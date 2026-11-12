@@ -1,0 +1,47 @@
+# Smoke test: 20 LoRA steps on DailyTalkContiguous conversations 0-4.
+# Derived from example/moshi_7B.yaml. Only data, max_steps, ckpt_freq,
+# run_dir and wandb (removed) differ from the example.
+
+# data
+data:
+  eval_data: ''
+  shuffle: true
+  train_data: '/root/moshi-finetune/daily-talk-contiguous/smoke.jsonl'
+
+# model
+moshi_paths:
+  hf_repo_id: "kyutai/moshiko-pytorch-bf16"
+
+full_finetuning: false
+lora:
+  enable: true
+  rank: 128
+  scaling: 2.
+  ft_embed: false
+
+first_codebook_weight_multiplier: 100.
+text_padding_weight: .5
+
+# optim
+duration_sec: 100
+batch_size: 16
+max_steps: 20
+gradient_checkpointing: true
+optim:
+  lr: 2e-6
+  weight_decay: 0.1
+  pct_start: 0.1  # example uses 0.05; with max_steps 20 that gives a 0-length warmup and OneCycleLR divides by zero
+
+# other
+seed: 0
+log_freq: 1
+eval_freq: 100
+do_eval: false
+do_ckpt: true
+ckpt_freq: 20
+
+save_adapters: true
+
+run_dir: "runs/smoke"
+
+# No wandb section: wandb is disabled when wandb.project is unset.
