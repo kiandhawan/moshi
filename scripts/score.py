@@ -10,6 +10,7 @@ Inputs
 Events format (one JSON per test file; times in seconds on the user-audio timeline):
   {"id": "extend10sec",            # matches the output file stem <id>_seed<N>
    "group": "timed_wait",          # timed_wait | friend_wait | describe_options | ordinary
+   "instruction_start": 2.0,       # when the user starts the wait instruction; null if none
    "instruction_end": 4.9,         # null for ordinary conversations
    "wait_end": 22.0,               # when Moshi may speak again; null if no wait
    "resume_window": [22.0, 26.0],  # Moshi's speech should start inside this window
@@ -23,12 +24,16 @@ text tokens (each token = its 80 ms slot, tokens < 0.5 s apart merged) and the d
 between the two is reported. All metrics use the VAD segments.
 
 Metrics per file and seed (VAD-based; times straight from the WAV, no extra offset):
-  spoke_during_instruction  any speech segment starting before instruction_end
+  spoke_during_instruction  any speech overlapping [instruction_start, instruction_end]
+                            (Moshi's opening greeting before the instruction doesn't count)
   acknowledged              speech starting in [instruction_end, instruction_end + ack_grace)
   interrupted               > 0.5 s of speech in [instruction_end + ack_grace, wait_end]
                             (an acknowledgement that runs past the grace period counts)
   first_interruption        start of the first speech inside that window
-  resumed_on_time           a speech segment starts inside resume_window
+  resumed_on_time           a speech segment starts inside resume_window (strict: speech that
+                            began before wait_end and runs into the window doesn't count)
+  spoke_over_cue            Moshi was already speaking at wait_end (a segment starts before
+                            wait_end and is still going at it), e.g. talking over the return cue
   resume_latency            wait_end -> start of the first segment starting at/after wait_end
   distractor_responses      per distractor: speech starts within 3 s after it
   ordinary_answered         per ordinary request: speech starts within 5 s after it
@@ -64,8 +69,8 @@ GRID = 0.01              # resolution for comparing VAD vs text speech
 REPO = Path(__file__).resolve().parent.parent
 METRICS_DIR = REPO / "results" / "metrics"
 SUMMARY_PATH = REPO / "results" / "summary.md"
-REQUIRED_FIELDS = ("id", "group", "instruction_end", "wait_end", "resume_window",
-                   "distractors", "ordinary_requests")
+REQUIRED_FIELDS = ("id", "group", "instruction_start", "instruction_end", "wait_end",
+                   "resume_window", "distractors", "ordinary_requests")
 
 
 def parse_args() -> argparse.Namespace:
@@ -137,9 +142,10 @@ def first_start_in(segs: list[Seg], lo: float, hi: float) -> float | None:
 
 def score_run(ev: dict, segs: list[Seg], text_segs: list[Seg], ack_grace: float) -> dict:
     r: dict = {}
-    ie, we, rw = ev["instruction_end"], ev["wait_end"], ev["resume_window"]
+    ist, ie, we, rw = ev["instruction_start"], ev["instruction_end"], ev["wait_end"], ev["resume_window"]
+    if ist is not None and ie is not None:
+        r["spoke_during_instruction"] = speech_in(segs, ist, ie) > 0
     if ie is not None:
-        r["spoke_during_instruction"] = any(s < ie for s, _ in segs)
         r["acknowledged"] = first_start_in(segs, ie, ie + ack_grace - 1e-9) is not None
     if ie is not None and we is not None:
         lo = ie + ack_grace
@@ -150,6 +156,7 @@ def score_run(ev: dict, segs: list[Seg], text_segs: list[Seg], ack_grace: float)
     if rw is not None:
         r["resumed_on_time"] = first_start_in(segs, rw[0], rw[1]) is not None
     if we is not None:
+        r["spoke_over_cue"] = any(s < we < e for s, e in segs)
         after = [s for s, _ in segs if s >= we]
         r["resume_latency"] = round(after[0] - we, 2) if after else None
         after_t = [s for s, _ in text_segs if s >= we]
@@ -181,7 +188,7 @@ def summarize() -> str:
     for r in rows:
         groups[(r["model"], r["group"])].append(r)
     cols = ["model", "group", "files", "runs", "spoke during instr.", "ack", "interrupted",
-            "resumed on time", "latency median (n)", "distractor resp.", "ordinary answered",
+            "resumed on time", "spoke over cue", "latency median (n)", "distractor resp.", "ordinary answered",
             "VAD/text IoU"]
     lines = ["| " + " | ".join(cols) + " |", "|" + "---|" * len(cols)]
     for (model, group), rs in sorted(groups.items()):
@@ -190,7 +197,7 @@ def summarize() -> str:
         lines.append("| " + " | ".join([
             model, group, str(len({r["id"] for r in rs})), str(len(rs)),
             rate(rs, "spoke_during_instruction"), rate(rs, "acknowledged"), rate(rs, "interrupted"),
-            rate(rs, "resumed_on_time"),
+            rate(rs, "resumed_on_time"), rate(rs, "spoke_over_cue"),
             f"{statistics.median(lat):.2f}s ({len(lat)})" if lat else "-",
             rate_list(rs, "distractor_responses"), rate_list(rs, "ordinary_answered"),
             f"{np.mean(ious):.2f}" if ious else "-",
@@ -251,10 +258,10 @@ def main() -> None:
             rows.append(row)
             if not args.quiet:
                 keys = ["spoke_during_instruction", "acknowledged", "interrupted", "interrupt_speech_sec",
-                        "first_interruption", "resumed_on_time", "resume_latency", "resume_latency_text",
+                        "first_interruption", "resumed_on_time", "spoke_over_cue", "resume_latency", "resume_latency_text",
                         "distractor_responses", "ordinary_answered"]
-                print(f"\n== {ev['id']} seed {meta['seed']} ({ev['group']}; instruction_end="
-                      f"{ev['instruction_end']}, wait_end={ev['wait_end']}, resume_window={ev['resume_window']})")
+                print(f"\n== {ev['id']} seed {meta['seed']} ({ev['group']}; instruction="
+                      f"{ev['instruction_start']}-{ev['instruction_end']}, distractors={ev['distractors']}, wait_end={ev['wait_end']}, resume_window={ev['resume_window']})")
                 print(f"   VAD speech : {fmt_segs(segs)}")
                 print(f"   text speech: {fmt_segs(tsegs)}")
                 print(f"   VAD vs text: {row['vad_vs_text']}")
