@@ -40,7 +40,7 @@ All runs start from the same checkpoint and use the same seed.
   - false resumes on distractors
   - ordinary-response rate
 - Plus a small human-recorded test set: `data/human/*.wav` with `*.events.json`, indexed by `data/indexes/human.jsonl`.
-- **Acknowledgement rule:** Moshi may give one brief acknowledgement (e.g. "Sure, take your time") within **2.0 s** after the instruction ends. Silence is required from then until the cue, and any speech after that 2 s window counts as an interruption. Events files encode this as `expected.acknowledge` followed by `expected.silent`.
+- **Acknowledgement rule:** Moshi may give one brief acknowledgement (e.g. "Sure, take your time") within **2.0 s** after the instruction ends. Silence is required from then until the cue, and any speech after that 2 s window counts as an interruption. Implemented as `scripts/score.py --ack-grace 2.0` (default). Events files use the standardized fields `id, group, instruction_end, wait_end, resume_window, distractors, ordinary_requests` (+ optional `notes`).
 
 ## Environment and constraints
 - Hardware: 2× H200 (141 GB each), running inside a Docker container.
