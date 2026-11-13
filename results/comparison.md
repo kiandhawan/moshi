@@ -20,6 +20,19 @@ Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); d
 | spoke over cue | 33% (1/3) [6%-79%] |
 | resume latency median | 0.36s (n=2) |
 
+## human_ordinary
+
+| metric | base |
+|---|---|
+| files | 1 |
+| runs | 3 |
+| wait success | - |
+| interrupt rate | - |
+| resume on time | - |
+| distractor response | - |
+| ordinary response | 78% (7/9) [45%-94%] |
+| resume latency median | - |
+
 ## timed_wait
 
 | metric | base |

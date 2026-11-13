@@ -15,8 +15,11 @@ Events format (one JSON per test file; times in seconds on the user-audio timeli
    "wait_end": 22.0,               # when Moshi may speak again; null if no wait
    "resume_window": [22.0, 26.0],  # Moshi's speech should start inside this window
    "distractors": [8.1, 15.0],     # times of things Moshi should NOT respond to
-   "ordinary_requests": [30.2],    # times of requests Moshi SHOULD answer
+   "ordinary_requests": [30.2],    # times (end of request) Moshi SHOULD answer
+   "ordinary_window": 5.0,         # optional: answer must start within this many s (default 5)
    "notes": "..."}                 # optional free text
+Only id and group are required. Missing wait fields mean "no wait" (e.g. ordinary
+conversations); missing distractors / ordinary_requests mean none.
 
 Speech detection: Silero VAD on the left channel only (resampled to 16 kHz), segments merged
 across gaps < 0.3 s, then segments < 0.2 s dropped. Speech is also derived from the non-padding
@@ -73,8 +76,10 @@ GRID = 0.01              # resolution for comparing VAD vs text speech
 REPO = Path(__file__).resolve().parent.parent
 METRICS_DIR = REPO / "results" / "metrics"
 SUMMARY_PATH = REPO / "results" / "summary.md"
-REQUIRED_FIELDS = ("id", "group", "instruction_start", "instruction_end", "wait_end",
-                   "resume_window", "distractors", "ordinary_requests")
+REQUIRED_FIELDS = ("id", "group")
+OPTIONAL_DEFAULTS = {"instruction_start": None, "instruction_end": None, "wait_end": None,
+                     "resume_window": None, "distractors": [], "ordinary_requests": [],
+                     "ordinary_window": ORDINARY_WINDOW}
 
 
 def parse_args() -> argparse.Namespace:
@@ -167,7 +172,7 @@ def score_run(ev: dict, segs: list[Seg], text_segs: list[Seg], ack_grace: float)
         r["resume_latency_text"] = round(after_t[0] - we, 2) if after_t else None
     r["distractor_responses"] = [first_start_in(segs, d, d + DISTRACTOR_WINDOW) is not None
                                  for d in ev["distractors"]]
-    r["ordinary_answered"] = [first_start_in(segs, q, q + ORDINARY_WINDOW) is not None
+    r["ordinary_answered"] = [first_start_in(segs, q, q + ev["ordinary_window"]) is not None
                               for q in ev["ordinary_requests"]]
     if "interrupted" in r and "resumed_on_time" in r:
         r["wait_success"] = (not r["interrupted"] and r["resumed_on_time"]
@@ -190,6 +195,8 @@ def load_events(index: Path) -> list[dict]:
         missing = [k for k in REQUIRED_FIELDS if k not in ev]
         if missing:
             sys.exit(f"{p}: missing fields {missing}")
+        for k, default in OPTIONAL_DEFAULTS.items():
+            ev.setdefault(k, default)
         events.append(ev)
     return events
 
