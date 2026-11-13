@@ -30,7 +30,7 @@ Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); d
 | interrupt rate | - |
 | resume on time | - |
 | distractor response | - |
-| ordinary response | 78% (7/9) [45%-94%] |
+| ordinary response | 67% (6/9) [35%-88%] |
 | resume latency median | - |
 
 ## timed_wait

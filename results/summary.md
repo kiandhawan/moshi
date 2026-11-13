@@ -9,7 +9,7 @@ Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); d
 | model | group | files | runs | wait success | interrupt rate | resume on time | distractor response | ordinary response |
 |---|---|---|---|---|---|---|---|---|
 | base | friend_wait | 1 | 3 | 0% (0/3) [0%-56%] | 100% (3/3) [44%-100%] | 67% (2/3) [21%-94%] | 67% (2/3) [21%-94%] | - |
-| base | human_ordinary | 1 | 3 | - | - | - | - | 78% (7/9) [45%-94%] |
+| base | human_ordinary | 1 | 3 | - | - | - | - | 67% (6/9) [35%-88%] |
 | base | timed_wait | 1 | 3 | 0% (0/3) [0%-56%] | 67% (2/3) [21%-94%] | 33% (1/3) [6%-79%] | - | - |
 
 ## Secondary metrics
@@ -17,5 +17,5 @@ Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); d
 | model | group | spoke during instr. | acknowledged | spoke over cue | resume latency median | VAD/text IoU |
 |---|---|---|---|---|---|---|
 | base | friend_wait | 0% (0/3) [0%-56%] | 67% (2/3) [21%-94%] | 33% (1/3) [6%-79%] | 0.36s (n=2) | 0.73 |
-| base | human_ordinary | - | - | - | - | 0.77 |
+| base | human_ordinary | - | - | - | - | 0.79 |
 | base | timed_wait | 100% (3/3) [44%-100%] | 0% (0/3) [0%-56%] | 0% (0/3) [0%-56%] | 1.20s (n=1) | 0.72 |
