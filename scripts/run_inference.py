@@ -46,6 +46,8 @@ def parse_args() -> argparse.Namespace:
                    help="Checkpoint folder with lora.safetensors and config.json. Omit for the base model.")
     p.add_argument("--seeds", type=int, nargs="+", default=[1], help="Run each file once per seed.")
     p.add_argument("--gpu", type=int, default=None, help="GPU index (sets CUDA_VISIBLE_DEVICES).")
+    p.add_argument("--tail-sec", type=float, default=TAIL_SILENCE_SEC,
+                   help="Seconds of silence fed after the input ends (default 8).")
     p.add_argument("--hf-repo", default="kyutai/moshiko-pytorch-bf16", help="Base model repository.")
     return p.parse_args()
 
@@ -170,7 +172,7 @@ def main() -> None:
                 sys.exit(f"{path}: expected mono or stereo, got {pcm.shape[0]} channels")
             input_sec = len(user) / SAMPLE_RATE
             # Append the tail silence, then zero-pad to a whole number of 80 ms frames.
-            n_total = len(user) + int(round(TAIL_SILENCE_SEC * SAMPLE_RATE))
+            n_total = len(user) + int(round(args.tail_sec * SAMPLE_RATE))
             n_total = -(-n_total // frame_size) * frame_size
             user_padded = np.zeros(n_total, dtype=np.float32)
             user_padded[:len(user)] = user
@@ -203,7 +205,7 @@ def main() -> None:
                     "frame_sec": frame_sec,
                     "output_delay_frames": OUTPUT_DELAY_FRAMES,
                     "input_sec": input_sec,
-                    "tail_silence_sec": TAIL_SILENCE_SEC,
+                    "tail_silence_sec": args.tail_sec,
                     "stream_sec": stream_sec,
                     "wall_sec": wall,
                     "realtime_factor": wall / stream_sec,
