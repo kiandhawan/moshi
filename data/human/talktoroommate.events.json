@@ -1,78 +1,13 @@
 {
-  "schema_version": 1,
-  "audio": "talktoroommate.wav",
-  "duration_sec": 15.101,
-  "sample_rate": 24000,
-  "channels": 1,
-  "source": "human",
-  "split": "test",
-  "wait_type": "talk_to_friend",
-  "description": "User tells Moshi they are talking to their roommate; says \"Moshi, I'm back\" at 13 s. Moshi should stay silent until the cue and reply within 5 s after it.",
-  "events": [
-    {
-      "type": "instruction_end",
-      "t": 5.0
-    },
-    {
-      "type": "return_cue",
-      "t": 13.0,
-      "text": "Moshi, I'm back"
-    }
+  "id": "talktoroommate",
+  "group": "friend_wait",
+  "instruction_end": 5.0,
+  "wait_end": 13.0,
+  "resume_window": [
+    13.0,
+    18.0
   ],
-  "expected": {
-    "acknowledge": [
-      {
-        "start": 5.0,
-        "end": 7.0,
-        "optional": true
-      }
-    ],
-    "silent": [
-      {
-        "start": 7.0,
-        "end": 13.0
-      }
-    ],
-    "respond": [
-      {
-        "start": 13.0,
-        "end": 18.0,
-        "ref": 13.0,
-        "kind": "reply_after_cue"
-      }
-    ]
-  },
-  "notes": {
-    "times": "Seconds from the start of the user audio. Same timeline as run_inference.py outputs (which append 8 s of silence after the input).",
-    "acknowledge": "Optional brief acknowledgement (e.g. 'Sure, take your time') allowed for 2 s after instruction_end. Speech continuing past this window counts as an interruption.",
-    "silent": "Any Moshi speech inside these windows counts as an interruption.",
-    "respond": "Moshi should start speaking inside this window; resume latency is measured from 'ref'.",
-    "detected_user_speech_sec": "Rough energy-based speech spans in the user audio (80 ms frames, 15 dB above noise floor), for reference only; the event times above are the ground truth."
-  },
-  "detected_user_speech_sec": [
-    [
-      0.0,
-      0.56
-    ],
-    [
-      2.48,
-      5.28
-    ],
-    [
-      6.24,
-      7.44
-    ],
-    [
-      8.4,
-      9.6
-    ],
-    [
-      10.88,
-      11.52
-    ],
-    [
-      12.48,
-      13.2
-    ]
-  ]
+  "distractors": [],
+  "ordinary_requests": [],
+  "notes": "User talks to their roommate; return cue \"Moshi, I'm back\" at 13.0 s; Moshi should reply within 5 s."
 }
