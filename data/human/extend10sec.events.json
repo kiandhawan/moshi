@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "audio": "extend10sec.wav",
+  "duration_sec": 23.805,
+  "sample_rate": 24000,
+  "channels": 1,
+  "source": "human",
+  "split": "test",
+  "wait_type": "think_n_seconds",
+  "description": "User asks for time to think, then extends the wait at 13 s. Moshi should stay silent until roughly 22-26 s, then ask again.",
+  "events": [
+    {
+      "type": "instruction_end",
+      "t": 4.9
+    },
+    {
+      "type": "extension",
+      "t": 13.0
+    }
+  ],
+  "expected": {
+    "acknowledge": [
+      {
+        "start": 4.9,
+        "end": 6.9,
+        "optional": true
+      }
+    ],
+    "silent": [
+      {
+        "start": 6.9,
+        "end": 22.0
+      }
+    ],
+    "respond": [
+      {
+        "start": 22.0,
+        "end": 26.0,
+        "ref": 22.0,
+        "kind": "ask_again"
+      }
+    ]
+  },
+  "notes": {
+    "times": "Seconds from the start of the user audio. Same timeline as run_inference.py outputs (which append 8 s of silence after the input).",
+    "acknowledge": "Optional brief acknowledgement (e.g. 'Sure, take your time') allowed for 2 s after instruction_end. Speech continuing past this window counts as an interruption.",
+    "silent": "Any Moshi speech inside these windows counts as an interruption.",
+    "respond": "Moshi should start speaking inside this window; resume latency is measured from 'ref'.",
+    "detected_user_speech_sec": "Rough energy-based speech spans in the user audio (80 ms frames, 15 dB above noise floor), for reference only; the event times above are the ground truth."
+  },
+  "detected_user_speech_sec": [
+    [
+      0.24,
+      5.6
+    ],
+    [
+      6.08,
+      7.52
+    ],
+    [
+      8.4,
+      13.2
+    ],
+    [
+      13.76,
+      16.96
+    ],
+    [
+      18.0,
+      19.04
+    ],
+    [
+      19.84,
+      20.24
+    ],
+    [
+      21.04,
+      21.76
+    ],
+    [
+      22.4,
+      22.72
+    ]
+  ]
+}
