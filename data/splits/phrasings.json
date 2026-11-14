@@ -1,5 +1,5 @@
 {
- "note": "Wait-type phrasings. Every third greeting/side/think item is held out for eval; describe_options and extensions are eval only. {n} = number of seconds in words, {friend} = friend's name.",
+ "note": "Wait-type phrasings. Every third item of a trained list is held out for eval. phone_*, door_*, reading_* and implicit_return, extension are eval-only. {n} = seconds in words, {friend} = friend's name.",
  "greeting": [
   {
    "id": "greet_01",
@@ -304,6 +304,235 @@
    "split": "eval"
   }
  ],
+ "think_instruction": [
+  {
+   "id": "think_instr_01",
+   "text": "Give me {n} seconds to think, then ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_02",
+   "text": "Let me think about it for {n} seconds and then ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_03",
+   "text": "Hmm, I need {n} seconds to think. Ask me again after that.",
+   "split": "eval"
+  },
+  {
+   "id": "think_instr_04",
+   "text": "I don't know yet. Ask me again in {n} seconds.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_05",
+   "text": "Can you give me {n} seconds? Then ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_06",
+   "text": "Let me think for {n} seconds, then check back with me.",
+   "split": "eval"
+  },
+  {
+   "id": "think_instr_07",
+   "text": "Hold on, give me {n} seconds to decide and ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_08",
+   "text": "I'm not sure. Wait {n} seconds and ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_09",
+   "text": "Good question. Let me think for {n} seconds, then ask again.",
+   "split": "eval"
+  },
+  {
+   "id": "think_instr_10",
+   "text": "Um, give me {n} seconds to think it over, then ask me.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_11",
+   "text": "Ask me again in {n} seconds, I need to think.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_12",
+   "text": "I need to think. Give me {n} seconds and then ask me again.",
+   "split": "eval"
+  },
+  {
+   "id": "think_instr_13",
+   "text": "Let me mull it over for {n} seconds. Then ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_14",
+   "text": "Wait {n} seconds, then ask me that again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_15",
+   "text": "Hmm, tough one. Give me {n} seconds and ask me again.",
+   "split": "eval"
+  },
+  {
+   "id": "think_instr_16",
+   "text": "Can I have {n} seconds to think? Ask me again after.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_17",
+   "text": "I haven't decided. Give me {n} seconds, then ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_18",
+   "text": "Let me think. Ask me again in about {n} seconds.",
+   "split": "eval"
+  },
+  {
+   "id": "think_instr_19",
+   "text": "Give me {n} seconds to figure it out, then ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_20",
+   "text": "Hang on, I need {n} seconds to think. Then ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_21",
+   "text": "Okay, let me think for {n} seconds. Ask me again after that.",
+   "split": "eval"
+  },
+  {
+   "id": "think_instr_22",
+   "text": "Not sure yet. Check back with me in {n} seconds.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_23",
+   "text": "Give me {n} seconds, I want to think about it. Then ask again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_24",
+   "text": "I need a moment, like {n} seconds. Ask me again then.",
+   "split": "eval"
+  },
+  {
+   "id": "think_instr_25",
+   "text": "Let me take {n} seconds to think, and then ask me again.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_26",
+   "text": "Hmm, wait {n} seconds and then ask me again, okay?",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_27",
+   "text": "Give me {n} seconds. I'll know by then, so ask me again.",
+   "split": "eval"
+  },
+  {
+   "id": "think_instr_28",
+   "text": "I'll need {n} seconds to think. Ask me again after that.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_29",
+   "text": "Let me think about that for {n} seconds, then ask me once more.",
+   "split": "train"
+  },
+  {
+   "id": "think_instr_30",
+   "text": "Wait, give me {n} seconds to think and then ask me again.",
+   "split": "eval"
+  }
+ ],
+ "early_end": [
+  {
+   "id": "early_end_01",
+   "text": "Okay, I've got it.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_02",
+   "text": "Actually, never mind, I know now.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_03",
+   "text": "Oh wait, I've decided.",
+   "split": "eval"
+  },
+  {
+   "id": "early_end_04",
+   "text": "Okay, I know what I want.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_05",
+   "text": "Got it, I don't need the full time.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_06",
+   "text": "Actually, I'm ready now.",
+   "split": "eval"
+  },
+  {
+   "id": "early_end_07",
+   "text": "Okay, never mind, I figured it out.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_08",
+   "text": "Oh, I know.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_09",
+   "text": "Alright, I've made up my mind.",
+   "split": "eval"
+  },
+  {
+   "id": "early_end_10",
+   "text": "Okay, done thinking.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_11",
+   "text": "Actually, I've got an answer.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_12",
+   "text": "Never mind, I'm ready.",
+   "split": "eval"
+  },
+  {
+   "id": "early_end_13",
+   "text": "Okay, I think I know.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_14",
+   "text": "You know what, I've decided.",
+   "split": "train"
+  },
+  {
+   "id": "early_end_15",
+   "text": "Okay, that was quick. I've got it.",
+   "split": "eval"
+  }
+ ],
  "side_instruction": [
   {
    "id": "side_instr_01",
@@ -474,289 +703,122 @@
   },
   {
    "id": "side_cue_04",
-   "text": "Okay, where were we?",
-   "split": "train"
-  },
-  {
-   "id": "side_cue_05",
    "text": "I'm back, sorry for the wait.",
    "split": "train"
   },
   {
-   "id": "side_cue_06",
+   "id": "side_cue_05",
    "text": "Okay, I'm all yours again.",
+   "split": "train"
+  },
+  {
+   "id": "side_cue_06",
+   "text": "Back again. What were we talking about?",
    "split": "eval"
   },
   {
    "id": "side_cue_07",
-   "text": "Alright, done. Where were we?",
+   "text": "Okay, sorry, I'm back now.",
    "split": "train"
   },
   {
    "id": "side_cue_08",
-   "text": "Back again. What were we talking about?",
-   "split": "train"
-  },
-  {
-   "id": "side_cue_09",
-   "text": "Okay, sorry, I'm back now.",
-   "split": "eval"
-  },
-  {
-   "id": "side_cue_10",
    "text": "I'm here again, let's continue.",
    "split": "train"
   },
   {
-   "id": "side_cue_11",
+   "id": "side_cue_09",
    "text": "Okay, that's sorted. I'm back.",
-   "split": "train"
-  },
-  {
-   "id": "side_cue_12",
-   "text": "Alright, I'm back. Let's keep going.",
    "split": "eval"
   },
   {
-   "id": "side_cue_13",
+   "id": "side_cue_10",
+   "text": "Alright, I'm back. Let's keep going.",
+   "split": "train"
+  },
+  {
+   "id": "side_cue_11",
    "text": "Sorry, I'm back now. Go ahead.",
    "split": "train"
   },
   {
-   "id": "side_cue_14",
+   "id": "side_cue_12",
    "text": "Okay, I'm done talking to them. I'm back.",
-   "split": "train"
-  },
-  {
-   "id": "side_cue_15",
-   "text": "I'm back. Where did we leave off?",
    "split": "eval"
   },
   {
-   "id": "side_cue_16",
+   "id": "side_cue_13",
+   "text": "I'm back. Where did we leave off?",
+   "split": "train"
+  },
+  {
+   "id": "side_cue_14",
    "text": "Alright, back to you.",
    "split": "train"
   },
   {
-   "id": "side_cue_17",
+   "id": "side_cue_15",
    "text": "Okay, finished. I'm back now.",
-   "split": "train"
-  },
-  {
-   "id": "side_cue_18",
-   "text": "Hey, I'm back. Sorry about that.",
    "split": "eval"
   },
   {
-   "id": "side_cue_19",
+   "id": "side_cue_16",
+   "text": "Hey, I'm back. Sorry about that.",
+   "split": "train"
+  },
+  {
+   "id": "side_cue_17",
    "text": "Okay, we can continue now.",
    "split": "train"
   },
   {
-   "id": "side_cue_20",
+   "id": "side_cue_18",
    "text": "I'm back, thanks for waiting.",
-   "split": "train"
-  },
-  {
-   "id": "side_cue_21",
-   "text": "Alright, I'm back with you.",
    "split": "eval"
   },
   {
-   "id": "side_cue_22",
-   "text": "Okay, sorry, where were we again?",
+   "id": "side_cue_19",
+   "text": "Alright, I'm back with you.",
    "split": "train"
   },
   {
-   "id": "side_cue_23",
+   "id": "side_cue_20",
    "text": "Done. I'm back now.",
    "split": "train"
   },
   {
-   "id": "side_cue_24",
+   "id": "side_cue_21",
    "text": "Okay, I'm free again.",
    "split": "eval"
   },
   {
-   "id": "side_cue_25",
+   "id": "side_cue_22",
    "text": "Right, I'm back. What was I saying?",
    "split": "train"
   },
   {
-   "id": "side_cue_26",
+   "id": "side_cue_23",
    "text": "Okay, back. Thanks for being patient.",
    "split": "train"
   },
   {
-   "id": "side_cue_27",
+   "id": "side_cue_24",
    "text": "Alright, all done. I'm back.",
    "split": "eval"
   },
   {
-   "id": "side_cue_28",
+   "id": "side_cue_25",
    "text": "Okay, I'm back. You can talk now.",
    "split": "train"
   },
   {
-   "id": "side_cue_29",
+   "id": "side_cue_26",
    "text": "Sorry, that took a while. I'm back.",
    "split": "train"
   },
   {
-   "id": "side_cue_30",
+   "id": "side_cue_27",
    "text": "Okay, I'm here again.",
-   "split": "eval"
-  }
- ],
- "think_instruction": [
-  {
-   "id": "think_instr_01",
-   "text": "Give me {n} seconds to think, then ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_02",
-   "text": "Let me think about it for {n} seconds and then ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_03",
-   "text": "Hmm, I need {n} seconds to think. Ask me again after that.",
-   "split": "eval"
-  },
-  {
-   "id": "think_instr_04",
-   "text": "I don't know yet. Ask me again in {n} seconds.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_05",
-   "text": "Can you give me {n} seconds? Then ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_06",
-   "text": "Let me think for {n} seconds, then check back with me.",
-   "split": "eval"
-  },
-  {
-   "id": "think_instr_07",
-   "text": "Hold on, give me {n} seconds to decide and ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_08",
-   "text": "I'm not sure. Wait {n} seconds and ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_09",
-   "text": "Good question. Let me think for {n} seconds, then ask again.",
-   "split": "eval"
-  },
-  {
-   "id": "think_instr_10",
-   "text": "Um, give me {n} seconds to think it over, then ask me.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_11",
-   "text": "Ask me again in {n} seconds, I need to think.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_12",
-   "text": "I need to think. Give me {n} seconds and then ask me again.",
-   "split": "eval"
-  },
-  {
-   "id": "think_instr_13",
-   "text": "Let me mull it over for {n} seconds. Then ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_14",
-   "text": "Wait {n} seconds, then ask me that again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_15",
-   "text": "Hmm, tough one. Give me {n} seconds and ask me again.",
-   "split": "eval"
-  },
-  {
-   "id": "think_instr_16",
-   "text": "Can I have {n} seconds to think? Ask me again after.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_17",
-   "text": "I haven't decided. Give me {n} seconds, then ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_18",
-   "text": "Let me think. Ask me again in about {n} seconds.",
-   "split": "eval"
-  },
-  {
-   "id": "think_instr_19",
-   "text": "Give me {n} seconds to figure it out, then ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_20",
-   "text": "Hang on, I need {n} seconds to think. Then ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_21",
-   "text": "Okay, let me think for {n} seconds. Ask me again after that.",
-   "split": "eval"
-  },
-  {
-   "id": "think_instr_22",
-   "text": "Not sure yet. Check back with me in {n} seconds.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_23",
-   "text": "Give me {n} seconds, I want to think about it. Then ask again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_24",
-   "text": "I need a moment, like {n} seconds. Ask me again then.",
-   "split": "eval"
-  },
-  {
-   "id": "think_instr_25",
-   "text": "Let me take {n} seconds to think, and then ask me again.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_26",
-   "text": "Hmm, wait {n} seconds and then ask me again, okay?",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_27",
-   "text": "Give me {n} seconds. I'll know by then, so ask me again.",
-   "split": "eval"
-  },
-  {
-   "id": "think_instr_28",
-   "text": "I'll need {n} seconds to think. Ask me again after that.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_29",
-   "text": "Let me think about that for {n} seconds, then ask me once more.",
-   "split": "train"
-  },
-  {
-   "id": "think_instr_30",
-   "text": "Wait, give me {n} seconds to think and then ask me again.",
    "split": "eval"
   }
  ],
@@ -764,12 +826,12 @@
   {
    "id": "describe_instr_01",
    "text": "Let me describe all the options before you comment.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_02",
    "text": "I'm going to list all the options first, so please don't comment until I'm done.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_03",
@@ -779,12 +841,12 @@
   {
    "id": "describe_instr_04",
    "text": "Hold your thoughts until I've described all the options.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_05",
    "text": "I'll tell you all the choices first. Wait until I'm finished before you comment.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_06",
@@ -794,12 +856,12 @@
   {
    "id": "describe_instr_07",
    "text": "Let me walk you through all the options, then you can tell me what you think.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_08",
    "text": "Please wait until I've gone through all the options.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_09",
@@ -809,12 +871,12 @@
   {
    "id": "describe_instr_10",
    "text": "Let me get through all the options before you weigh in.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_11",
    "text": "First let me tell you about all of them, then you can comment.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_12",
@@ -824,12 +886,12 @@
   {
    "id": "describe_instr_13",
    "text": "Wait until I've listed everything before you jump in.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_14",
    "text": "Let me lay out all the options first. Don't interrupt.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_15",
@@ -839,12 +901,12 @@
   {
    "id": "describe_instr_16",
    "text": "Listen to all of them first, then comment.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_17",
    "text": "Let me finish describing every option before you respond.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_18",
@@ -854,24 +916,24 @@
   {
    "id": "describe_instr_19",
    "text": "Hear me out on all the options before you comment.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_instr_20",
    "text": "Let me describe everything first, and then I'll ask for your thoughts.",
-   "split": "eval"
+   "split": "train"
   }
  ],
  "describe_cue": [
   {
    "id": "describe_cue_01",
    "text": "Okay, that's all of them. What do you think?",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_cue_02",
    "text": "That's everything. Which one would you pick?",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_cue_03",
@@ -881,12 +943,12 @@
   {
    "id": "describe_cue_04",
    "text": "Okay, I'm done. What do you think?",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_cue_05",
    "text": "That's the full list. Go ahead.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_cue_06",
@@ -896,12 +958,12 @@
   {
    "id": "describe_cue_07",
    "text": "That's it. Now you can comment.",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_cue_08",
    "text": "Okay, that's all. Which sounds best to you?",
-   "split": "eval"
+   "split": "train"
   },
   {
    "id": "describe_cue_09",
@@ -911,6 +973,31 @@
   {
    "id": "describe_cue_10",
    "text": "Done. What would you recommend?",
+   "split": "train"
+  },
+  {
+   "id": "describe_cue_11",
+   "text": "And that's the last one. What do you think?",
+   "split": "train"
+  },
+  {
+   "id": "describe_cue_12",
+   "text": "Okay, that's all the options. Go ahead.",
+   "split": "eval"
+  },
+  {
+   "id": "describe_cue_13",
+   "text": "That's all I've got. Which would you choose?",
+   "split": "train"
+  },
+  {
+   "id": "describe_cue_14",
+   "text": "Alright, I'm finished. What's your opinion?",
+   "split": "train"
+  },
+  {
+   "id": "describe_cue_15",
+   "text": "So that's the list. Thoughts?",
    "split": "eval"
   }
  ],
@@ -953,6 +1040,355 @@
   {
    "id": "extension_08",
    "text": "Not yet, give me {n} more seconds.",
+   "split": "eval"
+  }
+ ],
+ "implicit_return": [
+  {
+   "id": "implicit_01",
+   "text": "Alright, done. Where were we?",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_02",
+   "text": "Okay, sorry, where were we again?",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_03",
+   "text": "Okay, where were we?",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_04",
+   "text": "Anyway, where were we?",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_05",
+   "text": "So, what were you saying?",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_06",
+   "text": "Right, so anyway.",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_07",
+   "text": "Okay, so, back to what we were talking about.",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_08",
+   "text": "Anyway, sorry, go on.",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_09",
+   "text": "So where did we leave it?",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_10",
+   "text": "Okay, so, as I was saying.",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_11",
+   "text": "Anyway, what do you think?",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_12",
+   "text": "Right, where was I?",
+   "split": "eval"
+  },
+  {
+   "id": "implicit_13",
+   "text": "So, anyway, back to it.",
+   "split": "eval"
+  }
+ ],
+ "phone_instruction": [
+  {
+   "id": "phone_instr_01",
+   "text": "Sorry, I have to take this call. Hang on and stay quiet until I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_instr_02",
+   "text": "My phone's ringing, give me a minute. Don't say anything until I'm done.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_instr_03",
+   "text": "Hold on, I need to answer this call. I'll tell you when I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_instr_04",
+   "text": "Oh, I have to get this. Please wait quietly until I'm off the phone.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_instr_05",
+   "text": "Hang on, I've got to pick this up. Stay quiet until I come back to you.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_instr_06",
+   "text": "Sorry, quick call. Wait until I'm off the phone, okay?",
+   "split": "eval"
+  },
+  {
+   "id": "phone_instr_07",
+   "text": "One second, someone's calling me. Don't talk until I say I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_instr_08",
+   "text": "I need to take this, it's important. Please hold on until I'm done.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_instr_09",
+   "text": "Wait, I need to answer this. Stay quiet till I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_instr_10",
+   "text": "Hold that thought, I have a call coming in. I'll come back to you.",
+   "split": "eval"
+  }
+ ],
+ "phone_cue": [
+  {
+   "id": "phone_cue_01",
+   "text": "Okay, sorry, I'm off the phone now.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_cue_02",
+   "text": "Alright, sorry about that. I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_cue_03",
+   "text": "Okay, call's done. I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_cue_04",
+   "text": "Sorry about that call. I'm back now.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_cue_05",
+   "text": "Okay, I hung up. I'm all yours.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_cue_06",
+   "text": "Done with the call. I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_cue_07",
+   "text": "Okay, off the phone. Sorry about that.",
+   "split": "eval"
+  },
+  {
+   "id": "phone_cue_08",
+   "text": "Alright, finished the call. I'm back.",
+   "split": "eval"
+  }
+ ],
+ "door_instruction": [
+  {
+   "id": "door_instr_01",
+   "text": "Someone's at the door, give me a second. Stay quiet until I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_instr_02",
+   "text": "Hang on, the doorbell just rang. Don't say anything until I come back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_instr_03",
+   "text": "Hold on, I think someone's here. Wait until I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_instr_04",
+   "text": "Sorry, someone's knocking. Please stay quiet until I return.",
+   "split": "eval"
+  },
+  {
+   "id": "door_instr_05",
+   "text": "One moment, I need to get the door. I'll tell you when I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_instr_06",
+   "text": "Wait, that's the door. Hold on and don't talk until I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_instr_07",
+   "text": "Give me a minute, someone's at the door. Stay quiet till I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_instr_08",
+   "text": "Oh, the doorbell. Hang tight and wait for me.",
+   "split": "eval"
+  },
+  {
+   "id": "door_instr_09",
+   "text": "Hold that thought, someone's here. Don't say anything until I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_instr_10",
+   "text": "Excuse me, I have to answer the door. I'll come back to you.",
+   "split": "eval"
+  }
+ ],
+ "door_cue": [
+  {
+   "id": "door_cue_01",
+   "text": "Okay, I'm back. Sorry about that.",
+   "split": "eval"
+  },
+  {
+   "id": "door_cue_02",
+   "text": "Sorry, that took a minute. I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_cue_03",
+   "text": "Alright, door's closed. I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_cue_04",
+   "text": "Okay, back. All sorted.",
+   "split": "eval"
+  },
+  {
+   "id": "door_cue_05",
+   "text": "I'm back, sorry about the interruption.",
+   "split": "eval"
+  },
+  {
+   "id": "door_cue_06",
+   "text": "Okay, they're gone. I'm back now.",
+   "split": "eval"
+  },
+  {
+   "id": "door_cue_07",
+   "text": "Alright, sorted. I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "door_cue_08",
+   "text": "Okay, back from the door.",
+   "split": "eval"
+  }
+ ],
+ "reading_instruction": [
+  {
+   "id": "read_instr_01",
+   "text": "Let me read this first before you say anything.",
+   "split": "eval"
+  },
+  {
+   "id": "read_instr_02",
+   "text": "Hold on, I need to read this email. Stay quiet until I'm done.",
+   "split": "eval"
+  },
+  {
+   "id": "read_instr_03",
+   "text": "Give me a moment to read this, don't talk until I'm finished.",
+   "split": "eval"
+  },
+  {
+   "id": "read_instr_04",
+   "text": "Wait, let me read the instructions first. I'll tell you when I'm done.",
+   "split": "eval"
+  },
+  {
+   "id": "read_instr_05",
+   "text": "Let me read through this message before you comment.",
+   "split": "eval"
+  },
+  {
+   "id": "read_instr_06",
+   "text": "Hang on, I'm going to read this article. Please stay quiet until I'm done.",
+   "split": "eval"
+  },
+  {
+   "id": "read_instr_07",
+   "text": "One second, let me read the label first. Don't say anything yet.",
+   "split": "eval"
+  },
+  {
+   "id": "read_instr_08",
+   "text": "Let me finish reading this letter, then we can talk.",
+   "split": "eval"
+  },
+  {
+   "id": "read_instr_09",
+   "text": "Quiet for a moment please, I need to read this text.",
+   "split": "eval"
+  },
+  {
+   "id": "read_instr_10",
+   "text": "Hold on, let me read the menu first. I'll let you know when I'm done.",
+   "split": "eval"
+  }
+ ],
+ "reading_cue": [
+  {
+   "id": "read_cue_01",
+   "text": "Okay, I'm done reading.",
+   "split": "eval"
+  },
+  {
+   "id": "read_cue_02",
+   "text": "Alright, finished. I've read it.",
+   "split": "eval"
+  },
+  {
+   "id": "read_cue_03",
+   "text": "Okay, done. I read it all.",
+   "split": "eval"
+  },
+  {
+   "id": "read_cue_04",
+   "text": "Done reading, I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "read_cue_05",
+   "text": "Okay, I've finished reading it.",
+   "split": "eval"
+  },
+  {
+   "id": "read_cue_06",
+   "text": "Alright, I read it. We can talk now.",
+   "split": "eval"
+  },
+  {
+   "id": "read_cue_07",
+   "text": "Okay, finished the email. I'm back.",
+   "split": "eval"
+  },
+  {
+   "id": "read_cue_08",
+   "text": "Done, I've read it now.",
    "split": "eval"
   }
  ]

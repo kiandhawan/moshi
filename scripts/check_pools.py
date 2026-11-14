@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TOPICS = json.loads((ROOT / "data/splits/topics.json").read_text())
 BAD_CHARS = re.compile(r"[^A-Za-z ,.?!'\-/{}]")
 CUE_WORDS = re.compile(r"\b(i'm back|i am back|where were we|okay moshi|ok moshi|moshi|sorry about that)\b", re.I)
-WANT = {"train": {"contexts": 3, "side_conversations": 3, "ordinary_dialogues": 4, "option_sets": 0},
+WANT = {"train": {"contexts": 3, "side_conversations": 3, "ordinary_dialogues": 4, "option_sets": 2},
         "eval": {"contexts": 3, "side_conversations": 3, "ordinary_dialogues": 3, "option_sets": 2}}
 
 

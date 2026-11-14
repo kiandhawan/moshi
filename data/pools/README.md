@@ -77,7 +77,7 @@ Nothing here is audio; TTS happens later (`scripts/render_lib.py`).
 - `ordinary_dialogues`: a normal user-Moshi conversation on this topic, starting with the
   user, 6-12 turns, about 90-200 words. The user asks for things or chats, Moshi answers
   helpfully. Every Moshi turn follows a user turn.
-- `option_sets` (eval topics only): `{"id", "lead_in", "options", "moshi_comment"}`.
+- `option_sets` (every topic, 2 each; used by the describe-options wait): `{"id", "lead_in", "options", "moshi_comment"}`.
   `lead_in`: one user line saying they need help choosing. `options`: 3-4 user lines, each
   describing one option in 10-25 words ("The first one is ..."). `moshi_comment`: 2
   alternative Moshi replies that compare the options, 2-3 sentences, referring to them.

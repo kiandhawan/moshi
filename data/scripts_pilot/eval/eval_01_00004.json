@@ -2,102 +2,131 @@
  "id": "eval_01_00004",
  "split": "eval",
  "seed": 1,
- "type": "describe_options",
- "wait_type": "describe_options",
- "topics": [
-  "picnic"
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
  ],
- "topic": "picnic",
+ "topics": [
+  "camping"
+ ],
+ "topic": "camping",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
-  "friend": null,
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": "933563129e564b19a115bedd57b7406a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_06",
-  "describe_instr_05",
-  "describe_cue_02"
+  "greet_24",
+  "greet_ans_12",
+  "door_instr_07",
+  "door_01",
+  "implicit_10"
  ],
  "block_ids": [
-  "picnic.opt1"
+  "camping.ctx3"
  ],
- "est_total_sec": 55.99,
- "est_speech_sec": 44.92,
+ "est_total_sec": 47.39,
+ "est_speech_sec": 31.58,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.74,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.47,
    "role": "greeting",
-   "phrasing": "greet_06",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.6,
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_12"
   },
   {
    "speaker": "user",
-   "text": "I'm planning a picnic for my book club and I need help choosing a place.",
-   "est_sec": 4.75,
-   "gap_before": 0.57,
-   "block": "picnic.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll tell you all the choices first. Wait until I'm finished before you comment.",
-   "est_sec": 4.44,
-   "gap_before": 0.49,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_05"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is the botanical garden, really pretty, but you have to pay to get in.",
+   "text": "I'm in charge of food for the camping trip and I have no idea what to cook.",
    "est_sec": 5.37,
-   "gap_before": 1.4,
-   "block": "picnic.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's the lake park, free and big, but it gets noisy on weekends.",
-   "est_sec": 4.44,
-   "gap_before": 2.41,
-   "block": "picnic.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last option is my friend's backyard, which has a big table and real bathrooms.",
-   "est_sec": 5.06,
-   "gap_before": 1.41,
-   "block": "picnic.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "That's everything. Which one would you pick?",
-   "est_sec": 2.27,
-   "gap_before": 1.01,
-   "event": "return_cue",
-   "phrasing": "describe_cue_02"
+   "gap_before": 0.31,
+   "event": "ordinary_request",
+   "block": "camping.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "For a book club, being able to hear each other matters, so the noisy lake park might be a problem. The botanical garden is beautiful and calm, just check whether people mind the fee. Your friend's backyard is the most comfortable, especially with a table and bathrooms.",
-   "est_sec": 14.67,
-   "gap_before": 0.94,
+   "text": "Fun job. Do you want proper meals over the fire, or simple stuff that barely needs cooking?",
+   "est_sec": 5.37,
+   "gap_before": 0.95,
+   "role": "reply",
+   "block": "camping.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a minute, someone's at the door. Stay quiet till I'm back.",
+   "est_sec": 4.13,
+   "gap_before": 1.03,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi!",
+   "est_sec": 0.41,
+   "gap_before": 3.5,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Delivery for you, can you sign here?",
+   "est_sec": 2.27,
+   "gap_before": 0.54,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Sure. Do you have a pen?",
+   "est_sec": 1.96,
+   "gap_before": 0.34,
+   "phrasing": "door_01",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Here you go.",
+   "est_sec": 1.03,
+   "gap_before": 1.31,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Thanks, have a good one.",
+   "est_sec": 1.65,
+   "gap_before": 1.09,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so, as I was saying.",
+   "est_sec": 1.96,
+   "gap_before": 3.27,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "There you are. Still on the food question, fire cooking or low effort?",
+   "est_sec": 4.13,
+   "gap_before": 0.74,
    "role": "resume",
-   "block": "picnic.opt1",
+   "block": "camping.ctx3",
    "reference_only": true
   }
  ],

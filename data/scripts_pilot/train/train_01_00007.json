@@ -2,96 +2,167 @@
  "id": "train_01_00007",
  "split": "train",
  "seed": 1,
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
  "topics": [
-  "gardening"
+  "home_repair",
+  "weekend_plans"
  ],
- "wait_sec": 5,
- "deadline": {
-  "after_turn": 4,
-  "sec": 5
- },
- "topic": "gardening",
+ "topic": "home_repair",
  "voices": {
-  "user": "5ce84bbd213b4943bc89e1951e17848a",
-  "friend": null,
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "friend": "2680da81de8348a68e1f4dbaa79272f1",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Jordan",
+ "friend_name_id": "name_05",
  "phrasing_ids": [
-  "greet_17",
-  "greet_ans_17",
-  "think_instr_20",
-  "ack_06"
+  "greet_29",
+  "greet_ans_04",
+  "side_instr_16",
+  "side_cue_02"
  ],
  "block_ids": [
-  "gardening.ctx2"
+  "home_repair.ctx3",
+  "weekend_plans.side2"
  ],
- "est_total_sec": 32.39,
- "est_speech_sec": 23.02,
+ "est_total_sec": 71.59,
+ "est_speech_sec": 51.92,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there! How's your day?",
-   "est_sec": 1.65,
-   "gap_before": 0.52,
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.57,
    "role": "greeting",
-   "phrasing": "greet_17"
+   "phrasing": "greet_29"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.32,
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.83,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "phrasing": "greet_ans_04"
   },
   {
    "speaker": "user",
-   "text": "There's a bare patch in my back garden, maybe two meters wide, and it gets shade most of the day.",
-   "est_sec": 6.3,
-   "gap_before": 0.52,
+   "text": "My front door sticks every time it rains. I have to shove it with my shoulder.",
+   "est_sec": 5.06,
+   "gap_before": 0.55,
    "event": "ordinary_request",
-   "block": "gardening.ctx2"
+   "block": "home_repair.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "Shade is tricky but doable. Do you want flowers there, or something low-maintenance like ferns and ground cover?",
-   "est_sec": 5.68,
-   "gap_before": 0.47,
+   "text": "The wood is probably swelling. You could tighten the hinges first or plane down the edge. Where would you like to start?",
+   "est_sec": 6.92,
+   "gap_before": 0.59,
    "role": "reply",
-   "block": "gardening.ctx2"
+   "block": "home_repair.ctx3"
   },
   {
    "speaker": "user",
-   "text": "Hang on, I need five seconds to think. Then ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 1.3,
+   "text": "Hang on a minute, I want to ask Jordan something first. Don't jump in until I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 0.93,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 5,
-   "phrasing": "think_instr_20"
+   "kind": "side_conversation",
+   "phrasing": "side_instr_16"
   },
   {
-   "speaker": "moshi",
-   "text": "Of course.",
-   "est_sec": 0.72,
-   "gap_before": 0.56,
-   "role": "ack",
-   "phrasing": "ack_06"
+   "speaker": "user",
+   "text": "Did you book the cinema for Saturday?",
+   "est_sec": 2.27,
+   "gap_before": 1.03,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weekend_plans.side2"
   },
   {
-   "speaker": "moshi",
-   "text": "So, for that shady patch, flowers or something low-maintenance?",
+   "speaker": "friend",
+   "text": "Not yet. I wasn't sure which film you wanted.",
    "est_sec": 2.89,
+   "gap_before": 1.26,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "I don't mind. Anything but horror.",
+   "est_sec": 1.96,
+   "gap_before": 2.38,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "There's that comedy everyone's talking about.",
+   "est_sec": 1.96,
+   "gap_before": 1.11,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine by me. What time does it start?",
+   "est_sec": 2.58,
+   "gap_before": 1.41,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "There's a seven o'clock and a nine thirty.",
+   "est_sec": 2.58,
+   "gap_before": 1.0,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Seven, so we can eat after.",
+   "est_sec": 1.96,
+   "gap_before": 1.29,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Booking it now.",
+   "est_sec": 1.03,
+   "gap_before": 1.0,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 1.42,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "There you are. Any decision on the sticking door, hinges or planing?",
+   "est_sec": 3.82,
+   "gap_before": 0.55,
    "role": "resume",
-   "block": "gardening.ctx2",
-   "anchor": {
-    "turn": 4,
-    "offset": 5.46
-   }
+   "block": "home_repair.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Hinges first. That sounds a lot less scary.",
+   "est_sec": 2.58,
+   "gap_before": 1.13,
+   "event": "ordinary_request",
+   "block": "home_repair.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good plan. Try swapping one top hinge screw for a longer one, that often pulls the door back into line.",
+   "est_sec": 6.3,
+   "gap_before": 1.12,
+   "role": "followup",
+   "block": "home_repair.ctx3"
   }
  ]
 }

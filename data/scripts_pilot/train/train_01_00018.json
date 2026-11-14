@@ -4,109 +4,109 @@
  "seed": 1,
  "type": "think_time",
  "wait_type": "think_time",
- "topics": [
-  "travel_planning"
+ "conditions": [
+  "self_talk"
  ],
- "wait_sec": 5,
+ "topics": [
+  "public_transport"
+ ],
+ "wait_sec": 20,
  "deadline": {
-  "after_turn": 6,
-  "sec": 5
+  "after_turn": 4,
+  "sec": 20
  },
- "topic": "travel_planning",
+ "topic": "public_transport",
  "voices": {
-  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "user": "0efe38923c0b445ab09382e851ae1e30",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_13",
-  "greet_ans_16",
-  "think_instr_08",
-  "ack_02"
+  "greet_02",
+  "greet_ans_10",
+  "think_instr_01",
+  "ack_09",
+  "self_10"
  ],
  "block_ids": [
-  "travel_planning.ctx3"
+  "public_transport.ctx1"
  ],
- "est_total_sec": 35.91,
- "est_speech_sec": 24.77,
+ "est_total_sec": 47.62,
+ "est_speech_sec": 24.36,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, nice to hear from you. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.79,
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.6,
    "role": "greeting",
-   "phrasing": "greet_13"
+   "phrasing": "greet_02"
   },
   {
    "speaker": "user",
-   "text": "Pretty busy, but good.",
+   "text": "Doing well, thank you.",
    "est_sec": 1.34,
-   "gap_before": 0.76,
+   "gap_before": 0.4,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_16"
+   "phrasing": "greet_ans_10"
   },
   {
    "speaker": "user",
-   "text": "Help me pack for a long weekend in Edinburgh in October.",
-   "est_sec": 3.51,
-   "gap_before": 0.39,
+   "text": "I just started a new job across town. I could take the bus or the train.",
+   "est_sec": 5.06,
+   "gap_before": 0.53,
    "event": "ordinary_request",
-   "block": "travel_planning.ctx3"
+   "block": "public_transport.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "It'll be cool and probably rainy. First, carry-on only, or are you checking a bag?",
-   "est_sec": 4.75,
-   "gap_before": 0.58,
+   "text": "The bus stops closer to your place but takes about fifty minutes. The train is thirty, but it's a ten minute walk. Which matters more to you?",
+   "est_sec": 8.47,
+   "gap_before": 1.2,
    "role": "reply",
-   "block": "travel_planning.ctx3"
+   "block": "public_transport.ctx1"
   },
   {
    "speaker": "user",
-   "text": "Oh, I hadn't thought about that.",
-   "est_sec": 1.96,
-   "gap_before": 0.72,
-   "event": "ordinary_request",
-   "block": "travel_planning.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It changes what you can bring, so it's worth deciding now.",
-   "est_sec": 3.51,
-   "gap_before": 0.79,
-   "role": "reply",
-   "block": "travel_planning.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm not sure. Wait five seconds and ask me again.",
+   "text": "Give me twenty seconds to think, then ask me again.",
    "est_sec": 3.2,
-   "gap_before": 0.55,
+   "gap_before": 1.38,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 5,
-   "phrasing": "think_instr_08"
+   "wait_sec": 20,
+   "phrasing": "think_instr_01"
   },
   {
    "speaker": "moshi",
-   "text": "Okay.",
-   "est_sec": 0.41,
-   "gap_before": 0.32,
+   "text": "Take your time.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
    "role": "ack",
-   "phrasing": "ack_02"
+   "phrasing": "ack_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Mm, I don't know.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 11.86
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_10"
   },
   {
    "speaker": "moshi",
-   "text": "Have you decided on the bag situation for your trip?",
-   "est_sec": 3.2,
+   "text": "Okay, have you decided? Bus or train?",
+   "est_sec": 2.27,
    "role": "resume",
-   "block": "travel_planning.ctx3",
+   "block": "public_transport.ctx1",
    "anchor": {
-    "turn": 6,
-    "offset": 5.47
+    "turn": 4,
+    "offset": 20.02
    }
   }
  ]

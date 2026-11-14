@@ -10,21 +10,31 @@ The model itself must produce the silence. Do not add an external mute rule.
 
 ## Behaviors
 - **Opening greeting (always, train and eval):** Moshi opens every conversation by greeting the user and asking how they are, starting at 0.3-0.8 s, before the user's first words. The user answers, then the conversation continues. Greetings come from a varied list split train/eval like other phrasings. Scoring treats Moshi's speech before the user's first line (`user_start` in the events file) as the greeting (`greeted_at_start`), never as speaking during the instruction or as an interruption.
-- **Trained:**
-  - "Give me N seconds to think, then ask again."
-  - "I'm talking to my friend, stay quiet until I say I'm back."
-- **Held out (eval only, never in training):** "Let me describe all the options before you comment."
+- **Trained (all three listed behaviors):**
+  - Think time: "Give me N seconds to think, then ask again." Moshi asks again at the deadline. Durations: train 5/10/20/45/60 s, eval 15/30 s.
+  - Side conversation: "I'm talking to my friend, stay quiet until I say I'm back." Moshi resumes after the return cue.
+  - Describe options: "Let me describe all the options before you comment." Moshi stays quiet through the pauses between options and comments after "that's all".
+- **Conditions inside trained types (train and eval):**
+  - Think time: in about half, the user is audible during part of the wait (mumbling, thinking aloud, talking to themselves, not addressed to Moshi). In about 15%, the user ends the wait early ("Okay, I've got it") and Moshi responds right away.
+  - Ordinary conversations: about 15% contain "wait"-like phrases that are not wait instructions ("Wait, what did you say?", "Hold on, that's not right"); Moshi answers normally.
+- **Held out (eval only, never in training):**
+  - New wait types: taking a phone call (only the user's side is heard), someone at the door (the visitor is audible), reading something first (silence with occasional murmurs).
+  - Extensions before a deadline ("Give me five more seconds").
+  - Implicit returns without an explicit cue ("Anyway, where were we?").
 
 ## Data
 - Stereo WAVs: **left = Moshi**, **right = user and friend mixed together**. Moshi's channel is silent during waits.
 - Pipeline: an LLM writes the scripts, multi-voice TTS renders them, Moshi always uses one fixed voice, and we add realistic pauses and room noise.
 - Mix in ordinary conversations.
 - **Every training file must be shorter than `duration_sec`.** That way a crop can never start in the middle of a wait without the instruction that started it.
-- Hold out voices, phrasings, and the one wait type above for eval.
+- Hold out for eval: voices (20%), phrasings (every third item of each list), topics (12 of 40), friend names and distractor phrases (a third), and the eval-only wait types and conditions above.
+- Mix: train 20% think time, 20% side conversation, 20% describe options, 40% ordinary. Eval adds phone call, door and reading (10% each) and keeps 30% ordinary.
 - Distractors to include:
-  - questions addressed to the friend
+  - questions addressed to the friend (in at least half of friend-wait scripts)
   - pauses before the user has finished
-  - phrases that resemble the return cue
+  - phrases that resemble the return cue (near-miss cues, in at least a quarter of friend-wait scripts)
+  - the user's own self-talk during think-time waits
+- Generator: `scripts/generate_scripts.py` (pools in `data/pools/`, splits in `data/splits/`); `scripts/check_split_leakage.py` and `scripts/script_stats.py` check the split and the rates.
 
 ## Experiments
 All runs start from the same checkpoint and use the same seed.

@@ -2,99 +2,187 @@
  "id": "eval_01_00007",
  "split": "eval",
  "seed": 1,
- "type": "think_time",
- "wait_type": "think_time",
- "topics": [
-  "learning_language"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "implicit",
+  "near_miss"
  ],
- "wait_sec": 15,
- "deadline": {
-  "after_turn": 4,
-  "sec": 15
- },
- "topic": "learning_language",
+ "topics": [
+  "cycling",
+  "picnic"
+ ],
+ "topic": "cycling",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
-  "friend": null,
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": "732ea755bd9e446eb31dc79966b50428",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Sofia",
+ "friend_name_id": "name_12",
  "phrasing_ids": [
-  "greet_18",
-  "greet_ans_21",
-  "think_instr_15",
-  "ack_06"
+  "greet_12",
+  "greet_ans_30",
+  "side_instr_03",
+  "dn_09",
+  "dq_30",
+  "implicit_13"
  ],
  "block_ids": [
-  "learning_language.ctx1"
+  "cycling.ctx3",
+  "picnic.side2"
  ],
- "est_total_sec": 40.27,
- "est_speech_sec": 21.47,
+ "est_total_sec": 67.59,
+ "est_speech_sec": 50.47,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.33,
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_18",
+   "phrasing": "greet_12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.61,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.33,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
+   "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "I want to start learning a new language this year.",
+   "text": "A few friends invited me on a long weekend ride.",
    "est_sec": 3.2,
-   "gap_before": 0.34,
+   "gap_before": 0.37,
    "event": "ordinary_request",
-   "block": "learning_language.ctx1"
+   "block": "cycling.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "Great goal. Is there a language you need for work or travel, or would you rather pick one just because it sounds fun?",
-   "est_sec": 7.23,
-   "gap_before": 0.97,
+   "text": "Fun! They're doing either the flat forty mile loop or the hilly twenty five mile one. Which do you think your legs can handle?",
+   "est_sec": 7.54,
+   "gap_before": 0.88,
    "role": "reply",
-   "block": "learning_language.ctx1",
+   "block": "cycling.ctx3",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hmm, tough one. Give me fifteen seconds and ask me again.",
-   "est_sec": 3.51,
-   "gap_before": 0.38,
+   "text": "Wait, Sofia needs me for a sec. Please stay quiet until I come back to you.",
+   "est_sec": 5.06,
+   "gap_before": 1.29,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_15"
+   "kind": "side_conversation",
+   "phrasing": "side_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you invite your sister to the picnic?",
+   "est_sec": 2.58,
+   "gap_before": 0.76,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, she's coming with the kids.",
+   "est_sec": 1.96,
+   "gap_before": 1.72,
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, then we need way more food. What do the kids eat?",
+   "est_sec": 3.82,
+   "gap_before": 0.82,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Honestly, anything with peanut butter. And juice boxes.",
+   "est_sec": 2.58,
+   "gap_before": 1.44,
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Easy. I'll pick some up tomorrow.",
+   "est_sec": 1.96,
+   "gap_before": 0.83,
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll be right back, I need my glasses.",
+   "est_sec": 2.58,
+   "gap_before": 1.49,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_09"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.48,
+   "phrasing": "dn_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Sofia, what day is the dentist?",
+   "est_sec": 1.96,
+   "gap_before": 0.84,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_30"
+  },
+  {
+   "speaker": "friend",
+   "text": "Thursday afternoon, I think.",
+   "est_sec": 1.34,
+   "gap_before": 0.39,
+   "phrasing": "dq_30"
+  },
+  {
+   "speaker": "user",
+   "text": "So, anyway, back to it.",
+   "est_sec": 1.65,
+   "gap_before": 0.79,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_13"
   },
   {
    "speaker": "moshi",
-   "text": "Of course.",
-   "est_sec": 0.72,
-   "gap_before": 0.32,
-   "role": "ack",
-   "phrasing": "ack_06",
+   "text": "Hi again. Did you decide which group ride to do?",
+   "est_sec": 3.2,
+   "gap_before": 1.58,
+   "role": "resume",
+   "block": "cycling.ctx3",
    "reference_only": true
   },
   {
+   "speaker": "user",
+   "text": "The flat one. Hills and I are not friends.",
+   "est_sec": 2.89,
+   "gap_before": 0.81,
+   "event": "ordinary_request",
+   "block": "cycling.ctx3"
+  },
+  {
    "speaker": "moshi",
-   "text": "So, have you picked a language? Something useful, or just for fun?",
+   "text": "Fair. Bring two water bottles and a snack for the halfway point.",
    "est_sec": 3.82,
-   "role": "resume",
-   "block": "learning_language.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 15.39
-   },
+   "gap_before": 0.45,
+   "role": "followup",
+   "block": "cycling.ctx3",
    "reference_only": true
   }
  ],

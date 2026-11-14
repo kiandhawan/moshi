@@ -2,149 +2,103 @@
  "id": "train_01_00006",
  "split": "train",
  "seed": 1,
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "hiking",
-  "smartphones"
+  "home_repair"
  ],
- "topic": "hiking",
+ "topic": "home_repair",
  "voices": {
-  "user": "18b1276891524bd786fb8a59ecd3630a",
-  "friend": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Hannah",
- "friend_name_id": "name_14",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_23",
-  "greet_ans_07",
-  "side_instr_04",
-  "ack_16",
-  "side_cue_05"
+  "greet_16",
+  "greet_ans_19",
+  "describe_instr_13",
+  "describe_cue_04"
  ],
  "block_ids": [
-  "hiking.ctx3",
-  "smartphones.side1"
+  "home_repair.opt1"
  ],
- "est_total_sec": 68.91,
- "est_speech_sec": 52.65,
+ "est_total_sec": 55.17,
+ "est_speech_sec": 44.92,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How are you feeling?",
-   "est_sec": 1.65,
-   "gap_before": 0.4,
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.41,
    "role": "greeting",
-   "phrasing": "greet_23"
+   "phrasing": "greet_16"
   },
   {
    "speaker": "user",
-   "text": "Honestly, a little stressed, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.91,
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_07"
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "My friends invited me on a hike but the forecast says rain in the afternoon.",
-   "est_sec": 4.75,
-   "gap_before": 0.4,
-   "event": "ordinary_request",
-   "block": "hiking.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Tricky. You could start very early and be down before the rain, or move the hike to another day. What do you think?",
-   "est_sec": 7.23,
-   "gap_before": 1.19,
-   "role": "reply",
-   "block": "hiking.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Can you hang on? I have to talk to someone here. I'll tell you when I'm back.",
-   "est_sec": 5.37,
-   "gap_before": 0.47,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_04"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, sure.",
-   "est_sec": 0.72,
-   "gap_before": 0.37,
-   "role": "ack",
-   "phrasing": "ack_16"
-  },
-  {
-   "speaker": "user",
-   "text": "Hannah, do you know the wifi password here? My phone keeps dropping off.",
-   "est_sec": 4.13,
-   "gap_before": 0.79,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "It's on the back of the router, I think. The long one with all the letters.",
-   "est_sec": 5.06,
-   "gap_before": 1.88,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Ugh, I typed that in twice already.",
-   "est_sec": 2.27,
-   "gap_before": 1.18,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Did you try forgetting the network and joining again? That fixed mine last week.",
+   "text": "The bathroom faucet keeps dripping and I'm not sure how to deal with it.",
    "est_sec": 4.44,
-   "gap_before": 2.93,
-   "block": "smartphones.side1"
+   "gap_before": 0.27,
+   "block": "home_repair.opt1"
   },
   {
    "speaker": "user",
-   "text": "No, I'll try that now. Hold on.",
-   "est_sec": 2.27,
-   "gap_before": 1.42,
-   "block": "smartphones.side1"
+   "text": "Wait until I've listed everything before you jump in.",
+   "est_sec": 2.89,
+   "gap_before": 0.52,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_13"
   },
   {
    "speaker": "user",
-   "text": "I'm back, sorry for the wait.",
-   "est_sec": 1.96,
+   "text": "The first option is to replace the little washer inside myself, which is cheap but I've never done it.",
+   "est_sec": 5.99,
+   "gap_before": 0.96,
+   "block": "home_repair.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's buying a whole new faucet, which looks nicer but I'd still have to install it.",
+   "est_sec": 5.37,
+   "gap_before": 2.66,
+   "block": "home_repair.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is calling a plumber, who said he can come next week but charges a lot.",
+   "est_sec": 5.99,
    "gap_before": 1.17,
-   "event": "return_cue",
-   "phrasing": "side_cue_05"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Hi again. Any decision on the rainy hike?",
-   "est_sec": 2.58,
-   "gap_before": 0.84,
-   "role": "resume",
-   "block": "hiking.ctx3"
+   "block": "home_repair.opt1"
   },
   {
    "speaker": "user",
-   "text": "Let's go early. Everyone's already free that day.",
-   "est_sec": 2.58,
-   "gap_before": 0.48,
-   "event": "ordinary_request",
-   "block": "hiking.ctx3"
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 1.22,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_04"
   },
   {
    "speaker": "moshi",
-   "text": "Then aim to be on the trail by seven, and still pack a rain jacket just in case.",
-   "est_sec": 5.68,
-   "gap_before": 0.33,
-   "role": "followup",
-   "block": "hiking.ctx3"
+   "text": "Replacing the washer is usually a simple fix, and there are lots of guides for it. A new faucet makes sense if the old one is worn or ugly anyway. The plumber is the safest choice, but paying a lot for a drip feels like overkill.",
+   "est_sec": 14.36,
+   "gap_before": 1.01,
+   "role": "resume",
+   "block": "home_repair.opt1"
   }
  ]
 }

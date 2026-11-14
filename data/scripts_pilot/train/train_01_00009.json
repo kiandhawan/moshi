@@ -4,158 +4,160 @@
  "seed": 1,
  "type": "side_conversation",
  "wait_type": "side_conversation",
+ "conditions": [],
  "topics": [
-  "job_interview",
-  "home_repair"
+  "fitness",
+  "shopping"
  ],
- "topic": "job_interview",
+ "topic": "fitness",
  "voices": {
-  "user": "cc7f8544c64a439080193e9560100c5a",
-  "friend": "be9ce4282d8e414daad6fa1797f1cee8",
+  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "friend": "18b1276891524bd786fb8a59ecd3630a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Grace",
- "friend_name_id": "name_16",
+ "friend_name": "Alex",
+ "friend_name_id": "name_04",
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_29",
-  "side_instr_07",
-  "ack_07",
-  "side_cue_25"
+  "greet_20",
+  "greet_ans_16",
+  "side_instr_17",
+  "ack_14",
+  "side_cue_20"
  ],
  "block_ids": [
-  "job_interview.ctx1",
-  "home_repair.side2"
+  "fitness.ctx1",
+  "shopping.side3"
  ],
- "est_total_sec": 74.83,
- "est_speech_sec": 55.23,
+ "est_total_sec": 70.94,
+ "est_speech_sec": 51.82,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
-   "est_sec": 1.96,
-   "gap_before": 0.73,
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.63,
    "role": "greeting",
-   "phrasing": "greet_11"
+   "phrasing": "greet_20"
   },
   {
    "speaker": "user",
-   "text": "Pretty good so far.",
+   "text": "Pretty busy, but good.",
    "est_sec": 1.34,
-   "gap_before": 0.78,
+   "gap_before": 0.31,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
+   "phrasing": "greet_ans_16"
   },
   {
    "speaker": "user",
-   "text": "I have an interview on Thursday and I'm really nervous.",
-   "est_sec": 3.2,
-   "gap_before": 0.4,
+   "text": "I want to start working out again but I can only manage three short sessions a week.",
+   "est_sec": 5.37,
+   "gap_before": 0.45,
    "event": "ordinary_request",
-   "block": "job_interview.ctx1"
+   "block": "fitness.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "That's normal, we can practice. Do you want to start with tell me about yourself, or with questions about your weaknesses?",
-   "est_sec": 6.61,
-   "gap_before": 1.19,
+   "text": "That's plenty to make progress. Would you rather focus on strength with weights, or on cardio like running and cycling?",
+   "est_sec": 6.3,
+   "gap_before": 0.82,
    "role": "reply",
-   "block": "job_interview.ctx1"
+   "block": "fitness.ctx1"
   },
   {
    "speaker": "user",
-   "text": "Hold that thought, I need to talk to Grace real quick. Stay quiet until I return.",
+   "text": "Sorry, can you wait? My friend is talking to me. Keep quiet until I come back.",
    "est_sec": 5.06,
-   "gap_before": 0.64,
+   "gap_before": 0.57,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_07"
+   "phrasing": "side_instr_17"
   },
   {
    "speaker": "moshi",
-   "text": "Got it.",
+   "text": "No worries.",
    "est_sec": 0.72,
-   "gap_before": 0.61,
+   "gap_before": 0.5,
    "role": "ack",
-   "phrasing": "ack_07"
+   "phrasing": "ack_14"
   },
   {
    "speaker": "user",
-   "text": "Do you know what kind of paint the landlord used in the kitchen?",
+   "text": "Alex, which of these two pans do you think is better?",
+   "est_sec": 3.51,
+   "gap_before": 1.39,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "The heavier one. Thin pans burn everything.",
+   "est_sec": 2.27,
+   "gap_before": 0.6,
+   "block": "shopping.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "It's almost twice the price though.",
+   "est_sec": 1.96,
+   "gap_before": 3.11,
+   "block": "shopping.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "It'll last you ten years. The other one will be scratched by spring.",
    "est_sec": 4.13,
-   "gap_before": 1.04,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_repair.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "No idea. Why, are you touching up the scuffs?",
-   "est_sec": 2.89,
-   "gap_before": 0.53,
-   "block": "home_repair.side2"
+   "gap_before": 3.08,
+   "block": "shopping.side3"
   },
   {
    "speaker": "user",
-   "text": "I want to, but if it's glossy and I use matte, it'll look patchy.",
-   "est_sec": 4.44,
-   "gap_before": 3.25,
-   "block": "home_repair.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Just take a chip off behind the fridge and bring it to the store. They can match it.",
-   "est_sec": 5.68,
-   "gap_before": 1.09,
-   "block": "home_repair.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, that's clever. Can you help me pull the fridge out later?",
-   "est_sec": 3.82,
-   "gap_before": 2.86,
+   "text": "Okay, you've convinced me. Can you hold it while I find a basket?",
+   "est_sec": 4.13,
+   "gap_before": 1.16,
    "event": "distractor",
    "kind": "friend_question",
-   "block": "home_repair.side2"
+   "block": "shopping.side3"
   },
   {
    "speaker": "friend",
-   "text": "Sure, after dinner.",
+   "text": "Sure, go ahead.",
    "est_sec": 1.03,
-   "gap_before": 1.2,
-   "block": "home_repair.side2"
+   "gap_before": 1.11,
+   "block": "shopping.side3"
   },
   {
    "speaker": "user",
-   "text": "Right, I'm back. What was I saying?",
-   "est_sec": 2.27,
-   "gap_before": 1.4,
+   "text": "Done. I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 1.29,
    "event": "return_cue",
-   "phrasing": "side_cue_25"
+   "kind": "explicit",
+   "phrasing": "side_cue_20"
   },
   {
    "speaker": "moshi",
-   "text": "Hi again. Ready to choose, the introduction question or the weakness one?",
-   "est_sec": 3.82,
-   "gap_before": 0.38,
+   "text": "Hi again. You were choosing between weights and cardio for your three sessions.",
+   "est_sec": 4.13,
+   "gap_before": 1.86,
    "role": "resume",
-   "block": "job_interview.ctx1"
+   "block": "fitness.ctx1"
   },
   {
    "speaker": "user",
-   "text": "Weaknesses. That one always trips me up.",
-   "est_sec": 2.27,
-   "gap_before": 1.33,
+   "text": "Strength. I want to feel stronger carrying the groceries.",
+   "est_sec": 2.89,
+   "gap_before": 0.39,
    "event": "ordinary_request",
-   "block": "job_interview.ctx1"
+   "block": "fitness.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "Good choice. Pick a real weakness, then explain what you're doing to improve it. Honesty plus progress works best.",
-   "est_sec": 5.99,
-   "gap_before": 0.67,
+   "text": "Great goal. Start with squats, push-ups and rows, three sets each, and add weight slowly.",
+   "est_sec": 4.75,
+   "gap_before": 0.35,
    "role": "followup",
-   "block": "job_interview.ctx1"
+   "block": "fitness.ctx1"
   }
  ]
 }

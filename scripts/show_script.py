@@ -20,7 +20,8 @@ def main() -> None:
               f"~{s['est_total_sec']:.0f} s total, ~{s['est_speech_sec']:.0f} s speech")
         extra = [f"wait {s['wait_sec']} s" if s.get("wait_sec") else "",
                  f"extension +{s['extension']['extra_sec']} s" if s.get("extension") else "",
-                 f"friend {s['friend_name']}" if s.get("friend_name") else ""]
+                 f"friend {s['friend_name']}" if s.get("friend_name") else "",
+                 f"conditions: {', '.join(s['conditions'])}" if s.get("conditions") else ""]
         print("    " + "  ".join(x for x in extra if x) + f"  voices user={s['voices']['user'][:8]}"
               + (f" friend={s['voices']['friend'][:8]}" if s['voices'].get('friend') else ""))
         ends, cur = [], 0.0

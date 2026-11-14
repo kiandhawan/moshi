@@ -1,7 +1,8 @@
 """Check that no eval-only material appears in train scripts (and vice versa for voices).
 
 Eval-only: eval voices, eval topics (and building blocks from them), held-out phrasings,
-held-out friend names and distractors. Checks IDs recorded in each script and also the
+held-out friend names, distractors, self-talk and wait-like phrases, the eval-only wait types
+(phone_call, door, reading) and conditions (extension, implicit return). Checks IDs recorded in each script and also the
 turn texts (an eval phrasing's text must not occur in any train turn).
 
 Usage: python scripts/check_split_leakage.py --train DIR [--eval DIR]
@@ -14,6 +15,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+EVAL_ONLY_TYPES = {"phone_call", "door", "reading"}
+EVAL_ONLY_CONDITIONS = {"extension", "implicit"}
 
 
 def norm(t: str) -> str:
@@ -33,10 +36,19 @@ def main() -> None:
     train_voices = {v["id"] for v in voices["train"]}
     eval_topics = set(topics["eval"])
     eval_ph = [x for k, v in ph.items() if k != "note" for x in v if x["split"] == "eval"]
-    eval_gen = [x for k in ("friend_names", "distractors") for x in gen[k] if x["split"] == "eval"]
+    eval_gen = [x for k in ("friend_names", "distractors", "self_talk", "wait_like", "phone_calls",
+                            "door_visits", "reading_murmurs") for x in gen[k] if x["split"] == "eval"]
     eval_ids = {x["id"] for x in eval_ph + eval_gen}
     # texts: phrasings with slots removed become regexes; distractor user lines; names
     eval_text = []
+
+    def add_text(iid: str, t: str) -> None:
+        t = norm(t.replace("{friend}", "").replace("{n}", ""))
+        if len(t.split()) <= 3:  # short phrases: whole-turn match only, to avoid false alarms
+            eval_text.append((iid, re.compile(rf"^{re.escape(t)}$")))
+        else:
+            eval_text.append((iid, re.compile(re.escape(t))))
+
     for x in eval_ph:
         parts = [re.escape(norm(s)) for s in re.split(r"\{n\}|\{friend\}", x["text"])]
         eval_text.append((x["id"], re.compile(r"[a-z\- ]+".join(parts))))
@@ -44,8 +56,10 @@ def main() -> None:
         if x["split"] == "eval":
             eval_text.append((x["id"], re.compile(rf"\b{x['text'].lower()}\b")))
     for x in eval_gen:
-        if x.get("user"):
-            eval_text.append((x["id"], re.compile(re.escape(norm(x["user"].replace("{friend}", ""))))))
+        for t in [x.get("user"), x.get("text") if x["id"].startswith(("self", "murmur")) else None] \
+                + x.get("lines", []) + [tn["text"] for tn in x.get("turns", [])]:
+            if t:
+                add_text(x["id"], t)
 
     problems, n = [], 0
     for f in sorted(args.train.glob("*.json")):
@@ -69,8 +83,10 @@ def main() -> None:
                 problems.append(f"{f.name}: held-out item {i}")
         if s.get("friend_name") in {x["text"] for x in gen["friend_names"] if x["split"] == "eval"}:
             problems.append(f"{f.name}: eval friend name {s['friend_name']}")
-        if s["type"] == "describe_options":
-            problems.append(f"{f.name}: describe_options is eval only")
+        if s["type"] in EVAL_ONLY_TYPES:
+            problems.append(f"{f.name}: {s['type']} is an eval-only wait type")
+        for c in set(s.get("conditions", [])) & EVAL_ONLY_CONDITIONS:
+            problems.append(f"{f.name}: condition {c} is eval only")
         for k, t in enumerate(s["turns"]):
             for iid, rx in eval_text:
                 if rx.search(norm(t["text"])):
