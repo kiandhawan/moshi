@@ -19,11 +19,16 @@ Script types (fractions per split; trained wait types = the three behaviours in 
   phone_call (eval)  context -> "I have to take this call" -> the user's side of a call (the
                      caller is not heard) -> "I'm off the phone" -> Moshi welcomes back.
   door (eval)        context -> "someone's at the door" -> user and visitor talk -> back.
-  reading (eval)     context -> "let me read this first" -> silence with murmurs -> "done".
+  reading (eval)     context -> "let me read this email / recipe / text first" -> silence with
+                     murmurs about it -> "done reading".
+Resume replies match the wait type (an opener such as "All done?" or "Okay, you're off the
+phone" + the reference to the open question); no "welcome back" when the user never left.
   ordinary           a user-Moshi dialogue (two if the first is short).
 Conditions (exact fractions of the scripts of a type, at least one if the type occurs):
   think_time: self_talk 50% (the user mumbles or thinks aloud during the wait, not to Moshi),
-              early_end 15% ("Okay, I've got it" before the deadline; Moshi answers at once),
+              early_end 15% ("Okay, I've got it" before the deadline; Moshi answers at once;
+              in 60% of those, early_direct, the user just says they're ready and Moshi asks
+              again within 0.3-1.0 s),
               extension 40% (eval only, "give me five more seconds").
   side_conversation: near_miss 35% (inserted near-miss cue said to the friend),
               extra_question 30% (an extra question to the friend; the side conversations
@@ -69,6 +74,8 @@ ACK_P, ENDING_P = 0.5, 0.7
 # Conditions, as exact fractions of the scripts of the type (at least one if the type occurs)
 SELF_TALK_P = 0.5        # think_time: the user mumbles / thinks aloud during the wait
 EARLY_END_P = 0.15       # think_time: "Okay, I've got it" before the deadline, Moshi replies at once
+EARLY_DIRECT_P = 0.6     # of the early ends: the user just says they're ready and Moshi re-asks
+                         # within 0.3-1.0 s (the rest: the user also gives the answer)
 EXTENSION_P = 0.4        # think_time, eval only: "give me five more seconds"
 NEAR_MISS_P = 0.35       # side_conversation: an inserted near-miss return cue said to the friend
 EXTRA_QUESTION_P = 0.3   # side_conversation: an extra inserted question to the friend
@@ -137,6 +144,7 @@ class Pools:
             if items:
                 self.decks[k] = Deck(items, rng)
         self.wait_like_moshi = gen["wait_like_moshi"]
+        self.resume_openers = gen["resume_openers"]
         v = json.loads((ROOT / "data/splits/voices.json").read_text())
         self.voices, self.moshi_voice = v[split], v["moshi"]
         self.think_seconds = json.loads((ROOT / "data/splits/waits.json").read_text())["think_seconds"][split]
@@ -200,6 +208,17 @@ def num(n: int) -> str:
 
 
 NEAR_MISS_RX = re.compile(r"\b(back|where were we)\b", re.I)
+GREETING_SENTENCE = re.compile(r"^(hi again|oh, hi again|hey again|welcome back|hey, welcome back|there you are|"
+                               r"good to have you back|hey, good to have you back|hey, you're back|good, you're back)"
+                               r"[.!]\s*", re.I)
+
+
+def resume_line(ctx: dict, kind: str, implicit: bool, rng: random.Random, P: "Pools") -> str:
+    """Moshi's resume after a wait, matching the wait type: an opener for the type (no
+    'welcome back' when the user never left) + the context's reference to the open question."""
+    body = GREETING_SENTENCE.sub("", rng.choice(ctx["welcome_back"])).strip()
+    opener = rng.choice(P.resume_openers["implicit" if implicit else kind])
+    return f"{opener} {body[0].upper() + body[1:]}" if body else opener
 
 
 def build(kind: str, split: str, P: Pools, rng: random.Random, cond: set[str]) -> dict:
@@ -327,8 +346,16 @@ def build(kind: str, split: str, P: Pools, rng: random.Random, cond: set[str]) -
                 x = phr("early_end")
                 b.add("user", x["text"], anchor={"turn": instr, "offset": early_at},
                       event="return_cue", kind="early_end", phrasing=x["id"])
-                meta["early_end"] = {"after_sec": early_at}
-                ending(ctx, force=True, moshi_gap_=round(rng.uniform(0.3, 0.8), 2))  # Moshi answers right away
+                direct = "early_direct" in cond
+                meta["early_end"] = {"after_sec": early_at, "direct": direct}
+                if direct:  # "Okay, I'm ready": Moshi asks again within about a second
+                    b.add("moshi", rng.choice(ctx["think_reask"]), round(rng.uniform(0.3, 1.0), 2),
+                          role="resume", block=ctx["id"])
+                    e = rng.choice(ctx["endings"])
+                    b.add("user", e["user"], event="ordinary_request", block=ctx["id"])
+                    b.add("moshi", e["moshi"], role="followup", block=ctx["id"])
+                else:  # the user gives the answer too; Moshi replies right away
+                    ending(ctx, force=True, moshi_gap_=round(rng.uniform(0.3, 0.8), 2))
             else:
                 anchor, wait = instr, n
                 if lead:
@@ -368,7 +395,7 @@ def build(kind: str, split: str, P: Pools, rng: random.Random, cond: set[str]) -
                 b.add(t["speaker"], t["text"], round(rng.uniform(0.6, 1.5), 2) if k == 0 else None,
                       **{x_: t[x_] for x_ in ("event", "kind", "block", "phrasing") if x_ in t})
             cue("side_cue")
-            b.add("moshi", rng.choice(ctx["welcome_back"]), role="resume", block=ctx["id"])
+            b.add("moshi", resume_line(ctx, kind, "implicit" in cond, rng, P), role="resume", block=ctx["id"])
             ending(ctx)
 
         elif kind == "phone_call":  # eval only: one side of a call; the caller is not heard
@@ -385,7 +412,7 @@ def build(kind: str, split: str, P: Pools, rng: random.Random, cond: set[str]) -
                     ev = {"event": "distractor", "kind": "question_to_other"}
                 b.add("user", line, gp, phrasing=call["id"], **ev)
             cue("phone_cue")
-            b.add("moshi", rng.choice(ctx["welcome_back"]), role="resume", block=ctx["id"])
+            b.add("moshi", resume_line(ctx, kind, "implicit" in cond, rng, P), role="resume", block=ctx["id"])
             ending(ctx)
 
         elif kind == "door":  # eval only: the user answers the door; the visitor is audible
@@ -404,33 +431,36 @@ def build(kind: str, split: str, P: Pools, rng: random.Random, cond: set[str]) -
             b.turns[-1]["after_gap_hint"] = "walking back"
             cue("door_cue")
             b.turns[-1]["gap_before"] = round(rng.uniform(2.0, 4.0), 2)
-            b.add("moshi", rng.choice(ctx["welcome_back"]), role="resume", block=ctx["id"])
+            b.add("moshi", resume_line(ctx, kind, "implicit" in cond, rng, P), role="resume", block=ctx["id"])
             ending(ctx)
 
-        elif kind == "reading":  # eval only: the user reads silently, with occasional murmurs
+        elif kind == "reading":  # eval only: the user reads (an email, recipe, text...) silently
             x = phr("reading_instruction")
+            material = x["material"]
             instr = b.add("user", x["text"], event="instruction", kind="reading", phrasing=x["id"])
             ack()
             read_sec = round(rng.uniform(8.0, 25.0), 1)
+            meta["reading"] = {"material": material, "sec": read_sec}
             t0 = 3.0
             for _ in range(rng.choice([0, 1, 2])):
-                m = phr("reading_murmurs")
-                if t0 + est_sec(m["text"]) > read_sec - 1.0:
+                m = P.draw("reading_murmurs", avoid=lambda y: y["material"] not in (material, "any"))
+                if m["material"] not in (material, "any") or t0 + est_sec(m["text"]) > read_sec - 1.0:
                     break
                 off = round(rng.uniform(t0, read_sec - 1.0 - est_sec(m["text"])), 2)
+                b.phrasing_ids.append(m["id"])
                 b.add("user", m["text"], anchor={"turn": instr, "offset": off},
                       event="distractor", kind="self_talk", phrasing=m["id"])
                 t0 = off + est_sec(m["text"]) + 1.5
-            meta["reading_sec"] = read_sec
             if "implicit" in cond:
                 y = phr("implicit_return")
-                b.add("user", y["text"], anchor={"turn": instr, "offset": read_sec},
-                      event="return_cue", kind="implicit", phrasing=y["id"])
+                kind_ = "implicit"
             else:
-                y = phr("reading_cue")
-                b.add("user", y["text"], anchor={"turn": instr, "offset": read_sec},
-                      event="return_cue", kind="explicit", phrasing=y["id"])
-            b.add("moshi", rng.choice(ctx["welcome_back"]), role="resume", block=ctx["id"])
+                y = P.draw("reading_cue", avoid=lambda z: z["material"] not in (material, "any"))
+                b.phrasing_ids.append(y["id"])
+                kind_ = "explicit"
+            b.add("user", y["text"], anchor={"turn": instr, "offset": read_sec},
+                  event="return_cue", kind=kind_, phrasing=y["id"])
+            b.add("moshi", resume_line(ctx, kind, "implicit" in cond, rng, P), role="resume", block=ctx["id"])
             ending(ctx)
 
         # Fit the length by dropping the optional ending; if still too long (or too short),
@@ -499,7 +529,8 @@ def assign_conditions(kinds: list[str], split: str, rng: random.Random) -> list[
     else:
         think_rest = think
     if think_rest:  # 15% of all think-time scripts, among those without an extension
-        pick(think_rest, EARLY_END_P, "early_end", of=len(think))
+        early = pick(think_rest, EARLY_END_P, "early_end", of=len(think))
+        pick(early, EARLY_DIRECT_P, "early_direct")
     pick(think, SELF_TALK_P, "self_talk")
     side = [i for i, k in enumerate(kinds) if k == "side_conversation"]
     pick(side, NEAR_MISS_P, "near_miss")

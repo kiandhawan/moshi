@@ -1182,63 +1182,122 @@
   {
    "id": "murmur_01",
    "split": "eval",
-   "text": "Hmm, okay."
+   "material": "email",
+   "text": "Please confirm by Friday, okay."
   },
   {
    "id": "murmur_02",
    "split": "eval",
-   "text": "Please confirm by Friday, okay."
+   "material": "email",
+   "text": "Hmm, the meeting moved to Thursday."
   },
   {
    "id": "murmur_03",
    "split": "eval",
-   "text": "Wait, what does that mean?"
+   "material": "email",
+   "text": "Wait, which attachment?"
   },
   {
    "id": "murmur_04",
    "split": "eval",
-   "text": "Mm-hm."
+   "material": "recipe",
+   "text": "Two cups of flour, right."
   },
   {
    "id": "murmur_05",
    "split": "eval",
-   "text": "Huh."
+   "material": "recipe",
+   "text": "Bake for twenty minutes, okay."
   },
   {
    "id": "murmur_06",
    "split": "eval",
-   "text": "Step two, attach the base."
+   "material": "recipe",
+   "text": "Hmm, a pinch of salt."
   },
   {
    "id": "murmur_07",
    "split": "eval",
-   "text": "Okay, so that's the deadline."
+   "material": "text message",
+   "text": "Huh, she's running late."
   },
   {
    "id": "murmur_08",
    "split": "eval",
-   "text": "Interesting."
+   "material": "text message",
+   "text": "Wait, what does that mean?"
   },
   {
    "id": "murmur_09",
    "split": "eval",
-   "text": "Two cups of flour, right."
+   "material": "text message",
+   "text": "Ha, okay."
   },
   {
    "id": "murmur_10",
    "split": "eval",
-   "text": "Hmm, really?"
+   "material": "letter",
+   "text": "Dear resident, okay."
   },
   {
    "id": "murmur_11",
    "split": "eval",
-   "text": "Okay, that makes sense."
+   "material": "letter",
+   "text": "Hmm, by the end of the month."
   },
   {
    "id": "murmur_12",
    "split": "eval",
+   "material": "article",
    "text": "Huh, didn't see that coming."
+  },
+  {
+   "id": "murmur_13",
+   "split": "eval",
+   "material": "article",
+   "text": "Hmm, really?"
+  },
+  {
+   "id": "murmur_14",
+   "split": "eval",
+   "material": "any",
+   "text": "Mm-hm."
+  },
+  {
+   "id": "murmur_15",
+   "split": "eval",
+   "material": "any",
+   "text": "Mm, okay, I see."
   }
  ],
- "wait_like_note": "repeat: Moshi says the lead-in and then repeats its previous turn. check: Moshi answers with the line alone."
+ "wait_like_note": "repeat: Moshi says the lead-in and then repeats its previous turn. check: Moshi answers with the line alone.",
+ "resume_openers": {
+  "side_conversation": [
+   "Okay.",
+   "Alright.",
+   "No problem.",
+   "Sure thing."
+  ],
+  "phone_call": [
+   "Welcome back.",
+   "Okay, you're off the phone.",
+   "Hope the call went okay."
+  ],
+  "door": [
+   "Welcome back.",
+   "Everything okay at the door?",
+   "Hope that was nothing urgent."
+  ],
+  "reading": [
+   "All done?",
+   "Finished reading?",
+   "Okay, all read?"
+  ],
+  "implicit": [
+   "Right.",
+   "Sure.",
+   "Of course."
+  ]
+ },
+ "resume_openers_note": "Moshi's resume = an opener for the wait type + the context's welcome_back line without its greeting sentence (e.g. 'Welcome back.'), so there is no 'welcome back' when the user never left."
 }

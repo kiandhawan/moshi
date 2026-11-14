@@ -41,7 +41,7 @@ MOSHI_LINES = {
     "talktoroommate": [
         {"kind": "greeting", "start": 0.4, "text": "Hey, how are you doing?"},
         {"kind": "ack", "start": 5.35, "text": "Sure, go ahead."},
-        {"kind": "resume", "start": 13.4, "text": "Welcome back! What would you like to talk about?"},
+        {"kind": "resume", "start": 13.4, "text": "Okay, what would you like to talk about?"},
     ],
     "regularconvo": [
         {"kind": "greeting", "start": 0.6, "text": "Hey, how's it going?"},

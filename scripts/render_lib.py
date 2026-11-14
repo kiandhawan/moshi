@@ -17,7 +17,8 @@ right channel of stereo files.
 Conversation spec (a dict):
   id, group
   user_audio   optional path to a recorded user side (mono, or right channel of stereo)
-  user_lines   [{text, voice, start}]  TTS lines for the user/friend side
+  user_lines   [{text, voice, start, speaker}]  TTS lines for the right channel; speaker is
+               user (default), friend or visitor, which sets the loudness (LEVEL_DBFS)
   moshi_lines  [{text, start, kind}]   kind: greeting | ack | resume | ordinary
   events       the standard events fields; "id" and "group" are filled in, and
                "user_start" (the user's first words) from user_lines if not given
@@ -45,6 +46,10 @@ CACHE = Path("data/tts_cache")
 MAIN = "SPEAKER_MAIN"
 TAIL_SEC = 1.5          # digital silence after the last speech on either channel
 GREETING_MIN_START = 0.3  # the opening greeting never starts earlier (CLAUDE.md)
+# Speech loudness per speaker (RMS over active speech, dBFS). Moshi matches real Moshi output
+# (median -23.3 dBFS over eval_outputs/base_human, scripts/loudness.py); the friend and the
+# visitor at the door are 4 dB below the user. Recorded user audio is never rescaled.
+LEVEL_DBFS = {"moshi": -23.0, "user": -21.0, "friend": -25.0, "visitor": -25.0}
 MAX_SEC = 100.0         # must stay below training duration_sec (see CLAUDE.md)
 
 
@@ -158,6 +163,25 @@ def clamp_words(words, dur: float) -> list[tuple[str, float, float]]:
     return [(w, round(min(s, dur - 0.01), 3), round(min(e, dur), 3)) for w, s, e in words]
 
 
+def speech_rms_db(x: np.ndarray, floor_db: float = -30.0) -> float:
+    """RMS (dBFS) over active speech: 20 ms frames within floor_db of the loudest frame, so
+    pauses inside a line don't lower the measurement."""
+    hop = SR // 50
+    n = len(x) // hop
+    if n == 0:
+        return -120.0
+    fr = (x[: n * hop].reshape(n, hop).astype(np.float64) ** 2).mean(1)
+    active = fr[fr >= fr.max() * 10 ** (floor_db / 10)]
+    return float(10 * np.log10(max(active.mean(), 1e-12)))
+
+
+def normalize(x: np.ndarray, target_db: float) -> np.ndarray:
+    """Scale a clip so its speech RMS is target_db; if that would clip, keep the peak at 0.99."""
+    y = x * (10 ** ((target_db - speech_rms_db(x)) / 20))
+    peak = np.abs(y).max() if len(y) else 0.0
+    return (y * (0.99 / peak) if peak > 0.99 else y).astype(np.float32)
+
+
 def _place(track: np.ndarray, x: np.ndarray, start: float) -> np.ndarray:
     a = int(round(start * SR))
     if a + len(x) > len(track):
@@ -176,6 +200,7 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
         speech_ends.append(last_speech_end(right))
     for ln in spec.get("user_lines", []):
         x, _ = synth(client, ln["text"], ln["voice"])
+        x = normalize(x, LEVEL_DBFS[ln.get("speaker", "user")])
         right = _place(right, x, ln["start"])
         speech_ends.append(ln["start"] + len(x) / SR)  # clips are trimmed to their speech
 
@@ -184,6 +209,7 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
     alignments, turns = [], []
     for ln in sorted(spec["moshi_lines"], key=lambda l: l["start"]):
         x, words = synth(client, ln["text"], voice)
+        x = normalize(x, LEVEL_DBFS["moshi"])
         start, end = ln["start"], ln["start"] + len(x) / SR
         if turns and start < turns[-1]["end"]:
             raise ValueError(f"{spec['id']}: Moshi line at {start}s overlaps the previous one")

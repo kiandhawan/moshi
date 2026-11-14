@@ -16,452 +16,462 @@ script's conditions.
 ## train_01_00000
 
 ```
-=== train_01_00000  [think_time]  topic books  ~58 s total, ~26 s speech
-    wait 45 s  conditions: early_end, self_talk  voices user=c309730c
-    0.4s MOSHI  Hi, how have you been?   <greeting>
-    2.8s USER   Really good, actually.   <greeting_answer>
-    4.2s USER   It's my turn to pick the book for our book club.   <ordinary_request>
-    8.8s MOSHI  Nice. What does the group usually enjoy, and would you rather pick
-                something safe or something that sparks a big debate?   <reply>
-   16.5s USER   Wait forty-five seconds, then ask me that again.   <instruction:think_time>
-           ... 16.1 s silence ...
-   35.2s USER   Wait, no, the other one.   <distractor:self_talk>
-           ... 10.3 s silence ...
-   47.1s USER   Okay, never mind, I figured it out.   <return_cue:early_end>
-   49.9s USER   Let's stir things up. They're getting too comfortable.   <ordinary_request>
-   52.8s MOSHI  Love it. A novel with a morally gray narrator always gets people
-                talking.   <followup>
+=== train_01_00000  [think_time]  topic cars  ~47 s total, ~34 s speech
+    wait 10 s  conditions: early_direct, early_end, self_talk  voices user=b47bb94b
+    0.6s MOSHI  Hi, how have you been?   <greeting>
+    2.8s USER   Not too bad.   <greeting_answer>
+    4.1s USER   My car is twelve years old and the repairs keep piling up.   <ordinary_request>
+    9.1s MOSHI  That gets expensive. Are you leaning towards fixing it one more time,
+                or starting to look for a replacement?   <reply>
+   16.5s USER   Hmm, wait ten seconds and then ask me again, okay?   <instruction:think_time>
+   20.3s MOSHI  Okay.   <ack>
+   23.7s USER   Oh, but then again   <distractor:self_talk>
+   26.1s USER   Okay, I think I know.   <return_cue:early_end>
+   28.5s MOSHI  So, what's the verdict? Fix the old car once more, or start looking
+                for a new one?   <resume>
+   34.6s USER   I'll fix it one last time. I can't afford a new one until spring.   <ordinary_request>
+   40.0s MOSHI  Sensible. Ask the mechanic what else is likely to go soon, so there
+                are no surprises.   <followup>
 ```
 
 ## train_01_00001
 
 ```
-=== train_01_00001  [ordinary]  topic board_games  ~43 s total, ~33 s speech
-      voices user=cbc3add1
-    0.8s MOSHI  Hello there! How's your day treating you?   <greeting>
-    3.4s USER   I'm alright, a bit tired.   <greeting_answer>
-    5.6s USER   Can you recommend a good board game for just two players?   <ordinary_request>
-    9.8s MOSHI  Jaipur is a great one. It's a quick trading game, about twenty
-                minutes, and easy to learn.   <reply>
-   16.1s USER   We like something   <distractor:pause>
-   19.3s USER   a bit more strategic, actually.   <ordinary_request>
-   21.3s MOSHI  Then try Seven Wonders Duel. It's still under an hour, but there's
-                lots to plan.   <reply>
-   26.7s USER   Is that one hard to learn?   <ordinary_request>
-   29.7s MOSHI  The first game takes a bit of rule checking, but after that it flows
-                nicely. Most couples play it again right away.   <reply>
-   37.1s USER   Sounds perfect. We'll get that one.   <ordinary_request>
-   39.5s MOSHI  Enjoy! Fair warning, it gets pretty competitive.   <reply>
+=== train_01_00001  [ordinary]  topic birthday_party  ~52 s total, ~39 s speech
+      voices user=cc7f8544
+    0.7s MOSHI  Hello! How's everything today?   <greeting>
+    2.7s USER   Really good, actually.   <greeting_answer>
+    4.1s USER   How far in advance should I send invitations for a birthday party?   <ordinary_request>
+    8.7s MOSHI  About three to four weeks ahead is ideal. For a kids' party, two to
+                three weeks is usually fine.   <reply>
+   15.2s USER   And when should people reply by?   <ordinary_request>
+   17.6s MOSHI  Ask for replies about a week before. That gives you time to order food
+                and plan seating.   <reply>
+   24.4s USER   What if half of them never answer? That always happens   <distractor:pause>
+   29.6s USER   every single year.   <ordinary_request>
+   31.3s MOSHI  Send a friendly reminder a couple of days after the deadline. Then
+                plan for most of the quiet ones not coming.   <reply>
+   41.2s USER   Good point. Paper invites or just a group message?   <ordinary_request>
+   45.2s MOSHI  A group message is quicker and easier to track. Paper is lovely for a
+                milestone birthday, though.   <reply>
 ```
 
 ## train_01_00002
 
 ```
-=== train_01_00002  [side_conversation]  topic coffee, video_games  ~82 s total, ~59 s speech
-    friend Ben  conditions: near_miss  voices user=6d7a4582 friend=a52fdd0e
-    0.4s MOSHI  Hi! How's life treating you?   <greeting>
-    2.4s USER   Pretty good, thanks for asking.   <greeting_answer>
-    4.3s USER   I want to stop buying coffee every morning and make it at home
-                instead.   <ordinary_request>
-   10.2s MOSHI  Good plan, you'll save a lot. Do you want something simple like a
-                French press, or are you ready to invest in an espresso machine?   <reply>
-   19.1s USER   Can you hang on? I have to talk to someone here. I'll tell you when
-                I'm back.   <instruction:side_conversation>
-   26.0s USER   Ben, do you want to do the raid tonight?   <distractor:friend_question>
-   29.9s FRIEND What time? I've got work early tomorrow.
-   32.8s USER   Like eight? It should only take a couple of hours.
-   38.1s FRIEND Last time you said that we finished at one in the morning.
-   43.3s USER   That was because the tank kept disconnecting. We've got a new one now.
-   48.8s FRIEND Fine. Eight, and I'm out by ten whatever happens.
-   55.1s USER   Deal. I'll send everyone a message.
-   57.5s USER   Okay, all done here, back to the game.   <distractor:near_miss>
-   62.7s FRIEND Finally!
-   64.8s USER   Alright, back to you.   <return_cue:explicit>
-   67.2s MOSHI  Hi again. Decided between the French press and the espresso machine?   <resume>
-   71.4s USER   French press. I just want something that works at six in the morning.   <ordinary_request>
-   76.2s MOSHI  Great choice. Use coarse ground coffee and let it steep for about four
-                minutes.   <followup>
+=== train_01_00002  [side_conversation]  topic cooking, video_games  ~57 s total, ~43 s speech
+    friend Sam  voices user=70569022 friend=fa4c9eb3
+    0.5s MOSHI  Hey there! How's your day?   <greeting>
+    2.6s USER   Doing well, thank you.   <greeting_answer>
+    4.2s USER   My in-laws are coming Sunday and I want to make something impressive
+                but not stressful.   <ordinary_request>
+    9.3s MOSHI  A slow roast is hard to mess up. Would you rather do a roast chicken,
+                a lamb shoulder, or a vegetarian lasagna?   <reply>
+   16.8s USER   Hang tight, my dad is calling me over. Don't talk until I say I'm
+                back.   <instruction:side_conversation>
+   22.0s MOSHI  Okay, no rush.   <ack>
+   23.9s USER   Sam, are you still playing that farming game?   <distractor:friend_question>
+   27.9s FRIEND Every night. I'm in my third year now.
+   32.8s USER   Is it worth getting? It looks kind of slow.
+   36.5s FRIEND It is slow. That's the point. It's relaxing.
+   40.8s USER   Can we play it together or is it single player?   <distractor:friend_question>
+   44.7s FRIEND You can do co-op. Get it and I'll show you around my farm.
+   49.7s USER   Okay, I'm back.   <return_cue:explicit>
+   51.7s MOSHI  Okay. You were choosing a main for Sunday, chicken, lamb or lasagna?   <resume>
 ```
 
 ## train_01_00003
 
 ```
-=== train_01_00003  [describe_options]  topic public_transport  ~51 s total, ~40 s speech
-      voices user=c70cfb98
-    0.6s MOSHI  Hey, how are you doing?   <greeting>
-    3.0s USER   Honestly, a little stressed, but okay.   <greeting_answer>
-    5.3s USER   I'm trying to figure out which transit pass to buy for the month.
-   10.1s USER   Hold your thoughts until I've described all the options.   <instruction:describe_options>
-   14.4s USER   One option is a monthly unlimited pass, which pays off if I ride more
-                than about twice a day.   <distractor:pause>
-   22.7s USER   Another is a pay as you go card, which is cheaper if I only ride a few
-                times a week.
-   30.2s USER   Or there's a weekly pass, which I could buy only for the weeks I'm
-                busy.
-   36.3s USER   That's everything. Which one would you pick?   <return_cue:explicit>
-   39.1s MOSHI  How many days a week do you usually ride? If it's four or five, get
-                the monthly pass. If it's only one or two, pay as you go is the way to
-                go.   <resume>
+=== train_01_00003  [describe_options]  topic board_games  ~60 s total, ~47 s speech
+      voices user=4210f976
+    0.7s MOSHI  Hi! How's life treating you?   <greeting>
+    3.2s USER   A bit tired today, but okay.   <greeting_answer>
+    5.6s USER   We're having game night on Friday, and I need to pick what to buy.
+   10.6s USER   Please wait until I've gone through all the options.   <instruction:describe_options>
+   14.3s USER   The first one is a big strategy game about building cities, about two
+                hours to play.   <distractor:pause>
+   22.0s USER   Then there's a quick party game with drawing and guessing that works
+                for up to ten people.   <distractor:pause>
+   29.7s USER   Option three is a cooperative game where everyone works together to
+                stop a spreading disease.
+   35.6s USER   And the last one is a word game with cards that's short and pretty
+                easy to learn.
+   42.1s USER   Okay, that's all of them. What do you think?   <return_cue:explicit>
+   46.2s MOSHI  If lots of people are coming, the drawing party game is the safest
+                choice, it's easy and loud and fun. The strategy game is great for a
+                small, serious group. The cooperative game is nice if some people
+                don't enjoy competing.   <resume>
 ```
 
 ## train_01_00004
 
 ```
-=== train_01_00004  [describe_options]  topic gardening  ~53 s total, ~42 s speech
+=== train_01_00004  [describe_options]  topic books  ~51 s total, ~41 s speech
       voices user=be9ce428
-    0.5s MOSHI  Hey! How are you feeling?   <greeting>
-    3.1s USER   Pretty relaxed today.   <greeting_answer>
-    4.6s USER   I've got one empty bed in the backyard and I can't decide what to
-                plant.
-   10.2s USER   Listen to all of them first, then comment.   <instruction:describe_options>
-   13.8s USER   The first idea is tomatoes and peppers, which need a lot of sun and
-                regular watering.
-   20.1s USER   Then there's a herb garden with basil, mint and rosemary, small and
-                easy to keep up.   <distractor:pause>
-   27.6s USER   And the last one is wildflowers for the bees, basically no work once
-                they're in the ground.
-   34.2s USER   That's all I've got. Which would you choose?   <return_cue:explicit>
-   38.0s MOSHI  How much time do you want to spend out there each week? If you love
-                being in the garden, go for the tomatoes. If not, herbs give you
-                something useful without much work, just keep the mint in a pot or
-                it'll take over.   <resume>
+    0.6s MOSHI  Hey, good to have you here. How are you?   <greeting>
+    4.4s USER   I'm alright, a bit tired.   <greeting_answer>
+    6.5s USER   I'm going on vacation and I want to bring one book, but I can't decide
+                which.
+   12.0s USER   Let me describe everything first, and then I'll ask for your thoughts.   <instruction:describe_options>
+   16.1s MOSHI  No worries.   <ack>
+   17.8s USER   One is a light romance set on an island, perfect for lying by the
+                pool.   <distractor:pause>
+   24.4s USER   Another is a thick science fiction novel my brother keeps telling me
+                to read.
+   30.3s USER   Or I could finally read that classic novel I've been pretending I read
+                in school.
+   35.7s USER   That's it. Now you can comment.   <return_cue:explicit>
+   38.8s MOSHI  The island romance fits the vacation mood perfectly, easy and
+                relaxing. The science fiction one might be great if you'll have long
+                flights or quiet evenings. The classic could feel like homework on a
+                beach.   <resume>
 ```
 
 ## train_01_00005
 
 ```
-=== train_01_00005  [ordinary]  topic baking  ~47 s total, ~34 s speech
-      voices user=879653fd
-    0.4s MOSHI  Hey, nice to hear from you. How are you?   <greeting>
-    3.6s USER   Not too bad.   <greeting_answer>
-    5.1s USER   I don't have buttermilk and the recipe needs it. Any way around that?   <ordinary_request>
-   11.0s MOSHI  Easy fix. Stir a tablespoon of lemon juice or vinegar into a cup of
-                regular milk and let it sit five minutes.   <reply>
-   19.4s USER   It'll curdle, right? Is that okay?   <ordinary_request>
-   22.5s MOSHI  That's exactly what you want. It thickens and gets tangy like
-                buttermilk.   <reply>
-   27.4s USER   Great. Oh, and I'm also   <distractor:pause>
-   31.2s USER   out of eggs. Is that a disaster?   <ordinary_request>
-   34.6s MOSHI  Not for most cakes. A quarter cup of plain yogurt or mashed banana can
-                replace one egg.   <reply>
-   40.6s USER   I have yogurt. Okay, I'm saved.   <ordinary_request>
-   43.5s MOSHI  Nice save. Enjoy your baking.   <reply>
+=== train_01_00005  [ordinary]  topic public_transport  ~56 s total, ~42 s speech
+      voices user=c309730c
+    0.7s MOSHI  Hey, how are you doing?   <greeting>
+    3.0s USER   I'm well, thanks.   <greeting_answer>
+    4.2s USER   I'm visiting a big city next week and I've never used a subway before.
+                Any tips?   <ordinary_request>
+   10.2s MOSHI  Download the city's transit app before you go. It shows routes, live
+                times and which exit to use.   <reply>
+   17.1s USER   How do I know   <distractor:pause>
+   20.2s USER   which direction to go?   <ordinary_request>
+   22.9s MOSHI  Platforms are usually labeled by the last station on the line. Find
+                your stop on the map, then follow signs for the end station in that
+                direction.   <reply>
+   32.6s USER   That makes sense. What about rush hour?   <ordinary_request>
+   36.6s MOSHI  Try to avoid roughly seven to nine in the morning and five to seven in
+                the evening. If you can't, stand to the side and let people off first.   <reply>
+   47.1s USER   Okay, thanks. I feel less nervous now.   <ordinary_request>
+   50.6s MOSHI  You'll do great. Most people figure it out after one or two rides.   <reply>
 ```
 
 ## train_01_00006
 
 ```
-=== train_01_00006  [describe_options]  topic home_repair  ~55 s total, ~45 s speech
-      voices user=e58a6b7e
-    0.4s MOSHI  Hi, how are you holding up?   <greeting>
-    2.9s USER   Good, thanks. Just got home.   <greeting_answer>
-    4.8s USER   The bathroom faucet keeps dripping and I'm not sure how to deal with
-                it.
-    9.8s USER   Wait until I've listed everything before you jump in.   <instruction:describe_options>
-   13.6s USER   The first option is to replace the little washer inside myself, which
-                is cheap but I've never done it.   <distractor:pause>
-   22.3s USER   Then there's buying a whole new faucet, which looks nicer but I'd
-                still have to install it.
-   28.8s USER   And the last one is calling a plumber, who said he can come next week
-                but charges a lot.
-   36.0s USER   Okay, I'm done. What do you think?   <return_cue:explicit>
-   39.3s MOSHI  Replacing the washer is usually a simple fix, and there are lots of
-                guides for it. A new faucet makes sense if the old one is worn or ugly
-                anyway. The plumber is the safest choice, but paying a lot for a drip
-                feels like overkill.   <resume>
+=== train_01_00006  [describe_options]  topic sleep  ~62 s total, ~49 s speech
+      voices user=ec3f1730
+    0.4s MOSHI  Hey, nice to hear from you. How are you?   <greeting>
+    3.8s USER   Hanging in there.   <greeting_answer>
+    5.2s USER   I've been sleeping badly, and I want to try something new. Can you
+                help me pick?
+   10.7s USER   Hear me out on all the options before you comment.   <instruction:describe_options>
+   14.1s MOSHI  Alright.   <ack>
+   15.8s USER   The first idea is going to bed at exactly the same time every night,
+                even on weekends.   <distractor:pause>
+   22.9s USER   Then there's no screens for an hour before bed and reading a paper
+                book instead.   <distractor:pause>
+   30.3s USER   Option three is buying a white noise machine because my street is
+                pretty loud at night.   <distractor:pause>
+   37.7s USER   And the last one is cutting out coffee after lunch, which would be
+                really hard for me.
+   43.7s USER   And that's the last one. What do you think?   <return_cue:explicit>
+   47.6s MOSHI  Since your street is loud, the white noise machine might give you the
+                quickest improvement. A steady bedtime is one of the most reliable
+                habits for better sleep in general. Cutting afternoon coffee is tough,
+                but it can make a real difference.   <resume>
 ```
 
 ## train_01_00007
 
 ```
-=== train_01_00007  [side_conversation]  topic home_repair, weekend_plans  ~72 s total, ~52 s speech
-    friend Jordan  voices user=cfc0d21e friend=2680da81
-    0.6s MOSHI  Hi, how are you doing right now?   <greeting>
-    3.7s USER   Pretty well, actually.   <greeting_answer>
-    5.2s USER   My front door sticks every time it rains. I have to shove it with my
-                shoulder.   <ordinary_request>
-   10.9s MOSHI  The wood is probably swelling. You could tighten the hinges first or
-                plane down the edge. Where would you like to start?   <reply>
-   18.8s USER   Hang on a minute, I want to ask Jordan something first. Don't jump in
+=== train_01_00007  [side_conversation]  topic video_games, coffee  ~68 s total, ~51 s speech
+    friend Lucas  voices user=be9ce428 friend=c70cfb98
+    0.4s MOSHI  Hi, how are you holding up?   <greeting>
+    2.7s USER   Good, good. Thanks.   <greeting_answer>
+    4.1s USER   My daughter wants a games console for her birthday.   <ordinary_request>
+    8.1s MOSHI  Lovely. Does she mostly want to play on the TV with the family, or
+                carry it around and play on her own?   <reply>
+   16.2s USER   Wait for me, I need to talk to Lucas about something. Don't say a word
                 until I'm back.   <instruction:side_conversation>
-   25.2s USER   Did you book the cinema for Saturday?   <distractor:friend_question>
-   28.7s FRIEND Not yet. I wasn't sure which film you wanted.
-   34.0s USER   I don't mind. Anything but horror.
-   37.0s FRIEND There's that comedy everyone's talking about.
-   40.4s USER   Fine by me. What time does it start?   <distractor:friend_question>
-   44.0s FRIEND There's a seven o'clock and a nine thirty.
-   47.8s USER   Seven, so we can eat after.
-   50.8s FRIEND Booking it now.
-   53.2s USER   Alright, I'm back now.   <return_cue:explicit>
-   55.1s MOSHI  There you are. Any decision on the sticking door, hinges or planing?   <resume>
-   60.1s USER   Hinges first. That sounds a lot less scary.   <ordinary_request>
-   63.8s MOSHI  Good plan. Try swapping one top hinge screw for a longer one, that
-                often pulls the door back into line.   <followup>
+   23.1s USER   Lucas, what's that thing you ordered last time? The cold one?   <distractor:friend_question>
+   27.8s FRIEND Cold brew with oat milk. It's really smooth.
+   33.1s USER   Is it strong? I don't want to be awake all night.
+   37.0s FRIEND Pretty strong. Maybe get a small one.
+   40.2s USER   Or I'll just have a tea and steal a sip of yours.
+   44.7s FRIEND One sip. I know what you're like.
+   48.6s USER   I'm here again, let's continue.   <return_cue:explicit>
+   51.5s MOSHI  Sure thing. Have you thought about whether she'd want it for the TV or
+                on the go?   <resume>
+   59.0s USER   The TV. Honestly I want to play with her too.   <ordinary_request>
+   62.6s MOSHI  That's sweet. Pick one with good local multiplayer and grab a second
+                controller.   <followup>
 ```
 
 ## train_01_00008
 
 ```
-=== train_01_00008  [ordinary]  topic pets  ~54 s total, ~41 s speech
-      voices user=18b12768
-    0.8s MOSHI  Hi, how are things with you?   <greeting>
-    3.5s USER   Kind of tired, honestly.   <greeting_answer>
-    5.2s USER   Can dogs eat grapes? Mine just grabbed one off the floor.   <ordinary_request>
-    9.5s MOSHI  Grapes can be toxic to dogs, even in small amounts. Please call your
-                vet or a pet poison line right away.   <reply>
-   16.6s USER   It was just one grape. He's a big dog.   <ordinary_request>
-   20.6s MOSHI  Even so, it's best to call. The reaction varies a lot between dogs,
-                and they can tell you what to watch for.   <reply>
-   28.9s USER   Okay, I'll call them now. What else should I keep away from him?   <ordinary_request>
-   33.7s MOSHI  Chocolate, raisins, onions, garlic and anything with xylitol, which is
-                a sweetener in some gum and peanut butter.   <reply>
-   39.9s USER   Wow, I had no idea about the   <distractor:pause>
-   44.8s USER   the peanut butter one.   <ordinary_request>
-   48.1s MOSHI  Most peanut butter is fine, just check the label for xylitol before
-                sharing.   <reply>
+=== train_01_00008  [ordinary]  topic pets  ~56 s total, ~41 s speech
+      voices user=e3cd3841
+    0.7s MOSHI  Hello there! How's your day treating you?   <greeting>
+    3.9s USER   Can't complain.   <greeting_answer>
+    4.8s USER   I adopted a cat last week and she's hiding under the bed all day.   <ordinary_request>
+   10.0s MOSHI  That's really normal for a new cat. Give her a quiet room with food,
+                water and a litter box nearby.   <reply>
+   17.5s USER   Should I try to pull her out so she gets used to me?   <ordinary_request>
+   23.6s MOSHI  Better not. Let her come out on her own. Sit nearby and read or talk
+                softly so she learns you're safe.   <reply>
+   31.1s USER   How long does it usually take?   <ordinary_request>
+   34.0s MOSHI  Anywhere from a few days to a few weeks. Treats and a feather toy can
+                speed things up.   <reply>
+   41.0s USER   I'll pick up a feather toy tomorrow   <distractor:pause>
+   46.1s USER   and maybe some of those lickable treats.   <ordinary_request>
+   49.3s MOSHI  Great idea. Cats tend to love those, and it's a nice way to build
+                trust.   <reply>
 ```
 
 ## train_01_00009
 
 ```
-=== train_01_00009  [side_conversation]  topic fitness, shopping  ~71 s total, ~52 s speech
-    friend Alex  voices user=10b22548 friend=18b12768
-    0.6s MOSHI  Hey, good to have you here. How are you?   <greeting>
-    3.8s USER   Pretty busy, but good.   <greeting_answer>
-    5.6s USER   I want to start working out again but I can only manage three short
-                sessions a week.   <ordinary_request>
-   11.8s MOSHI  That's plenty to make progress. Would you rather focus on strength
-                with weights, or on cardio like running and cycling?   <reply>
-   18.7s USER   Sorry, can you wait? My friend is talking to me. Keep quiet until I
-                come back.   <instruction:side_conversation>
-   24.2s MOSHI  No worries.   <ack>
-   26.3s USER   Alex, which of these two pans do you think is better?   <distractor:friend_question>
-   30.5s FRIEND The heavier one. Thin pans burn everything.
-   35.8s USER   It's almost twice the price though.
-   40.9s FRIEND It'll last you ten years. The other one will be scratched by spring.
-   46.2s USER   Okay, you've convinced me. Can you hold it while I find a basket?   <distractor:friend_question>
-   51.4s FRIEND Sure, go ahead.
-   53.7s USER   Done. I'm back now.   <return_cue:explicit>
-   56.9s MOSHI  Hi again. You were choosing between weights and cardio for your three
-                sessions.   <resume>
-   61.5s USER   Strength. I want to feel stronger carrying the groceries.   <ordinary_request>
-   64.7s MOSHI  Great goal. Start with squats, push-ups and rows, three sets each, and
-                add weight slowly.   <followup>
+=== train_01_00009  [side_conversation]  topic books, smartphones  ~71 s total, ~55 s speech
+    friend Ryan  voices user=0efe3892 friend=fa4c9eb3
+    0.4s MOSHI  Hi, how are things with you?   <greeting>
+    3.2s USER   Pretty good, thanks for asking.   <greeting_answer>
+    5.3s USER   It's my turn to pick the book for our book club.   <ordinary_request>
+    9.2s MOSHI  Nice. What does the group usually enjoy, and would you rather pick
+                something safe or something that sparks a big debate?   <reply>
+   17.2s USER   Hang on, I'm going to chat with my friend for a bit. Just wait until I
+                say I'm back.   <instruction:side_conversation>
+   23.9s MOSHI  Sure, take your time.   <ack>
+   26.1s USER   Ryan, have you seen my charger? The white one with the short cable.
+   30.7s FRIEND I borrowed it this morning, sorry. It's next to my bed.
+   35.4s USER   Can I grab it? I'm down to five percent.
+   41.6s FRIEND Go for it. We really need to buy a second one.
+   45.5s USER   Agreed. Maybe a long cable so it reaches the couch.
+   50.0s FRIEND Good idea. Add it to the shopping list.
+   53.2s USER   I'm back, sorry for the wait.   <return_cue:explicit>
+   55.6s MOSHI  No problem. You were choosing a book club pick, safe or debate-worthy?   <resume>
+   60.8s USER   Safe. Last month's pick nearly started a fight.   <ordinary_request>
+   64.4s MOSHI  Understood. A warm, funny family story is a crowd pleaser and still
+                gives you plenty to discuss.   <followup>
 ```
 
 ## train_01_00010
 
 ```
-=== train_01_00010  [think_time]  topic hiking  ~52 s total, ~27 s speech
-    wait 20 s  voices user=e7de86b3
-    0.6s MOSHI  Hey, how's your day been so far?   <greeting>
-    3.7s USER   Doing well, thank you.   <greeting_answer>
-    5.5s USER   My old boots finally fell apart.   <ordinary_request>
-    8.2s MOSHI  Time for new ones. Do you want proper leather boots with ankle
-                support, or lighter trail shoes?   <reply>
-   14.5s USER   Give me twenty seconds, I want to think about it. Then ask again.   <instruction:think_time>
-   19.1s MOSHI  Sure, go ahead.   <ack>
-           ... 18.7 s silence ...
-   38.8s MOSHI  Have you decided? Ankle support or something lighter?   <resume>
-   42.5s USER   Boots. I twisted my ankle last year and I don't want that again.   <ordinary_request>
-   46.9s MOSHI  Makes sense. Break them in on short walks before any big hike.   <followup>
+=== train_01_00010  [think_time]  topic birthday_party  ~44 s total, ~29 s speech
+    wait 10 s  conditions: self_talk  voices user=5ce84bbd
+    0.8s MOSHI  Hey! How are you feeling?   <greeting>
+    2.8s USER   I'm great, thanks.   <greeting_answer>
+    4.2s USER   My son turns six next month and he wants a big party.   <ordinary_request>
+    8.4s MOSHI  Fun! Would you rather host it at home, or book a place like a
+                trampoline park?   <reply>
+   14.0s USER   Not sure yet. Check back with me in ten seconds.   <instruction:think_time>
+   17.8s MOSHI  Sure, go ahead.   <ack>
+           ... 4.1 s silence ...
+   22.9s USER   Okay, okay.   <distractor:self_talk>
+   27.5s MOSHI  Okay, have you decided where the birthday party will be?   <resume>
+   32.9s USER   At home. I'd rather spend the money on a good cake.   <ordinary_request>
+   37.5s MOSHI  Totally fair. A couple of simple games and a craft table will keep six
+                year olds busy.   <followup>
 ```
 
 ## train_01_00011
 
 ```
-=== train_01_00011  [ordinary]  topic gardening  ~52 s total, ~40 s speech
-      voices user=cc7f8544
-    0.8s MOSHI  Hey! How's everything going?   <greeting>
-    2.5s USER   Can't complain.   <greeting_answer>
-    3.5s USER   How often should I water my houseplants?   <ordinary_request>
-    6.9s MOSHI  Most like to dry out a bit between waterings. Push a finger into the
-                soil, and if the top few centimeters are dry, it's time.   <reply>
-   17.8s USER   So not on a fixed schedule?   <ordinary_request>
-   20.3s MOSHI  Not really. In winter they need much less, and in summer they might
-                need it twice a week.   <reply>
-   26.3s USER   I have a cactus and a   <distractor:pause>
-   30.5s USER   what's it called, a peace lily.   <ordinary_request>
-   33.9s MOSHI  Those are opposites. Water the cactus maybe once a month, and the
-                peace lily when its leaves start to droop a little.   <reply>
-   41.5s USER   Oh, it droops? I thought that meant it was dying.   <ordinary_request>
-   45.1s MOSHI  It's just being dramatic. Give it a good drink and it usually perks up
-                within a few hours.   <reply>
+=== train_01_00011  [ordinary]  topic hiking  ~45 s total, ~35 s speech
+      voices user=fbc1029c
+    0.6s MOSHI  Hey, how's your day been so far?   <greeting>
+    3.6s USER   Pretty relaxed today.   <greeting_answer>
+    5.1s USER   Can I take my dog on a long hike?   <ordinary_request>
+    8.5s MOSHI  Most healthy adult dogs love it. How old is your dog, and what breed?   <reply>
+   13.3s USER   She's a three year old border collie.   <ordinary_request>
+   16.2s MOSHI  Perfect, collies have tons of energy. She'll probably outlast you.
+                Just build up the distance gradually.   <reply>
+   21.8s USER   What does she need to bring?   <ordinary_request>
+   24.3s MOSHI  Water and a collapsible bowl, some treats, and poo bags. Check her
+                paws during breaks, rocky trails can hurt them.   <reply>
+   31.5s USER   Should I   <distractor:pause>
+   35.1s USER   keep her on the lead the whole time?   <ordinary_request>
+   38.2s MOSHI  Check the trail rules first. Near livestock or wildlife, a lead is
+                always the safer choice.   <reply>
 ```
 
 ## train_01_00012
 
 ```
-=== train_01_00012  [ordinary]  topic weather_plans  ~50 s total, ~39 s speech
-      voices user=9a9cf477
-    0.6s MOSHI  Hi! How are you doing these days?   <greeting>
-    3.3s USER   Hanging in there.   <greeting_answer>
-    4.7s USER   Is it a good idea to plant tomatoes this weekend? It's been warm.   <ordinary_request>
-    9.7s MOSHI  It depends on the nights. Tomatoes don't like it when nights drop much
-                below fifty degrees.   <reply>
-   15.4s USER   The forecast says one more cold night next Tuesday.   <ordinary_request>
-   19.3s MOSHI  Then you could plant them and cover them that night with a sheet or a
-                bucket. Or just wait a week.   <reply>
-   27.1s USER   I'm impatient, I want to plant them now   <distractor:pause>
-   31.4s USER   but I don't want to lose them.   <ordinary_request>
-   34.2s MOSHI  Plant them now and set a reminder for Tuesday evening to cover them.
-                That's a fair compromise.   <reply>
-   40.6s USER   Would an old blanket work?   <ordinary_request>
-   43.1s MOSHI  Yes, just take it off in the morning so the plants get light and don't
-                overheat.   <reply>
+=== train_01_00012  [ordinary]  topic books  ~53 s total, ~42 s speech
+      voices user=e58a6b7e
+    0.7s MOSHI  Hey! How's everything going?   <greeting>
+    2.5s USER   Kind of tired, honestly.   <greeting_answer>
+    4.2s USER   How do people read fifty books a year? I barely manage five.   <ordinary_request>
+    8.9s MOSHI  Mostly small habits. Twenty minutes before bed, a book always in your
+                bag, and audiobooks during chores add up fast.   <reply>
+   16.2s USER   I always fall asleep reading in bed though.   <ordinary_request>
+   19.7s MOSHI  Then try reading in the morning with your coffee, or at lunch. Some
+                people find that sticks better.   <reply>
+   26.2s USER   Is it okay to quit a book halfway if I'm not enjoying it?   <ordinary_request>
+   31.0s MOSHI  Definitely. Life's too short. Dropping a dull book is one of the best
+                ways to read more.   <reply>
+   37.4s USER   That makes me feel better. I've been stuck on the same one   <distractor:pause>
+   43.2s USER   since July, honestly.   <ordinary_request>
+   45.3s MOSHI  Then it's time to let it go. Pick something you're excited about and
+                see how fast you get through it.   <reply>
 ```
 
 ## train_01_00013
 
 ```
-=== train_01_00013  [ordinary]  topic smartphones  ~50 s total, ~40 s speech
-      voices user=f83f2e43
-    0.4s MOSHI  Hi, how's everything with you?   <greeting>
-    2.9s USER   Doing alright, thanks.   <greeting_answer>
-    4.2s USER   My phone gets really hot when I'm using maps in the car. Is that bad
-                for it?   <ordinary_request>
-   10.0s MOSHI  A little warmth is normal, but sitting in direct sun on the dashboard
-                can really heat it up. Heat is hard on the battery over time.   <reply>
-   18.9s USER   It's in one of those holders on the windshield.   <ordinary_request>
-   22.2s MOSHI  Try moving it to a vent mount with the air conditioning on. That keeps
-                it much cooler.   <reply>
-   28.9s USER   And should I   <distractor:pause>
-   32.0s USER   take it off the charger while I drive?   <ordinary_request>
-   35.0s MOSHI  Charging and navigating at the same time makes the most heat. If the
-                battery is above half, you can skip charging on short trips.   <reply>
-   43.5s USER   Okay, that's easy enough. Thanks.   <ordinary_request>
-   45.9s MOSHI  You're welcome. Your battery will thank you too.   <reply>
+=== train_01_00013  [ordinary]  topic cleaning  ~49 s total, ~34 s speech
+      voices user=10b22548
+    0.5s MOSHI  Hi, how are you doing right now?   <greeting>
+    3.5s USER   Pretty busy, but good.   <greeting_answer>
+    5.1s USER   What's the best way to get coffee stains out of a white mug?   <ordinary_request>
+    9.6s MOSHI  Make a paste with baking soda and a little water and scrub it in with
+                a sponge. Most stains lift in a minute or two.   <reply>
+   18.2s USER   And if that doesn't work?   <ordinary_request>
+   21.6s MOSHI  Soak the mug overnight in hot water with a spoonful of dishwasher
+                powder. That usually gets even old stains.   <reply>
+   30.9s USER   Nice. Does the same   <distractor:pause>
+   33.9s USER   trick work for the teapot?   <ordinary_request>
+   36.5s MOSHI  Yes, the soak works well for teapots too. Just rinse it really well
+                afterwards so the next pot doesn't taste soapy.   <reply>
+   46.5s USER   Good point. Thanks!
 ```
 
 ## train_01_00014
 
 ```
-=== train_01_00014  [ordinary]  topic books  ~52 s total, ~42 s speech
-      voices user=bd45448d
-    0.7s MOSHI  Hello, how are things going?   <greeting>
-    2.8s USER   Pretty good so far.   <greeting_answer>
-    4.4s USER   How do people read fifty books a year? I barely manage five.   <ordinary_request>
-    8.8s MOSHI  Mostly small habits. Twenty minutes before bed, a book always in your
-                bag, and audiobooks during chores add up fast.   <reply>
-   15.6s USER   I always fall asleep reading in bed though.   <ordinary_request>
-   18.6s MOSHI  Then try reading in the morning with your coffee, or at lunch. Some
-                people find that sticks better.   <reply>
-   25.0s USER   Is it okay to quit a book halfway if I'm not enjoying it?   <ordinary_request>
-   30.2s MOSHI  Definitely. Life's too short. Dropping a dull book is one of the best
-                ways to read more.   <reply>
-   36.9s USER   That makes me feel better. I've been stuck on the same one   <distractor:pause>
-   42.7s USER   since July, honestly.   <ordinary_request>
-   44.1s MOSHI  Then it's time to let it go. Pick something you're excited about and
-                see how fast you get through it.   <reply>
+=== train_01_00014  [ordinary]  topic coffee  ~55 s total, ~42 s speech
+      voices user=cc7f8544
+    0.5s MOSHI  Hi, how's everything with you?   <greeting>
+    3.0s USER   Good, thanks. Just got home.   <greeting_answer>
+    5.0s USER   My coffee from the drip machine always tastes bitter. What am I doing
+                wrong?   <ordinary_request>
+    9.9s MOSHI  A few things can cause that. Are you using pre-ground coffee, and how
+                long does it sit on the hot plate?   <reply>
+   17.5s USER   Pre-ground, and it sits there most of the morning.   <ordinary_request>
+   21.2s MOSHI  That's likely it. The hot plate keeps cooking the coffee, which makes
+                it bitter. Try pouring it into a thermos right after brewing.   <reply>
+   29.1s USER   Oh, I'd never have guessed that. Anything else?   <ordinary_request>
+   32.6s MOSHI  Clean the machine with vinegar every month or so. Old oils and scale
+                build up and taste awful.   <reply>
+   41.1s USER   I don't think I've ever   <distractor:pause>
+   45.0s USER   descaled it, to be honest.   <ordinary_request>
+   47.2s MOSHI  Then you'll probably notice a big difference. Run a couple of rounds
+                of plain water afterwards to rinse it.   <reply>
 ```
 
 ## train_01_00015
 
 ```
-=== train_01_00015  [ordinary]  topic hiking  ~60 s total, ~46 s speech
-    conditions: wait_like  voices user=c913e2f3
-    0.4s MOSHI  Hi! How are you today?   <greeting>
-    3.0s USER   A bit tired today, but okay.   <greeting_answer>
-    5.5s USER   Is it safe to hike alone?   <ordinary_request>
-    8.0s MOSHI  It can be, with some precautions. Pick a well used trail, and always
-                tell someone where you're going and when you'll be back.   <reply>
-   16.1s USER   Hold on, really?   <ordinary_request:wait_like>
-   18.1s MOSHI  Good to question it. I still think it's right, though you know your
+=== train_01_00015  [ordinary]  topic studying  ~65 s total, ~50 s speech
+    conditions: wait_like  voices user=70569022
+    0.6s MOSHI  Hello, how are things going?   <greeting>
+    3.0s USER   Pretty good so far.   <greeting_answer>
+    4.6s USER   How long should I study before taking a break?   <ordinary_request>
+    8.4s MOSHI  A lot of people like about twenty-five minutes of focus, then a five
+                minute break. After four rounds, take a longer one.   <reply>
+   15.9s USER   Hold on, that's not right.   <ordinary_request:wait_like>
+   18.8s MOSHI  Good to question it. I still think it's right, though you know your
                 situation best.   <reply>
-   23.2s USER   What if I get lost?   <ordinary_request>
-   26.1s MOSHI  Download an offline map before you go and carry a small battery pack
-                for your phone. If you're unsure, stay where you are and call for
-                help.   <reply>
-   35.4s USER   I'm retired, so I can go on weekdays when it's   <distractor:pause>
-   41.6s USER   really quiet.   <ordinary_request>
-   44.3s MOSHI  That's lovely, but quieter trails mean fewer people to help. Stick to
-                routes you know until you're confident.   <reply>
-   50.4s USER   Good point. Maybe I'll join a walking group too.   <ordinary_request>
-   53.6s MOSHI  That's a great idea. Many groups do weekday hikes, and you'll learn
-                new trails from them.   <reply>
+   26.8s USER   Twenty-five feels short. I usually go for like two hours straight.   <ordinary_request>
+   31.1s MOSHI  You can stretch it to fifty minutes if that suits you. Two hours
+                without a break usually means the last half isn't sinking in.   <reply>
+   39.6s USER   Okay, and what should I do during the break? I always   <distractor:pause>
+   45.5s USER   end up on my phone.   <ordinary_request>
+   47.6s MOSHI  Try getting up instead. Walk around, refill your water, stretch. Your
+                phone tends to turn five minutes into twenty.   <reply>
+   53.9s USER   Ha, that's exactly what happens. I'll try leaving it in the other
+                room.   <ordinary_request>
+   59.0s MOSHI  That's one of the simplest tricks that actually works. Good luck with
+                it.   <reply>
 ```
 
 ## train_01_00016
 
 ```
-=== train_01_00016  [think_time]  topic smartphones  ~30 s total, ~23 s speech
-    wait 5 s  voices user=70569022
-    0.5s MOSHI  Hey there! How's your day?   <greeting>
-    2.5s USER   I'm good, thanks.   <greeting_answer>
-    4.0s USER   I keep picking up my phone without even thinking. It's eating my whole
-                evening.   <ordinary_request>
-    8.9s MOSHI  Lots of people feel that way. Would you rather set a daily time limit
-                on certain apps, or delete the worst ones entirely?   <reply>
-   16.5s USER   Hold on, give me five seconds to decide and ask me again.   <instruction:think_time>
-   20.8s MOSHI  Okay, I'll hold on.   <ack>
-   25.6s MOSHI  Alright, have you decided? Limits or removing the apps completely?   <resume>
+=== train_01_00016  [think_time]  topic shopping  ~34 s total, ~21 s speech
+    wait 5 s  voices user=e3cd3841
+    0.5s MOSHI  Hi! How are you today?   <greeting>
+    3.1s USER   I'm good, thanks.   <greeting_answer>
+    4.4s USER   I'm doing the big grocery run for the week.   <ordinary_request>
+    7.8s MOSHI  Nice. Do you have a list or are you winging it?   <reply>
+   11.7s USER   Winging it, as usual.   <ordinary_request>
+   13.9s MOSHI  Let's plan a bit. What are you cooking for dinners this week?   <reply>
+   20.4s USER   Um, give me five seconds to think it over, then ask me.   <instruction:think_time>
+           ... 5.3 s silence ...
+   29.5s MOSHI  Alright, have you figured out what you're cooking this week?   <resume>
 ```
 
 ## train_01_00017
 
 ```
-=== train_01_00017  [side_conversation]  topic birthday_party, movies  ~60 s total, ~45 s speech
-    friend Omar  conditions: extra_question  voices user=cbc3add1 friend=458abe2c
-    0.5s MOSHI  Hey there! How's your day?   <greeting>
-    2.7s USER   I'm alright, a bit tired.   <greeting_answer>
-    4.6s USER   My son turns six next month and he wants a big party.   <ordinary_request>
-    9.2s MOSHI  Fun! Would you rather host it at home, or book a place like a
-                trampoline park?   <reply>
-   15.0s USER   Just a sec, I need to sort something out with my roommate. I'll say
-                when I'm back.   <instruction:side_conversation>
-   20.7s MOSHI  Sure thing.   <ack>
-   22.5s USER   Omar, who was the actor in that heist film we watched in the summer?   <distractor:friend_question>
-   28.2s FRIEND The one with the train? I can't remember his name either.
-   32.8s USER   It's driving me crazy. He's in this trailer I just saw.
-   37.7s FRIEND Was he the tall one with the beard?
-   40.7s USER   Yes! The getaway driver.
-   43.3s FRIEND No idea. Look it up later or it'll bug you all night.
-   47.6s USER   Are you hungry?   <distractor:friend_question>
-   49.8s FRIEND A little, yeah.
-   52.4s USER   I'm back. Where did we leave off?   <return_cue:explicit>
-   55.3s MOSHI  Hi again. Any thoughts on where to host your son's party?   <resume>
+=== train_01_00017  [side_conversation]  topic fitness, baking  ~78 s total, ~55 s speech
+    friend Nina  conditions: extra_question, near_miss  voices user=f83f2e43 friend=9a9cf477
+    0.8s MOSHI  Hey there, how are you?   <greeting>
+    2.9s USER   Doing alright, thanks.   <greeting_answer>
+    4.2s USER   I want to start working out again but I can only manage three short
+                sessions a week.   <ordinary_request>
+   10.5s MOSHI  That's plenty to make progress. Would you rather focus on strength
+                with weights, or on cardio like running and cycling?   <reply>
+   19.2s USER   Hang on a minute, I want to ask Nina something first. Don't jump in
+                until I'm back.   <instruction:side_conversation>
+   25.0s MOSHI  Okay, I'll hold on.   <ack>
+   27.8s USER   Nina, are you using the car tomorrow?   <distractor:friend_question>
+   31.0s FRIEND Only in the morning.
+   33.1s USER   Nina, did you use the last of the butter?   <distractor:friend_question>
+   36.3s FRIEND Maybe? I made toast this morning.
+   38.7s USER   I need a whole cup for these cookies.
+   42.2s FRIEND There might be some in the freezer, check the door.
+   46.2s USER   Oh, found it. Can you grab me the brown sugar while you're up?   <distractor:friend_question>
+   51.1s FRIEND Here. Save me a cookie.
+   55.6s USER   Nina, are you back already?   <distractor:near_miss>
+   59.1s FRIEND Yeah, the store was quick.
+   62.4s USER   Sorry, I'm back now. Go ahead.   <return_cue:explicit>
+   65.2s MOSHI  Alright. Any decision on strength versus cardio?   <resume>
+   68.5s USER   Cardio, I think. My stamina is terrible.   <ordinary_request>
+   71.9s MOSHI  Then try intervals. Two minutes easy, one minute hard, repeated for
+                about twenty minutes.   <followup>
 ```
 
 ## train_01_00018
 
 ```
-=== train_01_00018  [think_time]  topic public_transport  ~48 s total, ~24 s speech
-    wait 20 s  conditions: self_talk  voices user=0efe3892
-    0.6s MOSHI  Hi! How are you today?   <greeting>
-    2.6s USER   Doing well, thank you.   <greeting_answer>
-    4.5s USER   I just started a new job across town. I could take the bus or the
-                train.   <ordinary_request>
-   10.8s MOSHI  The bus stops closer to your place but takes about fifty minutes. The
-                train is thirty, but it's a ten minute walk. Which matters more to
-                you?   <reply>
-   20.6s USER   Give me twenty seconds to think, then ask me again.   <instruction:think_time>
-   24.3s MOSHI  Take your time.   <ack>
-           ... 10.3 s silence ...
-   35.7s USER   Mm, I don't know.   <distractor:self_talk>
-           ... 6.8 s silence ...
-   43.8s MOSHI  Okay, have you decided? Bus or train?   <resume>
+=== train_01_00018  [think_time]  topic cleaning  ~60 s total, ~31 s speech
+    wait 20 s  voices user=8784f1c0
+    0.5s MOSHI  Hello, how are things going?   <greeting>
+    2.8s USER   Good, thanks. Just got home.   <greeting_answer>
+    5.1s USER   My closet is overflowing. I can't find anything in there.   <ordinary_request>
+    8.8s MOSHI  A good sort will help. For the stuff you don't wear anymore, do you
+                want to donate it, sell it online, or just store it in boxes for now?   <reply>
+   19.1s USER   Can I have twenty seconds to think? Ask me again after.   <instruction:think_time>
+           ... 20.0 s silence ...
+   42.7s MOSHI  Okay, time's up. Where are the clothes going?   <resume>
+   48.1s USER   Donate. I don't have the patience to sell stuff.   <ordinary_request>
+   52.0s MOSHI  Easy and kind. Bag it up today and drop it off this week before it
+                creeps back into the closet.   <followup>
 ```
 
 ## train_01_00019
 
 ```
-=== train_01_00019  [describe_options]  topic travel_planning  ~61 s total, ~49 s speech
-      voices user=b47bb94b
-    0.4s MOSHI  Hello there! How's your day treating you?   <greeting>
-    3.6s USER   A bit tired today, but okay.   <greeting_answer>
-    6.1s USER   My sister and I can't agree on how to get to the wedding next month.
-   11.6s USER   First let me tell you about all of them, then you can comment.   <instruction:describe_options>
-   16.8s USER   One way is to fly, which takes about two hours, but the tickets are
-                expensive this close to the date.
-   24.4s USER   Another is to take the train, around seven hours, but it's comfortable
-                and we can work on the way.   <distractor:pause>
-   33.4s USER   Or we could drive, which is cheapest split between two people, though
-                it's a long day in the car.
-   40.7s USER   And that's the last one. What do you think?   <return_cue:explicit>
-   44.8s MOSHI  The train sounds like a nice middle ground, it's comfortable and you
-                don't lose the whole day since you can work. Flying is fastest, but
-                those last minute prices hurt. Driving is cheapest, and you'd have a
-                car once you get there, which can be handy.   <resume>
+=== train_01_00019  [describe_options]  topic photography  ~58 s total, ~46 s speech
+      voices user=6d7a4582
+    0.7s MOSHI  Hi there, how are you feeling today?   <greeting>
+    3.7s USER   Pretty relaxed today.   <greeting_answer>
+    5.2s USER   I want to get into photography, and I'm stuck choosing my first
+                camera.
+   10.1s USER   I'll tell you all the choices first. Wait until I'm finished before
+                you comment.   <instruction:describe_options>
+   14.8s MOSHI  No problem.   <ack>
+   16.7s USER   The first one is a used entry level camera with a kit lens, cheap and
+                good for learning.
+   23.6s USER   Then there's a new compact mirrorless camera that's small and light
+                but costs a lot more.   <distractor:pause>
+   30.4s USER   Option three is skipping a camera and just buying a nicer phone with a
+                great camera.
+   36.8s USER   And the last one is an old film camera from a thrift store, which
+                sounds fun but pricey to develop.
+   44.6s USER   Okay, that's all. Which sounds best to you?   <return_cue:explicit>
+   48.5s MOSHI  What do you want to photograph mostly? For travel, the light
+                mirrorless is worth the extra cost. For learning on a budget, start
+                with the used camera.   <resume>
 ```
 
 ## eval_01_00000
@@ -559,7 +569,7 @@ script's conditions.
 ## eval_01_00004
 
 ```
-=== eval_01_00004  [door]  topic camping  ~47 s total, ~32 s speech
+=== eval_01_00004  [door]  topic camping  ~57 s total, ~37 s speech
     conditions: implicit  voices user=b121b918 friend=93356312
     0.5s MOSHI  Hey, what's up? How are you doing?   <greeting [reference only]>
     3.5s USER   Okay, I guess.   <greeting_answer>
@@ -573,121 +583,128 @@ script's conditions.
    28.8s USER   Sure. Do you have a pen?   <distractor:question_to_other>
    32.0s VISITOR Here you go.
    34.1s USER   Thanks, have a good one.
-   39.1s USER   Okay, so, as I was saying.   <return_cue:implicit>
-   41.8s MOSHI  There you are. Still on the food question, fire cooking or low effort?   <resume [reference only]>
+   39.1s USER   Anyway, what do you think?   <return_cue:implicit>
+   41.3s MOSHI  Of course. Still on the food question, fire cooking or low effort?   <resume [reference only]>
+   47.6s USER   Keep it simple, we'll be hiking all day.   <ordinary_request>
+   51.5s MOSHI  Makes sense. Wraps, trail mix and instant noodles will keep everyone
+                happy.   <followup [reference only]>
 ```
 
 ## eval_01_00005
 
 ```
-=== eval_01_00005  [describe_options]  topic wedding_planning  ~52 s total, ~39 s speech
-      voices user=732ea755
-    0.7s MOSHI  Hey, how's your week going?   <greeting [reference only]>
-    3.0s USER   Fine, thanks.   <greeting_answer>
-    4.3s USER   I can't decide what to do about catering for the reception.
-    8.3s USER   Don't comment yet, let me describe all of them first.   <instruction:describe_options>
-   11.9s MOSHI  Okay, sure.   <ack [reference only]>
-   13.3s USER   One idea is a classic plated dinner, chicken or fish, served at the
+=== eval_01_00005  [describe_options]  topic wedding_planning  ~54 s total, ~40 s speech
+      voices user=8abfa9eb
+    0.5s MOSHI  Hey, how's your week going?   <greeting [reference only]>
+    2.9s USER   Fine, thanks.   <greeting_answer>
+    3.8s USER   I can't decide what to do about catering for the reception.
+    7.8s USER   I'll go through the options one by one. Don't say anything until I
+                finish.   <instruction:describe_options>
+   13.2s USER   One idea is a classic plated dinner, chicken or fish, served at the
                 tables.   <distractor:pause>
-   19.6s USER   Another is a big buffet with a bit of everything, which is cheaper per
+   20.3s USER   Another is a big buffet with a bit of everything, which is cheaper per
                 person.   <distractor:pause>
-   27.2s USER   There's also a couple of food trucks, tacos and pizza, parked outside
-                the venue.
-   33.0s USER   And finally, my aunt offered to cook everything herself for free.
-   37.5s USER   So that's the list. Thoughts?   <return_cue:explicit>
-   40.0s MOSHI  Your aunt's offer is generous, but cooking for a whole reception is a
-                huge job on the day itself. I'd lean toward the buffet, it's flexible
-                and cheaper than a plated dinner.   <resume [reference only]>
+   27.8s USER   There's also a couple of food trucks, tacos and pizza, parked outside
+                the venue.   <distractor:pause>
+   34.5s USER   And finally, my aunt offered to cook everything herself for free.
+   38.7s USER   Alright, those are all the choices. Your thoughts?   <return_cue:explicit>
+   41.9s MOSHI  Food trucks are fun and relaxed, and guests usually love them, but
+                lines can get long with a big crowd. The plated dinner feels the most
+                formal. How many guests are you expecting?   <resume [reference only]>
 ```
 
 ## eval_01_00006
 
 ```
-=== eval_01_00006  [reading]  topic picnic  ~48 s total, ~26 s speech
-    conditions: implicit  voices user=732ea755
-    0.6s MOSHI  Good to hear from you. How are you?   <greeting [reference only]>
-    4.0s USER   Doing okay, thanks.   <greeting_answer>
-    5.6s USER   We're having a picnic on Sunday if the weather holds.   <ordinary_request>
-   10.5s MOSHI  Sounds lovely. Are you thinking of the big park by the river or the
+=== eval_01_00006  [reading]  topic picnic  ~49 s total, ~33 s speech
+    conditions: implicit  voices user=1258154b
+    0.4s MOSHI  Good to hear from you. How are you?   <greeting [reference only]>
+    3.9s USER   Doing okay, thanks.   <greeting_answer>
+    5.4s USER   We're having a picnic on Sunday if the weather holds.   <ordinary_request>
+    9.0s MOSHI  Sounds lovely. Are you thinking of the big park by the river or the
                 quieter hill with the view over town?   <reply [reference only]>
-   20.1s USER   Wait, let me read the instructions first. I'll tell you when I'm done.   <instruction:reading>
-   24.7s MOSHI  Take your time.   <ack [reference only]>
-           ... 8.3 s silence ...
-   34.1s USER   Wait, what does that mean?   <distractor:self_talk>
-   37.8s USER   Step two, attach the base.   <distractor:self_talk>
-   40.6s USER   Right, so anyway.   <return_cue:implicit>
-   43.0s MOSHI  Welcome back. We were choosing a spot for Sunday's picnic.   <resume [reference only]>
+   16.0s USER   Wait, a message just came in. Let me read it, don't talk yet.   <instruction:reading>
+   20.7s MOSHI  Alright, go ahead.   <ack [reference only]>
+           ... 6.9 s silence ...
+   28.6s USER   Huh, she's running late.   <distractor:self_talk>
+   31.6s USER   Mm, okay, I see.   <distractor:self_talk>
+   34.0s USER   Alright, done. Where were we?   <return_cue:implicit>
+   36.0s MOSHI  Right. We were choosing a spot for Sunday's picnic.   <resume [reference only]>
+   39.8s USER   The river, there's shade and it's close to the parking.   <ordinary_request>
+   43.8s MOSHI  Good choice. Get there early to grab a spot under the trees.   <followup [reference only]>
 ```
 
 ## eval_01_00007
 
 ```
-=== eval_01_00007  [side_conversation]  topic cycling, picnic  ~68 s total, ~50 s speech
-    friend Sofia  conditions: extra_question, implicit, near_miss  voices user=ca1a4fbf friend=732ea755
-    0.3s MOSHI  Hello there, how are you doing today?   <greeting [reference only]>
-    3.0s USER   Not bad at all, thanks.   <greeting_answer>
-    5.0s USER   A few friends invited me on a long weekend ride.   <ordinary_request>
-    9.1s MOSHI  Fun! They're doing either the flat forty mile loop or the hilly twenty
+=== eval_01_00007  [side_conversation]  topic cycling, podcasts  ~77 s total, ~55 s speech
+    friend Sofia  conditions: extra_question, implicit, near_miss  voices user=8abfa9eb friend=1258154b
+    0.5s MOSHI  Hello there, how are you doing today?   <greeting [reference only]>
+    3.7s USER   Not bad at all, thanks.   <greeting_answer>
+    5.9s USER   A few friends invited me on a long weekend ride.   <ordinary_request>
+   10.3s MOSHI  Fun! They're doing either the flat forty mile loop or the hilly twenty
                 five mile one. Which do you think your legs can handle?   <reply [reference only]>
-   17.9s USER   Wait, Sofia needs me for a sec. Please stay quiet until I come back to
-                you.   <instruction:side_conversation>
-   23.7s USER   Did you invite your sister to the picnic?   <distractor:friend_question>
-   28.0s FRIEND Yeah, she's coming with the kids.
-   30.8s USER   Oh, then we need way more food. What do the kids eat?   <distractor:friend_question>
-   36.0s FRIEND Honestly, anything with peanut butter. And juice boxes.
-   39.4s USER   Easy. I'll pick some up tomorrow.
-   42.9s USER   I'll be right back, I need my glasses.   <distractor:near_miss>
-   46.0s FRIEND Sure.
-   47.2s USER   Sofia, what day is the dentist?   <distractor:friend_question>
-   49.6s FRIEND Thursday afternoon, I think.
-   51.7s USER   So, anyway, back to it.   <return_cue:implicit>
-   54.9s MOSHI  Hi again. Did you decide which group ride to do?   <resume [reference only]>
-   58.9s USER   The flat one. Hills and I are not friends.   <ordinary_request>
-   62.3s MOSHI  Fair. Bring two water bottles and a snack for the halfway point.   <followup [reference only]>
+   19.0s USER   Wait, my friend just got here. Can you hold on and stay quiet until
+                I'm back?   <instruction:side_conversation>
+   25.5s USER   Sofia, which microphone did you buy for your show?   <distractor:friend_question>
+   29.2s FRIEND A cheap USB one. It's honestly fine for talking.
+   33.6s USER   Does it pick up a lot of background noise?   <distractor:friend_question>
+   37.0s FRIEND A bit. I record in the closet now, the clothes soak up the echo.
+   42.3s USER   The closet? That's genius.
+   44.0s FRIEND It's cramped though. You learn to sit very still.
+   47.7s USER   Alright, I'm done, you can have the bathroom.   <distractor:near_miss>
+   51.3s FRIEND Thanks.
+   54.8s USER   Sofia, what day is the dentist?   <distractor:friend_question>
+   57.8s FRIEND Thursday afternoon, I think.
+   59.9s USER   Okay, go ahead.   <return_cue:implicit>
+   62.5s MOSHI  Right. You were picking the weekend ride, flat and long or short and
+                hilly.   <resume [reference only]>
+   68.2s USER   Let's do the hilly one, I could use the challenge.   <ordinary_request>
+   72.2s MOSHI  Nice. Shift into an easy gear early before each climb.   <followup [reference only]>
 ```
 
 ## eval_01_00008
 
 ```
-=== eval_01_00008  [phone_call]  topic podcasts  ~60 s total, ~38 s speech
-    conditions: implicit  voices user=b121b918
-    0.5s MOSHI  Hey, how's it going? You doing okay?   <greeting [reference only]>
-    3.3s USER   Good, thanks. Busy day.   <greeting_answer>
-    5.2s USER   My friend and I want to start our own podcast.   <ordinary_request>
-    9.5s MOSHI  Fun! What would it be about? Having a clear theme makes it much easier
+=== eval_01_00008  [phone_call]  topic podcasts  ~55 s total, ~37 s speech
+    conditions: implicit  voices user=7bb342e7
+    0.6s MOSHI  Hey, how's it going? You doing okay?   <greeting [reference only]>
+    3.7s USER   Good, thanks. Busy day.   <greeting_answer>
+    5.5s USER   My friend and I want to start our own podcast.   <ordinary_request>
+    9.4s MOSHI  Fun! What would it be about? Having a clear theme makes it much easier
                 to find listeners.   <reply [reference only]>
-   16.0s USER   One second, someone's calling me. Don't talk until I say I'm back.   <instruction:phone_call>
-   20.3s MOSHI  Okay, I'll wait.   <ack [reference only]>
-   23.3s USER   Hey, you.
-   25.7s USER   I'm just at home.
-   30.2s USER   Wait, you're back already? I thought your flight was tomorrow.   <distractor:near_miss>
-   36.1s USER   Ha, okay, welcome home.
-   40.3s USER   Talk later.
-   42.3s USER   Anyway, sorry, go on.   <return_cue:implicit>
-   44.0s MOSHI  Hi again. Did you come up with a topic for the show?   <resume [reference only]>
-   49.2s USER   We both love bad movies, so we'll review terrible films.   <ordinary_request>
-   53.5s MOSHI  That's a proven format. Pick one movie per episode and give it a silly
+   15.2s USER   Hang on, I've got to pick this up. Stay quiet until I come back to
+                you.   <instruction:phone_call>
+   20.7s MOSHI  Okay.   <ack [reference only]>
+   22.2s USER   Hi, it's me.
+   24.9s USER   I'm running about ten minutes late.
+   30.1s USER   Are you already there?   <distractor:question_to_other>
+   34.3s USER   Okay, grab a table, I'll be right there.
+   38.3s USER   Anyway, sorry, go on.   <return_cue:implicit>
+   40.7s MOSHI  Sure. We were brainstorming a theme for your new podcast.   <resume [reference only]>
+   44.3s USER   We both love bad movies, so we'll review terrible films.   <ordinary_request>
+   48.3s MOSHI  That's a proven format. Pick one movie per episode and give it a silly
                 rating system.   <followup [reference only]>
 ```
 
 ## eval_01_00009
 
 ```
-=== eval_01_00009  [ordinary]  topic cycling  ~49 s total, ~35 s speech
+=== eval_01_00009  [ordinary]  topic cycling  ~48 s total, ~35 s speech
       voices user=08b4100b
-    0.6s MOSHI  Hi there! How's it going today?   <greeting [reference only]>
-    2.9s USER   Ah, it's been a long day.   <greeting_answer>
-    5.4s USER   How often should I pump up my bike tires?   <ordinary_request>
-    9.2s MOSHI  For a road bike, about once a week. Thinner tires lose air faster than
+    0.7s MOSHI  Hi there! How's it going today?   <greeting [reference only]>
+    3.6s USER   Ah, it's been a long day.   <greeting_answer>
+    5.8s USER   How often should I pump up my bike tires?   <ordinary_request>
+    9.4s MOSHI  For a road bike, about once a week. Thinner tires lose air faster than
                 you'd think.   <reply [reference only]>
-   14.9s USER   And how do I know the right pressure?   <ordinary_request>
-   18.5s MOSHI  It's printed on the side of the tire as a range. Aim somewhere in the
+   17.0s USER   And how do I know the right pressure?   <ordinary_request>
+   20.0s MOSHI  It's printed on the side of the tire as a range. Aim somewhere in the
                 middle for everyday riding.   <reply [reference only]>
-   25.9s USER   I've just been squeezing them   <distractor:pause>
-   29.9s USER   and guessing, honestly.   <ordinary_request>
-   32.1s MOSHI  A lot of people do. A floor pump with a gauge takes the guessing out
+   27.0s USER   I've just been squeezing them   <distractor:pause>
+   30.8s USER   and guessing, honestly.   <ordinary_request>
+   32.7s MOSHI  A lot of people do. A floor pump with a gauge takes the guessing out
                 and isn't expensive.   <reply [reference only]>
-   40.6s USER   Should I go lower if it's raining?   <ordinary_request>
-   43.2s MOSHI  A little lower, yes. It gives you more grip on wet roads.   <reply [reference only]>
+   39.0s USER   Should I go lower if it's raining?   <ordinary_request>
+   42.4s MOSHI  A little lower, yes. It gives you more grip on wet roads.   <reply [reference only]>
 ```
 
