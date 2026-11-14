@@ -1,0 +1,160 @@
+{
+ "id": "trainv2_10_00153",
+ "split": "train",
+ "seed": 10,
+ "order_index": 153,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "smartphones"
+ ],
+ "instruction_position": 0.548,
+ "topic": "smartphones",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_08",
+  "describe_instruction_v2_32",
+  "ack_14",
+  "describe_cue_13"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_32": {
+   "style": "implied",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_13": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "gardening.dlg16",
+  "smartphones.opt3"
+ ],
+ "est_total_sec": 71.21,
+ "est_speech_sec": 57.93,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.37,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.95,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Monstera roots are coming out the bottom of the pot. Time to repot?",
+   "est_sec": 4.13,
+   "gap_before": 0.31,
+   "block": "gardening.dlg16",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sounds like it. Spring or early summer is the best time, when it's growing actively.",
+   "est_sec": 4.75,
+   "gap_before": 0.34,
+   "role": "reply",
+   "block": "gardening.dlg16"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? My contract ends next month and I need to pick a new phone plan.",
+   "est_sec": 6.3,
+   "gap_before": 1.31,
+   "block": "smartphones.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I've got a long list here and I'll want your verdict once I've read the last one.",
+   "est_sec": 5.68,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_32"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.24,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a cheap prepaid plan, ten gigs of data, no contract, but the coverage at my parents' place is patchy.",
+   "est_sec": 6.3,
+   "gap_before": 0.82,
+   "block": "smartphones.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "My current carrier offered unlimited data for a bit more each month if I sign up for two years.",
+   "est_sec": 5.99,
+   "gap_before": 1.61,
+   "block": "smartphones.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A family plan with my sister would split the cost, though I'd be tied to her paying on time.",
+   "est_sec": 5.99,
+   "gap_before": 2.99,
+   "block": "smartphones.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 1.05,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The family plan is cheapest on paper, but it only works if you trust your sister with the bills. If you want freedom, the prepaid one is great, as long as that patchy coverage at your parents' isn't a dealbreaker.",
+   "est_sec": 12.5,
+   "gap_before": 1.08,
+   "role": "resume",
+   "block": "smartphones.opt3"
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "id": "eval_12_00190",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 190,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "home_office"
+ ],
+ "wait_sec": 30,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 30
+ },
+ "topic": "home_office",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_30",
+  "think_instr_30",
+  "self_30"
+ ],
+ "block_ids": [
+  "home_office.ctx12"
+ ],
+ "est_total_sec": 66.36,
+ "est_speech_sec": 31.9,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.63,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.5,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "The kids are off school for the summer and I still have to work full time.",
+   "est_sec": 5.06,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "home_office.ctx12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a juggle. Would you rather do your focused work very early before they wake up, or split the day in shifts with your partner?",
+   "est_sec": 7.85,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "home_office.ctx12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, give me thirty seconds to think and then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.86,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Mm, hold on, hold on.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 7.89
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Now then, early mornings, or trading shifts with your partner?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "home_office.ctx12",
+   "anchor": {
+    "turn": 4,
+    "offset": 30.12
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Early mornings. I'm up at five anyway.",
+   "est_sec": 2.27,
+   "gap_before": 0.65,
+   "event": "ordinary_request",
+   "block": "home_office.ctx12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then protect those hours for your hardest work, and keep afternoons for calls and email.",
+   "est_sec": 4.75,
+   "gap_before": 0.52,
+   "role": "followup",
+   "block": "home_office.ctx12",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

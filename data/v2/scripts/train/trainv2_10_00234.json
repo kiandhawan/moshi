@@ -1,0 +1,173 @@
+{
+ "id": "trainv2_10_00234",
+ "split": "train",
+ "seed": 10,
+ "order_index": 234,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "music"
+ ],
+ "instruction_position": 0.374,
+ "topic": "music",
+ "voices": {
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_20",
+  "greet_ans_25",
+  "describe_instr_04",
+  "ack_14",
+  "describe_cue_v2_26"
+ ],
+ "phrasing_styles": {
+  "describe_instr_04": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_26": {
+   "style": "command",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "movies.dlg27",
+  "music.opt3"
+ ],
+ "est_total_sec": 75.85,
+ "est_speech_sec": 60.61,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.33,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Weird question. I saw my dad cry at a film yesterday for the first time ever.",
+   "est_sec": 5.06,
+   "gap_before": 0.4,
+   "block": "movies.dlg27",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's not weird, that's a big moment. What was the film?",
+   "est_sec": 3.51,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "movies.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, It's karaoke night on Friday and I need to choose a song.",
+   "est_sec": 4.75,
+   "gap_before": 1.33,
+   "block": "music.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold your thoughts until I've described all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.54,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.51,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a big power ballad that everyone loves, but the high notes are brutal.",
+   "est_sec": 4.44,
+   "gap_before": 1.27,
+   "block": "music.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a cheesy duet I could do with my sister, which would be a laugh.",
+   "est_sec": 4.75,
+   "gap_before": 1.84,
+   "block": "music.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Another one is a rock anthem with a huge chorus the whole pub can shout along to.",
+   "est_sec": 5.37,
+   "gap_before": 1.42,
+   "block": "music.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "All set, those are the choices. Help me pick.",
+   "est_sec": 2.89,
+   "gap_before": 0.93,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The power ballad is a gamble, brilliant if you nail the high notes, painful if you don't. The duet with your sister takes the pressure off and is always fun to watch. The rock anthem is the safest crowd pleaser because everyone joins the chorus.",
+   "est_sec": 14.05,
+   "gap_before": 0.85,
+   "role": "resume",
+   "block": "music.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "One about a father and son fixing up an old boat.",
+   "est_sec": 3.51,
+   "gap_before": 1.86,
+   "event": "ordinary_request",
+   "block": "movies.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ah, that makes sense. Films like that sometimes hit things people don't say out loud.",
+   "est_sec": 4.75,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "movies.dlg27"
+  }
+ ]
+}

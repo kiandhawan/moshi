@@ -1,0 +1,175 @@
+{
+ "id": "trainv2_10_00415",
+ "split": "train",
+ "seed": 10,
+ "order_index": 415,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "weather_plans"
+ ],
+ "wait_sec": 23,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 23
+ },
+ "instruction_position": 0.534,
+ "topic": "weather_plans",
+ "voices": {
+  "user": "5ce84bbd213b4943bc89e1951e17848a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_20",
+  "think_instr_17",
+  "self_07"
+ ],
+ "phrasing_styles": {
+  "think_instr_17": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "cooking.dlg13",
+  "weather_plans.ctx11"
+ ],
+ "est_total_sec": 79.89,
+ "est_speech_sec": 47.49,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.32,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.87,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it actually dangerous to leave cooked rice out overnight? My flatmate does it all the time.",
+   "est_sec": 5.37,
+   "gap_before": 0.38,
+   "block": "cooking.dlg13",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It can be. Rice can carry bacteria spores that survive cooking and multiply at room temperature.",
+   "est_sec": 5.06,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "cooking.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? Storm's due tomorrow evening and my gutters are full of leaves.",
+   "est_sec": 5.37,
+   "gap_before": 0.79,
+   "block": "weather_plans.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That could mean overflow. Will you climb up and clear them yourself today, or call someone in?",
+   "est_sec": 5.37,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "weather_plans.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "I haven't decided. Give me twenty-three seconds, then ask me again.",
+   "est_sec": 3.51,
+   "gap_before": 1.17,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 23,
+   "phrasing": "think_instr_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, either way, really.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 6.88
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, ladder yourself, or call someone?",
+   "est_sec": 1.96,
+   "role": "resume",
+   "block": "weather_plans.ctx11",
+   "anchor": {
+    "turn": 6,
+    "offset": 23.49
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "I'll do it. It's a bungalow, it's not that high.",
+   "est_sec": 3.2,
+   "gap_before": 0.75,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fine, but have someone hold the ladder and use gloves, there can be sharp bits in there.",
+   "est_sec": 5.37,
+   "gap_before": 0.42,
+   "role": "followup",
+   "block": "weather_plans.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "But he's never been sick.",
+   "est_sec": 1.65,
+   "gap_before": 1.07,
+   "event": "ordinary_request",
+   "block": "cooking.dlg13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lots of people get lucky. It's still better to cool rice within an hour and put it in the fridge.",
+   "est_sec": 6.3,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "cooking.dlg13"
+  }
+ ]
+}

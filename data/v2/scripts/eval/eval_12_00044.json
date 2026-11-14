@@ -1,0 +1,156 @@
+{
+ "id": "eval_12_00044",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 44,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension",
+  "self_talk"
+ ],
+ "topics": [
+  "wedding_planning"
+ ],
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 2.85
+ },
+ "deadline": {
+  "after_turn": 6,
+  "sec": 10
+ },
+ "topic": "wedding_planning",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_06",
+  "think_instr_30",
+  "self_30",
+  "extension_01"
+ ],
+ "block_ids": [
+  "wedding_planning.ctx9"
+ ],
+ "est_total_sec": 61.88,
+ "est_speech_sec": 31.69,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "We've got money for either a really great photographer or a videographer. Not both.",
+   "est_sec": 4.44,
+   "gap_before": 0.39,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hard trade. Are you people who'll print photos and frame them, or more likely to rewatch the day and hear the speeches again?",
+   "est_sec": 7.23,
+   "gap_before": 1.9,
+   "role": "reply",
+   "block": "wedding_planning.ctx9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, give me fifteen seconds to think and then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 2.03,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Mm, hold on, hold on.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 5.14
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Actually, give me ten more seconds.",
+   "est_sec": 1.96,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_01",
+   "anchor": {
+    "turn": 4,
+    "offset": 12.15
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Which one wins, photo or video?",
+   "est_sec": 1.96,
+   "role": "resume",
+   "block": "wedding_planning.ctx9",
+   "anchor": {
+    "turn": 6,
+    "offset": 10.19
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Video. I want to hear my grandma's speech again someday.",
+   "est_sec": 3.2,
+   "gap_before": 1.69,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's worth a lot. Lots of videographers also pull nice stills from the footage.",
+   "est_sec": 4.44,
+   "gap_before": 0.92,
+   "role": "followup",
+   "block": "wedding_planning.ctx9",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,183 @@
+{
+ "id": "eval_12_00066",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 66,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [],
+ "topics": [
+  "restaurant_choice"
+ ],
+ "topic": "restaurant_choice",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_15",
+  "greet_ans_24",
+  "phone_instr_10",
+  "ack_14",
+  "call_36",
+  "phone_cue_07"
+ ],
+ "block_ids": [
+  "restaurant_choice.ctx14",
+  "call_36"
+ ],
+ "est_total_sec": 68.43,
+ "est_speech_sec": 44.69,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.62,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "My sister wants to do brunch on Sunday.",
+   "est_sec": 2.58,
+   "gap_before": 0.31,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Brunch places get packed. Do you want an early slot around nine, or a lazy late one closer to noon?",
+   "est_sec": 6.61,
+   "gap_before": 1.15,
+   "role": "reply",
+   "block": "restaurant_choice.ctx14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold that thought, I have a call coming in. I'll come back to you.",
+   "est_sec": 4.44,
+   "gap_before": 0.79,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.25,
+   "role": "ack",
+   "phrasing": "ack_14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Dude, did you see the game?",
+   "est_sec": 1.96,
+   "gap_before": 1.86,
+   "phrasing": "call_36",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "I can't believe that last goal.",
+   "est_sec": 1.96,
+   "gap_before": 2.08,
+   "phrasing": "call_36"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I'm going outside. Okay, I'm ready, go ahead.",
+   "est_sec": 3.2,
+   "gap_before": 1.65,
+   "phrasing": "call_36"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you watching the rematch?",
+   "est_sec": 1.65,
+   "gap_before": 2.54,
+   "phrasing": "call_36",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Mine or yours?",
+   "est_sec": 1.03,
+   "gap_before": 2.43,
+   "phrasing": "call_36",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'll bring the crisps.",
+   "est_sec": 1.65,
+   "gap_before": 3.44,
+   "phrasing": "call_36"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, off the phone. Sorry about that.",
+   "est_sec": 2.27,
+   "gap_before": 1.78,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, you're off the phone. Sunday brunch with your sister still needs a time. Early or late?",
+   "est_sec": 5.37,
+   "gap_before": 0.3,
+   "role": "resume",
+   "block": "restaurant_choice.ctx14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Early. I want to beat the crowds.",
+   "est_sec": 2.27,
+   "gap_before": 1.4,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Smart. At nine you'll get a table without a wait and the pastries will still be fresh.",
+   "est_sec": 5.37,
+   "gap_before": 0.95,
+   "role": "followup",
+   "block": "restaurant_choice.ctx14",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

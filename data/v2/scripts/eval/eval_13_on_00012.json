@@ -1,0 +1,193 @@
+{
+ "id": "eval_13_on_00012",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 412,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00096",
+  "seed": 13
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "026218fe0c054374838d934016f34082"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_12",
+  "waitlike_09",
+  "nq_eval_059",
+  "pn_076"
+ ],
+ "block_ids": [
+  "learning_language.dlg5",
+  "nq_eval_059"
+ ],
+ "est_total_sec": 69.6,
+ "est_speech_sec": 48.52,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.39,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.58,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "How am I supposed to remember German noun genders? It feels random.",
+   "est_sec": 3.82,
+   "gap_before": 0.59,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Partly it is, honestly. But there are patterns. Words ending in ung, heit and keit are almost always feminine.",
+   "est_sec": 5.99,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "learning_language.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, is that true?",
+   "est_sec": 1.65,
+   "gap_before": 0.78,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_09",
+   "block": "learning_language.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good to question it. I still think it's right, though you know your situation best.",
+   "est_sec": 4.75,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "learning_language.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that helps a little.",
+   "est_sec": 1.65,
+   "gap_before": 3.05,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Also, words ending in chen are always neuter, like das Kaninchen, the rabbit. That's why even the word for girl is neuter.",
+   "est_sec": 6.92,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "learning_language.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "That's absurd.",
+   "est_sec": 0.72,
+   "gap_before": 1.05,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It is a bit. The best trick is to never learn a noun without its article. Learn der Tisch, not just Tisch.",
+   "est_sec": 6.92,
+   "gap_before": 0.6,
+   "role": "reply",
+   "block": "learning_language.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I've been doing it wrong this whole time.",
+   "est_sec": 2.58,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Easy fix. Some people also colour-code their flashcards, blue for masculine, red for feminine, green for neuter.",
+   "est_sec": 5.37,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "learning_language.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hey Brielle, is the gas canister empty or just cold?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_059",
+   "block": "nq_eval_059",
+   "name_pos": "start",
+   "addressee": "Brielle",
+   "est_sec": 3.2,
+   "gap_before": 0.88
+  },
+  {
+   "speaker": "other",
+   "text": "Empty. I told you this morning.",
+   "block": "nq_eval_059",
+   "est_sec": 1.96,
+   "gap_before": 0.69
+  },
+  {
+   "speaker": "user",
+   "text": "Ooh, I like colour coding.",
+   "est_sec": 1.65,
+   "gap_before": 1.5,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Your brain will start linking colour to gender, it's surprisingly effective.",
+   "est_sec": 3.51,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "learning_language.dlg5",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00096",
+  "name_pos": "start",
+  "answered": true
+ },
+ "groups": [
+  "ordinary",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

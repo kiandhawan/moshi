@@ -1,0 +1,156 @@
+{
+ "id": "eval_12_00164",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 164,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "reading": {
+  "material": "recipe",
+  "sec": 24.6
+ },
+ "topic": "podcasts",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_18",
+  "read_instr_05",
+  "murmur_06",
+  "murmur_06",
+  "read_cue_03"
+ ],
+ "block_ids": [
+  "podcasts.ctx8"
+ ],
+ "est_total_sec": 60.23,
+ "est_speech_sec": 30.86,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.31,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.38,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "My dad only ever listens to the radio. I want to get him into podcasts.",
+   "est_sec": 4.75,
+   "gap_before": 0.48,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun mission. What's he into, history, sport, or something else?",
+   "est_sec": 3.2,
+   "gap_before": 0.31,
+   "role": "reply",
+   "block": "podcasts.ctx8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment to read through the recipe before you say anything.",
+   "est_sec": 4.13,
+   "gap_before": 0.57,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, a pinch of salt.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 4.75
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, a pinch of salt.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 12.47
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I've read the recipe.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 24.6
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Finished reading? Your dad and podcasts. What does he like?",
+   "est_sec": 3.2,
+   "gap_before": 1.99,
+   "role": "resume",
+   "block": "podcasts.ctx8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "History. He reads about old wars constantly.",
+   "est_sec": 2.27,
+   "gap_before": 1.1,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great, a long narrative history series will suit him perfectly. Start him on the first episode.",
+   "est_sec": 5.06,
+   "gap_before": 1.43,
+   "role": "followup",
+   "block": "podcasts.ctx8",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

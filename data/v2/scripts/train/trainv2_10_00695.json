@@ -1,0 +1,114 @@
+{
+ "id": "trainv2_10_00695",
+ "split": "train",
+ "seed": 10,
+ "order_index": 695,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "movies"
+ ],
+ "wait_sec": 46,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 46
+ },
+ "instruction_position": 0.805,
+ "topic": "movies",
+ "voices": {
+  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_25",
+  "think_instr_10"
+ ],
+ "phrasing_styles": {
+  "think_instr_10": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "weather_plans.dlg4",
+  "movies.ctx3"
+ ],
+ "est_total_sec": 75.21,
+ "est_speech_sec": 24.16,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.3,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. There's a new sci-fi film out. Should I see it in the cinema or wait for streaming?",
+   "est_sec": 5.99,
+   "gap_before": 0.65,
+   "block": "movies.ctx3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Big sci-fi often looks amazing on a huge screen. How much do you care about the visuals compared to watching on your couch?",
+   "est_sec": 7.23,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "movies.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, give me forty-six seconds to think it over, then ask me.",
+   "est_sec": 3.82,
+   "gap_before": 0.66,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 46,
+   "phrasing": "think_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Have you decided? Big screen now, or wait for streaming?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "movies.ctx3",
+   "anchor": {
+    "turn": 4,
+    "offset": 46.47
+   }
+  }
+ ]
+}

@@ -1,0 +1,164 @@
+{
+ "id": "trainv2_10_00664",
+ "split": "train",
+ "seed": 10,
+ "order_index": 664,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "hiking"
+ ],
+ "instruction_position": 0.141,
+ "topic": "hiking",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_20",
+  "greet_ans_23",
+  "describe_instr_11",
+  "describe_cue_v2_01"
+ ],
+ "phrasing_styles": {
+  "describe_instr_11": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_01": {
+   "style": "fragment",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "hiking.opt2",
+  "pets.dlg17"
+ ],
+ "est_total_sec": 76.95,
+ "est_speech_sec": 61.13,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_23"
+  },
+  {
+   "speaker": "user",
+   "text": "I need to pick hiking boots before my trip, and I've tried on a few pairs.",
+   "est_sec": 5.06,
+   "gap_before": 0.22,
+   "block": "hiking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "First let me tell you about all of them, then you can comment.",
+   "est_sec": 4.13,
+   "gap_before": 0.69,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_11"
+  },
+  {
+   "speaker": "user",
+   "text": "The first pair is heavy leather boots, super sturdy and waterproof, but they need breaking in.",
+   "est_sec": 5.06,
+   "gap_before": 1.29,
+   "block": "hiking.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "The second pair is lightweight trail runners, really comfortable right away, but not waterproof.",
+   "est_sec": 4.44,
+   "gap_before": 2.91,
+   "block": "hiking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "And the third pair is mid height synthetic boots, kind of in between, with decent ankle support.",
+   "est_sec": 5.37,
+   "gap_before": 1.46,
+   "block": "hiking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's it, that's the lot. Your take?",
+   "est_sec": 2.27,
+   "gap_before": 1.29,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What kind of terrain and weather are you expecting? If it's wet and rocky, go for the leather boots, but start wearing them now. If it's dry, the trail runners will feel amazing.",
+   "est_sec": 10.33,
+   "gap_before": 1.06,
+   "role": "resume",
+   "block": "hiking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. We have a baby due in two months and a very spoiled dog. How do we prepare him?",
+   "est_sec": 6.61,
+   "gap_before": 1.07,
+   "block": "pets.dlg17",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good thinking to start now. Begin making small changes, like where he sleeps or which rooms he's allowed in, before the baby arrives.",
+   "est_sec": 7.23,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "pets.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "He sleeps on our bed.",
+   "est_sec": 1.65,
+   "gap_before": 1.35,
+   "block": "pets.dlg17",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If that'll change, change it now, so he doesn't connect losing his spot with the baby.",
+   "est_sec": 5.06,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "pets.dlg17"
+  }
+ ]
+}

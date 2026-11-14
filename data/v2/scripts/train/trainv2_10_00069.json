@@ -1,0 +1,182 @@
+{
+ "id": "trainv2_10_00069",
+ "split": "train",
+ "seed": 10,
+ "order_index": 69,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "sleep"
+ ],
+ "instruction_position": 0.154,
+ "topic": "sleep",
+ "voices": {
+  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_02",
+  "describe_instruction_v2_19",
+  "ack_06",
+  "describe_cue_v2_01"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_19": {
+   "style": "fragment",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_01": {
+   "style": "fragment",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "sleep.opt4",
+  "cleaning.dlg12"
+ ],
+ "est_total_sec": 81.4,
+ "est_speech_sec": 66.6,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.68,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "My dog has started sleeping in our bed and I need to decide what to do about it.",
+   "est_sec": 5.68,
+   "gap_before": 0.35,
+   "block": "sleep.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "All the options first, comments after.",
+   "est_sec": 1.96,
+   "gap_before": 0.47,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.34,
+   "role": "ack",
+   "phrasing": "ack_06"
+  },
+  {
+   "speaker": "user",
+   "text": "We could buy him a nice dog bed and put it right next to ours, so he's still close.",
+   "est_sec": 5.99,
+   "gap_before": 1.23,
+   "block": "sleep.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or crate train him in the kitchen at night with a blanket over the crate.",
+   "est_sec": 4.75,
+   "gap_before": 1.82,
+   "block": "sleep.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "We could just give up and let him stay in the bed, he's a small dog after all.",
+   "est_sec": 5.68,
+   "gap_before": 2.06,
+   "block": "sleep.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Or close the bedroom door and let him have the whole living room sofa.",
+   "est_sec": 4.44,
+   "gap_before": 1.43,
+   "block": "sleep.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "That's it, that's the lot. Your take?",
+   "est_sec": 2.27,
+   "gap_before": 0.9,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you're sleeping badly, the bed beside yours is the best compromise. The crate is good if he's anxious and likes a den, the sofa is easy but could become a habit, and keeping him in your bed is only fine if you both sleep well.",
+   "est_sec": 14.36,
+   "gap_before": 0.44,
+   "role": "resume",
+   "block": "sleep.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but How do you clean a mattress? I've never done it in my life.",
+   "est_sec": 4.75,
+   "gap_before": 0.94,
+   "block": "cleaning.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Most people haven't. Strip the bed, vacuum the mattress with the upholstery tool, especially the seams.",
+   "est_sec": 5.06,
+   "gap_before": 0.3,
+   "role": "reply",
+   "block": "cleaning.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "Then what?",
+   "est_sec": 0.72,
+   "gap_before": 0.73,
+   "block": "cleaning.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sprinkle baking soda over the top, leave it for a few hours, then vacuum it up. It freshens it nicely.",
+   "est_sec": 6.3,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "cleaning.dlg12"
+  }
+ ]
+}

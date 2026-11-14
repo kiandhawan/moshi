@@ -1,0 +1,165 @@
+{
+ "id": "trainv2_10_00381",
+ "split": "train",
+ "seed": 10,
+ "order_index": 381,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "books"
+ ],
+ "instruction_position": 0.492,
+ "topic": "books",
+ "voices": {
+  "user": "c250136a9ec74cc0b799be54664a83f2",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_04",
+  "describe_instr_08",
+  "describe_cue_13"
+ ],
+ "phrasing_styles": {
+  "describe_instr_08": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_13": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "cleaning.dlg18",
+  "books.opt3"
+ ],
+ "est_total_sec": 77.02,
+ "est_speech_sec": 61.75,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.58,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 1.0,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Every time I clean my windows they end up streaky. What am I doing wrong?",
+   "est_sec": 4.75,
+   "gap_before": 0.21,
+   "block": "cleaning.dlg18",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Probably cleaning in the sun. The liquid dries too fast and leaves streaks. Pick a cloudy day or do them in the shade.",
+   "est_sec": 7.23,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "cleaning.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, I want to start reading in the mornings before work, and I'm torn about what kind of book to use.",
+   "est_sec": 6.92,
+   "gap_before": 1.47,
+   "block": "books.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Please wait until I've gone through all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.77,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_08"
+  },
+  {
+   "speaker": "user",
+   "text": "A big collection of short stories, so I can finish one each morning over coffee.",
+   "est_sec": 4.75,
+   "gap_before": 0.82,
+   "block": "books.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A slow philosophy book that I'd read a few pages of at a time and think about all day.",
+   "est_sec": 5.99,
+   "gap_before": 2.91,
+   "block": "books.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a fast paced thriller, which would definitely get me out of bed earlier.",
+   "est_sec": 4.44,
+   "gap_before": 1.31,
+   "block": "books.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 0.73,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If your mornings are rushed, the short stories fit best. Save the thriller for weekends when you can binge it, and keep the philosophy book for a quiet evening.",
+   "est_sec": 9.09,
+   "gap_before": 0.91,
+   "role": "resume",
+   "block": "books.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Huh. I always wait for a sunny day.",
+   "est_sec": 2.58,
+   "gap_before": 1.57,
+   "event": "ordinary_request",
+   "block": "cleaning.dlg18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Common mistake. Use a spray of water with a splash of vinegar, then wipe with a microfibre cloth, and buff with a second dry one.",
+   "est_sec": 7.85,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "cleaning.dlg18"
+  }
+ ]
+}

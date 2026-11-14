@@ -1,0 +1,141 @@
+{
+ "id": "trainv2_10_00638",
+ "split": "train",
+ "seed": 10,
+ "order_index": 638,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "studying"
+ ],
+ "wait_sec": 52,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 52
+ },
+ "instruction_position": 0.78,
+ "topic": "studying",
+ "voices": {
+  "user": "c250136a9ec74cc0b799be54664a83f2",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_17",
+  "greet_ans_19",
+  "think_instr_19",
+  "self_28",
+  "self_22"
+ ],
+ "phrasing_styles": {
+  "think_instr_19": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "studying.ctx4",
+  "birthday_party.dlg2"
+ ],
+ "est_total_sec": 81.08,
+ "est_speech_sec": 24.36,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.62,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.4,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "My driving theory test is in two weeks and I haven't opened anything.",
+   "est_sec": 4.13,
+   "gap_before": 0.54,
+   "block": "studying.ctx4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Two weeks is enough if you're steady. Would you rather drill practice questions on an app, or read through the highway code first?",
+   "est_sec": 7.23,
+   "gap_before": 0.39,
+   "role": "reply",
+   "block": "studying.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me fifty-two seconds to figure it out, then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 3.38,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 52,
+   "phrasing": "think_instr_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, what else was there?",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 34.78
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, think, think.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 37.99
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, theory test. Starting with the app or the book?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "studying.ctx4",
+   "anchor": {
+    "turn": 4,
+    "offset": 52.57
+   }
+  }
+ ]
+}

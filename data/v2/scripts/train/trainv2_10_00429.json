@@ -1,0 +1,161 @@
+{
+ "id": "trainv2_10_00429",
+ "split": "train",
+ "seed": 10,
+ "order_index": 429,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "movies"
+ ],
+ "instruction_position": 0.602,
+ "topic": "movies",
+ "voices": {
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_25",
+  "describe_instruction_v2_32",
+  "ack_14",
+  "describe_cue_v2_23"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_32": {
+   "style": "implied",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_23": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "shopping.dlg32",
+  "movies.opt3"
+ ],
+ "est_total_sec": 80.61,
+ "est_speech_sec": 58.55,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.66,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.6,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "How do you buy perfume without smelling every bottle in the shop until your nose gives up?",
+   "est_sec": 5.37,
+   "gap_before": 0.46,
+   "block": "shopping.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Pick three at most per visit. Spray them on paper strips first, and only put your favourite on your skin.",
+   "est_sec": 6.3,
+   "gap_before": 1.01,
+   "role": "reply",
+   "block": "shopping.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. It's my gran's ninetieth and I want to show a film at the party. I've got a few ideas.",
+   "est_sec": 7.23,
+   "gap_before": 0.68,
+   "block": "movies.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I've got a long list here and I'll want your verdict once I've read the last one.",
+   "est_sec": 5.68,
+   "gap_before": 0.63,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_32"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.57,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "There's an old musical she says she saw at the cinema with my grandad back when they were courting.",
+   "est_sec": 5.99,
+   "gap_before": 1.01,
+   "block": "movies.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a nature documentary about the seaside town she grew up in, very gentle and pretty.",
+   "est_sec": 5.06,
+   "gap_before": 5.39,
+   "block": "movies.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another idea is a black and white comedy that she still quotes at Christmas every year.",
+   "est_sec": 5.06,
+   "gap_before": 7.35,
+   "block": "movies.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. Over to you, Moshi.",
+   "est_sec": 1.65,
+   "gap_before": 1.07,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Would she enjoy a happy cry, or would that be too much on the day? If she'd love it, the musical is the heartfelt choice. If you want lightness, put the comedy on and let her deliver her favourite lines.",
+   "est_sec": 12.5,
+   "gap_before": 1.13,
+   "role": "resume",
+   "block": "movies.opt3"
+  }
+ ]
+}

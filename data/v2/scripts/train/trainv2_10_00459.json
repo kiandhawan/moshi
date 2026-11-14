@@ -1,0 +1,185 @@
+{
+ "id": "trainv2_10_00459",
+ "split": "train",
+ "seed": 10,
+ "order_index": 459,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_end",
+  "long",
+  "other_name"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "sleep"
+ ],
+ "wait_sec": 35,
+ "early_end": {
+  "after_sec": 31.32,
+  "direct": false
+ },
+ "instruction_position": 0.491,
+ "topic": "sleep",
+ "voices": {
+  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "friend": null,
+  "other": "536d3a5e000945adb7038665781a4aca",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_086",
+  "greet_08",
+  "greet_ans_28",
+  "think_instruction_v2_19",
+  "ack_01",
+  "early_end_v2_13"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_19": {
+   "style": "command",
+   "tone": "distracted",
+   "states_return": false,
+   "source": "v2"
+  },
+  "early_end_v2_13": {
+   "style": "statement",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_work_062",
+  "video_games.dlg17",
+  "sleep.ctx1"
+ ],
+ "est_total_sec": 83.47,
+ "est_speech_sec": 42.22,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Jack, did you finish your maths homework?",
+   "est_sec": 2.27,
+   "gap_before": 0.52,
+   "block": "nq_work_062",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_work_062",
+   "name_pos": "start",
+   "addressee": "Jack"
+  },
+  {
+   "speaker": "other",
+   "text": "Mostly. The last two are impossible.",
+   "est_sec": 1.96,
+   "gap_before": 0.77,
+   "block": "nq_work_062"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. I've been going to bed at like one in the morning and I'm wrecked every day.",
+   "est_sec": 5.99,
+   "gap_before": 1.18,
+   "block": "sleep.ctx1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let's move it earlier step by step. What time do you realistically want to be asleep by on work nights?",
+   "est_sec": 6.3,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "sleep.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me thirty-five seconds to crunch the numbers.",
+   "est_sec": 2.58,
+   "gap_before": 1.48,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 35,
+   "phrasing": "think_instruction_v2_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.66,
+   "role": "ack",
+   "phrasing": "ack_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, that came quick. I'm done thinking.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 6,
+    "offset": 31.32
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_v2_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Let's say midnight to start. Eleven feels impossible right now.",
+   "est_sec": 3.2,
+   "gap_before": 0.57,
+   "event": "ordinary_request",
+   "block": "sleep.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Midnight is a solid first step. Once that feels normal we can nudge it earlier.",
+   "est_sec": 4.75,
+   "gap_before": 0.62,
+   "role": "followup",
+   "block": "sleep.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Wouldn't that spoil it?",
+   "est_sec": 1.34,
+   "gap_before": 1.08,
+   "event": "ordinary_request",
+   "block": "video_games.dlg17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A little, but it makes it far less scary. Or play it in the daytime with the lights on and someone else in the room.",
+   "est_sec": 7.85,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "video_games.dlg17"
+  }
+ ]
+}

@@ -1,0 +1,162 @@
+{
+ "id": "trainv2_10_00474",
+ "split": "train",
+ "seed": 10,
+ "order_index": 474,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "photography"
+ ],
+ "instruction_position": 0.184,
+ "topic": "photography",
+ "voices": {
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_05",
+  "describe_instr_16",
+  "describe_cue_02"
+ ],
+ "phrasing_styles": {
+  "describe_instr_16": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_02": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "photography.opt6",
+  "coffee.dlg25"
+ ],
+ "est_total_sec": 83.56,
+ "est_speech_sec": 58.24,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.72,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_05"
+  },
+  {
+   "speaker": "user",
+   "text": "We need new photos for our bakery's menu board and I'm not sure how to do it.",
+   "est_sec": 5.37,
+   "gap_before": 0.23,
+   "block": "photography.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Listen to all of them first, then comment.",
+   "est_sec": 2.58,
+   "gap_before": 0.46,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I could just shoot them myself on my phone near the front window in the morning light.",
+   "est_sec": 5.37,
+   "gap_before": 1.12,
+   "block": "photography.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "My nephew has a nice camera and offered to do it for a cake.",
+   "est_sec": 4.44,
+   "gap_before": 5.12,
+   "block": "photography.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a food photographer in the next town who charges a flat fee for half a day.",
+   "est_sec": 5.37,
+   "gap_before": 7.12,
+   "block": "photography.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or we skip photos and use hand drawn illustrations of the bread and pastries.",
+   "est_sec": 4.44,
+   "gap_before": 3.64,
+   "block": "photography.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 1.13,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Illustrations would give the bakery real character and never look dated. If you want photos, start with your phone, and only call the food photographer if the results look flat.",
+   "est_sec": 9.4,
+   "gap_before": 1.19,
+   "role": "resume",
+   "block": "photography.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, I own a small cafe and I want to add a new seasonal drink. How do I price it without scaring people off?",
+   "est_sec": 7.85,
+   "gap_before": 1.46,
+   "block": "coffee.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Start by working out the cost of each ingredient per cup, including the milk, syrup and even the cup and lid.",
+   "est_sec": 6.61,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "coffee.dlg25"
+  }
+ ]
+}

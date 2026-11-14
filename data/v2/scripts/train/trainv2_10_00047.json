@@ -1,0 +1,211 @@
+{
+ "id": "trainv2_10_00047",
+ "split": "train",
+ "seed": 10,
+ "order_index": 47,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "job_interview",
+  "job_interview"
+ ],
+ "instruction_position": 0.813,
+ "topic": "job_interview",
+ "voices": {
+  "user": "705690224f264386b87fb598083ab022",
+  "friend": "cfc0d21e0b5947d08b957b2061670c0a",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Omar",
+ "friend_name_id": "name_13",
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_11",
+  "side_instruction_v2_11",
+  "ack_12",
+  "dq_20",
+  "side_cue_v2_01"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_11": {
+   "style": "statement",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_01": {
+   "style": "command",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "fitness.dlg26",
+  "job_interview.ctx5",
+  "job_interview.side3",
+  "dq_20"
+ ],
+ "est_total_sec": 80.43,
+ "est_speech_sec": 58.22,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.53,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Is jumping rope actually good cardio, or is it just for boxers in movies?",
+   "est_sec": 4.44,
+   "gap_before": 0.52,
+   "block": "fitness.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's genuinely great cardio. Ten minutes of skipping is a tough workout, and it improves coordination too.",
+   "est_sec": 5.37,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "fitness.dlg26"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, disaster. Two companies just scheduled interviews at the exact same time on Monday.",
+   "est_sec": 5.06,
+   "gap_before": 1.35,
+   "block": "job_interview.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Annoying, but fixable. Which one would you rather move, the startup or the bank?",
+   "est_sec": 4.44,
+   "gap_before": 1.2,
+   "role": "reply",
+   "block": "job_interview.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, I have to deal with my roommate quickly. You'll hear from me when I'm done.",
+   "est_sec": 5.06,
+   "gap_before": 0.61,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.53,
+   "role": "ack",
+   "phrasing": "ack_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Omar, will you do a quick practice round with me?",
+   "est_sec": 3.2,
+   "gap_before": 1.49,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "job_interview.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay. Why do you want to work here?",
+   "est_sec": 2.58,
+   "gap_before": 1.05,
+   "block": "job_interview.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Because I really like their products and I think I could grow a lot.",
+   "est_sec": 4.44,
+   "gap_before": 3.38,
+   "block": "job_interview.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "That's kind of generic. What exactly do you like about them?",
+   "est_sec": 3.51,
+   "gap_before": 0.74,
+   "block": "job_interview.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Fair. How about how they help small shops sell online?",
+   "est_sec": 3.2,
+   "gap_before": 1.49,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "job_interview.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Much better. Lead with that and give an example.",
+   "est_sec": 2.89,
+   "gap_before": 1.43,
+   "block": "job_interview.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Omar, when does your train leave?",
+   "est_sec": 1.96,
+   "gap_before": 1.5,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_20"
+  },
+  {
+   "speaker": "friend",
+   "text": "At a quarter past nine.",
+   "est_sec": 1.65,
+   "gap_before": 1.25,
+   "phrasing": "dq_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, I'm back, Moshi. Go ahead.",
+   "est_sec": 1.96,
+   "gap_before": 1.45,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. Still need to sort out the double booking. Which one are you rescheduling?",
+   "est_sec": 4.44,
+   "gap_before": 0.64,
+   "role": "resume",
+   "block": "job_interview.ctx5"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "id": "trainv2_10_00547",
+ "split": "train",
+ "seed": 10,
+ "order_index": 547,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "home_repair"
+ ],
+ "instruction_position": 0.178,
+ "topic": "home_repair",
+ "voices": {
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_10",
+  "greet_ans_23",
+  "describe_instruction_v2_31",
+  "describe_cue_v2_20"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_31": {
+   "style": "implied",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_20": {
+   "style": "statement",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "home_repair.opt2",
+  "pets.dlg24"
+ ],
+ "est_total_sec": 80.8,
+ "est_speech_sec": 57.83,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.63,
+   "role": "greeting",
+   "phrasing": "greet_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.79,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_23"
+  },
+  {
+   "speaker": "user",
+   "text": "We need to fix the old wooden fence in the backyard and I'm weighing a few choices.",
+   "est_sec": 5.37,
+   "gap_before": 0.33,
+   "block": "home_repair.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "There are quite a few choices and they're all a bit complicated, so this might take me a while.",
+   "est_sec": 5.99,
+   "gap_before": 0.87,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_31"
+  },
+  {
+   "speaker": "user",
+   "text": "One is just replacing the few broken boards and painting the whole thing.",
+   "est_sec": 4.13,
+   "gap_before": 0.63,
+   "block": "home_repair.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another option is tearing it down and putting in a new wooden fence, which is a big weekend project.",
+   "est_sec": 5.99,
+   "gap_before": 7.66,
+   "block": "home_repair.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's a vinyl fence, more expensive at first but it basically never needs paint again.",
+   "est_sec": 5.06,
+   "gap_before": 5.44,
+   "block": "home_repair.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Done, that's all of them. Now I'd love your opinion.",
+   "est_sec": 3.2,
+   "gap_before": 1.35,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If most of the fence is still solid, replacing the broken boards and painting is the cheapest and quickest fix. A new wooden fence gives you a fresh start but takes real work. Vinyl costs more up front, but saves you painting for years.",
+   "est_sec": 13.74,
+   "gap_before": 1.15,
+   "role": "resume",
+   "block": "home_repair.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but We adopted a rescue dog and she's terrified of my husband. Just him.",
+   "est_sec": 4.75,
+   "gap_before": 1.72,
+   "block": "pets.dlg24",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's actually common. Some rescue dogs had bad experiences with men, or just weren't around many when they were young.",
+   "est_sec": 6.3,
+   "gap_before": 0.9,
+   "role": "reply",
+   "block": "pets.dlg24"
+  }
+ ]
+}

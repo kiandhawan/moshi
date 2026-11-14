@@ -1,0 +1,142 @@
+{
+ "id": "eval_12_00311",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 311,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
+ "topics": [
+  "cycling"
+ ],
+ "topic": "cycling",
+ "voices": {
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_21",
+  "waitlike_18"
+ ],
+ "block_ids": [
+  "cycling.dlg7"
+ ],
+ "est_total_sec": 49.91,
+ "est_speech_sec": 36.44,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.35,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.89,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "How much water should I take on a long ride?",
+   "est_sec": 3.2,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "cycling.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Roughly one bottle per hour, more if it's hot. On a three hour ride, two bottles plus a refill stop is a good plan.",
+   "est_sec": 7.54,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "cycling.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I always forget to drink.",
+   "est_sec": 1.65,
+   "gap_before": 1.28,
+   "event": "ordinary_request",
+   "block": "cycling.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Set a reminder, or take a sip every time you reach a hilltop or a junction.",
+   "est_sec": 5.06,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "cycling.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Should I bring food too?",
+   "est_sec": 1.65,
+   "gap_before": 2.5,
+   "event": "ordinary_request",
+   "block": "cycling.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, for anything over ninety minutes. Bananas, cereal bars, or even a small sandwich.",
+   "est_sec": 4.44,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "cycling.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, wait, honestly I thought I could just",
+   "est_sec": 2.58,
+   "gap_before": 1.38,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "cycling.dlg7"
+  },
+  {
+   "speaker": "user",
+   "text": "power through on breakfast.",
+   "est_sec": 1.34,
+   "gap_before": 2.3,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_18",
+   "block": "cycling.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A lot of people try that and run out of energy halfway. It's called bonking, and it's not fun.",
+   "est_sec": 5.99,
+   "gap_before": 0.46,
+   "role": "reply",
+   "block": "cycling.dlg7",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "ordinary"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

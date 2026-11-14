@@ -1,0 +1,225 @@
+{
+ "id": "trainv2_10_00084",
+ "split": "train",
+ "seed": 10,
+ "order_index": 84,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "friend_first"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "pets",
+  "coffee"
+ ],
+ "instruction_position": 0.441,
+ "topic": "pets",
+ "voices": {
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "friend": "ec3f1730c4494386accf1e86625bfe6d",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Ben",
+ "friend_name_id": "name_11",
+ "phrasing_ids": [
+  "greet_10",
+  "greet_ans_05",
+  "friend_interrupt_v2_22",
+  "side_instruction_v2_59",
+  "ack_08",
+  "dq_19",
+  "side_cue_v2_11"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_22": {
+   "style": "breakoff",
+   "tone": "polite",
+   "source": "v2"
+  },
+  "side_instruction_v2_59": {
+   "style": "friend_first",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_11": {
+   "style": "command",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "pets.ctx10",
+  "coffee.side1",
+  "dq_19",
+  "baking.dlg19"
+ ],
+ "est_total_sec": 84.15,
+ "est_speech_sec": 60.8,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_10"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.94,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Fireworks start tonight and my dog completely falls apart every year.",
+   "est_sec": 3.51,
+   "gap_before": 0.24,
+   "block": "pets.ctx10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Poor thing. Would you rather stay home and make a safe den for him, or take him somewhere quieter, like out of town?",
+   "est_sec": 7.23,
+   "gap_before": 1.66,
+   "role": "reply",
+   "block": "pets.ctx10"
+  },
+  {
+   "speaker": "friend",
+   "text": "Did you see that the— oh, you're talking. Can I just ask something?",
+   "est_sec": 4.13,
+   "gap_before": 0.51,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, Moshi, I need to answer him. I'll check in again when we're finished.",
+   "est_sec": 4.44,
+   "gap_before": 0.68,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_59"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.6,
+   "role": "ack",
+   "phrasing": "ack_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Ben, did you finish the milk?",
+   "est_sec": 1.96,
+   "gap_before": 1.15,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "There should be a little left, check behind the juice.",
+   "est_sec": 3.2,
+   "gap_before": 1.5,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Found it. Barely enough for one coffee.",
+   "est_sec": 2.27,
+   "gap_before": 0.87,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Make it for yourself. I'll grab one on the way to work.",
+   "est_sec": 3.82,
+   "gap_before": 2.65,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you sure? I can share it.",
+   "est_sec": 2.27,
+   "gap_before": 0.39,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "No, really. There's a new place near the station I want to try anyway.",
+   "est_sec": 4.44,
+   "gap_before": 1.67,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you hungry?",
+   "est_sec": 1.03,
+   "gap_before": 0.5,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_19"
+  },
+  {
+   "speaker": "friend",
+   "text": "A little, yeah.",
+   "est_sec": 1.03,
+   "gap_before": 3.31,
+   "phrasing": "dq_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm all set. Please, go ahead and continue.",
+   "est_sec": 2.89,
+   "gap_before": 1.51,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. Your nervous dog. Staying put, or heading somewhere calmer?",
+   "est_sec": 3.2,
+   "gap_before": 0.39,
+   "role": "resume",
+   "block": "pets.ctx10"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. My cheesecake cracked right across the middle. Again. I'm starting to take it personally.",
+   "est_sec": 5.37,
+   "gap_before": 1.93,
+   "block": "baking.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Don't, it happens to everyone. Cracks usually come from baking too hot or cooling too fast.",
+   "est_sec": 5.06,
+   "gap_before": 0.62,
+   "role": "reply",
+   "block": "baking.dlg19"
+  }
+ ]
+}

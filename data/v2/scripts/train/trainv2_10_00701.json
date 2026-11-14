@@ -1,0 +1,159 @@
+{
+ "id": "trainv2_10_00701",
+ "split": "train",
+ "seed": 10,
+ "order_index": 701,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "gardening"
+ ],
+ "wait_sec": 27,
+ "deadline": {
+  "after_turn": 8,
+  "sec": 27
+ },
+ "instruction_position": 0.896,
+ "topic": "gardening",
+ "voices": {
+  "user": "050df12e0f30484fb882a9a5410e5d66",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_01",
+  "greet_ans_01",
+  "think_instr_01",
+  "self_26"
+ ],
+ "phrasing_styles": {
+  "think_instr_01": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "coffee.dlg26",
+  "gardening.ctx4"
+ ],
+ "est_total_sec": 84.92,
+ "est_speech_sec": 49.46,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.72,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.77,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "My commute is an hour and a half and my coffee is cold by the time I'm halfway.",
+   "est_sec": 5.68,
+   "gap_before": 0.48,
+   "block": "coffee.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a long trip. A vacuum insulated travel mug makes a big difference, the good ones keep coffee hot for hours.",
+   "est_sec": 6.61,
+   "gap_before": 0.57,
+   "role": "reply",
+   "block": "coffee.dlg26"
+  },
+  {
+   "speaker": "user",
+   "text": "Mine says it's insulated, but it's useless.",
+   "est_sec": 2.27,
+   "gap_before": 2.16,
+   "block": "coffee.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Some cheaper ones only have a single wall. Look for double walled stainless steel and a lid that seals properly. A lot of heat escapes through the lid.",
+   "est_sec": 8.78,
+   "gap_before": 0.34,
+   "role": "reply",
+   "block": "coffee.dlg26"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. So the council finally gave me an allotment plot. It's waist high in brambles.",
+   "est_sec": 5.37,
+   "gap_before": 0.91,
+   "block": "gardening.ctx4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Congratulations, that's the hard part done. Do you want to clear the whole thing in one go, or cover half with sheeting and grow on the other half this year?",
+   "est_sec": 9.4,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "gardening.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me twenty-seven seconds to think, then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 1.08,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 27,
+   "phrasing": "think_instr_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, decisions, decisions.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 8,
+    "offset": 15.72
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So how are we tackling that plot, one big clearance or half and half?",
+   "est_sec": 4.44,
+   "role": "resume",
+   "block": "gardening.ctx4",
+   "anchor": {
+    "turn": 8,
+    "offset": 27.0
+   }
+  }
+ ]
+}

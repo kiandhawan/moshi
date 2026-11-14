@@ -1,0 +1,185 @@
+{
+ "id": "trainv2_10_00141",
+ "split": "train",
+ "seed": 10,
+ "order_index": 141,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "moshi_name",
+  "other_name",
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "job_interview"
+ ],
+ "wait_sec": 26,
+ "deadline": {
+  "after_turn": 10,
+  "sec": 26
+ },
+ "instruction_position": 0.932,
+ "topic": "job_interview",
+ "voices": {
+  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "friend": null,
+  "other": "050df12e0f30484fb882a9a5410e5d66",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_223",
+  "greet_17",
+  "greet_ans_22",
+  "think_instruction_v2_28",
+  "self_04"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_28": {
+   "style": "fragment",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_social_013",
+  "coffee.dlg17",
+  "job_interview.ctx8"
+ ],
+ "est_total_sec": 80.29,
+ "est_speech_sec": 45.94,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.54,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "First shift as a barista tomorrow. Moshi, I'm terrified of steaming milk wrong in front of customers.",
+   "est_sec": 5.37,
+   "gap_before": 0.4,
+   "block": "coffee.dlg17",
+   "kind": "moshi_name",
+   "name_pos": "middle",
+   "addressee": "Moshi",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everyone starts there. The main thing is to start with the steam wand tip just under the surface, so you hear a gentle tearing sound.",
+   "est_sec": 7.85,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "coffee.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, my mum says I should walk into cafes with my CV, but everyone does it online now.",
+   "est_sec": 6.3,
+   "gap_before": 1.18,
+   "block": "job_interview.ctx8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How old are you, and what kind of job is it?",
+   "est_sec": 3.51,
+   "gap_before": 1.15,
+   "role": "reply",
+   "block": "job_interview.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Sixteen. Just weekend shifts, anywhere.",
+   "est_sec": 1.65,
+   "gap_before": 1.19,
+   "block": "job_interview.ctx8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For weekend cafe work, both can work. Do you want to try dropping in with your CV, or apply online first?",
+   "est_sec": 6.61,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "job_interview.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "So Joao, how did the five-a-side go?",
+   "est_sec": 2.27,
+   "gap_before": 0.73,
+   "block": "nq_social_013",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_social_013",
+   "name_pos": "start",
+   "addressee": "Joao"
+  },
+  {
+   "speaker": "other",
+   "text": "We lost, but I scored once.",
+   "est_sec": 1.96,
+   "gap_before": 0.85,
+   "block": "nq_social_013"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, twenty-six seconds and then check in with me.",
+   "est_sec": 2.89,
+   "gap_before": 1.11,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 26,
+   "phrasing": "think_instruction_v2_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, what did I do last time?",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 10,
+    "offset": 21.82
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, weekend job hunt. In person or online?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "job_interview.ctx8",
+   "anchor": {
+    "turn": 10,
+    "offset": 26.12
+   }
+  }
+ ]
+}

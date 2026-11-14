@@ -1,0 +1,173 @@
+{
+ "id": "trainv2_10_00603",
+ "split": "train",
+ "seed": 10,
+ "order_index": 603,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "board_games"
+ ],
+ "instruction_position": 0.683,
+ "topic": "board_games",
+ "voices": {
+  "user": "705690224f264386b87fb598083ab022",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_16",
+  "describe_instr_07",
+  "ack_08",
+  "describe_cue_v2_20"
+ ],
+ "phrasing_styles": {
+  "describe_instr_07": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_20": {
+   "style": "statement",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "public_transport.dlg32",
+  "board_games.opt4"
+ ],
+ "est_total_sec": 82.54,
+ "est_speech_sec": 68.05,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.37,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.58,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "We just adopted a dog and I don't drive. Can she come on the train with me?",
+   "est_sec": 5.37,
+   "gap_before": 0.53,
+   "block": "public_transport.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "In lots of places, yes. Small dogs often travel free, and bigger ones might need a ticket or have to stay on a lead.",
+   "est_sec": 7.54,
+   "gap_before": 0.65,
+   "role": "reply",
+   "block": "public_transport.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "She's medium sized. A bit nervous.",
+   "est_sec": 1.96,
+   "gap_before": 1.91,
+   "block": "public_transport.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then start with short, quiet trips outside rush hour. Bring treats and a blanket that smells like home.",
+   "est_sec": 5.68,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "public_transport.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. We want a regular game night with the neighbours but can't agree how often or where.",
+   "est_sec": 5.68,
+   "gap_before": 1.42,
+   "block": "board_games.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me walk you through all the options, then you can tell me what you think.",
+   "est_sec": 5.06,
+   "gap_before": 0.72,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_08"
+  },
+  {
+   "speaker": "user",
+   "text": "We could rotate houses every other Friday, so everyone hosts and nobody gets stuck cleaning up every time.",
+   "est_sec": 5.68,
+   "gap_before": 0.71,
+   "block": "board_games.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or always do it at ours, since we have the biggest table, and the others bring food.",
+   "est_sec": 5.37,
+   "gap_before": 2.12,
+   "block": "board_games.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "A third idea is meeting monthly at the pub on the corner, which has a back room and lends games.",
+   "est_sec": 6.3,
+   "gap_before": 1.25,
+   "block": "board_games.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Done, that's all of them. Now I'd love your opinion.",
+   "est_sec": 3.2,
+   "gap_before": 0.92,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Rotating keeps it fair and everyone feels involved, but it can fizzle if one house is tiny. Hosting at yours is easiest to keep going. The pub is relaxed, though monthly might feel too rare to build a habit.",
+   "est_sec": 12.19,
+   "gap_before": 0.69,
+   "role": "resume",
+   "block": "board_games.opt4"
+  }
+ ]
+}

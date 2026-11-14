@@ -5,6 +5,9 @@ held-out friend names, distractors, self-talk and wait-like phrases, the eval-on
 (phone_call, door, reading) and conditions (extension, implicit return). Checks IDs recorded in each script and also the
 turn texts (an eval phrasing's text must not occur in any train turn).
 
+v2 adds the held-out v2 phrasings (data/pools/v2/phrasings_v2.json), eval name questions and
+eval person names (data/pools/v2/names.json): none may appear in a train script.
+
 Usage: python scripts/check_split_leakage.py --train DIR [--eval DIR]
 """
 
@@ -36,9 +39,18 @@ def main() -> None:
     train_voices = {v["id"] for v in voices["train"]}
     eval_topics = set(topics["eval"])
     eval_ph = [x for k, v in ph.items() if k != "note" for x in v if x["split"] == "eval"]
+    # v2: held-out v2 phrasings, eval name questions and eval person names (data/pools/v2/)
+    v2 = ROOT / "data/pools/v2"
+    if (v2 / "phrasings_v2.json").exists():
+        ph2 = json.loads((v2 / "phrasings_v2.json").read_text())
+        eval_ph += [x for k, v in ph2.items() if isinstance(v, list) for x in v if x["split"] == "eval"]
+    eval_nq = [x for f in sorted(v2.glob("name_questions_*.json")) for x in json.loads(f.read_text())["name_questions"]
+               if x["split"] == "eval"]
+    eval_names = [x for x in json.loads((v2 / "names.json").read_text())["person_names"] if x["split"] == "eval"] \
+        if (v2 / "names.json").exists() else []
     eval_gen = [x for k in ("friend_names", "distractors", "self_talk", "wait_like", "phone_calls",
                             "door_visits", "reading_murmurs") for x in gen[k] if x["split"] == "eval"]
-    eval_ids = {x["id"] for x in eval_ph + eval_gen}
+    eval_ids = {x["id"] for x in eval_ph + eval_gen + eval_nq + eval_names}
     # texts: phrasings with slots removed become regexes; distractor user lines; names
     eval_text = []
 
@@ -51,9 +63,17 @@ def main() -> None:
         else:
             eval_text.append((iid, re.compile(re.escape(t))))
 
-    for x in eval_ph:
-        parts = [re.escape(norm(s)) for s in re.split(r"\{n\}|\{friend\}", x["text"])]
-        eval_text.append((x["id"], re.compile(r"[a-z\- ]+".join(parts))))
+    for x in eval_ph + [{"id": q["id"], "text": q["user"]} for q in eval_nq]:
+        parts = [re.escape(norm(s)) for s in re.split(r"\{n\}|\{friend\}|\{name\}", x["text"])]
+        rx = r"[a-z\- ]+".join(parts)
+        if len(norm(re.sub(r"\{\w+\}", "", x["text"])).split()) <= 3:  # e.g. "Okay, I guess.": whole turn only (as above)
+            rx = rf"^{rx}$"
+        eval_text.append((x["id"], re.compile(rx)))
+    for q in eval_nq:  # the eval answers, as lines of their own
+        if q.get("answer") and len(norm(q["answer"]).split()) > 3:
+            eval_text.append((q["id"], re.compile(rf"^{re.escape(norm(q['answer']))}$")))
+    for x in eval_names:  # held-out names of other people
+        eval_text.append((x["id"], re.compile(rf"\b{x['text'].lower()}\b")))
     for x in gen["friend_names"]:
         if x["split"] == "eval":
             eval_text.append((x["id"], re.compile(rf"\b{x['text'].lower()}\b")))
@@ -99,7 +119,7 @@ def main() -> None:
                 problems.append(f"{f.name}[{k}]: reference_only in a train script")
     m = 0
     if args.eval:
-        for f in sorted(args.eval.glob("*.json")):
+        for f in sorted(args.eval.glob("*_*.json")):
             s = json.loads(f.read_text())
             m += 1
             for role, vid in s["voices"].items():

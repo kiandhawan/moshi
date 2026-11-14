@@ -1,0 +1,114 @@
+{
+ "id": "trainv2_10_00499",
+ "split": "train",
+ "seed": 10,
+ "order_index": 499,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "birthday_party"
+ ],
+ "wait_sec": 56,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 56
+ },
+ "instruction_position": 0.704,
+ "topic": "birthday_party",
+ "voices": {
+  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_29",
+  "greet_ans_28",
+  "think_instruction_v2_44"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_44": {
+   "style": "implied",
+   "tone": "distracted",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "birthday_party.ctx5",
+  "pets.dlg14"
+ ],
+ "est_total_sec": 83.17,
+ "est_speech_sec": 21.68,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.58,
+   "role": "greeting",
+   "phrasing": "greet_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, the twins want separate parties this year.",
+   "est_sec": 2.58,
+   "gap_before": 0.43,
+   "block": "birthday_party.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a big ask at their age. Are you open to two parties, or would one party with two cakes keep the peace?",
+   "est_sec": 7.23,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "birthday_party.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "My head's all over the place. I'll know in fifty-six seconds, ask me then.",
+   "est_sec": 4.44,
+   "gap_before": 1.25,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 56,
+   "phrasing": "think_instruction_v2_44"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, two parties for the twins, or one party with a cake each?",
+   "est_sec": 4.13,
+   "role": "resume",
+   "block": "birthday_party.ctx5",
+   "anchor": {
+    "turn": 4,
+    "offset": 56.17
+   }
+  }
+ ]
+}

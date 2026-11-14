@@ -1,0 +1,166 @@
+{
+ "id": "trainv2_10_00222",
+ "split": "train",
+ "seed": 10,
+ "order_index": 222,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "shopping"
+ ],
+ "instruction_position": 0.681,
+ "topic": "shopping",
+ "voices": {
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_29",
+  "describe_instruction_v2_32",
+  "describe_cue_v2_28"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_32": {
+   "style": "implied",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_28": {
+   "style": "fragment",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "cooking.dlg25",
+  "shopping.opt4"
+ ],
+ "est_total_sec": 78.17,
+ "est_speech_sec": 63.92,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.92,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_29"
+  },
+  {
+   "speaker": "user",
+   "text": "My garden is drowning in cucumbers. Can I pickle them without canning equipment?",
+   "est_sec": 4.13,
+   "gap_before": 0.23,
+   "block": "cooking.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, fridge pickles are easy. You just need jars, vinegar, water, salt, a little sugar and some dill.",
+   "est_sec": 5.68,
+   "gap_before": 0.57,
+   "role": "reply",
+   "block": "cooking.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "What ratio?",
+   "est_sec": 0.72,
+   "gap_before": 0.83,
+   "block": "cooking.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Equal parts vinegar and water, with about a tablespoon of salt and a teaspoon of sugar per cup of liquid.",
+   "est_sec": 6.3,
+   "gap_before": 1.02,
+   "role": "reply",
+   "block": "cooking.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. I walk to work with my laptop and my current bag is wrecking my shoulder. Help me pick a new one.",
+   "est_sec": 7.23,
+   "gap_before": 1.45,
+   "block": "shopping.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I've got a long list here and I'll want your verdict once I've read the last one.",
+   "est_sec": 5.68,
+   "gap_before": 0.57,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_32"
+  },
+  {
+   "speaker": "user",
+   "text": "A leather messenger bag looks really smart for meetings, but it's still one strap on one shoulder.",
+   "est_sec": 5.37,
+   "gap_before": 1.45,
+   "block": "shopping.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a waterproof rolltop backpack, very sturdy, but it looks a bit like I'm off hiking.",
+   "est_sec": 5.06,
+   "gap_before": 1.62,
+   "block": "shopping.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a slim office backpack with a padded laptop sleeve and a luggage strap, kind of middle of the road.",
+   "est_sec": 6.3,
+   "gap_before": 1.66,
+   "block": "shopping.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, um, that's everything, I think. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.29,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Two straps beat one for your shoulder, so it's really the rolltop or the slim backpack. How wet is your walk? Lots of rain, go rolltop. Mostly dry, the office one will look better at meetings.",
+   "est_sec": 11.26,
+   "gap_before": 0.38,
+   "role": "resume",
+   "block": "shopping.opt4"
+  }
+ ]
+}

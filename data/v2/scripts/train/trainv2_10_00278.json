@@ -1,0 +1,169 @@
+{
+ "id": "trainv2_10_00278",
+ "split": "train",
+ "seed": 10,
+ "order_index": 278,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "baking"
+ ],
+ "instruction_position": 0.177,
+ "topic": "baking",
+ "voices": {
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_29",
+  "describe_instr_02",
+  "ack_04",
+  "describe_cue_01"
+ ],
+ "phrasing_styles": {
+  "describe_instr_02": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_01": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "baking.opt4",
+  "books.dlg11"
+ ],
+ "est_total_sec": 75.2,
+ "est_speech_sec": 59.58,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.74,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_29"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to buy one piece of baking kit this month and I've narrowed it down.",
+   "est_sec": 5.06,
+   "gap_before": 0.25,
+   "block": "baking.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
+   "est_sec": 4.75,
+   "gap_before": 0.49,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.37,
+   "role": "ack",
+   "phrasing": "ack_04"
+  },
+  {
+   "speaker": "user",
+   "text": "A digital kitchen scale, so I can stop guessing with cups and weigh everything properly.",
+   "est_sec": 4.75,
+   "gap_before": 1.43,
+   "block": "baking.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe a stand mixer instead, it's expensive but would save my arms on bread and meringue.",
+   "est_sec": 5.06,
+   "gap_before": 1.85,
+   "block": "baking.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's also a cast iron pot for crusty bread, which people online swear by.",
+   "est_sec": 4.44,
+   "gap_before": 1.76,
+   "block": "baking.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or just a good set of heavy baking trays, because mine warp in the oven.",
+   "est_sec": 4.75,
+   "gap_before": 2.62,
+   "block": "baking.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 1.12,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The scale is cheap and will improve almost everything you bake straight away. The stand mixer is a joy, but it's a big spend for one month. The pot and the trays are great upgrades if you already know you'll bake lots of bread or cookies.",
+   "est_sec": 14.36,
+   "gap_before": 0.68,
+   "role": "resume",
+   "block": "baking.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? Speed reading. Real or a scam?",
+   "est_sec": 3.82,
+   "gap_before": 1.26,
+   "block": "books.dlg11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Mostly oversold. You can get somewhat faster with practice, but reading really fast usually means understanding less.",
+   "est_sec": 5.37,
+   "gap_before": 0.98,
+   "role": "reply",
+   "block": "books.dlg11"
+  }
+ ]
+}

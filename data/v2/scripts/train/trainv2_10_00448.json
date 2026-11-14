@@ -1,0 +1,155 @@
+{
+ "id": "trainv2_10_00448",
+ "split": "train",
+ "seed": 10,
+ "order_index": 448,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "cooking"
+ ],
+ "wait_sec": 35,
+ "deadline": {
+  "after_turn": 8,
+  "sec": 35
+ },
+ "instruction_position": 0.932,
+ "topic": "cooking",
+ "voices": {
+  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_28",
+  "think_instruction_v2_08",
+  "ack_04"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_08": {
+   "style": "request",
+   "tone": "curt",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "weather_plans.dlg6",
+  "cooking.ctx8"
+ ],
+ "est_total_sec": 82.44,
+ "est_speech_sec": 40.47,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.38,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "My hay fever is awful and I've got an outdoor work event on Thursday. Any tips?",
+   "est_sec": 5.06,
+   "gap_before": 0.35,
+   "block": "weather_plans.dlg6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Check the pollen forecast. Levels are usually highest on warm, dry, windy days, and lower after rain.",
+   "est_sec": 5.37,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "weather_plans.dlg6"
+  },
+  {
+   "speaker": "user",
+   "text": "It says high all week. Of course.",
+   "est_sec": 2.27,
+   "gap_before": 0.81,
+   "block": "weather_plans.dlg6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then take your antihistamine a few hours before, not when symptoms start. It works better ahead of time.",
+   "est_sec": 5.68,
+   "gap_before": 0.46,
+   "role": "reply",
+   "block": "weather_plans.dlg6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. I'm making soup for my grandmother, she's just had her teeth out.",
+   "est_sec": 4.75,
+   "gap_before": 0.77,
+   "block": "cooking.ctx8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Oh, poor her. Something smooth and gentle then. Would she prefer a sweet carrot and ginger, or something more savory like a leek and potato?",
+   "est_sec": 7.85,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "cooking.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you just leave me thirty-five seconds, then pop the question again?",
+   "est_sec": 3.82,
+   "gap_before": 0.87,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 35,
+   "phrasing": "think_instruction_v2_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.46,
+   "role": "ack",
+   "phrasing": "ack_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Which soup do you think she'd like?",
+   "est_sec": 2.27,
+   "role": "resume",
+   "block": "cooking.ctx8",
+   "anchor": {
+    "turn": 8,
+    "offset": 35.29
+   }
+  }
+ ]
+}

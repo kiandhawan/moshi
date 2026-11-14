@@ -1,0 +1,182 @@
+{
+ "id": "trainv2_10_00692",
+ "split": "train",
+ "seed": 10,
+ "order_index": 692,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "board_games"
+ ],
+ "instruction_position": 0.504,
+ "topic": "board_games",
+ "voices": {
+  "user": "c250136a9ec74cc0b799be54664a83f2",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_22",
+  "describe_instruction_v2_02",
+  "ack_14",
+  "describe_cue_v2_11"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_02": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_11": {
+   "style": "command",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "moving_house.dlg9",
+  "board_games.opt6"
+ ],
+ "est_total_sec": 84.68,
+ "est_speech_sec": 66.6,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.83,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm interviewing people for the spare room in my flat. What should I ask them?",
+   "est_sec": 4.75,
+   "gap_before": 0.51,
+   "block": "moving_house.dlg9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ask about their routine, like when they work and when they go to bed. Clashing schedules cause a lot of friction.",
+   "est_sec": 6.61,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "moving_house.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, My partner and I want to get into longer strategy games for winter, but we've only played easy ones.",
+   "est_sec": 6.61,
+   "gap_before": 1.14,
+   "block": "board_games.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you hold your comments till I've gone through every choice? I'll tell you when I'm done.",
+   "est_sec": 5.37,
+   "gap_before": 0.83,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.27,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "A farming game where you grow crops, raise animals and feed your family, about two hours.",
+   "est_sec": 5.06,
+   "gap_before": 1.22,
+   "block": "board_games.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "A space exploration game with lots of little cards and combos, quite chunky, maybe three hours.",
+   "est_sec": 5.06,
+   "gap_before": 1.41,
+   "block": "board_games.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A two player only card game about building a civilisation through the ages, under an hour.",
+   "est_sec": 5.06,
+   "gap_before": 3.0,
+   "block": "board_games.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A detective campaign where you solve cases over a dozen evenings, more story than strategy.",
+   "est_sec": 4.75,
+   "gap_before": 2.49,
+   "block": "board_games.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Phew, done. Tell me what you think.",
+   "est_sec": 2.27,
+   "gap_before": 1.0,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Coming from easy games, the two player civilisation one is a great step up, deep but short. The farming game is a classic next step. I'd save the space game until you're hooked, it's a lot.",
+   "est_sec": 11.26,
+   "gap_before": 0.69,
+   "role": "resume",
+   "block": "board_games.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Good one.",
+   "est_sec": 0.72,
+   "gap_before": 0.96,
+   "event": "ordinary_request",
+   "block": "moving_house.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ask how they feel about guests, cleaning and shared food. And how they handled problems with past flatmates.",
+   "est_sec": 5.68,
+   "gap_before": 0.71,
+   "role": "reply",
+   "block": "moving_house.dlg9"
+  }
+ ]
+}

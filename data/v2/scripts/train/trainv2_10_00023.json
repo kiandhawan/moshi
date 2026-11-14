@@ -1,0 +1,166 @@
+{
+ "id": "trainv2_10_00023",
+ "split": "train",
+ "seed": 10,
+ "order_index": 23,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "cooking"
+ ],
+ "wait_sec": 40,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 40
+ },
+ "instruction_position": 0.407,
+ "topic": "cooking",
+ "voices": {
+  "user": "e3cd384158934cc9a01029cd7d278634",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_02",
+  "greet_ans_28",
+  "think_instruction_v2_37",
+  "ack_06",
+  "self_08",
+  "self_29"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_37": {
+   "style": "breakoff",
+   "tone": "polite",
+   "states_return": false,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "cooking.ctx10",
+  "fitness.dlg29"
+ ],
+ "est_total_sec": 80.08,
+ "est_speech_sec": 37.37,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.45,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.95,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to cook a romantic dinner for my husband, our tenth anniversary. He likes steak.",
+   "est_sec": 5.06,
+   "gap_before": 0.45,
+   "block": "cooking.ctx10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's lovely. Do you want a classic steak with peppercorn sauce, or something showier like beef wellington?",
+   "est_sec": 5.37,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "cooking.ctx10"
+  },
+  {
+   "speaker": "user",
+   "text": "My gut says— no, sorry, let me think properly for forty seconds, if that's okay.",
+   "est_sec": 4.75,
+   "gap_before": 0.44,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 40,
+   "phrasing": "think_instruction_v2_37"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.56,
+   "role": "ack",
+   "phrasing": "ack_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, no, the other one.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 16.49
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, let me just picture it.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 22.25
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So for the anniversary, peppercorn steak or the wellington?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "cooking.ctx10",
+   "anchor": {
+    "turn": 4,
+    "offset": 40.06
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. My daughter is fourteen and starting pre-season for football. How can she get fitter without overdoing it?",
+   "est_sec": 6.3,
+   "gap_before": 1.63,
+   "block": "fitness.dlg29",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good that you're thinking about it. A mix of running, some short sprints and basic strength work is ideal.",
+   "est_sec": 5.99,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "fitness.dlg29"
+  }
+ ]
+}

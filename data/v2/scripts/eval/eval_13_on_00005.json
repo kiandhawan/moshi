@@ -1,0 +1,171 @@
+{
+ "id": "eval_13_on_00005",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 405,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00039",
+  "seed": 13
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end"
+ ],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "wait_sec": 15,
+ "early_end": {
+  "after_sec": 9.2,
+  "direct": true
+ },
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "026218fe0c054374838d934016f34082"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_21",
+  "think_instr_21",
+  "ack_08",
+  "early_end_15",
+  "nq_eval_006",
+  "pn_097"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx15",
+  "nq_eval_006"
+ ],
+ "est_total_sec": 50.64,
+ "est_speech_sec": 27.97,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.68,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm hopeless at wrapping and I've got twenty gifts.",
+   "est_sec": 2.89,
+   "gap_before": 0.29,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, that's a lot of tape. Would you pay the store to wrap them, or switch to gift bags and call it a day?",
+   "est_sec": 7.54,
+   "gap_before": 0.98,
+   "role": "reply",
+   "block": "holiday_gifts.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Is this paint dry enough for another coat, Joseph?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_006",
+   "block": "nq_eval_006",
+   "name_pos": "end",
+   "addressee": "Joseph",
+   "est_sec": 2.89,
+   "gap_before": 0.94
+  },
+  {
+   "speaker": "other",
+   "text": "Give it till tonight.",
+   "block": "nq_eval_006",
+   "est_sec": 1.34,
+   "gap_before": 0.72
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, let me think for fifteen seconds. Ask me again after that.",
+   "est_sec": 3.82,
+   "gap_before": 1.63,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.54,
+   "role": "ack",
+   "phrasing": "ack_08",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that was quick. I've got it.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 6,
+    "offset": 9.2
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Did you solve the wrapping mountain?",
+   "est_sec": 1.96,
+   "gap_before": 0.36,
+   "role": "resume",
+   "block": "holiday_gifts.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Bags. Nobody cares how it's wrapped.",
+   "est_sec": 1.96,
+   "gap_before": 1.3,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exactly. Tissue paper on top and you're done in an hour.",
+   "est_sec": 3.51,
+   "gap_before": 1.16,
+   "role": "followup",
+   "block": "holiday_gifts.ctx15",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00039",
+  "name_pos": "end",
+  "answered": true
+ },
+ "groups": [
+  "familiar_type",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,164 @@
+{
+ "id": "trainv2_10_00648",
+ "split": "train",
+ "seed": 10,
+ "order_index": 648,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "weather_plans"
+ ],
+ "instruction_position": 0.137,
+ "topic": "weather_plans",
+ "voices": {
+  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_07",
+  "describe_instr_02",
+  "describe_cue_v2_05"
+ ],
+ "phrasing_styles": {
+  "describe_instr_02": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_05": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "weather_plans.opt1",
+  "home_repair.dlg5"
+ ],
+ "est_total_sec": 71.53,
+ "est_speech_sec": 58.03,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.38,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.4,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "It might rain on Saturday and we need to pick a plan for the kids.",
+   "est_sec": 4.75,
+   "gap_before": 0.37,
+   "block": "weather_plans.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
+   "est_sec": 4.75,
+   "gap_before": 0.54,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "The first idea is the zoo, which is fun but mostly outdoors.",
+   "est_sec": 3.82,
+   "gap_before": 1.44,
+   "block": "weather_plans.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's the science museum, all indoors, but it gets really crowded on rainy days.",
+   "est_sec": 4.75,
+   "gap_before": 2.59,
+   "block": "weather_plans.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is staying in with a fort, board games and a movie marathon.",
+   "est_sec": 5.06,
+   "gap_before": 1.01,
+   "block": "weather_plans.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Finished. Thoughts, Moshi?",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How old are the kids, and how much do they mind getting a bit wet? If they're fine in raincoats, the zoo might be surprisingly fun. Otherwise, go early to the museum to beat the crowds.",
+   "est_sec": 11.26,
+   "gap_before": 0.35,
+   "role": "resume",
+   "block": "weather_plans.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. How do I hang a heavy mirror without it falling on my head?",
+   "est_sec": 5.06,
+   "gap_before": 1.63,
+   "block": "home_repair.dlg5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "First find out what the wall is made of. Knock on it. Does it sound hollow or solid?",
+   "est_sec": 5.68,
+   "gap_before": 0.77,
+   "role": "reply",
+   "block": "home_repair.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "Hollow, kind of like a drum.",
+   "est_sec": 1.96,
+   "gap_before": 1.07,
+   "block": "home_repair.dlg5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then it's probably plasterboard. Either screw into a wooden stud behind it, or use heavy duty hollow wall anchors.",
+   "est_sec": 5.99,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "home_repair.dlg5"
+  }
+ ]
+}

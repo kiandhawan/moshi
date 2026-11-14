@@ -1,0 +1,172 @@
+{
+ "id": "trainv2_10_00478",
+ "split": "train",
+ "seed": 10,
+ "order_index": 478,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "travel_planning"
+ ],
+ "instruction_position": 0.458,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_13",
+  "describe_instruction_v2_13",
+  "describe_cue_13"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_13": {
+   "style": "command",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_13": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "travel_planning.dlg8",
+  "travel_planning.opt5"
+ ],
+ "est_total_sec": 84.92,
+ "est_speech_sec": 68.98,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.8,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "I just realized my passport expires in five weeks and my trip to Peru is in three.",
+   "est_sec": 5.37,
+   "gap_before": 0.46,
+   "block": "travel_planning.dlg8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, that's worth acting on today. Many countries want your passport valid for six months after you arrive.",
+   "est_sec": 5.68,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "travel_planning.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. Summer holiday with three kids under ten, and my husband and I want different things.",
+   "est_sec": 5.68,
+   "gap_before": 0.93,
+   "block": "travel_planning.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Don't weigh in yet, Moshi, there's more than one and I want to cover them all.",
+   "est_sec": 5.06,
+   "gap_before": 0.79,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_13"
+  },
+  {
+   "speaker": "user",
+   "text": "He wants a theme park resort in Florida, which the kids would adore but it's crazy expensive.",
+   "est_sec": 5.37,
+   "gap_before": 0.99,
+   "block": "travel_planning.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "I'd love a lake cabin up north where they swim, catch frogs and go to bed early.",
+   "est_sec": 5.37,
+   "gap_before": 2.9,
+   "block": "travel_planning.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "My mum suggested we stay with her in the city and do day trips to the zoo and the beach.",
+   "est_sec": 6.3,
+   "gap_before": 1.37,
+   "block": "travel_planning.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a camping style holiday park with pools and kids' clubs, somewhere in between.",
+   "est_sec": 4.44,
+   "gap_before": 1.07,
+   "block": "travel_planning.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 0.6,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Florida would be magical for that age but it's a lot of money and queues. The lake cabin and your mum's place are both relaxed and cheaper. If you need a compromise, the holiday park splits the difference.",
+   "est_sec": 11.88,
+   "gap_before": 0.99,
+   "role": "resume",
+   "block": "travel_planning.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Six months? So it's useless?",
+   "est_sec": 1.65,
+   "gap_before": 1.11,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Possibly for this trip. Check the official entry rules for Peru, and look at your passport office's fast track service.",
+   "est_sec": 6.3,
+   "gap_before": 1.44,
+   "role": "reply",
+   "block": "travel_planning.dlg8"
+  }
+ ]
+}

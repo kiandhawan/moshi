@@ -1,0 +1,173 @@
+{
+ "id": "trainv2_10_00316",
+ "split": "train",
+ "seed": 10,
+ "order_index": 316,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "studying"
+ ],
+ "instruction_position": 0.445,
+ "topic": "studying",
+ "voices": {
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_28",
+  "greet_ans_11",
+  "describe_instruction_v2_17",
+  "describe_cue_v2_04"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_17": {
+   "style": "command",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_04": {
+   "style": "request",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "board_games.dlg23",
+  "studying.opt5"
+ ],
+ "est_total_sec": 77.83,
+ "est_speech_sec": 60.61,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.46,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.66,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to start a game night but I'm broke. Like properly broke.",
+   "est_sec": 4.13,
+   "gap_before": 0.48,
+   "block": "board_games.dlg23",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can do it really cheaply. A deck of cards, paper and pens already give you dozens of games.",
+   "est_sec": 5.99,
+   "gap_before": 1.48,
+   "role": "reply",
+   "block": "board_games.dlg23"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, I keep trying different ways of taking notes in lectures and nothing is working.",
+   "est_sec": 5.06,
+   "gap_before": 0.8,
+   "block": "studying.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Ooh, okay, listen to all of these first and then tell me your favorite.",
+   "est_sec": 4.44,
+   "gap_before": 0.46,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Typing everything on my laptop, which is fast, but I don't remember any of it.",
+   "est_sec": 4.75,
+   "gap_before": 1.02,
+   "block": "studying.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Writing by hand in a notebook, slower, but it feels like it sticks better.",
+   "est_sec": 4.44,
+   "gap_before": 1.21,
+   "block": "studying.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Just listening and then writing a summary afterwards from the slides.",
+   "est_sec": 3.51,
+   "gap_before": 1.91,
+   "block": "studying.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or recording the lecture and making notes from the recording at home.",
+   "est_sec": 3.82,
+   "gap_before": 2.92,
+   "block": "studying.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything on my list. What would you go for?",
+   "est_sec": 3.2,
+   "gap_before": 0.77,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Recording lectures sounds good but doubles your time, so I'd avoid it except for hard topics. Handwritten notes plus a quick summary that evening is a strong combination for most people.",
+   "est_sec": 9.71,
+   "gap_before": 0.7,
+   "role": "resume",
+   "block": "studying.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Paper games? Like what?",
+   "est_sec": 1.34,
+   "gap_before": 1.99,
+   "event": "ordinary_request",
+   "block": "board_games.dlg23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Things like word guessing games, drawing games, or making your own quiz. There are also print and play games you print at home for free.",
+   "est_sec": 7.85,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "board_games.dlg23"
+  }
+ ]
+}

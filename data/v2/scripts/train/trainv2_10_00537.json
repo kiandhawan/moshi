@@ -1,0 +1,166 @@
+{
+ "id": "trainv2_10_00537",
+ "split": "train",
+ "seed": 10,
+ "order_index": 537,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "weekend_plans"
+ ],
+ "wait_sec": 41,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 41
+ },
+ "instruction_position": 0.89,
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_22",
+  "think_instr_02",
+  "ack_09",
+  "self_14",
+  "self_11"
+ ],
+ "phrasing_styles": {
+  "think_instr_02": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "sleep.dlg13",
+  "weekend_plans.ctx9"
+ ],
+ "est_total_sec": 81.0,
+ "est_speech_sec": 37.06,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.55,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "My sixteen-year-old is impossible to wake up. School starts at eight.",
+   "est_sec": 3.51,
+   "gap_before": 0.31,
+   "block": "sleep.dlg13",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Teens' body clocks genuinely shift later, so it's not just laziness. They often can't feel sleepy before eleven.",
+   "est_sec": 5.68,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "sleep.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "I invited twelve people for a barbecue on Saturday and now the forecast says showers.",
+   "est_sec": 4.75,
+   "gap_before": 1.27,
+   "block": "weekend_plans.ctx9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Classic. You could keep the barbecue and put up a gazebo, or move it inside and make it a big curry night instead. Is your kitchen big enough for twelve?",
+   "est_sec": 9.4,
+   "gap_before": 1.05,
+   "role": "reply",
+   "block": "weekend_plans.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about it for forty-one seconds and then ask me again.",
+   "est_sec": 4.13,
+   "gap_before": 0.43,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 41,
+   "phrasing": "think_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Take your time.",
+   "est_sec": 1.03,
+   "gap_before": 0.59,
+   "role": "ack",
+   "phrasing": "ack_09"
+  },
+  {
+   "speaker": "user",
+   "text": "No, hang on, that's silly.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 15.59
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, pros and cons.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 35.54
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Brave the showers or move inside? What's the plan?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "weekend_plans.ctx9",
+   "anchor": {
+    "turn": 6,
+    "offset": 41.26
+   }
+  }
+ ]
+}

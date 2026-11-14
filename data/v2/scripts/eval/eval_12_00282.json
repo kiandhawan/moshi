@@ -1,0 +1,157 @@
+{
+ "id": "eval_12_00282",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 282,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "topic": "podcasts",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_24",
+  "phone_instr_05",
+  "ack_07",
+  "call_33",
+  "phone_cue_08"
+ ],
+ "block_ids": [
+  "podcasts.ctx10",
+  "call_33"
+ ],
+ "est_total_sec": 54.09,
+ "est_speech_sec": 31.99,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.61,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "A mattress company offered to sponsor my podcast!",
+   "est_sec": 2.58,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Congrats! Take the money and read the ad, or keep the show ad-free for now?",
+   "est_sec": 4.75,
+   "gap_before": 0.82,
+   "role": "reply",
+   "block": "podcasts.ctx10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I've got to pick this up. Stay quiet until I come back to you.",
+   "est_sec": 5.06,
+   "gap_before": 2.89,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.51,
+   "role": "ack",
+   "phrasing": "ack_07",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, it's your favourite cousin.",
+   "est_sec": 1.65,
+   "gap_before": 1.19,
+   "phrasing": "call_33"
+  },
+  {
+   "speaker": "user",
+   "text": "Guess who's getting married.",
+   "est_sec": 1.34,
+   "gap_before": 1.7,
+   "phrasing": "call_33"
+  },
+  {
+   "speaker": "user",
+   "text": "Me! Can you believe it?",
+   "est_sec": 1.65,
+   "gap_before": 2.61,
+   "phrasing": "call_33",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Will you be free in June?",
+   "est_sec": 1.96,
+   "gap_before": 3.49,
+   "phrasing": "call_33",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Yay, I'll send the details.",
+   "est_sec": 1.65,
+   "gap_before": 3.33,
+   "phrasing": "call_33"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, finished the call. I'm back.",
+   "est_sec": 1.96,
+   "gap_before": 0.79,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hope the call went okay. So, what are you telling the mattress people?",
+   "est_sec": 4.13,
+   "gap_before": 1.73,
+   "role": "resume",
+   "block": "podcasts.ctx10",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

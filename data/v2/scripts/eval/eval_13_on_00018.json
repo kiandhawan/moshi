@@ -1,0 +1,156 @@
+{
+ "id": "eval_13_on_00018",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 418,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00145",
+  "seed": 13
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
+ "topics": [
+  "cycling"
+ ],
+ "topic": "cycling",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "1258154bb41540c7b9dc0d10cd6704bf"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_24",
+  "nq_eval_030",
+  "pn_115"
+ ],
+ "block_ids": [
+  "cycling.dlg11",
+  "nq_eval_030"
+ ],
+ "est_total_sec": 59.68,
+ "est_speech_sec": 40.16,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "What does bike fitting mean? A friend said I need one.",
+   "est_sec": 3.51,
+   "gap_before": 0.57,
+   "event": "ordinary_request",
+   "block": "cycling.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's when a specialist adjusts your bike to your body, saddle height, handlebar reach, cleat position and so on.",
+   "est_sec": 5.99,
+   "gap_before": 1.82,
+   "role": "reply",
+   "block": "cycling.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My legs are dead. Charles, fancy swapping drivers at the next stop?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_030",
+   "block": "nq_eval_030",
+   "name_pos": "middle",
+   "addressee": "Charles",
+   "est_sec": 3.82,
+   "gap_before": 0.95
+  },
+  {
+   "speaker": "user",
+   "text": "Is it worth it?",
+   "est_sec": 1.34,
+   "gap_before": 2.13,
+   "event": "ordinary_request",
+   "block": "cycling.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you ride a lot and get aches in your knees, back or hands, it can make a big difference.",
+   "est_sec": 6.3,
+   "gap_before": 0.82,
+   "role": "reply",
+   "block": "cycling.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My neck hurts after long rides.",
+   "est_sec": 1.96,
+   "gap_before": 1.44,
+   "event": "ordinary_request",
+   "block": "cycling.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That can mean your handlebars are too far away or too low. A fitter would probably raise them or shorten the stem.",
+   "est_sec": 6.92,
+   "gap_before": 0.72,
+   "role": "reply",
+   "block": "cycling.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Is that expensive",
+   "est_sec": 1.03,
+   "gap_before": 1.09,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "cycling.dlg11"
+  },
+  {
+   "speaker": "user",
+   "text": "or just like a quick check?",
+   "est_sec": 1.96,
+   "gap_before": 2.49,
+   "event": "ordinary_request",
+   "block": "cycling.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A full fit can cost about as much as a nice pair of shoes. A basic adjustment at a bike shop is much cheaper.",
+   "est_sec": 7.54,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "cycling.dlg11",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00145",
+  "name_pos": "middle",
+  "answered": false
+ },
+ "groups": [
+  "ordinary",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

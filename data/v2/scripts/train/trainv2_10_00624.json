@@ -1,0 +1,220 @@
+{
+ "id": "trainv2_10_00624",
+ "split": "train",
+ "seed": 10,
+ "order_index": 624,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "friend_first"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "board_games",
+  "home_repair"
+ ],
+ "instruction_position": 0.436,
+ "topic": "board_games",
+ "voices": {
+  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "friend": "2680da81de8348a68e1f4dbaa79272f1",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Ben",
+ "friend_name_id": "name_11",
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_20",
+  "friend_interrupt_v2_04",
+  "side_instruction_v2_52",
+  "ack_10",
+  "side_cue_v2_41"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_04": {
+   "style": "request",
+   "tone": "curt",
+   "source": "v2"
+  },
+  "side_instruction_v2_52": {
+   "style": "friend_first",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_41": {
+   "style": "statement",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "board_games.ctx4",
+  "home_repair.side4",
+  "books.dlg5"
+ ],
+ "est_total_sec": 78.43,
+ "est_speech_sec": 61.42,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "My six year old cries every time she loses a game. Every time.",
+   "est_sec": 4.13,
+   "gap_before": 0.21,
+   "block": "board_games.ctx4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's really common at six. Do you want to let her win sometimes while she's little, or play cooperative games so nobody loses to anyone?",
+   "est_sec": 7.85,
+   "gap_before": 0.42,
+   "role": "reply",
+   "block": "board_games.ctx4"
+  },
+  {
+   "speaker": "friend",
+   "text": "You got a second? It's important.",
+   "est_sec": 1.96,
+   "gap_before": 0.79,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, Moshi, Ben needs me. I'll let you know when I'm done.",
+   "est_sec": 3.82,
+   "gap_before": 0.55,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_52"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.52,
+   "role": "ack",
+   "phrasing": "ack_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Ben, can you hold the ladder for a sec?",
+   "est_sec": 2.89,
+   "gap_before": 1.33,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'm holding it. Why is it wobbling?",
+   "est_sec": 2.27,
+   "gap_before": 0.47,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Because one leg is on the rug. Hang on.",
+   "est_sec": 2.89,
+   "gap_before": 0.86,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "You know you're supposed to do that before you climb up.",
+   "est_sec": 3.51,
+   "gap_before": 0.61,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, thank you. Okay, can you pass me the small screwdriver? The red one.",
+   "est_sec": 4.44,
+   "gap_before": 0.77,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "This one?",
+   "est_sec": 0.72,
+   "gap_before": 1.25,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the big one. The small red one.",
+   "est_sec": 2.58,
+   "gap_before": 1.37,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Here. Honestly, you'd be lost without me.",
+   "est_sec": 2.27,
+   "gap_before": 0.5,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, back to you, Moshi, I'm listening now.",
+   "est_sec": 2.58,
+   "gap_before": 1.56,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_41"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. Your daughter and the crying. Letting her win, or cooperative games?",
+   "est_sec": 4.13,
+   "gap_before": 0.33,
+   "role": "resume",
+   "block": "board_games.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, Okay, weird question. Is it normal to cry at the end of a book about a dog?",
+   "est_sec": 5.99,
+   "gap_before": 1.5,
+   "block": "books.dlg5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Completely normal. Stories about animals hit hard because the love in them is so simple and loyal.",
+   "est_sec": 5.37,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "books.dlg5"
+  }
+ ]
+}

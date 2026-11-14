@@ -1,0 +1,161 @@
+{
+ "id": "trainv2_10_00258",
+ "split": "train",
+ "seed": 10,
+ "order_index": 258,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "weekend_plans"
+ ],
+ "instruction_position": 0.647,
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "676f1654c4f747a69a5921ad94886fa1",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_26",
+  "describe_instruction_v2_16",
+  "ack_16",
+  "describe_cue_v2_19"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_16": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_19": {
+   "style": "request",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "music.dlg13",
+  "weekend_plans.opt5"
+ ],
+ "est_total_sec": 79.52,
+ "est_speech_sec": 59.48,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.32,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.73,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to write song lyrics but everything I write sounds cheesy.",
+   "est_sec": 3.82,
+   "gap_before": 0.36,
+   "block": "music.dlg13",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Most first drafts do. One trick is to swap general words for specific ones. Instead of saying I miss you, describe one small detail.",
+   "est_sec": 7.54,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "music.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. My flatmates are all away so I've got the whole weekend to myself, and I want to use it well.",
+   "est_sec": 7.54,
+   "gap_before": 1.31,
+   "block": "weekend_plans.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me get every option on the table before you react, and I'll say when that's the last one.",
+   "est_sec": 5.99,
+   "gap_before": 0.56,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.37,
+   "role": "ack",
+   "phrasing": "ack_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I could take the train to the coast and stay one night in a little guesthouse on my own.",
+   "est_sec": 5.99,
+   "gap_before": 1.1,
+   "block": "weekend_plans.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or stay home and do a proper reset, deep clean, cook something big, and read all day Sunday.",
+   "est_sec": 5.68,
+   "gap_before": 7.05,
+   "block": "weekend_plans.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or treat myself at the spa day place across town, pricey but I've wanted to go for ages.",
+   "est_sec": 5.68,
+   "gap_before": 3.72,
+   "block": "weekend_plans.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, I think I'm done. Yeah. What do you think?",
+   "est_sec": 3.2,
+   "gap_before": 1.42,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A solo night at the coast could be really special, and it's something that's hard to do with flatmates around. The home reset is lovely too, but you can do that any time.",
+   "est_sec": 10.33,
+   "gap_before": 0.57,
+   "role": "resume",
+   "block": "weekend_plans.opt5"
+  }
+ ]
+}

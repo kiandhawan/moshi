@@ -1,0 +1,164 @@
+{
+ "id": "trainv2_10_00513",
+ "split": "train",
+ "seed": 10,
+ "order_index": 513,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "shopping"
+ ],
+ "instruction_position": 0.622,
+ "topic": "shopping",
+ "voices": {
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_14",
+  "describe_instruction_v2_16",
+  "describe_cue_v2_17"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_16": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_17": {
+   "style": "request",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "public_transport.dlg29",
+  "shopping.opt3"
+ ],
+ "est_total_sec": 84.23,
+ "est_speech_sec": 68.88,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.79,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.36,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I bring my baby's pram onto the bus folded or does it have to be folded?",
+   "est_sec": 5.37,
+   "gap_before": 0.28,
+   "block": "public_transport.dlg29",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, I think you mean unfolded? On many buses, yes, there's a space for prams and wheelchairs.",
+   "est_sec": 5.37,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "public_transport.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, sorry, unfolded. Long day.",
+   "est_sec": 1.65,
+   "gap_before": 2.7,
+   "block": "public_transport.dlg29",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries. Wheelchair users usually get priority for that space, so you might be asked to move or fold it if someone needs it.",
+   "est_sec": 7.54,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "public_transport.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but Our washing machine flooded the kitchen, so I need a new one fast.",
+   "est_sec": 4.75,
+   "gap_before": 1.05,
+   "block": "shopping.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me get every option on the table before you react, and I'll say when that's the last one.",
+   "est_sec": 5.99,
+   "gap_before": 0.53,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_16"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a cheap top loader at the hardware store, they can deliver it tomorrow, but it's really loud.",
+   "est_sec": 5.68,
+   "gap_before": 1.05,
+   "block": "shopping.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then a front loader that's super quiet and saves water, but it's about twice the price and takes a week.",
+   "est_sec": 6.3,
+   "gap_before": 2.98,
+   "block": "shopping.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "And my neighbour is selling her two year old machine for almost nothing, though I'd have to collect it myself.",
+   "est_sec": 6.3,
+   "gap_before": 1.25,
+   "block": "shopping.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, all done. What's your gut say?",
+   "est_sec": 2.27,
+   "gap_before": 1.37,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The neighbour's machine is a great deal if it's working well and you can borrow someone to help lift it. The quiet front loader is the best long term, it'll save on water bills. The top loader only wins if you really can't go a week without washing.",
+   "est_sec": 14.98,
+   "gap_before": 0.42,
+   "role": "resume",
+   "block": "shopping.opt3"
+  }
+ ]
+}

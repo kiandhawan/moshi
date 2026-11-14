@@ -50,7 +50,7 @@ GREETING_MIN_START = 0.3  # the opening greeting never starts earlier (CLAUDE.md
 # Speech loudness per speaker (RMS over active speech, dBFS). Moshi matches real Moshi output
 # (median -23.3 dBFS over eval_outputs/base_human, scripts/loudness.py); the friend and the
 # visitor at the door are 4 dB below the user. Recorded user audio is never rescaled.
-LEVEL_DBFS = {"moshi": -23.0, "user": -21.0, "friend": -25.0, "visitor": -25.0}
+LEVEL_DBFS = {"moshi": -23.0, "user": -21.0, "friend": -25.0, "visitor": -25.0, "other": -25.0}  # other: v2 named person
 MAX_SEC = 90.0          # every rendered file must be shorter (training duration_sec is 100)
 
 
@@ -250,12 +250,16 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
         right = (u[1] if u.shape[0] == 2 else u[0]).astype(np.float32)
         speech_ends.append(last_speech_end(right))
     seed = int(hashlib.sha1(spec["id"].encode()).hexdigest()[:8], 16)
+    aug = spec.get("augment")  # v2 training files: right-channel augmentation (augment_settings)
     for k, ln in enumerate(spec.get("user_lines", [])):
         x, _ = synth(client, ln["text"], ln["voice"], align=False)
         speaker = ln.get("speaker", "user")
-        if speaker in ("friend", "visitor"):  # further from the microphone
+        if speaker in ("friend", "visitor", "other"):  # further from the microphone
             x = reverb(x, seed + k)
-        x = normalize(x, LEVEL_DBFS[speaker])
+        elif aug and aug.get("user_reverb"):
+            x = reverb(x, seed + k, rt60=aug["user_reverb"]["rt60"], wet=aug["user_reverb"]["wet"])
+        gain = aug["gain_db"]["user" if speaker == "user" else "other" if speaker == "other" else "friend"] if aug else 0.0
+        x = normalize(x, LEVEL_DBFS[speaker] + gain)
         right = _place(right, x, ln["start"])
         speech_ends.append(ln["start"] + len(x) / SR)  # clips are trimmed to their speech
 
@@ -284,7 +288,10 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
     if dur >= MAX_SEC:
         raise ValueError(f"{spec['id']}: {dur:.1f}s is not shorter than duration_sec={MAX_SEC}")
     left, right = np.pad(left, (0, n - len(left))), np.pad(right, (0, n - len(right)))
-    if spec.get("noise_dbfs") is not None:  # faint room tone on the user's side only
+    if aug:  # background noise of a type and level, then the mic coloring of the whole user side
+        right = right + make_noise(aug["noise"]["type"], n, aug["noise"]["dbfs"], seed, spec.get("babble_clips"))
+        right = mic_color(right, aug.get("mic"))
+    elif spec.get("noise_dbfs") is not None:  # faint room tone on the user's side only
         right = right + room_noise(n, spec["noise_dbfs"], seed)
     # Avoid clipping, per channel, so a recorded user side is never altered by a loud TTS line.
     left, right = (ch * (0.99 / max(np.abs(ch).max(), 1e-9)) if np.abs(ch).max() > 0.99 else ch
@@ -338,3 +345,139 @@ def update_index(index: Path, rows: list[dict]) -> None:
     keep = [r for r in old if r["path"] not in new_paths]
     index.parent.mkdir(parents=True, exist_ok=True)
     index.write_text("".join(json.dumps(r) + "\n" for r in keep + rows))
+
+
+# ---------------------------------------------------------------- v2 acoustic augmentation
+# Right channel only (user side); Moshi's channel is never touched. Settings are drawn per file
+# from a fixed seed (augment_settings) and recorded in the manifest.
+NOISE_LEVELS = {"quiet_room": (-62.0, -50.0), "fan": (-52.0, -40.0), "cafe": (-50.0, -38.0),
+                "street": (-50.0, -38.0)}
+MIC_P, USER_REVERB_P, GAIN_DB = 1 / 3, 0.25, 6.0
+
+
+def augment_settings(file_id: str) -> dict:
+    rng = np.random.default_rng(int(hashlib.sha1(f"{file_id}|augment-v2".encode()).hexdigest()[:8], 16))
+    noise = str(rng.choice(list(NOISE_LEVELS)))
+    s = {"gain_db": {k: round(float(rng.uniform(-GAIN_DB, GAIN_DB)), 1) for k in ("user", "friend", "other")},
+         "noise": {"type": noise, "dbfs": round(float(rng.uniform(*NOISE_LEVELS[noise])), 1)},
+         "mic": None, "user_reverb": None}
+    if rng.random() < MIC_P:
+        kind = str(rng.choice(["laptop", "phone"]))
+        if kind == "laptop":
+            s["mic"] = {"type": "laptop", "highpass_hz": round(float(rng.uniform(150, 300))),
+                        "lowpass_hz": round(float(rng.uniform(6000, 8000))),
+                        "presence_hz": round(float(rng.uniform(2000, 4000))),
+                        "presence_db": round(float(rng.uniform(3, 6)), 1), "drive": round(float(rng.uniform(1.5, 3.0)), 2)}
+        else:
+            s["mic"] = {"type": "phone", "band_hz": [round(float(rng.uniform(250, 350))), round(float(rng.uniform(3200, 3600)))],
+                        "mulaw_bits": 8}
+    if rng.random() < USER_REVERB_P:
+        s["user_reverb"] = {"rt60": round(float(rng.uniform(0.3, 0.8)), 2), "wet": round(float(rng.uniform(0.2, 0.5)), 2)}
+    return s
+
+
+def _colored(n: int, rng, exponent: float) -> np.ndarray:
+    """Noise with power ~ 1/f^exponent (0 white, 1 pink, 2 brown)."""
+    spec = np.fft.rfft(rng.standard_normal(n))
+    f = np.maximum(np.fft.rfftfreq(n, 1 / SR), 20.0)
+    return np.fft.irfft(spec / f ** (exponent / 2), n)
+
+
+def _shape(x: np.ndarray, gain_fn) -> np.ndarray:
+    """Zero-phase filtering by a magnitude response gain_fn(freqs)."""
+    X = np.fft.rfft(x)
+    return np.fft.irfft(X * gain_fn(np.fft.rfftfreq(len(x), 1 / SR)), len(x))
+
+
+def _lp(f, fc, order):
+    return 1 / np.sqrt(1 + (f / fc) ** (2 * order))
+
+
+def _hp(f, fc, order):
+    return 1 / np.sqrt(1 + (fc / np.maximum(f, 1e-3)) ** (2 * order))
+
+
+def _rms(x):
+    return max(float(np.sqrt(np.mean(np.asarray(x, dtype=np.float64) ** 2))), 1e-12)
+
+
+def make_noise(kind: str, n: int, level_dbfs: float, seed: int, babble_clips: list[Path] | None = None) -> np.ndarray:
+    """Background noise of a type at level_dbfs RMS: quiet_room (pink), fan (broadband + motor
+    hum), street (low rumble + passing cars), cafe (distant babble from other TTS clips +
+    pink noise + cup clinks)."""
+    rng = np.random.default_rng(seed)
+    t = np.arange(n) / SR
+    if kind == "quiet_room":
+        y = _colored(n, rng, 1.0)
+    elif kind == "fan":
+        y = _shape(_colored(n, rng, 1.0), lambda f: _lp(f, rng.uniform(2500, 5000), 2))
+        y /= _rms(y)
+        f0 = rng.uniform(90, 150)
+        hum = sum(np.sin(2 * np.pi * k * f0 * t + rng.uniform(0, 6.28)) / k for k in range(1, 5))
+        y = y + rng.uniform(0.3, 0.8) * hum / _rms(hum)
+        y *= 1 + 0.03 * np.sin(2 * np.pi * rng.uniform(0.3, 1.0) * t)
+    elif kind == "street":
+        y = _shape(_colored(n, rng, 2.0), lambda f: _lp(f, 400, 2))
+        y /= _rms(y)
+        k = 0.0
+        while True:
+            k += rng.uniform(5.0, 15.0)
+            if k > n / SR:
+                break
+            car = _shape(rng.standard_normal(n), lambda f: _hp(f, 80, 2) * _lp(f, rng.uniform(800, 2000), 3))
+            env = np.exp(-0.5 * ((t - k) / rng.uniform(0.8, 2.0)) ** 2)
+            y = y + rng.uniform(1.5, 4.0) * env * car / _rms(car)
+    elif kind == "cafe":
+        talk = []
+        if babble_clips:
+            total = 0
+            for p in rng.choice(babble_clips, size=min(len(babble_clips), 60), replace=False):
+                c = sphn.read(str(p), sample_rate=SR)[0][0]
+                talk.append(c)
+                talk.append(np.zeros(int(rng.uniform(0.1, 0.6) * SR), dtype=np.float32))
+                total += len(c)
+                if total > n:
+                    break
+        bab = np.zeros(n)
+        if talk:
+            stream = np.concatenate(talk)
+            stream = np.tile(stream, int(np.ceil(n / len(stream))) + 1)
+            for _ in range(int(rng.integers(6, 10))):
+                o = int(rng.integers(0, len(stream) - n))
+                bab += stream[o:o + n] * rng.uniform(0.5, 1.0)
+            bab = reverb(_shape(bab, lambda f: _lp(f, 3500, 2)).astype(np.float32), seed + 7, rt60=0.8, wet=0.6)
+            bab /= _rms(bab)
+        pink = _colored(n, rng, 1.0)
+        y = bab + 0.5 * pink / _rms(pink)
+        for c0 in np.cumsum(rng.exponential(1 / 0.3, size=int(n / SR * 0.6) + 2)):
+            a = int(c0 * SR)
+            if a >= n:
+                break
+            m = min(n - a, int(0.15 * SR))
+            tt = np.arange(m) / SR
+            y[a:a + m] += rng.uniform(1.0, 3.0) * np.sin(2 * np.pi * rng.uniform(2500, 6000) * tt) * \
+                np.exp(-tt / rng.uniform(0.01, 0.05))
+    else:
+        raise ValueError(kind)
+    y = y * (10 ** (level_dbfs / 20) / _rms(y))
+    return y.astype(np.float32)
+
+
+def mic_color(x: np.ndarray, mic: dict | None) -> np.ndarray:
+    """Laptop mic (high-pass, low-pass, presence peak, soft saturation) or phone band
+    (band-pass + 8-bit mu-law), applied to the whole right channel."""
+    if not mic:
+        return x
+    if mic["type"] == "laptop":
+        def H(f):
+            peak = 10 ** (mic["presence_db"] / 20 * np.exp(-0.5 * (np.log2(np.maximum(f, 1) / mic["presence_hz"]) / 0.5) ** 2))
+            return _hp(f, mic["highpass_hz"], 2) * _lp(f, mic["lowpass_hz"], 4) * peak
+        y = _shape(x, H)
+        d = mic["drive"]
+        return (np.tanh(d * y) / d).astype(np.float32)
+    lo, hi = mic["band_hz"]
+    y = _shape(x, lambda f: _hp(f, lo, 4) * _lp(f, hi, 6))
+    mu = 255.0
+    c = np.sign(y) * np.log1p(mu * np.minimum(np.abs(y), 1.0)) / np.log1p(mu)
+    c = np.round(c * 127) / 127
+    return (np.sign(c) * np.expm1(np.abs(c) * np.log1p(mu)) / mu).astype(np.float32)

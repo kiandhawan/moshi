@@ -1,0 +1,152 @@
+{
+ "id": "trainv2_10_00629",
+ "split": "train",
+ "seed": 10,
+ "order_index": 629,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "weather_plans"
+ ],
+ "instruction_position": 0.545,
+ "topic": "weather_plans",
+ "voices": {
+  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_14",
+  "describe_instruction_v2_26",
+  "describe_cue_v2_02"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_26": {
+   "style": "breakoff",
+   "tone": "apologetic",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_02": {
+   "style": "request",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "movies.dlg17",
+  "weather_plans.opt6"
+ ],
+ "est_total_sec": 75.32,
+ "est_speech_sec": 54.42,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.72,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "My dad refuses to watch foreign films because he hates subtitles. Any way around that?",
+   "est_sec": 4.75,
+   "gap_before": 0.43,
+   "block": "movies.dlg17",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A lot of international films now have good English dubs. Dubbing has improved a lot.",
+   "est_sec": 4.75,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "movies.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got Friday off and the forecast is weird, so I'm picking what to do.",
+   "est_sec": 4.75,
+   "gap_before": 1.16,
+   "block": "weather_plans.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is— oh, sorry, don't comment until I've got through all of them.",
+   "est_sec": 4.75,
+   "gap_before": 0.65,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Friday morning's cold but sunny, perfect for a long walk along the river if I go early.",
+   "est_sec": 5.37,
+   "gap_before": 0.98,
+   "block": "weather_plans.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "In the afternoon it turns mild with drizzle, so I could visit the museum I keep putting off.",
+   "est_sec": 5.68,
+   "gap_before": 7.64,
+   "block": "weather_plans.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And in the evening the wind picks up, but there's an outdoor food market with heaters and covered tables.",
+   "est_sec": 5.99,
+   "gap_before": 5.0,
+   "block": "weather_plans.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them, Moshi. Which one grabs you?",
+   "est_sec": 3.2,
+   "gap_before": 0.68,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you only pick one, the sunny morning walk is the rarest thing in this forecast, so grab it. The museum works in any weather, so it could wait. The market's fine if you dress for the wind.",
+   "est_sec": 11.88,
+   "gap_before": 1.01,
+   "role": "resume",
+   "block": "weather_plans.opt6"
+  }
+ ]
+}

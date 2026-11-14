@@ -1,0 +1,161 @@
+{
+ "id": "trainv2_10_00665",
+ "split": "train",
+ "seed": 10,
+ "order_index": 665,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "movies"
+ ],
+ "instruction_position": 0.514,
+ "topic": "movies",
+ "voices": {
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_20",
+  "describe_instruction_v2_22",
+  "describe_cue_v2_25"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_22": {
+   "style": "fragment",
+   "tone": "polite",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_25": {
+   "style": "command",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "cleaning.dlg22",
+  "movies.opt5"
+ ],
+ "est_total_sec": 84.28,
+ "est_speech_sec": 57.0,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.39,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.47,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "My bathroom sink smells awful. Like old eggs.",
+   "est_sec": 2.58,
+   "gap_before": 0.52,
+   "block": "cleaning.dlg22",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's usually gunk built up in the drain. Pull out the plug or stopper if you can, there's often hair wrapped around it.",
+   "est_sec": 7.23,
+   "gap_before": 1.0,
+   "role": "reply",
+   "block": "cleaning.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm starting a monthly film night at work and I need a theme for the year.",
+   "est_sec": 5.06,
+   "gap_before": 0.68,
+   "block": "movies.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "A few choices coming. No comments till the end, please.",
+   "est_sec": 3.2,
+   "gap_before": 0.89,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_22"
+  },
+  {
+   "speaker": "user",
+   "text": "We could do heist films, one every month, which most people seem to love.",
+   "est_sec": 4.44,
+   "gap_before": 1.0,
+   "block": "movies.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or go decade by decade, starting in the nineteen thirties and ending with something recent.",
+   "est_sec": 4.75,
+   "gap_before": 6.7,
+   "block": "movies.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another thought is films that are all set in the same city, to compare how it changes.",
+   "est_sec": 5.37,
+   "gap_before": 4.62,
+   "block": "movies.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or the so bad it's good night, where we pick famously terrible films and laugh at them.",
+   "est_sec": 5.37,
+   "gap_before": 7.52,
+   "block": "movies.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done describing. Be my tiebreaker.",
+   "est_sec": 2.27,
+   "gap_before": 1.23,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Heist films are crowd pleasers but might feel samey by month eight. Decade by decade gives you natural variety and a sense of progress. The same city idea is clever but could be hard to fill. The bad films night is fantastic fun for coworkers.",
+   "est_sec": 14.05,
+   "gap_before": 0.76,
+   "role": "resume",
+   "block": "movies.opt5"
+  }
+ ]
+}

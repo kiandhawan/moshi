@@ -1,0 +1,168 @@
+{
+ "id": "trainv2_10_00516",
+ "split": "train",
+ "seed": 10,
+ "order_index": 516,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "coffee"
+ ],
+ "wait_sec": 29,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 29
+ },
+ "instruction_position": 0.377,
+ "topic": "coffee",
+ "voices": {
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_20",
+  "think_instr_07",
+  "ack_07",
+  "self_16"
+ ],
+ "phrasing_styles": {
+  "think_instr_07": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "coffee.ctx8",
+  "cooking.dlg8"
+ ],
+ "est_total_sec": 81.87,
+ "est_speech_sec": 41.5,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.69,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.83,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "The coffee machine at the office died, and people are acting like it's a national emergency.",
+   "est_sec": 5.06,
+   "gap_before": 0.36,
+   "block": "coffee.ctx8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Understandable. Is the team going to chip in for a new machine, or switch to a kettle and some decent instant for now?",
+   "est_sec": 7.23,
+   "gap_before": 0.82,
+   "role": "reply",
+   "block": "coffee.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, give me twenty-nine seconds to decide and ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 1.32,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 29,
+   "phrasing": "think_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.22,
+   "role": "ack",
+   "phrasing": "ack_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 5.25
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The office coffee crisis. Chip in for a machine, or kettle and instant?",
+   "est_sec": 4.13,
+   "role": "resume",
+   "block": "coffee.ctx8",
+   "anchor": {
+    "turn": 4,
+    "offset": 29.36
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. Help. I put way too much salt in my lentil soup.",
+   "est_sec": 4.13,
+   "gap_before": 1.72,
+   "block": "cooking.dlg8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, it's fixable. Can you add more liquid, like water or unsalted stock?",
+   "est_sec": 4.13,
+   "gap_before": 1.87,
+   "role": "reply",
+   "block": "cooking.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah, but it'll get really thin.",
+   "est_sec": 1.96,
+   "gap_before": 1.42,
+   "block": "cooking.dlg8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then add more lentils or a potato to bulk it up and thicken it again. Simmer until they're soft.",
+   "est_sec": 5.99,
+   "gap_before": 1.92,
+   "role": "reply",
+   "block": "cooking.dlg8"
+  }
+ ]
+}

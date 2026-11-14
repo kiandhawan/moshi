@@ -1,0 +1,175 @@
+{
+ "id": "trainv2_10_00261",
+ "split": "train",
+ "seed": 10,
+ "order_index": 261,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "books"
+ ],
+ "wait_sec": 23,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 23
+ },
+ "instruction_position": 0.516,
+ "topic": "books",
+ "voices": {
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_04",
+  "greet_ans_01",
+  "think_instr_10",
+  "self_17"
+ ],
+ "phrasing_styles": {
+  "think_instr_10": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "movies.dlg15",
+  "books.ctx11"
+ ],
+ "est_total_sec": 84.94,
+ "est_speech_sec": 52.45,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.59,
+   "role": "greeting",
+   "phrasing": "greet_04"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.84,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "My eight year old watched a scary film at a friend's house and now he won't sleep.",
+   "est_sec": 5.37,
+   "gap_before": 0.59,
+   "block": "movies.dlg15",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Poor thing. Talk about it during the day, not at bedtime. Ask him what part scared him most.",
+   "est_sec": 5.68,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "movies.dlg15"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. I'm moving abroad and I have about four hundred books.",
+   "est_sec": 4.44,
+   "gap_before": 0.98,
+   "block": "books.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a lot to ship. Do you want to bring them all, or keep a small favorites shelf and give the rest away?",
+   "est_sec": 7.23,
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "books.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, give me twenty-three seconds to think it over, then ask me.",
+   "est_sec": 3.82,
+   "gap_before": 0.63,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 23,
+   "phrasing": "think_instr_10"
+  },
+  {
+   "speaker": "user",
+   "text": "If I pick that one, then",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 6,
+    "offset": 12.22
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The books and the move. Ship them or slim down?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "books.ctx11",
+   "anchor": {
+    "turn": 6,
+    "offset": 23.17
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "All of them. They're half my personality.",
+   "est_sec": 2.27,
+   "gap_before": 0.68,
+   "event": "ordinary_request",
+   "block": "books.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then look into sea freight for books, it's much cheaper than flying them.",
+   "est_sec": 4.13,
+   "gap_before": 0.95,
+   "role": "followup",
+   "block": "books.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "He says it's the monster in the wardrobe.",
+   "est_sec": 2.58,
+   "gap_before": 1.59,
+   "event": "ordinary_request",
+   "block": "movies.dlg15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It can help to explain how films are made, like the monster being an actor in a costume, or a puppet. Making it less magic makes it less scary.",
+   "est_sec": 9.09,
+   "gap_before": 1.17,
+   "role": "reply",
+   "block": "movies.dlg15"
+  }
+ ]
+}

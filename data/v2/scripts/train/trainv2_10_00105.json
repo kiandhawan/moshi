@@ -1,0 +1,157 @@
+{
+ "id": "trainv2_10_00105",
+ "split": "train",
+ "seed": 10,
+ "order_index": 105,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "pets"
+ ],
+ "instruction_position": 0.582,
+ "topic": "pets",
+ "voices": {
+  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_29",
+  "greet_ans_26",
+  "describe_instruction_v2_08",
+  "describe_cue_v2_16"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_08": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_16": {
+   "style": "command",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "music.dlg27",
+  "pets.opt4"
+ ],
+ "est_total_sec": 74.33,
+ "est_speech_sec": 60.1,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.35,
+   "role": "greeting",
+   "phrasing": "greet_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.55,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, music was just better when I was young.",
+   "est_sec": 2.89,
+   "gap_before": 0.55,
+   "block": "music.dlg27",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lots of people feel that. The music from your teens often sticks with us the most, because it's tied to so many big moments.",
+   "est_sec": 7.54,
+   "gap_before": 0.58,
+   "role": "reply",
+   "block": "music.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "I live in a small flat and work long hours, but I'd really love some kind of pet.",
+   "est_sec": 5.68,
+   "gap_before": 1.46,
+   "block": "pets.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to read out a few choices, and I'll let you know when I've finished.",
+   "est_sec": 5.06,
+   "gap_before": 0.6,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I keep coming back to a cat, independent and cuddly, but my landlord would need to agree.",
+   "est_sec": 5.37,
+   "gap_before": 1.2,
+   "block": "pets.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "A pair of budgies would be cheerful and fit in a corner, though they can be pretty noisy.",
+   "est_sec": 5.68,
+   "gap_before": 1.09,
+   "block": "pets.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's also a fish tank, very calm and nice to look at, but you can't exactly cuddle a fish.",
+   "est_sec": 5.99,
+   "gap_before": 2.8,
+   "block": "pets.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I could skip owning and volunteer walking dogs at the shelter on weekends.",
+   "est_sec": 4.44,
+   "gap_before": 1.84,
+   "block": "pets.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Go on, rip them apart.",
+   "est_sec": 2.27,
+   "gap_before": 1.06,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If what you want is cuddles, the cat or the shelter walks are your real options. The volunteering is a great way to start without the commitment, and it'll show you how much time you really have.",
+   "est_sec": 11.57,
+   "gap_before": 0.65,
+   "role": "resume",
+   "block": "pets.opt4"
+  }
+ ]
+}

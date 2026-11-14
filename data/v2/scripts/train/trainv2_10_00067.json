@@ -1,0 +1,225 @@
+{
+ "id": "trainv2_10_00067",
+ "split": "train",
+ "seed": 10,
+ "order_index": 67,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "friend_first"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "photography",
+  "cleaning"
+ ],
+ "instruction_position": 0.798,
+ "topic": "photography",
+ "voices": {
+  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "friend": "458abe2c9c0b41f793c7235a230caa8c",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Lucas",
+ "friend_name_id": "name_19",
+ "phrasing_ids": [
+  "greet_01",
+  "greet_ans_10",
+  "friend_interrupt_v2_29",
+  "side_instruction_v2_58",
+  "ack_11",
+  "dq_10",
+  "side_cue_v2_17"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_29": {
+   "style": "implied",
+   "tone": "curt",
+   "source": "v2"
+  },
+  "side_instruction_v2_58": {
+   "style": "friend_first",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_17": {
+   "style": "statement",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "photography.dlg13",
+  "photography.ctx4",
+  "cleaning.side6",
+  "dq_10"
+ ],
+ "est_total_sec": 81.22,
+ "est_speech_sec": 62.66,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.78,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.63,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Bit embarrassing, but I want to try street photography and I'm scared of pointing my camera at strangers.",
+   "est_sec": 5.68,
+   "gap_before": 0.22,
+   "block": "photography.dlg13",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not embarrassing at all, almost everyone feels that. Would you be more comfortable starting without faces?",
+   "est_sec": 5.06,
+   "gap_before": 1.16,
+   "role": "reply",
+   "block": "photography.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. My daughter's in the school play Thursday and they've banned flash.",
+   "est_sec": 4.44,
+   "gap_before": 1.07,
+   "block": "photography.ctx4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then light and distance are your two problems. Would you rather grab a front row seat with your phone, or sit further back with the zoom camera?",
+   "est_sec": 8.47,
+   "gap_before": 0.33,
+   "role": "reply",
+   "block": "photography.ctx4"
+  },
+  {
+   "speaker": "friend",
+   "text": "The pasta's boiling over!",
+   "est_sec": 1.34,
+   "gap_before": 0.96,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, okay. Moshi, quiet for a minute.",
+   "est_sec": 2.27,
+   "gap_before": 0.42,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_58"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright.",
+   "est_sec": 0.41,
+   "gap_before": 0.47,
+   "role": "ack",
+   "phrasing": "ack_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Lucas, did you call the landlord?",
+   "est_sec": 1.96,
+   "gap_before": 0.88,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_10"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not yet, I'll do it tonight.",
+   "est_sec": 1.96,
+   "gap_before": 1.49,
+   "phrasing": "dq_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Lucas, did you use the white towels to mop up the kitchen floor?",
+   "est_sec": 4.13,
+   "gap_before": 0.94,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Um. They were the closest thing.",
+   "est_sec": 1.96,
+   "gap_before": 0.97,
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Those were the guest towels. My mum's coming tomorrow.",
+   "est_sec": 2.89,
+   "gap_before": 0.63,
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'll put them on a hot wash right now, they'll be fine.",
+   "est_sec": 3.82,
+   "gap_before": 3.18,
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "With the bleach-free stuff, please, they're the fluffy ones.",
+   "est_sec": 2.89,
+   "gap_before": 0.76,
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Got it. Sorry, I panicked, the whole jug of juice went everywhere.",
+   "est_sec": 3.82,
+   "gap_before": 0.43,
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done chatting. Go ahead, I'm listening.",
+   "est_sec": 2.58,
+   "gap_before": 1.22,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. We'd got to your seat for Thursday. Close up with the phone or the zoom from the back?",
+   "est_sec": 5.99,
+   "gap_before": 0.52,
+   "role": "resume",
+   "block": "photography.ctx4"
+  }
+ ]
+}

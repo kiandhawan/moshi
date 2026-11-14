@@ -1,0 +1,130 @@
+{
+ "id": "eval_12_00335",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 335,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "family_visit"
+ ],
+ "reading": {
+  "material": "text message",
+  "sec": 24.2
+ },
+ "topic": "family_visit",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_21",
+  "read_instr_07",
+  "read_cue_08"
+ ],
+ "block_ids": [
+  "family_visit.ctx5"
+ ],
+ "est_total_sec": 60.23,
+ "est_speech_sec": 29.73,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.51,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.77,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh. My brother wants to bring his new dog when he visits.",
+   "est_sec": 3.82,
+   "gap_before": 0.38,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Do you mind having a dog in the house?",
+   "est_sec": 2.89,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "family_visit.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not really, but my cat will lose her mind.",
+   "est_sec": 2.89,
+   "gap_before": 0.78,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a real concern. Would you rather ask him to board the dog, or keep the cat shut in your bedroom for the weekend?",
+   "est_sec": 7.54,
+   "gap_before": 0.49,
+   "role": "reply",
+   "block": "family_visit.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, my sister texted me. Let me read it before you say anything.",
+   "est_sec": 4.44,
+   "gap_before": 0.88,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, done with the article.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 24.2
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Finished reading? So what's the verdict on your brother's dog?",
+   "est_sec": 3.2,
+   "gap_before": 0.51,
+   "role": "resume",
+   "block": "family_visit.ctx5",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

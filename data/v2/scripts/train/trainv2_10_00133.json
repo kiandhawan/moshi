@@ -1,0 +1,160 @@
+{
+ "id": "trainv2_10_00133",
+ "split": "train",
+ "seed": 10,
+ "order_index": 133,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "public_transport"
+ ],
+ "wait_sec": 14,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 14
+ },
+ "instruction_position": 0.536,
+ "topic": "public_transport",
+ "voices": {
+  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_04",
+  "think_instruction_v2_32"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_32": {
+   "style": "fragment",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "studying.dlg19",
+  "public_transport.ctx3"
+ ],
+ "est_total_sec": 77.8,
+ "est_speech_sec": 52.35,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.79,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.34,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "I've been studying ten hours a day for a month and I'm starting to feel numb.",
+   "est_sec": 5.06,
+   "gap_before": 0.45,
+   "block": "studying.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That sounds like burnout creeping in. Ten hours every day is a lot for anyone.",
+   "est_sec": 4.75,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "studying.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, my train got cancelled and I need to be at the airport by six.",
+   "est_sec": 5.37,
+   "gap_before": 0.75,
+   "block": "public_transport.ctx3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, you have options. There's an airport bus in twenty minutes, or a taxi would get you there faster but cost a lot more. What do you want to do?",
+   "est_sec": 9.4,
+   "gap_before": 0.61,
+   "role": "reply",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, fourteen seconds on the clock, then hit me with it again.",
+   "est_sec": 3.82,
+   "gap_before": 1.17,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 14,
+   "phrasing": "think_instruction_v2_32"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, what's it going to be? The airport bus, or a taxi?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "public_transport.ctx3",
+   "anchor": {
+    "turn": 6,
+    "offset": 14.53
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Taxi. I'm not risking it.",
+   "est_sec": 1.65,
+   "gap_before": 1.49,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Understood. The taxi rank is just outside the station, and it should take about thirty minutes.",
+   "est_sec": 5.06,
+   "gap_before": 0.52,
+   "role": "followup",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "But my exams are so close. I can't stop now.",
+   "est_sec": 3.2,
+   "gap_before": 1.41,
+   "event": "ordinary_request",
+   "block": "studying.dlg19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You don't have to stop. But cutting back to six focused hours with real breaks will probably get you more than ten tired ones.",
+   "est_sec": 7.54,
+   "gap_before": 0.92,
+   "role": "reply",
+   "block": "studying.dlg19"
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+ "id": "trainv2_10_00380",
+ "split": "train",
+ "seed": 10,
+ "order_index": 380,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "shopping"
+ ],
+ "instruction_position": 0.176,
+ "topic": "shopping",
+ "voices": {
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_10",
+  "greet_ans_22",
+  "describe_instr_20",
+  "describe_cue_01"
+ ],
+ "phrasing_styles": {
+  "describe_instr_20": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_01": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "shopping.opt6",
+  "photography.dlg17"
+ ],
+ "est_total_sec": 81.51,
+ "est_speech_sec": 57.93,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.73,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm a nurse and I need new shoes for twelve hour shifts. I'm down to a few.",
+   "est_sec": 5.37,
+   "gap_before": 0.44,
+   "block": "shopping.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me describe everything first, and then I'll ask for your thoughts.",
+   "est_sec": 3.82,
+   "gap_before": 0.85,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_20"
+  },
+  {
+   "speaker": "user",
+   "text": "One pair is classic clogs, easy to wipe clean and slip on, but my ankles feel a bit wobbly in them.",
+   "est_sec": 6.61,
+   "gap_before": 0.71,
+   "block": "shopping.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is thick cushioned running shoes in black, super comfy, though fabric soaks up anything spilled on it.",
+   "est_sec": 5.68,
+   "gap_before": 6.47,
+   "block": "shopping.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or these leather work trainers, water resistant and supportive, but stiff and they need breaking in.",
+   "est_sec": 5.06,
+   "gap_before": 7.49,
+   "block": "shopping.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 1.01,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wobbly ankles over twelve hours is a red flag, so I'd be careful with the clogs. The leather trainers sound like the best mix of support and easy cleaning, once they're broken in. The running shoes are the comfiest but spills could be a real problem.",
+   "est_sec": 14.36,
+   "gap_before": 1.01,
+   "role": "resume",
+   "block": "shopping.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. There are ducklings at the pond near me. They're so tiny and fast.",
+   "est_sec": 5.06,
+   "gap_before": 1.15,
+   "block": "photography.dlg17",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ducklings are such a treat to photograph. Can you get low, near the water?",
+   "est_sec": 4.44,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "photography.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll be good, promise.",
+   "est_sec": 1.34,
+   "gap_before": 0.7,
+   "block": "photography.dlg17"
+  }
+ ]
+}

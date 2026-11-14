@@ -1,0 +1,184 @@
+{
+ "id": "trainv2_10_00562",
+ "split": "train",
+ "seed": 10,
+ "order_index": 562,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "job_interview"
+ ],
+ "wait_sec": 18,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 18
+ },
+ "instruction_position": 0.53,
+ "topic": "job_interview",
+ "voices": {
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_08",
+  "think_instruction_v2_13",
+  "ack_13",
+  "self_19"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_13": {
+   "style": "statement",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "shopping.dlg15",
+  "job_interview.ctx3"
+ ],
+ "est_total_sec": 81.86,
+ "est_speech_sec": 55.03,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.49,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Is haggling at a flea market rude, or is it expected?",
+   "est_sec": 3.51,
+   "gap_before": 0.39,
+   "block": "shopping.dlg15",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "At most flea markets it's expected, especially on bigger items. Sellers often price things with a bit of room built in.",
+   "est_sec": 6.61,
+   "gap_before": 0.51,
+   "role": "reply",
+   "block": "shopping.dlg15"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? At the end of interviews they always ask if I have questions, and I never do.",
+   "est_sec": 6.92,
+   "gap_before": 1.11,
+   "block": "job_interview.ctx3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let's fix that. Would you rather ask about the team and daily work, or about growth and where the role leads?",
+   "est_sec": 6.61,
+   "gap_before": 0.59,
+   "role": "reply",
+   "block": "job_interview.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "I'd like eighteen seconds of quiet to work it out, then you can ask me again.",
+   "est_sec": 5.06,
+   "gap_before": 0.81,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 18,
+   "phrasing": "think_instruction_v2_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.2,
+   "role": "ack",
+   "phrasing": "ack_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, but then again",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 13.93
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, what kind of question do you want to ask them, team or growth?",
+   "est_sec": 4.44,
+   "role": "resume",
+   "block": "job_interview.ctx3",
+   "anchor": {
+    "turn": 6,
+    "offset": 18.32
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The team. I want to know who I'd be working with.",
+   "est_sec": 3.51,
+   "gap_before": 0.48,
+   "event": "ordinary_request",
+   "block": "job_interview.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great. Try asking what a typical week looks like and how the team usually works together.",
+   "est_sec": 5.06,
+   "gap_before": 1.18,
+   "role": "followup",
+   "block": "job_interview.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm terrible at it. I just pay whatever they say.",
+   "est_sec": 3.2,
+   "gap_before": 1.84,
+   "event": "ordinary_request",
+   "block": "shopping.dlg15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Start friendly. Ask how much, then offer around two thirds and see where you meet.",
+   "est_sec": 4.75,
+   "gap_before": 1.36,
+   "role": "reply",
+   "block": "shopping.dlg15"
+  }
+ ]
+}

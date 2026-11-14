@@ -1,0 +1,153 @@
+{
+ "id": "trainv2_10_00233",
+ "split": "train",
+ "seed": 10,
+ "order_index": 233,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "weekend_plans"
+ ],
+ "instruction_position": 0.201,
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "cbc3add1f54546e6a4a1964bacb8b122",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_08",
+  "describe_instr_17",
+  "describe_cue_13"
+ ],
+ "phrasing_styles": {
+  "describe_instr_17": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  },
+  "describe_cue_13": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "weekend_plans.opt3",
+  "board_games.dlg14"
+ ],
+ "est_total_sec": 76.6,
+ "est_speech_sec": 53.18,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.9,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "My group of friends wants to do something on Saturday night and they've put me in charge, help.",
+   "est_sec": 5.68,
+   "gap_before": 0.51,
+   "block": "weekend_plans.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me finish describing every option before you respond.",
+   "est_sec": 2.89,
+   "gap_before": 0.85,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_17"
+  },
+  {
+   "speaker": "user",
+   "text": "There's an escape room in town that fits six people, about an hour, and then we could grab food after.",
+   "est_sec": 6.3,
+   "gap_before": 1.06,
+   "block": "weekend_plans.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Someone suggested karaoke, private booth, but half of us can't sing and one person hates it.",
+   "est_sec": 5.06,
+   "gap_before": 7.6,
+   "block": "weekend_plans.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a pub quiz at the local, cheap and easy, though it gets super crowded and loud.",
+   "est_sec": 5.37,
+   "gap_before": 5.52,
+   "block": "weekend_plans.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 0.94,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd go for the escape room. It's a shared challenge, nobody has to perform, and it fits your six exactly. Save karaoke for a night when everyone's keen.",
+   "est_sec": 8.78,
+   "gap_before": 0.67,
+   "role": "resume",
+   "block": "weekend_plans.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? We're at a holiday cottage and all there is is a deck of cards. Any games for four adults?",
+   "est_sec": 7.85,
+   "gap_before": 1.46,
+   "block": "board_games.dlg14",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Loads. Hearts is a great one for four, easy to learn, and a bit mean in a fun way.",
+   "est_sec": 5.99,
+   "gap_before": 1.72,
+   "role": "reply",
+   "block": "board_games.dlg14"
+  }
+ ]
+}

@@ -1,0 +1,214 @@
+{
+ "id": "trainv2_10_00310",
+ "split": "train",
+ "seed": 10,
+ "order_index": 310,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "birthday_party",
+  "home_repair"
+ ],
+ "instruction_position": 0.301,
+ "topic": "birthday_party",
+ "voices": {
+  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "friend": "5ce84bbd213b4943bc89e1951e17848a",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Emma",
+ "friend_name_id": "name_20",
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_17",
+  "side_instr_11",
+  "side_cue_v2_26"
+ ],
+ "phrasing_styles": {
+  "side_instr_11": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_v2_26": {
+   "style": "command",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "birthday_party.ctx3",
+  "home_repair.side5",
+  "moving_house.dlg32"
+ ],
+ "est_total_sec": 84.98,
+ "est_speech_sec": 61.42,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.92,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "I still haven't ordered the cake for Saturday.",
+   "est_sec": 2.58,
+   "gap_before": 0.26,
+   "block": "birthday_party.ctx3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "There's still time if you order today. Chocolate is always popular, or would a fruity one like lemon fit better?",
+   "est_sec": 6.3,
+   "gap_before": 1.34,
+   "role": "reply",
+   "block": "birthday_party.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Excuse me for a moment, my friend has a question. Don't talk until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.35,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Did the plumber call you back?",
+   "est_sec": 1.96,
+   "gap_before": 1.22,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "He did. He can come Thursday morning.",
+   "est_sec": 2.27,
+   "gap_before": 1.22,
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Thursday? The sink's been leaking since Sunday.",
+   "est_sec": 2.27,
+   "gap_before": 0.94,
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "I know. He said everyone's pipes are freezing this week.",
+   "est_sec": 3.2,
+   "gap_before": 1.29,
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Did he say how much it would be?",
+   "est_sec": 2.58,
+   "gap_before": 1.54,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not really. Just that it depends what he finds.",
+   "est_sec": 2.89,
+   "gap_before": 1.31,
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Great, very reassuring. Can you put a bucket under it in the meantime?",
+   "est_sec": 4.13,
+   "gap_before": 2.94,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Already did. And a towel.",
+   "est_sec": 1.65,
+   "gap_before": 0.41,
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "We're finished. Please carry on, Moshi.",
+   "est_sec": 1.96,
+   "gap_before": 0.98,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Did you decide on the cake flavor?",
+   "est_sec": 2.89,
+   "gap_before": 1.0,
+   "role": "resume",
+   "block": "birthday_party.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. I've never driven a big van before and I'm moving with one next week.",
+   "est_sec": 5.68,
+   "gap_before": 1.68,
+   "block": "moving_house.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Practise a bit before the big day if you can, maybe a short drive around quiet streets.",
+   "est_sec": 5.37,
+   "gap_before": 1.96,
+   "role": "reply",
+   "block": "moving_house.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "What's the hardest part?",
+   "est_sec": 1.34,
+   "gap_before": 0.77,
+   "block": "moving_house.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The height and width. Know the van's height and watch for low bridges and car park barriers.",
+   "est_sec": 5.37,
+   "gap_before": 0.38,
+   "role": "reply",
+   "block": "moving_house.dlg32"
+  }
+ ]
+}

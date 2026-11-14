@@ -1,0 +1,172 @@
+{
+ "id": "trainv2_10_00139",
+ "split": "train",
+ "seed": 10,
+ "order_index": 139,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "video_games"
+ ],
+ "instruction_position": 0.676,
+ "topic": "video_games",
+ "voices": {
+  "user": "b47bb94bf3ce42b2a7643c31af62c553",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_23",
+  "describe_instruction_v2_19",
+  "describe_cue_10"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_19": {
+   "style": "fragment",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_10": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "shopping.dlg20",
+  "video_games.opt3"
+ ],
+ "est_total_sec": 78.54,
+ "est_speech_sec": 62.16,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.77,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_23"
+  },
+  {
+   "speaker": "user",
+   "text": "I've been waking up with a stiff neck. Is it my pillow?",
+   "est_sec": 3.82,
+   "gap_before": 0.47,
+   "block": "shopping.dlg20",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It could be. A pillow that's too high or too flat for how you sleep can definitely do that.",
+   "est_sec": 5.99,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "shopping.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "I sleep on my side.",
+   "est_sec": 1.65,
+   "gap_before": 1.3,
+   "block": "shopping.dlg20",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Side sleepers usually need a thicker, firmer pillow to fill the gap between your ear and your shoulder.",
+   "est_sec": 5.68,
+   "gap_before": 1.16,
+   "role": "reply",
+   "block": "shopping.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "I've saved up enough to upgrade one part of my gaming setup, and I keep changing my mind.",
+   "est_sec": 5.68,
+   "gap_before": 0.7,
+   "block": "video_games.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "All the options first, comments after.",
+   "est_sec": 1.96,
+   "gap_before": 0.44,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_19"
+  },
+  {
+   "speaker": "user",
+   "text": "A new graphics card would let me play the latest games on high settings, but it's the priciest.",
+   "est_sec": 5.68,
+   "gap_before": 0.87,
+   "block": "video_games.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a really good monitor, bigger and faster, so everything I already play looks smoother.",
+   "est_sec": 4.75,
+   "gap_before": 2.68,
+   "block": "video_games.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "I could also get a proper desk chair, because my back hurts after an evening of playing.",
+   "est_sec": 5.37,
+   "gap_before": 1.44,
+   "block": "video_games.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "And there's a nice wireless headset, which would mean no more tangled cables when I play with friends.",
+   "est_sec": 5.68,
+   "gap_before": 1.4,
+   "block": "video_games.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. What would you recommend?",
+   "est_sec": 1.65,
+   "gap_before": 1.18,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd think about the chair first, since pain makes every session worse. Between the card and the monitor, the monitor is better value unless your current card struggles. The headset can wait for a birthday.",
+   "est_sec": 10.95,
+   "gap_before": 1.17,
+   "role": "resume",
+   "block": "video_games.opt3"
+  }
+ ]
+}

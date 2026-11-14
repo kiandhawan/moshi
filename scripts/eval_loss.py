@@ -37,7 +37,8 @@ Metrics (one CSV row per checkpoint, pooled over all frames of all files; a fram
       reference: even while speaking most frames are PAD (one text token per word, words
       last several frames), so a perfect model sits well below 1.
   distractor_p_pad
-      Mean P(PAD) over the --distractor-sec (3.0) s after each distractor.
+      Mean P(PAD) over the --distractor-sec (3.0) s after each distractor (other-name questions
+      included: distractor kind other_name), cut at distractor_until when the events give it.
   ordinary_text_loss
       Training text loss restricted to the frames of the ideal Moshi turns that answer an
       ordinary request (kind ordinary in the human answer keys, reply / followup in rendered
@@ -49,10 +50,10 @@ out, so the greeting never counts as speaking during the instruction or as an in
 Usage:
   python scripts/eval_loss.py                                  # base model
   python scripts/eval_loss.py --checkpoint runs/X/checkpoints/checkpoint_000100/consolidated
-Options: --data (default data/indexes/eval_full.jsonl), --label, --gpu, --config.
+Options: --data (default data/indexes/eval_full_v2.jsonl, eval v2), --label, --gpu, --config.
 Writes results/metrics/loss_eval.csv (a row with the same label is replaced), one row per
 (checkpoint, eval group) in results/metrics/loss_eval_groups.csv (groups from the events
-files: familiar_type, new_type_phone/door/reading, extension, implicit_return, ordinary,
+files: familiar_type, new_type_phone/door/reading, extension, implicit_return, other_name, ordinary,
 human; a file with several tags counts in each), and results/metrics/loss_eval/<label>.jsonl
 (per-file numbers). Every row has the number of distinct contexts (bootstrap clusters) and
 95% CIs (<metric>_lo / _hi) from a cluster bootstrap over contexts (2000 resamples).
@@ -89,7 +90,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--config", type=Path, default=None,
                    help="Training config for loss weights/duration_sec. Default: the run's "
                         "args.yaml for a checkpoint, configs/smoke.yaml for the base model.")
-    p.add_argument("--data", type=Path, default=REPO / "data/indexes/eval_full.jsonl")
+    p.add_argument("--data", type=Path, default=REPO / "data/indexes/eval_full_v2.jsonl")  # eval v2 (final)
     p.add_argument("--label", default=None, help="Row name (default: base, or <run>/step<N>).")
     p.add_argument("--gpu", type=int, default=None)
     p.add_argument("--ack-grace", type=float, default=2.0)
@@ -222,8 +223,9 @@ def main() -> None:
                 tot["cue"] += (1 - p_pad[m]).sum().item(); cnt["cue"] += int(m.sum())
                 tot["cue_t"] += (target[m] != PAD).sum().item()
                 rec["cue_p_speak"] = (1 - p_pad[m]).mean().item() if m.any() else None
-            for d in ev.get("distractors", []):
-                m = frames(d, d + args.distractor_sec) & ~speaking
+            until = ev.get("distractor_until") or [None] * len(ev.get("distractors", []))
+            for d, u in zip(ev.get("distractors", []), until):  # never past Moshi's next ideal turn (v2 events)
+                m = frames(d, min(d + args.distractor_sec, u if u is not None else 1e9)) & ~speaking
                 tot["dis"] += p_pad[m].sum().item(); cnt["dis"] += int(m.sum())
             m = torch.zeros(T, dtype=torch.bool, device=valid.device)
             for turn in ev.get("moshi_turns", []):

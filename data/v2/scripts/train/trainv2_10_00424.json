@@ -1,0 +1,169 @@
+{
+ "id": "trainv2_10_00424",
+ "split": "train",
+ "seed": 10,
+ "order_index": 424,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "smartphones"
+ ],
+ "wait_sec": 21,
+ "deadline": {
+  "after_turn": 8,
+  "sec": 21
+ },
+ "instruction_position": 0.669,
+ "topic": "smartphones",
+ "voices": {
+  "user": "e7de86b388864b8cbd50d0d70a3494e5",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_13",
+  "think_instruction_v2_01",
+  "ack_16"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_01": {
+   "style": "request",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "moving_house.dlg22",
+  "smartphones.ctx5"
+ ],
+ "est_total_sec": 79.45,
+ "est_speech_sec": 49.35,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.38,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Why do people keep telling me to take meter readings on moving day?",
+   "est_sec": 4.13,
+   "gap_before": 0.5,
+   "block": "moving_house.dlg22",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So you only pay for the energy you used. Without readings, you might be charged for the last tenant's use, or the next one's.",
+   "est_sec": 7.54,
+   "gap_before": 1.05,
+   "role": "reply",
+   "block": "moving_house.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, dropped my phone on the bus steps this morning. Spiderweb crack right across the screen.",
+   "est_sec": 5.37,
+   "gap_before": 0.6,
+   "block": "smartphones.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ouch. Does the touch still work?",
+   "est_sec": 1.96,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "smartphones.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Mostly, yeah. Top corner's a bit jumpy.",
+   "est_sec": 2.27,
+   "gap_before": 0.8,
+   "block": "smartphones.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then it's fixable. Would you go to a repair shop for a new screen, or claim it on your insurance?",
+   "est_sec": 6.3,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "smartphones.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Could you give me twenty-one seconds to think that through, and then ask me again?",
+   "est_sec": 4.75,
+   "gap_before": 0.34,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 21,
+   "phrasing": "think_instruction_v2_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.3,
+   "role": "ack",
+   "phrasing": "ack_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, back to the spiderweb. Fix it at a shop, or go through insurance?",
+   "est_sec": 4.44,
+   "role": "resume",
+   "block": "smartphones.ctx5",
+   "anchor": {
+    "turn": 8,
+    "offset": 21.13
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Where's the meter, though?",
+   "est_sec": 1.34,
+   "gap_before": 1.23,
+   "event": "ordinary_request",
+   "block": "moving_house.dlg22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Often in a cupboard under the stairs, in the hall, or in a box outside. Ask the landlord or agent if you can't find it.",
+   "est_sec": 7.85,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "moving_house.dlg22"
+  }
+ ]
+}

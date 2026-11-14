@@ -32,6 +32,7 @@ SECONDARY = [
     ("spoke during instr.", "spoke_during_instruction", "run"),
     ("acknowledged", "acknowledged", "run"),
     ("spoke over cue", "spoke_over_cue", "run"),
+    ("other-name response", "other_name_responses", "list"),
 ]
 
 
@@ -185,7 +186,7 @@ def summary_markdown(models: dict[str, list[dict]]) -> str:
                             + [rate_cell(rs, "greeted_at_start", "run"), latency_cell(rs)])
     tag_part = ("" if not tag_rows else
                 "\n## By eval group\n\n"
-                "What is new about each file (events `groups`): familiar_type, new_type_phone, new_type_door, "
+                "What is new about each file (events `groups`): familiar_type, new_type_phone, new_type_door, other_name, "
                 "new_type_reading, extension, implicit_return, ordinary, human. A file with several tags is "
                 "counted in each.\n\n"
                 + md_table(["model", "eval group", "files", "contexts", "runs"] + [lbl for lbl, _, _ in PRIMARY]

@@ -1,0 +1,154 @@
+{
+ "id": "eval_13_on_00006",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 406,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00040",
+  "seed": 13
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "8abfa9ebd4c24a3399b68c3cdac8c7b5"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_27",
+  "describe_instr_15",
+  "describe_cue_12",
+  "nq_eval_028",
+  "pn_227"
+ ],
+ "block_ids": [
+  "learning_language.opt2",
+  "nq_eval_028"
+ ],
+ "est_total_sec": 60.12,
+ "est_speech_sec": 39.44,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.45,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.33,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "This screw keeps spinning. Pavel, have we got any wall plugs?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_028",
+   "block": "nq_eval_028",
+   "name_pos": "middle",
+   "addressee": "Pavel",
+   "est_sec": 3.51,
+   "gap_before": 1.32
+  },
+  {
+   "speaker": "other",
+   "text": "Top drawer of the toolbox, the red ones.",
+   "block": "nq_eval_028",
+   "est_sec": 2.58,
+   "gap_before": 0.75
+  },
+  {
+   "speaker": "user",
+   "text": "My company will pay for one language course, and I'm not sure which language to pick.",
+   "est_sec": 5.06,
+   "gap_before": 1.01,
+   "block": "learning_language.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to describe all the options before I hear your opinion.",
+   "est_sec": 3.82,
+   "gap_before": 0.65,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_15"
+  },
+  {
+   "speaker": "user",
+   "text": "First, there's German, since our biggest client is in Munich.",
+   "est_sec": 3.2,
+   "gap_before": 1.33,
+   "block": "learning_language.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Next, Mandarin, which would look great on my resume but seems really hard.",
+   "est_sec": 4.13,
+   "gap_before": 2.34,
+   "block": "learning_language.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's French, which I studied in school, so I wouldn't start from zero.",
+   "est_sec": 4.44,
+   "gap_before": 2.24,
+   "block": "learning_language.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Finally, Arabic, because we might open an office in Dubai next year.",
+   "est_sec": 3.82,
+   "gap_before": 1.12,
+   "block": "learning_language.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 0.61,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "French would give you the fastest progress because of your school background. Still, if the Dubai office really happens, Arabic could set you apart. How certain is that plan?",
+   "est_sec": 9.09,
+   "gap_before": 0.94,
+   "role": "resume",
+   "block": "learning_language.opt2",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00040",
+  "name_pos": "middle",
+  "answered": true
+ },
+ "groups": [
+  "familiar_type",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

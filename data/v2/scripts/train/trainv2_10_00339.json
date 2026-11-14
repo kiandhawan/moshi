@@ -1,0 +1,185 @@
+{
+ "id": "trainv2_10_00339",
+ "split": "train",
+ "seed": 10,
+ "order_index": 339,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "moving_house"
+ ],
+ "wait_sec": 21,
+ "deadline": {
+  "after_turn": 8,
+  "sec": 21
+ },
+ "instruction_position": 0.604,
+ "topic": "moving_house",
+ "voices": {
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_07",
+  "greet_ans_02",
+  "think_instr_26",
+  "ack_11"
+ ],
+ "phrasing_styles": {
+  "think_instr_26": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "studying.dlg28",
+  "moving_house.ctx5"
+ ],
+ "est_total_sec": 82.19,
+ "est_speech_sec": 50.17,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
+   "gap_before": 0.65,
+   "role": "greeting",
+   "phrasing": "greet_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.59,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I teach year eleven and they're just not revising. Any ideas to help them?",
+   "est_sec": 4.44,
+   "gap_before": 0.57,
+   "block": "studying.dlg28",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Teenagers often don't know how to revise, they just reread. Teaching them a few methods directly can help a lot.",
+   "est_sec": 6.3,
+   "gap_before": 0.53,
+   "role": "reply",
+   "block": "studying.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "First year of uni, and I have to pick a room in the shared house.",
+   "est_sec": 4.75,
+   "gap_before": 0.66,
+   "block": "moving_house.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. What are the choices?",
+   "est_sec": 1.65,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "moving_house.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "A small one with its own bathroom, or a big one where I'd share with three people.",
+   "est_sec": 5.37,
+   "gap_before": 0.45,
+   "block": "moving_house.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Classic dilemma. Would you rather have space or a bathroom to yourself?",
+   "est_sec": 3.82,
+   "gap_before": 0.84,
+   "role": "reply",
+   "block": "moving_house.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, wait twenty-one seconds and then ask me again, okay?",
+   "est_sec": 3.2,
+   "gap_before": 0.39,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 21,
+   "phrasing": "think_instr_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright.",
+   "est_sec": 0.41,
+   "gap_before": 0.51,
+   "role": "ack",
+   "phrasing": "ack_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Space or privacy? Which room are you taking?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "moving_house.ctx5",
+   "anchor": {
+    "turn": 8,
+    "offset": 21.19
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The big one. I'll have friends over and need the space.",
+   "est_sec": 3.51,
+   "gap_before": 1.02,
+   "event": "ordinary_request",
+   "block": "moving_house.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Makes sense. Buy some flip flops for the shared shower, you'll thank me.",
+   "est_sec": 4.13,
+   "gap_before": 1.2,
+   "role": "followup",
+   "block": "moving_house.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Like what, flashcards?",
+   "est_sec": 1.03,
+   "gap_before": 1.89,
+   "event": "ordinary_request",
+   "block": "studying.dlg28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Flashcards, self quizzing, and explaining things to a partner. Try short in class quizzes so they see the benefit.",
+   "est_sec": 5.99,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "studying.dlg28"
+  }
+ ]
+}

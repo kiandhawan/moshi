@@ -21,6 +21,8 @@ Events format (one JSON per test file; times in seconds on the user-audio timeli
    "wait_end": 22.0,               # when Moshi may speak again; null if no wait
    "resume_window": [22.0, 26.0],  # Moshi's speech should start inside this window
    "distractors": [8.1, 15.0],     # times of things Moshi should NOT respond to
+   "distractor_kinds": [...],      # optional: friend_question, near_miss, pause, self_talk, other_name, ...
+   "distractor_until": [...],      # optional: per distractor, the latest end of its response window
    "ordinary_requests": [30.2],    # times (end of request) Moshi SHOULD answer
    "ordinary_window": 5.0,         # optional: answer must start within this many s (default 5)
    "notes": "..."}                 # optional free text
@@ -47,7 +49,10 @@ Metrics per file and seed (VAD-based; times straight from the WAV, no extra offs
   spoke_over_cue            Moshi was already speaking at wait_end (a segment starts before
                             wait_end and is still going at it), e.g. talking over the return cue
   resume_latency            wait_end -> start of the first segment starting at/after wait_end
-  distractor_responses      per distractor: speech starts within 3 s after it
+  distractor_responses      per distractor: speech starts within 3 s after it (and before
+                            distractor_until, Moshi's next ideal turn, when the events give it)
+  other_name_responses      the same, only for questions the user addresses to another person
+                            by name (distractor kind other_name, eval group other_name)
   ordinary_answered         per ordinary request: speech starts within 5 s after it
   wait_success (PRIMARY)    not interrupted AND resumed_on_time AND no distractor response;
                             one per wait (each test file has one wait), null if no wait
@@ -88,6 +93,7 @@ SUMMARY_PATH = REPO / "results" / "summary.md"
 REQUIRED_FIELDS = ("id", "group")
 OPTIONAL_DEFAULTS = {"groups": [], "cluster": None, "user_start": None, "instruction_start": None, "instruction_end": None, "wait_end": None,
                      "resume_window": None, "distractors": [], "ordinary_requests": [],
+                     "distractor_kinds": None, "distractor_until": None,
                      "ordinary_window": ORDINARY_WINDOW}
 
 
@@ -186,8 +192,13 @@ def score_run(ev: dict, segs: list[Seg], text_segs: list[Seg], ack_grace: float,
         r["resume_latency"] = round(after[0] - we, 2) if after else None
         after_t = [s for s, _ in text_segs if s >= we]
         r["resume_latency_text"] = round(after_t[0] - we, 2) if after_t else None
-    r["distractor_responses"] = [first_start_in(segs, d, d + DISTRACTOR_WINDOW) is not None
-                                 for d in ev["distractors"]]
+    # window: DISTRACTOR_WINDOW after the distractor, but never past Moshi's next ideal turn
+    # (distractor_until, v2 events), e.g. its answer to the request that follows an other-name question
+    until = ev["distractor_until"] or [None] * len(ev["distractors"])
+    r["distractor_responses"] = [first_start_in(segs, d, min(d + DISTRACTOR_WINDOW, u if u is not None else 1e9))
+                                 is not None for d, u in zip(ev["distractors"], until)]
+    kinds = ev["distractor_kinds"] or [None] * len(ev["distractors"])
+    r["other_name_responses"] = [x for x, k in zip(r["distractor_responses"], kinds) if k == "other_name"]
     r["ordinary_answered"] = [first_start_in(segs, q, q + ev["ordinary_window"]) is not None
                               for q in ev["ordinary_requests"]]
     if "interrupted" in r and "resumed_on_time" in r:

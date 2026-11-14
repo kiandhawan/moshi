@@ -1,0 +1,161 @@
+{
+ "id": "trainv2_10_00585",
+ "split": "train",
+ "seed": 10,
+ "order_index": 585,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "birthday_party"
+ ],
+ "instruction_position": 0.613,
+ "topic": "birthday_party",
+ "voices": {
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_08",
+  "describe_instruction_v2_02",
+  "describe_cue_v2_29"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_02": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_29": {
+   "style": "fragment",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "gardening.dlg31",
+  "birthday_party.opt6"
+ ],
+ "est_total_sec": 84.98,
+ "est_speech_sec": 62.89,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.46,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a huge tree stump in the middle of my garden. Any way to get rid of it without a machine?",
+   "est_sec": 6.61,
+   "gap_before": 0.23,
+   "block": "gardening.dlg31",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can, it just takes patience. Drill some deep holes in the top, fill them with water and cover it so it stays damp. That speeds up rotting.",
+   "est_sec": 8.78,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "gardening.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, My mum's birthday is next week and I want to plan something, but money's tight.",
+   "est_sec": 5.37,
+   "gap_before": 0.67,
+   "block": "birthday_party.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you hold your comments till I've gone through every choice? I'll tell you when I'm done.",
+   "est_sec": 5.37,
+   "gap_before": 0.61,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I could cook her a three course dinner at home and do it all properly with candles.",
+   "est_sec": 5.37,
+   "gap_before": 1.1,
+   "block": "birthday_party.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a picnic by the lake where she used to take us when we were little.",
+   "est_sec": 5.06,
+   "gap_before": 6.94,
+   "block": "birthday_party.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "We could also just go to the cinema and get her favourite fish and chips after.",
+   "est_sec": 5.06,
+   "gap_before": 3.81,
+   "block": "birthday_party.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "My brother suggested a scrapbook of family photos instead of any outing.",
+   "est_sec": 3.82,
+   "gap_before": 4.05,
+   "block": "birthday_party.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Finished, finally. Which one, Moshi?",
+   "est_sec": 1.65,
+   "gap_before": 0.66,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The lake picnic has real meaning, it brings back those early memories, and it costs almost nothing. A home dinner is lovely but a lot of work for you. The scrapbook could actually go alongside any of the others as the gift.",
+   "est_sec": 13.12,
+   "gap_before": 0.8,
+   "role": "resume",
+   "block": "birthday_party.opt6"
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "id": "eval_12_00204",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 204,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "home_office"
+ ],
+ "reading": {
+  "material": "email",
+  "sec": 23.3
+ },
+ "topic": "home_office",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_24",
+  "read_instr_02",
+  "implicit_05"
+ ],
+ "block_ids": [
+  "home_office.ctx16"
+ ],
+ "est_total_sec": 53.87,
+ "est_speech_sec": 25.5,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.74,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "I've been fully remote for two years and lately I just feel kind of lonely.",
+   "est_sec": 4.75,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "home_office.ctx16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's really common, and it's worth taking seriously. Would you rather set up regular virtual coffee chats with coworkers, or work from a cafe once or twice a week?",
+   "est_sec": 9.09,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "home_office.ctx16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me read this email first before you comment.",
+   "est_sec": 2.89,
+   "gap_before": 0.45,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, sorry, where were we again?",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 23.3
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. About feeling lonely, virtual chats or the cafe days?",
+   "est_sec": 3.2,
+   "gap_before": 0.61,
+   "role": "resume",
+   "block": "home_office.ctx16",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

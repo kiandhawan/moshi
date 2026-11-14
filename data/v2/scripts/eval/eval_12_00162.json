@@ -1,0 +1,165 @@
+{
+ "id": "eval_12_00162",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 162,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "painting_art",
+  "laptop_buying"
+ ],
+ "topic": "painting_art",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Maya",
+ "friend_name_id": "name_03",
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_09",
+  "side_instr_06",
+  "implicit_04"
+ ],
+ "block_ids": [
+  "painting_art.ctx21",
+  "laptop_buying.side4"
+ ],
+ "est_total_sec": 59.08,
+ "est_speech_sec": 42.01,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.83,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm starting a big seascape and I can't settle on a mood.",
+   "est_sec": 3.82,
+   "gap_before": 0.55,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Seascapes can go so many ways. Are you picturing a stormy grey sea, or a bright turquoise summer one?",
+   "est_sec": 5.99,
+   "gap_before": 0.31,
+   "role": "reply",
+   "block": "painting_art.ctx21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One moment, my sister is asking me something. Please don't interrupt until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 1.09,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you see this one? It folds all the way back like a tablet.",
+   "est_sec": 4.44,
+   "gap_before": 1.03,
+   "block": "laptop_buying.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Cute. Does the hinge feel solid?",
+   "est_sec": 1.96,
+   "gap_before": 3.05,
+   "block": "laptop_buying.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of wobbly, actually. Can you try it?",
+   "est_sec": 2.58,
+   "gap_before": 0.8,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "laptop_buying.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, it bounces when I type. That would drive me nuts.",
+   "est_sec": 3.51,
+   "gap_before": 1.34,
+   "block": "laptop_buying.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, crossed off the list.",
+   "est_sec": 1.65,
+   "gap_before": 2.41,
+   "block": "laptop_buying.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, where were we?",
+   "est_sec": 1.34,
+   "gap_before": 1.56,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. Okay, which sea are you painting?",
+   "est_sec": 2.27,
+   "gap_before": 0.74,
+   "role": "resume",
+   "block": "painting_art.ctx21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Stormy. I want it dramatic.",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great. Use a lot of different greys, warm and cool, and let a small patch of light break through.",
+   "est_sec": 5.99,
+   "gap_before": 0.93,
+   "role": "followup",
+   "block": "painting_art.ctx21",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,133 @@
+{
+ "id": "eval_12_00158",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 158,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "learning_language"
+ ],
+ "reading": {
+  "material": "email",
+  "sec": 8.4
+ },
+ "topic": "learning_language",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_24",
+  "read_instr_02",
+  "implicit_14"
+ ],
+ "block_ids": [
+  "learning_language.ctx4"
+ ],
+ "est_total_sec": 45.25,
+ "est_speech_sec": 28.18,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.33,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.76,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "My boyfriend's whole family speaks Italian, and we're visiting them at Christmas.",
+   "est_sec": 3.82,
+   "gap_before": 0.55,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a great motivator. Focus on everyday conversation phrases, or build up proper grammar foundations first?",
+   "est_sec": 5.06,
+   "gap_before": 1.31,
+   "role": "reply",
+   "block": "learning_language.ctx4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me read this email first before you comment.",
+   "est_sec": 2.89,
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, go ahead.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 8.4
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. So, how are you tackling it before the visit?",
+   "est_sec": 3.51,
+   "gap_before": 1.19,
+   "role": "resume",
+   "block": "learning_language.ctx4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Phrases. I just want to chat with his nonna.",
+   "est_sec": 2.89,
+   "gap_before": 1.12,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect, start with greetings, compliments on the food and questions about family. Nonnas love questions.",
+   "est_sec": 4.75,
+   "gap_before": 1.16,
+   "role": "followup",
+   "block": "learning_language.ctx4",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

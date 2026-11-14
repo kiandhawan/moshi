@@ -1,0 +1,171 @@
+{
+ "id": "trainv2_10_00514",
+ "split": "train",
+ "seed": 10,
+ "order_index": 514,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "personal_finance"
+ ],
+ "instruction_position": 0.122,
+ "topic": "personal_finance",
+ "voices": {
+  "user": "4210f97652d14bec82edc1c2ee8296d2",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_01",
+  "greet_ans_22",
+  "describe_instr_05",
+  "ack_12",
+  "describe_cue_v2_28"
+ ],
+ "phrasing_styles": {
+  "describe_instr_05": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_28": {
+   "style": "fragment",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "personal_finance.opt3",
+  "cars.dlg21"
+ ],
+ "est_total_sec": 84.4,
+ "est_speech_sec": 66.81,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.85,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got about two thousand in savings and I can't decide where to keep it.",
+   "est_sec": 4.75,
+   "gap_before": 0.5,
+   "block": "personal_finance.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll tell you all the choices first. Wait until I'm finished before you comment.",
+   "est_sec": 4.44,
+   "gap_before": 0.62,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.62,
+   "role": "ack",
+   "phrasing": "ack_12"
+  },
+  {
+   "speaker": "user",
+   "text": "I could leave it in my normal current account, which pays basically nothing but is easy to reach.",
+   "est_sec": 5.68,
+   "gap_before": 1.42,
+   "block": "personal_finance.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Or move it to a high interest savings account, which pays more but takes a day or two to withdraw.",
+   "est_sec": 6.3,
+   "gap_before": 1.35,
+   "block": "personal_finance.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Or put some into a simple index fund, which could grow more but can also go down.",
+   "est_sec": 5.37,
+   "gap_before": 1.11,
+   "block": "personal_finance.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, um, that's everything, I think. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.44,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If this is your emergency money, the high interest savings account is the sweet spot, safe and still earning something. The index fund is better for money you won't need for years. Your current account is easy but your money just sits there.",
+   "est_sec": 13.43,
+   "gap_before": 1.18,
+   "role": "resume",
+   "block": "personal_finance.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? Somebody's trolley left a long scratch on my door at the supermarket.",
+   "est_sec": 5.68,
+   "gap_before": 1.74,
+   "block": "cars.dlg21",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ugh, that's infuriating. Can you catch your fingernail in it, or is it just on the surface?",
+   "est_sec": 5.37,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "cars.dlg21"
+  },
+  {
+   "speaker": "user",
+   "text": "My nail catches a little.",
+   "est_sec": 1.65,
+   "gap_before": 2.59,
+   "block": "cars.dlg21",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then it's through the clear coat but maybe not to bare metal. A touch up pen in your car's exact paint colour can hide it well.",
+   "est_sec": 8.16,
+   "gap_before": 1.16,
+   "role": "reply",
+   "block": "cars.dlg21"
+  }
+ ]
+}

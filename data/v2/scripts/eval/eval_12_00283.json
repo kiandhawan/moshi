@@ -1,0 +1,156 @@
+{
+ "id": "eval_12_00283",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 283,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "picnic"
+ ],
+ "reading": {
+  "material": "letter",
+  "sec": 19.8
+ },
+ "topic": "picnic",
+ "voices": {
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_27",
+  "read_instr_09",
+  "ack_16",
+  "murmur_10",
+  "implicit_04"
+ ],
+ "block_ids": [
+  "picnic.ctx18"
+ ],
+ "est_total_sec": 55.36,
+ "est_speech_sec": 29.0,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.47,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "We're planning a picnic at an outdoor concert.",
+   "est_sec": 2.58,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "picnic.ctx18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun. Would you bring a full spread of food, or keep it to snacks so you can focus on the music?",
+   "est_sec": 6.61,
+   "gap_before": 0.62,
+   "role": "reply",
+   "block": "picnic.ctx18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me read this letter first, please don't talk until I'm done.",
+   "est_sec": 3.82,
+   "gap_before": 0.69,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.57,
+   "role": "ack",
+   "phrasing": "ack_16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Dear resident, okay.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 14.25
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, where were we?",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 19.8
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. The concert picnic. Big spread, or light snacks?",
+   "est_sec": 3.2,
+   "gap_before": 1.56,
+   "role": "resume",
+   "block": "picnic.ctx18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Full spread. It's a three hour show.",
+   "est_sec": 2.27,
+   "gap_before": 1.77,
+   "event": "ordinary_request",
+   "block": "picnic.ctx18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then bring a cooler and a small light so you can see what you're eating.",
+   "est_sec": 4.75,
+   "gap_before": 0.72,
+   "role": "followup",
+   "block": "picnic.ctx18",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

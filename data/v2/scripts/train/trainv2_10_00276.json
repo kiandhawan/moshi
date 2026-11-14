@@ -1,0 +1,232 @@
+{
+ "id": "trainv2_10_00276",
+ "split": "train",
+ "seed": 10,
+ "order_index": 276,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "moshi_name",
+  "other_name"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "fitness",
+  "weather_plans"
+ ],
+ "instruction_position": 0.927,
+ "topic": "fitness",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": "6d7a45828f6a432c9233cd93bb93e5be",
+  "other": "e58a6b7e06f048d0b83836d55d226b90",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Leo",
+ "friend_name_id": "name_07",
+ "phrasing_ids": [
+  "pn_056",
+  "greet_01",
+  "greet_ans_13",
+  "side_instruction_v2_26",
+  "ack_08",
+  "side_cue_v2_04"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_26": {
+   "style": "fragment",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_04": {
+   "style": "statement",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_work_068",
+  "moving_house.dlg14",
+  "fitness.ctx12",
+  "weather_plans.side4"
+ ],
+ "est_total_sec": 84.01,
+ "est_speech_sec": 66.79,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.88,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Moshi, I'm moving to Lisbon for a new job and I'm already feeling homesick and I haven't even left.",
+   "est_sec": 5.99,
+   "gap_before": 0.29,
+   "block": "moving_house.dlg14",
+   "kind": "moshi_name",
+   "name_pos": "start",
+   "addressee": "Moshi",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's very common. It's a huge change, even if it's a good one.",
+   "est_sec": 4.13,
+   "gap_before": 0.34,
+   "role": "reply",
+   "block": "moving_house.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? I want to work out at home. I've got space for one big thing. Adjustable dumbbells or an exercise bike?",
+   "est_sec": 8.16,
+   "gap_before": 1.5,
+   "block": "fitness.ctx12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Dumbbells give you strength training and take up very little space. A bike is better for cardio and easy to use while watching TV. What do you want more from it?",
+   "est_sec": 9.71,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "fitness.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you check the train times for me, Hailey?",
+   "est_sec": 2.89,
+   "gap_before": 0.47,
+   "block": "nq_work_068",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_work_068",
+   "name_pos": "end",
+   "addressee": "Hailey"
+  },
+  {
+   "speaker": "other",
+   "text": "There's one at ten past.",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
+   "block": "nq_work_068"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, quick chat with Leo. I'll say when I'm back.",
+   "est_sec": 3.2,
+   "gap_before": 1.54,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.68,
+   "role": "ack",
+   "phrasing": "ack_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Leo, is that hail? On the skylight?",
+   "est_sec": 2.27,
+   "gap_before": 0.77,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "It sounds like someone's throwing gravel at the house.",
+   "est_sec": 2.89,
+   "gap_before": 0.37,
+   "block": "weather_plans.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "I left my bike outside the front.",
+   "est_sec": 2.27,
+   "gap_before": 1.22,
+   "block": "weather_plans.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's a bike. It'll survive a bit of ice.",
+   "est_sec": 2.89,
+   "gap_before": 0.92,
+   "block": "weather_plans.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "The seat is leather, though. Can you pass me a carrier bag?",
+   "est_sec": 3.82,
+   "gap_before": 1.01,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "You're going out in that? You'll get pelted.",
+   "est_sec": 2.58,
+   "gap_before": 1.18,
+   "block": "weather_plans.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Ten seconds. Just to cover the seat.",
+   "est_sec": 2.27,
+   "gap_before": 0.92,
+   "block": "weather_plans.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Take my coat at least, it's got a hood.",
+   "est_sec": 2.89,
+   "gap_before": 0.8,
+   "block": "weather_plans.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, Moshi, I'm all done over here. Your turn.",
+   "est_sec": 2.89,
+   "gap_before": 0.56,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. The home gym question. Dumbbells or bike?",
+   "est_sec": 2.58,
+   "gap_before": 0.87,
+   "role": "resume",
+   "block": "fitness.ctx12"
+  }
+ ]
+}

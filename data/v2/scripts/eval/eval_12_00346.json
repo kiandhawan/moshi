@@ -1,0 +1,159 @@
+{
+ "id": "eval_12_00346",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 346,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "home_office",
+  "learning_language"
+ ],
+ "topic": "home_office",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_15",
+  "side_instr_12",
+  "implicit_04"
+ ],
+ "block_ids": [
+  "home_office.ctx21",
+  "learning_language.side2"
+ ],
+ "est_total_sec": 58.89,
+ "est_speech_sec": 47.49,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "By Friday my desk is buried in mugs, papers and cables.",
+   "est_sec": 3.51,
+   "gap_before": 0.36,
+   "event": "ordinary_request",
+   "block": "home_office.ctx21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Very relatable. Would a two minute tidy at the end of each day work for you, or would you rather do one proper reset every Friday?",
+   "est_sec": 8.16,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "home_office.ctx21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, Marcus just called my name. Please wait and stay silent until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.05,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you still going to that conversation group on Thursdays?",
+   "est_sec": 3.2,
+   "gap_before": 0.88,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, at the library. It's mostly retirees, but they're really nice.",
+   "est_sec": 3.51,
+   "gap_before": 0.61,
+   "block": "learning_language.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Do they let beginners join?",
+   "est_sec": 1.65,
+   "gap_before": 0.84,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. Last week a guy only knew how to order coffee and they loved him.",
+   "est_sec": 4.75,
+   "gap_before": 0.62,
+   "block": "learning_language.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha, that's basically my level. Can I come with you next week?",
+   "est_sec": 3.82,
+   "gap_before": 1.49,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Of course. Bring a notebook, they throw a lot of new words at you.",
+   "est_sec": 4.44,
+   "gap_before": 0.76,
+   "block": "learning_language.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, where were we?",
+   "est_sec": 1.34,
+   "gap_before": 0.79,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. The desk chaos still needs a plan. Daily tidy or Friday reset?",
+   "est_sec": 4.44,
+   "gap_before": 0.99,
+   "role": "resume",
+   "block": "home_office.ctx21",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

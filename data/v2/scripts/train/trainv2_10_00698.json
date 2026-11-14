@@ -1,0 +1,183 @@
+{
+ "id": "trainv2_10_00698",
+ "split": "train",
+ "seed": 10,
+ "order_index": 698,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long",
+  "moshi_mention"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "coffee"
+ ],
+ "instruction_position": 0.143,
+ "topic": "coffee",
+ "voices": {
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "friend": null,
+  "other": "bd45448dd6f84f9ebd06f369f93f4410",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_01",
+  "greet_ans_01",
+  "describe_instruction_v2_34",
+  "describe_cue_08"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_34": {
+   "style": "implied",
+   "tone": "apologetic",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_08": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "mm_109",
+  "coffee.opt4",
+  "books.dlg30"
+ ],
+ "est_total_sec": 84.45,
+ "est_speech_sec": 57.82,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.62,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.75,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "My cafe needs a new plant milk option, and the supplier offered a few.",
+   "est_sec": 4.44,
+   "gap_before": 0.54,
+   "block": "coffee.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, I've got loads of these to get through, so bear with me till the end.",
+   "est_sec": 5.06,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_34"
+  },
+  {
+   "speaker": "user",
+   "text": "Oat milk is the most popular, foams beautifully and tastes a bit sweet.",
+   "est_sec": 4.13,
+   "gap_before": 1.38,
+   "block": "coffee.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Almond milk is lighter and nutty, but it can split in hot coffee.",
+   "est_sec": 4.13,
+   "gap_before": 6.85,
+   "block": "coffee.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Soy is cheap and creamy, though some customers say it tastes beany.",
+   "est_sec": 3.82,
+   "gap_before": 5.28,
+   "block": "coffee.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And there's a coconut milk blend that's great in iced drinks but strong tasting.",
+   "est_sec": 4.44,
+   "gap_before": 3.82,
+   "block": "coffee.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all. Which sounds best to you?",
+   "est_sec": 2.58,
+   "gap_before": 1.1,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Oat is the safe bet, people know it and it steams well. Almond and soy each have fans, but almond can split. Coconut is fun for a summer menu rather than an everyday choice.",
+   "est_sec": 10.64,
+   "gap_before": 0.72,
+   "role": "resume",
+   "block": "coffee.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Owen, did you ever ask Moshi how far Mars is?",
+   "est_sec": 3.2,
+   "gap_before": 0.82,
+   "block": "mm_109",
+   "event": "distractor",
+   "kind": "moshi_mention",
+   "phrasing": "mm_109",
+   "name_pos": "start",
+   "addressee": "Owen"
+  },
+  {
+   "speaker": "other",
+   "text": "Too far for a weekend trip.",
+   "est_sec": 1.96,
+   "gap_before": 0.43,
+   "block": "mm_109"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, can you tell me what a novella is? Is it just a short novel?",
+   "est_sec": 4.75,
+   "gap_before": 1.29,
+   "block": "books.dlg30",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Pretty much. It's longer than a short story but shorter than a novel, often somewhere around a hundred pages.",
+   "est_sec": 5.99,
+   "gap_before": 0.82,
+   "role": "reply",
+   "block": "books.dlg30"
+  }
+ ]
+}

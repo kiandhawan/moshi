@@ -1,0 +1,148 @@
+{
+ "id": "eval_12_00018",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 18,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "cycling"
+ ],
+ "topic": "cycling",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "933563129e564b19a115bedd57b7406a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_15",
+  "door_instr_05",
+  "ack_15",
+  "door_37",
+  "door_cue_08"
+ ],
+ "block_ids": [
+  "cycling.ctx22",
+  "door_37"
+ ],
+ "est_total_sec": 51.89,
+ "est_speech_sec": 32.82,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "First race Sunday. I'm panicking. Should I cram in loads of training?",
+   "est_sec": 3.82,
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "cycling.ctx22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Please don't, it's too late for that to help. How do your legs feel right now, heavy or fresh?",
+   "est_sec": 5.99,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "cycling.ctx22",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One moment, I need to get the door. I'll tell you when I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.87,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.7,
+   "role": "ack",
+   "phrasing": "ack_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Evening.",
+   "est_sec": 0.41,
+   "gap_before": 4.72,
+   "phrasing": "door_37"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi! Is Mia home? We're going to the park.",
+   "est_sec": 2.89,
+   "gap_before": 1.32,
+   "phrasing": "door_37"
+  },
+  {
+   "speaker": "user",
+   "text": "She's just finishing her homework. Can you wait five minutes?",
+   "est_sec": 3.2,
+   "gap_before": 0.74,
+   "phrasing": "door_37",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Okay, we'll sit on the wall.",
+   "est_sec": 1.96,
+   "gap_before": 2.15,
+   "phrasing": "door_37"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, back from the door.",
+   "est_sec": 1.65,
+   "gap_before": 3.1,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. Okay, are you tired or fresh this week?",
+   "est_sec": 3.2,
+   "gap_before": 1.82,
+   "role": "resume",
+   "block": "cycling.ctx22",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

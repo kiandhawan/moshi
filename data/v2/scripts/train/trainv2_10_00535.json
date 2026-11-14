@@ -1,0 +1,234 @@
+{
+ "id": "trainv2_10_00535",
+ "split": "train",
+ "seed": 10,
+ "order_index": 535,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "moshi_mention",
+  "near_miss"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "cleaning",
+  "hiking"
+ ],
+ "instruction_position": 0.483,
+ "topic": "cleaning",
+ "voices": {
+  "user": "6d7a45828f6a432c9233cd93bb93e5be",
+  "friend": "f3a2b90078d54a65af4b95f63bc7798e",
+  "other": "bf322df2096a46f18c579d0baa36f41d",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
+ "phrasing_ids": [
+  "greet_04",
+  "greet_ans_26",
+  "side_instruction_v2_25",
+  "dn_26",
+  "dq_23",
+  "side_cue_v2_04"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_25": {
+   "style": "fragment",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_04": {
+   "style": "statement",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "mm_096",
+  "cleaning.ctx11",
+  "hiking.side2",
+  "dn_26",
+  "dq_23",
+  "gardening.dlg6"
+ ],
+ "est_total_sec": 81.69,
+ "est_speech_sec": 59.97,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.85,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "My home desk is buried under papers. Bills, receipts, letters from school.",
+   "est_sec": 3.82,
+   "gap_before": 0.29,
+   "block": "cleaning.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Two ways to go. Scan everything and go mostly paperless, or set up a small filing box with folders?",
+   "est_sec": 5.99,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "cleaning.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "My grandson set up Moshi so I could hear audiobooks.",
+   "est_sec": 3.2,
+   "gap_before": 2.83,
+   "block": "mm_096",
+   "event": "distractor",
+   "kind": "moshi_mention",
+   "phrasing": "mm_096",
+   "name_pos": "none"
+  },
+  {
+   "speaker": "user",
+   "text": "One second, Moshi. Flatmate.",
+   "est_sec": 1.34,
+   "gap_before": 1.92,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Is your brother still coming over?",
+   "est_sec": 1.96,
+   "gap_before": 1.0,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_23"
+  },
+  {
+   "speaker": "friend",
+   "text": "He said around eight.",
+   "est_sec": 1.34,
+   "gap_before": 1.12,
+   "phrasing": "dq_23"
+  },
+  {
+   "speaker": "user",
+   "text": "Daniel, go ahead and take the last slice.",
+   "est_sec": 2.58,
+   "gap_before": 0.93,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_26"
+  },
+  {
+   "speaker": "friend",
+   "text": "Are you sure? Thanks.",
+   "est_sec": 1.34,
+   "gap_before": 0.46,
+   "phrasing": "dn_26"
+  },
+  {
+   "speaker": "user",
+   "text": "How was the trail you did last week?",
+   "est_sec": 2.58,
+   "gap_before": 0.98,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Beautiful, but really muddy near the waterfall.",
+   "est_sec": 2.27,
+   "gap_before": 1.21,
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Would it be okay for the kids?",
+   "est_sec": 2.27,
+   "gap_before": 0.48,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "The first part, yes. The last mile is steep with loose rocks, I wouldn't bring them up there.",
+   "est_sec": 5.68,
+   "gap_before": 0.63,
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "We could just go to the waterfall and turn back.",
+   "est_sec": 3.2,
+   "gap_before": 1.05,
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "That's the best bit anyway. They'll love it.",
+   "est_sec": 2.58,
+   "gap_before": 0.81,
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, Moshi, I'm all done over here. Your turn.",
+   "est_sec": 2.89,
+   "gap_before": 1.52,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. So, the pile of bills and letters. Which system?",
+   "est_sec": 3.2,
+   "gap_before": 0.58,
+   "role": "resume",
+   "block": "cleaning.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. My tomato seedlings are tall and spindly and falling over. Did I do something wrong?",
+   "est_sec": 5.37,
+   "gap_before": 1.41,
+   "block": "gardening.dlg6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's called legginess, and it's really common. They're stretching towards the light because they aren't getting enough.",
+   "est_sec": 5.37,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "gardening.dlg6"
+  }
+ ]
+}

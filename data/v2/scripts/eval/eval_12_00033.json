@@ -1,0 +1,167 @@
+{
+ "id": "eval_12_00033",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 33,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_06",
+  "waitlike_09"
+ ],
+ "block_ids": [
+  "learning_language.dlg10"
+ ],
+ "est_total_sec": 60.9,
+ "est_speech_sec": 46.66,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.48,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "My daughter's learning French at school, but I don't speak a word. How can I help her?",
+   "est_sec": 5.37,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You don't need to speak it. Show interest, ask her to teach you a word each day.",
+   "est_sec": 5.37,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "learning_language.dlg10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, is that true?",
+   "est_sec": 1.65,
+   "gap_before": 0.55,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_09",
+   "block": "learning_language.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'm fairly sure about it, but I could be wrong. What sounds off to you?",
+   "est_sec": 4.75,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "learning_language.dlg10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "She'd love being the teacher, actually.",
+   "est_sec": 1.96,
+   "gap_before": 0.84,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Kids usually do, and teaching helps them remember. You could also put French cartoons on at the weekend.",
+   "est_sec": 5.68,
+   "gap_before": 0.85,
+   "role": "reply",
+   "block": "learning_language.dlg10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Won't she just ignore them?",
+   "est_sec": 1.65,
+   "gap_before": 2.66,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Maybe at first. Pick ones she already likes in English, then switch the audio.",
+   "est_sec": 4.44,
+   "gap_before": 1.9,
+   "role": "reply",
+   "block": "learning_language.dlg10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good idea. What about homework?",
+   "est_sec": 1.65,
+   "gap_before": 0.48,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ask her to explain it to you, even if you don't understand. Talking it through helps her.",
+   "est_sec": 5.37,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "learning_language.dlg10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I can do that.",
+   "est_sec": 1.34,
+   "gap_before": 0.74,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "And praise her effort more than the grades. It keeps her motivated.",
+   "est_sec": 3.82,
+   "gap_before": 0.58,
+   "role": "reply",
+   "block": "learning_language.dlg10",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "ordinary"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

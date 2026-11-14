@@ -1,0 +1,216 @@
+{
+ "id": "trainv2_10_00246",
+ "split": "train",
+ "seed": 10,
+ "order_index": 246,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "home_repair",
+  "books"
+ ],
+ "instruction_position": 0.739,
+ "topic": "home_repair",
+ "voices": {
+  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "friend": "c250136a9ec74cc0b799be54664a83f2",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Hannah",
+ "friend_name_id": "name_14",
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_29",
+  "side_instr_26",
+  "side_cue_v2_16"
+ ],
+ "phrasing_styles": {
+  "side_instr_26": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_v2_16": {
+   "style": "fragment",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "cleaning.dlg32",
+  "home_repair.ctx5",
+  "books.side3"
+ ],
+ "est_total_sec": 81.51,
+ "est_speech_sec": 61.11,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.57,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.35,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Under my bathroom sink is a jungle of half-empty bottles. How do I tidy it?",
+   "est_sec": 4.75,
+   "gap_before": 0.45,
+   "block": "cleaning.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Empty it completely and group what's left. Cleaning sprays, spare toiletries, and random stuff.",
+   "est_sec": 4.44,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "cleaning.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, our smoke alarm keeps chirping at three in the morning.",
+   "est_sec": 4.13,
+   "gap_before": 1.45,
+   "block": "home_repair.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That chirp almost always means a low battery. Do you want to just swap the battery, or replace the whole alarm?",
+   "est_sec": 6.61,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "home_repair.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "How old do they get?",
+   "est_sec": 1.65,
+   "gap_before": 0.96,
+   "block": "home_repair.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "They're usually good for about ten years. Is yours older than that, or not sure?",
+   "est_sec": 4.75,
+   "gap_before": 0.6,
+   "role": "reply",
+   "block": "home_repair.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, my friend and I need to figure something out. Wait until I'm back, okay?",
+   "est_sec": 5.06,
+   "gap_before": 0.68,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey Hannah, what are you reading at the moment?",
+   "est_sec": 2.89,
+   "gap_before": 1.18,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "books.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "A history book about lighthouses. It's surprisingly gripping.",
+   "est_sec": 2.58,
+   "gap_before": 1.6,
+   "block": "books.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Lighthouses? Really?",
+   "est_sec": 0.72,
+   "gap_before": 0.67,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "books.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Seriously, there's shipwrecks, storms, keepers going mad from loneliness.",
+   "est_sec": 2.89,
+   "gap_before": 0.42,
+   "block": "books.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that does sound good. Can I borrow it when you're done?",
+   "est_sec": 3.82,
+   "gap_before": 1.29,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "books.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure, give me a week or so.",
+   "est_sec": 2.27,
+   "gap_before": 3.22,
+   "block": "books.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Done with my sister. Carry on, Moshi.",
+   "est_sec": 2.27,
+   "gap_before": 1.4,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Back to the chirping. Decided what to do?",
+   "est_sec": 3.2,
+   "gap_before": 0.62,
+   "role": "resume",
+   "block": "home_repair.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "I found four bottles of the same bathroom spray.",
+   "est_sec": 2.89,
+   "gap_before": 0.9,
+   "event": "ordinary_request",
+   "block": "cleaning.dlg32"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Combine them if they're the same, and recycle the empties.",
+   "est_sec": 3.2,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "cleaning.dlg32"
+  }
+ ]
+}

@@ -1,0 +1,175 @@
+{
+ "id": "trainv2_10_00715",
+ "split": "train",
+ "seed": 10,
+ "order_index": 715,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "moving_house"
+ ],
+ "instruction_position": 0.483,
+ "topic": "moving_house",
+ "voices": {
+  "user": "536d3a5e000945adb7038665781a4aca",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_20",
+  "greet_ans_11",
+  "describe_instr_07",
+  "ack_15",
+  "describe_cue_v2_05"
+ ],
+ "phrasing_styles": {
+  "describe_instr_07": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_05": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "public_transport.dlg18",
+  "moving_house.opt5"
+ ],
+ "est_total_sec": 78.89,
+ "est_speech_sec": 63.4,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.77,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I have six minutes to change trains tomorrow. Is that crazy?",
+   "est_sec": 3.51,
+   "gap_before": 0.51,
+   "block": "public_transport.dlg18",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Tight, but often fine if both trains are at the same station and on time. Is it one ticket for the whole trip?",
+   "est_sec": 7.23,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "public_transport.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. My nan is leaving her big house and nobody knows what to do with all her furniture.",
+   "est_sec": 6.61,
+   "gap_before": 0.81,
+   "block": "moving_house.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me walk you through all the options, then you can tell me what you think.",
+   "est_sec": 5.06,
+   "gap_before": 0.84,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.22,
+   "role": "ack",
+   "phrasing": "ack_15"
+  },
+  {
+   "speaker": "user",
+   "text": "A house clearance company could take it all in one day, but we'd get almost nothing for it.",
+   "est_sec": 5.68,
+   "gap_before": 1.33,
+   "block": "moving_house.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "My cousin wants to sell the nice pieces online one by one, which could make money but take months.",
+   "est_sec": 5.99,
+   "gap_before": 1.82,
+   "block": "moving_house.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or we split it between the family and donate whatever's left to the hospice shop.",
+   "est_sec": 4.75,
+   "gap_before": 1.51,
+   "block": "moving_house.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Finished. Thoughts, Moshi?",
+   "est_sec": 1.03,
+   "gap_before": 1.31,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Splitting it between the family first feels right, since some pieces will mean a lot to people. Then a hospice shop for the rest is quick and kind, and you can still sell anything really valuable.",
+   "est_sec": 11.26,
+   "gap_before": 0.89,
+   "role": "resume",
+   "block": "moving_house.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah, one booking.",
+   "est_sec": 1.03,
+   "gap_before": 1.53,
+   "event": "ordinary_request",
+   "block": "public_transport.dlg18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then if you miss the connection because of a delay, you're usually allowed on the next train without paying again.",
+   "est_sec": 6.3,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "public_transport.dlg18"
+  }
+ ]
+}

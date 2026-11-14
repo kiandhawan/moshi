@@ -1,0 +1,184 @@
+{
+ "id": "trainv2_10_00010",
+ "split": "train",
+ "seed": 10,
+ "order_index": 10,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "weekend_plans"
+ ],
+ "wait_sec": 17,
+ "deadline": {
+  "after_turn": 8,
+  "sec": 17
+ },
+ "instruction_position": 0.777,
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_19",
+  "think_instr_01",
+  "ack_03",
+  "self_01"
+ ],
+ "phrasing_styles": {
+  "think_instr_01": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "books.dlg9",
+  "weekend_plans.ctx6"
+ ],
+ "est_total_sec": 77.66,
+ "est_speech_sec": 52.86,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.63,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Is there a way to read in bed without keeping my wife awake?",
+   "est_sec": 4.13,
+   "gap_before": 0.51,
+   "block": "books.dlg9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A small clip on reading light with a warm, dim bulb works well. Or an e-reader with a backlight you can turn way down.",
+   "est_sec": 7.54,
+   "gap_before": 0.62,
+   "role": "reply",
+   "block": "books.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "She says even turning pages bugs her.",
+   "est_sec": 2.27,
+   "gap_before": 0.99,
+   "block": "books.dlg9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then an e-reader is your friend, it's completely silent. Some people also switch to audiobooks with one earbud in.",
+   "est_sec": 5.99,
+   "gap_before": 1.14,
+   "role": "reply",
+   "block": "books.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? I've got the grandkids all day Saturday. Four and seven.",
+   "est_sec": 5.06,
+   "gap_before": 1.15,
+   "block": "weekend_plans.ctx6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely. The zoo would be a big day out, or the farm park is smaller and they can feed the goats. How much energy do you have?",
+   "est_sec": 8.47,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "weekend_plans.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me seventeen seconds to think, then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 1.32,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 17,
+   "phrasing": "think_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.61,
+   "role": "ack",
+   "phrasing": "ack_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, let me see.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 8,
+    "offset": 12.33
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How's your energy looking? Zoo or farm?",
+   "est_sec": 2.27,
+   "role": "resume",
+   "block": "weekend_plans.ctx6",
+   "anchor": {
+    "turn": 8,
+    "offset": 17.04
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Farm park. My hip won't do the zoo.",
+   "est_sec": 2.58,
+   "gap_before": 0.77,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sensible. The little one will love the goats anyway, and there's usually a play barn.",
+   "est_sec": 4.75,
+   "gap_before": 0.41,
+   "role": "followup",
+   "block": "weekend_plans.ctx6"
+  }
+ ]
+}

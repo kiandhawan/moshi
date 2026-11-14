@@ -1,0 +1,173 @@
+{
+ "id": "eval_13_on_00033",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 433,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00371",
+  "seed": 13
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
+ "topics": [
+  "home_office"
+ ],
+ "topic": "home_office",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "ca1a4fbf6702400a863d60be2fe8062d"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_12",
+  "nq_eval_013",
+  "pn_173"
+ ],
+ "block_ids": [
+  "home_office.dlg9",
+  "nq_eval_013"
+ ],
+ "est_total_sec": 61.2,
+ "est_speech_sec": 41.29,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.74,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.68,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you help me plan my day? I've got a report, three calls and a pile of emails.",
+   "est_sec": 5.68,
+   "gap_before": 0.34,
+   "event": "ordinary_request",
+   "block": "home_office.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. When are the calls?",
+   "est_sec": 1.65,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "home_office.dlg9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Did you zip the tent all the way up, Chidi?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_013",
+   "block": "nq_eval_013",
+   "name_pos": "end",
+   "addressee": "Chidi",
+   "est_sec": 3.2,
+   "gap_before": 0.69
+  },
+  {
+   "speaker": "user",
+   "text": "Ten, two and half past four.",
+   "est_sec": 1.96,
+   "gap_before": 3.4,
+   "event": "ordinary_request",
+   "block": "home_office.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then do the report first thing, before ten, while your head is fresh. That's your deep work block.",
+   "est_sec": 5.68,
+   "gap_before": 0.85,
+   "role": "reply",
+   "block": "home_office.dlg9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "And the emails?",
+   "est_sec": 1.03,
+   "gap_before": 0.83,
+   "event": "ordinary_request",
+   "block": "home_office.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Clear them in two short bursts, maybe right after lunch and after the last call. Don't keep the inbox open while you write.",
+   "est_sec": 7.23,
+   "gap_before": 1.01,
+   "role": "reply",
+   "block": "home_office.dlg9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "That's hard for me,",
+   "est_sec": 1.34,
+   "gap_before": 0.49,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "home_office.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "I check it constantly.",
+   "est_sec": 1.34,
+   "gap_before": 2.12,
+   "event": "ordinary_request",
+   "block": "home_office.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Close the tab completely and turn off the notifications for the morning. If something's urgent, people will call.",
+   "est_sec": 5.68,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "home_office.dlg9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm doing it. Report first.",
+   "est_sec": 1.96,
+   "gap_before": 1.27,
+   "event": "ordinary_request",
+   "block": "home_office.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great. Take a short walk before the two o'clock call, it'll help you reset.",
+   "est_sec": 4.44,
+   "gap_before": 1.59,
+   "role": "reply",
+   "block": "home_office.dlg9",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00371",
+  "name_pos": "end",
+  "answered": false
+ },
+ "groups": [
+  "ordinary",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,180 @@
+{
+ "id": "trainv2_10_00114",
+ "split": "train",
+ "seed": 10,
+ "order_index": 114,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "cleaning"
+ ],
+ "instruction_position": 0.46,
+ "topic": "cleaning",
+ "voices": {
+  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_23",
+  "describe_instr_16",
+  "ack_11",
+  "describe_cue_v2_05"
+ ],
+ "phrasing_styles": {
+  "describe_instr_16": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_05": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "home_repair.dlg28",
+  "cleaning.opt1"
+ ],
+ "est_total_sec": 76.63,
+ "est_speech_sec": 59.78,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.57,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.92,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_23"
+  },
+  {
+   "speaker": "user",
+   "text": "My wife wants me to regrout the kitchen backsplash before her parents visit. I've got two days.",
+   "est_sec": 5.37,
+   "gap_before": 0.52,
+   "block": "home_repair.dlg28",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Two days is enough if you start today. Is the grout cracked, or just stained?",
+   "est_sec": 4.75,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "home_repair.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. Our place is always a mess, and I want to pick a cleaning system that sticks.",
+   "est_sec": 5.99,
+   "gap_before": 0.61,
+   "block": "cleaning.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Listen to all of them first, then comment.",
+   "est_sec": 2.58,
+   "gap_before": 0.88,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright.",
+   "est_sec": 0.41,
+   "gap_before": 0.45,
+   "role": "ack",
+   "phrasing": "ack_11"
+  },
+  {
+   "speaker": "user",
+   "text": "The first idea is a chore chart where each person gets assigned rooms that rotate every week.",
+   "est_sec": 5.37,
+   "gap_before": 0.65,
+   "block": "cleaning.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's doing fifteen minutes of tidying together every evening before dinner.",
+   "est_sec": 3.82,
+   "gap_before": 1.4,
+   "block": "cleaning.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Option three is one big cleaning session every Saturday morning for the whole house.",
+   "est_sec": 4.44,
+   "gap_before": 1.08,
+   "block": "cleaning.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is just hiring a cleaner to come every two weeks.",
+   "est_sec": 4.44,
+   "gap_before": 2.67,
+   "block": "cleaning.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Finished. Thoughts, Moshi?",
+   "est_sec": 1.03,
+   "gap_before": 1.43,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Is the problem more about clutter or about deep cleaning? For clutter, the evening tidy is great. For deep cleaning, a cleaner every two weeks could take a lot of pressure off.",
+   "est_sec": 10.02,
+   "gap_before": 1.16,
+   "role": "resume",
+   "block": "cleaning.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Cracked and falling out in places.",
+   "est_sec": 1.96,
+   "gap_before": 1.78,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then scrape out the damaged grout with a grout rake, vacuum the dust, and press new grout in with a rubber float.",
+   "est_sec": 6.92,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "home_repair.dlg28"
+  }
+ ]
+}

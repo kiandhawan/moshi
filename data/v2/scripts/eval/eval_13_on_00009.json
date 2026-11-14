@@ -1,0 +1,163 @@
+{
+ "id": "eval_13_on_00009",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 409,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00068",
+  "seed": 13
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
+ "topics": [
+  "cycling"
+ ],
+ "topic": "cycling",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "b121b91872f54f04ba9f6da08b8b6253"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_12",
+  "nq_eval_055",
+  "pn_266"
+ ],
+ "block_ids": [
+  "cycling.dlg6",
+  "nq_eval_055"
+ ],
+ "est_total_sec": 63.0,
+ "est_speech_sec": 39.85,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.45,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.83,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "How do I fix a slipping chain? It keeps jumping when I change gears.",
+   "est_sec": 4.44,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "cycling.dlg6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Often the gear cable just needs a small adjustment. Look for a little barrel adjuster where the cable enters the rear derailleur.",
+   "est_sec": 6.92,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "cycling.dlg6",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Aisha, is it my turn to keep the fire going?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_055",
+   "block": "nq_eval_055",
+   "name_pos": "start",
+   "addressee": "Aisha",
+   "est_sec": 3.2,
+   "gap_before": 0.55
+  },
+  {
+   "speaker": "other",
+   "text": "Yes, and don't let it die like last night.",
+   "block": "nq_eval_055",
+   "est_sec": 2.89,
+   "gap_before": 0.95
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, the little round thing?",
+   "est_sec": 1.65,
+   "gap_before": 0.82,
+   "event": "ordinary_request",
+   "block": "cycling.dlg6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's it. Turn it a quarter turn at a time while you change gears, until the shifting feels smooth.",
+   "est_sec": 5.99,
+   "gap_before": 0.99,
+   "role": "reply",
+   "block": "cycling.dlg6",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Which way do I turn it?",
+   "est_sec": 1.96,
+   "gap_before": 3.3,
+   "event": "ordinary_request",
+   "block": "cycling.dlg6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If the chain is slow to move to bigger cogs, turn it anticlockwise. If it's slow to drop to smaller ones, clockwise.",
+   "est_sec": 6.92,
+   "gap_before": 0.51,
+   "role": "reply",
+   "block": "cycling.dlg6",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, and if that",
+   "est_sec": 1.34,
+   "gap_before": 2.08,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "cycling.dlg6"
+  },
+  {
+   "speaker": "user",
+   "text": "doesn't fix it?",
+   "est_sec": 1.03,
+   "gap_before": 2.42,
+   "event": "ordinary_request",
+   "block": "cycling.dlg6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then it could be a worn chain or a bent derailleur hanger. That's a quick job for a bike shop.",
+   "est_sec": 6.3,
+   "gap_before": 1.16,
+   "role": "reply",
+   "block": "cycling.dlg6",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00068",
+  "name_pos": "start",
+  "answered": true
+ },
+ "groups": [
+  "ordinary",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

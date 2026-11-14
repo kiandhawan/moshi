@@ -1,0 +1,134 @@
+{
+ "id": "eval_12_00386",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 386,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "picnic"
+ ],
+ "topic": "picnic",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_30",
+  "describe_instr_03",
+  "ack_14",
+  "describe_cue_06"
+ ],
+ "block_ids": [
+  "picnic.opt2"
+ ],
+ "est_total_sec": 54.79,
+ "est_speech_sec": 43.26,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.79,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "We're doing a picnic for my son's class and I can't pick a main food.",
+   "est_sec": 4.75,
+   "gap_before": 0.26,
+   "block": "picnic.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me go through every option before you say anything.",
+   "est_sec": 3.2,
+   "gap_before": 0.79,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.56,
+   "role": "ack",
+   "phrasing": "ack_14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One idea is little sandwiches, cut into shapes, with cheese and ham or peanut butter.",
+   "est_sec": 4.75,
+   "gap_before": 1.21,
+   "block": "picnic.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is homemade pizza slices, which kids love but might get cold and greasy.",
+   "est_sec": 4.44,
+   "gap_before": 1.22,
+   "block": "picnic.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Or we could do wraps with chicken and veggies that the kids roll up themselves.",
+   "est_sec": 4.75,
+   "gap_before": 1.22,
+   "block": "picnic.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "The last idea is a big pasta salad that's easy to make ahead the night before.",
+   "est_sec": 5.06,
+   "gap_before": 1.41,
+   "block": "picnic.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, those are all the choices. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 0.87,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd go with the little sandwiches, but are there any allergies in the class? If peanuts are an issue, skip the peanut butter and maybe add the pasta salad as a backup.",
+   "est_sec": 10.02,
+   "gap_before": 1.01,
+   "role": "resume",
+   "block": "picnic.opt2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

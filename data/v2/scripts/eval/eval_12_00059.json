@@ -1,0 +1,177 @@
+{
+ "id": "eval_12_00059",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 59,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "home_office",
+  "picnic"
+ ],
+ "topic": "home_office",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "732ea755bd9e446eb31dc79966b50428",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
+ "phrasing_ids": [
+  "greet_15",
+  "greet_ans_27",
+  "side_instr_15",
+  "ack_16",
+  "dn_84",
+  "side_cue_15"
+ ],
+ "block_ids": [
+  "home_office.ctx13",
+  "picnic.side2",
+  "dn_84"
+ ],
+ "est_total_sec": 59.86,
+ "est_speech_sec": 42.73,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.45,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a coworking space near me that's a hundred and fifty a month.",
+   "est_sec": 4.13,
+   "gap_before": 0.39,
+   "event": "ordinary_request",
+   "block": "home_office.ctx13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That can be worth it. Is it more the social side you're missing, or do you just need fewer distractions than at home?",
+   "est_sec": 7.23,
+   "gap_before": 1.51,
+   "role": "reply",
+   "block": "home_office.ctx13",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a second, my brother needs help with something. Stay quiet until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 0.86,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.34,
+   "role": "ack",
+   "phrasing": "ack_16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Did you invite your sister to the picnic?",
+   "est_sec": 2.58,
+   "gap_before": 1.43,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, she's coming with the kids.",
+   "est_sec": 1.96,
+   "gap_before": 0.96,
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, then we need way more food. What do the kids eat?",
+   "est_sec": 3.82,
+   "gap_before": 0.9,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Honestly, anything with peanut butter. And juice boxes.",
+   "est_sec": 2.58,
+   "gap_before": 1.07,
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Easy. I'll pick some up tomorrow.",
+   "est_sec": 1.96,
+   "gap_before": 1.4,
+   "block": "picnic.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "When does your dad get back from the hospital?",
+   "est_sec": 2.89,
+   "gap_before": 2.5,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_84"
+  },
+  {
+   "speaker": "friend",
+   "text": "Tomorrow, if the doctor says so.",
+   "est_sec": 1.96,
+   "gap_before": 1.12,
+   "phrasing": "dn_84"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, I'm back. Sorry about that.",
+   "est_sec": 1.96,
+   "gap_before": 1.44,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. So, for the coworking idea, people or peace and quiet?",
+   "est_sec": 3.51,
+   "gap_before": 0.74,
+   "role": "resume",
+   "block": "home_office.ctx13",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

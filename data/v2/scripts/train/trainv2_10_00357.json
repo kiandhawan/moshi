@@ -1,0 +1,173 @@
+{
+ "id": "trainv2_10_00357",
+ "split": "train",
+ "seed": 10,
+ "order_index": 357,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "books"
+ ],
+ "instruction_position": 0.142,
+ "topic": "books",
+ "voices": {
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_20",
+  "describe_instruction_v2_29",
+  "ack_07",
+  "describe_cue_v2_10"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_29": {
+   "style": "breakoff",
+   "tone": "curt",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_10": {
+   "style": "request",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "books.opt2",
+  "shopping.dlg25"
+ ],
+ "est_total_sec": 77.2,
+ "est_speech_sec": 60.61,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going on vacation and I want to bring one book, but I can't decide which.",
+   "est_sec": 5.06,
+   "gap_before": 0.44,
+   "block": "books.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Basically there's the— right, hear them all first. I'll say when I'm done.",
+   "est_sec": 4.13,
+   "gap_before": 0.8,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.46,
+   "role": "ack",
+   "phrasing": "ack_07"
+  },
+  {
+   "speaker": "user",
+   "text": "One is a light romance set on an island, perfect for lying by the pool.",
+   "est_sec": 4.75,
+   "gap_before": 1.41,
+   "block": "books.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a thick science fiction novel my brother keeps telling me to read.",
+   "est_sec": 4.44,
+   "gap_before": 1.09,
+   "block": "books.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I could finally read that classic novel I've been pretending I read in school.",
+   "est_sec": 4.75,
+   "gap_before": 2.45,
+   "block": "books.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all the options I've got, Moshi. Be honest, which is best?",
+   "est_sec": 3.82,
+   "gap_before": 1.27,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The island romance fits the vacation mood perfectly, easy and relaxing. The science fiction one might be great if you'll have long flights or quiet evenings. The classic could feel like homework on a beach.",
+   "est_sec": 10.95,
+   "gap_before": 0.66,
+   "role": "resume",
+   "block": "books.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. Every checkout online now offers pay in four instalments. Is that a trap?",
+   "est_sec": 4.75,
+   "gap_before": 1.14,
+   "block": "shopping.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It can be. It's a form of credit, so it's easy to lose track if you use it for lots of small things.",
+   "est_sec": 7.23,
+   "gap_before": 0.36,
+   "role": "reply",
+   "block": "shopping.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "But there's no interest.",
+   "est_sec": 1.34,
+   "gap_before": 2.51,
+   "block": "shopping.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Often not, if you pay on time. Late fees are where it hurts, and some providers report missed payments too.",
+   "est_sec": 6.3,
+   "gap_before": 1.45,
+   "role": "reply",
+   "block": "shopping.dlg25"
+  }
+ ]
+}

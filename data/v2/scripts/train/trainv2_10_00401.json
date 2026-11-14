@@ -1,0 +1,173 @@
+{
+ "id": "trainv2_10_00401",
+ "split": "train",
+ "seed": 10,
+ "order_index": 401,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "music"
+ ],
+ "instruction_position": 0.523,
+ "topic": "music",
+ "voices": {
+  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_26",
+  "describe_instruction_v2_19",
+  "ack_10",
+  "describe_cue_v2_07"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_19": {
+   "style": "fragment",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_07": {
+   "style": "statement",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "cooking.dlg28",
+  "music.opt4"
+ ],
+ "est_total_sec": 68.96,
+ "est_speech_sec": 55.65,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.52,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.86,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Just moved into my first flat. Which spices should I buy first? The shelf at the shop is overwhelming.",
+   "est_sec": 5.99,
+   "gap_before": 0.59,
+   "block": "cooking.dlg28",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Start small. Black pepper, cumin, smoked paprika, chili flakes, dried oregano and cinnamon cover a lot of dishes.",
+   "est_sec": 5.68,
+   "gap_before": 0.61,
+   "role": "reply",
+   "block": "cooking.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but I finally want to learn guitar properly and I'm not sure how to go about it.",
+   "est_sec": 5.68,
+   "gap_before": 1.17,
+   "block": "music.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "All the options first, comments after.",
+   "est_sec": 1.96,
+   "gap_before": 0.52,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.63,
+   "role": "ack",
+   "phrasing": "ack_10"
+  },
+  {
+   "speaker": "user",
+   "text": "I could use one of those apps that listens to you play and gives you points.",
+   "est_sec": 5.06,
+   "gap_before": 0.76,
+   "block": "music.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a teacher down the road who does weekly lessons, but it's not cheap.",
+   "est_sec": 4.44,
+   "gap_before": 2.16,
+   "block": "music.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I just follow free online videos and figure it out myself.",
+   "est_sec": 3.82,
+   "gap_before": 1.31,
+   "block": "music.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, yeah, I think that's it. Go ahead.",
+   "est_sec": 2.58,
+   "gap_before": 0.69,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Maybe start with a handful of lessons with the teacher to get your posture and basics right. After that, the app or videos can keep you going between occasional check ins.",
+   "est_sec": 9.71,
+   "gap_before": 0.38,
+   "role": "resume",
+   "block": "music.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Cinnamon for savory stuff?",
+   "est_sec": 1.34,
+   "gap_before": 1.16,
+   "event": "ordinary_request",
+   "block": "cooking.dlg28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, a pinch in chili or a tagine is great. And of course for porridge.",
+   "est_sec": 4.75,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "cooking.dlg28"
+  }
+ ]
+}

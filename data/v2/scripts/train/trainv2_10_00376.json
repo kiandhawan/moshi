@@ -1,0 +1,186 @@
+{
+ "id": "trainv2_10_00376",
+ "split": "train",
+ "seed": 10,
+ "order_index": 376,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "moshi_name",
+  "other_name"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "fitness"
+ ],
+ "instruction_position": 0.681,
+ "topic": "fitness",
+ "voices": {
+  "user": "879653fd2b9c4cb0854d68e7e9a049e8",
+  "friend": null,
+  "other": "f83f2e43d24b4bccb3bd3a63a950aa93",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_146",
+  "greet_11",
+  "greet_ans_02",
+  "describe_instruction_v2_04",
+  "describe_cue_v2_17"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_04": {
+   "style": "request",
+   "tone": "apologetic",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_17": {
+   "style": "request",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_home_023",
+  "studying.dlg22",
+  "fitness.opt3"
+ ],
+ "est_total_sec": 83.58,
+ "est_speech_sec": 64.95,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.33,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.95,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "What should I eat on the morning of an exam? I usually just skip breakfast.",
+   "est_sec": 4.75,
+   "gap_before": 0.56,
+   "block": "studying.dlg22",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Try not to skip it. Something with slow energy, like porridge, eggs on toast, or yogurt with fruit, keeps you going.",
+   "est_sec": 6.61,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "studying.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "Miles, did the hamster escape again?",
+   "est_sec": 1.96,
+   "gap_before": 0.45,
+   "block": "nq_home_023",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_home_023",
+   "name_pos": "start",
+   "addressee": "Miles"
+  },
+  {
+   "speaker": "user",
+   "text": "I get too nervous to eat, Moshi.",
+   "est_sec": 2.27,
+   "gap_before": 3.0,
+   "block": "studying.dlg22",
+   "kind": "moshi_name",
+   "name_pos": "end",
+   "addressee": "Moshi",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then something small. A banana and a glass of milk is better than nothing.",
+   "est_sec": 4.44,
+   "gap_before": 0.98,
+   "role": "reply",
+   "block": "studying.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to sign up for one event this autumn to keep me motivated, and I've found a few.",
+   "est_sec": 5.99,
+   "gap_before": 1.24,
+   "block": "fitness.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, can you not jump in until I've covered all of them?",
+   "est_sec": 3.82,
+   "gap_before": 0.51,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_04"
+  },
+  {
+   "speaker": "user",
+   "text": "A half marathon in the city, flat and fast, with thousands of people cheering along the route.",
+   "est_sec": 5.37,
+   "gap_before": 0.94,
+   "block": "fitness.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A muddy trail race in the forest, about fifteen kilometers, with some steep climbs and river crossings.",
+   "est_sec": 5.37,
+   "gap_before": 2.47,
+   "block": "fitness.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "An obstacle course with walls, ropes and a lot of mud, and you can enter as a team with friends.",
+   "est_sec": 6.3,
+   "gap_before": 2.61,
+   "block": "fitness.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, all done. What's your gut say?",
+   "est_sec": 2.27,
+   "gap_before": 1.25,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you want structure, the half marathon gives you a clear training plan and a great atmosphere. The trail race is tougher but beautiful. The obstacle course is the most fun, especially with friends, though it's less about running.",
+   "est_sec": 12.19,
+   "gap_before": 1.16,
+   "role": "resume",
+   "block": "fitness.opt3"
+  }
+ ]
+}

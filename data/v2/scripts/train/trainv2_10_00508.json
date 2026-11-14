@@ -1,0 +1,171 @@
+{
+ "id": "trainv2_10_00508",
+ "split": "train",
+ "seed": 10,
+ "order_index": 508,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long",
+  "moshi_name",
+  "other_name"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "shopping"
+ ],
+ "instruction_position": 0.634,
+ "topic": "shopping",
+ "voices": {
+  "user": "b47bb94bf3ce42b2a7643c31af62c553",
+  "friend": null,
+  "other": "c70cfb98867a4bfb9ae20d2401257b92",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_022",
+  "greet_20",
+  "greet_ans_04",
+  "describe_instruction_v2_25",
+  "describe_cue_v2_05"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_25": {
+   "style": "breakoff",
+   "tone": "distracted",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_05": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_social_068",
+  "smartphones.dlg30",
+  "shopping.opt1"
+ ],
+ "est_total_sec": 84.24,
+ "est_speech_sec": 57.31,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.88,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "My friend's name is Saoirse and my phone changes it to sorry every single time, Moshi.",
+   "est_sec": 5.06,
+   "gap_before": 0.31,
+   "block": "smartphones.dlg30",
+   "kind": "moshi_name",
+   "name_pos": "end",
+   "addressee": "Moshi",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, autocorrect strikes again. Save Saoirse as a contact, phones usually learn names from your contacts.",
+   "est_sec": 5.06,
+   "gap_before": 1.47,
+   "role": "reply",
+   "block": "smartphones.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "You're not going out in shorts in this cold, Violet?",
+   "est_sec": 3.2,
+   "gap_before": 1.16,
+   "block": "nq_social_068",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_social_068",
+   "name_pos": "end",
+   "addressee": "Violet"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. I need a new winter coat and I've narrowed it down to a few.",
+   "est_sec": 5.68,
+   "gap_before": 1.97,
+   "block": "shopping.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "So I think I'd go with— actually no, let me list all the options first, then you tell me.",
+   "est_sec": 5.99,
+   "gap_before": 0.8,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_25"
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is a long puffy coat that's super warm, but it makes me look like a sleeping bag.",
+   "est_sec": 6.3,
+   "gap_before": 0.99,
+   "block": "shopping.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a wool coat, really stylish, but it's not waterproof at all.",
+   "est_sec": 4.13,
+   "gap_before": 7.99,
+   "block": "shopping.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is a shorter parka with a hood, waterproof and pretty warm, but a bit expensive.",
+   "est_sec": 5.99,
+   "gap_before": 6.86,
+   "block": "shopping.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Finished. Thoughts, Moshi?",
+   "est_sec": 1.03,
+   "gap_before": 1.48,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How cold and wet do your winters get? If it's really freezing, the puffy coat is worth looking a bit silly. If it's more wet than cold, I'd spend a little extra on the parka.",
+   "est_sec": 10.95,
+   "gap_before": 0.91,
+   "role": "resume",
+   "block": "shopping.opt1"
+  }
+ ]
+}

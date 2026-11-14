@@ -1,0 +1,159 @@
+{
+ "id": "eval_12_00342",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 342,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
+ "topics": [
+  "home_office"
+ ],
+ "topic": "home_office",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_09",
+  "waitlike_03"
+ ],
+ "block_ids": [
+  "home_office.dlg5"
+ ],
+ "est_total_sec": 59.05,
+ "est_speech_sec": 45.32,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.56,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "What's the best way to keep cables from turning into a nest under my desk?",
+   "est_sec": 4.75,
+   "gap_before": 0.57,
+   "event": "ordinary_request",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A cable tray screwed under the desk is the neatest fix. The power strip sits in it, so nothing touches the floor.",
+   "est_sec": 6.92,
+   "gap_before": 0.65,
+   "role": "reply",
+   "block": "home_office.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, sorry, what was that?",
+   "est_sec": 1.65,
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_03",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. A cable tray screwed under the desk is the neatest fix. The power strip sits in it, so nothing touches the floor.",
+   "est_sec": 7.23,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "home_office.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Is that hard to install?",
+   "est_sec": 1.65,
+   "gap_before": 0.92,
+   "event": "ordinary_request",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not really, four screws. If you don't want to drill, adhesive cable clips work for lighter setups.",
+   "est_sec": 5.37,
+   "gap_before": 0.57,
+   "role": "reply",
+   "block": "home_office.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My laptop charger is the worst one.",
+   "est_sec": 2.27,
+   "gap_before": 1.13,
+   "event": "ordinary_request",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Leave a spare charger permanently at the desk, then you never have to crawl under there again.",
+   "est_sec": 5.37,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "home_office.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, that's smart. And for",
+   "est_sec": 1.65,
+   "gap_before": 1.4,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "the monitor cables?",
+   "est_sec": 1.03,
+   "gap_before": 2.47,
+   "event": "ordinary_request",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Velcro ties. Bundle them along one leg of the desk and they almost disappear.",
+   "est_sec": 4.44,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "home_office.dlg5",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "ordinary"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

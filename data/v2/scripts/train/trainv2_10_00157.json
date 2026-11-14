@@ -1,0 +1,193 @@
+{
+ "id": "trainv2_10_00157",
+ "split": "train",
+ "seed": 10,
+ "order_index": 157,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "moshi_mention",
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "shopping"
+ ],
+ "wait_sec": 22,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 22
+ },
+ "instruction_position": 0.276,
+ "topic": "shopping",
+ "voices": {
+  "user": "c250136a9ec74cc0b799be54664a83f2",
+  "friend": null,
+  "other": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_25",
+  "think_instruction_v2_02",
+  "self_29",
+  "self_01"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_02": {
+   "style": "request",
+   "tone": "polite",
+   "states_return": false,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "mm_005",
+  "shopping.ctx12",
+  "weather_plans.dlg32"
+ ],
+ "est_total_sec": 80.66,
+ "est_speech_sec": 52.55,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.67,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "The TV I wanted is on sale, but apparently it'll be even cheaper next month. Great.",
+   "est_sec": 5.06,
+   "gap_before": 0.36,
+   "block": "shopping.ctx12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Classic. Can you live without a new TV for a few more weeks, or is the old one already dying?",
+   "est_sec": 6.3,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "shopping.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Mind giving me twenty-two seconds? I'll have an answer for you by then.",
+   "est_sec": 4.13,
+   "gap_before": 0.51,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 22,
+   "phrasing": "think_instruction_v2_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, let me just picture it.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 3.85
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, let me see.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 13.23
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, grab the TV now or hold out for next month?",
+   "est_sec": 3.51,
+   "role": "resume",
+   "block": "shopping.ctx12",
+   "anchor": {
+    "turn": 4,
+    "offset": 22.08
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? I'm planning a long walk across the city on Sunday. Forecast says drizzle all day. Lovely.",
+   "est_sec": 6.92,
+   "gap_before": 1.24,
+   "block": "weather_plans.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Drizzle isn't the worst. A light waterproof and decent shoes will keep you comfortable.",
+   "est_sec": 4.44,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "weather_plans.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "Chiara, you should try asking Moshi about your chemistry homework.",
+   "est_sec": 3.2,
+   "gap_before": 1.2,
+   "block": "mm_005",
+   "event": "distractor",
+   "kind": "moshi_mention",
+   "phrasing": "mm_005",
+   "name_pos": "start",
+   "addressee": "Chiara"
+  },
+  {
+   "speaker": "other",
+   "text": "I'd rather just copy yours.",
+   "est_sec": 1.65,
+   "gap_before": 0.79,
+   "block": "mm_005"
+  },
+  {
+   "speaker": "user",
+   "text": "My waterproof is basically a bin bag with sleeves.",
+   "est_sec": 2.89,
+   "gap_before": 0.8,
+   "block": "weather_plans.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then maybe tuck a spare jumper in a bag in case it soaks through. Or treat the old jacket with a waterproof spray.",
+   "est_sec": 7.23,
+   "gap_before": 0.34,
+   "role": "reply",
+   "block": "weather_plans.dlg32"
+  }
+ ]
+}

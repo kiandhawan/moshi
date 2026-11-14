@@ -1,0 +1,157 @@
+{
+ "id": "eval_12_00159",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 159,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [],
+ "topics": [
+  "laptop_buying"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_21",
+  "greet_ans_03",
+  "phone_instr_05",
+  "call_26",
+  "phone_cue_07"
+ ],
+ "block_ids": [
+  "laptop_buying.ctx12",
+  "call_26"
+ ],
+ "est_total_sec": 58.53,
+ "est_speech_sec": 39.43,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.62,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.96,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "I travel a lot for work. Planes, trains, hotel rooms.",
+   "est_sec": 3.2,
+   "gap_before": 0.5,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then weight and battery matter. Would you go for the lightest possible laptop, or accept a bit more weight for a bigger battery?",
+   "est_sec": 7.23,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "laptop_buying.ctx12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I've got to pick this up. Stay quiet until I come back to you.",
+   "est_sec": 5.06,
+   "gap_before": 0.81,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Hello, this is the right number for the vet?",
+   "est_sec": 2.89,
+   "gap_before": 1.17,
+   "phrasing": "call_26",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "My cat hasn't eaten since yesterday.",
+   "est_sec": 1.96,
+   "gap_before": 1.52,
+   "phrasing": "call_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Should I bring him in today?",
+   "est_sec": 1.96,
+   "gap_before": 3.69,
+   "phrasing": "call_26",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Four o'clock, okay. Thank you so much.",
+   "est_sec": 2.27,
+   "gap_before": 1.76,
+   "phrasing": "call_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, off the phone. Sorry about that.",
+   "est_sec": 2.27,
+   "gap_before": 1.55,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. Your travel laptop. Lightest, or longest battery?",
+   "est_sec": 2.89,
+   "gap_before": 1.72,
+   "role": "resume",
+   "block": "laptop_buying.ctx12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Lightest. My back is done with heavy bags.",
+   "est_sec": 2.58,
+   "gap_before": 1.36,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then something around one kilo. Carry a small power bank for long trips.",
+   "est_sec": 4.13,
+   "gap_before": 1.19,
+   "role": "followup",
+   "block": "laptop_buying.ctx12",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

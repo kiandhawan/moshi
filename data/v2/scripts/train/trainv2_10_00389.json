@@ -1,0 +1,218 @@
+{
+ "id": "trainv2_10_00389",
+ "split": "train",
+ "seed": 10,
+ "order_index": 389,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "friend_first"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "photography",
+  "shopping"
+ ],
+ "instruction_position": 0.378,
+ "topic": "photography",
+ "voices": {
+  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "friend": "2680da81de8348a68e1f4dbaa79272f1",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Rosa",
+ "friend_name_id": "name_22",
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_23",
+  "friend_interrupt_v2_13",
+  "side_instruction_v2_52",
+  "dq_37",
+  "side_cue_v2_28"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_13": {
+   "style": "command",
+   "tone": "polite",
+   "source": "v2"
+  },
+  "side_instruction_v2_52": {
+   "style": "friend_first",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_28": {
+   "style": "request",
+   "tone": "apologetic",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "photography.ctx6",
+  "shopping.side2",
+  "dq_37",
+  "video_games.dlg26"
+ ],
+ "est_total_sec": 80.63,
+ "est_speech_sec": 65.04,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_23"
+  },
+  {
+   "speaker": "user",
+   "text": "Found my dad's old film camera in the attic. It still clicks.",
+   "est_sec": 3.82,
+   "gap_before": 0.49,
+   "block": "photography.ctx6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What a find. Are you tempted to actually shoot with it, or would you rather get it cleaned up and keep it on a shelf?",
+   "est_sec": 7.85,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "photography.ctx6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Please check this email before I send it.",
+   "est_sec": 2.58,
+   "gap_before": 0.54,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, Moshi, Rosa needs me. I'll let you know when I'm done.",
+   "est_sec": 3.82,
+   "gap_before": 0.84,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_52"
+  },
+  {
+   "speaker": "user",
+   "text": "Are your parents still flying in on the weekend?",
+   "est_sec": 2.89,
+   "gap_before": 0.9,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_37"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, Saturday afternoon.",
+   "est_sec": 1.03,
+   "gap_before": 1.42,
+   "phrasing": "dq_37"
+  },
+  {
+   "speaker": "user",
+   "text": "Be honest, does this shirt look okay on me?",
+   "est_sec": 2.89,
+   "gap_before": 0.87,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "The color's great but it's kind of big in the shoulders.",
+   "est_sec": 3.51,
+   "gap_before": 0.72,
+   "block": "shopping.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah, I thought so too. Should I try a smaller size?",
+   "est_sec": 3.51,
+   "gap_before": 0.54,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Definitely. And maybe that green one next to it.",
+   "est_sec": 2.89,
+   "gap_before": 0.75,
+   "block": "shopping.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "The green? I never wear green.",
+   "est_sec": 1.96,
+   "gap_before": 0.41,
+   "block": "shopping.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "That's exactly why you should try it.",
+   "est_sec": 2.27,
+   "gap_before": 1.41,
+   "block": "shopping.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry for the interruption, I'm done. What was the rest of it?",
+   "est_sec": 3.82,
+   "gap_before": 0.6,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. We'd left off with the camera from the attic. Are you going to put film in it?",
+   "est_sec": 5.68,
+   "gap_before": 0.97,
+   "role": "resume",
+   "block": "photography.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but Thinking of buying a VR headset. My living room is pretty small, is that a problem?",
+   "est_sec": 5.68,
+   "gap_before": 1.28,
+   "block": "video_games.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It depends on what you want to play. Many VR games can be played seated or standing in one spot, which needs very little space.",
+   "est_sec": 7.85,
+   "gap_before": 0.61,
+   "role": "reply",
+   "block": "video_games.dlg26"
+  }
+ ]
+}

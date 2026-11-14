@@ -1,0 +1,121 @@
+{
+ "id": "eval_12_00329",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 329,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "cycling"
+ ],
+ "topic": "cycling",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_03",
+  "describe_instr_09",
+  "describe_cue_12"
+ ],
+ "block_ids": [
+  "cycling.opt1"
+ ],
+ "est_total_sec": 55.59,
+ "est_speech_sec": 45.23,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.42,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "I need a new bike and I've narrowed it down, but I'm stuck.",
+   "est_sec": 4.13,
+   "gap_before": 0.3,
+   "block": "cycling.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to describe each one. Save your comments until the end.",
+   "est_sec": 3.82,
+   "gap_before": 0.67,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_09"
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is a light road bike, really fast, but it has thin tires and no rack.",
+   "est_sec": 5.68,
+   "gap_before": 1.3,
+   "block": "cycling.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a hybrid with wider tires, a rack on the back and a more upright seat.",
+   "est_sec": 5.37,
+   "gap_before": 2.39,
+   "block": "cycling.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is an electric bike, heavy and pricey, but hills would be no problem at all.",
+   "est_sec": 5.99,
+   "gap_before": 2.01,
+   "block": "cycling.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 0.85,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It depends on what you'll use it for. The road bike is great for fitness rides but awkward for carrying groceries, while the hybrid handles commuting and errands easily. The electric bike makes sense if your route is hilly and you don't want to arrive sweaty.",
+   "est_sec": 14.36,
+   "gap_before": 0.5,
+   "role": "resume",
+   "block": "cycling.opt1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

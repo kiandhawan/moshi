@@ -1,0 +1,162 @@
+{
+ "id": "trainv2_10_00606",
+ "split": "train",
+ "seed": 10,
+ "order_index": 606,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "video_games"
+ ],
+ "instruction_position": 0.121,
+ "topic": "video_games",
+ "voices": {
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_29",
+  "greet_ans_04",
+  "describe_instr_16",
+  "ack_06",
+  "describe_cue_13"
+ ],
+ "phrasing_styles": {
+  "describe_instr_16": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_13": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "video_games.opt2",
+  "job_interview.dlg5"
+ ],
+ "est_total_sec": 80.17,
+ "est_speech_sec": 57.93,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.32,
+   "role": "greeting",
+   "phrasing": "greet_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.46,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm trying to decide what to play with my little brother this weekend.",
+   "est_sec": 4.13,
+   "gap_before": 0.42,
+   "block": "video_games.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Listen to all of them first, then comment.",
+   "est_sec": 2.58,
+   "gap_before": 0.49,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.57,
+   "role": "ack",
+   "phrasing": "ack_06"
+  },
+  {
+   "speaker": "user",
+   "text": "One is a racing game with silly karts that we can both play on the same screen.",
+   "est_sec": 5.37,
+   "gap_before": 0.78,
+   "block": "video_games.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a building game where we make castles and explore caves together.",
+   "est_sec": 4.13,
+   "gap_before": 7.73,
+   "block": "video_games.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's a dance game that uses the controllers, which would get us both moving around.",
+   "est_sec": 5.06,
+   "gap_before": 5.51,
+   "block": "video_games.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 0.96,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The kart racer is a classic for siblings, it's quick to pick up and really fun to compete. The building game is better if you'd rather work together than compete. The dance game is great for a laugh but might tire out fast.",
+   "est_sec": 13.43,
+   "gap_before": 0.9,
+   "role": "resume",
+   "block": "video_games.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, I'm a nurse applying for a job in a new hospital. How do I answer tell me about yourself without just reading my CV?",
+   "est_sec": 8.16,
+   "gap_before": 1.63,
+   "block": "job_interview.dlg5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Think of it as a short story in three parts. Where you are now, one thing you're proud of, and why this job is the next step.",
+   "est_sec": 8.47,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "job_interview.dlg5"
+  }
+ ]
+}

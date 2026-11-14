@@ -1,0 +1,204 @@
+{
+ "id": "trainv2_10_00020",
+ "split": "train",
+ "seed": 10,
+ "order_index": 20,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end",
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "movies"
+ ],
+ "wait_sec": 33,
+ "early_end": {
+  "after_sec": 31.44,
+  "direct": true
+ },
+ "instruction_position": 0.658,
+ "topic": "movies",
+ "voices": {
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_07",
+  "greet_ans_13",
+  "think_instruction_v2_34",
+  "self_04",
+  "self_19",
+  "self_28",
+  "early_end_02"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_34": {
+   "style": "breakoff",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "early_end_02": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "sleep.dlg27",
+  "movies.ctx2"
+ ],
+ "est_total_sec": 78.09,
+ "est_speech_sec": 44.8,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
+   "gap_before": 0.49,
+   "role": "greeting",
+   "phrasing": "greet_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.31,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "My cat wakes me up at five every day screaming for breakfast.",
+   "est_sec": 3.82,
+   "gap_before": 0.34,
+   "block": "sleep.dlg27",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "She's trained you well. Cats learn quickly that yowling gets food.",
+   "est_sec": 3.51,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "sleep.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. I want to get into older films but I don't know where to start.",
+   "est_sec": 5.68,
+   "gap_before": 1.01,
+   "block": "movies.ctx2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great idea. Would you like to start with classic Hollywood from the forties and fifties, or with foreign classics from Europe and Japan?",
+   "est_sec": 7.23,
+   "gap_before": 0.5,
+   "role": "reply",
+   "block": "movies.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "The answer is obviously— hmm, not so obvious. thirty-three seconds, then ask me again.",
+   "est_sec": 4.44,
+   "gap_before": 0.62,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 33,
+   "phrasing": "think_instruction_v2_34"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, what did I do last time?",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 6,
+    "offset": 7.03
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, but then again",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 25.63
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, what else was there?",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 28.74
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Actually, never mind, I know now.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 6,
+    "offset": 31.44
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, where would you like to start, classic Hollywood or foreign classics?",
+   "est_sec": 3.82,
+   "gap_before": 0.38,
+   "role": "resume",
+   "block": "movies.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let's try the Japanese ones.",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
+   "event": "ordinary_request",
+   "block": "movies.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wonderful. The samurai films from the fifties are a great way in, gripping and beautifully shot.",
+   "est_sec": 5.06,
+   "gap_before": 0.82,
+   "role": "followup",
+   "block": "movies.ctx2"
+  }
+ ]
+}

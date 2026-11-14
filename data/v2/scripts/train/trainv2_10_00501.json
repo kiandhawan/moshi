@@ -1,0 +1,160 @@
+{
+ "id": "trainv2_10_00501",
+ "split": "train",
+ "seed": 10,
+ "order_index": 501,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "shopping"
+ ],
+ "instruction_position": 0.188,
+ "topic": "shopping",
+ "voices": {
+  "user": "050df12e0f30484fb882a9a5410e5d66",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_07",
+  "greet_ans_08",
+  "describe_instruction_v2_10",
+  "describe_cue_04"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_10": {
+   "style": "statement",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_04": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "shopping.opt5",
+  "fitness.dlg31"
+ ],
+ "est_total_sec": 76.6,
+ "est_speech_sec": 61.34,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
+   "gap_before": 0.72,
+   "role": "greeting",
+   "phrasing": "greet_07"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.56,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm trying to cut our grocery bill and I can't decide where to do the weekly shop.",
+   "est_sec": 5.37,
+   "gap_before": 0.34,
+   "block": "shopping.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "I want your opinion, but only after you've heard every option. I'll say when I'm done.",
+   "est_sec": 5.06,
+   "gap_before": 0.53,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Our usual big supermarket has everything in one place and good loyalty points, but I always overspend there.",
+   "est_sec": 5.68,
+   "gap_before": 1.13,
+   "block": "shopping.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "The discount shop across town is way cheaper, though the range is small and it's a twenty minute drive.",
+   "est_sec": 5.99,
+   "gap_before": 2.22,
+   "block": "shopping.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "We could do online delivery, no impulse buys, but there's a fee and sometimes they swap things.",
+   "est_sec": 5.37,
+   "gap_before": 2.64,
+   "block": "shopping.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or the Saturday market for veg and the corner shop for the rest, which is fun but takes ages.",
+   "est_sec": 5.99,
+   "gap_before": 1.59,
+   "block": "shopping.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 1.44,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A mix could work best. Do a big monthly stock up at the discount shop for basics, and order the rest online so you dodge the treats aisle. Keep the market for a weekend treat.",
+   "est_sec": 10.95,
+   "gap_before": 0.46,
+   "role": "resume",
+   "block": "shopping.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, I've been training for two months and the scale hasn't moved. I'm so frustrated.",
+   "est_sec": 5.37,
+   "gap_before": 1.06,
+   "block": "fitness.dlg31",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's understandable. But the scale is only one measure, and if you're lifting, you might be building muscle as you lose fat.",
+   "est_sec": 6.92,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "fitness.dlg31"
+  }
+ ]
+}

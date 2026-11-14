@@ -1,0 +1,168 @@
+{
+ "id": "trainv2_10_00321",
+ "split": "train",
+ "seed": 10,
+ "order_index": 321,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "baking"
+ ],
+ "instruction_position": 0.156,
+ "topic": "baking",
+ "voices": {
+  "user": "705690224f264386b87fb598083ab022",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_13",
+  "describe_instr_11",
+  "describe_cue_v2_02"
+ ],
+ "phrasing_styles": {
+  "describe_instr_11": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_02": {
+   "style": "request",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "baking.opt5",
+  "shopping.dlg13"
+ ],
+ "est_total_sec": 81.93,
+ "est_speech_sec": 59.58,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.66,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.79,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm teaching a beginner baking night at the community centre and I need one recipe for everyone.",
+   "est_sec": 5.37,
+   "gap_before": 0.42,
+   "block": "baking.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "First let me tell you about all of them, then you can comment.",
+   "est_sec": 4.13,
+   "gap_before": 0.62,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Soda bread is fast, needs no yeast, and everyone could take a loaf home within an hour.",
+   "est_sec": 5.37,
+   "gap_before": 1.35,
+   "block": "baking.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Chocolate chip cookies would be popular, but twelve people sharing two ovens could get chaotic.",
+   "est_sec": 4.75,
+   "gap_before": 7.25,
+   "block": "baking.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's cheese scones, which teach rubbing butter into flour, a skill they'd use again.",
+   "est_sec": 4.75,
+   "gap_before": 4.6,
+   "block": "baking.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them, Moshi. Which one grabs you?",
+   "est_sec": 3.2,
+   "gap_before": 1.48,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Soda bread fits a short class beautifully and feels like a real achievement for beginners. Cheese scones teach the most useful technique. Cookies are crowd pleasers, but oven space would be your bottleneck.",
+   "est_sec": 10.33,
+   "gap_before": 0.7,
+   "role": "resume",
+   "block": "baking.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. What sunscreen should I buy for my face? I get greasy really easily.",
+   "est_sec": 4.75,
+   "gap_before": 1.28,
+   "block": "shopping.dlg13",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Look for one labelled for oily skin, often called gel, fluid or matte. They feel a lot lighter than the thick lotions.",
+   "est_sec": 6.92,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "shopping.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "Does the factor number matter that much?",
+   "est_sec": 2.27,
+   "gap_before": 0.74,
+   "block": "shopping.dlg13",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For daily use, thirty or fifty is good. Higher than that adds very little protection.",
+   "est_sec": 4.75,
+   "gap_before": 0.49,
+   "role": "reply",
+   "block": "shopping.dlg13"
+  }
+ ]
+}

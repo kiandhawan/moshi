@@ -1,0 +1,113 @@
+{
+ "id": "eval_12_00175",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 175,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "wedding_planning"
+ ],
+ "reading": {
+  "material": "article",
+  "sec": 22.8
+ },
+ "topic": "wedding_planning",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_15",
+  "read_instr_10",
+  "read_cue_08"
+ ],
+ "block_ids": [
+  "wedding_planning.ctx6"
+ ],
+ "est_total_sec": 55.06,
+ "est_speech_sec": 26.74,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.47,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.6,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "My college roommate is getting married in Portugal and the trip would cost me about two thousand.",
+   "est_sec": 5.37,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a lot to spend on one weekend. Is it a stretch you could manage, or would declining with a really thoughtful gift feel better?",
+   "est_sec": 7.85,
+   "gap_before": 0.95,
+   "role": "reply",
+   "block": "wedding_planning.ctx6",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, let me finish reading this article. I'll tell you when I'm done.",
+   "est_sec": 4.44,
+   "gap_before": 1.09,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, done with the article.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 22.8
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Finished reading? The Portugal wedding. Going, or sending something special?",
+   "est_sec": 3.2,
+   "gap_before": 0.51,
+   "role": "resume",
+   "block": "wedding_planning.ctx6",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,189 @@
+{
+ "id": "trainv2_10_00431",
+ "split": "train",
+ "seed": 10,
+ "order_index": 431,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "sleep",
+  "smartphones"
+ ],
+ "instruction_position": 0.464,
+ "topic": "sleep",
+ "voices": {
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": "e3cd384158934cc9a01029cd7d278634",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Chloe",
+ "friend_name_id": "name_08",
+ "phrasing_ids": [
+  "greet_01",
+  "greet_ans_07",
+  "side_instruction_v2_37",
+  "ack_06",
+  "side_cue_v2_08"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_37": {
+   "style": "breakoff",
+   "tone": "cheerful",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_08": {
+   "style": "statement",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "sleep.ctx2",
+  "smartphones.side6",
+  "books.dlg29"
+ ],
+ "est_total_sec": 77.21,
+ "est_speech_sec": 59.26,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "My partner snores and I'm waking up three times a night.",
+   "est_sec": 3.51,
+   "gap_before": 0.42,
+   "block": "sleep.ctx2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's rough. Do you want to try earplugs or a white noise machine first, or talk to your partner about seeing a doctor?",
+   "est_sec": 7.23,
+   "gap_before": 0.98,
+   "role": "reply",
+   "block": "sleep.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "The budget's around— oh, hi! Moshi, give me a minute, my friend's here.",
+   "est_sec": 4.13,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_37"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.24,
+   "role": "ack",
+   "phrasing": "ack_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Chloe, how do you share your location with someone? Mum wants to see when I'm driving home.",
+   "est_sec": 5.37,
+   "gap_before": 1.45,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Open the map app, tap your little picture, then share location. You pick how long.",
+   "est_sec": 4.75,
+   "gap_before": 0.81,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I make it just for tonight?",
+   "est_sec": 2.27,
+   "gap_before": 1.03,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, there's an option for one hour or until you turn it off.",
+   "est_sec": 4.13,
+   "gap_before": 0.59,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll do until I turn it off. Otherwise I'll forget and she'll panic halfway down the motorway.",
+   "est_sec": 5.37,
+   "gap_before": 2.54,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Classic. Send it to me too while you're at it.",
+   "est_sec": 3.2,
+   "gap_before": 2.53,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, okay, yeah, I'm back. Sorry. Go ahead.",
+   "est_sec": 2.58,
+   "gap_before": 1.16,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. So, a quick fix, or the doctor idea?",
+   "est_sec": 3.2,
+   "gap_before": 0.85,
+   "role": "resume",
+   "block": "sleep.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, I'm a slow reader and it embarrasses me.",
+   "est_sec": 3.2,
+   "gap_before": 0.98,
+   "block": "books.dlg29",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lots of people read slowly, and there's nothing wrong with it. Slow readers often notice details fast readers miss.",
+   "est_sec": 5.99,
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "books.dlg29"
+  }
+ ]
+}

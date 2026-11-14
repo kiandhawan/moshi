@@ -51,8 +51,8 @@ import numpy as np
 import sphn
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from render_lib import (MAX_SEC, SR, cache_key, CACHE, moshi_voice_id, render_full,  # noqa: E402
-                        synth, update_index)
+from render_lib import (MAX_SEC, SR, cache_key, CACHE, augment_settings, moshi_voice_id,  # noqa: E402
+                        render_full, synth, update_index)
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEXES = ROOT / "data/indexes"
@@ -68,6 +68,8 @@ def voice_of(turn: dict, script: dict, moshi: str) -> str:
         return moshi
     if turn["speaker"] in ("friend", "visitor"):
         return script["voices"]["friend"]
+    if turn["speaker"] == "other":  # v2: the person addressed by name
+        return script["voices"]["other"]
     return script["voices"]["user"]
 
 
@@ -153,6 +155,11 @@ def events_for(script: dict, turns: list[dict]) -> dict:
     for t in dis:  # until the next user-side speech starts (e.g. the rest of a paused sentence)
         nxt = [u["start"] for u in user if u["start"] > t["end"]]
         ev["distractor_windows"].append([t["end"], round(nxt[0], 3) if nxt else None])
+    # v2: the latest time a response to each distractor could be wrong: the start of Moshi's
+    # next (ideal) turn, e.g. its answer to the user's next request after an other-name question
+    # (score.py: window = [end, min(end + 3 s, until)]).
+    mo = sorted(t["start"] for t in turns if t["speaker"] == "moshi")
+    ev["distractor_until"] = [next((round(m, 3) for m in mo if m > t["end"]), None) for t in dis]
     ev["ordinary_requests"] = [t["end"] for t in turns if t.get("event") == "ordinary_request"]
     ev["right_turns"] = [{"speaker": t["speaker"], "start": t["start"], "end": t["end"],
                           **({"event": t["event"]} if t.get("event") else {}),
@@ -184,6 +191,14 @@ def manifest_row(script: dict, row: dict, ev: dict, turns: list[dict], path: str
         "total_sec": total, "speech_sec": round(speech, 3), "silence_sec": round(total - speech, 3),
         "moshi_speech_sec": round(sum(t["end"] - t["start"] for t in turns if t["speaker"] == "moshi"), 3),
         "wait_sec": ev.get("wait_sec"),
+        **({"data_version": 2, "position_plan": script.get("position_plan"),
+            "instruction_position": script.get("instruction_position"),
+            "phrasing_styles": script.get("phrasing_styles"),
+            "addressed": [{"kind": t["kind"], "name_pos": t.get("name_pos"), "addressee": t.get("addressee"),
+                           "answered": k + 1 < len(turns) and turns[k + 1]["speaker"] == "other"}
+                          for k, t in enumerate(turns) if t.get("kind") in ("other_name", "moshi_name", "moshi_mention")],
+            "augmentation": script.get("_augmentation")} if script.get("data_version") == 2 or
+           script["id"].startswith("eval_13_on") else {}),
         "events": {k: ev[k] for k in ("user_start", "instruction_start", "instruction_end", "wait_end",
                                       "resume_window", "distractors", "distractor_kinds",
                                       "ordinary_requests") if k in ev},
@@ -196,7 +211,15 @@ def main() -> None:
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--name", required=True, help="Index name: data/indexes/<name>.jsonl")
     p.add_argument("--workers", type=int, default=12)
+    p.add_argument("--augment", action="store_true",
+                   help="v2 training files: right-channel augmentation (render_lib.augment_settings); a clean "
+                        "copy goes to --clean-out for verification.")
+    p.add_argument("--clean-out", type=Path, default=None)
+    p.add_argument("--full-dir", type=Path, default=EVAL_FULL, help="Eval: where the ideal stereo files go.")
+    p.add_argument("--full-index", default="eval_full", help="Eval: index name for all eval_full files.")
     args = p.parse_args()
+    if args.augment and not args.clean_out:
+        sys.exit("--augment needs --clean-out")
 
     scripts = [json.loads(Path(f).read_text()) for f in sorted(glob.glob(str(args.scripts / "*_*.json")))]
     if not scripts:
@@ -211,7 +234,10 @@ def main() -> None:
     stats = prefetch(scripts, client, moshi, args.workers)
 
     args.out.mkdir(parents=True, exist_ok=True)
-    full_dir = args.out if split == "train" else EVAL_FULL
+    full_dir = args.out if split == "train" else args.full_dir
+    babble = sorted({str(CACHE / f"{cache_key(t['text'], voice_of(t, s, moshi))}.wav") for s in scripts
+                     for t in s["turns"] if t["speaker"] == "user"}) if args.augment else None
+    clean_rows = []
     rows, full_rows, manifest, problems = [], [], [], []
     for s in scripts:
         turns, notes = timeline(s, moshi)
@@ -227,6 +253,13 @@ def main() -> None:
             "events": {**ev, "noise_dbfs": round(noise, 1)},
         }
         try:
+            if args.augment:  # the clean version first (verification), then the augmented one
+                clean_rows.append(render_full(spec, None, args.clean_out, INDEXES))
+                aug = augment_settings(s["id"])
+                s["_augmentation"] = aug
+                spec = {**spec, "augment": aug, "babble_clips": [Path(b) for b in babble]}
+                spec["events"] = {**spec["events"], "augmentation": aug}
+                spec["events"].pop("noise_dbfs", None)
             row = render_full(spec, None, full_dir, INDEXES)  # all clips are cached: no requests
         except ValueError as e:
             raise SystemExit(f"FAILED {s['id']}: {e}")
@@ -251,14 +284,16 @@ def main() -> None:
               flush=True)
 
     update_index(INDEXES / f"{args.name}.jsonl", rows)
+    if clean_rows:
+        update_index(INDEXES / f"{args.name}_clean.jsonl", clean_rows)
     if split == "eval":
-        update_index(INDEXES / "eval_full.jsonl", full_rows)
+        update_index(INDEXES / f"{args.full_index}.jsonl", full_rows)
         update_index(INDEXES / f"{args.name}_full.jsonl", full_rows)
     (args.out / "manifest.jsonl").write_text("".join(json.dumps(m) + "\n" for m in manifest))
     tot = sum(m["total_sec"] for m in manifest)
     sp = sum(m["speech_sec"] for m in manifest)
     print(f"\n{len(manifest)} {split} files -> {args.out}; index data/indexes/{args.name}.jsonl"
-          + (f" (+ {args.name}_full.jsonl, eval_full.jsonl)" if split == "eval" else ""))
+          + (f" (+ {args.name}_full.jsonl, {args.full_index}.jsonl)" if split == "eval" else ""))
     print(f"  audio {tot / 60:.1f} min, speech {sp / 60:.1f} min, silence {(tot - sp) / 60:.1f} min; "
           f"length {min(m['total_sec'] for m in manifest):.1f}-{max(m['total_sec'] for m in manifest):.1f} s")
     print(f"  TTS: {stats['lines']} unique lines, {stats['requested']} requested "

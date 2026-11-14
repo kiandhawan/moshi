@@ -1,0 +1,181 @@
+{
+ "id": "trainv2_10_00205",
+ "split": "train",
+ "seed": 10,
+ "order_index": 205,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "board_games"
+ ],
+ "wait_sec": 27,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 27
+ },
+ "instruction_position": 0.358,
+ "topic": "board_games",
+ "voices": {
+  "user": "5ce84bbd213b4943bc89e1951e17848a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_17",
+  "greet_ans_01",
+  "think_instruction_v2_20",
+  "ack_12",
+  "self_25",
+  "self_14"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_20": {
+   "style": "command",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "board_games.ctx12",
+  "smartphones.dlg32"
+ ],
+ "est_total_sec": 78.29,
+ "est_speech_sec": 46.25,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.49,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.85,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm moving abroad next month and I can't take my game collection. There's about forty games.",
+   "est_sec": 5.06,
+   "gap_before": 0.27,
+   "block": "board_games.ctx12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a hard goodbye. Do you want to sell them online for some money, or donate them somewhere like a local school or youth club?",
+   "est_sec": 7.85,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "board_games.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Sit tight for twenty-seven seconds and then check in with me.",
+   "est_sec": 3.51,
+   "gap_before": 0.34,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 27,
+   "phrasing": "think_instruction_v2_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.6,
+   "role": "ack",
+   "phrasing": "ack_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so, the thing is",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 19.82
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_25"
+  },
+  {
+   "speaker": "user",
+   "text": "No, hang on, that's silly.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 23.61
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, the collection. Money or donation?",
+   "est_sec": 1.96,
+   "role": "resume",
+   "block": "board_games.ctx12",
+   "anchor": {
+    "turn": 4,
+    "offset": 27.4
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. Quick one. What's an eSIM? The shop mentioned it and I nodded like I knew.",
+   "est_sec": 5.68,
+   "gap_before": 1.76,
+   "block": "smartphones.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's a SIM card that's built into the phone instead of a little plastic card. You download your plan instead of slotting something in.",
+   "est_sec": 7.54,
+   "gap_before": 0.9,
+   "role": "reply",
+   "block": "smartphones.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it better?",
+   "est_sec": 1.03,
+   "gap_before": 0.9,
+   "block": "smartphones.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Mostly convenient. You can switch carriers without a trip to a shop, and some phones hold a couple of plans at once.",
+   "est_sec": 6.92,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "smartphones.dlg32"
+  }
+ ]
+}

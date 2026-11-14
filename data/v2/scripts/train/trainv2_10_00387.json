@@ -1,0 +1,165 @@
+{
+ "id": "trainv2_10_00387",
+ "split": "train",
+ "seed": 10,
+ "order_index": 387,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "baking"
+ ],
+ "instruction_position": 0.651,
+ "topic": "baking",
+ "voices": {
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_02",
+  "greet_ans_17",
+  "describe_instruction_v2_14",
+  "describe_cue_08"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_14": {
+   "style": "command",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_08": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "coffee.dlg5",
+  "baking.opt2"
+ ],
+ "est_total_sec": 74.6,
+ "est_speech_sec": 59.89,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.39,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "My espresso shots taste really sour, and they come out in like ten seconds.",
+   "est_sec": 4.44,
+   "gap_before": 0.34,
+   "block": "coffee.dlg5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a classic sign of the grind being too coarse. Water rushes through without pulling out enough flavour.",
+   "est_sec": 5.68,
+   "gap_before": 0.59,
+   "role": "reply",
+   "block": "coffee.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "So, finer?",
+   "est_sec": 0.72,
+   "gap_before": 2.66,
+   "block": "coffee.dlg5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, a little finer at a time. You're aiming for roughly twenty five to thirty seconds for a standard shot.",
+   "est_sec": 6.3,
+   "gap_before": 0.73,
+   "role": "reply",
+   "block": "coffee.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to start baking bread at home and I have a few ways to begin.",
+   "est_sec": 5.06,
+   "gap_before": 1.2,
+   "block": "baking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Just listen while I lay them all out, and I'll ask for your view at the end.",
+   "est_sec": 5.37,
+   "gap_before": 0.41,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_14"
+  },
+  {
+   "speaker": "user",
+   "text": "One is a simple no knead loaf that rises overnight and bakes in a heavy pot.",
+   "est_sec": 5.06,
+   "gap_before": 1.33,
+   "block": "baking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is starting a sourdough starter, which takes about a week before I can even bake.",
+   "est_sec": 5.06,
+   "gap_before": 1.16,
+   "block": "baking.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I could just buy a bread machine that does everything for me.",
+   "est_sec": 4.13,
+   "gap_before": 2.11,
+   "block": "baking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all. Which sounds best to you?",
+   "est_sec": 2.58,
+   "gap_before": 1.19,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The no knead loaf is the easiest place to start, and it tastes amazing for so little effort. Sourdough is really rewarding, but it needs patience and daily feeding. The bread machine is convenient but you learn less.",
+   "est_sec": 11.88,
+   "gap_before": 0.59,
+   "role": "resume",
+   "block": "baking.opt2"
+  }
+ ]
+}

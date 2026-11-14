@@ -1,0 +1,175 @@
+{
+ "id": "trainv2_10_00614",
+ "split": "train",
+ "seed": 10,
+ "order_index": 614,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "music"
+ ],
+ "instruction_position": 0.719,
+ "topic": "music",
+ "voices": {
+  "user": "536d3a5e000945adb7038665781a4aca",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_26",
+  "describe_instruction_v2_22",
+  "ack_14",
+  "describe_cue_v2_08"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_22": {
+   "style": "fragment",
+   "tone": "polite",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_08": {
+   "style": "statement",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "music.dlg23",
+  "music.opt6"
+ ],
+ "est_total_sec": 78.32,
+ "est_speech_sec": 60.92,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.83,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "My trumpet smells weird. How often am I meant to clean it?",
+   "est_sec": 3.82,
+   "gap_before": 0.48,
+   "block": "music.dlg23",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ideally a quick rinse every couple of weeks and a proper bath once a month or so. A smell usually means it's overdue.",
+   "est_sec": 7.23,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "music.dlg23"
+  },
+  {
+   "speaker": "user",
+   "text": "Overdue is putting it mildly.",
+   "est_sec": 1.65,
+   "gap_before": 1.28,
+   "block": "music.dlg23",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then give it a full bath. Lukewarm water with a bit of washing up liquid, and take the valves and slides out first.",
+   "est_sec": 7.23,
+   "gap_before": 0.95,
+   "role": "reply",
+   "block": "music.dlg23"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. My son wants to do something for the school talent show and he's asking me to help him choose.",
+   "est_sec": 7.23,
+   "gap_before": 1.48,
+   "block": "music.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "A few choices coming. No comments till the end, please.",
+   "est_sec": 3.2,
+   "gap_before": 0.9,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.66,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "He could play a solo piano piece he's been practising for months.",
+   "est_sec": 3.82,
+   "gap_before": 0.89,
+   "block": "music.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or start a little band with his two best mates, they'd have about three weeks to rehearse.",
+   "est_sec": 5.37,
+   "gap_before": 2.87,
+   "block": "music.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "He also mentioned writing a rap about the school dinners, which would be funny.",
+   "est_sec": 4.44,
+   "gap_before": 2.28,
+   "block": "music.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's everything. Now you can weigh in.",
+   "est_sec": 2.58,
+   "gap_before": 1.01,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What's he most excited about? If he lights up talking about the rap, that energy will come through on stage. If he wants to impress, the piano solo is the safe and lovely option.",
+   "est_sec": 10.64,
+   "gap_before": 0.78,
+   "role": "resume",
+   "block": "music.opt6"
+  }
+ ]
+}

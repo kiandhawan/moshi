@@ -1,0 +1,131 @@
+{
+ "id": "eval_12_00295",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 295,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "painting_art"
+ ],
+ "topic": "painting_art",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_27",
+  "describe_instr_03",
+  "ack_15",
+  "describe_cue_06"
+ ],
+ "block_ids": [
+  "painting_art.opt5"
+ ],
+ "est_total_sec": 49.31,
+ "est_speech_sec": 38.2,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.62,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm redecorating and want to choose art for the living room wall.",
+   "est_sec": 3.82,
+   "gap_before": 0.31,
+   "block": "painting_art.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me go through every option before you say anything.",
+   "est_sec": 3.2,
+   "gap_before": 0.47,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.22,
+   "role": "ack",
+   "phrasing": "ack_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I could hang one of my own big acrylic paintings, the orange abstract one.",
+   "est_sec": 4.44,
+   "gap_before": 1.19,
+   "block": "painting_art.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or buy a print from a local artist I follow, a misty forest scene in soft greens.",
+   "est_sec": 5.37,
+   "gap_before": 1.77,
+   "block": "painting_art.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or do a gallery wall with lots of small framed sketches and postcards.",
+   "est_sec": 4.13,
+   "gap_before": 2.34,
+   "block": "painting_art.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, those are all the choices. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.49,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd hang your orange abstract, nothing beats your own work on the main wall. If the room is already colorful though, the misty forest might be more restful. What color are the walls and sofa?",
+   "est_sec": 10.95,
+   "gap_before": 0.65,
+   "role": "resume",
+   "block": "painting_art.opt5",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

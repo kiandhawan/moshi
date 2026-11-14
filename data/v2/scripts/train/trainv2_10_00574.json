@@ -1,0 +1,174 @@
+{
+ "id": "trainv2_10_00574",
+ "split": "train",
+ "seed": 10,
+ "order_index": 574,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long",
+  "moshi_mention"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "job_interview"
+ ],
+ "instruction_position": 0.504,
+ "topic": "job_interview",
+ "voices": {
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
+  "friend": null,
+  "other": "cc7f8544c64a439080193e9560100c5a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_16",
+  "describe_instruction_v2_23",
+  "ack_14",
+  "describe_cue_v2_26"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_23": {
+   "style": "fragment",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_26": {
+   "style": "command",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "mm_027",
+  "movies.dlg24",
+  "job_interview.opt4"
+ ],
+ "est_total_sec": 82.81,
+ "est_speech_sec": 55.24,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.91,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I wonder if Moshi could help plan the road trip.",
+   "est_sec": 3.2,
+   "gap_before": 0.64,
+   "block": "mm_027",
+   "event": "distractor",
+   "kind": "moshi_mention",
+   "phrasing": "mm_027",
+   "name_pos": "none"
+  },
+  {
+   "speaker": "other",
+   "text": "Worth a try.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "block": "mm_027"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? They'll ask me about a time I handled a challenge, and I've got a few stories but can't pick.",
+   "est_sec": 7.85,
+   "gap_before": 1.36,
+   "block": "job_interview.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, a handful of options. Listen first, I'll say when I'm finished.",
+   "est_sec": 3.82,
+   "gap_before": 0.5,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.53,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "There's when our main supplier went bust and I found a new one in three days.",
+   "est_sec": 5.06,
+   "gap_before": 0.85,
+   "block": "job_interview.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is when I had to calm down a really angry customer who was shouting in the shop.",
+   "est_sec": 5.68,
+   "gap_before": 7.95,
+   "block": "job_interview.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's also the time I trained two new starters while my manager was off sick for a month.",
+   "est_sec": 5.68,
+   "gap_before": 5.23,
+   "block": "job_interview.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or when I caught a big billing mistake that would have cost us thousands.",
+   "est_sec": 4.44,
+   "gap_before": 3.94,
+   "block": "job_interview.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "All set, those are the choices. Help me pick.",
+   "est_sec": 2.89,
+   "gap_before": 1.21,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Pick based on the job. For a team lead role, the month of training new starters is strongest. For anything with numbers, the billing mistake. Keep the angry customer as a backup for a question about difficult people.",
+   "est_sec": 11.88,
+   "gap_before": 1.5,
+   "role": "resume",
+   "block": "job_interview.opt4"
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "id": "trainv2_10_00472",
+ "split": "train",
+ "seed": 10,
+ "order_index": 472,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "gardening"
+ ],
+ "instruction_position": 0.625,
+ "topic": "gardening",
+ "voices": {
+  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_04",
+  "describe_instr_07",
+  "describe_cue_11"
+ ],
+ "phrasing_styles": {
+  "describe_instr_07": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_11": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "studying.dlg32",
+  "gardening.opt2"
+ ],
+ "est_total_sec": 78.88,
+ "est_speech_sec": 63.3,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.47,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.64,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Results day. I missed the grade I needed for my first choice uni.",
+   "est_sec": 4.13,
+   "gap_before": 0.21,
+   "block": "studying.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'm sorry, that's a hard moment. Have you checked if they'll still accept you?",
+   "est_sec": 4.44,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "studying.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "Not yet. I'm too scared to look.",
+   "est_sec": 2.27,
+   "gap_before": 1.49,
+   "block": "studying.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's worth checking right away. Sometimes universities accept people who miss by a little.",
+   "est_sec": 4.44,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "studying.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? Our lawn looks terrible and I'm trying to figure out what to do with it.",
+   "est_sec": 6.61,
+   "gap_before": 1.24,
+   "block": "gardening.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me walk you through all the options, then you can tell me what you think.",
+   "est_sec": 5.06,
+   "gap_before": 0.57,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "One option is to reseed the whole thing in the fall and water it a lot for a few weeks.",
+   "est_sec": 6.3,
+   "gap_before": 0.7,
+   "block": "gardening.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is to lay new sod, which looks perfect right away but costs a lot more.",
+   "est_sec": 5.06,
+   "gap_before": 2.22,
+   "block": "gardening.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or we could replace part of it with a gravel patio and some low plants that don't need much water.",
+   "est_sec": 6.3,
+   "gap_before": 2.52,
+   "block": "gardening.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "And that's the last one. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 1.08,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Reseeding in the fall is the cheapest way to get a nice lawn, it just takes patience. Sod is instant, but you're paying a lot for that speed. The gravel patio is a nice idea if you're tired of mowing and watering.",
+   "est_sec": 13.12,
+   "gap_before": 0.98,
+   "role": "resume",
+   "block": "gardening.opt2"
+  }
+ ]
+}

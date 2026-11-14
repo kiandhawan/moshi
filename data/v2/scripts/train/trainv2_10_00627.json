@@ -1,0 +1,199 @@
+{
+ "id": "trainv2_10_00627",
+ "split": "train",
+ "seed": 10,
+ "order_index": 627,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "movies",
+  "studying"
+ ],
+ "instruction_position": 0.679,
+ "topic": "movies",
+ "voices": {
+  "user": "cc7f8544c64a439080193e9560100c5a",
+  "friend": "c913e2f3869449568fc3fc08dfa21dfe",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Chloe",
+ "friend_name_id": "name_08",
+ "phrasing_ids": [
+  "greet_17",
+  "greet_ans_11",
+  "side_instruction_v2_29",
+  "side_cue_01"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_29": {
+   "style": "fragment",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_01": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "cooking.dlg27",
+  "movies.ctx7",
+  "studying.side1"
+ ],
+ "est_total_sec": 77.15,
+ "est_speech_sec": 61.22,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.74,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.31,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm cooking just for myself now, after twenty years of cooking for a family. It feels a bit pointless.",
+   "est_sec": 5.99,
+   "gap_before": 0.28,
+   "block": "cooking.dlg27",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a big change, and it makes sense that it feels strange. Cooking for one can still be a nice thing to do for yourself.",
+   "est_sec": 7.85,
+   "gap_before": 1.17,
+   "role": "reply",
+   "block": "cooking.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got eight nine year olds sleeping over tonight and they all want different films.",
+   "est_sec": 4.75,
+   "gap_before": 1.4,
+   "block": "movies.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Classic sleepover chaos. Is this group more likely to sing along to an animated musical, or yell at a live action adventure?",
+   "est_sec": 6.92,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "movies.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, quick word with my aunt. Tell you when I'm done.",
+   "est_sec": 3.51,
+   "gap_before": 0.58,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Chloe, did you keep the notes from last week's lecture?",
+   "est_sec": 3.2,
+   "gap_before": 0.75,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "studying.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Some of them. I missed the last half hour though.",
+   "est_sec": 3.2,
+   "gap_before": 0.74,
+   "block": "studying.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the part I need. The bit about supply curves.",
+   "est_sec": 3.2,
+   "gap_before": 0.47,
+   "block": "studying.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Ask Tasha, she records everything on her laptop.",
+   "est_sec": 2.58,
+   "gap_before": 0.91,
+   "block": "studying.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Good idea. Can you send me her number?",
+   "est_sec": 2.58,
+   "gap_before": 0.99,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "studying.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure, give me a second.",
+   "est_sec": 1.65,
+   "gap_before": 0.97,
+   "block": "studying.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back.",
+   "est_sec": 1.03,
+   "gap_before": 0.82,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. So, have you sussed out the crowd? Musical or adventure?",
+   "est_sec": 3.82,
+   "gap_before": 0.6,
+   "role": "resume",
+   "block": "movies.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Everything I make lasts for days though.",
+   "est_sec": 2.27,
+   "gap_before": 1.84,
+   "event": "ordinary_request",
+   "block": "cooking.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You could cook a full recipe and freeze single portions. Then you have homemade ready meals on tired evenings.",
+   "est_sec": 5.99,
+   "gap_before": 1.0,
+   "role": "reply",
+   "block": "cooking.dlg27"
+  }
+ ]
+}

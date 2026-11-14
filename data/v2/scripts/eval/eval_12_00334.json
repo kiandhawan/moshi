@@ -1,0 +1,152 @@
+{
+ "id": "eval_12_00334",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 334,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension"
+ ],
+ "topics": [
+  "learning_language"
+ ],
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 2.48
+ },
+ "deadline": {
+  "after_turn": 6,
+  "sec": 10
+ },
+ "topic": "learning_language",
+ "voices": {
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_12",
+  "think_instr_30",
+  "ack_08",
+  "extension_04"
+ ],
+ "block_ids": [
+  "learning_language.ctx2"
+ ],
+ "est_total_sec": 60.9,
+ "est_speech_sec": 32.0,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.72,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.64,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "I've been doing Spanish on an app for months, but I still freeze when someone talks to me.",
+   "est_sec": 5.68,
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Very common. Would you be up for weekly sessions with an online tutor, or does a casual language exchange sound better?",
+   "est_sec": 6.61,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "learning_language.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, give me fifteen seconds to think and then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.64,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.37,
+   "role": "ack",
+   "phrasing": "ack_08",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Actually, wait ten more seconds.",
+   "est_sec": 1.65,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_04",
+   "anchor": {
+    "turn": 4,
+    "offset": 12.52
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, for speaking practice, a tutor or a language exchange?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "learning_language.ctx2",
+   "anchor": {
+    "turn": 6,
+    "offset": 10.38
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A tutor. I need someone to actually correct me.",
+   "est_sec": 2.89,
+   "gap_before": 1.21,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good thinking. Even thirty minutes a week with corrections makes a big difference.",
+   "est_sec": 4.13,
+   "gap_before": 0.68,
+   "role": "followup",
+   "block": "learning_language.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

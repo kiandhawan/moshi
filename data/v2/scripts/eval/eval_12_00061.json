@@ -1,0 +1,152 @@
+{
+ "id": "eval_12_00061",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 61,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension"
+ ],
+ "topics": [
+  "learning_language"
+ ],
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 5,
+  "said_before_deadline_sec": 2.67
+ },
+ "deadline": {
+  "after_turn": 6,
+  "sec": 5
+ },
+ "topic": "learning_language",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_30",
+  "think_instr_24",
+  "ack_10",
+  "extension_02"
+ ],
+ "block_ids": [
+  "learning_language.ctx7"
+ ],
+ "est_total_sec": 53.0,
+ "est_speech_sec": 30.76,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.3,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "I just lost a four hundred day streak on my language app and I'm weirdly devastated.",
+   "est_sec": 5.06,
+   "gap_before": 0.28,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a real loss, honestly. Start the streak again, or take it as a sign to try something new?",
+   "est_sec": 5.99,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "learning_language.ctx7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I need a moment, like fifteen seconds. Ask me again then.",
+   "est_sec": 3.51,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.66,
+   "role": "ack",
+   "phrasing": "ack_10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, I need five more seconds.",
+   "est_sec": 1.96,
+   "event": "extension",
+   "extra_sec": 5,
+   "phrasing": "extension_02",
+   "anchor": {
+    "turn": 4,
+    "offset": 12.33
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, rebuild the streak, or switch it up?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "learning_language.ctx7",
+   "anchor": {
+    "turn": 6,
+    "offset": 5.04
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Start again. Day one, here I come.",
+   "est_sec": 2.27,
+   "gap_before": 1.21,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's the spirit. Your skills didn't vanish with the number, only the counter did.",
+   "est_sec": 4.44,
+   "gap_before": 0.48,
+   "role": "followup",
+   "block": "learning_language.ctx7",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

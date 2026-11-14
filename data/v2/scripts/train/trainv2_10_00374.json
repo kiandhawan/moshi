@@ -1,0 +1,153 @@
+{
+ "id": "trainv2_10_00374",
+ "split": "train",
+ "seed": 10,
+ "order_index": 374,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "smartphones"
+ ],
+ "wait_sec": 42,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 42
+ },
+ "instruction_position": 0.882,
+ "topic": "smartphones",
+ "voices": {
+  "user": "050df12e0f30484fb882a9a5410e5d66",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_28",
+  "greet_ans_13",
+  "think_instruction_v2_47",
+  "ack_03",
+  "self_22"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_47": {
+   "style": "implied",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "coffee.dlg16",
+  "smartphones.ctx2"
+ ],
+ "est_total_sec": 81.51,
+ "est_speech_sec": 35.1,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.78,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.5,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "My Turkish neighbour made me coffee in a little pot and it was amazing. Can I make it at home?",
+   "est_sec": 6.3,
+   "gap_before": 0.45,
+   "block": "coffee.dlg16",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can. You'll want a small long handled pot, very finely ground coffee, almost like powder, and cold water.",
+   "est_sec": 5.99,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "coffee.dlg16"
+  },
+  {
+   "speaker": "user",
+   "text": "I keep picking up my phone without even thinking. It's eating my whole evening.",
+   "est_sec": 4.44,
+   "gap_before": 1.38,
+   "block": "smartphones.ctx2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lots of people feel that way. Would you rather set a daily time limit on certain apps, or delete the worst ones entirely?",
+   "est_sec": 7.23,
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "smartphones.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "You've stumped me. I reckon forty-two seconds should do it.",
+   "est_sec": 3.2,
+   "gap_before": 0.48,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 42,
+   "phrasing": "think_instruction_v2_47"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.52,
+   "role": "ack",
+   "phrasing": "ack_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, think, think.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 6,
+    "offset": 7.23
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, have you decided? Limits or removing the apps completely?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "smartphones.ctx2",
+   "anchor": {
+    "turn": 6,
+    "offset": 42.18
+   }
+  }
+ ]
+}

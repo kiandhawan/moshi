@@ -1,0 +1,224 @@
+{
+ "id": "eval_13_on_00031",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 431,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00355",
+  "seed": 13
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "laptop_buying",
+  "family_visit"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "7bb342e710854139b1d6e12411229f1f"
+ },
+ "friend_name": "Maya",
+ "friend_name_id": "name_03",
+ "phrasing_ids": [
+  "greet_27",
+  "greet_ans_18",
+  "side_instr_12",
+  "dn_85",
+  "side_cue_03",
+  "nq_eval_037",
+  "pn_179"
+ ],
+ "block_ids": [
+  "laptop_buying.ctx19",
+  "family_visit.side4",
+  "dn_85",
+  "nq_eval_037"
+ ],
+ "est_total_sec": 80.04,
+ "est_speech_sec": 51.4,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_27",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, decision time. Matte screen or glossy?",
+   "est_sec": 2.27,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, classic debate. Do you work in bright rooms with lots of windows, or mostly in dim light?",
+   "est_sec": 5.68,
+   "gap_before": 0.61,
+   "role": "reply",
+   "block": "laptop_buying.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Did you set out enough chairs for the grandparents, Kwame?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_037",
+   "block": "nq_eval_037",
+   "name_pos": "end",
+   "addressee": "Kwame",
+   "est_sec": 3.2,
+   "gap_before": 0.72
+  },
+  {
+   "speaker": "other",
+   "text": "Six, all with cushions.",
+   "block": "nq_eval_037",
+   "est_sec": 1.34,
+   "gap_before": 0.67
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, Maya just called my name. Please wait and stay silent until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.18,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Maya, be honest. Is the guest room too cold?",
+   "est_sec": 2.89,
+   "gap_before": 1.15,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "family_visit.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Kind of. The radiator in there clicks but never really warms up.",
+   "est_sec": 3.82,
+   "gap_before": 2.13,
+   "block": "family_visit.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Great. My grandmother is always freezing.",
+   "est_sec": 1.96,
+   "gap_before": 1.44,
+   "block": "family_visit.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "We could put the little heater from the garage in there.",
+   "est_sec": 3.51,
+   "gap_before": 1.03,
+   "block": "family_visit.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Isn't that the one that smells like burning dust?",
+   "est_sec": 2.89,
+   "gap_before": 1.41,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "family_visit.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Only the first ten minutes. I'll run it this afternoon so it's done by the time she gets here.",
+   "est_sec": 5.99,
+   "gap_before": 2.33,
+   "block": "family_visit.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "You're a lifesaver.",
+   "est_sec": 1.03,
+   "gap_before": 2.76,
+   "block": "family_visit.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back on my feet, the cold's gone.",
+   "est_sec": 2.89,
+   "gap_before": 1.01,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_85"
+  },
+  {
+   "speaker": "friend",
+   "text": "Good, you sounded awful last week.",
+   "est_sec": 1.96,
+   "gap_before": 1.13,
+   "phrasing": "dn_85"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 0.89,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. The screen finish question. Matte, or glossy?",
+   "est_sec": 2.58,
+   "gap_before": 1.06,
+   "role": "resume",
+   "block": "laptop_buying.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Dim mostly. I watch a lot of films.",
+   "est_sec": 2.58,
+   "gap_before": 1.31,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Glossy then. The colours look richer.",
+   "est_sec": 1.96,
+   "gap_before": 0.55,
+   "role": "followup",
+   "block": "laptop_buying.ctx19",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00355",
+  "name_pos": "end",
+  "answered": true
+ },
+ "groups": [
+  "familiar_type",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

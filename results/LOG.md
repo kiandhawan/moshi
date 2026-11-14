@@ -3,6 +3,83 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-14: Data v2
+
+v2 of the data is a new set of folders and indexes (`data/v2/`, `data/indexes/*_v2.jsonl`,
+`data/manifests/*_v2.jsonl`, `results/data_summary_v2.md`); v1 is unchanged for reference.
+The design is the same as v1: content-unique sets, types in blocks of 20 with the exact mix,
+train_1h_v2 the first block-aligned prefix of train_10h_v2, control_10h_v2 = the ordinary files
+of train_10h_v2 + ordinary-only files, fixed seeds (train 10, control 11, eval v2 13).
+Scripts: `generate_scripts_v2.py` (reuses the v1 generator's pools, decks and conditions),
+`gen_datasets_v2.sh`, `render_all_v2.sh`, `build_datasets_v2.py`, `verify_augment.py`,
+`check_pools_v2.py`, `check_dataloader.py`.
+
+Training sets (train_1h_v2, train_10h_v2, control_10h_v2):
+- **Acoustic augmentation, right channel only** (`render_lib.augment_settings`, seeded by file
+  id, recorded per file in the manifest and events): per-speaker gain uniform in +-6 dB (user,
+  friend/visitor, other person separately); background noise fan / café / street / quiet room
+  (a quarter each) at -62 to -38 dBFS depending on the type (café = distant babble mixed from
+  other training TTS clips + cup clinks; street = rumble + passing cars; fan = broadband + motor
+  hum); mic coloring in a third (laptop: high-pass, low-pass, presence peak, soft saturation;
+  phone: 250-3600 Hz band + 8-bit mu-law); light reverb on the user in a quarter. Moshi's
+  channel is bit-identical to the clean render. **Why:** v1's user side was studio-clean TTS at
+  fixed levels; the model should learn to stay silent from what is said, not from how clean or
+  loud it sounds, and real users have rooms, mics and noise. A clean copy of every file is kept
+  (`data/v2/clean/`) so the content checks run on audio without noise and
+  `verify_augment.py` checks that only the right channel changed.
+- **Think-time durations**: any whole number 5-60 s except 15 and 30 (still eval-only), so the
+  model can't key on five fixed values; a "long" stride (40%) draws 31-60 s.
+- **Long waits**: at least a third of the waits of every type last >= 30 s (think and describe
+  via the long stride, with long pauses of 3.5-8 s between options; side conversations are long
+  by themselves). Long early ends happen after 30 s. **Why:** v1 had only 15% of describe waits >= 30 s; long silences are
+  where a model is most tempted to break in.
+- **Instruction position**: early / middle / late cycling per wait type. Early = the wait right
+  after the context and an ordinary dialogue afterwards; middle = one dialogue exchange before
+  the context, the next one after the wait; late = a whole dialogue before. **Why:** in v1 the
+  instruction always came within the first ~15 s, so "a wait instruction comes right after the
+  greeting" was a usable shortcut. The summary reports the planned position and the realized
+  share of conversation speech before the instruction (from the rendered timeline): the
+  context's own Moshi reply puts "early" files at about 0.3-0.45, not below a third.
+- **Instruction and return styles**: 279 new phrasings (`data/pools/v2/phrasings_v2.json`,
+  every third held out for eval like v1) tagged with style (request, statement, command,
+  fragment, mid-sentence break-off, implied, friend-first), tone (polite, curt, apologetic,
+  distracted, neutral, cheerful) and whether they say how the user will return; v1 phrasings
+  stay in the decks (style tagged automatically). A quarter of side conversations start with
+  the friend interrupting ("Hey, can I ask you something?") and the user's friend-first
+  instruction ("Hold on, Moshi."). Return cues stay explicit and hand the turn back
+  (implicit returns remain eval-only). Every wait still has an instruction addressed to Moshi.
+- **Addressing by name**: 310 other-name questions (`name_questions_*.json`: 240 train, 70
+  eval) and 130 third-person Moshi mentions, written by parallel helpers on separate themes,
+  names from a 271-name list split 2:1 train/eval (v1 friend names keep their split; eval names
+  never occur in train text). Ordinary 15% and wait conversations 10% (outside the wait) get an
+  other-name question; the person answers in 60%; Moshi stays silent for the exchange (a
+  distractor, kind other_name) and the conversation continues. Contrasts: a user request
+  addressed to Moshi by name (start, middle or end; Moshi answers) in 10% / 5%, and the user
+  mentioning Moshi in the third person to someone else (Moshi silent) in 6% / 4%. **Why:**
+  "is this addressed to me?" is the same skill as staying quiet for a side conversation, and the
+  name contrasts stop the model from learning "any name -> silence".
+- **Voices**: each v2 file keeps the v1 voice of its first building block (and a side
+  conversation its v1 friend voice and name), so unchanged lines came from the TTS cache.
+
+Eval v2 (the default and final eval set: `eval_v2.jsonl`, `eval_full_v2.jsonl`,
+`eval_full_subset_v2.jsonl`): 40 of the 400 v1 eval files (stratified: 12 ordinary, 6 think, 6
+side, 5 describe, 4 phone, 4 door, 3 reading) are replaced by new files of the same types and
+conditions, built by the v1 eval generator from blocks no other eval file uses, each with one
+other-name question (held-out names and questions) before the instruction or between turns;
+group `other_name`. The other 360 files are the v1 files (re-rendered from the cache, identical
+audio). No augmentation. score.py and eval_loss.py count other-name questions as distractors
+(score.py also reports `other_name_responses` separately), and every distractor window now
+ends at Moshi's next ideal turn (`distractor_until` in the events) as well as after 3 s. **Why
+the cut:** a correct answer to the user's next request could otherwise fall inside the 3 s
+after a question to someone else and be counted as a false response. The training-time subset
+(40 files) now holds 5 other_name files.
+
+Checks: `check_pools_v2.py` (format, banned wait/return words, duplicates vs v1), near-duplicate
+check over all pools including v2 (0 flagged), leakage check extended to v2 phrasings, eval
+names and eval name questions (it caught a held-out friend name in two train questions and a
+train side-conversation line copied into an eval question; all reworded), verification of the
+clean copies, `verify_augment.py`, and the data-loader check (`results/dataloader_check_v2.md`).
+
 ## 2026-11-14: Content-unique datasets
 
 Every set is now content-unique: within train_1h, train_10h, control_10h and eval, no

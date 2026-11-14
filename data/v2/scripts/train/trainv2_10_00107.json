@@ -1,0 +1,177 @@
+{
+ "id": "trainv2_10_00107",
+ "split": "train",
+ "seed": 10,
+ "order_index": 107,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "weekend_plans"
+ ],
+ "instruction_position": 0.727,
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_14",
+  "describe_instr_08",
+  "ack_13",
+  "describe_cue_v2_23"
+ ],
+ "phrasing_styles": {
+  "describe_instr_08": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_23": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "weather_plans.dlg16",
+  "weekend_plans.opt2"
+ ],
+ "est_total_sec": 80.71,
+ "est_speech_sec": 58.44,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.79,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.45,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Heatwave this week, and my mum is eighty four and lives alone. I'm worried.",
+   "est_sec": 4.44,
+   "gap_before": 0.27,
+   "block": "weather_plans.dlg16",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a good thing to worry about. Older people often don't feel thirsty and can overheat without noticing.",
+   "est_sec": 5.68,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "weather_plans.dlg16"
+  },
+  {
+   "speaker": "user",
+   "text": "She refuses to turn the fan on, she says it's wasteful.",
+   "est_sec": 3.51,
+   "gap_before": 0.72,
+   "block": "weather_plans.dlg16",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Explain it's just for this week. Curtains closed in the day and windows open at night really help too.",
+   "est_sec": 5.99,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "weather_plans.dlg16"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. My partner and I want to plan a nice Sunday together, help me choose.",
+   "est_sec": 5.37,
+   "gap_before": 1.49,
+   "block": "weekend_plans.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Please wait until I've gone through all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.38,
+   "role": "ack",
+   "phrasing": "ack_13"
+  },
+  {
+   "speaker": "user",
+   "text": "One option is a long brunch at that new place by the river, followed by a walk.",
+   "est_sec": 5.37,
+   "gap_before": 0.96,
+   "block": "weekend_plans.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a cooking class in the afternoon where we'd make fresh pasta together.",
+   "est_sec": 4.44,
+   "gap_before": 4.74,
+   "block": "weekend_plans.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or we could go to the art museum, which has a new exhibit opening this week.",
+   "est_sec": 5.06,
+   "gap_before": 6.86,
+   "block": "weekend_plans.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. Over to you, Moshi.",
+   "est_sec": 1.65,
+   "gap_before": 0.77,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What does your partner usually enjoy more, food or culture? If it's food, the cooking class is a great pick. You could even do the river walk after the museum.",
+   "est_sec": 9.4,
+   "gap_before": 1.18,
+   "role": "resume",
+   "block": "weekend_plans.opt2"
+  }
+ ]
+}

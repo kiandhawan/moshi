@@ -1,0 +1,208 @@
+{
+ "id": "trainv2_10_00362",
+ "split": "train",
+ "seed": 10,
+ "order_index": 362,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "cars",
+  "studying"
+ ],
+ "instruction_position": 0.833,
+ "topic": "cars",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": "cbc3add1f54546e6a4a1964bacb8b122",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Chloe",
+ "friend_name_id": "name_08",
+ "phrasing_ids": [
+  "greet_07",
+  "greet_ans_04",
+  "side_instr_19",
+  "ack_05",
+  "dn_40",
+  "side_cue_16"
+ ],
+ "phrasing_styles": {
+  "side_instr_19": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_16": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "pets.dlg31",
+  "cars.ctx5",
+  "studying.side5",
+  "dn_40"
+ ],
+ "est_total_sec": 83.16,
+ "est_speech_sec": 64.42,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
+   "gap_before": 0.62,
+   "role": "greeting",
+   "phrasing": "greet_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.72,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Our hamster escaped last night. The cage door was open. Help.",
+   "est_sec": 3.51,
+   "gap_before": 0.39,
+   "block": "pets.dlg31",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Don't worry, they're usually still in the house. Close doors to keep him in one area and check behind sofas and under the fridge.",
+   "est_sec": 7.54,
+   "gap_before": 0.35,
+   "role": "reply",
+   "block": "pets.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? My son turns seventeen next month and he's desperate to start driving.",
+   "est_sec": 5.68,
+   "gap_before": 1.11,
+   "block": "cars.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting times. Will he book proper lessons with an instructor, or are you planning to teach him yourself in the family car?",
+   "est_sec": 6.92,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "cars.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, quick break, I need to talk to my roommate. I'll tell you when I'm done.",
+   "est_sec": 5.06,
+   "gap_before": 1.06,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "role": "ack",
+   "phrasing": "ack_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Have you seen my calculator? The graphing one.",
+   "est_sec": 2.58,
+   "gap_before": 0.73,
+   "block": "studying.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Is it the grey one with the cracked screen?",
+   "est_sec": 2.89,
+   "gap_before": 2.01,
+   "block": "studying.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes! Exam's at two and I can't find it anywhere.",
+   "est_sec": 3.2,
+   "gap_before": 1.43,
+   "block": "studying.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "I borrowed it on Tuesday, sorry. It's in my bag by the door.",
+   "est_sec": 4.13,
+   "gap_before": 1.24,
+   "block": "studying.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "You could have told me. I nearly bought a new one.",
+   "est_sec": 3.51,
+   "gap_before": 0.87,
+   "block": "studying.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "I know, I know. I'll buy you a coffee after your exam, deal?",
+   "est_sec": 4.13,
+   "gap_before": 0.32,
+   "block": "studying.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, that was rude of me, go on.",
+   "est_sec": 2.58,
+   "gap_before": 1.47,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_40"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's okay, I was only saying the cake's ready.",
+   "est_sec": 2.89,
+   "gap_before": 1.0,
+   "phrasing": "dn_40"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, we can continue now.",
+   "est_sec": 1.65,
+   "gap_before": 1.53,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. So, an instructor for him, or the family car with you in charge?",
+   "est_sec": 4.75,
+   "gap_before": 1.12,
+   "role": "resume",
+   "block": "cars.ctx5"
+  }
+ ]
+}

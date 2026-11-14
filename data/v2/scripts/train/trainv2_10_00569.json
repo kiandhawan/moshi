@@ -1,0 +1,157 @@
+{
+ "id": "trainv2_10_00569",
+ "split": "train",
+ "seed": 10,
+ "order_index": 569,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "photography"
+ ],
+ "wait_sec": 42,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 42
+ },
+ "instruction_position": 0.44,
+ "topic": "photography",
+ "voices": {
+  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_10",
+  "greet_ans_28",
+  "think_instruction_v2_20",
+  "self_05",
+  "self_08"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_20": {
+   "style": "command",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "photography.ctx2",
+  "travel_planning.dlg26"
+ ],
+ "est_total_sec": 83.74,
+ "est_speech_sec": 35.72,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.47,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "My friend asked me to take photos at her engagement party. I'm kind of nervous.",
+   "est_sec": 4.75,
+   "gap_before": 0.43,
+   "block": "photography.ctx2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You'll be fine with a plan. Do you want to focus on posed group shots, or candid moments as the party happens?",
+   "est_sec": 6.92,
+   "gap_before": 1.87,
+   "role": "reply",
+   "block": "photography.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Sit tight for forty-two seconds and then check in with me.",
+   "est_sec": 3.51,
+   "gap_before": 1.28,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 42,
+   "phrasing": "think_instruction_v2_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, okay.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 12.22
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, no, the other one.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 28.96
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, have you thought about it? Posed or candid?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "photography.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 42.31
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? I'm visiting the States for the first time. The tipping thing confuses me. Who do I tip?",
+   "est_sec": 7.23,
+   "gap_before": 0.93,
+   "block": "travel_planning.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "In restaurants with table service, around fifteen to twenty percent of the bill is normal.",
+   "est_sec": 4.75,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "travel_planning.dlg26"
+  }
+ ]
+}

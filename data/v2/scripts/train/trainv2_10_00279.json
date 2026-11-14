@@ -1,0 +1,216 @@
+{
+ "id": "trainv2_10_00279",
+ "split": "train",
+ "seed": 10,
+ "order_index": 279,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "music",
+  "travel_planning"
+ ],
+ "instruction_position": 0.865,
+ "topic": "music",
+ "voices": {
+  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "friend": "9a9cf47702da476aa4629e2506d4a857",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_28",
+  "side_instruction_v2_34",
+  "dn_32",
+  "side_cue_v2_14"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_34": {
+   "style": "breakoff",
+   "tone": "distracted",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_14": {
+   "style": "fragment",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "smartphones.dlg13",
+  "music.ctx8",
+  "travel_planning.side5",
+  "dn_32"
+ ],
+ "est_total_sec": 83.55,
+ "est_speech_sec": 64.21,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.32,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.58,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Guests keep asking for my wifi password and it's this long random thing. Embarrassing.",
+   "est_sec": 4.44,
+   "gap_before": 0.59,
+   "block": "smartphones.dlg13",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can share it with a QR code instead. Go to your wifi settings, tap your network, and there's usually a share option.",
+   "est_sec": 7.23,
+   "gap_before": 0.72,
+   "role": "reply",
+   "block": "smartphones.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. I'm running my first half marathon in May and I want a proper playlist.",
+   "est_sec": 5.68,
+   "gap_before": 1.0,
+   "block": "music.ctx8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Would you like steady songs with the same tempo the whole way, or a playlist that builds up energy towards the end?",
+   "est_sec": 7.23,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "music.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "And then we could— oh, Daniel needs me. One minute, Moshi.",
+   "est_sec": 3.51,
+   "gap_before": 1.26,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_34"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you done with the newspaper?",
+   "est_sec": 1.96,
+   "gap_before": 0.74,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_32"
+  },
+  {
+   "speaker": "friend",
+   "text": "Take it, I only read the sports page.",
+   "est_sec": 2.58,
+   "gap_before": 1.35,
+   "phrasing": "dn_32"
+  },
+  {
+   "speaker": "user",
+   "text": "Daniel, any chance you could feed the cat while we're away?",
+   "est_sec": 3.51,
+   "gap_before": 1.14,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "travel_planning.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "How long are you gone?",
+   "est_sec": 1.65,
+   "gap_before": 1.26,
+   "block": "travel_planning.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Nine days. Just once a day, and maybe scoop the litter.",
+   "est_sec": 3.51,
+   "gap_before": 0.5,
+   "block": "travel_planning.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Nine days of litter. You owe me big.",
+   "est_sec": 2.58,
+   "gap_before": 1.57,
+   "block": "travel_planning.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll bring you back something nice. Chocolate? A fridge magnet?",
+   "est_sec": 3.2,
+   "gap_before": 1.14,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "travel_planning.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not a magnet. Something edible, please.",
+   "est_sec": 1.96,
+   "gap_before": 1.08,
+   "block": "travel_planning.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Edible it is. I'll leave the spare key under the plant.",
+   "est_sec": 3.51,
+   "gap_before": 1.31,
+   "block": "travel_planning.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Text me her food amounts, I'll forget otherwise.",
+   "est_sec": 2.58,
+   "gap_before": 0.36,
+   "block": "travel_planning.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Back with you. Go for it.",
+   "est_sec": 1.96,
+   "gap_before": 1.29,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. So, for race day, which kind of playlist are you after?",
+   "est_sec": 3.82,
+   "gap_before": 0.82,
+   "role": "resume",
+   "block": "music.ctx8"
+  }
+ ]
+}

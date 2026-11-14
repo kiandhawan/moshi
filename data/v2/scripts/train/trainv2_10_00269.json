@@ -1,0 +1,164 @@
+{
+ "id": "trainv2_10_00269",
+ "split": "train",
+ "seed": 10,
+ "order_index": 269,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "coffee"
+ ],
+ "instruction_position": 0.477,
+ "topic": "coffee",
+ "voices": {
+  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_02",
+  "describe_instruction_v2_10",
+  "describe_cue_v2_05"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_10": {
+   "style": "statement",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_05": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "home_repair.dlg30",
+  "coffee.opt5"
+ ],
+ "est_total_sec": 73.63,
+ "est_speech_sec": 58.34,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.41,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "The paint is peeling off my window frames outside. Do I need to strip all of it?",
+   "est_sec": 5.37,
+   "gap_before": 0.59,
+   "block": "home_repair.dlg30",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not necessarily all. Scrape off anything loose or flaky until you hit paint that's firmly stuck.",
+   "est_sec": 5.06,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "home_repair.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, I'm visiting a new city for one morning and I've found three cafes I want to try.",
+   "est_sec": 5.99,
+   "gap_before": 1.14,
+   "block": "coffee.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "I want your opinion, but only after you've heard every option. I'll say when I'm done.",
+   "est_sec": 5.06,
+   "gap_before": 0.87,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_10"
+  },
+  {
+   "speaker": "user",
+   "text": "A tiny specialty roaster near the station that only does pour overs, standing room only.",
+   "est_sec": 4.75,
+   "gap_before": 1.15,
+   "block": "coffee.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "A big old fashioned coffee house with chandeliers, cakes and waiters in waistcoats.",
+   "est_sec": 4.13,
+   "gap_before": 1.46,
+   "block": "coffee.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a little rooftop place with a view over the river, but it's a twenty minute walk uphill.",
+   "est_sec": 5.68,
+   "gap_before": 2.76,
+   "block": "coffee.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Finished. Thoughts, Moshi?",
+   "est_sec": 1.03,
+   "gap_before": 1.34,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you love coffee itself, the roaster is the one, though you'll be standing. The coffee house is about the atmosphere and the cake. The rooftop is the most memorable view, if you don't mind the climb.",
+   "est_sec": 11.57,
+   "gap_before": 0.55,
+   "role": "resume",
+   "block": "coffee.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Then sand?",
+   "est_sec": 0.72,
+   "gap_before": 1.22,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, sand the edges so there's no ridge, then fill any cracks in the wood with exterior filler.",
+   "est_sec": 5.68,
+   "gap_before": 0.65,
+   "role": "reply",
+   "block": "home_repair.dlg30"
+  }
+ ]
+}

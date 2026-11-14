@@ -1,0 +1,242 @@
+{
+ "id": "trainv2_10_00611",
+ "split": "train",
+ "seed": 10,
+ "order_index": 611,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "friend_first",
+  "near_miss"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "job_interview",
+  "fitness"
+ ],
+ "instruction_position": 0.827,
+ "topic": "job_interview",
+ "voices": {
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": "536d3a5e000945adb7038665781a4aca",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Rosa",
+ "friend_name_id": "name_22",
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_08",
+  "friend_interrupt_v2_01",
+  "side_instruction_v2_58",
+  "ack_12",
+  "dn_56",
+  "side_cue_01"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_01": {
+   "style": "request",
+   "tone": "polite",
+   "source": "v2"
+  },
+  "side_instruction_v2_58": {
+   "style": "friend_first",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_01": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "music.dlg30",
+  "job_interview.ctx4",
+  "fitness.side4",
+  "dn_56"
+ ],
+ "est_total_sec": 81.24,
+ "est_speech_sec": 64.1,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.66,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.53,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I run a little bakery and I need music for the shop. What works?",
+   "est_sec": 4.44,
+   "gap_before": 0.34,
+   "block": "music.dlg30",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Something warm and relaxed that doesn't distract. Acoustic, soft soul or gentle jazz all work well in cafes and bakeries.",
+   "est_sec": 6.3,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "music.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "They're definitely going to ask my salary expectations tomorrow and I freeze every time.",
+   "est_sec": 4.44,
+   "gap_before": 1.07,
+   "block": "job_interview.ctx4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let's plan it. Would you rather name a range you've researched, or turn it back and ask what budget they have for the role?",
+   "est_sec": 7.54,
+   "gap_before": 0.65,
+   "role": "reply",
+   "block": "job_interview.ctx4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Hey, can I borrow you for a minute?",
+   "est_sec": 2.58,
+   "gap_before": 0.47,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, okay. Moshi, quiet for a minute.",
+   "est_sec": 2.27,
+   "gap_before": 0.52,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_58"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.28,
+   "role": "ack",
+   "phrasing": "ack_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you back on the night shift this week?",
+   "est_sec": 2.89,
+   "gap_before": 1.13,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_56"
+  },
+  {
+   "speaker": "friend",
+   "text": "Unfortunately, starting tomorrow.",
+   "est_sec": 1.03,
+   "gap_before": 0.74,
+   "phrasing": "dn_56"
+  },
+  {
+   "speaker": "user",
+   "text": "Rosa, if we shared a personal trainer, would you actually show up?",
+   "est_sec": 3.82,
+   "gap_before": 0.34,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Rude. I show up to things.",
+   "est_sec": 1.96,
+   "gap_before": 1.37,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "You cancelled yoga three times last month.",
+   "est_sec": 2.27,
+   "gap_before": 0.65,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yoga was at seven in the morning. That's not fair.",
+   "est_sec": 3.2,
+   "gap_before": 0.69,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so evenings. Would you do Tuesdays and Thursdays?",
+   "est_sec": 2.89,
+   "gap_before": 1.33,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Thursdays, yes. Tuesdays I have choir.",
+   "est_sec": 1.96,
+   "gap_before": 0.35,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Then I'll ask if he does Thursdays and maybe a Sunday morning.",
+   "est_sec": 3.82,
+   "gap_before": 1.34,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not too early on Sunday. Ten at the earliest.",
+   "est_sec": 2.89,
+   "gap_before": 0.9,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back.",
+   "est_sec": 1.03,
+   "gap_before": 0.7,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. The salary question. Are you naming a range or asking for their budget?",
+   "est_sec": 4.75,
+   "gap_before": 0.83,
+   "role": "resume",
+   "block": "job_interview.ctx4"
+  }
+ ]
+}

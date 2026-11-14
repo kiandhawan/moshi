@@ -1,0 +1,205 @@
+{
+ "id": "trainv2_10_00410",
+ "split": "train",
+ "seed": 10,
+ "order_index": 410,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "pets",
+  "fitness"
+ ],
+ "instruction_position": 0.89,
+ "topic": "pets",
+ "voices": {
+  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "friend": "c250136a9ec74cc0b799be54664a83f2",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Leo",
+ "friend_name_id": "name_07",
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_28",
+  "side_instruction_v2_46",
+  "ack_07",
+  "side_cue_v2_40"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_46": {
+   "style": "implied",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_40": {
+   "style": "statement",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "job_interview.dlg28",
+  "pets.ctx12",
+  "fitness.side6"
+ ],
+ "est_total_sec": 79.38,
+ "est_speech_sec": 61.63,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.34,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.48,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "My friend's company is hiring and she offered to set up a coffee with her boss. Is that an interview or not?",
+   "est_sec": 6.92,
+   "gap_before": 0.46,
+   "block": "job_interview.dlg28",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's informal, but treat it as a gentle interview. First impressions still count.",
+   "est_sec": 4.13,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "job_interview.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I'm finally getting pet insurance for my two year old lab. The choices are confusing.",
+   "est_sec": 5.68,
+   "gap_before": 1.06,
+   "block": "pets.ctx12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "They really are. Would you go for a cheaper accident only policy, or a lifetime one that covers illness every year?",
+   "est_sec": 6.61,
+   "gap_before": 0.5,
+   "role": "reply",
+   "block": "pets.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "The kids are fighting again. Sorry, I'll come back to you when it's sorted.",
+   "est_sec": 4.44,
+   "gap_before": 1.0,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_46"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey Leo, are we still on for the Saturday bootcamp in the park, the one with the hill sprints?",
+   "est_sec": 5.99,
+   "gap_before": 0.86,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "fitness.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Ugh, I forgot I said yes to that.",
+   "est_sec": 2.58,
+   "gap_before": 1.04,
+   "block": "fitness.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "You were so excited on Monday.",
+   "est_sec": 1.96,
+   "gap_before": 0.7,
+   "block": "fitness.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Monday me is very brave. Saturday me wants pancakes.",
+   "est_sec": 2.89,
+   "gap_before": 1.31,
+   "block": "fitness.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "We can get pancakes after. Will you come if I drive?",
+   "est_sec": 3.51,
+   "gap_before": 0.74,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "fitness.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine, but if I collapse on the hill, you carry me down.",
+   "est_sec": 3.82,
+   "gap_before": 1.07,
+   "block": "fitness.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll bring water and sympathy. Mostly water.",
+   "est_sec": 2.27,
+   "gap_before": 0.84,
+   "block": "fitness.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Great. Pick me up at nine.",
+   "est_sec": 1.96,
+   "gap_before": 2.68,
+   "block": "fitness.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "They've gone, so we're good. Carry on.",
+   "est_sec": 2.27,
+   "gap_before": 1.61,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_40"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. The lab's insurance. Accident only, or lifetime?",
+   "est_sec": 2.89,
+   "gap_before": 0.69,
+   "role": "resume",
+   "block": "pets.ctx12"
+  }
+ ]
+}

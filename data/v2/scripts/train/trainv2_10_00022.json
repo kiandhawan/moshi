@@ -1,0 +1,144 @@
+{
+ "id": "trainv2_10_00022",
+ "split": "train",
+ "seed": 10,
+ "order_index": 22,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "travel_planning"
+ ],
+ "wait_sec": 26,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 26
+ },
+ "instruction_position": 0.702,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_11",
+  "think_instruction_v2_01"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_01": {
+   "style": "request",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "board_games.dlg7",
+  "travel_planning.ctx6"
+ ],
+ "est_total_sec": 79.7,
+ "est_speech_sec": 41.3,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm useless at chess. Should I be memorising openings?",
+   "est_sec": 2.89,
+   "gap_before": 0.42,
+   "block": "board_games.dlg7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not yet. At the start, a few simple ideas matter much more than memorised moves.",
+   "est_sec": 4.75,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "board_games.dlg7"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. My work trip to Chicago ends on a Friday. My company says I can stay the weekend if I pay for the hotel.",
+   "est_sec": 8.16,
+   "gap_before": 1.27,
+   "block": "travel_planning.ctx6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a good deal, the flight's already covered. Do you want to explore the city, or would you rather get home to your family?",
+   "est_sec": 7.54,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "travel_planning.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "Could you give me twenty-six seconds to think that through, and then ask me again?",
+   "est_sec": 4.75,
+   "gap_before": 3.24,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 26,
+   "phrasing": "think_instruction_v2_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, a weekend in Chicago, or straight home on Friday?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "travel_planning.ctx6",
+   "anchor": {
+    "turn": 6,
+    "offset": 26.32
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Home. My kids would never forgive me.",
+   "est_sec": 2.27,
+   "gap_before": 1.2,
+   "event": "ordinary_request",
+   "block": "travel_planning.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally fair. Maybe pick up something from the city for them at the airport.",
+   "est_sec": 4.44,
+   "gap_before": 1.09,
+   "role": "followup",
+   "block": "travel_planning.ctx6"
+  }
+ ]
+}

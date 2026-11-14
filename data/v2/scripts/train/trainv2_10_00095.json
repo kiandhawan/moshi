@@ -1,0 +1,193 @@
+{
+ "id": "trainv2_10_00095",
+ "split": "train",
+ "seed": 10,
+ "order_index": 95,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end",
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "weather_plans"
+ ],
+ "wait_sec": 29,
+ "early_end": {
+  "after_sec": 21.43,
+  "direct": true
+ },
+ "instruction_position": 0.242,
+ "topic": "weather_plans",
+ "voices": {
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_02",
+  "greet_ans_04",
+  "think_instr_05",
+  "self_16",
+  "early_end_07"
+ ],
+ "phrasing_styles": {
+  "think_instr_05": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "early_end_07": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "weather_plans.ctx12",
+  "studying.dlg30"
+ ],
+ "est_total_sec": 84.86,
+ "est_speech_sec": 53.17,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.79,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.39,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "We're on holiday at the coast and it's meant to rain every day this week.",
+   "est_sec": 4.75,
+   "gap_before": 0.32,
+   "block": "weather_plans.ctx12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's rotten luck. Would you ride it out here with indoor plans, or drive inland where it looks drier?",
+   "est_sec": 5.99,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "weather_plans.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you give me twenty-nine seconds? Then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 1.1,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 29,
+   "phrasing": "think_instr_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 5.84
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, never mind, I figured it out.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 21.43
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, stick it out at the coast, or head inland?",
+   "est_sec": 3.2,
+   "gap_before": 0.96,
+   "role": "resume",
+   "block": "weather_plans.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Inland. A couple of day trips at least.",
+   "est_sec": 2.58,
+   "gap_before": 0.55,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice idea. Check the forecast each morning and pick a town with a castle or a park, so it's worth the drive.",
+   "est_sec": 6.92,
+   "gap_before": 0.7,
+   "role": "followup",
+   "block": "weather_plans.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? I share a bedroom with my little brother and it's impossible to study.",
+   "est_sec": 5.99,
+   "gap_before": 0.99,
+   "block": "studying.dlg30",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's tough. Is there anywhere else in the house you could use, even for an hour?",
+   "est_sec": 5.06,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "studying.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "The kitchen, but my mum cooks there.",
+   "est_sec": 2.27,
+   "gap_before": 1.31,
+   "block": "studying.dlg30",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Maybe after dinner, once it's cleared? Or ask if you can have the bedroom for a set time while your brother plays somewhere else.",
+   "est_sec": 7.54,
+   "gap_before": 0.46,
+   "role": "reply",
+   "block": "studying.dlg30"
+  }
+ ]
+}

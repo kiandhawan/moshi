@@ -1,0 +1,209 @@
+{
+ "id": "trainv2_10_00250",
+ "split": "train",
+ "seed": 10,
+ "order_index": 250,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "cars",
+  "fitness"
+ ],
+ "instruction_position": 0.486,
+ "topic": "cars",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": "4210f97652d14bec82edc1c2ee8296d2",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Ben",
+ "friend_name_id": "name_11",
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_07",
+  "side_instruction_v2_46",
+  "ack_02",
+  "dq_07",
+  "side_cue_v2_43"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_46": {
+   "style": "implied",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_43": {
+   "style": "request",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "cars.ctx11",
+  "fitness.side2",
+  "dq_07",
+  "weekend_plans.dlg31"
+ ],
+ "est_total_sec": 82.71,
+ "est_speech_sec": 57.91,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.71,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.62,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "My coworker lives on my street and we've started driving in together.",
+   "est_sec": 3.82,
+   "gap_before": 0.48,
+   "block": "cars.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice, that saves money. How do you want to split it? Take turns driving each week, or one of you drives and the other pays for fuel?",
+   "est_sec": 8.47,
+   "gap_before": 0.99,
+   "role": "reply",
+   "block": "cars.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "The kids are fighting again. Sorry, I'll come back to you when it's sorted.",
+   "est_sec": 4.44,
+   "gap_before": 3.47,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_46"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.57,
+   "role": "ack",
+   "phrasing": "ack_02"
+  },
+  {
+   "speaker": "user",
+   "text": "What do you want for dinner?",
+   "est_sec": 1.96,
+   "gap_before": 1.43,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_07"
+  },
+  {
+   "speaker": "friend",
+   "text": "I don't mind, maybe pasta?",
+   "est_sec": 1.65,
+   "gap_before": 0.42,
+   "phrasing": "dq_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Have you seen my running shoes? The blue ones.",
+   "est_sec": 2.89,
+   "gap_before": 1.04,
+   "block": "fitness.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "They're by the back door. They were muddy so I left them out there.",
+   "est_sec": 4.44,
+   "gap_before": 0.75,
+   "block": "fitness.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Thanks. Do you want to come for a quick run around the park?",
+   "est_sec": 4.13,
+   "gap_before": 1.19,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "fitness.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "How quick is quick?",
+   "est_sec": 1.34,
+   "gap_before": 3.43,
+   "block": "fitness.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Like thirty minutes, nice and easy.",
+   "est_sec": 1.96,
+   "gap_before": 2.16,
+   "block": "fitness.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay, but I'm walking the hill. Not negotiable.",
+   "est_sec": 2.58,
+   "gap_before": 1.2,
+   "block": "fitness.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "All set over here. Can you keep going?",
+   "est_sec": 2.58,
+   "gap_before": 1.22,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_43"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. So, any plan yet for splitting the drive to work?",
+   "est_sec": 3.51,
+   "gap_before": 0.95,
+   "role": "resume",
+   "block": "cars.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but I work in a hospital, so my weekend is Tuesday and Wednesday. Nobody's free.",
+   "est_sec": 5.06,
+   "gap_before": 1.84,
+   "block": "weekend_plans.dlg31",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That can feel lonely, but weekdays have perks. Everything's quieter, from museums to cinemas.",
+   "est_sec": 4.44,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "weekend_plans.dlg31"
+  }
+ ]
+}

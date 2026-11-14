@@ -1,0 +1,227 @@
+{
+ "id": "trainv2_10_00103",
+ "split": "train",
+ "seed": 10,
+ "order_index": 103,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "coffee",
+  "video_games"
+ ],
+ "instruction_position": 0.458,
+ "topic": "coffee",
+ "voices": {
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "friend": "a92fb82d739d428a80d4645c5cf91e38",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Ethan",
+ "friend_name_id": "name_23",
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_25",
+  "side_instr_05",
+  "ack_09",
+  "dq_57",
+  "side_cue_v2_41"
+ ],
+ "phrasing_styles": {
+  "side_instr_05": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_v2_41": {
+   "style": "statement",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "coffee.ctx1",
+  "video_games.side6",
+  "dq_57",
+  "coffee.dlg32"
+ ],
+ "est_total_sec": 81.98,
+ "est_speech_sec": 60.9,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.57,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to stop buying coffee every morning and make it at home instead.",
+   "est_sec": 4.44,
+   "gap_before": 0.34,
+   "block": "coffee.ctx1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good plan, you'll save a lot. Do you want something simple like a French press, or are you ready to invest in an espresso machine?",
+   "est_sec": 7.85,
+   "gap_before": 0.59,
+   "role": "reply",
+   "block": "coffee.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I'm going to chat with my friend for a bit. Just wait until I say I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 1.89,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Take your time.",
+   "est_sec": 1.03,
+   "gap_before": 0.66,
+   "role": "ack",
+   "phrasing": "ack_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Did the plumber say when he's coming?",
+   "est_sec": 2.27,
+   "gap_before": 1.08,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_57"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sometime between ten and twelve.",
+   "est_sec": 1.65,
+   "gap_before": 1.4,
+   "phrasing": "dq_57"
+  },
+  {
+   "speaker": "user",
+   "text": "Why are you holding my controller like that?",
+   "est_sec": 2.58,
+   "gap_before": 0.95,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "I need a favour. There's this level with the moving platforms, I've died about fifty times.",
+   "est_sec": 5.06,
+   "gap_before": 0.66,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "You want me to beat it for you?",
+   "est_sec": 2.58,
+   "gap_before": 1.35,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just this one. I'll do the rest myself, promise.",
+   "est_sec": 2.89,
+   "gap_before": 1.12,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Is that cheating?",
+   "est_sec": 1.03,
+   "gap_before": 0.9,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's teamwork.",
+   "est_sec": 0.72,
+   "gap_before": 0.72,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine. But you're making tea.",
+   "est_sec": 1.65,
+   "gap_before": 1.1,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Done. Milk, no sugar?",
+   "est_sec": 1.34,
+   "gap_before": 0.69,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, back to you, Moshi, I'm listening now.",
+   "est_sec": 2.58,
+   "gap_before": 1.81,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_41"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Decided between the French press and the espresso machine?",
+   "est_sec": 3.2,
+   "gap_before": 0.86,
+   "role": "resume",
+   "block": "coffee.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. My coworker puts butter in his coffee and says it's the secret to productivity. Is that a thing?",
+   "est_sec": 6.3,
+   "gap_before": 1.2,
+   "block": "coffee.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's a trend, often called butter coffee. People blend coffee with butter and sometimes coconut oil.",
+   "est_sec": 5.06,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "coffee.dlg32"
+  }
+ ]
+}

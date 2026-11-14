@@ -1,0 +1,130 @@
+{
+ "id": "trainv2_10_00644",
+ "split": "train",
+ "seed": 10,
+ "order_index": 644,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "sleep"
+ ],
+ "wait_sec": 41,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 41
+ },
+ "instruction_position": 0.471,
+ "topic": "sleep",
+ "voices": {
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_16",
+  "think_instr_02"
+ ],
+ "phrasing_styles": {
+  "think_instr_02": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "sleep.ctx9",
+  "books.dlg26"
+ ],
+ "est_total_sec": 79.59,
+ "est_speech_sec": 30.56,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.86,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm always roasting at night. I wake up kicking the duvet off.",
+   "est_sec": 3.82,
+   "gap_before": 0.26,
+   "block": "sleep.ctx9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A lot of people sleep hot. Would you try a cooling mattress topper, or swap to a lighter duvet and breathable sheets?",
+   "est_sec": 6.92,
+   "gap_before": 0.37,
+   "role": "reply",
+   "block": "sleep.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about it for forty-one seconds and then ask me again.",
+   "est_sec": 4.13,
+   "gap_before": 0.69,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 41,
+   "phrasing": "think_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, the overheating. Which fix?",
+   "est_sec": 1.65,
+   "role": "resume",
+   "block": "sleep.ctx9",
+   "anchor": {
+    "turn": 4,
+    "offset": 41.35
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. I want to start a book club at work but I don't want it to be awkward.",
+   "est_sec": 5.99,
+   "gap_before": 1.72,
+   "block": "books.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Keep it low pressure. Lunchtime meetings, short books, and no shame for not finishing.",
+   "est_sec": 4.44,
+   "gap_before": 1.6,
+   "role": "reply",
+   "block": "books.dlg26"
+  }
+ ]
+}

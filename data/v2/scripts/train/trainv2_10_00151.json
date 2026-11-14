@@ -1,0 +1,171 @@
+{
+ "id": "trainv2_10_00151",
+ "split": "train",
+ "seed": 10,
+ "order_index": 151,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "sleep"
+ ],
+ "instruction_position": 0.574,
+ "topic": "sleep",
+ "voices": {
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_23",
+  "greet_ans_22",
+  "describe_instruction_v2_11",
+  "ack_05",
+  "describe_cue_07"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_11": {
+   "style": "statement",
+   "tone": "distracted",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_07": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "personal_finance.dlg20",
+  "sleep.opt6"
+ ],
+ "est_total_sec": 83.7,
+ "est_speech_sec": 55.55,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How are you feeling?",
+   "est_sec": 1.65,
+   "gap_before": 0.56,
+   "role": "greeting",
+   "phrasing": "greet_23"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.96,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Do I really need a will? I'm only thirty.",
+   "est_sec": 2.89,
+   "gap_before": 0.56,
+   "block": "personal_finance.dlg20",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you have anything you care about, or anyone who depends on you, it's a good idea at any age.",
+   "est_sec": 6.3,
+   "gap_before": 0.61,
+   "role": "reply",
+   "block": "personal_finance.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. My bedroom is way too bright in summer and I'm figuring out how to make it darker.",
+   "est_sec": 5.99,
+   "gap_before": 0.6,
+   "block": "sleep.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "There are several, um, possibilities, and I'd rather go through the whole lot first.",
+   "est_sec": 4.44,
+   "gap_before": 0.48,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Thick blackout curtains that cover the whole window and a bit past the edges.",
+   "est_sec": 4.44,
+   "gap_before": 0.86,
+   "block": "sleep.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A comfy silk eye mask, which is cheap but I always pull it off in my sleep.",
+   "est_sec": 5.37,
+   "gap_before": 6.21,
+   "block": "sleep.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Fitted blackout blinds inside the window frame, a bit pricey and need installing.",
+   "est_sec": 4.13,
+   "gap_before": 6.43,
+   "block": "sleep.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or temporary blackout film stuck on the glass, which looks a bit strange from the street.",
+   "est_sec": 5.06,
+   "gap_before": 7.51,
+   "block": "sleep.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "That's it. Now you can comment.",
+   "est_sec": 1.96,
+   "gap_before": 0.76,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fitted blinds give the darkest room, especially with curtains layered on top. Blackout curtains alone are a solid choice, the eye mask is fine for travel, and the film is a quick fix if you rent.",
+   "est_sec": 11.26,
+   "gap_before": 0.78,
+   "role": "resume",
+   "block": "sleep.opt6"
+  }
+ ]
+}

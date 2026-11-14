@@ -1,0 +1,159 @@
+{
+ "id": "trainv2_10_00550",
+ "split": "train",
+ "seed": 10,
+ "order_index": 550,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "gardening"
+ ],
+ "instruction_position": 0.608,
+ "topic": "gardening",
+ "voices": {
+  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_04",
+  "greet_ans_25",
+  "describe_instr_14",
+  "describe_cue_v2_19"
+ ],
+ "phrasing_styles": {
+  "describe_instr_14": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  },
+  "describe_cue_v2_19": {
+   "style": "request",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "sleep.dlg5",
+  "gardening.opt3"
+ ],
+ "est_total_sec": 74.7,
+ "est_speech_sec": 60.41,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_04"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.55,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it okay to take melatonin every night? My coworker swears by it.",
+   "est_sec": 4.13,
+   "gap_before": 0.22,
+   "block": "sleep.dlg5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's best to check with a doctor or pharmacist, especially for nightly use. It can help for things like jet lag, but it's not a fix for every sleep problem.",
+   "est_sec": 9.4,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "sleep.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, I've got room for exactly one fruit tree and I keep changing my mind.",
+   "est_sec": 5.37,
+   "gap_before": 1.34,
+   "block": "gardening.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me lay out all the options first. Don't interrupt.",
+   "est_sec": 3.2,
+   "gap_before": 0.59,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_14"
+  },
+  {
+   "speaker": "user",
+   "text": "There's an apple on a dwarf rootstock, so it stays small and fruits in a couple of years.",
+   "est_sec": 5.68,
+   "gap_before": 1.05,
+   "block": "gardening.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a fig trained against the south wall, which would love the warmth there.",
+   "est_sec": 4.44,
+   "gap_before": 2.26,
+   "block": "gardening.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A plum is another one, but I've heard they crop like mad one year and then hardly at all.",
+   "est_sec": 5.99,
+   "gap_before": 2.23,
+   "block": "gardening.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And maybe a cherry, though the birds would probably get most of them.",
+   "est_sec": 4.13,
+   "gap_before": 1.9,
+   "block": "gardening.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, I think I'm done. Yeah. What do you think?",
+   "est_sec": 3.2,
+   "gap_before": 1.07,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Which fruit do you actually eat most? If it's apples, go dwarf apple and you'll never regret it. If you want something a bit special, the fig against the south wall is a treat that most neighbours won't have.",
+   "est_sec": 12.19,
+   "gap_before": 0.47,
+   "role": "resume",
+   "block": "gardening.opt3"
+  }
+ ]
+}

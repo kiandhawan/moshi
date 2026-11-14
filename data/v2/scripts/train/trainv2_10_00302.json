@@ -1,0 +1,184 @@
+{
+ "id": "trainv2_10_00302",
+ "split": "train",
+ "seed": 10,
+ "order_index": 302,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "gardening"
+ ],
+ "wait_sec": 19,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 19
+ },
+ "instruction_position": 0.331,
+ "topic": "gardening",
+ "voices": {
+  "user": "e3cd384158934cc9a01029cd7d278634",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_04",
+  "greet_ans_17",
+  "think_instr_17",
+  "ack_10",
+  "self_25"
+ ],
+ "phrasing_styles": {
+  "think_instr_17": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "gardening.ctx6",
+  "birthday_party.dlg19"
+ ],
+ "est_total_sec": 79.01,
+ "est_speech_sec": 51.62,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
+   "role": "greeting",
+   "phrasing": "greet_04"
+  },
+  {
+   "speaker": "user",
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.68,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "I sit in a windowless office all day and I want one plant on my desk that won't die.",
+   "est_sec": 5.99,
+   "gap_before": 0.27,
+   "block": "gardening.ctx6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good news, a couple of plants actually cope with office lights. Would you like something that trails over the edge, or something tall and upright?",
+   "est_sec": 7.85,
+   "gap_before": 0.99,
+   "role": "reply",
+   "block": "gardening.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "I haven't decided. Give me nineteen seconds, then ask me again.",
+   "est_sec": 3.51,
+   "gap_before": 0.86,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 19,
+   "phrasing": "think_instr_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.64,
+   "role": "ack",
+   "phrasing": "ack_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so, the thing is",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 15.74
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, for your desk, trailing or upright?",
+   "est_sec": 2.27,
+   "role": "resume",
+   "block": "gardening.ctx6",
+   "anchor": {
+    "turn": 4,
+    "offset": 19.25
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Upright, I don't have much space.",
+   "est_sec": 1.96,
+   "gap_before": 0.66,
+   "event": "ordinary_request",
+   "block": "gardening.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Go for a snake plant. It barely needs water, maybe once every three weeks under office lights.",
+   "est_sec": 5.37,
+   "gap_before": 0.74,
+   "role": "followup",
+   "block": "gardening.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. Should I warn my neighbours about a party? It's a Saturday, not huge.",
+   "est_sec": 5.37,
+   "gap_before": 0.94,
+   "block": "birthday_party.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A quick heads up is always a good idea. It turns a possible complaint into goodwill.",
+   "est_sec": 5.06,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "birthday_party.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "What do I even say?",
+   "est_sec": 1.65,
+   "gap_before": 1.38,
+   "block": "birthday_party.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Just a short note with the date, a rough end time, and your number in case it gets too loud.",
+   "est_sec": 6.3,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "birthday_party.dlg19"
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "id": "trainv2_10_00470",
+ "split": "train",
+ "seed": 10,
+ "order_index": 470,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "travel_planning"
+ ],
+ "wait_sec": 5,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 5
+ },
+ "instruction_position": 0.326,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_10",
+  "think_instr_16"
+ ],
+ "phrasing_styles": {
+  "think_instr_16": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "travel_planning.ctx8",
+  "gardening.dlg29"
+ ],
+ "est_total_sec": 80.36,
+ "est_speech_sec": 59.68,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.53,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "For Barcelona, there's a tiny hotel in the old town or a bigger place outside the center with a pool. Same price.",
+   "est_sec": 6.92,
+   "gap_before": 0.54,
+   "block": "travel_planning.ctx8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The old town puts you right in the action, but it can be noisy at night. The pool is great in summer, but you'd take the metro in. What matters more to you?",
+   "est_sec": 10.33,
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "travel_planning.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I have five seconds to think? Ask me again after.",
+   "est_sec": 3.51,
+   "gap_before": 3.36,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 5,
+   "phrasing": "think_instr_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Location or pool, which wins?",
+   "est_sec": 1.65,
+   "role": "resume",
+   "block": "travel_planning.ctx8",
+   "anchor": {
+    "turn": 4,
+    "offset": 5.25
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Pool. It's August, I'll melt.",
+   "est_sec": 1.65,
+   "gap_before": 1.47,
+   "event": "ordinary_request",
+   "block": "travel_planning.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good point. Just check how close it is to a metro stop, ideally under ten minutes' walk.",
+   "est_sec": 5.37,
+   "gap_before": 1.01,
+   "role": "followup",
+   "block": "travel_planning.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I rent a basement flat. One small north facing window. Can I grow herbs at all?",
+   "est_sec": 5.99,
+   "gap_before": 1.11,
+   "block": "gardening.dlg29",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Some, yes. Mint, parsley and chives handle lower light better than sunny herbs like basil or rosemary.",
+   "est_sec": 5.37,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "gardening.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "Basil was the one I wanted, of course.",
+   "est_sec": 2.58,
+   "gap_before": 0.69,
+   "block": "gardening.dlg29",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. You could grow basil under a small clip on grow light. They're cheap now, and it makes a huge difference.",
+   "est_sec": 6.92,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "gardening.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "Does it need to be on all day?",
+   "est_sec": 2.58,
+   "gap_before": 0.72,
+   "block": "gardening.dlg29",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "About twelve to fourteen hours. A plug timer makes it effortless.",
+   "est_sec": 3.51,
+   "gap_before": 1.19,
+   "role": "reply",
+   "block": "gardening.dlg29"
+  }
+ ]
+}

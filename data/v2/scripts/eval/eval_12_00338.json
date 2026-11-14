@@ -1,0 +1,175 @@
+{
+ "id": "eval_12_00338",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 338,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": "933563129e564b19a115bedd57b7406a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_06",
+  "door_instr_03",
+  "ack_13",
+  "door_01",
+  "implicit_03"
+ ],
+ "block_ids": [
+  "learning_language.ctx3",
+  "door_01"
+ ],
+ "est_total_sec": 56.19,
+ "est_speech_sec": 37.46,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.4,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "My French exam is in two months.",
+   "est_sec": 2.27,
+   "gap_before": 0.44,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, let's plan. How much time can you realistically give it each day, and which part worries you most, grammar, listening or speaking?",
+   "est_sec": 7.23,
+   "gap_before": 1.14,
+   "role": "reply",
+   "block": "learning_language.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I think someone's here. Wait until I'm back.",
+   "est_sec": 3.2,
+   "gap_before": 1.0,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.32,
+   "role": "ack",
+   "phrasing": "ack_13",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hi!",
+   "est_sec": 0.41,
+   "gap_before": 2.11,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Delivery for you, can you sign here?",
+   "est_sec": 2.27,
+   "gap_before": 3.19,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Sure. Do you have a pen?",
+   "est_sec": 1.96,
+   "gap_before": 1.05,
+   "phrasing": "door_01",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Here you go.",
+   "est_sec": 1.03,
+   "gap_before": 0.45,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Thanks, have a good one.",
+   "est_sec": 1.65,
+   "gap_before": 0.95,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm all yours.",
+   "est_sec": 1.34,
+   "gap_before": 2.27,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. We were planning your French exam prep. How much time a day, and what's hardest?",
+   "est_sec": 5.06,
+   "gap_before": 0.7,
+   "role": "resume",
+   "block": "learning_language.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe twenty minutes, and grammar scares me.",
+   "est_sec": 2.27,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's enough if you're steady. Do one grammar topic a week with short daily exercises.",
+   "est_sec": 4.75,
+   "gap_before": 1.99,
+   "role": "followup",
+   "block": "learning_language.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

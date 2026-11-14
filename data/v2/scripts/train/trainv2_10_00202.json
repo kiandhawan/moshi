@@ -1,0 +1,220 @@
+{
+ "id": "trainv2_10_00202",
+ "split": "train",
+ "seed": 10,
+ "order_index": 202,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "friend_first",
+  "near_miss"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "travel_planning",
+  "personal_finance"
+ ],
+ "instruction_position": 0.428,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": "fbc1029c018041d4b17f2c1e57222dff",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Ryan",
+ "friend_name_id": "name_01",
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_11",
+  "friend_interrupt_v2_26",
+  "side_instruction_v2_58",
+  "dn_62",
+  "side_cue_v2_08"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_26": {
+   "style": "implied",
+   "tone": "neutral",
+   "source": "v2"
+  },
+  "side_instruction_v2_58": {
+   "style": "friend_first",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_08": {
+   "style": "statement",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "travel_planning.ctx10",
+  "personal_finance.side3",
+  "dn_62",
+  "movies.dlg8"
+ ],
+ "est_total_sec": 76.92,
+ "est_speech_sec": 58.53,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.41,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.58,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "The flexible ticket is eighty dollars more than the cheap one. The trip is in four months.",
+   "est_sec": 5.37,
+   "gap_before": 0.35,
+   "block": "travel_planning.ctx10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Four months is a long time for plans to change. How likely is it that your dates could move?",
+   "est_sec": 5.99,
+   "gap_before": 0.36,
+   "role": "reply",
+   "block": "travel_planning.ctx10"
+  },
+  {
+   "speaker": "friend",
+   "text": "Ugh, the printer's jammed again.",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, okay. Moshi, quiet for a minute.",
+   "est_sec": 2.27,
+   "gap_before": 0.34,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_58"
+  },
+  {
+   "speaker": "user",
+   "text": "Look at this statement. What is this charge from Tuesday?",
+   "est_sec": 3.2,
+   "gap_before": 1.44,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "personal_finance.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Let me see. Oh, that's the parking garage downtown.",
+   "est_sec": 2.89,
+   "gap_before": 2.51,
+   "block": "personal_finance.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Twenty dollars for parking? Seriously?",
+   "est_sec": 1.65,
+   "gap_before": 1.1,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "personal_finance.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "That place is a rip off. Next time take the bus with me.",
+   "est_sec": 4.13,
+   "gap_before": 0.99,
+   "block": "personal_finance.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah, I think I will. Do you get a monthly pass?",
+   "est_sec": 3.51,
+   "gap_before": 0.8,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "personal_finance.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "I do, it pays for itself in about two weeks.",
+   "est_sec": 3.2,
+   "gap_before": 0.39,
+   "block": "personal_finance.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let's go ahead with the blue paint, I'm sold.",
+   "est_sec": 2.89,
+   "gap_before": 0.92,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_62"
+  },
+  {
+   "speaker": "friend",
+   "text": "Finally, a decision!",
+   "est_sec": 1.03,
+   "gap_before": 1.37,
+   "phrasing": "dn_62"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, okay, yeah, I'm back. Sorry. Go ahead.",
+   "est_sec": 2.58,
+   "gap_before": 1.04,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. So, are your dates solid enough for the cheap fare?",
+   "est_sec": 3.51,
+   "gap_before": 1.09,
+   "role": "resume",
+   "block": "travel_planning.ctx10"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. Why does my TV show black bars at the top and bottom on some films?",
+   "est_sec": 5.37,
+   "gap_before": 1.56,
+   "block": "movies.dlg8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Those films are shot wider than your TV's shape. The bars keep the full picture without cutting off the sides.",
+   "est_sec": 6.3,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "movies.dlg8"
+  }
+ ]
+}

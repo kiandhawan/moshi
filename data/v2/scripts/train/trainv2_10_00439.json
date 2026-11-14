@@ -1,0 +1,160 @@
+{
+ "id": "trainv2_10_00439",
+ "split": "train",
+ "seed": 10,
+ "order_index": 439,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "home_repair"
+ ],
+ "wait_sec": 21,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 21
+ },
+ "instruction_position": 0.255,
+ "topic": "home_repair",
+ "voices": {
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_20",
+  "think_instruction_v2_13"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_13": {
+   "style": "statement",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "home_repair.ctx7",
+  "board_games.dlg25"
+ ],
+ "est_total_sec": 84.19,
+ "est_speech_sec": 52.04,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.56,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a draft coming under the back door and my feet are freezing.",
+   "est_sec": 4.13,
+   "gap_before": 0.54,
+   "block": "home_repair.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Brr. You could stick on a foam strip, screw on a brush sweep, or use a fabric draft stopper. Which sounds doable today?",
+   "est_sec": 7.23,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "home_repair.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "I'd like twenty-one seconds of quiet to work it out, then you can ask me again.",
+   "est_sec": 5.06,
+   "gap_before": 1.21,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 21,
+   "phrasing": "think_instruction_v2_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, so which one for the back door? Foam, brush or fabric?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "home_repair.ctx7",
+   "anchor": {
+    "turn": 4,
+    "offset": 21.0
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The brush sweep. I want it to last.",
+   "est_sec": 2.58,
+   "gap_before": 1.37,
+   "event": "ordinary_request",
+   "block": "home_repair.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good choice. Measure the door width and trim the sweep with a hacksaw if needed.",
+   "est_sec": 4.75,
+   "gap_before": 1.04,
+   "role": "followup",
+   "block": "home_repair.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? Those escape room games in a box, can you play them more than once?",
+   "est_sec": 6.3,
+   "gap_before": 0.95,
+   "block": "board_games.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Most of them only once, sadly. You often cut, fold or write on the components, and once you know the puzzles, the surprise is gone.",
+   "est_sec": 7.85,
+   "gap_before": 1.7,
+   "role": "reply",
+   "block": "board_games.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "That seems wasteful.",
+   "est_sec": 1.03,
+   "gap_before": 0.68,
+   "block": "board_games.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Some are designed so you don't destroy anything, so you can pass them on to friends afterward. The box usually says so.",
+   "est_sec": 6.92,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "board_games.dlg25"
+  }
+ ]
+}

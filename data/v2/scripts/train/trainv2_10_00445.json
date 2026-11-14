@@ -1,0 +1,180 @@
+{
+ "id": "trainv2_10_00445",
+ "split": "train",
+ "seed": 10,
+ "order_index": 445,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "moshi_mention"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "pets"
+ ],
+ "instruction_position": 0.547,
+ "topic": "pets",
+ "voices": {
+  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "friend": null,
+  "other": "e7de86b388864b8cbd50d0d70a3494e5",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_28",
+  "greet_ans_08",
+  "describe_instruction_v2_25",
+  "ack_12",
+  "describe_cue_v2_13"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_25": {
+   "style": "breakoff",
+   "tone": "distracted",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_13": {
+   "style": "fragment",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "mm_024",
+  "pets.dlg28",
+  "pets.opt1"
+ ],
+ "est_total_sec": 83.27,
+ "est_speech_sec": 65.57,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.56,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "My neighbour is feeding my cats for a week. What should I write down for her?",
+   "est_sec": 5.06,
+   "gap_before": 0.29,
+   "block": "pets.dlg28",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Keep it simple. How much food, what time, and where the food and bowls are.",
+   "est_sec": 4.75,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "When I asked Moshi about stretching, it said ten minutes is plenty.",
+   "est_sec": 3.82,
+   "gap_before": 0.57,
+   "block": "mm_024",
+   "event": "distractor",
+   "kind": "moshi_mention",
+   "phrasing": "mm_024",
+   "name_pos": "none"
+  },
+  {
+   "speaker": "user",
+   "text": "We're finally getting a dog and we're choosing between a few at the shelter.",
+   "est_sec": 4.44,
+   "gap_before": 2.81,
+   "block": "pets.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "So I think I'd go with— actually no, let me list all the options first, then you tell me.",
+   "est_sec": 5.99,
+   "gap_before": 0.8,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.57,
+   "role": "ack",
+   "phrasing": "ack_12"
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is a young lab mix, super energetic, who needs a lot of walks and space.",
+   "est_sec": 5.68,
+   "gap_before": 1.22,
+   "block": "pets.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's an older beagle, calm and sweet, but he howls when he's left alone.",
+   "est_sec": 4.75,
+   "gap_before": 2.62,
+   "block": "pets.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Option three is a small terrier mix that's great with kids but not with cats.",
+   "est_sec": 4.75,
+   "gap_before": 1.16,
+   "block": "pets.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is a big shy greyhound who mostly wants to nap on the couch.",
+   "est_sec": 5.37,
+   "gap_before": 1.93,
+   "block": "pets.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "And that's the final one, I'm done. Your verdict?",
+   "est_sec": 2.89,
+   "gap_before": 1.18,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It really depends on your home. The lab mix is great if you're active and have space, but needs a lot of time. The greyhound sounds surprisingly easy, since they're often happy to nap all day. The beagle's howling could be a problem if you're out at work.",
+   "est_sec": 14.98,
+   "gap_before": 0.93,
+   "role": "resume",
+   "block": "pets.opt1"
+  }
+ ]
+}

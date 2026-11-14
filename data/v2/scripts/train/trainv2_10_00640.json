@@ -1,0 +1,168 @@
+{
+ "id": "trainv2_10_00640",
+ "split": "train",
+ "seed": 10,
+ "order_index": 640,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "home_repair"
+ ],
+ "instruction_position": 0.635,
+ "topic": "home_repair",
+ "voices": {
+  "user": "e3cd384158934cc9a01029cd7d278634",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_01",
+  "describe_instruction_v2_01",
+  "ack_14",
+  "describe_cue_v2_07"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_01": {
+   "style": "request",
+   "tone": "polite",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_07": {
+   "style": "statement",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "weather_plans.dlg27",
+  "home_repair.opt5"
+ ],
+ "est_total_sec": 77.24,
+ "est_speech_sec": 62.37,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.41,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.31,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to catch a beautiful sunset on my evening walk. When's the best time to go?",
+   "est_sec": 5.37,
+   "gap_before": 0.58,
+   "block": "weather_plans.dlg27",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Head out about half an hour before sunset. The light gets warm and golden, and the best colours often come just after the sun dips.",
+   "est_sec": 7.85,
+   "gap_before": 0.37,
+   "role": "reply",
+   "block": "weather_plans.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? There's a big damp patch on our basement wall and I need to choose a plan.",
+   "est_sec": 6.92,
+   "gap_before": 0.93,
+   "block": "home_repair.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Could you hear me out on every option before you weigh in?",
+   "est_sec": 3.82,
+   "gap_before": 0.86,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.47,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "We could paint it with special damp proof paint, which is quick but might just hide the problem.",
+   "est_sec": 5.68,
+   "gap_before": 0.8,
+   "block": "home_repair.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another plan is to clean out the gutters and check if rainwater is pooling by that wall outside.",
+   "est_sec": 5.68,
+   "gap_before": 2.07,
+   "block": "home_repair.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "We could also buy a dehumidifier and run it down there all the time.",
+   "est_sec": 4.44,
+   "gap_before": 1.89,
+   "block": "home_repair.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or call a damp specialist to find where the water is really coming from.",
+   "est_sec": 4.44,
+   "gap_before": 2.76,
+   "block": "home_repair.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, yeah, I think that's it. Go ahead.",
+   "est_sec": 2.58,
+   "gap_before": 1.15,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd start with the gutters, it's cheap and fixes a surprising number of damp walls. The paint only hides things if water is still getting in. A dehumidifier helps with the air but doesn't stop the source.",
+   "est_sec": 11.57,
+   "gap_before": 0.77,
+   "role": "resume",
+   "block": "home_repair.opt5"
+  }
+ ]
+}

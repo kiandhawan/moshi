@@ -1,0 +1,156 @@
+{
+ "id": "eval_13_on_00013",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 413,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00104",
+  "seed": 13
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
+ "topics": [
+  "picnic"
+ ],
+ "topic": "picnic",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "1258154bb41540c7b9dc0d10cd6704bf"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_27",
+  "greet_ans_06",
+  "nq_eval_009",
+  "pn_142"
+ ],
+ "block_ids": [
+  "picnic.dlg8",
+  "nq_eval_009"
+ ],
+ "est_total_sec": 51.44,
+ "est_speech_sec": 32.72,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.41,
+   "role": "greeting",
+   "phrasing": "greet_27",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.98,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "My kids want to have a teddy bear picnic in the garden. Ideas?",
+   "est_sec": 4.13,
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "block": "picnic.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How lovely. Lay out a blanket and give each teddy its own little plate and cup.",
+   "est_sec": 5.06,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "picnic.dlg8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Bennett, want to help me move the compost bin before lunch?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_009",
+   "block": "nq_eval_009",
+   "name_pos": "start",
+   "addressee": "Bennett",
+   "est_sec": 3.51,
+   "gap_before": 0.58
+  },
+  {
+   "speaker": "user",
+   "text": "What should we eat?",
+   "est_sec": 1.34,
+   "gap_before": 3.06,
+   "event": "ordinary_request",
+   "block": "picnic.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Honey sandwiches, tiny cakes and fruit in bowls. Everything mini to match the teddies.",
+   "est_sec": 4.44,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "picnic.dlg8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Could we do games too?",
+   "est_sec": 1.65,
+   "gap_before": 1.03,
+   "event": "ordinary_request",
+   "block": "picnic.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. A teddy hunt, where you hide a few stuffed animals around the garden, is always a hit.",
+   "est_sec": 5.68,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "picnic.dlg8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My son will insist",
+   "est_sec": 1.34,
+   "gap_before": 1.03,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "picnic.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "that his dinosaur comes.",
+   "est_sec": 1.34,
+   "gap_before": 2.54,
+   "event": "ordinary_request",
+   "block": "picnic.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then the dinosaur is the guest of honour. Maybe give him a little crown.",
+   "est_sec": 4.44,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "picnic.dlg8",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00104",
+  "name_pos": "start",
+  "answered": false
+ },
+ "groups": [
+  "ordinary",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

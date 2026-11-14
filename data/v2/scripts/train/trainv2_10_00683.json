@@ -1,0 +1,144 @@
+{
+ "id": "trainv2_10_00683",
+ "split": "train",
+ "seed": 10,
+ "order_index": 683,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "studying"
+ ],
+ "wait_sec": 39,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 39
+ },
+ "instruction_position": 0.894,
+ "topic": "studying",
+ "voices": {
+  "user": "e3cd384158934cc9a01029cd7d278634",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_11",
+  "think_instr_10",
+  "self_16"
+ ],
+ "phrasing_styles": {
+  "think_instr_10": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "weekend_plans.dlg8",
+  "studying.ctx9"
+ ],
+ "est_total_sec": 79.85,
+ "est_speech_sec": 34.38,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.65,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.85,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I want a little overnight getaway this weekend, but I've got hardly any money.",
+   "est_sec": 4.44,
+   "gap_before": 0.23,
+   "block": "weekend_plans.dlg8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Very doable. Look at youth hostels, a lot of them have private rooms now and they're much cheaper than hotels.",
+   "est_sec": 6.3,
+   "gap_before": 0.66,
+   "role": "reply",
+   "block": "weekend_plans.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I keep picking up my phone every five minutes when I study. It's pathetic.",
+   "est_sec": 5.37,
+   "gap_before": 0.84,
+   "block": "studying.ctx9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's not pathetic, phones are designed for that. Would you rather put it in another room, or keep it nearby with an app that blocks everything?",
+   "est_sec": 8.16,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "studying.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, give me thirty-nine seconds to think it over, then ask me.",
+   "est_sec": 3.82,
+   "gap_before": 1.19,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 39,
+   "phrasing": "think_instr_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 6,
+    "offset": 30.41
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, phone in another room, or the blocking app?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "studying.ctx9",
+   "anchor": {
+    "turn": 6,
+    "offset": 39.39
+   }
+  }
+ ]
+}

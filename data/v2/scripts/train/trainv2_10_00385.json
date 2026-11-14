@@ -1,0 +1,201 @@
+{
+ "id": "trainv2_10_00385",
+ "split": "train",
+ "seed": 10,
+ "order_index": 385,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_end"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "personal_finance"
+ ],
+ "wait_sec": 10,
+ "early_end": {
+  "after_sec": 7.74,
+  "direct": false
+ },
+ "instruction_position": 0.878,
+ "topic": "personal_finance",
+ "voices": {
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_01",
+  "think_instr_23",
+  "early_end_v2_29"
+ ],
+ "phrasing_styles": {
+  "think_instr_23": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "early_end_v2_29": {
+   "style": "command",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "hiking.dlg25",
+  "personal_finance.ctx11"
+ ],
+ "est_total_sec": 82.63,
+ "est_speech_sec": 61.43,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.7,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "The walk I'm planning ends at a lake. I'd love to swim at the end.",
+   "est_sec": 4.75,
+   "gap_before": 0.53,
+   "block": "hiking.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sounds lovely. Just be careful, mountain lakes are often much colder than they look, even in summer.",
+   "est_sec": 5.37,
+   "gap_before": 1.74,
+   "role": "reply",
+   "block": "hiking.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "How cold are we talking?",
+   "est_sec": 1.65,
+   "gap_before": 0.77,
+   "block": "hiking.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It can be cold enough to make you gasp involuntarily, which is dangerous if your head goes under. Walk in slowly rather than jumping.",
+   "est_sec": 7.54,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "hiking.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "I was totally going to jump.",
+   "est_sec": 1.96,
+   "gap_before": 0.83,
+   "block": "hiking.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lots of people do. Let your body adjust for a minute or two first, and stay close to the shore.",
+   "est_sec": 6.3,
+   "gap_before": 1.39,
+   "role": "reply",
+   "block": "hiking.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "Anything else?",
+   "est_sec": 0.72,
+   "gap_before": 0.43,
+   "block": "hiking.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Swim with someone, keep it short, and have warm clothes and a hot drink ready. You'll cool down more after you get out.",
+   "est_sec": 7.23,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "hiking.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. I'm thinking about selling stuff I don't use to make some extra cash.",
+   "est_sec": 5.06,
+   "gap_before": 1.17,
+   "block": "personal_finance.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Do you want to do one big weekend yard sale, or list things online one by one?",
+   "est_sec": 5.68,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "personal_finance.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me ten seconds, I want to think about it. Then ask again.",
+   "est_sec": 4.13,
+   "gap_before": 0.34,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_23"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, I'm done already. Fire away.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 12,
+    "offset": 7.74
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_v2_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Online. Some of it is worth real money.",
+   "est_sec": 2.58,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good thinking. Take bright photos near a window, they sell much faster.",
+   "est_sec": 3.82,
+   "gap_before": 0.6,
+   "role": "followup",
+   "block": "personal_finance.ctx11"
+  }
+ ]
+}

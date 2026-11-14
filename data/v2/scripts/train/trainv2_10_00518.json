@@ -1,0 +1,160 @@
+{
+ "id": "trainv2_10_00518",
+ "split": "train",
+ "seed": 10,
+ "order_index": 518,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "movies"
+ ],
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 10
+ },
+ "instruction_position": 0.553,
+ "topic": "movies",
+ "voices": {
+  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_19",
+  "think_instruction_v2_40"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_40": {
+   "style": "breakoff",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "coffee.dlg4",
+  "movies.ctx11"
+ ],
+ "est_total_sec": 72.09,
+ "est_speech_sec": 52.66,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.49,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.63,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to make iced coffee at home this summer. Where do I start?",
+   "est_sec": 4.44,
+   "gap_before": 0.34,
+   "block": "coffee.dlg4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The easiest way is to brew your coffee a bit stronger than usual and pour it over lots of ice, so it doesn't get watery.",
+   "est_sec": 7.85,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "coffee.dlg4"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? I need to cut down to one streaming service. Money's tight this month.",
+   "est_sec": 5.99,
+   "gap_before": 0.7,
+   "block": "movies.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally understandable. For films, do you care more about a huge back catalogue of older stuff, or getting the new releases quickly?",
+   "est_sec": 6.92,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "movies.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "It's either Tuesday or— right, ten seconds, Moshi, then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.93,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instruction_v2_40"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, which matters more for the one service you keep?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "movies.ctx11",
+   "anchor": {
+    "turn": 6,
+    "offset": 10.3
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "New releases. My kids would riot otherwise.",
+   "est_sec": 2.27,
+   "gap_before": 0.78,
+   "event": "ordinary_request",
+   "block": "movies.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair enough. Cancel the others now and set a reminder to check again in a few months.",
+   "est_sec": 5.37,
+   "gap_before": 0.84,
+   "role": "followup",
+   "block": "movies.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "What about cold brew? Is that hard?",
+   "est_sec": 2.27,
+   "gap_before": 0.89,
+   "event": "ordinary_request",
+   "block": "coffee.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's really easy, just slow. Mix coarse coffee with cold water, leave it in the fridge overnight, and strain it in the morning.",
+   "est_sec": 7.23,
+   "gap_before": 0.82,
+   "role": "reply",
+   "block": "coffee.dlg4"
+  }
+ ]
+}

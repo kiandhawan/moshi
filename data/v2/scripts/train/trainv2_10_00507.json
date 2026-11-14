@@ -1,0 +1,123 @@
+{
+ "id": "trainv2_10_00507",
+ "split": "train",
+ "seed": 10,
+ "order_index": 507,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "music"
+ ],
+ "wait_sec": 56,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 56
+ },
+ "instruction_position": 0.811,
+ "topic": "music",
+ "voices": {
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_20",
+  "think_instruction_v2_34",
+  "ack_02"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_34": {
+   "style": "breakoff",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "movies.dlg18",
+  "music.ctx6"
+ ],
+ "est_total_sec": 83.49,
+ "est_speech_sec": 22.09,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.94,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but My daughter's starting violin at school and they want us to get her one.",
+   "est_sec": 5.06,
+   "gap_before": 0.99,
+   "block": "music.ctx6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely. At the start, would you rather rent one through the school, or buy a cheap beginner violin outright?",
+   "est_sec": 5.99,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "music.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "The answer is obviously— hmm, not so obvious. fifty-six seconds, then ask me again.",
+   "est_sec": 4.44,
+   "gap_before": 0.76,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 56,
+   "phrasing": "think_instruction_v2_34"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.21,
+   "role": "ack",
+   "phrasing": "ack_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, any decision on getting her the violin?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "music.ctx6",
+   "anchor": {
+    "turn": 4,
+    "offset": 56.56
+   }
+  }
+ ]
+}

@@ -1,0 +1,168 @@
+{
+ "id": "eval_12_00089",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 89,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "family_visit"
+ ],
+ "topic": "family_visit",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_21",
+  "greet_ans_09",
+  "phone_instr_01",
+  "ack_05",
+  "call_27",
+  "implicit_02"
+ ],
+ "block_ids": [
+  "family_visit.ctx15",
+  "call_27"
+ ],
+ "est_total_sec": 60.06,
+ "est_speech_sec": 40.46,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "We're visiting my wife's family for the first time and there'll be like thirty people.",
+   "est_sec": 4.75,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a crowd. Do you want to learn some names in advance, or just focus on her parents and grandparents?",
+   "est_sec": 6.3,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "family_visit.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, I have to take this call. Hang on and stay quiet until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.48,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.59,
+   "role": "ack",
+   "phrasing": "ack_05",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hiya.",
+   "est_sec": 0.41,
+   "gap_before": 1.35,
+   "phrasing": "call_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, I'm on my way, I'm just stuck in traffic.",
+   "est_sec": 3.2,
+   "gap_before": 3.98,
+   "phrasing": "call_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you start without me?",
+   "est_sec": 1.65,
+   "gap_before": 1.97,
+   "phrasing": "call_27",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "I know, I know. Twenty minutes, tops.",
+   "est_sec": 2.27,
+   "gap_before": 2.08,
+   "phrasing": "call_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, what were you saying?",
+   "est_sec": 2.27,
+   "gap_before": 1.93,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. Still thinking about how to prep for the in-laws?",
+   "est_sec": 3.2,
+   "gap_before": 0.33,
+   "role": "resume",
+   "block": "family_visit.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Just the core. I'll never remember thirty names.",
+   "est_sec": 2.58,
+   "gap_before": 1.02,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally fine. Ask your wife for one fun fact about each of them, it helps a lot.",
+   "est_sec": 5.37,
+   "gap_before": 1.05,
+   "role": "followup",
+   "block": "family_visit.ctx15",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

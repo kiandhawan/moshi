@@ -1,0 +1,208 @@
+{
+ "id": "trainv2_10_00384",
+ "split": "train",
+ "seed": 10,
+ "order_index": 384,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "books",
+  "movies"
+ ],
+ "instruction_position": 0.882,
+ "topic": "books",
+ "voices": {
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": "705690224f264386b87fb598083ab022",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Lucas",
+ "friend_name_id": "name_19",
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_20",
+  "side_instr_25",
+  "ack_01",
+  "side_cue_25"
+ ],
+ "phrasing_styles": {
+  "side_instr_25": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_25": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "gardening.dlg8",
+  "books.ctx1",
+  "movies.side1"
+ ],
+ "est_total_sec": 81.49,
+ "est_speech_sec": 62.87,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.66,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.87,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to grow potatoes but I've only got a patio. Is that daft?",
+   "est_sec": 4.44,
+   "gap_before": 0.57,
+   "block": "gardening.dlg8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not daft at all. Potatoes grow well in big bags or tubs, and tipping them out at harvest is honestly the best bit.",
+   "est_sec": 7.23,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "gardening.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "How big are we talking?",
+   "est_sec": 1.65,
+   "gap_before": 1.45,
+   "block": "gardening.dlg8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Something around the size of a laundry basket, with drainage holes. Three seed potatoes per bag is plenty.",
+   "est_sec": 5.68,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "gardening.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "I just finished a really long fantasy series and now I feel kind of lost.",
+   "est_sec": 4.75,
+   "gap_before": 0.71,
+   "block": "books.ctx1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That book hangover is real. Do you want another big series to sink into, or something short and different as a palate cleanser?",
+   "est_sec": 7.23,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "books.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang tight, my dad is calling me over. Don't talk until I say I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 0.76,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.58,
+   "role": "ack",
+   "phrasing": "ack_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Lucas, have you seen the new one with the space station?",
+   "est_sec": 3.51,
+   "gap_before": 1.5,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, last weekend. It was okay. The ending was a bit weird.",
+   "est_sec": 3.82,
+   "gap_before": 1.15,
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Weird how? Don't spoil it.",
+   "est_sec": 1.65,
+   "gap_before": 1.17,
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "I won't. Let's just say you'll have questions.",
+   "est_sec": 2.58,
+   "gap_before": 0.74,
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, now I have to watch it. Would you see it again?",
+   "est_sec": 3.82,
+   "gap_before": 0.39,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Maybe, if you're buying the popcorn.",
+   "est_sec": 1.96,
+   "gap_before": 2.49,
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, that took a while. I'm back.",
+   "est_sec": 2.27,
+   "gap_before": 1.41,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. We were finding your next read. Big series or something short?",
+   "est_sec": 4.13,
+   "gap_before": 0.94,
+   "role": "resume",
+   "block": "books.ctx1"
+  }
+ ]
+}

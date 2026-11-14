@@ -1,0 +1,175 @@
+{
+ "id": "trainv2_10_00066",
+ "split": "train",
+ "seed": 10,
+ "order_index": 66,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "travel_planning"
+ ],
+ "instruction_position": 0.636,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_20",
+  "greet_ans_25",
+  "describe_instr_02",
+  "describe_cue_v2_28"
+ ],
+ "phrasing_styles": {
+  "describe_instr_02": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_28": {
+   "style": "fragment",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "birthday_party.dlg22",
+  "travel_planning.opt6"
+ ],
+ "est_total_sec": 84.91,
+ "est_speech_sec": 67.74,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.37,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.71,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "We booked bowling for my son's party. What do I need to sort beforehand?",
+   "est_sec": 4.44,
+   "gap_before": 0.25,
+   "block": "birthday_party.dlg22",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice choice. Have you checked if they do bumpers and lighter balls for kids?",
+   "est_sec": 4.44,
+   "gap_before": 0.74,
+   "role": "reply",
+   "block": "birthday_party.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "I didn't think of that. They're nine.",
+   "est_sec": 2.27,
+   "gap_before": 1.33,
+   "block": "birthday_party.dlg22",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ask for bumpers, they make it more fun and less frustrating at that age. Also check how many kids per lane.",
+   "est_sec": 6.61,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "birthday_party.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. I'm taking a gap year after school and I've narrowed it down to a few plans.",
+   "est_sec": 5.68,
+   "gap_before": 0.67,
+   "block": "travel_planning.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
+   "est_sec": 4.75,
+   "gap_before": 0.72,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Working at a ski lodge in Canada for the winter, then traveling with the money I've saved.",
+   "est_sec": 5.37,
+   "gap_before": 0.92,
+   "block": "travel_planning.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Volunteering on an organic farm in New Zealand, which gives me free food and a bed.",
+   "est_sec": 5.06,
+   "gap_before": 2.53,
+   "block": "travel_planning.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Teaching English in South Korea, with a proper salary but a one year contract.",
+   "est_sec": 4.44,
+   "gap_before": 1.94,
+   "block": "travel_planning.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Interrailing around Europe, which would be amazing, but I'd need to save for months first.",
+   "est_sec": 4.75,
+   "gap_before": 2.2,
+   "block": "travel_planning.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, um, that's everything, I think. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.45,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You could chain two of them, like the ski lodge for the winter and then interrailing with what you earn. The farm in New Zealand is good if you want calm. Korea is the most serious choice, best if you're curious about teaching.",
+   "est_sec": 13.43,
+   "gap_before": 0.95,
+   "role": "resume",
+   "block": "travel_planning.opt6"
+  }
+ ]
+}

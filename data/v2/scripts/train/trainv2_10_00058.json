@@ -1,0 +1,132 @@
+{
+ "id": "trainv2_10_00058",
+ "split": "train",
+ "seed": 10,
+ "order_index": 58,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "moshi_name",
+  "wait_like"
+ ],
+ "topics": [
+  "weather_plans"
+ ],
+ "topic": "weather_plans",
+ "voices": {
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_08",
+  "waitlike_16"
+ ],
+ "phrasing_styles": {},
+ "block_ids": [
+  "weather_plans.dlg12"
+ ],
+ "est_total_sec": 52.94,
+ "est_speech_sec": 42.54,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.91,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey Moshi, we're having friends over in the garden on Sunday. Gusts are forecast. Can I still put the gazebo up?",
+   "est_sec": 6.61,
+   "gap_before": 0.22,
+   "block": "weather_plans.dlg12",
+   "kind": "moshi_name",
+   "name_pos": "start",
+   "addressee": "Moshi",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It depends how strong. Pop up gazebos can turn into kites in quite modest winds.",
+   "est_sec": 4.75,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "weather_plans.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "The app says gusts up to thirty miles an hour.",
+   "est_sec": 3.2,
+   "gap_before": 0.72,
+   "block": "weather_plans.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's too much for a typical garden gazebo. I'd leave it packed away.",
+   "est_sec": 4.13,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "weather_plans.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait a second, but what if it rains?",
+   "est_sec": 2.58,
+   "gap_before": 0.82,
+   "block": "weather_plans.dlg12",
+   "kind": "wait_like",
+   "phrasing": "waitlike_16",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Keep the gazebo as a plan B and only put it up if the wind drops. Have the back door open so people can step inside.",
+   "est_sec": 8.16,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "weather_plans.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "Should I tie it down?",
+   "est_sec": 1.65,
+   "gap_before": 3.26,
+   "block": "weather_plans.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you do put it up, weigh every leg with sandbags or water weights and use guy ropes. And take it down if the gusts pick up.",
+   "est_sec": 8.47,
+   "gap_before": 0.3,
+   "role": "reply",
+   "block": "weather_plans.dlg12"
+  }
+ ]
+}

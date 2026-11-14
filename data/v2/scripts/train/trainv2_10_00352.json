@@ -1,0 +1,157 @@
+{
+ "id": "trainv2_10_00352",
+ "split": "train",
+ "seed": 10,
+ "order_index": 352,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end",
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "baking"
+ ],
+ "wait_sec": 51,
+ "early_end": {
+  "after_sec": 43.04,
+  "direct": true
+ },
+ "instruction_position": 0.479,
+ "topic": "baking",
+ "voices": {
+  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_28",
+  "greet_ans_14",
+  "think_instr_29",
+  "ack_13",
+  "early_end_10"
+ ],
+ "phrasing_styles": {
+  "think_instr_29": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "early_end_10": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "job_interview.dlg20",
+  "baking.ctx2"
+ ],
+ "est_total_sec": 84.05,
+ "est_speech_sec": 33.86,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.91,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, I want to start baking my own bread.",
+   "est_sec": 3.2,
+   "gap_before": 0.67,
+   "block": "baking.ctx2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great project. Do you want to start with a quick yeast loaf you can make in an afternoon, or grow a sourdough starter, which takes about a week?",
+   "est_sec": 8.78,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "baking.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about that for fifty-one seconds, then ask me once more.",
+   "est_sec": 4.13,
+   "gap_before": 0.74,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 51,
+   "phrasing": "think_instr_29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.26,
+   "role": "ack",
+   "phrasing": "ack_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, done thinking.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 43.04
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, how do you want to begin? A quick yeast loaf, or a sourdough starter?",
+   "est_sec": 4.75,
+   "gap_before": 0.96,
+   "role": "resume",
+   "block": "baking.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Quick yeast loaf. I want bread this weekend.",
+   "est_sec": 2.58,
+   "gap_before": 1.07,
+   "event": "ordinary_request",
+   "block": "baking.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then a simple sandwich loaf is perfect. Flour, water, yeast, salt, and about three hours start to finish.",
+   "est_sec": 5.68,
+   "gap_before": 1.0,
+   "role": "followup",
+   "block": "baking.ctx2"
+  }
+ ]
+}

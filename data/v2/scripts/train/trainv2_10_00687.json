@@ -1,0 +1,137 @@
+{
+ "id": "trainv2_10_00687",
+ "split": "train",
+ "seed": 10,
+ "order_index": 687,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
+ "topics": [
+  "public_transport"
+ ],
+ "topic": "public_transport",
+ "voices": {
+  "user": "cbc3add1f54546e6a4a1964bacb8b122",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_02",
+  "waitlike_17"
+ ],
+ "phrasing_styles": {},
+ "block_ids": [
+  "public_transport.dlg3"
+ ],
+ "est_total_sec": 50.22,
+ "est_speech_sec": 40.47,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.4,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I bring my bike on the train?",
+   "est_sec": 2.58,
+   "gap_before": 0.2,
+   "block": "public_transport.dlg3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "On most regional trains, yes, but often not during rush hour. Look for the carriages with a bike symbol on the door.",
+   "est_sec": 6.92,
+   "gap_before": 0.5,
+   "role": "reply",
+   "block": "public_transport.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "Do I need a ticket for it?",
+   "est_sec": 2.27,
+   "gap_before": 0.94,
+   "block": "public_transport.dlg3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Many operators charge a small bike fee or need a reservation on long distance trains. Check your operator's website before you go.",
+   "est_sec": 6.92,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "public_transport.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "Actually, I'm also thinking",
+   "est_sec": 1.34,
+   "gap_before": 1.42,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "public_transport.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "about getting a folding bike instead.",
+   "est_sec": 1.96,
+   "gap_before": 2.04,
+   "block": "public_transport.dlg3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a great option for commuting. Folded bikes usually count as luggage, so you can bring them anytime for free.",
+   "est_sec": 6.3,
+   "gap_before": 0.34,
+   "role": "reply",
+   "block": "public_transport.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on a sec, aren't they slow, though?",
+   "est_sec": 2.58,
+   "gap_before": 0.33,
+   "block": "public_transport.dlg3",
+   "kind": "wait_like",
+   "phrasing": "waitlike_17",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A bit slower than a regular bike, but for short rides to and from the station you'll hardly notice.",
+   "est_sec": 5.99,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "public_transport.dlg3"
+  }
+ ]
+}

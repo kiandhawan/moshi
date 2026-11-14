@@ -1,0 +1,155 @@
+{
+ "id": "eval_12_00301",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 301,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "family_visit"
+ ],
+ "topic": "family_visit",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_12",
+  "door_instr_06",
+  "door_05",
+  "door_cue_06"
+ ],
+ "block_ids": [
+  "family_visit.ctx8",
+  "door_05"
+ ],
+ "est_total_sec": 60.23,
+ "est_speech_sec": 39.43,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.53,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly I'm dreading this. My sister and I haven't talked properly in a year and she's staying with us.",
+   "est_sec": 5.99,
+   "gap_before": 0.39,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That sounds hard. Do you want to clear the air on the first night, or keep things light and see how it goes?",
+   "est_sec": 7.23,
+   "gap_before": 1.01,
+   "role": "reply",
+   "block": "family_visit.ctx8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, that's the door. Hold on and don't talk until I'm back.",
+   "est_sec": 3.82,
+   "gap_before": 1.17,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi.",
+   "est_sec": 0.41,
+   "gap_before": 4.35,
+   "phrasing": "door_05"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Pizza for apartment four?",
+   "est_sec": 1.34,
+   "gap_before": 2.62,
+   "phrasing": "door_05"
+  },
+  {
+   "speaker": "user",
+   "text": "That's us. Is it already paid?",
+   "est_sec": 1.96,
+   "gap_before": 1.72,
+   "phrasing": "door_05",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Yep, all paid. Enjoy!",
+   "est_sec": 1.34,
+   "gap_before": 1.17,
+   "phrasing": "door_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, they're gone. I'm back now.",
+   "est_sec": 1.96,
+   "gap_before": 3.62,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everything okay at the door? About your sister. Clear the air early, or let it settle first?",
+   "est_sec": 5.37,
+   "gap_before": 0.35,
+   "role": "resume",
+   "block": "family_visit.ctx8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Light first. Maybe it comes up naturally.",
+   "est_sec": 2.27,
+   "gap_before": 0.87,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's okay too. Just leave a little space for it if she seems open.",
+   "est_sec": 4.44,
+   "gap_before": 0.93,
+   "role": "followup",
+   "block": "family_visit.ctx8",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

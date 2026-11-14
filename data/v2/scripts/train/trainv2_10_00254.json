@@ -1,0 +1,206 @@
+{
+ "id": "trainv2_10_00254",
+ "split": "train",
+ "seed": 10,
+ "order_index": 254,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "travel_planning",
+  "video_games"
+ ],
+ "instruction_position": 0.894,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "friend": "cc7f8544c64a439080193e9560100c5a",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Jordan",
+ "friend_name_id": "name_05",
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_19",
+  "side_instruction_v2_22",
+  "ack_12",
+  "side_cue_16"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_22": {
+   "style": "command",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_16": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "hiking.dlg28",
+  "travel_planning.ctx7",
+  "video_games.side4"
+ ],
+ "est_total_sec": 78.35,
+ "est_speech_sec": 57.29,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.89,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "How did I get sunburned on a cloudy, windy hike?",
+   "est_sec": 3.2,
+   "gap_before": 0.21,
+   "block": "hiking.dlg28",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Clouds don't block much UV, and wind cools your skin so you don't feel yourself burning.",
+   "est_sec": 5.06,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "hiking.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, I want to take my parents somewhere for their fortieth anniversary. They're in their seventies and my dad has a bad knee.",
+   "est_sec": 7.85,
+   "gap_before": 1.46,
+   "block": "travel_planning.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's lovely. A river cruise means no packing and unpacking, while a rail tour shows more scenery but has more walking. Which would suit them better?",
+   "est_sec": 8.16,
+   "gap_before": 0.33,
+   "role": "reply",
+   "block": "travel_planning.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Zip it for a sec, Moshi, I'll tell you when I'm back. Jordan needs me.",
+   "est_sec": 4.75,
+   "gap_before": 0.56,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.6,
+   "role": "ack",
+   "phrasing": "ack_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you finish it last night?",
+   "est_sec": 1.96,
+   "gap_before": 1.42,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, and that ending, I can't believe the captain was the one who",
+   "est_sec": 4.13,
+   "gap_before": 0.89,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Stop! Don't! I'm two hours from the end!",
+   "est_sec": 2.58,
+   "gap_before": 1.01,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh no. Did I just ruin it?",
+   "est_sec": 2.27,
+   "gap_before": 1.4,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "You said the captain. Now I'll be suspicious of him the whole time.",
+   "est_sec": 4.13,
+   "gap_before": 2.52,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Maybe I'm bluffing.",
+   "est_sec": 1.03,
+   "gap_before": 1.25,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you bluffing?",
+   "est_sec": 1.03,
+   "gap_before": 2.45,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'm not saying anything else. Go play it.",
+   "est_sec": 2.58,
+   "gap_before": 0.72,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, we can continue now.",
+   "est_sec": 1.65,
+   "gap_before": 1.4,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Your parents' anniversary trip. Cruise or train?",
+   "est_sec": 2.89,
+   "gap_before": 0.8,
+   "role": "resume",
+   "block": "travel_planning.ctx7"
+  }
+ ]
+}

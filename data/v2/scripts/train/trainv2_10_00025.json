@@ -1,0 +1,181 @@
+{
+ "id": "trainv2_10_00025",
+ "split": "train",
+ "seed": 10,
+ "order_index": 25,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long",
+  "other_name"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "cooking"
+ ],
+ "instruction_position": 0.14,
+ "topic": "cooking",
+ "voices": {
+  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
+  "friend": null,
+  "other": "c913e2f3869449568fc3fc08dfa21dfe",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_261",
+  "greet_11",
+  "greet_ans_25",
+  "describe_instruction_v2_16",
+  "describe_cue_v2_04"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_16": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_04": {
+   "style": "request",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_home_061",
+  "cooking.opt1",
+  "fitness.dlg4"
+ ],
+ "est_total_sec": 82.79,
+ "est_speech_sec": 63.71,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.33,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.35,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "I can't decide what to make for dinner on Saturday when my in-laws come over.",
+   "est_sec": 4.75,
+   "gap_before": 0.21,
+   "block": "cooking.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me get every option on the table before you react, and I'll say when that's the last one.",
+   "est_sec": 5.99,
+   "gap_before": 0.74,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_16"
+  },
+  {
+   "speaker": "user",
+   "text": "The first idea is a big roast chicken with potatoes and carrots, all in one tray in the oven.",
+   "est_sec": 5.99,
+   "gap_before": 0.68,
+   "block": "cooking.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's homemade lasagna, which I could make the night before and just bake when they arrive.",
+   "est_sec": 5.37,
+   "gap_before": 4.73,
+   "block": "cooking.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is grilled salmon with a lemon sauce and a green salad, lighter but more last minute.",
+   "est_sec": 6.3,
+   "gap_before": 4.1,
+   "block": "cooking.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything on my list. What would you go for?",
+   "est_sec": 3.2,
+   "gap_before": 1.38,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Do your in-laws have any favorite foods, or anything they don't eat? If not, I'd go with the lasagna so you're not stuck in the kitchen. The roast chicken would be my second pick, it's simple and everyone likes it.",
+   "est_sec": 12.5,
+   "gap_before": 0.44,
+   "role": "resume",
+   "block": "cooking.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you put your school shoes by the door, Omar?",
+   "est_sec": 3.2,
+   "gap_before": 1.36,
+   "block": "nq_home_061",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_home_061",
+   "name_pos": "end",
+   "addressee": "Omar"
+  },
+  {
+   "speaker": "other",
+   "text": "One of them.",
+   "est_sec": 1.03,
+   "gap_before": 0.3,
+   "block": "nq_home_061"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm sixty-eight and my doctor said I should do more exercise. I'm not really a gym person.",
+   "est_sec": 5.37,
+   "gap_before": 1.63,
+   "block": "fitness.dlg4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You don't need a gym. Brisk walking, swimming or a gentle yoga class are all excellent choices.",
+   "est_sec": 5.37,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "fitness.dlg4"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha, that I can manage.",
+   "est_sec": 1.65,
+   "gap_before": 0.37,
+   "block": "fitness.dlg4"
+  }
+ ]
+}

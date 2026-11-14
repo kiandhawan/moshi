@@ -1,0 +1,169 @@
+{
+ "id": "trainv2_10_00293",
+ "split": "train",
+ "seed": 10,
+ "order_index": 293,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_end"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "studying"
+ ],
+ "wait_sec": 20,
+ "early_end": {
+  "after_sec": 12.34,
+  "direct": false
+ },
+ "instruction_position": 0.302,
+ "topic": "studying",
+ "voices": {
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_05",
+  "think_instruction_v2_10",
+  "early_end_v2_08"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_10": {
+   "style": "statement",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "early_end_v2_08": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "studying.ctx5",
+  "baking.dlg6"
+ ],
+ "est_total_sec": 74.5,
+ "est_speech_sec": 51.42,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.57,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.77,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_05"
+  },
+  {
+   "speaker": "user",
+   "text": "My daughter's maths homework uses a method I've never seen, and she's in tears.",
+   "est_sec": 4.44,
+   "gap_before": 0.51,
+   "block": "studying.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Oh, the dreaded new methods. Do you want to learn her method together tonight, or show her your way and let the teacher sort it out?",
+   "est_sec": 8.16,
+   "gap_before": 0.92,
+   "role": "reply",
+   "block": "studying.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, I need a good twenty seconds before I can answer. Then ask me again.",
+   "est_sec": 4.75,
+   "gap_before": 0.59,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instruction_v2_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Decided. Ask away.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 12.34
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_v2_08"
+  },
+  {
+   "speaker": "user",
+   "text": "My way tonight, then a note to the teacher.",
+   "est_sec": 2.89,
+   "gap_before": 0.57,
+   "event": "ordinary_request",
+   "block": "studying.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That works. Just tell her both ways are right, so she doesn't feel she's breaking the rules.",
+   "est_sec": 5.37,
+   "gap_before": 0.51,
+   "role": "followup",
+   "block": "studying.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. We just moved up to the mountains and my cakes keep overflowing the tin.",
+   "est_sec": 5.37,
+   "gap_before": 1.32,
+   "block": "baking.dlg6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's the altitude. Air pressure is lower, so the bubbles grow faster and the batter rises too much before it sets.",
+   "est_sec": 6.61,
+   "gap_before": 1.16,
+   "role": "reply",
+   "block": "baking.dlg6"
+  },
+  {
+   "speaker": "user",
+   "text": "So what do I change?",
+   "est_sec": 1.65,
+   "gap_before": 1.17,
+   "block": "baking.dlg6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Use a little less baking powder, maybe a quarter less, and bump the oven up by about fifteen degrees so it sets sooner.",
+   "est_sec": 7.23,
+   "gap_before": 1.15,
+   "role": "reply",
+   "block": "baking.dlg6"
+  }
+ ]
+}

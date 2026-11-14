@@ -1,0 +1,203 @@
+{
+ "id": "trainv2_10_00190",
+ "split": "train",
+ "seed": 10,
+ "order_index": 190,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "movies",
+  "birthday_party"
+ ],
+ "instruction_position": 0.427,
+ "topic": "movies",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": "050df12e0f30484fb882a9a5410e5d66",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
+ "phrasing_ids": [
+  "greet_20",
+  "greet_ans_14",
+  "side_instruction_v2_37",
+  "dn_14",
+  "side_cue_23"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_37": {
+   "style": "breakoff",
+   "tone": "cheerful",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_23": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "movies.ctx4",
+  "birthday_party.side1",
+  "dn_14",
+  "smartphones.dlg21"
+ ],
+ "est_total_sec": 75.49,
+ "est_speech_sec": 58.74,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.3,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "I run the Thursday film afternoon at our care home. Next week it's a French film.",
+   "est_sec": 5.06,
+   "gap_before": 0.23,
+   "block": "movies.ctx4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How lovely. Since some residents might struggle to read small text, would you show it dubbed, or with big subtitles and a short intro first?",
+   "est_sec": 7.85,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "movies.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "The budget's around— oh, hi! Moshi, give me a minute, my friend's here.",
+   "est_sec": 4.13,
+   "gap_before": 2.61,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_37"
+  },
+  {
+   "speaker": "user",
+   "text": "Sam, did you send the invites yet?",
+   "est_sec": 2.27,
+   "gap_before": 1.13,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Most of them. I'm still missing a few addresses.",
+   "est_sec": 2.89,
+   "gap_before": 0.63,
+   "block": "birthday_party.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Whose?",
+   "est_sec": 0.41,
+   "gap_before": 0.94,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "The neighbors from upstairs and your cousin.",
+   "est_sec": 2.27,
+   "gap_before": 0.74,
+   "block": "birthday_party.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll text you my cousin's. Just knock on the neighbors' door, they're always home.",
+   "est_sec": 4.44,
+   "gap_before": 0.59,
+   "block": "birthday_party.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay, I'll do it tonight.",
+   "est_sec": 1.65,
+   "gap_before": 0.68,
+   "block": "birthday_party.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so where were we with the shopping list?",
+   "est_sec": 2.89,
+   "gap_before": 1.01,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_14"
+  },
+  {
+   "speaker": "friend",
+   "text": "We still need eggs and bread.",
+   "est_sec": 1.96,
+   "gap_before": 1.07,
+   "phrasing": "dn_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, all done. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.45,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Back to the French film at the care home. Have you decided how to show it?",
+   "est_sec": 5.68,
+   "gap_before": 0.45,
+   "role": "resume",
+   "block": "movies.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but My charger only works if I hold the cable at an angle. Is my phone broken?",
+   "est_sec": 5.68,
+   "gap_before": 1.23,
+   "block": "smartphones.dlg21",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Maybe not. Pocket lint often packs into the charging port and stops the cable going all the way in.",
+   "est_sec": 5.99,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "smartphones.dlg21"
+  }
+ ]
+}

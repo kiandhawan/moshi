@@ -1,0 +1,137 @@
+{
+ "id": "trainv2_10_00071",
+ "split": "train",
+ "seed": 10,
+ "order_index": 71,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "board_games"
+ ],
+ "wait_sec": 56,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 56
+ },
+ "instruction_position": 0.793,
+ "topic": "board_games",
+ "voices": {
+  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_28",
+  "think_instruction_v2_23",
+  "ack_16",
+  "self_22"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_23": {
+   "style": "command",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "shopping.dlg1",
+  "board_games.ctx9"
+ ],
+ "est_total_sec": 82.11,
+ "est_speech_sec": 21.57,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to teach my grandson chess. He's seven and very wriggly.",
+   "est_sec": 3.82,
+   "gap_before": 1.44,
+   "block": "board_games.ctx9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely. Would you start with the full game straight away, or begin with just the pawns and add one piece at a time?",
+   "est_sec": 7.23,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "board_games.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Please give me fifty-six seconds and then repeat the question.",
+   "est_sec": 3.2,
+   "gap_before": 1.2,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 56,
+   "phrasing": "think_instruction_v2_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.23,
+   "role": "ack",
+   "phrasing": "ack_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, think, think.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 41.31
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, your wriggly grandson. Full chess, or pawns first?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "board_games.ctx9",
+   "anchor": {
+    "turn": 4,
+    "offset": 56.26
+   }
+  }
+ ]
+}

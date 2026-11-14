@@ -1,0 +1,176 @@
+{
+ "id": "eval_12_00067",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 67,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "home_office"
+ ],
+ "reading": {
+  "material": "recipe",
+  "sec": 14.6
+ },
+ "topic": "home_office",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_18",
+  "read_instr_04",
+  "murmur_05",
+  "murmur_04",
+  "implicit_13"
+ ],
+ "block_ids": [
+  "home_office.ctx5"
+ ],
+ "est_total_sec": 57.53,
+ "est_speech_sec": 37.57,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.95,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "Everyone on my team has these nice bookshelves behind them on video calls.",
+   "est_sec": 4.13,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "home_office.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What's behind you right now?",
+   "est_sec": 1.65,
+   "gap_before": 0.74,
+   "role": "reply",
+   "block": "home_office.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "It's literally the laundry rack.",
+   "est_sec": 1.65,
+   "gap_before": 0.96,
+   "event": "ordinary_request",
+   "block": "home_office.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, honest answer. You could blur it, or tidy one corner into a real backdrop. Which appeals?",
+   "est_sec": 5.37,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "home_office.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, let me read this recipe first. Don't talk until I'm finished.",
+   "est_sec": 4.13,
+   "gap_before": 1.48,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Bake for twenty minutes, okay.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 5.08
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Two cups of flour, right.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 9.54
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, you were saying?",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 14.6
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. So for your video background, quick blur or a real corner?",
+   "est_sec": 4.13,
+   "gap_before": 0.38,
+   "role": "resume",
+   "block": "home_office.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Blur for now. I'll fix the corner on the weekend.",
+   "est_sec": 3.2,
+   "gap_before": 0.6,
+   "event": "ordinary_request",
+   "block": "home_office.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sensible. Just move the rack anyway, blur struggles when something sticks out right behind your head.",
+   "est_sec": 5.06,
+   "gap_before": 0.4,
+   "role": "followup",
+   "block": "home_office.ctx5",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

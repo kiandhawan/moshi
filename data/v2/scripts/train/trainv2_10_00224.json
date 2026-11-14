@@ -1,0 +1,152 @@
+{
+ "id": "trainv2_10_00224",
+ "split": "train",
+ "seed": 10,
+ "order_index": 224,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_end",
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "weather_plans"
+ ],
+ "wait_sec": 51,
+ "early_end": {
+  "after_sec": 39.04,
+  "direct": false
+ },
+ "instruction_position": 0.509,
+ "topic": "weather_plans",
+ "voices": {
+  "user": "705690224f264386b87fb598083ab022",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_04",
+  "think_instruction_v2_43",
+  "self_28",
+  "early_end_v2_05"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_43": {
+   "style": "implied",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "early_end_v2_05": {
+   "style": "statement",
+   "tone": "apologetic",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "travel_planning.dlg20",
+  "weather_plans.ctx5"
+ ],
+ "est_total_sec": 73.18,
+ "est_speech_sec": 28.8,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. Big pile of washing and the sky can't make up its mind.",
+   "est_sec": 4.75,
+   "gap_before": 1.35,
+   "block": "weather_plans.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Classic. Will you risk hanging it outside, or give up and use the dryer?",
+   "est_sec": 4.44,
+   "gap_before": 0.95,
+   "role": "reply",
+   "block": "weather_plans.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "I can't decide with you talking. fifty-one seconds would be great.",
+   "est_sec": 3.51,
+   "gap_before": 0.86,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 51,
+   "phrasing": "think_instruction_v2_43"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, what else was there?",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 26.62
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, I'm ready sooner than I thought.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 39.04
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_v2_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Outside. If it rains I'll dash out and grab it.",
+   "est_sec": 3.2,
+   "gap_before": 0.39,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Hang the heavy stuff on the line nearest the door, so the quick rescue takes less time.",
+   "est_sec": 5.68,
+   "gap_before": 0.58,
+   "role": "followup",
+   "block": "weather_plans.ctx5"
+  }
+ ]
+}

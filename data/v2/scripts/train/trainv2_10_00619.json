@@ -1,0 +1,176 @@
+{
+ "id": "trainv2_10_00619",
+ "split": "train",
+ "seed": 10,
+ "order_index": 619,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "sleep"
+ ],
+ "wait_sec": 8,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 8
+ },
+ "instruction_position": 0.233,
+ "topic": "sleep",
+ "voices": {
+  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_19",
+  "think_instr_23"
+ ],
+ "phrasing_styles": {
+  "think_instr_23": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "sleep.ctx11",
+  "pets.dlg12"
+ ],
+ "est_total_sec": 75.48,
+ "est_speech_sec": 54.72,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.3,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "At night my brain just won't switch off. Work, money, everything.",
+   "est_sec": 3.51,
+   "gap_before": 0.55,
+   "block": "sleep.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That racing mind is hard. Would you try writing your worries down before bed, or a slow breathing exercise once you're lying down?",
+   "est_sec": 7.23,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "sleep.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me eight seconds, I want to think about it. Then ask again.",
+   "est_sec": 4.13,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 8,
+   "phrasing": "think_instr_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, the busy brain. Which one feels like you?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "sleep.ctx11",
+   "anchor": {
+    "turn": 4,
+    "offset": 8.42
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Breathing. I'm too tired to write anything.",
+   "est_sec": 2.27,
+   "gap_before": 0.76,
+   "event": "ordinary_request",
+   "block": "sleep.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Breathe in for four, hold for a moment, out for six. Repeat a few rounds slowly.",
+   "est_sec": 5.37,
+   "gap_before": 0.72,
+   "role": "followup",
+   "block": "sleep.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I just found a flea on my cat. Do I need to panic?",
+   "est_sec": 5.06,
+   "gap_before": 1.96,
+   "block": "pets.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No panic needed, but it's worth acting now. Where there's one flea there are usually more.",
+   "est_sec": 5.06,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "pets.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "Gross. What do I do?",
+   "est_sec": 1.65,
+   "gap_before": 1.02,
+   "block": "pets.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Get a vet recommended spot on treatment for cats. Never use a dog one, some of them are really toxic to cats.",
+   "est_sec": 6.92,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "pets.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh wow, I didn't know that.",
+   "est_sec": 1.96,
+   "gap_before": 0.6,
+   "block": "pets.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's an important one. Treat every pet in the house, not just her.",
+   "est_sec": 4.13,
+   "gap_before": 1.46,
+   "role": "reply",
+   "block": "pets.dlg12"
+  }
+ ]
+}

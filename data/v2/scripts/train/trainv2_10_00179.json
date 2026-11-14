@@ -1,0 +1,201 @@
+{
+ "id": "trainv2_10_00179",
+ "split": "train",
+ "seed": 10,
+ "order_index": 179,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "baking",
+  "travel_planning"
+ ],
+ "instruction_position": 0.403,
+ "topic": "baking",
+ "voices": {
+  "user": "050df12e0f30484fb882a9a5410e5d66",
+  "friend": "676f1654c4f747a69a5921ad94886fa1",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Hannah",
+ "friend_name_id": "name_14",
+ "phrasing_ids": [
+  "greet_04",
+  "greet_ans_17",
+  "side_instr_29",
+  "dn_54",
+  "side_cue_22"
+ ],
+ "phrasing_styles": {
+  "side_instr_29": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_22": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "baking.ctx11",
+  "travel_planning.side2",
+  "dn_54",
+  "weekend_plans.dlg22"
+ ],
+ "est_total_sec": 79.15,
+ "est_speech_sec": 59.98,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
+   "role": "greeting",
+   "phrasing": "greet_04"
+  },
+  {
+   "speaker": "user",
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.45,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got four bananas going completely black on the counter. Again.",
+   "est_sec": 3.51,
+   "gap_before": 0.32,
+   "block": "baking.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Prime baking bananas. Do you want to bake with them tonight, or peel and freeze them for later?",
+   "est_sec": 5.68,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "baking.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Pause for a bit, my kid needs me. I'll come back to you when I'm done.",
+   "est_sec": 5.06,
+   "gap_before": 1.36,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you care if we stay in a hotel or would you rather rent an apartment?",
+   "est_sec": 5.06,
+   "gap_before": 0.78,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Apartment, if it has a kitchen. Eating out every night gets expensive.",
+   "est_sec": 3.82,
+   "gap_before": 1.21,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "True. But hotels usually have breakfast included.",
+   "est_sec": 2.27,
+   "gap_before": 0.83,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "We can buy croissants. Honestly I just want a balcony.",
+   "est_sec": 3.2,
+   "gap_before": 0.47,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha, okay, balcony and kitchen. I'll filter for that.",
+   "est_sec": 2.89,
+   "gap_before": 0.44,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "And not too far from the train station please, with all our bags.",
+   "est_sec": 4.13,
+   "gap_before": 1.84,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Go ahead and use my charger, mine's in the drawer anyway.",
+   "est_sec": 3.51,
+   "gap_before": 1.92,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_54"
+  },
+  {
+   "speaker": "friend",
+   "text": "Thanks, I'm on two percent.",
+   "est_sec": 1.65,
+   "gap_before": 1.49,
+   "phrasing": "dn_54"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, back. Thanks for being patient.",
+   "est_sec": 1.96,
+   "gap_before": 0.88,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. So, are the bananas getting baked, or frozen?",
+   "est_sec": 2.89,
+   "gap_before": 1.15,
+   "role": "resume",
+   "block": "baking.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. My dad uses a walking frame now. What can we do together at the weekend?",
+   "est_sec": 5.37,
+   "gap_before": 1.29,
+   "block": "weekend_plans.dlg22",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "There's plenty. Garden centres are flat and usually have a cafe, so they're a great relaxed outing.",
+   "est_sec": 5.37,
+   "gap_before": 1.86,
+   "role": "reply",
+   "block": "weekend_plans.dlg22"
+  }
+ ]
+}

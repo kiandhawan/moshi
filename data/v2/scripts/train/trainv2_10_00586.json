@@ -1,0 +1,195 @@
+{
+ "id": "trainv2_10_00586",
+ "split": "train",
+ "seed": 10,
+ "order_index": 586,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "cooking"
+ ],
+ "wait_sec": 17,
+ "early_end": {
+  "after_sec": 9.43,
+  "direct": true
+ },
+ "instruction_position": 0.235,
+ "topic": "cooking",
+ "voices": {
+  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_28",
+  "think_instruction_v2_17",
+  "early_end_08"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_17": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v2"
+  },
+  "early_end_08": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "cooking.ctx11",
+  "pets.dlg32"
+ ],
+ "est_total_sec": 83.91,
+ "est_speech_sec": 59.78,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.44,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, hi. I've never really cooked. I can do toast. I want to learn one real dinner.",
+   "est_sec": 5.37,
+   "gap_before": 0.48,
+   "block": "cooking.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everyone starts somewhere. A simple tomato pasta or a chicken stir fry are both very forgiving. Which would you actually enjoy eating?",
+   "est_sec": 6.92,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "cooking.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me chew on that for seventeen seconds.",
+   "est_sec": 2.58,
+   "gap_before": 1.48,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 17,
+   "phrasing": "think_instruction_v2_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, I know.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 9.43
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Which one do you want to try first?",
+   "est_sec": 2.58,
+   "gap_before": 0.99,
+   "role": "resume",
+   "block": "cooking.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Stir fry. I like things fast and hot.",
+   "est_sec": 2.58,
+   "gap_before": 0.9,
+   "event": "ordinary_request",
+   "block": "cooking.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great pick. Cut everything before you turn on the heat, then it's about eight minutes of stirring.",
+   "est_sec": 5.37,
+   "gap_before": 1.01,
+   "role": "followup",
+   "block": "cooking.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. My cat keeps leaving dead mice on the doormat. Is she trying to tell me something?",
+   "est_sec": 5.99,
+   "gap_before": 1.87,
+   "block": "pets.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "In a way. It's natural hunting behaviour, and some think cats bring prey home to the place they feel safe, or to share with their family.",
+   "est_sec": 8.16,
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "pets.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "It's very disgusting sharing.",
+   "est_sec": 1.34,
+   "gap_before": 2.26,
+   "block": "pets.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, I understand. Don't tell her off, she won't connect it with the mouse.",
+   "est_sec": 4.44,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "pets.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I stop her hunting?",
+   "est_sec": 1.65,
+   "gap_before": 0.42,
+   "block": "pets.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A bright collar with a quick release clasp can warn birds and mice. Keeping her in at dawn and dusk also cuts down on hunting.",
+   "est_sec": 7.85,
+   "gap_before": 0.66,
+   "role": "reply",
+   "block": "pets.dlg32"
+  }
+ ]
+}

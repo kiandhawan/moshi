@@ -1,0 +1,174 @@
+{
+ "id": "trainv2_10_00034",
+ "split": "train",
+ "seed": 10,
+ "order_index": 34,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "moshi_mention"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "birthday_party"
+ ],
+ "wait_sec": 7,
+ "deadline": {
+  "after_turn": 7,
+  "sec": 7
+ },
+ "instruction_position": 0.561,
+ "topic": "birthday_party",
+ "voices": {
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "friend": null,
+  "other": "2680da81de8348a68e1f4dbaa79272f1",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_08",
+  "think_instruction_v2_46"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_46": {
+   "style": "implied",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "mm_086",
+  "video_games.dlg25",
+  "birthday_party.ctx7"
+ ],
+ "est_total_sec": 79.31,
+ "est_speech_sec": 58.03,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.46,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I have about forty games I've bought and never played. How do I even choose?",
+   "est_sec": 4.75,
+   "gap_before": 0.57,
+   "block": "video_games.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A classic backlog. One way is to pick by how long they take. Do you want a short win or a long project right now?",
+   "est_sec": 7.85,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "video_games.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "You'd laugh, Moshi tried to give me a pep talk.",
+   "est_sec": 3.2,
+   "gap_before": 1.35,
+   "block": "mm_086",
+   "event": "distractor",
+   "kind": "moshi_mention",
+   "phrasing": "mm_086",
+   "name_pos": "none"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. My daughter's turning sixteen and she says parties are cringe.",
+   "est_sec": 4.44,
+   "gap_before": 2.77,
+   "block": "birthday_party.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, classic sixteen. Would she go for a small outing with a few friends, like an escape room, or a nice dinner with just the family?",
+   "est_sec": 8.16,
+   "gap_before": 1.77,
+   "role": "reply",
+   "block": "birthday_party.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "I haven't the foggiest yet, Moshi. Circle round to me in seven seconds.",
+   "est_sec": 4.13,
+   "gap_before": 0.92,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 7,
+   "phrasing": "think_instruction_v2_46"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, which would she grumble at less, an escape room with friends or a family dinner?",
+   "est_sec": 5.06,
+   "role": "resume",
+   "block": "birthday_party.ctx7",
+   "anchor": {
+    "turn": 7,
+    "offset": 7.07
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Family dinner, but she gets to pick the restaurant.",
+   "est_sec": 2.89,
+   "gap_before": 1.28,
+   "event": "ordinary_request",
+   "block": "birthday_party.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Smart move. Giving her the choice makes it feel less like a parent thing.",
+   "est_sec": 4.44,
+   "gap_before": 0.48,
+   "role": "followup",
+   "block": "birthday_party.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Short. I need to feel like I finish something.",
+   "est_sec": 2.89,
+   "gap_before": 1.08,
+   "event": "ordinary_request",
+   "block": "video_games.dlg25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then look up how long each one takes to beat and sort by that. Pick the shortest one you're still curious about.",
+   "est_sec": 6.92,
+   "gap_before": 0.85,
+   "role": "reply",
+   "block": "video_games.dlg25"
+  }
+ ]
+}

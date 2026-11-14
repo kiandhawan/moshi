@@ -1,0 +1,174 @@
+{
+ "id": "trainv2_10_00093",
+ "split": "train",
+ "seed": 10,
+ "order_index": 93,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long",
+  "other_name"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "travel_planning"
+ ],
+ "instruction_position": 0.181,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "b47bb94bf3ce42b2a7643c31af62c553",
+  "friend": null,
+  "other": "6d7a45828f6a432c9233cd93bb93e5be",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_090",
+  "greet_28",
+  "greet_ans_10",
+  "describe_instruction_v2_17",
+  "describe_cue_v2_26"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_17": {
+   "style": "command",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_26": {
+   "style": "command",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_work_034",
+  "travel_planning.opt4",
+  "baking.dlg25"
+ ],
+ "est_total_sec": 76.67,
+ "est_speech_sec": 56.17,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.34,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got a ten hour layover in Istanbul and I'm not sure what to do with it.",
+   "est_sec": 5.37,
+   "gap_before": 0.41,
+   "block": "travel_planning.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Ooh, okay, listen to all of these first and then tell me your favorite.",
+   "est_sec": 4.44,
+   "gap_before": 0.88,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_17"
+  },
+  {
+   "speaker": "user",
+   "text": "I could stay in the airport lounge, shower, nap and eat, nice and stress free.",
+   "est_sec": 4.75,
+   "gap_before": 0.79,
+   "block": "travel_planning.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or take the metro into the old city, see a mosque or two and get back in time, hopefully.",
+   "est_sec": 5.99,
+   "gap_before": 6.2,
+   "block": "travel_planning.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's also a short guided tour the airline offers for transit passengers, about six hours with a guide.",
+   "est_sec": 5.68,
+   "gap_before": 5.07,
+   "block": "travel_planning.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "All set, those are the choices. Help me pick.",
+   "est_sec": 2.89,
+   "gap_before": 0.82,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you've never seen the city, the guided tour gives you a taste without the risk of missing your flight. Doing it alone gives more freedom but you'd have to watch the clock. The lounge is a sensible fallback if you're tired.",
+   "est_sec": 13.12,
+   "gap_before": 0.94,
+   "role": "resume",
+   "block": "travel_planning.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Is your camera on, Jacob?",
+   "est_sec": 1.65,
+   "gap_before": 0.81,
+   "block": "nq_work_034",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_work_034",
+   "name_pos": "end",
+   "addressee": "Jacob"
+  },
+  {
+   "speaker": "other",
+   "text": "No, thank goodness.",
+   "est_sec": 1.03,
+   "gap_before": 0.31,
+   "block": "nq_work_034"
+  },
+  {
+   "speaker": "user",
+   "text": "Help, I'm melting chocolate for a ganache and it's gone thick and grainy.",
+   "est_sec": 4.13,
+   "gap_before": 1.61,
+   "block": "baking.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's seized. That happens when even a drop of water gets into melting chocolate.",
+   "est_sec": 4.44,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "baking.dlg25"
+  }
+ ]
+}

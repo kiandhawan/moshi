@@ -1,0 +1,197 @@
+{
+ "id": "trainv2_10_00583",
+ "split": "train",
+ "seed": 10,
+ "order_index": 583,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "fitness",
+  "cars"
+ ],
+ "instruction_position": 0.445,
+ "topic": "fitness",
+ "voices": {
+  "user": "4210f97652d14bec82edc1c2ee8296d2",
+  "friend": "5ce84bbd213b4943bc89e1951e17848a",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_29",
+  "side_instr_22",
+  "side_cue_04"
+ ],
+ "phrasing_styles": {
+  "side_instr_22": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_04": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "fitness.ctx7",
+  "cars.side3",
+  "smartphones.dlg2"
+ ],
+ "est_total_sec": 81.6,
+ "est_speech_sec": 63.7,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_29"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm training for a marathon and my calf has been feeling tight for three days.",
+   "est_sec": 4.75,
+   "gap_before": 0.53,
+   "block": "fitness.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Tightness can turn into an injury if you push through. Do you want to rest for a few days, or switch to easy cross training like cycling?",
+   "est_sec": 8.47,
+   "gap_before": 0.53,
+   "role": "reply",
+   "block": "fitness.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "One sec, I'm going to talk with my neighbor. Please wait until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.81,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Sam, which one did you like better, the blue one or the grey one?",
+   "est_sec": 4.44,
+   "gap_before": 1.46,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "The grey one drove nicer. The blue one felt kind of heavy.",
+   "est_sec": 3.82,
+   "gap_before": 2.73,
+   "block": "cars.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "But the blue one has a bigger boot. We need space for the dog.",
+   "est_sec": 4.44,
+   "gap_before": 0.57,
+   "block": "cars.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "True. The dog doesn't care how it drives.",
+   "est_sec": 2.58,
+   "gap_before": 1.31,
+   "block": "cars.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Should we go back and test drive them again tomorrow?",
+   "est_sec": 3.2,
+   "gap_before": 1.24,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Let's do it in the morning, before the dealership gets busy.",
+   "est_sec": 3.51,
+   "gap_before": 0.83,
+   "block": "cars.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay. I'll call them first thing.",
+   "est_sec": 1.96,
+   "gap_before": 0.54,
+   "block": "cars.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, sorry for the wait.",
+   "est_sec": 1.96,
+   "gap_before": 0.8,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. So, for your marathon calf, total rest or cross training?",
+   "est_sec": 3.82,
+   "gap_before": 1.4,
+   "role": "resume",
+   "block": "fitness.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, I'm setting up a phone for my mom. She's not great with tech. Any tips?",
+   "est_sec": 5.68,
+   "gap_before": 1.19,
+   "block": "smartphones.dlg2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Make the text and icons bigger in the display settings first. That alone helps a lot.",
+   "est_sec": 5.06,
+   "gap_before": 0.74,
+   "role": "reply",
+   "block": "smartphones.dlg2"
+  },
+  {
+   "speaker": "user",
+   "text": "Perfect, I'll do that this weekend.",
+   "est_sec": 1.96,
+   "gap_before": 0.42,
+   "block": "smartphones.dlg2"
+  }
+ ]
+}

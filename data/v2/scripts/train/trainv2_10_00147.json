@@ -1,0 +1,220 @@
+{
+ "id": "trainv2_10_00147",
+ "split": "train",
+ "seed": 10,
+ "order_index": 147,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "gardening",
+  "pets"
+ ],
+ "instruction_position": 0.847,
+ "topic": "gardening",
+ "voices": {
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": "536d3a5e000945adb7038665781a4aca",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_16",
+  "side_instruction_v2_19",
+  "dq_39",
+  "side_cue_v2_22"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_19": {
+   "style": "command",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_22": {
+   "style": "statement",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "travel_planning.dlg15",
+  "gardening.ctx2",
+  "pets.side4",
+  "dq_39"
+ ],
+ "est_total_sec": 78.29,
+ "est_speech_sec": 62.35,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.42,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I have three days in Rome. Help me not waste them.",
+   "est_sec": 3.51,
+   "gap_before": 0.57,
+   "block": "travel_planning.dlg15",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Three days is good. I'd group things by area so you're not crossing the city all the time.",
+   "est_sec": 5.68,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "travel_planning.dlg15"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a bare patch in my back garden, maybe two meters wide, and it gets shade most of the day.",
+   "est_sec": 6.3,
+   "gap_before": 0.71,
+   "block": "gardening.ctx2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Shade is tricky but doable. Do you want flowers there, or something low-maintenance like ferns and ground cover?",
+   "est_sec": 5.68,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "gardening.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Keep quiet, Moshi, my grandma's asking me something.",
+   "est_sec": 2.58,
+   "gap_before": 1.05,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you have a spare hair tie?",
+   "est_sec": 2.27,
+   "gap_before": 1.43,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_39"
+  },
+  {
+   "speaker": "friend",
+   "text": "Check my coat pocket.",
+   "est_sec": 1.34,
+   "gap_before": 0.72,
+   "phrasing": "dq_39"
+  },
+  {
+   "speaker": "user",
+   "text": "Daniel, did Mango throw up on my duvet?",
+   "est_sec": 2.58,
+   "gap_before": 0.98,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "pets.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Possibly. I heard a very dramatic noise from your room at about six.",
+   "est_sec": 4.13,
+   "gap_before": 0.59,
+   "block": "pets.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "And you didn't check?",
+   "est_sec": 1.34,
+   "gap_before": 0.41,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "pets.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "I was asleep. Mostly.",
+   "est_sec": 1.34,
+   "gap_before": 0.67,
+   "block": "pets.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "It's a hairball, I think. Do we still have that paste the vet gave us?",
+   "est_sec": 4.75,
+   "gap_before": 0.35,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "pets.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Top shelf, next to the vitamins. She hates it though.",
+   "est_sec": 3.2,
+   "gap_before": 0.52,
+   "block": "pets.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "She hates everything that's good for her. Hold her while I put some on her paw?",
+   "est_sec": 5.06,
+   "gap_before": 0.97,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "pets.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine, but if she scratches me, you're buying dinner.",
+   "est_sec": 2.89,
+   "gap_before": 0.47,
+   "block": "pets.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm done over here. You can jump in now.",
+   "est_sec": 2.89,
+   "gap_before": 1.37,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. Did you decide what to put in that bare spot?",
+   "est_sec": 3.82,
+   "gap_before": 0.8,
+   "role": "resume",
+   "block": "gardening.ctx2"
+  }
+ ]
+}

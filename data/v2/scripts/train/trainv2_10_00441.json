@@ -1,0 +1,169 @@
+{
+ "id": "trainv2_10_00441",
+ "split": "train",
+ "seed": 10,
+ "order_index": 441,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "moshi_name",
+  "other_name",
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "cooking"
+ ],
+ "wait_sec": 21,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 21
+ },
+ "instruction_position": 0.611,
+ "topic": "cooking",
+ "voices": {
+  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "friend": null,
+  "other": "5ce84bbd213b4943bc89e1951e17848a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_225",
+  "greet_26",
+  "greet_ans_02",
+  "think_instruction_v2_29",
+  "self_29"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_29": {
+   "style": "fragment",
+   "tone": "distracted",
+   "states_return": false,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_work_002",
+  "cars.dlg1",
+  "cooking.ctx9"
+ ],
+ "est_total_sec": 73.18,
+ "est_speech_sec": 45.43,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you read me the tracking number, Tomasz?",
+   "est_sec": 2.58,
+   "gap_before": 0.5,
+   "block": "nq_work_002",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_work_002",
+   "name_pos": "end",
+   "addressee": "Tomasz"
+  },
+  {
+   "speaker": "other",
+   "text": "It starts with seven, nine, two.",
+   "est_sec": 1.96,
+   "gap_before": 0.32,
+   "block": "nq_work_002"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? Dude. I bought a cast iron pan and it's already rusty. Moshi, I've had it two days.",
+   "est_sec": 7.23,
+   "gap_before": 1.1,
+   "block": "cooking.ctx9",
+   "kind": "moshi_name",
+   "name_pos": "middle",
+   "addressee": "Moshi",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That happens if it stays wet. You can scrub it and re-season it in the oven, or just cook a lot of bacon in it and let the fat do the work. How patient are you feeling?",
+   "est_sec": 11.57,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "cooking.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, twenty-one seconds. Thinking.",
+   "est_sec": 1.34,
+   "gap_before": 0.4,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 21,
+   "phrasing": "think_instruction_v2_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, let me just picture it.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 6,
+    "offset": 15.76
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Which fix for the pan, the proper one or the tasty one?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "cooking.ctx9",
+   "anchor": {
+    "turn": 6,
+    "offset": 21.54
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "How do I know what pressure they should be?",
+   "est_sec": 2.89,
+   "gap_before": 1.1,
+   "event": "ordinary_request",
+   "block": "cars.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "There's usually a sticker inside the driver's door frame, or it's in the manual. Most petrol stations have a pump you can set to that number.",
+   "est_sec": 8.16,
+   "gap_before": 1.01,
+   "role": "reply",
+   "block": "cars.dlg1"
+  }
+ ]
+}

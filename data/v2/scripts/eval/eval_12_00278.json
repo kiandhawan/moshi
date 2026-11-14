@@ -1,0 +1,131 @@
+{
+ "id": "eval_12_00278",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 278,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_30",
+  "describe_instr_18",
+  "ack_02",
+  "describe_cue_06"
+ ],
+ "block_ids": [
+  "learning_language.opt4"
+ ],
+ "est_total_sec": 53.13,
+ "est_speech_sec": 40.99,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.37,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.8,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got a month off this summer and I want to spend it immersing myself in Spanish.",
+   "est_sec": 5.37,
+   "gap_before": 0.6,
+   "block": "learning_language.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll go through the options one by one. Don't say anything until I finish.",
+   "est_sec": 4.44,
+   "gap_before": 0.76,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.48,
+   "role": "ack",
+   "phrasing": "ack_02",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Living with a host family in Seville and taking classes in the mornings, all meals included.",
+   "est_sec": 5.06,
+   "gap_before": 0.85,
+   "block": "learning_language.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "An intensive language school in Valencia with twenty hours a week and a shared student flat.",
+   "est_sec": 5.06,
+   "gap_before": 2.35,
+   "block": "learning_language.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Volunteering on an organic farm in the mountains, where nobody speaks English at all.",
+   "est_sec": 4.44,
+   "gap_before": 2.28,
+   "block": "learning_language.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, those are all the choices. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.27,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For a month, I'd pick the host family. You get classes and daily real-life Spanish. The farm sounds amazing, but it could be lonely and hard if you're still a beginner.",
+   "est_sec": 9.71,
+   "gap_before": 0.88,
+   "role": "resume",
+   "block": "learning_language.opt4",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

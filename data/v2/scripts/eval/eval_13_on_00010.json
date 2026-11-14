@@ -1,0 +1,179 @@
+{
+ "id": "eval_13_on_00010",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 410,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00077",
+  "seed": 13
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "reading": {
+  "material": "letter",
+  "sec": 8.2
+ },
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "1258154bb41540c7b9dc0d10cd6704bf"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_15",
+  "read_instr_09",
+  "ack_14",
+  "murmur_15",
+  "read_cue_07",
+  "nq_eval_047",
+  "pn_209"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx21",
+  "nq_eval_047"
+ ],
+ "est_total_sec": 52.28,
+ "est_speech_sec": 30.86,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.6,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "My grandmother has everything and she's ninety two.",
+   "est_sec": 2.58,
+   "gap_before": 0.25,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then memories might be best. Would you record family members telling stories for her, or frame a photo of all the grandkids?",
+   "est_sec": 6.92,
+   "gap_before": 1.49,
+   "role": "reply",
+   "block": "holiday_gifts.ctx21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh Inez, what time did their mum say bedtime was?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_047",
+   "block": "nq_eval_047",
+   "name_pos": "start",
+   "addressee": "Inez",
+   "est_sec": 3.2,
+   "gap_before": 0.84
+  },
+  {
+   "speaker": "other",
+   "text": "Half seven, but they'll beg for eight.",
+   "block": "nq_eval_047",
+   "est_sec": 2.27,
+   "gap_before": 0.32
+  },
+  {
+   "speaker": "user",
+   "text": "Let me read this letter first, please don't talk until I'm done.",
+   "est_sec": 3.82,
+   "gap_before": 1.28,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.61,
+   "role": "ack",
+   "phrasing": "ack_14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Mm, okay, I see.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 3.97
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, finished the letter.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 8.2
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Finished reading? Your grandmother. A recording, or a framed photo?",
+   "est_sec": 3.2,
+   "gap_before": 0.76,
+   "role": "resume",
+   "block": "holiday_gifts.ctx21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The photo. Getting everyone together will be a nightmare, but worth it.",
+   "est_sec": 3.82,
+   "gap_before": 1.31,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Do it at a gathering if you can, everyone's already in one place.",
+   "est_sec": 4.13,
+   "gap_before": 1.1,
+   "role": "followup",
+   "block": "holiday_gifts.ctx21",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00077",
+  "name_pos": "start",
+  "answered": true
+ },
+ "groups": [
+  "new_type_reading",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

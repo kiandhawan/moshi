@@ -1,0 +1,203 @@
+{
+ "id": "trainv2_10_00685",
+ "split": "train",
+ "seed": 10,
+ "order_index": 685,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "job_interview",
+  "sleep"
+ ],
+ "instruction_position": 0.894,
+ "topic": "job_interview",
+ "voices": {
+  "user": "676f1654c4f747a69a5921ad94886fa1",
+  "friend": "cfc0d21e0b5947d08b957b2061670c0a",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Lucas",
+ "friend_name_id": "name_19",
+ "phrasing_ids": [
+  "greet_17",
+  "greet_ans_13",
+  "side_instr_29",
+  "side_cue_v2_43"
+ ],
+ "phrasing_styles": {
+  "side_instr_29": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_v2_43": {
+   "style": "request",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "sleep.dlg10",
+  "job_interview.ctx1",
+  "sleep.side6"
+ ],
+ "est_total_sec": 80.77,
+ "est_speech_sec": 61.94,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.41,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Weird question. Is it okay to sleep with socks on? My boyfriend says it's gross.",
+   "est_sec": 4.75,
+   "gap_before": 0.55,
+   "block": "sleep.dlg10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not weird at all, and it's fine. Warm feet can actually help you fall asleep faster, because it helps your body release heat.",
+   "est_sec": 7.23,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "sleep.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha! Told him.",
+   "est_sec": 1.03,
+   "gap_before": 1.32,
+   "block": "sleep.dlg10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Just pick clean, loose socks, not tight ones that squeeze your ankles.",
+   "est_sec": 3.82,
+   "gap_before": 0.64,
+   "role": "reply",
+   "block": "sleep.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm sending him this whole conversation.",
+   "est_sec": 1.96,
+   "gap_before": 0.86,
+   "block": "sleep.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, I have an interview on Thursday and I'm really nervous.",
+   "est_sec": 4.13,
+   "gap_before": 1.2,
+   "block": "job_interview.ctx1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's normal, we can practice. Do you want to start with tell me about yourself, or with questions about your weaknesses?",
+   "est_sec": 6.61,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "job_interview.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Pause for a bit, my kid needs me. I'll come back to you when I'm done.",
+   "est_sec": 5.06,
+   "gap_before": 1.27,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_29"
+  },
+  {
+   "speaker": "user",
+   "text": "I had the weirdest dream. You were a waiter and you kept serving me soup made of buttons.",
+   "est_sec": 5.68,
+   "gap_before": 0.92,
+   "block": "sleep.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Buttons? Was it good at least?",
+   "est_sec": 1.96,
+   "gap_before": 1.04,
+   "block": "sleep.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "It was crunchy. Then my teeth started falling out.",
+   "est_sec": 2.89,
+   "gap_before": 1.1,
+   "block": "sleep.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh, the teeth one. I get that before exams.",
+   "est_sec": 2.89,
+   "gap_before": 0.73,
+   "block": "sleep.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you think it means something?",
+   "est_sec": 1.96,
+   "gap_before": 2.28,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "sleep.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "It means you ate cheese at midnight. I saw you.",
+   "est_sec": 3.2,
+   "gap_before": 0.48,
+   "block": "sleep.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "All set over here. Can you keep going?",
+   "est_sec": 2.58,
+   "gap_before": 1.18,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_43"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. Ready to choose, the introduction question or the weakness one?",
+   "est_sec": 3.51,
+   "gap_before": 0.82,
+   "role": "resume",
+   "block": "job_interview.ctx1"
+  }
+ ]
+}

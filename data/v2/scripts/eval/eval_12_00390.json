@@ -1,0 +1,160 @@
+{
+ "id": "eval_12_00390",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 390,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_30",
+  "door_instr_07",
+  "door_03",
+  "implicit_05"
+ ],
+ "block_ids": [
+  "learning_language.ctx19",
+  "door_03"
+ ],
+ "est_total_sec": 51.66,
+ "est_speech_sec": 33.23,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.59,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.32,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "I come home too tired to study Arabic. Every single night.",
+   "est_sec": 3.51,
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's real. Ten minutes on your commute each day, or one longer session on the weekend?",
+   "est_sec": 5.06,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "learning_language.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a minute, someone's at the door. Stay quiet till I'm back.",
+   "est_sec": 4.13,
+   "gap_before": 1.22,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Hello?",
+   "est_sec": 0.41,
+   "gap_before": 2.15,
+   "phrasing": "door_03",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, I'm from the building office, we're checking smoke alarms today.",
+   "est_sec": 3.51,
+   "gap_before": 1.21,
+   "phrasing": "door_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, can you come back in an hour?",
+   "est_sec": 2.58,
+   "gap_before": 0.4,
+   "phrasing": "door_03",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Sure, no problem.",
+   "est_sec": 1.03,
+   "gap_before": 0.31,
+   "phrasing": "door_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, sorry, where were we again?",
+   "est_sec": 1.96,
+   "gap_before": 3.98,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. So, what slot are you going for?",
+   "est_sec": 2.89,
+   "gap_before": 0.97,
+   "role": "resume",
+   "block": "learning_language.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Commute. I've got a train ride anyway.",
+   "est_sec": 2.27,
+   "gap_before": 3.43,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect, audio lessons and flashcards fit that well.",
+   "est_sec": 2.58,
+   "gap_before": 1.06,
+   "role": "followup",
+   "block": "learning_language.ctx19",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

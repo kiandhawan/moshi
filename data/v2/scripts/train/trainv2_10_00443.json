@@ -1,0 +1,178 @@
+{
+ "id": "trainv2_10_00443",
+ "split": "train",
+ "seed": 10,
+ "order_index": 443,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "public_transport"
+ ],
+ "instruction_position": 0.44,
+ "topic": "public_transport",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_25",
+  "describe_instr_14",
+  "ack_07",
+  "describe_cue_07"
+ ],
+ "phrasing_styles": {
+  "describe_instr_14": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  },
+  "describe_cue_07": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "personal_finance.dlg7",
+  "public_transport.opt6"
+ ],
+ "est_total_sec": 83.84,
+ "est_speech_sec": 58.13,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.31,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "My grandson keeps telling me to do online banking. Is it safe?",
+   "est_sec": 3.82,
+   "gap_before": 0.56,
+   "block": "personal_finance.dlg7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's generally very safe if you use your bank's official app or website and keep your password private.",
+   "est_sec": 5.68,
+   "gap_before": 1.16,
+   "role": "reply",
+   "block": "personal_finance.dlg7"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. I'm finally ditching my car for commuting, and I need to pick a new routine.",
+   "est_sec": 5.37,
+   "gap_before": 0.67,
+   "block": "public_transport.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me lay out all the options first. Don't interrupt.",
+   "est_sec": 3.2,
+   "gap_before": 0.72,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.54,
+   "role": "ack",
+   "phrasing": "ack_07"
+  },
+  {
+   "speaker": "user",
+   "text": "I could cycle to the park and ride, then take the express bus the rest of the way.",
+   "est_sec": 5.68,
+   "gap_before": 1.22,
+   "block": "public_transport.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another way is the train from my village, which only runs twice an hour.",
+   "est_sec": 4.44,
+   "gap_before": 7.03,
+   "block": "public_transport.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I join my neighbour's car share to the tram terminus and ride the tram in.",
+   "est_sec": 5.06,
+   "gap_before": 7.5,
+   "block": "public_transport.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "That's it. Now you can comment.",
+   "est_sec": 1.96,
+   "gap_before": 1.25,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you want the most flexibility, cycling plus the express bus means you're never waiting on anyone. The train works too if you're the kind of person who's always early.",
+   "est_sec": 9.4,
+   "gap_before": 0.77,
+   "role": "resume",
+   "block": "public_transport.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "I worry about those scam messages.",
+   "est_sec": 1.96,
+   "gap_before": 1.06,
+   "event": "ordinary_request",
+   "block": "personal_finance.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a smart worry. Your bank will never ask for your full password or ask you to move money by text or phone call.",
+   "est_sec": 7.54,
+   "gap_before": 0.73,
+   "role": "reply",
+   "block": "personal_finance.dlg7"
+  }
+ ]
+}

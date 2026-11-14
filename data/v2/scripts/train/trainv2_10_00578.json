@@ -1,0 +1,159 @@
+{
+ "id": "trainv2_10_00578",
+ "split": "train",
+ "seed": 10,
+ "order_index": 578,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "board_games"
+ ],
+ "instruction_position": 0.164,
+ "topic": "board_games",
+ "voices": {
+  "user": "b47bb94bf3ce42b2a7643c31af62c553",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_02",
+  "describe_instruction_v2_13",
+  "describe_cue_v2_07"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_13": {
+   "style": "command",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_07": {
+   "style": "statement",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "board_games.opt1",
+  "video_games.dlg10"
+ ],
+ "est_total_sec": 75.29,
+ "est_speech_sec": 59.17,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 1.0,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "We're having game night on Friday, and I need to pick what to buy.",
+   "est_sec": 4.44,
+   "gap_before": 0.35,
+   "block": "board_games.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Don't weigh in yet, Moshi, there's more than one and I want to cover them all.",
+   "est_sec": 5.06,
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_13"
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is a big strategy game about building cities, about two hours to play.",
+   "est_sec": 5.06,
+   "gap_before": 1.33,
+   "block": "board_games.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a quick party game with drawing and guessing that works for up to ten people.",
+   "est_sec": 5.37,
+   "gap_before": 2.97,
+   "block": "board_games.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Option three is a cooperative game where everyone works together to stop a spreading disease.",
+   "est_sec": 4.75,
+   "gap_before": 1.72,
+   "block": "board_games.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is a word game with cards that's short and pretty easy to learn.",
+   "est_sec": 5.37,
+   "gap_before": 2.22,
+   "block": "board_games.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, yeah, I think that's it. Go ahead.",
+   "est_sec": 2.58,
+   "gap_before": 1.05,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How many people are coming, and are they into games? For a big casual crowd, the party game wins. For four keen players, I'd go with the city building one.",
+   "est_sec": 9.4,
+   "gap_before": 0.8,
+   "role": "resume",
+   "block": "board_games.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. I found a box of my old game cartridges in my mum's loft. Are they worth anything?",
+   "est_sec": 6.61,
+   "gap_before": 1.02,
+   "block": "video_games.dlg10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Some can be! It depends on the console, which games, and their condition. Do you still have the boxes and manuals?",
+   "est_sec": 6.61,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "video_games.dlg10"
+  }
+ ]
+}

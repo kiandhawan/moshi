@@ -1,0 +1,133 @@
+{
+ "id": "eval_12_00017",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 17,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "cycling"
+ ],
+ "reading": {
+  "material": "recipe",
+  "sec": 23.9
+ },
+ "topic": "cycling",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_27",
+  "greet_ans_21",
+  "read_instr_05",
+  "implicit_12"
+ ],
+ "block_ids": [
+  "cycling.ctx4"
+ ],
+ "est_total_sec": 61.33,
+ "est_speech_sec": 29.42,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.77,
+   "role": "greeting",
+   "phrasing": "greet_27",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "My daughter's four and she wants to learn to ride a bike.",
+   "est_sec": 3.82,
+   "gap_before": 0.34,
+   "event": "ordinary_request",
+   "block": "cycling.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sweet age to start. Would you go for a balance bike with no pedals, or a regular small bike with stabilisers?",
+   "est_sec": 6.61,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "cycling.ctx4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment to read through the recipe before you say anything.",
+   "est_sec": 4.13,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm all yours again.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 23.9
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. Now then, which way for her to learn?",
+   "est_sec": 3.2,
+   "gap_before": 1.09,
+   "role": "resume",
+   "block": "cycling.ctx4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Balance bike. My nephew learned that way super fast.",
+   "est_sec": 2.89,
+   "gap_before": 0.84,
+   "event": "ordinary_request",
+   "block": "cycling.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good choice. Most kids skip stabilisers entirely and go straight to pedals after.",
+   "est_sec": 4.13,
+   "gap_before": 1.18,
+   "role": "followup",
+   "block": "cycling.ctx4",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

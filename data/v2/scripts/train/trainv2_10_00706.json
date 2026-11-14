@@ -1,0 +1,161 @@
+{
+ "id": "trainv2_10_00706",
+ "split": "train",
+ "seed": 10,
+ "order_index": 706,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "cooking"
+ ],
+ "instruction_position": 0.562,
+ "topic": "cooking",
+ "voices": {
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_10",
+  "greet_ans_22",
+  "describe_instruction_v2_19",
+  "describe_cue_v2_13"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_19": {
+   "style": "fragment",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_13": {
+   "style": "fragment",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "birthday_party.dlg11",
+  "cooking.opt5"
+ ],
+ "est_total_sec": 84.42,
+ "est_speech_sec": 59.79,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.31,
+   "role": "greeting",
+   "phrasing": "greet_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.47,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm having people over for my birthday and I want some games for adults that aren't awkward.",
+   "est_sec": 5.37,
+   "gap_before": 0.5,
+   "block": "birthday_party.dlg11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Do your guests mostly know each other, or is it a mix of friend groups?",
+   "est_sec": 4.75,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "birthday_party.dlg11"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but My daughter wants to help cook on Saturday and I need something a seven year old can do.",
+   "est_sec": 6.3,
+   "gap_before": 1.31,
+   "block": "cooking.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "All the options first, comments after.",
+   "est_sec": 1.96,
+   "gap_before": 0.51,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Homemade pizza, where she rolls the dough and picks her own toppings, though the kitchen will get covered in flour.",
+   "est_sec": 6.3,
+   "gap_before": 1.38,
+   "block": "cooking.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe meatballs, she'd love squishing them, but raw meat and little hands make me a bit nervous.",
+   "est_sec": 5.37,
+   "gap_before": 6.14,
+   "block": "cooking.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or fruit skewers with a yogurt dip, which is safe and quick but maybe not very exciting for her.",
+   "est_sec": 5.99,
+   "gap_before": 5.56,
+   "block": "cooking.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Possibly pancakes, she can stir and pour while I do the flipping at the stove.",
+   "est_sec": 4.75,
+   "gap_before": 4.5,
+   "block": "cooking.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "And that's the final one, I'm done. Your verdict?",
+   "est_sec": 2.89,
+   "gap_before": 0.95,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Pizza is the winner for a seven year old, she gets to make choices and it feels like her dinner. The pancakes are a close second. Meatballs are fine with hand washing, and the skewers might be over in five minutes.",
+   "est_sec": 12.81,
+   "gap_before": 0.62,
+   "role": "resume",
+   "block": "cooking.opt5"
+  }
+ ]
+}

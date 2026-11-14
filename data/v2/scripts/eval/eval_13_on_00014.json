@@ -1,0 +1,194 @@
+{
+ "id": "eval_13_on_00014",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 414,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00107",
+  "seed": 13
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": "732ea755bd9e446eb31dc79966b50428",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "79d0bd3e4e5444b18f7b6d89b5927bf1"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_21",
+  "greet_ans_30",
+  "door_instr_04",
+  "ack_02",
+  "door_16",
+  "implicit_10",
+  "nq_eval_051",
+  "pn_218"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx8",
+  "door_16",
+  "nq_eval_051"
+ ],
+ "est_total_sec": 70.65,
+ "est_speech_sec": 41.18,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.7,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay I've got a weird one. My grandpa's a retired pilot and I'm broke.",
+   "est_sec": 4.44,
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not weird at all. Would he enjoy something nostalgic, like printing old flight photos, or a cheap trip to watch planes at the airfield?",
+   "est_sec": 7.54,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "holiday_gifts.ctx8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Before everyone gets here, Luca, did you hide the presents?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_051",
+   "block": "nq_eval_051",
+   "name_pos": "middle",
+   "addressee": "Luca",
+   "est_sec": 3.2,
+   "gap_before": 0.87
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, someone's knocking. Please stay quiet until I return.",
+   "est_sec": 2.89,
+   "gap_before": 2.78,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.4,
+   "role": "ack",
+   "phrasing": "ack_02",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hey! You made it.",
+   "est_sec": 1.34,
+   "gap_before": 4.57,
+   "phrasing": "door_16"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Sorry I'm early, the train was faster than I thought.",
+   "est_sec": 3.2,
+   "gap_before": 2.6,
+   "phrasing": "door_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Early is great. Did you find the place okay?",
+   "est_sec": 2.89,
+   "gap_before": 1.39,
+   "phrasing": "door_16",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Your directions were perfect.",
+   "est_sec": 1.34,
+   "gap_before": 1.22,
+   "phrasing": "door_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Come in, give me your bag.",
+   "est_sec": 1.96,
+   "gap_before": 0.74,
+   "phrasing": "door_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Anyway, what do you think?",
+   "est_sec": 1.65,
+   "gap_before": 3.44,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. So which one for him?",
+   "est_sec": 2.27,
+   "gap_before": 1.65,
+   "role": "resume",
+   "block": "holiday_gifts.ctx8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Photos. My gran has boxes of them in the attic.",
+   "est_sec": 3.2,
+   "gap_before": 2.22,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great, scan a dozen and put them in a cheap album. He'll love it.",
+   "est_sec": 4.44,
+   "gap_before": 0.71,
+   "role": "followup",
+   "block": "holiday_gifts.ctx8",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00107",
+  "name_pos": "middle",
+  "answered": false
+ },
+ "groups": [
+  "new_type_door",
+  "implicit_return",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

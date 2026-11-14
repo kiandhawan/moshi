@@ -1,0 +1,173 @@
+{
+ "id": "trainv2_10_00160",
+ "split": "train",
+ "seed": 10,
+ "order_index": 160,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "photography"
+ ],
+ "instruction_position": 0.439,
+ "topic": "photography",
+ "voices": {
+  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_11",
+  "describe_instr_13",
+  "describe_cue_v2_10"
+ ],
+ "phrasing_styles": {
+  "describe_instr_13": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_v2_10": {
+   "style": "request",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "cooking.dlg6",
+  "photography.opt1"
+ ],
+ "est_total_sec": 81.41,
+ "est_speech_sec": 62.47,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.34,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "My knives are so blunt I basically crush tomatoes instead of slicing them.",
+   "est_sec": 4.13,
+   "gap_before": 0.41,
+   "block": "cooking.dlg6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a sign they need sharpening. Do you have a sharpener or a whetstone at home?",
+   "est_sec": 5.06,
+   "gap_before": 1.05,
+   "role": "reply",
+   "block": "cooking.dlg6"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to get into photography, and I'm stuck choosing my first camera.",
+   "est_sec": 4.13,
+   "gap_before": 1.03,
+   "block": "photography.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait until I've listed everything before you jump in.",
+   "est_sec": 2.89,
+   "gap_before": 0.55,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_13"
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is a used entry level camera with a kit lens, cheap and good for learning.",
+   "est_sec": 5.68,
+   "gap_before": 1.26,
+   "block": "photography.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a new compact mirrorless camera that's small and light but costs a lot more.",
+   "est_sec": 5.06,
+   "gap_before": 2.85,
+   "block": "photography.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Option three is skipping a camera and just buying a nicer phone with a great camera.",
+   "est_sec": 5.06,
+   "gap_before": 2.53,
+   "block": "photography.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is an old film camera from a thrift store, which sounds fun but pricey to develop.",
+   "est_sec": 6.3,
+   "gap_before": 1.35,
+   "block": "photography.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all the options I've got, Moshi. Be honest, which is best?",
+   "est_sec": 3.82,
+   "gap_before": 1.28,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What do you want to photograph mostly? For travel, the light mirrorless is worth the extra cost. For learning on a budget, start with the used camera.",
+   "est_sec": 8.47,
+   "gap_before": 0.97,
+   "role": "resume",
+   "block": "photography.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a little pull-through thing in the drawer. Never used it.",
+   "est_sec": 3.51,
+   "gap_before": 1.96,
+   "event": "ordinary_request",
+   "block": "cooking.dlg6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That'll help. Pull the blade through gently, five or six times, always in the same direction.",
+   "est_sec": 5.06,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "cooking.dlg6"
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+{
+ "id": "trainv2_10_00259",
+ "split": "train",
+ "seed": 10,
+ "order_index": 259,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end",
+  "long",
+  "other_name"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "books"
+ ],
+ "wait_sec": 52,
+ "early_end": {
+  "after_sec": 36.12,
+  "direct": true
+ },
+ "instruction_position": 0.609,
+ "topic": "books",
+ "voices": {
+  "user": "b47bb94bf3ce42b2a7643c31af62c553",
+  "friend": null,
+  "other": "ba875f2fb2ea4a4e9b175821014984b6",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_143",
+  "greet_11",
+  "greet_ans_20",
+  "think_instruction_v2_13",
+  "ack_06",
+  "early_end_v2_14"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_13": {
+   "style": "statement",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  },
+  "early_end_v2_14": {
+   "style": "statement",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_social_078",
+  "books.ctx8",
+  "coffee.dlg13"
+ ],
+ "est_total_sec": 79.73,
+ "est_speech_sec": 32.1,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.66,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "My partner and I want to read the same book together.",
+   "est_sec": 3.51,
+   "gap_before": 0.5,
+   "block": "books.ctx8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a fun idea. Would you both read separately and compare notes, or read it aloud to each other?",
+   "est_sec": 5.99,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "books.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you book the physio for me like you promised, Ezra?",
+   "est_sec": 3.51,
+   "gap_before": 1.16,
+   "block": "nq_social_078",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_social_078",
+   "name_pos": "end",
+   "addressee": "Ezra"
+  },
+  {
+   "speaker": "user",
+   "text": "I'd like fifty-two seconds of quiet to work it out, then you can ask me again.",
+   "est_sec": 5.06,
+   "gap_before": 3.4,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 52,
+   "phrasing": "think_instruction_v2_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, yeah, okay, I've got it now.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 5,
+    "offset": 36.12
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_v2_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Reading together. Separately or out loud?",
+   "est_sec": 1.96,
+   "gap_before": 0.59,
+   "role": "resume",
+   "block": "books.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Aloud. We do a chapter before bed.",
+   "est_sec": 2.27,
+   "gap_before": 2.15,
+   "event": "ordinary_request",
+   "block": "books.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's lovely. Pick something with short chapters so nobody falls asleep mid page.",
+   "est_sec": 4.13,
+   "gap_before": 1.41,
+   "role": "followup",
+   "block": "books.ctx8"
+  }
+ ]
+}

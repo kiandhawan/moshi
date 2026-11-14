@@ -1,0 +1,154 @@
+{
+ "id": "eval_13_on_00032",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 432,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00359",
+  "seed": 13
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
+ "topics": [
+  "laptop_buying"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "7bb342e710854139b1d6e12411229f1f"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_15",
+  "nq_eval_018",
+  "pn_082"
+ ],
+ "block_ids": [
+  "laptop_buying.dlg11",
+  "nq_eval_018"
+ ],
+ "est_total_sec": 52.15,
+ "est_speech_sec": 36.34,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.9,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "My laptop keeps overheating. Should I just buy a new one?",
+   "est_sec": 3.51,
+   "gap_before": 0.57,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not necessarily. Overheating is often just dust in the fans. Have you ever cleaned it?",
+   "est_sec": 4.75,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "laptop_buying.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Henry, any idea where the bottle opener went?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_018",
+   "block": "nq_eval_018",
+   "name_pos": "start",
+   "addressee": "Henry",
+   "est_sec": 2.58,
+   "gap_before": 1.49
+  },
+  {
+   "speaker": "other",
+   "text": "Your uncle's got it in his pocket.",
+   "block": "nq_eval_018",
+   "est_sec": 2.27,
+   "gap_before": 0.38
+  },
+  {
+   "speaker": "user",
+   "text": "Never. It's four years old.",
+   "est_sec": 1.65,
+   "gap_before": 0.98,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then a cleaning could make a big difference. A repair shop can do it cheaply if you don't want to open it.",
+   "est_sec": 6.92,
+   "gap_before": 0.62,
+   "role": "reply",
+   "block": "laptop_buying.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Anything else I can do?",
+   "est_sec": 1.65,
+   "gap_before": 0.5,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Use it on a hard surface, not a bed or a couch. A cheap cooling pad can help too.",
+   "est_sec": 5.99,
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "laptop_buying.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "And if that doesn't work?",
+   "est_sec": 1.65,
+   "gap_before": 0.7,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then it might be the thermal paste drying out. A shop can replace it, it's still way cheaper than a new laptop.",
+   "est_sec": 6.92,
+   "gap_before": 0.5,
+   "role": "reply",
+   "block": "laptop_buying.dlg11",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00359",
+  "name_pos": "start",
+  "answered": true
+ },
+ "groups": [
+  "ordinary",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

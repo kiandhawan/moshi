@@ -1,0 +1,137 @@
+{
+ "id": "eval_12_00332",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 332,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "cycling"
+ ],
+ "wait_sec": 30,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 30
+ },
+ "topic": "cycling",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_03",
+  "think_instr_18",
+  "self_24"
+ ],
+ "block_ids": [
+  "cycling.ctx20"
+ ],
+ "est_total_sec": 64.05,
+ "est_speech_sec": 28.49,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to sell my old road bike. It's been in the garage for years.",
+   "est_sec": 4.75,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "cycling.ctx20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good idea. Would you rather list it online yourself, or trade it in at a bike shop for something new?",
+   "est_sec": 6.3,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "cycling.ctx20",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think. Ask me again in about thirty seconds.",
+   "est_sec": 3.2,
+   "gap_before": 1.23,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_18"
+  },
+  {
+   "speaker": "user",
+   "text": "No, I really don't know.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 25.11
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sell it online, or trade it in?",
+   "est_sec": 2.27,
+   "role": "resume",
+   "block": "cycling.ctx20",
+   "anchor": {
+    "turn": 4,
+    "offset": 30.33
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Online. I'll get more money that way.",
+   "est_sec": 2.27,
+   "gap_before": 1.2,
+   "event": "ordinary_request",
+   "block": "cycling.ctx20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Probably. Clean it, pump the tires, and take photos in daylight, it really helps.",
+   "est_sec": 4.44,
+   "gap_before": 0.64,
+   "role": "followup",
+   "block": "cycling.ctx20",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

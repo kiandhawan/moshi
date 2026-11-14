@@ -1,0 +1,176 @@
+{
+ "id": "trainv2_10_00162",
+ "split": "train",
+ "seed": 10,
+ "order_index": 162,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "weather_plans"
+ ],
+ "instruction_position": 0.697,
+ "topic": "weather_plans",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_14",
+  "describe_instruction_v2_05",
+  "describe_cue_04"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_05": {
+   "style": "request",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_04": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "job_interview.dlg26",
+  "weather_plans.opt3"
+ ],
+ "est_total_sec": 83.09,
+ "est_speech_sec": 67.12,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.47,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "My friend says I look bored in interviews. I'm not, it's just my face.",
+   "est_sec": 4.44,
+   "gap_before": 0.45,
+   "block": "job_interview.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, resting serious face. Body language can fix a lot of that.",
+   "est_sec": 3.82,
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "job_interview.dlg26"
+  },
+  {
+   "speaker": "user",
+   "text": "Like what? I can't just grin the whole time.",
+   "est_sec": 2.89,
+   "gap_before": 0.43,
+   "block": "job_interview.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No, but lean forward slightly when they talk, nod now and then, and smile when you greet them and when you're talking about something you enjoy.",
+   "est_sec": 8.16,
+   "gap_before": 0.37,
+   "role": "reply",
+   "block": "job_interview.dlg26"
+  },
+  {
+   "speaker": "user",
+   "text": "We're probably snowed in all weekend and I need ideas to keep everyone sane.",
+   "est_sec": 4.44,
+   "gap_before": 1.43,
+   "block": "weather_plans.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Ooh, can you just listen while I run through the choices? Then I'll ask what you think.",
+   "est_sec": 5.37,
+   "gap_before": 0.43,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_05"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a massive jigsaw in the cupboard, a thousand pieces, which would keep us busy but might cause fights.",
+   "est_sec": 5.99,
+   "gap_before": 0.94,
+   "block": "weather_plans.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "We could have a baking marathon, bread, cookies, the lot, as long as we don't run out of flour.",
+   "est_sec": 5.99,
+   "gap_before": 1.81,
+   "block": "weather_plans.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "The kids want to build an igloo in the garden, which sounds amazing until everyone's soaked and freezing.",
+   "est_sec": 5.68,
+   "gap_before": 1.69,
+   "block": "weather_plans.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a full movie day with blankets, popcorn and a film each person picks.",
+   "est_sec": 4.44,
+   "gap_before": 2.7,
+   "block": "weather_plans.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 1.34,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Mix them up. An igloo session in the morning while everyone has energy, then warm up with baking, and finish with the movie day. Save the jigsaw for whoever needs some quiet time.",
+   "est_sec": 10.33,
+   "gap_before": 0.44,
+   "role": "resume",
+   "block": "weather_plans.opt3"
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "id": "trainv2_10_00451",
+ "split": "train",
+ "seed": 10,
+ "order_index": 451,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "job_interview"
+ ],
+ "instruction_position": 0.174,
+ "topic": "job_interview",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_29",
+  "greet_ans_01",
+  "describe_instruction_v2_16",
+  "ack_06",
+  "describe_cue_v2_22"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_16": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_22": {
+   "style": "statement",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "job_interview.opt1",
+  "coffee.dlg2"
+ ],
+ "est_total_sec": 76.06,
+ "est_speech_sec": 52.97,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.72,
+   "role": "greeting",
+   "phrasing": "greet_29"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.37,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got a job interview on Thursday and I'm trying to decide how to prepare.",
+   "est_sec": 4.75,
+   "gap_before": 0.48,
+   "block": "job_interview.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me get every option on the table before you react, and I'll say when that's the last one.",
+   "est_sec": 5.99,
+   "gap_before": 0.74,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.26,
+   "role": "ack",
+   "phrasing": "ack_06"
+  },
+  {
+   "speaker": "user",
+   "text": "The first option is writing out answers to common questions and memorizing them.",
+   "est_sec": 4.13,
+   "gap_before": 0.94,
+   "block": "job_interview.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's doing a practice interview with my friend who works in hiring.",
+   "est_sec": 4.13,
+   "gap_before": 7.13,
+   "block": "job_interview.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is spending the time researching the company and their recent projects.",
+   "est_sec": 4.75,
+   "gap_before": 7.05,
+   "block": "job_interview.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the last option, I'm finished. Go ahead.",
+   "est_sec": 2.58,
+   "gap_before": 0.92,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Is this a company you know a lot about already? If not, spend an evening on research, then do the practice interview. Just jot down key points for common questions instead of memorizing full answers.",
+   "est_sec": 10.95,
+   "gap_before": 1.0,
+   "role": "resume",
+   "block": "job_interview.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, My coffee from the drip machine always tastes bitter. What am I doing wrong?",
+   "est_sec": 5.06,
+   "gap_before": 1.35,
+   "block": "coffee.dlg2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A few things can cause that. Are you using pre-ground coffee, and how long does it sit on the hot plate?",
+   "est_sec": 6.61,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "coffee.dlg2"
+  }
+ ]
+}

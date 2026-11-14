@@ -1,0 +1,212 @@
+{
+ "id": "trainv2_10_00576",
+ "split": "train",
+ "seed": 10,
+ "order_index": 576,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "moshi_name",
+  "other_name"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "public_transport"
+ ],
+ "wait_sec": 9,
+ "deadline": {
+  "after_turn": 8,
+  "sec": 9
+ },
+ "instruction_position": 0.574,
+ "topic": "public_transport",
+ "voices": {
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": null,
+  "other": "a52fdd0e957b4c288d8ec590bdd10288",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_177",
+  "greet_25",
+  "greet_ans_19",
+  "think_instruction_v2_23",
+  "ack_10"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_23": {
+   "style": "command",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_work_079",
+  "weekend_plans.dlg16",
+  "public_transport.ctx5"
+ ],
+ "est_total_sec": 76.35,
+ "est_speech_sec": 53.47,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.75,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm in Vienna for work and have Saturday to myself. I've never travelled alone.",
+   "est_sec": 4.44,
+   "gap_before": 0.55,
+   "block": "weekend_plans.dlg16",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a great chance. Start with a walking tour in the morning, it's a nice way to get your bearings.",
+   "est_sec": 6.3,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "weekend_plans.dlg16"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. I've got my toddler and a big pushchair today.",
+   "est_sec": 4.13,
+   "gap_before": 0.81,
+   "block": "public_transport.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The nearest station only has stairs. The next one has a lift but it's ten minutes further.",
+   "est_sec": 5.37,
+   "gap_before": 0.95,
+   "role": "reply",
+   "block": "public_transport.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh. And he's just fallen asleep.",
+   "est_sec": 1.96,
+   "gap_before": 0.75,
+   "block": "public_transport.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, risk waking him on the stairs, or take the longer walk?",
+   "est_sec": 3.82,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "public_transport.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Please give me nine seconds and then repeat the question.",
+   "est_sec": 3.2,
+   "gap_before": 0.89,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 9,
+   "phrasing": "think_instruction_v2_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.53,
+   "role": "ack",
+   "phrasing": "ack_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Which station are you heading for?",
+   "est_sec": 1.96,
+   "role": "resume",
+   "block": "public_transport.ctx5",
+   "anchor": {
+    "turn": 8,
+    "offset": 9.35
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The lift. Let him sleep.",
+   "est_sec": 1.65,
+   "gap_before": 0.81,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good choice. The walk might even keep him dozing, the motion usually helps.",
+   "est_sec": 4.13,
+   "gap_before": 0.85,
+   "role": "followup",
+   "block": "public_transport.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Want a coffee from the machine, Thabo?",
+   "est_sec": 2.27,
+   "gap_before": 1.18,
+   "block": "nq_work_079",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_work_079",
+   "name_pos": "end",
+   "addressee": "Thabo"
+  },
+  {
+   "speaker": "other",
+   "text": "Please, extra strong.",
+   "est_sec": 1.03,
+   "gap_before": 0.81,
+   "block": "nq_work_079"
+  },
+  {
+   "speaker": "user",
+   "text": "Eating alone in restaurants feels awkward, Moshi.",
+   "est_sec": 2.27,
+   "gap_before": 0.88,
+   "kind": "moshi_name",
+   "name_pos": "end",
+   "addressee": "Moshi",
+   "event": "ordinary_request",
+   "block": "weekend_plans.dlg16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lunch alone is often easier than dinner. Sit at a counter or by a window, and take a book.",
+   "est_sec": 5.99,
+   "gap_before": 1.81,
+   "role": "reply",
+   "block": "weekend_plans.dlg16"
+  }
+ ]
+}

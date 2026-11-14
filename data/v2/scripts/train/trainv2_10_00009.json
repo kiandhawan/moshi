@@ -1,0 +1,165 @@
+{
+ "id": "trainv2_10_00009",
+ "split": "train",
+ "seed": 10,
+ "order_index": 9,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "weekend_plans"
+ ],
+ "instruction_position": 0.432,
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_17",
+  "greet_ans_04",
+  "describe_instruction_v2_28",
+  "describe_cue_14"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_28": {
+   "style": "breakoff",
+   "tone": "polite",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_14": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "weekend_plans.dlg19",
+  "weekend_plans.opt4"
+ ],
+ "est_total_sec": 73.12,
+ "est_speech_sec": 60.51,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.59,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Challenge for you. I've got twenty pounds for the entire weekend.",
+   "est_sec": 3.51,
+   "gap_before": 0.39,
+   "block": "weekend_plans.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Accepted. Saturday could be a long walk or a bike ride somewhere pretty, with a packed lunch.",
+   "est_sec": 5.37,
+   "gap_before": 0.34,
+   "role": "reply",
+   "block": "weekend_plans.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, I want to sign my daughter up for a Saturday morning activity, and she can't decide either.",
+   "est_sec": 5.99,
+   "gap_before": 0.92,
+   "block": "weekend_plans.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm torn between— no, let me just describe every option and you can comment after.",
+   "est_sec": 4.75,
+   "gap_before": 0.43,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_28"
+  },
+  {
+   "speaker": "user",
+   "text": "A drama club at the community centre, lots of games and a little show at the end of term.",
+   "est_sec": 5.99,
+   "gap_before": 1.28,
+   "block": "weekend_plans.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Junior tennis lessons at the park, small groups, but outdoors even when it's cold.",
+   "est_sec": 4.44,
+   "gap_before": 1.03,
+   "block": "weekend_plans.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a coding club at the library for kids her age, free, but some say it's quite quiet and serious.",
+   "est_sec": 6.3,
+   "gap_before": 1.82,
+   "block": "weekend_plans.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm finished. What's your opinion?",
+   "est_sec": 1.96,
+   "gap_before": 0.92,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd ask her to try a taster session of two of them. Drama is great for confidence, tennis for energy, and the coding club suits a kid who likes to tinker quietly.",
+   "est_sec": 10.02,
+   "gap_before": 0.53,
+   "role": "resume",
+   "block": "weekend_plans.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, that's free. What about Saturday night?",
+   "est_sec": 2.27,
+   "gap_before": 1.72,
+   "event": "ordinary_request",
+   "block": "weekend_plans.dlg19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Invite a friend over and cook together. Pasta, a sauce and some cheese for a few pounds, and maybe a cheap film rental.",
+   "est_sec": 7.23,
+   "gap_before": 0.38,
+   "role": "reply",
+   "block": "weekend_plans.dlg19"
+  }
+ ]
+}

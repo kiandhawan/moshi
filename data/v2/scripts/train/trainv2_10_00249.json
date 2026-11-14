@@ -1,0 +1,236 @@
+{
+ "id": "trainv2_10_00249",
+ "split": "train",
+ "seed": 10,
+ "order_index": 249,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "friend_first",
+  "near_miss"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "books",
+  "shopping"
+ ],
+ "instruction_position": 0.832,
+ "topic": "books",
+ "voices": {
+  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "friend": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Emma",
+ "friend_name_id": "name_20",
+ "phrasing_ids": [
+  "greet_23",
+  "greet_ans_22",
+  "friend_interrupt_v2_16",
+  "side_instruction_v2_52",
+  "dn_16",
+  "side_cue_v2_35"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_16": {
+   "style": "fragment",
+   "tone": "neutral",
+   "source": "v2"
+  },
+  "side_instruction_v2_52": {
+   "style": "friend_first",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_35": {
+   "style": "fragment",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "pets.dlg6",
+  "books.ctx5",
+  "shopping.side1",
+  "dn_16"
+ ],
+ "est_total_sec": 76.35,
+ "est_speech_sec": 58.11,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How are you feeling?",
+   "est_sec": 1.65,
+   "gap_before": 0.52,
+   "role": "greeting",
+   "phrasing": "greet_23"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.6,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "My cat yowls at four in the morning. Every morning. I'm losing my mind.",
+   "est_sec": 4.44,
+   "gap_before": 0.49,
+   "block": "pets.dlg6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That sounds rough. Cats are naturally most active around dawn, and she's probably learned that yowling gets you up.",
+   "est_sec": 5.99,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "pets.dlg6"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, ugh, I left my book on the train this morning.",
+   "est_sec": 3.82,
+   "gap_before": 0.68,
+   "block": "books.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Oh no, that's the worst. Were you near the end?",
+   "est_sec": 3.2,
+   "gap_before": 0.34,
+   "role": "reply",
+   "block": "books.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Like forty pages from the end.",
+   "est_sec": 1.96,
+   "gap_before": 1.11,
+   "block": "books.ctx5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Painful. Do you want to buy a new copy, or wait and see if lost property has it?",
+   "est_sec": 5.68,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "books.ctx5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Quick question for you—",
+   "est_sec": 1.34,
+   "gap_before": 1.28,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, Moshi, Emma needs me. I'll let you know when I'm done.",
+   "est_sec": 3.82,
+   "gap_before": 0.6,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_52"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you back from the gym?",
+   "est_sec": 1.96,
+   "gap_before": 0.82,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_16"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yep, just got in.",
+   "est_sec": 1.34,
+   "gap_before": 0.7,
+   "phrasing": "dn_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Emma, are we out of dish soap?",
+   "est_sec": 2.27,
+   "gap_before": 2.97,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Almost. There's maybe one more load in the bottle.",
+   "est_sec": 2.89,
+   "gap_before": 1.22,
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, adding it to the list. Anything else you need from the store?",
+   "est_sec": 4.13,
+   "gap_before": 0.81,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oat milk, and those crackers I like.",
+   "est_sec": 2.27,
+   "gap_before": 0.55,
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "The rosemary ones?",
+   "est_sec": 1.03,
+   "gap_before": 0.93,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yes, those. Get two boxes if they're on sale.",
+   "est_sec": 2.89,
+   "gap_before": 0.53,
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back. Floor's yours.",
+   "est_sec": 1.34,
+   "gap_before": 0.84,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_35"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. Your book on the train. Buying a new copy, or waiting on lost property?",
+   "est_sec": 5.06,
+   "gap_before": 0.57,
+   "role": "resume",
+   "block": "books.ctx5"
+  }
+ ]
+}

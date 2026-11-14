@@ -1,0 +1,222 @@
+{
+ "id": "trainv2_10_00124",
+ "split": "train",
+ "seed": 10,
+ "order_index": 124,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "near_miss"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "gardening",
+  "smartphones"
+ ],
+ "instruction_position": 0.893,
+ "topic": "gardening",
+ "voices": {
+  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "friend": "4210f97652d14bec82edc1c2ee8296d2",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Ethan",
+ "friend_name_id": "name_23",
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_25",
+  "side_instr_11",
+  "ack_15",
+  "dn_69",
+  "dq_29",
+  "side_cue_01"
+ ],
+ "phrasing_styles": {
+  "side_instr_11": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_01": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "home_repair.dlg14",
+  "gardening.ctx1",
+  "smartphones.side5",
+  "dn_69",
+  "dq_29"
+ ],
+ "est_total_sec": 79.51,
+ "est_speech_sec": 56.15,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Our neighbour's music comes straight through the wall. Can I soundproof it myself?",
+   "est_sec": 4.13,
+   "gap_before": 0.5,
+   "block": "home_repair.dlg14",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can reduce it, though fully soundproofing a wall is a big job. How bad is it?",
+   "est_sec": 5.37,
+   "gap_before": 1.4,
+   "role": "reply",
+   "block": "home_repair.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I've got a sunny balcony and I want to grow something I can actually eat.",
+   "est_sec": 5.68,
+   "gap_before": 0.6,
+   "block": "gardening.ctx1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely. Herbs, cherry tomatoes and salad greens all do well in pots. Which of those would you use the most?",
+   "est_sec": 6.3,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "gardening.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Excuse me for a moment, my friend has a question. Don't talk until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 3.45,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "role": "ack",
+   "phrasing": "ack_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you water the plants?",
+   "est_sec": 1.65,
+   "gap_before": 1.4,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_29"
+  },
+  {
+   "speaker": "friend",
+   "text": "I did, this morning.",
+   "est_sec": 1.34,
+   "gap_before": 0.48,
+   "phrasing": "dq_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Is that your phone buzzing again? That's the fourth time since we sat down.",
+   "est_sec": 4.44,
+   "gap_before": 0.36,
+   "block": "smartphones.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sorry, it's the work group. They're arguing about the rota.",
+   "est_sec": 3.2,
+   "gap_before": 2.4,
+   "block": "smartphones.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Can it not wait until after dinner?",
+   "est_sec": 2.27,
+   "gap_before": 1.29,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "smartphones.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Probably. Fine, I'm putting it face down. Happy?",
+   "est_sec": 2.58,
+   "gap_before": 0.76,
+   "block": "smartphones.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Very. Pass the bread.",
+   "est_sec": 1.34,
+   "gap_before": 3.46,
+   "block": "smartphones.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Ethan, I'm almost done with the ironing, want me to do your shirt?",
+   "est_sec": 4.13,
+   "gap_before": 0.63,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_69"
+  },
+  {
+   "speaker": "friend",
+   "text": "Would you? You're a star.",
+   "est_sec": 1.65,
+   "gap_before": 1.06,
+   "phrasing": "dn_69"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back.",
+   "est_sec": 1.03,
+   "gap_before": 1.13,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. Any thoughts on what to plant first?",
+   "est_sec": 2.58,
+   "gap_before": 0.88,
+   "role": "resume",
+   "block": "gardening.ctx1"
+  }
+ ]
+}

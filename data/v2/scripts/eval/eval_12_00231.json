@@ -1,0 +1,173 @@
+{
+ "id": "eval_12_00231",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 231,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "podcasts"
+ ],
+ "reading": {
+  "material": "email",
+  "sec": 17.2
+ },
+ "topic": "podcasts",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_03",
+  "read_instr_01",
+  "ack_16",
+  "murmur_02",
+  "implicit_12"
+ ],
+ "block_ids": [
+  "podcasts.ctx15"
+ ],
+ "est_total_sec": 56.83,
+ "est_speech_sec": 34.47,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.56,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "I need a name for my gardening podcast and I'm stuck.",
+   "est_sec": 3.51,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun. Do you lean toward puns, or something plain?",
+   "est_sec": 2.89,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "podcasts.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My friends all want puns.",
+   "est_sec": 1.65,
+   "gap_before": 0.91,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Puns are memorable but can get cheesy. A clever pun, or a simple name people can search easily?",
+   "est_sec": 5.68,
+   "gap_before": 0.98,
+   "role": "reply",
+   "block": "podcasts.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I just got an email I need to read. Don't say anything until I'm done.",
+   "est_sec": 5.37,
+   "gap_before": 1.2,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.7,
+   "role": "ack",
+   "phrasing": "ack_16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, the meeting moved to Thursday.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 6,
+    "offset": 7.43
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm all yours again.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 17.2
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. Your podcast name. Pun, or plain?",
+   "est_sec": 2.58,
+   "gap_before": 0.37,
+   "role": "resume",
+   "block": "podcasts.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A pun. Something like Lettuce Talk.",
+   "est_sec": 1.96,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, that's cute. Just check nobody else already uses it.",
+   "est_sec": 3.2,
+   "gap_before": 0.45,
+   "role": "followup",
+   "block": "podcasts.ctx15",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

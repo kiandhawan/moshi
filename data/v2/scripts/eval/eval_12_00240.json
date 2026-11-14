@@ -1,0 +1,162 @@
+{
+ "id": "eval_12_00240",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 240,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_15",
+  "phone_instr_02",
+  "call_08",
+  "phone_cue_01"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx13",
+  "call_08"
+ ],
+ "est_total_sec": 57.02,
+ "est_speech_sec": 36.74,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.56,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "My little brother just moved into his first apartment.",
+   "est_sec": 2.89,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting. Should we think about something fun for the place, like a nice lamp, or boring but useful, like a tool kit?",
+   "est_sec": 6.92,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "holiday_gifts.ctx13",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My phone's ringing, give me a minute. Don't say anything until I'm done.",
+   "est_sec": 4.13,
+   "gap_before": 0.57,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, Dad.",
+   "est_sec": 0.72,
+   "gap_before": 1.47,
+   "phrasing": "call_08"
+  },
+  {
+   "speaker": "user",
+   "text": "No, I haven't forgotten.",
+   "est_sec": 1.34,
+   "gap_before": 2.81,
+   "phrasing": "call_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you want me to call the plumber?",
+   "est_sec": 2.58,
+   "gap_before": 2.74,
+   "phrasing": "call_08",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'll do it this afternoon.",
+   "est_sec": 1.96,
+   "gap_before": 2.96,
+   "phrasing": "call_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Bye.",
+   "est_sec": 0.41,
+   "gap_before": 2.66,
+   "phrasing": "call_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, sorry, I'm off the phone now.",
+   "est_sec": 2.27,
+   "gap_before": 1.47,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. So which one for his first apartment?",
+   "est_sec": 2.89,
+   "gap_before": 0.41,
+   "role": "resume",
+   "block": "holiday_gifts.ctx13",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Tool kit. He's going to need it and he won't buy one.",
+   "est_sec": 3.82,
+   "gap_before": 1.0,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "He'll thank you the first time a shelf falls down.",
+   "est_sec": 3.2,
+   "gap_before": 0.61,
+   "role": "followup",
+   "block": "holiday_gifts.ctx13",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

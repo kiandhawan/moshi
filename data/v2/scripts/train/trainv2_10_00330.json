@@ -1,0 +1,166 @@
+{
+ "id": "trainv2_10_00330",
+ "split": "train",
+ "seed": 10,
+ "order_index": 330,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "movies"
+ ],
+ "instruction_position": 0.141,
+ "topic": "movies",
+ "voices": {
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_08",
+  "describe_instruction_v2_14",
+  "describe_cue_v2_22"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_14": {
+   "style": "command",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_22": {
+   "style": "statement",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "movies.opt4",
+  "cleaning.dlg26"
+ ],
+ "est_total_sec": 80.11,
+ "est_speech_sec": 64.54,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.83,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "My friends and I want to see the new monster film on Friday and we can't agree where.",
+   "est_sec": 5.68,
+   "gap_before": 0.39,
+   "block": "movies.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Just listen while I lay them all out, and I'll ask for your view at the end.",
+   "est_sec": 5.37,
+   "gap_before": 0.74,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_14"
+  },
+  {
+   "speaker": "user",
+   "text": "There's the big multiplex with reclining seats, but tickets are pretty pricey.",
+   "est_sec": 3.82,
+   "gap_before": 1.25,
+   "block": "movies.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A tiny independent cinema near the station, cheap, cosy, and they serve proper cake.",
+   "est_sec": 4.44,
+   "gap_before": 2.46,
+   "block": "movies.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a drive in about forty minutes out of town, which we've never been to.",
+   "est_sec": 4.75,
+   "gap_before": 2.57,
+   "block": "movies.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the last option, I'm finished. Go ahead.",
+   "est_sec": 2.58,
+   "gap_before": 0.57,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For a big monster film, the multiplex will have the best sound and screen, if the price is okay. The independent is cheap and cosy, though the screen is smaller. The drive in is the most memorable night out, just check the weather first.",
+   "est_sec": 13.74,
+   "gap_before": 0.55,
+   "role": "resume",
+   "block": "movies.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? I've got a cupboard full of kitchen gadgets I never use. Spiralizer, waffle maker, and three blenders.",
+   "est_sec": 7.23,
+   "gap_before": 1.16,
+   "block": "cleaning.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sounds like a museum. A quick test, when did you last use each one?",
+   "est_sec": 4.44,
+   "gap_before": 1.13,
+   "role": "reply",
+   "block": "cleaning.dlg26"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly? The spiralizer was a January thing. Two years ago.",
+   "est_sec": 3.2,
+   "gap_before": 1.11,
+   "block": "cleaning.dlg26",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then it can go. If you haven't touched something in a year, and it's not seasonal, it's probably clutter.",
+   "est_sec": 5.99,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "cleaning.dlg26"
+  }
+ ]
+}

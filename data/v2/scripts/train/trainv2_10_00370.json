@@ -1,0 +1,205 @@
+{
+ "id": "trainv2_10_00370",
+ "split": "train",
+ "seed": 10,
+ "order_index": 370,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "travel_planning",
+  "movies"
+ ],
+ "instruction_position": 0.498,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "friend": "f3a2b90078d54a65af4b95f63bc7798e",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Ben",
+ "friend_name_id": "name_11",
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_11",
+  "side_instruction_v2_17",
+  "ack_15",
+  "side_cue_v2_17"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_17": {
+   "style": "command",
+   "tone": "polite",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_17": {
+   "style": "statement",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "travel_planning.ctx4",
+  "movies.side2",
+  "personal_finance.dlg9"
+ ],
+ "est_total_sec": 77.37,
+ "est_speech_sec": 58.22,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.41,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.71,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm finally doing it. Three months backpacking in Southeast Asia, starting in January.",
+   "est_sec": 4.13,
+   "gap_before": 0.44,
+   "block": "travel_planning.ctx4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting! Thailand is the easiest place to land and find your feet, while Vietnam has amazing food but is a bit more hectic. Where do you want to start?",
+   "est_sec": 9.09,
+   "gap_before": 0.39,
+   "role": "reply",
+   "block": "travel_planning.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Stay silent while I talk to Ben, please.",
+   "est_sec": 2.58,
+   "gap_before": 0.78,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.52,
+   "role": "ack",
+   "phrasing": "ack_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you want to watch something tonight or are you too tired?",
+   "est_sec": 3.82,
+   "gap_before": 1.11,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "movies.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Something short. I'll fall asleep if it's over two hours.",
+   "est_sec": 3.2,
+   "gap_before": 2.78,
+   "block": "movies.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "There's that animated one your sister recommended.",
+   "est_sec": 2.27,
+   "gap_before": 2.67,
+   "block": "movies.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh, that's supposed to be really good. How long is it?",
+   "est_sec": 3.51,
+   "gap_before": 0.6,
+   "block": "movies.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "About an hour and a half.",
+   "est_sec": 1.96,
+   "gap_before": 1.13,
+   "block": "movies.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Perfect. I'll make tea, you find the remote.",
+   "est_sec": 2.58,
+   "gap_before": 0.43,
+   "block": "movies.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Deal. Do we have any of those biscuits left?",
+   "est_sec": 2.89,
+   "gap_before": 0.97,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "movies.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Top cupboard, if you didn't eat them all.",
+   "est_sec": 2.58,
+   "gap_before": 0.48,
+   "block": "movies.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done chatting. Go ahead, I'm listening.",
+   "est_sec": 2.58,
+   "gap_before": 1.94,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. So, your first stop in January. Thailand or Vietnam?",
+   "est_sec": 3.2,
+   "gap_before": 0.31,
+   "role": "resume",
+   "block": "travel_planning.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. Help me understand compound interest like I'm five.",
+   "est_sec": 3.2,
+   "gap_before": 1.46,
+   "block": "personal_finance.dlg9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. Imagine you plant one apple seed and it grows a tree. The tree gives apples, and you plant those seeds too.",
+   "est_sec": 6.92,
+   "gap_before": 0.52,
+   "role": "reply",
+   "block": "personal_finance.dlg9"
+  }
+ ]
+}

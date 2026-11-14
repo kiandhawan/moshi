@@ -1,0 +1,183 @@
+{
+ "id": "trainv2_10_00626",
+ "split": "train",
+ "seed": 10,
+ "order_index": 626,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long",
+  "other_name"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "coffee"
+ ],
+ "instruction_position": 0.13,
+ "topic": "coffee",
+ "voices": {
+  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "friend": null,
+  "other": "705690224f264386b87fb598083ab022",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_037",
+  "greet_02",
+  "greet_ans_26",
+  "describe_instruction_v2_08",
+  "ack_01",
+  "describe_cue_v2_19"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_08": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_19": {
+   "style": "request",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_work_073",
+  "coffee.opt2",
+  "photography.dlg14"
+ ],
+ "est_total_sec": 81.72,
+ "est_speech_sec": 57.82,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.57,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 1.0,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "I can't figure out which coffee beans to order for the office.",
+   "est_sec": 3.82,
+   "gap_before": 0.58,
+   "block": "coffee.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to read out a few choices, and I'll let you know when I've finished.",
+   "est_sec": 5.06,
+   "gap_before": 0.5,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.66,
+   "role": "ack",
+   "phrasing": "ack_01"
+  },
+  {
+   "speaker": "user",
+   "text": "One is a dark roast that's bold and smoky, the kind most people expect from office coffee.",
+   "est_sec": 5.37,
+   "gap_before": 0.97,
+   "block": "coffee.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a light roast from a small farm, fruity and bright, but some people find it sour.",
+   "est_sec": 5.68,
+   "gap_before": 6.11,
+   "block": "coffee.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or we could get a medium blend that's smooth and balanced and a bit cheaper by the pound.",
+   "est_sec": 5.68,
+   "gap_before": 4.02,
+   "block": "coffee.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, I think I'm done. Yeah. What do you think?",
+   "est_sec": 3.2,
+   "gap_before": 0.67,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Do people mostly drink it with milk and sugar? If so, the dark roast holds up better. If not, the medium blend is a nice middle ground.",
+   "est_sec": 8.47,
+   "gap_before": 0.88,
+   "role": "resume",
+   "block": "coffee.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey Kennedy, is the wifi dropping for you too?",
+   "est_sec": 2.89,
+   "gap_before": 1.8,
+   "block": "nq_work_073",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_work_073",
+   "name_pos": "start",
+   "addressee": "Kennedy"
+  },
+  {
+   "speaker": "user",
+   "text": "I dropped my camera in the sand at the beach. It sounds crunchy when I zoom. Please help.",
+   "est_sec": 5.68,
+   "gap_before": 2.99,
+   "block": "photography.dlg14",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "First, don't zoom or turn it on and off any more. Grinding sand gets in deeper every time the lens moves.",
+   "est_sec": 6.61,
+   "gap_before": 0.62,
+   "role": "reply",
+   "block": "photography.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "Lesson learned. Camera bag next time.",
+   "est_sec": 1.96,
+   "gap_before": 1.03,
+   "block": "photography.dlg14"
+  }
+ ]
+}

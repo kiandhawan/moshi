@@ -1,0 +1,212 @@
+{
+ "id": "trainv2_10_00679",
+ "split": "train",
+ "seed": 10,
+ "order_index": 679,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "personal_finance",
+  "birthday_party"
+ ],
+ "instruction_position": 0.917,
+ "topic": "personal_finance",
+ "voices": {
+  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "friend": "e3cd384158934cc9a01029cd7d278634",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Jordan",
+ "friend_name_id": "name_05",
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_19",
+  "side_instruction_v2_13",
+  "ack_12",
+  "dn_34",
+  "side_cue_10"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_13": {
+   "style": "statement",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_10": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "photography.dlg31",
+  "personal_finance.ctx10",
+  "birthday_party.side5",
+  "dn_34"
+ ],
+ "est_total_sec": 79.3,
+ "est_speech_sec": 62.56,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.46,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.63,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm selling my car this week. How do I make the photos look good enough?",
+   "est_sec": 4.75,
+   "gap_before": 0.41,
+   "block": "photography.dlg31",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wash it first, inside and out, it matters more than any camera trick. Then pick an empty spot with a plain background, like a car park on a Sunday.",
+   "est_sec": 9.09,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "photography.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I got a letter saying I owe a bit more tax this year.",
+   "est_sec": 5.06,
+   "gap_before": 0.74,
+   "block": "personal_finance.ctx10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not fun. Would you rather pay it all at once, or ask about a payment plan to spread it out?",
+   "est_sec": 6.3,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "personal_finance.ctx10"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll be talking to Jordan for a little while, so please stay silent until I tell you I'm finished.",
+   "est_sec": 5.99,
+   "gap_before": 0.67,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.42,
+   "role": "ack",
+   "phrasing": "ack_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Go ahead, you tell the story, you remember it better.",
+   "est_sec": 3.2,
+   "gap_before": 0.76,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_34"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine, but you'll interrupt me anyway.",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
+   "phrasing": "dn_34"
+  },
+  {
+   "speaker": "user",
+   "text": "Jordan, be honest, is this banner too much?",
+   "est_sec": 2.58,
+   "gap_before": 1.2,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's enormous. It covers the entire window.",
+   "est_sec": 2.27,
+   "gap_before": 2.98,
+   "block": "birthday_party.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "I know, but she loves glitter.",
+   "est_sec": 1.96,
+   "gap_before": 0.59,
+   "block": "birthday_party.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "She's turning fifty, not five. Maybe just the gold letters and lose the unicorns?",
+   "est_sec": 4.44,
+   "gap_before": 0.52,
+   "block": "birthday_party.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, you're right. Can you hold that end while I cut it down?",
+   "est_sec": 4.13,
+   "gap_before": 1.23,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. Go slowly, the scissors are blunt.",
+   "est_sec": 2.27,
+   "gap_before": 0.52,
+   "block": "birthday_party.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, I'm back now. Go ahead.",
+   "est_sec": 1.96,
+   "gap_before": 0.89,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. Still deciding about the tax letter?",
+   "est_sec": 2.27,
+   "gap_before": 1.15,
+   "role": "resume",
+   "block": "personal_finance.ctx10"
+  }
+ ]
+}

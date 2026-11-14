@@ -1,0 +1,193 @@
+{
+ "id": "trainv2_10_00407",
+ "split": "train",
+ "seed": 10,
+ "order_index": 407,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "moshi_name",
+  "other_name"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "cleaning"
+ ],
+ "instruction_position": 0.106,
+ "topic": "cleaning",
+ "voices": {
+  "user": "c250136a9ec74cc0b799be54664a83f2",
+  "friend": null,
+  "other": "18b1276891524bd786fb8a59ecd3630a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_210",
+  "greet_19",
+  "greet_ans_19",
+  "describe_instr_17",
+  "describe_cue_v2_05"
+ ],
+ "phrasing_styles": {
+  "describe_instr_17": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  },
+  "describe_cue_v2_05": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_home_009",
+  "cleaning.opt3",
+  "travel_planning.dlg1"
+ ],
+ "est_total_sec": 76.64,
+ "est_speech_sec": 58.54,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.58,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.77,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Laundry is taking over my bedroom and I need a better plan.",
+   "est_sec": 3.82,
+   "gap_before": 0.37,
+   "block": "cleaning.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me finish describing every option before you respond.",
+   "est_sec": 2.89,
+   "gap_before": 0.78,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_17"
+  },
+  {
+   "speaker": "user",
+   "text": "I could do one small load every evening, so it never piles up.",
+   "est_sec": 4.13,
+   "gap_before": 1.23,
+   "block": "cleaning.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or have a laundry day on Sunday and do everything at once, folding included, with a film on.",
+   "est_sec": 5.68,
+   "gap_before": 1.77,
+   "block": "cleaning.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a service near me that collects it and brings it back folded, but it isn't cheap.",
+   "est_sec": 5.37,
+   "gap_before": 2.07,
+   "block": "cleaning.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Finished. Thoughts, Moshi?",
+   "est_sec": 1.03,
+   "gap_before": 1.37,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If the folding is what you hate, the pickup service solves that completely. Otherwise the Sunday session with a film is the cheapest, and the nightly load is the gentlest on your weekends.",
+   "est_sec": 10.33,
+   "gap_before": 0.48,
+   "role": "resume",
+   "block": "cleaning.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay Moshi, what's the best way to get from Paris to Amsterdam?",
+   "est_sec": 3.82,
+   "gap_before": 1.79,
+   "block": "travel_planning.dlg1",
+   "kind": "moshi_name",
+   "name_pos": "start",
+   "addressee": "Moshi",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The train is easiest. It takes a bit over three hours and drops you right in the city center.",
+   "est_sec": 5.99,
+   "gap_before": 1.47,
+   "role": "reply",
+   "block": "travel_planning.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "Lars, why is there a single grape on the bathroom floor?",
+   "est_sec": 3.51,
+   "gap_before": 1.34,
+   "block": "nq_home_009",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_home_009",
+   "name_pos": "start",
+   "addressee": "Lars"
+  },
+  {
+   "speaker": "other",
+   "text": "No idea. Probably the dog.",
+   "est_sec": 1.65,
+   "gap_before": 0.74,
+   "block": "nq_home_009"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it expensive?",
+   "est_sec": 1.03,
+   "gap_before": 1.36,
+   "block": "travel_planning.dlg1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It can be if you book late. Book a few weeks ahead and you'll often find much cheaper fares.",
+   "est_sec": 5.99,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "travel_planning.dlg1"
+  }
+ ]
+}

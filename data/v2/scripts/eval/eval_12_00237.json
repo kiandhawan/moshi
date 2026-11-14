@@ -1,0 +1,131 @@
+{
+ "id": "eval_12_00237",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 237,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "picnic"
+ ],
+ "topic": "picnic",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_15",
+  "describe_instr_15",
+  "ack_05",
+  "describe_cue_09"
+ ],
+ "block_ids": [
+  "picnic.opt4"
+ ],
+ "est_total_sec": 52.78,
+ "est_speech_sec": 41.92,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.39,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.68,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "We're planning a big picnic for my running club after our race and I can't pick the food.",
+   "est_sec": 5.68,
+   "gap_before": 0.26,
+   "block": "picnic.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to describe all the options before I hear your opinion.",
+   "est_sec": 3.82,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.26,
+   "role": "ack",
+   "phrasing": "ack_05",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A barbecue with burgers and veggie skewers, filling but someone has to cook while we're all tired.",
+   "est_sec": 5.37,
+   "gap_before": 1.22,
+   "block": "picnic.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A big order of wraps and salads from a cafe, easy, but it costs more.",
+   "est_sec": 4.75,
+   "gap_before": 2.36,
+   "block": "picnic.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a potluck where everyone brings something, cheap and fun but a bit unpredictable.",
+   "est_sec": 4.44,
+   "gap_before": 1.76,
+   "block": "picnic.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "So, that's all of them. Tell me what you think.",
+   "est_sec": 3.2,
+   "gap_before": 1.28,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd go with the cafe wraps, people will be hungry and tired, so convenience wins. A potluck could work if you assign categories. Save the barbecue for a day without a race.",
+   "est_sec": 10.02,
+   "gap_before": 0.44,
+   "role": "resume",
+   "block": "picnic.opt4",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

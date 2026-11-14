@@ -1,0 +1,197 @@
+{
+ "id": "trainv2_10_00691",
+ "split": "train",
+ "seed": 10,
+ "order_index": 691,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "gardening"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "instruction_position": 0.267,
+ "topic": "gardening",
+ "voices": {
+  "user": "3fdb457debb744ca9cfe9e2ce99a2deb",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_16",
+  "think_instr_20",
+  "ack_02",
+  "self_29",
+  "self_07"
+ ],
+ "phrasing_styles": {
+  "think_instr_20": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "gardening.ctx7",
+  "home_repair.dlg32"
+ ],
+ "est_total_sec": 77.69,
+ "est_speech_sec": 49.55,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.33,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.84,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "My two boys want a sunflower contest this summer. Who grows the best one.",
+   "est_sec": 4.44,
+   "gap_before": 0.34,
+   "block": "gardening.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What a fun idea. Best meaning tallest, or best meaning the most flowers? That changes which seeds to buy.",
+   "est_sec": 5.99,
+   "gap_before": 1.39,
+   "role": "reply",
+   "block": "gardening.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I need twenty seconds to think. Then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 2.28,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.48,
+   "role": "ack",
+   "phrasing": "ack_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, let me just picture it.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 13.73
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, either way, really.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 17.59
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So what's the contest, tallest sunflower or most flowers?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "gardening.ctx7",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.08
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Most flowers, so nobody cries if one falls over.",
+   "est_sec": 2.89,
+   "gap_before": 0.86,
+   "event": "ordinary_request",
+   "block": "gardening.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Smart parenting. Choose a branching variety, each plant can give you ten or more heads.",
+   "est_sec": 4.75,
+   "gap_before": 1.27,
+   "role": "followup",
+   "block": "gardening.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but Hi, my hot water tank is making a weird rumbling sound.",
+   "est_sec": 4.13,
+   "gap_before": 1.0,
+   "block": "home_repair.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's often a build up of sediment at the bottom of the tank. As the water heats, it bubbles through and rumbles.",
+   "est_sec": 6.92,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "home_repair.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it dangerous?",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
+   "block": "home_repair.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not usually right away, but it makes the heater work harder and wear out sooner. Flushing the tank helps.",
+   "est_sec": 5.99,
+   "gap_before": 0.52,
+   "role": "reply",
+   "block": "home_repair.dlg32"
+  }
+ ]
+}

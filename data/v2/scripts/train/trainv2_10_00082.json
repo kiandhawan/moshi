@@ -1,0 +1,171 @@
+{
+ "id": "trainv2_10_00082",
+ "split": "train",
+ "seed": 10,
+ "order_index": 82,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "fitness"
+ ],
+ "instruction_position": 0.215,
+ "topic": "fitness",
+ "voices": {
+  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_04",
+  "describe_instruction_v2_26",
+  "ack_02",
+  "describe_cue_10"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_26": {
+   "style": "breakoff",
+   "tone": "apologetic",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_10": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "fitness.opt4",
+  "personal_finance.dlg17"
+ ],
+ "est_total_sec": 80.01,
+ "est_speech_sec": 57.41,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.34,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.4,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "My gym has a new timetable and I can fit in one class a week. Help me pick.",
+   "est_sec": 5.68,
+   "gap_before": 0.26,
+   "block": "fitness.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is— oh, sorry, don't comment until I've got through all of them.",
+   "est_sec": 4.75,
+   "gap_before": 0.8,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.29,
+   "role": "ack",
+   "phrasing": "ack_02"
+  },
+  {
+   "speaker": "user",
+   "text": "There's spin on Monday evenings, very intense, with loud music and an instructor who shouts a lot.",
+   "est_sec": 5.37,
+   "gap_before": 0.8,
+   "block": "fitness.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A weights class on Wednesdays where everyone uses barbells, good for strength but it gets crowded.",
+   "est_sec": 5.06,
+   "gap_before": 3.51,
+   "block": "fitness.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Yoga on Friday lunchtimes, slow and calm, which my tight hamstrings would probably thank me for.",
+   "est_sec": 5.06,
+   "gap_before": 6.07,
+   "block": "fitness.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or the Sunday morning swim group, which mixes drills and laps, but means getting up early on the weekend.",
+   "est_sec": 5.99,
+   "gap_before": 5.56,
+   "block": "fitness.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. What would you recommend?",
+   "est_sec": 1.65,
+   "gap_before": 0.59,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd think about what you skip on your own. Most people don't stretch, so yoga fills a gap. The weights class would build strength, though crowds can be annoying. Spin and swimming are both solid cardio choices.",
+   "est_sec": 11.57,
+   "gap_before": 0.65,
+   "role": "resume",
+   "block": "fitness.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. What's an emergency fund supposed to cover exactly?",
+   "est_sec": 3.82,
+   "gap_before": 1.13,
+   "block": "personal_finance.dlg17",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Unexpected costs you can't put off. Things like a broken boiler, car repairs, or losing your job.",
+   "est_sec": 5.37,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "personal_finance.dlg17"
+  }
+ ]
+}

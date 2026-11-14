@@ -1,0 +1,130 @@
+{
+ "id": "trainv2_10_00393",
+ "split": "train",
+ "seed": 10,
+ "order_index": 393,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "smartphones"
+ ],
+ "wait_sec": 39,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 39
+ },
+ "instruction_position": 0.821,
+ "topic": "smartphones",
+ "voices": {
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_01",
+  "greet_ans_14",
+  "think_instruction_v2_43"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_43": {
+   "style": "implied",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "weather_plans.dlg25",
+  "smartphones.ctx1"
+ ],
+ "est_total_sec": 81.85,
+ "est_speech_sec": 36.14,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.31,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.66,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going sea fishing and someone said the air pressure matters. Is that true?",
+   "est_sec": 4.44,
+   "gap_before": 0.37,
+   "block": "weather_plans.dlg25",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A lot of anglers believe it. Fish often seem more active when the pressure is falling, like just before a front comes in.",
+   "est_sec": 7.23,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "weather_plans.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but My phone is three years old and the battery dies by lunchtime. I think it's time to replace it.",
+   "est_sec": 6.61,
+   "gap_before": 0.96,
+   "block": "smartphones.ctx1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's fair. Do you want to stick with the same brand, or are you open to switching to something new?",
+   "est_sec": 6.3,
+   "gap_before": 0.73,
+   "role": "reply",
+   "block": "smartphones.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "I can't decide with you talking. thirty-nine seconds would be great.",
+   "est_sec": 3.51,
+   "gap_before": 1.29,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 39,
+   "phrasing": "think_instruction_v2_43"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, have you made up your mind? Same brand as before, or are you thinking of switching?",
+   "est_sec": 5.37,
+   "role": "resume",
+   "block": "smartphones.ctx1",
+   "anchor": {
+    "turn": 6,
+    "offset": 39.42
+   }
+  }
+ ]
+}

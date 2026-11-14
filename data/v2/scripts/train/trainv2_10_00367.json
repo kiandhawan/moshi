@@ -1,0 +1,174 @@
+{
+ "id": "trainv2_10_00367",
+ "split": "train",
+ "seed": 10,
+ "order_index": 367,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "sleep"
+ ],
+ "instruction_position": 0.1,
+ "topic": "sleep",
+ "voices": {
+  "user": "a52fdd0e957b4c288d8ec590bdd10288",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_07",
+  "describe_instr_02",
+  "ack_16",
+  "describe_cue_11"
+ ],
+ "phrasing_styles": {
+  "describe_instr_02": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_11": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "sleep.opt2",
+  "sleep.dlg20"
+ ],
+ "est_total_sec": 73.89,
+ "est_speech_sec": 60.61,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.52,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm buying a new mattress and I've narrowed it down.",
+   "est_sec": 3.2,
+   "gap_before": 0.23,
+   "block": "sleep.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
+   "est_sec": 4.75,
+   "gap_before": 0.51,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.48,
+   "role": "ack",
+   "phrasing": "ack_16"
+  },
+  {
+   "speaker": "user",
+   "text": "One is a firm memory foam mattress that a lot of reviews say is great for back pain.",
+   "est_sec": 5.68,
+   "gap_before": 0.68,
+   "block": "sleep.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a soft pillow top spring mattress, really cozy, but it might sag after a few years.",
+   "est_sec": 5.68,
+   "gap_before": 1.2,
+   "block": "sleep.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's a hybrid with springs and foam, medium firm, and a bit more expensive.",
+   "est_sec": 4.75,
+   "gap_before": 2.8,
+   "block": "sleep.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "And that's the last one. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 0.85,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Do you sleep on your side, back or stomach? Side sleepers usually like something softer, so the hybrid could be ideal. If you have back pain, I'd try the firm foam one.",
+   "est_sec": 10.02,
+   "gap_before": 0.44,
+   "role": "resume",
+   "block": "sleep.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I can only fit in my workouts at ten at night. Is that wrecking my sleep?",
+   "est_sec": 5.99,
+   "gap_before": 1.12,
+   "block": "sleep.dlg20",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For some people it does, because intense exercise raises your heart rate and body temperature. Others sleep fine.",
+   "est_sec": 5.68,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "sleep.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "How do I know which one I am?",
+   "est_sec": 2.58,
+   "gap_before": 0.43,
+   "block": "sleep.dlg20",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Notice how long it takes to fall asleep on workout nights versus rest nights.",
+   "est_sec": 4.44,
+   "gap_before": 0.49,
+   "role": "reply",
+   "block": "sleep.dlg20"
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "id": "trainv2_10_00436",
+ "split": "train",
+ "seed": 10,
+ "order_index": 436,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "pets"
+ ],
+ "instruction_position": 0.598,
+ "topic": "pets",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_19",
+  "describe_instruction_v2_31",
+  "ack_03",
+  "describe_cue_v2_02"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_31": {
+   "style": "implied",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_02": {
+   "style": "request",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "cars.dlg17",
+  "pets.opt5"
+ ],
+ "est_total_sec": 82.2,
+ "est_speech_sec": 61.65,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.77,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.63,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Petrol's so expensive now. I'm retired and I want to squeeze every mile out of a tank.",
+   "est_sec": 5.37,
+   "gap_before": 0.51,
+   "block": "cars.dlg17",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "There's quite a lot you can do. Smooth driving is the biggest one, accelerating gently and anticipating stops so you brake less.",
+   "est_sec": 6.92,
+   "gap_before": 1.19,
+   "role": "reply",
+   "block": "cars.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? Our kitten is about to graduate to a proper litter tray and I can't pick a litter.",
+   "est_sec": 7.23,
+   "gap_before": 1.41,
+   "block": "pets.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "There are quite a few choices and they're all a bit complicated, so this might take me a while.",
+   "est_sec": 5.99,
+   "gap_before": 0.73,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.25,
+   "role": "ack",
+   "phrasing": "ack_03"
+  },
+  {
+   "speaker": "user",
+   "text": "The clumping clay one is cheap and easy to scoop, but it's dusty and gets tracked everywhere.",
+   "est_sec": 5.37,
+   "gap_before": 1.07,
+   "block": "pets.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Pine pellets smell nice and are biodegradable, though some cats hate the feel under their paws.",
+   "est_sec": 5.06,
+   "gap_before": 4.91,
+   "block": "pets.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And silica crystals soak up smells really well, but they're expensive and crunchy.",
+   "est_sec": 4.13,
+   "gap_before": 5.73,
+   "block": "pets.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them, Moshi. Which one grabs you?",
+   "est_sec": 3.2,
+   "gap_before": 0.8,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Kittens are often fine with clumping clay since it feels like sand. The pine pellets are nice for the planet, but try a small bag first in case she refuses it. Crystals are great at smells, just pricey for a messy kitten.",
+   "est_sec": 13.12,
+   "gap_before": 1.05,
+   "role": "resume",
+   "block": "pets.opt5"
+  }
+ ]
+}

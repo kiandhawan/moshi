@@ -1,0 +1,207 @@
+{
+ "id": "trainv2_10_00502",
+ "split": "train",
+ "seed": 10,
+ "order_index": 502,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "coffee",
+  "smartphones"
+ ],
+ "instruction_position": 0.874,
+ "topic": "coffee",
+ "voices": {
+  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "friend": "e3cd384158934cc9a01029cd7d278634",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Emma",
+ "friend_name_id": "name_20",
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_11",
+  "side_instruction_v2_35",
+  "ack_12",
+  "dq_25",
+  "side_cue_v2_13"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_35": {
+   "style": "breakoff",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_13": {
+   "style": "statement",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "sleep.dlg21",
+  "coffee.ctx4",
+  "smartphones.side3",
+  "dq_25"
+ ],
+ "est_total_sec": 80.05,
+ "est_speech_sec": 62.25,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "My husband snoozes his alarm five times. I wake up at every single one.",
+   "est_sec": 4.44,
+   "gap_before": 0.36,
+   "block": "sleep.dlg21",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's maddening. Could he set one alarm for the real time and put his phone across the room?",
+   "est_sec": 5.68,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "sleep.dlg21"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm running a little coffee cart at the farmers market this summer and I want one signature drink.",
+   "est_sec": 5.68,
+   "gap_before": 1.04,
+   "block": "coffee.ctx4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Love that. A honey lavender latte would feel special and floral, or a maple cold brew would be great on hot mornings. Which way are you leaning?",
+   "est_sec": 8.47,
+   "gap_before": 1.31,
+   "role": "reply",
+   "block": "coffee.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "What I really want is— hang on, my dad's calling me over. Don't say anything.",
+   "est_sec": 4.75,
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_35"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.38,
+   "role": "ack",
+   "phrasing": "ack_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Emma, have you seen my charger? The white one with the short cable.",
+   "est_sec": 4.13,
+   "gap_before": 1.19,
+   "block": "smartphones.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "I borrowed it this morning, sorry. It's next to my bed.",
+   "est_sec": 3.51,
+   "gap_before": 1.4,
+   "block": "smartphones.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I grab it? I'm down to five percent.",
+   "est_sec": 2.89,
+   "gap_before": 1.15,
+   "block": "smartphones.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Go for it. We really need to buy a second one.",
+   "est_sec": 3.51,
+   "gap_before": 0.51,
+   "block": "smartphones.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Agreed. Maybe a long cable so it reaches the couch.",
+   "est_sec": 3.2,
+   "gap_before": 0.77,
+   "block": "smartphones.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Good idea. Add it to the shopping list.",
+   "est_sec": 2.58,
+   "gap_before": 0.5,
+   "block": "smartphones.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Emma, did you hear that noise?",
+   "est_sec": 1.96,
+   "gap_before": 1.62,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_25"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think it was the neighbors.",
+   "est_sec": 1.96,
+   "gap_before": 0.8,
+   "phrasing": "dq_25"
+  },
+  {
+   "speaker": "user",
+   "text": "All sorted, Moshi. Pick up where you were.",
+   "est_sec": 2.58,
+   "gap_before": 1.22,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Your coffee cart drink. Lavender latte or maple cold brew?",
+   "est_sec": 3.51,
+   "gap_before": 1.89,
+   "role": "resume",
+   "block": "coffee.ctx4"
+  }
+ ]
+}

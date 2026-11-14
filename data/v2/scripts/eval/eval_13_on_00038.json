@@ -1,0 +1,145 @@
+{
+ "id": "eval_13_on_00038",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 438,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00385",
+  "seed": 13
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "8abfa9ebd4c24a3399b68c3cdac8c7b5"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_21",
+  "greet_ans_09",
+  "describe_instr_09",
+  "describe_cue_03",
+  "nq_eval_045",
+  "pn_203"
+ ],
+ "block_ids": [
+  "holiday_gifts.opt4",
+  "nq_eval_045"
+ ],
+ "est_total_sec": 63.44,
+ "est_speech_sec": 45.02,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.52,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.81,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "This lake is freezing, Ximena, are you really going in?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_045",
+   "block": "nq_eval_045",
+   "name_pos": "middle",
+   "addressee": "Ximena",
+   "est_sec": 3.2,
+   "gap_before": 0.63
+  },
+  {
+   "speaker": "user",
+   "text": "My sister just had a baby and I want to give her something for the holidays, not for the baby.",
+   "est_sec": 6.3,
+   "gap_before": 3.33,
+   "block": "holiday_gifts.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to describe each one. Save your comments until the end.",
+   "est_sec": 3.82,
+   "gap_before": 0.79,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_09"
+  },
+  {
+   "speaker": "user",
+   "text": "A spa voucher for a massage, though she might not have time to use it for months.",
+   "est_sec": 5.37,
+   "gap_before": 1.23,
+   "block": "holiday_gifts.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "A meal delivery subscription for a month, so nobody has to cook at all.",
+   "est_sec": 4.44,
+   "gap_before": 1.23,
+   "block": "holiday_gifts.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A really soft robe and slippers, which is a bit basic but she'd wear it constantly.",
+   "est_sec": 5.06,
+   "gap_before": 2.75,
+   "block": "holiday_gifts.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I offer to babysit every Saturday morning in January so she can sleep.",
+   "est_sec": 4.44,
+   "gap_before": 1.09,
+   "block": "holiday_gifts.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "So those are the options. What's your take?",
+   "est_sec": 2.58,
+   "gap_before": 0.71,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Honestly, babysitting is the most generous one, sleep is gold with a newborn. Pair it with the robe so there's something to unwrap. Save the spa for when the baby's a bit older.",
+   "est_sec": 10.33,
+   "gap_before": 0.63,
+   "role": "resume",
+   "block": "holiday_gifts.opt4",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00385",
+  "name_pos": "middle",
+  "answered": false
+ },
+ "groups": [
+  "familiar_type",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

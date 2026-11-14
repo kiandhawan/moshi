@@ -1,0 +1,180 @@
+{
+ "id": "trainv2_10_00001",
+ "split": "train",
+ "seed": 10,
+ "order_index": 1,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "board_games"
+ ],
+ "instruction_position": 0.667,
+ "topic": "board_games",
+ "voices": {
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_26",
+  "describe_instruction_v2_04",
+  "ack_14",
+  "describe_cue_v2_23"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_04": {
+   "style": "request",
+   "tone": "apologetic",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_23": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "video_games.dlg30",
+  "board_games.opt2"
+ ],
+ "est_total_sec": 78.36,
+ "est_speech_sec": 62.88,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.56,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.65,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "My girlfriend and I want a cozy game night at home. We've only got one TV.",
+   "est_sec": 5.06,
+   "gap_before": 0.4,
+   "block": "video_games.dlg30",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sounds lovely. Do you want to work together, or tease each other in a bit of friendly competition?",
+   "est_sec": 5.68,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "video_games.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "Together. If I beat her she'll",
+   "est_sec": 1.96,
+   "gap_before": 1.32,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "video_games.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "sulk for an hour.",
+   "est_sec": 1.34,
+   "gap_before": 1.68,
+   "block": "video_games.dlg30",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, co-op it is. There are great split screen puzzle adventures where you each control a character and need each other to progress.",
+   "est_sec": 7.23,
+   "gap_before": 1.38,
+   "role": "reply",
+   "block": "video_games.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I want a board game to play with my partner on quiet evenings.",
+   "est_sec": 5.06,
+   "gap_before": 0.89,
+   "block": "board_games.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, can you not jump in until I've covered all of them?",
+   "est_sec": 3.82,
+   "gap_before": 0.8,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.35,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "One is a two player card game about trading spices, fast and really easy to set up.",
+   "est_sec": 5.37,
+   "gap_before": 0.84,
+   "block": "board_games.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a puzzle style game where you build a pretty garden with tiles.",
+   "est_sec": 4.44,
+   "gap_before": 1.02,
+   "block": "board_games.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's a long campaign game where the story changes every time you play.",
+   "est_sec": 4.44,
+   "gap_before": 1.37,
+   "block": "board_games.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. Over to you, Moshi.",
+   "est_sec": 1.65,
+   "gap_before": 1.36,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The spice trading game is perfect for quick evenings, you can play a few rounds after dinner. The garden tile game is relaxing and looks lovely on the table. The campaign game is the most immersive but needs a real time commitment.",
+   "est_sec": 13.12,
+   "gap_before": 0.43,
+   "role": "resume",
+   "block": "board_games.opt2"
+  }
+ ]
+}

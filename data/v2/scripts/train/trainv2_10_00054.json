@@ -1,0 +1,167 @@
+{
+ "id": "trainv2_10_00054",
+ "split": "train",
+ "seed": 10,
+ "order_index": 54,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "photography"
+ ],
+ "instruction_position": 0.154,
+ "topic": "photography",
+ "voices": {
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_23",
+  "greet_ans_01",
+  "describe_instruction_v2_14",
+  "ack_06",
+  "describe_cue_01"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_14": {
+   "style": "command",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_01": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "photography.opt3",
+  "music.dlg2"
+ ],
+ "est_total_sec": 80.26,
+ "est_speech_sec": 65.78,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How are you feeling?",
+   "est_sec": 1.65,
+   "gap_before": 0.33,
+   "role": "greeting",
+   "phrasing": "greet_23"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.58,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "My sister's wedding is in June and I've offered to sort the photographer. I'm overwhelmed.",
+   "est_sec": 4.75,
+   "gap_before": 0.34,
+   "block": "photography.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Just listen while I lay them all out, and I'll ask for your view at the end.",
+   "est_sec": 5.37,
+   "gap_before": 0.66,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.58,
+   "role": "ack",
+   "phrasing": "ack_06"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a guy from her work who does it on weekends, cheap, but his website only has a few weddings on it.",
+   "est_sec": 6.92,
+   "gap_before": 0.75,
+   "block": "photography.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A proper studio in town quoted us a lot, but they bring two shooters and a printed album.",
+   "est_sec": 5.68,
+   "gap_before": 1.62,
+   "block": "photography.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Then a student from the art college who's really talented and hungry, though she's never done a wedding alone.",
+   "est_sec": 5.99,
+   "gap_before": 1.46,
+   "block": "photography.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or we could put disposable cameras on every table and let the guests do it.",
+   "est_sec": 4.75,
+   "gap_before": 2.93,
+   "block": "photography.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 0.84,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Weddings only happen once, so I'd lean away from the coworker with only a few weddings to show. The student is the best value if you meet her first and see a full gallery. And the table cameras would make a sweet bonus either way.",
+   "est_sec": 14.05,
+   "gap_before": 0.33,
+   "role": "resume",
+   "block": "photography.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? What's the difference between a major and a minor chord?",
+   "est_sec": 5.06,
+   "gap_before": 1.85,
+   "block": "music.dlg2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It comes down to the middle note. In a minor chord it's one half step lower, which gives it that sadder sound.",
+   "est_sec": 6.92,
+   "gap_before": 0.71,
+   "role": "reply",
+   "block": "music.dlg2"
+  }
+ ]
+}

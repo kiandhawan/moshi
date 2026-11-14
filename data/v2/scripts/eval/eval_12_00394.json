@@ -1,0 +1,179 @@
+{
+ "id": "eval_12_00394",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 394,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "camping"
+ ],
+ "topic": "camping",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_15",
+  "phone_instr_02",
+  "ack_05",
+  "call_10",
+  "implicit_11"
+ ],
+ "block_ids": [
+  "camping.ctx18",
+  "call_10"
+ ],
+ "est_total_sec": 58.52,
+ "est_speech_sec": 38.08,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.33,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.84,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "We won't reach the campsite until after dark on Friday.",
+   "est_sec": 3.2,
+   "gap_before": 0.59,
+   "event": "ordinary_request",
+   "block": "camping.ctx18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Doable with a bit of prep. Practice pitching the tent at home first, or just pack a big lantern and wing it?",
+   "est_sec": 6.92,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "camping.ctx18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My phone's ringing, give me a minute. Don't say anything until I'm done.",
+   "est_sec": 4.13,
+   "gap_before": 0.82,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.49,
+   "role": "ack",
+   "phrasing": "ack_05",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hello, yes.",
+   "est_sec": 0.72,
+   "gap_before": 1.24,
+   "phrasing": "call_10"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm calling back about the apartment.",
+   "est_sec": 1.96,
+   "gap_before": 2.86,
+   "phrasing": "call_10",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it still available?",
+   "est_sec": 1.34,
+   "gap_before": 2.16,
+   "phrasing": "call_10",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Could I see it this weekend?",
+   "est_sec": 1.96,
+   "gap_before": 2.15,
+   "phrasing": "call_10",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Great, Saturday at noon then.",
+   "est_sec": 1.65,
+   "gap_before": 2.94,
+   "phrasing": "call_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, where was I?",
+   "est_sec": 1.34,
+   "gap_before": 0.99,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. So, are you rehearsing that tent or not?",
+   "est_sec": 2.89,
+   "gap_before": 1.01,
+   "role": "resume",
+   "block": "camping.ctx18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wing it, it's a simple tent.",
+   "est_sec": 1.96,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "camping.ctx18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Then park so the headlights face the pitch, it helps more than any lantern.",
+   "est_sec": 4.75,
+   "gap_before": 1.24,
+   "role": "followup",
+   "block": "camping.ctx18",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

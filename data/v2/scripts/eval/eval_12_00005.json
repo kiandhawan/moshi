@@ -1,0 +1,166 @@
+{
+ "id": "eval_12_00005",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 5,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension",
+  "self_talk"
+ ],
+ "topics": [
+  "camping"
+ ],
+ "wait_sec": 30,
+ "extension": {
+  "extra_sec": 5,
+  "said_before_deadline_sec": 1.56
+ },
+ "deadline": {
+  "after_turn": 7,
+  "sec": 5
+ },
+ "topic": "camping",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_21",
+  "think_instr_21",
+  "ack_07",
+  "self_18",
+  "extension_03"
+ ],
+ "block_ids": [
+  "camping.ctx15"
+ ],
+ "est_total_sec": 73.49,
+ "est_speech_sec": 32.72,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "My new coworkers invited me camping and I don't own anything. Like, nothing.",
+   "est_sec": 4.13,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "camping.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem, lots of people start there. Borrow from them, or rent a full kit from an outdoor shop?",
+   "est_sec": 5.99,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "camping.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, let me think for thirty seconds. Ask me again after that.",
+   "est_sec": 3.82,
+   "gap_before": 1.23,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.53,
+   "role": "ack",
+   "phrasing": "ack_07",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Mmm, yeah, maybe that.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 7.92
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_18"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, five more seconds please.",
+   "est_sec": 1.65,
+   "event": "extension",
+   "extra_sec": 5,
+   "phrasing": "extension_03",
+   "anchor": {
+    "turn": 4,
+    "offset": 28.44
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Have you decided how to get kitted out?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "camping.ctx15",
+   "anchor": {
+    "turn": 7,
+    "offset": 5.58
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Rent. I don't want to owe anyone on day one.",
+   "est_sec": 3.2,
+   "gap_before": 2.04,
+   "event": "ordinary_request",
+   "block": "camping.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Understandable. Rental kits usually include a tent, pad and bag, so ask for a size that fits you.",
+   "est_sec": 5.68,
+   "gap_before": 1.13,
+   "role": "followup",
+   "block": "camping.ctx15",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

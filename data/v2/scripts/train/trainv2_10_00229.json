@@ -1,0 +1,208 @@
+{
+ "id": "trainv2_10_00229",
+ "split": "train",
+ "seed": 10,
+ "order_index": 229,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "friend_first"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "pets",
+  "birthday_party"
+ ],
+ "instruction_position": 0.872,
+ "topic": "pets",
+ "voices": {
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": "ce9db9be1ecb4c8a832802626864595d",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Alex",
+ "friend_name_id": "name_04",
+ "phrasing_ids": [
+  "greet_02",
+  "greet_ans_17",
+  "friend_interrupt_v2_05",
+  "side_instruction_v2_55",
+  "ack_01",
+  "side_cue_v2_23"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_05": {
+   "style": "request",
+   "tone": "cheerful",
+   "source": "v2"
+  },
+  "side_instruction_v2_55": {
+   "style": "friend_first",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_23": {
+   "style": "fragment",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "board_games.dlg17",
+  "pets.ctx11",
+  "birthday_party.side4"
+ ],
+ "est_total_sec": 70.74,
+ "est_speech_sec": 51.3,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.74,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "How do I stop losing at that train game where you claim routes across the map?",
+   "est_sec": 5.06,
+   "gap_before": 0.24,
+   "block": "board_games.dlg17",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Look at your destination tickets first and plan the route, then grab the most important connections before others do.",
+   "est_sec": 5.99,
+   "gap_before": 1.46,
+   "role": "reply",
+   "block": "board_games.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "Puppy arrives on Saturday. Where should her crate go?",
+   "est_sec": 2.89,
+   "gap_before": 0.62,
+   "block": "pets.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting! For the first few nights, do you want her in your bedroom, or downstairs in the kitchen?",
+   "est_sec": 5.68,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "pets.ctx11"
+  },
+  {
+   "speaker": "friend",
+   "text": "Ooh, can I show you something?",
+   "est_sec": 1.96,
+   "gap_before": 1.36,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Just a second, Moshi, let me deal with this.",
+   "est_sec": 2.89,
+   "gap_before": 0.54,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_55"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.62,
+   "role": "ack",
+   "phrasing": "ack_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you hide the presents somewhere he won't look?",
+   "est_sec": 2.89,
+   "gap_before": 1.23,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Top of the wardrobe, behind the winter coats.",
+   "est_sec": 2.58,
+   "gap_before": 0.72,
+   "block": "birthday_party.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "He checks there every year, you know.",
+   "est_sec": 2.27,
+   "gap_before": 2.3,
+   "block": "birthday_party.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine. Boot of my car, then. He never goes in my car.",
+   "est_sec": 3.82,
+   "gap_before": 2.79,
+   "block": "birthday_party.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Perfect. And the big one, the bike?",
+   "est_sec": 2.27,
+   "gap_before": 0.33,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Your neighbour said we can leave it in her shed till Sunday morning.",
+   "est_sec": 4.13,
+   "gap_before": 1.4,
+   "block": "birthday_party.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, okay, I'm back. Hit me.",
+   "est_sec": 1.96,
+   "gap_before": 1.78,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. The crate. Bedroom with you, or the kitchen?",
+   "est_sec": 2.89,
+   "gap_before": 0.31,
+   "role": "resume",
+   "block": "pets.ctx11"
+  }
+ ]
+}

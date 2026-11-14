@@ -1,0 +1,188 @@
+{
+ "id": "trainv2_10_00718",
+ "split": "train",
+ "seed": 10,
+ "order_index": 718,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "studying"
+ ],
+ "wait_sec": 23,
+ "deadline": {
+  "after_turn": 8,
+  "sec": 23
+ },
+ "instruction_position": 0.667,
+ "topic": "studying",
+ "voices": {
+  "user": "6d7a45828f6a432c9233cd93bb93e5be",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_25",
+  "think_instruction_v2_26",
+  "self_17",
+  "self_11"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_26": {
+   "style": "fragment",
+   "tone": "polite",
+   "states_return": false,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "board_games.dlg5",
+  "studying.ctx3"
+ ],
+ "est_total_sec": 82.39,
+ "est_speech_sec": 47.28,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.46,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.43,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it weird to play board games on your own?",
+   "est_sec": 3.2,
+   "gap_before": 0.25,
+   "block": "board_games.dlg5",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not at all. Solo gaming is really popular, and lots of games come with a one player mode built in.",
+   "est_sec": 6.3,
+   "gap_before": 0.49,
+   "role": "reply",
+   "block": "board_games.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I've been reading my notes over and over but nothing sticks.",
+   "est_sec": 4.44,
+   "gap_before": 1.39,
+   "block": "studying.ctx3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Rereading feels productive but it doesn't stick well. Want to try flashcards or practice questions instead?",
+   "est_sec": 5.06,
+   "gap_before": 1.17,
+   "role": "reply",
+   "block": "studying.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe. Which one do you think?",
+   "est_sec": 1.96,
+   "gap_before": 3.04,
+   "block": "studying.ctx3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Both work. It depends on whether your exam is more about facts or problem solving. Which is it?",
+   "est_sec": 5.68,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "studying.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Just twenty-three seconds, Moshi.",
+   "est_sec": 1.34,
+   "gap_before": 2.39,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 23,
+   "phrasing": "think_instruction_v2_26"
+  },
+  {
+   "speaker": "user",
+   "text": "If I pick that one, then",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 8,
+    "offset": 15.45
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, pros and cons.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 8,
+    "offset": 18.95
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Time's up. Facts or problem solving, what's the exam more like?",
+   "est_sec": 3.51,
+   "role": "resume",
+   "block": "studying.ctx3",
+   "anchor": {
+    "turn": 8,
+    "offset": 23.44
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "How does that even work with no opponent?",
+   "est_sec": 2.58,
+   "gap_before": 1.95,
+   "event": "ordinary_request",
+   "block": "board_games.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Usually the game plays against you with a deck of cards or simple rules, or you're trying to beat your own best score.",
+   "est_sec": 7.23,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "board_games.dlg5"
+  }
+ ]
+}

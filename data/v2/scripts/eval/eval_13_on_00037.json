@@ -1,0 +1,163 @@
+{
+ "id": "eval_13_on_00037",
+ "split": "eval",
+ "seed": 13,
+ "order_index": 437,
+ "generator": {
+  "script": "generate_scripts_v2.py --eval-v2",
+  "replaces": "eval_12_00383",
+  "seed": 13
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
+ "topics": [
+  "cycling"
+ ],
+ "topic": "cycling",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28",
+  "other": "79d0bd3e4e5444b18f7b6d89b5927bf1"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_03",
+  "nq_eval_038",
+  "pn_130"
+ ],
+ "block_ids": [
+  "cycling.dlg3",
+  "nq_eval_038"
+ ],
+ "est_total_sec": 54.42,
+ "est_speech_sec": 37.06,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.75,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it a bad idea to bike in the winter?",
+   "est_sec": 3.2,
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "cycling.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not at all, lots of people do. You just need good lights, warm gloves and a bit more caution on ice.",
+   "est_sec": 6.61,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "cycling.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "It's meant to freeze tonight, should we cover the seedlings, Austin?",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_eval_038",
+   "block": "nq_eval_038",
+   "name_pos": "end",
+   "addressee": "Austin",
+   "est_sec": 3.51,
+   "gap_before": 0.9
+  },
+  {
+   "speaker": "other",
+   "text": "Yes, use the old sheets.",
+   "block": "nq_eval_038",
+   "est_sec": 1.65,
+   "gap_before": 0.62
+  },
+  {
+   "speaker": "user",
+   "text": "What about my hands? They freeze even in fall.",
+   "est_sec": 2.89,
+   "gap_before": 1.48,
+   "event": "ordinary_request",
+   "block": "cycling.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Try lobster style gloves, they keep fingers together for warmth but still let you brake easily.",
+   "est_sec": 5.06,
+   "gap_before": 1.13,
+   "role": "reply",
+   "block": "cycling.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, actually maybe I'll just",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "cycling.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "take the bus when it snows.",
+   "est_sec": 1.96,
+   "gap_before": 2.18,
+   "event": "ordinary_request",
+   "block": "cycling.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a sensible compromise. Ride on dry days and skip the icy ones.",
+   "est_sec": 4.13,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "cycling.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Do I need special tires for the cold days?",
+   "est_sec": 2.89,
+   "gap_before": 0.37,
+   "event": "ordinary_request",
+   "block": "cycling.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not for dry cold. Studded tires only really matter if you plan to ride on ice.",
+   "est_sec": 5.06,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "cycling.dlg3",
+   "reference_only": true
+  }
+ ],
+ "other_name": {
+  "replaces": "eval_12_00383",
+  "name_pos": "end",
+  "answered": true
+ },
+ "groups": [
+  "ordinary",
+  "other_name"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

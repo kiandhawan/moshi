@@ -1,0 +1,155 @@
+{
+ "id": "control_11_00269",
+ "split": "train",
+ "seed": 11,
+ "order_index": 269,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": "ordinary",
+  "seed": 11,
+  "block": 1,
+  "exclude_ordinary_from": [
+   "../data/v2/scripts/train"
+  ]
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
+ "topics": [
+  "weather_plans"
+ ],
+ "topic": "weather_plans",
+ "voices": {
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_02",
+  "greet_ans_26",
+  "waitlike_05"
+ ],
+ "phrasing_styles": {},
+ "block_ids": [
+  "weather_plans.dlg19"
+ ],
+ "est_total_sec": 57.93,
+ "est_speech_sec": 45.63,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.65,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Beach day tomorrow. Is there anything about the weather I should check besides sunshine?",
+   "est_sec": 4.44,
+   "gap_before": 0.22,
+   "block": "weather_plans.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The wind and the tide times. A windy beach can feel cold and sandblasting even if it's sunny.",
+   "est_sec": 5.68,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "weather_plans.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, what was the last part?",
+   "est_sec": 1.96,
+   "gap_before": 1.03,
+   "block": "weather_plans.dlg19",
+   "kind": "wait_like",
+   "phrasing": "waitlike_05",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. The wind and the tide times. A windy beach can feel cold and sandblasting even if it's sunny.",
+   "est_sec": 6.3,
+   "gap_before": 0.95,
+   "role": "reply",
+   "block": "weather_plans.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "What wind speed is too much?",
+   "est_sec": 1.96,
+   "gap_before": 0.4,
+   "block": "weather_plans.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Above about fifteen or twenty miles an hour gets unpleasant. A windbreak helps a lot.",
+   "est_sec": 4.75,
+   "gap_before": 0.61,
+   "role": "reply",
+   "block": "weather_plans.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "And why the tides?",
+   "est_sec": 1.34,
+   "gap_before": 0.64,
+   "block": "weather_plans.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "At high tide some beaches almost disappear. Low tide is better for rock pools and space to play.",
+   "est_sec": 5.68,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "weather_plans.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "My kids want to swim",
+   "est_sec": 1.65,
+   "gap_before": 1.24,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "weather_plans.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "but the sea is freezing this time of year.",
+   "est_sec": 2.89,
+   "gap_before": 2.19,
+   "block": "weather_plans.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Pick a lifeguarded beach, and get them out before their lips go blue. Bring a hot drink for after.",
+   "est_sec": 5.99,
+   "gap_before": 0.9,
+   "role": "reply",
+   "block": "weather_plans.dlg19"
+  }
+ ]
+}

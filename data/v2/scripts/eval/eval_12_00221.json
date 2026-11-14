@@ -1,0 +1,172 @@
+{
+ "id": "eval_12_00221",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 221,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "laptop_buying",
+  "wedding_planning"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Kenji",
+ "friend_name_id": "name_21",
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_09",
+  "side_instr_15",
+  "dn_24",
+  "side_cue_12"
+ ],
+ "block_ids": [
+  "laptop_buying.ctx1",
+  "wedding_planning.side4",
+  "dn_24"
+ ],
+ "est_total_sec": 65.38,
+ "est_speech_sec": 48.93,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.8,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.54,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "My old laptop is dying and I need a new one before next month.",
+   "est_sec": 4.44,
+   "gap_before": 0.3,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. First big question, do you want something small and light to carry around, or a bigger screen for working at a desk?",
+   "est_sec": 7.23,
+   "gap_before": 1.05,
+   "role": "reply",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a second, my brother needs help with something. Stay quiet until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 0.97,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, back to what you were saying.",
+   "est_sec": 2.27,
+   "gap_before": 1.34,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_24"
+  },
+  {
+   "speaker": "friend",
+   "text": "So anyway, the trip is in June.",
+   "est_sec": 2.27,
+   "gap_before": 0.97,
+   "phrasing": "dn_24"
+  },
+  {
+   "speaker": "user",
+   "text": "Kenji, can you read this envelope back to me? Is my handwriting legible?",
+   "est_sec": 4.13,
+   "gap_before": 1.25,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "wedding_planning.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Mrs. and Mr. Pat Holloway. Yes, but your Ls look like Ts.",
+   "est_sec": 3.82,
+   "gap_before": 0.58,
+   "block": "wedding_planning.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Great. That's sixty envelopes of Ts.",
+   "est_sec": 1.96,
+   "gap_before": 2.92,
+   "block": "wedding_planning.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Nobody's going to notice. Want me to do the addresses and you do the names?",
+   "est_sec": 4.75,
+   "gap_before": 1.45,
+   "block": "wedding_planning.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Would you? Your writing is so neat.",
+   "est_sec": 2.27,
+   "gap_before": 0.8,
+   "block": "wedding_planning.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Years of labelling lunchboxes. Pass me the pen.",
+   "est_sec": 2.58,
+   "gap_before": 0.79,
+   "block": "wedding_planning.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back. Where did we leave off?",
+   "est_sec": 2.27,
+   "gap_before": 0.65,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Any thoughts on size for the new laptop?",
+   "est_sec": 2.89,
+   "gap_before": 0.54,
+   "role": "resume",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

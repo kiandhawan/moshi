@@ -1,0 +1,175 @@
+{
+ "id": "trainv2_10_00174",
+ "split": "train",
+ "seed": 10,
+ "order_index": 174,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "cars",
+  "cleaning"
+ ],
+ "instruction_position": 0.884,
+ "topic": "cars",
+ "voices": {
+  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "friend": "879653fd2b9c4cb0854d68e7e9a049e8",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Omar",
+ "friend_name_id": "name_13",
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_04",
+  "side_instruction_v2_13",
+  "side_cue_v2_02"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_13": {
+   "style": "statement",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_02": {
+   "style": "statement",
+   "tone": "apologetic",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "weather_plans.dlg18",
+  "cars.ctx7",
+  "cleaning.side2"
+ ],
+ "est_total_sec": 75.26,
+ "est_speech_sec": 57.51,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.62,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.81,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "It's pouring all half term. What can I do with two bored kids?",
+   "est_sec": 4.13,
+   "gap_before": 0.32,
+   "block": "weather_plans.dlg18",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Rainy days can still be fun. How about a den building afternoon with sofa cushions and blankets?",
+   "est_sec": 5.37,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "weather_plans.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask about something else? We just moved up north and everyone keeps warning me about the winters.",
+   "est_sec": 5.99,
+   "gap_before": 0.6,
+   "block": "cars.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "They're not wrong. Do you want to swap to proper winter tyres for the cold months, or go with all season tyres you can leave on all year?",
+   "est_sec": 8.78,
+   "gap_before": 0.52,
+   "role": "reply",
+   "block": "cars.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll be talking to Omar for a little while, so please stay silent until I tell you I'm finished.",
+   "est_sec": 5.99,
+   "gap_before": 0.72,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Do we have any more of that spray for the shower?",
+   "est_sec": 3.51,
+   "gap_before": 0.89,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Under the sink, behind the sponges. There should be a full bottle.",
+   "est_sec": 3.82,
+   "gap_before": 3.26,
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Found it. Did you ever figure out what's causing that black stuff in the corner?",
+   "est_sec": 4.75,
+   "gap_before": 3.38,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think it's just mold. We should open the window after showers.",
+   "est_sec": 3.82,
+   "gap_before": 0.94,
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah, let's both try to remember that.",
+   "est_sec": 2.27,
+   "gap_before": 1.77,
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, done with him now. Over to you.",
+   "est_sec": 3.2,
+   "gap_before": 0.91,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. The tyre question. Proper winter ones or all season?",
+   "est_sec": 3.2,
+   "gap_before": 1.03,
+   "role": "resume",
+   "block": "cars.ctx7"
+  }
+ ]
+}

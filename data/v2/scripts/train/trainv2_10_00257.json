@@ -1,0 +1,168 @@
+{
+ "id": "trainv2_10_00257",
+ "split": "train",
+ "seed": 10,
+ "order_index": 257,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "studying"
+ ],
+ "wait_sec": 29,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 29
+ },
+ "instruction_position": 0.68,
+ "topic": "studying",
+ "voices": {
+  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_29",
+  "think_instruction_v2_35",
+  "ack_04",
+  "self_01"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_35": {
+   "style": "breakoff",
+   "tone": "apologetic",
+   "states_return": false,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "books.dlg13",
+  "studying.ctx7"
+ ],
+ "est_total_sec": 79.45,
+ "est_speech_sec": 43.98,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.59,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.71,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_29"
+  },
+  {
+   "speaker": "user",
+   "text": "What's the deal with people sniffing old books? My boyfriend does it in every secondhand shop.",
+   "est_sec": 5.06,
+   "gap_before": 0.51,
+   "block": "books.dlg13",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "He's not alone. Old paper breaks down slowly and gives off a sweet, slightly vanilla smell that a lot of people love.",
+   "est_sec": 6.92,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "books.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. Revision timetable time. I've got seven subjects and six weeks.",
+   "est_sec": 4.13,
+   "gap_before": 1.25,
+   "block": "studying.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, let's build it. Do you want one subject per day, or two or three short sessions of different subjects each day?",
+   "est_sec": 6.92,
+   "gap_before": 0.99,
+   "role": "reply",
+   "block": "studying.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "I was going to say the blue one, but— sorry, can I have twenty-nine seconds?",
+   "est_sec": 4.75,
+   "gap_before": 0.58,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 29,
+   "phrasing": "think_instruction_v2_35"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.52,
+   "role": "ack",
+   "phrasing": "ack_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, let me see.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 16.2
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Timetable time. Whole days per subject, or mixing it up?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "studying.ctx7",
+   "anchor": {
+    "turn": 6,
+    "offset": 29.07
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "One a day. I like getting properly stuck in.",
+   "est_sec": 2.89,
+   "gap_before": 0.72,
+   "event": "ordinary_request",
+   "block": "studying.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fine. Just make sure each subject comes back around within a week so nothing fades.",
+   "est_sec": 4.75,
+   "gap_before": 1.29,
+   "role": "followup",
+   "block": "studying.ctx7"
+  }
+ ]
+}

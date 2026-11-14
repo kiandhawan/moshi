@@ -1,0 +1,119 @@
+{
+ "id": "eval_12_00368",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 368,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "cycling"
+ ],
+ "topic": "cycling",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_18",
+  "describe_instr_15",
+  "describe_cue_15"
+ ],
+ "block_ids": [
+  "cycling.opt5"
+ ],
+ "est_total_sec": 50.84,
+ "est_speech_sec": 40.58,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.74,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "My work is offering a cycle to work scheme and I've got three bikes on my shortlist.",
+   "est_sec": 5.37,
+   "gap_before": 0.49,
+   "block": "cycling.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to describe all the options before I hear your opinion.",
+   "est_sec": 3.82,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_15"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a gravel bike that can handle roads and dirt tracks, with space for mudguards.",
+   "est_sec": 4.75,
+   "gap_before": 1.26,
+   "block": "cycling.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Then a lightweight carbon road bike, really quick, but it eats most of the budget.",
+   "est_sec": 4.75,
+   "gap_before": 1.3,
+   "block": "cycling.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a sturdy electric hybrid with a big battery and built in lights.",
+   "est_sec": 4.13,
+   "gap_before": 2.29,
+   "block": "cycling.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "So that's the list. Thoughts?",
+   "est_sec": 1.65,
+   "gap_before": 1.08,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For commuting plus weekend fun, the gravel bike is the most versatile, and mudguards make rainy days easy. The carbon road bike is fast, but less practical day to day. The e-hybrid is great if your commute is long or hilly.",
+   "est_sec": 12.81,
+   "gap_before": 0.46,
+   "role": "resume",
+   "block": "cycling.opt5",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

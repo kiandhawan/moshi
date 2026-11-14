@@ -1,0 +1,173 @@
+{
+ "id": "trainv2_10_00087",
+ "split": "train",
+ "seed": 10,
+ "order_index": 87,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "moving_house"
+ ],
+ "instruction_position": 0.612,
+ "topic": "moving_house",
+ "voices": {
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_13",
+  "describe_instruction_v2_23",
+  "describe_cue_v2_19"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_23": {
+   "style": "fragment",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_19": {
+   "style": "request",
+   "tone": "distracted",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "travel_planning.dlg29",
+  "moving_house.opt1"
+ ],
+ "est_total_sec": 81.77,
+ "est_speech_sec": 66.19,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.96,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "How much should I budget per day in Mexico City? I'm a student, so, not much.",
+   "est_sec": 5.06,
+   "gap_before": 0.34,
+   "block": "travel_planning.dlg29",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can do it fairly cheaply. A hostel bed, street food and the metro keep costs very low.",
+   "est_sec": 5.68,
+   "gap_before": 0.65,
+   "role": "reply",
+   "block": "travel_planning.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "Like how low?",
+   "est_sec": 1.03,
+   "gap_before": 1.01,
+   "block": "travel_planning.dlg29",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Many backpackers spend somewhere around thirty to forty dollars a day, but prices change, so check recent travel forums.",
+   "est_sec": 5.99,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "travel_planning.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "We're moving next month and I'm stuck on how to actually do the move.",
+   "est_sec": 4.44,
+   "gap_before": 0.94,
+   "block": "moving_house.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, a handful of options. Listen first, I'll say when I'm finished.",
+   "est_sec": 3.82,
+   "gap_before": 0.44,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_23"
+  },
+  {
+   "speaker": "user",
+   "text": "The first option is hiring a full service moving company that packs everything, but it's expensive.",
+   "est_sec": 5.06,
+   "gap_before": 0.67,
+   "block": "moving_house.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's renting a big truck and getting friends to help in exchange for pizza.",
+   "est_sec": 4.75,
+   "gap_before": 2.52,
+   "block": "moving_house.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Option three is one of those portable storage containers they drop off and pick up later.",
+   "est_sec": 5.06,
+   "gap_before": 1.45,
+   "block": "moving_house.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is hiring movers just for the heavy furniture and packing the rest ourselves.",
+   "est_sec": 5.37,
+   "gap_before": 2.53,
+   "block": "moving_house.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, I think I'm done. Yeah. What do you think?",
+   "est_sec": 3.2,
+   "gap_before": 0.63,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hiring movers just for the heavy stuff is often the sweet spot, you save money and your back. The full service company is worth it if you're short on time. The truck with friends is cheapest, but it depends on how reliable your friends are.",
+   "est_sec": 14.05,
+   "gap_before": 0.59,
+   "role": "resume",
+   "block": "moving_house.opt1"
+  }
+ ]
+}

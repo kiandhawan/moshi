@@ -1,0 +1,176 @@
+{
+ "id": "trainv2_10_00136",
+ "split": "train",
+ "seed": 10,
+ "order_index": 136,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "personal_finance"
+ ],
+ "wait_sec": 13,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 13
+ },
+ "instruction_position": 0.28,
+ "topic": "personal_finance",
+ "voices": {
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_07",
+  "think_instruction_v2_25"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_25": {
+   "style": "fragment",
+   "tone": "curt",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "personal_finance.ctx3",
+  "board_games.dlg4"
+ ],
+ "est_total_sec": 75.23,
+ "est_speech_sec": 48.52,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.41,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.68,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm paying for way too many subscriptions.",
+   "est_sec": 2.27,
+   "gap_before": 0.42,
+   "block": "personal_finance.ctx3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That adds up fast. How many are we talking?",
+   "est_sec": 2.89,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "personal_finance.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Three streaming services, a gym, and some app I forgot about.",
+   "est_sec": 3.51,
+   "gap_before": 0.48,
+   "block": "personal_finance.ctx3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Which one could you cancel today without really missing it?",
+   "est_sec": 3.2,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "personal_finance.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, thirteen seconds. Then ask again.",
+   "est_sec": 1.96,
+   "gap_before": 1.91,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 13,
+   "phrasing": "think_instruction_v2_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, which subscription gets the axe first?",
+   "est_sec": 2.27,
+   "role": "resume",
+   "block": "personal_finance.ctx3",
+   "anchor": {
+    "turn": 6,
+    "offset": 13.54
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, one of the streaming ones. I only watch one show on it.",
+   "est_sec": 4.13,
+   "gap_before": 1.49,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then cancel it now and pick it back up for a month when the new season comes out.",
+   "est_sec": 5.68,
+   "gap_before": 1.0,
+   "role": "followup",
+   "block": "personal_finance.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I want a game I can play with my grandkids. They're four and six.",
+   "est_sec": 5.37,
+   "gap_before": 1.52,
+   "block": "board_games.dlg4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wonderful. Outfoxed is a sweet cooperative game for that age, everyone works together to catch a sneaky fox.",
+   "est_sec": 5.68,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "board_games.dlg4"
+  },
+  {
+   "speaker": "user",
+   "text": "The four year old can't read yet.",
+   "est_sec": 2.27,
+   "gap_before": 0.31,
+   "block": "board_games.dlg4",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's fine, it uses pictures only. Another favorite is Hoot Owl Hoot, which is all colors.",
+   "est_sec": 5.06,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "board_games.dlg4"
+  }
+ ]
+}

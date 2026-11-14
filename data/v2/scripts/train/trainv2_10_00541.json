@@ -1,0 +1,174 @@
+{
+ "id": "trainv2_10_00541",
+ "split": "train",
+ "seed": 10,
+ "order_index": 541,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "late",
+ "topics": [
+  "personal_finance"
+ ],
+ "instruction_position": 0.737,
+ "topic": "personal_finance",
+ "voices": {
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_05",
+  "describe_instruction_v2_20",
+  "ack_03",
+  "describe_cue_01"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_20": {
+   "style": "fragment",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_01": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "smartphones.dlg19",
+  "personal_finance.opt5"
+ ],
+ "est_total_sec": 77.8,
+ "est_speech_sec": 62.16,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.56,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.31,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_05"
+  },
+  {
+   "speaker": "user",
+   "text": "My eyes feel tired after an evening on my phone. Is the brightness doing that?",
+   "est_sec": 4.75,
+   "gap_before": 0.3,
+   "block": "smartphones.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Partly, yes. Turn on auto-brightness so it dims in dark rooms, and try the night light or warm screen setting after sunset.",
+   "est_sec": 6.92,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "smartphones.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "The warm one makes everything look yellow. It's kind of gross.",
+   "est_sec": 3.51,
+   "gap_before": 2.39,
+   "block": "smartphones.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can adjust how warm it gets. Even a gentle shift helps, it doesn't have to look like an old photo.",
+   "est_sec": 6.61,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "smartphones.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm trying to save for a holiday next summer and I have a few plans in mind.",
+   "est_sec": 5.37,
+   "gap_before": 0.97,
+   "block": "personal_finance.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Options first, Moshi, then your take.",
+   "est_sec": 1.96,
+   "gap_before": 0.7,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.62,
+   "role": "ack",
+   "phrasing": "ack_03"
+  },
+  {
+   "speaker": "user",
+   "text": "One is to save a fixed amount from every paycheck into a separate holiday pot.",
+   "est_sec": 4.75,
+   "gap_before": 1.25,
+   "block": "personal_finance.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is the round up thing, where the app rounds up every purchase and saves the change.",
+   "est_sec": 5.37,
+   "gap_before": 2.4,
+   "block": "personal_finance.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I could pick up extra shifts at the cafe on weekends just for the holiday money.",
+   "est_sec": 5.37,
+   "gap_before": 1.36,
+   "block": "personal_finance.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 0.83,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How far off is the holiday? If it's a while, the fixed transfer plus round ups on top is easy and steady. Save the extra shifts in case you fall behind.",
+   "est_sec": 9.71,
+   "gap_before": 0.68,
+   "role": "resume",
+   "block": "personal_finance.opt5"
+  }
+ ]
+}

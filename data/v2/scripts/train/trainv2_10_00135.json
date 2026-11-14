@@ -1,0 +1,128 @@
+{
+ "id": "trainv2_10_00135",
+ "split": "train",
+ "seed": 10,
+ "order_index": 135,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "cooking"
+ ],
+ "wait_sec": 52,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 52
+ },
+ "instruction_position": 0.739,
+ "topic": "cooking",
+ "voices": {
+  "user": "705690224f264386b87fb598083ab022",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_02",
+  "think_instruction_v2_29",
+  "self_28"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_29": {
+   "style": "fragment",
+   "tone": "distracted",
+   "states_return": false,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "cars.dlg10",
+  "cooking.ctx2"
+ ],
+ "est_total_sec": 78.15,
+ "est_speech_sec": 22.09,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.87,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "My in-laws are coming Sunday and I want to make something impressive but not stressful.",
+   "est_sec": 4.75,
+   "gap_before": 1.28,
+   "block": "cooking.ctx2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A slow roast is hard to mess up. Would you rather do a roast chicken, a lamb shoulder, or a vegetarian lasagna?",
+   "est_sec": 6.92,
+   "gap_before": 0.57,
+   "role": "reply",
+   "block": "cooking.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, fifty-two seconds. Thinking.",
+   "est_sec": 1.34,
+   "gap_before": 0.61,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 52,
+   "phrasing": "think_instruction_v2_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, what else was there?",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 46.27
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, have you thought it over? Roast chicken, lamb shoulder or the lasagna?",
+   "est_sec": 4.13,
+   "role": "resume",
+   "block": "cooking.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 52.48
+   }
+  }
+ ]
+}

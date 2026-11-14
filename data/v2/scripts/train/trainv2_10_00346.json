@@ -1,0 +1,188 @@
+{
+ "id": "trainv2_10_00346",
+ "split": "train",
+ "seed": 10,
+ "order_index": 346,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "movies"
+ ],
+ "wait_sec": 12,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 12
+ },
+ "instruction_position": 0.553,
+ "topic": "movies",
+ "voices": {
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_02",
+  "greet_ans_04",
+  "think_instruction_v2_23",
+  "self_04",
+  "self_16"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_23": {
+   "style": "command",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "gardening.dlg9",
+  "movies.ctx1"
+ ],
+ "est_total_sec": 73.31,
+ "est_speech_sec": 51.62,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.78,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.54,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Every autumn I throw out my geraniums and buy new ones in spring. Feels wasteful.",
+   "est_sec": 4.75,
+   "gap_before": 0.47,
+   "block": "gardening.dlg9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It is a bit. You can keep them over winter quite easily if you've got a cool, frost free spot, like a porch or a spare room.",
+   "est_sec": 8.47,
+   "gap_before": 1.0,
+   "role": "reply",
+   "block": "gardening.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. It's movie night and nobody can agree on anything. Help.",
+   "est_sec": 4.44,
+   "gap_before": 1.02,
+   "block": "movies.ctx1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let's narrow it down. Are you in the mood for something funny, something scary, or a big action film?",
+   "est_sec": 5.99,
+   "gap_before": 1.81,
+   "role": "reply",
+   "block": "movies.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Please give me twelve seconds and then repeat the question.",
+   "est_sec": 3.2,
+   "gap_before": 0.92,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 12,
+   "phrasing": "think_instruction_v2_23"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, what did I do last time?",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 6,
+    "offset": 4.93
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 6,
+    "offset": 9.01
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, what's the verdict? Funny, scary or action?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "movies.ctx1",
+   "anchor": {
+    "turn": 6,
+    "offset": 12.59
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Funny. Everyone's had a long week.",
+   "est_sec": 1.96,
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "movies.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then go for a light comedy you can all talk over. Nothing too long, under two hours.",
+   "est_sec": 5.37,
+   "gap_before": 0.62,
+   "role": "followup",
+   "block": "movies.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "There's an unheated porch. Gets cold but never freezes.",
+   "est_sec": 2.89,
+   "gap_before": 1.93,
+   "event": "ordinary_request",
+   "block": "gardening.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's ideal. Dig them up before the first frost, cut them back by about half, and pot them up snugly.",
+   "est_sec": 6.3,
+   "gap_before": 0.99,
+   "role": "reply",
+   "block": "gardening.dlg9"
+  }
+ ]
+}

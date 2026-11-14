@@ -1,0 +1,132 @@
+{
+ "id": "eval_12_00090",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 90,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "camping"
+ ],
+ "wait_sec": 15,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 15
+ },
+ "topic": "camping",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_27",
+  "greet_ans_24",
+  "think_instr_24",
+  "ack_08"
+ ],
+ "block_ids": [
+  "camping.ctx5"
+ ],
+ "est_total_sec": 55.33,
+ "est_speech_sec": 33.14,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.38,
+   "role": "greeting",
+   "phrasing": "greet_27",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.4,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm sixty-eight and I've decided to go camping alone for the first time. My kids think I've lost it.",
+   "est_sec": 5.99,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "camping.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good for you. Would you feel more at ease at a campground with a host on site, or are you after somewhere truly remote?",
+   "est_sec": 7.54,
+   "gap_before": 1.15,
+   "role": "reply",
+   "block": "camping.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I need a moment, like fifteen seconds. Ask me again then.",
+   "est_sec": 3.51,
+   "gap_before": 1.38,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_08",
+   "reference_only": true
+  },
+  {
+   "speaker": "moshi",
+   "text": "Any answer yet? Someone nearby, or properly off on your own?",
+   "est_sec": 3.51,
+   "role": "resume",
+   "block": "camping.ctx5",
+   "anchor": {
+    "turn": 4,
+    "offset": 15.52
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A host, I think. Just this first time.",
+   "est_sec": 2.58,
+   "gap_before": 1.45,
+   "event": "ordinary_request",
+   "block": "camping.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sensible. You'll still have your own quiet site, with help close by if you need it.",
+   "est_sec": 5.06,
+   "gap_before": 1.02,
+   "role": "followup",
+   "block": "camping.ctx5",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

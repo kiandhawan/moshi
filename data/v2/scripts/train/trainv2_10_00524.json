@@ -1,0 +1,204 @@
+{
+ "id": "trainv2_10_00524",
+ "split": "train",
+ "seed": 10,
+ "order_index": 524,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end",
+  "long",
+  "self_talk"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "baking"
+ ],
+ "wait_sec": 55,
+ "early_end": {
+  "after_sec": 33.74,
+  "direct": true
+ },
+ "instruction_position": 0.537,
+ "topic": "baking",
+ "voices": {
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_07",
+  "greet_ans_11",
+  "think_instr_11",
+  "self_20",
+  "self_23",
+  "self_02",
+  "early_end_13"
+ ],
+ "phrasing_styles": {
+  "think_instr_11": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "early_end_13": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "home_repair.dlg12",
+  "baking.ctx7"
+ ],
+ "est_total_sec": 77.42,
+ "est_speech_sec": 38.91,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
+   "gap_before": 0.65,
+   "role": "greeting",
+   "phrasing": "greet_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.37,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "My sourdough keeps coming out flat as a pancake.",
+   "est_sec": 2.89,
+   "gap_before": 0.7,
+   "block": "baking.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Often that's the last rise. Do you proof it on the counter?",
+   "est_sec": 3.82,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "baking.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah. Is there another way?",
+   "est_sec": 1.65,
+   "gap_before": 0.98,
+   "block": "baking.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A slow overnight proof in the fridge makes shaping easier. Want to switch, or tweak your counter timing first?",
+   "est_sec": 5.99,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "baking.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Ask me again in fifty-five seconds, I need to think.",
+   "est_sec": 3.2,
+   "gap_before": 1.24,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 55,
+   "phrasing": "think_instr_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Let's see, let's see.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 15.03
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_20"
+  },
+  {
+   "speaker": "user",
+   "text": "That one's cheaper, but",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 26.85
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_23"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so if I do that, then",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 6,
+    "offset": 29.76
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I think I know.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 33.74
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, flat loaf fix. Which are you trying?",
+   "est_sec": 2.58,
+   "gap_before": 0.74,
+   "role": "resume",
+   "block": "baking.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll adjust the counter first, one change at a time.",
+   "est_sec": 3.2,
+   "gap_before": 0.8,
+   "event": "ordinary_request",
+   "block": "baking.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Very scientific. Try cutting the final rise by about a third and do the poke test, it should spring back slowly.",
+   "est_sec": 6.61,
+   "gap_before": 0.92,
+   "role": "followup",
+   "block": "baking.ctx7"
+  }
+ ]
+}

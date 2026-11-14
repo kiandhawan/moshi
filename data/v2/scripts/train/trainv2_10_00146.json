@@ -1,0 +1,224 @@
+{
+ "id": "trainv2_10_00146",
+ "split": "train",
+ "seed": 10,
+ "order_index": 146,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "friend_first",
+  "near_miss"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "shopping",
+  "cleaning"
+ ],
+ "instruction_position": 0.352,
+ "topic": "shopping",
+ "voices": {
+  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "friend": "c70cfb98867a4bfb9ae20d2401257b92",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Grace",
+ "friend_name_id": "name_16",
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_28",
+  "friend_interrupt_v2_08",
+  "side_instruction_v2_50",
+  "dn_22",
+  "side_cue_08"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_08": {
+   "style": "statement",
+   "tone": "neutral",
+   "source": "v2"
+  },
+  "side_instruction_v2_50": {
+   "style": "friend_first",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_08": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "shopping.ctx1",
+  "cleaning.side1",
+  "dn_22",
+  "baking.dlg32"
+ ],
+ "est_total_sec": 75.13,
+ "est_speech_sec": 57.39,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.32,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.67,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "I need a new winter coat. My old one has a broken zipper.",
+   "est_sec": 4.13,
+   "gap_before": 0.52,
+   "block": "shopping.ctx1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it. Are you thinking a long warm parka, or a shorter jacket that's easier to move in?",
+   "est_sec": 5.68,
+   "gap_before": 1.2,
+   "role": "reply",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think the delivery guy got our order wrong.",
+   "est_sec": 2.89,
+   "gap_before": 0.94,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Moshi, pause, she's asking me something. I'll say when I'm back.",
+   "est_sec": 3.51,
+   "gap_before": 0.66,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_50"
+  },
+  {
+   "speaker": "user",
+   "text": "Grace, whose turn is it to take out the trash?",
+   "est_sec": 3.2,
+   "gap_before": 1.0,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cleaning.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Pretty sure it's yours. I did it Tuesday and Thursday.",
+   "est_sec": 3.2,
+   "gap_before": 1.33,
+   "block": "cleaning.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Really? I thought I did Thursday.",
+   "est_sec": 1.96,
+   "gap_before": 1.15,
+   "block": "cleaning.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "No, you were at your sister's on Thursday.",
+   "est_sec": 2.58,
+   "gap_before": 0.83,
+   "block": "cleaning.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh right. Fine, I'll take it down tonight.",
+   "est_sec": 2.58,
+   "gap_before": 0.46,
+   "block": "cleaning.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Recycling too, please. The box is overflowing.",
+   "est_sec": 2.27,
+   "gap_before": 0.72,
+   "block": "cleaning.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, all done here, back to the game.",
+   "est_sec": 2.58,
+   "gap_before": 0.78,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_22"
+  },
+  {
+   "speaker": "friend",
+   "text": "Finally!",
+   "est_sec": 0.41,
+   "gap_before": 1.18,
+   "phrasing": "dn_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's sorted. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.43,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. Still deciding on the coat, long or short?",
+   "est_sec": 3.2,
+   "gap_before": 0.87,
+   "role": "resume",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. I feel bad throwing away sourdough discard every day. Is there anything useful to do with it?",
+   "est_sec": 6.3,
+   "gap_before": 1.15,
+   "block": "baking.dlg32",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Loads! Pancakes are the classic. Mix the discard with an egg, a little milk, sugar and a pinch of baking soda.",
+   "est_sec": 6.61,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "baking.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "So that's my weekend breakfast sorted.",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
+   "block": "baking.dlg32"
+  }
+ ]
+}

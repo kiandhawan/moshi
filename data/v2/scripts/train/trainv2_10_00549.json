@@ -1,0 +1,139 @@
+{
+ "id": "trainv2_10_00549",
+ "split": "train",
+ "seed": 10,
+ "order_index": 549,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "weekend_plans"
+ ],
+ "wait_sec": 34,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 34
+ },
+ "instruction_position": 0.876,
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_04",
+  "think_instr_25",
+  "ack_05"
+ ],
+ "phrasing_styles": {
+  "think_instr_25": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "board_games.dlg15",
+  "weekend_plans.ctx12"
+ ],
+ "est_total_sec": 76.1,
+ "est_speech_sec": 36.55,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.5,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Hosting fifteen people for New Year's Eve. Is there any board game that works for fifteen?",
+   "est_sec": 5.06,
+   "gap_before": 0.39,
+   "block": "board_games.dlg15",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not many classic board games do, but party games handle it well. Word guessing in teams or hidden role games scale up nicely.",
+   "est_sec": 7.23,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "board_games.dlg15"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. I've got a garage full of stuff to sell.",
+   "est_sec": 3.51,
+   "gap_before": 0.86,
+   "block": "weekend_plans.ctx12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "There's a car boot sale on Saturday, but you'd need to be there by six. Or you could list things online and sell them slowly. Early start or patience?",
+   "est_sec": 9.09,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "weekend_plans.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me take thirty-four seconds to think, and then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.55,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 34,
+   "phrasing": "think_instr_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.63,
+   "role": "ack",
+   "phrasing": "ack_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, a six o'clock car boot, or online bit by bit?",
+   "est_sec": 3.51,
+   "role": "resume",
+   "block": "weekend_plans.ctx12",
+   "anchor": {
+    "turn": 6,
+    "offset": 34.18
+   }
+  }
+ ]
+}

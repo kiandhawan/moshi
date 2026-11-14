@@ -1,0 +1,167 @@
+{
+ "id": "trainv2_10_00253",
+ "split": "train",
+ "seed": 10,
+ "order_index": 253,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "home_repair"
+ ],
+ "instruction_position": 0.433,
+ "topic": "home_repair",
+ "voices": {
+  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_02",
+  "greet_ans_25",
+  "describe_instruction_v2_02",
+  "describe_cue_02"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_02": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_02": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "weekend_plans.dlg13",
+  "home_repair.opt3"
+ ],
+ "est_total_sec": 74.04,
+ "est_speech_sec": 58.96,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.96,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "I broke my arm on Wednesday and now my whole weekend is ruined.",
+   "est_sec": 4.13,
+   "gap_before": 0.32,
+   "block": "weekend_plans.dlg13",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Oh no, I'm sorry. How are you feeling?",
+   "est_sec": 2.58,
+   "gap_before": 0.65,
+   "role": "reply",
+   "block": "weekend_plans.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. My old bathroom extractor fan is basically just noise now, and I have a few ways to deal with it.",
+   "est_sec": 7.23,
+   "gap_before": 1.06,
+   "block": "home_repair.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you hold your comments till I've gone through every choice? I'll tell you when I'm done.",
+   "est_sec": 5.37,
+   "gap_before": 0.77,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I could just clean it properly, take the cover off and get all the dust out of the blades.",
+   "est_sec": 5.99,
+   "gap_before": 1.22,
+   "block": "home_repair.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or buy a cheap replacement fan from the hardware store and fit it into the same hole myself.",
+   "est_sec": 5.68,
+   "gap_before": 2.46,
+   "block": "home_repair.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or pay an electrician to put in a proper quiet fan with a humidity sensor.",
+   "est_sec": 4.75,
+   "gap_before": 1.61,
+   "block": "home_repair.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 1.21,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How old is the fan? A really old motor won't get quieter with cleaning. In that case, the electrician option costs more but you'll never think about it again.",
+   "est_sec": 9.09,
+   "gap_before": 0.39,
+   "role": "resume",
+   "block": "home_repair.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Sore and fed up. I was supposed to go kayaking.",
+   "est_sec": 3.2,
+   "gap_before": 1.1,
+   "event": "ordinary_request",
+   "block": "weekend_plans.dlg13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's rotten luck. Could you still go along with your friends and enjoy the riverbank, maybe with a picnic?",
+   "est_sec": 5.99,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "weekend_plans.dlg13"
+  }
+ ]
+}

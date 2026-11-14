@@ -1,0 +1,216 @@
+{
+ "id": "trainv2_10_00303",
+ "split": "train",
+ "seed": 10,
+ "order_index": 303,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "fitness",
+  "cars"
+ ],
+ "instruction_position": 0.665,
+ "topic": "fitness",
+ "voices": {
+  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "friend": "536d3a5e000945adb7038665781a4aca",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_20",
+  "side_instruction_v2_11",
+  "dq_46",
+  "side_cue_v2_10"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_11": {
+   "style": "statement",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_10": {
+   "style": "fragment",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "personal_finance.dlg8",
+  "fitness.ctx11",
+  "cars.side2",
+  "dq_46"
+ ],
+ "est_total_sec": 78.63,
+ "est_speech_sec": 62.04,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.77,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Should I pay off my student loan early?",
+   "est_sec": 2.58,
+   "gap_before": 0.38,
+   "block": "personal_finance.dlg8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It depends on the interest rate and the type of loan. What's the rate like?",
+   "est_sec": 4.75,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "personal_finance.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. My wife and I want to do a class together. Something we'd both enjoy.",
+   "est_sec": 5.68,
+   "gap_before": 0.76,
+   "block": "fitness.ctx11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun idea. Salsa classes are social and playful, while a beginner boxing class is a great workout and a stress release. Which sounds more like you two?",
+   "est_sec": 8.47,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "fitness.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, I have to deal with my roommate quickly. You'll hear from me when I'm done.",
+   "est_sec": 5.06,
+   "gap_before": 1.27,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I borrow your car on Saturday?",
+   "est_sec": 2.27,
+   "gap_before": 0.94,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Depends. Where are you going?",
+   "est_sec": 1.65,
+   "gap_before": 0.61,
+   "block": "cars.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Just to the garden centre and back. Mine's in the shop.",
+   "est_sec": 3.51,
+   "gap_before": 1.17,
+   "block": "cars.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine, but it's nearly out of petrol, so fill it up.",
+   "est_sec": 3.51,
+   "gap_before": 0.6,
+   "block": "cars.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Deal. And I'll wash it too, it needs it.",
+   "est_sec": 2.89,
+   "gap_before": 1.25,
+   "block": "cars.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Now you're just showing off.",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
+   "block": "cars.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it cold enough for a scarf out there?",
+   "est_sec": 2.89,
+   "gap_before": 0.38,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_46"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, it's pretty windy.",
+   "est_sec": 1.34,
+   "gap_before": 0.44,
+   "phrasing": "dq_46"
+  },
+  {
+   "speaker": "user",
+   "text": "Finished with that. Your turn to talk.",
+   "est_sec": 2.27,
+   "gap_before": 0.59,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. The couples class. Salsa or boxing?",
+   "est_sec": 2.58,
+   "gap_before": 1.19,
+   "role": "resume",
+   "block": "fitness.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty low, I think. Like three percent.",
+   "est_sec": 2.27,
+   "gap_before": 1.46,
+   "event": "ordinary_request",
+   "block": "personal_finance.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "At three percent, many people put extra money elsewhere first, like a high interest savings account or retirement saving.",
+   "est_sec": 5.99,
+   "gap_before": 0.44,
+   "role": "reply",
+   "block": "personal_finance.dlg8"
+  }
+ ]
+}

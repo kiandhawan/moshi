@@ -1,0 +1,225 @@
+{
+ "id": "trainv2_10_00325",
+ "split": "train",
+ "seed": 10,
+ "order_index": 325,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss",
+  "other_name"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "weekend_plans",
+  "home_repair"
+ ],
+ "instruction_position": 0.904,
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "friend": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "other": "a52fdd0e957b4c288d8ec590bdd10288",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Ben",
+ "friend_name_id": "name_11",
+ "phrasing_ids": [
+  "pn_068",
+  "greet_19",
+  "greet_ans_02",
+  "side_instr_22",
+  "dn_05",
+  "side_cue_19"
+ ],
+ "phrasing_styles": {
+  "side_instr_22": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_19": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "nq_home_035",
+  "job_interview.dlg10",
+  "weekend_plans.ctx8",
+  "home_repair.side2",
+  "dn_05"
+ ],
+ "est_total_sec": 82.21,
+ "est_speech_sec": 64.52,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm interviewing for a team lead job and the panel includes two of my current colleagues. That's so awkward.",
+   "est_sec": 5.99,
+   "gap_before": 0.34,
+   "block": "job_interview.dlg10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It can feel strange. Do you get on with them?",
+   "est_sec": 3.2,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "job_interview.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. I moved here two months ago and I don't really know anyone yet.",
+   "est_sec": 4.75,
+   "gap_before": 1.05,
+   "block": "weekend_plans.ctx8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's hard. There's a beginners climbing night on Saturday, and a board game cafe that does a social on Sunday. Would you prefer something active or something chatty?",
+   "est_sec": 8.78,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "weekend_plans.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Could you, um, Josephine, pass me the tea towel?",
+   "est_sec": 2.89,
+   "gap_before": 1.58,
+   "block": "nq_home_035",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_home_035",
+   "name_pos": "middle",
+   "addressee": "Josephine"
+  },
+  {
+   "speaker": "other",
+   "text": "Here. It's a bit damp.",
+   "est_sec": 1.65,
+   "gap_before": 0.4,
+   "block": "nq_home_035"
+  },
+  {
+   "speaker": "user",
+   "text": "One sec, I'm going to talk with my neighbor. Please wait until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.95,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you know what kind of paint the landlord used in the kitchen?",
+   "est_sec": 4.13,
+   "gap_before": 0.89,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "No idea. Why, are you touching up the scuffs?",
+   "est_sec": 2.89,
+   "gap_before": 1.38,
+   "block": "home_repair.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to, but if it's glossy and I use matte, it'll look patchy.",
+   "est_sec": 4.44,
+   "gap_before": 0.54,
+   "block": "home_repair.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just take a chip off behind the fridge and bring it to the store. They can match it.",
+   "est_sec": 5.68,
+   "gap_before": 1.11,
+   "block": "home_repair.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, that's clever. Can you help me pull the fridge out later?",
+   "est_sec": 3.82,
+   "gap_before": 0.61,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure, after dinner.",
+   "est_sec": 1.03,
+   "gap_before": 1.3,
+   "block": "home_repair.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done with the dishes, your turn.",
+   "est_sec": 2.58,
+   "gap_before": 1.17,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_05"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine, fine.",
+   "est_sec": 0.72,
+   "gap_before": 0.72,
+   "phrasing": "dn_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 0.65,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. So, the climbing night or the game cafe?",
+   "est_sec": 2.89,
+   "gap_before": 0.9,
+   "role": "resume",
+   "block": "weekend_plans.ctx8"
+  }
+ ]
+}

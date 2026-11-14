@@ -1,0 +1,170 @@
+{
+ "id": "eval_12_00399",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 399,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "reading": {
+  "material": "article",
+  "sec": 20.2
+ },
+ "topic": "podcasts",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_21",
+  "read_instr_10",
+  "ack_01",
+  "murmur_12",
+  "read_cue_08"
+ ],
+ "block_ids": [
+  "podcasts.ctx13"
+ ],
+ "est_total_sec": 64.59,
+ "est_speech_sec": 34.16,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.92,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "My manager wants the whole team to listen to a leadership podcast and discuss it on Monday.",
+   "est_sec": 5.37,
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Homework, nice. How long is it?",
+   "est_sec": 1.96,
+   "gap_before": 1.29,
+   "role": "reply",
+   "block": "podcasts.ctx13",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ninety minutes. Ugh.",
+   "est_sec": 1.03,
+   "gap_before": 1.41,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Listen properly and take notes, or speed it up and just catch the main points?",
+   "est_sec": 5.06,
+   "gap_before": 1.0,
+   "role": "reply",
+   "block": "podcasts.ctx13",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, let me finish reading this article. I'll tell you when I'm done.",
+   "est_sec": 4.44,
+   "gap_before": 0.33,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.52,
+   "role": "ack",
+   "phrasing": "ack_01",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Huh, didn't see that coming.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 16.06
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, done with the article.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 20.2
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "All done? So, notes or the gist?",
+   "est_sec": 2.27,
+   "gap_before": 1.85,
+   "role": "resume",
+   "block": "podcasts.ctx13",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fast. I'll just grab two points to mention.",
+   "est_sec": 2.58,
+   "gap_before": 2.37,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect for a team chat. One thing you agreed with and one you didn't.",
+   "est_sec": 4.44,
+   "gap_before": 0.67,
+   "role": "followup",
+   "block": "podcasts.ctx13",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

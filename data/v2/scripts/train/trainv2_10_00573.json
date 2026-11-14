@@ -1,0 +1,166 @@
+{
+ "id": "trainv2_10_00573",
+ "split": "train",
+ "seed": 10,
+ "order_index": 573,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "gardening"
+ ],
+ "instruction_position": 0.452,
+ "topic": "gardening",
+ "voices": {
+  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_02",
+  "greet_ans_11",
+  "describe_instruction_v2_11",
+  "describe_cue_v2_23"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_11": {
+   "style": "statement",
+   "tone": "distracted",
+   "states_return": false,
+   "source": "v2"
+  },
+  "describe_cue_v2_23": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "sleep.dlg22",
+  "gardening.opt4"
+ ],
+ "est_total_sec": 74.33,
+ "est_speech_sec": 59.27,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.75,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I catch up on sleep at the weekend? I do five hours on weeknights.",
+   "est_sec": 4.75,
+   "gap_before": 0.29,
+   "block": "sleep.dlg22",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A little, but not fully. Weekend lie-ins help, but your body still feels the deficit during the week.",
+   "est_sec": 5.68,
+   "gap_before": 0.85,
+   "role": "reply",
+   "block": "sleep.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "The gravel drive is full of weeds again and I want to pick a method that actually works.",
+   "est_sec": 5.68,
+   "gap_before": 1.18,
+   "block": "gardening.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "There are several, um, possibilities, and I'd rather go through the whole lot first.",
+   "est_sec": 4.44,
+   "gap_before": 0.8,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_11"
+  },
+  {
+   "speaker": "user",
+   "text": "One idea is just pouring boiling water from the kettle on them every week or so.",
+   "est_sec": 5.06,
+   "gap_before": 0.91,
+   "block": "gardening.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is buying a gas weed burner, which looks fun but a bit scary.",
+   "est_sec": 4.44,
+   "gap_before": 1.88,
+   "block": "gardening.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or we rake all the gravel off, put down a proper membrane, and put the gravel back.",
+   "est_sec": 5.37,
+   "gap_before": 1.59,
+   "block": "gardening.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. Over to you, Moshi.",
+   "est_sec": 1.65,
+   "gap_before": 0.87,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Boiling water works on small weeds but you'll be doing it forever. The burner is quicker, though deep roots often come back. Redoing the membrane is a weekend of hard work, but it's the only one that stops most weeds for years.",
+   "est_sec": 13.12,
+   "gap_before": 1.1,
+   "role": "resume",
+   "block": "gardening.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "So it's pointless?",
+   "est_sec": 1.03,
+   "gap_before": 1.66,
+   "event": "ordinary_request",
+   "block": "sleep.dlg22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not pointless, but sleeping in until noon can shift your body clock, and Monday morning hurts more.",
+   "est_sec": 5.37,
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "sleep.dlg22"
+  }
+ ]
+}

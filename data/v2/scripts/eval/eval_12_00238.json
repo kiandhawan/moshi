@@ -1,0 +1,142 @@
+{
+ "id": "eval_12_00238",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 238,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
+ "topics": [
+  "painting_art"
+ ],
+ "topic": "painting_art",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_15",
+  "greet_ans_12",
+  "waitlike_15"
+ ],
+ "block_ids": [
+  "painting_art.dlg4"
+ ],
+ "est_total_sec": 50.58,
+ "est_speech_sec": 39.23,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.87,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Why do my acrylic paintings look darker when they dry?",
+   "est_sec": 3.2,
+   "gap_before": 0.59,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Acrylics have a slight color shift. The binder looks white when wet and turns clear as it dries, so colors deepen a bit.",
+   "est_sec": 7.23,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "painting_art.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "That's so annoying.",
+   "est_sec": 1.03,
+   "gap_before": 0.96,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It catches everyone. Mix your colors a touch lighter than you want, and they'll dry closer to your target.",
+   "est_sec": 5.99,
+   "gap_before": 1.37,
+   "role": "reply",
+   "block": "painting_art.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, is there a way to test it first?",
+   "est_sec": 3.2,
+   "gap_before": 1.06,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_15",
+   "block": "painting_art.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Paint a small swatch on scrap paper and let it dry for a few minutes. Compare it with the wet mix.",
+   "est_sec": 6.61,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "painting_art.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay. And if I want",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "painting_art.dlg4"
+  },
+  {
+   "speaker": "user",
+   "text": "the colors to stay glossy?",
+   "est_sec": 1.65,
+   "gap_before": 1.56,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Add a gloss medium to the paint or varnish the finished piece. Both bring back that rich, wet look.",
+   "est_sec": 5.99,
+   "gap_before": 0.37,
+   "role": "reply",
+   "block": "painting_art.dlg4",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "ordinary"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

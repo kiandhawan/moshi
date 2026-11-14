@@ -1,0 +1,211 @@
+{
+ "id": "trainv2_10_00610",
+ "split": "train",
+ "seed": 10,
+ "order_index": 610,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "weekend_plans",
+  "cooking"
+ ],
+ "instruction_position": 0.831,
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "friend": "536d3a5e000945adb7038665781a4aca",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Rosa",
+ "friend_name_id": "name_22",
+ "phrasing_ids": [
+  "greet_20",
+  "greet_ans_20",
+  "side_instruction_v2_16",
+  "ack_10",
+  "dq_45",
+  "side_cue_v2_02"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_16": {
+   "style": "statement",
+   "tone": "curt",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_02": {
+   "style": "statement",
+   "tone": "apologetic",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "travel_planning.dlg21",
+  "weekend_plans.ctx7",
+  "cooking.side1",
+  "dq_45"
+ ],
+ "est_total_sec": 80.14,
+ "est_speech_sec": 63.49,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.47,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.48,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I take daily medication. What do I need to know for flying abroad?",
+   "est_sec": 4.13,
+   "gap_before": 0.55,
+   "block": "travel_planning.dlg21",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Always pack it in your hand luggage, in its original packaging with the label on.",
+   "est_sec": 4.75,
+   "gap_before": 1.59,
+   "role": "reply",
+   "block": "travel_planning.dlg21"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. It's a bank holiday weekend, so three whole days.",
+   "est_sec": 3.82,
+   "gap_before": 0.79,
+   "block": "weekend_plans.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely. You could squeeze in a short trip somewhere, or finally do those jobs around the house. Which would make you happier on Tuesday?",
+   "est_sec": 7.54,
+   "gap_before": 0.46,
+   "role": "reply",
+   "block": "weekend_plans.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, I need a quick chat with my colleague. Not a word from you till I'm done.",
+   "est_sec": 5.37,
+   "gap_before": 0.53,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.61,
+   "role": "ack",
+   "phrasing": "ack_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Rosa, do we still have garlic or did you use the last of it?",
+   "est_sec": 4.44,
+   "gap_before": 0.6,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think there's half a bulb in the cupboard by the kettle.",
+   "est_sec": 3.82,
+   "gap_before": 1.32,
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Half a bulb won't be enough. Could you grab some on your way back from work?",
+   "est_sec": 5.06,
+   "gap_before": 0.37,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure, anything else while I'm there?",
+   "est_sec": 1.96,
+   "gap_before": 0.94,
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe a lemon. And check if they have fresh parsley.",
+   "est_sec": 3.2,
+   "gap_before": 1.11,
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Got it, garlic, lemon, parsley.",
+   "est_sec": 1.65,
+   "gap_before": 0.62,
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Rosa, which shoes should I wear, the black or the brown?",
+   "est_sec": 3.51,
+   "gap_before": 0.48,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_45"
+  },
+  {
+   "speaker": "friend",
+   "text": "The brown, they go with the jacket.",
+   "est_sec": 2.27,
+   "gap_before": 2.26,
+   "phrasing": "dq_45"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, done with him now. Over to you.",
+   "est_sec": 3.2,
+   "gap_before": 1.52,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. So, three days. Getting away, or catching up on the house?",
+   "est_sec": 4.13,
+   "gap_before": 0.45,
+   "role": "resume",
+   "block": "weekend_plans.ctx7"
+  }
+ ]
+}

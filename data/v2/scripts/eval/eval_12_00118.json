@@ -1,0 +1,129 @@
+{
+ "id": "eval_12_00118",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 118,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "laptop_buying"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_03",
+  "describe_instr_09",
+  "ack_13",
+  "describe_cue_15"
+ ],
+ "block_ids": [
+  "laptop_buying.opt1"
+ ],
+ "est_total_sec": 53.19,
+ "est_speech_sec": 43.47,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.34,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.3,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "I need help picking a laptop for school.",
+   "est_sec": 2.58,
+   "gap_before": 0.21,
+   "block": "laptop_buying.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to describe each one. Save your comments until the end.",
+   "est_sec": 3.82,
+   "gap_before": 0.47,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.37,
+   "role": "ack",
+   "phrasing": "ack_13",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is a really thin laptop, very light, great battery, but only eight gigs of memory.",
+   "est_sec": 5.68,
+   "gap_before": 0.91,
+   "block": "laptop_buying.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a gaming laptop that's super powerful, but it's heavy and the battery lasts maybe three hours.",
+   "est_sec": 5.68,
+   "gap_before": 2.45,
+   "block": "laptop_buying.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is a basic model, cheaper than the others, with a slightly dim screen.",
+   "est_sec": 5.37,
+   "gap_before": 1.09,
+   "block": "laptop_buying.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "So that's the list. Thoughts?",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For school, the thin laptop sounds like the best fit, since you'll carry it around and need the battery to last through classes. The gaming laptop only makes sense if you'll actually game or run heavy software. The basic model is fine if budget is the main concern.",
+   "est_sec": 14.98,
+   "gap_before": 1.55,
+   "role": "resume",
+   "block": "laptop_buying.opt1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,236 @@
+{
+ "id": "trainv2_10_00545",
+ "split": "train",
+ "seed": 10,
+ "order_index": 545,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "friend_first",
+  "near_miss"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "job_interview",
+  "cars"
+ ],
+ "instruction_position": 0.827,
+ "topic": "job_interview",
+ "voices": {
+  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
+  "friend": "0efe38923c0b445ab09382e851ae1e30",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
+ "phrasing_ids": [
+  "greet_01",
+  "greet_ans_10",
+  "friend_interrupt_v2_25",
+  "side_instruction_v2_49",
+  "ack_01",
+  "dn_30",
+  "side_cue_v2_32"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_25": {
+   "style": "breakoff",
+   "tone": "cheerful",
+   "source": "v2"
+  },
+  "side_instruction_v2_49": {
+   "style": "friend_first",
+   "tone": "apologetic",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_32": {
+   "style": "fragment",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "home_repair.dlg24",
+  "job_interview.ctx12",
+  "cars.side5",
+  "dn_30"
+ ],
+ "est_total_sec": 80.28,
+ "est_speech_sec": 60.9,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.38,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "My front step is crumbling. Is that a concrete job or what?",
+   "est_sec": 3.82,
+   "gap_before": 0.51,
+   "block": "home_repair.dlg24",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sounds like it. Is it just the edges breaking off, or are there big chunks missing?",
+   "est_sec": 5.06,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "home_repair.dlg24"
+  },
+  {
+   "speaker": "user",
+   "text": "I got let go from my last job and I'm terrified they'll ask about it.",
+   "est_sec": 4.75,
+   "gap_before": 0.67,
+   "block": "job_interview.ctx12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a fear lots of people have. Would you rather bring it up yourself early on, or wait and answer only if they ask?",
+   "est_sec": 7.54,
+   "gap_before": 0.95,
+   "role": "reply",
+   "block": "job_interview.ctx12"
+  },
+  {
+   "speaker": "friend",
+   "text": "Guess what just— oh, this is so good, come here.",
+   "est_sec": 3.2,
+   "gap_before": 0.43,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, sorry Moshi, give me a sec.",
+   "est_sec": 2.27,
+   "gap_before": 0.37,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_49"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.26,
+   "role": "ack",
+   "phrasing": "ack_01"
+  },
+  {
+   "speaker": "user",
+   "text": "So when's your driving test again?",
+   "est_sec": 1.96,
+   "gap_before": 0.95,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Thursday. I can't sleep thinking about it.",
+   "est_sec": 2.27,
+   "gap_before": 1.98,
+   "block": "cars.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "You'll be fine. Is it the parallel parking that's worrying you?",
+   "est_sec": 3.51,
+   "gap_before": 1.09,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "All of it, honestly. Mostly the roundabouts. I freeze.",
+   "est_sec": 2.89,
+   "gap_before": 1.13,
+   "block": "cars.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Want to go out tomorrow evening and just do roundabouts for an hour?",
+   "est_sec": 4.13,
+   "gap_before": 1.15,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Would you really? That would help so much.",
+   "est_sec": 2.58,
+   "gap_before": 0.93,
+   "block": "cars.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Of course. I'll bring snacks for afterwards.",
+   "est_sec": 2.27,
+   "gap_before": 0.9,
+   "block": "cars.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "You can continue the episode without me, I've seen it.",
+   "est_sec": 3.2,
+   "gap_before": 1.42,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_30"
+  },
+  {
+   "speaker": "friend",
+   "text": "No way, we're watching it together.",
+   "est_sec": 1.96,
+   "gap_before": 0.73,
+   "phrasing": "dn_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Done and dusted. Go ahead.",
+   "est_sec": 1.65,
+   "gap_before": 1.42,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_32"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. We'd stopped on how to handle being let go. Which approach feels right?",
+   "est_sec": 4.44,
+   "gap_before": 0.86,
+   "role": "resume",
+   "block": "job_interview.ctx12"
+  }
+ ]
+}

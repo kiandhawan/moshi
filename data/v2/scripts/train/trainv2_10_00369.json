@@ -1,0 +1,234 @@
+{
+ "id": "trainv2_10_00369",
+ "split": "train",
+ "seed": 10,
+ "order_index": 369,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "friend_first"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "cleaning",
+  "job_interview"
+ ],
+ "instruction_position": 0.624,
+ "topic": "cleaning",
+ "voices": {
+  "user": "cc7f8544c64a439080193e9560100c5a",
+  "friend": "ce9db9be1ecb4c8a832802626864595d",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Emma",
+ "friend_name_id": "name_20",
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_29",
+  "friend_interrupt_v2_11",
+  "side_instruction_v2_55",
+  "dq_58",
+  "side_cue_v2_23"
+ ],
+ "phrasing_styles": {
+  "friend_interrupt_v2_11": {
+   "style": "command",
+   "tone": "curt",
+   "source": "v2"
+  },
+  "side_instruction_v2_55": {
+   "style": "friend_first",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_v2_23": {
+   "style": "fragment",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "personal_finance.dlg10",
+  "cleaning.ctx7",
+  "job_interview.side1",
+  "dq_58"
+ ],
+ "est_total_sec": 84.21,
+ "est_speech_sec": 64.31,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.99,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_29"
+  },
+  {
+   "speaker": "user",
+   "text": "I freelance and my income is all over the place. How do I budget?",
+   "est_sec": 4.44,
+   "gap_before": 0.52,
+   "block": "personal_finance.dlg10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Irregular income needs a slightly different approach. Start by working out your bare minimum monthly costs.",
+   "est_sec": 5.06,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "personal_finance.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, and another thing. My kids bring home paintings every day. The fridge is buried.",
+   "est_sec": 4.75,
+   "gap_before": 1.34,
+   "block": "cleaning.ctx7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely problem, but a real one. Would you photograph them and keep only a few favourites, or have one keepsake box per child per year?",
+   "est_sec": 7.85,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "cleaning.ctx7"
+  },
+  {
+   "speaker": "friend",
+   "text": "Come look at this.",
+   "est_sec": 1.34,
+   "gap_before": 0.69,
+   "event": "distractor",
+   "kind": "friend_interrupt",
+   "phrasing": "friend_interrupt_v2_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Just a second, Moshi, let me deal with this.",
+   "est_sec": 2.89,
+   "gap_before": 0.54,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_55"
+  },
+  {
+   "speaker": "user",
+   "text": "Could you hold this for a sec?",
+   "est_sec": 2.27,
+   "gap_before": 0.69,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_58"
+  },
+  {
+   "speaker": "friend",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 1.85,
+   "phrasing": "dq_58"
+  },
+  {
+   "speaker": "user",
+   "text": "Emma, can you look at my resume for a second?",
+   "est_sec": 3.2,
+   "gap_before": 0.62,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "job_interview.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. Hmm, it's pretty long.",
+   "est_sec": 1.65,
+   "gap_before": 0.86,
+   "block": "job_interview.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Is two pages too much?",
+   "est_sec": 1.65,
+   "gap_before": 0.83,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "job_interview.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "For you, yeah. Cut the part about your summer job from college.",
+   "est_sec": 3.82,
+   "gap_before": 1.63,
+   "block": "job_interview.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "But I learned a lot there.",
+   "est_sec": 1.96,
+   "gap_before": 1.1,
+   "block": "job_interview.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then mention it in the interview. On paper, keep it focused on this job.",
+   "est_sec": 4.44,
+   "gap_before": 0.33,
+   "block": "job_interview.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, okay, I'm back. Hit me.",
+   "est_sec": 1.96,
+   "gap_before": 1.77,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. So, the paintings. Have you settled on a way to keep them?",
+   "est_sec": 4.44,
+   "gap_before": 1.16,
+   "role": "resume",
+   "block": "cleaning.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "A box each. I can't bring myself to throw their art away.",
+   "est_sec": 3.82,
+   "gap_before": 0.73,
+   "event": "ordinary_request",
+   "block": "cleaning.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally understandable. Write the date on the back and the boxes become a little time capsule.",
+   "est_sec": 5.06,
+   "gap_before": 1.28,
+   "role": "followup",
+   "block": "cleaning.ctx7"
+  }
+ ]
+}

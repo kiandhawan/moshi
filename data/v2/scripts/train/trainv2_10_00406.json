@@ -1,0 +1,205 @@
+{
+ "id": "trainv2_10_00406",
+ "split": "train",
+ "seed": 10,
+ "order_index": 406,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "moshi_mention",
+  "self_talk"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "pets"
+ ],
+ "wait_sec": 18,
+ "deadline": {
+  "after_turn": 12,
+  "sec": 18
+ },
+ "instruction_position": 0.929,
+ "topic": "pets",
+ "voices": {
+  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "friend": null,
+  "other": "4210f97652d14bec82edc1c2ee8296d2",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_07",
+  "think_instruction_v2_28",
+  "ack_15",
+  "self_10"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_28": {
+   "style": "fragment",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "mm_043",
+  "movies.dlg12",
+  "pets.ctx6"
+ ],
+ "est_total_sec": 80.68,
+ "est_speech_sec": 53.68,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.98,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "How do I make proper cinema popcorn at home? Mine always tastes like cardboard.",
+   "est_sec": 4.44,
+   "gap_before": 0.42,
+   "block": "movies.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The secret is fat and salt. Pop the kernels in a heavy pot with a good coating of oil, rather than in the microwave.",
+   "est_sec": 7.54,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "movies.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "What oil?",
+   "est_sec": 0.72,
+   "gap_before": 0.44,
+   "block": "movies.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Coconut oil gives that cinema taste. A neutral oil works too, but coconut is the classic.",
+   "est_sec": 5.06,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "movies.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "And the salt never sticks to mine.",
+   "est_sec": 2.27,
+   "gap_before": 0.75,
+   "block": "movies.dlg12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Use very fine salt, even blitzed in a blender. It clings much better than chunky flakes.",
+   "est_sec": 5.06,
+   "gap_before": 1.15,
+   "role": "reply",
+   "block": "movies.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, the vet says my cat is a bit overweight and I should rethink her food.",
+   "est_sec": 5.68,
+   "gap_before": 0.75,
+   "block": "pets.ctx6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. At the moment is she mostly on dry biscuits, or wet food from pouches and tins?",
+   "est_sec": 5.37,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "pets.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "Julian, did you ask Moshi about the bus strike or should I?",
+   "est_sec": 3.82,
+   "gap_before": 0.63,
+   "block": "mm_043",
+   "event": "distractor",
+   "kind": "moshi_mention",
+   "phrasing": "mm_043",
+   "name_pos": "start",
+   "addressee": "Julian"
+  },
+  {
+   "speaker": "other",
+   "text": "I'll check the website instead.",
+   "est_sec": 1.65,
+   "gap_before": 0.49,
+   "block": "mm_043"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, eighteen seconds and then check in with me.",
+   "est_sec": 2.89,
+   "gap_before": 1.07,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 18,
+   "phrasing": "think_instruction_v2_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "role": "ack",
+   "phrasing": "ack_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Mm, I don't know.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 12,
+    "offset": 14.36
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, what's she eating now, mostly dry or mostly wet?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "pets.ctx6",
+   "anchor": {
+    "turn": 12,
+    "offset": 18.33
+   }
+  }
+ ]
+}

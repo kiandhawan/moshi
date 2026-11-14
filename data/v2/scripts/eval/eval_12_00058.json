@@ -1,0 +1,130 @@
+{
+ "id": "eval_12_00058",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 58,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "family_visit"
+ ],
+ "topic": "family_visit",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_06",
+  "describe_instr_03",
+  "describe_cue_09"
+ ],
+ "block_ids": [
+  "family_visit.opt5"
+ ],
+ "est_total_sec": 65.07,
+ "est_speech_sec": 51.22,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.75,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "We're planning a weekend away with my husband's family and I'm stuck on where.",
+   "est_sec": 4.44,
+   "gap_before": 0.22,
+   "block": "family_visit.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me go through every option before you say anything.",
+   "est_sec": 3.2,
+   "gap_before": 0.45,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "A lake cabin, two hours north, with a dock and a big kitchen, but the wifi is basically nothing.",
+   "est_sec": 5.99,
+   "gap_before": 1.03,
+   "block": "family_visit.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A city apartment rental, central and walkable, but we'd be squeezed into three small bedrooms.",
+   "est_sec": 4.75,
+   "gap_before": 2.0,
+   "block": "family_visit.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A beach house on the coast, great for the kids, though it's a five hour drive and pricey in summer.",
+   "est_sec": 6.3,
+   "gap_before": 2.74,
+   "block": "family_visit.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or just everyone at his parents' place, free, familiar, and probably a little chaotic.",
+   "est_sec": 4.44,
+   "gap_before": 2.02,
+   "block": "family_visit.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "So, that's all of them. Tell me what you think.",
+   "est_sec": 3.2,
+   "gap_before": 1.44,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The cabin feels like a real break and the big kitchen helps with a crowd, no wifi might even be a plus. The beach house is great for kids but the drive and price add up. The city place sounds cramped, and his parents' house isn't really getting away.",
+   "est_sec": 15.29,
+   "gap_before": 1.1,
+   "role": "resume",
+   "block": "family_visit.opt5",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

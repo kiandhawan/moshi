@@ -1,0 +1,165 @@
+{
+ "id": "eval_12_00109",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 109,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "topic": "podcasts",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_18",
+  "door_instr_04",
+  "ack_14",
+  "door_08",
+  "door_cue_03"
+ ],
+ "block_ids": [
+  "podcasts.ctx11",
+  "door_08"
+ ],
+ "est_total_sec": 50.74,
+ "est_speech_sec": 34.26,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.56,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.87,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "We're driving eight hours with three kids this weekend. I need podcasts.",
+   "est_sec": 3.82,
+   "gap_before": 0.26,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Smart. A kids' mystery series to keep them guessing, or a science show full of weird facts?",
+   "est_sec": 5.37,
+   "gap_before": 0.92,
+   "role": "reply",
+   "block": "podcasts.ctx11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, someone's knocking. Please stay quiet until I return.",
+   "est_sec": 2.89,
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.52,
+   "role": "ack",
+   "phrasing": "ack_14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Yes?",
+   "est_sec": 0.41,
+   "gap_before": 3.37,
+   "phrasing": "door_08",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, is this the right address for Jordan?",
+   "est_sec": 2.58,
+   "gap_before": 0.31,
+   "phrasing": "door_08"
+  },
+  {
+   "speaker": "user",
+   "text": "No, I think that's next door.",
+   "est_sec": 1.96,
+   "gap_before": 0.94,
+   "phrasing": "door_08"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Oh, sorry, thanks!",
+   "est_sec": 1.03,
+   "gap_before": 0.75,
+   "phrasing": "door_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, door's closed. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 3.59,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everything okay at the door? So, which one for the kids?",
+   "est_sec": 3.51,
+   "gap_before": 0.91,
+   "role": "resume",
+   "block": "podcasts.ctx11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Science. My oldest asks questions all day anyway.",
+   "est_sec": 2.58,
+   "gap_before": 0.44,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect, and he'll have a hundred new questions by the end of the drive.",
+   "est_sec": 4.44,
+   "gap_before": 0.79,
+   "role": "followup",
+   "block": "podcasts.ctx11",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

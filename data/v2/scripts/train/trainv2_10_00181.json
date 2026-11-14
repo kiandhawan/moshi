@@ -1,0 +1,162 @@
+{
+ "id": "trainv2_10_00181",
+ "split": "train",
+ "seed": 10,
+ "order_index": 181,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "travel_planning"
+ ],
+ "instruction_position": 0.498,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_17",
+  "greet_ans_19",
+  "describe_instr_07",
+  "ack_01",
+  "describe_cue_02"
+ ],
+ "phrasing_styles": {
+  "describe_instr_07": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_02": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "books.dlg21",
+  "travel_planning.opt2"
+ ],
+ "est_total_sec": 75.88,
+ "est_speech_sec": 57.93,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.66,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.67,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "My kid just asked me why some books are banned. I didn't know what to say.",
+   "est_sec": 5.06,
+   "gap_before": 0.42,
+   "block": "books.dlg21",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a big question for a kid. How old are they?",
+   "est_sec": 3.51,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "books.dlg21"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, My sister and I can't agree on how to get to the wedding next month.",
+   "est_sec": 5.68,
+   "gap_before": 0.69,
+   "block": "travel_planning.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me walk you through all the options, then you can tell me what you think.",
+   "est_sec": 5.06,
+   "gap_before": 0.73,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.21,
+   "role": "ack",
+   "phrasing": "ack_01"
+  },
+  {
+   "speaker": "user",
+   "text": "One way is to fly, which takes about two hours, but the tickets are expensive this close to the date.",
+   "est_sec": 6.3,
+   "gap_before": 0.63,
+   "block": "travel_planning.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is to take the train, around seven hours, but it's comfortable and we can work on the way.",
+   "est_sec": 5.99,
+   "gap_before": 4.12,
+   "block": "travel_planning.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or we could drive, which is cheapest split between two people, though it's a long day in the car.",
+   "est_sec": 5.99,
+   "gap_before": 6.35,
+   "block": "travel_planning.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 0.72,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The train sounds like a nice middle ground, it's comfortable and you don't lose the whole day since you can work. Flying is fastest, but those last minute prices hurt. Driving is cheapest, and you'd have a car once you get there, which can be handy.",
+   "est_sec": 14.36,
+   "gap_before": 0.38,
+   "role": "resume",
+   "block": "travel_planning.opt2"
+  }
+ ]
+}

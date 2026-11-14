@@ -1,0 +1,168 @@
+{
+ "id": "trainv2_10_00544",
+ "split": "train",
+ "seed": 10,
+ "order_index": 544,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "hiking"
+ ],
+ "wait_sec": 28,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 28
+ },
+ "instruction_position": 0.347,
+ "topic": "hiking",
+ "voices": {
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_28",
+  "greet_ans_11",
+  "think_instruction_v2_11",
+  "ack_14",
+  "self_13"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_11": {
+   "style": "statement",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "hiking.ctx1",
+  "cooking.dlg19"
+ ],
+ "est_total_sec": 81.41,
+ "est_speech_sec": 46.15,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.3,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to do a day hike on Sunday but I'm not super fit.",
+   "est_sec": 4.44,
+   "gap_before": 0.57,
+   "block": "hiking.ctx1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. There's a flat lakeside loop of about five miles, or a shorter trail with a steep climb and a great view. Which appeals more?",
+   "est_sec": 8.16,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "hiking.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "That's a big one, Moshi. I'll want twenty-eight seconds, and after that you can check in with me.",
+   "est_sec": 5.68,
+   "gap_before": 0.38,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 28,
+   "phrasing": "think_instruction_v2_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.48,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, so first",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 16.29
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, the flat loop around the lake, or the steep one with the view?",
+   "est_sec": 4.44,
+   "role": "resume",
+   "block": "hiking.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 28.41
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. Do air fryers really cook chips as well as a deep fryer?",
+   "est_sec": 4.44,
+   "gap_before": 1.37,
+   "block": "cooking.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not quite as crispy, but close, and with way less oil. Most people are happy with them.",
+   "est_sec": 5.37,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "cooking.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "What's the trick for fresh potatoes?",
+   "est_sec": 1.96,
+   "gap_before": 1.45,
+   "block": "cooking.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Cut them evenly, soak them in cold water for half an hour, then dry them really well before tossing with a spoon of oil.",
+   "est_sec": 7.54,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "cooking.dlg19"
+  }
+ ]
+}

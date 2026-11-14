@@ -1,0 +1,206 @@
+{
+ "id": "trainv2_10_00005",
+ "split": "train",
+ "seed": 10,
+ "order_index": 5,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "home_repair",
+  "studying"
+ ],
+ "instruction_position": 0.872,
+ "topic": "home_repair",
+ "voices": {
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": "ba875f2fb2ea4a4e9b175821014984b6",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_14",
+  "side_instruction_v2_47",
+  "dq_11",
+  "side_cue_11"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_47": {
+   "style": "implied",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "side_cue_11": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "cars.dlg30",
+  "home_repair.ctx10",
+  "studying.side6",
+  "dq_11"
+ ],
+ "est_total_sec": 84.49,
+ "est_speech_sec": 65.66,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.72,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "We're taking our electric car on holiday for the first time. I'm worried we'll run out of charge somewhere.",
+   "est_sec": 5.99,
+   "gap_before": 0.44,
+   "block": "cars.dlg30",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally normal worry. How far is the trip, and what's your car's real range in practice?",
+   "est_sec": 5.06,
+   "gap_before": 0.84,
+   "role": "reply",
+   "block": "cars.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, the grout in my shower has gone all grey and grim.",
+   "est_sec": 4.44,
+   "gap_before": 1.01,
+   "block": "home_repair.ctx10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can deep clean it, paint over it with a grout pen, or scrape it out and regrout. How much effort do you want to put in?",
+   "est_sec": 8.47,
+   "gap_before": 0.46,
+   "role": "reply",
+   "block": "home_repair.ctx10"
+  },
+  {
+   "speaker": "user",
+   "text": "My mate's just sat down next to me. Couple of minutes.",
+   "est_sec": 3.51,
+   "gap_before": 0.79,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_47"
+  },
+  {
+   "speaker": "user",
+   "text": "Have you seen my phone charger?",
+   "est_sec": 1.96,
+   "gap_before": 1.31,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_11"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think it's in the bedroom.",
+   "est_sec": 1.96,
+   "gap_before": 2.54,
+   "phrasing": "dq_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Sam, does this essay make sense? I've read it so many times the words look fake.",
+   "est_sec": 5.06,
+   "gap_before": 1.24,
+   "block": "studying.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Hand it over. How long is it supposed to be?",
+   "est_sec": 3.2,
+   "gap_before": 0.76,
+   "block": "studying.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Two thousand words. I'm at two thousand four hundred.",
+   "est_sec": 2.89,
+   "gap_before": 2.01,
+   "block": "studying.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "This whole paragraph about the history of the factory, do you need it?",
+   "est_sec": 4.13,
+   "gap_before": 0.9,
+   "block": "studying.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe not. I just found it interesting.",
+   "est_sec": 2.27,
+   "gap_before": 0.73,
+   "block": "studying.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then cut it. Your argument starts on page two, it should start on page one.",
+   "est_sec": 4.75,
+   "gap_before": 0.86,
+   "block": "studying.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh. You're right, but it hurts.",
+   "est_sec": 1.96,
+   "gap_before": 0.82,
+   "block": "studying.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done talking to them. I'm back.",
+   "est_sec": 2.58,
+   "gap_before": 0.66,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. Your shower grout. Cleaning, a pen, or redoing it?",
+   "est_sec": 3.51,
+   "gap_before": 0.64,
+   "role": "resume",
+   "block": "home_repair.ctx10"
+  }
+ ]
+}

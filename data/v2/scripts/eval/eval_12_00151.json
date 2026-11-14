@@ -1,0 +1,157 @@
+{
+ "id": "eval_12_00151",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 151,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "laptop_buying"
+ ],
+ "reading": {
+  "material": "recipe",
+  "sec": 18.9
+ },
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_21",
+  "read_instr_04",
+  "ack_06",
+  "read_cue_04"
+ ],
+ "block_ids": [
+  "laptop_buying.ctx5"
+ ],
+ "est_total_sec": 60.45,
+ "est_speech_sec": 32.2,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.66,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.66,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "My grandad wants a laptop for emails and video calls with us.",
+   "est_sec": 3.82,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Does he use a smartphone?",
+   "est_sec": 1.65,
+   "gap_before": 1.27,
+   "role": "reply",
+   "block": "laptop_buying.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Barely. He calls it the gadget.",
+   "est_sec": 1.96,
+   "gap_before": 1.05,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha. Would a tablet with a keyboard be easier for him, or does he really want a proper laptop?",
+   "est_sec": 5.99,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "laptop_buying.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, let me read this recipe first. Don't talk until I'm finished.",
+   "est_sec": 4.13,
+   "gap_before": 1.74,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.43,
+   "role": "ack",
+   "phrasing": "ack_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Done, I read through it.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 18.9
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, all read? So which one feels right for him?",
+   "est_sec": 3.2,
+   "gap_before": 0.92,
+   "role": "resume",
+   "block": "laptop_buying.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Laptop. He wants to type his memoirs.",
+   "est_sec": 2.27,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely. Then a comfortable keyboard and a big clear screen matter most.",
+   "est_sec": 3.82,
+   "gap_before": 0.57,
+   "role": "followup",
+   "block": "laptop_buying.ctx5",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

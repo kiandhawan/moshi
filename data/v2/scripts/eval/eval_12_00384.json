@@ -1,0 +1,126 @@
+{
+ "id": "eval_12_00384",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 384,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "restaurant_choice"
+ ],
+ "reading": {
+  "material": "letter",
+  "sec": 9.9
+ },
+ "topic": "restaurant_choice",
+ "voices": {
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_03",
+  "read_instr_09",
+  "ack_12",
+  "implicit_02"
+ ],
+ "block_ids": [
+  "restaurant_choice.ctx5"
+ ],
+ "est_total_sec": 43.18,
+ "est_speech_sec": 27.77,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.75,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got a client lunch on Thursday and I have no clue where to take her.",
+   "est_sec": 5.06,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Do you know anything about her tastes? Or should we just pick somewhere quiet near your office where you can actually talk business?",
+   "est_sec": 7.23,
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "restaurant_choice.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me read this letter first, please don't talk until I'm done.",
+   "est_sec": 3.82,
+   "gap_before": 0.77,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.48,
+   "role": "ack",
+   "phrasing": "ack_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, what were you saying?",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 9.9
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. The client lunch on Thursday still needs a place. Do you know what she likes?",
+   "est_sec": 5.06,
+   "gap_before": 1.01,
+   "role": "resume",
+   "block": "restaurant_choice.ctx5",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

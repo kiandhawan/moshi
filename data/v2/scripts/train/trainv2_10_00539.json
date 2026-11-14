@@ -1,0 +1,166 @@
+{
+ "id": "trainv2_10_00539",
+ "split": "train",
+ "seed": 10,
+ "order_index": 539,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "middle",
+ "topics": [
+  "public_transport"
+ ],
+ "instruction_position": 0.408,
+ "topic": "public_transport",
+ "voices": {
+  "user": "879653fd2b9c4cb0854d68e7e9a049e8",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_07",
+  "describe_instruction_v2_05",
+  "describe_cue_v2_08"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_05": {
+   "style": "request",
+   "tone": "cheerful",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_v2_08": {
+   "style": "statement",
+   "tone": "polite",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "job_interview.dlg19",
+  "public_transport.opt4"
+ ],
+ "est_total_sec": 83.6,
+ "est_speech_sec": 69.19,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.63,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm seventeen, going for a Christmas job at a toy shop. What will they ask?",
+   "est_sec": 4.75,
+   "gap_before": 0.31,
+   "block": "job_interview.dlg19",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Probably simple things. When you're free, why you want to work there, and how you'd handle a busy shop.",
+   "est_sec": 5.99,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "job_interview.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "Changing the subject, My daughter starts secondary school in September and we're working out how she'll get there.",
+   "est_sec": 5.68,
+   "gap_before": 0.93,
+   "block": "public_transport.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Ooh, can you just listen while I run through the choices? Then I'll ask what you think.",
+   "est_sec": 5.37,
+   "gap_before": 0.85,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_05"
+  },
+  {
+   "speaker": "user",
+   "text": "The school bus picks up at the end of our road, but it leaves really early, at ten past seven.",
+   "est_sec": 6.3,
+   "gap_before": 0.69,
+   "block": "public_transport.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "She could take the public bus with her friends, it's later but involves one change in town.",
+   "est_sec": 5.37,
+   "gap_before": 1.83,
+   "block": "public_transport.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I drop her at the train station on my way to work, and she takes one stop.",
+   "est_sec": 5.68,
+   "gap_before": 2.27,
+   "block": "public_transport.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's everything. Now you can weigh in.",
+   "est_sec": 2.58,
+   "gap_before": 1.29,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_v2_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The school bus is the simplest and safest, even if the early start hurts. The public bus with friends builds independence, but the change adds a chance to miss a connection. The train is quick, though it ties her to your work schedule.",
+   "est_sec": 13.43,
+   "gap_before": 1.0,
+   "role": "resume",
+   "block": "public_transport.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "What do I say for why I want to work there? Money?",
+   "est_sec": 3.82,
+   "gap_before": 1.5,
+   "event": "ordinary_request",
+   "block": "job_interview.dlg19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Money's honest, but add something else. Maybe that you like helping people or that you know lots about games and toys.",
+   "est_sec": 6.61,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "job_interview.dlg19"
+  }
+ ]
+}

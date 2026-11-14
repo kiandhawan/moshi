@@ -1,0 +1,163 @@
+{
+ "id": "trainv2_10_00051",
+ "split": "train",
+ "seed": 10,
+ "order_index": 51,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_end",
+  "long"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "smartphones"
+ ],
+ "wait_sec": 57,
+ "early_end": {
+  "after_sec": 39.77,
+  "direct": false
+ },
+ "instruction_position": 0.73,
+ "topic": "smartphones",
+ "voices": {
+  "user": "5ce84bbd213b4943bc89e1951e17848a",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_23",
+  "think_instruction_v2_38",
+  "ack_16",
+  "early_end_v2_02"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_38": {
+   "style": "breakoff",
+   "tone": "curt",
+   "states_return": false,
+   "source": "v2"
+  },
+  "early_end_v2_02": {
+   "style": "statement",
+   "tone": "neutral",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "sleep.dlg6",
+  "smartphones.ctx12"
+ ],
+ "est_total_sec": 84.33,
+ "est_speech_sec": 36.75,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_23"
+  },
+  {
+   "speaker": "user",
+   "text": "My wife talks in her sleep. Last night she said, very clearly, the penguins are late.",
+   "est_sec": 5.06,
+   "gap_before": 0.33,
+   "block": "sleep.dlg6",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a great one. Sleep talking is really common and usually harmless, especially if she's stressed or overtired.",
+   "est_sec": 5.68,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "sleep.dlg6"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, next thing. My thumb aches after using my phone. It's huge, like a small tablet.",
+   "est_sec": 5.06,
+   "gap_before": 1.28,
+   "block": "smartphones.ctx12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a real thing. Want to try one-handed mode first, or is it time for a smaller phone?",
+   "est_sec": 5.68,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "smartphones.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Definitely the— ugh. fifty-seven seconds.",
+   "est_sec": 1.65,
+   "gap_before": 1.28,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 57,
+   "phrasing": "think_instruction_v2_38"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.21,
+   "role": "ack",
+   "phrasing": "ack_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, I'm ready.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 6,
+    "offset": 39.77
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_v2_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Smaller phone. I'm done with this brick.",
+   "est_sec": 2.27,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "smartphones.ctx12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then look at the compact models. They're fewer now, but there are still a couple of good ones.",
+   "est_sec": 5.68,
+   "gap_before": 0.51,
+   "role": "followup",
+   "block": "smartphones.ctx12"
+  }
+ ]
+}

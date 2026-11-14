@@ -1,7 +1,7 @@
 """Near-duplicate check across all building-block pools.
 
 Every block (context, side conversation, option set, ordinary dialogue, distractor exchange,
-phone call, door visit) from data/pools/topics/*.json, data/pools/generic.json and, if present,
+phone call, door visit, and the v2 name questions / Moshi mentions in data/pools/v2/) from data/pools/topics/*.json, data/pools/generic.json and, if present,
 data/pools/new/*.json is turned into its words. Two blocks are flagged when
   - long blocks (>= 20 words): the share of the smaller block's word 3-grams that also occur
     in the other (containment) is >= SHINGLE_T, or
@@ -37,6 +37,8 @@ def text_of(kind: str, it: dict) -> str:
     parts += it.get("lines", [])
     if kind == "distractors":
         parts += [it["user"], it["friend"]]
+    if kind in ("name_questions", "moshi_mentions"):  # v2 (data/pools/v2/)
+        parts += [it["user"].replace("{name}", ""), it.get("answer") or ""]
     return " ".join(p for p in parts if p).replace("{friend}", "")
 
 
@@ -59,6 +61,11 @@ def blocks(include_new: bool = True) -> list[tuple[str, str, str, str]]:
     for k in ("distractors", "phone_calls", "door_visits"):
         for it in gen[k]:
             out.append((it["id"], k, text_of(k, it), "pool"))
+    for f in sorted(glob.glob(str(ROOT / "data/pools/v2/*.json"))):  # v2 name questions / mentions
+        d = json.load(open(f))
+        for k in ("name_questions", "moshi_mentions"):
+            for it in d.get(k, []):
+                out.append((it["id"], k, text_of(k, it), "v2"))
     return out
 
 
@@ -112,7 +119,7 @@ def main() -> None:
         if c >= 3 and jac >= SHORT_T:
             flagged.append((jac, i, j, "content-word Jaccard"))
     flagged.sort(reverse=True)
-    print(f"{len(bl)} blocks ({sum(b[3] == 'new' for b in bl)} new); flagged pairs: {len(flagged)} "
+    print(f"{len(bl)} blocks ({sum(b[3] == 'new' for b in bl)} new, {sum(b[3] == 'v2' for b in bl)} v2); flagged pairs: {len(flagged)} "
           f"(3-gram containment >= {SHINGLE_T} for >= {SHORT_WORDS} words; content-word Jaccard >= {SHORT_T} for shorter)")
     by = defaultdict(int)
     for _, i, j, _ in flagged:

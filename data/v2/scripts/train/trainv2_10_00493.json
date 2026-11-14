@@ -1,0 +1,217 @@
+{
+ "id": "trainv2_10_00493",
+ "split": "train",
+ "seed": 10,
+ "order_index": 493,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "studying",
+  "board_games"
+ ],
+ "instruction_position": 0.419,
+ "topic": "studying",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": "705690224f264386b87fb598083ab022",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_16",
+  "side_instr_22",
+  "ack_14",
+  "dn_68",
+  "side_cue_17"
+ ],
+ "phrasing_styles": {
+  "side_instr_22": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "side_cue_17": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "studying.ctx12",
+  "board_games.side4",
+  "dn_68",
+  "movies.dlg11"
+ ],
+ "est_total_sec": 78.68,
+ "est_speech_sec": 57.7,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.67,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Group project, and one guy in our group has done nothing for three weeks.",
+   "est_sec": 4.44,
+   "gap_before": 0.3,
+   "block": "studying.ctx12",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Frustrating. Do you want to talk to him directly first, or go to your teacher about it?",
+   "est_sec": 5.37,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "studying.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "One sec, I'm going to talk with my neighbor. Please wait until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 1.56,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.5,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "You can't build there. That road's mine.",
+   "est_sec": 2.27,
+   "gap_before": 0.66,
+   "block": "board_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Since when? It's been empty all game.",
+   "est_sec": 2.27,
+   "gap_before": 1.33,
+   "block": "board_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Since two turns ago. Can't you see my little red piece?",
+   "est_sec": 3.51,
+   "gap_before": 0.65,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "board_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "That's not red, that's orange. Is that orange or red?",
+   "est_sec": 3.2,
+   "gap_before": 0.71,
+   "block": "board_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "It's red. The orange ones are in the box, nobody's using orange.",
+   "est_sec": 3.82,
+   "gap_before": 1.25,
+   "block": "board_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine. Then I'm building here instead, and you're blocked in the corner.",
+   "est_sec": 3.82,
+   "gap_before": 1.11,
+   "block": "board_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Wow. Okay. That's how it is.",
+   "est_sec": 1.96,
+   "gap_before": 3.1,
+   "block": "board_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, wrong cup, that one's yours.",
+   "est_sec": 1.96,
+   "gap_before": 0.42,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_68"
+  },
+  {
+   "speaker": "friend",
+   "text": "Ugh, I already drank some.",
+   "est_sec": 1.65,
+   "gap_before": 0.84,
+   "phrasing": "dn_68"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, thanks for waiting.",
+   "est_sec": 1.65,
+   "gap_before": 1.57,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. The group project guy. Chat with him, or the teacher?",
+   "est_sec": 3.82,
+   "gap_before": 1.55,
+   "role": "resume",
+   "block": "studying.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Different question. I just watched a time travel film and I'm so confused. Is it me?",
+   "est_sec": 5.06,
+   "gap_before": 1.99,
+   "block": "movies.dlg11",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Probably not, time travel plots are designed to twist your brain. What part lost you?",
+   "est_sec": 4.75,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "movies.dlg11"
+  }
+ ]
+}

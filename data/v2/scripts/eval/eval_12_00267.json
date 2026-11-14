@@ -1,0 +1,131 @@
+{
+ "id": "eval_12_00267",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 267,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "picnic"
+ ],
+ "topic": "picnic",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_03",
+  "describe_instr_06",
+  "ack_01",
+  "describe_cue_03"
+ ],
+ "block_ids": [
+  "picnic.opt1"
+ ],
+ "est_total_sec": 50.53,
+ "est_speech_sec": 40.37,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.32,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm planning a picnic for my book club and I need help choosing a place.",
+   "est_sec": 4.75,
+   "gap_before": 0.55,
+   "block": "picnic.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Don't comment yet, let me describe all of them first.",
+   "est_sec": 3.2,
+   "gap_before": 0.51,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_01",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is the botanical garden, really pretty, but you have to pay to get in.",
+   "est_sec": 5.37,
+   "gap_before": 0.92,
+   "block": "picnic.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's the lake park, free and big, but it gets noisy on weekends.",
+   "est_sec": 4.44,
+   "gap_before": 2.23,
+   "block": "picnic.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last option is my friend's backyard, which has a big table and real bathrooms.",
+   "est_sec": 5.06,
+   "gap_before": 1.98,
+   "block": "picnic.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "So those are the options. What's your take?",
+   "est_sec": 2.58,
+   "gap_before": 1.05,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd lean toward the backyard, it's quiet and practical for a long chat. Is it a special occasion, though? If you want it to feel a bit more special, the botanical garden is worth the ticket.",
+   "est_sec": 11.26,
+   "gap_before": 0.37,
+   "role": "resume",
+   "block": "picnic.opt1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

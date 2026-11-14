@@ -1,0 +1,209 @@
+{
+ "id": "trainv2_10_00319",
+ "split": "train",
+ "seed": 10,
+ "order_index": 319,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "video_games",
+  "weekend_plans"
+ ],
+ "instruction_position": 0.863,
+ "topic": "video_games",
+ "voices": {
+  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "friend": "cbc3add1f54546e6a4a1964bacb8b122",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Omar",
+ "friend_name_id": "name_13",
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_10",
+  "side_instruction_v2_20",
+  "dq_62",
+  "side_cue_v2_38"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_20": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_38": {
+   "style": "fragment",
+   "tone": "apologetic",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "sleep.dlg7",
+  "video_games.ctx8",
+  "weekend_plans.side6",
+  "dq_62"
+ ],
+ "est_total_sec": 81.8,
+ "est_speech_sec": 61.94,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.37,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "I wake up drenched in sweat most nights. The room isn't even that warm.",
+   "est_sec": 4.44,
+   "gap_before": 0.51,
+   "block": "sleep.dlg7",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That can come from bedding that traps heat, alcohol, spicy food late, or sometimes medication or hormone changes.",
+   "est_sec": 5.68,
+   "gap_before": 0.61,
+   "role": "reply",
+   "block": "sleep.dlg7"
+  },
+  {
+   "speaker": "user",
+   "text": "The game just asked me to name my village and I've been staring at the box for five minutes.",
+   "est_sec": 5.99,
+   "gap_before": 0.72,
+   "block": "video_games.ctx8",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Naming things is hard! Do you want something funny you'll laugh at every time, or something grand and epic?",
+   "est_sec": 5.99,
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "video_games.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Pause there and let me talk to my cousin. I'll be the one to pick it up again.",
+   "est_sec": 5.68,
+   "gap_before": 1.16,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_20"
+  },
+  {
+   "speaker": "user",
+   "text": "If we want Sunday free, we need to get the chores done tomorrow.",
+   "est_sec": 4.13,
+   "gap_before": 0.65,
+   "block": "weekend_plans.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "All of them?",
+   "est_sec": 1.03,
+   "gap_before": 1.39,
+   "block": "weekend_plans.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Washing, bathroom, food shop. Which one do you want?",
+   "est_sec": 2.89,
+   "gap_before": 1.13,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weekend_plans.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'll do the food shop. You're terrible at it.",
+   "est_sec": 2.89,
+   "gap_before": 3.15,
+   "block": "weekend_plans.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "How am I terrible at it?",
+   "est_sec": 1.96,
+   "gap_before": 1.4,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weekend_plans.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "You came back with four kinds of crisps and no milk.",
+   "est_sec": 3.51,
+   "gap_before": 0.67,
+   "block": "weekend_plans.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "That was one time. Fine, I'll do the bathroom.",
+   "est_sec": 2.89,
+   "gap_before": 0.49,
+   "block": "weekend_plans.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Omar, do you mind if I put the news on?",
+   "est_sec": 3.2,
+   "gap_before": 0.63,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_62"
+  },
+  {
+   "speaker": "friend",
+   "text": "Go for it, just keep it low.",
+   "est_sec": 2.27,
+   "gap_before": 1.04,
+   "phrasing": "dq_62"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, sorry, I'm back with you. Continue.",
+   "est_sec": 2.27,
+   "gap_before": 1.59,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_38"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Your village still needs a name. Funny or epic?",
+   "est_sec": 3.51,
+   "gap_before": 1.17,
+   "role": "resume",
+   "block": "video_games.ctx8"
+  }
+ ]
+}

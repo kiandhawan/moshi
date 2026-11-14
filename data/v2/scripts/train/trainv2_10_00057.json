@@ -1,0 +1,214 @@
+{
+ "id": "trainv2_10_00057",
+ "split": "train",
+ "seed": 10,
+ "order_index": 57,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "other_name"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "shopping",
+  "birthday_party"
+ ],
+ "instruction_position": 0.276,
+ "topic": "shopping",
+ "voices": {
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": "ec3f1730c4494386accf1e86625bfe6d",
+  "other": "cc7f8544c64a439080193e9560100c5a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Ryan",
+ "friend_name_id": "name_01",
+ "phrasing_ids": [
+  "pn_057",
+  "greet_11",
+  "greet_ans_01",
+  "side_instruction_v2_26",
+  "side_cue_v2_44"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_26": {
+   "style": "fragment",
+   "tone": "apologetic",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_v2_44": {
+   "style": "command",
+   "tone": "cheerful",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_work_027",
+  "shopping.ctx9",
+  "birthday_party.side2",
+  "studying.dlg10"
+ ],
+ "est_total_sec": 78.68,
+ "est_speech_sec": 58.84,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.35,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm getting new glasses and I'm stuck at the frames stage.",
+   "est_sec": 3.51,
+   "gap_before": 0.29,
+   "block": "shopping.ctx9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun part, though. Are you drawn to bold thick frames, or thin wire ones that kind of disappear?",
+   "est_sec": 5.68,
+   "gap_before": 1.23,
+   "role": "reply",
+   "block": "shopping.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, quick chat with Ryan. I'll say when I'm back.",
+   "est_sec": 3.2,
+   "gap_before": 3.09,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_26"
+  },
+  {
+   "speaker": "user",
+   "text": "What do you think, balloons or streamers?",
+   "est_sec": 2.27,
+   "gap_before": 0.62,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Why not both?",
+   "est_sec": 1.03,
+   "gap_before": 0.97,
+   "block": "birthday_party.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Because the last time we had balloons the dog popped every single one.",
+   "est_sec": 4.13,
+   "gap_before": 1.08,
+   "block": "birthday_party.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then streamers and some fairy lights. That looks nicer anyway.",
+   "est_sec": 3.2,
+   "gap_before": 0.95,
+   "block": "birthday_party.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Fairy lights, good idea. Do you still have the ones from your balcony?",
+   "est_sec": 4.13,
+   "gap_before": 0.54,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, I can bring them on Friday.",
+   "est_sec": 2.27,
+   "gap_before": 0.97,
+   "block": "birthday_party.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. Talk to me, Moshi.",
+   "est_sec": 2.27,
+   "gap_before": 0.64,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_v2_44"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. The glasses. Bold thick frames, or thin wire?",
+   "est_sec": 3.2,
+   "gap_before": 0.95,
+   "role": "resume",
+   "block": "shopping.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay Gianna, do you want the desk by the window today?",
+   "est_sec": 3.51,
+   "gap_before": 1.15,
+   "block": "nq_work_027",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_work_027",
+   "name_pos": "start",
+   "addressee": "Gianna"
+  },
+  {
+   "speaker": "user",
+   "text": "My son's in reception and he's supposed to read with me every night. He hates it.",
+   "est_sec": 5.06,
+   "gap_before": 2.71,
+   "block": "studying.dlg10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lots of little ones push back. How long are the sessions now?",
+   "est_sec": 3.82,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "studying.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "About fifteen minutes, and it ends in a fight.",
+   "est_sec": 2.89,
+   "gap_before": 0.55,
+   "block": "studying.dlg10",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Try five minutes instead, and stop while he's still enjoying it. Short and happy builds the habit better.",
+   "est_sec": 5.68,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "studying.dlg10"
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "id": "eval_12_00043",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 43,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "podcasts",
+  "painting_art"
+ ],
+ "topic": "podcasts",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Zoe",
+ "friend_name_id": "name_24",
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_18",
+  "side_instr_12",
+  "implicit_06"
+ ],
+ "block_ids": [
+  "podcasts.ctx19",
+  "painting_art.side3"
+ ],
+ "est_total_sec": 71.43,
+ "est_speech_sec": 50.06,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.8,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.32,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "My friend asked me to be a guest on her podcast next week. I'm nervous.",
+   "est_sec": 4.75,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's exciting. What's the topic?",
+   "est_sec": 1.65,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "podcasts.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My job, I'm a nurse in an emergency room.",
+   "est_sec": 2.89,
+   "gap_before": 1.08,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great topic. Prepare a few notes and stories, or go in spontaneous and just chat?",
+   "est_sec": 4.75,
+   "gap_before": 0.62,
+   "role": "reply",
+   "block": "podcasts.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, Zoe just called my name. Please wait and stay silent until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 2.43,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Zoe, are you still coming to the gallery opening on Friday?",
+   "est_sec": 3.51,
+   "gap_before": 1.36,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "I want to, but what time does it start?",
+   "est_sec": 2.89,
+   "gap_before": 1.21,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Seven, and there's free wine apparently.",
+   "est_sec": 1.96,
+   "gap_before": 0.33,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay, now I'm definitely coming. Is your teacher showing anything?",
+   "est_sec": 3.2,
+   "gap_before": 1.36,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Two big oil paintings, the ones with the horses.",
+   "est_sec": 2.89,
+   "gap_before": 1.06,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh, I remember those. They were huge.",
+   "est_sec": 2.27,
+   "gap_before": 1.31,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, done. Where were we?",
+   "est_sec": 1.65,
+   "gap_before": 1.49,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. So, are you planning anything for it?",
+   "est_sec": 2.58,
+   "gap_before": 1.16,
+   "role": "resume",
+   "block": "podcasts.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Spontaneous. I talk about it every day.",
+   "est_sec": 2.27,
+   "gap_before": 2.83,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "True, you know it inside out. Maybe just think of one story to start with.",
+   "est_sec": 4.75,
+   "gap_before": 1.2,
+   "role": "followup",
+   "block": "podcasts.ctx19",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

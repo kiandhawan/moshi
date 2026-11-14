@@ -1,0 +1,174 @@
+{
+ "id": "trainv2_10_00635",
+ "split": "train",
+ "seed": 10,
+ "order_index": 635,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "position_plan": "early",
+ "topics": [
+  "movies"
+ ],
+ "instruction_position": 0.101,
+ "topic": "movies",
+ "voices": {
+  "user": "a52fdd0e957b4c288d8ec590bdd10288",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_26",
+  "describe_instr_08",
+  "describe_cue_04"
+ ],
+ "phrasing_styles": {
+  "describe_instr_08": {
+   "style": "command",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v1"
+  },
+  "describe_cue_04": {
+   "style": "request",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "movies.opt2",
+  "cleaning.dlg1"
+ ],
+ "est_total_sec": 81.29,
+ "est_speech_sec": 64.02,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.52,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.68,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "My partner and I are trying to choose a movie for date night.",
+   "est_sec": 4.13,
+   "gap_before": 0.57,
+   "block": "movies.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Please wait until I've gone through all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.88,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_08"
+  },
+  {
+   "speaker": "user",
+   "text": "One is a romantic comedy about two chefs who own rival restaurants on the same street.",
+   "est_sec": 5.06,
+   "gap_before": 1.19,
+   "block": "movies.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a thriller about a heist on a train, which my partner really wants to see.",
+   "est_sec": 5.37,
+   "gap_before": 2.54,
+   "block": "movies.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's an animated movie about a lost robot that's supposed to make everyone cry.",
+   "est_sec": 4.75,
+   "gap_before": 2.74,
+   "block": "movies.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 0.94,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The rival chefs one sounds like a classic date night pick, light and fun. The train heist could be exciting, and it's the one your partner is keen on, which counts for a lot. The robot movie might be lovely, but maybe not if you want a cheerful night.",
+   "est_sec": 15.29,
+   "gap_before": 1.99,
+   "role": "resume",
+   "block": "movies.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Unrelated, but What's the best way to get coffee stains out of a white mug?",
+   "est_sec": 4.75,
+   "gap_before": 0.86,
+   "block": "cleaning.dlg1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Make a paste with baking soda and a little water and scrub it in with a sponge. Most stains lift in a minute or two.",
+   "est_sec": 7.85,
+   "gap_before": 0.35,
+   "role": "reply",
+   "block": "cleaning.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "And if that doesn't work?",
+   "est_sec": 1.65,
+   "gap_before": 0.84,
+   "block": "cleaning.dlg1",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Soak the mug overnight in hot water with a spoonful of dishwasher powder. That usually gets even old stains.",
+   "est_sec": 5.99,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "cleaning.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "Good point. Thanks!",
+   "est_sec": 1.03,
+   "gap_before": 1.19,
+   "block": "cleaning.dlg1"
+  }
+ ]
+}

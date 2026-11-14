@@ -1,0 +1,219 @@
+{
+ "id": "trainv2_10_00286",
+ "split": "train",
+ "seed": 10,
+ "order_index": 286,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "position_plan": "late",
+ "topics": [
+  "shopping",
+  "cooking"
+ ],
+ "instruction_position": 0.913,
+ "topic": "shopping",
+ "voices": {
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "friend": "9a9cf47702da476aa4629e2506d4a857",
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Jordan",
+ "friend_name_id": "name_05",
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_19",
+  "side_instruction_v2_32",
+  "ack_02",
+  "dn_45",
+  "side_cue_26"
+ ],
+ "phrasing_styles": {
+  "side_instruction_v2_32": {
+   "style": "fragment",
+   "tone": "neutral",
+   "states_return": true,
+   "source": "v2"
+  },
+  "side_cue_26": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "smartphones.dlg9",
+  "shopping.ctx3",
+  "cooking.side3",
+  "dn_45"
+ ],
+ "est_total_sec": 78.07,
+ "est_speech_sec": 58.94,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.85,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "My seven-year-old just spent sixty pounds on gems in some cartoon game. On my phone. I'm fuming.",
+   "est_sec": 5.37,
+   "gap_before": 0.35,
+   "block": "smartphones.dlg9",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Oh no. The good news is you can usually request a refund from the app store, especially for an accidental purchase by a child.",
+   "est_sec": 7.54,
+   "gap_before": 0.9,
+   "role": "reply",
+   "block": "smartphones.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, something else. Our vacuum finally died. I need to buy a new one this weekend.",
+   "est_sec": 5.06,
+   "gap_before": 0.72,
+   "block": "shopping.ctx3",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Do you want a cordless stick vacuum that's light and handy, or a full size one with more suction?",
+   "est_sec": 5.99,
+   "gap_before": 1.19,
+   "role": "reply",
+   "block": "shopping.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Just a moment with Jordan, then I'll come back to you.",
+   "est_sec": 3.51,
+   "gap_before": 1.25,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instruction_v2_32"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.34,
+   "role": "ack",
+   "phrasing": "ack_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Jordan, are you eating with us tonight or are you going out?",
+   "est_sec": 3.82,
+   "gap_before": 0.79,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cooking.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'm staying in. What are you making?",
+   "est_sec": 2.27,
+   "gap_before": 2.14,
+   "block": "cooking.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Some kind of stir fry, I haven't fully decided. Do you eat mushrooms now?",
+   "est_sec": 4.44,
+   "gap_before": 1.31,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cooking.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Only if they're cooked properly, not the slimy kind.",
+   "est_sec": 2.89,
+   "gap_before": 1.42,
+   "block": "cooking.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, I'll fry them hard on high heat then.",
+   "est_sec": 2.89,
+   "gap_before": 0.54,
+   "block": "cooking.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Perfect. I'll do the dishes after, deal?",
+   "est_sec": 2.27,
+   "gap_before": 0.88,
+   "block": "cooking.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Deal.",
+   "est_sec": 0.41,
+   "gap_before": 0.7,
+   "block": "cooking.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Jordan, I'm here at the front, where are you parked?",
+   "est_sec": 3.2,
+   "gap_before": 0.61,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_45"
+  },
+  {
+   "speaker": "friend",
+   "text": "Round the back, by the bins.",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
+   "phrasing": "dn_45"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm here again.",
+   "est_sec": 1.34,
+   "gap_before": 1.69,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. Any decision on the new vacuum?",
+   "est_sec": 2.27,
+   "gap_before": 0.73,
+   "role": "resume",
+   "block": "shopping.ctx3"
+  }
+ ]
+}

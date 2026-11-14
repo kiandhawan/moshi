@@ -1,0 +1,162 @@
+{
+ "id": "trainv2_10_00154",
+ "split": "train",
+ "seed": 10,
+ "order_index": 154,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [
+  "long"
+ ],
+ "position_plan": "early",
+ "topics": [
+  "travel_planning"
+ ],
+ "instruction_position": 0.194,
+ "topic": "travel_planning",
+ "voices": {
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": null,
+  "other": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_20",
+  "greet_ans_10",
+  "describe_instruction_v2_35",
+  "ack_02",
+  "describe_cue_05"
+ ],
+ "phrasing_styles": {
+  "describe_instruction_v2_35": {
+   "style": "implied",
+   "tone": "polite",
+   "states_return": true,
+   "source": "v2"
+  },
+  "describe_cue_05": {
+   "style": "statement",
+   "tone": "neutral",
+   "states_return": false,
+   "source": "v1"
+  }
+ },
+ "block_ids": [
+  "travel_planning.opt3",
+  "personal_finance.dlg24"
+ ],
+ "est_total_sec": 76.76,
+ "est_speech_sec": 55.76,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.63,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.44,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "We want a ski trip in February but none of us are great skiers. I found three places.",
+   "est_sec": 5.68,
+   "gap_before": 0.32,
+   "block": "travel_planning.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "I've narrowed it down to a few. You'll hear them all, then I'll ask you.",
+   "est_sec": 4.75,
+   "gap_before": 0.53,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instruction_v2_35"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.32,
+   "role": "ack",
+   "phrasing": "ack_02"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a big famous resort with tons of slopes, lively nightlife, and prices to match.",
+   "est_sec": 4.75,
+   "gap_before": 1.45,
+   "block": "travel_planning.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A small family resort in the next valley, cheaper and quieter, with mostly gentle beginner runs.",
+   "est_sec": 5.06,
+   "gap_before": 6.42,
+   "block": "travel_planning.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a ski school package, where lessons, boots and lift passes are all included in one price.",
+   "est_sec": 5.37,
+   "gap_before": 5.87,
+   "block": "travel_planning.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the full list. Go ahead.",
+   "est_sec": 1.96,
+   "gap_before": 1.09,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd look hard at the package, lessons make the week far more fun when you're still learning. If some of you are confident already, the small resort plus a couple of lessons could be cheaper. The famous resort is better saved for when you've improved.",
+   "est_sec": 14.05,
+   "gap_before": 1.07,
+   "role": "resume",
+   "block": "travel_planning.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, Is a high yield savings account actually worth it or is it a gimmick?",
+   "est_sec": 5.06,
+   "gap_before": 0.98,
+   "block": "personal_finance.dlg24",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's real. Online banks often pay noticeably more interest because they have lower costs.",
+   "est_sec": 4.44,
+   "gap_before": 0.38,
+   "role": "reply",
+   "block": "personal_finance.dlg24"
+  }
+ ]
+}

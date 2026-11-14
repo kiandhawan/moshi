@@ -1,0 +1,169 @@
+{
+ "id": "trainv2_10_00158",
+ "split": "train",
+ "seed": 10,
+ "order_index": 158,
+ "data_version": 2,
+ "generator": {
+  "script": "generate_scripts_v2.py",
+  "ordered": true,
+  "unique": true,
+  "only": null,
+  "seed": 10,
+  "block": 20,
+  "exclude_ordinary_from": []
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end",
+  "long",
+  "other_name"
+ ],
+ "position_plan": "middle",
+ "topics": [
+  "board_games"
+ ],
+ "wait_sec": 49,
+ "early_end": {
+  "after_sec": 34.37,
+  "direct": true
+ },
+ "instruction_position": 0.592,
+ "topic": "board_games",
+ "voices": {
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": null,
+  "other": "050df12e0f30484fb882a9a5410e5d66",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "pn_265",
+  "greet_26",
+  "greet_ans_23",
+  "think_instruction_v2_05",
+  "early_end_v2_20"
+ ],
+ "phrasing_styles": {
+  "think_instruction_v2_05": {
+   "style": "request",
+   "tone": "apologetic",
+   "states_return": false,
+   "source": "v2"
+  },
+  "early_end_v2_20": {
+   "style": "fragment",
+   "tone": "curt",
+   "source": "v2"
+  }
+ },
+ "block_ids": [
+  "nq_home_014",
+  "studying.dlg3",
+  "board_games.ctx2"
+ ],
+ "est_total_sec": 79.36,
+ "est_speech_sec": 34.89,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.71,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_23"
+  },
+  {
+   "speaker": "user",
+   "text": "So Daniel, are we having your mum's lasagne or mine on Sunday?",
+   "est_sec": 3.82,
+   "gap_before": 1.41,
+   "block": "nq_home_014",
+   "event": "distractor",
+   "kind": "other_name",
+   "phrasing": "nq_home_014",
+   "name_pos": "start",
+   "addressee": "Daniel"
+  },
+  {
+   "speaker": "other",
+   "text": "Hers. Don't tell her I said that.",
+   "est_sec": 2.27,
+   "gap_before": 0.58,
+   "block": "nq_home_014"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, also, my nephew turns ten next week and loves board games.",
+   "est_sec": 3.82,
+   "gap_before": 1.49,
+   "block": "board_games.ctx2",
+   "event": "ordinary_request"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Would he like something competitive where he can beat the grown-ups, or a cooperative game where everyone plays together?",
+   "est_sec": 6.3,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "board_games.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, could I have forty-nine seconds before I answer that?",
+   "est_sec": 3.2,
+   "gap_before": 1.15,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 49,
+   "phrasing": "think_instruction_v2_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. Ask me.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 6,
+    "offset": 34.37
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_v2_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, have you decided? Beat the grown-ups, or team up?",
+   "est_sec": 3.2,
+   "gap_before": 0.42,
+   "role": "resume",
+   "block": "board_games.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Competitive, for sure. He loves winning.",
+   "est_sec": 1.96,
+   "gap_before": 0.6,
+   "event": "ordinary_request",
+   "block": "board_games.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then Ticket to Ride is a great pick. It's easy to learn and kids beat adults all the time.",
+   "est_sec": 5.99,
+   "gap_before": 0.78,
+   "role": "followup",
+   "block": "board_games.ctx2"
+  }
+ ]
+}
