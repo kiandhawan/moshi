@@ -74,6 +74,26 @@ the cut:** a correct answer to the user's next request could otherwise fall insi
 after a question to someone else and be counted as a false response. The training-time subset
 (40 files) now holds 5 other_name files.
 
+Fixes made while building v2 (all before the final render):
+- Think waits of 49-60 s were silently rejected by the 85 s length limit once a dialogue had
+  to surround every wait (the first render's think waits topped out at 48 s). Think waits of
+  46 s or more may now drop the surrounding dialogue when nothing else fits; 49-58 s waits are
+  in the list. Train and control were regenerated and re-rendered.
+- Name questions and Moshi mentions were not recorded in `block_ids`, so control's exclusion
+  (blocks of the train list's ordinary files) could not see them; a middle-position file also
+  listed its split dialogue twice. Both fixed; the builder's max-reuse check caught it.
+- Leakage check: held-out phrasings of 3 words or fewer now match whole turns only (as short
+  generic phrases already did): "Okay, I guess." (an eval greeting answer) matched the start
+  of an ordinary train dialogue line.
+
+Billing: all v2 render requests (logged byte counts: first train render 214 k bytes incl. the
+killed start, control 42 k, eval 20 k, control re-render 29 k, train + control re-render 162 k +
+26 k = 493 k bytes = $7.39 TTS, plus about $0.6 ASR on new Moshi lines) add up to about $8.0;
+the credit fell from $25.21 to $13.23 = $11.98. The stages measured on their own (control
+$0.73, the final re-render $2.98) matched their estimates; the extra ~$4 appeared during the
+first train render's requests and is unexplained (Fish bills with a delay of minutes, so it
+might include charges from before). Worth checking Fish's usage page.
+
 Checks: `check_pools_v2.py` (format, banned wait/return words, duplicates vs v1), near-duplicate
 check over all pools including v2 (0 flagged), leakage check extended to v2 phrasings, eval
 names and eval name questions (it caught a held-out friend name in two train questions and a

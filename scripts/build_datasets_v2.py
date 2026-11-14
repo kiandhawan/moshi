@@ -118,10 +118,14 @@ def v2_section(name: str, rows: list[dict]) -> str:
               "before, one after; late: a whole dialogue before); realized = share of the conversation's speech "
               "(greeting exchange and the wait excluded) before the instruction, from the rendered timeline; "
               "e/m/l = under 1/3, 1/3-2/3, over 2/3.", ""]
+        if name.startswith("eval"):  # eval keeps the v1 design: no planned positions or style tags
+            L[-1] += (" Eval v2 keeps the v1 eval design (instruction right after the context, v1 phrasings "
+                      "without style tags), so the planned positions and the style table don't apply.")
+            L += [""]
         # instruction and return-cue phrasings
-        L += ["| wait type | instruction phrasings | instruction styles | tones | states how to return | "
+        L += [] if name.startswith("eval") else ["| wait type | instruction phrasings | instruction styles | tones | states how to return | "
               "return-cue phrasings | cue styles | friend interrupts first |", "|---|---|---|---|---|---|---|---|"]
-        for t in WAIT_TYPES:
+        for t in (WAIT_TYPES if not name.startswith("eval") else []):
             rr = [r for r in waits if r["type"] == t]
             if not rr:
                 continue
