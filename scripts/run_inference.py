@@ -49,6 +49,14 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--tail-sec", type=float, default=TAIL_SILENCE_SEC,
                    help="Seconds of silence fed after the input ends (default 8).")
     p.add_argument("--hf-repo", default="kyutai/moshiko-pytorch-bf16", help="Base model repository.")
+    p.add_argument("--shard", default="0/1",
+                   help="I/N: this worker takes every N-th input starting at I (run N workers in parallel).")
+    p.add_argument("--batch", type=int, default=1,
+                   help="Stream B files together in lockstep (one independent conversation each, padded "
+                        "with silence to the longest; outputs trimmed back). Seeds are set once per batch, so "
+                        "results differ from --batch 1 at the same seed. Files are sorted by length first.")
+    p.add_argument("--overwrite", action="store_true",
+                   help="Redo outputs that already exist (default: skip them, so a stopped run can resume).")
     return p.parse_args()
 
 
@@ -87,6 +95,8 @@ def main() -> None:
     # the web server - so the few lines of ServerState setup we need are copied below.
 
     inputs = list_inputs(args.input)
+    shard_i, shard_n = (int(x) for x in args.shard.split("/"))
+    inputs = inputs[shard_i::shard_n]
     args.out_dir.mkdir(parents=True, exist_ok=True)
     device = "cuda"
 
@@ -109,12 +119,16 @@ def main() -> None:
     condition_tensors = get_condition_tensors(checkpoint_info.model_type, lm, batch_size=1, cfg_coef=1.0)
     lm_gen = LMGen(lm, cfg_coef=1.0, condition_tensors=condition_tensors, **checkpoint_info.lm_gen_config)
     frame_size = int(mimi.sample_rate / mimi.frame_rate)  # 1920 samples = 80 ms
-    mimi.streaming_forever(1)
-    lm_gen.streaming_forever(1)
+    if args.batch > 1:
+        condition_tensors = get_condition_tensors(checkpoint_info.model_type, lm, batch_size=args.batch, cfg_coef=1.0)
+        lm_gen = LMGen(lm, cfg_coef=1.0, condition_tensors=condition_tensors, **checkpoint_info.lm_gen_config)
+    B = args.batch
+    mimi.streaming_forever(B)
+    lm_gen.streaming_forever(B)
     # Copied from moshi.server.ServerState.warmup: a few silent frames so CUDA graphs and
     # kernels are built before timing. State is reset (and RNG re-seeded) before each run.
     for _ in range(4):
-        codes = mimi.encode(torch.zeros(1, 1, frame_size, dtype=torch.float32, device=device))
+        codes = mimi.encode(torch.zeros(B, 1, frame_size, dtype=torch.float32, device=device))
         for c in range(codes.shape[-1]):
             tokens = lm_gen.step(codes[:, :, c:c + 1])
             if tokens is not None:
@@ -158,7 +172,114 @@ def main() -> None:
                     text_ids[slot] = int(tokens[0, 0, 0].item())
         return moshi_pcm, text_ids
 
+    def write_outputs(path, seed, user_padded, moshi_pcm, text_ids, input_sec, wall, extra):
+        stream_sec = len(user_padded) / SAMPLE_RATE
+        stem = f"{path.stem}_seed{seed}"
+        sphn.write_wav(str(args.out_dir / f"{stem}.wav"),
+                       np.stack([moshi_pcm, user_padded]), sample_rate=SAMPLE_RATE)
+        words = [
+            {"start": round(k * frame_sec, 3), "end": round((k + 1) * frame_sec, 3), "id": tid,
+             "piece": text_tokenizer.id_to_piece(tid)}  # type: ignore
+            for k, tid in enumerate(text_ids) if tid is not None and tid not in padding_ids
+        ]
+        meta = {
+            "input": str(path),
+            "seed": seed,
+            "lora": str(args.lora) if args.lora else None,
+            "hf_repo": args.hf_repo,
+            "sampling": sampling,
+            "sample_rate": SAMPLE_RATE,
+            "frame_sec": frame_sec,
+            "output_delay_frames": OUTPUT_DELAY_FRAMES,
+            "input_sec": input_sec,
+            "tail_silence_sec": args.tail_sec,
+            "stream_sec": stream_sec,
+            "wall_sec": wall,
+            "realtime_factor": wall / stream_sec,
+            "text": "".join(w["piece"] for w in words).replace("▁", " ").strip(),
+            # Non-padding text tokens; start/end is the output slot they were emitted in.
+            "text_tokens": words,
+            # Raw text token per 80 ms output slot (null = no output yet).
+            "text_token_ids_per_frame": text_ids,
+            **extra,
+        }
+        (args.out_dir / f"{stem}.json").write_text(json.dumps(meta, indent=1, ensure_ascii=False))
+        print(f"{stem}: {stream_sec:.1f}s audio in {wall:.1f}s "
+              f"(x{wall / stream_sec:.2f} real time) -> {meta['text'][:80]!r}", flush=True)
+
+    def run_batch(pcms: np.ndarray) -> tuple[np.ndarray, list[list[int | None]]]:
+        """Like run_one for a (B, samples) array: B independent conversations in lockstep."""
+        n_frames = pcms.shape[1] // frame_size
+        out_pcm = np.zeros_like(pcms)
+        text_ids: list[list[int | None]] = [[None] * n_frames for _ in range(B)]
+        mimi.reset_streaming()
+        lm_gen.reset_streaming()
+        seed_all(seeds_now[0])
+        skip_frames = 1
+        for i in range(n_frames):
+            chunk = torch.from_numpy(np.ascontiguousarray(pcms[:, i * frame_size:(i + 1) * frame_size]))
+            codes = mimi.encode(chunk.to(device=device)[:, None])
+            if skip_frames:
+                mimi.reset_streaming()
+                skip_frames -= 1
+            for c in range(codes.shape[-1]):
+                tokens = lm_gen.step(codes[:, :, c:c + 1])
+                if tokens is None:
+                    continue
+                out = mimi.decode(tokens[:, 1:])[:, 0].float().cpu().numpy()
+                slot = i + OUTPUT_DELAY_FRAMES
+                if slot < n_frames:
+                    out_pcm[:, slot * frame_size:(slot + 1) * frame_size] = out
+                    tk = tokens[:, 0, 0].tolist()
+                    for b in range(B):
+                        text_ids[b][slot] = int(tk[b])
+        return out_pcm, text_ids
+
+    def prepare(path: Path) -> tuple[np.ndarray, float]:
+        pcm, _ = sphn.read(str(path), sample_rate=SAMPLE_RATE)
+        if pcm.ndim == 1:
+            pcm = pcm[None]
+        if pcm.shape[0] not in (1, 2):
+            sys.exit(f"{path}: expected mono or stereo, got {pcm.shape[0]} channels")
+        user = pcm[0] if pcm.shape[0] == 1 else pcm[1]
+        n_total = len(user) + int(round(args.tail_sec * SAMPLE_RATE))
+        n_total = -(-n_total // frame_size) * frame_size
+        up = np.zeros(n_total, dtype=np.float32)
+        up[:len(user)] = user
+        return up, len(user) / SAMPLE_RATE
+
+    seeds_now = [args.seeds[0]]
     total_audio = total_wall = 0.0
+    if B > 1:
+        todo = [(p, s) for p in inputs for s in args.seeds
+                if args.overwrite or not (args.out_dir / f"{p.stem}_seed{s}.json").exists()]
+        prepared = {p: prepare(p) for p in {p for p, _ in todo}}
+        for seed in args.seeds:
+            items = sorted([p for p, s in todo if s == seed], key=lambda p: len(prepared[p][0]))
+            for j in range(0, len(items), B):
+                group = items[j:j + B]
+                longest = max(len(prepared[p][0]) for p in group)
+                batch = np.zeros((B, longest), dtype=np.float32)
+                for b, p in enumerate(group):
+                    batch[b, :len(prepared[p][0])] = prepared[p][0]
+                seeds_now[0] = seed
+                torch.cuda.synchronize()
+                t0 = time.perf_counter()
+                out_pcm, tids = run_batch(batch)
+                torch.cuda.synchronize()
+                wall = time.perf_counter() - t0
+                for b, p in enumerate(group):
+                    up, input_sec = prepared[p]
+                    n = len(up) // frame_size
+                    write_outputs(p, seed, up, out_pcm[b, :len(up)], tids[b][:n], input_sec, wall / len(group),
+                                  {"batch": B, "batch_index": b, "batch_files": [q.stem for q in group],
+                                   "batch_stream_sec": longest / SAMPLE_RATE})
+                total_audio += sum(len(prepared[p][0]) for p in group) / SAMPLE_RATE
+                total_wall += wall
+        if total_audio:
+            print(f"Total: {total_audio:.1f}s audio in {total_wall:.1f}s (x{total_wall / total_audio:.2f} real time)")
+        return
+
     with torch.no_grad():
         for path in inputs:
             pcm, _ = sphn.read(str(path), sample_rate=SAMPLE_RATE)  # (channels, samples), resampled
@@ -179,6 +300,8 @@ def main() -> None:
             stream_sec = n_total / SAMPLE_RATE
 
             for seed in args.seeds:
+                if not args.overwrite and (args.out_dir / f"{path.stem}_seed{seed}.json").exists():
+                    continue
                 torch.cuda.synchronize()
                 t0 = time.perf_counter()
                 moshi_pcm, text_ids = run_one(user_padded, seed)
@@ -187,37 +310,7 @@ def main() -> None:
                 total_audio += stream_sec
                 total_wall += wall
 
-                stem = f"{path.stem}_seed{seed}"
-                sphn.write_wav(str(args.out_dir / f"{stem}.wav"),
-                               np.stack([moshi_pcm, user_padded]), sample_rate=SAMPLE_RATE)
-                words = [
-                    {"start": round(k * frame_sec, 3), "end": round((k + 1) * frame_sec, 3), "id": tid,
-                     "piece": text_tokenizer.id_to_piece(tid)}  # type: ignore
-                    for k, tid in enumerate(text_ids) if tid is not None and tid not in padding_ids
-                ]
-                meta = {
-                    "input": str(path),
-                    "seed": seed,
-                    "lora": str(args.lora) if args.lora else None,
-                    "hf_repo": args.hf_repo,
-                    "sampling": sampling,
-                    "sample_rate": SAMPLE_RATE,
-                    "frame_sec": frame_sec,
-                    "output_delay_frames": OUTPUT_DELAY_FRAMES,
-                    "input_sec": input_sec,
-                    "tail_silence_sec": args.tail_sec,
-                    "stream_sec": stream_sec,
-                    "wall_sec": wall,
-                    "realtime_factor": wall / stream_sec,
-                    "text": "".join(w["piece"] for w in words).replace("▁", " ").strip(),
-                    # Non-padding text tokens; start/end is the output slot they were emitted in.
-                    "text_tokens": words,
-                    # Raw text token per 80 ms output slot (null = no output yet).
-                    "text_token_ids_per_frame": text_ids,
-                }
-                (args.out_dir / f"{stem}.json").write_text(json.dumps(meta, indent=1, ensure_ascii=False))
-                print(f"{stem}: {stream_sec:.1f}s audio in {wall:.1f}s "
-                      f"(x{wall / stream_sec:.2f} real time) -> {meta['text'][:80]!r}", flush=True)
+                write_outputs(path, seed, user_padded, moshi_pcm, text_ids, input_sec, wall, {})
 
     if total_audio:
         print(f"Total: {total_audio:.1f}s audio in {total_wall:.1f}s (x{total_wall / total_audio:.2f} real time)")

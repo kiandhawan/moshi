@@ -3,6 +3,47 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-14: Data v2 and eval v2 are final
+
+The v2 training sets (train_1h_v2, train_10h_v2, control_1h_v2, control_10h_v2) and the eval set
+(eval_v2 / eval_full_v2 / eval_full_subset_v2 + the 3 human files) are frozen: every result from
+here on uses them unchanged.
+
+## 2026-11-14: Training grid and evaluation protocol
+
+- **Configs** (`scripts/make_run_configs.py` -> `configs/<run>.yaml`): smoke.yaml settings (seed 0,
+  batch 16, duration_sec 100, LoRA rank 128 / scaling 2, base kyutai/moshiko-pytorch-bf16,
+  40-file eval subset) with max_steps 250, ckpt_freq 50, eval_freq 50, pct_start 0.1 (25 warm-up
+  steps, then cosine decay) and num_ckpt_keep null. train.py's default num_ckpt_keep is 3, which
+  would delete the step-50/100 checkpoints; pair 1 had already started with it, so
+  `scripts/archive_ckpts.sh` copied its checkpoints to `runs/<run>/checkpoints_all/` as they
+  were written. Pairs run one per GPU (1 h on GPU 0, 10 h on GPU 1), `scripts/pipeline.sh`.
+- **Same seen hours, different repetition.** Every file is shorter than duration_sec, so one
+  sample = one whole file: 250 x 16 = 4000 file passes per run = 66.7 epochs of train_1h_v2 and
+  7.4 of train_10h_v2, ~73 h of real audio either way (controls 50 / 5.7 epochs, ~57 h).
+  1 h vs 10 h therefore compares the number of *unique* scripts at equal training compute.
+- **Batched inference.** One stream per process ran at ~0.28x real time alone and slowed
+  training ~4x when six shared the GPUs, so `run_inference.py --batch 32` streams 32 files in
+  lockstep (independent conversations, same model and sampling settings; files sorted by length,
+  padded with silence, outputs trimmed; seed set once per batch). 0.05x real time while sharing a
+  GPU with training. All models use it for the 400 eval files (seed 1), so seeds are comparable
+  across models but not with --batch 1 at the same seed; the human files stay unbatched (seeds
+  1 2 3).
+- **New metrics** (`score.py` docstring; reported per model by `compare.py`): time to first
+  interruption (+ Kaplan-Meier survival curves, `plot_results.py`), wait success by wait length
+  (5-15 / 15-30 / 30-60 s), signed resume error for timed waits (think time without an early end;
+  first speech >= 0.5 s after the ack grace, so an interruption counts as an early resume), missed
+  resumes (nothing within 10 s of the cue / deadline) separate from late ones, distractor
+  responses by kind, talk-over (Moshi starting while the user speaks: the events' user turns, VAD
+  on the user channel for the human files), ordinary latency and Moshi speech s/min; reply
+  relevance (`relevance.py`: fixed sample of 50 resumes + 50 ordinary replies, judged blind by a
+  Claude subagent from Moshi's own text stream vs the reference reply; instructions in
+  `results/relevance/JUDGE.md`; no API key is available, so the judge is a subagent of this
+  session); voice similarity (`voice_similarity.py`: ECAPA speaker embeddings, vs base on the same
+  file); whole-wait silence probability (`eval_loss.py` wait_p_silent_whole / _10s). Medians get
+  cluster-bootstrap CIs like the rates. "Overall" = the 400 eval files; human files are reported
+  only in their own section.
+
 ## 2026-11-14: control_1h_v2
 
 A 1 h control so the 1 h runs have an ordinary-only counterpart, like control_10h_v2 for 10 h.

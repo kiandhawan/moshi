@@ -56,6 +56,25 @@ Metrics per file and seed (VAD-based; times straight from the WAV, no extra offs
   ordinary_answered         per ordinary request: speech starts within 5 s after it
   wait_success (PRIMARY)    not interrupted AND resumed_on_time AND no distractor response;
                             one per wait (each test file has one wait), null if no wait
+  wait_len, wait_len_bin    wait_end - instruction_end; bin 5-15 / 15-30 / 30-60 s (<5, >60 outside);
+                            wait_success_<bin> = wait_success for waits in that bin (else null)
+  time_to_interruption      seconds from instruction_end to first_interruption (null = stayed silent:
+                            censored at wait_len). Survival curves: scripts/plot_results.py
+  timed_wait                think-time waits with a deadline (no early end by the user) and the human
+                            extend10sec file; resume_error = first speech start after
+                            instruction_end + ack_grace (segments >= 0.5 s; up to wait_end + 10 s)
+                            minus the deadline,
+                            signed (negative = early, e.g. an interruption; null = nothing by +10 s)
+  late_resume               not resumed_on_time, but speech starts after the resume window and
+                            within 10 s of wait_end (resumed, late)
+  missed_resume             no speech starts in [wait_end, wait_end + 10 s] (separate from late)
+  distractor_<kind>         distractor_responses split by kind: friend_or_other (friend_question,
+                            question_to_other), other_name, near_miss, self_talk, pause
+  talk_over                 per Moshi speech segment (after the greeting): it starts while the
+                            user is speaking (user turns from the events' right_turns; VAD on the
+                            user channel for files without them, i.e. the human files)
+  ordinary_latency          per ordinary request: request end -> first speech start (<= 10 s)
+  moshi_speech_sec          Moshi VAD speech after the greeting; per minute = / duration (minutes)
 
 Outputs
   results/metrics/<NAME>.jsonl   one row per file and seed (overwritten on each run)
@@ -84,6 +103,11 @@ MIN_SEGMENT = 0.2        # then drop VAD segments shorter than this
 TEXT_MERGE_GAP = 0.5     # merge text-token slots separated by less than this
 INTERRUPT_MIN_SPEECH = 0.5
 DISTRACTOR_WINDOW = 3.0
+MISSED_AFTER = 10.0      # no speech within this long after wait_end = missed resume
+LEN_BINS = [("5_15", 5, 15), ("15_30", 15, 30), ("30_60", 30, 60.0001)]
+KIND_GROUPS = {"friend_question": "friend_or_other", "question_to_other": "friend_or_other",
+               "other_name": "other_name", "near_miss": "near_miss", "self_talk": "self_talk", "pause": "pause"}
+DISTRACTOR_KEYS = ["friend_or_other", "other_name", "near_miss", "self_talk", "pause"]
 ORDINARY_WINDOW = 5.0
 GRID = 0.01              # resolution for comparing VAD vs text speech
 
@@ -99,8 +123,9 @@ OPTIONAL_DEFAULTS = {"groups": [], "cluster": None, "user_start": None, "instruc
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--outputs", type=Path, required=True)
-    p.add_argument("--events", type=Path, required=True)
+    p.add_argument("--outputs", type=Path, nargs="+", required=True,
+                   help="One or more output folders, paired in order with --events.")
+    p.add_argument("--events", type=Path, nargs="+", required=True)
     p.add_argument("--name", required=True)
     p.add_argument("--ack-grace", type=float, default=2.0,
                    help="Seconds after instruction_end in which a brief acknowledgement is allowed.")
@@ -164,8 +189,14 @@ def first_start_in(segs: list[Seg], lo: float, hi: float) -> float | None:
 
 # ---------------------------------------------------------------- metrics
 
+def is_timed(ev: dict) -> bool:
+    """A wait with a deadline: think time without an early end, or the human timed wait."""
+    conds = ev.get("conditions") or []
+    return (ev.get("type") == "think_time" or ev["group"] == "timed_wait") and "early_end" not in conds
+
+
 def score_run(ev: dict, segs: list[Seg], text_segs: list[Seg], ack_grace: float,
-              user_start: float | None) -> dict:
+              user_start: float | None, user_turns: list[Seg] | None = None) -> dict:
     r: dict = {"user_start": None if user_start is None else round(user_start, 2)}
     greeting = [(s, e) for s, e in segs if user_start is not None and s < user_start]
     r["greeted_at_start"] = bool(greeting)
@@ -206,6 +237,38 @@ def score_run(ev: dict, segs: list[Seg], text_segs: list[Seg], ack_grace: float,
                              and not any(r["distractor_responses"]))
     else:
         r["wait_success"] = None
+    # ---- additions (see docstring)
+    if ie is not None and we is not None:
+        wl = we - ie
+        r["wait_len"] = round(wl, 2)
+        r["wait_len_bin"] = next((b for b, lo, hi in LEN_BINS if lo <= wl < hi), "<5" if wl < 5 else ">60")
+        for b, _, _ in LEN_BINS:
+            r[f"wait_success_{b}"] = r["wait_success"] if r["wait_len_bin"] == b else None
+        r["time_to_interruption"] = round(r["first_interruption"] - ie, 2) if r["interrupted"] else None
+        r["timed_wait"] = is_timed(ev)
+        if r["timed_wait"]:
+            # segments of at least INTERRUPT_MIN_SPEECH (blips are ignored, as for interrupted); one that
+            # began in the grace period and runs past it counts from the end of the grace period
+            long = [(s, e) for s, e in segs if e - s >= INTERRUPT_MIN_SPEECH]
+            st = [s for s, _ in long if ie + ack_grace <= s <= we + MISSED_AFTER]
+            ov = [ie + ack_grace for s, e in long if s < ie + ack_grace < e]
+            first = min(st + ov) if st + ov else None
+            r["resume_error"] = round(first - we, 2) if first is not None else None
+    if we is not None:
+        after = [s for s, _ in segs if we <= s <= we + MISSED_AFTER]
+        r["missed_resume"] = not after
+        if rw is not None:
+            r["late_resume"] = (not r["resumed_on_time"]) and any(rw[1] < s <= we + MISSED_AFTER for s in after)
+    kinds = ev["distractor_kinds"] or [("friend_question" if ev["group"] == "friend_wait" else None)] * len(ev["distractors"])
+    for k in DISTRACTOR_KEYS:
+        r[f"distractor_{k}"] = [x for x, kd in zip(r["distractor_responses"], kinds) if KIND_GROUPS.get(kd) == k]
+    if user_turns is not None:
+        r["talk_over"] = [any(us < s < ue for us, ue in user_turns) for s, _ in segs]
+    r["ordinary_latency"] = []
+    for q in ev["ordinary_requests"]:
+        st = next((s for s, _ in segs if q <= s <= q + MISSED_AFTER), None)
+        r["ordinary_latency"].append(None if st is None else round(st - q, 2))
+    r["moshi_speech_sec"] = round(sum(e - s for s, e in segs), 2)
     return r
 
 
@@ -236,13 +299,15 @@ def main() -> None:
     args = parse_args()
     if not re.fullmatch(r"[A-Za-z0-9_.-]+", args.name):
         sys.exit("--name may only contain letters, digits, '_', '.', '-'")
-    events = load_events(args.events)
+    if len(args.outputs) != len(args.events):
+        sys.exit("--outputs and --events need the same number of entries")
+    pairs = [(o, ev) for o, ix in zip(args.outputs, args.events) for ev in load_events(ix)]
     torch.set_num_threads(1)
     model = load_silero_vad()
 
     rows, missing = [], []
-    for ev in events:
-        runs = sorted(args.outputs.glob(f"{ev['id']}_seed*.json"),
+    for outputs, ev in pairs:
+        runs = sorted(outputs.glob(f"{ev['id']}_seed*.json"),
                       key=lambda p: int(p.stem.rsplit("seed", 1)[1]))
         if not runs:
             missing.append(ev["id"])
@@ -254,15 +319,20 @@ def main() -> None:
             segs = vad_segments(model, wav[0], sr)
             tsegs = text_segments(meta)
             user_start = ev["user_start"]
+            rt = ev.get("right_turns")
+            if rt is not None:
+                user_turns = [(t["start"], t["end"]) for t in rt if t["speaker"] == "user"]
+            else:
+                user_turns = vad_segments(model, wav[1], sr)  # human files: the user channel's speech
             if user_start is None:
-                user_segs = vad_segments(model, wav[1], sr)
-                user_start = user_segs[0][0] if user_segs else None
+                user_start = user_turns[0][0] if user_turns else None
             row = {"model": args.name, "id": ev["id"], "group": ev["group"], "groups": ev["groups"],
                    "cluster": ev["cluster"] or ev["id"],
                    "seed": meta["seed"],
                    "output": str(jp.with_suffix(".wav")), "duration_sec": round(dur, 2),
                    "ack_grace": args.ack_grace,
-                   **score_run(ev, segs, tsegs, args.ack_grace, user_start),
+                   "type": ev.get("type"), "conditions": ev.get("conditions") or [],
+                   **score_run(ev, segs, tsegs, args.ack_grace, user_start, user_turns),
                    "vad_vs_text": disagreement(segs, tsegs, dur),
                    "speech_segments": [[round(s, 2), round(e, 2)] for s, e in segs],
                    "text_segments": [[round(s, 2), round(e, 2)] for s, e in tsegs],
@@ -280,10 +350,10 @@ def main() -> None:
                 print("   " + ", ".join(f"{k}={row[k]}" for k in keys if k in row))
                 print(f"   text: {row['text']!r}")
 
-    known = {ev["id"] for ev in events}
-    extra = sorted({p.stem.rsplit("_seed", 1)[0] for p in args.outputs.glob("*_seed*.json")} - known)
+    known = {ev["id"] for _, ev in pairs}
+    extra = sorted({p.stem.rsplit("_seed", 1)[0] for o in args.outputs for p in o.glob("*_seed*.json")} - known)
     if missing:
-        print(f"\nWARNING: no outputs in {args.outputs} for: {missing}")
+        print(f"\nWARNING: no outputs for {len(missing)} files: {missing[:10]}")
     if extra:
         print(f"WARNING: outputs without events (not scored): {extra}")
     if not rows:

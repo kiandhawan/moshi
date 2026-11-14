@@ -225,3 +225,111 @@ def comparison_markdown(models: dict[str, list[dict]]) -> str:
         body.append(["resume latency median"] + [latency_cell(per[m]) for m in names])
         parts.append(f"## {group}\n\n" + md_table(["metric"] + names, body) + "\n")
     return "\n".join(parts)
+
+
+# ---------------------------------------------------------------- model-per-row report (comparison.md)
+# kind: "run" / "list" = rates as above; "med" = median of a per-row value (or of the values of a
+# per-row list), with a cluster-bootstrap CI; "permin" = sum(key) / sum(duration) * 60.
+
+WAIT_COLS = [
+    ("wait success", "wait_success", "run"),
+    ("wait success 5-15 s", "wait_success_5_15", "run"),
+    ("wait success 15-30 s", "wait_success_15_30", "run"),
+    ("wait success 30-60 s", "wait_success_30_60", "run"),
+    ("interrupt rate", "interrupted", "run"),
+    ("time to 1st interruption (interrupted waits)", "time_to_interruption", "med"),
+    ("resume on time", "resumed_on_time", "run"),
+    ("late resume", "late_resume", "run"),
+    ("missed resume", "missed_resume", "run"),
+    ("resume latency", "resume_latency", "med"),
+    ("resume error, timed waits (signed)", "resume_error", "med"),
+    ("spoke over cue", "spoke_over_cue", "run"),
+    ("acknowledged", "acknowledged", "run"),
+    ("spoke during instr.", "spoke_during_instruction", "run"),
+]
+DISTRACTOR_COLS = [
+    ("distractor response", "distractor_responses", "list"),
+    ("question to friend / other", "distractor_friend_or_other", "list"),
+    ("other-name question", "distractor_other_name", "list"),
+    ("near-miss cue", "distractor_near_miss", "list"),
+    ("self-talk", "distractor_self_talk", "list"),
+    ("mid-sentence pause", "distractor_pause", "list"),
+]
+CONV_COLS = [
+    ("ordinary response", "ordinary_answered", "list"),
+    ("ordinary latency", "ordinary_latency", "med"),
+    ("Moshi speech s/min", "moshi_speech_sec", "permin"),
+    ("talk-over", "talk_over", "list"),
+    ("greeted at start", "greeted_at_start", "run"),
+]
+
+
+def row_values(r: dict, key: str) -> list[float]:
+    v = r.get(key)
+    if v is None:
+        return []
+    return [x for x in v if x is not None] if isinstance(v, list) else [v]
+
+
+def median_cell(rows: list[dict], key: str) -> str:
+    """'median s [95% CI] (n)', CI from resampling clusters and taking the pooled median."""
+    per: dict[str, list[float]] = defaultdict(list)
+    for r in rows:
+        per[cluster_of(r)] += row_values(r, key)
+    cl = [c for c in per if per[c]]
+    vals = [x for c in cl for x in per[c]]
+    if not vals:
+        return "-"
+    med = float(np.median(vals))
+    if len(cl) < 2:
+        return f"{med:+.2f}s (n={len(vals)})" if key == "resume_error" else f"{med:.2f}s (n={len(vals)})"
+    rng = np.random.default_rng(BOOT_SEED)
+    arrs = [np.array(per[c]) for c in cl]
+    meds = [float(np.median(np.concatenate([arrs[i] for i in rng.integers(0, len(cl), len(cl))])))
+            for _ in range(500)]
+    lo, hi = np.percentile(meds, [2.5, 97.5])
+    f = "+.2f" if key == "resume_error" else ".2f"
+    return f"{med:{f}}s [{lo:{f}}, {hi:{f}}] (n={len(vals)})"
+
+
+def permin_cell(rows: list[dict], key: str) -> str:
+    num = defaultdict(float); den = defaultdict(float)
+    for r in rows:
+        if r.get(key) is not None:
+            num[cluster_of(r)] += r[key]; den[cluster_of(r)] += r["duration_sec"] / 60
+    if not den:
+        return "-"
+    cl = list(den)
+    est = sum(num.values()) / sum(den.values())
+    if len(cl) < 2:
+        return f"{est:.1f}"
+    lo, hi = bootstrap_ratio(np.array([num[c] for c in cl]), np.array([den[c] for c in cl]))
+    return f"{est:.1f} [{lo:.1f}-{hi:.1f}]"
+
+
+def any_cell(rows: list[dict], key: str, kind: str) -> str:
+    if kind in ("run", "list"):
+        return rate_cell(rows, key, kind)
+    if kind == "med":
+        return median_cell(rows, key)
+    return permin_cell(rows, key)
+
+
+def model_tables(models: dict[str, list[dict]], extra_cols: dict[str, dict[str, str]] | None = None,
+                 keep=lambda r: True) -> str:
+    """Three tables (waits, distractors, conversation), one row per model, for rows passing keep."""
+    out = []
+    for title, cols in (("Waits", WAIT_COLS), ("Distractors (response rate; lower is better)", DISTRACTOR_COLS),
+                        ("Conversation", CONV_COLS)):
+        body = []
+        for m, rows in models.items():
+            rs = [r for r in rows if keep(r)]
+            if not rs:
+                continue
+            cells = [any_cell(rs, k, kind) for _, k, kind in cols]
+            body.append([m, str(n_files(rs)), str(n_clusters(rs)), str(len(rs))] + cells)
+        if body:
+            keepcol = [i for i in range(4, len(body[0])) if any(b[i] != "-" for b in body)]
+            hdr = ["model", "files", "contexts", "runs"] + [cols[i - 4][0] for i in keepcol]
+            out.append(f"**{title}**\n\n" + md_table(hdr, [b[:4] + [b[i] for i in keepcol] for b in body]))
+    return "\n\n".join(out)

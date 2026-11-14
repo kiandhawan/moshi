@@ -39,6 +39,11 @@ Metrics (one CSV row per checkpoint, pooled over all frames of all files; a fram
   distractor_p_pad
       Mean P(PAD) over the --distractor-sec (3.0) s after each distractor (other-name questions
       included: distractor kind other_name), cut at distractor_until when the events give it.
+  wait_p_silent_whole, wait_p_silent_10s
+      Per wait: the probability of emitting PAD on every frame of the wait_p_pad window,
+      exp(sum of log P(PAD)) - i.e. of staying silent through the entire wait - and the same
+      per-frame rate stretched to a 10 s wait, exp(mean log P(PAD) x 125 frames), so waits of
+      different lengths are comparable. Averaged over waits (one per wait file; `waits` = n).
   ordinary_text_loss
       Training text loss restricted to the frames of the ideal Moshi turns that answer an
       ordinary request (kind ordinary in the human answer keys, reply / followup in rendered
@@ -75,10 +80,12 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))  # the training package `finetune`
 
 ORDINARY_KINDS = {"ordinary", "reply", "followup"}  # Moshi turns that answer an ordinary request
-CI_METRICS = ["val_loss", "greet_p_speak", "wait_p_pad", "cue_p_speak", "distractor_p_pad", "ordinary_text_loss"]
+CI_METRICS = ["val_loss", "greet_p_speak", "wait_p_pad", "wait_p_silent_whole", "wait_p_silent_10s", "cue_p_speak",
+              "distractor_p_pad", "ordinary_text_loss"]
 BOOT_B, BOOT_SEED = 2000, 0
 COLUMNS = ["label", "checkpoint", "step", "files", "contexts", "val_loss", "text_loss", "audio_loss",
-           "greet_p_speak", "greet_target_speak", "greet_frames", "wait_p_pad", "wait_frames", "cue_p_speak", "cue_target_speak", "cue_frames",
+           "greet_p_speak", "greet_target_speak", "greet_frames", "wait_p_pad", "wait_frames",
+           "waits", "wait_p_silent_whole", "wait_p_silent_10s", "cue_p_speak", "cue_target_speak", "cue_frames",
            "distractor_p_pad", "distractor_frames", "ordinary_text_loss", "ordinary_frames"] + \
           [f"{m}_{e}" for m in CI_METRICS for e in ("lo", "hi")] + ["date"]
 
@@ -174,7 +181,8 @@ def main() -> None:
 
     PAD, EPAD = model.text_padding_token_id, model.end_of_text_padding_id
     fps = mimi.frame_rate
-    SUM_KEYS, CNT_KEYS = ("greet", "greet_t", "wait", "cue", "cue_t", "dis", "ord"), ("greet", "wait", "cue", "dis", "ord")
+    SUM_KEYS = ("greet", "greet_t", "wait", "ww", "ww10", "cue", "cue_t", "dis", "ord")
+    CNT_KEYS = ("greet", "wait", "ww", "cue", "dis", "ord")
     files, per_file = 0, []
     t0 = time.perf_counter()
     for sample in samples:
@@ -196,7 +204,8 @@ def main() -> None:
         if ev is not None:
             T = codes.shape[-1]
             valid = out.text_mask[0, 0]  # real (non-padding-of-the-crop) frames
-            p_pad = out.text_logits[0, 0].float().softmax(-1)[:, PAD]
+            logp_all = out.text_logits[0, 0].float().log_softmax(-1)
+            p_pad, logp_pad = logp_all[:, PAD].exp(), logp_all[:, PAD]
             target = text_target[0, 0]
 
             def frames(a: float, b: float) -> torch.Tensor:
@@ -219,6 +228,12 @@ def main() -> None:
                 m = frames(ev["instruction_end"] + args.ack_grace, ev["wait_end"]) & ~speaking
                 tot["wait"] += p_pad[m].sum().item(); cnt["wait"] += int(m.sum())
                 rec["wait_p_pad"] = p_pad[m].mean().item() if m.any() else None
+                if m.any():
+                    lp, nfr = logp_pad[m].sum().item(), int(m.sum())
+                    rec["wait_logp_silent"], rec["wait_silent_frames"] = lp, nfr
+                    rec["wait_p_silent_whole"] = math.exp(lp)
+                    rec["wait_p_silent_10s"] = math.exp(lp / nfr * 10 * fps)
+                    tot["ww"] += rec["wait_p_silent_whole"]; tot["ww10"] += rec["wait_p_silent_10s"]; cnt["ww"] += 1
                 m = frames(ev["wait_end"], ev["wait_end"] + args.cue_sec)
                 tot["cue"] += (1 - p_pad[m]).sum().item(); cnt["cue"] += int(m.sum())
                 tot["cue_t"] += (target[m] != PAD).sum().item()
@@ -241,7 +256,8 @@ def main() -> None:
         per_file.append(rec)
         print(f"  {Path(path).name}: text {text_loss:.3f} audio {audio_loss:.3f} "
               + " ".join(f"{k} {v:.3f}" for k, v in rec.items()
-                         if k in ("greet_p_speak", "wait_p_pad", "cue_p_speak", "ordinary_text_loss") and v is not None),
+                         if k in ("greet_p_speak", "wait_p_pad", "wait_p_silent_10s", "cue_p_speak", "ordinary_text_loss")
+                         and v is not None),
               flush=True)
     if not files:
         sys.exit(f"No samples in {args.data}")
@@ -264,6 +280,10 @@ def main() -> None:
             nf, tl, al = agg(lambda r: 1.0), agg(lambda r: r["text_loss"]), agg(lambda r: r["audio_loss"])
             idx = np.random.default_rng(BOOT_SEED).integers(0, C, size=(BOOT_B, C))
             samples = {"val_loss": (tl[idx].sum(1) + al[idx].sum(1)) / nf[idx].sum(1)}
+            for m, k, kc in (("wait_p_silent_whole", "ww", "ww"), ("wait_p_silent_10s", "ww10", "ww")):
+                num, den = agg(lambda r: r["sums"][k]), agg(lambda r: r["counts"][kc])
+                d = den[idx].sum(1)
+                samples[m] = num[idx].sum(1)[d > 0] / d[d > 0] if den.sum() > 0 else np.array([])
             for m, k in (("greet_p_speak", "greet"), ("wait_p_pad", "wait"), ("cue_p_speak", "cue"),
                          ("distractor_p_pad", "dis"), ("ordinary_text_loss", "ord")):
                 num, den = agg(lambda r: r["sums"][k]), agg(lambda r: r["counts"][k])
@@ -271,7 +291,8 @@ def main() -> None:
                 samples[m] = num[idx].sum(1)[d > 0] / d[d > 0] if den.sum() > 0 else np.array([])
             for m, v in samples.items():
                 if len(v):
-                    ci[f"{m}_lo"], ci[f"{m}_hi"] = round(float(np.percentile(v, 2.5)), 4), round(float(np.percentile(v, 97.5)), 4)
+                    rnd = (lambda x: float(f"{x:.4g}")) if m.startswith("wait_p_silent") else (lambda x: round(x, 4))
+                    ci[f"{m}_lo"], ci[f"{m}_hi"] = rnd(float(np.percentile(v, 2.5))), rnd(float(np.percentile(v, 97.5)))
         return {
             "files": len(recs), "contexts": len(cl), **ci,
             "val_loss": round(mean("text_loss") + mean("audio_loss"), 4),
@@ -279,6 +300,8 @@ def main() -> None:
             "greet_p_speak": ratio(tot["greet"], cnt["greet"]),
             "greet_target_speak": ratio(tot["greet_t"], cnt["greet"]), "greet_frames": cnt["greet"],
             "wait_p_pad": ratio(tot["wait"], cnt["wait"]), "wait_frames": cnt["wait"],
+            "waits": cnt["ww"], "wait_p_silent_whole": float(f"{tot['ww'] / cnt['ww']:.4g}") if cnt["ww"] else None,
+            "wait_p_silent_10s": float(f"{tot['ww10'] / cnt['ww']:.4g}") if cnt["ww"] else None,
             "cue_p_speak": ratio(tot["cue"], cnt["cue"]), "cue_target_speak": ratio(tot["cue_t"], cnt["cue"]),
             "cue_frames": cnt["cue"],
             "distractor_p_pad": ratio(tot["dis"], cnt["dis"]), "distractor_frames": cnt["dis"],
@@ -321,7 +344,8 @@ def main() -> None:
         v = g.get(m)
         if v is None:
             return "-"
-        return f"{v:.3f} [{g[m + '_lo']:.3f}-{g[m + '_hi']:.3f}]" if f"{m}_lo" in g else f"{v:.3f} [n/a]"
+        f = ".2e" if m.startswith("wait_p_silent") else ".3f"
+        return f"{v:{f}} [{g[m + '_lo']:{f}}-{g[m + '_hi']:{f}}]" if f"{m}_lo" in g else f"{v:{f}} [n/a]"
     print(f"{'eval group':17s} {'files':>5s} {'ctx':>4s}  " + "  ".join(f"{m:>21s}" for m in CI_METRICS))
     for g in [dict(row, eval_group="ALL")] + group_rows:
         print(f"{g['eval_group']:17s} {g['files']:5d} {g['contexts']:4d}  " + "  ".join(f"{cell(g, m):>21s}" for m in CI_METRICS))
