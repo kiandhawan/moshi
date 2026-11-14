@@ -32,10 +32,19 @@ def evaluate(
     text_loss = torch.tensor(0.0).cuda()
     audio_loss = torch.tensor(0.0).cuda()
     model.eval()
+    # Take the batches first so every rank runs the same number of forward passes: with
+    # FSDP each forward is a collective, and a rank with one batch fewer would hang the rest.
+    batches = []
     for batch in eval_data_loader:
-        num_samples += 1
-        if num_samples > 40 // get_world_size():
+        if len(batches) >= max(1, 40 // get_world_size()):
             break
+        batches.append(batch)
+    n_batches = torch.tensor([len(batches)], device="cuda", dtype=torch.long)
+    dist.all_reduce(n_batches, op=dist.ReduceOp.MIN)
+    if n_batches.item() < len(batches):
+        main_logger_info(f"Eval: using {n_batches.item()} batches per rank (ranks differ).")
+    for batch in batches[: n_batches.item()]:
+        num_samples += 1
         with torch.no_grad():
             codes = batch.codes
             condition_tensors = None

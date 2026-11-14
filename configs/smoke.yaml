@@ -1,10 +1,10 @@
 # Smoke test: 20 LoRA steps on DailyTalkContiguous conversations 0-4.
-# Derived from example/moshi_7B.yaml. Only data, max_steps, ckpt_freq,
-# run_dir and wandb (removed) differ from the example.
+# Derived from example/moshi_7B.yaml. Only data (train and eval), max_steps, ckpt_freq,
+# eval_freq/do_eval, run_dir and wandb (removed) differ from the example.
 
 # data
 data:
-  eval_data: ''
+  eval_data: '/root/moshi-finetune/data/indexes/eval_full.jsonl'  # ideal-side eval conversations (scripts/render_lib.py)
   shuffle: true
   train_data: '/root/moshi-finetune/daily-talk-contiguous/smoke.jsonl'
 
@@ -35,8 +35,8 @@ optim:
 # other
 seed: 0
 log_freq: 1
-eval_freq: 100
-do_eval: false
+eval_freq: 50
+do_eval: true
 do_ckpt: true
 ckpt_freq: 20
 

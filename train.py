@@ -175,8 +175,10 @@ def _train(args: TrainArgs, exit_stack: ExitStack):
         is_eval=False,
     )
 
-    if args.do_eval:
-        eval_data_loader = build_data_loader(
+    def make_eval_data_loader():
+        # A fresh loader for every evaluation: the eval loader is a finite generator, so a
+        # single one built up front would be used up after the first evaluation.
+        return build_data_loader(
             instruct_tokenizer=interleaved_tokenizer,
             args=args.data,
             batch_size=args.batch_size,
@@ -316,7 +318,7 @@ def _train(args: TrainArgs, exit_stack: ExitStack):
             (args.eval_freq > 0 and state.step % args.eval_freq == 0) or is_last_step
         ):
             # write perplexity to state
-            evaluate(model, eval_data_loader, state, args)
+            evaluate(model, make_eval_data_loader(), state, args)
 
             eval_logs = get_eval_logs(
                 state.step,
