@@ -24,6 +24,7 @@ PRIMARY = [
     ("ordinary response", "ordinary_answered", "list"),
 ]
 SECONDARY = [
+    ("greeted at start", "greeted_at_start", "run"),
     ("spoke during instr.", "spoke_during_instruction", "run"),
     ("acknowledged", "acknowledged", "run"),
     ("spoke over cue", "spoke_over_cue", "run"),

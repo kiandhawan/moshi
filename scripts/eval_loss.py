@@ -22,6 +22,10 @@ Metrics (one CSV row per checkpoint, pooled over all frames of all files; a fram
   val_loss, text_loss, audio_loss
       Mean over files of the training losses (finetune/eval.py averages over batches; here
       a batch is one file).
+  greet_p_speak (greeted_at_start)
+      Mean P(not PAD) over the frames before user_start (the user's first words), where
+      Moshi should greet the user and ask how they are (CLAUDE.md). greet_target_speak is the
+      same fraction in the ideal transcript (reference ceiling, as for cue_p_speak).
   wait_p_pad
       Mean P(PAD) over frames from instruction_end + ack_grace (2.0 s, the ack rule) to
       wait_end. PAD (id 3) is the "say nothing" token.
@@ -37,8 +41,9 @@ Metrics (one CSV row per checkpoint, pooled over all frames of all files; a fram
   ordinary_text_loss
       Training text loss restricted to the frames of the ideal Moshi turns of kind
       "ordinary" (plus the frame before each, where the EPAD goes), pooled over frames.
-In the "should be silent" windows, frames where the ideal Moshi side is speaking (e.g. an
-acknowledgement running past the 2 s mark, see moshi_turns) are left out.
+In the "should be silent" windows, frames where the ideal Moshi side is speaking (the
+opening greeting, or an acknowledgement running past the 2 s mark; see moshi_turns) are left
+out, so the greeting never counts as speaking during the instruction or as an interruption.
 
 Usage:
   python scripts/eval_loss.py                                  # base model
@@ -62,7 +67,7 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))  # the training package `finetune`
 
 COLUMNS = ["label", "checkpoint", "step", "files", "val_loss", "text_loss", "audio_loss",
-           "wait_p_pad", "wait_frames", "cue_p_speak", "cue_target_speak", "cue_frames",
+           "greet_p_speak", "greet_target_speak", "greet_frames", "wait_p_pad", "wait_frames", "cue_p_speak", "cue_target_speak", "cue_frames",
            "distractor_p_pad", "distractor_frames", "ordinary_text_loss", "ordinary_frames",
            "date"]
 
@@ -158,8 +163,8 @@ def main() -> None:
 
     PAD, EPAD = model.text_padding_token_id, model.end_of_text_padding_id
     fps = mimi.frame_rate
-    tot = {k: 0.0 for k in ("wait", "cue", "cue_t", "dis", "ord")}
-    cnt = {k: 0 for k in ("wait", "cue", "dis", "ord")}
+    tot = {k: 0.0 for k in ("greet", "greet_t", "wait", "cue", "cue_t", "dis", "ord")}
+    cnt = {k: 0 for k in ("greet", "wait", "cue", "dis", "ord")}
     files, per_file = 0, []
     t0 = time.perf_counter()
     for sample in samples:
@@ -194,6 +199,11 @@ def main() -> None:
             speaking = torch.zeros(T, dtype=torch.bool, device=valid.device)
             for turn in ev.get("moshi_turns", []):
                 speaking |= frames(turn["start"] - 1 / fps, turn["end"])
+            if ev.get("user_start") is not None:
+                m = frames(0.0, ev["user_start"])
+                tot["greet"] += (1 - p_pad[m]).sum().item(); cnt["greet"] += int(m.sum())
+                tot["greet_t"] += (target[m] != PAD).sum().item()
+                rec["greet_p_speak"] = (1 - p_pad[m]).mean().item() if m.any() else None
             if ev.get("instruction_end") is not None and ev.get("wait_end") is not None:
                 m = frames(ev["instruction_end"] + args.ack_grace, ev["wait_end"]) & ~speaking
                 tot["wait"] += p_pad[m].sum().item(); cnt["wait"] += int(m.sum())
@@ -217,7 +227,7 @@ def main() -> None:
         per_file.append(rec)
         print(f"  {Path(path).name}: text {text_loss:.3f} audio {audio_loss:.3f} "
               + " ".join(f"{k} {v:.3f}" for k, v in rec.items()
-                         if k in ("wait_p_pad", "cue_p_speak", "ordinary_text_loss") and v is not None),
+                         if k in ("greet_p_speak", "wait_p_pad", "cue_p_speak", "ordinary_text_loss") and v is not None),
               flush=True)
     if not files:
         sys.exit(f"No samples in {args.data}")
@@ -229,6 +239,8 @@ def main() -> None:
         "step": step if step is not None else "", "files": files,
         "val_loss": round(mean("text_loss") + mean("audio_loss"), 4),
         "text_loss": round(mean("text_loss"), 4), "audio_loss": round(mean("audio_loss"), 4),
+        "greet_p_speak": ratio(tot["greet"], cnt["greet"]),
+        "greet_target_speak": ratio(tot["greet_t"], cnt["greet"]), "greet_frames": cnt["greet"],
         "wait_p_pad": ratio(tot["wait"], cnt["wait"]), "wait_frames": cnt["wait"],
         "cue_p_speak": ratio(tot["cue"], cnt["cue"]), "cue_target_speak": ratio(tot["cue_t"], cnt["cue"]),
         "cue_frames": cnt["cue"],

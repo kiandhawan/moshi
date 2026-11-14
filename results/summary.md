@@ -14,8 +14,8 @@ Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); d
 
 ## Secondary metrics
 
-| model | group | spoke during instr. | acknowledged | spoke over cue | resume latency median | VAD/text IoU |
-|---|---|---|---|---|---|---|
-| base | friend_wait | 0% (0/3) [0%-56%] | 67% (2/3) [21%-94%] | 33% (1/3) [6%-79%] | 0.36s (n=2) | 0.73 |
-| base | human_ordinary | - | - | - | - | 0.79 |
-| base | timed_wait | 100% (3/3) [44%-100%] | 0% (0/3) [0%-56%] | 0% (0/3) [0%-56%] | 1.20s (n=1) | 0.72 |
+| model | group | greeted at start | spoke during instr. | acknowledged | spoke over cue | resume latency median | VAD/text IoU |
+|---|---|---|---|---|---|---|---|
+| base | friend_wait | 100% (3/3) [44%-100%] | 0% (0/3) [0%-56%] | 67% (2/3) [21%-94%] | 0% (0/3) [0%-56%] | 0.26s (n=2) | 0.73 |
+| base | human_ordinary | 100% (3/3) [44%-100%] | - | - | - | - | 0.79 |
+| base | timed_wait | 100% (3/3) [44%-100%] | 100% (3/3) [44%-100%] | 0% (0/3) [0%-56%] | 0% (0/3) [0%-56%] | 1.20s (n=1) | 0.72 |

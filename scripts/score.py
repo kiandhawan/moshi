@@ -10,6 +10,8 @@ Inputs
 Events format (one JSON per test file; times in seconds on the user-audio timeline):
   {"id": "extend10sec",            # matches the output file stem <id>_seed<N>
    "group": "timed_wait",          # timed_wait | friend_wait | describe_options | ordinary
+   "user_start": 2.0,              # when the user first speaks (default: first VAD speech on
+                                   # the user channel); Moshi speech before it is the greeting
    "instruction_start": 2.0,       # when the user starts the wait instruction; null if none
    "instruction_end": 4.9,         # null for ordinary conversations
    "wait_end": 22.0,               # when Moshi may speak again; null if no wait
@@ -27,8 +29,11 @@ text tokens (each token = its 80 ms slot, tokens < 0.5 s apart merged) and the d
 between the two is reported. All metrics use the VAD segments.
 
 Metrics per file and seed (VAD-based; times straight from the WAV, no extra offset):
+  greeted_at_start          Moshi speech starts before user_start: the opening greeting
+                            (CLAUDE.md: Moshi always opens by greeting and asking how the user
+                            is). Those greeting segments are excluded from all metrics below,
+                            even if they run past user_start.
   spoke_during_instruction  any speech overlapping [instruction_start, instruction_end]
-                            (Moshi's opening greeting before the instruction doesn't count)
   acknowledged              speech starting in [instruction_end, instruction_end + ack_grace)
   interrupted               > 0.5 s of speech in [instruction_end + ack_grace, wait_end]
                             (an acknowledgement that runs past the grace period counts)
@@ -77,7 +82,7 @@ REPO = Path(__file__).resolve().parent.parent
 METRICS_DIR = REPO / "results" / "metrics"
 SUMMARY_PATH = REPO / "results" / "summary.md"
 REQUIRED_FIELDS = ("id", "group")
-OPTIONAL_DEFAULTS = {"instruction_start": None, "instruction_end": None, "wait_end": None,
+OPTIONAL_DEFAULTS = {"user_start": None, "instruction_start": None, "instruction_end": None, "wait_end": None,
                      "resume_window": None, "distractors": [], "ordinary_requests": [],
                      "ordinary_window": ORDINARY_WINDOW}
 
@@ -149,8 +154,15 @@ def first_start_in(segs: list[Seg], lo: float, hi: float) -> float | None:
 
 # ---------------------------------------------------------------- metrics
 
-def score_run(ev: dict, segs: list[Seg], text_segs: list[Seg], ack_grace: float) -> dict:
-    r: dict = {}
+def score_run(ev: dict, segs: list[Seg], text_segs: list[Seg], ack_grace: float,
+              user_start: float | None) -> dict:
+    r: dict = {"user_start": None if user_start is None else round(user_start, 2)}
+    greeting = [(s, e) for s, e in segs if user_start is not None and s < user_start]
+    r["greeted_at_start"] = bool(greeting)
+    r["greeting_segments"] = [[round(s, 2), round(e, 2)] for s, e in greeting]
+    segs = [g for g in segs if g not in greeting]  # the greeting counts as nothing else
+    if user_start is not None:
+        text_segs = [(s, e) for s, e in text_segs if s >= user_start]
     ist, ie, we, rw = ev["instruction_start"], ev["instruction_end"], ev["wait_end"], ev["resume_window"]
     if ist is not None and ie is not None:
         r["spoke_during_instruction"] = speech_in(segs, ist, ie) > 0
@@ -226,17 +238,21 @@ def main() -> None:
             dur = wav.shape[-1] / sr
             segs = vad_segments(model, wav[0], sr)
             tsegs = text_segments(meta)
+            user_start = ev["user_start"]
+            if user_start is None:
+                user_segs = vad_segments(model, wav[1], sr)
+                user_start = user_segs[0][0] if user_segs else None
             row = {"model": args.name, "id": ev["id"], "group": ev["group"], "seed": meta["seed"],
                    "output": str(jp.with_suffix(".wav")), "duration_sec": round(dur, 2),
                    "ack_grace": args.ack_grace,
-                   **score_run(ev, segs, tsegs, args.ack_grace),
+                   **score_run(ev, segs, tsegs, args.ack_grace, user_start),
                    "vad_vs_text": disagreement(segs, tsegs, dur),
                    "speech_segments": [[round(s, 2), round(e, 2)] for s, e in segs],
                    "text_segments": [[round(s, 2), round(e, 2)] for s, e in tsegs],
                    "text": meta.get("text", "")}
             rows.append(row)
             if not args.quiet:
-                keys = ["wait_success", "spoke_during_instruction", "acknowledged", "interrupted", "interrupt_speech_sec",
+                keys = ["wait_success", "greeted_at_start", "spoke_during_instruction", "acknowledged", "interrupted", "interrupt_speech_sec",
                         "first_interruption", "resumed_on_time", "spoke_over_cue", "resume_latency", "resume_latency_text",
                         "distractor_responses", "ordinary_answered"]
                 print(f"\n== {ev['id']} seed {meta['seed']} ({ev['group']}; instruction="

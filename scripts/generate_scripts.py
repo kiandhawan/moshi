@@ -17,14 +17,15 @@ Script types (fractions per split):
   describe_options   lead-in -> "let me describe all the options before you comment" ->
                      [ack] -> options with pauses -> "that's all, what do you think?" -> Moshi.
   ordinary           a user-Moshi dialogue (two if the first is short).
-About half the scripts start with a short Moshi greeting.
+Every script opens with Moshi greeting the user and asking how they are (CLAUDE.md), starting
+at 0.3-0.8 s, then a short user answer, then the rest of the conversation.
 
 Each script is one JSON file with: id, split, type, topic(s), voices (user, friend, moshi),
 friend_name, phrasing_ids, block_ids, wait_sec / extension, and an ordered list of turns.
 Each turn has speaker (user | friend | moshi), text, est_sec (estimated spoken length), and
 either gap_before (silence after the previous turn ends) or anchor {turn, offset} (start
 offset seconds after the end of turn number `turn`, used for deadlines). Optional: event
-(instruction | extension | distractor | return_cue | ordinary_request) with kind, role for
+(greeting_answer | instruction | extension | distractor | return_cue | ordinary_request) with kind, role for
 Moshi turns (greeting | ack | resume | reply | followup), block/phrasing IDs.
 In eval scripts every Moshi turn has reference_only: true. These are the ideal replies, used
 for eval_full and loss evaluation only, never rendered into the model's input.
@@ -46,7 +47,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MIX = {"train": {"think_time": 0.3, "side_conversation": 0.3, "ordinary": 0.4},
        "eval": {"think_time": 0.25, "side_conversation": 0.25, "describe_options": 0.2, "ordinary": 0.3}}
 MIN_SEC, MAX_SEC = 30.0, 85.0
-GREETING_P, ACK_P, ENDING_P, EXTENSION_P = 0.5, 0.5, 0.7, 0.4
+ACK_P, ENDING_P, EXTENSION_P = 0.5, 0.7, 0.4
 TAIL_SEC = 1.0
 NUM_WORDS = {5: "five", 10: "ten", 15: "fifteen", 20: "twenty", 30: "thirty", 45: "forty-five", 60: "sixty"}
 
@@ -101,7 +102,7 @@ class Pools:
             if k != "note" and any(ok(x) for x in v):
                 self.decks[k] = Deck([x for x in v if ok(x)], rng)
         gen = json.loads((ROOT / "data/pools/generic.json").read_text())
-        for k in ("greetings", "acks", "friend_names"):
+        for k in ("acks", "friend_names"):
             self.decks[k] = Deck([x for x in gen[k] if ok(x)], rng)
         for kind in ("friend_question", "near_miss"):
             self.decks[kind] = Deck([x for x in gen["distractors"] if x["kind"] == kind and ok(x)], rng)
@@ -172,11 +173,14 @@ def build(kind: str, split: str, P: Pools, rng: random.Random, extension: bool =
     friend = P.draw("friend_names")
     b = Builder(split, rng, friend["text"])
     meta: dict = {"type": kind, "wait_type": None if kind == "ordinary" else kind}
-    if rng.random() < GREETING_P:
-        g = P.draw("greetings")
-        b.add("moshi", g["text"], round(rng.uniform(0.3, 1.0), 2), role="greeting", phrasing=g["id"])
-        b.phrasing_ids.append(g["id"])
-    first_gap = round(rng.uniform(0.3, 1.2), 2)
+    # Opening (always): Moshi greets and asks how the user is, the user answers, and then
+    # goes straight on with the rest of the conversation.
+    g = P.draw("greeting")
+    b.add("moshi", g["text"], round(rng.uniform(0.3, 0.8), 2), role="greeting", phrasing=g["id"])
+    a = P.draw("greeting_answer")
+    b.add("user", a["text"], round(rng.uniform(0.3, 1.0), 2), event="greeting_answer", phrasing=a["id"])
+    b.phrasing_ids += [g["id"], a["id"]]
+    first_gap = round(rng.uniform(0.2, 0.6), 2)
 
     def ack(after: int) -> int | None:
         if rng.random() >= ACK_P:

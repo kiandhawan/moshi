@@ -5,66 +5,100 @@
  "type": "think_time",
  "wait_type": "think_time",
  "topics": [
-  "shopping"
+  "smartphones"
  ],
- "wait_sec": 20,
+ "wait_sec": 5,
  "deadline": {
-  "after_turn": 2,
-  "sec": 20
+  "after_turn": 4,
+  "sec": 5
  },
- "topic": "shopping",
+ "topic": "smartphones",
  "voices": {
-  "user": "536d3a5e000945adb7038665781a4aca",
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "think_instr_17"
+  "greet_01",
+  "greet_ans_08",
+  "think_instr_01"
  ],
  "block_ids": [
-  "shopping.ctx3"
+  "smartphones.ctx2"
  ],
- "est_total_sec": 39.59,
- "est_speech_sec": 16.21,
+ "est_total_sec": 40.68,
+ "est_speech_sec": 29.63,
  "turns": [
   {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
    "speaker": "user",
-   "text": "Our vacuum finally died. I need to buy a new one this weekend.",
-   "est_sec": 4.13,
-   "gap_before": 0.61,
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.82,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I keep picking up my phone without even thinking. It's eating my whole evening.",
+   "est_sec": 4.44,
+   "gap_before": 0.6,
    "event": "ordinary_request",
-   "block": "shopping.ctx3"
+   "block": "smartphones.ctx2"
   },
   {
    "speaker": "moshi",
-   "text": "Do you want a cordless stick vacuum that's light and handy, or a full size one with more suction?",
-   "est_sec": 5.99,
-   "gap_before": 0.85,
+   "text": "Lots of people feel that way. Would you rather set a daily time limit on certain apps, or delete the worst ones entirely?",
+   "est_sec": 7.23,
+   "gap_before": 1.68,
    "role": "reply",
-   "block": "shopping.ctx3"
+   "block": "smartphones.ctx2"
   },
   {
    "speaker": "user",
-   "text": "I haven't decided. Give me twenty seconds, then ask me again.",
-   "est_sec": 3.51,
-   "gap_before": 0.84,
+   "text": "Give me five seconds to think, then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 0.32,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_17"
+   "wait_sec": 5,
+   "phrasing": "think_instr_01"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, have you picked a vacuum type yet?",
-   "est_sec": 2.58,
+   "text": "So, what feels right? Time limits on those apps, or deleting them?",
+   "est_sec": 3.82,
    "role": "resume",
-   "block": "shopping.ctx3",
+   "block": "smartphones.ctx2",
    "anchor": {
-    "turn": 2,
-    "offset": 20.08
+    "turn": 4,
+    "offset": 5.01
    }
+  },
+  {
+   "speaker": "user",
+   "text": "Let's try limits first. Deleting feels a bit extreme.",
+   "est_sec": 2.89,
+   "gap_before": 0.38,
+   "event": "ordinary_request",
+   "block": "smartphones.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good start. Try thirty minutes a day for social apps and see how the first week goes.",
+   "est_sec": 5.37,
+   "gap_before": 0.81,
+   "role": "followup",
+   "block": "smartphones.ctx2"
   }
  ]
 }

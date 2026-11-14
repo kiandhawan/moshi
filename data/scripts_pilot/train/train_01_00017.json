@@ -5,82 +5,109 @@
  "type": "think_time",
  "wait_type": "think_time",
  "topics": [
-  "moving_house"
+  "fitness"
  ],
  "wait_sec": 20,
  "deadline": {
-  "after_turn": 2,
+  "after_turn": 4,
   "sec": 20
  },
- "topic": "moving_house",
+ "topic": "fitness",
  "voices": {
-  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "user": "cc7f8544c64a439080193e9560100c5a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "think_instr_16"
+  "greet_04",
+  "greet_ans_05",
+  "think_instr_13",
+  "ack_10"
  ],
  "block_ids": [
-  "moving_house.ctx2"
+  "fitness.ctx1"
  ],
- "est_total_sec": 50.52,
- "est_speech_sec": 24.78,
+ "est_total_sec": 55.56,
+ "est_speech_sec": 30.97,
  "turns": [
   {
+   "speaker": "moshi",
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.32,
+   "role": "greeting",
+   "phrasing": "greet_04"
+  },
+  {
    "speaker": "user",
-   "text": "We're moving at the end of the month and I'm dreading the packing.",
-   "est_sec": 4.13,
-   "gap_before": 0.89,
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_05"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to start working out again but I can only manage three short sessions a week.",
+   "est_sec": 5.37,
+   "gap_before": 0.45,
    "event": "ordinary_request",
-   "block": "moving_house.ctx2"
+   "block": "fitness.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "It's a big job. Do you want to hire movers to pack for you, or do it yourselves and save the money?",
-   "est_sec": 6.92,
-   "gap_before": 0.48,
+   "text": "That's plenty to make progress. Would you rather focus on strength with weights, or on cardio like running and cycling?",
+   "est_sec": 6.3,
+   "gap_before": 0.36,
    "role": "reply",
-   "block": "moving_house.ctx2"
+   "block": "fitness.ctx1"
   },
   {
    "speaker": "user",
-   "text": "Can I have twenty seconds to think? Ask me again after.",
-   "est_sec": 3.51,
-   "gap_before": 1.09,
+   "text": "Let me mull it over for twenty seconds. Then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.58,
    "event": "instruction",
    "kind": "think_time",
    "wait_sec": 20,
-   "phrasing": "think_instr_16"
+   "phrasing": "think_instr_13"
   },
   {
    "speaker": "moshi",
-   "text": "So, hire movers to do the packing, or tackle it yourselves?",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.36,
+   "role": "ack",
+   "phrasing": "ack_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Time's up. For your three sessions a week, weights or cardio?",
    "est_sec": 3.51,
    "role": "resume",
-   "block": "moving_house.ctx2",
+   "block": "fitness.ctx1",
    "anchor": {
-    "turn": 2,
-    "offset": 20.49
+    "turn": 4,
+    "offset": 20.56
    }
   },
   {
    "speaker": "user",
-   "text": "We'll do it ourselves. Movers are so expensive.",
-   "est_sec": 2.58,
-   "gap_before": 0.78,
+   "text": "Strength. I want to feel stronger carrying the groceries.",
+   "est_sec": 2.89,
+   "gap_before": 0.97,
    "event": "ordinary_request",
-   "block": "moving_house.ctx2"
+   "block": "fitness.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. Start with the rooms you use least, a few boxes each evening.",
-   "est_sec": 4.13,
-   "gap_before": 1.01,
+   "text": "Great goal. Start with squats, push-ups and rows, three sets each, and add weight slowly.",
+   "est_sec": 4.75,
+   "gap_before": 0.6,
    "role": "followup",
-   "block": "moving_house.ctx2"
+   "block": "fitness.ctx1"
   }
  ]
 }

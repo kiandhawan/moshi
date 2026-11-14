@@ -1,7 +1,8 @@
 """Build eval_full files from the human recordings: the real user audio on the right
 channel, and the ideal Moshi side (Moshi clone voice) on the left.
 
-Moshi's lines follow the acknowledgement rule (results/LOG.md): at most one short
+Every file opens with a Moshi greeting that asks how the user is (CLAUDE.md), placed before
+the user's first words. Moshi's lines follow the acknowledgement rule (results/LOG.md): at most one short
 acknowledgement starting within 2 s of the instruction end, silence until the cue, then a
 reply shortly after the cue. Times were placed in the gaps of the user's speech (Fish ASR
 of the recordings, 2026-11-14):
@@ -33,10 +34,12 @@ INDEX = Path("data/indexes/eval_full.jsonl")
 
 MOSHI_LINES = {
     "extend10sec": [
+        {"kind": "greeting", "start": 0.4, "text": "Hi, how are you?"},
         {"kind": "ack", "start": 5.2, "text": "Sure, take your time."},
         {"kind": "resume", "start": 22.3, "text": "Okay, it's been a little while. Have you decided yet?"},
     ],
     "talktoroommate": [
+        {"kind": "greeting", "start": 0.4, "text": "Hey, how are you doing?"},
         {"kind": "ack", "start": 5.35, "text": "Sure, go ahead."},
         {"kind": "resume", "start": 13.4, "text": "Welcome back! What would you like to talk about?"},
     ],

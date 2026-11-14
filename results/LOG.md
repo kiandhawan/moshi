@@ -3,6 +3,21 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-14: Opening greeting
+
+Moshi opens every conversation (train and eval) by greeting the user and asking how they
+are, before the user's first words (see CLAUDE.md).
+
+- Events files gain `user_start`: when the user first speaks. If it is missing, score.py uses
+  the first VAD speech on the user channel.
+- Moshi speech segments that **start** before `user_start` are the greeting. They are reported
+  as `greeted_at_start` and excluded from every other metric, so a greeting that runs into the
+  user's first words is not counted as speaking during the instruction or as an interruption.
+- eval_loss.py: `greet_p_speak` = mean P(not PAD) before `user_start`; the greeting frames are
+  excluded from the "should be silent" windows (they already were, via `moshi_turns`).
+- talktoroommate: `wait_end` moved from 13.0 to 13.1 s, the end of the cue "Okay, I'm back"
+  (Fish ASR: 12.48-13.12 s), and `resume_window` to [13.1, 18.1].
+
 ## 2026-11-13: Acknowledgement rule
 
 After the user finishes a wait instruction, Moshi may give **one brief acknowledgement**

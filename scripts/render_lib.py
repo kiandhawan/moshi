@@ -19,7 +19,8 @@ Conversation spec (a dict):
   user_audio   optional path to a recorded user side (mono, or right channel of stereo)
   user_lines   [{text, voice, start}]  TTS lines for the user/friend side
   moshi_lines  [{text, start, kind}]   kind: greeting | ack | resume | ordinary
-  events       the standard events fields; "id" and "group" are filled in
+  events       the standard events fields; "id" and "group" are filled in, and
+               "user_start" (the user's first words) from user_lines if not given
 
 TTS (Fish Audio, 24 kHz) and word timings (Fish ASR) are cached in data/tts_cache/, keyed
 by model + voice + text, so re-rendering costs nothing. Reads FISH_API_KEY from the
@@ -196,6 +197,8 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
     sphn.write_wav(str(wav_p), np.stack([left, right]), sample_rate=SR)
     wav_p.with_suffix(".json").write_text(json.dumps({"alignments": alignments}, indent=1))
     events = {"id": cid, "group": spec["group"], **spec.get("events", {}), "moshi_turns": turns}
+    if events.get("user_start") is None and spec.get("user_lines"):
+        events["user_start"] = round(min(l["start"] for l in spec["user_lines"]), 3)
     ev_p = out_dir / f"{cid}.events.json"
     ev_p.write_text(json.dumps(events, indent=2) + "\n")
     rel = lambda p: os.path.relpath(p.resolve(), index_dir.resolve())  # noqa: E731
