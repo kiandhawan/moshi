@@ -133,7 +133,7 @@ def synth(client, text: str, voice: str) -> tuple[np.ndarray, list[tuple[str, fl
     wav_p, ali_p = CACHE / f"{key}.wav", CACHE / f"{key}.json"
     if wav_p.exists() and ali_p.exists():
         x, _ = sphn.read(str(wav_p), sample_rate=SR)
-        return x[0], [tuple(w) for w in json.loads(ali_p.read_text())["words"]]
+        return x[0], clamp_words(json.loads(ali_p.read_text())["words"], len(x[0]) / SR)
     from fishaudio.types import TTSConfig
     raw = client.tts.convert(text=text, reference_id=voice, format="wav", model=MODEL,
                              config=TTSConfig(format="wav", sample_rate=SR))
@@ -148,7 +148,13 @@ def synth(client, text: str, voice: str) -> tuple[np.ndarray, list[tuple[str, fl
     sphn.write_wav(str(wav_p), x[None], sample_rate=SR)
     ali_p.write_text(json.dumps({"model": MODEL, "voice": voice, "text": text,
                                  "asr_text": asr.text, "words": words}, indent=1))
-    return x, words
+    return x, clamp_words(words, len(x) / SR)
+
+
+def clamp_words(words, dur: float) -> list[tuple[str, float, float]]:
+    """Keep word times inside the clip: the ASR's last timestamp can run a few tens of ms
+    past the end of the (trimmed) audio."""
+    return [(w, round(min(s, dur - 0.01), 3), round(min(e, dur), 3)) for w, s, e in words]
 
 
 def _place(track: np.ndarray, x: np.ndarray, start: float) -> np.ndarray:
@@ -188,9 +194,9 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
     if dur >= MAX_SEC:
         raise ValueError(f"{spec['id']}: {dur:.1f}s is not shorter than duration_sec={MAX_SEC}")
     left, right = np.pad(left, (0, n - len(left))), np.pad(right, (0, n - len(right)))
-    peak = max(np.abs(left).max(), np.abs(right).max(), 1e-9)
-    if peak > 0.99:  # avoid clipping where lines overlap
-        left, right = left * 0.99 / peak, right * 0.99 / peak
+    # Avoid clipping, per channel, so a recorded user side is never altered by a loud TTS line.
+    left, right = (ch * (0.99 / max(np.abs(ch).max(), 1e-9)) if np.abs(ch).max() > 0.99 else ch
+                   for ch in (left, right))
 
     cid = spec["id"]
     wav_p = out_dir / f"{cid}.wav"
