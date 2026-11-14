@@ -9,7 +9,10 @@ Inputs
 
 Events format (one JSON per test file; times in seconds on the user-audio timeline):
   {"id": "extend10sec",            # matches the output file stem <id>_seed<N>
-   "group": "timed_wait",          # timed_wait | friend_wait | describe_options | ordinary
+   "group": "timed_wait",          # the wait type (timed_wait, friend_wait, ... or a script type)
+   "groups": ["human", "familiar_type"],  # what is new about the file (summary breaks down by
+                                   # these): familiar_type, new_type_phone, new_type_door,
+                                   # new_type_reading, extension, implicit_return, ordinary, human
    "user_start": 2.0,              # when the user first speaks (default: first VAD speech on
                                    # the user channel); Moshi speech before it is the greeting
    "instruction_start": 2.0,       # when the user starts the wait instruction; null if none
@@ -82,7 +85,7 @@ REPO = Path(__file__).resolve().parent.parent
 METRICS_DIR = REPO / "results" / "metrics"
 SUMMARY_PATH = REPO / "results" / "summary.md"
 REQUIRED_FIELDS = ("id", "group")
-OPTIONAL_DEFAULTS = {"user_start": None, "instruction_start": None, "instruction_end": None, "wait_end": None,
+OPTIONAL_DEFAULTS = {"groups": [], "user_start": None, "instruction_start": None, "instruction_end": None, "wait_end": None,
                      "resume_window": None, "distractors": [], "ordinary_requests": [],
                      "ordinary_window": ORDINARY_WINDOW}
 
@@ -242,7 +245,8 @@ def main() -> None:
             if user_start is None:
                 user_segs = vad_segments(model, wav[1], sr)
                 user_start = user_segs[0][0] if user_segs else None
-            row = {"model": args.name, "id": ev["id"], "group": ev["group"], "seed": meta["seed"],
+            row = {"model": args.name, "id": ev["id"], "group": ev["group"], "groups": ev["groups"],
+                   "seed": meta["seed"],
                    "output": str(jp.with_suffix(".wav")), "duration_sec": round(dur, 2),
                    "ack_grace": args.ack_grace,
                    **score_run(ev, segs, tsegs, args.ack_grace, user_start),

@@ -19,3 +19,14 @@ Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); d
 | base | friend_wait | 100% (3/3) [44%-100%] | 0% (0/3) [0%-56%] | 67% (2/3) [21%-94%] | 0% (0/3) [0%-56%] | 0.26s (n=2) | 0.73 |
 | base | human_ordinary | 100% (3/3) [44%-100%] | - | - | - | - | 0.79 |
 | base | timed_wait | 100% (3/3) [44%-100%] | 100% (3/3) [44%-100%] | 0% (0/3) [0%-56%] | 0% (0/3) [0%-56%] | 1.20s (n=1) | 0.72 |
+
+## By eval group
+
+What is new about each file (events `groups`): familiar_type, new_type_phone, new_type_door, new_type_reading, extension, implicit_return, ordinary, human. A file with several tags is counted in each.
+
+| model | eval group | files | runs | wait success | interrupt rate | resume on time | distractor response | ordinary response | greeted at start | resume latency median |
+|---|---|---|---|---|---|---|---|---|---|---|
+| base | extension | 1 | 3 | 0% (0/3) [0%-56%] | 67% (2/3) [21%-94%] | 33% (1/3) [6%-79%] | - | - | 100% (3/3) [44%-100%] | 1.20s (n=1) |
+| base | familiar_type | 2 | 6 | 0% (0/6) [0%-39%] | 83% (5/6) [44%-97%] | 50% (3/6) [19%-81%] | 67% (2/3) [21%-94%] | - | 100% (6/6) [61%-100%] | 0.31s (n=3) |
+| base | human | 3 | 9 | 0% (0/6) [0%-39%] | 83% (5/6) [44%-97%] | 50% (3/6) [19%-81%] | 67% (2/3) [21%-94%] | 67% (6/9) [35%-88%] | 100% (9/9) [70%-100%] | 0.31s (n=3) |
+| base | ordinary | 1 | 3 | - | - | - | - | 67% (6/9) [35%-88%] | 100% (3/3) [44%-100%] | - |

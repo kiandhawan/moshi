@@ -125,6 +125,10 @@ def events_for(script: dict, turns: list[dict]) -> dict:
     user = [t for t in turns if t["speaker"] != "moshi"]
     ev = {"user_start": user[0]["start"] if user else None, "type": script["type"],
           "conditions": script.get("conditions", [])}
+    if script["split"] == "eval":
+        if not script.get("groups"):
+            raise SystemExit(f"{script['id']}: eval script without groups (regenerate it)")
+        ev["groups"] = script["groups"]
     instr = next((t for t in turns if t.get("event") == "instruction"), None)
     if instr:
         ev["instruction_start"], ev["instruction_end"] = instr["start"], instr["end"]
@@ -170,6 +174,7 @@ def manifest_row(script: dict, row: dict, ev: dict, turns: list[dict], path: str
     return {
         "id": script["id"], "split": script["split"], "type": script["type"],
         "wait_type": script.get("wait_type"), "conditions": script.get("conditions", []),
+        "groups": script.get("groups"),
         "topic": script["topic"], "topics": script["topics"], "voices": script["voices"],
         "friend_name": script.get("friend_name"), "phrasing_ids": script["phrasing_ids"],
         "block_ids": script["block_ids"], "path": path,

@@ -50,6 +50,7 @@ All runs start from the same checkpoint and use the same seed.
   - resume latency after the cue
   - false resumes on distractors
   - ordinary-response rate
+- **Eval groups:** every eval script and events file has `groups`, a list of what is new about it: `familiar_type` (trained wait type, only held-out voices/phrasings/topic), `new_type_phone`, `new_type_door`, `new_type_reading`, `extension`, `implicit_return`, `ordinary`, `human`. A file can have several. `score.py` (summary "By eval group") and `eval_loss.py` (`results/metrics/loss_eval_groups.csv`) break results down by them.
 - Plus a small human-recorded test set: `data/human/*.wav` with `*.events.json`, indexed by `data/indexes/human.jsonl`.
 - **Acknowledgement rule:** Moshi may give one brief acknowledgement (e.g. "Sure, take your time") within **2.0 s** after the instruction ends. Silence is required from then until the cue, and any speech after that 2 s window counts as an interruption. Implemented as `scripts/score.py --ack-grace 2.0` (default). Events files use the standardized fields `id, group, user_start, instruction_end, wait_end, resume_window, distractors, ordinary_requests` (+ optional `notes`).
 

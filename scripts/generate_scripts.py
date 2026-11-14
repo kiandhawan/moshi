@@ -49,6 +49,7 @@ offset seconds after the end of turn number `turn`, used for deadlines). Optiona
 (distractor: friend_question | question_to_other | near_miss | pause | self_talk; return_cue:
 explicit | implicit | early_end; ordinary_request: wait_like), role for
 Moshi turns (greeting | ack | resume | reply | followup), block/phrasing IDs.
+Eval scripts also carry "groups", the list of what is new about them (eval_groups()).
 In eval scripts every Moshi turn has reference_only: true. These are the ideal replies, used
 for eval_full and loss evaluation only, never rendered into the model's input.
 
@@ -509,6 +510,27 @@ def add_wait_like(turns: list[dict], P: Pools, rng: random.Random, b: Builder) -
                         {"speaker": "moshi", "text": reply}] + turns[k:]
 
 
+NEW_TYPE_TAG = {"phone_call": "new_type_phone", "door": "new_type_door", "reading": "new_type_reading"}
+
+
+def eval_groups(kind: str, conditions) -> list[str]:
+    """What is new about an eval script (a list; a script can be in several groups):
+    familiar_type   a trained wait type, with only held-out voices / phrasings / topic
+    new_type_phone, new_type_door, new_type_reading   an eval-only wait type
+    extension       "give me five more seconds" before the deadline (eval only)
+    implicit_return  return without an explicit cue, e.g. "Anyway, where were we?" (eval only)
+    ordinary        an ordinary conversation, no wait
+    (The human recordings carry the tag "human" in their events files.)"""
+    if kind == "ordinary":
+        return ["ordinary"]
+    tags = [NEW_TYPE_TAG.get(kind, "familiar_type")]
+    if "extension" in conditions:
+        tags.append("extension")
+    if "implicit" in conditions:
+        tags.append("implicit_return")
+    return tags
+
+
 def assign_conditions(kinds: list[str], split: str, rng: random.Random) -> list[set[str]]:
     """Exact-count condition assignment (at least one where the type is present), so even a
     small pilot contains every case."""
@@ -573,10 +595,12 @@ def main() -> None:
         sid = f"{args.split}_{args.seed:02d}_{i:05d}"
         script = {"id": sid, "split": args.split, "seed": args.seed, **s}
         if args.split == "eval":
+            script["groups"] = eval_groups(kind, s["conditions"])
             script["note"] = ("Moshi turns are reference_only: the ideal replies, for eval_full and "
                               "loss evaluation. Never render them into the model's input.")
         (args.out / f"{sid}.json").write_text(json.dumps(script, indent=1, ensure_ascii=False) + "\n")
-        rows.append({"id": sid, "type": kind, "conditions": s["conditions"], "topic": s["topic"],
+        rows.append({"id": sid, "type": kind, "conditions": s["conditions"], "groups": script.get("groups"),
+                     "topic": s["topic"],
                      "est_total_sec": s["est_total_sec"], "est_speech_sec": s["est_speech_sec"],
                      "wait_sec": s.get("wait_sec")})
     (args.out / "index.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
@@ -585,6 +609,9 @@ def main() -> None:
     print(f"{len(rows)} {args.split} scripts -> {args.out}: {dict(Counter(r['type'] for r in rows))}")
     print(f"  estimated {tot / 60:.1f} min total, {sp / 60:.1f} min speech; "
           f"length {min(r['est_total_sec'] for r in rows):.0f}-{max(r['est_total_sec'] for r in rows):.0f} s")
+    if args.split == "eval":
+        g = Counter(t for r in rows for t in r["groups"])
+        print("  eval groups (a script can be in several): " + ", ".join(f"{k} {v}" for k, v in g.most_common()))
 
 
 if __name__ == "__main__":

@@ -3,6 +3,15 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-14: Eval groups
+
+Eval files are tagged with what is new about them (events `groups`, a list): familiar_type,
+new_type_phone, new_type_door, new_type_reading, extension, implicit_return, ordinary, human.
+Human files: extend10sec = human, familiar_type, extension (the user extends the wait);
+talktoroommate = human, familiar_type; regularconvo = human, ordinary. The old `group` field
+(wait type) is kept for the existing tables. eval_loss's ordinary text loss now covers every
+Moshi turn that answers an ordinary request (reply / followup in rendered files).
+
 ## 2026-11-14: Opening greeting
 
 Moshi opens every conversation (train and eval) by greeting the user and asking how they

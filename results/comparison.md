@@ -15,10 +15,11 @@ Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); d
 | resume on time | 67% (2/3) [21%-94%] |
 | distractor response | 67% (2/3) [21%-94%] |
 | ordinary response | - |
+| greeted at start | 100% (3/3) [44%-100%] |
 | spoke during instr. | 0% (0/3) [0%-56%] |
 | acknowledged | 67% (2/3) [21%-94%] |
-| spoke over cue | 33% (1/3) [6%-79%] |
-| resume latency median | 0.36s (n=2) |
+| spoke over cue | 0% (0/3) [0%-56%] |
+| resume latency median | 0.26s (n=2) |
 
 ## human_ordinary
 
@@ -31,6 +32,7 @@ Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); d
 | resume on time | - |
 | distractor response | - |
 | ordinary response | 67% (6/9) [35%-88%] |
+| greeted at start | 100% (3/3) [44%-100%] |
 | resume latency median | - |
 
 ## timed_wait
@@ -44,7 +46,73 @@ Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); d
 | resume on time | 33% (1/3) [6%-79%] |
 | distractor response | - |
 | ordinary response | - |
+| greeted at start | 100% (3/3) [44%-100%] |
 | spoke during instr. | 100% (3/3) [44%-100%] |
 | acknowledged | 0% (0/3) [0%-56%] |
 | spoke over cue | 0% (0/3) [0%-56%] |
 | resume latency median | 1.20s (n=1) |
+
+## eval group: extension
+
+| metric | base |
+|---|---|
+| files | 1 |
+| runs | 3 |
+| wait success | 0% (0/3) [0%-56%] |
+| interrupt rate | 67% (2/3) [21%-94%] |
+| resume on time | 33% (1/3) [6%-79%] |
+| distractor response | - |
+| ordinary response | - |
+| greeted at start | 100% (3/3) [44%-100%] |
+| spoke during instr. | 100% (3/3) [44%-100%] |
+| acknowledged | 0% (0/3) [0%-56%] |
+| spoke over cue | 0% (0/3) [0%-56%] |
+| resume latency median | 1.20s (n=1) |
+
+## eval group: familiar_type
+
+| metric | base |
+|---|---|
+| files | 2 |
+| runs | 6 |
+| wait success | 0% (0/6) [0%-39%] |
+| interrupt rate | 83% (5/6) [44%-97%] |
+| resume on time | 50% (3/6) [19%-81%] |
+| distractor response | 67% (2/3) [21%-94%] |
+| ordinary response | - |
+| greeted at start | 100% (6/6) [61%-100%] |
+| spoke during instr. | 50% (3/6) [19%-81%] |
+| acknowledged | 33% (2/6) [10%-70%] |
+| spoke over cue | 0% (0/6) [0%-39%] |
+| resume latency median | 0.31s (n=3) |
+
+## eval group: human
+
+| metric | base |
+|---|---|
+| files | 3 |
+| runs | 9 |
+| wait success | 0% (0/6) [0%-39%] |
+| interrupt rate | 83% (5/6) [44%-97%] |
+| resume on time | 50% (3/6) [19%-81%] |
+| distractor response | 67% (2/3) [21%-94%] |
+| ordinary response | 67% (6/9) [35%-88%] |
+| greeted at start | 100% (9/9) [70%-100%] |
+| spoke during instr. | 50% (3/6) [19%-81%] |
+| acknowledged | 33% (2/6) [10%-70%] |
+| spoke over cue | 0% (0/6) [0%-39%] |
+| resume latency median | 0.31s (n=3) |
+
+## eval group: ordinary
+
+| metric | base |
+|---|---|
+| files | 1 |
+| runs | 3 |
+| wait success | - |
+| interrupt rate | - |
+| resume on time | - |
+| distractor response | - |
+| ordinary response | 67% (6/9) [35%-88%] |
+| greeted at start | 100% (3/3) [44%-100%] |
+| resume latency median | - |

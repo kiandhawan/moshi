@@ -90,6 +90,15 @@ def by_group(rows: list[dict]) -> dict[str, list[dict]]:
     return dict(sorted(g.items()))
 
 
+def by_tag(rows: list[dict]) -> dict[str, list[dict]]:
+    """Rows per eval group tag (events "groups"); a row with several tags is in each."""
+    g: dict[str, list[dict]] = defaultdict(list)
+    for r in rows:
+        for t in r.get("groups") or []:
+            g[t].append(r)
+    return dict(sorted(g.items()))
+
+
 def md_table(header: list[str], body: list[list[str]]) -> str:
     lines = ["| " + " | ".join(header) + " |", "|" + "---|" * len(header)]
     lines += ["| " + " | ".join(row) + " |" for row in body]
@@ -106,13 +115,26 @@ def summary_markdown(models: dict[str, list[dict]]) -> str:
             sec.append([model, group]
                        + [fmt_rate(*count(rs, key, kind)) for _, key, kind in SECONDARY]
                        + [latency_cell(rs), iou_cell(rs)])
+    tag_rows = []
+    for model, rows in models.items():
+        for tag, rs in by_tag(rows).items():
+            tag_rows.append([model, tag, str(n_files(rs)), str(len(rs))]
+                            + [fmt_rate(*count(rs, key, kind)) for _, key, kind in PRIMARY]
+                            + [fmt_rate(*count(rs, "greeted_at_start", "run")), latency_cell(rs)])
+    tag_part = ("" if not tag_rows else
+                "\n## By eval group\n\n"
+                "What is new about each file (events `groups`): familiar_type, new_type_phone, new_type_door, "
+                "new_type_reading, extension, implicit_return, ordinary, human. A file with several tags is "
+                "counted in each.\n\n"
+                + md_table(["model", "eval group", "files", "runs"] + [lbl for lbl, _, _ in PRIMARY]
+                           + ["greeted at start", "resume latency median"], tag_rows) + "\n")
     return ("## Primary metrics\n\n"
             "Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); "
             "distractor and ordinary rates are over individual events x seeds.\n\n"
             + md_table(["model", "group", "files", "runs"] + [lbl for lbl, _, _ in PRIMARY], prim)
             + "\n\n## Secondary metrics\n\n"
             + md_table(["model", "group"] + [lbl for lbl, _, _ in SECONDARY]
-                       + ["resume latency median", "VAD/text IoU"], sec) + "\n")
+                       + ["resume latency median", "VAD/text IoU"], sec) + "\n" + tag_part)
 
 
 def comparison_markdown(models: dict[str, list[dict]]) -> str:
@@ -121,8 +143,11 @@ def comparison_markdown(models: dict[str, list[dict]]) -> str:
     groups = sorted({r["group"] for rows in models.values() for r in rows})
     parts = ["Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); "
              "distractor and ordinary rates are over individual events x seeds.\n"]
-    for group in groups:
-        per = {m: [r for r in models[m] if r["group"] == group] for m in names}
+    tags = sorted({t for rows in models.values() for r in rows for t in r.get("groups") or []})
+    sections = [(g, lambda r, g=g: r["group"] == g) for g in groups] + \
+               [(f"eval group: {t}", lambda r, t=t: t in (r.get("groups") or [])) for t in tags]
+    for group, keep in sections:
+        per = {m: [r for r in models[m] if keep(r)] for m in names}
         body = [["files"] + [str(n_files(per[m])) if per[m] else "-" for m in names],
                 ["runs"] + [str(len(per[m])) if per[m] else "-" for m in names]]
         for lbl, key, kind in PRIMARY:  # always shown, "-" when nothing to count

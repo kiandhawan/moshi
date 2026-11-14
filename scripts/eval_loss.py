@@ -39,8 +39,9 @@ Metrics (one CSV row per checkpoint, pooled over all frames of all files; a fram
   distractor_p_pad
       Mean P(PAD) over the --distractor-sec (3.0) s after each distractor.
   ordinary_text_loss
-      Training text loss restricted to the frames of the ideal Moshi turns of kind
-      "ordinary" (plus the frame before each, where the EPAD goes), pooled over frames.
+      Training text loss restricted to the frames of the ideal Moshi turns that answer an
+      ordinary request (kind ordinary in the human answer keys, reply / followup in rendered
+      files; plus the frame before each, where the EPAD goes), pooled over frames.
 In the "should be silent" windows, frames where the ideal Moshi side is speaking (the
 opening greeting, or an acknowledgement running past the 2 s mark; see moshi_turns) are left
 out, so the greeting never counts as speaking during the instruction or as an interruption.
@@ -49,8 +50,11 @@ Usage:
   python scripts/eval_loss.py                                  # base model
   python scripts/eval_loss.py --checkpoint runs/X/checkpoints/checkpoint_000100/consolidated
 Options: --data (default data/indexes/eval_full.jsonl), --label, --gpu, --config.
-Writes results/metrics/loss_eval.csv (a row with the same label is replaced) and
-results/metrics/loss_eval/<label>.jsonl (per-file numbers).
+Writes results/metrics/loss_eval.csv (a row with the same label is replaced), one row per
+(checkpoint, eval group) in results/metrics/loss_eval_groups.csv (groups from the events
+files: familiar_type, new_type_phone/door/reading, extension, implicit_return, ordinary,
+human; a file with several tags counts in each), and results/metrics/loss_eval/<label>.jsonl
+(per-file numbers).
 """
 
 import argparse
@@ -66,6 +70,7 @@ os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0"  # see run_inference.py
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))  # the training package `finetune`
 
+ORDINARY_KINDS = {"ordinary", "reply", "followup"}  # Moshi turns that answer an ordinary request
 COLUMNS = ["label", "checkpoint", "step", "files", "val_loss", "text_loss", "audio_loss",
            "greet_p_speak", "greet_target_speak", "greet_frames", "wait_p_pad", "wait_frames", "cue_p_speak", "cue_target_speak", "cue_frames",
            "distractor_p_pad", "distractor_frames", "ordinary_text_loss", "ordinary_frames",
@@ -163,8 +168,7 @@ def main() -> None:
 
     PAD, EPAD = model.text_padding_token_id, model.end_of_text_padding_id
     fps = mimi.frame_rate
-    tot = {k: 0.0 for k in ("greet", "greet_t", "wait", "cue", "cue_t", "dis", "ord")}
-    cnt = {k: 0 for k in ("greet", "wait", "cue", "dis", "ord")}
+    SUM_KEYS, CNT_KEYS = ("greet", "greet_t", "wait", "cue", "cue_t", "dis", "ord"), ("greet", "wait", "cue", "dis", "ord")
     files, per_file = 0, []
     t0 = time.perf_counter()
     for sample in samples:
@@ -180,6 +184,7 @@ def main() -> None:
             mode="audio", first_codebook_weight_multiplier=targs.first_codebook_weight_multiplier).item()
         files += 1
         rec = {"path": path, "crop_start": start, "text_loss": text_loss, "audio_loss": audio_loss}
+        tot, cnt = {k: 0.0 for k in SUM_KEYS}, {k: 0 for k in CNT_KEYS}  # this file's sums / frame counts
 
         ev = events_by_wav.get(str(Path(path).resolve()))
         if ev is not None:
@@ -217,13 +222,14 @@ def main() -> None:
                 tot["dis"] += p_pad[m].sum().item(); cnt["dis"] += int(m.sum())
             m = torch.zeros(T, dtype=torch.bool, device=valid.device)
             for turn in ev.get("moshi_turns", []):
-                if turn["kind"] == "ordinary":
+                if turn["kind"] in ORDINARY_KINDS:
                     m |= frames(turn["start"] - 1 / fps, turn["end"])
             if m.any():
                 ol = compute_loss_with_mask(out.text_logits, text_target, out.text_mask & m[None, None],
                                             **loss_kw).item()
                 tot["ord"] += ol * int(m.sum()); cnt["ord"] += int(m.sum())
                 rec["ordinary_text_loss"] = ol
+        rec.update(groups=(ev or {}).get("groups", []), sums=tot, counts=cnt)
         per_file.append(rec)
         print(f"  {Path(path).name}: text {text_loss:.3f} audio {audio_loss:.3f} "
               + " ".join(f"{k} {v:.3f}" for k, v in rec.items()
@@ -232,22 +238,35 @@ def main() -> None:
     if not files:
         sys.exit(f"No samples in {args.data}")
 
-    mean = lambda k: sum(r[k] for r in per_file) / files  # noqa: E731
-    ratio = lambda a, n: round(a / n, 4) if n else None  # noqa: E731
-    row = {
-        "label": label, "checkpoint": str(args.checkpoint) if args.checkpoint else "",
-        "step": step if step is not None else "", "files": files,
-        "val_loss": round(mean("text_loss") + mean("audio_loss"), 4),
-        "text_loss": round(mean("text_loss"), 4), "audio_loss": round(mean("audio_loss"), 4),
-        "greet_p_speak": ratio(tot["greet"], cnt["greet"]),
-        "greet_target_speak": ratio(tot["greet_t"], cnt["greet"]), "greet_frames": cnt["greet"],
-        "wait_p_pad": ratio(tot["wait"], cnt["wait"]), "wait_frames": cnt["wait"],
-        "cue_p_speak": ratio(tot["cue"], cnt["cue"]), "cue_target_speak": ratio(tot["cue_t"], cnt["cue"]),
-        "cue_frames": cnt["cue"],
-        "distractor_p_pad": ratio(tot["dis"], cnt["dis"]), "distractor_frames": cnt["dis"],
-        "ordinary_text_loss": ratio(tot["ord"], cnt["ord"]), "ordinary_frames": cnt["ord"],
-        "date": time.strftime("%Y-%m-%d %H:%M"),
-    }
+    def aggregate(recs: list[dict]) -> dict:
+        """The metric columns for a set of files (frame-pooled, as described above)."""
+        tot = {k: sum(r["sums"][k] for r in recs) for k in SUM_KEYS}
+        cnt = {k: sum(r["counts"][k] for r in recs) for k in CNT_KEYS}
+        mean = lambda k: sum(r[k] for r in recs) / len(recs)  # noqa: E731
+        ratio = lambda a, n: round(a / n, 4) if n else None  # noqa: E731
+        return {
+            "files": len(recs),
+            "val_loss": round(mean("text_loss") + mean("audio_loss"), 4),
+            "text_loss": round(mean("text_loss"), 4), "audio_loss": round(mean("audio_loss"), 4),
+            "greet_p_speak": ratio(tot["greet"], cnt["greet"]),
+            "greet_target_speak": ratio(tot["greet_t"], cnt["greet"]), "greet_frames": cnt["greet"],
+            "wait_p_pad": ratio(tot["wait"], cnt["wait"]), "wait_frames": cnt["wait"],
+            "cue_p_speak": ratio(tot["cue"], cnt["cue"]), "cue_target_speak": ratio(tot["cue_t"], cnt["cue"]),
+            "cue_frames": cnt["cue"],
+            "distractor_p_pad": ratio(tot["dis"], cnt["dis"]), "distractor_frames": cnt["dis"],
+            "ordinary_text_loss": ratio(tot["ord"], cnt["ord"]), "ordinary_frames": cnt["ord"],
+        }
+
+    head = {"label": label, "checkpoint": str(args.checkpoint) if args.checkpoint else "",
+            "step": step if step is not None else ""}
+    date = time.strftime("%Y-%m-%d %H:%M")
+    row = {**head, **aggregate(per_file), "date": date}
+    tags = sorted({t for r in per_file for t in r["groups"]})
+    group_rows = [{**head, "eval_group": t, **aggregate([r for r in per_file if t in r["groups"]]), "date": date}
+                  for t in tags]
+    untagged = [r for r in per_file if not r["groups"]]
+    if untagged:
+        print(f"WARNING: {len(untagged)} files have no eval groups (events 'groups'), e.g. {untagged[0]['path']}")
     print(f"{files} files in {time.perf_counter() - t0:.1f}s")
     print(json.dumps(row, indent=1))
 
@@ -260,6 +279,22 @@ def main() -> None:
         w = csv.DictWriter(f, fieldnames=COLUMNS)
         w.writeheader()
         w.writerows(rows + [row])
+    gout = args.out.with_name(args.out.stem + "_groups.csv")
+    gcols = COLUMNS[:3] + ["eval_group"] + COLUMNS[3:]
+    grows = []
+    if gout.exists():
+        with gout.open() as f:
+            grows = [r for r in csv.DictReader(f) if r["label"] != label]
+    with gout.open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=gcols)
+        w.writeheader()
+        w.writerows(grows + group_rows)
+    print(f"{'eval group':18s} {'files':>5s} {'val_loss':>8s} {'greet':>6s} {'wait':>6s} {'cue':>6s} {'distr':>6s} {'ord':>6s}")
+    for g in group_rows:
+        f_ = lambda v: "-" if v is None else f"{v:.3f}"  # noqa: E731
+        print(f"{g['eval_group']:18s} {g['files']:5d} {g['val_loss']:8.4f} {f_(g['greet_p_speak']):>6s} "
+              f"{f_(g['wait_p_pad']):>6s} {f_(g['cue_p_speak']):>6s} {f_(g['distractor_p_pad']):>6s} "
+              f"{f_(g['ordinary_text_loss']):>6s}")
     detail = args.out.parent / "loss_eval" / f"{label.replace('/', '__')}.jsonl"
     detail.parent.mkdir(parents=True, exist_ok=True)
     detail.write_text("".join(json.dumps(r) + "\n" for r in per_file))
