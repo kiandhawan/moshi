@@ -3,6 +3,16 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-14: control_1h_v2
+
+A 1 h control so the 1 h runs have an ordinary-only counterpart, like control_10h_v2 for 10 h.
+`scripts/make_control_1h_v2.py`: the block-aligned (multiple of 20 files) prefix of
+control_10h_v2 whose total is closest to train_1h_v2's 1.103 h -> 80 files, 1.131 h (the 60-file
+cut gives 0.836 h, further off). All 80 are ordinary files of train_10h_v2 (control_10h_v2 starts
+with them); 24 are also in train_1h_v2 (all of its ordinary files). `configs/control_1h_v2.yaml`
+= smoke.yaml settings with this train_data; lr is null until the grid is set, so the config
+fails to load instead of silently using train.py's 1e-4 default.
+
 ## 2026-11-14: Data v2
 
 v2 of the data is a new set of folders and indexes (`data/v2/`, `data/indexes/*_v2.jsonl`,

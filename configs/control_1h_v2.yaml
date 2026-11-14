@@ -1,0 +1,48 @@
+# control_1h_v2: LoRA on ordinary conversations only, ~1.1 h (data/indexes/control_1h_v2.jsonl,
+# scripts/make_control_1h_v2.py). Same settings as configs/smoke.yaml except train_data, run_dir and lr.
+# NOT READY TO RUN: optim.lr is null on purpose (set it later; if the key were absent, train.py would
+# silently use its 1e-4 default). max_steps / ckpt_freq / eval_freq are still smoke.yaml's values.
+
+# data
+data:
+  eval_data: '/root/moshi-finetune/data/indexes/eval_full_subset_v2.jsonl'  # fixed stratified 40-file subset of eval v2 (scripts/make_eval_subset.py); all 403 eval_full_v2 files: eval_loss.py after training
+  shuffle: true
+  train_data: '/root/moshi-finetune/data/indexes/control_1h_v2.jsonl'
+
+# model
+moshi_paths:
+  hf_repo_id: "kyutai/moshiko-pytorch-bf16"
+
+full_finetuning: false
+lora:
+  enable: true
+  rank: 128
+  scaling: 2.
+  ft_embed: false
+
+first_codebook_weight_multiplier: 100.
+text_padding_weight: .5
+
+# optim
+duration_sec: 100
+batch_size: 16
+max_steps: 20
+gradient_checkpointing: true
+optim:
+  lr: null  # TO SET before running (same grid as the other runs)
+  weight_decay: 0.1
+  pct_start: 0.1  # example uses 0.05; with max_steps 20 that gives a 0-length warmup and OneCycleLR divides by zero
+
+# other
+seed: 0
+log_freq: 1
+eval_freq: 50
+do_eval: true
+do_ckpt: true
+ckpt_freq: 20
+
+save_adapters: true
+
+run_dir: "runs/control_1h_v2"
+
+# No wandb section: wandb is disabled when wandb.project is unset.
