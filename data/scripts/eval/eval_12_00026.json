@@ -1,0 +1,138 @@
+{
+ "id": "eval_12_00026",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 26,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "wedding_planning"
+ ],
+ "reading": {
+  "material": "article",
+  "sec": 18.8
+ },
+ "topic": "wedding_planning",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_15",
+  "greet_ans_18",
+  "read_instr_10",
+  "ack_08",
+  "read_cue_10"
+ ],
+ "block_ids": [
+  "wedding_planning.ctx3"
+ ],
+ "est_total_sec": 55.63,
+ "est_speech_sec": 31.38,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.59,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.92,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "My best friend's wedding is in three weeks and I'm giving a speech.",
+   "est_sec": 4.13,
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What an honor. Do you want it to be mostly funny stories, or more heartfelt and sentimental?",
+   "est_sec": 5.37,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "wedding_planning.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, let me finish reading this article. I'll tell you when I'm done.",
+   "est_sec": 4.44,
+   "gap_before": 0.99,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.21,
+   "role": "ack",
+   "phrasing": "ack_08",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, finished.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 18.8
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, all read? So, is the speech going to be funny or heartfelt?",
+   "est_sec": 4.13,
+   "gap_before": 0.32,
+   "role": "resume",
+   "block": "wedding_planning.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Heartfelt. She'd hate it if I told embarrassing stories.",
+   "est_sec": 2.89,
+   "gap_before": 0.38,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then talk about how you met and what makes her partner right for her. Keep it under five minutes.",
+   "est_sec": 5.99,
+   "gap_before": 0.55,
+   "role": "followup",
+   "block": "wedding_planning.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

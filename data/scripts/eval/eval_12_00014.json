@@ -1,0 +1,128 @@
+{
+ "id": "eval_12_00014",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 14,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "family_visit"
+ ],
+ "topic": "family_visit",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_27",
+  "describe_instr_03",
+  "describe_cue_09"
+ ],
+ "block_ids": [
+  "family_visit.opt2"
+ ],
+ "est_total_sec": 59.09,
+ "est_speech_sec": 45.64,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.41,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.32,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm visiting my brother next month and I have to choose how to get there.",
+   "est_sec": 4.75,
+   "gap_before": 0.46,
+   "block": "family_visit.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me go through every option before you say anything.",
+   "est_sec": 3.2,
+   "gap_before": 0.76,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "One way is a direct flight, only an hour, but it leaves at six in the morning.",
+   "est_sec": 5.37,
+   "gap_before": 1.36,
+   "block": "family_visit.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is the train, about five hours, cheaper, and I could work on my laptop.",
+   "est_sec": 4.75,
+   "gap_before": 1.86,
+   "block": "family_visit.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I could drive, which takes four hours, but then I'd have the car while I'm there.",
+   "est_sec": 5.37,
+   "gap_before": 1.81,
+   "block": "family_visit.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last option is the overnight bus, super cheap but probably not very comfortable.",
+   "est_sec": 4.75,
+   "gap_before": 2.71,
+   "block": "family_visit.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "So, that's all of them. Tell me what you think.",
+   "est_sec": 3.2,
+   "gap_before": 0.79,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd skip the overnight bus unless money is really tight. Does your brother live somewhere you can get around without a car? If yes, take the train, and if not, driving might be worth it.",
+   "est_sec": 10.95,
+   "gap_before": 1.47,
+   "role": "resume",
+   "block": "family_visit.opt2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

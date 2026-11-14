@@ -1,0 +1,126 @@
+{
+ "id": "eval_12_00059",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 59,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "home_office"
+ ],
+ "topic": "home_office",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_30",
+  "describe_instr_03",
+  "describe_cue_06"
+ ],
+ "block_ids": [
+  "home_office.opt2"
+ ],
+ "est_total_sec": 55.75,
+ "est_speech_sec": 44.09,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.33,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "My company gave me five hundred dollars for my home office, and I'm stuck on how to spend it.",
+   "est_sec": 5.99,
+   "gap_before": 0.46,
+   "block": "home_office.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me go through every option before you say anything.",
+   "est_sec": 3.2,
+   "gap_before": 0.84,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "One option is a really good ergonomic chair, which would use up almost the whole budget.",
+   "est_sec": 5.06,
+   "gap_before": 0.73,
+   "block": "home_office.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a second monitor plus a nice keyboard and mouse.",
+   "est_sec": 3.51,
+   "gap_before": 1.98,
+   "block": "home_office.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a cheaper chair and a standing desk converter that sits on my current table.",
+   "est_sec": 5.06,
+   "gap_before": 2.01,
+   "block": "home_office.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Or finally, noise cancelling headphones and a good webcam for all my calls.",
+   "est_sec": 4.13,
+   "gap_before": 1.19,
+   "block": "home_office.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, those are all the choices. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.2,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The cheaper chair plus the standing desk converter gives you the most variety in posture for the money. The headphones and webcam only make sense if calls are a big part of your day.",
+   "est_sec": 10.64,
+   "gap_before": 0.71,
+   "role": "resume",
+   "block": "home_office.opt2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

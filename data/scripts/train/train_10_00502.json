@@ -1,0 +1,105 @@
+{
+ "id": "train_10_00502",
+ "split": "train",
+ "seed": 10,
+ "order_index": 502,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "weather_plans"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "weather_plans",
+ "voices": {
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_13",
+  "think_instr_20",
+  "ack_15"
+ ],
+ "block_ids": [
+  "weather_plans.ctx3"
+ ],
+ "est_total_sec": 46.81,
+ "est_speech_sec": 23.02,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.99,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a snowstorm coming Thursday night and I'm supposed to drive to my sister's on Friday.",
+   "est_sec": 5.06,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That could make the roads rough. Would you rather leave Thursday afternoon before it hits, or wait and go Saturday?",
+   "est_sec": 6.3,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "weather_plans.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I need twenty seconds to think. Then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.65,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.53,
+   "role": "ack",
+   "phrasing": "ack_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Time's up. What's the plan for the drive to your sister's?",
+   "est_sec": 3.51,
+   "role": "resume",
+   "block": "weather_plans.ctx3",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.13
+   }
+  }
+ ]
+}

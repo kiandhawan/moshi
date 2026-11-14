@@ -1,0 +1,164 @@
+{
+ "id": "eval_12_00308",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 308,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension",
+  "self_talk"
+ ],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 5,
+  "said_before_deadline_sec": 1.2
+ },
+ "deadline": {
+  "after_turn": 7,
+  "sec": 5
+ },
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_03",
+  "think_instr_06",
+  "ack_01",
+  "self_21",
+  "extension_05"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx1"
+ ],
+ "est_total_sec": 55.79,
+ "est_speech_sec": 33.65,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.43,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "I still haven't got anything for my dad and the holidays are in two weeks.",
+   "est_sec": 4.75,
+   "gap_before": 0.6,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Still time. Does he like gadgets, or would something like a nice sweater or a cooking class feel more like him?",
+   "est_sec": 6.61,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "holiday_gifts.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think for fifteen seconds, then check back with me.",
+   "est_sec": 3.51,
+   "gap_before": 1.08,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.23,
+   "role": "ack",
+   "phrasing": "ack_01",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, I keep going back and forth.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 4.35
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_21"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, give me another five seconds.",
+   "est_sec": 2.27,
+   "event": "extension",
+   "extra_sec": 5,
+   "phrasing": "extension_05",
+   "anchor": {
+    "turn": 4,
+    "offset": 13.8
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, so for your dad, a gadget, a sweater, or a cooking class?",
+   "est_sec": 4.13,
+   "role": "resume",
+   "block": "holiday_gifts.ctx1",
+   "anchor": {
+    "turn": 7,
+    "offset": 5.09
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A cooking class. He's been making the same three dishes for years.",
+   "est_sec": 3.82,
+   "gap_before": 0.38,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, perfect. Pick one with a cuisine he's never tried.",
+   "est_sec": 3.2,
+   "gap_before": 1.07,
+   "role": "followup",
+   "block": "holiday_gifts.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

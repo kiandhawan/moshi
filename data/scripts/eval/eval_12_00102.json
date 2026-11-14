@@ -1,0 +1,119 @@
+{
+ "id": "eval_12_00102",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 102,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "painting_art"
+ ],
+ "topic": "painting_art",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_09",
+  "describe_instr_18",
+  "describe_cue_12"
+ ],
+ "block_ids": [
+  "painting_art.opt1"
+ ],
+ "est_total_sec": 54.06,
+ "est_speech_sec": 42.75,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.81,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to take an art class this spring and I can't pick one.",
+   "est_sec": 4.44,
+   "gap_before": 0.34,
+   "block": "painting_art.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll go through the options one by one. Don't say anything until I finish.",
+   "est_sec": 4.44,
+   "gap_before": 0.65,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_18"
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is a six week watercolor course at the community center, pretty cheap, Tuesday nights.",
+   "est_sec": 5.37,
+   "gap_before": 1.28,
+   "block": "painting_art.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a figure drawing class downtown with live models, but it's twice the price.",
+   "est_sec": 4.75,
+   "gap_before": 2.61,
+   "block": "painting_art.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is an online oil painting course I could do whenever I want from home.",
+   "est_sec": 5.68,
+   "gap_before": 1.75,
+   "block": "painting_art.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 0.66,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The watercolor course is the easiest start and the cheapest. Figure drawing will improve your skills fastest, but only if the price doesn't bother you. The online oil course is flexible, though it's easy to lose motivation without a teacher in the room.",
+   "est_sec": 13.43,
+   "gap_before": 1.35,
+   "role": "resume",
+   "block": "painting_art.opt1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

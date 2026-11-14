@@ -1,0 +1,126 @@
+{
+ "id": "eval_12_00322",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 322,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_24",
+  "describe_instr_12",
+  "describe_cue_12"
+ ],
+ "block_ids": [
+  "learning_language.opt2"
+ ],
+ "est_total_sec": 51.05,
+ "est_speech_sec": 39.75,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.48,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "My company will pay for one language course, and I'm not sure which language to pick.",
+   "est_sec": 5.06,
+   "gap_before": 0.32,
+   "block": "learning_language.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll describe them all, so please hold off until I'm done.",
+   "est_sec": 3.51,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_12"
+  },
+  {
+   "speaker": "user",
+   "text": "First, there's German, since our biggest client is in Munich.",
+   "est_sec": 3.2,
+   "gap_before": 0.65,
+   "block": "learning_language.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Next, Mandarin, which would look great on my resume but seems really hard.",
+   "est_sec": 4.13,
+   "gap_before": 2.07,
+   "block": "learning_language.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's French, which I studied in school, so I wouldn't start from zero.",
+   "est_sec": 4.44,
+   "gap_before": 1.07,
+   "block": "learning_language.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Finally, Arabic, because we might open an office in Dubai next year.",
+   "est_sec": 3.82,
+   "gap_before": 1.75,
+   "block": "learning_language.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 0.55,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "French would give you the fastest progress because of your school background. Still, if the Dubai office really happens, Arabic could set you apart. How certain is that plan?",
+   "est_sec": 9.09,
+   "gap_before": 1.49,
+   "role": "resume",
+   "block": "learning_language.opt2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

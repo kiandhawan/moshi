@@ -1,0 +1,112 @@
+{
+ "id": "train_10_00127",
+ "split": "train",
+ "seed": 10,
+ "order_index": 127,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "fitness"
+ ],
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 10
+ },
+ "topic": "fitness",
+ "voices": {
+  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_01",
+  "think_instr_28"
+ ],
+ "block_ids": [
+  "fitness.ctx1"
+ ],
+ "est_total_sec": 43.45,
+ "est_speech_sec": 27.15,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.77,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.91,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to start working out again but I can only manage three short sessions a week.",
+   "est_sec": 5.37,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "fitness.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's plenty to make progress. Would you rather focus on strength with weights, or on cardio like running and cycling?",
+   "est_sec": 6.3,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "fitness.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll need ten seconds to think. Ask me again after that.",
+   "est_sec": 3.51,
+   "gap_before": 0.42,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, so what's your pick, strength or cardio?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "fitness.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 10.02
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Cardio, I think. My stamina is terrible.",
+   "est_sec": 2.27,
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "fitness.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then try intervals. Two minutes easy, one minute hard, repeated for about twenty minutes.",
+   "est_sec": 4.44,
+   "gap_before": 1.14,
+   "role": "followup",
+   "block": "fitness.ctx1"
+  }
+ ]
+}

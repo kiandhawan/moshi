@@ -1,0 +1,164 @@
+{
+ "id": "eval_12_00045",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 45,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "restaurant_choice"
+ ],
+ "topic": "restaurant_choice",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": "933563129e564b19a115bedd57b7406a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_21",
+  "door_instr_03",
+  "ack_12",
+  "door_03",
+  "door_cue_06"
+ ],
+ "block_ids": [
+  "restaurant_choice.ctx2"
+ ],
+ "est_total_sec": 61.45,
+ "est_speech_sec": 38.6,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.74,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.39,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "My parents are visiting and I want to take them out for dinner.",
+   "est_sec": 4.13,
+   "gap_before": 0.28,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Do they like trying new kinds of food, or would they be happier with something familiar like a steakhouse?",
+   "est_sec": 6.3,
+   "gap_before": 1.67,
+   "role": "reply",
+   "block": "restaurant_choice.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I think someone's here. Wait until I'm back.",
+   "est_sec": 3.2,
+   "gap_before": 3.32,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.31,
+   "role": "ack",
+   "phrasing": "ack_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hello?",
+   "est_sec": 0.41,
+   "gap_before": 4.99,
+   "phrasing": "door_03",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, I'm from the building office, we're checking smoke alarms today.",
+   "est_sec": 3.51,
+   "gap_before": 1.47,
+   "phrasing": "door_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, can you come back in an hour?",
+   "est_sec": 2.58,
+   "gap_before": 1.26,
+   "phrasing": "door_03",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Sure, no problem.",
+   "est_sec": 1.03,
+   "gap_before": 1.19,
+   "phrasing": "door_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, they're gone. I'm back now.",
+   "est_sec": 1.96,
+   "gap_before": 2.49,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everything okay at the door? Still deciding on dinner with your parents?",
+   "est_sec": 3.82,
+   "gap_before": 1.06,
+   "role": "resume",
+   "block": "restaurant_choice.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Familiar. My dad is very picky.",
+   "est_sec": 1.96,
+   "gap_before": 1.38,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then a steakhouse or a good Italian place is a safe bet. Check that it's not too loud.",
+   "est_sec": 5.68,
+   "gap_before": 0.8,
+   "role": "followup",
+   "block": "restaurant_choice.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

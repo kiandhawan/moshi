@@ -1,0 +1,157 @@
+{
+ "id": "eval_12_00207",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 207,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
+ "topics": [
+  "painting_art"
+ ],
+ "topic": "painting_art",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_15",
+  "greet_ans_21",
+  "waitlike_03"
+ ],
+ "block_ids": [
+  "painting_art.dlg3"
+ ],
+ "est_total_sec": 60.79,
+ "est_speech_sec": 46.25,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you explain what a complementary color is?",
+   "est_sec": 2.58,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. Complementary colors sit opposite each other on the color wheel, like blue and orange or red and green.",
+   "est_sec": 5.99,
+   "gap_before": 0.33,
+   "role": "reply",
+   "block": "painting_art.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Why does that matter for painting?",
+   "est_sec": 1.96,
+   "gap_before": 2.16,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Put side by side, they make each other look brighter. Mixed together, they cancel out into a soft gray or brown.",
+   "est_sec": 6.61,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "painting_art.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, so I could use that instead of black for shadows?",
+   "est_sec": 3.51,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exactly. A shadow on an orange made with a little blue looks much more alive than plain black.",
+   "est_sec": 5.68,
+   "gap_before": 1.55,
+   "role": "reply",
+   "block": "painting_art.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, sorry, what was that?",
+   "est_sec": 1.65,
+   "gap_before": 0.99,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_03",
+   "block": "painting_art.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. Exactly. A shadow on an orange made with a little blue looks much more alive than plain black.",
+   "est_sec": 5.99,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "painting_art.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Actually, I was going to buy black paint",
+   "est_sec": 2.58,
+   "gap_before": 2.16,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "painting_art.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "but maybe I'll skip it.",
+   "est_sec": 1.65,
+   "gap_before": 1.85,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can always get it later. Plenty of painters work without black and mix their darks instead.",
+   "est_sec": 5.37,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "painting_art.dlg3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "ordinary"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

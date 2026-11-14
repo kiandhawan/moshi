@@ -1,0 +1,174 @@
+{
+ "id": "eval_12_00127",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 127,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "podcasts"
+ ],
+ "topic": "podcasts",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "732ea755bd9e446eb31dc79966b50428",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_24",
+  "door_instr_05",
+  "ack_03",
+  "door_07",
+  "implicit_01"
+ ],
+ "block_ids": [
+  "podcasts.ctx2"
+ ],
+ "est_total_sec": 55.15,
+ "est_speech_sec": 35.29,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.9,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "My friend and I want to start our own podcast.",
+   "est_sec": 3.2,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun! What would it be about? Having a clear theme makes it much easier to find listeners.",
+   "est_sec": 5.37,
+   "gap_before": 1.77,
+   "role": "reply",
+   "block": "podcasts.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One moment, I need to get the door. I'll tell you when I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.64,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.35,
+   "role": "ack",
+   "phrasing": "ack_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hello?",
+   "est_sec": 0.41,
+   "gap_before": 4.39,
+   "phrasing": "door_07",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, we're collecting for the school fundraiser.",
+   "est_sec": 2.27,
+   "gap_before": 1.03,
+   "phrasing": "door_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Sure, how much are people giving?",
+   "est_sec": 1.96,
+   "gap_before": 0.67,
+   "phrasing": "door_07",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Anything helps, really.",
+   "est_sec": 1.03,
+   "gap_before": 1.0,
+   "phrasing": "door_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Here you go.",
+   "est_sec": 1.03,
+   "gap_before": 0.37,
+   "phrasing": "door_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Anyway, where were we?",
+   "est_sec": 1.34,
+   "gap_before": 2.37,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. So, what will your podcast be about?",
+   "est_sec": 2.58,
+   "gap_before": 1.7,
+   "role": "resume",
+   "block": "podcasts.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe local food, trying a new restaurant in town each week.",
+   "est_sec": 3.51,
+   "gap_before": 0.97,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice, very focused. Local businesses might even help promote it.",
+   "est_sec": 3.2,
+   "gap_before": 1.17,
+   "role": "followup",
+   "block": "podcasts.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

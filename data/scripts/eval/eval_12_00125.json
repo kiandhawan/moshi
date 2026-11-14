@@ -1,0 +1,145 @@
+{
+ "id": "eval_12_00125",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 125,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "family_visit"
+ ],
+ "wait_sec": 15,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 15
+ },
+ "topic": "family_visit",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_09",
+  "think_instr_24",
+  "ack_01",
+  "self_12"
+ ],
+ "block_ids": [
+  "family_visit.ctx2"
+ ],
+ "est_total_sec": 52.02,
+ "est_speech_sec": 28.59,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.78,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.66,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm flying home to see my grandma for the holidays.",
+   "est_sec": 3.2,
+   "gap_before": 0.28,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How nice. Do you want to stay the whole week, or just a long weekend so you don't miss too much work?",
+   "est_sec": 6.92,
+   "gap_before": 1.28,
+   "role": "reply",
+   "block": "family_visit.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good question, I hadn't really thought about that.",
+   "est_sec": 2.58,
+   "gap_before": 1.11,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No rush. So, a full week or a long weekend?",
+   "est_sec": 3.2,
+   "gap_before": 1.49,
+   "role": "reply",
+   "block": "family_visit.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I need a moment, like fifteen seconds. Ask me again then.",
+   "est_sec": 3.51,
+   "gap_before": 1.92,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.65,
+   "role": "ack",
+   "phrasing": "ack_01",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, maybe.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 6,
+    "offset": 5.37
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, any thoughts on the trip to your grandma's? A full week or a long weekend?",
+   "est_sec": 5.06,
+   "role": "resume",
+   "block": "family_visit.ctx2",
+   "anchor": {
+    "turn": 6,
+    "offset": 15.54
+   },
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

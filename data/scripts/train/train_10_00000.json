@@ -1,0 +1,149 @@
+{
+ "id": "train_10_00000",
+ "split": "train",
+ "seed": 10,
+ "order_index": 0,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "cleaning"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "cleaning",
+ "voices": {
+  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_25",
+  "think_instr_02",
+  "ack_13",
+  "self_02",
+  "self_28"
+ ],
+ "block_ids": [
+  "cleaning.ctx3"
+ ],
+ "est_total_sec": 54.89,
+ "est_speech_sec": 34.27,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.49,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.36,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "I keep falling behind on chores. Everything piles up until Sunday.",
+   "est_sec": 3.51,
+   "gap_before": 0.34,
+   "event": "ordinary_request",
+   "block": "cleaning.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's really common. Would you prefer a little bit every day, like fifteen minutes, or one bigger cleaning session each week?",
+   "est_sec": 6.61,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "cleaning.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about it for twenty seconds and then ask me again.",
+   "est_sec": 4.13,
+   "gap_before": 0.39,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.51,
+   "role": "ack",
+   "phrasing": "ack_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so if I do that, then",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 10.82
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, what else was there?",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 16.5
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, which sounds more like you? A little every day, or one big weekly clean?",
+   "est_sec": 4.75,
+   "role": "resume",
+   "block": "cleaning.ctx3",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.29
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Fifteen minutes a day. I can handle that.",
+   "est_sec": 2.58,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "cleaning.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great. Pick a set time, like right after dinner, so it becomes a habit.",
+   "est_sec": 4.44,
+   "gap_before": 1.66,
+   "role": "followup",
+   "block": "cleaning.ctx3"
+  }
+ ]
+}

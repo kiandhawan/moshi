@@ -1,0 +1,127 @@
+{
+ "id": "eval_12_00341",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 341,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "restaurant_choice"
+ ],
+ "topic": "restaurant_choice",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_30",
+  "describe_instr_15",
+  "ack_10",
+  "describe_cue_09"
+ ],
+ "block_ids": [
+  "restaurant_choice.opt1"
+ ],
+ "est_total_sec": 51.49,
+ "est_speech_sec": 40.68,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.54,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.65,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm picking a place for my team dinner on Friday, can you help?",
+   "est_sec": 4.13,
+   "gap_before": 0.53,
+   "block": "restaurant_choice.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to describe all the options before I hear your opinion.",
+   "est_sec": 3.82,
+   "gap_before": 0.78,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.56,
+   "role": "ack",
+   "phrasing": "ack_10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is an Italian place downtown, great pasta, but it's quite noisy on weekends.",
+   "est_sec": 5.06,
+   "gap_before": 1.13,
+   "block": "restaurant_choice.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a sushi restaurant near the office with private rooms, but it's pretty expensive.",
+   "est_sec": 4.75,
+   "gap_before": 1.22,
+   "block": "restaurant_choice.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is a casual barbecue joint with long picnic tables and a big patio.",
+   "est_sec": 5.37,
+   "gap_before": 1.9,
+   "block": "restaurant_choice.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "So, that's all of them. Tell me what you think.",
+   "est_sec": 3.2,
+   "gap_before": 1.0,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd lean toward the barbecue place, long tables are perfect for a group and the vibe is easygoing. The Italian spot sounds tasty, but noise on a Friday could make conversation hard.",
+   "est_sec": 10.02,
+   "gap_before": 1.0,
+   "role": "resume",
+   "block": "restaurant_choice.opt1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

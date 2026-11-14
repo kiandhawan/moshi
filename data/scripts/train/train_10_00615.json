@@ -1,0 +1,105 @@
+{
+ "id": "train_10_00615",
+ "split": "train",
+ "seed": 10,
+ "order_index": 615,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "public_transport"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "public_transport",
+ "voices": {
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_17",
+  "think_instr_23",
+  "ack_03"
+ ],
+ "block_ids": [
+  "public_transport.ctx1"
+ ],
+ "est_total_sec": 49.13,
+ "est_speech_sec": 25.19,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.61,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "I just started a new job across town. I could take the bus or the train.",
+   "est_sec": 5.06,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The bus stops closer to your place but takes about fifty minutes. The train is thirty, but it's a ten minute walk. Which matters more to you?",
+   "est_sec": 8.47,
+   "gap_before": 0.82,
+   "role": "reply",
+   "block": "public_transport.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me twenty seconds, I want to think about it. Then ask again.",
+   "est_sec": 4.13,
+   "gap_before": 0.8,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.68,
+   "role": "ack",
+   "phrasing": "ack_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, have you decided? Bus or train?",
+   "est_sec": 2.27,
+   "role": "resume",
+   "block": "public_transport.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.55
+   }
+  }
+ ]
+}

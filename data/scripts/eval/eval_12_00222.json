@@ -1,0 +1,162 @@
+{
+ "id": "eval_12_00222",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 222,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "family_visit"
+ ],
+ "topic": "family_visit",
+ "voices": {
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": "026218fe0c054374838d934016f34082",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_24",
+  "door_instr_04",
+  "ack_05",
+  "door_05",
+  "door_cue_04"
+ ],
+ "block_ids": [
+  "family_visit.ctx3"
+ ],
+ "est_total_sec": 55.72,
+ "est_speech_sec": 39.84,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.74,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.8,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "My sister and her two kids are coming Saturday and I have no idea what to do with them.",
+   "est_sec": 5.99,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "We could plan something. Would the kids like the zoo, or would you rather keep it relaxed with a movie and pizza at home?",
+   "est_sec": 7.54,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "family_visit.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, someone's knocking. Please stay quiet until I return.",
+   "est_sec": 2.89,
+   "gap_before": 1.45,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.27,
+   "role": "ack",
+   "phrasing": "ack_05",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hi.",
+   "est_sec": 0.41,
+   "gap_before": 2.61,
+   "phrasing": "door_05"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Pizza for apartment four?",
+   "est_sec": 1.34,
+   "gap_before": 1.26,
+   "phrasing": "door_05"
+  },
+  {
+   "speaker": "user",
+   "text": "That's us. Is it already paid?",
+   "est_sec": 1.96,
+   "gap_before": 0.69,
+   "phrasing": "door_05",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Yep, all paid. Enjoy!",
+   "est_sec": 1.34,
+   "gap_before": 1.23,
+   "phrasing": "door_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, back. All sorted.",
+   "est_sec": 1.34,
+   "gap_before": 2.51,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hope that was nothing urgent. Did you pick between the zoo and a movie day for the kids?",
+   "est_sec": 5.68,
+   "gap_before": 0.83,
+   "role": "resume",
+   "block": "family_visit.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Home. My sister will be tired from the drive anyway.",
+   "est_sec": 3.2,
+   "gap_before": 0.44,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sounds cozy. Let the kids pick the movie and the pizza toppings.",
+   "est_sec": 3.82,
+   "gap_before": 0.68,
+   "role": "followup",
+   "block": "family_visit.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

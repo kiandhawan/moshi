@@ -1,0 +1,131 @@
+{
+ "id": "eval_12_00238",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 238,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "family_visit"
+ ],
+ "reading": {
+  "material": "recipe",
+  "sec": 15.8
+ },
+ "topic": "family_visit",
+ "voices": {
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_21",
+  "greet_ans_24",
+  "read_instr_05",
+  "implicit_10"
+ ],
+ "block_ids": [
+  "family_visit.ctx1"
+ ],
+ "est_total_sec": 56.61,
+ "est_speech_sec": 31.59,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.89,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "My parents are staying with us next week and our apartment is tiny.",
+   "est_sec": 4.13,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That can be tricky. Would you give them your bedroom and take the couch, or book them a hotel nearby?",
+   "est_sec": 6.3,
+   "gap_before": 0.9,
+   "role": "reply",
+   "block": "family_visit.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment to read through the recipe before you say anything.",
+   "est_sec": 4.13,
+   "gap_before": 2.46,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Anyway, what do you think?",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 15.8
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. Still torn between giving up your bedroom and finding them a hotel?",
+   "est_sec": 4.44,
+   "gap_before": 1.15,
+   "role": "resume",
+   "block": "family_visit.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hotel. Everyone will sleep better and stay friends.",
+   "est_sec": 2.58,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Very wise. Look for one within walking distance so they can drop by easily.",
+   "est_sec": 4.44,
+   "gap_before": 0.78,
+   "role": "followup",
+   "block": "family_visit.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,141 @@
+{
+ "id": "eval_12_00122",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 122,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "reading": {
+  "material": "email",
+  "sec": 15.1
+ },
+ "topic": "podcasts",
+ "voices": {
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_27",
+  "read_instr_03",
+  "murmur_01",
+  "read_cue_03"
+ ],
+ "block_ids": [
+  "podcasts.ctx1"
+ ],
+ "est_total_sec": 51.0,
+ "est_speech_sec": 28.59,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.66,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "I need a new podcast for my drive to work.",
+   "est_sec": 3.2,
+   "gap_before": 0.26,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How long is the drive, and are you in the mood for true crime, comedy, or something you'd actually learn from?",
+   "est_sec": 6.61,
+   "gap_before": 0.9,
+   "role": "reply",
+   "block": "podcasts.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One second, I have to read this work email. Stay quiet till I'm done.",
+   "est_sec": 4.44,
+   "gap_before": 0.94,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Please confirm by Friday, okay.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 6.08
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I've read the recipe.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 15.1
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Finished reading? So, true crime, comedy or learning something?",
+   "est_sec": 2.89,
+   "gap_before": 0.88,
+   "role": "resume",
+   "block": "podcasts.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Something educational, maybe history.",
+   "est_sec": 1.34,
+   "gap_before": 1.96,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great pick. Narrative history shows work really well on long drives.",
+   "est_sec": 3.51,
+   "gap_before": 1.17,
+   "role": "followup",
+   "block": "podcasts.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

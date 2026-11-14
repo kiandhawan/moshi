@@ -1,0 +1,165 @@
+{
+ "id": "eval_12_00154",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 154,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "cycling"
+ ],
+ "topic": "cycling",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_18",
+  "door_instr_07",
+  "ack_12",
+  "door_04",
+  "implicit_02"
+ ],
+ "block_ids": [
+  "cycling.ctx3"
+ ],
+ "est_total_sec": 57.11,
+ "est_speech_sec": 39.53,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.67,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "A few friends invited me on a long weekend ride.",
+   "est_sec": 3.2,
+   "gap_before": 0.26,
+   "event": "ordinary_request",
+   "block": "cycling.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun! They're doing either the flat forty mile loop or the hilly twenty five mile one. Which do you think your legs can handle?",
+   "est_sec": 7.54,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "cycling.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a minute, someone's at the door. Stay quiet till I'm back.",
+   "est_sec": 4.13,
+   "gap_before": 2.89,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.55,
+   "role": "ack",
+   "phrasing": "ack_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, come in for a second.",
+   "est_sec": 1.96,
+   "gap_before": 4.53,
+   "phrasing": "door_04"
+  },
+  {
+   "speaker": "visitor",
+   "text": "I just wanted to return your ladder.",
+   "est_sec": 2.27,
+   "gap_before": 0.74,
+   "phrasing": "door_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh great, did it work out?",
+   "est_sec": 1.96,
+   "gap_before": 0.57,
+   "phrasing": "door_04",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Perfectly, thanks again.",
+   "est_sec": 1.03,
+   "gap_before": 0.47,
+   "phrasing": "door_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, what were you saying?",
+   "est_sec": 2.27,
+   "gap_before": 2.0,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. You were picking the weekend ride, flat and long or short and hilly.",
+   "est_sec": 4.44,
+   "gap_before": 0.34,
+   "role": "resume",
+   "block": "cycling.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The flat one. Hills and I are not friends.",
+   "est_sec": 2.89,
+   "gap_before": 1.27,
+   "event": "ordinary_request",
+   "block": "cycling.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Bring two water bottles and a snack for the halfway point.",
+   "est_sec": 3.82,
+   "gap_before": 0.73,
+   "role": "followup",
+   "block": "cycling.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

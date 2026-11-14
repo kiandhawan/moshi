@@ -1,0 +1,148 @@
+{
+ "id": "eval_12_00203",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 203,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "cycling"
+ ],
+ "wait_sec": 30,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 30
+ },
+ "topic": "cycling",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_21",
+  "greet_ans_09",
+  "think_instr_27",
+  "self_06",
+  "self_09"
+ ],
+ "block_ids": [
+  "cycling.ctx3"
+ ],
+ "est_total_sec": 64.96,
+ "est_speech_sec": 32.62,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.31,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.37,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "A few friends invited me on a long weekend ride.",
+   "est_sec": 3.2,
+   "gap_before": 0.57,
+   "event": "ordinary_request",
+   "block": "cycling.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun! They're doing either the flat forty mile loop or the hilly twenty five mile one. Which do you think your legs can handle?",
+   "est_sec": 7.54,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "cycling.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me thirty seconds. I'll know by then, so ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 1.13,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think, let me think.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 7.83
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, this is harder than it sounds.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 13.45
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Have you made up your mind? Forty flat miles or twenty five with hills?",
+   "est_sec": 4.44,
+   "role": "resume",
+   "block": "cycling.ctx3",
+   "anchor": {
+    "turn": 4,
+    "offset": 30.07
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The flat one. Hills and I are not friends.",
+   "est_sec": 2.89,
+   "gap_before": 1.18,
+   "event": "ordinary_request",
+   "block": "cycling.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Bring two water bottles and a snack for the halfway point.",
+   "est_sec": 3.82,
+   "gap_before": 0.61,
+   "role": "followup",
+   "block": "cycling.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

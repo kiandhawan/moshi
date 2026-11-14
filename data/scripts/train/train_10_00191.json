@@ -1,0 +1,180 @@
+{
+ "id": "train_10_00191",
+ "split": "train",
+ "seed": 10,
+ "order_index": 191,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "shopping",
+  "movies"
+ ],
+ "topic": "shopping",
+ "voices": {
+  "user": "cbc3add1f54546e6a4a1964bacb8b122",
+  "friend": "a52fdd0e957b4c288d8ec590bdd10288",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Rosa",
+ "friend_name_id": "name_22",
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_14",
+  "side_instr_01",
+  "dn_22",
+  "side_cue_02"
+ ],
+ "block_ids": [
+  "shopping.ctx2",
+  "movies.side1"
+ ],
+ "est_total_sec": 64.14,
+ "est_speech_sec": 45.41,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.38,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.39,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing the big grocery run for the week.",
+   "est_sec": 2.89,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "shopping.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Do you have a list or are you winging it?",
+   "est_sec": 3.51,
+   "gap_before": 0.84,
+   "role": "reply",
+   "block": "shopping.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Winging it, as usual.",
+   "est_sec": 1.34,
+   "gap_before": 2.6,
+   "event": "ordinary_request",
+   "block": "shopping.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let's plan a bit. What are you cooking for dinners this week?",
+   "est_sec": 3.82,
+   "gap_before": 0.57,
+   "role": "reply",
+   "block": "shopping.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I need to talk to my roommate for a second. Stay quiet until I say I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 0.45,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, all done here, back to the game.",
+   "est_sec": 2.58,
+   "gap_before": 1.44,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_22"
+  },
+  {
+   "speaker": "friend",
+   "text": "Finally!",
+   "est_sec": 0.41,
+   "gap_before": 2.06,
+   "phrasing": "dn_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Rosa, have you seen the new one with the space station?",
+   "est_sec": 3.51,
+   "gap_before": 0.57,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, last weekend. It was okay. The ending was a bit weird.",
+   "est_sec": 3.82,
+   "gap_before": 1.36,
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Weird how? Don't spoil it.",
+   "est_sec": 1.65,
+   "gap_before": 1.26,
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "I won't. Let's just say you'll have questions.",
+   "est_sec": 2.58,
+   "gap_before": 0.44,
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, now I have to watch it. Would you see it again?",
+   "est_sec": 3.82,
+   "gap_before": 1.33,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Maybe, if you're buying the popcorn.",
+   "est_sec": 1.96,
+   "gap_before": 1.29,
+   "block": "movies.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 1.46,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. We were planning your dinners before the grocery run.",
+   "est_sec": 3.51,
+   "gap_before": 0.55,
+   "role": "resume",
+   "block": "shopping.ctx2"
+  }
+ ]
+}

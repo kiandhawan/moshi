@@ -1,0 +1,162 @@
+{
+ "id": "eval_12_00078",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 78,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_12",
+  "door_instr_04",
+  "door_01",
+  "implicit_05"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx2"
+ ],
+ "est_total_sec": 55.42,
+ "est_speech_sec": 37.36,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.67,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Our office is doing a gift exchange with a twenty dollar limit.",
+   "est_sec": 3.82,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun. Do you want to play it safe with something everyone would like, like good chocolate, or go for a funny gag gift?",
+   "est_sec": 7.23,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "holiday_gifts.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, someone's knocking. Please stay quiet until I return.",
+   "est_sec": 2.89,
+   "gap_before": 1.09,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi!",
+   "est_sec": 0.41,
+   "gap_before": 3.28,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Delivery for you, can you sign here?",
+   "est_sec": 2.27,
+   "gap_before": 1.44,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Sure. Do you have a pen?",
+   "est_sec": 1.96,
+   "gap_before": 1.14,
+   "phrasing": "door_01",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Here you go.",
+   "est_sec": 1.03,
+   "gap_before": 0.44,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Thanks, have a good one.",
+   "est_sec": 1.65,
+   "gap_before": 1.21,
+   "phrasing": "door_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, sorry, where were we again?",
+   "est_sec": 1.96,
+   "gap_before": 2.11,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. You were choosing between a safe gift and a gag gift for work.",
+   "est_sec": 4.44,
+   "gap_before": 1.05,
+   "role": "resume",
+   "block": "holiday_gifts.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Funny, our team loves that stuff.",
+   "est_sec": 1.96,
+   "gap_before": 1.36,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then go for it. A desk sized punching bag usually gets a good laugh.",
+   "est_sec": 4.44,
+   "gap_before": 1.0,
+   "role": "followup",
+   "block": "holiday_gifts.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

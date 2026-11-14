@@ -1,0 +1,171 @@
+{
+ "id": "eval_12_00277",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 277,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "topics": [
+  "family_visit",
+  "home_office"
+ ],
+ "topic": "family_visit",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Priya",
+ "friend_name_id": "name_06",
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_09",
+  "side_instr_21",
+  "dq_21",
+  "side_cue_12"
+ ],
+ "block_ids": [
+  "family_visit.ctx1",
+  "home_office.side1"
+ ],
+ "est_total_sec": 67.42,
+ "est_speech_sec": 45.21,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.57,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.58,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "My parents are staying with us next week and our apartment is tiny.",
+   "est_sec": 4.13,
+   "gap_before": 0.36,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That can be tricky. Would you give them your bedroom and take the couch, or book them a hotel nearby?",
+   "est_sec": 6.3,
+   "gap_before": 1.92,
+   "role": "reply",
+   "block": "family_visit.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, my friend just got here. Can you hold on and stay quiet until I'm back?",
+   "est_sec": 5.06,
+   "gap_before": 2.5,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_21"
+  },
+  {
+   "speaker": "user",
+   "text": "Priya, are you on a call right now?",
+   "est_sec": 2.58,
+   "gap_before": 0.64,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_office.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "In five minutes. Why?",
+   "est_sec": 1.34,
+   "gap_before": 0.8,
+   "block": "home_office.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "I have a big meeting at ten too. Can you take yours in the bedroom?",
+   "est_sec": 4.75,
+   "gap_before": 1.0,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_office.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Only if I can borrow your headphones.",
+   "est_sec": 2.27,
+   "gap_before": 0.93,
+   "block": "home_office.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Deal. They're on the shelf by the printer.",
+   "est_sec": 2.58,
+   "gap_before": 1.98,
+   "block": "home_office.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Got them. Close the door when you start, the dog keeps barking.",
+   "est_sec": 3.82,
+   "gap_before": 0.43,
+   "block": "home_office.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you take the trash out?",
+   "est_sec": 1.96,
+   "gap_before": 2.84,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_21"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not yet, I'll do it now.",
+   "est_sec": 1.96,
+   "gap_before": 3.42,
+   "phrasing": "dq_21"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back. Where did we leave off?",
+   "est_sec": 2.27,
+   "gap_before": 0.98,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Still torn between giving up your bedroom and finding them a hotel?",
+   "est_sec": 4.13,
+   "gap_before": 1.76,
+   "role": "resume",
+   "block": "family_visit.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

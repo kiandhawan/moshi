@@ -1,0 +1,164 @@
+{
+ "id": "eval_12_00334",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 334,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "camping"
+ ],
+ "topic": "camping",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_18",
+  "phone_instr_04",
+  "call_03",
+  "implicit_05"
+ ],
+ "block_ids": [
+  "camping.ctx2"
+ ],
+ "est_total_sec": 62.57,
+ "est_speech_sec": 41.08,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.45,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "My old tent finally ripped. I need a new one before the trip.",
+   "est_sec": 4.13,
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "camping.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sorry to hear it. How many people should it sleep, and will you be carrying it far or just parking next to it?",
+   "est_sec": 7.23,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "camping.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, I have to get this. Please wait quietly until I'm off the phone.",
+   "est_sec": 4.44,
+   "gap_before": 0.57,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey!",
+   "est_sec": 0.41,
+   "gap_before": 1.26,
+   "phrasing": "call_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, you cut out there. Okay, you're back.",
+   "est_sec": 2.58,
+   "gap_before": 2.89,
+   "phrasing": "call_03",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "I said I'll be there at seven.",
+   "est_sec": 2.27,
+   "gap_before": 2.72,
+   "phrasing": "call_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you pick up some bread on the way?",
+   "est_sec": 2.89,
+   "gap_before": 2.45,
+   "phrasing": "call_03",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Perfect, see you.",
+   "est_sec": 1.03,
+   "gap_before": 2.47,
+   "phrasing": "call_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, sorry, where were we again?",
+   "est_sec": 1.96,
+   "gap_before": 1.73,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. Still need that tent, right? How many sleepers, and how far will it travel?",
+   "est_sec": 4.75,
+   "gap_before": 0.57,
+   "role": "resume",
+   "block": "camping.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Two people, and we'll hike in about five miles.",
+   "est_sec": 2.89,
+   "gap_before": 1.24,
+   "event": "ordinary_request",
+   "block": "camping.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then look for a light two-person backpacking tent, ideally under four pounds.",
+   "est_sec": 3.82,
+   "gap_before": 1.56,
+   "role": "followup",
+   "block": "camping.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

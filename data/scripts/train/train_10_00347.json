@@ -1,0 +1,96 @@
+{
+ "id": "train_10_00347",
+ "split": "train",
+ "seed": 10,
+ "order_index": 347,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "shopping"
+ ],
+ "wait_sec": 60,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 60
+ },
+ "topic": "shopping",
+ "voices": {
+  "user": "705690224f264386b87fb598083ab022",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_22",
+  "think_instr_05"
+ ],
+ "block_ids": [
+  "shopping.ctx1"
+ ],
+ "est_total_sec": 84.43,
+ "est_speech_sec": 19.82,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.43,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "I need a new winter coat. My old one has a broken zipper.",
+   "est_sec": 4.13,
+   "gap_before": 0.33,
+   "event": "ordinary_request",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it. Are you thinking a long warm parka, or a shorter jacket that's easier to move in?",
+   "est_sec": 5.68,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you give me sixty seconds? Then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 0.32,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 60,
+   "phrasing": "think_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, which coat are we hunting for, a long parka or something shorter?",
+   "est_sec": 4.13,
+   "role": "resume",
+   "block": "shopping.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 60.53
+   }
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "id": "eval_12_00395",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 395,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "topics": [
+  "picnic",
+  "wedding_planning"
+ ],
+ "topic": "picnic",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": "026218fe0c054374838d934016f34082",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Sofia",
+ "friend_name_id": "name_12",
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_30",
+  "side_instr_30",
+  "side_cue_12"
+ ],
+ "block_ids": [
+  "picnic.ctx2",
+  "wedding_planning.side3"
+ ],
+ "est_total_sec": 62.78,
+ "est_speech_sec": 44.39,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.47,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.34,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm in charge of food for the picnic and I'm overwhelmed.",
+   "est_sec": 3.51,
+   "gap_before": 0.21,
+   "event": "ordinary_request",
+   "block": "picnic.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let's keep it easy. Do you want to make sandwiches at home, or pick up a few things from the deli on the way?",
+   "est_sec": 7.54,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "picnic.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment, I'm going to talk to my friend. Stay quiet until you hear I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 2.99,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Sofia, what are you wearing to Sam and Priya's wedding?",
+   "est_sec": 3.2,
+   "gap_before": 1.41,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "wedding_planning.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "The invite says garden formal, so maybe my green dress.",
+   "est_sec": 3.2,
+   "gap_before": 2.95,
+   "block": "wedding_planning.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Is a linen suit too casual for that?",
+   "est_sec": 2.58,
+   "gap_before": 0.63,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "wedding_planning.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not if you wear a tie. Linen is perfect for outdoors.",
+   "est_sec": 3.51,
+   "gap_before": 2.95,
+   "block": "wedding_planning.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Cool. Should we split a gift or get our own?",
+   "est_sec": 3.2,
+   "gap_before": 0.71,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "wedding_planning.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Let's split one. They registered for that fancy blender.",
+   "est_sec": 2.89,
+   "gap_before": 1.53,
+   "block": "wedding_planning.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back. Where did we leave off?",
+   "est_sec": 2.27,
+   "gap_before": 1.2,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Still deciding how to handle the picnic food?",
+   "est_sec": 2.89,
+   "gap_before": 0.71,
+   "role": "resume",
+   "block": "picnic.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

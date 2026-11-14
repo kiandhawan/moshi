@@ -1,0 +1,169 @@
+{
+ "id": "eval_12_00295",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 295,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "topics": [
+  "restaurant_choice",
+  "family_visit"
+ ],
+ "topic": "restaurant_choice",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_09",
+  "side_instr_27",
+  "dq_03",
+  "side_cue_03"
+ ],
+ "block_ids": [
+  "restaurant_choice.ctx2",
+  "family_visit.side2"
+ ],
+ "est_total_sec": 62.11,
+ "est_speech_sec": 43.97,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.8,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.32,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "My parents are visiting and I want to take them out for dinner.",
+   "est_sec": 4.13,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Do they like trying new kinds of food, or would they be happier with something familiar like a steakhouse?",
+   "est_sec": 6.3,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "restaurant_choice.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Just a minute, I have to answer my roommate. Please stay quiet until I return.",
+   "est_sec": 4.75,
+   "gap_before": 0.87,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_27"
+  },
+  {
+   "speaker": "user",
+   "text": "What time does my uncle's train get in?",
+   "est_sec": 2.58,
+   "gap_before": 1.13,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Quarter past four, I think. Want me to pick him up?",
+   "est_sec": 3.51,
+   "gap_before": 2.53,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Would you? I have a call until five.",
+   "est_sec": 2.58,
+   "gap_before": 1.27,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "No problem. Does he have a lot of luggage?",
+   "est_sec": 2.89,
+   "gap_before": 1.89,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Knowing him, two big suitcases and a bag of cheese.",
+   "est_sec": 3.2,
+   "gap_before": 0.33,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then I'll take the car, not the bike.",
+   "est_sec": 2.58,
+   "gap_before": 1.19,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, have you seen my keys anywhere?",
+   "est_sec": 2.27,
+   "gap_before": 3.25,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_03"
+  },
+  {
+   "speaker": "friend",
+   "text": "They're on the kitchen counter.",
+   "est_sec": 1.65,
+   "gap_before": 0.74,
+   "phrasing": "dq_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.09,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. So, would your parents like something new or something familiar?",
+   "est_sec": 3.51,
+   "gap_before": 0.33,
+   "role": "resume",
+   "block": "restaurant_choice.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

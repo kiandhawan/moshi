@@ -1,0 +1,149 @@
+{
+ "id": "train_10_00506",
+ "split": "train",
+ "seed": 10,
+ "order_index": 506,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "studying"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 20
+ },
+ "topic": "studying",
+ "voices": {
+  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_17",
+  "greet_ans_20",
+  "think_instr_01",
+  "ack_14",
+  "self_29",
+  "self_02"
+ ],
+ "block_ids": [
+  "studying.ctx3"
+ ],
+ "est_total_sec": 52.33,
+ "est_speech_sec": 30.55,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.52,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.58,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I've been reading my notes over and over but nothing sticks.",
+   "est_sec": 3.51,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "studying.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Rereading feels productive but it doesn't stick well. Want to try flashcards or practice questions instead?",
+   "est_sec": 5.06,
+   "gap_before": 1.02,
+   "role": "reply",
+   "block": "studying.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe. Which one do you think?",
+   "est_sec": 1.96,
+   "gap_before": 0.84,
+   "event": "ordinary_request",
+   "block": "studying.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Both work. It depends on whether your exam is more about facts or problem solving. Which is it?",
+   "est_sec": 5.68,
+   "gap_before": 0.65,
+   "role": "reply",
+   "block": "studying.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me twenty seconds to think, then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 0.7,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.32,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, let me just picture it.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 6,
+    "offset": 3.52
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so if I do that, then",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 6,
+    "offset": 15.23
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, is your exam mostly facts to remember, or problems to solve?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "studying.ctx3",
+   "anchor": {
+    "turn": 6,
+    "offset": 20.34
+   }
+  }
+ ]
+}

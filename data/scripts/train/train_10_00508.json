@@ -1,0 +1,105 @@
+{
+ "id": "train_10_00508",
+ "split": "train",
+ "seed": 10,
+ "order_index": 508,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "weekend_plans"
+ ],
+ "wait_sec": 5,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 5
+ },
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "e7de86b388864b8cbd50d0d70a3494e5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_10",
+  "think_instr_26",
+  "ack_01"
+ ],
+ "block_ids": [
+  "weekend_plans.ctx1"
+ ],
+ "est_total_sec": 31.34,
+ "est_speech_sec": 20.23,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.47,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "It's finally Friday and I have absolutely nothing planned.",
+   "est_sec": 2.89,
+   "gap_before": 0.23,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely feeling. Do you want a lazy weekend at home to recharge, or would you like to get out and do something?",
+   "est_sec": 6.92,
+   "gap_before": 1.02,
+   "role": "reply",
+   "block": "weekend_plans.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, wait five seconds and then ask me again, okay?",
+   "est_sec": 3.2,
+   "gap_before": 2.06,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 5,
+   "phrasing": "think_instr_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.34,
+   "role": "ack",
+   "phrasing": "ack_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, a lazy weekend at home, or getting out and about?",
+   "est_sec": 3.51,
+   "role": "resume",
+   "block": "weekend_plans.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 5.48
+   }
+  }
+ ]
+}

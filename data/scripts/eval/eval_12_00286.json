@@ -1,0 +1,161 @@
+{
+ "id": "eval_12_00286",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 286,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "topic": "podcasts",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_09",
+  "phone_instr_02",
+  "call_09",
+  "phone_cue_02"
+ ],
+ "block_ids": [
+  "podcasts.ctx1"
+ ],
+ "est_total_sec": 57.91,
+ "est_speech_sec": 36.43,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.8,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.94,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "I need a new podcast for my drive to work.",
+   "est_sec": 3.2,
+   "gap_before": 0.28,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How long is the drive, and are you in the mood for true crime, comedy, or something you'd actually learn from?",
+   "est_sec": 6.61,
+   "gap_before": 0.38,
+   "role": "reply",
+   "block": "podcasts.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My phone's ringing, give me a minute. Don't say anything until I'm done.",
+   "est_sec": 4.13,
+   "gap_before": 1.44,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi!",
+   "est_sec": 0.41,
+   "gap_before": 1.61,
+   "phrasing": "call_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh no, is she okay?",
+   "est_sec": 1.65,
+   "gap_before": 2.71,
+   "phrasing": "call_09",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you need me to come over?",
+   "est_sec": 2.27,
+   "gap_before": 3.13,
+   "phrasing": "call_09",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, call me if anything changes.",
+   "est_sec": 1.96,
+   "gap_before": 2.75,
+   "phrasing": "call_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, take care.",
+   "est_sec": 1.03,
+   "gap_before": 3.52,
+   "phrasing": "call_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, sorry about that. I'm back.",
+   "est_sec": 1.96,
+   "gap_before": 0.7,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hope the call went okay. Still want that driving podcast? What kind?",
+   "est_sec": 3.82,
+   "gap_before": 0.31,
+   "role": "resume",
+   "block": "podcasts.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Comedy, please. Mornings are rough enough.",
+   "est_sec": 1.96,
+   "gap_before": 0.96,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Look for a chatty improv or panel show, the episodes are easy to jump into.",
+   "est_sec": 5.06,
+   "gap_before": 0.45,
+   "role": "followup",
+   "block": "podcasts.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

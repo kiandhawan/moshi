@@ -1,0 +1,138 @@
+{
+ "id": "eval_12_00372",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 372,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "topic": "podcasts",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_27",
+  "describe_instr_18",
+  "ack_01",
+  "describe_cue_12"
+ ],
+ "block_ids": [
+  "podcasts.opt1"
+ ],
+ "est_total_sec": 58.6,
+ "est_speech_sec": 43.88,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.35,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.63,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got a twelve-hour flight coming up and I need help choosing what to listen to.",
+   "est_sec": 5.06,
+   "gap_before": 0.33,
+   "block": "podcasts.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll go through the options one by one. Don't say anything until I finish.",
+   "est_sec": 4.44,
+   "gap_before": 0.87,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.37,
+   "role": "ack",
+   "phrasing": "ack_01",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is a true crime series with ten episodes about a bank robbery in the seventies.",
+   "est_sec": 5.68,
+   "gap_before": 0.85,
+   "block": "podcasts.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a comedy podcast where three friends rank random things, like cereals or holidays.",
+   "est_sec": 4.75,
+   "gap_before": 2.9,
+   "block": "podcasts.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's also a long history show about the Roman Empire, something like twenty hours.",
+   "est_sec": 4.44,
+   "gap_before": 1.82,
+   "block": "podcasts.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last option is a self-improvement podcast about building better habits.",
+   "est_sec": 3.82,
+   "gap_before": 2.92,
+   "block": "podcasts.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 1.22,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd take the true crime series. Ten episodes is a great binge for a long flight, and the story will pull you along. Save the habits podcast for when you can actually take notes.",
+   "est_sec": 10.64,
+   "gap_before": 0.96,
+   "role": "resume",
+   "block": "podcasts.opt1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

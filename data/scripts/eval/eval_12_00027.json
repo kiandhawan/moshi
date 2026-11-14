@@ -1,0 +1,117 @@
+{
+ "id": "eval_12_00027",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 27,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "home_office"
+ ],
+ "topic": "home_office",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_27",
+  "describe_instr_18",
+  "describe_cue_15"
+ ],
+ "block_ids": [
+  "home_office.opt1"
+ ],
+ "est_total_sec": 50.8,
+ "est_speech_sec": 41.2,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.46,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.53,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "I need help deciding where to set up my home office.",
+   "est_sec": 3.51,
+   "gap_before": 0.27,
+   "block": "home_office.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll go through the options one by one. Don't say anything until I finish.",
+   "est_sec": 4.44,
+   "gap_before": 0.79,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_18"
+  },
+  {
+   "speaker": "user",
+   "text": "The first option is the spare bedroom, which has a door but is pretty small and dark.",
+   "est_sec": 5.37,
+   "gap_before": 0.74,
+   "block": "home_office.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a corner of the living room, lots of light, but my kids play there all afternoon.",
+   "est_sec": 5.68,
+   "gap_before": 1.54,
+   "block": "home_office.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last choice is the basement, quiet and roomy, but there's no window at all.",
+   "est_sec": 5.06,
+   "gap_before": 1.1,
+   "block": "home_office.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "So that's the list. Thoughts?",
+   "est_sec": 1.65,
+   "gap_before": 1.48,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "With kids playing in the living room, that corner would be tough for calls and focus. The spare bedroom has the big advantage of a door, and a good lamp can fix the darkness. How often are you on video calls?",
+   "est_sec": 12.81,
+   "gap_before": 1.19,
+   "role": "resume",
+   "block": "home_office.opt1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

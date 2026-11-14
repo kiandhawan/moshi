@@ -1,0 +1,152 @@
+{
+ "id": "train_10_00095",
+ "split": "train",
+ "seed": 10,
+ "order_index": 95,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end",
+  "self_talk"
+ ],
+ "topics": [
+  "books"
+ ],
+ "wait_sec": 45,
+ "early_end": {
+  "after_sec": 19.03,
+  "direct": true
+ },
+ "topic": "books",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_07",
+  "greet_ans_25",
+  "think_instr_01",
+  "self_26",
+  "self_05",
+  "early_end_08"
+ ],
+ "block_ids": [
+  "books.ctx1"
+ ],
+ "est_total_sec": 53.75,
+ "est_speech_sec": 30.24,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
+   "gap_before": 0.71,
+   "role": "greeting",
+   "phrasing": "greet_07"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "I just finished a really long fantasy series and now I feel kind of lost.",
+   "est_sec": 4.75,
+   "gap_before": 0.48,
+   "event": "ordinary_request",
+   "block": "books.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That book hangover is real. Do you want another big series to sink into, or something short and different as a palate cleanser?",
+   "est_sec": 7.23,
+   "gap_before": 0.34,
+   "role": "reply",
+   "block": "books.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me forty-five seconds to think, then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 0.99,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, decisions, decisions.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 11.62
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, okay.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 16.86
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, I know.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 19.03
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Time's up! Long series or quick palate cleanser?",
+   "est_sec": 2.58,
+   "gap_before": 0.99,
+   "role": "resume",
+   "block": "books.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Another series, I can't help myself.",
+   "est_sec": 1.96,
+   "gap_before": 0.38,
+   "event": "ordinary_request",
+   "block": "books.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, fair. Look for a finished trilogy, so you don't have to wait for the next book.",
+   "est_sec": 5.37,
+   "gap_before": 0.33,
+   "role": "followup",
+   "block": "books.ctx1"
+  }
+ ]
+}

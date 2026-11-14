@@ -1,0 +1,123 @@
+{
+ "id": "eval_12_00134",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 134,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension"
+ ],
+ "topics": [
+  "home_office"
+ ],
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 5,
+  "said_before_deadline_sec": 2.43
+ },
+ "deadline": {
+  "after_turn": 5,
+  "sec": 5
+ },
+ "topic": "home_office",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_18",
+  "think_instr_27",
+  "extension_05"
+ ],
+ "block_ids": [
+  "home_office.ctx1"
+ ],
+ "est_total_sec": 44.64,
+ "est_speech_sec": 22.4,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.71,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm finally turning the spare room into a proper office.",
+   "est_sec": 3.2,
+   "gap_before": 0.55,
+   "event": "ordinary_request",
+   "block": "home_office.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting. Where do you want the desk, facing the window for the light, or against the wall so the screen has no glare?",
+   "est_sec": 7.23,
+   "gap_before": 0.49,
+   "role": "reply",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me fifteen seconds. I'll know by then, so ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.78,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, give me another five seconds.",
+   "est_sec": 2.27,
+   "event": "extension",
+   "extra_sec": 5,
+   "phrasing": "extension_05",
+   "anchor": {
+    "turn": 4,
+    "offset": 12.57
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Time's up. Natural light, or no glare on the screen?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "home_office.ctx1",
+   "anchor": {
+    "turn": 5,
+    "offset": 5.22
+   },
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,176 @@
+{
+ "id": "eval_12_00317",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 317,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "picnic"
+ ],
+ "topic": "picnic",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_06",
+  "phone_instr_05",
+  "ack_16",
+  "call_10",
+  "implicit_03"
+ ],
+ "block_ids": [
+  "picnic.ctx1"
+ ],
+ "est_total_sec": 60.18,
+ "est_speech_sec": 37.15,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.84,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "We're having a picnic on Sunday if the weather holds.",
+   "est_sec": 3.2,
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "picnic.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sounds lovely. Are you thinking of the big park by the river or the quieter hill with the view over town?",
+   "est_sec": 6.61,
+   "gap_before": 0.35,
+   "role": "reply",
+   "block": "picnic.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I've got to pick this up. Stay quiet until I come back to you.",
+   "est_sec": 5.06,
+   "gap_before": 1.14,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.7,
+   "role": "ack",
+   "phrasing": "ack_16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hello, yes.",
+   "est_sec": 0.72,
+   "gap_before": 1.43,
+   "phrasing": "call_10"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm calling back about the apartment.",
+   "est_sec": 1.96,
+   "gap_before": 2.18,
+   "phrasing": "call_10",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it still available?",
+   "est_sec": 1.34,
+   "gap_before": 2.04,
+   "phrasing": "call_10",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Could I see it this weekend?",
+   "est_sec": 1.96,
+   "gap_before": 1.8,
+   "phrasing": "call_10",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Great, Saturday at noon then.",
+   "est_sec": 1.65,
+   "gap_before": 4.0,
+   "phrasing": "call_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm all yours.",
+   "est_sec": 1.34,
+   "gap_before": 1.47,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. We were choosing a spot for Sunday's picnic.",
+   "est_sec": 2.89,
+   "gap_before": 0.58,
+   "role": "resume",
+   "block": "picnic.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The hill. The view is worth the walk.",
+   "est_sec": 2.58,
+   "gap_before": 3.18,
+   "event": "ordinary_request",
+   "block": "picnic.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Pack light then, and bring a blanket that can handle some grass.",
+   "est_sec": 4.13,
+   "gap_before": 0.81,
+   "role": "followup",
+   "block": "picnic.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

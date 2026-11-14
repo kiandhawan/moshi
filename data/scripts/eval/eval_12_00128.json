@@ -1,0 +1,186 @@
+{
+ "id": "eval_12_00128",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 128,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "topics": [
+  "learning_language",
+  "podcasts"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Aisha",
+ "friend_name_id": "name_18",
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_12",
+  "side_instr_18",
+  "dq_03",
+  "side_cue_21"
+ ],
+ "block_ids": [
+  "learning_language.ctx1",
+  "podcasts.side2"
+ ],
+ "est_total_sec": 70.17,
+ "est_speech_sec": 51.61,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.31,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.58,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to start learning a new language this year.",
+   "est_sec": 3.2,
+   "gap_before": 0.57,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great goal. Is there a language you need for work or travel, or would you rather pick one just because it sounds fun?",
+   "est_sec": 7.23,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "learning_language.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold up, my mom is asking me something. Please don't say anything until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 0.5,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_18"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you turn the speaker down a little? That host is so loud.",
+   "est_sec": 4.13,
+   "gap_before": 1.16,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sorry, he gets really excited about space stuff.",
+   "est_sec": 2.58,
+   "gap_before": 0.81,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "What's this episode about anyway?",
+   "est_sec": 1.65,
+   "gap_before": 1.97,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Whether we could ever live on Mars. Spoiler, probably not.",
+   "est_sec": 3.2,
+   "gap_before": 0.55,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha. Send me the link, I'll listen later with headphones.",
+   "est_sec": 3.2,
+   "gap_before": 0.69,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Already did. Check your messages.",
+   "est_sec": 1.65,
+   "gap_before": 0.88,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, have you seen my keys anywhere?",
+   "est_sec": 2.27,
+   "gap_before": 2.46,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_03"
+  },
+  {
+   "speaker": "friend",
+   "text": "They're on the kitchen counter.",
+   "est_sec": 1.65,
+   "gap_before": 1.79,
+   "phrasing": "dq_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, I'm back. What was I saying?",
+   "est_sec": 2.27,
+   "gap_before": 1.65,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Have you thought about which language you'd like to start?",
+   "est_sec": 3.82,
+   "gap_before": 0.81,
+   "role": "resume",
+   "block": "learning_language.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Japanese, honestly just because I love the culture.",
+   "est_sec": 2.58,
+   "gap_before": 0.74,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wonderful. Learn the two kana alphabets first, they make everything else easier.",
+   "est_sec": 3.82,
+   "gap_before": 1.16,
+   "role": "followup",
+   "block": "learning_language.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

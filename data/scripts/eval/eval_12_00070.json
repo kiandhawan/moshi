@@ -1,0 +1,147 @@
+{
+ "id": "eval_12_00070",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 70,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "picnic"
+ ],
+ "topic": "picnic",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_15",
+  "phone_instr_09",
+  "call_09",
+  "implicit_09"
+ ],
+ "block_ids": [
+  "picnic.ctx3"
+ ],
+ "est_total_sec": 52.32,
+ "est_speech_sec": 32.82,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.96,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "My friends want to do a picnic but the forecast says maybe rain.",
+   "est_sec": 4.13,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "picnic.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hmm, there's a forty percent chance in the afternoon. Do you want to move it to the morning, or keep the plan and bring a tarp just in case?",
+   "est_sec": 9.09,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, I need to answer this. Stay quiet till I'm back.",
+   "est_sec": 3.51,
+   "gap_before": 0.4,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi!",
+   "est_sec": 0.41,
+   "gap_before": 1.32,
+   "phrasing": "call_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh no, is she okay?",
+   "est_sec": 1.65,
+   "gap_before": 2.79,
+   "phrasing": "call_09",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you need me to come over?",
+   "est_sec": 2.27,
+   "gap_before": 2.18,
+   "phrasing": "call_09",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, call me if anything changes.",
+   "est_sec": 1.96,
+   "gap_before": 3.17,
+   "phrasing": "call_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, take care.",
+   "est_sec": 1.03,
+   "gap_before": 3.43,
+   "phrasing": "call_09"
+  },
+  {
+   "speaker": "user",
+   "text": "So where did we leave it?",
+   "est_sec": 1.96,
+   "gap_before": 1.52,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. We were working around the rain forecast for your picnic.",
+   "est_sec": 3.51,
+   "gap_before": 0.53,
+   "role": "resume",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

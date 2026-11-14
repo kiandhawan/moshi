@@ -1,0 +1,154 @@
+{
+ "id": "eval_12_00312",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 312,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "picnic"
+ ],
+ "reading": {
+  "material": "recipe",
+  "sec": 23.4
+ },
+ "topic": "picnic",
+ "voices": {
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_21",
+  "greet_ans_21",
+  "read_instr_05",
+  "ack_08",
+  "murmur_04",
+  "implicit_14"
+ ],
+ "block_ids": [
+  "picnic.ctx3"
+ ],
+ "est_total_sec": 63.51,
+ "est_speech_sec": 33.96,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.52,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.94,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "My friends want to do a picnic but the forecast says maybe rain.",
+   "est_sec": 4.13,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "picnic.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hmm, there's a forty percent chance in the afternoon. Do you want to move it to the morning, or keep the plan and bring a tarp just in case?",
+   "est_sec": 9.09,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment to read through the recipe before you say anything.",
+   "est_sec": 4.13,
+   "gap_before": 1.02,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.5,
+   "role": "ack",
+   "phrasing": "ack_08",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Two cups of flour, right.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 15.45
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, go ahead.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 23.4
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. We were working around the rain forecast for your picnic.",
+   "est_sec": 3.51,
+   "gap_before": 0.65,
+   "role": "resume",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "We'll keep it and bring the tarp.",
+   "est_sec": 2.27,
+   "gap_before": 1.41,
+   "event": "ordinary_request",
+   "block": "picnic.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Pick a spot near a shelter, just in case it really pours.",
+   "est_sec": 4.13,
+   "gap_before": 1.09,
+   "role": "followup",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

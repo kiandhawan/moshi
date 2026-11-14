@@ -1,0 +1,180 @@
+{
+ "id": "eval_12_00156",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 156,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "laptop_buying",
+  "painting_art"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "7bb342e710854139b1d6e12411229f1f",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Zoe",
+ "friend_name_id": "name_24",
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_21",
+  "side_instr_30",
+  "ack_10",
+  "implicit_09"
+ ],
+ "block_ids": [
+  "laptop_buying.ctx1",
+  "painting_art.side3"
+ ],
+ "est_total_sec": 68.98,
+ "est_speech_sec": 52.13,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.59,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "My old laptop is dying and I need a new one before next month.",
+   "est_sec": 4.44,
+   "gap_before": 0.33,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. First big question, do you want something small and light to carry around, or a bigger screen for working at a desk?",
+   "est_sec": 7.23,
+   "gap_before": 1.72,
+   "role": "reply",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment, I'm going to talk to my friend. Stay quiet until you hear I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 2.63,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.44,
+   "role": "ack",
+   "phrasing": "ack_10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Zoe, are you still coming to the gallery opening on Friday?",
+   "est_sec": 3.51,
+   "gap_before": 0.81,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "I want to, but what time does it start?",
+   "est_sec": 2.89,
+   "gap_before": 0.89,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Seven, and there's free wine apparently.",
+   "est_sec": 1.96,
+   "gap_before": 1.13,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay, now I'm definitely coming. Is your teacher showing anything?",
+   "est_sec": 3.2,
+   "gap_before": 0.38,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Two big oil paintings, the ones with the horses.",
+   "est_sec": 2.89,
+   "gap_before": 1.23,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh, I remember those. They were huge.",
+   "est_sec": 2.27,
+   "gap_before": 1.02,
+   "block": "painting_art.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "So where did we leave it?",
+   "est_sec": 1.96,
+   "gap_before": 1.69,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. We were deciding whether your new laptop should be light or have a big screen.",
+   "est_sec": 5.06,
+   "gap_before": 0.34,
+   "role": "resume",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Light. I carry it to cafes almost every day.",
+   "est_sec": 2.89,
+   "gap_before": 0.67,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then look at thirteen or fourteen inch models with long battery life.",
+   "est_sec": 3.82,
+   "gap_before": 0.98,
+   "role": "followup",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

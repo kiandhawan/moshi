@@ -1,0 +1,133 @@
+{
+ "id": "train_10_00328",
+ "split": "train",
+ "seed": 10,
+ "order_index": 328,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "public_transport"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "public_transport",
+ "voices": {
+  "user": "e7de86b388864b8cbd50d0d70a3494e5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_04",
+  "greet_ans_02",
+  "think_instr_22",
+  "ack_07",
+  "self_16",
+  "self_05"
+ ],
+ "block_ids": [
+  "public_transport.ctx2"
+ ],
+ "est_total_sec": 73.58,
+ "est_speech_sec": 24.77,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.32,
+   "role": "greeting",
+   "phrasing": "greet_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.88,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I take the subway about four times a week. Should I get a monthly pass?",
+   "est_sec": 4.75,
+   "gap_before": 0.52,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "At four trips a week, it's close. Do you also use it on weekends, or would you mostly pay per ride outside of work?",
+   "est_sec": 7.54,
+   "gap_before": 1.15,
+   "role": "reply",
+   "block": "public_transport.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Not sure yet. Check back with me in forty-five seconds.",
+   "est_sec": 3.2,
+   "gap_before": 1.09,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.21,
+   "role": "ack",
+   "phrasing": "ack_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 3.63
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, okay.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 26.65
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, thinking about your weekends, how often do you use the subway?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "public_transport.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.51
+   }
+  }
+ ]
+}

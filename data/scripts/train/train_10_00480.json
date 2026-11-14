@@ -1,0 +1,127 @@
+{
+ "id": "train_10_00480",
+ "split": "train",
+ "seed": 10,
+ "order_index": 480,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "baking"
+ ],
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 10
+ },
+ "topic": "baking",
+ "voices": {
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_14",
+  "greet_ans_13",
+  "think_instr_29",
+  "self_17"
+ ],
+ "block_ids": [
+  "baking.ctx2"
+ ],
+ "est_total_sec": 46.21,
+ "est_speech_sec": 31.28,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.66,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to start baking my own bread.",
+   "est_sec": 2.58,
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "baking.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great project. Do you want to start with a quick yeast loaf you can make in an afternoon, or grow a sourdough starter, which takes about a week?",
+   "est_sec": 8.78,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "baking.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about that for ten seconds, then ask me once more.",
+   "est_sec": 4.13,
+   "gap_before": 1.1,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_29"
+  },
+  {
+   "speaker": "user",
+   "text": "If I pick that one, then",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 6.65
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Back to your bread plans. Which one?",
+   "est_sec": 2.27,
+   "role": "resume",
+   "block": "baking.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 10.04
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Sourdough. I'm patient, and I want to do it properly.",
+   "est_sec": 3.2,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "baking.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Love it. Mix equal parts flour and water in a jar today, and feed it once a day.",
+   "est_sec": 5.68,
+   "gap_before": 1.07,
+   "role": "followup",
+   "block": "baking.ctx2"
+  }
+ ]
+}

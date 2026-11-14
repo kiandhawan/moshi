@@ -1,0 +1,127 @@
+{
+ "id": "eval_12_00356",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 356,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "camping"
+ ],
+ "topic": "camping",
+ "voices": {
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_21",
+  "describe_instr_09",
+  "ack_14",
+  "describe_cue_15"
+ ],
+ "block_ids": [
+  "camping.opt1"
+ ],
+ "est_total_sec": 47.63,
+ "est_speech_sec": 38.2,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.34,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.64,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "I need help picking a campsite for next month.",
+   "est_sec": 2.89,
+   "gap_before": 0.25,
+   "block": "camping.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to describe each one. Save your comments until the end.",
+   "est_sec": 3.82,
+   "gap_before": 0.73,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.28,
+   "role": "ack",
+   "phrasing": "ack_14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is right on the beach, with showers and a little shop, but it's pretty crowded.",
+   "est_sec": 5.68,
+   "gap_before": 0.78,
+   "block": "camping.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a site deep in the national forest, no water, no toilets, totally quiet.",
+   "est_sec": 4.75,
+   "gap_before": 1.65,
+   "block": "camping.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is a family campground by a river, with a playground and fire pits at every spot.",
+   "est_sec": 6.3,
+   "gap_before": 1.32,
+   "block": "camping.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "So that's the list. Thoughts?",
+   "est_sec": 1.65,
+   "gap_before": 1.23,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The river campground sounds like a nice middle ground, fire pits and some facilities without the beach crowds. I'd only pick the forest site if you're happy to rough it completely.",
+   "est_sec": 9.71,
+   "gap_before": 0.71,
+   "role": "resume",
+   "block": "camping.opt1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

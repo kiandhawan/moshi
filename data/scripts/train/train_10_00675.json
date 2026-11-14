@@ -1,0 +1,96 @@
+{
+ "id": "train_10_00675",
+ "split": "train",
+ "seed": 10,
+ "order_index": 675,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "books"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "books",
+ "voices": {
+  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_01",
+  "think_instr_10"
+ ],
+ "block_ids": [
+  "books.ctx2"
+ ],
+ "est_total_sec": 69.8,
+ "est_speech_sec": 20.75,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.58,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.7,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "It's my turn to pick the book for our book club.",
+   "est_sec": 3.51,
+   "gap_before": 0.23,
+   "event": "ordinary_request",
+   "block": "books.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. What does the group usually enjoy, and would you rather pick something safe or something that sparks a big debate?",
+   "est_sec": 6.61,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "books.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, give me forty-five seconds to think it over, then ask me.",
+   "est_sec": 3.82,
+   "gap_before": 0.37,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, for your book club, safe pick or something to argue about?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "books.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.04
+   }
+  }
+ ]
+}

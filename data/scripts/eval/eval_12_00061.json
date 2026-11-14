@@ -1,0 +1,135 @@
+{
+ "id": "eval_12_00061",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 61,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "topic": "podcasts",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_21"
+ ],
+ "block_ids": [
+  "podcasts.dlg2"
+ ],
+ "est_total_sec": 47.05,
+ "est_speech_sec": 35.2,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.72,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.5,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "How do people listen to podcasts at double speed? I can't understand anything.",
+   "est_sec": 4.13,
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Most people build up gradually. Try one and a quarter speed for a week, then nudge it up.",
+   "est_sec": 5.68,
+   "gap_before": 0.5,
+   "role": "reply",
+   "block": "podcasts.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Is it even worth it?",
+   "est_sec": 1.65,
+   "gap_before": 1.34,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For slow talk shows, it saves a lot of time. For stories or comedy, normal speed usually works better because timing matters.",
+   "est_sec": 6.92,
+   "gap_before": 1.58,
+   "role": "reply",
+   "block": "podcasts.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Makes sense. I mostly listen to",
+   "est_sec": 1.96,
+   "gap_before": 0.37,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "podcasts.dlg2"
+  },
+  {
+   "speaker": "user",
+   "text": "long interviews with scientists.",
+   "est_sec": 1.34,
+   "gap_before": 2.32,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Those are perfect for a slight speed boost. Many apps also trim silences automatically, which helps without sounding rushed.",
+   "est_sec": 5.99,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "podcasts.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, I'll turn that on.",
+   "est_sec": 1.65,
+   "gap_before": 1.14,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's usually in the playback settings. You'll barely notice it.",
+   "est_sec": 3.2,
+   "gap_before": 0.6,
+   "role": "reply",
+   "block": "podcasts.dlg2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "ordinary"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

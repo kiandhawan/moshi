@@ -1,0 +1,136 @@
+{
+ "id": "train_10_00166",
+ "split": "train",
+ "seed": 10,
+ "order_index": 166,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "smartphones"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "smartphones",
+ "voices": {
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_13",
+  "greet_ans_23",
+  "think_instr_04",
+  "ack_08",
+  "self_17"
+ ],
+ "block_ids": [
+  "smartphones.ctx1"
+ ],
+ "est_total_sec": 59.8,
+ "est_speech_sec": 35.1,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.95,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_23"
+  },
+  {
+   "speaker": "user",
+   "text": "My phone is three years old and the battery dies by lunchtime. I think it's time to replace it.",
+   "est_sec": 5.99,
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "smartphones.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's fair. Do you want to stick with the same brand, or are you open to switching to something new?",
+   "est_sec": 6.3,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "smartphones.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "I don't know yet. Ask me again in twenty seconds.",
+   "est_sec": 3.2,
+   "gap_before": 0.77,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.38,
+   "role": "ack",
+   "phrasing": "ack_08"
+  },
+  {
+   "speaker": "user",
+   "text": "If I pick that one, then",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 6.69
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, back to the phone. Same brand, or a switch?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "smartphones.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.3
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, I want to try something new this time.",
+   "est_sec": 2.89,
+   "gap_before": 1.62,
+   "event": "ordinary_request",
+   "block": "smartphones.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun. Most phones have a transfer app now, so moving your photos and contacts is easier than it used to be.",
+   "est_sec": 6.61,
+   "gap_before": 0.63,
+   "role": "followup",
+   "block": "smartphones.ctx1"
+  }
+ ]
+}

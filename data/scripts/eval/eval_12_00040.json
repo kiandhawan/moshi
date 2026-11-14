@@ -1,0 +1,117 @@
+{
+ "id": "eval_12_00040",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 40,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "laptop_buying"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_15",
+  "describe_instr_09",
+  "describe_cue_12"
+ ],
+ "block_ids": [
+  "laptop_buying.opt2"
+ ],
+ "est_total_sec": 51.25,
+ "est_speech_sec": 41.51,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.36,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "My mom wants a new laptop and asked me to help her decide.",
+   "est_sec": 4.13,
+   "gap_before": 0.2,
+   "block": "laptop_buying.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to describe each one. Save your comments until the end.",
+   "est_sec": 3.82,
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_09"
+  },
+  {
+   "speaker": "user",
+   "text": "One is a simple Chromebook that's cheap and easy, mostly for email and video calls.",
+   "est_sec": 4.75,
+   "gap_before": 0.67,
+   "block": "laptop_buying.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a regular Windows laptop with a big screen, which is what she's used to.",
+   "est_sec": 5.06,
+   "gap_before": 2.88,
+   "block": "laptop_buying.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's a tablet with a keyboard cover, smaller but really easy to carry around.",
+   "est_sec": 4.75,
+   "gap_before": 1.17,
+   "block": "laptop_buying.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 0.63,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If she mostly does email and video calls, the Chromebook is simple and hard to mess up. The Windows laptop is familiar, which really matters for some people. The tablet is handy, but typing long emails on it can be a little cramped.",
+   "est_sec": 13.43,
+   "gap_before": 1.07,
+   "role": "resume",
+   "block": "laptop_buying.opt2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

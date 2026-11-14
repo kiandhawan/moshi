@@ -1,0 +1,142 @@
+{
+ "id": "eval_12_00305",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 305,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [],
+ "topics": [
+  "wedding_planning"
+ ],
+ "topic": "wedding_planning",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_21",
+  "phone_instr_08",
+  "call_11",
+  "phone_cue_04"
+ ],
+ "block_ids": [
+  "wedding_planning.ctx3"
+ ],
+ "est_total_sec": 53.37,
+ "est_speech_sec": 30.34,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.8,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "My best friend's wedding is in three weeks and I'm giving a speech.",
+   "est_sec": 4.13,
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What an honor. Do you want it to be mostly funny stories, or more heartfelt and sentimental?",
+   "est_sec": 5.37,
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "wedding_planning.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I need to take this, it's important. Please hold on until I'm done.",
+   "est_sec": 4.13,
+   "gap_before": 3.45,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, you.",
+   "est_sec": 0.72,
+   "gap_before": 1.83,
+   "phrasing": "call_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm just at home.",
+   "est_sec": 1.34,
+   "gap_before": 2.5,
+   "phrasing": "call_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, you're back already? I thought your flight was tomorrow.",
+   "est_sec": 3.2,
+   "gap_before": 3.34,
+   "phrasing": "call_11",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha, okay, welcome home.",
+   "est_sec": 1.34,
+   "gap_before": 2.54,
+   "phrasing": "call_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Talk later.",
+   "est_sec": 0.72,
+   "gap_before": 2.7,
+   "phrasing": "call_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that call. I'm back now.",
+   "est_sec": 2.27,
+   "gap_before": 1.6,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. We were figuring out the tone of your wedding speech.",
+   "est_sec": 3.82,
+   "gap_before": 0.42,
+   "role": "resume",
+   "block": "wedding_planning.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

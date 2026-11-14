@@ -1,0 +1,180 @@
+{
+ "id": "train_10_00560",
+ "split": "train",
+ "seed": 10,
+ "order_index": 560,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "shopping",
+  "personal_finance"
+ ],
+ "topic": "shopping",
+ "voices": {
+  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "friend": "e58a6b7e06f048d0b83836d55d226b90",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Lucas",
+ "friend_name_id": "name_19",
+ "phrasing_ids": [
+  "greet_29",
+  "greet_ans_02",
+  "side_instr_07",
+  "dn_19",
+  "side_cue_19"
+ ],
+ "block_ids": [
+  "shopping.ctx1",
+  "personal_finance.side2"
+ ],
+ "est_total_sec": 75.62,
+ "est_speech_sec": 58.12,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.55,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I need a new winter coat. My old one has a broken zipper.",
+   "est_sec": 4.13,
+   "gap_before": 0.33,
+   "event": "ordinary_request",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it. Are you thinking a long warm parka, or a shorter jacket that's easier to move in?",
+   "est_sec": 5.68,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold that thought, I need to talk to Lucas real quick. Stay quiet until I return.",
+   "est_sec": 5.06,
+   "gap_before": 1.42,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm finished with that, what's next?",
+   "est_sec": 2.27,
+   "gap_before": 1.15,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_19"
+  },
+  {
+   "speaker": "friend",
+   "text": "Can you help me move the table?",
+   "est_sec": 2.27,
+   "gap_before": 1.17,
+   "phrasing": "dn_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I ask you something? Do you actually stick to a budget?",
+   "est_sec": 3.82,
+   "gap_before": 0.4,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "personal_finance.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Kind of. I give myself a fixed amount for eating out and that's the only rule.",
+   "est_sec": 5.06,
+   "gap_before": 1.15,
+   "block": "personal_finance.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's it? Just one rule?",
+   "est_sec": 1.65,
+   "gap_before": 1.03,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "personal_finance.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah. Rent and bills come out automatically, savings too, so the only thing I can mess up is food.",
+   "est_sec": 5.99,
+   "gap_before": 0.71,
+   "block": "personal_finance.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Huh. Maybe I'm overthinking mine.",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
+   "block": "personal_finance.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "You definitely are. You had like twenty categories.",
+   "est_sec": 2.58,
+   "gap_before": 0.52,
+   "block": "personal_finance.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 1.9,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. You were choosing between a long parka and a shorter winter jacket.",
+   "est_sec": 4.13,
+   "gap_before": 0.4,
+   "role": "resume",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "A shorter one, I bike to work most days.",
+   "est_sec": 2.89,
+   "gap_before": 2.55,
+   "event": "ordinary_request",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Makes sense. Look for something windproof with a bit of stretch so you can move your arms easily.",
+   "est_sec": 5.68,
+   "gap_before": 0.63,
+   "role": "followup",
+   "block": "shopping.ctx1"
+  }
+ ]
+}

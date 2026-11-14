@@ -1,0 +1,180 @@
+{
+ "id": "train_10_00396",
+ "split": "train",
+ "seed": 10,
+ "order_index": 396,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "movies",
+  "weather_plans"
+ ],
+ "topic": "movies",
+ "voices": {
+  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "friend": "bf322df2096a46f18c579d0baa36f41d",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
+ "phrasing_ids": [
+  "greet_28",
+  "greet_ans_26",
+  "side_instr_01",
+  "dn_11",
+  "side_cue_10"
+ ],
+ "block_ids": [
+  "movies.ctx2",
+  "weather_plans.side3"
+ ],
+ "est_total_sec": 74.28,
+ "est_speech_sec": 56.88,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.92,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to get into older films but I don't know where to start.",
+   "est_sec": 4.44,
+   "gap_before": 0.33,
+   "event": "ordinary_request",
+   "block": "movies.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great idea. Would you like to start with classic Hollywood from the forties and fifties, or with foreign classics from Europe and Japan?",
+   "est_sec": 7.23,
+   "gap_before": 0.36,
+   "role": "reply",
+   "block": "movies.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I need to talk to my roommate for a second. Stay quiet until I say I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 1.08,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Sam, I'm back at the office next week.",
+   "est_sec": 2.58,
+   "gap_before": 0.65,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_11"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh nice, finally.",
+   "est_sec": 1.03,
+   "gap_before": 1.42,
+   "phrasing": "dn_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Sam, is it still raining out there?",
+   "est_sec": 2.27,
+   "gap_before": 1.17,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just drizzling now. The sky looks lighter over the hills.",
+   "est_sec": 3.2,
+   "gap_before": 1.11,
+   "block": "weather_plans.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you think it'll clear up in time for the market?",
+   "est_sec": 3.51,
+   "gap_before": 0.38,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Maybe. If not, we can just take umbrellas. It's only a ten minute walk.",
+   "est_sec": 4.44,
+   "gap_before": 0.88,
+   "block": "weather_plans.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "True. I really want those peaches before they sell out.",
+   "est_sec": 3.2,
+   "gap_before": 0.68,
+   "block": "weather_plans.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then let's not wait too long. Grab your jacket.",
+   "est_sec": 2.89,
+   "gap_before": 1.13,
+   "block": "weather_plans.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, I'm back now. Go ahead.",
+   "est_sec": 1.96,
+   "gap_before": 1.73,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Any thoughts on where to start with the classics?",
+   "est_sec": 3.51,
+   "gap_before": 0.93,
+   "role": "resume",
+   "block": "movies.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Hollywood first. Subtitles put me to sleep.",
+   "est_sec": 2.27,
+   "gap_before": 1.43,
+   "event": "ordinary_request",
+   "block": "movies.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Start with a screwball comedy and a film noir, they're both fast and easy to love.",
+   "est_sec": 5.68,
+   "gap_before": 0.94,
+   "role": "followup",
+   "block": "movies.ctx2"
+  }
+ ]
+}

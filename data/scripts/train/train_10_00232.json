@@ -1,0 +1,96 @@
+{
+ "id": "train_10_00232",
+ "split": "train",
+ "seed": 10,
+ "order_index": 232,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "shopping"
+ ],
+ "wait_sec": 5,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 5
+ },
+ "topic": "shopping",
+ "voices": {
+  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_17",
+  "think_instr_25"
+ ],
+ "block_ids": [
+  "shopping.ctx3"
+ ],
+ "est_total_sec": 32.14,
+ "est_speech_sec": 21.99,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Our vacuum finally died. I need to buy a new one this weekend.",
+   "est_sec": 4.13,
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "block": "shopping.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Do you want a cordless stick vacuum that's light and handy, or a full size one with more suction?",
+   "est_sec": 5.99,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "shopping.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me take five seconds to think, and then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.84,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 5,
+   "phrasing": "think_instr_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So what's it going to be, a cordless stick or a full size vacuum?",
+   "est_sec": 4.44,
+   "role": "resume",
+   "block": "shopping.ctx3",
+   "anchor": {
+    "turn": 4,
+    "offset": 5.21
+   }
+  }
+ ]
+}

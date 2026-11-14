@@ -1,0 +1,171 @@
+{
+ "id": "eval_12_00066",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 66,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "family_visit",
+  "laptop_buying"
+ ],
+ "topic": "family_visit",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
+ "phrasing_ids": [
+  "greet_21",
+  "greet_ans_30",
+  "side_instr_09",
+  "dn_12",
+  "side_cue_12"
+ ],
+ "block_ids": [
+  "family_visit.ctx1",
+  "laptop_buying.side1"
+ ],
+ "est_total_sec": 62.39,
+ "est_speech_sec": 46.45,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.35,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "My parents are staying with us next week and our apartment is tiny.",
+   "est_sec": 4.13,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That can be tricky. Would you give them your bedroom and take the couch, or book them a hotel nearby?",
+   "est_sec": 6.3,
+   "gap_before": 0.53,
+   "role": "reply",
+   "block": "family_visit.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, give me a bit, someone's at my door. Wait quietly until I say I'm back.",
+   "est_sec": 5.06,
+   "gap_before": 0.9,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm done, you can have the bathroom.",
+   "est_sec": 2.58,
+   "gap_before": 1.4,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_12"
+  },
+  {
+   "speaker": "friend",
+   "text": "Thanks.",
+   "est_sec": 0.41,
+   "gap_before": 2.31,
+   "phrasing": "dn_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Marcus, how do you like your laptop? You've had it a while now.",
+   "est_sec": 4.13,
+   "gap_before": 1.71,
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Honestly, I love it. The battery lasts all day.",
+   "est_sec": 2.89,
+   "gap_before": 1.47,
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Does it get hot when you play games?",
+   "est_sec": 2.58,
+   "gap_before": 0.9,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "A little, but the fan isn't loud.",
+   "est_sec": 2.27,
+   "gap_before": 0.57,
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm. Was it expensive?",
+   "est_sec": 1.34,
+   "gap_before": 0.55,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not too bad, I got it on sale. I can send you the link.",
+   "est_sec": 4.44,
+   "gap_before": 0.84,
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back. Where did we leave off?",
+   "est_sec": 2.27,
+   "gap_before": 0.98,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Still torn between giving up your bedroom and finding them a hotel?",
+   "est_sec": 4.44,
+   "gap_before": 0.79,
+   "role": "resume",
+   "block": "family_visit.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

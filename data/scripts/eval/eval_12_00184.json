@@ -1,0 +1,154 @@
+{
+ "id": "eval_12_00184",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 184,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "picnic"
+ ],
+ "topic": "picnic",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_24",
+  "door_instr_09",
+  "door_06",
+  "door_cue_08"
+ ],
+ "block_ids": [
+  "picnic.ctx1"
+ ],
+ "est_total_sec": 52.65,
+ "est_speech_sec": 37.57,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.53,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.87,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "We're having a picnic on Sunday if the weather holds.",
+   "est_sec": 3.2,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "picnic.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sounds lovely. Are you thinking of the big park by the river or the quieter hill with the view over town?",
+   "est_sec": 6.61,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "picnic.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold that thought, someone's here. Don't say anything until I'm back.",
+   "est_sec": 3.51,
+   "gap_before": 0.7,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, hi!",
+   "est_sec": 0.72,
+   "gap_before": 2.31,
+   "phrasing": "door_06"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hey, I'm back from the trip, brought you something.",
+   "est_sec": 2.89,
+   "gap_before": 0.68,
+   "phrasing": "door_06",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "You didn't have to! How was it?",
+   "est_sec": 2.27,
+   "gap_before": 0.96,
+   "phrasing": "door_06",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Amazing, I'll tell you later.",
+   "est_sec": 1.65,
+   "gap_before": 1.26,
+   "phrasing": "door_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, back from the door.",
+   "est_sec": 1.65,
+   "gap_before": 3.27,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everything okay at the door? We were choosing a spot for Sunday's picnic.",
+   "est_sec": 4.13,
+   "gap_before": 0.88,
+   "role": "resume",
+   "block": "picnic.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "The hill. The view is worth the walk.",
+   "est_sec": 2.58,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "picnic.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Pack light then, and bring a blanket that can handle some grass.",
+   "est_sec": 4.13,
+   "gap_before": 0.47,
+   "role": "followup",
+   "block": "picnic.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

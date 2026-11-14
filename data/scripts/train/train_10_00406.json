@@ -1,0 +1,191 @@
+{
+ "id": "train_10_00406",
+ "split": "train",
+ "seed": 10,
+ "order_index": 406,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "gardening",
+  "shopping"
+ ],
+ "topic": "gardening",
+ "voices": {
+  "user": "3fdb457debb744ca9cfe9e2ce99a2deb",
+  "friend": "c250136a9ec74cc0b799be54664a83f2",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_02",
+  "side_instr_20",
+  "ack_03",
+  "dn_08",
+  "side_cue_02"
+ ],
+ "block_ids": [
+  "gardening.ctx3",
+  "shopping.side1"
+ ],
+ "est_total_sec": 72.22,
+ "est_speech_sec": 52.02,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.41,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "We're building raised beds this weekend. Wood or metal?",
+   "est_sec": 2.89,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "gardening.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wood looks natural and is cheaper, metal lasts longer and warms up faster in spring. What matters more to you, budget or durability?",
+   "est_sec": 7.23,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "gardening.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me talk to Daniel for a bit, so please stay quiet until I say I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 0.4,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.41,
+   "role": "ack",
+   "phrasing": "ack_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Daniel, are we out of dish soap?",
+   "est_sec": 2.27,
+   "gap_before": 1.1,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Almost. There's maybe one more load in the bottle.",
+   "est_sec": 2.89,
+   "gap_before": 1.26,
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, adding it to the list. Anything else you need from the store?",
+   "est_sec": 4.13,
+   "gap_before": 1.15,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oat milk, and those crackers I like.",
+   "est_sec": 2.27,
+   "gap_before": 1.15,
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "The rosemary ones?",
+   "est_sec": 1.03,
+   "gap_before": 0.99,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yes, those. Get two boxes if they're on sale.",
+   "est_sec": 2.89,
+   "gap_before": 2.24,
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, are you back for good or just visiting?",
+   "est_sec": 2.89,
+   "gap_before": 2.42,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_08"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just for the weekend.",
+   "est_sec": 1.34,
+   "gap_before": 1.39,
+   "phrasing": "dn_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 0.98,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. We were picking material for your raised beds.",
+   "est_sec": 3.2,
+   "gap_before": 0.34,
+   "role": "resume",
+   "block": "gardening.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Metal. I don't want to rebuild them in five years.",
+   "est_sec": 3.2,
+   "gap_before": 1.47,
+   "event": "ordinary_request",
+   "block": "gardening.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sensible. Line the bottom with cardboard before you fill them, it smothers the weeds.",
+   "est_sec": 4.44,
+   "gap_before": 1.06,
+   "role": "followup",
+   "block": "gardening.ctx3"
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "id": "eval_12_00073",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 73,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "reading": {
+  "material": "text message",
+  "sec": 17.6
+ },
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_27",
+  "greet_ans_06",
+  "read_instr_07",
+  "ack_02",
+  "murmur_08",
+  "murmur_07",
+  "implicit_01"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx1"
+ ],
+ "est_total_sec": 56.7,
+ "est_speech_sec": 34.06,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.54,
+   "role": "greeting",
+   "phrasing": "greet_27",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "I still haven't got anything for my dad and the holidays are in two weeks.",
+   "est_sec": 4.75,
+   "gap_before": 0.5,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Still time. Does he like gadgets, or would something like a nice sweater or a cooking class feel more like him?",
+   "est_sec": 6.61,
+   "gap_before": 1.01,
+   "role": "reply",
+   "block": "holiday_gifts.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, my sister texted me. Let me read it before you say anything.",
+   "est_sec": 4.44,
+   "gap_before": 1.39,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.56,
+   "role": "ack",
+   "phrasing": "ack_02",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, what does that mean?",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 8.65
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Huh, she's running late.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 12.83
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Anyway, where were we?",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 17.6
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. We were brainstorming a holiday gift for your dad.",
+   "est_sec": 3.2,
+   "gap_before": 0.48,
+   "role": "resume",
+   "block": "holiday_gifts.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A cooking class. He's been making the same three dishes for years.",
+   "est_sec": 3.82,
+   "gap_before": 1.05,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, perfect. Pick one with a cuisine he's never tried.",
+   "est_sec": 3.2,
+   "gap_before": 1.04,
+   "role": "followup",
+   "block": "holiday_gifts.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

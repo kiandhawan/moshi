@@ -1,0 +1,139 @@
+{
+ "id": "train_10_00221",
+ "split": "train",
+ "seed": 10,
+ "order_index": 221,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_end",
+  "self_talk"
+ ],
+ "topics": [
+  "fitness"
+ ],
+ "wait_sec": 10,
+ "early_end": {
+  "after_sec": 7.39,
+  "direct": false
+ },
+ "topic": "fitness",
+ "voices": {
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_28",
+  "greet_ans_02",
+  "think_instr_10",
+  "ack_12",
+  "self_16",
+  "early_end_05"
+ ],
+ "block_ids": [
+  "fitness.ctx2"
+ ],
+ "est_total_sec": 41.8,
+ "est_speech_sec": 30.45,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.46,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I signed up for a ten kilometer race in two months. I've never run that far.",
+   "est_sec": 5.06,
+   "gap_before": 0.44,
+   "event": "ordinary_request",
+   "block": "fitness.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Two months is enough if you build up gradually. What's the longest you can run comfortably right now?",
+   "est_sec": 5.68,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "fitness.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, give me ten seconds to think it over, then ask me.",
+   "est_sec": 3.82,
+   "gap_before": 0.72,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.65,
+   "role": "ack",
+   "phrasing": "ack_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 4.24
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Got it, I don't need the full time.",
+   "est_sec": 2.58,
+   "anchor": {
+    "turn": 4,
+    "offset": 7.39
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe three kilometers before I need to walk.",
+   "est_sec": 2.58,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "fitness.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a fine starting point. Add about half a kilometer to your long run each week and you'll be ready.",
+   "est_sec": 6.3,
+   "gap_before": 0.71,
+   "role": "followup",
+   "block": "fitness.ctx2"
+  }
+ ]
+}

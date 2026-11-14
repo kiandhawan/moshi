@@ -1,0 +1,165 @@
+{
+ "id": "eval_12_00174",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 174,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_18",
+  "phone_instr_01",
+  "ack_15",
+  "call_02",
+  "implicit_13"
+ ],
+ "block_ids": [
+  "learning_language.ctx3"
+ ],
+ "est_total_sec": 58.08,
+ "est_speech_sec": 38.29,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.37,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "My French exam is in two months.",
+   "est_sec": 2.27,
+   "gap_before": 0.23,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, let's plan. How much time can you realistically give it each day, and which part worries you most, grammar, listening or speaking?",
+   "est_sec": 7.23,
+   "gap_before": 1.4,
+   "role": "reply",
+   "block": "learning_language.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, I have to take this call. Hang on and stay quiet until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.24,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.58,
+   "role": "ack",
+   "phrasing": "ack_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hi, yes, this is me.",
+   "est_sec": 1.65,
+   "gap_before": 1.82,
+   "phrasing": "call_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Tuesday at three works for me.",
+   "est_sec": 1.96,
+   "gap_before": 1.93,
+   "phrasing": "call_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Do I need to bring anything?",
+   "est_sec": 1.96,
+   "gap_before": 2.56,
+   "phrasing": "call_02",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, great. Thank you.",
+   "est_sec": 1.34,
+   "gap_before": 3.34,
+   "phrasing": "call_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, you were saying?",
+   "est_sec": 1.34,
+   "gap_before": 1.73,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. Have you figured out your study time and your weakest skill?",
+   "est_sec": 3.82,
+   "gap_before": 1.0,
+   "role": "resume",
+   "block": "learning_language.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "About an hour a day, and listening is the worst.",
+   "est_sec": 3.2,
+   "gap_before": 1.31,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then spend half of it on French podcasts or news with transcripts. Listen first, then read along.",
+   "est_sec": 5.37,
+   "gap_before": 0.38,
+   "role": "followup",
+   "block": "learning_language.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

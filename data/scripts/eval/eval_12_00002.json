@@ -1,0 +1,127 @@
+{
+ "id": "eval_12_00002",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 2,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "cycling"
+ ],
+ "topic": "cycling",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_03",
+  "describe_instr_15",
+  "ack_14",
+  "describe_cue_12"
+ ],
+ "block_ids": [
+  "cycling.opt2"
+ ],
+ "est_total_sec": 46.58,
+ "est_speech_sec": 35.72,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.79,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.37,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "We're planning a cycling day trip and I can't decide on the route.",
+   "est_sec": 4.13,
+   "gap_before": 0.47,
+   "block": "cycling.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to describe all the options before I hear your opinion.",
+   "est_sec": 3.82,
+   "gap_before": 0.68,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.61,
+   "role": "ack",
+   "phrasing": "ack_14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One route follows the coast, about thirty miles, flat, with a nice cafe at the end.",
+   "est_sec": 5.06,
+   "gap_before": 1.06,
+   "block": "cycling.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another one goes up through the vineyards, shorter, but with two pretty steep climbs.",
+   "est_sec": 4.44,
+   "gap_before": 1.96,
+   "block": "cycling.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "The third is a forest trail, mostly gravel, quiet and shady, maybe twenty miles.",
+   "est_sec": 4.44,
+   "gap_before": 1.37,
+   "block": "cycling.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 1.05,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd pick the coast unless your group loves hills. Are all of you on road bikes? If so, I'd skip the gravel forest trail.",
+   "est_sec": 7.54,
+   "gap_before": 1.0,
+   "role": "resume",
+   "block": "cycling.opt2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

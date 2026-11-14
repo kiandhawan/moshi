@@ -1,0 +1,154 @@
+{
+ "id": "train_10_00625",
+ "split": "train",
+ "seed": 10,
+ "order_index": 625,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "topics": [
+  "weather_plans",
+  "video_games"
+ ],
+ "topic": "weather_plans",
+ "voices": {
+  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "friend": "5ce84bbd213b4943bc89e1951e17848a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Rosa",
+ "friend_name_id": "name_22",
+ "phrasing_ids": [
+  "greet_25",
+  "greet_ans_11",
+  "side_instr_22",
+  "ack_07",
+  "side_cue_11"
+ ],
+ "block_ids": [
+  "weather_plans.ctx3",
+  "video_games.side1"
+ ],
+ "est_total_sec": 57.16,
+ "est_speech_sec": 44.8,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.58,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.94,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a snowstorm coming Thursday night and I'm supposed to drive to my sister's on Friday.",
+   "est_sec": 5.06,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That could make the roads rough. Would you rather leave Thursday afternoon before it hits, or wait and go Saturday?",
+   "est_sec": 6.3,
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "weather_plans.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "One sec, I'm going to talk with my neighbor. Please wait until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 1.53,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.24,
+   "role": "ack",
+   "phrasing": "ack_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Rosa, are you still playing that farming game?",
+   "est_sec": 2.58,
+   "gap_before": 0.95,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Every night. I'm in my third year now.",
+   "est_sec": 2.58,
+   "gap_before": 0.42,
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it worth getting? It looks kind of slow.",
+   "est_sec": 2.89,
+   "gap_before": 1.74,
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "It is slow. That's the point. It's relaxing.",
+   "est_sec": 2.58,
+   "gap_before": 0.51,
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Can we play it together or is it single player?",
+   "est_sec": 3.2,
+   "gap_before": 0.38,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "You can do co-op. Get it and I'll show you around my farm.",
+   "est_sec": 4.13,
+   "gap_before": 0.3,
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done talking to them. I'm back.",
+   "est_sec": 2.58,
+   "gap_before": 0.74,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. We were deciding whether you beat the storm Thursday or wait until Saturday.",
+   "est_sec": 4.44,
+   "gap_before": 0.87,
+   "role": "resume",
+   "block": "weather_plans.ctx3"
+  }
+ ]
+}

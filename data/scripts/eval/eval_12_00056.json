@@ -1,0 +1,152 @@
+{
+ "id": "eval_12_00056",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 56,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "laptop_buying"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": "933563129e564b19a115bedd57b7406a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_12",
+  "door_instr_10",
+  "door_04",
+  "door_cue_08"
+ ],
+ "block_ids": [
+  "laptop_buying.ctx1"
+ ],
+ "est_total_sec": 60.15,
+ "est_speech_sec": 41.6,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.57,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.96,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "My old laptop is dying and I need a new one before next month.",
+   "est_sec": 4.44,
+   "gap_before": 0.37,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. First big question, do you want something small and light to carry around, or a bigger screen for working at a desk?",
+   "est_sec": 7.23,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Excuse me, I have to answer the door. I'll come back to you.",
+   "est_sec": 4.13,
+   "gap_before": 0.46,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, come in for a second.",
+   "est_sec": 1.96,
+   "gap_before": 3.32,
+   "phrasing": "door_04"
+  },
+  {
+   "speaker": "visitor",
+   "text": "I just wanted to return your ladder.",
+   "est_sec": 2.27,
+   "gap_before": 0.92,
+   "phrasing": "door_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh great, did it work out?",
+   "est_sec": 1.96,
+   "gap_before": 2.17,
+   "phrasing": "door_04",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Perfectly, thanks again.",
+   "est_sec": 1.03,
+   "gap_before": 1.37,
+   "phrasing": "door_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, back from the door.",
+   "est_sec": 1.65,
+   "gap_before": 2.88,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. We were deciding whether your new laptop should be light or have a big screen.",
+   "est_sec": 5.37,
+   "gap_before": 0.58,
+   "role": "resume",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Bigger screen. It mostly stays on my desk anyway.",
+   "est_sec": 2.89,
+   "gap_before": 1.84,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great, a sixteen inch model would give you lots of room for windows side by side.",
+   "est_sec": 5.06,
+   "gap_before": 0.94,
+   "role": "followup",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

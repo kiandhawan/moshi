@@ -1,0 +1,128 @@
+{
+ "id": "train_10_00338",
+ "split": "train",
+ "seed": 10,
+ "order_index": 338,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "cooking"
+ ],
+ "wait_sec": 5,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 5
+ },
+ "topic": "cooking",
+ "voices": {
+  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_17",
+  "greet_ans_01",
+  "think_instr_02"
+ ],
+ "block_ids": [
+  "cooking.ctx3"
+ ],
+ "est_total_sec": 48.86,
+ "est_speech_sec": 33.86,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.52,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.48,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm trying to meal prep lunches for the week. Cheap and not boring, please.",
+   "est_sec": 4.44,
+   "gap_before": 0.26,
+   "event": "ordinary_request",
+   "block": "cooking.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. Do you want one big batch of the same thing, like a chili, or two smaller recipes you can alternate?",
+   "est_sec": 6.61,
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "cooking.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, good question.",
+   "est_sec": 1.03,
+   "gap_before": 2.4,
+   "event": "ordinary_request",
+   "block": "cooking.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No rush, it really depends on how much variety you need.",
+   "est_sec": 3.51,
+   "gap_before": 0.82,
+   "role": "reply",
+   "block": "cooking.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about it for five seconds and then ask me again.",
+   "est_sec": 4.13,
+   "gap_before": 0.91,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 5,
+   "phrasing": "think_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, one big batch of chili, or two recipes to switch between?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "cooking.ctx3",
+   "anchor": {
+    "turn": 6,
+    "offset": 5.5
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "One big batch, I really don't have time.",
+   "est_sec": 2.58,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "cooking.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then chili is perfect. One pot, five portions, and it freezes well if you make extra.",
+   "est_sec": 5.06,
+   "gap_before": 1.13,
+   "role": "followup",
+   "block": "cooking.ctx3"
+  }
+ ]
+}

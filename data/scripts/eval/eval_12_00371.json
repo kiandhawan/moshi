@@ -1,0 +1,150 @@
+{
+ "id": "eval_12_00371",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 371,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "painting_art"
+ ],
+ "topic": "painting_art",
+ "voices": {
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_21",
+  "phone_instr_07",
+  "ack_12",
+  "call_12",
+  "implicit_06"
+ ],
+ "block_ids": [
+  "painting_art.ctx3"
+ ],
+ "est_total_sec": 48.49,
+ "est_speech_sec": 31.89,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.65,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.35,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "My painting of the harbor looks kind of flat and boring.",
+   "est_sec": 3.51,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hmm, that often comes from contrast. Would you rather darken the shadows on the boats or add a bright color somewhere as a focal point?",
+   "est_sec": 7.85,
+   "gap_before": 0.74,
+   "role": "reply",
+   "block": "painting_art.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One second, someone's calling me. Don't talk until I say I'm back.",
+   "est_sec": 3.82,
+   "gap_before": 1.91,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.29,
+   "role": "ack",
+   "phrasing": "ack_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hello?",
+   "est_sec": 0.41,
+   "gap_before": 1.64,
+   "phrasing": "call_12",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi, yes, about the dentist appointment.",
+   "est_sec": 1.96,
+   "gap_before": 3.1,
+   "phrasing": "call_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Could we move it to next week?",
+   "est_sec": 2.27,
+   "gap_before": 2.05,
+   "phrasing": "call_12",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Monday works. Thank you so much.",
+   "est_sec": 1.96,
+   "gap_before": 1.57,
+   "phrasing": "call_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, done. Where were we?",
+   "est_sec": 1.65,
+   "gap_before": 1.65,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. We were trying to fix your flat harbor painting, shadows or a bright accent?",
+   "est_sec": 4.75,
+   "gap_before": 0.8,
+   "role": "resume",
+   "block": "painting_art.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_phone",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

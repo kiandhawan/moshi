@@ -1,0 +1,124 @@
+{
+ "id": "train_10_00656",
+ "split": "train",
+ "seed": 10,
+ "order_index": 656,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "gardening"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "gardening",
+ "voices": {
+  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_01",
+  "think_instr_10",
+  "self_02",
+  "self_16"
+ ],
+ "block_ids": [
+  "gardening.ctx1"
+ ],
+ "est_total_sec": 70.9,
+ "est_speech_sec": 23.74,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.34,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got a sunny balcony and I want to grow something I can actually eat.",
+   "est_sec": 4.75,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "gardening.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely. Herbs, cherry tomatoes and salad greens all do well in pots. Which of those would you use the most?",
+   "est_sec": 6.3,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "gardening.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, give me forty-five seconds to think it over, then ask me.",
+   "est_sec": 3.82,
+   "gap_before": 1.06,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so if I do that, then",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 25.32
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 42.13
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Have you picked yet, herbs, cherry tomatoes or greens?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "gardening.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.57
+   }
+  }
+ ]
+}

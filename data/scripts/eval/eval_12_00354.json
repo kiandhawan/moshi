@@ -1,0 +1,148 @@
+{
+ "id": "eval_12_00354",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 354,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "podcasts"
+ ],
+ "reading": {
+  "material": "text message",
+  "sec": 16.8
+ },
+ "topic": "podcasts",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_12",
+  "read_instr_06",
+  "implicit_01"
+ ],
+ "block_ids": [
+  "podcasts.ctx3"
+ ],
+ "est_total_sec": 56.71,
+ "est_speech_sec": 31.48,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.46,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "I've subscribed to way too many shows and I'm drowning in episodes.",
+   "est_sec": 3.82,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Happens to everyone. Which ones could you drop? Think about which you actually look forward to.",
+   "est_sec": 5.06,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "podcasts.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about that.",
+   "est_sec": 1.65,
+   "gap_before": 0.77,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. Aim to keep maybe five.",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
+   "role": "reply",
+   "block": "podcasts.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, I just got a text. Let me read it first, stay quiet for a second.",
+   "est_sec": 5.06,
+   "gap_before": 1.39,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Anyway, where were we?",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 16.8
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. Any idea which shows you'll unsubscribe from?",
+   "est_sec": 2.58,
+   "gap_before": 0.92,
+   "role": "resume",
+   "block": "podcasts.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, I'll only keep the three interview shows.",
+   "est_sec": 2.58,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great. Mark everything older than a month as played and start fresh.",
+   "est_sec": 3.82,
+   "gap_before": 0.33,
+   "role": "followup",
+   "block": "podcasts.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

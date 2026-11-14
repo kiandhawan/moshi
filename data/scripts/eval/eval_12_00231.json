@@ -1,0 +1,171 @@
+{
+ "id": "eval_12_00231",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 231,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": "b121b91872f54f04ba9f6da08b8b6253",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_15",
+  "door_instr_06",
+  "ack_11",
+  "door_07",
+  "door_cue_02"
+ ],
+ "block_ids": [
+  "learning_language.ctx1"
+ ],
+ "est_total_sec": 56.78,
+ "est_speech_sec": 36.84,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.53,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.46,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to start learning a new language this year.",
+   "est_sec": 3.2,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great goal. Is there a language you need for work or travel, or would you rather pick one just because it sounds fun?",
+   "est_sec": 7.23,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "learning_language.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, that's the door. Hold on and don't talk until I'm back.",
+   "est_sec": 3.82,
+   "gap_before": 1.38,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright.",
+   "est_sec": 0.41,
+   "gap_before": 0.36,
+   "role": "ack",
+   "phrasing": "ack_11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hello?",
+   "est_sec": 0.41,
+   "gap_before": 4.53,
+   "phrasing": "door_07",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, we're collecting for the school fundraiser.",
+   "est_sec": 2.27,
+   "gap_before": 0.93,
+   "phrasing": "door_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Sure, how much are people giving?",
+   "est_sec": 1.96,
+   "gap_before": 0.56,
+   "phrasing": "door_07",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Anything helps, really.",
+   "est_sec": 1.03,
+   "gap_before": 0.66,
+   "phrasing": "door_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Here you go.",
+   "est_sec": 1.03,
+   "gap_before": 0.86,
+   "phrasing": "door_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, that took a minute. I'm back.",
+   "est_sec": 2.27,
+   "gap_before": 3.94,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. Have you thought about which language you'd like to start?",
+   "est_sec": 3.82,
+   "gap_before": 0.42,
+   "role": "resume",
+   "block": "learning_language.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Japanese, honestly just because I love the culture.",
+   "est_sec": 2.58,
+   "gap_before": 1.67,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wonderful. Learn the two kana alphabets first, they make everything else easier.",
+   "est_sec": 3.82,
+   "gap_before": 1.0,
+   "role": "followup",
+   "block": "learning_language.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

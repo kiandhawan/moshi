@@ -1,0 +1,177 @@
+{
+ "id": "eval_12_00022",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 22,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "topics": [
+  "camping",
+  "family_visit"
+ ],
+ "topic": "camping",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "933563129e564b19a115bedd57b7406a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Zoe",
+ "friend_name_id": "name_24",
+ "phrasing_ids": [
+  "greet_30",
+  "greet_ans_12",
+  "side_instr_12",
+  "ack_09",
+  "side_cue_15"
+ ],
+ "block_ids": [
+  "camping.ctx1",
+  "family_visit.side2"
+ ],
+ "est_total_sec": 66.72,
+ "est_speech_sec": 49.03,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.62,
+   "role": "greeting",
+   "phrasing": "greet_30",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.61,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "We're finally going camping next weekend, just me and my partner.",
+   "est_sec": 3.51,
+   "gap_before": 0.48,
+   "event": "ordinary_request",
+   "block": "camping.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice! Do you want a spot by the lake with more people around, or a quieter site up in the forest?",
+   "est_sec": 6.61,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "camping.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, Zoe just called my name. Please wait and stay silent until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.13,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Take your time.",
+   "est_sec": 1.03,
+   "gap_before": 0.56,
+   "role": "ack",
+   "phrasing": "ack_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "What time does my uncle's train get in?",
+   "est_sec": 2.58,
+   "gap_before": 1.15,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Quarter past four, I think. Want me to pick him up?",
+   "est_sec": 3.51,
+   "gap_before": 1.13,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Would you? I have a call until five.",
+   "est_sec": 2.58,
+   "gap_before": 1.44,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "No problem. Does he have a lot of luggage?",
+   "est_sec": 2.89,
+   "gap_before": 1.27,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Knowing him, two big suitcases and a bag of cheese.",
+   "est_sec": 3.2,
+   "gap_before": 1.97,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then I'll take the car, not the bike.",
+   "est_sec": 2.58,
+   "gap_before": 1.06,
+   "block": "family_visit.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, I'm back. Sorry about that.",
+   "est_sec": 1.96,
+   "gap_before": 1.49,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. Still thinking about the lake or the forest for next weekend?",
+   "est_sec": 4.13,
+   "gap_before": 0.66,
+   "role": "resume",
+   "block": "camping.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let's do the lake, I'd love a morning swim.",
+   "est_sec": 2.89,
+   "gap_before": 0.73,
+   "event": "ordinary_request",
+   "block": "camping.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely. Book early though, lakeside spots fill up fast in summer.",
+   "est_sec": 3.51,
+   "gap_before": 1.13,
+   "role": "followup",
+   "block": "camping.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

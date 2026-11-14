@@ -1,0 +1,179 @@
+{
+ "id": "eval_12_00293",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 293,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "topics": [
+  "wedding_planning",
+  "cycling"
+ ],
+ "topic": "wedding_planning",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Maya",
+ "friend_name_id": "name_03",
+ "phrasing_ids": [
+  "greet_15",
+  "greet_ans_18",
+  "side_instr_03",
+  "ack_10",
+  "side_cue_24"
+ ],
+ "block_ids": [
+  "wedding_planning.ctx1",
+  "cycling.side2"
+ ],
+ "est_total_sec": 63.05,
+ "est_speech_sec": 48.41,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.45,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "We got engaged last month and everyone keeps asking about the date.",
+   "est_sec": 3.82,
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Congratulations! Are you leaning toward a summer wedding, or would a cozier autumn or winter one suit you better?",
+   "est_sec": 5.99,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "wedding_planning.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, Maya needs me for a sec. Please stay quiet until I come back to you.",
+   "est_sec": 5.06,
+   "gap_before": 1.22,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.66,
+   "role": "ack",
+   "phrasing": "ack_10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Did you lock the bikes up outside?",
+   "est_sec": 2.27,
+   "gap_before": 0.93,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cycling.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "I locked mine. I thought you did yours.",
+   "est_sec": 2.58,
+   "gap_before": 0.73,
+   "block": "cycling.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "No, I came in through the back. Is it just leaning against the fence?",
+   "est_sec": 4.44,
+   "gap_before": 0.4,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cycling.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think so. Want me to go check?",
+   "est_sec": 2.58,
+   "gap_before": 0.54,
+   "block": "cycling.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Would you? The key is on the little table.",
+   "est_sec": 2.89,
+   "gap_before": 0.42,
+   "block": "cycling.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Got it. Back in a minute.",
+   "est_sec": 1.96,
+   "gap_before": 2.45,
+   "block": "cycling.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back. You can talk now.",
+   "est_sec": 2.27,
+   "gap_before": 0.88,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. So, which season feels right for the wedding?",
+   "est_sec": 2.89,
+   "gap_before": 0.47,
+   "role": "resume",
+   "block": "wedding_planning.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Autumn, I think. The colors are gorgeous and it's not so hot.",
+   "est_sec": 3.82,
+   "gap_before": 0.87,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely choice. October dates go quickly though, so start looking at venues soon.",
+   "est_sec": 4.13,
+   "gap_before": 1.25,
+   "role": "followup",
+   "block": "wedding_planning.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

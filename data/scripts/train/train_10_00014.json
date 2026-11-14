@@ -1,0 +1,111 @@
+{
+ "id": "train_10_00014",
+ "split": "train",
+ "seed": 10,
+ "order_index": 14,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "birthday_party"
+ ],
+ "wait_sec": 60,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 60
+ },
+ "topic": "birthday_party",
+ "voices": {
+  "user": "6d7a45828f6a432c9233cd93bb93e5be",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_13",
+  "think_instr_22",
+  "self_07"
+ ],
+ "block_ids": [
+  "birthday_party.ctx1"
+ ],
+ "est_total_sec": 82.91,
+ "est_speech_sec": 19.3,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.33,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.7,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
+  },
+  {
+   "speaker": "user",
+   "text": "My son turns six next month and he wants a big party.",
+   "est_sec": 3.82,
+   "gap_before": 0.25,
+   "event": "ordinary_request",
+   "block": "birthday_party.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun! Would you rather host it at home, or book a place like a trampoline park?",
+   "est_sec": 5.06,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "birthday_party.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Not sure yet. Check back with me in sixty seconds.",
+   "est_sec": 3.2,
+   "gap_before": 1.36,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 60,
+   "phrasing": "think_instr_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, either way, really.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 56.82
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, have you decided where the birthday party will be?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "birthday_party.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 60.27
+   }
+  }
+ ]
+}

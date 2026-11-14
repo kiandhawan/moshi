@@ -1,0 +1,147 @@
+{
+ "id": "eval_12_00060",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 60,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "reading": {
+  "material": "email",
+  "sec": 17.6
+ },
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_24",
+  "greet_ans_09",
+  "read_instr_03",
+  "ack_14",
+  "murmur_03",
+  "murmur_02",
+  "read_cue_01"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx2"
+ ],
+ "est_total_sec": 45.53,
+ "est_speech_sec": 27.35,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_24",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.32,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Our office is doing a gift exchange with a twenty dollar limit.",
+   "est_sec": 3.82,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun. Do you want to play it safe with something everyone would like, like good chocolate, or go for a funny gag gift?",
+   "est_sec": 7.23,
+   "gap_before": 0.53,
+   "role": "reply",
+   "block": "holiday_gifts.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One second, I have to read this work email. Stay quiet till I'm done.",
+   "est_sec": 4.44,
+   "gap_before": 0.73,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.65,
+   "role": "ack",
+   "phrasing": "ack_14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, which attachment?",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 5.94
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, the meeting moved to Thursday.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 12.01
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, done with the email.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 17.6
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "All done? Still thinking about the office exchange, safe or silly?",
+   "est_sec": 3.51,
+   "gap_before": 0.38,
+   "role": "resume",
+   "block": "holiday_gifts.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

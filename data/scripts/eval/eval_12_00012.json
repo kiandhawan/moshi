@@ -1,0 +1,140 @@
+{
+ "id": "eval_12_00012",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 12,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "painting_art"
+ ],
+ "topic": "painting_art",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_18",
+  "door_instr_01",
+  "door_06",
+  "implicit_14"
+ ],
+ "block_ids": [
+  "painting_art.ctx3"
+ ],
+ "est_total_sec": 46.88,
+ "est_speech_sec": 31.48,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.8,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "My painting of the harbor looks kind of flat and boring.",
+   "est_sec": 3.51,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hmm, that often comes from contrast. Would you rather darken the shadows on the boats or add a bright color somewhere as a focal point?",
+   "est_sec": 7.85,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "painting_art.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Someone's at the door, give me a second. Stay quiet until I'm back.",
+   "est_sec": 4.13,
+   "gap_before": 1.06,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, hi!",
+   "est_sec": 0.72,
+   "gap_before": 3.84,
+   "phrasing": "door_06"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hey, I'm back from the trip, brought you something.",
+   "est_sec": 2.89,
+   "gap_before": 1.02,
+   "phrasing": "door_06",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "You didn't have to! How was it?",
+   "est_sec": 2.27,
+   "gap_before": 0.82,
+   "phrasing": "door_06",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Amazing, I'll tell you later.",
+   "est_sec": 1.65,
+   "gap_before": 1.08,
+   "phrasing": "door_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 3.54,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. We were trying to fix your flat harbor painting, shadows or a bright accent?",
+   "est_sec": 4.75,
+   "gap_before": 0.36,
+   "role": "resume",
+   "block": "painting_art.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

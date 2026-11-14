@@ -1,0 +1,124 @@
+{
+ "id": "eval_12_00258",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 258,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "painting_art"
+ ],
+ "reading": {
+  "material": "letter",
+  "sec": 20.6
+ },
+ "topic": "painting_art",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_27",
+  "greet_ans_21",
+  "read_instr_09",
+  "murmur_11",
+  "read_cue_07"
+ ],
+ "block_ids": [
+  "painting_art.ctx2"
+ ],
+ "est_total_sec": 50.31,
+ "est_speech_sec": 26.22,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_27",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.7,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "There are two art classes near me, one on weekday evenings and one on Saturday mornings.",
+   "est_sec": 5.06,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Both sound good. Which fits your week better, a tired evening after work or giving up a slow Saturday morning?",
+   "est_sec": 6.3,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "painting_art.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me read this letter first, please don't talk until I'm done.",
+   "est_sec": 3.82,
+   "gap_before": 1.19,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, by the end of the month.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 15.35
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, finished the letter.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 20.6
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, all read? You were choosing between the evening class and the Saturday class.",
+   "est_sec": 4.44,
+   "gap_before": 1.19,
+   "role": "resume",
+   "block": "painting_art.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

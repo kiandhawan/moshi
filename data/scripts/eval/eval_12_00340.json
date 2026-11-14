@@ -1,0 +1,140 @@
+{
+ "id": "eval_12_00340",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 340,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension"
+ ],
+ "topics": [
+  "laptop_buying"
+ ],
+ "wait_sec": 30,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 1.44
+ },
+ "deadline": {
+  "after_turn": 5,
+  "sec": 10
+ },
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_15",
+  "greet_ans_12",
+  "think_instr_15",
+  "extension_08"
+ ],
+ "block_ids": [
+  "laptop_buying.ctx1"
+ ],
+ "est_total_sec": 75.82,
+ "est_speech_sec": 30.66,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.38,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.35,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "My old laptop is dying and I need a new one before next month.",
+   "est_sec": 4.44,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. First big question, do you want something small and light to carry around, or a bigger screen for working at a desk?",
+   "est_sec": 7.23,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough one. Give me thirty seconds and ask me again.",
+   "est_sec": 3.51,
+   "gap_before": 0.61,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Not yet, give me ten more seconds.",
+   "est_sec": 2.27,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_08",
+   "anchor": {
+    "turn": 4,
+    "offset": 28.56
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, for the new laptop, small and light or a bigger screen?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "laptop_buying.ctx1",
+   "anchor": {
+    "turn": 5,
+    "offset": 10.12
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Light. I carry it to cafes almost every day.",
+   "est_sec": 2.89,
+   "gap_before": 1.57,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then look at thirteen or fourteen inch models with long battery life.",
+   "est_sec": 3.82,
+   "gap_before": 0.81,
+   "role": "followup",
+   "block": "laptop_buying.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,151 @@
+{
+ "id": "eval_12_00160",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 160,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "restaurant_choice"
+ ],
+ "reading": {
+  "material": "recipe",
+  "sec": 11.4
+ },
+ "topic": "restaurant_choice",
+ "voices": {
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_09",
+  "read_instr_05",
+  "ack_16",
+  "murmur_04",
+  "read_cue_03"
+ ],
+ "block_ids": [
+  "restaurant_choice.ctx3"
+ ],
+ "est_total_sec": 49.64,
+ "est_speech_sec": 30.86,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a group of eight of us going out tomorrow night.",
+   "est_sec": 3.51,
+   "gap_before": 0.31,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Big group. Any dietary needs, like vegetarians or allergies? That really narrows down where to book.",
+   "est_sec": 5.06,
+   "gap_before": 0.92,
+   "role": "reply",
+   "block": "restaurant_choice.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment to read through the recipe before you say anything.",
+   "est_sec": 4.13,
+   "gap_before": 2.99,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.61,
+   "role": "ack",
+   "phrasing": "ack_16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Two cups of flour, right.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 7.77
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I've read the recipe.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 11.4
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Finished reading? I was asking about dietary needs for your group of eight.",
+   "est_sec": 4.13,
+   "gap_before": 0.62,
+   "role": "resume",
+   "block": "restaurant_choice.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Two vegetarians and one person who can't eat nuts.",
+   "est_sec": 2.89,
+   "gap_before": 1.54,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Indian or Mediterranean places usually handle that well, just mention the nut allergy when booking.",
+   "est_sec": 5.06,
+   "gap_before": 0.75,
+   "role": "followup",
+   "block": "restaurant_choice.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,154 @@
+{
+ "id": "eval_12_00032",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 32,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "home_office"
+ ],
+ "reading": {
+  "material": "letter",
+  "sec": 20.5
+ },
+ "topic": "home_office",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_06",
+  "read_instr_09",
+  "ack_16",
+  "murmur_14",
+  "implicit_04"
+ ],
+ "block_ids": [
+  "home_office.ctx1"
+ ],
+ "est_total_sec": 57.6,
+ "est_speech_sec": 30.86,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.86,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm finally turning the spare room into a proper office.",
+   "est_sec": 3.2,
+   "gap_before": 0.38,
+   "event": "ordinary_request",
+   "block": "home_office.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting. Where do you want the desk, facing the window for the light, or against the wall so the screen has no glare?",
+   "est_sec": 7.23,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me read this letter first, please don't talk until I'm done.",
+   "est_sec": 3.82,
+   "gap_before": 0.63,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.24,
+   "role": "ack",
+   "phrasing": "ack_16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Mm-hm.",
+   "est_sec": 0.41,
+   "anchor": {
+    "turn": 4,
+    "offset": 17.26
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, where were we?",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 20.5
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. We were placing the desk in your new office.",
+   "est_sec": 3.2,
+   "gap_before": 0.4,
+   "role": "resume",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "By the window. I need to see outside or I go crazy.",
+   "est_sec": 3.82,
+   "gap_before": 1.12,
+   "event": "ordinary_request",
+   "block": "home_office.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally fair. Add a sheer curtain to soften the glare on bright afternoons.",
+   "est_sec": 4.13,
+   "gap_before": 0.61,
+   "role": "followup",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

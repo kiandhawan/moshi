@@ -1,0 +1,130 @@
+{
+ "id": "eval_12_00006",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 6,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "wait_sec": 30,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 30
+ },
+ "topic": "podcasts",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_21",
+  "greet_ans_15",
+  "think_instr_03",
+  "ack_04"
+ ],
+ "block_ids": [
+  "podcasts.ctx3"
+ ],
+ "est_total_sec": 60.2,
+ "est_speech_sec": 23.53,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.98,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "I've subscribed to way too many shows and I'm drowning in episodes.",
+   "est_sec": 3.82,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Happens to everyone. Which ones could you drop? Think about which you actually look forward to.",
+   "est_sec": 5.06,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "podcasts.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about that.",
+   "est_sec": 1.65,
+   "gap_before": 0.88,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. Aim to keep maybe five.",
+   "est_sec": 1.96,
+   "gap_before": 1.16,
+   "role": "reply",
+   "block": "podcasts.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, I need thirty seconds to think. Ask me again after that.",
+   "est_sec": 3.82,
+   "gap_before": 1.49,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.22,
+   "role": "ack",
+   "phrasing": "ack_04",
+   "reference_only": true
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, which shows are you keeping, and which go?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "podcasts.ctx3",
+   "anchor": {
+    "turn": 6,
+    "offset": 30.24
+   },
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

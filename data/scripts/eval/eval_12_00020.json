@@ -1,0 +1,138 @@
+{
+ "id": "eval_12_00020",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 20,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "wedding_planning"
+ ],
+ "topic": "wedding_planning",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_03",
+  "door_instr_05",
+  "door_02",
+  "implicit_12"
+ ],
+ "block_ids": [
+  "wedding_planning.ctx1"
+ ],
+ "est_total_sec": 47.31,
+ "est_speech_sec": 31.17,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.32,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "We got engaged last month and everyone keeps asking about the date.",
+   "est_sec": 3.82,
+   "gap_before": 0.25,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Congratulations! Are you leaning toward a summer wedding, or would a cozier autumn or winter one suit you better?",
+   "est_sec": 5.99,
+   "gap_before": 0.64,
+   "role": "reply",
+   "block": "wedding_planning.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One moment, I need to get the door. I'll tell you when I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.92,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, hey!",
+   "est_sec": 0.72,
+   "gap_before": 4.04,
+   "phrasing": "door_02"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Sorry to bother you, did a package for me end up here?",
+   "est_sec": 3.82,
+   "gap_before": 1.23,
+   "phrasing": "door_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me check. Is this it?",
+   "est_sec": 1.96,
+   "gap_before": 1.27,
+   "phrasing": "door_02",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Yes, that's it, thanks!",
+   "est_sec": 1.34,
+   "gap_before": 1.04,
+   "phrasing": "door_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm all yours again.",
+   "est_sec": 1.65,
+   "gap_before": 3.52,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. Have you thought more about summer versus autumn or winter?",
+   "est_sec": 3.82,
+   "gap_before": 0.9,
+   "role": "resume",
+   "block": "wedding_planning.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

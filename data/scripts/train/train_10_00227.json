@@ -1,0 +1,121 @@
+{
+ "id": "train_10_00227",
+ "split": "train",
+ "seed": 10,
+ "order_index": 227,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "weekend_plans"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "705690224f264386b87fb598083ab022",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_20",
+  "greet_ans_28",
+  "think_instr_07",
+  "ack_04"
+ ],
+ "block_ids": [
+  "weekend_plans.ctx1"
+ ],
+ "est_total_sec": 81.49,
+ "est_speech_sec": 28.18,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.7,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.4,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "It's finally Friday and I have absolutely nothing planned.",
+   "est_sec": 2.89,
+   "gap_before": 0.26,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely feeling. Do you want a lazy weekend at home to recharge, or would you like to get out and do something?",
+   "est_sec": 6.92,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "weekend_plans.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, give me forty-five seconds to decide and ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 1.49,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.39,
+   "role": "ack",
+   "phrasing": "ack_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, a lazy weekend at home, or getting out and about?",
+   "est_sec": 3.51,
+   "role": "resume",
+   "block": "weekend_plans.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.25
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Home. I've been running around all week.",
+   "est_sec": 2.27,
+   "gap_before": 2.57,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You've earned it. Maybe plan one nice meal so it still feels special.",
+   "est_sec": 4.13,
+   "gap_before": 0.95,
+   "role": "followup",
+   "block": "weekend_plans.ctx1"
+  }
+ ]
+}

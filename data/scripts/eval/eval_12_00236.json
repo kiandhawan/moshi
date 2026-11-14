@@ -1,0 +1,130 @@
+{
+ "id": "eval_12_00236",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 236,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "painting_art"
+ ],
+ "wait_sec": 15,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 15
+ },
+ "topic": "painting_art",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_15",
+  "greet_ans_27",
+  "think_instr_21",
+  "ack_12"
+ ],
+ "block_ids": [
+  "painting_art.ctx1"
+ ],
+ "est_total_sec": 53.98,
+ "est_speech_sec": 32.52,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "I finally bought some paints and I want to start a little hobby.",
+   "est_sec": 4.13,
+   "gap_before": 0.25,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's exciting. Did you get watercolors or acrylics, and do you want to start with landscapes or something simpler like fruit on a table?",
+   "est_sec": 7.54,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "painting_art.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, let me think for fifteen seconds. Ask me again after that.",
+   "est_sec": 3.82,
+   "gap_before": 1.35,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.32,
+   "role": "ack",
+   "phrasing": "ack_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, what did you land on? Landscape, or something like a bowl of fruit?",
+   "est_sec": 4.44,
+   "role": "resume",
+   "block": "painting_art.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 15.03
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let's keep it easy, I'll paint a couple of lemons and a mug.",
+   "est_sec": 4.13,
+   "gap_before": 1.44,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good pick. Set them near a window so you get one clear shadow to work with.",
+   "est_sec": 5.06,
+   "gap_before": 0.71,
+   "role": "followup",
+   "block": "painting_art.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

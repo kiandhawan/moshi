@@ -1,0 +1,162 @@
+{
+ "id": "eval_12_00324",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 324,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "laptop_buying"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": "026218fe0c054374838d934016f34082",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_03",
+  "door_instr_03",
+  "ack_07",
+  "door_08",
+  "door_cue_05"
+ ],
+ "block_ids": [
+  "laptop_buying.ctx2"
+ ],
+ "est_total_sec": 53.37,
+ "est_speech_sec": 37.98,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.63,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "I found a laptop I like but there are two versions.",
+   "est_sec": 3.51,
+   "gap_before": 0.59,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let me guess, more memory or more storage? One has sixteen gigs of memory and the other has a bigger drive. Which do you think you'd miss more?",
+   "est_sec": 8.78,
+   "gap_before": 1.17,
+   "role": "reply",
+   "block": "laptop_buying.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I think someone's here. Wait until I'm back.",
+   "est_sec": 3.2,
+   "gap_before": 0.99,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.4,
+   "role": "ack",
+   "phrasing": "ack_07",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Yes?",
+   "est_sec": 0.41,
+   "gap_before": 2.88,
+   "phrasing": "door_08",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, is this the right address for Jordan?",
+   "est_sec": 2.58,
+   "gap_before": 0.9,
+   "phrasing": "door_08"
+  },
+  {
+   "speaker": "user",
+   "text": "No, I think that's next door.",
+   "est_sec": 1.96,
+   "gap_before": 0.39,
+   "phrasing": "door_08"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Oh, sorry, thanks!",
+   "est_sec": 1.03,
+   "gap_before": 0.44,
+   "phrasing": "door_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, sorry about the interruption.",
+   "est_sec": 1.96,
+   "gap_before": 2.9,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. Still weighing memory against storage on that laptop?",
+   "est_sec": 3.2,
+   "gap_before": 0.37,
+   "role": "resume",
+   "block": "laptop_buying.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Memory. I always have a million browser tabs open.",
+   "est_sec": 2.89,
+   "gap_before": 1.18,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then memory is the right call. You can always add an external drive later.",
+   "est_sec": 4.44,
+   "gap_before": 0.32,
+   "role": "followup",
+   "block": "laptop_buying.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

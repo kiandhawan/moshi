@@ -1,0 +1,119 @@
+{
+ "id": "eval_12_00240",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 240,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "learning_language"
+ ],
+ "topic": "learning_language",
+ "voices": {
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_18",
+  "describe_instr_15",
+  "describe_cue_12"
+ ],
+ "block_ids": [
+  "learning_language.opt1"
+ ],
+ "est_total_sec": 51.89,
+ "est_speech_sec": 40.58,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.44,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.37,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm trying to choose how to learn Spanish this year, and I'd love some advice.",
+   "est_sec": 4.75,
+   "gap_before": 0.21,
+   "block": "learning_language.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to describe all the options before I hear your opinion.",
+   "est_sec": 3.82,
+   "gap_before": 0.54,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_15"
+  },
+  {
+   "speaker": "user",
+   "text": "The first option is an evening class at the community college, twice a week, for about three hundred dollars.",
+   "est_sec": 5.99,
+   "gap_before": 1.16,
+   "block": "learning_language.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's an app subscription, which is cheap and I could do it on my commute.",
+   "est_sec": 5.06,
+   "gap_before": 2.77,
+   "block": "learning_language.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is a two-week immersion trip to Mexico, living with a host family.",
+   "est_sec": 5.06,
+   "gap_before": 2.3,
+   "block": "learning_language.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 0.86,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The immersion trip would give you the most speaking practice by far, but two weeks alone won't stick without some groundwork. The evening class gives you structure and a teacher who corrects you. What's your budget?",
+   "est_sec": 11.26,
+   "gap_before": 1.16,
+   "role": "resume",
+   "block": "learning_language.opt1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

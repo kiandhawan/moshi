@@ -1,0 +1,117 @@
+{
+ "id": "eval_12_00357",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 357,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "topic": "podcasts",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_18",
+  "describe_instr_15",
+  "describe_cue_12"
+ ],
+ "block_ids": [
+  "podcasts.opt2"
+ ],
+ "est_total_sec": 46.34,
+ "est_speech_sec": 37.48,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.51,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.92,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm buying gear for my podcast and I can't decide what to get.",
+   "est_sec": 4.13,
+   "gap_before": 0.45,
+   "block": "podcasts.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to describe all the options before I hear your opinion.",
+   "est_sec": 3.82,
+   "gap_before": 0.68,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Option one is a USB microphone for about a hundred dollars that plugs right into my laptop.",
+   "est_sec": 5.37,
+   "gap_before": 0.84,
+   "block": "podcasts.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Option two is a proper mixer and two XLR microphones, which costs around four hundred.",
+   "est_sec": 4.75,
+   "gap_before": 1.07,
+   "block": "podcasts.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a portable recorder with built-in mics, good for recording on the go.",
+   "est_sec": 4.44,
+   "gap_before": 1.63,
+   "block": "podcasts.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 0.7,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The portable recorder is great if you plan to interview people out in the world. For a studio-style show with a co-host, though, the two XLR microphones will sound noticeably better.",
+   "est_sec": 9.71,
+   "gap_before": 0.56,
+   "role": "resume",
+   "block": "podcasts.opt2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

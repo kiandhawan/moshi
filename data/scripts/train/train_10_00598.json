@@ -1,0 +1,121 @@
+{
+ "id": "train_10_00598",
+ "split": "train",
+ "seed": 10,
+ "order_index": 598,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "personal_finance"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "personal_finance",
+ "voices": {
+  "user": "e3cd384158934cc9a01029cd7d278634",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_01",
+  "greet_ans_28",
+  "think_instr_08",
+  "ack_09"
+ ],
+ "block_ids": [
+  "personal_finance.ctx1"
+ ],
+ "est_total_sec": 81.52,
+ "est_speech_sec": 30.35,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.39,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.34,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "I got a small bonus at work and I don't want to just blow it.",
+   "est_sec": 4.75,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice! You could put it toward your credit card balance or start an emergency fund. Which matters more to you right now?",
+   "est_sec": 6.92,
+   "gap_before": 0.39,
+   "role": "reply",
+   "block": "personal_finance.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm not sure. Wait forty-five seconds and ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 1.35,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Take your time.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "role": "ack",
+   "phrasing": "ack_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, time's up. Where's the bonus going, the card balance or savings?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "personal_finance.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.6
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Emergency fund, I think. I've got nothing saved at all.",
+   "est_sec": 3.2,
+   "gap_before": 1.42,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Makes sense. Put it in a separate savings account so it's not tempting to spend.",
+   "est_sec": 4.75,
+   "gap_before": 0.67,
+   "role": "followup",
+   "block": "personal_finance.ctx1"
+  }
+ ]
+}

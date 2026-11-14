@@ -1,0 +1,177 @@
+{
+ "id": "eval_12_00009",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 9,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension",
+  "self_talk"
+ ],
+ "topics": [
+  "podcasts"
+ ],
+ "wait_sec": 30,
+ "extension": {
+  "extra_sec": 5,
+  "said_before_deadline_sec": 2.5
+ },
+ "deadline": {
+  "after_turn": 8,
+  "sec": 5
+ },
+ "topic": "podcasts",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_24",
+  "think_instr_30",
+  "ack_05",
+  "self_24",
+  "self_09",
+  "extension_05"
+ ],
+ "block_ids": [
+  "podcasts.ctx2"
+ ],
+ "est_total_sec": 68.56,
+ "est_speech_sec": 34.37,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.58,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.36,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "My friend and I want to start our own podcast.",
+   "est_sec": 3.2,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun! What would it be about? Having a clear theme makes it much easier to find listeners.",
+   "est_sec": 5.37,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "podcasts.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, give me thirty seconds to think and then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 1.42,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.68,
+   "role": "ack",
+   "phrasing": "ack_05",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "No, I really don't know.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 15.67
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_24"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, this is harder than it sounds.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 21.6
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, give me another five seconds.",
+   "est_sec": 2.27,
+   "event": "extension",
+   "extra_sec": 5,
+   "phrasing": "extension_05",
+   "anchor": {
+    "turn": 4,
+    "offset": 27.5
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Time's up. Any ideas for the podcast's topic?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "podcasts.ctx2",
+   "anchor": {
+    "turn": 8,
+    "offset": 5.06
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "We both love bad movies, so we'll review terrible films.",
+   "est_sec": 3.2,
+   "gap_before": 0.66,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a proven format. Pick one movie per episode and give it a silly rating system.",
+   "est_sec": 5.06,
+   "gap_before": 1.1,
+   "role": "followup",
+   "block": "podcasts.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,189 @@
+{
+ "id": "eval_12_00071",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 71,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "topics": [
+  "home_office",
+  "painting_art"
+ ],
+ "topic": "home_office",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "933563129e564b19a115bedd57b7406a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Zoe",
+ "friend_name_id": "name_24",
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_21",
+  "side_instr_09",
+  "ack_01",
+  "dq_09",
+  "side_cue_06"
+ ],
+ "block_ids": [
+  "home_office.ctx1",
+  "painting_art.side1"
+ ],
+ "est_total_sec": 70.08,
+ "est_speech_sec": 49.75,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.38,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm finally turning the spare room into a proper office.",
+   "est_sec": 3.2,
+   "gap_before": 0.28,
+   "event": "ordinary_request",
+   "block": "home_office.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting. Where do you want the desk, facing the window for the light, or against the wall so the screen has no glare?",
+   "est_sec": 7.23,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, give me a bit, someone's at my door. Wait quietly until I say I'm back.",
+   "est_sec": 5.06,
+   "gap_before": 2.73,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.65,
+   "role": "ack",
+   "phrasing": "ack_01",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Is it still raining outside?",
+   "est_sec": 1.65,
+   "gap_before": 1.22,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_09"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just a little now.",
+   "est_sec": 1.34,
+   "gap_before": 2.62,
+   "phrasing": "dq_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Zoe, have you seen my small round brush? I left it by the sink.",
+   "est_sec": 4.44,
+   "gap_before": 2.07,
+   "block": "painting_art.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Is it the one with the blue handle? I put it in the jar with the others.",
+   "est_sec": 5.37,
+   "gap_before": 1.43,
+   "block": "painting_art.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, that one. Did you rinse it?",
+   "est_sec": 2.27,
+   "gap_before": 0.95,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "painting_art.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just with water. It still had some yellow on it.",
+   "est_sec": 3.2,
+   "gap_before": 1.22,
+   "block": "painting_art.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "That's fine, I'm using yellow anyway.",
+   "est_sec": 1.96,
+   "gap_before": 0.37,
+   "block": "painting_art.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, sorry, I'm back now.",
+   "est_sec": 1.65,
+   "gap_before": 1.03,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. Still deciding where the desk goes?",
+   "est_sec": 2.27,
+   "gap_before": 0.72,
+   "role": "resume",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Against the wall, the glare drives me nuts.",
+   "est_sec": 2.58,
+   "gap_before": 0.92,
+   "event": "ordinary_request",
+   "block": "home_office.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good choice. Put the window to your side so you still get daylight.",
+   "est_sec": 4.13,
+   "gap_before": 0.97,
+   "role": "followup",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

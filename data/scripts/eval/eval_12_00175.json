@@ -1,0 +1,178 @@
+{
+ "id": "eval_12_00175",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 175,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "topics": [
+  "picnic",
+  "learning_language"
+ ],
+ "topic": "picnic",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": "026218fe0c054374838d934016f34082",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
+ "phrasing_ids": [
+  "greet_12",
+  "greet_ans_15",
+  "side_instr_03",
+  "side_cue_09"
+ ],
+ "block_ids": [
+  "picnic.ctx3",
+  "learning_language.side3"
+ ],
+ "est_total_sec": 63.57,
+ "est_speech_sec": 46.86,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.34,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.62,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "My friends want to do a picnic but the forecast says maybe rain.",
+   "est_sec": 4.13,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "picnic.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hmm, there's a forty percent chance in the afternoon. Do you want to move it to the morning, or keep the plan and bring a tarp just in case?",
+   "est_sec": 9.09,
+   "gap_before": 1.14,
+   "role": "reply",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, Marcus needs me for a sec. Please stay quiet until I come back to you.",
+   "est_sec": 5.06,
+   "gap_before": 0.93,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you quiz me on these flashcards for a minute?",
+   "est_sec": 3.2,
+   "gap_before": 0.78,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. What's the word for window?",
+   "est_sec": 1.96,
+   "gap_before": 1.27,
+   "block": "learning_language.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Ventana.",
+   "est_sec": 0.41,
+   "gap_before": 0.78,
+   "block": "learning_language.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Correct. And spoon?",
+   "est_sec": 1.03,
+   "gap_before": 1.54,
+   "block": "learning_language.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Uh, cuchillo?",
+   "est_sec": 0.72,
+   "gap_before": 0.31,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "No, that's knife. Spoon is cuchara.",
+   "est_sec": 1.96,
+   "gap_before": 1.52,
+   "block": "learning_language.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "I always mix those two up. Can you do the kitchen ones again?",
+   "est_sec": 4.13,
+   "gap_before": 0.57,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back. Let's keep going.",
+   "est_sec": 1.96,
+   "gap_before": 1.78,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. We were working around the rain forecast for your picnic.",
+   "est_sec": 3.51,
+   "gap_before": 0.57,
+   "role": "resume",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Morning. Nobody wants a soggy picnic.",
+   "est_sec": 1.96,
+   "gap_before": 1.48,
+   "event": "ordinary_request",
+   "block": "picnic.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Smart. A brunch picnic with fruit and pastries could be really nice.",
+   "est_sec": 3.82,
+   "gap_before": 1.17,
+   "role": "followup",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

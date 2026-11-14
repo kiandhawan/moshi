@@ -1,0 +1,173 @@
+{
+ "id": "train_10_00162",
+ "split": "train",
+ "seed": 10,
+ "order_index": 162,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "shopping",
+  "weather_plans"
+ ],
+ "topic": "shopping",
+ "voices": {
+  "user": "5ce84bbd213b4943bc89e1951e17848a",
+  "friend": "ec3f1730c4494386accf1e86625bfe6d",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Nina",
+ "friend_name_id": "name_10",
+ "phrasing_ids": [
+  "greet_22",
+  "greet_ans_10",
+  "side_instr_10",
+  "dn_19",
+  "side_cue_23"
+ ],
+ "block_ids": [
+  "shopping.ctx1",
+  "weather_plans.side1"
+ ],
+ "est_total_sec": 61.1,
+ "est_speech_sec": 44.07,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
+   "role": "greeting",
+   "phrasing": "greet_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.8,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "I need a new winter coat. My old one has a broken zipper.",
+   "est_sec": 4.13,
+   "gap_before": 0.23,
+   "event": "ordinary_request",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it. Are you thinking a long warm parka, or a shorter jacket that's easier to move in?",
+   "est_sec": 5.68,
+   "gap_before": 1.19,
+   "role": "reply",
+   "block": "shopping.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, can you stay quiet for a minute? I need to talk to my partner. I'll come back to you.",
+   "est_sec": 6.3,
+   "gap_before": 0.42,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm finished with that, what's next?",
+   "est_sec": 2.27,
+   "gap_before": 0.67,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_19"
+  },
+  {
+   "speaker": "friend",
+   "text": "Can you help me move the table?",
+   "est_sec": 2.27,
+   "gap_before": 2.19,
+   "phrasing": "dn_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Nina, did you see the forecast for tomorrow?",
+   "est_sec": 2.58,
+   "gap_before": 2.64,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, thunderstorms after three.",
+   "est_sec": 1.34,
+   "gap_before": 0.88,
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh. Do you still want to do the hike?",
+   "est_sec": 2.89,
+   "gap_before": 0.76,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "We could start really early and be down by noon.",
+   "est_sec": 3.2,
+   "gap_before": 1.28,
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "How early is really early?",
+   "est_sec": 1.65,
+   "gap_before": 1.25,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Like leave the house at six.",
+   "est_sec": 1.96,
+   "gap_before": 0.59,
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, but you're making the coffee.",
+   "est_sec": 1.96,
+   "gap_before": 0.62,
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, all done. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 0.73,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Still deciding on the coat, long or short?",
+   "est_sec": 3.2,
+   "gap_before": 0.77,
+   "role": "resume",
+   "block": "shopping.ctx1"
+  }
+ ]
+}

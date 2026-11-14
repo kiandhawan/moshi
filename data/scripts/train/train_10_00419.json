@@ -1,0 +1,121 @@
+{
+ "id": "train_10_00419",
+ "split": "train",
+ "seed": 10,
+ "order_index": 419,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "public_transport"
+ ],
+ "wait_sec": 5,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 5
+ },
+ "topic": "public_transport",
+ "voices": {
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_16",
+  "think_instr_29",
+  "ack_08"
+ ],
+ "block_ids": [
+  "public_transport.ctx3"
+ ],
+ "est_total_sec": 42.22,
+ "est_speech_sec": 32.21,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.45,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "My train got cancelled and I need to be at the airport by six.",
+   "est_sec": 4.44,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, you have options. There's an airport bus in twenty minutes, or a taxi would get you there faster but cost a lot more. What do you want to do?",
+   "est_sec": 9.4,
+   "gap_before": 0.74,
+   "role": "reply",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about that for five seconds, then ask me once more.",
+   "est_sec": 4.13,
+   "gap_before": 1.27,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 5,
+   "phrasing": "think_instr_29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.52,
+   "role": "ack",
+   "phrasing": "ack_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Back to getting you to the airport. Which option?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "public_transport.ctx3",
+   "anchor": {
+    "turn": 4,
+    "offset": 5.16
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Taxi. I'm not risking it.",
+   "est_sec": 1.65,
+   "gap_before": 0.62,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Understood. The taxi rank is just outside the station, and it should take about thirty minutes.",
+   "est_sec": 5.06,
+   "gap_before": 0.35,
+   "role": "followup",
+   "block": "public_transport.ctx3"
+  }
+ ]
+}

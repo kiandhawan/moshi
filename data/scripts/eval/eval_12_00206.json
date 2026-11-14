@@ -1,0 +1,150 @@
+{
+ "id": "eval_12_00206",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 206,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension"
+ ],
+ "topics": [
+  "painting_art"
+ ],
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 2.0
+ },
+ "deadline": {
+  "after_turn": 6,
+  "sec": 10
+ },
+ "topic": "painting_art",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_30",
+  "think_instr_06",
+  "ack_12",
+  "extension_03"
+ ],
+ "block_ids": [
+  "painting_art.ctx3"
+ ],
+ "est_total_sec": 62.21,
+ "est_speech_sec": 32.0,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.56,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.96,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "My painting of the harbor looks kind of flat and boring.",
+   "est_sec": 3.51,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hmm, that often comes from contrast. Would you rather darken the shadows on the boats or add a bright color somewhere as a focal point?",
+   "est_sec": 7.85,
+   "gap_before": 0.98,
+   "role": "reply",
+   "block": "painting_art.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think for fifteen seconds, then check back with me.",
+   "est_sec": 3.51,
+   "gap_before": 1.48,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.62,
+   "role": "ack",
+   "phrasing": "ack_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, ten more seconds please.",
+   "est_sec": 1.65,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_03",
+   "anchor": {
+    "turn": 4,
+    "offset": 13.0
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, so for the harbor painting, darker shadows or a bright accent color?",
+   "est_sec": 4.13,
+   "role": "resume",
+   "block": "painting_art.ctx3",
+   "anchor": {
+    "turn": 6,
+    "offset": 10.1
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let's try a red boat, I think that'll wake it up.",
+   "est_sec": 3.51,
+   "gap_before": 1.05,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great idea. Keep it small and put it a bit off center.",
+   "est_sec": 3.82,
+   "gap_before": 0.76,
+   "role": "followup",
+   "block": "painting_art.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

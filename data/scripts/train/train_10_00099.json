@@ -1,0 +1,143 @@
+{
+ "id": "train_10_00099",
+ "split": "train",
+ "seed": 10,
+ "order_index": 99,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "topics": [
+  "personal_finance",
+  "coffee"
+ ],
+ "topic": "personal_finance",
+ "voices": {
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
+  "friend": "e3cd384158934cc9a01029cd7d278634",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Leo",
+ "friend_name_id": "name_07",
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_29",
+  "side_instr_14",
+  "side_cue_13"
+ ],
+ "block_ids": [
+  "personal_finance.ctx2",
+  "coffee.side1"
+ ],
+ "est_total_sec": 54.38,
+ "est_speech_sec": 41.6,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.39,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.37,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_29"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to make a monthly budget but every app I try feels complicated.",
+   "est_sec": 4.44,
+   "gap_before": 0.23,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You could keep it simple with a spreadsheet, or try the envelope method with cash. Which feels more doable for you?",
+   "est_sec": 6.61,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "personal_finance.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait a moment, my coworker is here. Please be quiet until I tell you I'm back.",
+   "est_sec": 5.06,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Leo, did you finish the milk?",
+   "est_sec": 1.96,
+   "gap_before": 0.78,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "There should be a little left, check behind the juice.",
+   "est_sec": 3.2,
+   "gap_before": 1.11,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Found it. Barely enough for one coffee.",
+   "est_sec": 2.27,
+   "gap_before": 0.96,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Make it for yourself. I'll grab one on the way to work.",
+   "est_sec": 3.82,
+   "gap_before": 1.8,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you sure? I can share it.",
+   "est_sec": 2.27,
+   "gap_before": 1.44,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "No, really. There's a new place near the station I want to try anyway.",
+   "est_sec": 4.44,
+   "gap_before": 0.43,
+   "block": "coffee.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, back to you.",
+   "est_sec": 1.34,
+   "gap_before": 1.84,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. We were picking a budgeting method, spreadsheet or envelopes.",
+   "est_sec": 3.2,
+   "gap_before": 0.53,
+   "role": "resume",
+   "block": "personal_finance.ctx2"
+  }
+ ]
+}

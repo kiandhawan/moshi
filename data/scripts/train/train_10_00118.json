@@ -1,0 +1,112 @@
+{
+ "id": "train_10_00118",
+ "split": "train",
+ "seed": 10,
+ "order_index": 118,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "moving_house"
+ ],
+ "wait_sec": 5,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 5
+ },
+ "topic": "moving_house",
+ "voices": {
+  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_16",
+  "greet_ans_16",
+  "think_instr_05"
+ ],
+ "block_ids": [
+  "moving_house.ctx2"
+ ],
+ "est_total_sec": 40.28,
+ "est_speech_sec": 28.39,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.64,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "We're moving at the end of the month and I'm dreading the packing.",
+   "est_sec": 4.13,
+   "gap_before": 0.48,
+   "event": "ordinary_request",
+   "block": "moving_house.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's a big job. Do you want to hire movers to pack for you, or do it yourselves and save the money?",
+   "est_sec": 6.92,
+   "gap_before": 0.42,
+   "role": "reply",
+   "block": "moving_house.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you give me five seconds? Then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 0.54,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 5,
+   "phrasing": "think_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Have you decided? Pay for packing help, or do it on your own?",
+   "est_sec": 4.13,
+   "role": "resume",
+   "block": "moving_house.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 5.46
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "We'll do it ourselves. Movers are so expensive.",
+   "est_sec": 2.58,
+   "gap_before": 1.3,
+   "event": "ordinary_request",
+   "block": "moving_house.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Start with the rooms you use least, a few boxes each evening.",
+   "est_sec": 4.13,
+   "gap_before": 0.91,
+   "role": "followup",
+   "block": "moving_house.ctx2"
+  }
+ ]
+}

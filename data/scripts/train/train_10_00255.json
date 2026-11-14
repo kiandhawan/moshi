@@ -1,0 +1,161 @@
+{
+ "id": "train_10_00255",
+ "split": "train",
+ "seed": 10,
+ "order_index": 255,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "topics": [
+  "public_transport",
+  "gardening"
+ ],
+ "topic": "public_transport",
+ "voices": {
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "friend": "c913e2f3869449568fc3fc08dfa21dfe",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Nina",
+ "friend_name_id": "name_10",
+ "phrasing_ids": [
+  "greet_20",
+  "greet_ans_19",
+  "side_instr_22",
+  "side_cue_14"
+ ],
+ "block_ids": [
+  "public_transport.ctx3",
+  "gardening.side2"
+ ],
+ "est_total_sec": 73.37,
+ "est_speech_sec": 54.82,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.44,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "My train got cancelled and I need to be at the airport by six.",
+   "est_sec": 4.44,
+   "gap_before": 0.23,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, you have options. There's an airport bus in twenty minutes, or a taxi would get you there faster but cost a lot more. What do you want to do?",
+   "est_sec": 9.4,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "One sec, I'm going to talk with my neighbor. Please wait until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 3.01,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Look at these leaves. Do you think something's eating them?",
+   "est_sec": 3.2,
+   "gap_before": 1.25,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "gardening.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, those holes look like slugs to me.",
+   "est_sec": 2.58,
+   "gap_before": 0.66,
+   "block": "gardening.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Great. What do your parents use against slugs?",
+   "est_sec": 2.58,
+   "gap_before": 0.41,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "gardening.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "My mom puts crushed eggshells around the plants. Dad just goes out at night with a torch and picks them off.",
+   "est_sec": 6.61,
+   "gap_before": 0.72,
+   "block": "gardening.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm not doing the torch thing. Eggshells I can manage.",
+   "est_sec": 3.2,
+   "gap_before": 3.5,
+   "block": "gardening.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "We have loads, I made an omelette yesterday.",
+   "est_sec": 2.58,
+   "gap_before": 0.9,
+   "block": "gardening.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, finished. I'm back now.",
+   "est_sec": 1.65,
+   "gap_before": 0.89,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. We were sorting out your ride to the airport.",
+   "est_sec": 3.2,
+   "gap_before": 0.82,
+   "role": "resume",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "The bus. I've got enough time.",
+   "est_sec": 1.96,
+   "gap_before": 2.58,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good. It leaves from the stop outside the main entrance, so head there now.",
+   "est_sec": 4.44,
+   "gap_before": 0.41,
+   "role": "followup",
+   "block": "public_transport.ctx3"
+  }
+ ]
+}

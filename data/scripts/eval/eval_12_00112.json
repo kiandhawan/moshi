@@ -1,0 +1,155 @@
+{
+ "id": "eval_12_00112",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 112,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "family_visit"
+ ],
+ "topic": "family_visit",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": "026218fe0c054374838d934016f34082",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_21",
+  "door_instr_01",
+  "door_02",
+  "implicit_09"
+ ],
+ "block_ids": [
+  "family_visit.ctx2"
+ ],
+ "est_total_sec": 53.47,
+ "est_speech_sec": 37.88,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.98,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm flying home to see my grandma for the holidays.",
+   "est_sec": 3.2,
+   "gap_before": 0.36,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How nice. Do you want to stay the whole week, or just a long weekend so you don't miss too much work?",
+   "est_sec": 6.92,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "family_visit.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good question, I hadn't really thought about that.",
+   "est_sec": 2.58,
+   "gap_before": 0.97,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No rush. So, a full week or a long weekend?",
+   "est_sec": 3.2,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "family_visit.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Someone's at the door, give me a second. Stay quiet until I'm back.",
+   "est_sec": 4.13,
+   "gap_before": 0.48,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, hey!",
+   "est_sec": 0.72,
+   "gap_before": 2.46,
+   "phrasing": "door_02"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Sorry to bother you, did a package for me end up here?",
+   "est_sec": 3.82,
+   "gap_before": 1.5,
+   "phrasing": "door_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me check. Is this it?",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
+   "phrasing": "door_02",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Yes, that's it, thanks!",
+   "est_sec": 1.34,
+   "gap_before": 0.66,
+   "phrasing": "door_02"
+  },
+  {
+   "speaker": "user",
+   "text": "So where did we leave it?",
+   "est_sec": 1.96,
+   "gap_before": 3.15,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. Did you figure out whether it's a week or a long weekend at your grandma's?",
+   "est_sec": 5.06,
+   "gap_before": 0.93,
+   "role": "resume",
+   "block": "family_visit.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

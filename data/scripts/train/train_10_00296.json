@@ -1,0 +1,96 @@
+{
+ "id": "train_10_00296",
+ "split": "train",
+ "seed": 10,
+ "order_index": 296,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "travel_planning"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "travel_planning",
+ "voices": {
+  "user": "879653fd2b9c4cb0854d68e7e9a049e8",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_14",
+  "think_instr_04"
+ ],
+ "block_ids": [
+  "travel_planning.ctx2"
+ ],
+ "est_total_sec": 47.45,
+ "est_speech_sec": 22.92,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.59,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.33,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
+  },
+  {
+   "speaker": "user",
+   "text": "I found two flights to Tokyo. One is cheaper but has a nine hour layover.",
+   "est_sec": 4.75,
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "travel_planning.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That layover is long, but you could leave the airport for a few hours. Is saving the money worth the extra travel time to you?",
+   "est_sec": 7.85,
+   "gap_before": 0.44,
+   "role": "reply",
+   "block": "travel_planning.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "I don't know yet. Ask me again in twenty seconds.",
+   "est_sec": 3.2,
+   "gap_before": 0.86,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, have you decided? The cheaper flight with the layover, or the faster one?",
+   "est_sec": 4.44,
+   "role": "resume",
+   "block": "travel_planning.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.32
+   }
+  }
+ ]
+}

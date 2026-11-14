@@ -1,0 +1,134 @@
+{
+ "id": "train_10_00357",
+ "split": "train",
+ "seed": 10,
+ "order_index": 357,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end"
+ ],
+ "topics": [
+  "hiking"
+ ],
+ "wait_sec": 20,
+ "early_end": {
+  "after_sec": 15.55,
+  "direct": true
+ },
+ "topic": "hiking",
+ "voices": {
+  "user": "676f1654c4f747a69a5921ad94886fa1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_19",
+  "greet_ans_29",
+  "think_instr_17",
+  "ack_15",
+  "early_end_04"
+ ],
+ "block_ids": [
+  "hiking.ctx1"
+ ],
+ "est_total_sec": 55.14,
+ "est_speech_sec": 32.93,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.49,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.75,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_29"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to do a day hike on Sunday but I'm not super fit.",
+   "est_sec": 4.44,
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "hiking.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. There's a flat lakeside loop of about five miles, or a shorter trail with a steep climb and a great view. Which appeals more?",
+   "est_sec": 8.16,
+   "gap_before": 0.82,
+   "role": "reply",
+   "block": "hiking.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "I haven't decided. Give me twenty seconds, then ask me again.",
+   "est_sec": 3.51,
+   "gap_before": 1.2,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I know what I want.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 15.55
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, time's up. Lakeside loop or the short climb?",
+   "est_sec": 2.89,
+   "gap_before": 0.33,
+   "role": "resume",
+   "block": "hiking.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "The steep one. I want the view, even if I'm slow.",
+   "est_sec": 3.51,
+   "gap_before": 1.44,
+   "event": "ordinary_request",
+   "block": "hiking.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Go for it. Take plenty of breaks and start early before it gets hot.",
+   "est_sec": 4.44,
+   "gap_before": 0.65,
+   "role": "followup",
+   "block": "hiking.ctx1"
+  }
+ ]
+}

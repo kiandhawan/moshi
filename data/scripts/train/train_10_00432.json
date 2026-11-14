@@ -1,0 +1,152 @@
+{
+ "id": "train_10_00432",
+ "split": "train",
+ "seed": 10,
+ "order_index": 432,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
+ "topics": [
+  "pets",
+  "movies"
+ ],
+ "topic": "pets",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": "be9ce4282d8e414daad6fa1797f1cee8",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Leo",
+ "friend_name_id": "name_07",
+ "phrasing_ids": [
+  "greet_11",
+  "greet_ans_16",
+  "side_instr_28",
+  "ack_05",
+  "side_cue_08"
+ ],
+ "block_ids": [
+  "pets.ctx1",
+  "movies.side3"
+ ],
+ "est_total_sec": 56.26,
+ "est_speech_sec": 44.18,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.45,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.73,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "We're finally getting a dog! The kids have been begging for years.",
+   "est_sec": 3.82,
+   "gap_before": 0.27,
+   "event": "ordinary_request",
+   "block": "pets.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How exciting! Are you leaning toward a puppy, or an older dog from a shelter?",
+   "est_sec": 4.75,
+   "gap_before": 0.6,
+   "role": "reply",
+   "block": "pets.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait for me, I need to talk to Leo about something. Don't say a word until I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 1.64,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.27,
+   "role": "ack",
+   "phrasing": "ack_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Leo, who was the actor in that heist film we watched in the summer?",
+   "est_sec": 4.44,
+   "gap_before": 1.34,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "movies.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "The one with the train? I can't remember his name either.",
+   "est_sec": 3.51,
+   "gap_before": 1.26,
+   "block": "movies.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "It's driving me crazy. He's in this trailer I just saw.",
+   "est_sec": 3.51,
+   "gap_before": 0.42,
+   "block": "movies.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Was he the tall one with the beard?",
+   "est_sec": 2.58,
+   "gap_before": 0.68,
+   "block": "movies.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes! The getaway driver.",
+   "est_sec": 1.34,
+   "gap_before": 0.38,
+   "block": "movies.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "No idea. Look it up later or it'll bug you all night.",
+   "est_sec": 3.82,
+   "gap_before": 0.71,
+   "block": "movies.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's sorted. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.13,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. We were talking about whether to get a puppy or an older dog.",
+   "est_sec": 4.75,
+   "gap_before": 0.7,
+   "role": "resume",
+   "block": "pets.ctx1"
+  }
+ ]
+}

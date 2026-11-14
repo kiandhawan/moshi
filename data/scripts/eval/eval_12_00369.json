@@ -1,0 +1,164 @@
+{
+ "id": "eval_12_00369",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 369,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "holiday_gifts"
+ ],
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_18",
+  "door_instr_02",
+  "ack_02",
+  "door_06",
+  "door_cue_01"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx1"
+ ],
+ "est_total_sec": 56.3,
+ "est_speech_sec": 39.22,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.34,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.83,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "I still haven't got anything for my dad and the holidays are in two weeks.",
+   "est_sec": 4.75,
+   "gap_before": 0.22,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Still time. Does he like gadgets, or would something like a nice sweater or a cooking class feel more like him?",
+   "est_sec": 6.61,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "holiday_gifts.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, the doorbell just rang. Don't say anything until I come back.",
+   "est_sec": 4.13,
+   "gap_before": 1.29,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.24,
+   "role": "ack",
+   "phrasing": "ack_02",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, hi!",
+   "est_sec": 0.72,
+   "gap_before": 3.15,
+   "phrasing": "door_06"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hey, I'm back from the trip, brought you something.",
+   "est_sec": 2.89,
+   "gap_before": 1.35,
+   "phrasing": "door_06",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "You didn't have to! How was it?",
+   "est_sec": 2.27,
+   "gap_before": 1.26,
+   "phrasing": "door_06",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Amazing, I'll tell you later.",
+   "est_sec": 1.65,
+   "gap_before": 0.98,
+   "phrasing": "door_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back. Sorry about that.",
+   "est_sec": 1.96,
+   "gap_before": 2.81,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. We were brainstorming a holiday gift for your dad.",
+   "est_sec": 3.51,
+   "gap_before": 1.04,
+   "role": "resume",
+   "block": "holiday_gifts.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Probably a gadget, he loves anything with buttons.",
+   "est_sec": 2.58,
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Easy then. A wireless meat thermometer is a fun one for a dad who grills.",
+   "est_sec": 4.75,
+   "gap_before": 0.94,
+   "role": "followup",
+   "block": "holiday_gifts.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

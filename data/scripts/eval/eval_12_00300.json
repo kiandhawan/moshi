@@ -1,0 +1,138 @@
+{
+ "id": "eval_12_00300",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 300,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "podcasts"
+ ],
+ "reading": {
+  "material": "email",
+  "sec": 24.2
+ },
+ "topic": "podcasts",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_09",
+  "greet_ans_24",
+  "read_instr_03",
+  "ack_06",
+  "read_cue_04"
+ ],
+ "block_ids": [
+  "podcasts.ctx2"
+ ],
+ "est_total_sec": 59.37,
+ "est_speech_sec": 28.59,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.35,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "My friend and I want to start our own podcast.",
+   "est_sec": 3.2,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun! What would it be about? Having a clear theme makes it much easier to find listeners.",
+   "est_sec": 5.37,
+   "gap_before": 0.46,
+   "role": "reply",
+   "block": "podcasts.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One second, I have to read this work email. Stay quiet till I'm done.",
+   "est_sec": 4.44,
+   "gap_before": 0.8,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.44,
+   "role": "ack",
+   "phrasing": "ack_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Done, I read through it.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 24.2
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, all read? So, what will your podcast be about?",
+   "est_sec": 3.2,
+   "gap_before": 0.32,
+   "role": "resume",
+   "block": "podcasts.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe local food, trying a new restaurant in town each week.",
+   "est_sec": 3.51,
+   "gap_before": 2.7,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice, very focused. Local businesses might even help promote it.",
+   "est_sec": 3.2,
+   "gap_before": 0.5,
+   "role": "followup",
+   "block": "podcasts.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

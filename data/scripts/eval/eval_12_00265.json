@@ -1,0 +1,114 @@
+{
+ "id": "eval_12_00265",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 265,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "camping"
+ ],
+ "reading": {
+  "material": "text message",
+  "sec": 22.5
+ },
+ "topic": "camping",
+ "voices": {
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_15",
+  "read_instr_07",
+  "implicit_04"
+ ],
+ "block_ids": [
+  "camping.ctx2"
+ ],
+ "est_total_sec": 53.07,
+ "est_speech_sec": 25.81,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.59,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.86,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "My old tent finally ripped. I need a new one before the trip.",
+   "est_sec": 4.13,
+   "gap_before": 0.28,
+   "event": "ordinary_request",
+   "block": "camping.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sorry to hear it. How many people should it sleep, and will you be carrying it far or just parking next to it?",
+   "est_sec": 7.23,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "camping.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, my sister texted me. Let me read it before you say anything.",
+   "est_sec": 4.44,
+   "gap_before": 0.68,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, where were we?",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 22.5
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. We were figuring out your new tent. How many people, and will you carry it?",
+   "est_sec": 5.06,
+   "gap_before": 0.42,
+   "role": "resume",
+   "block": "camping.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

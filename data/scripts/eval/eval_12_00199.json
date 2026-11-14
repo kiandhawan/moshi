@@ -1,0 +1,151 @@
+{
+ "id": "eval_12_00199",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 199,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
+ "topics": [
+  "camping"
+ ],
+ "reading": {
+  "material": "article",
+  "sec": 16.4
+ },
+ "topic": "camping",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_18",
+  "greet_ans_18",
+  "read_instr_10",
+  "ack_08",
+  "murmur_12",
+  "read_cue_08"
+ ],
+ "block_ids": [
+  "camping.ctx2"
+ ],
+ "est_total_sec": 59.78,
+ "est_speech_sec": 38.3,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.45,
+   "role": "greeting",
+   "phrasing": "greet_18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.77,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "My old tent finally ripped. I need a new one before the trip.",
+   "est_sec": 4.13,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "camping.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sorry to hear it. How many people should it sleep, and will you be carrying it far or just parking next to it?",
+   "est_sec": 7.23,
+   "gap_before": 1.13,
+   "role": "reply",
+   "block": "camping.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, let me finish reading this article. I'll tell you when I'm done.",
+   "est_sec": 4.44,
+   "gap_before": 0.33,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.22,
+   "role": "ack",
+   "phrasing": "ack_08",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Huh, didn't see that coming.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 10.57
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, done with the article.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 16.4
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, all read? We were figuring out your new tent. How many people, and will you carry it?",
+   "est_sec": 5.68,
+   "gap_before": 1.71,
+   "role": "resume",
+   "block": "camping.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "It's for the whole family, four of us, and we'll park right next to it.",
+   "est_sec": 4.75,
+   "gap_before": 0.6,
+   "event": "ordinary_request",
+   "block": "camping.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great, then weight doesn't matter. A roomy six-person cabin tent will feel much more comfortable.",
+   "est_sec": 4.75,
+   "gap_before": 0.87,
+   "role": "followup",
+   "block": "camping.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_reading"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

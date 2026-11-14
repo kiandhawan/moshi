@@ -1,0 +1,105 @@
+{
+ "id": "train_10_00212",
+ "split": "train",
+ "seed": 10,
+ "order_index": 212,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "smartphones"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "smartphones",
+ "voices": {
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_20",
+  "think_instr_08",
+  "ack_05"
+ ],
+ "block_ids": [
+  "smartphones.ctx2"
+ ],
+ "est_total_sec": 72.81,
+ "est_speech_sec": 22.71,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.6,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I keep picking up my phone without even thinking. It's eating my whole evening.",
+   "est_sec": 4.44,
+   "gap_before": 0.59,
+   "event": "ordinary_request",
+   "block": "smartphones.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lots of people feel that way. Would you rather set a daily time limit on certain apps, or delete the worst ones entirely?",
+   "est_sec": 7.23,
+   "gap_before": 0.95,
+   "role": "reply",
+   "block": "smartphones.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm not sure. Wait forty-five seconds and ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 1.51,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.44,
+   "role": "ack",
+   "phrasing": "ack_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, about your evenings. Do you want limits, or a clean delete?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "smartphones.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.58
+   }
+  }
+ ]
+}

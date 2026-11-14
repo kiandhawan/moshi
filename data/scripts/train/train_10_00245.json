@@ -1,0 +1,112 @@
+{
+ "id": "train_10_00245",
+ "split": "train",
+ "seed": 10,
+ "order_index": 245,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "music"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "music",
+ "voices": {
+  "user": "536d3a5e000945adb7038665781a4aca",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_26",
+  "greet_ans_25",
+  "think_instr_14"
+ ],
+ "block_ids": [
+  "music.ctx3"
+ ],
+ "est_total_sec": 54.55,
+ "est_speech_sec": 24.36,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_26"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.94,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Two bands I like are playing on the same night next month.",
+   "est_sec": 3.82,
+   "gap_before": 0.25,
+   "event": "ordinary_request",
+   "block": "music.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a tough one. Is one of them a band you've never seen live, or one that rarely tours?",
+   "est_sec": 5.99,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "music.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait twenty seconds, then ask me that again.",
+   "est_sec": 2.58,
+   "gap_before": 0.82,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, any thoughts on which band to see that night?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "music.ctx3",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.15
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The first band rarely tours, so them.",
+   "est_sec": 2.27,
+   "gap_before": 3.24,
+   "event": "ordinary_request",
+   "block": "music.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Makes sense. You might not get another chance for years.",
+   "est_sec": 3.2,
+   "gap_before": 1.64,
+   "role": "followup",
+   "block": "music.ctx3"
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+ "id": "eval_12_00152",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 152,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
+ "topics": [
+  "camping"
+ ],
+ "topic": "camping",
+ "voices": {
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": "b121b91872f54f04ba9f6da08b8b6253",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_06",
+  "door_instr_08",
+  "ack_02",
+  "door_08",
+  "door_cue_07"
+ ],
+ "block_ids": [
+  "camping.ctx2"
+ ],
+ "est_total_sec": 44.76,
+ "est_speech_sec": 31.27,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.75,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "My old tent finally ripped. I need a new one before the trip.",
+   "est_sec": 4.13,
+   "gap_before": 0.55,
+   "event": "ordinary_request",
+   "block": "camping.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sorry to hear it. How many people should it sleep, and will you be carrying it far or just parking next to it?",
+   "est_sec": 7.23,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "camping.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, the doorbell. Hang tight and wait for me.",
+   "est_sec": 2.89,
+   "gap_before": 1.26,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.39,
+   "role": "ack",
+   "phrasing": "ack_02",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Yes?",
+   "est_sec": 0.41,
+   "gap_before": 2.7,
+   "phrasing": "door_08",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, is this the right address for Jordan?",
+   "est_sec": 2.58,
+   "gap_before": 1.36,
+   "phrasing": "door_08"
+  },
+  {
+   "speaker": "user",
+   "text": "No, I think that's next door.",
+   "est_sec": 1.96,
+   "gap_before": 1.2,
+   "phrasing": "door_08"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Oh, sorry, thanks!",
+   "est_sec": 1.03,
+   "gap_before": 0.38,
+   "phrasing": "door_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, sorted. I'm back.",
+   "est_sec": 1.34,
+   "gap_before": 2.07,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everything okay at the door? We were figuring out your new tent. How many people, and will you carry it?",
+   "est_sec": 6.3,
+   "gap_before": 0.35,
+   "role": "resume",
+   "block": "camping.ctx2",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "new_type_door"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

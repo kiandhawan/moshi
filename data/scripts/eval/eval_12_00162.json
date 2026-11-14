@@ -1,0 +1,157 @@
+{
+ "id": "eval_12_00162",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 162,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
+ "topics": [
+  "wedding_planning"
+ ],
+ "topic": "wedding_planning",
+ "voices": {
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_03",
+  "greet_ans_18",
+  "waitlike_12"
+ ],
+ "block_ids": [
+  "wedding_planning.dlg3"
+ ],
+ "est_total_sec": 63.68,
+ "est_speech_sec": 48.42,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
+   "role": "greeting",
+   "phrasing": "greet_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.59,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "What's a good first dance song that isn't super cheesy?",
+   "est_sec": 3.2,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It depends on your taste. Something like an old soul ballad or an acoustic cover of a song you both love tends to feel personal without being cheesy.",
+   "est_sec": 8.78,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, that can't be right.",
+   "est_sec": 1.65,
+   "gap_before": 2.33,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_12",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let me double-check. I'd still stand by it, but tell me what you heard.",
+   "est_sec": 4.44,
+   "gap_before": 1.09,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "We met at a jazz bar, if that helps.",
+   "est_sec": 2.89,
+   "gap_before": 1.15,
+   "event": "ordinary_request",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Oh, then a jazz standard would be perfect. Something slow and swingy, maybe even played by a live trio.",
+   "est_sec": 5.99,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A live band sounds expensive though",
+   "est_sec": 1.96,
+   "gap_before": 0.91,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "how much do they usually cost?",
+   "est_sec": 1.96,
+   "gap_before": 2.36,
+   "event": "ordinary_request",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A small jazz trio often runs between one and three thousand dollars for an evening, depending on the city.",
+   "est_sec": 5.99,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah, that's too much. We'll just play a recording.",
+   "est_sec": 2.89,
+   "gap_before": 1.45,
+   "event": "ordinary_request",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally fine. Ask your DJ to fade it out after two minutes so nobody feels stuck on the floor.",
+   "est_sec": 5.99,
+   "gap_before": 1.01,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "ordinary"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

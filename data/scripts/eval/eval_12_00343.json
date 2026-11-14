@@ -1,0 +1,156 @@
+{
+ "id": "eval_12_00343",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 343,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "painting_art",
+  "camping"
+ ],
+ "topic": "painting_art",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Aisha",
+ "friend_name_id": "name_18",
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_15",
+  "side_instr_18",
+  "ack_06",
+  "implicit_07"
+ ],
+ "block_ids": [
+  "painting_art.ctx1",
+  "camping.side1"
+ ],
+ "est_total_sec": 54.23,
+ "est_speech_sec": 42.22,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.54,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.94,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "I finally bought some paints and I want to start a little hobby.",
+   "est_sec": 4.13,
+   "gap_before": 0.48,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's exciting. Did you get watercolors or acrylics, and do you want to start with landscapes or something simpler like fruit on a table?",
+   "est_sec": 7.54,
+   "gap_before": 0.3,
+   "role": "reply",
+   "block": "painting_art.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold up, my mom is asking me something. Please don't say anything until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.38,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.59,
+   "role": "ack",
+   "phrasing": "ack_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Aisha, did you pack the sleeping bags already?",
+   "est_sec": 2.58,
+   "gap_before": 1.38,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "camping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Mine's in the car. I couldn't find yours anywhere.",
+   "est_sec": 2.89,
+   "gap_before": 1.16,
+   "block": "camping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "I think it's still in the garage, behind the bikes.",
+   "est_sec": 3.2,
+   "gap_before": 0.51,
+   "block": "camping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay, I'll grab it. Do we need the pads too?",
+   "est_sec": 3.2,
+   "gap_before": 1.15,
+   "block": "camping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, the ground up there is really rocky.",
+   "est_sec": 2.58,
+   "gap_before": 0.47,
+   "block": "camping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "So, what were you saying?",
+   "est_sec": 1.65,
+   "gap_before": 0.54,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. You were deciding what to paint first, remember? Landscape or fruit on a table?",
+   "est_sec": 4.75,
+   "gap_before": 1.07,
+   "role": "resume",
+   "block": "painting_art.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

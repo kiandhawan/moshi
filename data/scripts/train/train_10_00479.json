@@ -1,0 +1,112 @@
+{
+ "id": "train_10_00479",
+ "split": "train",
+ "seed": 10,
+ "order_index": 479,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "job_interview"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "job_interview",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_29",
+  "greet_ans_11",
+  "think_instr_23"
+ ],
+ "block_ids": [
+  "job_interview.ctx1"
+ ],
+ "est_total_sec": 56.87,
+ "est_speech_sec": 29.94,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.76,
+   "role": "greeting",
+   "phrasing": "greet_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.9,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I have an interview on Thursday and I'm really nervous.",
+   "est_sec": 3.2,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "job_interview.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's normal, we can practice. Do you want to start with tell me about yourself, or with questions about your weaknesses?",
+   "est_sec": 6.61,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "job_interview.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me twenty seconds, I want to think about it. Then ask again.",
+   "est_sec": 4.13,
+   "gap_before": 0.84,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, where should we start, the tell me about yourself question or weaknesses?",
+   "est_sec": 4.13,
+   "role": "resume",
+   "block": "job_interview.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.3
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Let's do tell me about yourself. I always ramble.",
+   "est_sec": 2.89,
+   "gap_before": 0.79,
+   "event": "ordinary_request",
+   "block": "job_interview.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Aim for about a minute, your current role, one proud achievement, and why you want this job.",
+   "est_sec": 5.68,
+   "gap_before": 0.63,
+   "role": "followup",
+   "block": "job_interview.ctx1"
+  }
+ ]
+}

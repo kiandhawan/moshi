@@ -1,0 +1,173 @@
+{
+ "id": "eval_12_00239",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 239,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "implicit"
+ ],
+ "topics": [
+  "home_office",
+  "wedding_planning"
+ ],
+ "topic": "home_office",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "026218fe0c054374838d934016f34082",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Zoe",
+ "friend_name_id": "name_24",
+ "phrasing_ids": [
+  "greet_27",
+  "greet_ans_30",
+  "side_instr_12",
+  "dq_06",
+  "implicit_09"
+ ],
+ "block_ids": [
+  "home_office.ctx1",
+  "wedding_planning.side1"
+ ],
+ "est_total_sec": 57.22,
+ "est_speech_sec": 42.11,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.48,
+   "role": "greeting",
+   "phrasing": "greet_27",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.82,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm finally turning the spare room into a proper office.",
+   "est_sec": 3.2,
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "block": "home_office.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting. Where do you want the desk, facing the window for the light, or against the wall so the screen has no glare?",
+   "est_sec": 7.23,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, Zoe just called my name. Please wait and stay silent until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.61,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you feed the cat already?",
+   "est_sec": 1.96,
+   "gap_before": 1.33,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_06"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yep, about an hour ago.",
+   "est_sec": 1.65,
+   "gap_before": 0.94,
+   "phrasing": "dq_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Zoe, did your cousin ever send back the RSVP card?",
+   "est_sec": 3.2,
+   "gap_before": 1.04,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "wedding_planning.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "No, and I asked her twice already.",
+   "est_sec": 2.27,
+   "gap_before": 0.58,
+   "block": "wedding_planning.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "The caterer needs final numbers by Friday.",
+   "est_sec": 2.27,
+   "gap_before": 0.86,
+   "block": "wedding_planning.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just count her as a yes. She always shows up anyway.",
+   "est_sec": 3.51,
+   "gap_before": 1.47,
+   "block": "wedding_planning.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "And her boyfriend?",
+   "est_sec": 1.03,
+   "gap_before": 0.48,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "wedding_planning.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Ugh, probably him too. Put down two.",
+   "est_sec": 2.27,
+   "gap_before": 1.33,
+   "block": "wedding_planning.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "So where did we leave it?",
+   "est_sec": 1.96,
+   "gap_before": 0.69,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. So, desk by the window or against the wall?",
+   "est_sec": 3.2,
+   "gap_before": 0.59,
+   "role": "resume",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

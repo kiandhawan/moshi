@@ -1,0 +1,162 @@
+{
+ "id": "eval_12_00385",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 385,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit"
+ ],
+ "topics": [
+  "home_office",
+  "wedding_planning"
+ ],
+ "topic": "home_office",
+ "voices": {
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": "933563129e564b19a115bedd57b7406a",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Kenji",
+ "friend_name_id": "name_21",
+ "phrasing_ids": [
+  "greet_06",
+  "greet_ans_21",
+  "side_instr_24",
+  "implicit_13"
+ ],
+ "block_ids": [
+  "home_office.ctx1",
+  "wedding_planning.side2"
+ ],
+ "est_total_sec": 58.81,
+ "est_speech_sec": 45.42,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.72,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.98,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm finally turning the spare room into a proper office.",
+   "est_sec": 3.2,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "home_office.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting. Where do you want the desk, facing the window for the light, or against the wall so the screen has no glare?",
+   "est_sec": 7.23,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Can you give me a moment? Kenji wants to show me something. I'll let you know when I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 1.48,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_24"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you look at these two invitation samples for a second?",
+   "est_sec": 3.51,
+   "gap_before": 0.85,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "wedding_planning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. Oh, the cream one is really pretty.",
+   "est_sec": 2.58,
+   "gap_before": 0.46,
+   "block": "wedding_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Right? But the white one is half the price.",
+   "est_sec": 2.89,
+   "gap_before": 0.31,
+   "block": "wedding_planning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Honestly, nobody keeps the invitation. Go with the cheaper one.",
+   "est_sec": 3.2,
+   "gap_before": 0.47,
+   "block": "wedding_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "My mom will notice though. Which font do you like better?",
+   "est_sec": 3.51,
+   "gap_before": 1.11,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "wedding_planning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "The curly one. The other looks like a business letter.",
+   "est_sec": 3.2,
+   "gap_before": 1.35,
+   "block": "wedding_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, curly font, white card. Deal.",
+   "est_sec": 1.96,
+   "gap_before": 0.73,
+   "block": "wedding_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, you were saying?",
+   "est_sec": 1.34,
+   "gap_before": 1.39,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. We were placing the desk in your new office.",
+   "est_sec": 3.2,
+   "gap_before": 0.66,
+   "role": "resume",
+   "block": "home_office.ctx1",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "implicit_return"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

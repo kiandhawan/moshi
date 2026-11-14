@@ -1,0 +1,136 @@
+{
+ "id": "train_10_00044",
+ "split": "train",
+ "seed": 10,
+ "order_index": 44,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
+ ],
+ "topics": [
+  "video_games"
+ ],
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 10
+ },
+ "topic": "video_games",
+ "voices": {
+  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "greet_ans_05",
+  "think_instr_25",
+  "ack_14",
+  "self_29"
+ ],
+ "block_ids": [
+  "video_games.ctx2"
+ ],
+ "est_total_sec": 46.59,
+ "est_speech_sec": 31.69,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.43,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.34,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_05"
+  },
+  {
+   "speaker": "user",
+   "text": "My daughter wants a games console for her birthday.",
+   "est_sec": 2.89,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "video_games.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely. Does she mostly want to play on the TV with the family, or carry it around and play on her own?",
+   "est_sec": 6.92,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "video_games.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me take ten seconds to think, and then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 2.26,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.63,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, let me just picture it.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 4.83
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, a console for the TV with everyone, or a handheld she can take around?",
+   "est_sec": 4.75,
+   "role": "resume",
+   "block": "video_games.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 10.42
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The TV. Honestly I want to play with her too.",
+   "est_sec": 3.2,
+   "gap_before": 0.7,
+   "event": "ordinary_request",
+   "block": "video_games.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's sweet. Pick one with good local multiplayer and grab a second controller.",
+   "est_sec": 4.13,
+   "gap_before": 0.47,
+   "role": "followup",
+   "block": "video_games.ctx2"
+  }
+ ]
+}

@@ -29,7 +29,7 @@ Conditions (exact fractions of the scripts of a type, at least one if the type o
               early_end 15% ("Okay, I've got it" before the deadline; Moshi answers at once;
               in 60% of those, early_direct, the user just says they're ready and Moshi asks
               again within 0.3-1.0 s),
-              extension 40% (eval only, "give me five more seconds").
+              extension 60% (eval only, "give me five more seconds").
   side_conversation: near_miss 35% (inserted near-miss cue said to the friend),
               extra_question 30% (an extra question to the friend; the side conversations
               themselves already contain at least one).
@@ -56,7 +56,10 @@ for eval_full and loss evaluation only, never rendered into the model's input.
 Planned length is 30-85 s (estimated), so rendered files stay under 90 s.
 
 Usage:
-  python scripts/generate_scripts.py --split train --n 20 --seed 1 --out data/scripts_pilot/train
+  python scripts/generate_scripts.py --split train --n 20 --seed 1 --out data/scripts_pilot/train   (pilot)
+  python scripts/generate_scripts.py --split train --ordered --n 760 --seed 10 --out data/scripts/train
+With --ordered the list is prefix-stable: the first k scripts are identical for any --n >= k,
+so a larger set (e.g. 100 h) extends a smaller one without changing its files.
 """
 
 import argparse
@@ -77,7 +80,7 @@ SELF_TALK_P = 0.5        # think_time: the user mumbles / thinks aloud during th
 EARLY_END_P = 0.15       # think_time: "Okay, I've got it" before the deadline, Moshi replies at once
 EARLY_DIRECT_P = 0.6     # of the early ends: the user just says they're ready and Moshi re-asks
                          # within 0.3-1.0 s (the rest: the user also gives the answer)
-EXTENSION_P = 0.4        # think_time, eval only: "give me five more seconds"
+EXTENSION_P = 0.6        # think_time, eval only: "give me five more seconds"
 NEAR_MISS_P = 0.35       # side_conversation: an inserted near-miss return cue said to the friend
 EXTRA_QUESTION_P = 0.3   # side_conversation: an extra inserted question to the friend
 IMPLICIT_P = 0.4         # eval only (side/phone/door/reading): "Anyway, where were we?"
@@ -564,36 +567,125 @@ def assign_conditions(kinds: list[str], split: str, rng: random.Random) -> list[
     return conds
 
 
+BLOCK = {"train": 20, "eval": 50}  # every block of this many scripts has the exact type mix
+# Stride phases, so different conditions on the same type don't always fall on the same scripts.
+PHASE = {"extension": 0.5, "early_end": 0.3, "early_direct": 0.5, "self_talk": 0.5, "near_miss": 0.5,
+         "extra_question": 0.8, "implicit": 0.5, "wait_like": 0.6}
+
+
+def stride_hit(k: int, frac: float, phase: float) -> bool:
+    """True for about `frac` of k = 0, 1, 2, ..., evenly spread, so that every prefix of the
+    sequence has the right proportion (to within one)."""
+    return int((k + 1) * frac + phase) > int(k * frac + phase)
+
+
+class OrderedPlan:
+    """Script types and conditions for an ordered list that can be cut at any block boundary:
+    blocks of BLOCK[split] scripts each contain the exact MIX (shuffled within the block), and
+    conditions are assigned on an even stride through each type's own sequence. Generating
+    more scripts never changes the earlier ones (same seed -> same prefix)."""
+
+    def __init__(self, split: str, rng: random.Random, only: str | None = None):
+        self.split, self.rng, self.only = split, rng, only
+        self.queue: list[str] = []
+        self.seen: dict[str, int] = {}
+        self.sub: dict[str, int] = {}
+
+    def _block(self) -> list[str]:
+        if self.only:
+            return [self.only]
+        n = BLOCK[self.split]
+        counts = {k: round(f * n) for k, f in MIX[self.split].items()}
+        assert sum(counts.values()) == n, counts
+        kinds = [k for k, c in counts.items() for _ in range(c)]
+        self.rng.shuffle(kinds)
+        return kinds
+
+    def _hit(self, name: str, key: str, frac: float) -> bool:
+        k = self.sub.get(key, 0)
+        self.sub[key] = k + 1
+        return stride_hit(k, frac, PHASE[name])
+
+    def next(self) -> tuple[str, set[str]]:
+        if not self.queue:
+            self.queue = self._block()
+        kind = self.queue.pop(0)
+        cond: set[str] = set()
+        ev = self.split == "eval"
+        if kind == "think_time":
+            if ev and self._hit("extension", "think", EXTENSION_P):
+                cond.add("extension")
+            # early ends: EARLY_END_P of all think-time scripts, among those without an extension
+            elif self._hit("early_end", "think_noext", EARLY_END_P / ((1 - EXTENSION_P) if ev else 1.0)):
+                cond.add("early_end")
+                if self._hit("early_direct", "early", EARLY_DIRECT_P):
+                    cond.add("early_direct")
+            if self._hit("self_talk", "think_self", SELF_TALK_P):
+                cond.add("self_talk")
+        elif kind == "side_conversation":
+            if self._hit("near_miss", "side_nm", NEAR_MISS_P):
+                cond.add("near_miss")
+            if self._hit("extra_question", "side_q", EXTRA_QUESTION_P):
+                cond.add("extra_question")
+        elif kind == "ordinary":
+            if self._hit("wait_like", "ord", WAIT_LIKE_P):
+                cond.add("wait_like")
+        if ev and kind in ("side_conversation", "phone_call", "door", "reading") and \
+                self._hit("implicit", f"implicit_{kind}", IMPLICIT_P):
+            cond.add("implicit")
+        return kind, cond
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--split", choices=["train", "eval"], required=True)
     p.add_argument("--n", type=int, required=True)
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--ordered", action="store_true",
+                   help="Ordered, prefix-stable list (blocks with the exact mix, stride conditions): "
+                        "the first n scripts are the same whatever --n is. Used for the real datasets.")
+    p.add_argument("--only", choices=list(MIX["train"]), default=None,
+                   help="With --ordered: only this script type (e.g. ordinary for the control set).")
+    p.add_argument("--id-prefix", default=None, help="Script id prefix (default: <split>_<seed>).")
     args = p.parse_args()
 
-    rng = random.Random(f"{args.split}-{args.seed}")
+    rng = random.Random(f"{args.split}-{args.seed}" + (f"-only-{args.only}" if args.only else ""))
     P = Pools(args.split, rng)
-    mix = MIX[args.split]
-    counts = {k: round(f * args.n) for k, f in mix.items()}
-    counts["ordinary"] += args.n - sum(counts.values())
-    kinds = [k for k, c in counts.items() for _ in range(c)]
-    rng.shuffle(kinds)
-    conds = assign_conditions(kinds, args.split, rng)
+    if args.ordered:
+        plan = OrderedPlan(args.split, rng, args.only)
+        # The plan draws a block's shuffle from rng when the block starts, between builds, so
+        # the sequence of rng draws (and so every script) depends only on the position.
+        kinds, conds = None, None
+    else:  # the original pilot mode: exact counts over the whole run
+        mix = MIX[args.split]
+        counts = {k: round(f * args.n) for k, f in mix.items()}
+        counts["ordinary"] += args.n - sum(counts.values())
+        kinds = [k for k, c in counts.items() for _ in range(c)]
+        rng.shuffle(kinds)
+        conds = assign_conditions(kinds, args.split, rng)
 
     args.out.mkdir(parents=True, exist_ok=True)
+    prefix = args.id_prefix or f"{args.split}_{args.seed:02d}"
     rows = []
-    for i, kind in enumerate(kinds):
+    for i in range(args.n):
+        if args.ordered:
+            kind, cond_i = plan.next()
+        else:
+            kind, cond_i = kinds[i], conds[i]
         for attempt in range(100):
             try:
-                s = build(kind, args.split, P, rng, conds[i])
+                s = build(kind, args.split, P, rng, cond_i)
                 break
             except ValueError:
                 continue
         else:
-            raise SystemExit(f"could not build a {kind} script {sorted(conds[i])} within {MIN_SEC}-{MAX_SEC} s")
-        sid = f"{args.split}_{args.seed:02d}_{i:05d}"
-        script = {"id": sid, "split": args.split, "seed": args.seed, **s}
+            raise SystemExit(f"could not build a {kind} script {sorted(cond_i)} within {MIN_SEC}-{MAX_SEC} s")
+        sid = f"{prefix}_{i:05d}"
+        script = {"id": sid, "split": args.split, "seed": args.seed, "order_index": i,
+                  "generator": {"ordered": args.ordered, "only": args.only, "seed": args.seed,
+                                "block": (BLOCK[args.split] if not args.only else 1) if args.ordered else None},
+                  **s}
         if args.split == "eval":
             script["groups"] = eval_groups(kind, s["conditions"])
             script["note"] = ("Moshi turns are reference_only: the ideal replies, for eval_full and "

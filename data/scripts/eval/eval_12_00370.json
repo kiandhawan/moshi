@@ -1,0 +1,164 @@
+{
+ "id": "eval_12_00370",
+ "split": "eval",
+ "seed": 12,
+ "order_index": 370,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 12,
+  "block": 50
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension",
+  "self_talk"
+ ],
+ "topics": [
+  "picnic"
+ ],
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 2.87
+ },
+ "deadline": {
+  "after_turn": 7,
+  "sec": 10
+ },
+ "topic": "picnic",
+ "voices": {
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_15",
+  "greet_ans_18",
+  "think_instr_12",
+  "ack_06",
+  "self_21",
+  "extension_01"
+ ],
+ "block_ids": [
+  "picnic.ctx3"
+ ],
+ "est_total_sec": 63.24,
+ "est_speech_sec": 36.13,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.63,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.8,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "My friends want to do a picnic but the forecast says maybe rain.",
+   "est_sec": 4.13,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "picnic.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hmm, there's a forty percent chance in the afternoon. Do you want to move it to the morning, or keep the plan and bring a tarp just in case?",
+   "est_sec": 9.09,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I need to think. Give me fifteen seconds and then ask me again.",
+   "est_sec": 4.13,
+   "gap_before": 1.42,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, I keep going back and forth.",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 7.55
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_21"
+  },
+  {
+   "speaker": "user",
+   "text": "Actually, give me ten more seconds.",
+   "est_sec": 1.96,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_01",
+   "anchor": {
+    "turn": 4,
+    "offset": 12.13
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, with the rain chance, morning picnic or stick with the afternoon and a tarp?",
+   "est_sec": 4.75,
+   "role": "resume",
+   "block": "picnic.ctx3",
+   "anchor": {
+    "turn": 7,
+    "offset": 10.1
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "We'll keep it and bring the tarp.",
+   "est_sec": 2.27,
+   "gap_before": 1.32,
+   "event": "ordinary_request",
+   "block": "picnic.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Pick a spot near a shelter, just in case it really pours.",
+   "est_sec": 4.13,
+   "gap_before": 0.73,
+   "role": "followup",
+   "block": "picnic.ctx3",
+   "reference_only": true
+  }
+ ],
+ "groups": [
+  "familiar_type",
+  "extension"
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

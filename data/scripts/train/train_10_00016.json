@@ -1,0 +1,112 @@
+{
+ "id": "train_10_00016",
+ "split": "train",
+ "seed": 10,
+ "order_index": 16,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "movies"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "movies",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_08",
+  "greet_ans_01",
+  "think_instr_14"
+ ],
+ "block_ids": [
+  "movies.ctx1"
+ ],
+ "est_total_sec": 76.72,
+ "est_speech_sec": 24.36,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.38,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "It's movie night and nobody can agree on anything. Help.",
+   "est_sec": 3.2,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "movies.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let's narrow it down. Are you in the mood for something funny, something scary, or a big action film?",
+   "est_sec": 5.99,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "movies.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait forty-five seconds, then ask me that again.",
+   "est_sec": 2.58,
+   "gap_before": 0.98,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Time's up! Comedy, horror or action?",
+   "est_sec": 1.96,
+   "role": "resume",
+   "block": "movies.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.23
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Funny. Everyone's had a long week.",
+   "est_sec": 1.96,
+   "gap_before": 1.04,
+   "event": "ordinary_request",
+   "block": "movies.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then go for a light comedy you can all talk over. Nothing too long, under two hours.",
+   "est_sec": 5.37,
+   "gap_before": 1.09,
+   "role": "followup",
+   "block": "movies.ctx1"
+  }
+ ]
+}

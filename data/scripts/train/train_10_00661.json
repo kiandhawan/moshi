@@ -1,0 +1,173 @@
+{
+ "id": "train_10_00661",
+ "split": "train",
+ "seed": 10,
+ "order_index": 661,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
+ ],
+ "topics": [
+  "cars",
+  "home_repair"
+ ],
+ "topic": "cars",
+ "voices": {
+  "user": "cbc3add1f54546e6a4a1964bacb8b122",
+  "friend": "c250136a9ec74cc0b799be54664a83f2",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Chloe",
+ "friend_name_id": "name_08",
+ "phrasing_ids": [
+  "greet_07",
+  "greet_ans_22",
+  "side_instr_25",
+  "ack_04",
+  "dn_16",
+  "side_cue_25"
+ ],
+ "block_ids": [
+  "cars.ctx3",
+  "home_repair.side3"
+ ],
+ "est_total_sec": 59.19,
+ "est_speech_sec": 44.07,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm finally buying my first car.",
+   "est_sec": 1.96,
+   "gap_before": 0.22,
+   "event": "ordinary_request",
+   "block": "cars.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Congratulations! Have you thought about whether you want something new with a warranty, or a cheaper used one?",
+   "est_sec": 5.68,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "cars.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang tight, my dad is calling me over. Don't talk until I say I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 0.32,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.58,
+   "role": "ack",
+   "phrasing": "ack_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you back from the gym?",
+   "est_sec": 1.96,
+   "gap_before": 0.8,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_16"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yep, just got in.",
+   "est_sec": 1.34,
+   "gap_before": 0.85,
+   "phrasing": "dn_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Chloe, come look at this. Is that water stain on the ceiling getting bigger?",
+   "est_sec": 4.44,
+   "gap_before": 1.16,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Hmm, yeah, it looks darker than yesterday.",
+   "est_sec": 2.27,
+   "gap_before": 0.43,
+   "block": "home_repair.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Great. Do you think it's the roof or the upstairs bathroom?",
+   "est_sec": 3.51,
+   "gap_before": 1.44,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's right under the tub, so my bet's the bathroom.",
+   "est_sec": 3.2,
+   "gap_before": 0.45,
+   "block": "home_repair.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'll check the seal around the tub tomorrow morning.",
+   "est_sec": 3.2,
+   "gap_before": 0.59,
+   "block": "home_repair.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Put a towel down in the meantime, just in case.",
+   "est_sec": 3.2,
+   "gap_before": 0.7,
+   "block": "home_repair.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, that took a while. I'm back.",
+   "est_sec": 2.27,
+   "gap_before": 1.98,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. So, for your first car, new or used?",
+   "est_sec": 3.2,
+   "gap_before": 1.78,
+   "role": "resume",
+   "block": "cars.ctx3"
+  }
+ ]
+}

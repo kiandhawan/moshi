@@ -1,0 +1,173 @@
+{
+ "id": "train_10_00284",
+ "split": "train",
+ "seed": 10,
+ "order_index": 284,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "block": 20
+ },
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
+ "topics": [
+  "sleep",
+  "cars"
+ ],
+ "topic": "sleep",
+ "voices": {
+  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "friend": "ba875f2fb2ea4a4e9b175821014984b6",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Emma",
+ "friend_name_id": "name_20",
+ "phrasing_ids": [
+  "greet_28",
+  "greet_ans_07",
+  "side_instr_28",
+  "ack_05",
+  "dq_14",
+  "side_cue_01"
+ ],
+ "block_ids": [
+  "sleep.ctx3",
+  "cars.side1"
+ ],
+ "est_total_sec": 63.6,
+ "est_speech_sec": 47.79,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.53,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.66,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "I want a better bedtime routine. Right now I just scroll until I pass out.",
+   "est_sec": 4.75,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "sleep.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A wind down routine can really help. What would you enjoy doing in the last half hour instead, reading, stretching, or maybe a warm shower?",
+   "est_sec": 7.85,
+   "gap_before": 0.84,
+   "role": "reply",
+   "block": "sleep.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait for me, I need to talk to Emma about something. Don't say a word until I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 0.47,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.54,
+   "role": "ack",
+   "phrasing": "ack_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Did the package arrive today?",
+   "est_sec": 1.65,
+   "gap_before": 0.9,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_14"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, I put it by the door.",
+   "est_sec": 2.27,
+   "gap_before": 0.97,
+   "phrasing": "dq_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Emma, did you hear that rattling noise when we pulled in?",
+   "est_sec": 3.51,
+   "gap_before": 0.35,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, it sounded like it was coming from underneath.",
+   "est_sec": 2.89,
+   "gap_before": 1.79,
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "I think it might be the exhaust again.",
+   "est_sec": 2.58,
+   "gap_before": 0.53,
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "My brother had the same thing. It was just a loose heat shield.",
+   "est_sec": 4.13,
+   "gap_before": 1.3,
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Was it expensive to fix?",
+   "est_sec": 1.65,
+   "gap_before": 1.22,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not really, maybe forty quid. Took them ten minutes.",
+   "est_sec": 2.89,
+   "gap_before": 1.34,
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back.",
+   "est_sec": 1.03,
+   "gap_before": 1.89,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. We were building your bedtime routine.",
+   "est_sec": 2.58,
+   "gap_before": 0.74,
+   "role": "resume",
+   "block": "sleep.ctx3"
+  }
+ ]
+}
