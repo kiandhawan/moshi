@@ -1,0 +1,138 @@
+{
+  "topic": "sleep",
+  "contexts": [
+    {
+      "id": "sleep.ctx1",
+      "turns": [
+        {"speaker": "user", "text": "I've been going to bed at like one in the morning and I'm wrecked every day."},
+        {"speaker": "moshi", "text": "Let's move it earlier step by step. What time do you realistically want to be asleep by on work nights?"}
+      ],
+      "pending": "target bedtime on work nights",
+      "think_reask": [
+        "So, what bedtime are you aiming for on work nights?",
+        "Okay, have you picked a time? When do you want to be asleep by?",
+        "Back to your sleep plan. What's a realistic bedtime for you?"
+      ],
+      "welcome_back": [
+        "Welcome back! You were choosing a bedtime for work nights.",
+        "Hi again. So, what time do you want to be asleep by?",
+        "There you are. We were working out an earlier bedtime for you."
+      ],
+      "endings": [
+        {"user": "Eleven, I think. That gives me about eight hours.", "moshi": "Good target. Try going to bed fifteen minutes earlier each week until you get there."},
+        {"user": "Let's say midnight to start. Eleven feels impossible right now.", "moshi": "Midnight is a solid first step. Once that feels normal we can nudge it earlier."}
+      ]
+    },
+    {
+      "id": "sleep.ctx2",
+      "turns": [
+        {"speaker": "user", "text": "My partner snores and I'm waking up three times a night."},
+        {"speaker": "moshi", "text": "That's rough. Do you want to try earplugs or a white noise machine first, or talk to your partner about seeing a doctor?"}
+      ],
+      "pending": "earplugs or white noise versus doctor",
+      "think_reask": [
+        "So, what do you want to try first? Earplugs and white noise, or the doctor conversation?",
+        "Okay, have you decided? A quick fix for you, or a visit to the doctor for them?",
+        "Back to the snoring. Which way are you leaning?"
+      ],
+      "welcome_back": [
+        "Welcome back! We were talking about the snoring. Earplugs and white noise, or the doctor?",
+        "Hi again. You were deciding how to deal with your partner's snoring.",
+        "Good to have you back. So, a quick fix, or the doctor idea?"
+      ],
+      "endings": [
+        {"user": "Earplugs first. I don't want to make a big deal of it yet.", "moshi": "Fair enough. Soft foam ones work best, and roll them thin before you put them in."},
+        {"user": "I think the doctor. It's been going on for years.", "moshi": "That's wise. Loud snoring can be a sign of sleep apnea, so it's worth checking."}
+      ]
+    },
+    {
+      "id": "sleep.ctx3",
+      "turns": [
+        {"speaker": "user", "text": "I want a better bedtime routine. Right now I just scroll until I pass out."},
+        {"speaker": "moshi", "text": "A wind down routine can really help. What would you enjoy doing in the last half hour instead, reading, stretching, or maybe a warm shower?"}
+      ],
+      "pending": "what to do in the last half hour before bed",
+      "think_reask": [
+        "So, what will your wind down be? Reading, stretching, or a shower?",
+        "Okay, time to choose. What do you want to do instead of scrolling?",
+        "Back to your bedtime routine. Which one appeals to you?"
+      ],
+      "welcome_back": [
+        "Welcome back! You were picking something to replace scrolling before bed.",
+        "Hi again. So, reading, stretching, or a warm shower for your wind down?",
+        "There you are. We were building your bedtime routine."
+      ],
+      "endings": [
+        {"user": "Reading. I've got a pile of books I never touch.", "moshi": "Perfect. Leave the phone charging in another room and keep a book on your pillow."},
+        {"user": "A shower and some stretching, I think.", "moshi": "Nice combo. The drop in body temperature after a warm shower actually helps you fall asleep."}
+      ]
+    }
+  ],
+  "side_conversations": [
+    {"id": "sleep.side1", "turns": [
+      {"speaker": "user", "text": "{friend}, were you up late last night? I heard the TV."},
+      {"speaker": "friend", "text": "Yeah, I couldn't sleep. I watched two episodes of that cooking show."},
+      {"speaker": "user", "text": "Did it help at all?"},
+      {"speaker": "friend", "text": "Not really. I finally fell asleep around three."},
+      {"speaker": "user", "text": "You should try that tea I bought. It's on the top shelf."},
+      {"speaker": "friend", "text": "The chamomile one? Maybe tonight."}
+    ]},
+    {"id": "sleep.side2", "turns": [
+      {"speaker": "user", "text": "Can you keep it down a bit tomorrow morning? I'm trying to sleep in."},
+      {"speaker": "friend", "text": "Sure. What time do you want to get up?"},
+      {"speaker": "user", "text": "Ten, maybe eleven. It's been such a long week."},
+      {"speaker": "friend", "text": "No problem. I'll make my coffee quietly and go for a walk."},
+      {"speaker": "user", "text": "You're the best. Could you close the hallway door too? The light comes in."},
+      {"speaker": "friend", "text": "Will do."}
+    ]},
+    {"id": "sleep.side3", "turns": [
+      {"speaker": "user", "text": "{friend}, which pillow do you use? Yours always looks so comfy."},
+      {"speaker": "friend", "text": "It's a memory foam one. I got it after my neck kept hurting."},
+      {"speaker": "user", "text": "Did it actually make a difference?"},
+      {"speaker": "friend", "text": "Honestly, yes. It took about a week to get used to it, but now I sleep way better."},
+      {"speaker": "user", "text": "Hmm. Was it expensive?"},
+      {"speaker": "friend", "text": "Not bad. I can send you the link later."}
+    ]}
+  ],
+  "ordinary_dialogues": [
+    {"id": "sleep.dlg1", "turns": [
+      {"speaker": "user", "text": "Is it bad to drink coffee in the afternoon?"},
+      {"speaker": "moshi", "text": "For a lot of people, yes. Caffeine can stay in your system for six hours or more, so a cup at four can still keep you up at ten."},
+      {"speaker": "user", "text": "Wow. What about tea?"},
+      {"speaker": "moshi", "text": "Black and green tea have less caffeine, but still some. Herbal teas like chamomile or mint have none."},
+      {"speaker": "user", "text": "I usually need / something around three to get through work."},
+      {"speaker": "moshi", "text": "Try a short walk outside or a glass of cold water instead. A little daylight and movement can wake you up surprisingly well."},
+      {"speaker": "user", "text": "I'll give it a shot tomorrow."}
+    ]},
+    {"id": "sleep.dlg2", "turns": [
+      {"speaker": "user", "text": "My baby is six months old and I feel like I haven't slept since she was born."},
+      {"speaker": "moshi", "text": "That sounds exhausting. Can you and your partner take turns with night feeds, so each of you gets one longer stretch?"},
+      {"speaker": "user", "text": "I'm breastfeeding, so / it's mostly me."},
+      {"speaker": "moshi", "text": "You could pump one bottle in the evening so your partner can handle one feed. Even four hours in a row can make a big difference."},
+      {"speaker": "user", "text": "That might work. What about naps?"},
+      {"speaker": "moshi", "text": "Sleep when she naps, at least once a day, even if the house is messy. Rest matters more than chores right now."},
+      {"speaker": "user", "text": "That's hard for me, but okay."},
+      {"speaker": "moshi", "text": "It is hard. Be kind to yourself, this stage really does pass."}
+    ]},
+    {"id": "sleep.dlg3", "turns": [
+      {"speaker": "user", "text": "I keep waking up at four and I can't fall back asleep. Any ideas?"},
+      {"speaker": "moshi", "text": "If you're awake for more than twenty minutes, get up and do something calm in dim light, like reading. Lying there stressed usually makes it worse."},
+      {"speaker": "user", "text": "Should I look at the clock?"},
+      {"speaker": "moshi", "text": "Better not. Turn it away from you, because counting the hours left tends to wake you up more."},
+      {"speaker": "user", "text": "I also have / a glass of wine most evenings. Could that be it?"},
+      {"speaker": "moshi", "text": "It could. Alcohol helps you fall asleep but often wakes you up in the early morning hours. Try a week without it and see."},
+      {"speaker": "user", "text": "Okay, a week. I can do a week."},
+      {"speaker": "moshi", "text": "Great. Keep a quick note each morning so you can spot any pattern."}
+    ]},
+    {"id": "sleep.dlg4", "turns": [
+      {"speaker": "user", "text": "How warm or cold should my bedroom be for sleeping?"},
+      {"speaker": "moshi", "text": "Most people sleep best in a cool room, around sixty five degrees Fahrenheit or about eighteen Celsius."},
+      {"speaker": "user", "text": "That sounds cold. I'm always freezing."},
+      {"speaker": "moshi", "text": "You can keep the room cool and still be cozy with warm socks or a heavier blanket. Cold feet actually make it harder to fall asleep."},
+      {"speaker": "user", "text": "Oh, I didn't know that. What about / blackout curtains, are those worth it?"},
+      {"speaker": "moshi", "text": "Yes, especially if there are streetlights outside or you sleep past sunrise. A sleep mask is a cheaper way to test it first."},
+      {"speaker": "user", "text": "I'll try the mask then."}
+    ]}
+  ],
+  "option_sets": []
+}

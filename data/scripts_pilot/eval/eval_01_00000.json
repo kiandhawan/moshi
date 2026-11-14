@@ -1,0 +1,90 @@
+{
+ "id": "eval_01_00000",
+ "split": "eval",
+ "seed": 1,
+ "type": "think_time",
+ "wait_type": "think_time",
+ "topics": [
+  "holiday_gifts"
+ ],
+ "wait_sec": 30,
+ "extension": {
+  "extra_sec": 5,
+  "said_before_deadline_sec": 2.13
+ },
+ "deadline": {
+  "after_turn": 3,
+  "sec": 5
+ },
+ "topic": "holiday_gifts",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "think_instr_15",
+  "extension_02"
+ ],
+ "block_ids": [
+  "holiday_gifts.ctx2"
+ ],
+ "est_total_sec": 55.57,
+ "est_speech_sec": 19.41,
+ "turns": [
+  {
+   "speaker": "user",
+   "text": "Our office is doing a gift exchange with a twenty dollar limit.",
+   "est_sec": 3.82,
+   "gap_before": 0.92,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun. Do you want to play it safe with something everyone would like, like good chocolate, or go for a funny gag gift?",
+   "est_sec": 7.23,
+   "gap_before": 0.66,
+   "role": "reply",
+   "block": "holiday_gifts.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough one. Give me thirty seconds and ask me again.",
+   "est_sec": 3.51,
+   "gap_before": 0.65,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, I need five more seconds.",
+   "est_sec": 1.96,
+   "event": "extension",
+   "extra_sec": 5,
+   "phrasing": "extension_02",
+   "anchor": {
+    "turn": 2,
+    "offset": 27.87
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, did you decide? Chocolate or a gag gift?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "holiday_gifts.ctx2",
+   "anchor": {
+    "turn": 3,
+    "offset": 5.06
+   },
+   "reference_only": true
+  }
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

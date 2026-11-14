@@ -1,0 +1,141 @@
+{
+  "topic": "public_transport",
+  "contexts": [
+    {
+      "id": "public_transport.ctx1",
+      "turns": [
+        {"speaker": "user", "text": "I just started a new job across town. I could take the bus or the train."},
+        {"speaker": "moshi", "text": "The bus stops closer to your place but takes about fifty minutes. The train is thirty, but it's a ten minute walk. Which matters more to you?"}
+      ],
+      "pending": "bus or train for the commute",
+      "think_reask": [
+        "So, which commute sounds better? The closer bus, or the faster train?",
+        "Okay, have you decided? Bus or train?",
+        "Back to your new commute. Which one are you going with?"
+      ],
+      "welcome_back": [
+        "Welcome back! You were choosing between the bus and the train for work.",
+        "Hi again. So, for the new job, bus or train?",
+        "There you are. We were figuring out your commute across town."
+      ],
+      "endings": [
+        {"user": "The train. I don't mind the walk.", "moshi": "Good choice. The walk is a nice way to wake up, and you'll save almost an hour a day."},
+        {"user": "The bus. I can read the whole way without changing.", "moshi": "That's a great reason. Fifty minutes of reading adds up to a lot of books."}
+      ]
+    },
+    {
+      "id": "public_transport.ctx2",
+      "turns": [
+        {"speaker": "user", "text": "I take the subway about four times a week. Should I get a monthly pass?"},
+        {"speaker": "moshi", "text": "At four trips a week, it's close. Do you also use it on weekends, or would you mostly pay per ride outside of work?"}
+      ],
+      "pending": "weekend use to decide on monthly pass",
+      "think_reask": [
+        "So, do you ride on weekends too, or is it mostly work trips?",
+        "Okay, thinking about your weekends, how often do you use the subway?",
+        "Back to the pass question. Weekend rides or not?"
+      ],
+      "welcome_back": [
+        "Welcome back! We were figuring out if a monthly pass is worth it for you.",
+        "Hi again. So, do you ride the subway on weekends too?",
+        "Good to have you back. I was asking about your weekend trips."
+      ],
+      "endings": [
+        {"user": "Yeah, I go out most weekends.", "moshi": "Then the monthly pass is worth it. Every weekend ride is basically free."},
+        {"user": "No, weekends I mostly walk or stay home.", "moshi": "Then paying per ride is probably cheaper. Check your total at the end of the month to be sure."}
+      ]
+    },
+    {
+      "id": "public_transport.ctx3",
+      "turns": [
+        {"speaker": "user", "text": "My train got cancelled and I need to be at the airport by six."},
+        {"speaker": "moshi", "text": "Okay, you have options. There's an airport bus in twenty minutes, or a taxi would get you there faster but cost a lot more. What do you want to do?"}
+      ],
+      "pending": "airport bus or taxi",
+      "think_reask": [
+        "So, what's it going to be? The airport bus, or a taxi?",
+        "Okay, quick decision. Bus or taxi to the airport?",
+        "Back to getting you to the airport. Which option?"
+      ],
+      "welcome_back": [
+        "Welcome back! You still need to get to the airport. Bus or taxi?",
+        "Hi again. The airport bus is still an option, or a taxi. What do you think?",
+        "There you are. We were sorting out your ride to the airport."
+      ],
+      "endings": [
+        {"user": "The bus. I've got enough time.", "moshi": "Good. It leaves from the stop outside the main entrance, so head there now."},
+        {"user": "Taxi. I'm not risking it.", "moshi": "Understood. The taxi rank is just outside the station, and it should take about thirty minutes."}
+      ]
+    }
+  ],
+  "side_conversations": [
+    {"id": "public_transport.side1", "turns": [
+      {"speaker": "user", "text": "{friend}, which stop do we get off at for the museum?"},
+      {"speaker": "friend", "text": "I think it's the one after the big park. Central Square?"},
+      {"speaker": "user", "text": "Are you sure? The map says there's a stop called Museum Road."},
+      {"speaker": "friend", "text": "Oh, maybe that's closer. Let me look."},
+      {"speaker": "user", "text": "It's two stops from here."},
+      {"speaker": "friend", "text": "Okay, Museum Road then. Get ready, it's coming up fast."}
+    ]},
+    {"id": "public_transport.side2", "turns": [
+      {"speaker": "user", "text": "Did you top up your travel card? Mine's almost empty."},
+      {"speaker": "friend", "text": "I did it yesterday at the machine by the entrance."},
+      {"speaker": "user", "text": "Does it take cards or only cash?"},
+      {"speaker": "friend", "text": "Both. But the one on the left is always broken."},
+      {"speaker": "user", "text": "Good to know. Wait for me here, I'll be quick."},
+      {"speaker": "friend", "text": "Hurry, the train is in four minutes."}
+    ]},
+    {"id": "public_transport.side3", "turns": [
+      {"speaker": "user", "text": "{friend}, is it just me or is the bus really late today?"},
+      {"speaker": "friend", "text": "It's not just you. The sign says twelve minutes now."},
+      {"speaker": "user", "text": "It said five minutes when we got here."},
+      {"speaker": "friend", "text": "Probably the roadwork on the main street again."},
+      {"speaker": "user", "text": "Should we just walk? It's like fifteen minutes."},
+      {"speaker": "friend", "text": "In this rain? Let's give it five more minutes."},
+      {"speaker": "user", "text": "Fine. But if it's not here by then, I'm walking."}
+    ]}
+  ],
+  "ordinary_dialogues": [
+    {"id": "public_transport.dlg1", "turns": [
+      {"speaker": "user", "text": "I'm visiting a big city next week and I've never used a subway before. Any tips?"},
+      {"speaker": "moshi", "text": "Download the city's transit app before you go. It shows routes, live times and which exit to use."},
+      {"speaker": "user", "text": "How do I know / which direction to go?"},
+      {"speaker": "moshi", "text": "Platforms are usually labeled by the last station on the line. Find your stop on the map, then follow signs for the end station in that direction."},
+      {"speaker": "user", "text": "That makes sense. What about rush hour?"},
+      {"speaker": "moshi", "text": "Try to avoid roughly seven to nine in the morning and five to seven in the evening. If you can't, stand to the side and let people off first."},
+      {"speaker": "user", "text": "Okay, thanks. I feel less nervous now."},
+      {"speaker": "moshi", "text": "You'll do great. Most people figure it out after one or two rides."}
+    ]},
+    {"id": "public_transport.dlg2", "turns": [
+      {"speaker": "user", "text": "I get really motion sick on buses. Is there anything that helps?"},
+      {"speaker": "moshi", "text": "Sit near the front, facing forward, and look out the window at the horizon. Reading or scrolling usually makes it worse."},
+      {"speaker": "user", "text": "I always read / on my commute, though."},
+      {"speaker": "moshi", "text": "Audiobooks or podcasts are a great swap. You keep the story without staring at a page."},
+      {"speaker": "user", "text": "Hmm, I never thought of that. Anything else?"},
+      {"speaker": "moshi", "text": "Fresh air helps, so open a window if you can. Some people also find ginger candies settle their stomach."},
+      {"speaker": "user", "text": "I'll try the podcast thing first."},
+      {"speaker": "moshi", "text": "Good plan. Let me know if you want some podcast suggestions."}
+    ]},
+    {"id": "public_transport.dlg3", "turns": [
+      {"speaker": "user", "text": "Can I bring my bike on the train?"},
+      {"speaker": "moshi", "text": "On most regional trains, yes, but often not during rush hour. Look for the carriages with a bike symbol on the door."},
+      {"speaker": "user", "text": "Do I need a ticket for it?"},
+      {"speaker": "moshi", "text": "Many operators charge a small bike fee or need a reservation on long distance trains. Check your operator's website before you go."},
+      {"speaker": "user", "text": "Actually, I'm also thinking / about getting a folding bike instead."},
+      {"speaker": "moshi", "text": "That's a great option for commuting. Folded bikes usually count as luggage, so you can bring them anytime for free."},
+      {"speaker": "user", "text": "Aren't they slow, though?"},
+      {"speaker": "moshi", "text": "A bit slower than a regular bike, but for short rides to and from the station you'll hardly notice."}
+    ]},
+    {"id": "public_transport.dlg4", "turns": [
+      {"speaker": "user", "text": "My grandson says I should use the bus instead of driving into town. I'm seventy-two and I haven't taken a bus in years."},
+      {"speaker": "moshi", "text": "Lots of people rediscover the bus later in life. Many cities offer a free or discounted senior pass, too."},
+      {"speaker": "user", "text": "How would I / find out about that?"},
+      {"speaker": "moshi", "text": "Your local transit office or the town hall can tell you. You usually just need a photo ID showing your age."},
+      {"speaker": "user", "text": "And where do I get on? I don't want to look silly."},
+      {"speaker": "moshi", "text": "Wave to the driver as the bus comes, then get on at the front and show your pass. Drivers are used to questions, so feel free to ask which stop is yours."},
+      {"speaker": "user", "text": "That doesn't sound so bad."},
+      {"speaker": "moshi", "text": "It really isn't. And no parking to worry about in town."}
+    ]}
+  ],
+  "option_sets": []
+}

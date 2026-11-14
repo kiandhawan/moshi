@@ -1,0 +1,130 @@
+{
+  "topic": "home_office",
+  "contexts": [
+    {
+      "id": "home_office.ctx1",
+      "turns": [
+        {"speaker": "user", "text": "I'm finally turning the spare room into a proper office."},
+        {"speaker": "moshi", "text": "Exciting. Where do you want the desk, facing the window for the light, or against the wall so the screen has no glare?"}
+      ],
+      "pending": "desk facing window or wall",
+      "think_reask": ["So, where's the desk going? Window or wall?", "Time's up. Natural light, or no glare on the screen?", "Have you decided on the desk spot?"],
+      "welcome_back": ["Welcome back! We were placing the desk in your new office.", "Hi again. So, desk by the window or against the wall?", "There you are. Still deciding where the desk goes?"],
+      "endings": [
+        {"user": "By the window. I need to see outside or I go crazy.", "moshi": "Totally fair. Add a sheer curtain to soften the glare on bright afternoons."},
+        {"user": "Against the wall, the glare drives me nuts.", "moshi": "Good choice. Put the window to your side so you still get daylight."}
+      ]
+    },
+    {
+      "id": "home_office.ctx2",
+      "turns": [
+        {"speaker": "user", "text": "My back hurts after every workday at the kitchen table."},
+        {"speaker": "moshi", "text": "That table is probably the wrong height. Would you rather invest in a proper office chair first, or a standing desk?"}
+      ],
+      "pending": "office chair or standing desk",
+      "think_reask": ["So, for your back, chair first or standing desk?", "Okay, what's it going to be? A good chair or a standing desk?", "Time's up. Which one feels like the better buy?"],
+      "welcome_back": ["Welcome back! We were deciding between a new chair and a standing desk.", "Hi again. Still thinking about the chair versus the standing desk?", "Good to have you back. So, which one for your back?"],
+      "endings": [
+        {"user": "The chair. I sit most of the day anyway.", "moshi": "Then get one with adjustable lumbar support, and try it before you buy if you can."},
+        {"user": "Standing desk. I want to move around more.", "moshi": "Nice. Start with short standing stretches, maybe twenty minutes at a time."}
+      ]
+    },
+    {
+      "id": "home_office.ctx3",
+      "turns": [
+        {"speaker": "user", "text": "Working from home is great, but I never really stop working."},
+        {"speaker": "moshi", "text": "That's a common trap. What could be your end of the day ritual, something that tells your brain work is over?"}
+      ],
+      "pending": "end of workday ritual",
+      "think_reask": ["So, any ideas for your end of day ritual?", "Time's up. What could signal that the workday is over?", "Have you thought of something to close out your workday?"],
+      "welcome_back": ["Welcome back! We were coming up with a ritual to end your workday.", "Hi again. Did you think of a way to mark the end of work?", "There you are. So, what's your end of day ritual going to be?"],
+      "endings": [
+        {"user": "Maybe a short walk around the block at six.", "moshi": "Perfect, a fake commute. It really helps your brain switch off."},
+        {"user": "I'll shut the laptop and put it in a drawer.", "moshi": "Out of sight, out of mind. Turn off work notifications on your phone too."}
+      ]
+    }
+  ],
+  "side_conversations": [
+    {"id": "home_office.side1", "turns": [
+      {"speaker": "user", "text": "{friend}, are you on a call right now?"},
+      {"speaker": "friend", "text": "In five minutes. Why?"},
+      {"speaker": "user", "text": "I have a big meeting at ten too. Can you take yours in the bedroom?"},
+      {"speaker": "friend", "text": "Only if I can borrow your headphones."},
+      {"speaker": "user", "text": "Deal. They're on the shelf by the printer."},
+      {"speaker": "friend", "text": "Got them. Close the door when you start, the dog keeps barking."}
+    ]},
+    {"id": "home_office.side2", "turns": [
+      {"speaker": "user", "text": "Is the internet slow for you too, or is it just my laptop?"},
+      {"speaker": "friend", "text": "It's crawling. I think someone's downloading a game."},
+      {"speaker": "user", "text": "Well, it isn't me. I'm trying to upload a presentation."},
+      {"speaker": "friend", "text": "Let me restart the router, give it two minutes."},
+      {"speaker": "user", "text": "Thanks. Maybe we should finally get the faster plan?"},
+      {"speaker": "friend", "text": "Yeah, if we're both working from home, it's probably worth it."}
+    ]},
+    {"id": "home_office.side3", "turns": [
+      {"speaker": "user", "text": "{friend}, what do you think of this lamp for my desk?"},
+      {"speaker": "friend", "text": "It's cute, but is it bright enough?"},
+      {"speaker": "user", "text": "The box says it has three settings."},
+      {"speaker": "friend", "text": "Then it's probably fine. Where are you putting the plant?"},
+      {"speaker": "user", "text": "On the corner of the desk, next to the monitor."},
+      {"speaker": "friend", "text": "Nice. Your setup is starting to look like an actual office."}
+    ]}
+  ],
+  "ordinary_dialogues": [
+    {"id": "home_office.dlg1", "turns": [
+      {"speaker": "user", "text": "How high should my monitor be?"},
+      {"speaker": "moshi", "text": "The top of the screen should be at about eye level or slightly below. You should be looking a bit down, not up."},
+      {"speaker": "user", "text": "And how far away?"},
+      {"speaker": "moshi", "text": "Roughly an arm's length. If you have to lean forward to read, make the text bigger rather than moving closer."},
+      {"speaker": "user", "text": "I only have a laptop, so / it's always too low."},
+      {"speaker": "moshi", "text": "A laptop stand with a separate keyboard and mouse fixes that. Even a stack of books works in a pinch."},
+      {"speaker": "user", "text": "Ha, I'll use my old textbooks then."},
+      {"speaker": "moshi", "text": "Finally a good use for them. Just make sure the stack is stable."}
+    ]},
+    {"id": "home_office.dlg2", "turns": [
+      {"speaker": "user", "text": "I keep getting distracted at home. Any tips for focusing?"},
+      {"speaker": "moshi", "text": "Try working in focused blocks, like twenty five minutes on and five off. And keep your phone in another room during those blocks."},
+      {"speaker": "user", "text": "My phone in another room? That sounds hard."},
+      {"speaker": "moshi", "text": "It is at first, but it's one of the most effective tricks. Even putting it in a drawer helps."},
+      {"speaker": "user", "text": "What about noise? My neighbors / are doing construction all week."},
+      {"speaker": "moshi", "text": "Noise cancelling headphones with some brown noise or instrumental music can block out a lot. Earplugs work too if you're not on calls."},
+      {"speaker": "user", "text": "Maybe I'll just work from the library on those days."},
+      {"speaker": "moshi", "text": "Great idea. A change of scenery often boosts focus all by itself."}
+    ]},
+    {"id": "home_office.dlg3", "turns": [
+      {"speaker": "user", "text": "My video calls look terrible. How do I make them better?"},
+      {"speaker": "moshi", "text": "Lighting makes the biggest difference. Sit facing a window or a lamp, never with the light behind you."},
+      {"speaker": "user", "text": "My desk faces a wall, and the window is behind me."},
+      {"speaker": "moshi", "text": "Then put a small lamp behind your screen, pointing at your face. A cheap ring light works well too."},
+      {"speaker": "user", "text": "Okay. And the sound is kind of / echoey in my room."},
+      {"speaker": "moshi", "text": "Soft things absorb echo, like a rug, curtains, or even a bookshelf. A headset microphone also helps a lot."},
+      {"speaker": "user", "text": "What about the camera angle?"},
+      {"speaker": "moshi", "text": "Raise it to eye level. Looking up from below is never flattering."}
+    ]}
+  ],
+  "option_sets": [
+    {"id": "home_office.opt1",
+     "lead_in": "I need help deciding where to set up my home office.",
+     "options": [
+       "The first option is the spare bedroom, which has a door but is pretty small and dark.",
+       "Then there's a corner of the living room, lots of light, but my kids play there all afternoon.",
+       "And the last choice is the basement, quiet and roomy, but there's no window at all."
+     ],
+     "moshi_comment": [
+       "With kids playing in the living room, that corner would be tough for calls and focus. The spare bedroom has the big advantage of a door, and a good lamp can fix the darkness. How often are you on video calls?",
+       "The basement is the quietest and most spacious, but working all day without daylight can really drag you down. I'd go with the spare bedroom and add some bright warm lighting."
+     ]},
+    {"id": "home_office.opt2",
+     "lead_in": "My company gave me five hundred dollars for my home office, and I'm stuck on how to spend it.",
+     "options": [
+       "One option is a really good ergonomic chair, which would use up almost the whole budget.",
+       "Another is a second monitor plus a nice keyboard and mouse.",
+       "Then there's a cheaper chair and a standing desk converter that sits on my current table.",
+       "Or finally, noise cancelling headphones and a good webcam for all my calls."
+     ],
+     "moshi_comment": [
+       "If your back ever bothers you, the ergonomic chair is the best long-term investment, you'll use it every single hour. The second monitor is great for productivity, but comfort comes first. What's bugging you most right now?",
+       "The cheaper chair plus the standing desk converter gives you the most variety in posture for the money. The headphones and webcam only make sense if calls are a big part of your day."
+     ]}
+  ]
+}

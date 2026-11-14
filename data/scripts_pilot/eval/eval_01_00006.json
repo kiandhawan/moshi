@@ -1,0 +1,98 @@
+{
+ "id": "eval_01_00006",
+ "split": "eval",
+ "seed": 1,
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "topics": [
+  "family_visit"
+ ],
+ "topic": "family_visit",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_04",
+  "describe_instr_16",
+  "describe_cue_10"
+ ],
+ "block_ids": [
+  "family_visit.opt1"
+ ],
+ "est_total_sec": 47.81,
+ "est_speech_sec": 38.0,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey! What can I do for you?",
+   "est_sec": 2.27,
+   "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_04",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My parents are visiting for the first time and I need help planning their big day out.",
+   "est_sec": 5.37,
+   "gap_before": 0.3,
+   "block": "family_visit.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Listen to all of them first, then comment.",
+   "est_sec": 2.58,
+   "gap_before": 0.57,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_16"
+  },
+  {
+   "speaker": "user",
+   "text": "The first option is a boat tour around the harbor, about two hours, with lunch included.",
+   "est_sec": 5.06,
+   "gap_before": 1.35,
+   "block": "family_visit.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's the art museum, which my mom would love, but my dad might get bored.",
+   "est_sec": 5.06,
+   "gap_before": 2.72,
+   "block": "family_visit.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And there's a big farmers market on Saturdays with live music and lots of local food.",
+   "est_sec": 5.06,
+   "gap_before": 2.01,
+   "block": "family_visit.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. What would you recommend?",
+   "est_sec": 1.65,
+   "gap_before": 0.52,
+   "event": "return_cue",
+   "phrasing": "describe_cue_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How do your parents feel about walking and crowds? If they're easygoing, I'd do the farmers market in the morning and the boat tour after. The museum could be a short stop on another day.",
+   "est_sec": 10.95,
+   "gap_before": 0.98,
+   "role": "resume",
+   "block": "family_visit.opt1",
+   "reference_only": true
+  }
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

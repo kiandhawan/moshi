@@ -1,0 +1,137 @@
+{
+  "topic": "movies",
+  "contexts": [
+    {
+      "id": "movies.ctx1",
+      "turns": [
+        {"speaker": "user", "text": "It's movie night and nobody can agree on anything. Help."},
+        {"speaker": "moshi", "text": "Let's narrow it down. Are you in the mood for something funny, something scary, or a big action film?"}
+      ],
+      "pending": "funny, scary or action movie",
+      "think_reask": [
+        "Alright, what's the verdict? Funny, scary or action?",
+        "So, for movie night, which mood are you going with?",
+        "Time's up! Comedy, horror or action?"
+      ],
+      "welcome_back": [
+        "Welcome back! We were picking a movie. Funny, scary or action?",
+        "Hi again. Did the group agree on a mood for movie night?",
+        "There you are. So, which kind of film tonight?"
+      ],
+      "endings": [
+        {"user": "Funny. Everyone's had a long week.", "moshi": "Then go for a light comedy you can all talk over. Nothing too long, under two hours."},
+        {"user": "Scary, but not too gory please.", "moshi": "A good haunted house film then. More tension and jump scares, less blood."}
+      ]
+    },
+    {
+      "id": "movies.ctx2",
+      "turns": [
+        {"speaker": "user", "text": "I want to get into older films but I don't know where to start."},
+        {"speaker": "moshi", "text": "Great idea. Would you like to start with classic Hollywood from the forties and fifties, or with foreign classics from Europe and Japan?"}
+      ],
+      "pending": "classic Hollywood or foreign classics",
+      "think_reask": [
+        "So, where would you like to start, classic Hollywood or foreign classics?",
+        "Okay, have you decided which old films to begin with?"
+      ],
+      "welcome_back": [
+        "Welcome back. We were talking about getting into older films. Hollywood or foreign classics?",
+        "Good to have you back. Any thoughts on where to start with the classics?"
+      ],
+      "endings": [
+        {"user": "Hollywood first. Subtitles put me to sleep.", "moshi": "No problem. Start with a screwball comedy and a film noir, they're both fast and easy to love."},
+        {"user": "Let's try the Japanese ones.", "moshi": "Wonderful. The samurai films from the fifties are a great way in, gripping and beautifully shot."}
+      ]
+    },
+    {
+      "id": "movies.ctx3",
+      "turns": [
+        {"speaker": "user", "text": "There's a new sci-fi film out. Should I see it in the cinema or wait for streaming?"},
+        {"speaker": "moshi", "text": "Big sci-fi often looks amazing on a huge screen. How much do you care about the visuals compared to watching on your couch?"}
+      ],
+      "pending": "cinema or wait for streaming",
+      "think_reask": [
+        "So, cinema or couch for the new sci-fi film?",
+        "Have you decided? Big screen now, or wait for streaming?"
+      ],
+      "welcome_back": [
+        "Welcome back! You were deciding whether to see the sci-fi film in the cinema.",
+        "Hey, you're back. Big screen or streaming, what do you think?"
+      ],
+      "endings": [
+        {"user": "Cinema. If I wait I'll get spoiled anyway.", "moshi": "True. Try a weekday evening, it's usually quieter and sometimes cheaper."},
+        {"user": "I'll wait. My couch is very comfortable.", "moshi": "Fair enough. It'll probably be streaming in a couple of months."}
+      ]
+    }
+  ],
+  "side_conversations": [
+    {"id": "movies.side1", "turns": [
+      {"speaker": "user", "text": "{friend}, have you seen the new one with the space station?"},
+      {"speaker": "friend", "text": "Yeah, last weekend. It was okay. The ending was a bit weird."},
+      {"speaker": "user", "text": "Weird how? Don't spoil it."},
+      {"speaker": "friend", "text": "I won't. Let's just say you'll have questions."},
+      {"speaker": "user", "text": "Ugh, now I have to watch it. Would you see it again?"},
+      {"speaker": "friend", "text": "Maybe, if you're buying the popcorn."}
+    ]},
+    {"id": "movies.side2", "turns": [
+      {"speaker": "user", "text": "Do you want to watch something tonight or are you too tired?"},
+      {"speaker": "friend", "text": "Something short. I'll fall asleep if it's over two hours."},
+      {"speaker": "user", "text": "There's that animated one your sister recommended."},
+      {"speaker": "friend", "text": "Oh, that's supposed to be really good. How long is it?"},
+      {"speaker": "user", "text": "About an hour and a half."},
+      {"speaker": "friend", "text": "Perfect. I'll make tea, you find the remote."},
+      {"speaker": "user", "text": "Deal. Do we have any of those biscuits left?"},
+      {"speaker": "friend", "text": "Top cupboard, if you didn't eat them all."}
+    ]},
+    {"id": "movies.side3", "turns": [
+      {"speaker": "user", "text": "{friend}, who was the actor in that heist film we watched in the summer?"},
+      {"speaker": "friend", "text": "The one with the train? I can't remember his name either."},
+      {"speaker": "user", "text": "It's driving me crazy. He's in this trailer I just saw."},
+      {"speaker": "friend", "text": "Was he the tall one with the beard?"},
+      {"speaker": "user", "text": "Yes! The getaway driver."},
+      {"speaker": "friend", "text": "No idea. Look it up later or it'll bug you all night."}
+    ]}
+  ],
+  "ordinary_dialogues": [
+    {"id": "movies.dlg1", "turns": [
+      {"speaker": "user", "text": "Can you recommend a good movie for a ten year old who loves animals?"},
+      {"speaker": "moshi", "text": "An animated adventure about a lost dog or a fox trying to get home would be perfect. Funny, warm and not too scary."},
+      {"speaker": "user", "text": "She cries at sad endings though."},
+      {"speaker": "moshi", "text": "Then skip the classic animal dramas. Lots of them have a heartbreaking twist."},
+      {"speaker": "user", "text": "What about nature documentaries? She might / actually like those more."},
+      {"speaker": "moshi", "text": "Great idea. Ocean and jungle series are gorgeous and full of amazing facts. Just skip the predator scenes if she's sensitive."},
+      {"speaker": "user", "text": "Ha, yes, the cheetah ones were a disaster last time."},
+      {"speaker": "moshi", "text": "Then go for something about whales or baby animals. Much gentler."}
+    ]},
+    {"id": "movies.dlg2", "turns": [
+      {"speaker": "user", "text": "Why do people say the book is always better than the movie?"},
+      {"speaker": "moshi", "text": "A book can spend pages inside a character's head, while a film has to show everything in about two hours. So a lot gets cut."},
+      {"speaker": "user", "text": "Are there movies that are better than the book?"},
+      {"speaker": "moshi", "text": "Definitely. Sometimes a director tightens a slow story or a great actor adds something the book didn't have."},
+      {"speaker": "user", "text": "I usually read the book first, but / maybe I should try the other way round."},
+      {"speaker": "moshi", "text": "That can be fun. You get to enjoy the film without comparing, and the book then fills in the details."},
+      {"speaker": "user", "text": "Okay, I'll try it with the next adaptation."}
+    ]},
+    {"id": "movies.dlg3", "turns": [
+      {"speaker": "user", "text": "I'm doing a horror marathon on Halloween. How many films is reasonable?"},
+      {"speaker": "moshi", "text": "Three is a good number. Four if you start early and have plenty of snacks."},
+      {"speaker": "user", "text": "Should I start with the scariest one or end with it?"},
+      {"speaker": "moshi", "text": "Build up. Start with a fun, campy one, then something creepy, and finish with the most intense."},
+      {"speaker": "user", "text": "My friend wants to include a really old black and white one / is that a mood killer?"},
+      {"speaker": "moshi", "text": "Not at all. Old horror can be surprisingly eerie. Put it first or second, while everyone's still fresh."},
+      {"speaker": "user", "text": "Nice. And what snacks go with horror?"},
+      {"speaker": "moshi", "text": "Popcorn, obviously. And something like red gummy sweets for the theme."}
+    ]},
+    {"id": "movies.dlg4", "turns": [
+      {"speaker": "user", "text": "My film studies essay is about how music shapes a scene. Any examples I could use?"},
+      {"speaker": "moshi", "text": "Think of a shark film where just two notes make you nervous before you see anything. That's a classic example."},
+      {"speaker": "user", "text": "Oh, good one. What about the opposite, like when there's no music?"},
+      {"speaker": "moshi", "text": "Silence can be powerful too. Many thrillers drop the score right before something shocking, so the quiet itself becomes tense."},
+      {"speaker": "user", "text": "I need one more. Something / maybe where happy music plays over something dark?"},
+      {"speaker": "moshi", "text": "That's called contrast or ironic scoring. Gangster films do it a lot, with a cheerful pop song over a violent scene."},
+      {"speaker": "user", "text": "Perfect, that's my three sections. Thanks!"},
+      {"speaker": "moshi", "text": "Good luck with the essay. Describe the scene briefly, then explain what the music makes you feel."}
+    ]}
+  ],
+  "option_sets": []
+}

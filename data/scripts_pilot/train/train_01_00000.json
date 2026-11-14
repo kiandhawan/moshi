@@ -1,0 +1,104 @@
+{
+ "id": "train_01_00000",
+ "split": "train",
+ "seed": 1,
+ "type": "think_time",
+ "wait_type": "think_time",
+ "topics": [
+  "weather_plans"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 3,
+  "sec": 45
+ },
+ "topic": "weather_plans",
+ "voices": {
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_05",
+  "think_instr_07",
+  "ack_09"
+ ],
+ "block_ids": [
+  "weather_plans.ctx1"
+ ],
+ "est_total_sec": 80.62,
+ "est_speech_sec": 30.56,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi, good to hear from you.",
+   "est_sec": 1.96,
+   "gap_before": 0.62,
+   "role": "greeting",
+   "phrasing": "greet_05"
+  },
+  {
+   "speaker": "user",
+   "text": "We planned a barbecue on Saturday, but now they're saying rain in the afternoon.",
+   "est_sec": 4.44,
+   "gap_before": 0.87,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's annoying. You could move it to the morning, or keep the time and set up a canopy. What do you think?",
+   "est_sec": 6.92,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "weather_plans.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, give me forty-five seconds to decide and ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Take your time.",
+   "est_sec": 1.03,
+   "gap_before": 0.31,
+   "role": "ack",
+   "phrasing": "ack_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, have you decided? Move it to the morning or stick it out under a canopy?",
+   "est_sec": 5.06,
+   "role": "resume",
+   "block": "weather_plans.ctx1",
+   "anchor": {
+    "turn": 3,
+    "offset": 45.57
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Let's move it to late morning. Brunch barbecue!",
+   "est_sec": 2.58,
+   "gap_before": 0.99,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Love it. Send a quick message to everyone today so they can plan around it.",
+   "est_sec": 4.75,
+   "gap_before": 0.92,
+   "role": "followup",
+   "block": "weather_plans.ctx1"
+  }
+ ]
+}

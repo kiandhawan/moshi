@@ -1,0 +1,135 @@
+{
+  "topic": "coffee",
+  "contexts": [
+    {
+      "id": "coffee.ctx1",
+      "turns": [
+        {"speaker": "user", "text": "I want to stop buying coffee every morning and make it at home instead."},
+        {"speaker": "moshi", "text": "Good plan, you'll save a lot. Do you want something simple like a French press, or are you ready to invest in an espresso machine?"}
+      ],
+      "pending": "French press or espresso machine",
+      "think_reask": [
+        "So, a simple French press, or going all in with an espresso machine?",
+        "Okay, what's it going to be for your home coffee, press or espresso machine?"
+      ],
+      "welcome_back": [
+        "Welcome back. You were choosing how to make coffee at home, a press or an espresso machine?",
+        "Hi again. Decided between the French press and the espresso machine?"
+      ],
+      "endings": [
+        {"user": "French press. I just want something that works at six in the morning.", "moshi": "Great choice. Use coarse ground coffee and let it steep for about four minutes."},
+        {"user": "Espresso. I mostly drink lattes, so I might as well.", "moshi": "Then get one with a steam wand for the milk. It'll pay for itself in a few months."}
+      ]
+    },
+    {
+      "id": "coffee.ctx2",
+      "turns": [
+        {"speaker": "user", "text": "I'm meeting a friend I haven't seen in years."},
+        {"speaker": "moshi", "text": "How nice. Would you prefer a cozy little cafe where you can talk for hours, or somewhere livelier in the town centre?"}
+      ],
+      "pending": "cozy quiet cafe or livelier place in town",
+      "think_reask": [
+        "So, a quiet cozy cafe or somewhere busier in town?",
+        "Time's up. What kind of place feels right for catching up?"
+      ],
+      "welcome_back": [
+        "Welcome back. You were picking a cafe for meeting your old friend, quiet or lively?",
+        "There you are. Still thinking about where to meet your friend?"
+      ],
+      "endings": [
+        {"user": "Somewhere quiet. We've got years to catch up on.", "moshi": "Then go mid-morning on a weekday, when cafes are calmest."},
+        {"user": "Lively, actually. It might feel less awkward with some noise around.", "moshi": "That's a good instinct. A busy cafe with a nice terrace would be perfect."}
+      ]
+    },
+    {
+      "id": "coffee.ctx3",
+      "turns": [
+        {"speaker": "user", "text": "I think I'm drinking way too much coffee. Like five cups a day."},
+        {"speaker": "moshi", "text": "That's a fair amount. Would you rather cut down gradually, or switch some of those cups to decaf?"}
+      ],
+      "pending": "cut down gradually or switch some cups to decaf",
+      "think_reask": [
+        "So, cutting down slowly, or swapping a few cups for decaf?",
+        "Okay, which feels more doable, fewer cups or some decaf?"
+      ],
+      "welcome_back": [
+        "Welcome back. We were talking about your coffee habit. Cut down, or try decaf?",
+        "Hi again. Have you thought about how you want to drink less coffee?"
+      ],
+      "endings": [
+        {"user": "Decaf in the afternoon. I still want the ritual.", "moshi": "That's a nice approach. You keep the habit and probably sleep better too."},
+        {"user": "Cut down. One cup less each week until I'm at two.", "moshi": "Very sensible. Drink some water when you'd normally reach for a cup, it helps."}
+      ]
+    }
+  ],
+  "side_conversations": [
+    {"id": "coffee.side1", "turns": [
+      {"speaker": "user", "text": "{friend}, did you finish the milk?"},
+      {"speaker": "friend", "text": "There should be a little left, check behind the juice."},
+      {"speaker": "user", "text": "Found it. Barely enough for one coffee."},
+      {"speaker": "friend", "text": "Make it for yourself. I'll grab one on the way to work."},
+      {"speaker": "user", "text": "Are you sure? I can share it."},
+      {"speaker": "friend", "text": "No, really. There's a new place near the station I want to try anyway."}
+    ]},
+    {"id": "coffee.side2", "turns": [
+      {"speaker": "user", "text": "Which beans did you buy this time?"},
+      {"speaker": "friend", "text": "Some Ethiopian ones. The guy at the market said they're fruity."},
+      {"speaker": "user", "text": "Fruity coffee? That sounds wrong."},
+      {"speaker": "friend", "text": "Just try it. It tastes a bit like berries, honestly."},
+      {"speaker": "user", "text": "Fine. Should I grind them fine or coarse for the pour-over?"},
+      {"speaker": "friend", "text": "Medium, like sand. Not too fine or it gets bitter."},
+      {"speaker": "user", "text": "Medium, okay. I'll make us both one."}
+    ]},
+    {"id": "coffee.side3", "turns": [
+      {"speaker": "user", "text": "{friend}, what's that thing you ordered last time? The cold one?"},
+      {"speaker": "friend", "text": "Cold brew with oat milk. It's really smooth."},
+      {"speaker": "user", "text": "Is it strong? I don't want to be awake all night."},
+      {"speaker": "friend", "text": "Pretty strong. Maybe get a small one."},
+      {"speaker": "user", "text": "Or I'll just have a tea and steal a sip of yours."},
+      {"speaker": "friend", "text": "One sip. I know what you're like."}
+    ]}
+  ],
+  "ordinary_dialogues": [
+    {"id": "coffee.dlg1", "turns": [
+      {"speaker": "user", "text": "What's the difference between a latte and a flat white?"},
+      {"speaker": "moshi", "text": "A flat white has less milk and a thinner layer of foam, so it tastes stronger. A latte is bigger and milkier."},
+      {"speaker": "user", "text": "And a cappuccino?"},
+      {"speaker": "moshi", "text": "A cappuccino has a thick layer of foam on top, and it's usually smaller than a latte."},
+      {"speaker": "user", "text": "So if I want something / not too milky but still creamy?"},
+      {"speaker": "moshi", "text": "A flat white is probably your best bet. Strong coffee flavour with a smooth, velvety texture."},
+      {"speaker": "user", "text": "Okay, I'm going to order one tomorrow and see."},
+      {"speaker": "moshi", "text": "Enjoy it. If it's too strong, you can always ask for an extra splash of milk."}
+    ]},
+    {"id": "coffee.dlg2", "turns": [
+      {"speaker": "user", "text": "My coffee from the drip machine always tastes bitter. What am I doing wrong?"},
+      {"speaker": "moshi", "text": "A few things can cause that. Are you using pre-ground coffee, and how long does it sit on the hot plate?"},
+      {"speaker": "user", "text": "Pre-ground, and it sits there most of the morning."},
+      {"speaker": "moshi", "text": "That's likely it. The hot plate keeps cooking the coffee, which makes it bitter. Try pouring it into a thermos right after brewing."},
+      {"speaker": "user", "text": "Oh, I'd never have guessed that. Anything else?"},
+      {"speaker": "moshi", "text": "Clean the machine with vinegar every month or so. Old oils and scale build up and taste awful."},
+      {"speaker": "user", "text": "I don't think I've ever / descaled it, to be honest."},
+      {"speaker": "moshi", "text": "Then you'll probably notice a big difference. Run a couple of rounds of plain water afterwards to rinse it."}
+    ]},
+    {"id": "coffee.dlg3", "turns": [
+      {"speaker": "user", "text": "How late in the day can I drink coffee and still sleep?"},
+      {"speaker": "moshi", "text": "Caffeine stays in your system for quite a while, about half of it is still there five or six hours later. Many people stop around early afternoon."},
+      {"speaker": "user", "text": "So no coffee after lunch?"},
+      {"speaker": "moshi", "text": "If you go to bed around eleven, try to have your last cup by about two. Everyone's a bit different though."},
+      {"speaker": "user", "text": "What about decaf? Is that / totally caffeine free?"},
+      {"speaker": "moshi", "text": "Not totally, but close. A cup of decaf has only a tiny amount, so it's usually fine in the evening."},
+      {"speaker": "user", "text": "Great, decaf after dinner it is."},
+      {"speaker": "moshi", "text": "Sounds like a good compromise. You keep the taste without the sleepless night."}
+    ]},
+    {"id": "coffee.dlg4", "turns": [
+      {"speaker": "user", "text": "I want to make iced coffee at home this summer. Where do I start?"},
+      {"speaker": "moshi", "text": "The easiest way is to brew your coffee a bit stronger than usual and pour it over lots of ice, so it doesn't get watery."},
+      {"speaker": "user", "text": "What about cold brew? Is that hard?"},
+      {"speaker": "moshi", "text": "It's really easy, just slow. Mix coarse coffee with cold water, leave it in the fridge overnight, and strain it in the morning."},
+      {"speaker": "user", "text": "How long does it keep?"},
+      {"speaker": "moshi", "text": "About a week in the fridge. Make a big jar on Sunday and you're set for the week."},
+      {"speaker": "user", "text": "Actually, maybe I'll / try both and see which I like."},
+      {"speaker": "moshi", "text": "Good idea. Freeze some coffee in an ice cube tray too, so your drink never gets diluted."}
+    ]}
+  ],
+  "option_sets": []
+}

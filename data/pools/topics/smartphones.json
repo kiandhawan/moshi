@@ -1,0 +1,142 @@
+{
+  "topic": "smartphones",
+  "contexts": [
+    {
+      "id": "smartphones.ctx1",
+      "turns": [
+        {"speaker": "user", "text": "My phone is three years old and the battery dies by lunchtime. I think it's time to replace it."},
+        {"speaker": "moshi", "text": "That's fair. Do you want to stick with the same brand, or are you open to switching to something new?"}
+      ],
+      "pending": "same phone brand or switch",
+      "think_reask": [
+        "So, have you made up your mind? Same brand as before, or are you thinking of switching?",
+        "Time's up. Are you staying loyal to your current brand, or trying something different?",
+        "Okay, back to the phone. Same brand, or a switch?"
+      ],
+      "welcome_back": [
+        "Welcome back! We were talking about your new phone. Same brand, or something different?",
+        "Hi again. You were deciding whether to stick with your phone brand or switch.",
+        "Good to have you back. So, same brand for the new phone, or a change?"
+      ],
+      "endings": [
+        {"user": "I'll stay with the same one. Moving all my stuff over sounds like a pain.", "moshi": "Makes sense. Then the newest mid-range model will feel familiar and last you a long time."},
+        {"user": "Honestly, I want to try something new this time.", "moshi": "Fun. Most phones have a transfer app now, so moving your photos and contacts is easier than it used to be."}
+      ]
+    },
+    {
+      "id": "smartphones.ctx2",
+      "turns": [
+        {"speaker": "user", "text": "I keep picking up my phone without even thinking. It's eating my whole evening."},
+        {"speaker": "moshi", "text": "Lots of people feel that way. Would you rather set a daily time limit on certain apps, or delete the worst ones entirely?"}
+      ],
+      "pending": "app time limits or delete apps",
+      "think_reask": [
+        "So, what feels right? Time limits on those apps, or deleting them?",
+        "Alright, have you decided? Limits or removing the apps completely?",
+        "Okay, about your evenings. Do you want limits, or a clean delete?"
+      ],
+      "welcome_back": [
+        "Welcome back! You were choosing between app time limits and just deleting them.",
+        "There you are. So, for cutting down on phone time, limits or delete?",
+        "Hi again. We were working on your evening scrolling. Limits or delete?"
+      ],
+      "endings": [
+        {"user": "Let's try limits first. Deleting feels a bit extreme.", "moshi": "Good start. Try thirty minutes a day for social apps and see how the first week goes."},
+        {"user": "Delete them. I know myself, I'd just ignore the limits.", "moshi": "Bold move. You can still check them in a browser if you really need to, which adds a helpful bit of friction."}
+      ]
+    },
+    {
+      "id": "smartphones.ctx3",
+      "turns": [
+        {"speaker": "user", "text": "My storage is full again and I can't even take a picture."},
+        {"speaker": "moshi", "text": "Annoying. Do you want to pay for cloud storage, or clear things out by hand?"},
+        {"speaker": "user", "text": "Hmm, both sound kind of bad."},
+        {"speaker": "moshi", "text": "They each have a cost, time or money. Which one would you rather spend?"}
+      ],
+      "pending": "cloud storage or manual cleanup",
+      "think_reask": [
+        "So, time or money? Cloud storage, or a manual cleanup?",
+        "Okay, have you thought it over? Pay for the cloud, or clear things out yourself?",
+        "Back to your full phone. Which way are you leaning?"
+      ],
+      "welcome_back": [
+        "Welcome back! You were deciding how to free up space, cloud storage or a cleanup.",
+        "Hi again. So, for your full storage, are you paying for the cloud or clearing it by hand?",
+        "Good, you're back. We were stuck on time versus money for your phone storage."
+      ],
+      "endings": [
+        {"user": "I'll pay for the cloud. My time is worth more.", "moshi": "Fair enough. The smallest paid plan is usually enough, and once photos upload you can remove them from the phone."},
+        {"user": "I'll clean it up myself. I probably have a thousand blurry photos anyway.", "moshi": "Start with videos, they take the most space. Sorting by size will show you the biggest ones first."}
+      ]
+    }
+  ],
+  "side_conversations": [
+    {"id": "smartphones.side1", "turns": [
+      {"speaker": "user", "text": "{friend}, do you know the wifi password here? My phone keeps dropping off."},
+      {"speaker": "friend", "text": "It's on the back of the router, I think. The long one with all the letters."},
+      {"speaker": "user", "text": "Ugh, I typed that in twice already."},
+      {"speaker": "friend", "text": "Did you try forgetting the network and joining again? That fixed mine last week."},
+      {"speaker": "user", "text": "No, I'll try that now. Hold on."}
+    ]},
+    {"id": "smartphones.side2", "turns": [
+      {"speaker": "user", "text": "Is that the new phone? Let me see it."},
+      {"speaker": "friend", "text": "Yeah, I got it on Saturday. The camera is ridiculous."},
+      {"speaker": "user", "text": "How much did it cost you, if you don't mind me asking?"},
+      {"speaker": "friend", "text": "Way too much. But I traded in the old one, so it wasn't terrible."},
+      {"speaker": "user", "text": "Does the battery last any better?"},
+      {"speaker": "friend", "text": "So far it's lasting the whole day, even with music on the train."}
+    ]},
+    {"id": "smartphones.side3", "turns": [
+      {"speaker": "user", "text": "{friend}, have you seen my charger? The white one with the short cable."},
+      {"speaker": "friend", "text": "I borrowed it this morning, sorry. It's next to my bed."},
+      {"speaker": "user", "text": "Can I grab it? I'm down to five percent."},
+      {"speaker": "friend", "text": "Go for it. We really need to buy a second one."},
+      {"speaker": "user", "text": "Agreed. Maybe a long cable so it reaches the couch."},
+      {"speaker": "friend", "text": "Good idea. Add it to the shopping list."}
+    ]}
+  ],
+  "ordinary_dialogues": [
+    {"id": "smartphones.dlg1", "turns": [
+      {"speaker": "user", "text": "My phone gets really hot when I'm using maps in the car. Is that bad for it?"},
+      {"speaker": "moshi", "text": "A little warmth is normal, but sitting in direct sun on the dashboard can really heat it up. Heat is hard on the battery over time."},
+      {"speaker": "user", "text": "It's in one of those holders on the windshield."},
+      {"speaker": "moshi", "text": "Try moving it to a vent mount with the air conditioning on. That keeps it much cooler."},
+      {"speaker": "user", "text": "And should I / take it off the charger while I drive?"},
+      {"speaker": "moshi", "text": "Charging and navigating at the same time makes the most heat. If the battery is above half, you can skip charging on short trips."},
+      {"speaker": "user", "text": "Okay, that's easy enough. Thanks."},
+      {"speaker": "moshi", "text": "You're welcome. Your battery will thank you too."}
+    ]},
+    {"id": "smartphones.dlg2", "turns": [
+      {"speaker": "user", "text": "I'm setting up a phone for my mom. She's not great with tech. Any tips?"},
+      {"speaker": "moshi", "text": "Make the text and icons bigger in the display settings first. That alone helps a lot."},
+      {"speaker": "user", "text": "Good one. What else?"},
+      {"speaker": "moshi", "text": "Put just the apps she uses on the home screen, like calls, messages and photos. Hide the rest in a folder."},
+      {"speaker": "user", "text": "She always / ends up calling people by accident from her pocket."},
+      {"speaker": "moshi", "text": "A simple case with a flip cover can stop that. You could also shorten the screen timeout so it locks sooner."},
+      {"speaker": "user", "text": "Oh, and can I help her from my own phone if she's stuck?"},
+      {"speaker": "moshi", "text": "Yes, a screen sharing app lets you see her screen and guide her. Set it up together before you hand the phone over."},
+      {"speaker": "user", "text": "Perfect, I'll do that this weekend."}
+    ]},
+    {"id": "smartphones.dlg3", "turns": [
+      {"speaker": "user", "text": "Quick question. Is it okay to leave my phone charging overnight?"},
+      {"speaker": "moshi", "text": "Modern phones stop charging when they're full, so it's generally safe. Many also have an optimized charging setting that waits to finish until just before you wake up."},
+      {"speaker": "user", "text": "Where do I find that?"},
+      {"speaker": "moshi", "text": "It's usually under battery in your settings. Look for something like optimized or adaptive charging."},
+      {"speaker": "user", "text": "Found it, it was already on. Huh."},
+      {"speaker": "moshi", "text": "Nice, then you're already set. Just keep the phone out from under your pillow so it can cool down."},
+      {"speaker": "user", "text": "Ha, I definitely / do that sometimes. I'll stop."},
+      {"speaker": "moshi", "text": "Good plan. A nightstand is much better for both of you."}
+    ]},
+    {"id": "smartphones.dlg4", "turns": [
+      {"speaker": "user", "text": "I want to start backing up my photos. I've never done it and I'm a bit scared I'll lose them."},
+      {"speaker": "moshi", "text": "Smart to do it now. The easiest way is to turn on the photo backup built into your phone's cloud service."},
+      {"speaker": "user", "text": "Will it use up all my data?"},
+      {"speaker": "moshi", "text": "You can set it to back up only on wifi. That way your mobile data stays untouched."},
+      {"speaker": "user", "text": "Actually, I'd rather / keep a copy on my computer too. Just in case."},
+      {"speaker": "moshi", "text": "Good thinking. Plug the phone in with a cable and copy the photo folder over every month or so."},
+      {"speaker": "user", "text": "How long will the first backup take?"},
+      {"speaker": "moshi", "text": "If you have thousands of photos, it could take a night or two. Leave it plugged in and on wifi and it'll finish on its own."}
+    ]}
+  ],
+  "option_sets": []
+}

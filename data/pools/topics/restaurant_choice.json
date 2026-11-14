@@ -1,0 +1,130 @@
+{
+  "topic": "restaurant_choice",
+  "contexts": [
+    {
+      "id": "restaurant_choice.ctx1",
+      "turns": [
+        {"speaker": "user", "text": "It's our anniversary on Saturday and I haven't booked anywhere."},
+        {"speaker": "moshi", "text": "No panic, there's still time. Would you like somewhere fancy and romantic, or a relaxed place that serves your favorite food?"}
+      ],
+      "pending": "fancy romantic or relaxed favorite food",
+      "think_reask": ["So, for the anniversary, fancy and romantic, or relaxed?", "Time's up. Which kind of place for Saturday?", "Have you decided? Candlelight, or comfort food?"],
+      "welcome_back": ["Welcome back! You were picking a restaurant for your anniversary.", "Hi again. So, fancy or relaxed for Saturday night?", "There you are. Still need to book for the anniversary. Which style?"],
+      "endings": [
+        {"user": "Fancy. Let's make it special this year.", "moshi": "Lovely. Call today and mention it's an anniversary, some places add a little dessert."},
+        {"user": "Relaxed, honestly. We both love that little Thai place.", "moshi": "That sounds perfect. Book a quiet corner table and bring flowers."}
+      ]
+    },
+    {
+      "id": "restaurant_choice.ctx2",
+      "turns": [
+        {"speaker": "user", "text": "My parents are visiting and I want to take them out for dinner."},
+        {"speaker": "moshi", "text": "Nice. Do they like trying new kinds of food, or would they be happier with something familiar like a steakhouse?"}
+      ],
+      "pending": "adventurous or familiar food for parents",
+      "think_reask": ["So, for your parents, something new or something familiar?", "Okay, what do you think? Adventurous food or a classic steakhouse?", "Time's up. Which way are we going for dinner with your parents?"],
+      "welcome_back": ["Welcome back! We were choosing a dinner spot for your parents.", "Hi again. So, would your parents like something new or something familiar?", "Good to have you back. Still deciding on dinner with your parents?"],
+      "endings": [
+        {"user": "Familiar. My dad is very picky.", "moshi": "Then a steakhouse or a good Italian place is a safe bet. Check that it's not too loud."},
+        {"user": "Let's try something new, my mom loves surprises.", "moshi": "Fun. A Lebanese or Ethiopian place with sharing plates could be a great experience."}
+      ]
+    },
+    {
+      "id": "restaurant_choice.ctx3",
+      "turns": [
+        {"speaker": "user", "text": "There's a group of eight of us going out tomorrow night."},
+        {"speaker": "moshi", "text": "Big group. Any dietary needs, like vegetarians or allergies? That really narrows down where to book."}
+      ],
+      "pending": "dietary needs of the group",
+      "think_reask": ["So, anything I should know about the group's diets?", "Okay, any vegetarians or allergies among the eight of you?", "Time's up. Have you figured out who eats what?"],
+      "welcome_back": ["Welcome back! I was asking about dietary needs for your group of eight.", "Hi again. Did you find out if anyone has allergies or special diets?", "There you are. So, any vegetarians or allergies in the group?"],
+      "endings": [
+        {"user": "Two vegetarians and one person who can't eat nuts.", "moshi": "Okay. Indian or Mediterranean places usually handle that well, just mention the nut allergy when booking."},
+        {"user": "Nope, everyone eats everything.", "moshi": "Easy then. Korean barbecue is great for a group of eight, everyone cooks together."}
+      ]
+    }
+  ],
+  "side_conversations": [
+    {"id": "restaurant_choice.side1", "turns": [
+      {"speaker": "user", "text": "{friend}, do you feel like sushi or burgers tonight?"},
+      {"speaker": "friend", "text": "We had sushi on Tuesday. Burgers?"},
+      {"speaker": "user", "text": "Okay, but not the place with the endless line."},
+      {"speaker": "friend", "text": "What about the new one on Elm Street? I heard the fries are amazing."},
+      {"speaker": "user", "text": "Do they take reservations?"},
+      {"speaker": "friend", "text": "No idea. Let's just go early, like six."}
+    ]},
+    {"id": "restaurant_choice.side2", "turns": [
+      {"speaker": "user", "text": "Wait, what was the name of that Vietnamese place we went to with your sister?"},
+      {"speaker": "friend", "text": "The one with the huge bowls of pho?"},
+      {"speaker": "user", "text": "Yes! I want to take my coworkers there."},
+      {"speaker": "friend", "text": "I think it was called Little Saigon, near the train station."},
+      {"speaker": "user", "text": "Is it big enough for six people?"},
+      {"speaker": "friend", "text": "There's a long table in the back. Call ahead though."}
+    ]},
+    {"id": "restaurant_choice.side3", "turns": [
+      {"speaker": "user", "text": "{friend}, how was that tapas bar you tried last weekend?"},
+      {"speaker": "friend", "text": "Food was great, but it was so loud we had to shout."},
+      {"speaker": "user", "text": "Hmm, I want somewhere we can actually talk. Was it pricey?"},
+      {"speaker": "friend", "text": "About forty each with drinks. Not bad."},
+      {"speaker": "user", "text": "Maybe we go early, before it gets busy."},
+      {"speaker": "friend", "text": "Good plan. It's pretty calm before seven."}
+    ]}
+  ],
+  "ordinary_dialogues": [
+    {"id": "restaurant_choice.dlg1", "turns": [
+      {"speaker": "user", "text": "How can I tell if a restaurant is good before I go?"},
+      {"speaker": "moshi", "text": "Read the most recent reviews rather than the overall score. Look for comments about specific dishes, not just the service."},
+      {"speaker": "user", "text": "What about photos?"},
+      {"speaker": "moshi", "text": "Customer photos are more honest than the restaurant's own. If the food looks the same across many photos, the kitchen is consistent."},
+      {"speaker": "user", "text": "And I always wonder / whether a short menu is a good sign."},
+      {"speaker": "moshi", "text": "Usually yes. A short menu often means fresher ingredients and dishes the kitchen has really mastered."},
+      {"speaker": "user", "text": "Good to know. I'll stop avoiding those places."},
+      {"speaker": "moshi", "text": "You might find some favorites. Small menus are often where the best cooking happens."}
+    ]},
+    {"id": "restaurant_choice.dlg2", "turns": [
+      {"speaker": "user", "text": "I'm eating out alone for the first time tonight and it feels a little awkward."},
+      {"speaker": "moshi", "text": "Lots of people enjoy solo dining. Sitting at the bar or a counter feels very natural, and you can chat with the staff."},
+      {"speaker": "user", "text": "Should I bring a book?"},
+      {"speaker": "moshi", "text": "Sure, a book or a podcast is totally normal. Or just people-watch, that's half the fun."},
+      {"speaker": "user", "text": "I was thinking of going to / that ramen place downtown."},
+      {"speaker": "moshi", "text": "Ramen is ideal for solo dining. Many ramen shops are built around counters, and the meals are quick."},
+      {"speaker": "user", "text": "Actually, maybe I'll do the Italian place instead, I want to linger."},
+      {"speaker": "moshi", "text": "Also a great choice. Order a glass of wine and take your time with every course."}
+    ]},
+    {"id": "restaurant_choice.dlg3", "turns": [
+      {"speaker": "user", "text": "Is it rude to ask for the check right after we finish eating?"},
+      {"speaker": "moshi", "text": "Not at all, especially if the restaurant is busy. A simple, could we get the check when you have a moment, is perfectly polite."},
+      {"speaker": "user", "text": "What about splitting the bill between five people?"},
+      {"speaker": "moshi", "text": "Tell the server at the start of the meal if you can. It makes things much easier for them at the end."},
+      {"speaker": "user", "text": "And how much should we / tip for a big group?"},
+      {"speaker": "moshi", "text": "In the United States, eighteen to twenty percent is standard. Some places add it automatically for groups of six or more, so check the bill first."},
+      {"speaker": "user", "text": "Oh, I didn't know that. Good thing I asked."},
+      {"speaker": "moshi", "text": "It catches a lot of people out. Otherwise you might accidentally tip twice."}
+    ]}
+  ],
+  "option_sets": [
+    {"id": "restaurant_choice.opt1",
+     "lead_in": "I'm picking a place for my team dinner on Friday, can you help?",
+     "options": [
+       "The first one is an Italian place downtown, great pasta, but it's quite noisy on weekends.",
+       "Then there's a sushi restaurant near the office with private rooms, but it's pretty expensive.",
+       "And the last one is a casual barbecue joint with long picnic tables and a big patio."
+     ],
+     "moshi_comment": [
+       "For a team dinner, the sushi place's private rooms are a big plus, everyone can talk without shouting. The barbecue joint is cheaper and more relaxed if the weather is nice. What's the budget per person?",
+       "I'd lean toward the barbecue place, long tables are perfect for a group and the vibe is easygoing. The Italian spot sounds tasty, but noise on a Friday could make conversation hard."
+     ]},
+    {"id": "restaurant_choice.opt2",
+     "lead_in": "My sister's birthday dinner is next week, and I have to choose where we go.",
+     "options": [
+       "First, there's a rooftop bar with small plates and an amazing view of the river.",
+       "Second, a family-run Mexican restaurant where the staff sing to you on your birthday.",
+       "There's also a fancy French bistro she's mentioned wanting to try for ages.",
+       "Or lastly, we could just do a pizza night at my place with the whole family."
+     ],
+     "moshi_comment": [
+       "If she's been wanting to try the French bistro for ages, that would feel really thoughtful. The Mexican place is more fun if she enjoys a bit of attention. Does she like being the center of attention?",
+       "The rooftop bar sounds special, but small plates can leave people hungry at a birthday dinner. I'd pick the French bistro, and save pizza night for a relaxed family weekend."
+     ]}
+  ]
+}

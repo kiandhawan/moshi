@@ -1,0 +1,172 @@
+{
+ "id": "eval_01_00008",
+ "split": "eval",
+ "seed": 1,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "topics": [
+  "laptop_buying",
+  "family_visit"
+ ],
+ "topic": "laptop_buying",
+ "voices": {
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": "Zoe",
+ "friend_name_id": "name_24",
+ "phrasing_ids": [
+  "greet_13",
+  "side_instr_06",
+  "dq_21",
+  "side_cue_24"
+ ],
+ "block_ids": [
+  "laptop_buying.ctx3",
+  "family_visit.side3"
+ ],
+ "est_total_sec": 71.84,
+ "est_speech_sec": 52.85,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hi! Ready when you are.",
+   "est_sec": 1.65,
+   "gap_before": 0.91,
+   "role": "greeting",
+   "phrasing": "greet_13",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Should I buy a laptop now or wait for the sales?",
+   "est_sec": 3.51,
+   "gap_before": 0.86,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Prices usually drop in about three weeks. Can you get by with your current one until then, or do you need it right away?",
+   "est_sec": 7.54,
+   "gap_before": 0.58,
+   "role": "reply",
+   "block": "laptop_buying.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One moment, my sister is asking me something. Please don't interrupt until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 1.38,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Zoe, can you help me move the air mattress into the office?",
+   "est_sec": 3.82,
+   "gap_before": 1.32,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "family_visit.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. Is your cousin really staying for ten days?",
+   "est_sec": 2.89,
+   "gap_before": 0.43,
+   "block": "family_visit.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you take the trash out?",
+   "est_sec": 1.96,
+   "gap_before": 0.33,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_21"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not yet, I'll do it now.",
+   "est_sec": 1.96,
+   "gap_before": 1.07,
+   "phrasing": "dq_21"
+  },
+  {
+   "speaker": "user",
+   "text": "Apparently. She says it's cheaper than a hotel.",
+   "est_sec": 2.58,
+   "gap_before": 0.79,
+   "block": "family_visit.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Well, it is. Does she know about the cat?",
+   "est_sec": 2.89,
+   "gap_before": 3.02,
+   "block": "family_visit.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh no. She's allergic, isn't she?",
+   "est_sec": 1.96,
+   "gap_before": 0.34,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "family_visit.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Very. You should probably tell her tonight.",
+   "est_sec": 2.27,
+   "gap_before": 1.38,
+   "block": "family_visit.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah. I'll call her after dinner.",
+   "est_sec": 1.96,
+   "gap_before": 1.04,
+   "block": "family_visit.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm free again.",
+   "est_sec": 1.34,
+   "gap_before": 1.98,
+   "event": "return_cue",
+   "phrasing": "side_cue_24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. We were working out whether you can wait for the laptop sales.",
+   "est_sec": 4.44,
+   "gap_before": 1.29,
+   "role": "resume",
+   "block": "laptop_buying.ctx3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I can wait. My old one is slow but it still works.",
+   "est_sec": 3.82,
+   "gap_before": 0.57,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good, then set a price alert and grab it when it drops.",
+   "est_sec": 3.82,
+   "gap_before": 0.7,
+   "role": "followup",
+   "block": "laptop_buying.ctx3",
+   "reference_only": true
+  }
+ ],
+ "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
+}

@@ -1,0 +1,135 @@
+{
+  "topic": "home_repair",
+  "contexts": [
+    {
+      "id": "home_repair.ctx1",
+      "turns": [
+        {"speaker": "user", "text": "The bathroom faucet keeps dripping all night and it's driving me nuts."},
+        {"speaker": "moshi", "text": "That's usually a worn washer or cartridge. Do you want to try fixing it yourself, or would you rather call a plumber?"}
+      ],
+      "pending": "fix the faucet yourself or call a plumber",
+      "think_reask": [
+        "So, what's the plan for that faucet? Fix it yourself or bring in a plumber?",
+        "Time's up. Are you going the do it yourself route on the drip, or calling someone?"
+      ],
+      "welcome_back": [
+        "Welcome back! We were deciding whether you'd fix the dripping faucet yourself or call a plumber.",
+        "Good to have you back. Any thoughts on the faucet, yourself or a plumber?"
+      ],
+      "endings": [
+        {"user": "I'll give it a shot myself. How hard can a washer be?", "moshi": "Not too hard. Shut off the water under the sink first, then take the handle off and bring the old washer to the hardware store."},
+        {"user": "Honestly, I'd rather just call someone. I don't trust myself with pipes.", "moshi": "Fair enough. Ask for a quote up front, a simple drip repair shouldn't take them long."}
+      ]
+    },
+    {
+      "id": "home_repair.ctx2",
+      "turns": [
+        {"speaker": "user", "text": "I finally want to patch the hole my kid put in the hallway wall."},
+        {"speaker": "moshi", "text": "Oh no. How big is it?"},
+        {"speaker": "user", "text": "About the size of a fist."},
+        {"speaker": "moshi", "text": "Then you can use a mesh patch kit or cut in a small piece of new drywall. Which sounds more like you?"}
+      ],
+      "pending": "mesh patch kit or a new piece of drywall",
+      "think_reask": [
+        "Okay, have you picked? Patch kit or a fresh piece of drywall for that hallway hole?",
+        "So which way are you leaning for the wall, the quick mesh patch or cutting in new drywall?"
+      ],
+      "welcome_back": [
+        "Hi again. You were choosing between a mesh patch and new drywall for the hole in the hallway.",
+        "Welcome back. Still thinking about that fist sized hole, patch kit or drywall piece?"
+      ],
+      "endings": [
+        {"user": "The patch kit. I want this done before the weekend's over.", "moshi": "Smart. Stick it on, spread two thin coats of compound, then sand and paint once it's dry."},
+        {"user": "Let's do it properly with a new piece of drywall.", "moshi": "Good call for a hole that size. Cut the opening into a neat square first so the new piece fits snugly."}
+      ]
+    },
+    {
+      "id": "home_repair.ctx3",
+      "turns": [
+        {"speaker": "user", "text": "My front door sticks every time it rains. I have to shove it with my shoulder."},
+        {"speaker": "moshi", "text": "The wood is probably swelling. You could tighten the hinges first or plane down the edge. Where would you like to start?"}
+      ],
+      "pending": "tighten the hinges or plane the door edge",
+      "think_reask": [
+        "Alright, so for the sticky door, hinges first or straight to planing the edge?",
+        "Did you decide where to start with that front door?"
+      ],
+      "welcome_back": [
+        "Welcome back. We were figuring out whether to tighten the hinges or plane the door.",
+        "There you are. Any decision on the sticking door, hinges or planing?"
+      ],
+      "endings": [
+        {"user": "Hinges first. That sounds a lot less scary.", "moshi": "Good plan. Try swapping one top hinge screw for a longer one, that often pulls the door back into line."},
+        {"user": "I think I'll just plane it. It's been like this for years.", "moshi": "Okay. Mark where it rubs, take the door off its hinges, and shave off only a little at a time."}
+      ]
+    }
+  ],
+  "side_conversations": [
+    {"id": "home_repair.side1", "turns": [
+      {"speaker": "user", "text": "{friend}, did you borrow my cordless drill last week?"},
+      {"speaker": "friend", "text": "Oh yeah, it's still in my car. I needed it for the shelves."},
+      {"speaker": "user", "text": "No worries. Is the battery still charged?"},
+      {"speaker": "friend", "text": "Probably not. I used it a lot. I'll grab the charger too."},
+      {"speaker": "user", "text": "Thanks, I want to hang the curtain rod tonight."}
+    ]},
+    {"id": "home_repair.side2", "turns": [
+      {"speaker": "user", "text": "Do you know what kind of paint the landlord used in the kitchen?"},
+      {"speaker": "friend", "text": "No idea. Why, are you touching up the scuffs?"},
+      {"speaker": "user", "text": "I want to, but if it's glossy and I use matte, it'll look patchy."},
+      {"speaker": "friend", "text": "Just take a chip off behind the fridge and bring it to the store. They can match it."},
+      {"speaker": "user", "text": "Oh, that's clever. Can you help me pull the fridge out later?"},
+      {"speaker": "friend", "text": "Sure, after dinner."}
+    ]},
+    {"id": "home_repair.side3", "turns": [
+      {"speaker": "user", "text": "{friend}, come look at this. Is that water stain on the ceiling getting bigger?"},
+      {"speaker": "friend", "text": "Hmm, yeah, it looks darker than yesterday."},
+      {"speaker": "user", "text": "Great. Do you think it's the roof or the upstairs bathroom?"},
+      {"speaker": "friend", "text": "It's right under the tub, so my bet's the bathroom."},
+      {"speaker": "user", "text": "Okay, I'll check the seal around the tub tomorrow morning."},
+      {"speaker": "friend", "text": "Put a towel down in the meantime, just in case."}
+    ]}
+  ],
+  "ordinary_dialogues": [
+    {"id": "home_repair.dlg1", "turns": [
+      {"speaker": "user", "text": "My toilet keeps running after I flush. What's going on?"},
+      {"speaker": "moshi", "text": "Most likely the flapper at the bottom of the tank isn't sealing. It's a cheap rubber part and easy to replace."},
+      {"speaker": "user", "text": "Do I need to turn off the water for that?"},
+      {"speaker": "moshi", "text": "Yes, close the valve behind the toilet and flush to empty the tank. Then the old flapper just unhooks."},
+      {"speaker": "user", "text": "And how do I know which one to buy? There are / like a dozen kinds at the store."},
+      {"speaker": "moshi", "text": "Take the old one with you and match the size, most are two inch or three inch. A universal one usually works too."},
+      {"speaker": "user", "text": "Okay, that sounds doable. Anything else I should check while I'm in there?"},
+      {"speaker": "moshi", "text": "Look at the chain length. If it's too tight or too loose, the flapper won't close properly."}
+    ]},
+    {"id": "home_repair.dlg2", "turns": [
+      {"speaker": "user", "text": "I'm retired now and finally have time to fix up the deck. Where do I even begin?"},
+      {"speaker": "moshi", "text": "Start with a good look for loose boards, popped nails and soft spots. Soft wood means rot and should be replaced first."},
+      {"speaker": "user", "text": "There are a few soft boards near the steps, yes."},
+      {"speaker": "moshi", "text": "Replace those, then give the whole deck a scrub with a deck cleaner and let it dry for a couple of days."},
+      {"speaker": "user", "text": "Then stain it?"},
+      {"speaker": "moshi", "text": "Exactly. Pick a dry stretch of weather and apply a thin, even coat. Two thin coats beat one thick one."},
+      {"speaker": "user", "text": "I was going to do it all / well, maybe over two weekends instead."},
+      {"speaker": "moshi", "text": "That's a sensible pace. Repairs and cleaning one weekend, staining the next."}
+    ]},
+    {"id": "home_repair.dlg3", "turns": [
+      {"speaker": "user", "text": "Quick question, what's the difference between a flathead and a Phillips screwdriver?"},
+      {"speaker": "moshi", "text": "A flathead has a single straight blade. A Phillips has a cross shaped tip for screws with a plus sign on top."},
+      {"speaker": "user", "text": "Ha, okay. I just moved into my first apartment and I own zero tools."},
+      {"speaker": "moshi", "text": "Congrats on the place! A basic kit with a hammer, a couple of screwdrivers, pliers and a tape measure will cover most things."},
+      {"speaker": "user", "text": "Should I get a drill too, or is that overkill?"},
+      {"speaker": "moshi", "text": "A small cordless drill is worth it if you plan to hang shelves or assemble furniture. Otherwise you can wait."},
+      {"speaker": "user", "text": "I do have a bookshelf to put together / and a mirror to hang, so maybe yes."},
+      {"speaker": "moshi", "text": "Then a drill will save you a lot of wrist pain. Grab some wall anchors for the mirror too."}
+    ]},
+    {"id": "home_repair.dlg4", "turns": [
+      {"speaker": "user", "text": "The caulk around my tub is all moldy and gross. Can I just put new caulk over it?"},
+      {"speaker": "moshi", "text": "It's better not to. New caulk won't stick well over old caulk, and the mold will come right back."},
+      {"speaker": "user", "text": "Ugh. So I have to scrape it all off?"},
+      {"speaker": "moshi", "text": "Yes, a plastic scraper or a utility knife works. Then clean the gap with some rubbing alcohol and let it dry completely."},
+      {"speaker": "user", "text": "How long does it need before I can shower again?"},
+      {"speaker": "moshi", "text": "Most silicone caulk wants about a full day. Check the tube, some fast cure ones are ready sooner."},
+      {"speaker": "user", "text": "Okay, I'll do it Friday night / so it's ready by Saturday evening."},
+      {"speaker": "moshi", "text": "Perfect timing. Tape both edges before you caulk and you'll get a really clean line."}
+    ]}
+  ],
+  "option_sets": []
+}
