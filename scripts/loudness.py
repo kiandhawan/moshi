@@ -55,6 +55,11 @@ def main() -> None:
                 print(f"  moshi {t['kind']:9s} {t['start']:6.2f}-{t['end']:6.2f}  RMS {r:6.1f} dBFS  peak {pk:6.1f} dBFS  {t['text'][:45]!r}")
             r, pk = level(x[1], sr, right)
             print(f"  user channel (all speech)          RMS {r:6.1f} dBFS  peak {pk:6.1f} dBFS")
+            for spk in sorted({u["speaker"] for u in ev.get("right_turns", [])}):
+                segs = [(max(s, u["start"]), min(e, u["end"])) for u in ev["right_turns"] if u["speaker"] == spk
+                        for s, e in right if s < u["end"] and e > u["start"]]
+                r, pk = level(x[1], sr, segs)
+                print(f"  {spk:8s} (right channel)            RMS {r:6.1f} dBFS  peak {pk:6.1f} dBFS")
     else:
         vals = []
         for f in sorted(glob.glob(str(args.dir / "*_seed*.wav"))):

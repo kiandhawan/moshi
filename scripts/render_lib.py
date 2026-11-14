@@ -20,6 +20,7 @@ Conversation spec (a dict):
   user_lines   [{text, voice, start, speaker}]  TTS lines for the right channel; speaker is
                user (default), friend or visitor, which sets the loudness (LEVEL_DBFS)
   moshi_lines  [{text, start, kind}]   kind: greeting | ack | resume | ordinary
+  noise_dbfs   optional level of faint background noise added to the right channel
   events       the standard events fields; "id" and "group" are filled in, and
                "user_start" (the user's first words) from user_lines if not given
 
@@ -50,7 +51,7 @@ GREETING_MIN_START = 0.3  # the opening greeting never starts earlier (CLAUDE.md
 # (median -23.3 dBFS over eval_outputs/base_human, scripts/loudness.py); the friend and the
 # visitor at the door are 4 dB below the user. Recorded user audio is never rescaled.
 LEVEL_DBFS = {"moshi": -23.0, "user": -21.0, "friend": -25.0, "visitor": -25.0}
-MAX_SEC = 100.0         # must stay below training duration_sec (see CLAUDE.md)
+MAX_SEC = 90.0          # every rendered file must be shorter (training duration_sec is 100)
 
 
 def moshi_voice_id() -> str:
@@ -132,29 +133,79 @@ def map_words(script: str, asr: list[tuple[str, float, float]], dur: float):
     return [(w, round(s, 3), round(max(e, s + 0.01), 3)) for w, (s, e) in zip(words, spans)]
 
 
-def synth(client, text: str, voice: str) -> tuple[np.ndarray, list[tuple[str, float, float]]]:
-    """TTS one line (cached). Returns trimmed 24 kHz mono audio and word timings relative
-    to the start of that audio."""
-    key = hashlib.sha1(f"{MODEL}|{voice}|{text}".encode()).hexdigest()[:16]
+def cache_key(text: str, voice: str) -> str:
+    return hashlib.sha1(f"{MODEL}|{voice}|{text}".encode()).hexdigest()[:16]
+
+
+def _retry(fn, what: str, tries: int = 6):
+    """Call fn(), retrying with exponential backoff (rate limits, network errors)."""
+    import time
+    for k in range(tries):
+        try:
+            return fn()
+        except Exception as e:  # noqa: BLE001
+            if k == tries - 1:
+                raise RuntimeError(f"{what}: failed after {tries} tries: {type(e).__name__}: {str(e)[:200]}") from e
+            time.sleep(min(30.0, 1.5 * 2 ** k))
+
+
+def synth(client, text: str, voice: str, align: bool = True):
+    """TTS one line (cached by voice + text). Returns trimmed 24 kHz mono audio and, if
+    align, word timings relative to the start of that audio (Fish ASR matched to the
+    script words; only Moshi's lines need them), else None."""
+    key = cache_key(text, voice)
     wav_p, ali_p = CACHE / f"{key}.wav", CACHE / f"{key}.json"
-    if wav_p.exists() and ali_p.exists():
-        x, _ = sphn.read(str(wav_p), sample_rate=SR)
-        return x[0], clamp_words(json.loads(ali_p.read_text())["words"], len(x[0]) / SR)
-    from fishaudio.types import TTSConfig
-    raw = client.tts.convert(text=text, reference_id=voice, format="wav", model=MODEL,
-                             config=TTSConfig(format="wav", sample_rate=SR))
-    pcm, sr, ch, sw = parse_wav(raw)
-    assert sr == SR and sw == 2, (sr, sw)
-    x = np.frombuffer(pcm, dtype="<i2").reshape(-1, ch)[:, 0].astype(np.float32) / 32768
-    x = trim(x)
-    asr = client.asr.transcribe(audio=to_wav_bytes(x), language="en", include_timestamps=True)
-    asr_words = [(s.text.strip(), s.start, s.end) for s in asr.segments if s.text.strip()]
-    words = map_words(text, asr_words, len(x) / SR)
     CACHE.mkdir(parents=True, exist_ok=True)
-    sphn.write_wav(str(wav_p), x[None], sample_rate=SR)
-    ali_p.write_text(json.dumps({"model": MODEL, "voice": voice, "text": text,
-                                 "asr_text": asr.text, "words": words}, indent=1))
+    if wav_p.exists():
+        x = sphn.read(str(wav_p), sample_rate=SR)[0][0]
+    else:
+        from fishaudio.types import TTSConfig
+        raw = _retry(lambda: client.tts.convert(text=text, reference_id=voice, format="wav", model=MODEL,
+                                                config=TTSConfig(format="wav", sample_rate=SR)), f"TTS {text[:40]!r}")
+        pcm, sr, ch, sw = parse_wav(raw)  # header fix: Fish's streamed WAV length is a placeholder
+        assert sr == SR and sw == 2, (sr, sw)
+        x = trim(np.frombuffer(pcm, dtype="<i2").reshape(-1, ch)[:, 0].astype(np.float32) / 32768)
+        tmp = wav_p.with_suffix(".tmp.wav")
+        sphn.write_wav(str(tmp), x[None], sample_rate=SR)
+        tmp.rename(wav_p)  # atomic: a crash never leaves a half-written clip in the cache
+        x = sphn.read(str(wav_p), sample_rate=SR)[0][0]  # exactly what later cache reads return
+    if not align:
+        return x, None
+    if ali_p.exists():
+        words = json.loads(ali_p.read_text())["words"]
+    else:
+        asr = _retry(lambda: client.asr.transcribe(audio=to_wav_bytes(x), language="en", include_timestamps=True),
+                     f"ASR {text[:40]!r}")
+        asr_words = [(sg.text.strip(), sg.start, sg.end) for sg in asr.segments if sg.text.strip()]
+        words = map_words(text, asr_words, len(x) / SR)
+        ali_p.write_text(json.dumps({"model": MODEL, "voice": voice, "text": text,
+                                     "asr_text": asr.text, "words": words}, indent=1))
     return x, clamp_words(words, len(x) / SR)
+
+
+def reverb(x: np.ndarray, seed: int, rt60: float = 0.35, wet: float = 0.25) -> np.ndarray:
+    """Light synthetic room reverb (exponentially decaying noise impulse response) for
+    voices that are not right at the microphone (friend, visitor). Same length as x; the
+    tail beyond the clip is dropped (it is >25 dB down by then)."""
+    rng = np.random.default_rng(seed)
+    n = int(rt60 * SR)
+    ir = rng.standard_normal(n) * np.exp(-6.91 * np.arange(n) / n)
+    ir[: int(0.005 * SR)] = 0.0  # 5 ms pre-delay
+    ir /= np.sqrt((ir ** 2).sum())
+    m = len(x) + n
+    y = np.fft.irfft(np.fft.rfft(x, m) * np.fft.rfft(ir, m), m)[: len(x)]
+    return (x + wet * y).astype(np.float32)
+
+
+def room_noise(n: int, level_dbfs: float, seed: int) -> np.ndarray:
+    """Faint pink (1/f) background noise at level_dbfs RMS."""
+    rng = np.random.default_rng(seed)
+    spec = np.fft.rfft(rng.standard_normal(n))
+    f = np.fft.rfftfreq(n, 1 / SR)
+    spec /= np.sqrt(np.maximum(f, 20.0))
+    y = np.fft.irfft(spec, n)
+    y *= 10 ** (level_dbfs / 20) / max(np.sqrt(np.mean(y ** 2)), 1e-12)
+    return y.astype(np.float32)
 
 
 def clamp_words(words, dur: float) -> list[tuple[str, float, float]]:
@@ -198,9 +249,13 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
         u, _ = sphn.read(spec["user_audio"], sample_rate=SR)
         right = (u[1] if u.shape[0] == 2 else u[0]).astype(np.float32)
         speech_ends.append(last_speech_end(right))
-    for ln in spec.get("user_lines", []):
-        x, _ = synth(client, ln["text"], ln["voice"])
-        x = normalize(x, LEVEL_DBFS[ln.get("speaker", "user")])
+    seed = int(hashlib.sha1(spec["id"].encode()).hexdigest()[:8], 16)
+    for k, ln in enumerate(spec.get("user_lines", [])):
+        x, _ = synth(client, ln["text"], ln["voice"], align=False)
+        speaker = ln.get("speaker", "user")
+        if speaker in ("friend", "visitor"):  # further from the microphone
+            x = reverb(x, seed + k)
+        x = normalize(x, LEVEL_DBFS[speaker])
         right = _place(right, x, ln["start"])
         speech_ends.append(ln["start"] + len(x) / SR)  # clips are trimmed to their speech
 
@@ -229,6 +284,8 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
     if dur >= MAX_SEC:
         raise ValueError(f"{spec['id']}: {dur:.1f}s is not shorter than duration_sec={MAX_SEC}")
     left, right = np.pad(left, (0, n - len(left))), np.pad(right, (0, n - len(right)))
+    if spec.get("noise_dbfs") is not None:  # faint room tone on the user's side only
+        right = right + room_noise(n, spec["noise_dbfs"], seed)
     # Avoid clipping, per channel, so a recorded user side is never altered by a loud TTS line.
     left, right = (ch * (0.99 / max(np.abs(ch).max(), 1e-9)) if np.abs(ch).max() > 0.99 else ch
                    for ch in (left, right))
