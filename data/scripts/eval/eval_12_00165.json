@@ -7,129 +7,201 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "family_visit"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "near_miss"
  ],
- "topic": "family_visit",
+ "topics": [
+  "learning_language",
+  "picnic"
+ ],
+ "topic": "learning_language",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
-  "friend": null,
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "732ea755bd9e446eb31dc79966b50428",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_30"
+  "greet_15",
+  "greet_ans_03",
+  "side_instr_30",
+  "dn_15",
+  "dq_18",
+  "side_cue_18"
  ],
  "block_ids": [
-  "family_visit.dlg3"
+  "learning_language.ctx9",
+  "picnic.side6",
+  "dn_15",
+  "dq_18"
  ],
- "est_total_sec": 52.06,
- "est_speech_sec": 40.16,
+ "est_total_sec": 71.58,
+ "est_speech_sec": 53.05,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.61,
-   "role": "greeting",
-   "phrasing": "greet_21",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Not bad at all, thanks.",
+   "text": "Hey, how's your week going?",
    "est_sec": 1.65,
-   "gap_before": 0.47,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
-  },
-  {
-   "speaker": "user",
-   "text": "My grandparents are coming over and they don't really use phones. What can we do together?",
-   "est_sec": 5.06,
-   "gap_before": 0.37,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Card games are usually a hit, or you could look through old photo albums and ask them for stories.",
-   "est_sec": 5.99,
-   "gap_before": 1.28,
-   "role": "reply",
-   "block": "family_visit.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Ooh, photo albums is a good one. My grandpa loves telling stories.",
-   "est_sec": 3.82,
-   "gap_before": 0.66,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then that's perfect. You could even record a few of his stories to keep.",
-   "est_sec": 4.44,
-   "gap_before": 0.73,
-   "role": "reply",
-   "block": "family_visit.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "What about food, they're kind of picky",
-   "est_sec": 2.27,
-   "gap_before": 2.19,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "family_visit.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "and my grandma can't eat salt.",
-   "est_sec": 1.96,
-   "gap_before": 2.08,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try a simple roast chicken with lemon and herbs instead of salt. Soft roasted vegetables on the side are usually safe too.",
-   "est_sec": 6.92,
-   "gap_before": 1.03,
-   "role": "reply",
-   "block": "family_visit.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "And dessert?",
-   "est_sec": 0.72,
-   "gap_before": 0.58,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A fruit crumble is easy and most grandparents love it. Serve it warm with a little cream.",
-   "est_sec": 5.37,
    "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.99,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "My company is moving me to Berlin in three months and my German is basically zero.",
+   "est_sec": 5.06,
+   "gap_before": 0.59,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Big change. With three months, go intensive with a daily course, or fit evening classes around your job?",
+   "est_sec": 5.68,
+   "gap_before": 0.37,
    "role": "reply",
-   "block": "family_visit.dlg3",
+   "block": "learning_language.ctx9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment, I'm going to talk to my friend. Stay quiet until you hear I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 0.91,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you know where the scissors are?",
+   "est_sec": 2.27,
+   "gap_before": 1.41,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_18"
+  },
+  {
+   "speaker": "friend",
+   "text": "Top drawer, next to the tape.",
+   "est_sec": 1.96,
+   "gap_before": 0.72,
+   "phrasing": "dq_18"
+  },
+  {
+   "speaker": "user",
+   "text": "Back in a sec, I need to grab a pen.",
+   "est_sec": 3.2,
+   "gap_before": 0.39,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_15"
+  },
+  {
+   "speaker": "friend",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 1.19,
+   "phrasing": "dn_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Marcus, is that our spot or did someone take it?",
+   "est_sec": 3.2,
+   "gap_before": 0.94,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "picnic.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Looks like a family set up under the big tree.",
+   "est_sec": 3.2,
+   "gap_before": 0.65,
+   "block": "picnic.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Seriously? We always sit there.",
+   "est_sec": 1.65,
+   "gap_before": 0.46,
+   "block": "picnic.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "We could go by the pond instead. There's shade near the willows.",
+   "est_sec": 3.82,
+   "gap_before": 0.79,
+   "block": "picnic.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Isn't that where the geese hang out?",
+   "est_sec": 2.27,
+   "gap_before": 0.53,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "picnic.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Only in the mornings, I think.",
+   "est_sec": 1.96,
+   "gap_before": 3.31,
+   "block": "picnic.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, let's try. If a goose steals my sandwich, it's on you.",
+   "est_sec": 3.82,
+   "gap_before": 1.17,
+   "block": "picnic.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Deal. I'll fight the goose.",
+   "est_sec": 1.65,
+   "gap_before": 0.56,
+   "block": "picnic.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back with you.",
+   "est_sec": 1.65,
+   "gap_before": 0.95,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. Your Berlin German. Intensive, or evening classes?",
+   "est_sec": 2.58,
+   "gap_before": 0.7,
+   "role": "resume",
+   "block": "learning_language.ctx9",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

@@ -7,6 +7,8 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "side_conversation",
@@ -16,160 +18,170 @@
   "near_miss"
  ],
  "topics": [
-  "restaurant_choice",
-  "cycling"
+  "wedding_planning",
+  "restaurant_choice"
  ],
- "topic": "restaurant_choice",
+ "topic": "wedding_planning",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
-  "friend": "933563129e564b19a115bedd57b7406a",
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "7bb342e710854139b1d6e12411229f1f",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Maya",
- "friend_name_id": "name_03",
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_03",
-  "side_instr_30",
-  "dn_18",
-  "implicit_03"
+  "greet_03",
+  "greet_ans_12",
+  "side_instr_06",
+  "dn_12",
+  "implicit_08"
  ],
  "block_ids": [
-  "restaurant_choice.ctx1",
-  "cycling.side1"
+  "wedding_planning.ctx19",
+  "restaurant_choice.side1",
+  "dn_12"
  ],
- "est_total_sec": 67.31,
- "est_speech_sec": 49.03,
+ "est_total_sec": 60.91,
+ "est_speech_sec": 43.86,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.64,
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.8,
    "role": "greeting",
-   "phrasing": "greet_06",
+   "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Doing okay, thanks.",
+   "text": "Okay, I guess.",
    "est_sec": 1.03,
-   "gap_before": 0.96,
+   "gap_before": 0.43,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_03"
+   "phrasing": "greet_ans_12"
   },
   {
    "speaker": "user",
-   "text": "It's our anniversary on Saturday and I haven't booked anywhere.",
+   "text": "My brother got ordained online and offered to marry us.",
    "est_sec": 3.2,
-   "gap_before": 0.38,
+   "gap_before": 0.21,
    "event": "ordinary_request",
-   "block": "restaurant_choice.ctx1"
+   "block": "wedding_planning.ctx19"
   },
   {
    "speaker": "moshi",
-   "text": "No panic, there's still time. Would you like somewhere fancy and romantic, or a relaxed place that serves your favorite food?",
-   "est_sec": 6.61,
-   "gap_before": 0.87,
+   "text": "That's sweet. How do you feel about it?",
+   "est_sec": 2.58,
+   "gap_before": 0.55,
    "role": "reply",
-   "block": "restaurant_choice.ctx1",
+   "block": "wedding_planning.ctx19",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Give me a moment, I'm going to talk to my friend. Stay quiet until you hear I'm back.",
-   "est_sec": 5.68,
-   "gap_before": 0.81,
+   "text": "Touched, but he mumbles when he's nervous.",
+   "est_sec": 2.27,
+   "gap_before": 0.96,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, honest. Say yes and coach him through a rehearsal, or hire a professional and give him a reading instead?",
+   "est_sec": 6.3,
+   "gap_before": 0.64,
+   "role": "reply",
+   "block": "wedding_planning.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One moment, my sister is asking me something. Please don't interrupt until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.96,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_30"
+   "phrasing": "side_instr_06"
   },
   {
    "speaker": "user",
-   "text": "Maya, can I borrow your helmet tomorrow? Mine's cracked.",
+   "text": "Marcus, do you feel like sushi or burgers tonight?",
    "est_sec": 2.89,
-   "gap_before": 0.97,
-   "block": "cycling.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Sure, but it might be a little big for you.",
-   "est_sec": 3.2,
-   "gap_before": 0.75,
-   "block": "cycling.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "It has that little dial in the back, right?",
-   "est_sec": 2.89,
-   "gap_before": 0.68,
+   "gap_before": 1.43,
    "event": "distractor",
    "kind": "friend_question",
-   "block": "cycling.side1"
+   "block": "restaurant_choice.side1"
   },
   {
    "speaker": "friend",
-   "text": "Yeah, just tighten it. It's on the hook by the door.",
-   "est_sec": 3.51,
-   "gap_before": 0.6,
-   "block": "cycling.side1"
+   "text": "We had sushi on Tuesday. Burgers?",
+   "est_sec": 1.96,
+   "gap_before": 1.19,
+   "block": "restaurant_choice.side1"
   },
   {
    "speaker": "user",
-   "text": "Thanks, I'll order a new one tonight.",
-   "est_sec": 2.27,
-   "gap_before": 1.99,
-   "block": "cycling.side1"
+   "text": "Okay, but not the place with the endless line.",
+   "est_sec": 2.89,
+   "gap_before": 0.8,
+   "block": "restaurant_choice.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "What about the new one on Elm Street? I heard the fries are amazing.",
+   "est_sec": 4.44,
+   "gap_before": 0.99,
+   "block": "restaurant_choice.side1"
   },
   {
    "speaker": "user",
-   "text": "I'm here, I'm here, sorry I'm late.",
-   "est_sec": 2.27,
-   "gap_before": 0.92,
+   "text": "Do they take reservations?",
+   "est_sec": 1.34,
+   "gap_before": 1.25,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "restaurant_choice.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "No idea. Let's just go early, like six.",
+   "est_sec": 2.58,
+   "gap_before": 1.14,
+   "block": "restaurant_choice.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm done, you can have the bathroom.",
+   "est_sec": 2.58,
+   "gap_before": 0.77,
    "event": "distractor",
    "kind": "near_miss",
-   "phrasing": "dn_18"
+   "phrasing": "dn_12"
   },
   {
    "speaker": "friend",
-   "text": "No worries, we just started.",
-   "est_sec": 1.65,
-   "gap_before": 2.76,
-   "phrasing": "dn_18"
+   "text": "Thanks.",
+   "est_sec": 0.41,
+   "gap_before": 0.75,
+   "phrasing": "dn_12"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'm all yours.",
+   "text": "Anyway, sorry, go on.",
    "est_sec": 1.34,
-   "gap_before": 1.4,
+   "gap_before": 0.75,
    "event": "return_cue",
    "kind": "implicit",
-   "phrasing": "implicit_03"
+   "phrasing": "implicit_08"
   },
   {
    "speaker": "moshi",
-   "text": "Right. Still need to book for the anniversary. Which style?",
-   "est_sec": 3.2,
-   "gap_before": 0.54,
+   "text": "Right. So, who's marrying you two?",
+   "est_sec": 1.96,
+   "gap_before": 1.93,
    "role": "resume",
-   "block": "restaurant_choice.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Fancy. Let's make it special this year.",
-   "est_sec": 2.27,
-   "gap_before": 1.37,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Lovely. Call today and mention it's an anniversary, some places add a little dessert.",
-   "est_sec": 4.44,
-   "gap_before": 1.14,
-   "role": "followup",
-   "block": "restaurant_choice.ctx1",
+   "block": "wedding_planning.ctx19",
    "reference_only": true
   }
  ],

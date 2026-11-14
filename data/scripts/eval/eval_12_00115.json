@@ -7,122 +7,163 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
- "conditions": [],
- "topics": [
-  "podcasts"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension",
+  "self_talk"
  ],
- "reading": {
-  "material": "text message",
-  "sec": 17.1
+ "topics": [
+  "cycling"
+ ],
+ "wait_sec": 30,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 2.31
  },
- "topic": "podcasts",
+ "deadline": {
+  "after_turn": 7,
+  "sec": 10
+ },
+ "topic": "cycling",
  "voices": {
-  "user": "732ea755bd9e446eb31dc79966b50428",
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_12",
-  "read_instr_07",
-  "read_cue_07"
+  "greet_12",
+  "greet_ans_18",
+  "think_instr_03",
+  "self_12",
+  "self_12",
+  "extension_05"
  ],
  "block_ids": [
-  "podcasts.ctx2"
+  "cycling.ctx10"
  ],
- "est_total_sec": 51.66,
- "est_speech_sec": 27.87,
+ "est_total_sec": 71.92,
+ "est_speech_sec": 28.69,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.66,
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.78,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Okay, I guess.",
+   "text": "I'm doing great.",
    "est_sec": 1.03,
-   "gap_before": 0.37,
+   "gap_before": 0.63,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_12"
+   "phrasing": "greet_ans_18"
   },
   {
    "speaker": "user",
-   "text": "My friend and I want to start our own podcast.",
-   "est_sec": 3.2,
-   "gap_before": 0.21,
+   "text": "Every time I ride more than an hour, my backside is in agony.",
+   "est_sec": 4.13,
+   "gap_before": 0.49,
    "event": "ordinary_request",
-   "block": "podcasts.ctx2"
+   "block": "cycling.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "Fun! What would it be about? Having a clear theme makes it much easier to find listeners.",
-   "est_sec": 5.37,
-   "gap_before": 0.81,
+   "text": "Ah, the classic. Would you start with proper padded shorts, or try a different saddle first?",
+   "est_sec": 5.06,
+   "gap_before": 0.78,
    "role": "reply",
-   "block": "podcasts.ctx2",
+   "block": "cycling.ctx10",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hold on, my sister texted me. Let me read it before you say anything.",
-   "est_sec": 4.44,
-   "gap_before": 1.67,
+   "text": "Hmm, I need thirty seconds to think. Ask me again after that.",
+   "est_sec": 3.82,
+   "gap_before": 0.75,
    "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_07"
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_03"
   },
   {
    "speaker": "user",
-   "text": "Okay, finished the letter.",
-   "est_sec": 1.34,
+   "text": "Hmm, maybe.",
+   "est_sec": 0.72,
    "anchor": {
     "turn": 4,
-    "offset": 17.1
+    "offset": 4.34
    },
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "read_cue_07"
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, maybe.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 20.07
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, give me another ten seconds.",
+   "est_sec": 2.27,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_05",
+   "anchor": {
+    "turn": 4,
+    "offset": 27.69
+   }
   },
   {
    "speaker": "moshi",
-   "text": "Okay, all read? We were brainstorming a theme for your new podcast.",
-   "est_sec": 3.82,
-   "gap_before": 0.49,
+   "text": "Which first, shorts or saddle?",
+   "est_sec": 1.65,
    "role": "resume",
-   "block": "podcasts.ctx2",
+   "block": "cycling.ctx10",
+   "anchor": {
+    "turn": 7,
+    "offset": 10.22
+   },
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Maybe local food, trying a new restaurant in town each week.",
-   "est_sec": 3.51,
-   "gap_before": 0.58,
+   "text": "Saddle. Mine feels like a brick.",
+   "est_sec": 1.96,
+   "gap_before": 0.79,
    "event": "ordinary_request",
-   "block": "podcasts.ctx2"
+   "block": "cycling.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "Nice, very focused. Local businesses might even help promote it.",
-   "est_sec": 3.2,
-   "gap_before": 0.4,
+   "text": "Then get your sit bones measured at a bike shop, saddle width matters more than padding.",
+   "est_sec": 5.06,
+   "gap_before": 1.04,
    "role": "followup",
-   "block": "podcasts.ctx2",
+   "block": "cycling.ctx10",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading"
+  "familiar_type",
+  "extension"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

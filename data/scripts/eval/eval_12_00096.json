@@ -7,161 +7,153 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [
-  "extension",
-  "self_talk"
+  "wait_like"
  ],
  "topics": [
-  "podcasts"
+  "laptop_buying"
  ],
- "wait_sec": 30,
- "extension": {
-  "extra_sec": 10,
-  "said_before_deadline_sec": 1.64
- },
- "deadline": {
-  "after_turn": 7,
-  "sec": 10
- },
- "topic": "podcasts",
+ "topic": "laptop_buying",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_03",
-  "think_instr_21",
-  "self_27",
-  "self_18",
-  "extension_03"
+  "greet_24",
+  "greet_ans_15",
+  "waitlike_12"
  ],
  "block_ids": [
-  "podcasts.ctx1"
+  "laptop_buying.dlg2"
  ],
- "est_total_sec": 76.64,
- "est_speech_sec": 30.24,
+ "est_total_sec": 58.82,
+ "est_speech_sec": 44.08,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.72,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.79,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Doing okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.31,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_03"
-  },
-  {
-   "speaker": "user",
-   "text": "I need a new podcast for my drive to work.",
-   "est_sec": 3.2,
-   "gap_before": 0.29,
-   "event": "ordinary_request",
-   "block": "podcasts.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "How long is the drive, and are you in the mood for true crime, comedy, or something you'd actually learn from?",
-   "est_sec": 6.61,
-   "gap_before": 0.9,
-   "role": "reply",
-   "block": "podcasts.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, let me think for thirty seconds. Ask me again after that.",
-   "est_sec": 3.82,
-   "gap_before": 2.24,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 30,
-   "phrasing": "think_instr_21"
-  },
-  {
-   "speaker": "user",
-   "text": "Huh, interesting.",
-   "est_sec": 0.72,
-   "anchor": {
-    "turn": 4,
-    "offset": 15.15
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_27"
-  },
-  {
-   "speaker": "user",
-   "text": "Mmm, yeah, maybe that.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 24.49
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_18"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, ten more seconds please.",
+   "text": "I'm fine, thanks for asking.",
    "est_sec": 1.65,
-   "event": "extension",
-   "extra_sec": 10,
-   "phrasing": "extension_03",
-   "anchor": {
-    "turn": 4,
-    "offset": 28.36
-   }
+   "gap_before": 0.67,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it worth getting a touchscreen laptop?",
+   "est_sec": 2.27,
+   "gap_before": 0.33,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg2"
   },
   {
    "speaker": "moshi",
-   "text": "Time's up. Which kind of podcast for the drive?",
-   "est_sec": 2.89,
-   "role": "resume",
-   "block": "podcasts.ctx1",
-   "anchor": {
-    "turn": 7,
-    "offset": 10.34
-   },
+   "text": "It depends. If you like drawing or taking handwritten notes, yes. For typing and browsing, most people barely use it.",
+   "est_sec": 6.3,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "laptop_buying.dlg2",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Comedy, please. Mornings are rough enough.",
-   "est_sec": 1.96,
-   "gap_before": 2.9,
+   "text": "I do take a lot of notes in meetings.",
+   "est_sec": 2.89,
+   "gap_before": 1.16,
    "event": "ordinary_request",
-   "block": "podcasts.ctx1"
+   "block": "laptop_buying.dlg2"
   },
   {
    "speaker": "moshi",
-   "text": "Fair. Look for a chatty improv or panel show, the episodes are easy to jump into.",
+   "text": "Then a two in one with a stylus could be really handy. You can fold it flat like a notepad.",
+   "est_sec": 6.3,
+   "gap_before": 0.72,
+   "role": "reply",
+   "block": "laptop_buying.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, that can't be right.",
+   "est_sec": 1.65,
+   "gap_before": 0.88,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_12",
+   "block": "laptop_buying.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'm fairly sure about it, but I could be wrong. What sounds off to you?",
+   "est_sec": 4.75,
+   "gap_before": 0.71,
+   "role": "reply",
+   "block": "laptop_buying.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Do those break more easily, with the",
+   "est_sec": 2.27,
+   "gap_before": 1.1,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "laptop_buying.dlg2"
+  },
+  {
+   "speaker": "user",
+   "text": "folding hinge and everything?",
+   "est_sec": 1.34,
+   "gap_before": 2.0,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good ones are pretty sturdy these days. Just read reviews about the hinge before you buy.",
    "est_sec": 5.06,
-   "gap_before": 0.9,
-   "role": "followup",
-   "block": "podcasts.ctx1",
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "laptop_buying.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "And does the touchscreen drain the battery?",
+   "est_sec": 2.27,
+   "gap_before": 1.8,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A little, but not much. The screen brightness matters a lot more than the touch part.",
+   "est_sec": 5.06,
+   "gap_before": 1.74,
+   "role": "reply",
+   "block": "laptop_buying.dlg2",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

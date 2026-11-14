@@ -7,120 +7,118 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "board_games"
+  "birthday_party"
  ],
- "topic": "board_games",
+ "topic": "birthday_party",
  "voices": {
-  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "user": "676f1654c4f747a69a5921ad94886fa1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_19"
+  "greet_05",
+  "greet_ans_07",
+  "describe_instr_19",
+  "ack_03",
+  "describe_cue_11"
  ],
  "block_ids": [
-  "board_games.dlg4"
+  "birthday_party.opt5"
  ],
- "est_total_sec": 49.3,
- "est_speech_sec": 38.3,
+ "est_total_sec": 53.74,
+ "est_speech_sec": 41.61,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
+   "text": "Hi, how have you been?",
    "est_sec": 1.65,
-   "gap_before": 0.47,
+   "gap_before": 0.73,
    "role": "greeting",
-   "phrasing": "greet_02"
+   "phrasing": "greet_05"
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Just got home.",
-   "est_sec": 1.65,
-   "gap_before": 0.35,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_19"
-  },
-  {
-   "speaker": "user",
-   "text": "I want a game I can play with my grandkids. They're four and six.",
-   "est_sec": 4.44,
-   "gap_before": 0.26,
-   "event": "ordinary_request",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Wonderful. Outfoxed is a sweet cooperative game for that age, everyone works together to catch a sneaky fox.",
-   "est_sec": 5.68,
-   "gap_before": 0.69,
-   "role": "reply",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "The four year old can't read yet.",
-   "est_sec": 2.27,
-   "gap_before": 0.92,
-   "event": "ordinary_request",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's fine, it uses pictures only. Another favorite is Hoot Owl Hoot, which is all colors.",
-   "est_sec": 5.06,
-   "gap_before": 0.86,
-   "role": "reply",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "I used to play",
-   "est_sec": 1.34,
-   "gap_before": 0.94,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "snakes and ladders with my kids. Is that still good?",
-   "est_sec": 3.2,
-   "gap_before": 2.21,
-   "event": "ordinary_request",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It's still great for counting practice. It's pure luck though, so mix it with one where they make choices.",
-   "est_sec": 5.99,
-   "gap_before": 0.53,
-   "role": "reply",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll get the owl one then.",
+   "text": "Honestly, a little stressed, but okay.",
    "est_sec": 1.96,
-   "gap_before": 1.01,
-   "event": "ordinary_request",
-   "block": "board_games.dlg4"
+   "gap_before": 0.46,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm turning twenty five and I've got three ideas for the night, but I keep flip flopping.",
+   "est_sec": 5.37,
+   "gap_before": 0.43,
+   "block": "birthday_party.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Hear me out on all the options before you comment.",
+   "est_sec": 3.2,
+   "gap_before": 0.63,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_19"
   },
   {
    "speaker": "moshi",
-   "text": "Lovely. Games for that age usually last about fifteen minutes, just right for little attention spans.",
-   "est_sec": 5.06,
-   "gap_before": 1.26,
-   "role": "reply",
-   "block": "board_games.dlg4"
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.2,
+   "role": "ack",
+   "phrasing": "ack_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Karaoke in a private booth with about ten friends and way too many snacks.",
+   "est_sec": 4.44,
+   "gap_before": 1.29,
+   "block": "birthday_party.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A rooftop bar downtown, more grown up, people just drop by over the evening.",
+   "est_sec": 4.44,
+   "gap_before": 2.13,
+   "block": "birthday_party.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a house party at mine with a playlist everyone adds to beforehand.",
+   "est_sec": 4.13,
+   "gap_before": 2.58,
+   "block": "birthday_party.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "And that's the last one. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 1.07,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you want a night you'll laugh about later, karaoke wins. If you'd rather lots of people pass through without pressure, the rooftop bar suits that. The house party is lovely but you'll spend half of it tidying cups.",
+   "est_sec": 12.19,
+   "gap_before": 1.11,
+   "role": "resume",
+   "block": "birthday_party.opt5"
   }
  ]
 }

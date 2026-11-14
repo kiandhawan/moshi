@@ -7,133 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "early_end",
-  "self_talk"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "photography"
+  "video_games"
  ],
- "wait_sec": 60,
- "early_end": {
-  "after_sec": 27.55,
-  "direct": false
- },
- "topic": "photography",
+ "topic": "video_games",
  "voices": {
-  "user": "6d7a45828f6a432c9233cd93bb93e5be",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_08",
-  "greet_ans_22",
-  "think_instr_16",
-  "ack_10",
-  "self_11",
-  "early_end_05"
+  "greet_14",
+  "greet_ans_14"
  ],
  "block_ids": [
-  "photography.ctx3"
+  "video_games.dlg1"
  ],
- "est_total_sec": 61.04,
- "est_speech_sec": 28.28,
+ "est_total_sec": 52.38,
+ "est_speech_sec": 40.78,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there, how are you feeling today?",
-   "est_sec": 2.27,
-   "gap_before": 0.77,
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.57,
    "role": "greeting",
-   "phrasing": "greet_08"
+   "phrasing": "greet_14"
   },
   {
    "speaker": "user",
-   "text": "Pretty relaxed today.",
+   "text": "Hanging in there.",
    "est_sec": 1.03,
-   "gap_before": 0.63,
+   "gap_before": 0.82,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_22"
+   "phrasing": "greet_ans_14"
   },
   {
    "speaker": "user",
-   "text": "I have something like twenty thousand photos and they're a total mess.",
-   "est_sec": 3.82,
-   "gap_before": 0.56,
-   "event": "ordinary_request",
-   "block": "photography.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Let's tame them. Would you rather organize them by year, or by events like trips and birthdays?",
-   "est_sec": 5.37,
-   "gap_before": 0.98,
-   "role": "reply",
-   "block": "photography.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Can I have sixty seconds to think? Ask me again after.",
-   "est_sec": 3.51,
-   "gap_before": 1.97,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 60,
-   "phrasing": "think_instr_16"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, no rush.",
-   "est_sec": 1.03,
-   "gap_before": 0.32,
-   "role": "ack",
-   "phrasing": "ack_10"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, pros and cons.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 13.17
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Got it, I don't need the full time.",
-   "est_sec": 2.58,
-   "anchor": {
-    "turn": 4,
-    "offset": 27.55
-   },
-   "event": "return_cue",
-   "kind": "early_end",
-   "phrasing": "early_end_05"
-  },
-  {
-   "speaker": "user",
-   "text": "By event, I think. That's how I remember things.",
-   "est_sec": 2.89,
+   "text": "Can you recommend a game I could play with my partner? She doesn't really play games.",
+   "est_sec": 5.06,
    "gap_before": 0.53,
    "event": "ordinary_request",
-   "block": "photography.ctx3"
+   "block": "video_games.dlg1"
   },
   {
    "speaker": "moshi",
-   "text": "Nice. Start each folder name with the year so they still sort in order.",
-   "est_sec": 4.44,
-   "gap_before": 0.64,
-   "role": "followup",
-   "block": "photography.ctx3"
+   "text": "Co-op puzzle games are great for that. There are lovely ones where you each control a character and have to work together.",
+   "est_sec": 6.92,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "video_games.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "She gets stressed with anything",
+   "est_sec": 1.65,
+   "gap_before": 0.65,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "video_games.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "too fast.",
+   "est_sec": 0.72,
+   "gap_before": 2.41,
+   "event": "ordinary_request",
+   "block": "video_games.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then avoid anything with timers. A cozy building or cooking game where nobody can really lose might suit her better.",
+   "est_sec": 6.3,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "video_games.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "Cooking games are chaotic though, aren't they?",
+   "est_sec": 2.27,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "video_games.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Some are very chaotic, yes. Look for a relaxed one, or a point and click adventure where you solve things at your own pace.",
+   "est_sec": 7.54,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "video_games.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "Point and click sounds good. We could just chat while we play.",
+   "est_sec": 3.82,
+   "gap_before": 1.43,
+   "event": "ordinary_request",
+   "block": "video_games.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exactly. It's more like reading a story together than playing a game.",
+   "est_sec": 3.82,
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "video_games.dlg1"
   }
  ]
 }

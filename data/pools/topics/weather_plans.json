@@ -1,160 +1,1877 @@
 {
-  "topic": "weather_plans",
-  "contexts": [
+ "topic": "weather_plans",
+ "contexts": [
+  {
+   "id": "weather_plans.ctx1",
+   "turns": [
     {
-      "id": "weather_plans.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "We planned a barbecue on Saturday, but now they're saying rain in the afternoon."},
-        {"speaker": "moshi", "text": "That's annoying. You could move it to the morning, or keep the time and set up a canopy. What do you think?"}
-      ],
-      "pending": "move the barbecue earlier or keep it and use a canopy",
-      "think_reask": [
-        "So, for the barbecue, earlier in the day or a canopy?",
-        "Okay, have you decided? Move it to the morning or stick it out under a canopy?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were working out what to do about Saturday's barbecue and the rain.",
-        "Hi again. Any decision on the barbecue, earlier start or canopy?"
-      ],
-      "endings": [
-        {"user": "Let's move it to late morning. Brunch barbecue!", "moshi": "Love it. Send a quick message to everyone today so they can plan around it."},
-        {"user": "We'll keep the time and borrow my neighbor's canopy.", "moshi": "Good plan. Set it up early and stake it down well in case the wind picks up."}
-      ]
+     "speaker": "user",
+     "text": "We planned a barbecue on Saturday, but now they're saying rain in the afternoon."
     },
     {
-      "id": "weather_plans.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "It's supposed to be really hot tomorrow."},
-        {"speaker": "moshi", "text": "How hot are we talking?"},
-        {"speaker": "user", "text": "Close to a hundred, and I promised the kids an outing."},
-        {"speaker": "moshi", "text": "Then maybe the pool, or somewhere indoors like a museum. Which would they enjoy more?"}
-      ],
-      "pending": "pool or an indoor outing on a hot day",
-      "think_reask": [
-        "So, pool day or a cool museum for the kids tomorrow?",
-        "Alright, which outing sounds better for the heat, the pool or indoors?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing between the pool and an indoor outing for the hot day.",
-        "There you are. Still deciding what to do with the kids in the heat?"
-      ],
-      "endings": [
-        {"user": "The pool, for sure. They'd never forgive me otherwise.", "moshi": "Go in the morning before it gets crowded, and bring lots of sunscreen and water."},
-        {"user": "Museum. My youngest burns way too easily.", "moshi": "Sensible. Many museums have kids' areas, and you'll all stay nice and cool."}
-      ]
-    },
-    {
-      "id": "weather_plans.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "There's a snowstorm coming Thursday night and I'm supposed to drive to my sister's on Friday."},
-        {"speaker": "moshi", "text": "That could make the roads rough. Would you rather leave Thursday afternoon before it hits, or wait and go Saturday?"}
-      ],
-      "pending": "leave before the storm or wait until Saturday",
-      "think_reask": [
-        "So, are you leaving early on Thursday or holding off until Saturday?",
-        "Time's up. What's the plan for the drive to your sister's?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were deciding whether you beat the storm Thursday or wait until Saturday.",
-        "Hi again. Any thoughts on when to drive to your sister's?"
-      ],
-      "endings": [
-        {"user": "I'll leave Thursday right after lunch.", "moshi": "Good idea. Fill up the tank and pack a blanket and snacks, just in case traffic slows down."},
-        {"user": "Saturday. I don't want to rush.", "moshi": "That's the safer choice. Give the plows a day to clear things and check the road conditions before you go."}
-      ]
+     "speaker": "moshi",
+     "text": "That's annoying. You could move it to the morning, or keep the time and set up a canopy. What do you think?"
     }
-  ],
-  "side_conversations": [
-    {"id": "weather_plans.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you see the forecast for tomorrow?"},
-      {"speaker": "friend", "text": "Yeah, thunderstorms after three."},
-      {"speaker": "user", "text": "Ugh. Do you still want to do the hike?"},
-      {"speaker": "friend", "text": "We could start really early and be down by noon."},
-      {"speaker": "user", "text": "How early is really early?"},
-      {"speaker": "friend", "text": "Like leave the house at six."},
-      {"speaker": "user", "text": "Fine, but you're making the coffee."}
-    ]},
-    {"id": "weather_plans.side2", "turns": [
-      {"speaker": "user", "text": "Should we bring the patio chairs inside? It's getting really windy."},
-      {"speaker": "friend", "text": "Probably. One of them blew into the fence last time."},
-      {"speaker": "user", "text": "Right, I forgot about that. Can you grab the cushions?"},
-      {"speaker": "friend", "text": "Sure. Where do you want them, the garage?"},
-      {"speaker": "user", "text": "Yeah, on the shelf by the bikes."}
-    ]},
-    {"id": "weather_plans.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, is it still raining out there?"},
-      {"speaker": "friend", "text": "Just drizzling now. The sky looks lighter over the hills."},
-      {"speaker": "user", "text": "Do you think it'll clear up in time for the market?"},
-      {"speaker": "friend", "text": "Maybe. If not, we can just take umbrellas. It's only a ten minute walk."},
-      {"speaker": "user", "text": "True. I really want those peaches before they sell out."},
-      {"speaker": "friend", "text": "Then let's not wait too long. Grab your jacket."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "weather_plans.dlg1", "turns": [
-      {"speaker": "user", "text": "I'm painting the fence this week. What weather do I need for that?"},
-      {"speaker": "moshi", "text": "Ideally a dry day that's mild, not too hot and not freezing. Most paints also need a few hours without rain after you finish."},
-      {"speaker": "user", "text": "What if it rains the next day?"},
-      {"speaker": "moshi", "text": "Usually that's fine. Check the can, many exterior paints are rain resistant after a few hours of drying."},
-      {"speaker": "user", "text": "And is direct sun bad? The fence gets / pretty much full sun all afternoon."},
-      {"speaker": "moshi", "text": "Strong sun can make paint dry too fast and leave marks. Paint that side in the morning while it's still shaded."},
-      {"speaker": "user", "text": "Morning works. Wednesday looks dry so far."},
-      {"speaker": "moshi", "text": "Then Wednesday morning it is. Just wait until any dew on the wood has dried off before you start."}
-    ]},
-    {"id": "weather_plans.dlg2", "turns": [
-      {"speaker": "user", "text": "What should I pack for a weekend where it might be sunny or might pour?"},
-      {"speaker": "moshi", "text": "Layers are your friend. A t-shirt, a warm sweater and a light waterproof jacket cover most situations."},
-      {"speaker": "user", "text": "What about shoes? I only want to bring one pair."},
-      {"speaker": "moshi", "text": "Then pick something comfortable that can handle getting wet, like trail runners or water resistant sneakers."},
-      {"speaker": "user", "text": "Should I bother with an umbrella or / is the jacket enough?"},
-      {"speaker": "moshi", "text": "If the jacket has a hood, it's usually enough. A small folding umbrella is nice if you'll be walking around a city."},
-      {"speaker": "user", "text": "We'll be in a city, mostly."},
-      {"speaker": "moshi", "text": "Then toss the umbrella in your bag. It barely takes up any space."}
-    ]},
-    {"id": "weather_plans.dlg3", "turns": [
-      {"speaker": "user", "text": "My running club meets outside at six in the morning. It's going to be below freezing all week."},
-      {"speaker": "moshi", "text": "Running in the cold is fine with the right gear. Wear a base layer that wicks sweat, plus gloves and a hat."},
-      {"speaker": "user", "text": "I always feel freezing for the first ten minutes."},
-      {"speaker": "moshi", "text": "That's normal. Dress as if it's about ten degrees warmer than it is, because you'll heat up quickly."},
-      {"speaker": "user", "text": "What about ice on the paths?"},
-      {"speaker": "moshi", "text": "That's the real risk. Shorten your stride, slow down on corners, and consider slip-on traction cleats."},
-      {"speaker": "user", "text": "Maybe I'll just / no, I'll still go, I don't want to lose my streak."},
-      {"speaker": "moshi", "text": "Good for you. Just warm up indoors for a few minutes first so your muscles aren't cold."}
-    ]},
-    {"id": "weather_plans.dlg4", "turns": [
-      {"speaker": "user", "text": "Is it a good idea to plant tomatoes this weekend? It's been warm."},
-      {"speaker": "moshi", "text": "It depends on the nights. Tomatoes don't like it when nights drop much below fifty degrees."},
-      {"speaker": "user", "text": "The forecast says one more cold night next Tuesday."},
-      {"speaker": "moshi", "text": "Then you could plant them and cover them that night with a sheet or a bucket. Or just wait a week."},
-      {"speaker": "user", "text": "I'm impatient, I want to plant them now / but I don't want to lose them."},
-      {"speaker": "moshi", "text": "Plant them now and set a reminder for Tuesday evening to cover them. That's a fair compromise."},
-      {"speaker": "user", "text": "Would an old blanket work?"},
-      {"speaker": "moshi", "text": "Yes, just take it off in the morning so the plants get light and don't overheat."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "weather_plans.opt1",
-     "lead_in": "It might rain on Saturday and we need to pick a plan for the kids.",
-     "options": [
-       "The first idea is the zoo, which is fun but mostly outdoors.",
-       "Then there's the science museum, all indoors, but it gets really crowded on rainy days.",
-       "And the last one is staying in with a fort, board games and a movie marathon."
-     ],
-     "moshi_comment": [
-       "The science museum is safe from the rain, but expect crowds since everyone else will have the same idea. The zoo could be great if the rain holds off, and it might even be quieter. Staying in is cozy and cheap, but kids can get restless.",
-       "How old are the kids, and how much do they mind getting a bit wet? If they're fine in raincoats, the zoo might be surprisingly fun. Otherwise, go early to the museum to beat the crowds."
-     ]},
-    {"id": "weather_plans.opt2",
-     "lead_in": "There's a heat wave coming and I'm trying to figure out what to do on my day off.",
-     "options": [
-       "One option is going to the lake, but it's an hour drive and the beach has no shade.",
-       "Another is spending the afternoon at the mall, which is boring but at least air conditioned.",
-       "Option three is going to the public pool in the morning before it gets too hot.",
-       "And the last one is staying home with the fan on and catching up on my shows."
-     ],
-     "moshi_comment": [
-       "The morning pool trip sounds smart, you get to swim and you're home before the worst of the heat. The lake is lovely, but no shade in a heat wave can be rough. The mall is a fine backup if you need to cool off in the afternoon.",
-       "Do you have a beach umbrella? If you do, the lake could be great. If not, I'd do the pool in the morning and then relax at home with your shows."
-     ]}
-  ]
+   ],
+   "pending": "move the barbecue earlier or keep it and use a canopy",
+   "think_reask": [
+    "So, for the barbecue, earlier in the day or a canopy?",
+    "Okay, have you decided? Move it to the morning or stick it out under a canopy?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were working out what to do about Saturday's barbecue and the rain.",
+    "Hi again. Any decision on the barbecue, earlier start or canopy?"
+   ],
+   "endings": [
+    {
+     "user": "Let's move it to late morning. Brunch barbecue!",
+     "moshi": "Love it. Send a quick message to everyone today so they can plan around it."
+    },
+    {
+     "user": "We'll keep the time and borrow my neighbor's canopy.",
+     "moshi": "Good plan. Set it up early and stake it down well in case the wind picks up."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's supposed to be really hot tomorrow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How hot are we talking?"
+    },
+    {
+     "speaker": "user",
+     "text": "Close to a hundred, and I promised the kids an outing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then maybe the pool, or somewhere indoors like a museum. Which would they enjoy more?"
+    }
+   ],
+   "pending": "pool or an indoor outing on a hot day",
+   "think_reask": [
+    "So, pool day or a cool museum for the kids tomorrow?",
+    "Alright, which outing sounds better for the heat, the pool or indoors?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing between the pool and an indoor outing for the hot day.",
+    "There you are. Still deciding what to do with the kids in the heat?"
+   ],
+   "endings": [
+    {
+     "user": "The pool, for sure. They'd never forgive me otherwise.",
+     "moshi": "Go in the morning before it gets crowded, and bring lots of sunscreen and water."
+    },
+    {
+     "user": "Museum. My youngest burns way too easily.",
+     "moshi": "Sensible. Many museums have kids' areas, and you'll all stay nice and cool."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a snowstorm coming Thursday night and I'm supposed to drive to my sister's on Friday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That could make the roads rough. Would you rather leave Thursday afternoon before it hits, or wait and go Saturday?"
+    }
+   ],
+   "pending": "leave before the storm or wait until Saturday",
+   "think_reask": [
+    "So, are you leaving early on Thursday or holding off until Saturday?",
+    "Time's up. What's the plan for the drive to your sister's?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were deciding whether you beat the storm Thursday or wait until Saturday.",
+    "Hi again. Any thoughts on when to drive to your sister's?"
+   ],
+   "endings": [
+    {
+     "user": "I'll leave Thursday right after lunch.",
+     "moshi": "Good idea. Fill up the tank and pack a blanket and snacks, just in case traffic slows down."
+    },
+    {
+     "user": "Saturday. I don't want to rush.",
+     "moshi": "That's the safer choice. Give the plows a day to clear things and check the road conditions before you go."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I coach my daughter's football team and there's lightning forecast for Saturday morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lightning and football fields don't mix. Would you cancel the match outright, or push it to the afternoon in case it clears?"
+    }
+   ],
+   "pending": "cancelling the football match or moving it to the afternoon",
+   "think_reask": [
+    "So, Saturday's match. Cancel or try the afternoon?",
+    "Okay, have you decided what to tell the parents?"
+   ],
+   "welcome_back": [
+    "The lightning and the match. Call it off, or move it later?",
+    "Still on Saturday's game. Cancel, or gamble on the afternoon?"
+   ],
+   "endings": [
+    {
+     "user": "Move it to the afternoon. The kids will be gutted otherwise.",
+     "moshi": "Okay. Tell the parents early, and keep the rule that you stop play for half an hour after any thunder."
+    },
+    {
+     "user": "Cancel it. I'm not risking it with twelve kids on an open field.",
+     "moshi": "Sensible. Send the message tonight so families can make other plans, and suggest a makeup date."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Big pile of washing and the sky can't make up its mind."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic. Will you risk hanging it outside, or give up and use the dryer?"
+    }
+   ],
+   "pending": "hanging the washing outside or using the dryer",
+   "think_reask": [
+    "So, the washing. Line or dryer?",
+    "Alright, are you trusting the sky or the tumble dryer?"
+   ],
+   "welcome_back": [
+    "That pile of washing. Outside or dryer?",
+    "So, are you hanging it out, or playing it safe?"
+   ],
+   "endings": [
+    {
+     "user": "Outside. If it rains I'll dash out and grab it.",
+     "moshi": "Fair. Hang the heavy stuff on the line nearest the door, so the quick rescue takes less time."
+    },
+    {
+     "user": "Dryer. I don't have the energy for a rescue mission.",
+     "moshi": "Understood. Do the towels in the dryer and hang the delicate bits on a rack inside, it saves a bit of electricity."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My flight's at seven tomorrow morning and they're forecasting thick fog."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fog can make the roads slow. Would you rather drive extra early and park, or take the first train and not worry about the motorway?"
+    }
+   ],
+   "pending": "driving early in fog or taking the first train to the airport",
+   "think_reask": [
+    "So, drive early in the fog, or take the train?",
+    "Okay, how are you getting to the airport tomorrow?"
+   ],
+   "welcome_back": [
+    "The foggy morning. Drive or train?",
+    "Still sorting tomorrow's trip to the airport. Car or train?"
+   ],
+   "endings": [
+    {
+     "user": "Train. I don't want to crawl along the motorway at five.",
+     "moshi": "Good plan. Check the first departure tonight and set two alarms, early trains don't wait."
+    },
+    {
+     "user": "Drive. The first train gets in too late.",
+     "moshi": "Then leave an extra half hour, use dipped headlights, and keep a long gap. Fog lights only if visibility's really bad."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm organising sports day at the primary school and it's going to be a scorcher."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Kids and heat need some planning. Would you shift the start earlier to beat the heat, or move some events into the hall?"
+    }
+   ],
+   "pending": "starting sports day earlier or moving events into the hall",
+   "think_reask": [
+    "So, early start or indoor events for sports day?",
+    "Any decision on the scorching sports day?"
+   ],
+   "welcome_back": [
+    "Sports day in the heat. Start earlier, or take some of it inside?",
+    "The school sports day. Earlier start, or into the hall?"
+   ],
+   "endings": [
+    {
+     "user": "Earlier start. We'll finish before lunch.",
+     "moshi": "That works well. Have water stations at every event and a shaded area where kids wait their turn."
+    },
+    {
+     "user": "Some events in the hall. The running ones stay outside.",
+     "moshi": "Good mix. Keep the outdoor races short, and remind parents to send hats and sun cream."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We booked a sailing trip for tomorrow but the wind's picking up a lot."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Strong winds can be thrilling or miserable. Are you happy to go anyway with an experienced skipper, or would you rather rebook?"
+    }
+   ],
+   "pending": "going sailing in strong wind or rebooking",
+   "think_reask": [
+    "So, tomorrow's sail. Go for it, or rebook?",
+    "Have you decided about the boat? Brave the wind or wait?"
+   ],
+   "welcome_back": [
+    "The windy sailing trip. Go anyway, or rebook?",
+    "Still on tomorrow's sail. Going, or moving it?"
+   ],
+   "endings": [
+    {
+     "user": "Rebook. My partner gets seasick in a light breeze.",
+     "moshi": "Then definitely move it. Ask the company about a calmer day later in the week."
+    },
+    {
+     "user": "We'll go. The skipper says it'll be a fun ride.",
+     "moshi": "Then trust the skipper. Wear layers, waterproofs and non slip shoes, and take ginger biscuits just in case."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The pavements are like an ice rink this morning and I've got two kids to get to school."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oof. Would you walk carefully, or drive them even though it's only ten minutes on foot?"
+    }
+   ],
+   "pending": "walking the kids to school on ice or driving",
+   "think_reask": [
+    "So, walk on the ice, or take the car?",
+    "Okay, the school run. Feet or wheels today?"
+   ],
+   "welcome_back": [
+    "The icy school run. Walking or driving?",
+    "This morning's ice. Did you decide how to get the kids there?"
+   ],
+   "endings": [
+    {
+     "user": "We'll walk, slowly. The roads are probably worse.",
+     "moshi": "Probably right. Walk like a penguin, small steps, and stick to the gritted paths if you can."
+    },
+    {
+     "user": "Drive. My youngest falls over on a dry day.",
+     "moshi": "Fair. Clear all the windows properly first and go gently, braking takes a lot longer on ice."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a meteor shower tonight but the forecast says cloudy until midnight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Annoying. Would you stay up past midnight and hope it clears, or try again tomorrow night when the sky's meant to be clearer?"
+    }
+   ],
+   "pending": "staying up past midnight for the meteor shower or trying tomorrow night",
+   "think_reask": [
+    "So, late night tonight, or tomorrow when it's clearer?",
+    "Alright, the meteor shower. Tonight or tomorrow?"
+   ],
+   "welcome_back": [
+    "The meteors. Wait up tonight, or try tomorrow?",
+    "Back to stargazing. Tonight after midnight, or the clearer night?"
+   ],
+   "endings": [
+    {
+     "user": "Tonight. Peak night is peak night.",
+     "moshi": "Fair. Set an alarm for midnight, check the sky, and take a blanket and a hot drink out with you."
+    },
+    {
+     "user": "Tomorrow. I'm too old for a midnight vigil.",
+     "moshi": "Sensible. There are usually still plenty of meteors the night after, just fewer per hour."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Storm's due tomorrow evening and my gutters are full of leaves."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That could mean overflow. Will you climb up and clear them yourself today, or call someone in?"
+    }
+   ],
+   "pending": "clearing the gutters yourself or calling someone before the storm",
+   "think_reask": [
+    "So, ladder yourself, or call someone?",
+    "Okay, the gutters. Doing it, or paying for it?"
+   ],
+   "welcome_back": [
+    "Those leafy gutters. Up the ladder yourself, or a pro?",
+    "The storm prep. Who's clearing the gutters?"
+   ],
+   "endings": [
+    {
+     "user": "I'll do it. It's a bungalow, it's not that high.",
+     "moshi": "Fine, but have someone hold the ladder and use gloves, there can be sharp bits in there."
+    },
+    {
+     "user": "Call someone. I'm not great with heights.",
+     "moshi": "Good call. Ring a few today, they'll be busy before a storm. Clear the drains at ground level yourself."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're on holiday at the coast and it's meant to rain every day this week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's rotten luck. Would you ride it out here with indoor plans, or drive inland where it looks drier?"
+    }
+   ],
+   "pending": "staying at the rainy coast or driving inland for drier weather",
+   "think_reask": [
+    "So, stick it out at the coast, or head inland?",
+    "Have you decided? Rainy seaside or drier countryside?"
+   ],
+   "welcome_back": [
+    "The rainy holiday. Stay put or chase the sun inland?",
+    "Still on your soggy week. Coast or inland?"
+   ],
+   "endings": [
+    {
+     "user": "We'll stay. The kids love the rock pools even in the rain.",
+     "moshi": "Good attitude. Waterproofs for everyone and a few indoor backups, like the aquarium or a swimming pool."
+    },
+    {
+     "user": "Inland. A couple of day trips at least.",
+     "moshi": "Nice idea. Check the forecast each morning and pick a town with a castle or a park, so it's worth the drive."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "weather_plans.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you see the forecast for tomorrow?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, thunderstorms after three."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh. Do you still want to do the hike?"
+    },
+    {
+     "speaker": "friend",
+     "text": "We could start really early and be down by noon."
+    },
+    {
+     "speaker": "user",
+     "text": "How early is really early?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Like leave the house at six."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine, but you're making the coffee."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should we bring the patio chairs inside? It's getting really windy."
+    },
+    {
+     "speaker": "friend",
+     "text": "Probably. One of them blew into the fence last time."
+    },
+    {
+     "speaker": "user",
+     "text": "Right, I forgot about that. Can you grab the cushions?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. Where do you want them, the garage?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, on the shelf by the bikes."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, is it still raining out there?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Just drizzling now. The sky looks lighter over the hills."
+    },
+    {
+     "speaker": "user",
+     "text": "Do you think it'll clear up in time for the market?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Maybe. If not, we can just take umbrellas. It's only a ten minute walk."
+    },
+    {
+     "speaker": "user",
+     "text": "True. I really want those peaches before they sell out."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then let's not wait too long. Grab your jacket."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, is that hail? On the skylight?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It sounds like someone's throwing gravel at the house."
+    },
+    {
+     "speaker": "user",
+     "text": "I left my bike outside the front."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's a bike. It'll survive a bit of ice."
+    },
+    {
+     "speaker": "user",
+     "text": "The seat is leather, though. Can you pass me a carrier bag?"
+    },
+    {
+     "speaker": "friend",
+     "text": "You're going out in that? You'll get pelted."
+    },
+    {
+     "speaker": "user",
+     "text": "Ten seconds. Just to cover the seat."
+    },
+    {
+     "speaker": "friend",
+     "text": "Take my coat at least, it's got a hood."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you see? School's closed. Snow day."
+    },
+    {
+     "speaker": "friend",
+     "text": "The kids are going to be unbearable. In a good way."
+    },
+    {
+     "speaker": "user",
+     "text": "Should we take them sledging on the big hill after lunch?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Only if someone shovels the drive first. I can't get the car out."
+    },
+    {
+     "speaker": "user",
+     "text": "Can't the kids help shovel?"
+    },
+    {
+     "speaker": "friend",
+     "text": "They'll throw snow at each other for ten minutes and then demand hot chocolate."
+    },
+    {
+     "speaker": "user",
+     "text": "That's still ten minutes of shovelling."
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine. Kids on shovel duty, then sledging, then hot chocolate. Deal."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can we put the fan on? It's like an oven in here."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's so noisy though. I'll never sleep."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll never sleep without it. I'm literally sticking to the sheets."
+    },
+    {
+     "speaker": "friend",
+     "text": "What if we open the windows instead?"
+    },
+    {
+     "speaker": "user",
+     "text": "Then the mosquitoes come in. You remember last week?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Okay, fan on, but point it at you, not me."
+    },
+    {
+     "speaker": "user",
+     "text": "Deal. And I'll put a bowl of ice in front of it."
+    },
+    {
+     "speaker": "friend",
+     "text": "Does that actually work, or is that one of your internet tricks?"
+    },
+    {
+     "speaker": "user",
+     "text": "We're about to find out."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "weather_plans.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm painting the fence this week. What weather do I need for that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ideally a dry day that's mild, not too hot and not freezing. Most paints also need a few hours without rain after you finish."
+    },
+    {
+     "speaker": "user",
+     "text": "What if it rains the next day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually that's fine. Check the can, many exterior paints are rain resistant after a few hours of drying."
+    },
+    {
+     "speaker": "user",
+     "text": "And is direct sun bad? The fence gets / pretty much full sun all afternoon."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Strong sun can make paint dry too fast and leave marks. Paint that side in the morning while it's still shaded."
+    },
+    {
+     "speaker": "user",
+     "text": "Morning works. Wednesday looks dry so far."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then Wednesday morning it is. Just wait until any dew on the wood has dried off before you start."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What should I pack for a weekend where it might be sunny or might pour?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Layers are your friend. A t-shirt, a warm sweater and a light waterproof jacket cover most situations."
+    },
+    {
+     "speaker": "user",
+     "text": "What about shoes? I only want to bring one pair."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then pick something comfortable that can handle getting wet, like trail runners or water resistant sneakers."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I bother with an umbrella or / is the jacket enough?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If the jacket has a hood, it's usually enough. A small folding umbrella is nice if you'll be walking around a city."
+    },
+    {
+     "speaker": "user",
+     "text": "We'll be in a city, mostly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then toss the umbrella in your bag. It barely takes up any space."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My running club meets outside at six in the morning. It's going to be below freezing all week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Running in the cold is fine with the right gear. Wear a base layer that wicks sweat, plus gloves and a hat."
+    },
+    {
+     "speaker": "user",
+     "text": "I always feel freezing for the first ten minutes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's normal. Dress as if it's about ten degrees warmer than it is, because you'll heat up quickly."
+    },
+    {
+     "speaker": "user",
+     "text": "What about ice on the paths?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the real risk. Shorten your stride, slow down on corners, and consider slip-on traction cleats."
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe I'll just / no, I'll still go, I don't want to lose my streak."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good for you. Just warm up indoors for a few minutes first so your muscles aren't cold."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it a good idea to plant tomatoes this weekend? It's been warm."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends on the nights. Tomatoes don't like it when nights drop much below fifty degrees."
+    },
+    {
+     "speaker": "user",
+     "text": "The forecast says one more cold night next Tuesday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you could plant them and cover them that night with a sheet or a bucket. Or just wait a week."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm impatient, I want to plant them now / but I don't want to lose them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plant them now and set a reminder for Tuesday evening to cover them. That's a fair compromise."
+    },
+    {
+     "speaker": "user",
+     "text": "Would an old blanket work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, just take it off in the morning so the plants get light and don't overheat."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "When the app says sixty percent chance of rain, what does that actually mean?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It roughly means that on days like this, it rains somewhere in the area about six times out of ten."
+    },
+    {
+     "speaker": "user",
+     "text": "So it might not rain on me at all."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Right, it's about the area, not your exact street. It doesn't say how much rain or for how long either."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I cancel my bike ride then? / No, wait, it's a walk, I'm walking."
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a walk, I'd just bring a waterproof. Check the hourly view, it often shows the rain lined up for a few specific hours."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, it says mostly after four."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then go out after lunch and aim to be home by half three. You'll probably stay dry."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My hay fever is awful and I've got an outdoor work event on Thursday. Any tips?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the pollen forecast. Levels are usually highest on warm, dry, windy days, and lower after rain."
+    },
+    {
+     "speaker": "user",
+     "text": "It says high all week. Of course."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then take your antihistamine a few hours before, not when symptoms start. It works better ahead of time."
+    },
+    {
+     "speaker": "user",
+     "text": "What else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wraparound sunglasses help keep pollen out of your eyes, and a bit of balm around your nostrils can trap some of it."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds weird."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It looks normal, nobody will notice. Change clothes and shower when you get home so you don't bring the pollen to bed with you."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I got sunburnt yesterday and it was cloudy the whole time. How?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Clouds block less of the sun's rays than people think, especially thin cloud. You can still burn on a grey day."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh. So I should check something besides the temperature?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, the UV index. It's on most weather apps. Once it's at three or higher, sun protection is a good idea."
+    },
+    {
+     "speaker": "user",
+     "text": "And how high does it go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Around here in summer it can hit seven or eight. Near the equator or up mountains it gets much higher."
+    },
+    {
+     "speaker": "user",
+     "text": "So I need sun cream / even on a cloudy afternoon in the park."
+    },
+    {
+     "speaker": "moshi",
+     "text": "If the UV is high, yes. A hat, sunglasses and sitting in the shade at midday make a big difference too."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Heavy rain warning for tonight and I have to drive home on the motorway. Nervous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Understandable. Slow down, double your gap to the car in front, and use dipped headlights so others see you."
+    },
+    {
+     "speaker": "user",
+     "text": "What about aquaplaning? That freaks me out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "If the steering suddenly feels light, ease off the accelerator, don't brake hard, and keep the wheel straight until the tyres grip again."
+    },
+    {
+     "speaker": "user",
+     "text": "And big puddles?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Avoid them if you can do it safely. If you must go through, go slowly in a low gear, and test your brakes gently afterwards."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I just wait it out?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If it's torrential and you can wait an hour or two, that's often the safest choice. Check the radar, some storms pass quickly."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The forecast says minus two but feels like minus nine. What's the difference?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's wind chill. The wind pulls heat away from your skin faster, so it feels much colder than the thermometer says."
+    },
+    {
+     "speaker": "user",
+     "text": "So I should dress for minus nine."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Especially your face, ears and hands, they're the bits that get bitten first."
+    },
+    {
+     "speaker": "user",
+     "text": "I was going to wear my wool coat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wool is warm, but the wind goes straight through it. A windproof layer on top would help a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Like a rain jacket?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a rain jacket over a warm jumper works brilliantly. Add a hat and gloves, and maybe a scarf over your nose."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why do my two weather apps give totally different forecasts?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They often use different weather models and update at different times. They may also pick a different nearby location for you."
+    },
+    {
+     "speaker": "user",
+     "text": "One says sunny Sunday, one says thunderstorms."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That usually means the forecast is uncertain. A few days out, models can disagree a lot about storms."
+    },
+    {
+     "speaker": "user",
+     "text": "Which one do I trust?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check your national weather service. They have meteorologists looking at several models, not just one."
+    },
+    {
+     "speaker": "user",
+     "text": "I've got a barbecue planned. / Well, my brother's barbecue, but I'm cooking."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then keep both possibilities in mind. Look again on Saturday morning, forecasts the day before are much more reliable."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's going to be super humid tomorrow and I'm meant to do a long run. Good idea?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, but slow down. Sweat doesn't evaporate well in humidity, so your body struggles more to cool off."
+    },
+    {
+     "speaker": "user",
+     "text": "So run slower than usual?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, and don't chase your normal times. Running by feel or heart rate is better on days like that."
+    },
+    {
+     "speaker": "user",
+     "text": "What time's best?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Early morning usually, it's cooler, even if the humidity's still high."
+    },
+    {
+     "speaker": "user",
+     "text": "And water? I usually don't carry any."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tomorrow, I'd carry some, or plan a loop past a tap. Stop if you feel dizzy, sick or stop sweating."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're having friends over in the garden on Sunday. Gusts are forecast. Can I still put the gazebo up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends how strong. Pop up gazebos can turn into kites in quite modest winds."
+    },
+    {
+     "speaker": "user",
+     "text": "The app says gusts up to thirty miles an hour."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's too much for a typical garden gazebo. I'd leave it packed away."
+    },
+    {
+     "speaker": "user",
+     "text": "But what if it rains?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep the gazebo as a plan B and only put it up if the wind drops. Have the back door open so people can step inside."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I tie it down?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you do put it up, weigh every leg with sandbags or water weights and use guy ropes. And take it down if the gusts pick up."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're hiking in the hills and I can hear thunder. What do I do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Head downhill and away from ridges and peaks straight away. Don't shelter under a lone tree."
+    },
+    {
+     "speaker": "user",
+     "text": "We're on a ridge. / Like, right on top of it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then get off it as fast as you safely can. Lower ground with lots of shorter trees is better than open space."
+    },
+    {
+     "speaker": "user",
+     "text": "What if it's right on top of us?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Spread out from each other, keep away from metal fences, and crouch low on your pack if it gets close."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, we're moving."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good. Wait about half an hour after the last thunder before going back up high."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "First winter with a car. What should I keep in it for snow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A scraper, de icer, a small shovel and a blanket are the basics. A phone charger and a torch too."
+    },
+    {
+     "speaker": "user",
+     "text": "A shovel? In my tiny car?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A folding one fits in the boot. If you get stuck, it's a lifesaver."
+    },
+    {
+     "speaker": "user",
+     "text": "What about food?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few cereal bars and some water. If you're stuck in traffic for hours, you'll be glad."
+    },
+    {
+     "speaker": "user",
+     "text": "And tyres?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the tread and the pressure. If you live somewhere hilly or snowy, winter tyres are really worth it."
+    },
+    {
+     "speaker": "user",
+     "text": "My dad says I need a bag of cat litter. / He was very serious about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "He's right. Sprinkle it under the wheels if you're spinning on ice, it gives the tyres grip."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a severe wind warning tonight. What should I do with the garden stuff?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring in anything light, like cushions, plant pots, toys and the bins if you can."
+    },
+    {
+     "speaker": "user",
+     "text": "We have a massive trampoline."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Trampolines are notorious for flying. Either weigh it down with anchor kits or flip it upside down."
+    },
+    {
+     "speaker": "user",
+     "text": "Upside down? Seriously?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, it catches much less wind that way. Some people also take the net off."
+    },
+    {
+     "speaker": "user",
+     "text": "And the shed door keeps blowing open."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tie it or wedge it shut. Park the car away from trees if possible, and check on any elderly neighbours too."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Heatwave this week, and my mum is eighty four and lives alone. I'm worried."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a good thing to worry about. Older people often don't feel thirsty and can overheat without noticing."
+    },
+    {
+     "speaker": "user",
+     "text": "She refuses to turn the fan on, she says it's wasteful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Explain it's just for this week. Curtains closed in the day and windows open at night really help too."
+    },
+    {
+     "speaker": "user",
+     "text": "How often should I check on her?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "At least once a day, by phone or a visit. Ask if she's drinking, and listen for confusion or dizziness."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll drop off some / jelly and fruit, she always eats those."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely idea, both have lots of water. A spray bottle of cool water and a damp flannel on her neck can also help her cool down."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's damp and grey for weeks. How do I dry washing indoors without the flat smelling musty?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Space the clothes out on the rack so air can move between them. Don't cram everything together."
+    },
+    {
+     "speaker": "user",
+     "text": "I've got a small flat and one rack."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then do smaller loads more often. Use the highest spin on your washing machine to get more water out."
+    },
+    {
+     "speaker": "user",
+     "text": "Windows open or closed?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Open a little if you can, or put the rack near an extractor fan. A dehumidifier is even better and dries things fast."
+    },
+    {
+     "speaker": "user",
+     "text": "Are those expensive to run?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Less than a tumble dryer usually. And it'll help stop mould on the walls, which is often the real musty smell."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's pouring all half term. What can I do with two bored kids?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rainy days can still be fun. How about a den building afternoon with sofa cushions and blankets?"
+    },
+    {
+     "speaker": "user",
+     "text": "Done that. Twice."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, a puddle walk then. Proper waterproofs and wellies, and you go out looking for the biggest puddle."
+    },
+    {
+     "speaker": "user",
+     "text": "They would love that. I'd hate it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take a flask of tea and stand under an umbrella. Then home for a warm bath and a film."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything not involving me getting wet?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Indoor treasure hunt with little clues, a baking session, or a trip to the library or a swimming pool. You're wet there too, but on purpose."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Beach day tomorrow. Is there anything about the weather I should check besides sunshine?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The wind and the tide times. A windy beach can feel cold and sandblasting even if it's sunny."
+    },
+    {
+     "speaker": "user",
+     "text": "What wind speed is too much?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Above about fifteen or twenty miles an hour gets unpleasant. A windbreak helps a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "And why the tides?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "At high tide some beaches almost disappear. Low tide is better for rock pools and space to play."
+    },
+    {
+     "speaker": "user",
+     "text": "My kids want to swim / but the sea is freezing this time of year."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick a lifeguarded beach, and get them out before their lips go blue. Bring a hot drink for after."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our front path is a sheet of ice. Salt or grit?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Grit is just salt mixed with sand or small stones. Salt melts the ice, grit also adds some grip."
+    },
+    {
+     "speaker": "user",
+     "text": "I have table salt. Does that work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It does, for a small area. Sprinkle it thinly before the ice forms, it works best that way."
+    },
+    {
+     "speaker": "user",
+     "text": "What about hot water?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Avoid it. It melts the ice for a bit, then refreezes, often even slipperier."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh no, I did that this morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Easy mistake. Scatter some salt on it now and wear shoes with good soles until it's gone."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I sell jam at an outdoor market on Saturdays. Rain's forecast. Should I still go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If it's light showers, people still come, especially regulars. Heavy rain all day is another story."
+    },
+    {
+     "speaker": "user",
+     "text": "My gazebo leaks at the corners."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A cheap tarp over the top or a bit of seam sealer could save you. Keep your stock in plastic boxes under the table."
+    },
+    {
+     "speaker": "user",
+     "text": "Do people buy jam in the rain?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Comfort food sells well on grim days. A little sign saying something like rainy day treats can help."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, I like that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And bring a towel for your jars and a warm hat for you. Standing still in the rain gets cold fast."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The wind is crazy this morning. Do I even bother with an umbrella for the school run?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably not. In strong wind umbrellas just flip inside out or try to take off."
+    },
+    {
+     "speaker": "user",
+     "text": "My son loves his dinosaur umbrella though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe save it for a calm rainy day. Today, a hooded coat for everyone works better."
+    },
+    {
+     "speaker": "user",
+     "text": "He'll be devastated. / He takes his umbrella very seriously."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let him bring it closed, he can hold it like a sword. He still gets to have it."
+    },
+    {
+     "speaker": "user",
+     "text": "That might actually work."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Kids love a compromise that sounds like an adventure. Stay away from trees and building sites on the way too."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've booked a hot air balloon ride for my partner's anniversary. What weather do they need?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Calm and stable. Light winds, no rain, and good visibility. They usually fly just after sunrise or before sunset."
+    },
+    {
+     "speaker": "user",
+     "text": "Why those times?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The air is calmer then. In the middle of the day, the sun heats the ground and makes the air bumpy."
+    },
+    {
+     "speaker": "user",
+     "text": "What if the weather's bad?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They'll cancel and rebook you, often at short notice. It's very common, sometimes several times."
+    },
+    {
+     "speaker": "user",
+     "text": "I wanted it to be a surprise."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then maybe keep the exact day a surprise but tell your partner to keep a few mornings free. Pick a flexible ticket if you can."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have tickets for an outdoor concert and it's meant to pour. What do I wear?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A proper poncho or rain jacket with a hood. Many festivals don't allow umbrellas because they block the view."
+    },
+    {
+     "speaker": "user",
+     "text": "What about shoes? I was going to wear trainers."
+    },
+    {
+     "speaker": "moshi",
+     "text": "If the ground is grass, it'll turn to mud quickly. Old boots or wellies would be much happier."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I bring a bag?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the venue rules, many only allow small clear bags. A dry bag or a zip lock for your phone is a good idea."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I / bring a change of clothes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Leave them in the car or a locker if you can. A dry pair of socks for the trip home feels amazing."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm going sea fishing and someone said the air pressure matters. Is that true?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot of anglers believe it. Fish often seem more active when the pressure is falling, like just before a front comes in."
+    },
+    {
+     "speaker": "user",
+     "text": "And when it's high and steady?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some say fish get a bit lazy then, though clear sunny days can still be good early and late."
+    },
+    {
+     "speaker": "user",
+     "text": "So I should go before the rain?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Possibly, but check the wind and the sea state first. A choppy sea or a big swell is more of a problem than pressure."
+    },
+    {
+     "speaker": "user",
+     "text": "The forecast says a front's coming in Thursday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then Wednesday evening might be a nice window. Just keep an eye on the marine forecast and go out with someone."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's going to drop to minus ten tonight. Will my pipes freeze?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They might, especially any in the loft, garage, or along outside walls. Let's make sure they don't."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep the heating on low through the night, even if you're out. Open the cupboard under the sink so warm air reaches the pipes."
+    },
+    {
+     "speaker": "user",
+     "text": "And outside taps?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Turn them off from inside if you can, and drain them. Cover them with an insulating jacket or wrap them in old towels."
+    },
+    {
+     "speaker": "user",
+     "text": "What if one freezes anyway?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Thaw it slowly with a hairdryer or a hot water bottle, never a flame. And know where your stopcock is in case it bursts."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to catch a beautiful sunset on my evening walk. When's the best time to go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Head out about half an hour before sunset. The light gets warm and golden, and the best colours often come just after the sun dips."
+    },
+    {
+     "speaker": "user",
+     "text": "Does cloud ruin it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not always. Some high, broken cloud often makes sunsets more dramatic, it catches the colour."
+    },
+    {
+     "speaker": "user",
+     "text": "And a completely clear sky?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pretty, but simpler. A thick grey layer on the horizon is the one that usually spoils it."
+    },
+    {
+     "speaker": "user",
+     "text": "There's a hill near me / with a view to the west."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect spot. Check the sunset time in your weather app and bring a torch for the walk back."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Taking a ferry tomorrow and the sea's meant to be rough. I get so seasick."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sorry, that's no fun. Take seasickness tablets an hour or so before boarding, they work better before symptoms start."
+    },
+    {
+     "speaker": "user",
+     "text": "Where should I sit?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "In the middle of the boat and as low down as possible. That's where the movement is smallest."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I eat?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A light, plain meal beforehand helps. An empty stomach can make it worse, and so can greasy food."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look at the horizon if you can, and get some fresh air on deck. Avoid reading or staring at your phone."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm running a half marathon on Sunday and it'll probably be wet and cold."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, layers again. A light, thin rain jacket you can tie around your waist, plus a cap to keep rain out of your eyes."
+    },
+    {
+     "speaker": "user",
+     "text": "A cap? I never run in one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "In the rain it's a game changer. Try it on a short run first."
+    },
+    {
+     "speaker": "user",
+     "text": "What about chafing? It's worse when wet."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use plenty of anti chafe balm in all the usual spots before you set off. Taping nipples helps a lot too."
+    },
+    {
+     "speaker": "user",
+     "text": "And at the start, / while we're waiting?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wear a bin bag with holes for your head and arms, then throw it away when you start. Very glamorous, very effective."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I run a small farm and I need about four dry days in a row to make hay. How do I plan that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look at the longer range forecasts, and check the national weather service rather than just one app."
+    },
+    {
+     "speaker": "user",
+     "text": "They keep changing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, forecasts over three or four days have some uncertainty. Look for a settled high pressure system building in."
+    },
+    {
+     "speaker": "user",
+     "text": "What signs should I look for?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rising pressure, light winds, and a few days in a row with low rain chance. Morning dew drying early is a good local sign."
+    },
+    {
+     "speaker": "user",
+     "text": "My dad used to just sniff the air."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty of old farmers had a good feel for it. Combining his instinct with the modern forecast is probably your best bet."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My train commute is unbearable in the heat. Any tips?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring a big bottle of cold water. Freeze half of it the night before, it'll still be cold by the afternoon."
+    },
+    {
+     "speaker": "user",
+     "text": "That's genius."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wear loose clothes in light fabrics, and if you can, stand near the doors where there's a breeze at each stop."
+    },
+    {
+     "speaker": "user",
+     "text": "I always end up squished in the middle."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try an earlier train if you can. They're often a bit less full and the morning is cooler."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll think about it. / Wait, does the first carriage tend to be emptier?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often the ends of the train are less crowded. And a small handheld fan won't hurt, people will be jealous."
+    }
+   ]
+  },
+  {
+   "id": "weather_plans.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm planning a long walk across the city on Sunday. Forecast says drizzle all day. Lovely."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Drizzle isn't the worst. A light waterproof and decent shoes will keep you comfortable."
+    },
+    {
+     "speaker": "user",
+     "text": "My waterproof is basically a bin bag with sleeves."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then maybe tuck a spare jumper in a bag in case it soaks through. Or treat the old jacket with a waterproof spray."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I plan stops?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, pick a few cafes or covered markets along the route. Little warm breaks make a grey day much nicer."
+    },
+    {
+     "speaker": "user",
+     "text": "Any route tips?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Choose paths along the river or through parks with some cover. Drizzle can make city streets feel really moody and pretty."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "weather_plans.opt1",
+   "lead_in": "It might rain on Saturday and we need to pick a plan for the kids.",
+   "options": [
+    "The first idea is the zoo, which is fun but mostly outdoors.",
+    "Then there's the science museum, all indoors, but it gets really crowded on rainy days.",
+    "And the last one is staying in with a fort, board games and a movie marathon."
+   ],
+   "moshi_comment": [
+    "The science museum is safe from the rain, but expect crowds since everyone else will have the same idea. The zoo could be great if the rain holds off, and it might even be quieter. Staying in is cozy and cheap, but kids can get restless.",
+    "How old are the kids, and how much do they mind getting a bit wet? If they're fine in raincoats, the zoo might be surprisingly fun. Otherwise, go early to the museum to beat the crowds."
+   ]
+  },
+  {
+   "id": "weather_plans.opt2",
+   "lead_in": "There's a heat wave coming and I'm trying to figure out what to do on my day off.",
+   "options": [
+    "One option is going to the lake, but it's an hour drive and the beach has no shade.",
+    "Another is spending the afternoon at the mall, which is boring but at least air conditioned.",
+    "Option three is going to the public pool in the morning before it gets too hot.",
+    "And the last one is staying home with the fan on and catching up on my shows."
+   ],
+   "moshi_comment": [
+    "The morning pool trip sounds smart, you get to swim and you're home before the worst of the heat. The lake is lovely, but no shade in a heat wave can be rough. The mall is a fine backup if you need to cool off in the afternoon.",
+    "Do you have a beach umbrella? If you do, the lake could be great. If not, I'd do the pool in the morning and then relax at home with your shows."
+   ]
+  },
+  {
+   "id": "weather_plans.opt3",
+   "lead_in": "We're probably snowed in all weekend and I need ideas to keep everyone sane.",
+   "options": [
+    "There's a massive jigsaw in the cupboard, a thousand pieces, which would keep us busy but might cause fights.",
+    "We could have a baking marathon, bread, cookies, the lot, as long as we don't run out of flour.",
+    "The kids want to build an igloo in the garden, which sounds amazing until everyone's soaked and freezing.",
+    "Or a full movie day with blankets, popcorn and a film each person picks."
+   ],
+   "moshi_comment": [
+    "Mix them up. An igloo session in the morning while everyone has energy, then warm up with baking, and finish with the movie day. Save the jigsaw for whoever needs some quiet time.",
+    "The igloo is the one they'll remember, so do it while the snow's fresh. The movie day is the easy win for the evening. The jigsaw might be better as a background project people can drop in and out of."
+   ]
+  },
+  {
+   "id": "weather_plans.opt4",
+   "lead_in": "A huge storm's forecast for Wednesday and I'm working out how to prepare.",
+   "options": [
+    "I could buy a little generator in case the power goes, but they're expensive and noisy.",
+    "Or just stock up on torches, batteries, water and tinned food, and ride it out at home.",
+    "My mum lives inland and says we can stay with her, though it's a two hour drive with the kids."
+   ],
+   "moshi_comment": [
+    "Stocking up is a good idea whatever you choose, it's cheap and useful. The generator only makes sense if long power cuts are common where you are. Your mum's place is the safest if the storm looks really serious.",
+    "Check how strong the warnings are. If they're advising people to leave, go to your mum's early, before the roads get bad. If it's just a rough night, torches, water and food at home will see you through."
+   ]
+  },
+  {
+   "id": "weather_plans.opt5",
+   "lead_in": "There's a big storm on my commute day tomorrow and I'm stuck on how to get to work.",
+   "options": [
+    "My usual bus takes forty minutes, but in bad weather it's packed and always late.",
+    "I could drive, which would be warm and dry, but parking near the office costs a fortune.",
+    "Or I could ask my boss if I can work from home, which she allows, though she doesn't love it."
+   ],
+   "moshi_comment": [
+    "Working from home is the safest and least stressful, especially if the storm is really bad. Driving is comfortable but the parking cost and flooded roads might make it a pain. The bus is fine if you're happy to be late.",
+    "If you've got meetings in person, drive and accept the parking fee as a one off. Otherwise just ask your boss to work from home tomorrow, most managers understand on a stormy day."
+   ]
+  },
+  {
+   "id": "weather_plans.opt6",
+   "lead_in": "I've got Friday off and the forecast is weird, so I'm picking what to do.",
+   "options": [
+    "Friday morning's cold but sunny, perfect for a long walk along the river if I go early.",
+    "In the afternoon it turns mild with drizzle, so I could visit the museum I keep putting off.",
+    "And in the evening the wind picks up, but there's an outdoor food market with heaters and covered tables."
+   ],
+   "moshi_comment": [
+    "You could do all three. Walk in the sunny morning, museum when the drizzle starts, then wrap up warm for the market. It sounds like a lovely day.",
+    "If you only pick one, the sunny morning walk is the rarest thing in this forecast, so grab it. The museum works in any weather, so it could wait. The market's fine if you dress for the wind."
+   ]
+  }
+ ]
 }

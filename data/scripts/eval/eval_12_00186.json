@@ -7,28 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "extension"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "camping"
+  "family_visit"
  ],
- "wait_sec": 30,
- "extension": {
-  "extra_sec": 10,
-  "said_before_deadline_sec": 2.72
- },
- "deadline": {
-  "after_turn": 6,
-  "sec": 10
- },
- "topic": "camping",
+ "topic": "family_visit",
  "voices": {
-  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "user": "933563129e564b19a115bedd57b7406a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -37,21 +28,21 @@
  "phrasing_ids": [
   "greet_21",
   "greet_ans_06",
-  "think_instr_15",
+  "describe_instr_03",
   "ack_03",
-  "extension_03"
+  "describe_cue_12"
  ],
  "block_ids": [
-  "camping.ctx3"
+  "family_visit.opt4"
  ],
- "est_total_sec": 74.85,
- "est_speech_sec": 31.38,
+ "est_total_sec": 51.96,
+ "est_speech_sec": 41.3,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi there! How's it going today?",
    "est_sec": 1.96,
-   "gap_before": 0.43,
+   "gap_before": 0.69,
    "role": "greeting",
    "phrasing": "greet_21",
    "reference_only": true
@@ -60,91 +51,79 @@
    "speaker": "user",
    "text": "Good, thanks. Busy day.",
    "est_sec": 1.34,
-   "gap_before": 0.6,
+   "gap_before": 0.76,
    "event": "greeting_answer",
    "phrasing": "greet_ans_06"
   },
   {
    "speaker": "user",
-   "text": "I'm in charge of food for the camping trip and I have no idea what to cook.",
-   "est_sec": 5.37,
-   "gap_before": 0.38,
-   "event": "ordinary_request",
-   "block": "camping.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fun job. Do you want proper meals over the fire, or simple stuff that barely needs cooking?",
-   "est_sec": 5.37,
-   "gap_before": 0.4,
-   "role": "reply",
-   "block": "camping.ctx3",
-   "reference_only": true
+   "text": "My mum's coming to stay and I need to figure out where she sleeps.",
+   "est_sec": 4.44,
+   "gap_before": 0.57,
+   "block": "family_visit.opt4"
   },
   {
    "speaker": "user",
-   "text": "Hmm, tough one. Give me thirty seconds and ask me again.",
-   "est_sec": 3.51,
-   "gap_before": 1.19,
+   "text": "Let me go through every option before you say anything.",
+   "est_sec": 3.2,
+   "gap_before": 0.81,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 30,
-   "phrasing": "think_instr_15"
+   "kind": "describe_options",
+   "phrasing": "describe_instr_03"
   },
   {
    "speaker": "moshi",
    "text": "Sure, take your time.",
    "est_sec": 1.34,
-   "gap_before": 0.58,
+   "gap_before": 0.55,
    "role": "ack",
    "phrasing": "ack_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hmm, ten more seconds please.",
-   "est_sec": 1.65,
-   "event": "extension",
-   "extra_sec": 10,
-   "phrasing": "extension_03",
-   "anchor": {
-    "turn": 4,
-    "offset": 27.28
-   }
-  },
-  {
-   "speaker": "moshi",
-   "text": "Back to the menu. Cooking over the fire, or as little cooking as possible?",
-   "est_sec": 4.44,
-   "role": "resume",
-   "block": "camping.ctx3",
-   "anchor": {
-    "turn": 6,
-    "offset": 10.33
-   },
-   "reference_only": true
+   "text": "My bed, and I take the sofa, which is fine for me but I've got a bad back.",
+   "est_sec": 5.68,
+   "gap_before": 1.32,
+   "block": "family_visit.opt4"
   },
   {
    "speaker": "user",
-   "text": "Keep it simple, we'll be hiking all day.",
-   "est_sec": 2.58,
-   "gap_before": 2.13,
-   "event": "ordinary_request",
-   "block": "camping.ctx3"
+   "text": "An air mattress in the study, she'd have privacy but it's a bit sad and it deflates by morning.",
+   "est_sec": 5.99,
+   "gap_before": 1.08,
+   "block": "family_visit.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or the little guesthouse two streets over, about sixty a night, with a proper bed and breakfast.",
+   "est_sec": 5.37,
+   "gap_before": 2.07,
+   "block": "family_visit.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 0.91,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. Wraps, trail mix and instant noodles will keep everyone happy.",
-   "est_sec": 3.82,
-   "gap_before": 0.57,
-   "role": "followup",
-   "block": "camping.ctx3",
+   "text": "Honestly, the guesthouse sounds best, as long as she won't feel pushed out. If she would, give her your bed for a few nights and use the guesthouse for the rest.",
+   "est_sec": 9.71,
+   "gap_before": 0.4,
+   "role": "resume",
+   "block": "family_visit.opt4",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

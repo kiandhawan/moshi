@@ -7,125 +7,118 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [
-  "wait_like"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "job_interview"
+  "cars"
  ],
- "topic": "job_interview",
+ "topic": "cars",
  "voices": {
-  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_10",
-  "greet_ans_20",
-  "waitlike_16"
+  "greet_22",
+  "greet_ans_17",
+  "describe_instr_04",
+  "describe_cue_04"
  ],
  "block_ids": [
-  "job_interview.dlg1"
+  "cars.opt4"
  ],
- "est_total_sec": 47.95,
- "est_speech_sec": 37.37,
+ "est_total_sec": 58.08,
+ "est_speech_sec": 44.09,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your day been so far?",
-   "est_sec": 2.27,
-   "gap_before": 0.79,
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.68,
    "role": "greeting",
-   "phrasing": "greet_10"
+   "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "Can't complain.",
-   "est_sec": 0.72,
-   "gap_before": 0.5,
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.59,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_20"
+   "phrasing": "greet_ans_17"
   },
   {
    "speaker": "user",
-   "text": "How do I answer what's your biggest weakness without sounding fake?",
-   "est_sec": 3.51,
-   "gap_before": 0.26,
-   "event": "ordinary_request",
-   "block": "job_interview.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Pick something real but not central to the job. Then show what you've done to get better at it.",
-   "est_sec": 5.99,
-   "gap_before": 0.84,
-   "role": "reply",
-   "block": "job_interview.dlg1"
+   "text": "We're driving to my parents' place for the holidays and I can't decide how to do it.",
+   "est_sec": 5.37,
+   "gap_before": 0.25,
+   "block": "cars.opt4"
   },
   {
    "speaker": "user",
-   "text": "Like what? Give me an example.",
-   "est_sec": 1.96,
-   "gap_before": 0.51,
-   "event": "ordinary_request",
-   "block": "job_interview.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You could say you used to take on too much alone, so now you check in with your team earlier on big projects.",
-   "est_sec": 7.23,
-   "gap_before": 0.62,
-   "role": "reply",
-   "block": "job_interview.dlg1"
+   "text": "Hold your thoughts until I've described all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.56,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_04"
   },
   {
    "speaker": "user",
-   "text": "Wait a second, is saying I'm a perfectionist",
-   "est_sec": 2.58,
-   "gap_before": 0.41,
+   "text": "We could drive straight through overnight while the kids sleep, about nine hours.",
+   "est_sec": 4.13,
+   "gap_before": 0.7,
+   "block": "cars.opt4",
    "event": "distractor",
-   "kind": "pause",
-   "block": "job_interview.dlg1"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "a bad idea?",
-   "est_sec": 1.03,
-   "gap_before": 2.42,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_16",
-   "block": "job_interview.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It usually is. Interviewers hear it constantly and it can sound like you're dodging the question.",
+   "text": "Or we leave after lunch, stop at a cheap hotel halfway, and finish the next morning.",
    "est_sec": 5.06,
-   "gap_before": 0.6,
-   "role": "reply",
-   "block": "job_interview.dlg1"
+   "gap_before": 2.87,
+   "block": "cars.opt4",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Okay. Mine is probably public speaking.",
-   "est_sec": 1.96,
-   "gap_before": 1.03,
-   "event": "ordinary_request",
-   "block": "job_interview.dlg1"
+   "text": "My partner suggested putting the car on the overnight train, which costs more but nobody has to drive.",
+   "est_sec": 5.68,
+   "gap_before": 1.91,
+   "block": "cars.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then again, we could just skip driving, fly, and rent a car when we land.",
+   "est_sec": 4.75,
+   "gap_before": 2.97,
+   "block": "cars.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 1.07,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_04"
   },
   {
    "speaker": "moshi",
-   "text": "That's a good honest one. Mention a concrete step, like volunteering to present at team meetings.",
-   "est_sec": 5.06,
-   "gap_before": 1.1,
-   "role": "reply",
-   "block": "job_interview.dlg1"
+   "text": "With kids, I'd pick the halfway hotel or the car train. The overnight drive puts a lot on whoever's behind the wheel, and flying plus a rental often ends up costing the most.",
+   "est_sec": 10.33,
+   "gap_before": 0.89,
+   "role": "resume",
+   "block": "cars.opt4"
   }
  ]
 }

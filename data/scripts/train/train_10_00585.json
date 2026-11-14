@@ -7,114 +7,175 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "weather_plans"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
  ],
- "topic": "weather_plans",
+ "topics": [
+  "smartphones",
+  "smartphones"
+ ],
+ "topic": "smartphones",
  "voices": {
-  "user": "705690224f264386b87fb598083ab022",
-  "friend": null,
+  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "friend": "e3cd384158934cc9a01029cd7d278634",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Chloe",
+ "friend_name_id": "name_08",
  "phrasing_ids": [
-  "greet_05",
-  "greet_ans_01",
-  "describe_instr_02",
-  "describe_cue_14"
+  "greet_16",
+  "greet_ans_11",
+  "side_instr_08",
+  "dq_42",
+  "side_cue_25"
  ],
  "block_ids": [
-  "weather_plans.opt2"
+  "smartphones.ctx7",
+  "smartphones.side6",
+  "dq_42"
  ],
- "est_total_sec": 57.0,
- "est_speech_sec": 45.95,
+ "est_total_sec": 78.96,
+ "est_speech_sec": 63.08,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how have you been?",
-   "est_sec": 1.65,
-   "gap_before": 0.7,
-   "role": "greeting",
-   "phrasing": "greet_05"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm good, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.42,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
-  },
-  {
-   "speaker": "user",
-   "text": "There's a heat wave coming and I'm trying to figure out what to do on my day off.",
-   "est_sec": 5.68,
-   "gap_before": 0.45,
-   "block": "weather_plans.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
-   "est_sec": 4.75,
-   "gap_before": 0.57,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_02"
-  },
-  {
-   "speaker": "user",
-   "text": "One option is going to the lake, but it's an hour drive and the beach has no shade.",
-   "est_sec": 5.68,
-   "gap_before": 1.17,
-   "block": "weather_plans.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is spending the afternoon at the mall, which is boring but at least air conditioned.",
-   "est_sec": 5.06,
-   "gap_before": 1.88,
-   "block": "weather_plans.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is going to the public pool in the morning before it gets too hot.",
-   "est_sec": 5.06,
-   "gap_before": 1.79,
-   "block": "weather_plans.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is staying home with the fan on and catching up on my shows.",
-   "est_sec": 5.37,
-   "gap_before": 1.06,
-   "block": "weather_plans.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'm finished. What's your opinion?",
+   "text": "Hi, how are you holding up?",
    "est_sec": 1.96,
-   "gap_before": 0.97,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_14"
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.64,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Heading to Portugal for two weeks and I'm terrified of the roaming bill.",
+   "est_sec": 4.13,
+   "gap_before": 0.34,
+   "event": "ordinary_request",
+   "block": "smartphones.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Do you have a beach umbrella? If you do, the lake could be great. If not, I'd do the pool in the morning and then relax at home with your shows.",
-   "est_sec": 9.71,
-   "gap_before": 0.54,
+   "text": "Understandable. Would you rather buy your carrier's travel pass, or get a local eSIM when you land?",
+   "est_sec": 5.37,
+   "gap_before": 0.36,
+   "role": "reply",
+   "block": "smartphones.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Pause for a second, my roommate wants to ask me something. I'll let you know when I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 0.87,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Chloe, how do you share your location with someone? Mum wants to see when I'm driving home.",
+   "est_sec": 5.37,
+   "gap_before": 0.7,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Open the map app, tap your little picture, then share location. You pick how long.",
+   "est_sec": 4.75,
+   "gap_before": 0.32,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I make it just for tonight?",
+   "est_sec": 2.27,
+   "gap_before": 0.72,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, there's an option for one hour or until you turn it off.",
+   "est_sec": 4.13,
+   "gap_before": 0.57,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll do until I turn it off. Otherwise I'll forget and she'll panic halfway down the motorway.",
+   "est_sec": 5.37,
+   "gap_before": 2.84,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Classic. Send it to me too while you're at it.",
+   "est_sec": 3.2,
+   "gap_before": 2.0,
+   "block": "smartphones.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Could you open the window a little?",
+   "est_sec": 2.27,
+   "gap_before": 0.42,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_42"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure, it's stuffy in here.",
+   "est_sec": 1.65,
+   "gap_before": 0.97,
+   "phrasing": "dq_42"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, that took a while. I'm back.",
+   "est_sec": 2.27,
+   "gap_before": 1.84,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. Your Portugal trip and that roaming bill. Carrier pass or local eSIM?",
+   "est_sec": 4.44,
+   "gap_before": 0.69,
    "role": "resume",
-   "block": "weather_plans.opt2"
+   "block": "smartphones.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "The travel pass. I don't want to mess with settings at the airport.",
+   "est_sec": 4.13,
+   "gap_before": 0.36,
+   "event": "ordinary_request",
+   "block": "smartphones.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally reasonable. Just switch it on before you fly so you're covered the moment you land.",
+   "est_sec": 5.06,
+   "gap_before": 0.32,
+   "role": "followup",
+   "block": "smartphones.ctx7"
   }
  ]
 }

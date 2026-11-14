@@ -7,116 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "photography"
+  "travel_planning"
  ],
- "topic": "photography",
+ "topic": "travel_planning",
  "voices": {
-  "user": "c250136a9ec74cc0b799be54664a83f2",
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_26",
-  "greet_ans_11",
-  "describe_instr_04",
-  "ack_16",
-  "describe_cue_13"
+  "greet_13",
+  "greet_ans_25"
  ],
  "block_ids": [
-  "photography.opt2"
+  "travel_planning.dlg12"
  ],
- "est_total_sec": 52.0,
- "est_speech_sec": 39.44,
+ "est_total_sec": 50.32,
+ "est_speech_sec": 37.99,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you doing these days?",
-   "est_sec": 2.27,
-   "gap_before": 0.71,
-   "role": "greeting",
-   "phrasing": "greet_26"
-  },
-  {
-   "speaker": "user",
-   "text": "Not too bad.",
-   "est_sec": 1.03,
-   "gap_before": 0.96,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_11"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm planning a photo walk this weekend and can't pick where to go.",
-   "est_sec": 4.13,
-   "gap_before": 0.29,
-   "block": "photography.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold your thoughts until I've described all the options.",
+   "text": "Hey, nice to hear from you. How are you?",
    "est_sec": 2.89,
-   "gap_before": 0.6,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_04"
+   "gap_before": 0.75,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Everyone online swears by packing cubes. Are they a scam?",
+   "est_sec": 3.2,
+   "gap_before": 0.5,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg12"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, sure.",
-   "est_sec": 0.72,
-   "gap_before": 0.49,
-   "role": "ack",
-   "phrasing": "ack_16"
+   "text": "Not a scam, but not magic either. They don't make clothes smaller, they just keep things organized.",
+   "est_sec": 5.37,
+   "gap_before": 1.13,
+   "role": "reply",
+   "block": "travel_planning.dlg12"
   },
   {
    "speaker": "user",
-   "text": "One option is the old downtown market early in the morning, when vendors are setting up.",
-   "est_sec": 5.06,
-   "gap_before": 0.88,
-   "block": "photography.opt2",
-   "event": "distractor",
-   "kind": "pause"
+   "text": "So my suitcase won't suddenly hold twice as much.",
+   "est_sec": 2.89,
+   "gap_before": 0.37,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg12"
   },
   {
-   "speaker": "user",
-   "text": "Another is the botanical garden, which has a big flower show going on right now.",
-   "est_sec": 4.75,
-   "gap_before": 2.18,
-   "block": "photography.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's the harbor at sunset, with the boats and the bridge lit up.",
+   "speaker": "moshi",
+   "text": "Sadly no. Compression cubes squeeze things a bit, but then the bag gets heavier.",
    "est_sec": 4.44,
-   "gap_before": 2.98,
-   "block": "photography.opt2"
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "travel_planning.dlg12"
   },
   {
    "speaker": "user",
-   "text": "That's all I've got. Which would you choose?",
-   "est_sec": 2.58,
-   "gap_before": 1.21,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_13"
+   "text": "What's the actual best way to fit more in?",
+   "est_sec": 2.89,
+   "gap_before": 1.04,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg12"
   },
   {
    "speaker": "moshi",
-   "text": "What kind of photos do you enjoy taking most, people, nature or landscapes? If it's people, the morning market is the best fit. You could even do the market and then the harbor later the same day.",
-   "est_sec": 11.57,
-   "gap_before": 0.76,
-   "role": "resume",
-   "block": "photography.opt2"
+   "text": "Roll soft things like t-shirts, fold stiff things like shirts, and stuff socks inside your shoes.",
+   "est_sec": 5.06,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "travel_planning.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "Socks in shoes. I like that. And I always",
+   "est_sec": 2.89,
+   "gap_before": 1.42,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "travel_planning.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "overpack on shoes, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 2.37,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then limit yourself to two pairs plus whatever you wear on the plane. Wear the bulkiest ones while traveling.",
+   "est_sec": 5.99,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "travel_planning.dlg12"
   }
  ]
 }

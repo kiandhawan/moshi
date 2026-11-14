@@ -1,166 +1,1820 @@
 {
-  "topic": "smartphones",
-  "contexts": [
+ "topic": "smartphones",
+ "contexts": [
+  {
+   "id": "smartphones.ctx1",
+   "turns": [
     {
-      "id": "smartphones.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "My phone is three years old and the battery dies by lunchtime. I think it's time to replace it."},
-        {"speaker": "moshi", "text": "That's fair. Do you want to stick with the same brand, or are you open to switching to something new?"}
-      ],
-      "pending": "same phone brand or switch",
-      "think_reask": [
-        "So, have you made up your mind? Same brand as before, or are you thinking of switching?",
-        "Time's up. Are you staying loyal to your current brand, or trying something different?",
-        "Okay, back to the phone. Same brand, or a switch?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were talking about your new phone. Same brand, or something different?",
-        "Hi again. You were deciding whether to stick with your phone brand or switch.",
-        "Good to have you back. So, same brand for the new phone, or a change?"
-      ],
-      "endings": [
-        {"user": "I'll stay with the same one. Moving all my stuff over sounds like a pain.", "moshi": "Makes sense. Then the newest mid-range model will feel familiar and last you a long time."},
-        {"user": "Honestly, I want to try something new this time.", "moshi": "Fun. Most phones have a transfer app now, so moving your photos and contacts is easier than it used to be."}
-      ]
+     "speaker": "user",
+     "text": "My phone is three years old and the battery dies by lunchtime. I think it's time to replace it."
     },
     {
-      "id": "smartphones.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I keep picking up my phone without even thinking. It's eating my whole evening."},
-        {"speaker": "moshi", "text": "Lots of people feel that way. Would you rather set a daily time limit on certain apps, or delete the worst ones entirely?"}
-      ],
-      "pending": "app time limits or delete apps",
-      "think_reask": [
-        "So, what feels right? Time limits on those apps, or deleting them?",
-        "Alright, have you decided? Limits or removing the apps completely?",
-        "Okay, about your evenings. Do you want limits, or a clean delete?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were choosing between app time limits and just deleting them.",
-        "There you are. So, for cutting down on phone time, limits or delete?",
-        "Hi again. We were working on your evening scrolling. Limits or delete?"
-      ],
-      "endings": [
-        {"user": "Let's try limits first. Deleting feels a bit extreme.", "moshi": "Good start. Try thirty minutes a day for social apps and see how the first week goes."},
-        {"user": "Delete them. I know myself, I'd just ignore the limits.", "moshi": "Bold move. You can still check them in a browser if you really need to, which adds a helpful bit of friction."}
-      ]
-    },
-    {
-      "id": "smartphones.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "My storage is full again and I can't even take a picture."},
-        {"speaker": "moshi", "text": "Annoying. Do you want to pay for cloud storage, or clear things out by hand?"},
-        {"speaker": "user", "text": "Hmm, both sound kind of bad."},
-        {"speaker": "moshi", "text": "They each have a cost, time or money. Which one would you rather spend?"}
-      ],
-      "pending": "cloud storage or manual cleanup",
-      "think_reask": [
-        "So, time or money? Cloud storage, or a manual cleanup?",
-        "Okay, have you thought it over? Pay for the cloud, or clear things out yourself?",
-        "Back to your full phone. Which way are you leaning?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were deciding how to free up space, cloud storage or a cleanup.",
-        "Hi again. So, for your full storage, are you paying for the cloud or clearing it by hand?",
-        "Good, you're back. We were stuck on time versus money for your phone storage."
-      ],
-      "endings": [
-        {"user": "I'll pay for the cloud. My time is worth more.", "moshi": "Fair enough. The smallest paid plan is usually enough, and once photos upload you can remove them from the phone."},
-        {"user": "I'll clean it up myself. I probably have a thousand blurry photos anyway.", "moshi": "Start with videos, they take the most space. Sorting by size will show you the biggest ones first."}
-      ]
+     "speaker": "moshi",
+     "text": "That's fair. Do you want to stick with the same brand, or are you open to switching to something new?"
     }
-  ],
-  "side_conversations": [
-    {"id": "smartphones.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, do you know the wifi password here? My phone keeps dropping off."},
-      {"speaker": "friend", "text": "It's on the back of the router, I think. The long one with all the letters."},
-      {"speaker": "user", "text": "Ugh, I typed that in twice already."},
-      {"speaker": "friend", "text": "Did you try forgetting the network and joining again? That fixed mine last week."},
-      {"speaker": "user", "text": "No, I'll try that now. Hold on."}
-    ]},
-    {"id": "smartphones.side2", "turns": [
-      {"speaker": "user", "text": "Is that the new phone? Let me see it."},
-      {"speaker": "friend", "text": "Yeah, I got it on Saturday. The camera is ridiculous."},
-      {"speaker": "user", "text": "How much did it cost you, if you don't mind me asking?"},
-      {"speaker": "friend", "text": "Way too much. But I traded in the old one, so it wasn't terrible."},
-      {"speaker": "user", "text": "Does the battery last any better?"},
-      {"speaker": "friend", "text": "So far it's lasting the whole day, even with music on the train."}
-    ]},
-    {"id": "smartphones.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, have you seen my charger? The white one with the short cable."},
-      {"speaker": "friend", "text": "I borrowed it this morning, sorry. It's next to my bed."},
-      {"speaker": "user", "text": "Can I grab it? I'm down to five percent."},
-      {"speaker": "friend", "text": "Go for it. We really need to buy a second one."},
-      {"speaker": "user", "text": "Agreed. Maybe a long cable so it reaches the couch."},
-      {"speaker": "friend", "text": "Good idea. Add it to the shopping list."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "smartphones.dlg1", "turns": [
-      {"speaker": "user", "text": "My phone gets really hot when I'm using maps in the car. Is that bad for it?"},
-      {"speaker": "moshi", "text": "A little warmth is normal, but sitting in direct sun on the dashboard can really heat it up. Heat is hard on the battery over time."},
-      {"speaker": "user", "text": "It's in one of those holders on the windshield."},
-      {"speaker": "moshi", "text": "Try moving it to a vent mount with the air conditioning on. That keeps it much cooler."},
-      {"speaker": "user", "text": "And should I / take it off the charger while I drive?"},
-      {"speaker": "moshi", "text": "Charging and navigating at the same time makes the most heat. If the battery is above half, you can skip charging on short trips."},
-      {"speaker": "user", "text": "Okay, that's easy enough. Thanks."},
-      {"speaker": "moshi", "text": "You're welcome. Your battery will thank you too."}
-    ]},
-    {"id": "smartphones.dlg2", "turns": [
-      {"speaker": "user", "text": "I'm setting up a phone for my mom. She's not great with tech. Any tips?"},
-      {"speaker": "moshi", "text": "Make the text and icons bigger in the display settings first. That alone helps a lot."},
-      {"speaker": "user", "text": "Good one. What else?"},
-      {"speaker": "moshi", "text": "Put just the apps she uses on the home screen, like calls, messages and photos. Hide the rest in a folder."},
-      {"speaker": "user", "text": "She always / ends up calling people by accident from her pocket."},
-      {"speaker": "moshi", "text": "A simple case with a flip cover can stop that. You could also shorten the screen timeout so it locks sooner."},
-      {"speaker": "user", "text": "Oh, and can I help her from my own phone if she's stuck?"},
-      {"speaker": "moshi", "text": "Yes, a screen sharing app lets you see her screen and guide her. Set it up together before you hand the phone over."},
-      {"speaker": "user", "text": "Perfect, I'll do that this weekend."}
-    ]},
-    {"id": "smartphones.dlg3", "turns": [
-      {"speaker": "user", "text": "Quick question. Is it okay to leave my phone charging overnight?"},
-      {"speaker": "moshi", "text": "Modern phones stop charging when they're full, so it's generally safe. Many also have an optimized charging setting that waits to finish until just before you wake up."},
-      {"speaker": "user", "text": "Where do I find that?"},
-      {"speaker": "moshi", "text": "It's usually under battery in your settings. Look for something like optimized or adaptive charging."},
-      {"speaker": "user", "text": "Found it, it was already on. Huh."},
-      {"speaker": "moshi", "text": "Nice, then you're already set. Just keep the phone out from under your pillow so it can cool down."},
-      {"speaker": "user", "text": "Ha, I definitely / do that sometimes. I'll stop."},
-      {"speaker": "moshi", "text": "Good plan. A nightstand is much better for both of you."}
-    ]},
-    {"id": "smartphones.dlg4", "turns": [
-      {"speaker": "user", "text": "I want to start backing up my photos. I've never done it and I'm a bit scared I'll lose them."},
-      {"speaker": "moshi", "text": "Smart to do it now. The easiest way is to turn on the photo backup built into your phone's cloud service."},
-      {"speaker": "user", "text": "Will it use up all my data?"},
-      {"speaker": "moshi", "text": "You can set it to back up only on wifi. That way your mobile data stays untouched."},
-      {"speaker": "user", "text": "Actually, I'd rather / keep a copy on my computer too. Just in case."},
-      {"speaker": "moshi", "text": "Good thinking. Plug the phone in with a cable and copy the photo folder over every month or so."},
-      {"speaker": "user", "text": "How long will the first backup take?"},
-      {"speaker": "moshi", "text": "If you have thousands of photos, it could take a night or two. Leave it plugged in and on wifi and it'll finish on its own."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "smartphones.opt1",
-     "lead_in": "My phone finally died, and I'm choosing between a few replacements.",
-     "options": [
-      "The first one is the latest flagship with an amazing camera, but it costs over a thousand dollars.",
-      "Then there's last year's model of the same phone, almost as good and a few hundred cheaper.",
-      "Option three is a mid range phone with a huge battery that lasts two full days.",
-      "And the last one is a small compact phone that fits easily in my pocket."
-     ],
-     "moshi_comment": [
-      "Last year's flagship is usually the best value, you get nearly the same camera for much less. The new flagship only makes sense if photos are really important to you. The mid range phone is great if battery life is your biggest worry.",
-      "What bugged you most about your old phone? If it was the battery, the mid range phone is a clear win. If you take lots of photos, go with last year's flagship."
-     ]},
-    {"id": "smartphones.opt2",
-     "lead_in": "I'm getting my dad a new phone and I want to pick the right one.",
-     "options": [
-      "One is a simple phone with big buttons and a large screen, made for people who aren't techy.",
-      "Another is the same brand he's using now, just the newer version, so everything feels familiar.",
-      "Or there's a cheap basic smartphone that mostly does calls, texts and photos."
-     ],
-     "moshi_comment": [
-      "Sticking with the same brand is probably the smoothest choice, he won't have to relearn anything. The big button phone is great if his eyesight is a concern. The basic smartphone saves money but might feel slow.",
-      "Does he struggle with his current phone, or is it just old? If he's comfortable with it, get the newer version of the same one. If he struggles, the big screen phone could really help."
-     ]}
-  ]
+   ],
+   "pending": "same phone brand or switch",
+   "think_reask": [
+    "So, have you made up your mind? Same brand as before, or are you thinking of switching?",
+    "Time's up. Are you staying loyal to your current brand, or trying something different?",
+    "Okay, back to the phone. Same brand, or a switch?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were talking about your new phone. Same brand, or something different?",
+    "Hi again. You were deciding whether to stick with your phone brand or switch.",
+    "Good to have you back. So, same brand for the new phone, or a change?"
+   ],
+   "endings": [
+    {
+     "user": "I'll stay with the same one. Moving all my stuff over sounds like a pain.",
+     "moshi": "Makes sense. Then the newest mid-range model will feel familiar and last you a long time."
+    },
+    {
+     "user": "Honestly, I want to try something new this time.",
+     "moshi": "Fun. Most phones have a transfer app now, so moving your photos and contacts is easier than it used to be."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I keep picking up my phone without even thinking. It's eating my whole evening."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people feel that way. Would you rather set a daily time limit on certain apps, or delete the worst ones entirely?"
+    }
+   ],
+   "pending": "app time limits or delete apps",
+   "think_reask": [
+    "So, what feels right? Time limits on those apps, or deleting them?",
+    "Alright, have you decided? Limits or removing the apps completely?",
+    "Okay, about your evenings. Do you want limits, or a clean delete?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were choosing between app time limits and just deleting them.",
+    "There you are. So, for cutting down on phone time, limits or delete?",
+    "Hi again. We were working on your evening scrolling. Limits or delete?"
+   ],
+   "endings": [
+    {
+     "user": "Let's try limits first. Deleting feels a bit extreme.",
+     "moshi": "Good start. Try thirty minutes a day for social apps and see how the first week goes."
+    },
+    {
+     "user": "Delete them. I know myself, I'd just ignore the limits.",
+     "moshi": "Bold move. You can still check them in a browser if you really need to, which adds a helpful bit of friction."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My storage is full again and I can't even take a picture."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Annoying. Do you want to pay for cloud storage, or clear things out by hand?"
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm, both sound kind of bad."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They each have a cost, time or money. Which one would you rather spend?"
+    }
+   ],
+   "pending": "cloud storage or manual cleanup",
+   "think_reask": [
+    "So, time or money? Cloud storage, or a manual cleanup?",
+    "Okay, have you thought it over? Pay for the cloud, or clear things out yourself?",
+    "Back to your full phone. Which way are you leaning?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were deciding how to free up space, cloud storage or a cleanup.",
+    "Hi again. So, for your full storage, are you paying for the cloud or clearing it by hand?",
+    "Good, you're back. We were stuck on time versus money for your phone storage."
+   ],
+   "endings": [
+    {
+     "user": "I'll pay for the cloud. My time is worth more.",
+     "moshi": "Fair enough. The smallest paid plan is usually enough, and once photos upload you can remove them from the phone."
+    },
+    {
+     "user": "I'll clean it up myself. I probably have a thousand blurry photos anyway.",
+     "moshi": "Start with videos, they take the most space. Sorting by size will show you the biggest ones first."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter's turning twelve and she's been begging for a phone. I caved."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big milestone. Are you thinking of handing down your old phone, or getting her a cheap new one of her own?"
+    }
+   ],
+   "pending": "hand-me-down phone or new budget phone for daughter",
+   "think_reask": [
+    "So, for your daughter. Your old phone, or a fresh budget one?",
+    "Right, the twelve-year-old's phone. Hand-me-down or new?"
+   ],
+   "welcome_back": [
+    "Your daughter's first phone was still up in the air. Your old one or a new cheap one?",
+    "So, the birthday phone. Passing yours down, or buying her one?"
+   ],
+   "endings": [
+    {
+     "user": "She can have my old one. It still works fine, it just needs a new case.",
+     "moshi": "Easy win. Wipe it, set up a child account, and a bright new case will make it feel like hers."
+    },
+    {
+     "user": "I'll get her a new one. She'd roll her eyes at my scratched old thing.",
+     "moshi": "Fair enough. A budget model with a decent camera will keep her happy without costing much."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Dropped my phone on the bus steps this morning. Spiderweb crack right across the screen."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ouch. Does the touch still work?"
+    },
+    {
+     "speaker": "user",
+     "text": "Mostly, yeah. Top corner's a bit jumpy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's fixable. Would you go to a repair shop for a new screen, or claim it on your insurance?"
+    }
+   ],
+   "pending": "repair shop or insurance claim for cracked screen",
+   "think_reask": [
+    "So, the cracked screen. Repair shop or insurance?",
+    "Okay, back to the spiderweb. Fix it at a shop, or go through insurance?"
+   ],
+   "welcome_back": [
+    "Your cracked screen still needs a plan. Shop repair or an insurance claim?",
+    "We'd left your phone with a jumpy corner. Shop or insurance?"
+   ],
+   "endings": [
+    {
+     "user": "Repair shop. The insurance excess is almost the same price anyway.",
+     "moshi": "Sensible. Ask if they use original parts, and back up your phone before you hand it over."
+    },
+    {
+     "user": "Insurance, I think. I'm paying for it every month, might as well use it.",
+     "moshi": "True. Most claims start online with a few photos of the damage, so snap those today."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Work chats are pinging me nonstop. I can't concentrate on anything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two ways to handle it. A focus mode that hushes everything during set hours, or muting just the noisiest group chats. Which sounds better?"
+    }
+   ],
+   "pending": "focus mode or mute specific chats",
+   "think_reask": [
+    "So, how do you want to tame the pings? Focus mode, or muting the loud chats?",
+    "Back to the notifications. Blanket focus hours, or pick off the worst chats?"
+   ],
+   "welcome_back": [
+    "About those nonstop work pings. Focus mode or muting a few chats?",
+    "So, the noisy notifications. Which way are you going?"
+   ],
+   "endings": [
+    {
+     "user": "Focus mode. If it's urgent, people can call me.",
+     "moshi": "Good boundary. You can set it for nine to twelve and still let calls from your manager through."
+    },
+    {
+     "user": "Just mute the big chats. I still need to see direct messages.",
+     "moshi": "That's a light touch. Long-press each group and mute it, and your direct messages stay loud."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Heading to Portugal for two weeks and I'm terrified of the roaming bill."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Understandable. Would you rather buy your carrier's travel pass, or get a local eSIM when you land?"
+    }
+   ],
+   "pending": "carrier travel pass or local eSIM",
+   "think_reask": [
+    "So, for Portugal. Travel pass from your carrier, or a local eSIM?",
+    "Time's up on the roaming question. Which one?"
+   ],
+   "welcome_back": [
+    "Your Portugal trip and that roaming bill. Carrier pass or local eSIM?",
+    "So, data abroad. Have you landed on an option?"
+   ],
+   "endings": [
+    {
+     "user": "The travel pass. I don't want to mess with settings at the airport.",
+     "moshi": "Totally reasonable. Just switch it on before you fly so you're covered the moment you land."
+    },
+    {
+     "user": "A local eSIM. It sounds way cheaper.",
+     "moshi": "Usually is. Check your phone is unlocked first, then you can buy and install it before you even leave."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I finally upgraded, so now my old phone is just sitting in a drawer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's probably still worth something. Do you want to trade it in at the store, or sell it yourself online?"
+    }
+   ],
+   "pending": "trade in old phone or sell privately",
+   "think_reask": [
+    "So, the phone in the drawer. Trade-in or sell it yourself?",
+    "Okay. Store trade-in, or try your luck online?"
+   ],
+   "welcome_back": [
+    "That old phone in your drawer. Trade it in, or sell it privately?",
+    "So, cashing in the old phone. Which route?"
+   ],
+   "endings": [
+    {
+     "user": "Trade-in. I can't be bothered meeting strangers.",
+     "moshi": "Quick and painless. Remember to sign out of your account and do a full reset before handing it over."
+    },
+    {
+     "user": "I'll sell it online. Trade-in offers are always insulting.",
+     "moshi": "Often true. Good photos and an honest note about scratches will help it sell faster."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Someone at work picked up my phone and just opened it. No lock at all. I felt so exposed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Time to fix that. Would you prefer face unlock or a six-digit code?"
+    }
+   ],
+   "pending": "face unlock or PIN code",
+   "think_reask": [
+    "So, locking your phone. Face unlock or a code?",
+    "Back to security. Which lock feels right?"
+   ],
+   "welcome_back": [
+    "Your unlocked phone situation. Face or a code?",
+    "Still need to lock that phone down. Face unlock or a six-digit code?"
+   ],
+   "endings": [
+    {
+     "user": "Face unlock. I'll never remember another code.",
+     "moshi": "Fine choice. It'll still ask you for a backup code once, so pick something that isn't your birthday."
+    },
+    {
+     "user": "A code. Face unlock creeps me out a bit.",
+     "moshi": "Totally valid. Six digits is a good balance, and you can set it to lock after thirty seconds."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son is on his tablet and phone till midnight. Something has to change."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can control that from your own phone. Lock his apps after a set bedtime, or give him a daily allowance of hours?"
+    }
+   ],
+   "pending": "app bedtime lock or daily screen allowance",
+   "think_reask": [
+    "So, for your son. A hard bedtime lock, or a daily allowance?",
+    "Okay, back to the midnight scrolling. Lock or allowance?"
+   ],
+   "welcome_back": [
+    "Your son's late nights on the phone. Bedtime lock or daily hours?",
+    "So, screen limits for your boy. Which one?"
+   ],
+   "endings": [
+    {
+     "user": "A bedtime lock. Nine thirty, no arguments.",
+     "moshi": "Clear and simple. Leave calls and messages to you allowed, so he can still reach you."
+    },
+    {
+     "user": "Daily hours. He's fifteen, he should learn to manage it himself.",
+     "moshi": "That builds trust. Three hours a day is a common starting point, and you can tweak it."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Need a new case. I always lose my bank card, so, you know."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, I see where this is going. A wallet case that holds cards, or a slim case with a little card slot on the back?"
+    }
+   ],
+   "pending": "wallet case or slim case with card slot",
+   "think_reask": [
+    "So, the case. Full wallet, or slim with a slot?",
+    "Decided on the case yet?"
+   ],
+   "welcome_back": [
+    "That phone case for your wandering bank card. Wallet or slim?",
+    "So, the new case. Which style won?"
+   ],
+   "endings": [
+    {
+     "user": "Wallet case. I want my ID in there too.",
+     "moshi": "Sounds practical. Look for one with a magnetic clasp so the cards don't slide out."
+    },
+    {
+     "user": "Slim with a slot. Wallet cases feel bulky in my pocket.",
+     "moshi": "Good call. One card and a bit of cash fits fine, and it stays pocket-friendly."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My thumb aches after using my phone. It's huge, like a small tablet."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a real thing. Want to try one-handed mode first, or is it time for a smaller phone?"
+    }
+   ],
+   "pending": "one-handed mode or smaller phone",
+   "think_reask": [
+    "So, your sore thumb. One-handed mode or a smaller phone?",
+    "Okay, about the giant phone. Try the setting, or switch phones?"
+   ],
+   "welcome_back": [
+    "Your aching thumb. One-handed mode, or downsizing?",
+    "So, the oversized phone. Keeping it or downsizing?"
+   ],
+   "endings": [
+    {
+     "user": "Let me try the one-handed mode first. I just paid this thing off.",
+     "moshi": "Fair. Swipe down on the bottom edge to shrink the screen, and a grip ring on the back helps too."
+    },
+    {
+     "user": "Smaller phone. I'm done with this brick.",
+     "moshi": "Then look at the compact models. They're fewer now, but there are still a couple of good ones."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "smartphones.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, do you know the wifi password here? My phone keeps dropping off."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's on the back of the router, I think. The long one with all the letters."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, I typed that in twice already."
+    },
+    {
+     "speaker": "friend",
+     "text": "Did you try forgetting the network and joining again? That fixed mine last week."
+    },
+    {
+     "speaker": "user",
+     "text": "No, I'll try that now. Hold on."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is that the new phone? Let me see it."
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, I got it on Saturday. The camera is ridiculous."
+    },
+    {
+     "speaker": "user",
+     "text": "How much did it cost you, if you don't mind me asking?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Way too much. But I traded in the old one, so it wasn't terrible."
+    },
+    {
+     "speaker": "user",
+     "text": "Does the battery last any better?"
+    },
+    {
+     "speaker": "friend",
+     "text": "So far it's lasting the whole day, even with music on the train."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, have you seen my charger? The white one with the short cable."
+    },
+    {
+     "speaker": "friend",
+     "text": "I borrowed it this morning, sorry. It's next to my bed."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I grab it? I'm down to five percent."
+    },
+    {
+     "speaker": "friend",
+     "text": "Go for it. We really need to buy a second one."
+    },
+    {
+     "speaker": "user",
+     "text": "Agreed. Maybe a long cable so it reaches the couch."
+    },
+    {
+     "speaker": "friend",
+     "text": "Good idea. Add it to the shopping list."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you grab a picture of all of us? Get the lake in the background."
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. Wait, how do I make it go wide? It's only showing your heads."
+    },
+    {
+     "speaker": "user",
+     "text": "Tap the little point five at the bottom."
+    },
+    {
+     "speaker": "friend",
+     "text": "Got it. Okay, everyone squish in. Uncle Ray, you're half cut off."
+    },
+    {
+     "speaker": "user",
+     "text": "Take a few, someone always blinks."
+    },
+    {
+     "speaker": "friend",
+     "text": "I took about fifteen. Your aunt blinked in every single one, by the way."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is that your phone buzzing again? That's the fourth time since we sat down."
+    },
+    {
+     "speaker": "friend",
+     "text": "Sorry, it's the work group. They're arguing about the rota."
+    },
+    {
+     "speaker": "user",
+     "text": "Can it not wait until after dinner?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Probably. Fine, I'm putting it face down. Happy?"
+    },
+    {
+     "speaker": "user",
+     "text": "Very. Pass the bread."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, how do you share your location with someone? Mum wants to see when I'm driving home."
+    },
+    {
+     "speaker": "friend",
+     "text": "Open the map app, tap your little picture, then share location. You pick how long."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I make it just for tonight?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, there's an option for one hour or until you turn it off."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll do until I turn it off. Otherwise I'll forget and she'll panic halfway down the motorway."
+    },
+    {
+     "speaker": "friend",
+     "text": "Classic. Send it to me too while you're at it."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "smartphones.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My phone gets really hot when I'm using maps in the car. Is that bad for it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little warmth is normal, but sitting in direct sun on the dashboard can really heat it up. Heat is hard on the battery over time."
+    },
+    {
+     "speaker": "user",
+     "text": "It's in one of those holders on the windshield."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try moving it to a vent mount with the air conditioning on. That keeps it much cooler."
+    },
+    {
+     "speaker": "user",
+     "text": "And should I / take it off the charger while I drive?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Charging and navigating at the same time makes the most heat. If the battery is above half, you can skip charging on short trips."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that's easy enough. Thanks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're welcome. Your battery will thank you too."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm setting up a phone for my mom. She's not great with tech. Any tips?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Make the text and icons bigger in the display settings first. That alone helps a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Good one. What else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put just the apps she uses on the home screen, like calls, messages and photos. Hide the rest in a folder."
+    },
+    {
+     "speaker": "user",
+     "text": "She always / ends up calling people by accident from her pocket."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A simple case with a flip cover can stop that. You could also shorten the screen timeout so it locks sooner."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, and can I help her from my own phone if she's stuck?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a screen sharing app lets you see her screen and guide her. Set it up together before you hand the phone over."
+    },
+    {
+     "speaker": "user",
+     "text": "Perfect, I'll do that this weekend."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Quick question. Is it okay to leave my phone charging overnight?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Modern phones stop charging when they're full, so it's generally safe. Many also have an optimized charging setting that waits to finish until just before you wake up."
+    },
+    {
+     "speaker": "user",
+     "text": "Where do I find that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's usually under battery in your settings. Look for something like optimized or adaptive charging."
+    },
+    {
+     "speaker": "user",
+     "text": "Found it, it was already on. Huh."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice, then you're already set. Just keep the phone out from under your pillow so it can cool down."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, I definitely / do that sometimes. I'll stop."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good plan. A nightstand is much better for both of you."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to start backing up my photos. I've never done it and I'm a bit scared I'll lose them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Smart to do it now. The easiest way is to turn on the photo backup built into your phone's cloud service."
+    },
+    {
+     "speaker": "user",
+     "text": "Will it use up all my data?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can set it to back up only on wifi. That way your mobile data stays untouched."
+    },
+    {
+     "speaker": "user",
+     "text": "Actually, I'd rather / keep a copy on my computer too. Just in case."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good thinking. Plug the phone in with a cable and copy the photo folder over every month or so."
+    },
+    {
+     "speaker": "user",
+     "text": "How long will the first backup take?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you have thousands of photos, it could take a night or two. Leave it plugged in and on wifi and it'll finish on its own."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Help, my phone just fell in the sink. I've put it in a bag of rice."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take it out of the rice, honestly. Rice doesn't do much and the dust can get into the ports. Is the phone on right now?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, it turned on. The screen looks okay."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good sign. Turn it off anyway, dry the outside with a towel, and leave it somewhere with airflow for a day."
+    },
+    {
+     "speaker": "user",
+     "text": "A whole day? I need it for / um, for work tomorrow morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "If it's rated water resistant, a quick splash is usually fine. Just don't charge it until the port is completely dry, that's where damage happens."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'll leave it by the window tonight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. If the speaker sounds muffled tomorrow, that's often just water in the grille and it clears up."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I keep getting calls from the same weird number. Every day at lunch."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like a robocall. You can block it from your recent calls list. Tap the number, then block."
+    },
+    {
+     "speaker": "user",
+     "text": "Done. But they'll just use another number, won't they?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often, yes. Most phones also have a setting to silence unknown callers, so anyone not in your contacts goes straight to voicemail."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. My dentist sometimes calls from a number I don't have / saved."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then save the dentist now. Anyone important who calls from a new number can still leave a message, and you'll see it."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, turning it on. Peace at last."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a plumber, just started my own business. My voicemail still says the default robot thing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Worth changing, it's the first thing a customer hears. Do you want help with what to say?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes please, I'm / terrible at that stuff."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it short. Your name, your business, that you're probably under a sink, and when you'll call back. Something like, you've reached Dan's Plumbing, I'm on a job, leave your name and address and I'll ring you within the hour."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, under a sink. That's honest. How do I record it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Open the phone app, go to voicemail, and look for greeting. Record it somewhere quiet, not in the van with the engine running."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it. I'll do it tonight when the kids are asleep."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My battery goes from eighty to forty overnight, and I'm not even using it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lot. Something's probably running in the background. Check the battery section in settings, it lists which apps used the most."
+    },
+    {
+     "speaker": "user",
+     "text": "Let me look. Oh. A weather app used thirty percent."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's your culprit. It's likely refreshing your location constantly."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I keep it but stop it doing / that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. Set its location access to only while using the app, and turn off background refresh for it."
+    },
+    {
+     "speaker": "user",
+     "text": "Done. That's so sneaky."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pretty common, sadly. Check again tomorrow morning and see if it holds its charge."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My seven-year-old just spent sixty pounds on gems in some cartoon game. On my phone. I'm fuming."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh no. The good news is you can usually request a refund from the app store, especially for an accidental purchase by a child."
+    },
+    {
+     "speaker": "user",
+     "text": "How?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Find the purchase in your account's order history and choose report a problem. Explain it was your child. Do it today, they're more generous when it's quick."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And how do I stop this happening again? Because he will / absolutely try again."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Turn on a password requirement for every purchase, or set up a child profile where he has to ask your permission."
+    },
+    {
+     "speaker": "user",
+     "text": "Password on everything. He knows my code, the little rascal."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then change the code too. Kids are very good at watching thumbs."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is there a way to screenshot a whole webpage, not just what's on the screen?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, most phones can do a scrolling screenshot. Take a normal screenshot, then look for a button that says scroll or full page in the preview."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I see it. Full page. It saved it as a PDF though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That happens in some browsers. A PDF is actually handy for long recipes or tickets, it keeps everything readable."
+    },
+    {
+     "speaker": "user",
+     "text": "It's a train booking, so fine. Can I / can I find it offline later?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's saved to your files, so yes, no signal needed. Maybe rename it so you don't hunt for it at the station."
+    },
+    {
+     "speaker": "user",
+     "text": "Good tip. Thanks."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So I'm switching from one phone system to the other and I'm worried my contacts won't come over."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They almost always do. Contacts live in your account, so if they're synced, they'll come across when you sign in."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know if they're synced?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Go to your contacts settings on the old phone and see which account they're saved to. If it says on device, they're only on the phone itself."
+    },
+    {
+     "speaker": "user",
+     "text": "It says on device for, like, / half of them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then move those to your account first. There's usually an option to export or move contacts in that same menu."
+    },
+    {
+     "speaker": "user",
+     "text": "And my messages?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Messages are trickier between systems. The setup app on the new phone usually offers to copy them, so use it during the first setup rather than afterwards."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'll do it all on Saturday with a cup of tea."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "All my photos look hazy lately. Like there's fog on everything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "First thing to try sounds silly, but wipe the camera lens. Pocket grease is the most common cause."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh. Wow. That's way better."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It happens to everyone. A soft cloth, your shirt in a pinch, but not paper towels, they can scratch."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there anything else I should do / for sharper shots?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tap on your subject before taking the photo so it focuses there, and hold still for a second after you press the button."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I've been snapping and moving immediately."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most phones keep processing the image for a moment, so that little pause really helps."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Guests keep asking for my wifi password and it's this long random thing. Embarrassing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can share it with a QR code instead. Go to your wifi settings, tap your network, and there's usually a share option."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh nice. They just point their camera at it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly, it connects them without typing. Some people print the code and stick it on the fridge."
+    },
+    {
+     "speaker": "user",
+     "text": "That's cute. My mum would / love that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And if anyone's phone can't scan it, you can still read out the password, but hopefully that's rare."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I work nights in a hospital and I sleep during the day. My phone keeps waking me up."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Set a do not disturb schedule for your sleep hours. It silences everything at once."
+    },
+    {
+     "speaker": "user",
+     "text": "But I can't miss calls from my kids' school. That's the whole problem."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can allow certain contacts through. Add the school and your partner as favourites, and only they will ring."
+    },
+    {
+     "speaker": "user",
+     "text": "And if a call comes from the school office instead of / the number I saved?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good thinking. There's often a setting that lets a call through if the same number tries twice within a few minutes. Schools usually do try again if it's urgent."
+    },
+    {
+     "speaker": "user",
+     "text": "That's actually perfect. Why didn't I do this years ago?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Better late than never. Sleep well today."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My brother says my phone is listening to me because I talked about kayaks and then saw kayak ads."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Spooky, right? It's more likely the ads came from your searches, location, or what your friends looked at, rather than the microphone."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. I did look at a lake on the map."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That'll do it. Still, you can check which apps have microphone permission in your privacy settings."
+    },
+    {
+     "speaker": "user",
+     "text": "Checking now. Why does a flashlight app want my microphone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It doesn't need it at all. Switch that off, or delete the app, your phone has a built-in flashlight anyway."
+    },
+    {
+     "speaker": "user",
+     "text": "Deleted. Take that, / kayak people."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandad is hard of hearing and phone calls are a struggle for him. Any tricks?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Quite a few. Many phones have live captions that show what the other person says as text on the screen."
+    },
+    {
+     "speaker": "user",
+     "text": "Really? That would be amazing for him."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's in the accessibility settings. You can also turn up the call volume beyond normal and use video calls so he can lip-read."
+    },
+    {
+     "speaker": "user",
+     "text": "He'd love video calls. He'd get to see / the dog, too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then that's a double win. Set up the captions, put a big video call button on his home screen, and do a practice call together."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm visiting him Sunday, I'll set it up then."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Going hiking in the hills next week. There's zero signal up there."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Download offline maps before you go. Most map apps let you save an area to your phone."
+    },
+    {
+     "speaker": "user",
+     "text": "How big an area?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Draw the box a bit wider than your route, in case you take a wrong turn. It takes a few minutes on wifi."
+    },
+    {
+     "speaker": "user",
+     "text": "And battery? Using maps all day / kills my phone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Turn on airplane mode, GPS still works without signal. And bring a small power bank, just in case."
+    },
+    {
+     "speaker": "user",
+     "text": "Airplane mode and GPS works? I didn't know that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yep, GPS comes from satellites, not your network. Your blue dot will still move."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm dyslexic and typing long messages is exhausting. Is voice typing any good these days?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's gotten really good. Tap the microphone on your keyboard and just talk. You can even say comma and full stop."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, I feel silly talking to my phone in public though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people feel that. You could use it at home for the long stuff and type short replies when you're out."
+    },
+    {
+     "speaker": "user",
+     "text": "That's fair. Does it learn / my weird words?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly, yes. If it keeps getting a name wrong, add it to your personal dictionary in the keyboard settings."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'm going to try it on my essay notes tonight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. You might also like the read aloud feature for checking what you wrote."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My eyes feel tired after an evening on my phone. Is the brightness doing that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Partly, yes. Turn on auto-brightness so it dims in dark rooms, and try the night light or warm screen setting after sunset."
+    },
+    {
+     "speaker": "user",
+     "text": "The warm one makes everything look yellow. It's kind of gross."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can adjust how warm it gets. Even a gentle shift helps, it doesn't have to look like an old photo."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll set it to halfway. Anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Every twenty minutes or so, look at something far away for a bit. And hold the phone a little further from your face than feels natural."
+    },
+    {
+     "speaker": "user",
+     "text": "I hold it like / two inches from my nose, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then that alone could make a big difference."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I think I left my phone in a taxi. I'm using my friend's laptop. Please help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, deep breath. Go to your phone maker's find my device website and sign in with your account."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm in. It shows a dot. It's moving / across town."
+    },
+    {
+     "speaker": "moshi",
+     "text": "So it's probably still in the taxi. Use the play sound option, and put a message on the lock screen with your friend's number."
+    },
+    {
+     "speaker": "user",
+     "text": "Done. Should I call the taxi company?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, give them the time and pickup street. They can radio the driver. And don't erase the phone yet, or you'll lose the tracking."
+    },
+    {
+     "speaker": "user",
+     "text": "The driver just called my friend! He's bringing it back."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brilliant. Maybe give him a nice tip."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My charger only works if I hold the cable at an angle. Is my phone broken?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe not. Pocket lint often packs into the charging port and stops the cable going all the way in."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I get it out / without wrecking it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Turn the phone off, then gently scrape around inside with a wooden toothpick. No metal, and no blowing into it."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh my goodness. A whole little felt pad came out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's very typical. Try the cable now."
+    },
+    {
+     "speaker": "user",
+     "text": "It clicks in properly. Wow. I was about to buy a new phone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Glad we checked first. Do it every few months if you keep your phone in your pocket."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Are wireless charging pads worth it, or just a gimmick?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Depends on your habits. They're slower than a cable, but really handy on a desk or nightstand where you just drop the phone down."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm always unplugging my phone to text in bed and then it doesn't charge."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a cable is actually better for you, since you can use the phone while it's plugged in. A pad only charges when the phone's lying on it."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. Fair point. What about / at work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's where a pad shines. You set it down between meetings and it tops up without any fiddling."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, one for the office then. Not the bedroom."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do I actually need a screen protector? The guy at the shop was very pushy about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Modern screens are tough against scratches, but they still crack when dropped. A protector mostly takes the hit instead of the screen."
+    },
+    {
+     "speaker": "user",
+     "text": "I drop my phone constantly. Like, daily."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then yes, it's cheap insurance. A tempered glass one is worth it, and you can put it on yourself."
+    },
+    {
+     "speaker": "user",
+     "text": "I always get bubbles / when I try."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Do it in a steamy bathroom after a shower, there's less dust floating around. Many come with a frame that lines it up for you."
+    },
+    {
+     "speaker": "user",
+     "text": "The bathroom trick. Okay, I'm intrigued."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My bank keeps nagging me to set up two-factor something. Is it worth the hassle?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It really is. It means even if someone steals your password, they'd still need your phone to get in."
+    },
+    {
+     "speaker": "user",
+     "text": "But then every time I log in I have to wait for a code. Annoying."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually just the first time on a new device. After that it remembers your laptop."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine. Text message codes, or that / authenticator app thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "An authenticator app is safer than texts, because texts can be intercepted. But texts are much better than nothing."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll start with texts. Baby steps."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally fair. You can always upgrade later."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I run alone early in the mornings. Is there a way for someone to know who I am if I collapse?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, set up your medical ID and emergency contacts. Paramedics can see them from the lock screen without your code."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I put in it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Your name, any allergies or conditions, medications, blood type if you know it, and one or two emergency contacts."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm allergic to penicillin, so that's useful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely put that in. Many phones also have an emergency SOS shortcut, pressing the side button a few times calls for help and texts your contacts."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll test where the button / is without actually calling anyone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. Most phones have a countdown first, so you can cancel."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm in Seoul and the menu here is all in Korean. No pictures. Help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Open your translate app and use the camera mode. Point it at the menu and the translation appears on top of the text."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh wow. It says spicy pork and rice cake soup."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There you go. It's not always perfect, but it'll get you close."
+    },
+    {
+     "speaker": "user",
+     "text": "What's this one? It translated as / angry chicken."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably a very spicy chicken dish. Translations of food names can be pretty literal."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll take the angry chicken. Living dangerously."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brave choice. Maybe order a cold drink too."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I record my university lectures on my phone? I can't write fast enough."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, the built-in voice recorder works well. Sit nearer the front so the lecturer's voice is clearer than people around you."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need to ask permission?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's polite and often required. Check the course rules or just ask the lecturer after class. Most say yes for personal study."
+    },
+    {
+     "speaker": "user",
+     "text": "And can it / turn it into text?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some recorder apps transcribe automatically, and you can search the text later for keywords."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that would save my life during exams."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Just don't skip actually listening in the room. The recording is a backup, not a replacement."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're giving our eight-year-old a phone just for emergencies. How do I lock it down?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Set it up with a child account first. Then you can choose exactly which apps she can open and who she can call."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I make it so she can only call family?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many phones let you restrict calls and messages to approved contacts. Add yourselves, grandparents, and maybe a close neighbour."
+    },
+    {
+     "speaker": "user",
+     "text": "And no internet. She'd find / some video app within an hour."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Turn off the browser and the app store in the restrictions. You'll approve anything new from your own phone."
+    },
+    {
+     "speaker": "user",
+     "text": "Sounds like a mini prison phone. She'll still be thrilled though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "At eight, any phone feels like a big deal."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My wife and I keep double-booking our weekends. Can our phones sort that out?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A shared calendar would help. Make one calendar called family, share it with her, and you'll both see and edit it."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I have to put everything in there?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Just the things that affect both of you. Dinners, kids' events, trips. Your work meetings can stay in your own calendar."
+    },
+    {
+     "speaker": "user",
+     "text": "Her sister's birthday is usually the / the one we forget."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Add it as a yearly event with a reminder a week before. That way there's time to buy a present."
+    },
+    {
+     "speaker": "user",
+     "text": "A week. Yeah. Last year I bought flowers at a petrol station."
+    },
+    {
+     "speaker": "moshi",
+     "text": "We can do better than that this year."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friend's name is Saoirse and my phone changes it to sorry every single time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, autocorrect strikes again. Save Saoirse as a contact, phones usually learn names from your contacts."
+    },
+    {
+     "speaker": "user",
+     "text": "She's already / in my contacts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then add it to your keyboard's personal dictionary. It's in the keyboard settings, often under text correction."
+    },
+    {
+     "speaker": "user",
+     "text": "Found it. Added. Let me test it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How did it go?"
+    },
+    {
+     "speaker": "user",
+     "text": "It worked! Finally. She thinks I've been apologising to her for months."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Well, now you can just say hi."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I miss every call because my phone is so quiet. The ringer's on full."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Is it in a case? Some thick cases cover the speaker holes on the bottom."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh. Maybe. It's a chunky rubber one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a call with the case off and see. Also check the speaker grille for lint, it gets clogged."
+    },
+    {
+     "speaker": "user",
+     "text": "Without the case it's way louder. Okay then. And at work I keep it / on vibrate."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can choose a stronger vibration pattern in the sound settings. Some are a long heartbeat rather than a short buzz, much easier to notice."
+    },
+    {
+     "speaker": "user",
+     "text": "Heartbeat. Love it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And maybe shop for a case with proper cutouts for the speaker."
+    }
+   ]
+  },
+  {
+   "id": "smartphones.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Quick one. What's an eSIM? The shop mentioned it and I nodded like I knew."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a SIM card that's built into the phone instead of a little plastic card. You download your plan instead of slotting something in."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it better?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly convenient. You can switch carriers without a trip to a shop, and some phones hold a couple of plans at once."
+    },
+    {
+     "speaker": "user",
+     "text": "Any / downside?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Moving it to a new phone takes a few extra steps, and some small carriers don't support it yet."
+    },
+    {
+     "speaker": "user",
+     "text": "Alright. I'll nod with confidence next time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Now you've earned it."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "smartphones.opt1",
+   "lead_in": "My phone finally died, and I'm choosing between a few replacements.",
+   "options": [
+    "The first one is the latest flagship with an amazing camera, but it costs over a thousand dollars.",
+    "Then there's last year's model of the same phone, almost as good and a few hundred cheaper.",
+    "Option three is a mid range phone with a huge battery that lasts two full days.",
+    "And the last one is a small compact phone that fits easily in my pocket."
+   ],
+   "moshi_comment": [
+    "Last year's flagship is usually the best value, you get nearly the same camera for much less. The new flagship only makes sense if photos are really important to you. The mid range phone is great if battery life is your biggest worry.",
+    "What bugged you most about your old phone? If it was the battery, the mid range phone is a clear win. If you take lots of photos, go with last year's flagship."
+   ]
+  },
+  {
+   "id": "smartphones.opt2",
+   "lead_in": "I'm getting my dad a new phone and I want to pick the right one.",
+   "options": [
+    "One is a simple phone with big buttons and a large screen, made for people who aren't techy.",
+    "Another is the same brand he's using now, just the newer version, so everything feels familiar.",
+    "Or there's a cheap basic smartphone that mostly does calls, texts and photos."
+   ],
+   "moshi_comment": [
+    "Sticking with the same brand is probably the smoothest choice, he won't have to relearn anything. The big button phone is great if his eyesight is a concern. The basic smartphone saves money but might feel slow.",
+    "Does he struggle with his current phone, or is it just old? If he's comfortable with it, get the newer version of the same one. If he struggles, the big screen phone could really help."
+   ]
+  },
+  {
+   "id": "smartphones.opt3",
+   "lead_in": "My contract ends next month and I need to pick a new phone plan.",
+   "options": [
+    "There's a cheap prepaid plan, ten gigs of data, no contract, but the coverage at my parents' place is patchy.",
+    "My current carrier offered unlimited data for a bit more each month if I sign up for two years.",
+    "A family plan with my sister would split the cost, though I'd be tied to her paying on time."
+   ],
+   "moshi_comment": [
+    "The family plan is cheapest on paper, but it only works if you trust your sister with the bills. If you want freedom, the prepaid one is great, as long as that patchy coverage at your parents' isn't a dealbreaker.",
+    "If you use a lot of data, your carrier's unlimited deal is the safe pick, even with the two-year lock. The prepaid plan wins on flexibility, and the family split saves money but mixes in family politics."
+   ]
+  },
+  {
+   "id": "smartphones.opt4",
+   "lead_in": "My fourteen-year-old needs a new phone and I've got it down to a few.",
+   "options": [
+    "A brand new budget phone, nothing fancy, but the battery lasts and it's cheap if he breaks it.",
+    "My old flagship, two years old, still fast, it just has a scratch on the back.",
+    "A refurbished mid-range model with a really good camera, because he's obsessed with filming skate videos.",
+    "Or a basic phone with just calls and texts, which he would absolutely hate."
+   ],
+   "moshi_comment": [
+    "For skate videos, the refurbished one with the good camera is the clear favourite. Your old flagship is a close second and free, while the basic phone is more of a punishment than a plan.",
+    "Your old flagship costs you nothing and still runs well, which is hard to beat. The refurbished one suits his filming, and the budget phone is the low-stress choice if he's rough on things."
+   ]
+  },
+  {
+   "id": "smartphones.opt5",
+   "lead_in": "My phone has gotten painfully slow and I'm not sure how to fix it.",
+   "options": [
+    "I could do a full factory reset and set everything up again from scratch.",
+    "Or pay a shop to swap the battery, since I've heard old batteries slow phones down.",
+    "Another idea is just deleting a ton of apps and photos to free up space.",
+    "Or give up and buy a new one, which I really don't want to do."
+   ],
+   "moshi_comment": [
+    "Start with clearing space, it's free and often helps right away. If it's still sluggish, a battery swap is cheap compared to a new phone, and a factory reset is the deep clean if nothing else works.",
+    "A new battery plus freeing up space usually brings an old phone back to life. The reset is worth it if apps keep crashing, and buying new is only for when the phone is truly ancient."
+   ]
+  },
+  {
+   "id": "smartphones.opt6",
+   "lead_in": "I want a used phone and I can't decide where to get it.",
+   "options": [
+    "A refurbished one from a big electronics store, a year of warranty, but it costs more.",
+    "Someone on a local marketplace is selling the same phone for much less, meeting in a car park.",
+    "My coworker is upgrading and offered me her old one at a friend price."
+   ],
+   "moshi_comment": [
+    "Your coworker's phone is probably the best mix, cheap and you know its history. The store gives you the warranty for peace of mind, and the marketplace deal is fine if you check it carefully in person.",
+    "If you hate risk, pay a bit more for the store's warranty. The coworker's offer is great value, and the car park sale is the cheapest but the one most likely to go wrong."
+   ]
+  }
+ ]
 }

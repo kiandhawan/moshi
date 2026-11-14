@@ -7,116 +7,123 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "board_games"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "board_games",
+ "topics": [
+  "pets"
+ ],
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 10
+ },
+ "topic": "pets",
  "voices": {
-  "user": "3fdb457debb744ca9cfe9e2ce99a2deb",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_02",
-  "describe_instr_16",
-  "ack_09",
-  "describe_cue_08"
+  "greet_14",
+  "greet_ans_29",
+  "think_instr_05",
+  "self_13"
  ],
  "block_ids": [
-  "board_games.opt2"
+  "pets.ctx3"
  ],
- "est_total_sec": 49.67,
- "est_speech_sec": 38.51,
+ "est_total_sec": 44.24,
+ "est_speech_sec": 27.56,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
+   "text": "Hi! How's life treating you?",
    "est_sec": 1.65,
-   "gap_before": 0.59,
+   "gap_before": 0.67,
    "role": "greeting",
-   "phrasing": "greet_02"
+   "phrasing": "greet_14"
   },
   {
    "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.89,
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.98,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
+   "phrasing": "greet_ans_29"
   },
   {
    "speaker": "user",
-   "text": "I want a board game to play with my partner on quiet evenings.",
-   "est_sec": 4.13,
-   "gap_before": 0.23,
-   "block": "board_games.opt2"
+   "text": "I'm going away for a week and I don't know what to do with my dog.",
+   "est_sec": 5.06,
+   "gap_before": 0.2,
+   "event": "ordinary_request",
+   "block": "pets.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You've got a few options. Would you prefer a boarding kennel, or a sitter who comes to your home?",
+   "est_sec": 5.99,
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "pets.ctx3"
   },
   {
    "speaker": "user",
-   "text": "Listen to all of them first, then comment.",
-   "est_sec": 2.58,
-   "gap_before": 0.45,
+   "text": "Can you give me ten seconds? Then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 0.53,
    "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_16"
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_05"
   },
   {
-   "speaker": "moshi",
-   "text": "Take your time.",
+   "speaker": "user",
+   "text": "Right, so first",
    "est_sec": 1.03,
-   "gap_before": 0.23,
-   "role": "ack",
-   "phrasing": "ack_09"
-  },
-  {
-   "speaker": "user",
-   "text": "One is a two player card game about trading spices, fast and really easy to set up.",
-   "est_sec": 5.37,
-   "gap_before": 1.33,
-   "block": "board_games.opt2",
+   "anchor": {
+    "turn": 4,
+    "offset": 5.58
+   },
    "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a puzzle style game where you build a pretty garden with tiles.",
-   "est_sec": 4.44,
-   "gap_before": 1.62,
-   "block": "board_games.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a long campaign game where the story changes every time you play.",
-   "est_sec": 4.44,
-   "gap_before": 2.47,
-   "block": "board_games.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all. Which sounds best to you?",
-   "est_sec": 2.58,
-   "gap_before": 1.09,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_08"
+   "kind": "self_talk",
+   "phrasing": "self_13"
   },
   {
    "speaker": "moshi",
-   "text": "Do you two like to compete, or would you rather relax? For relaxing, the garden game is a lovely pick. If you want something to look forward to each week, try the campaign game.",
-   "est_sec": 10.64,
-   "gap_before": 0.76,
+   "text": "So, kennel or a sitter at home for your dog?",
+   "est_sec": 3.2,
    "role": "resume",
-   "block": "board_games.opt2"
+   "block": "pets.ctx3",
+   "anchor": {
+    "turn": 4,
+    "offset": 10.47
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The kennel. He loves other dogs.",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
+   "event": "ordinary_request",
+   "block": "pets.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "He'll have a blast then. Book early and check what vaccinations they require.",
+   "est_sec": 4.13,
+   "gap_before": 1.61,
+   "role": "followup",
+   "block": "pets.ctx3"
   }
  ]
 }

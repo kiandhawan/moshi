@@ -1,161 +1,1956 @@
 {
-  "topic": "fitness",
-  "contexts": [
+ "topic": "fitness",
+ "contexts": [
+  {
+   "id": "fitness.ctx1",
+   "turns": [
     {
-      "id": "fitness.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I want to start working out again but I can only manage three short sessions a week."},
-        {"speaker": "moshi", "text": "That's plenty to make progress. Would you rather focus on strength with weights, or on cardio like running and cycling?"}
-      ],
-      "pending": "strength or cardio focus",
-      "think_reask": [
-        "Okay, so what's your pick, strength or cardio?",
-        "Time's up. For your three sessions a week, weights or cardio?",
-        "Have you decided where you want to focus, strength or cardio?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were planning your workouts. Strength or cardio?",
-        "Hi again. You were choosing between weights and cardio for your three sessions.",
-        "Good to have you back. Any decision on strength versus cardio?"
-      ],
-      "endings": [
-        {"user": "Strength. I want to feel stronger carrying the groceries.", "moshi": "Great goal. Start with squats, push-ups and rows, three sets each, and add weight slowly."},
-        {"user": "Cardio, I think. My stamina is terrible.", "moshi": "Then try intervals. Two minutes easy, one minute hard, repeated for about twenty minutes."}
-      ]
+     "speaker": "user",
+     "text": "I want to start working out again but I can only manage three short sessions a week."
     },
     {
-      "id": "fitness.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I signed up for a ten kilometer race in two months. I've never run that far."},
-        {"speaker": "moshi", "text": "Two months is enough if you build up gradually. What's the longest you can run comfortably right now?"}
-      ],
-      "pending": "current comfortable running distance",
-      "think_reask": [
-        "So, how far can you comfortably run at the moment?",
-        "Alright, any idea of your longest comfortable run right now?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were planning your ten kilometer training. How far can you run comfortably now?",
-        "Hey, you're back. You were figuring out your current running distance."
-      ],
-      "endings": [
-        {"user": "Maybe three kilometers before I need to walk.", "moshi": "That's a fine starting point. Add about half a kilometer to your long run each week and you'll be ready."},
-        {"user": "Honestly, about five, but it's slow.", "moshi": "Slow is perfect for building distance. Keep most runs easy and do one longer run every weekend."}
-      ]
-    },
-    {
-      "id": "fitness.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "My gym membership is up for renewal and there's also a cheaper climbing gym nearby."},
-        {"speaker": "moshi", "text": "Both are good options. Do you want to stick with what you know, or try something new that might keep you more motivated?"}
-      ],
-      "pending": "renew regular gym or switch to climbing gym",
-      "think_reask": [
-        "So, have you decided? Renew the gym or switch to climbing?",
-        "Okay, which way are you leaning, your usual gym or the climbing gym?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were deciding between your gym and the climbing gym.",
-        "There you are. Any thoughts on renewing your gym or trying climbing?"
-      ],
-      "endings": [
-        {"user": "I'll try climbing. I'm bored of the treadmill.", "moshi": "Sounds fun. Most climbing gyms do an intro session, so book that first and see how you like it."},
-        {"user": "I'll renew. I know I'll actually go.", "moshi": "That's the most important thing. Consistency beats novelty every time."}
-      ]
+     "speaker": "moshi",
+     "text": "That's plenty to make progress. Would you rather focus on strength with weights, or on cardio like running and cycling?"
     }
-  ],
-  "side_conversations": [
-    {"id": "fitness.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, are you coming to the gym with me tomorrow morning?"},
-      {"speaker": "friend", "text": "How early are we talking?"},
-      {"speaker": "user", "text": "Half past six. Before work."},
-      {"speaker": "friend", "text": "Ugh. Fine, but only if we do legs. I skipped them last week."},
-      {"speaker": "user", "text": "Legs it is. Can you set an alarm for both of us? I always sleep through mine."},
-      {"speaker": "friend", "text": "Yeah, I'll bang on your door if I have to."}
-    ]},
-    {"id": "fitness.side2", "turns": [
-      {"speaker": "user", "text": "Have you seen my running shoes? The blue ones."},
-      {"speaker": "friend", "text": "They're by the back door. They were muddy so I left them out there."},
-      {"speaker": "user", "text": "Thanks. Do you want to come for a quick run around the park?"},
-      {"speaker": "friend", "text": "How quick is quick?"},
-      {"speaker": "user", "text": "Like thirty minutes, nice and easy."},
-      {"speaker": "friend", "text": "Okay, but I'm walking the hill. Not negotiable."}
-    ]},
-    {"id": "fitness.side3", "turns": [
-      {"speaker": "user", "text": "My shoulder still hurts from that class on Tuesday. Did yours?"},
-      {"speaker": "friend", "text": "A bit. I think it was all those overhead presses."},
-      {"speaker": "user", "text": "Should I just take a few days off, do you think?"},
-      {"speaker": "friend", "text": "Probably. Or do lower body stuff and leave your arms alone for a while."},
-      {"speaker": "user", "text": "Yeah, that's probably smarter than skipping completely."},
-      {"speaker": "friend", "text": "And put some ice on it tonight."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "fitness.dlg1", "turns": [
-      {"speaker": "user", "text": "How many push-ups should a beginner aim for?"},
-      {"speaker": "moshi", "text": "Start with however many you can do with good form, even if it's five. Do three sets and try to add one rep each week."},
-      {"speaker": "user", "text": "What if I can't do a single one?"},
-      {"speaker": "moshi", "text": "Then start with push-ups against a wall or a kitchen counter. As those get easy, move lower, to a chair and then the floor."},
-      {"speaker": "user", "text": "Knee push-ups count too, right?"},
-      {"speaker": "moshi", "text": "Absolutely. They build the same muscles and they're a great step towards full push-ups."},
-      {"speaker": "user", "text": "Cool. And how often should I / do them, every day?"},
-      {"speaker": "moshi", "text": "Every other day is better at first. Your muscles grow during the rest days."}
-    ]},
-    {"id": "fitness.dlg2", "turns": [
-      {"speaker": "user", "text": "I sit at a desk all day and my back is killing me. Are there exercises that help?"},
-      {"speaker": "moshi", "text": "Yes. Bridges, bird dogs and gentle cat cow stretches strengthen and loosen your back. A few minutes a day helps."},
-      {"speaker": "user", "text": "What's a bird dog?"},
-      {"speaker": "moshi", "text": "On your hands and knees, you stretch one arm forward and the opposite leg back, hold for a few seconds, then switch."},
-      {"speaker": "user", "text": "Sounds doable. Should I also get a standing desk or / is that overrated?"},
-      {"speaker": "moshi", "text": "It can help, but mostly by making you change position. Getting up and walking around every half hour matters more."},
-      {"speaker": "user", "text": "Alright, I'll set a reminder on my phone."},
-      {"speaker": "moshi", "text": "Good plan. And if the pain is sharp or doesn't improve, it's worth seeing a doctor."}
-    ]},
-    {"id": "fitness.dlg3", "turns": [
-      {"speaker": "user", "text": "Is it better to stretch before or after a run?"},
-      {"speaker": "moshi", "text": "Before a run, do a dynamic warm-up like leg swings and easy jogging. Save the longer, held stretches for after."},
-      {"speaker": "user", "text": "Why not hold stretches before?"},
-      {"speaker": "moshi", "text": "Long static stretches can make your muscles feel a bit weaker right away. Moving warm-ups get them ready instead."},
-      {"speaker": "user", "text": "Makes sense. I usually just / start running and hope for the best."},
-      {"speaker": "moshi", "text": "Lots of people do. Even five minutes of brisk walking first makes a real difference."},
-      {"speaker": "user", "text": "Okay. And after, how long should I hold each stretch?"},
-      {"speaker": "moshi", "text": "About thirty seconds each. Focus on calves, hamstrings and hips, those get tight from running."}
-    ]},
-    {"id": "fitness.dlg4", "turns": [
-      {"speaker": "user", "text": "I'm sixty-eight and my doctor said I should do more exercise. I'm not really a gym person."},
-      {"speaker": "moshi", "text": "You don't need a gym. Brisk walking, swimming or a gentle yoga class are all excellent choices."},
-      {"speaker": "user", "text": "I do like swimming. How often should I go?"},
-      {"speaker": "moshi", "text": "Two or three times a week is a great target. Start with twenty minutes and build up as you feel comfortable."},
-      {"speaker": "user", "text": "What about strength? My doctor mentioned that too."},
-      {"speaker": "moshi", "text": "Simple things help a lot, like standing up from a chair without using your hands, or light weights at home."},
-      {"speaker": "user", "text": "I have some old dumbbells / somewhere in the garage, I think."},
-      {"speaker": "moshi", "text": "Perfect. Try a few slow bicep curls and shoulder raises while watching television."},
-      {"speaker": "user", "text": "Ha, that I can manage."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "fitness.opt1",
-     "lead_in": "I want to start exercising again and I'm stuck between a few options.",
-     "options": [
-       "The first one is joining the gym near my office, it's pricey but I'd go right after work.",
-       "Then there's running outside, totally free, but I tend to skip it when the weather's bad.",
-       "And the last one is a home workout app with short twenty minute sessions I can do in the living room."
-     ],
-     "moshi_comment": [
-       "The gym near your office has a big advantage, going right after work makes it easy to build a habit. Running is free, but if bad weather stops you, it might not stick. The home app is the most flexible, and twenty minutes is easy to fit in.",
-       "What's stopped you in the past, time, money, or motivation? If it's motivation, the gym after work is probably best because it becomes part of your routine. If it's time, the home app is hard to beat."
-     ]},
-    {"id": "fitness.opt2",
-     "lead_in": "I'm training for my first five kilometer race and I'm trying to pick a plan.",
-     "options": [
-       "One plan has me running three days a week, slowly building up over about eight weeks.",
-       "Another one mixes running with cycling and swimming, so it's less hard on my knees.",
-       "Option three is a run walk method, where I alternate jogging and walking until I can run the whole thing.",
-       "And the last is just running every day as far as I can and hoping for the best."
-     ],
-     "moshi_comment": [
-       "For a first race, the three days a week plan is a classic for a reason, it gives your body time to recover. The run walk method is great if you're starting from zero. I'd skip running every day, that's a fast way to get hurt.",
-       "How much running are you doing right now? If almost none, start with the run walk method. If you can already jog for a bit, the eight week plan is perfect, and the cycling mix is nice if your knees complain."
-     ]}
-  ]
+   ],
+   "pending": "strength or cardio focus",
+   "think_reask": [
+    "Okay, so what's your pick, strength or cardio?",
+    "Time's up. For your three sessions a week, weights or cardio?",
+    "Have you decided where you want to focus, strength or cardio?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were planning your workouts. Strength or cardio?",
+    "Hi again. You were choosing between weights and cardio for your three sessions.",
+    "Good to have you back. Any decision on strength versus cardio?"
+   ],
+   "endings": [
+    {
+     "user": "Strength. I want to feel stronger carrying the groceries.",
+     "moshi": "Great goal. Start with squats, push-ups and rows, three sets each, and add weight slowly."
+    },
+    {
+     "user": "Cardio, I think. My stamina is terrible.",
+     "moshi": "Then try intervals. Two minutes easy, one minute hard, repeated for about twenty minutes."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I signed up for a ten kilometer race in two months. I've never run that far."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two months is enough if you build up gradually. What's the longest you can run comfortably right now?"
+    }
+   ],
+   "pending": "current comfortable running distance",
+   "think_reask": [
+    "So, how far can you comfortably run at the moment?",
+    "Alright, any idea of your longest comfortable run right now?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were planning your ten kilometer training. How far can you run comfortably now?",
+    "Hey, you're back. You were figuring out your current running distance."
+   ],
+   "endings": [
+    {
+     "user": "Maybe three kilometers before I need to walk.",
+     "moshi": "That's a fine starting point. Add about half a kilometer to your long run each week and you'll be ready."
+    },
+    {
+     "user": "Honestly, about five, but it's slow.",
+     "moshi": "Slow is perfect for building distance. Keep most runs easy and do one longer run every weekend."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My gym membership is up for renewal and there's also a cheaper climbing gym nearby."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Both are good options. Do you want to stick with what you know, or try something new that might keep you more motivated?"
+    }
+   ],
+   "pending": "renew regular gym or switch to climbing gym",
+   "think_reask": [
+    "So, have you decided? Renew the gym or switch to climbing?",
+    "Okay, which way are you leaning, your usual gym or the climbing gym?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were deciding between your gym and the climbing gym.",
+    "There you are. Any thoughts on renewing your gym or trying climbing?"
+   ],
+   "endings": [
+    {
+     "user": "I'll try climbing. I'm bored of the treadmill.",
+     "moshi": "Sounds fun. Most climbing gyms do an intro session, so book that first and see how you like it."
+    },
+    {
+     "user": "I'll renew. I know I'll actually go.",
+     "moshi": "That's the most important thing. Consistency beats novelty every time."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My baby is five months old and my doctor's cleared me to exercise. I feel completely out of shape."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's great news, and be gentle with yourself. A postnatal pilates class rebuilds your core, while a buggy walking group gets you out with the baby. Which appeals more?"
+    }
+   ],
+   "pending": "postnatal pilates or a buggy walking group",
+   "think_reask": [
+    "So, pilates for your core, or walking with the buggy?",
+    "Which one feels right for you and the baby?"
+   ],
+   "welcome_back": [
+    "The postnatal plan. Pilates or the walking group?",
+    "Getting back into exercise. Class or walks with the buggy?"
+   ],
+   "endings": [
+    {
+     "user": "Walking group. I need adult conversation more than anything.",
+     "moshi": "That sounds perfect for now. Start with shorter walks and add some hills once you feel stronger."
+    },
+    {
+     "user": "Pilates. My back is a mess from carrying her.",
+     "moshi": "Good call, a stronger core will help your back. Look for a class taught by someone with postnatal training."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My bench press has been stuck at the same weight for two months. It's driving me nuts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic plateau. You could take a lighter deload week to recover, or switch up the program with new variations. Which do you think you need more?"
+    }
+   ],
+   "pending": "a deload week or changing the program",
+   "think_reask": [
+    "So, back off for a week, or change the routine?",
+    "The bench plateau. Rest or a new program?"
+   ],
+   "welcome_back": [
+    "Your stuck bench. Deload or switch things up?",
+    "Two months at the same weight. Which fix are you going for?"
+   ],
+   "endings": [
+    {
+     "user": "Deload. Honestly I'm wrecked.",
+     "moshi": "Then that's probably the issue. Drop to about half the volume for a week and sleep as much as you can."
+    },
+    {
+     "user": "New program. I'm bored of the old one anyway.",
+     "moshi": "Try adding incline and close grip bench, and work in lower rep ranges for a few weeks."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I get an hour for lunch at work and there's a tiny gym in the basement."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice perk. You could do a fast twenty minute circuit there, or just take a brisk walk outside and get some daylight. What do you need more at midday?"
+    }
+   ],
+   "pending": "a lunchtime circuit in the gym or a brisk walk outside",
+   "think_reask": [
+    "So, basement circuit or a walk outside at lunch?",
+    "Gym or daylight, which wins for your lunch hour?"
+   ],
+   "welcome_back": [
+    "The lunch hour question. Circuit or walk?",
+    "So, the basement gym, or fresh air?"
+   ],
+   "endings": [
+    {
+     "user": "Circuit. I want to actually sweat.",
+     "moshi": "Then keep it simple, squats, push-ups, rows and a short cooldown, and leave ten minutes to clean up."
+    },
+    {
+     "user": "A walk. I stare at screens all day.",
+     "moshi": "Good choice. Even thirty minutes outside will lift your energy for the afternoon."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm training for a marathon and my calf has been feeling tight for three days."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tightness can turn into an injury if you push through. Do you want to rest for a few days, or switch to easy cross training like cycling?"
+    }
+   ],
+   "pending": "resting the calf or switching to cross training",
+   "think_reask": [
+    "So, rest completely, or cross train for a bit?",
+    "What's the call for your calf, rest or the bike?"
+   ],
+   "welcome_back": [
+    "The tight calf. Rest or cycling?",
+    "So, for your marathon calf, total rest or cross training?"
+   ],
+   "endings": [
+    {
+     "user": "I'll do the bike, I can't sit still.",
+     "moshi": "Okay, keep it easy and stop if the calf complains. If it's not better in a week, see a physio."
+    },
+    {
+     "user": "Rest. I'd rather lose three days than three weeks.",
+     "moshi": "Wise. Gentle stretching and foam rolling can help, then try a short easy run to test it."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My fifteen year old wants to start lifting weights. I'm a bit nervous about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lifting is safe for teens with good technique. Would you rather he started with a few sessions with a trainer, or joined a supervised school or club program?"
+    }
+   ],
+   "pending": "a personal trainer or a supervised club program for the teen",
+   "think_reask": [
+    "So, for your son, a trainer or a club program?",
+    "Which feels safer to you, one-on-one or a group?"
+   ],
+   "welcome_back": [
+    "Your teenager's lifting. Trainer or club?",
+    "The weights question for your son. Any decision?"
+   ],
+   "endings": [
+    {
+     "user": "A trainer for a few sessions, then he can go alone.",
+     "moshi": "Good plan. Ask for someone who works with young athletes and focuses on form first."
+    },
+    {
+     "user": "The school program. He'll stick with it if his mates are there.",
+     "moshi": "True, friends keep teens motivated. Check that a coach is always there during sessions."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I can never decide when to work out. Mornings I'm a zombie, evenings I'm lazy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, tricky. The best time is the one you'll actually stick to. Would you rather get it over with first thing, or use it to unwind after work?"
+    }
+   ],
+   "pending": "morning or evening workouts",
+   "think_reask": [
+    "So, zombie mornings or lazy evenings?",
+    "When are you going to work out, before or after work?"
+   ],
+   "welcome_back": [
+    "The workout time. Morning or evening?",
+    "So, which version of you gets the workout?"
+   ],
+   "endings": [
+    {
+     "user": "Mornings. If I wait, I'll talk myself out of it.",
+     "moshi": "Then lay out your clothes the night before. Make the first few workouts short so getting up feels doable."
+    },
+    {
+     "user": "Evenings. I need something to look forward to.",
+     "moshi": "Go straight from work, don't stop at home first. The sofa is very persuasive."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My knees are shot from years of football. Swimming or the rowing machine?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Both are gentle on the knees. Swimming is zero impact, while rowing builds more strength but does bend the knees a lot. How do your knees feel when you squat?"
+    }
+   ],
+   "pending": "swimming or the rowing machine for bad knees",
+   "think_reask": [
+    "So, pool or rowing machine for your knees?",
+    "Which one do you want to try, swimming or rowing?"
+   ],
+   "welcome_back": [
+    "Your knees. Swimming or rowing?",
+    "So, the pool or the rower?"
+   ],
+   "endings": [
+    {
+     "user": "Squatting hurts, so swimming.",
+     "moshi": "Then swimming it is. Front crawl or backstroke are kinder than breaststroke, which twists the knees."
+    },
+    {
+     "user": "Squats are fine, it's running that hurts.",
+     "moshi": "Then rowing could be great. Keep the movement smooth and push mostly with your legs."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My wife and I want to do a class together. Something we'd both enjoy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun idea. Salsa classes are social and playful, while a beginner boxing class is a great workout and a stress release. Which sounds more like you two?"
+    }
+   ],
+   "pending": "salsa or boxing as a couples class",
+   "think_reask": [
+    "So, salsa or boxing for the two of you?",
+    "Dancing or punching, which did you pick?"
+   ],
+   "welcome_back": [
+    "The couples class. Salsa or boxing?",
+    "So, for you and your wife, which class?"
+   ],
+   "endings": [
+    {
+     "user": "Boxing. We both need to let off steam.",
+     "moshi": "Great, look for a beginners class with pads and partner drills, it's surprisingly fun together."
+    },
+    {
+     "user": "Salsa. She's been asking for years.",
+     "moshi": "Then it's long overdue. Most beginner courses run about six weeks, perfect to see if you like it."
+    }
+   ]
+  },
+  {
+   "id": "fitness.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to work out at home. I've got space for one big thing. Adjustable dumbbells or an exercise bike?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Dumbbells give you strength training and take up very little space. A bike is better for cardio and easy to use while watching TV. What do you want more from it?"
+    }
+   ],
+   "pending": "adjustable dumbbells or an exercise bike for home",
+   "think_reask": [
+    "So, dumbbells or the bike?",
+    "Strength or cardio, which do you want at home?"
+   ],
+   "welcome_back": [
+    "The home gym question. Dumbbells or bike?",
+    "So, which one are you buying?"
+   ],
+   "endings": [
+    {
+     "user": "Dumbbells. I can always walk for cardio.",
+     "moshi": "Smart. A set that goes up to about twenty-five kilos will last you a long time."
+    },
+    {
+     "user": "The bike. I'll be honest, I'll use it during my shows.",
+     "moshi": "That's a real plus, you'll actually use it. Get one with a seat that's comfy for longer sessions."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "fitness.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, are you coming to the gym with me tomorrow morning?"
+    },
+    {
+     "speaker": "friend",
+     "text": "How early are we talking?"
+    },
+    {
+     "speaker": "user",
+     "text": "Half past six. Before work."
+    },
+    {
+     "speaker": "friend",
+     "text": "Ugh. Fine, but only if we do legs. I skipped them last week."
+    },
+    {
+     "speaker": "user",
+     "text": "Legs it is. Can you set an alarm for both of us? I always sleep through mine."
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, I'll bang on your door if I have to."
+    }
+   ]
+  },
+  {
+   "id": "fitness.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Have you seen my running shoes? The blue ones."
+    },
+    {
+     "speaker": "friend",
+     "text": "They're by the back door. They were muddy so I left them out there."
+    },
+    {
+     "speaker": "user",
+     "text": "Thanks. Do you want to come for a quick run around the park?"
+    },
+    {
+     "speaker": "friend",
+     "text": "How quick is quick?"
+    },
+    {
+     "speaker": "user",
+     "text": "Like thirty minutes, nice and easy."
+    },
+    {
+     "speaker": "friend",
+     "text": "Okay, but I'm walking the hill. Not negotiable."
+    }
+   ]
+  },
+  {
+   "id": "fitness.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My shoulder still hurts from that class on Tuesday. Did yours?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A bit. I think it was all those overhead presses."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I just take a few days off, do you think?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Probably. Or do lower body stuff and leave your arms alone for a while."
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, that's probably smarter than skipping completely."
+    },
+    {
+     "speaker": "friend",
+     "text": "And put some ice on it tonight."
+    }
+   ]
+  },
+  {
+   "id": "fitness.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, if we shared a personal trainer, would you actually show up?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Rude. I show up to things."
+    },
+    {
+     "speaker": "user",
+     "text": "You cancelled yoga three times last month."
+    },
+    {
+     "speaker": "friend",
+     "text": "Yoga was at seven in the morning. That's not fair."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, so evenings. Would you do Tuesdays and Thursdays?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Thursdays, yes. Tuesdays I have choir."
+    },
+    {
+     "speaker": "user",
+     "text": "Then I'll ask if he does Thursdays and maybe a Sunday morning."
+    },
+    {
+     "speaker": "friend",
+     "text": "Not too early on Sunday. Ten at the earliest."
+    }
+   ]
+  },
+  {
+   "id": "fitness.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did I wake you with the blender this morning?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yes. Every single morning at six."
+    },
+    {
+     "speaker": "user",
+     "text": "Sorry. I need my shake before the gym."
+    },
+    {
+     "speaker": "friend",
+     "text": "Can't you make it the night before?"
+    },
+    {
+     "speaker": "user",
+     "text": "It goes kind of grey and gross overnight."
+    },
+    {
+     "speaker": "friend",
+     "text": "Put a towel over the blender at least. It sounds like a jet taking off."
+    },
+    {
+     "speaker": "user",
+     "text": "Deal. I'll try that tomorrow."
+    }
+   ]
+  },
+  {
+   "id": "fitness.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey {friend}, are we still on for the Saturday bootcamp in the park, the one with the hill sprints?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Ugh, I forgot I said yes to that."
+    },
+    {
+     "speaker": "user",
+     "text": "You were so excited on Monday."
+    },
+    {
+     "speaker": "friend",
+     "text": "Monday me is very brave. Saturday me wants pancakes."
+    },
+    {
+     "speaker": "user",
+     "text": "We can get pancakes after. Will you come if I drive?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine, but if I collapse on the hill, you carry me down."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll bring water and sympathy. Mostly water."
+    },
+    {
+     "speaker": "friend",
+     "text": "Great. Pick me up at nine."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "fitness.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How many push-ups should a beginner aim for?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with however many you can do with good form, even if it's five. Do three sets and try to add one rep each week."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I can't do a single one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then start with push-ups against a wall or a kitchen counter. As those get easy, move lower, to a chair and then the floor."
+    },
+    {
+     "speaker": "user",
+     "text": "Knee push-ups count too, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Absolutely. They build the same muscles and they're a great step towards full push-ups."
+    },
+    {
+     "speaker": "user",
+     "text": "Cool. And how often should I / do them, every day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Every other day is better at first. Your muscles grow during the rest days."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I sit at a desk all day and my back is killing me. Are there exercises that help?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. Bridges, bird dogs and gentle cat cow stretches strengthen and loosen your back. A few minutes a day helps."
+    },
+    {
+     "speaker": "user",
+     "text": "What's a bird dog?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "On your hands and knees, you stretch one arm forward and the opposite leg back, hold for a few seconds, then switch."
+    },
+    {
+     "speaker": "user",
+     "text": "Sounds doable. Should I also get a standing desk or / is that overrated?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can help, but mostly by making you change position. Getting up and walking around every half hour matters more."
+    },
+    {
+     "speaker": "user",
+     "text": "Alright, I'll set a reminder on my phone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good plan. And if the pain is sharp or doesn't improve, it's worth seeing a doctor."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it better to stretch before or after a run?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Before a run, do a dynamic warm-up like leg swings and easy jogging. Save the longer, held stretches for after."
+    },
+    {
+     "speaker": "user",
+     "text": "Why not hold stretches before?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Long static stretches can make your muscles feel a bit weaker right away. Moving warm-ups get them ready instead."
+    },
+    {
+     "speaker": "user",
+     "text": "Makes sense. I usually just / start running and hope for the best."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people do. Even five minutes of brisk walking first makes a real difference."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And after, how long should I hold each stretch?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About thirty seconds each. Focus on calves, hamstrings and hips, those get tight from running."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm sixty-eight and my doctor said I should do more exercise. I'm not really a gym person."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You don't need a gym. Brisk walking, swimming or a gentle yoga class are all excellent choices."
+    },
+    {
+     "speaker": "user",
+     "text": "I do like swimming. How often should I go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two or three times a week is a great target. Start with twenty minutes and build up as you feel comfortable."
+    },
+    {
+     "speaker": "user",
+     "text": "What about strength? My doctor mentioned that too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Simple things help a lot, like standing up from a chair without using your hands, or light weights at home."
+    },
+    {
+     "speaker": "user",
+     "text": "I have some old dumbbells / somewhere in the garage, I think."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Try a few slow bicep curls and shoulder raises while watching television."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, that I can manage."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I tried running today and I was gasping after one minute. Is something wrong with me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all, that's really normal when you're starting out. Most beginners go too fast."
+    },
+    {
+     "speaker": "user",
+     "text": "I wasn't even going fast. I don't think."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try slowing down until you could hold a conversation. It'll feel almost silly slow."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I still can't last?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mix running and walking. Run one minute, walk two, and repeat that six or seven times."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds doable. How often / should I go out?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Three times a week, with a rest day in between. Each week, run a little longer and walk a little less."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I did my first leg day yesterday and now I can't walk down the stairs. Did I injure myself?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably not. It sounds like normal muscle soreness, which usually peaks one or two days after a new workout."
+    },
+    {
+     "speaker": "user",
+     "text": "It hurts so much. Sitting on the toilet is an event."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's very common after squats and lunges. It should ease in a few days."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I rest or move?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Gentle movement helps, like walking or easy cycling. Avoid another hard leg session until it fades."
+    },
+    {
+     "speaker": "user",
+     "text": "Will it be this bad / every single time?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, your body adapts quickly. The next few leg days will feel much better, as long as you stay consistent."
+    },
+    {
+     "speaker": "user",
+     "text": "Good, because right now I hate squats."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally understandable. You'll make up with them."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm vegetarian and I lift weights. Am I getting enough protein?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Possibly, but it's worth checking. People who lift often aim for about one and a half to two grams per kilo of body weight a day."
+    },
+    {
+     "speaker": "user",
+     "text": "I weigh seventy kilos. So that's a lot of beans."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Around a hundred to a hundred and forty grams. Beans help, but eggs, Greek yogurt, tofu and lentils are great too."
+    },
+    {
+     "speaker": "user",
+     "text": "I eat eggs and dairy, yeah."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That makes it easier. Cottage cheese and yogurt are very high in protein, and a whey shake can fill gaps."
+    },
+    {
+     "speaker": "user",
+     "text": "I always just / kind of guess, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try logging your food for a few days in an app. You'll see quickly where you stand."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My goal this year is one single pull-up. I can't do even half of one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great goal. Start with dead hangs, just hanging from the bar for as long as you can."
+    },
+    {
+     "speaker": "user",
+     "text": "Just hanging? That's it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It builds grip and shoulder strength. Then add negatives, jump up to the top and lower yourself as slowly as you can."
+    },
+    {
+     "speaker": "user",
+     "text": "How slow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Aim for three to five seconds on the way down. Do a few sets, two or three times a week."
+    },
+    {
+     "speaker": "user",
+     "text": "And rows, right? My trainer said something about rows / but I forgot."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, rows build the same back muscles. Inverted rows under a table or a bar are a good start."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. One pull-up by summer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very realistic with that plan."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's going to be thirty-four degrees this week. Is it stupid to run in that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not stupid, but you have to be careful. Run early in the morning or late in the evening when it's cooler."
+    },
+    {
+     "speaker": "user",
+     "text": "I usually go at lunch."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'd skip lunch runs this week. Midday heat is when it's most risky."
+    },
+    {
+     "speaker": "user",
+     "text": "What about water?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Drink before you go and take some with you if you're out longer than half an hour. Wear light, loose clothing."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know if I'm / overdoing it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Dizziness, a headache, feeling sick or stopping sweating are warning signs. Stop, find shade and cool down right away."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it. Early mornings then."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Slow down a little too. Heat makes every pace feel harder."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is ten thousand steps a day actually a thing, or just a number someone made up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a bit of both. It started partly as a marketing number, but research does show more steps help your health."
+    },
+    {
+     "speaker": "user",
+     "text": "So do I need ten thousand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not exactly. Benefits seem to rise up to around seven or eight thousand for many people, and more is still good."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm at like three thousand on a desk day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then any increase is a win. Try a ten minute walk after each meal."
+    },
+    {
+     "speaker": "user",
+     "text": "After every meal? / That's a lot."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even after lunch alone gets you over a thousand extra steps. Start there and add more if you like it."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My lower back hurts when I hold a plank. Am I doing it wrong?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably your hips are sagging. Try squeezing your glutes and pulling your belly button in slightly."
+    },
+    {
+     "speaker": "user",
+     "text": "My glutes? For a plank?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, it keeps your pelvis level, so your back doesn't arch. Picture a straight line from your head to your heels."
+    },
+    {
+     "speaker": "user",
+     "text": "How long should I hold it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Quality matters more than time. Thirty seconds with good form beats two minutes with a sagging back."
+    },
+    {
+     "speaker": "user",
+     "text": "My brother holds his / for like five minutes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good for him, but it's not a competition. Build up slowly, and if your back still hurts, try planks on your knees first."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I bought a kettlebell and I'm scared of the swing. It feels like it's going to fly through my window."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a fair worry. The key is that the power comes from your hips, not your arms."
+    },
+    {
+     "speaker": "user",
+     "text": "My hips?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Push your hips back like you're closing a car door with your bum, then snap them forward. Your arms just guide the bell."
+    },
+    {
+     "speaker": "user",
+     "text": "That's a weird image but okay."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It works. Keep your back flat and let the bell float up to chest height, no higher."
+    },
+    {
+     "speaker": "user",
+     "text": "What weight / should a beginner use?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Something you can control for fifteen swings with good form. For many people, that's eight to twelve kilos."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine's eight. Phew."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect starting point. Practice in a clear space, away from that window."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to start going to the gym but honestly I'm terrified of looking stupid."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people feel exactly that. Most people at the gym are too busy with their own workout to notice anyone else."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't even know how to use the machines."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many gyms offer a free induction where a staff member shows you around. It's worth asking for."
+    },
+    {
+     "speaker": "user",
+     "text": "What should I do on day one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it short. Ten minutes on a bike or treadmill, then three or four machines with the instructions printed on them."
+    },
+    {
+     "speaker": "user",
+     "text": "Could I go at a quiet time? / Like really quiet."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, mid morning or early afternoon is usually calm. Late evenings on weekends too."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And headphones, so nobody talks to me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Headphones are the universal do not disturb sign. Good plan."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I get rid of belly fat? I do a hundred sit-ups every night."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Unfortunately sit-ups won't burn fat from your belly specifically. You can't really target fat loss in one spot."
+    },
+    {
+     "speaker": "user",
+     "text": "Then what's the point of them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They strengthen your core, which is good. But losing belly fat comes from overall fat loss, through diet, activity and sleep."
+    },
+    {
+     "speaker": "user",
+     "text": "So I should stop?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No need to stop, but your time might be better spent on full body strength training and more walking."
+    },
+    {
+     "speaker": "user",
+     "text": "And food-wise? I eat pretty healthy / mostly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Small steady changes work best, like more protein and vegetables, fewer sugary drinks. Aim for slow progress, not a crash diet."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do I really need to warm up before lifting? It feels like a waste of time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A short one is worth it. Five to ten minutes gets blood flowing and makes your first sets feel better."
+    },
+    {
+     "speaker": "user",
+     "text": "What counts as a warm up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few minutes of light cardio, then some lighter sets of the lift you're about to do."
+    },
+    {
+     "speaker": "user",
+     "text": "Lighter sets. Like how light?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For example, if your working weight on squats is sixty kilos, do a set with the empty bar, then forty, then fifty."
+    },
+    {
+     "speaker": "user",
+     "text": "That's actually not that long. I always just / jump straight to my working weight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's when people tweak something. A few warm up sets is cheap insurance."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I travel for work every week. How do I keep fit in hotel rooms?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bodyweight circuits are perfect. Squats, push-ups, lunges, planks and burpees need no equipment at all."
+    },
+    {
+     "speaker": "user",
+     "text": "Burpees. I hate burpees."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Everybody does. You can swap them for fast mountain climbers."
+    },
+    {
+     "speaker": "user",
+     "text": "How long should a circuit take?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Twenty minutes is plenty. Do each exercise for forty seconds with twenty seconds rest, and repeat the round four times."
+    },
+    {
+     "speaker": "user",
+     "text": "That's quiet enough / for a thin wall hotel?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly, yes. Skip jumping moves late at night if you're worried about the neighbors."
+    },
+    {
+     "speaker": "user",
+     "text": "Smart. Resistance bands too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, they weigh nothing and add a lot. Throw a pair in your suitcase."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My shins hurt every time I run. A sharp ache along the front."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds like it could be shin splints, which is common when people increase their running too quickly."
+    },
+    {
+     "speaker": "user",
+     "text": "I did go from twice a week to five times."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's probably it. Cut back for a while and let them settle."
+    },
+    {
+     "speaker": "user",
+     "text": "Ice? Rest? I've heard both."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Both help. Ice for fifteen minutes after activity, and rest from running for a week or two. Swimming or cycling keep you fit meanwhile."
+    },
+    {
+     "speaker": "user",
+     "text": "Do my shoes / have anything to do with it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They can. If they're worn out, replace them. And if the pain doesn't improve after a couple of weeks, see a doctor or physio."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Everyone at my gym takes creatine. Is it just hype?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's actually one of the most studied supplements. It helps with short, intense efforts like lifting and sprints."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it safe? My mum thinks it's like steroids."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's not a steroid. For healthy adults, research suggests it's safe at normal doses. Check with a doctor if you have kidney problems."
+    },
+    {
+     "speaker": "user",
+     "text": "What's a normal dose?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Around three to five grams a day, every day. You don't need a loading phase."
+    },
+    {
+     "speaker": "user",
+     "text": "Does it make you / like, puffy?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You may gain a little water weight in your muscles at first. That's normal and not fat."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll tell my mum."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe show her the research too. That usually helps."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My watch keeps talking about zone two training. What even is that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's easy, steady exercise at a low heart rate, where you can still talk in full sentences."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds too easy to do anything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It builds your aerobic base, so your heart and muscles get better at using oxygen. Lots of endurance athletes spend most of their time there."
+    },
+    {
+     "speaker": "user",
+     "text": "How long do I have to do it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sessions of thirty to sixty minutes, a few times a week, tend to work well."
+    },
+    {
+     "speaker": "user",
+     "text": "So I should slow down my runs? / My ego hates that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most of them, yes. Keep one harder session a week for speed. Your ego will recover when you get faster."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I use a wheelchair and I want to build upper body strength. Where should I start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great goal. Resistance bands are a flexible place to start, you can anchor them to a door or your chair."
+    },
+    {
+     "speaker": "user",
+     "text": "What exercises, though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Seated rows, chest presses, shoulder presses and bicep curls all work well from your chair."
+    },
+    {
+     "speaker": "user",
+     "text": "I've also got a pair of dumbbells somewhere."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Add them for curls, overhead presses and lateral raises. Start light and focus on control."
+    },
+    {
+     "speaker": "user",
+     "text": "My shoulders already / work hard pushing all day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's an important point. Balance pushing with lots of pulling, like rows, to protect your shoulders. A physio with wheelchair experience could tailor a plan."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My father is seventy-nine and he had a fall last month. Are there exercises for balance?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, and they really help. Start with simple ones, like standing on one foot while holding a sturdy chair."
+    },
+    {
+     "speaker": "user",
+     "text": "Holding a chair? He'd hate that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Safety first, especially after a fall. As he gets steadier, he can hold on with just one finger."
+    },
+    {
+     "speaker": "user",
+     "text": "What else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Heel to toe walking along a hallway, and sit to stand from a chair without using his hands. Both build strength and balance."
+    },
+    {
+     "speaker": "user",
+     "text": "He's quite stubborn. He thinks exercise / is for young people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe frame it as staying independent rather than exercising. A tai chi class for seniors is also excellent for balance."
+    },
+    {
+     "speaker": "user",
+     "text": "Tai chi might actually work. He likes calm things."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it could be a perfect fit. Many community centers run gentle classes."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The running shop wants to do a gait analysis before selling me shoes. Is that worth it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can help, especially if you've had injuries. They watch how your foot lands and suggest shoes that suit you."
+    },
+    {
+     "speaker": "user",
+     "text": "Or is it just a way to sell expensive shoes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sometimes it's a bit of both. Comfort is the most important thing, research says choosing what feels best works well."
+    },
+    {
+     "speaker": "user",
+     "text": "So I should just try them on?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, try several pairs and jog around in them if the shop lets you. Go in the afternoon, when your feet are a little bigger."
+    },
+    {
+     "speaker": "user",
+     "text": "Bigger in the afternoon? / That's weird."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Feet swell a bit during the day, and even more when you run. Leave about a thumb's width at the toe."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's dark at five, it's raining, and I haven't worked out in three weeks. I just can't be bothered."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Winter slumps hit almost everyone. Be kind to yourself, three weeks is not a disaster."
+    },
+    {
+     "speaker": "user",
+     "text": "Feels like one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I get that. The trick is to make the next workout tiny, like ten minutes, so it's easy to start."
+    },
+    {
+     "speaker": "user",
+     "text": "Ten minutes won't do anything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It does more than zero, and starting is the hard part. Often you'll keep going once you're moving."
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe. I could / do something at home I guess."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. A short video workout in your living room, no rain involved. Put your trainers by the sofa now."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friend says knees should never go past your toes when you squat. True?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's an old rule that isn't really true for most people. Knees going forward is natural, especially if you're tall."
+    },
+    {
+     "speaker": "user",
+     "text": "So I can just let them go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, as long as your heels stay down and your knees track over your toes, not collapsing inward."
+    },
+    {
+     "speaker": "user",
+     "text": "How deep should I go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "As deep as you can while keeping your back neutral and heels down. For many people that's thighs parallel or lower."
+    },
+    {
+     "speaker": "user",
+     "text": "My heels lift / when I go low."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That often means tight ankles. Try putting small plates under your heels and work on ankle mobility."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I can swim, but I can't breathe properly doing front crawl. I end up gasping after one length."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's usually because people hold their breath underwater. Breathe out slowly through your nose or mouth while your face is in the water."
+    },
+    {
+     "speaker": "user",
+     "text": "Breathe out underwater?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, then when you turn your head, your lungs are ready to take a quick breath in."
+    },
+    {
+     "speaker": "user",
+     "text": "When do I turn my head?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Every two or three strokes. Rotate your body and keep one eye in the water, don't lift your whole head."
+    },
+    {
+     "speaker": "user",
+     "text": "This is a lot to think about / all at once."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Practice the breathing standing in the shallow end first. Bubbles out, turn, breathe in, repeat."
+    },
+    {
+     "speaker": "user",
+     "text": "Bubbles, turn, breathe. Got it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You'll get it. Most people need a few sessions."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is jumping rope actually good cardio, or is it just for boxers in movies?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's genuinely great cardio. Ten minutes of skipping is a tough workout, and it improves coordination too."
+    },
+    {
+     "speaker": "user",
+     "text": "I tried yesterday and kept tripping."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Everybody does at first. Make sure the rope length is right, the handles should reach your armpits when you stand on the middle."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine's definitely too long."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That makes it much harder. Shorten it with a knot, and keep your jumps small, just off the ground."
+    },
+    {
+     "speaker": "user",
+     "text": "How long should I do it / as a beginner?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try thirty seconds on, thirty seconds rest, for ten rounds. Do it on a soft surface to protect your joints."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have asthma. Can I still get into running?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many people with asthma run, including top athletes. It's worth talking to your doctor about a plan first."
+    },
+    {
+     "speaker": "user",
+     "text": "What kind of plan?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often using your inhaler before exercise, and having it with you on every run."
+    },
+    {
+     "speaker": "user",
+     "text": "Cold air seems to set me off."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's common. A scarf or buff over your mouth warms the air. Warm up gradually rather than starting fast."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I avoid / certain times or places?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Avoid busy roads with traffic fumes, and high pollen days if pollen is a trigger. Parks in the morning are often good."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll book a doctor's appointment first."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great idea. Then start gently and build up."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How long should I rest between sets? I usually scroll my phone until I feel like it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a very common approach. It depends on your goal, though."
+    },
+    {
+     "speaker": "user",
+     "text": "Strength, mostly. Getting stronger."
+    },
+    {
+     "speaker": "moshi",
+     "text": "For heavy strength work, two to three minutes is good. That lets your muscles recover enough to lift heavy again."
+    },
+    {
+     "speaker": "user",
+     "text": "And for, like, arm stuff?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For smaller muscles or lighter weights, sixty to ninety seconds is usually enough."
+    },
+    {
+     "speaker": "user",
+     "text": "So the scrolling / is fine as long as I time it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Set a timer on your phone so ten minutes of videos don't sneak in."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter is fourteen and starting pre-season for football. How can she get fitter without overdoing it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good that you're thinking about it. A mix of running, some short sprints and basic strength work is ideal."
+    },
+    {
+     "speaker": "user",
+     "text": "Strength work at fourteen?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bodyweight exercises like squats, lunges and planks are safe and help prevent injuries."
+    },
+    {
+     "speaker": "user",
+     "text": "How many days a week?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Three or four sessions, with rest days in between. Keep the sprints short and the jogging easy."
+    },
+    {
+     "speaker": "user",
+     "text": "She tends to / go all out every time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then remind her that rest is part of training. Sleep and good food matter just as much at her age."
+    },
+    {
+     "speaker": "user",
+     "text": "She'll roll her eyes at me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe let her coach say it then. It often lands better."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it a good idea to work out with a hangover? Asking for, um, me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha. Light exercise can make you feel better, but a hard workout is not a great plan."
+    },
+    {
+     "speaker": "user",
+     "text": "What counts as light?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A gentle walk or some easy stretching. Skip heavy lifting and high intensity stuff today."
+    },
+    {
+     "speaker": "user",
+     "text": "I was going to do a spin class."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably not the day for it. You're likely dehydrated, and intense sweating makes that worse."
+    },
+    {
+     "speaker": "user",
+     "text": "Water and a walk then. Maybe / some toast first."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good plan. Drink plenty of water and maybe something with salt in it."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've been training for two months and the scale hasn't moved. I'm so frustrated."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's understandable. But the scale is only one measure, and if you're lifting, you might be building muscle as you lose fat."
+    },
+    {
+     "speaker": "user",
+     "text": "How would I even know?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Measure your waist, take a photo every few weeks in the same light, and notice how your clothes fit."
+    },
+    {
+     "speaker": "user",
+     "text": "My jeans are a bit looser, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a great sign. Strength counts too. Are you lifting more than you did in week one?"
+    },
+    {
+     "speaker": "user",
+     "text": "Way more. My squat / went up by twenty kilos."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's real progress. Keep going, and weigh yourself less often, maybe once a week at the same time."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. That makes me feel better."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It should. You're doing well."
+    }
+   ]
+  },
+  {
+   "id": "fitness.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Are ice baths actually good after a workout, or just a social media thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's some evidence they reduce soreness, but they may also slightly blunt muscle growth if you use them right after lifting."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. So not for gym days?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably better after tough endurance sessions or between games, when recovery matters more than building muscle."
+    },
+    {
+     "speaker": "user",
+     "text": "What about a cold shower instead?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A cold shower is a gentler version. Some people find it refreshing, but benefits are smaller."
+    },
+    {
+     "speaker": "user",
+     "text": "My gym has / one of those cold plunge tubs."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try it after a hard run sometime. Start with a minute or two, and get out if you feel unwell."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "fitness.opt1",
+   "lead_in": "I want to start exercising again and I'm stuck between a few options.",
+   "options": [
+    "The first one is joining the gym near my office, it's pricey but I'd go right after work.",
+    "Then there's running outside, totally free, but I tend to skip it when the weather's bad.",
+    "And the last one is a home workout app with short twenty minute sessions I can do in the living room."
+   ],
+   "moshi_comment": [
+    "The gym near your office has a big advantage, going right after work makes it easy to build a habit. Running is free, but if bad weather stops you, it might not stick. The home app is the most flexible, and twenty minutes is easy to fit in.",
+    "What's stopped you in the past, time, money, or motivation? If it's motivation, the gym after work is probably best because it becomes part of your routine. If it's time, the home app is hard to beat."
+   ]
+  },
+  {
+   "id": "fitness.opt2",
+   "lead_in": "I'm training for my first five kilometer race and I'm trying to pick a plan.",
+   "options": [
+    "One plan has me running three days a week, slowly building up over about eight weeks.",
+    "Another one mixes running with cycling and swimming, so it's less hard on my knees.",
+    "Option three is a run walk method, where I alternate jogging and walking until I can run the whole thing.",
+    "And the last is just running every day as far as I can and hoping for the best."
+   ],
+   "moshi_comment": [
+    "For a first race, the three days a week plan is a classic for a reason, it gives your body time to recover. The run walk method is great if you're starting from zero. I'd skip running every day, that's a fast way to get hurt.",
+    "How much running are you doing right now? If almost none, start with the run walk method. If you can already jog for a bit, the eight week plan is perfect, and the cycling mix is nice if your knees complain."
+   ]
+  },
+  {
+   "id": "fitness.opt3",
+   "lead_in": "I want to sign up for one event this autumn to keep me motivated, and I've found a few.",
+   "options": [
+    "A half marathon in the city, flat and fast, with thousands of people cheering along the route.",
+    "A muddy trail race in the forest, about fifteen kilometers, with some steep climbs and river crossings.",
+    "An obstacle course with walls, ropes and a lot of mud, and you can enter as a team with friends."
+   ],
+   "moshi_comment": [
+    "If you want structure, the half marathon gives you a clear training plan and a great atmosphere. The trail race is tougher but beautiful. The obstacle course is the most fun, especially with friends, though it's less about running.",
+    "It depends what keeps you going. Friends and laughs point to the obstacle course, while a big goal points to the half marathon. The trail race sits in between and is a nice change if you're tired of pavements."
+   ]
+  },
+  {
+   "id": "fitness.opt4",
+   "lead_in": "My gym has a new timetable and I can fit in one class a week. Help me pick.",
+   "options": [
+    "There's spin on Monday evenings, very intense, with loud music and an instructor who shouts a lot.",
+    "A weights class on Wednesdays where everyone uses barbells, good for strength but it gets crowded.",
+    "Yoga on Friday lunchtimes, slow and calm, which my tight hamstrings would probably thank me for.",
+    "Or the Sunday morning swim group, which mixes drills and laps, but means getting up early on the weekend."
+   ],
+   "moshi_comment": [
+    "If you already do cardio on your own, the weights class or yoga would add the most. Yoga could really help those hamstrings. Spin is great fun if you love the energy, and the swim group is good but Sunday mornings can be hard to keep.",
+    "I'd think about what you skip on your own. Most people don't stretch, so yoga fills a gap. The weights class would build strength, though crowds can be annoying. Spin and swimming are both solid cardio choices."
+   ]
+  },
+  {
+   "id": "fitness.opt5",
+   "lead_in": "I'm finally starting a proper strength program and there are so many styles to choose from.",
+   "options": [
+    "Full body workouts three times a week, hitting every muscle each time with a few big lifts.",
+    "A push, pull and legs split, which means going five or six days a week to do it properly.",
+    "Bodyweight training at home, like push-ups, pull-ups and lunges, with no equipment at all."
+   ],
+   "moshi_comment": [
+    "For a beginner, the full body routine is hard to beat, three sessions is manageable and you practice the main lifts often. The split works better once you're more experienced and have more time. Bodyweight training is great if the gym is the obstacle.",
+    "How many days can you realistically train? If it's three, go full body. If you love the idea of training most days, the split could work. Bodyweight is a solid start too, and you can always add weights later."
+   ]
+  },
+  {
+   "id": "fitness.opt6",
+   "lead_in": "My rest days are a mess. I've got some ideas for what to do on them.",
+   "options": [
+    "Total rest, sofa, films, nothing at all, which feels great but makes me stiff the next day.",
+    "A long easy walk with the dog, maybe an hour, just to keep moving.",
+    "A stretching and foam rolling session, about thirty minutes, which I always say I'll do and never do.",
+    "Or a gentle swim, which loosens everything up but means going to the pool and back."
+   ],
+   "moshi_comment": [
+    "The dog walk is a great default, it's easy, you'll do it anyway, and it helps you recover. Add ten minutes of stretching after it and you've covered two of your ideas. Save the full sofa days for when you're really tired.",
+    "Active recovery usually beats doing nothing, so the walk or the swim are good bets. Stretching is useful but only if you'll actually do it, so keep it short. Total rest is fine now and then, just not every time."
+   ]
+  }
+ ]
 }

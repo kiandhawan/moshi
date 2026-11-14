@@ -7,155 +7,134 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [
-  "early_direct",
-  "early_end",
-  "self_talk"
+  "wait_like"
  ],
  "topics": [
   "gardening"
  ],
- "wait_sec": 60,
- "early_end": {
-  "after_sec": 28.59,
-  "direct": true
- },
  "topic": "gardening",
  "voices": {
-  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "user": "18b1276891524bd786fb8a59ecd3630a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_01",
-  "greet_ans_20",
-  "think_instr_16",
-  "ack_12",
-  "self_01",
-  "self_08",
-  "early_end_10"
+  "greet_14",
+  "greet_ans_10",
+  "waitlike_01"
  ],
  "block_ids": [
-  "gardening.ctx1"
+  "gardening.dlg10"
  ],
- "est_total_sec": 65.74,
- "est_speech_sec": 32.51,
+ "est_total_sec": 64.0,
+ "est_speech_sec": 53.9,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how are you doing?",
+   "text": "Hi! How's life treating you?",
    "est_sec": 1.65,
-   "gap_before": 0.3,
+   "gap_before": 0.56,
    "role": "greeting",
-   "phrasing": "greet_01"
+   "phrasing": "greet_14"
   },
   {
    "speaker": "user",
-   "text": "Can't complain.",
-   "est_sec": 0.72,
-   "gap_before": 0.71,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_20"
-  },
-  {
-   "speaker": "user",
-   "text": "I've got a sunny balcony and I want to grow something I can actually eat.",
-   "est_sec": 4.75,
-   "gap_before": 0.41,
-   "event": "ordinary_request",
-   "block": "gardening.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Lovely. Herbs, cherry tomatoes and salad greens all do well in pots. Which of those would you use the most?",
-   "est_sec": 6.3,
-   "gap_before": 0.97,
-   "role": "reply",
-   "block": "gardening.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Can I have sixty seconds to think? Ask me again after.",
-   "est_sec": 3.51,
-   "gap_before": 2.3,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 60,
-   "phrasing": "think_instr_16"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
-   "gap_before": 0.33,
-   "role": "ack",
-   "phrasing": "ack_12"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, let me see.",
+   "text": "Doing well, thank you.",
    "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 12.8
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_01"
+   "gap_before": 0.8,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
   },
   {
    "speaker": "user",
-   "text": "Wait, no, the other one.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 19.68
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, done thinking.",
-   "est_sec": 1.03,
-   "anchor": {
-    "turn": 4,
-    "offset": 28.59
-   },
-   "event": "return_cue",
-   "kind": "early_end",
-   "phrasing": "early_end_10"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Have you picked yet, herbs, cherry tomatoes or greens?",
-   "est_sec": 2.89,
-   "gap_before": 0.37,
-   "role": "resume",
-   "block": "gardening.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Herbs, for sure. I'm always buying basil.",
-   "est_sec": 2.27,
-   "gap_before": 1.08,
+   "text": "How short should I cut the lawn? I just bought a new mower and I'm itching to use it.",
+   "est_sec": 5.99,
+   "gap_before": 0.53,
    "event": "ordinary_request",
-   "block": "gardening.ctx1"
+   "block": "gardening.dlg10"
   },
   {
    "speaker": "moshi",
-   "text": "Then start with basil, parsley and mint. Keep the mint in its own pot, it spreads like crazy.",
-   "est_sec": 5.68,
-   "gap_before": 0.71,
-   "role": "followup",
-   "block": "gardening.ctx1"
+   "text": "For most garden lawns, around four or five centimetres is a happy height. Going shorter tends to stress the grass.",
+   "est_sec": 6.3,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "gardening.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, what did you say?",
+   "est_sec": 1.65,
+   "gap_before": 0.89,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_01",
+   "block": "gardening.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, here it is again. For most garden lawns, around four or five centimetres is a happy height. Going shorter tends to stress the grass.",
+   "est_sec": 7.85,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "gardening.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "My neighbour cuts his like a golf course.",
+   "est_sec": 2.58,
+   "gap_before": 0.86,
+   "event": "ordinary_request",
+   "block": "gardening.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It looks sharp, but very short grass dries out faster and lets moss and weeds in. His probably needs a lot more feeding and watering.",
+   "est_sec": 7.85,
+   "gap_before": 1.2,
+   "role": "reply",
+   "block": "gardening.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha, he is always out there with a sprinkler. How often should I mow?",
+   "est_sec": 4.44,
+   "gap_before": 0.6,
+   "event": "ordinary_request",
+   "block": "gardening.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "In spring and early summer, about once a week. The rule of thumb is never cut off more than a third of the height at once.",
+   "est_sec": 8.16,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "gardening.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "And in a heatwave?",
+   "est_sec": 1.34,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "gardening.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Raise the blades and mow less. Taller grass shades its own roots and stays greener.",
+   "est_sec": 4.75,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "gardening.dlg10"
   }
  ]
 }

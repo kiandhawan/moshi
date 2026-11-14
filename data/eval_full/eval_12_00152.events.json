@@ -1,83 +1,144 @@
 {
   "id": "eval_12_00152",
-  "group": "door",
-  "user_start": 2.86,
-  "type": "door",
-  "conditions": [],
+  "group": "side_conversation",
+  "user_start": 2.49,
+  "type": "side_conversation",
+  "conditions": [
+    "implicit",
+    "near_miss"
+  ],
+  "cluster": "podcasts.ctx5",
   "groups": [
-    "new_type_door"
+    "familiar_type",
+    "implicit_return"
   ],
-  "instruction_start": 15.8,
-  "instruction_end": 18.42,
-  "wait_end": 34.609,
+  "instruction_start": 14.82,
+  "instruction_end": 19.4,
+  "wait_end": 54.93,
   "resume_window": [
-    34.609,
-    39.609
+    54.93,
+    59.93
   ],
-  "wait_sec": 16.189,
+  "wait_sec": 35.53,
   "distractors": [
-    22.399
+    23.56,
+    32.0,
+    38.64,
+    50.06
   ],
   "distractor_kinds": [
-    "question_to_other"
+    "friend_question",
+    "friend_question",
+    "friend_question",
+    "near_miss"
   ],
   "distractor_windows": [
     [
-      22.399,
-      23.759
+      23.56,
+      26.59
+    ],
+    [
+      32.0,
+      32.52
+    ],
+    [
+      38.64,
+      39.7
+    ],
+    [
+      50.06,
+      50.54
     ]
   ],
   "ordinary_requests": [
-    8.75
+    7.31,
+    63.95
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.86,
-      "end": 4.62,
+      "start": 2.49,
+      "end": 3.43,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 5.17,
-      "end": 8.75,
+      "start": 3.8,
+      "end": 7.31,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 15.8,
-      "end": 18.42,
+      "start": 14.82,
+      "end": 19.4,
       "event": "instruction",
-      "kind": "door"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 21.879,
-      "end": 22.399,
+      "start": 20.81,
+      "end": 23.56,
       "event": "distractor",
-      "kind": "question_to_other"
+      "kind": "friend_question"
     },
     {
-      "speaker": "visitor",
-      "start": 23.759,
-      "end": 26.079
-    },
-    {
-      "speaker": "user",
-      "start": 27.279,
-      "end": 28.909
-    },
-    {
-      "speaker": "visitor",
-      "start": 29.289,
-      "end": 30.669
+      "speaker": "friend",
+      "start": 26.59,
+      "end": 29.7
     },
     {
       "speaker": "user",
-      "start": 32.739,
-      "end": 34.609,
+      "start": 30.41,
+      "end": 32.0,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 32.52,
+      "end": 35.65
+    },
+    {
+      "speaker": "user",
+      "start": 37.2,
+      "end": 38.64,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 39.7,
+      "end": 42.86
+    },
+    {
+      "speaker": "user",
+      "start": 43.56,
+      "end": 45.11
+    },
+    {
+      "speaker": "user",
+      "start": 48.19,
+      "end": 50.06,
+      "event": "distractor",
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 50.54,
+      "end": 52.0
+    },
+    {
+      "speaker": "user",
+      "start": 52.99,
+      "end": 54.93,
       "event": "return_cue",
-      "kind": "explicit"
+      "kind": "implicit"
+    },
+    {
+      "speaker": "user",
+      "start": 60.5,
+      "end": 63.95,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script eval_12_00152 by scripts/render.py.",
@@ -85,27 +146,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.53,
-      "end": 2.11,
-      "text": "Hello, how's your day going?"
+      "start": 0.61,
+      "end": 2.02,
+      "text": "Hey, how's your week going?"
     },
     {
       "kind": "reply",
-      "start": 9.2,
-      "end": 14.54,
-      "text": "Sorry to hear it. How many people should it sleep, and will you be carrying it far or just parking next to it?"
-    },
-    {
-      "kind": "ack",
-      "start": 18.81,
-      "end": 19.179,
-      "text": "Okay."
+      "start": 8.59,
+      "end": 14.16,
+      "text": "Nice. A chatty interview show that you can drift in and out of, or a story series that pulls you along?"
     },
     {
       "kind": "resume",
-      "start": 34.959,
-      "end": 40.329,
-      "text": "Everything okay at the door? We were figuring out your new tent. How many people, and will you carry it?"
+      "start": 55.78,
+      "end": 59.44,
+      "text": "Right. Your long runs. Interviews, or a story series?"
+    },
+    {
+      "kind": "followup",
+      "start": 64.37,
+      "end": 67.64,
+      "text": "Ha, that's the trick. Save new episodes only for runs."
     }
   ]
 }

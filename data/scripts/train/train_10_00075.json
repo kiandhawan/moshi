@@ -7,120 +7,164 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "gardening"
+  "sleep",
+  "public_transport"
  ],
- "topic": "gardening",
+ "topic": "sleep",
  "voices": {
-  "user": "8784f1c03bdd41c3a381f65eae08e814",
-  "friend": null,
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": "f3a2b90078d54a65af4b95f63bc7798e",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Grace",
+ "friend_name_id": "name_16",
  "phrasing_ids": [
-  "greet_01",
-  "greet_ans_28"
+  "greet_25",
+  "greet_ans_26",
+  "side_instr_26",
+  "side_cue_25"
  ],
  "block_ids": [
-  "gardening.dlg2"
+  "sleep.ctx2",
+  "public_transport.side6"
  ],
- "est_total_sec": 47.12,
- "est_speech_sec": 35.2,
+ "est_total_sec": 70.34,
+ "est_speech_sec": 53.68,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how are you doing?",
-   "est_sec": 1.65,
-   "gap_before": 0.63,
-   "role": "greeting",
-   "phrasing": "greet_01"
-  },
-  {
-   "speaker": "user",
-   "text": "Doing alright, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.87,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
-  },
-  {
-   "speaker": "user",
-   "text": "When should I plant tulip bulbs?",
-   "est_sec": 1.96,
-   "gap_before": 0.41,
-   "event": "ordinary_request",
-   "block": "gardening.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "In autumn, once the soil has cooled down. Late October to November is usually ideal.",
-   "est_sec": 4.75,
-   "gap_before": 1.01,
-   "role": "reply",
-   "block": "gardening.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "How deep do they go?",
-   "est_sec": 1.65,
-   "gap_before": 1.02,
-   "event": "ordinary_request",
-   "block": "gardening.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "About three times the height of the bulb, so roughly fifteen to twenty centimeters, pointy end up.",
-   "est_sec": 5.37,
-   "gap_before": 1.2,
-   "role": "reply",
-   "block": "gardening.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "And can I put them in pots? I was hoping to",
-   "est_sec": 3.51,
-   "gap_before": 0.85,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "gardening.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "put a few by the front door.",
+   "text": "Hello there! How's your day treating you?",
    "est_sec": 2.27,
-   "gap_before": 2.39,
-   "event": "ordinary_request",
-   "block": "gardening.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Yes, tulips look great in pots. Pack them closely together and make sure the pot drains well.",
-   "est_sec": 5.37,
-   "gap_before": 0.63,
-   "role": "reply",
-   "block": "gardening.dlg2"
+   "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_25"
   },
   {
    "speaker": "user",
-   "text": "Do they come back every year?",
-   "est_sec": 1.96,
-   "gap_before": 1.06,
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.75,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "My partner snores and I'm waking up three times a night.",
+   "est_sec": 3.51,
+   "gap_before": 0.2,
    "event": "ordinary_request",
-   "block": "gardening.dlg2"
+   "block": "sleep.ctx2"
   },
   {
    "speaker": "moshi",
-   "text": "Some do, but many fade after the first year. Lots of people just plant fresh ones each autumn.",
-   "est_sec": 5.68,
-   "gap_before": 0.35,
+   "text": "That's rough. Do you want to try earplugs or a white noise machine first, or talk to your partner about seeing a doctor?",
+   "est_sec": 7.23,
+   "gap_before": 0.95,
    "role": "reply",
-   "block": "gardening.dlg2"
+   "block": "sleep.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, my friend and I need to figure something out. Wait until I'm back, okay?",
+   "est_sec": 5.06,
+   "gap_before": 1.03,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_26"
+  },
+  {
+   "speaker": "user",
+   "text": "Did he just say platform nine or platform five?",
+   "est_sec": 2.89,
+   "gap_before": 0.92,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "public_transport.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Nine, I think. The board still says five, though.",
+   "est_sec": 2.89,
+   "gap_before": 2.56,
+   "block": "public_transport.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Which one do we trust?",
+   "est_sec": 1.65,
+   "gap_before": 0.5,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "public_transport.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "The announcement. Boards are always behind.",
+   "est_sec": 1.96,
+   "gap_before": 0.79,
+   "block": "public_transport.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Grace, nine's at the far end. We've got three minutes.",
+   "est_sec": 3.2,
+   "gap_before": 0.77,
+   "block": "public_transport.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then stop talking and run. Grab your bag.",
+   "est_sec": 2.58,
+   "gap_before": 1.07,
+   "block": "public_transport.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, the board just changed. Nine. Go, go, go.",
+   "est_sec": 2.89,
+   "gap_before": 0.35,
+   "block": "public_transport.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, that took a while. I'm back.",
+   "est_sec": 2.27,
+   "gap_before": 0.91,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. We were talking about the snoring. Earplugs and white noise, or the doctor?",
+   "est_sec": 4.75,
+   "gap_before": 0.66,
+   "role": "resume",
+   "block": "sleep.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Earplugs first. I don't want to make a big deal of it yet.",
+   "est_sec": 4.13,
+   "gap_before": 2.26,
+   "event": "ordinary_request",
+   "block": "sleep.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair enough. Soft foam ones work best, and roll them thin before you put them in.",
+   "est_sec": 5.06,
+   "gap_before": 0.71,
+   "role": "followup",
+   "block": "sleep.ctx2"
   }
  ]
 }

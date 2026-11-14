@@ -1,80 +1,134 @@
 {
   "id": "train_10_00321",
-  "group": "describe_options",
-  "user_start": 2.82,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 9.87,
-  "instruction_end": 12.76,
-  "wait_end": 36.72,
-  "resume_window": [
-    36.72,
-    41.72
+  "group": "side_conversation",
+  "user_start": 3.44,
+  "type": "side_conversation",
+  "conditions": [
+    "near_miss"
   ],
-  "wait_sec": 23.96,
+  "cluster": "cooking.ctx6",
+  "instruction_start": 17.75,
+  "instruction_end": 23.02,
+  "wait_end": 60.19,
+  "resume_window": [
+    60.19,
+    65.19
+  ],
+  "wait_sec": 37.17,
   "distractors": [
-    19.98,
-    25.35
+    28.51,
+    36.89,
+    46.04,
+    53.19
   ],
   "distractor_kinds": [
-    "pause",
-    "pause"
+    "friend_question",
+    "friend_question",
+    "friend_question",
+    "near_miss"
   ],
   "distractor_windows": [
     [
-      19.98,
-      21.67
+      28.51,
+      29.5
     ],
     [
-      25.35,
-      27.93
+      36.89,
+      38.29
+    ],
+    [
+      46.04,
+      47.14
+    ],
+    [
+      53.19,
+      54.09
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    9.17,
+    69.47
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.82,
-      "end": 4.71,
+      "start": 3.44,
+      "end": 4.37,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 5.11,
-      "end": 9.05
+      "start": 4.74,
+      "end": 9.17,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 9.87,
-      "end": 12.76,
+      "start": 17.75,
+      "end": 23.02,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 15.66,
-      "end": 19.98,
+      "start": 25.25,
+      "end": 28.51,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 29.5,
+      "end": 33.11
     },
     {
       "speaker": "user",
-      "start": 21.67,
-      "end": 25.35,
+      "start": 34.46,
+      "end": 36.89,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 38.29,
+      "end": 42.26
     },
     {
       "speaker": "user",
-      "start": 27.93,
-      "end": 32.55
+      "start": 43.06,
+      "end": 46.04,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 47.14,
+      "end": 50.12
     },
     {
       "speaker": "user",
-      "start": 33.61,
-      "end": 36.72,
+      "start": 50.52,
+      "end": 53.19,
+      "event": "distractor",
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 54.09,
+      "end": 55.93
+    },
+    {
+      "speaker": "user",
+      "start": 57.73,
+      "end": 60.19,
       "event": "return_cue",
       "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 66.03,
+      "end": 69.47,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00321 by scripts/render.py.",
@@ -82,21 +136,33 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.7,
-      "end": 1.83,
-      "text": "Hi, how are things with you?"
+      "start": 0.8,
+      "end": 2.77,
+      "text": "Hi there, how are you feeling today?"
+    },
+    {
+      "kind": "reply",
+      "start": 9.76,
+      "end": 17.16,
+      "text": "Don't panic, there's time. You can start a fresh pot, or switch to couscous, which is ready in five minutes. Which do you prefer?"
     },
     {
       "kind": "ack",
-      "start": 13.42,
-      "end": 14.92,
-      "text": "Okay, I'll hold on."
+      "start": 23.54,
+      "end": 24.16,
+      "text": "Of course."
     },
     {
       "kind": "resume",
-      "start": 37.8,
-      "end": 49.55,
-      "text": "The practice interview with your friend is probably the most valuable, since you'll get real feedback. Researching the company is important too, it helps you ask good questions. Memorizing answers word for word can make you sound stiff."
+      "start": 60.7,
+      "end": 64.86,
+      "text": "No problem. Still about the burned rice. Fresh pot or couscous?"
+    },
+    {
+      "kind": "followup",
+      "start": 70.11,
+      "end": 75.76,
+      "text": "Good choice. Pour boiling stock over it, cover it for five minutes, then fluff it with a fork and a bit of butter."
     }
   ]
 }

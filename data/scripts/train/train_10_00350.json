@@ -7,162 +7,108 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "coffee",
-  "weekend_plans"
+  "weather_plans"
  ],
- "topic": "coffee",
+ "wait_sec": 5,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 5
+ },
+ "topic": "weather_plans",
  "voices": {
-  "user": "050df12e0f30484fb882a9a5410e5d66",
-  "friend": "a52fdd0e957b4c288d8ec590bdd10288",
+  "user": "705690224f264386b87fb598083ab022",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Grace",
- "friend_name_id": "name_16",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_01",
-  "greet_ans_28",
-  "side_instr_20",
-  "side_cue_08"
+  "greet_10",
+  "greet_ans_07",
+  "think_instr_22"
  ],
  "block_ids": [
-  "coffee.ctx1",
-  "weekend_plans.side3"
+  "weather_plans.ctx5"
  ],
- "est_total_sec": 72.31,
- "est_speech_sec": 53.99,
+ "est_total_sec": 36.25,
+ "est_speech_sec": 26.53,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how are you doing?",
-   "est_sec": 1.65,
-   "gap_before": 0.55,
-   "role": "greeting",
-   "phrasing": "greet_01"
-  },
-  {
-   "speaker": "user",
-   "text": "Doing alright, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.81,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to stop buying coffee every morning and make it at home instead.",
-   "est_sec": 4.44,
-   "gap_before": 0.22,
-   "event": "ordinary_request",
-   "block": "coffee.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Good plan, you'll save a lot. Do you want something simple like a French press, or are you ready to invest in an espresso machine?",
-   "est_sec": 7.85,
-   "gap_before": 1.09,
-   "role": "reply",
-   "block": "coffee.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me talk to Grace for a bit, so please stay quiet until I say I'm back.",
-   "est_sec": 5.37,
-   "gap_before": 1.0,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_20"
-  },
-  {
-   "speaker": "user",
-   "text": "Are we still going to your sister's on Saturday?",
-   "est_sec": 2.89,
-   "gap_before": 0.76,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "weekend_plans.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "She cancelled, the baby's got a cold.",
+   "text": "Hey, how's your day been so far?",
    "est_sec": 2.27,
-   "gap_before": 0.62,
-   "block": "weekend_plans.side3"
+   "gap_before": 0.63,
+   "role": "greeting",
+   "phrasing": "greet_10"
   },
   {
    "speaker": "user",
-   "text": "Oh no, poor thing. So we're free all day then?",
-   "est_sec": 3.2,
-   "gap_before": 1.11,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "weekend_plans.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Looks like it. We could finally clear out the garage.",
-   "est_sec": 3.2,
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
    "gap_before": 0.46,
-   "block": "weekend_plans.side3"
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
   },
   {
    "speaker": "user",
-   "text": "Or we could not do that and go for a long lunch instead.",
-   "est_sec": 4.13,
-   "gap_before": 1.25,
-   "block": "weekend_plans.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Garage in the morning, lunch after. That's my offer.",
-   "est_sec": 2.89,
-   "gap_before": 0.73,
-   "block": "weekend_plans.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Deal, but you're buying.",
-   "est_sec": 1.34,
-   "gap_before": 1.41,
-   "block": "weekend_plans.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's sorted. I'm back.",
-   "est_sec": 1.65,
-   "gap_before": 1.32,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_08"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright. Decided between the French press and the espresso machine?",
-   "est_sec": 3.2,
-   "gap_before": 1.95,
-   "role": "resume",
-   "block": "coffee.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Espresso. I mostly drink lattes, so I might as well.",
-   "est_sec": 3.2,
-   "gap_before": 2.64,
+   "text": "Big pile of washing and the sky can't make up its mind.",
+   "est_sec": 3.82,
+   "gap_before": 0.24,
    "event": "ordinary_request",
-   "block": "coffee.ctx1"
+   "block": "weather_plans.ctx5"
   },
   {
    "speaker": "moshi",
-   "text": "Then get one with a steam wand for the milk. It'll pay for itself in a few months.",
+   "text": "Classic. Will you risk hanging it outside, or give up and use the dryer?",
+   "est_sec": 4.44,
+   "gap_before": 0.3,
+   "role": "reply",
+   "block": "weather_plans.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Not sure yet. Check back with me in five seconds.",
+   "est_sec": 3.2,
+   "gap_before": 0.5,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 5,
+   "phrasing": "think_instr_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, the washing. Line or dryer?",
+   "est_sec": 1.96,
+   "role": "resume",
+   "block": "weather_plans.ctx5",
+   "anchor": {
+    "turn": 4,
+    "offset": 5.07
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Outside. If it rains I'll dash out and grab it.",
+   "est_sec": 3.2,
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Hang the heavy stuff on the line nearest the door, so the quick rescue takes less time.",
    "est_sec": 5.68,
-   "gap_before": 0.9,
+   "gap_before": 0.49,
    "role": "followup",
-   "block": "coffee.ctx1"
+   "block": "weather_plans.ctx5"
   }
  ]
 }

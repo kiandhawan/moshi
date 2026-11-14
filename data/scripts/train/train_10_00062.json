@@ -7,172 +7,107 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [
-  "near_miss"
+  "self_talk"
  ],
  "topics": [
-  "board_games",
-  "coffee"
+  "weekend_plans"
  ],
- "topic": "board_games",
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "weekend_plans",
  "voices": {
-  "user": "cc7f8544c64a439080193e9560100c5a",
-  "friend": "fbc1029c018041d4b17f2c1e57222dff",
+  "user": "e7de86b388864b8cbd50d0d70a3494e5",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Omar",
- "friend_name_id": "name_13",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_10",
-  "greet_ans_16",
-  "side_instr_02",
-  "dn_10",
-  "side_cue_10"
+  "greet_17",
+  "greet_ans_08",
+  "think_instr_20",
+  "self_14"
  ],
  "block_ids": [
-  "board_games.ctx1",
-  "coffee.side3"
+  "weekend_plans.ctx11"
  ],
- "est_total_sec": 73.36,
- "est_speech_sec": 55.64,
+ "est_total_sec": 73.71,
+ "est_speech_sec": 24.57,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your day been so far?",
-   "est_sec": 2.27,
-   "gap_before": 0.59,
-   "role": "greeting",
-   "phrasing": "greet_10"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty busy, but good.",
-   "est_sec": 1.34,
-   "gap_before": 1.0,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_16"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm hosting a game night Friday. There'll be six of us, and two have never really played board games.",
-   "est_sec": 5.99,
-   "gap_before": 0.28,
-   "event": "ordinary_request",
-   "block": "board_games.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fun! Do you want one easy party game everyone can join, or two smaller groups playing different games?",
-   "est_sec": 5.68,
-   "gap_before": 0.41,
-   "role": "reply",
-   "block": "board_games.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Give me a minute, my friend just walked in. Don't say anything until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 0.59,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Omar, what's that thing you ordered last time? The cold one?",
-   "est_sec": 3.51,
-   "gap_before": 0.79,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "coffee.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Cold brew with oat milk. It's really smooth.",
-   "est_sec": 2.58,
-   "gap_before": 1.13,
-   "block": "coffee.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it strong? I don't want to be awake all night.",
-   "est_sec": 3.51,
-   "gap_before": 0.55,
-   "block": "coffee.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Pretty strong. Maybe get a small one.",
-   "est_sec": 2.27,
-   "gap_before": 1.28,
-   "block": "coffee.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Or I'll just have a tea and steal a sip of yours.",
-   "est_sec": 3.82,
-   "gap_before": 1.2,
-   "block": "coffee.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "One sip. I know what you're like.",
-   "est_sec": 2.27,
-   "gap_before": 3.4,
-   "block": "coffee.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, where did we put the remote?",
-   "est_sec": 2.27,
-   "gap_before": 1.1,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_10"
-  },
-  {
-   "speaker": "friend",
-   "text": "Under the cushion, I think.",
+   "text": "Hey there! How's your day?",
    "est_sec": 1.65,
-   "gap_before": 1.41,
-   "phrasing": "dn_10"
+   "gap_before": 0.35,
+   "role": "greeting",
+   "phrasing": "greet_17"
   },
   {
    "speaker": "user",
-   "text": "Sorry, I'm back now. Go ahead.",
-   "est_sec": 1.96,
-   "gap_before": 0.81,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_10"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem. We were planning your game night for six.",
-   "est_sec": 3.2,
-   "gap_before": 0.85,
-   "role": "resume",
-   "block": "board_games.ctx1"
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
   },
   {
    "speaker": "user",
-   "text": "Two groups. My usual crowd will want something heavier.",
-   "est_sec": 2.89,
-   "gap_before": 0.46,
+   "text": "Sunday evenings make me so anxious about work.",
+   "est_sec": 2.58,
+   "gap_before": 0.24,
    "event": "ordinary_request",
-   "block": "board_games.ctx1"
+   "block": "weekend_plans.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. Give the newcomers a simple card game and let the others tackle the long strategy one.",
-   "est_sec": 5.68,
-   "gap_before": 0.37,
-   "role": "followup",
-   "block": "board_games.ctx1"
+   "text": "Lots of people feel that. You could spend Sunday evening batch cooking so Monday feels easier, or plan something fun like an early film to break the dread. Which sounds more helpful?",
+   "est_sec": 10.02,
+   "gap_before": 1.7,
+   "role": "reply",
+   "block": "weekend_plans.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I need forty-five seconds to think. Then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.9,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_20"
+  },
+  {
+   "speaker": "user",
+   "text": "No, hang on, that's silly.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 3.25
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, batch cooking to get ahead, or a film to switch off?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "weekend_plans.ctx11",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.17
+   }
   }
  ]
 }

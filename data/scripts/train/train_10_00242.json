@@ -7,141 +7,166 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [
-  "wait_like"
- ],
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
  "topics": [
-  "public_transport"
+  "personal_finance",
+  "video_games"
  ],
- "topic": "public_transport",
+ "topic": "personal_finance",
  "voices": {
-  "user": "ec3f1730c4494386accf1e86625bfe6d",
-  "friend": null,
+  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "friend": "e3cd384158934cc9a01029cd7d278634",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
  "phrasing_ids": [
-  "greet_07",
-  "greet_ans_04",
-  "waitlike_11"
+  "greet_10",
+  "greet_ans_11",
+  "side_instr_11",
+  "ack_02",
+  "side_cue_26"
  ],
  "block_ids": [
-  "public_transport.dlg1"
+  "personal_finance.ctx4",
+  "video_games.side1"
  ],
- "est_total_sec": 64.83,
- "est_speech_sec": 47.8,
+ "est_total_sec": 69.6,
+ "est_speech_sec": 50.58,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How's everything going?",
-   "est_sec": 1.34,
-   "gap_before": 0.68,
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.78,
    "role": "greeting",
-   "phrasing": "greet_07"
+   "phrasing": "greet_10"
   },
   {
    "speaker": "user",
-   "text": "Pretty well, actually.",
+   "text": "Not too bad.",
    "est_sec": 1.03,
-   "gap_before": 0.37,
+   "gap_before": 0.78,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_04"
+   "phrasing": "greet_ans_11"
   },
   {
    "speaker": "user",
-   "text": "I'm visiting a big city next week and I've never used a subway before. Any tips?",
-   "est_sec": 5.06,
-   "gap_before": 0.44,
-   "event": "ordinary_request",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Download the city's transit app before you go. It shows routes, live times and which exit to use.",
-   "est_sec": 5.68,
-   "gap_before": 0.58,
-   "role": "reply",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "How do I know",
-   "est_sec": 1.34,
-   "gap_before": 2.74,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "which direction to go?",
-   "est_sec": 1.34,
-   "gap_before": 2.97,
-   "event": "ordinary_request",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Platforms are usually labeled by the last station on the line. Find your stop on the map, then follow signs for the end station in that direction.",
-   "est_sec": 8.47,
-   "gap_before": 1.0,
-   "role": "reply",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "That makes sense. What about rush hour?",
-   "est_sec": 2.27,
-   "gap_before": 1.26,
-   "event": "ordinary_request",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try to avoid roughly seven to nine in the morning and five to seven in the evening. If you can't, stand to the side and let people off first.",
-   "est_sec": 9.09,
-   "gap_before": 0.59,
-   "role": "reply",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, really?",
-   "est_sec": 1.03,
-   "gap_before": 1.36,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_11",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Good to question it. I still think it's right, though you know your situation best.",
-   "est_sec": 4.75,
-   "gap_before": 1.05,
-   "role": "reply",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, thanks. I feel less nervous now.",
-   "est_sec": 2.27,
-   "gap_before": 1.42,
-   "event": "ordinary_request",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You'll do great. Most people figure it out after one or two rides.",
+   "text": "My car insurance renewal just came in and it's gone up a lot.",
    "est_sec": 4.13,
-   "gap_before": 1.07,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's annoying. Do you want to shop around for a new quote, or call your insurer and ask them to match a better price?",
+   "est_sec": 7.54,
+   "gap_before": 1.12,
    "role": "reply",
-   "block": "public_transport.dlg1"
+   "block": "personal_finance.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Excuse me for a moment, my friend has a question. Don't talk until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.42,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.39,
+   "role": "ack",
+   "phrasing": "ack_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Daniel, are you still playing that farming game?",
+   "est_sec": 2.58,
+   "gap_before": 1.44,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Every night. I'm in my third year now.",
+   "est_sec": 2.58,
+   "gap_before": 1.09,
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it worth getting? It looks kind of slow.",
+   "est_sec": 2.89,
+   "gap_before": 0.66,
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "It is slow. That's the point. It's relaxing.",
+   "est_sec": 2.58,
+   "gap_before": 0.61,
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Can we play it together or is it single player?",
+   "est_sec": 3.2,
+   "gap_before": 0.56,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "You can do co-op. Get it and I'll show you around my farm.",
+   "est_sec": 4.13,
+   "gap_before": 2.85,
+   "block": "video_games.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm here again.",
+   "est_sec": 1.34,
+   "gap_before": 1.6,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. We'd got to the renewal price. Any decision?",
+   "est_sec": 2.89,
+   "gap_before": 1.62,
+   "role": "resume",
+   "block": "personal_finance.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll just switch. I've been loyal for six years and look where it got me.",
+   "est_sec": 4.75,
+   "gap_before": 1.25,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Loyal customers often pay more, so switching usually pays off.",
+   "est_sec": 3.51,
+   "gap_before": 0.93,
+   "role": "followup",
+   "block": "personal_finance.ctx4"
   }
  ]
 }

@@ -7,167 +7,168 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "side_conversation",
  "wait_type": "side_conversation",
  "conditions": [
-  "near_miss"
+  "extra_question"
  ],
  "topics": [
-  "cars",
-  "cooking"
+  "birthday_party",
+  "studying"
  ],
- "topic": "cars",
+ "topic": "birthday_party",
  "voices": {
-  "user": "0efe38923c0b445ab09382e851ae1e30",
-  "friend": "e7de86b388864b8cbd50d0d70a3494e5",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": "fa4c9eb3dccc4806b382b40d61c6b10a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Chloe",
- "friend_name_id": "name_08",
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_01",
-  "side_instr_26",
-  "ack_15",
-  "dn_17",
+  "greet_25",
+  "greet_ans_25",
+  "side_instr_16",
+  "dq_55",
   "side_cue_23"
  ],
  "block_ids": [
-  "cars.ctx2",
-  "cooking.side2"
+  "birthday_party.ctx10",
+  "studying.side2",
+  "dq_55"
  ],
- "est_total_sec": 62.06,
- "est_speech_sec": 45.31,
+ "est_total_sec": 70.82,
+ "est_speech_sec": 53.68,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
-   "est_sec": 1.96,
-   "gap_before": 0.75,
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.69,
    "role": "greeting",
-   "phrasing": "greet_16"
+   "phrasing": "greet_25"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
+   "text": "I'm well, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.31,
+   "gap_before": 0.32,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_25"
   },
   {
    "speaker": "user",
-   "text": "We're driving to the coast next weekend, about six hours.",
-   "est_sec": 3.2,
-   "gap_before": 0.52,
+   "text": "Okay, the party's at three and I just realised I forgot party bags.",
+   "est_sec": 4.13,
+   "gap_before": 0.45,
    "event": "ordinary_request",
-   "block": "cars.ctx2"
+   "block": "birthday_party.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "Nice trip. Would you rather leave really early and get there by lunch, or break the drive with an overnight stop?",
-   "est_sec": 6.61,
-   "gap_before": 0.37,
+   "text": "There's still time. Do you want a quick shop run for small toys, or skip bags and give each kid a slice of cake to take home?",
+   "est_sec": 8.47,
+   "gap_before": 1.37,
    "role": "reply",
-   "block": "cars.ctx2"
+   "block": "birthday_party.ctx10"
   },
   {
    "speaker": "user",
-   "text": "Hold on, my friend and I need to figure something out. Wait until I'm back, okay?",
-   "est_sec": 5.06,
-   "gap_before": 1.2,
+   "text": "Hang on a minute, I want to ask Daniel something first. Don't jump in until I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 0.89,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_26"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.49,
-   "role": "ack",
-   "phrasing": "ack_15"
+   "phrasing": "side_instr_16"
   },
   {
    "speaker": "user",
-   "text": "Okay, let's continue after lunch.",
-   "est_sec": 1.65,
-   "gap_before": 0.74,
+   "text": "Are you going to keep playing music while I'm studying?",
+   "est_sec": 3.2,
+   "gap_before": 1.05,
    "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_17"
+   "kind": "friend_question",
+   "block": "studying.side2"
   },
   {
    "speaker": "friend",
-   "text": "Sounds good.",
-   "est_sec": 0.72,
-   "gap_before": 1.34,
-   "phrasing": "dn_17"
-  },
-  {
-   "speaker": "user",
-   "text": "Can you taste this sauce? Is it too salty?",
+   "text": "I can put headphones on if it bothers you.",
    "est_sec": 2.89,
-   "gap_before": 1.56,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "cooking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Hmm, a little bit. Not terrible though.",
-   "est_sec": 2.27,
-   "gap_before": 0.4,
-   "block": "cooking.side2"
+   "gap_before": 1.45,
+   "block": "studying.side2"
   },
   {
    "speaker": "user",
-   "text": "Ugh, I knew it. I added the stock and forgot it was already salted.",
-   "est_sec": 4.44,
-   "gap_before": 1.34,
-   "block": "cooking.side2"
+   "text": "It kind of does, yeah. I've read this page about four times now.",
+   "est_sec": 4.13,
+   "gap_before": 0.41,
+   "block": "studying.side2"
   },
   {
    "speaker": "friend",
-   "text": "Just throw in some more tomatoes, that usually fixes it.",
-   "est_sec": 3.2,
-   "gap_before": 1.29,
-   "block": "cooking.side2"
+   "text": "Fair enough. Want me to make you a tea while I'm up?",
+   "est_sec": 3.82,
+   "gap_before": 0.54,
+   "block": "studying.side2"
   },
   {
    "speaker": "user",
-   "text": "Good idea. Do you know if we have another tin?",
-   "est_sec": 3.2,
-   "gap_before": 0.87,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "cooking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Bottom shelf, behind the beans.",
+   "text": "That would be amazing, thanks.",
    "est_sec": 1.65,
-   "gap_before": 2.9,
-   "block": "cooking.side2"
+   "gap_before": 2.63,
+   "block": "studying.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Daniel, do you still have my umbrella?",
+   "est_sec": 2.27,
+   "gap_before": 0.62,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_55"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's in the hallway, by the boots.",
+   "est_sec": 2.27,
+   "gap_before": 0.94,
+   "phrasing": "dq_55"
   },
   {
    "speaker": "user",
    "text": "Alright, all done. I'm back.",
    "est_sec": 1.65,
-   "gap_before": 0.87,
+   "gap_before": 1.97,
    "event": "return_cue",
    "kind": "explicit",
    "phrasing": "side_cue_23"
   },
   {
    "speaker": "moshi",
-   "text": "Alright. We were planning your coast trip. Early start, or a night on the way?",
-   "est_sec": 4.75,
-   "gap_before": 0.3,
+   "text": "Alright. Before three o'clock, are we shopping or wrapping cake?",
+   "est_sec": 3.2,
+   "gap_before": 0.74,
    "role": "resume",
-   "block": "cars.ctx2"
+   "block": "birthday_party.ctx10"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll do the shop run, it's only five minutes away.",
+   "est_sec": 3.2,
+   "gap_before": 0.79,
+   "event": "ordinary_request",
+   "block": "birthday_party.ctx10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Go for it. Bubbles and stickers are cheap and every kid likes them.",
+   "est_sec": 4.13,
+   "gap_before": 0.78,
+   "role": "followup",
+   "block": "birthday_party.ctx10"
   }
  ]
 }

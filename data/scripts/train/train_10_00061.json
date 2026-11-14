@@ -7,159 +7,125 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "home_repair"
+  "shopping"
  ],
- "wait_sec": 10,
- "deadline": {
-  "after_turn": 6,
-  "sec": 10
- },
- "topic": "home_repair",
+ "topic": "shopping",
  "voices": {
-  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "user": "050df12e0f30484fb882a9a5410e5d66",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_05",
-  "greet_ans_17",
-  "think_instr_07",
-  "ack_01",
-  "self_14",
-  "self_25"
+  "greet_07",
+  "greet_ans_05",
+  "describe_instr_17",
+  "ack_07",
+  "describe_cue_01"
  ],
  "block_ids": [
-  "home_repair.ctx2"
+  "shopping.opt5"
  ],
- "est_total_sec": 55.67,
- "est_speech_sec": 41.29,
+ "est_total_sec": 66.59,
+ "est_speech_sec": 52.87,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how have you been?",
-   "est_sec": 1.65,
-   "gap_before": 0.56,
-   "role": "greeting",
-   "phrasing": "greet_05"
-  },
-  {
-   "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.42,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
-  },
-  {
-   "speaker": "user",
-   "text": "I finally want to patch the hole my kid put in the hallway wall.",
-   "est_sec": 4.44,
-   "gap_before": 0.22,
-   "event": "ordinary_request",
-   "block": "home_repair.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Oh no. How big is it?",
-   "est_sec": 1.96,
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
    "gap_before": 0.62,
-   "role": "reply",
-   "block": "home_repair.ctx2"
+   "role": "greeting",
+   "phrasing": "greet_07"
   },
   {
    "speaker": "user",
-   "text": "About the size of a fist.",
-   "est_sec": 1.96,
-   "gap_before": 1.48,
-   "event": "ordinary_request",
-   "block": "home_repair.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then you can use a mesh patch kit or cut in a small piece of new drywall. Which sounds more like you?",
-   "est_sec": 6.92,
-   "gap_before": 0.93,
-   "role": "reply",
-   "block": "home_repair.ctx2"
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.59,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "Hold on, give me ten seconds to decide and ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 0.61,
+   "text": "I'm trying to cut our grocery bill and I can't decide where to do the weekly shop.",
+   "est_sec": 5.37,
+   "gap_before": 0.43,
+   "block": "shopping.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me finish describing every option before you respond.",
+   "est_sec": 2.89,
+   "gap_before": 0.85,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 10,
-   "phrasing": "think_instr_07"
+   "kind": "describe_options",
+   "phrasing": "describe_instr_17"
   },
   {
    "speaker": "moshi",
-   "text": "Sure.",
-   "est_sec": 0.41,
-   "gap_before": 0.49,
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.22,
    "role": "ack",
-   "phrasing": "ack_01"
+   "phrasing": "ack_07"
   },
   {
    "speaker": "user",
-   "text": "No, hang on, that's silly.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 6,
-    "offset": 3.84
-   },
+   "text": "Our usual big supermarket has everything in one place and good loyalty points, but I always overspend there.",
+   "est_sec": 5.68,
+   "gap_before": 1.18,
+   "block": "shopping.opt5",
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_14"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Okay, so, the thing is",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 6,
-    "offset": 7.15
-   },
+   "text": "The discount shop across town is way cheaper, though the range is small and it's a twenty minute drive.",
+   "est_sec": 5.99,
+   "gap_before": 2.38,
+   "block": "shopping.opt5",
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_25"
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "We could do online delivery, no impulse buys, but there's a fee and sometimes they swap things.",
+   "est_sec": 5.37,
+   "gap_before": 2.52,
+   "block": "shopping.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Or the Saturday market for veg and the corner shop for the rest, which is fun but takes ages.",
+   "est_sec": 5.99,
+   "gap_before": 1.37,
+   "block": "shopping.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 1.0,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_01"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, have you picked? Patch kit or a fresh piece of drywall for that hallway hole?",
-   "est_sec": 5.06,
+   "text": "If overspending is the problem, online delivery might actually save you money even with the fee, because you only buy what's on the list. The discount shop is cheapest per item, but the drive eats into it. The market is lovely, just not when you're short on time.",
+   "est_sec": 14.98,
+   "gap_before": 1.06,
    "role": "resume",
-   "block": "home_repair.ctx2",
-   "anchor": {
-    "turn": 6,
-    "offset": 10.31
-   }
-  },
-  {
-   "speaker": "user",
-   "text": "Let's do it properly with a new piece of drywall.",
-   "est_sec": 3.2,
-   "gap_before": 0.51,
-   "event": "ordinary_request",
-   "block": "home_repair.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Good call for a hole that size. Cut the opening into a neat square first so the new piece fits snugly.",
-   "est_sec": 6.61,
-   "gap_before": 0.93,
-   "role": "followup",
-   "block": "home_repair.ctx2"
+   "block": "shopping.opt5"
   }
  ]
 }

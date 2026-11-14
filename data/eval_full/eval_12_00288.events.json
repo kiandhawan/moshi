@@ -1,90 +1,134 @@
 {
   "id": "eval_12_00288",
-  "group": "door",
-  "user_start": 2.46,
-  "type": "door",
-  "conditions": [],
+  "group": "side_conversation",
+  "user_start": 2.51,
+  "type": "side_conversation",
+  "conditions": [
+    "implicit",
+    "near_miss"
+  ],
+  "cluster": "laptop_buying.ctx10",
   "groups": [
-    "new_type_door"
+    "familiar_type",
+    "implicit_return"
   ],
-  "instruction_start": 16.36,
-  "instruction_end": 19.51,
-  "wait_end": 35.41,
+  "instruction_start": 17.43,
+  "instruction_end": 21.85,
+  "wait_end": 57.67,
   "resume_window": [
-    35.41,
-    40.41
+    57.67,
+    62.67
   ],
-  "wait_sec": 15.9,
+  "wait_sec": 35.82,
   "distractors": [
-    23.39
+    26.98,
+    33.05,
+    53.37
   ],
   "distractor_kinds": [
-    "question_to_other"
+    "near_miss",
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      23.39,
-      23.77
+      26.98,
+      28.27
+    ],
+    [
+      33.05,
+      34.41
+    ],
+    [
+      53.37,
+      53.69
     ]
   ],
   "ordinary_requests": [
-    6.27,
-    44.66
+    7.74
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.46,
-      "end": 3.4,
+      "start": 2.51,
+      "end": 4.01,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 3.83,
-      "end": 6.27,
+      "start": 4.56,
+      "end": 7.74,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 16.36,
-      "end": 19.51,
+      "start": 17.43,
+      "end": 21.85,
       "event": "instruction",
-      "kind": "door"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 22.96,
-      "end": 23.39,
+      "start": 24.63,
+      "end": 26.98,
       "event": "distractor",
-      "kind": "question_to_other"
+      "kind": "near_miss"
     },
     {
-      "speaker": "visitor",
-      "start": 23.77,
-      "end": 25.89
-    },
-    {
-      "speaker": "user",
-      "start": 27.48,
-      "end": 29.32
-    },
-    {
-      "speaker": "visitor",
-      "start": 30.61,
-      "end": 31.63
+      "speaker": "friend",
+      "start": 28.27,
+      "end": 30.35
     },
     {
       "speaker": "user",
-      "start": 33.72,
-      "end": 35.41,
+      "start": 30.66,
+      "end": 33.05,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 34.41,
+      "end": 36.25
+    },
+    {
+      "speaker": "user",
+      "start": 37.08,
+      "end": 39.09
+    },
+    {
+      "speaker": "friend",
+      "start": 39.65,
+      "end": 42.33
+    },
+    {
+      "speaker": "user",
+      "start": 43.63,
+      "end": 46.08
+    },
+    {
+      "speaker": "friend",
+      "start": 47.5,
+      "end": 49.91
+    },
+    {
+      "speaker": "user",
+      "start": 51.16,
+      "end": 53.37,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 53.69,
+      "end": 55.63
+    },
+    {
+      "speaker": "user",
+      "start": 56.41,
+      "end": 57.67,
       "event": "return_cue",
-      "kind": "explicit"
-    },
-    {
-      "speaker": "user",
-      "start": 42.63,
-      "end": 44.66,
-      "event": "ordinary_request"
+      "kind": "implicit"
     }
   ],
   "notes": "Rendered from script eval_12_00288 by scripts/render.py.",
@@ -92,33 +136,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.42,
-      "end": 1.97,
-      "text": "Hey there, how have things been?"
+      "start": 0.47,
+      "end": 1.78,
+      "text": "Hello! How's it going?"
     },
     {
       "kind": "reply",
-      "start": 7.27,
-      "end": 13.04,
-      "text": "Big group. Any dietary needs, like vegetarians or allergies? That really narrows down where to book."
+      "start": 8.63,
+      "end": 15.72,
+      "text": "Not usually, if it's from a trusted seller. Would you rather save money with a certified refurb, or pay full price for peace of mind?"
     },
     {
       "kind": "ack",
-      "start": 20.09,
-      "end": 20.83,
-      "text": "Take your time."
+      "start": 22.46,
+      "end": 23.42,
+      "text": "Okay, no rush."
     },
     {
       "kind": "resume",
-      "start": 36.01,
-      "end": 40.49,
-      "text": "Everything okay at the door? Did you find out if anyone has allergies or special diets?"
-    },
-    {
-      "kind": "followup",
-      "start": 45.5,
-      "end": 49.97,
-      "text": "Easy then. Korean barbecue is great for a group of eight, everyone cooks together."
+      "start": 59.43,
+      "end": 61.44,
+      "text": "Of course. So which one feels right?"
     }
   ]
 }

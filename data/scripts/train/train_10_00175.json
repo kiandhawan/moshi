@@ -7,172 +7,169 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "side_conversation",
  "wait_type": "side_conversation",
- "conditions": [
-  "near_miss"
- ],
+ "conditions": [],
  "topics": [
-  "board_games",
-  "movies"
+  "fitness",
+  "studying"
  ],
- "topic": "board_games",
+ "topic": "fitness",
  "voices": {
-  "user": "050df12e0f30484fb882a9a5410e5d66",
-  "friend": "18b1276891524bd786fb8a59ecd3630a",
+  "user": "4210f97652d14bec82edc1c2ee8296d2",
+  "friend": "ec3f1730c4494386accf1e86625bfe6d",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Daniel",
- "friend_name_id": "name_17",
+ "friend_name": "Alex",
+ "friend_name_id": "name_04",
  "phrasing_ids": [
-  "greet_04",
-  "greet_ans_17",
-  "side_instr_11",
-  "dn_16",
-  "side_cue_11"
+  "greet_29",
+  "greet_ans_08",
+  "side_instr_26",
+  "side_cue_25"
  ],
  "block_ids": [
-  "board_games.ctx3",
-  "movies.side3"
+  "fitness.ctx7",
+  "studying.side4"
  ],
- "est_total_sec": 73.28,
- "est_speech_sec": 56.88,
+ "est_total_sec": 73.67,
+ "est_speech_sec": 56.57,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how are you?",
-   "est_sec": 1.65,
-   "gap_before": 0.37,
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.34,
    "role": "greeting",
-   "phrasing": "greet_04"
+   "phrasing": "greet_29"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.44,
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.5,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "phrasing": "greet_ans_08"
   },
   {
    "speaker": "user",
-   "text": "We've played the same three games every week for a year. I'm bored.",
-   "est_sec": 4.13,
-   "gap_before": 0.56,
+   "text": "I'm training for a marathon and my calf has been feeling tight for three days.",
+   "est_sec": 4.75,
+   "gap_before": 0.51,
    "event": "ordinary_request",
-   "block": "board_games.ctx3"
+   "block": "fitness.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Time for something new. Do you want a short game you can play a few rounds of, or one long epic game for the whole evening?",
-   "est_sec": 8.16,
-   "gap_before": 1.17,
+   "text": "Tightness can turn into an injury if you push through. Do you want to rest for a few days, or switch to easy cross training like cycling?",
+   "est_sec": 8.47,
+   "gap_before": 0.78,
    "role": "reply",
-   "block": "board_games.ctx3"
+   "block": "fitness.ctx7"
   },
   {
    "speaker": "user",
-   "text": "Excuse me for a moment, my friend has a question. Don't talk until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 0.69,
+   "text": "Hold on, my friend and I need to figure something out. Wait until I'm back, okay?",
+   "est_sec": 5.06,
+   "gap_before": 2.59,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_11"
+   "phrasing": "side_instr_26"
   },
   {
    "speaker": "user",
-   "text": "Are you back from the gym?",
-   "est_sec": 1.96,
-   "gap_before": 0.65,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_16"
+   "text": "Alex, quiz me. Bones of the arm. Go.",
+   "est_sec": 2.58,
+   "gap_before": 0.92,
+   "block": "studying.side4"
   },
   {
    "speaker": "friend",
-   "text": "Yep, just got in.",
-   "est_sec": 1.34,
-   "gap_before": 1.47,
-   "phrasing": "dn_16"
+   "text": "Okay, the long one from shoulder to elbow?",
+   "est_sec": 2.58,
+   "gap_before": 0.49,
+   "block": "studying.side4"
   },
   {
    "speaker": "user",
-   "text": "Daniel, who was the actor in that heist film we watched in the summer?",
-   "est_sec": 4.44,
-   "gap_before": 0.66,
+   "text": "Humerus.",
+   "est_sec": 0.41,
+   "gap_before": 2.11,
+   "block": "studying.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Correct. And the two in the forearm?",
+   "est_sec": 2.27,
+   "gap_before": 1.27,
+   "block": "studying.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Radius and ulna. Which one's on the thumb side, though? I always mix them up.",
+   "est_sec": 4.75,
+   "gap_before": 0.32,
+   "block": "studying.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Radius. Thumb, radius, think of a radio dial you turn with your thumb.",
+   "est_sec": 4.13,
+   "gap_before": 0.62,
+   "block": "studying.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, that's good. Did you make that up?",
+   "est_sec": 2.58,
+   "gap_before": 0.84,
    "event": "distractor",
    "kind": "friend_question",
-   "block": "movies.side3"
+   "block": "studying.side4"
   },
   {
    "speaker": "friend",
-   "text": "The one with the train? I can't remember his name either.",
-   "est_sec": 3.51,
-   "gap_before": 1.43,
-   "block": "movies.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "It's driving me crazy. He's in this trailer I just saw.",
-   "est_sec": 3.51,
-   "gap_before": 1.02,
-   "block": "movies.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Was he the tall one with the beard?",
-   "est_sec": 2.58,
-   "gap_before": 0.33,
-   "block": "movies.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Yes! The getaway driver.",
+   "text": "Just now. You're welcome.",
    "est_sec": 1.34,
-   "gap_before": 1.22,
-   "block": "movies.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "No idea. Look it up later or it'll bug you all night.",
-   "est_sec": 3.82,
-   "gap_before": 0.67,
-   "block": "movies.side3"
+   "gap_before": 1.28,
+   "block": "studying.side4"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'm done talking to them. I'm back.",
-   "est_sec": 2.58,
-   "gap_before": 1.33,
+   "text": "Sorry, that took a while. I'm back.",
+   "est_sec": 2.27,
+   "gap_before": 0.93,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_11"
+   "phrasing": "side_cue_25"
   },
   {
    "speaker": "moshi",
-   "text": "Sure thing. We were finding something new for your weekly game night.",
+   "text": "Sure thing. So, for your marathon calf, total rest or cross training?",
    "est_sec": 3.82,
-   "gap_before": 0.33,
+   "gap_before": 0.59,
    "role": "resume",
-   "block": "board_games.ctx3"
+   "block": "fitness.ctx7"
   },
   {
    "speaker": "user",
-   "text": "Something long. We have all evening anyway.",
-   "est_sec": 2.27,
-   "gap_before": 1.46,
+   "text": "Rest. I'd rather lose three days than three weeks.",
+   "est_sec": 2.89,
+   "gap_before": 1.03,
    "event": "ordinary_request",
-   "block": "board_games.ctx3"
+   "block": "fitness.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Then try a big strategy game like Terraforming Mars. Expect around three hours the first time.",
-   "est_sec": 5.06,
-   "gap_before": 1.1,
+   "text": "Wise. Gentle stretching and foam rolling can help, then try a short easy run to test it.",
+   "est_sec": 5.37,
+   "gap_before": 0.48,
    "role": "followup",
-   "block": "board_games.ctx3"
+   "block": "fitness.ctx7"
   }
  ]
 }

@@ -7,125 +7,123 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [
-  "wait_like"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "music"
+  "cleaning"
  ],
- "topic": "music",
+ "topic": "cleaning",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "b47bb94bf3ce42b2a7643c31af62c553",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_05",
-  "greet_ans_22",
-  "waitlike_17"
+  "greet_10",
+  "greet_ans_17",
+  "describe_instr_01",
+  "ack_07",
+  "describe_cue_04"
  ],
  "block_ids": [
-  "music.dlg1"
+  "cleaning.opt4"
  ],
- "est_total_sec": 51.79,
- "est_speech_sec": 37.99,
+ "est_total_sec": 56.7,
+ "est_speech_sec": 45.12,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how have you been?",
-   "est_sec": 1.65,
-   "gap_before": 0.51,
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.55,
    "role": "greeting",
-   "phrasing": "greet_05"
+   "phrasing": "greet_10"
   },
   {
    "speaker": "user",
-   "text": "Pretty relaxed today.",
-   "est_sec": 1.03,
-   "gap_before": 0.87,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_22"
-  },
-  {
-   "speaker": "user",
-   "text": "I need music to help me focus while studying. Lyrics distract me.",
-   "est_sec": 3.82,
-   "gap_before": 0.37,
-   "event": "ordinary_request",
-   "block": "music.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try instrumental stuff like lo-fi beats, classical piano or ambient electronic music. They keep you going without pulling your attention.",
-   "est_sec": 6.3,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "music.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Classical always makes me sleepy, though.",
+   "text": "A bit tired today, but okay.",
    "est_sec": 1.96,
-   "gap_before": 3.4,
-   "event": "ordinary_request",
-   "block": "music.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then go for something with a steady beat, like lo-fi hip hop or video game soundtracks. Those are made to stay in the background.",
-   "est_sec": 7.54,
-   "gap_before": 0.41,
-   "role": "reply",
-   "block": "music.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Video game music, really? I hadn't",
-   "est_sec": 1.96,
-   "gap_before": 0.59,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "music.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "thought of that.",
-   "est_sec": 1.03,
-   "gap_before": 2.65,
-   "event": "ordinary_request",
-   "block": "music.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It's surprisingly good for studying. It's designed to keep you focused for hours without getting annoying.",
-   "est_sec": 5.06,
-   "gap_before": 1.08,
-   "role": "reply",
-   "block": "music.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on a sec, should I play it loud or quiet?",
-   "est_sec": 3.51,
-   "gap_before": 1.28,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_17",
-   "block": "music.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fairly quiet. You want it just loud enough to block out other noise.",
-   "est_sec": 4.13,
    "gap_before": 0.32,
-   "role": "reply",
-   "block": "music.dlg1"
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Our hallway is a shoe disaster and I'm picking some kind of storage.",
+   "est_sec": 4.13,
+   "gap_before": 0.27,
+   "block": "cleaning.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me describe all the options before you comment.",
+   "est_sec": 2.89,
+   "gap_before": 0.58,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.67,
+   "role": "ack",
+   "phrasing": "ack_07"
+  },
+  {
+   "speaker": "user",
+   "text": "A simple open rack by the door, fits about twelve pairs, very cheap.",
+   "est_sec": 4.13,
+   "gap_before": 1.24,
+   "block": "cleaning.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "A bench with closed cupboards underneath, so you can sit to put boots on and hide the mess.",
+   "est_sec": 5.68,
+   "gap_before": 1.2,
+   "block": "cleaning.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "An over the door organiser with pockets, which takes up no floor at all.",
+   "est_sec": 4.44,
+   "gap_before": 1.39,
+   "block": "cleaning.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a rule that shoes go back in each person's bedroom, no storage needed.",
+   "est_sec": 4.44,
+   "gap_before": 2.83,
+   "block": "cleaning.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 0.62,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The bench is the nicest long-term, it hides everything and gives you a seat. The open rack is cheap but still looks cluttered, the door pockets suit small flats, and the bedroom rule only works if everyone obeys it.",
+   "est_sec": 12.19,
+   "gap_before": 0.41,
+   "role": "resume",
+   "block": "cleaning.opt4"
   }
  ]
 }

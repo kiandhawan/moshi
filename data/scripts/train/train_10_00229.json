@@ -7,114 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "smartphones"
+  "fitness"
  ],
- "topic": "smartphones",
+ "topic": "fitness",
  "voices": {
-  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "user": "ce9db9be1ecb4c8a832802626864595d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_10",
-  "greet_ans_16",
-  "describe_instr_07",
-  "ack_01",
-  "describe_cue_04"
+  "greet_23",
+  "greet_ans_13"
  ],
  "block_ids": [
-  "smartphones.opt2"
+  "fitness.dlg19"
  ],
- "est_total_sec": 53.12,
- "est_speech_sec": 42.54,
+ "est_total_sec": 51.19,
+ "est_speech_sec": 39.23,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your day been so far?",
-   "est_sec": 2.27,
-   "gap_before": 0.34,
+   "text": "Hey! How are you feeling?",
+   "est_sec": 1.65,
+   "gap_before": 0.48,
    "role": "greeting",
-   "phrasing": "greet_10"
+   "phrasing": "greet_23"
   },
   {
    "speaker": "user",
-   "text": "Pretty busy, but good.",
-   "est_sec": 1.34,
-   "gap_before": 0.78,
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.65,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_16"
+   "phrasing": "greet_ans_13"
   },
   {
    "speaker": "user",
-   "text": "I'm getting my dad a new phone and I want to pick the right one.",
-   "est_sec": 4.75,
-   "gap_before": 0.28,
-   "block": "smartphones.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me walk you through all the options, then you can tell me what you think.",
-   "est_sec": 5.06,
-   "gap_before": 0.84,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_07"
+   "text": "My watch keeps talking about zone two training. What even is that?",
+   "est_sec": 3.82,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "fitness.dlg19"
   },
   {
    "speaker": "moshi",
-   "text": "Sure.",
-   "est_sec": 0.41,
-   "gap_before": 0.25,
-   "role": "ack",
-   "phrasing": "ack_01"
+   "text": "It's easy, steady exercise at a low heart rate, where you can still talk in full sentences.",
+   "est_sec": 5.37,
+   "gap_before": 1.72,
+   "role": "reply",
+   "block": "fitness.dlg19"
   },
   {
    "speaker": "user",
-   "text": "One is a simple phone with big buttons and a large screen, made for people who aren't techy.",
-   "est_sec": 5.68,
-   "gap_before": 1.42,
-   "block": "smartphones.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is the same brand he's using now, just the newer version, so everything feels familiar.",
-   "est_sec": 5.06,
-   "gap_before": 1.27,
-   "block": "smartphones.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a cheap basic smartphone that mostly does calls, texts and photos.",
-   "est_sec": 4.13,
-   "gap_before": 2.82,
-   "block": "smartphones.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm done. What do you think?",
+   "text": "That sounds too easy to do anything.",
    "est_sec": 2.27,
-   "gap_before": 0.67,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_04"
+   "gap_before": 1.01,
+   "event": "ordinary_request",
+   "block": "fitness.dlg19"
   },
   {
    "speaker": "moshi",
-   "text": "Sticking with the same brand is probably the smoothest choice, he won't have to relearn anything. The big button phone is great if his eyesight is a concern. The basic smartphone saves money but might feel slow.",
-   "est_sec": 11.57,
-   "gap_before": 0.41,
-   "role": "resume",
-   "block": "smartphones.opt2"
+   "text": "It builds your aerobic base, so your heart and muscles get better at using oxygen. Lots of endurance athletes spend most of their time there.",
+   "est_sec": 7.85,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "fitness.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "How long do I have to do it?",
+   "est_sec": 2.58,
+   "gap_before": 0.81,
+   "event": "ordinary_request",
+   "block": "fitness.dlg19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sessions of thirty to sixty minutes, a few times a week, tend to work well.",
+   "est_sec": 4.75,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "fitness.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "So I should slow down my runs?",
+   "est_sec": 2.27,
+   "gap_before": 1.94,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "fitness.dlg19"
+  },
+  {
+   "speaker": "user",
+   "text": "My ego hates that.",
+   "est_sec": 1.34,
+   "gap_before": 1.8,
+   "event": "ordinary_request",
+   "block": "fitness.dlg19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Most of them, yes. Keep one harder session a week for speed. Your ego will recover when you get faster.",
+   "est_sec": 6.3,
+   "gap_before": 0.38,
+   "role": "reply",
+   "block": "fitness.dlg19"
   }
  ]
 }

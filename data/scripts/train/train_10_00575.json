@@ -7,143 +7,143 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [
-  "self_talk"
+  "wait_like"
  ],
  "topics": [
-  "baking"
+  "moving_house"
  ],
- "wait_sec": 20,
- "deadline": {
-  "after_turn": 4,
-  "sec": 20
- },
- "topic": "baking",
+ "topic": "moving_house",
  "voices": {
-  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_19",
-  "think_instr_11",
-  "ack_03",
-  "self_19",
-  "self_10"
+  "greet_10",
+  "greet_ans_13",
+  "waitlike_08"
  ],
  "block_ids": [
-  "baking.ctx1"
+  "moving_house.dlg12"
  ],
- "est_total_sec": 56.89,
- "est_speech_sec": 31.79,
+ "est_total_sec": 60.84,
+ "est_speech_sec": 46.87,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
-   "est_sec": 1.96,
-   "gap_before": 0.53,
-   "role": "greeting",
-   "phrasing": "greet_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Good, thanks. Just got home.",
-   "est_sec": 1.65,
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
    "gap_before": 0.73,
+   "role": "greeting",
+   "phrasing": "greet_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_19"
+   "phrasing": "greet_ans_13"
   },
   {
    "speaker": "user",
-   "text": "It's my coworker's last day on Monday and I said I'd bake something.",
-   "est_sec": 4.13,
-   "gap_before": 0.47,
+   "text": "A landlord wants me to send a holding deposit before I've seen the flat. He says he's abroad.",
+   "est_sec": 5.68,
+   "gap_before": 0.6,
    "event": "ordinary_request",
-   "block": "baking.ctx1"
+   "block": "moving_house.dlg12"
   },
   {
    "speaker": "moshi",
-   "text": "How kind. Would you rather make one big cake to share, or a batch of cookies or cupcakes people can grab?",
-   "est_sec": 6.61,
-   "gap_before": 0.58,
+   "text": "Please be careful. That's one of the most common rental scams.",
+   "est_sec": 3.51,
+   "gap_before": 0.54,
    "role": "reply",
-   "block": "baking.ctx1"
+   "block": "moving_house.dlg12"
   },
   {
    "speaker": "user",
-   "text": "Ask me again in twenty seconds, I need to think.",
-   "est_sec": 3.2,
-   "gap_before": 0.89,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_11"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, take your time.",
-   "est_sec": 1.34,
-   "gap_before": 0.28,
-   "role": "ack",
-   "phrasing": "ack_03"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, but then again",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 7.0
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_19"
-  },
-  {
-   "speaker": "user",
-   "text": "Mm, I don't know.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 14.12
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_10"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, have you decided? Cake, or cookies and cupcakes?",
-   "est_sec": 2.89,
-   "role": "resume",
-   "block": "baking.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 20.26
-   }
-  },
-  {
-   "speaker": "user",
-   "text": "Cupcakes. Nobody has to cut anything at the office.",
-   "est_sec": 2.89,
-   "gap_before": 3.09,
+   "text": "Really? The photos look amazing.",
+   "est_sec": 1.65,
+   "gap_before": 0.72,
    "event": "ordinary_request",
-   "block": "baking.ctx1"
+   "block": "moving_house.dlg12"
   },
   {
    "speaker": "moshi",
-   "text": "Very practical. Bake them Sunday and frost them Monday morning so they look fresh.",
+   "text": "Scammers often copy photos from real listings. A rent that seems too good for the area is another warning sign.",
+   "est_sec": 6.3,
+   "gap_before": 1.35,
+   "role": "reply",
+   "block": "moving_house.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, are you sure about that?",
+   "est_sec": 1.96,
+   "gap_before": 1.3,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_08",
+   "block": "moving_house.dlg12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good to question it. I still think it's right, though you know your situation best.",
+   "est_sec": 4.75,
+   "gap_before": 0.74,
+   "role": "reply",
+   "block": "moving_house.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "It is really cheap for the area, now that",
+   "est_sec": 2.89,
+   "gap_before": 1.16,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "moving_house.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "I think about it.",
+   "est_sec": 1.34,
+   "gap_before": 1.76,
+   "event": "ordinary_request",
+   "block": "moving_house.dlg12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Never pay before you've seen the place in person, or had a trusted person view it. And never send money by bank transfer to someone you can't verify.",
+   "est_sec": 8.78,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "moving_house.dlg12"
+  },
+  {
+   "speaker": "user",
+   "text": "What should I do with the listing?",
+   "est_sec": 2.27,
+   "gap_before": 1.15,
+   "event": "ordinary_request",
+   "block": "moving_house.dlg12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Report it to the website. You might save someone else from losing their money.",
    "est_sec": 4.44,
-   "gap_before": 1.07,
-   "role": "followup",
-   "block": "baking.ctx1"
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "moving_house.dlg12"
   }
  ]
 }

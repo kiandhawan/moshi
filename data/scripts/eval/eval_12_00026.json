@@ -7,90 +7,118 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "reading",
  "wait_type": "reading",
  "conditions": [],
  "topics": [
-  "wedding_planning"
+  "family_visit"
  ],
  "reading": {
   "material": "article",
-  "sec": 18.8
+  "sec": 20.5
  },
- "topic": "wedding_planning",
+ "topic": "family_visit",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
+  "user": "7bb342e710854139b1d6e12411229f1f",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_15",
-  "greet_ans_18",
+  "greet_03",
+  "greet_ans_09",
   "read_instr_10",
-  "ack_08",
+  "ack_16",
+  "murmur_12",
+  "murmur_13",
   "read_cue_10"
  ],
  "block_ids": [
-  "wedding_planning.ctx3"
+  "family_visit.ctx20"
  ],
- "est_total_sec": 55.63,
- "est_speech_sec": 31.38,
+ "est_total_sec": 56.56,
+ "est_speech_sec": 29.72,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your week going?",
+   "text": "Hello, how's your day going?",
    "est_sec": 1.65,
-   "gap_before": 0.59,
+   "gap_before": 0.77,
    "role": "greeting",
-   "phrasing": "greet_15",
+   "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
-   "est_sec": 1.03,
-   "gap_before": 0.92,
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.84,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
+   "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "My best friend's wedding is in three weeks and I'm giving a speech.",
-   "est_sec": 4.13,
-   "gap_before": 0.56,
+   "text": "I'm so tired. My parents are coming tomorrow and I haven't even bought groceries.",
+   "est_sec": 4.44,
+   "gap_before": 0.27,
    "event": "ordinary_request",
-   "block": "wedding_planning.ctx3"
+   "block": "family_visit.ctx20"
   },
   {
    "speaker": "moshi",
-   "text": "What an honor. Do you want it to be mostly funny stories, or more heartfelt and sentimental?",
-   "est_sec": 5.37,
-   "gap_before": 0.67,
+   "text": "Let's keep it simple. Would you rather do one quick shop tonight, or order a delivery for the morning?",
+   "est_sec": 5.99,
+   "gap_before": 0.47,
    "role": "reply",
-   "block": "wedding_planning.ctx3",
+   "block": "family_visit.ctx20",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "Hold on, let me finish reading this article. I'll tell you when I'm done.",
    "est_sec": 4.44,
-   "gap_before": 0.99,
+   "gap_before": 1.34,
    "event": "instruction",
    "kind": "reading",
    "phrasing": "read_instr_10"
   },
   {
    "speaker": "moshi",
-   "text": "Sure, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.21,
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.5,
    "role": "ack",
-   "phrasing": "ack_08",
+   "phrasing": "ack_16",
    "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Huh, didn't see that coming.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 3.09
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, really?",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 6.45
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_13"
   },
   {
    "speaker": "user",
@@ -98,7 +126,7 @@
    "est_sec": 0.72,
    "anchor": {
     "turn": 4,
-    "offset": 18.8
+    "offset": 20.5
    },
    "event": "return_cue",
    "kind": "explicit",
@@ -106,28 +134,28 @@
   },
   {
    "speaker": "moshi",
-   "text": "Okay, all read? So, is the speech going to be funny or heartfelt?",
-   "est_sec": 4.13,
-   "gap_before": 0.32,
+   "text": "Okay, all read? So which is it for the shopping?",
+   "est_sec": 3.2,
+   "gap_before": 1.16,
    "role": "resume",
-   "block": "wedding_planning.ctx3",
+   "block": "family_visit.ctx20",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Heartfelt. She'd hate it if I told embarrassing stories.",
-   "est_sec": 2.89,
-   "gap_before": 0.38,
+   "text": "Delivery. I'm not leaving this couch.",
+   "est_sec": 1.96,
+   "gap_before": 1.4,
    "event": "ordinary_request",
-   "block": "wedding_planning.ctx3"
+   "block": "family_visit.ctx20"
   },
   {
    "speaker": "moshi",
-   "text": "Then talk about how you met and what makes her partner right for her. Keep it under five minutes.",
-   "est_sec": 5.99,
-   "gap_before": 0.55,
+   "text": "Good call. Order before ten so you get an early slot.",
+   "est_sec": 3.51,
+   "gap_before": 1.68,
    "role": "followup",
-   "block": "wedding_planning.ctx3",
+   "block": "family_visit.ctx20",
    "reference_only": true
   }
  ],

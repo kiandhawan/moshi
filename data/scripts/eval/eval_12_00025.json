@@ -7,6 +7,8 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "side_conversation",
@@ -16,171 +18,165 @@
   "implicit"
  ],
  "topics": [
-  "picnic",
-  "wedding_planning"
+  "painting_art",
+  "laptop_buying"
  ],
- "topic": "picnic",
+ "topic": "painting_art",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
-  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Kenji",
- "friend_name_id": "name_21",
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_06",
-  "side_instr_18",
-  "dq_06",
-  "implicit_07"
+  "greet_24",
+  "greet_ans_18",
+  "side_instr_30",
+  "dq_09",
+  "implicit_03"
  ],
  "block_ids": [
-  "picnic.ctx3",
-  "wedding_planning.side3"
+  "painting_art.ctx16",
+  "laptop_buying.side6",
+  "dq_09"
  ],
- "est_total_sec": 72.44,
- "est_speech_sec": 54.4,
+ "est_total_sec": 70.88,
+ "est_speech_sec": 48.82,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.48,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.69,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.94,
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.4,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_18"
   },
   {
    "speaker": "user",
-   "text": "My friends want to do a picnic but the forecast says maybe rain.",
-   "est_sec": 4.13,
-   "gap_before": 0.52,
+   "text": "I want to try painting outside this weekend, like a proper plein air thing.",
+   "est_sec": 4.44,
+   "gap_before": 0.43,
    "event": "ordinary_request",
-   "block": "picnic.ctx3"
+   "block": "painting_art.ctx16"
   },
   {
    "speaker": "moshi",
-   "text": "Hmm, there's a forty percent chance in the afternoon. Do you want to move it to the morning, or keep the plan and bring a tarp just in case?",
-   "est_sec": 9.09,
-   "gap_before": 0.77,
+   "text": "Fun! Would you rather set up in the park with trees and shade, or go down to the beach for the light on the water?",
+   "est_sec": 7.85,
+   "gap_before": 0.81,
    "role": "reply",
-   "block": "picnic.ctx3",
+   "block": "painting_art.ctx16",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hold up, my mom is asking me something. Please don't say anything until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 0.57,
+   "text": "Give me a moment, I'm going to talk to my friend. Stay quiet until you hear I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 3.01,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_18"
+   "phrasing": "side_instr_30"
   },
   {
    "speaker": "user",
-   "text": "Kenji, what are you wearing to Sam and Priya's wedding?",
-   "est_sec": 3.2,
-   "gap_before": 0.88,
+   "text": "Marcus, quick, is a hundred dollars more worth it for the silver one?",
+   "est_sec": 4.13,
+   "gap_before": 1.24,
    "event": "distractor",
    "kind": "friend_question",
-   "block": "wedding_planning.side3"
+   "block": "laptop_buying.side6"
   },
   {
    "speaker": "friend",
-   "text": "The invite says garden formal, so maybe my green dress.",
-   "est_sec": 3.2,
-   "gap_before": 0.68,
-   "block": "wedding_planning.side3"
+   "text": "Is it just the colour?",
+   "est_sec": 1.65,
+   "gap_before": 2.64,
+   "block": "laptop_buying.side6"
   },
   {
    "speaker": "user",
-   "text": "Is a linen suit too casual for that?",
-   "est_sec": 2.58,
-   "gap_before": 1.7,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "wedding_planning.side3"
+   "text": "No, it's also got a better webcam.",
+   "est_sec": 2.27,
+   "gap_before": 1.26,
+   "block": "laptop_buying.side6"
   },
   {
    "speaker": "friend",
-   "text": "Not if you wear a tie. Linen is perfect for outdoors.",
-   "est_sec": 3.51,
-   "gap_before": 1.03,
-   "block": "wedding_planning.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Cool. Should we split a gift or get our own?",
-   "est_sec": 3.2,
-   "gap_before": 1.34,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "wedding_planning.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Let's split one. They registered for that fancy blender.",
-   "est_sec": 2.89,
-   "gap_before": 0.5,
-   "block": "wedding_planning.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Did you feed the cat already?",
+   "text": "Do you even do video calls?",
    "est_sec": 1.96,
-   "gap_before": 0.95,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_06"
-  },
-  {
-   "speaker": "friend",
-   "text": "Yep, about an hour ago.",
-   "est_sec": 1.65,
-   "gap_before": 1.03,
-   "phrasing": "dq_06"
+   "gap_before": 0.99,
+   "block": "laptop_buying.side6"
   },
   {
    "speaker": "user",
-   "text": "So, what were you saying?",
+   "text": "Every Monday with my team. And my mum on Sundays.",
+   "est_sec": 3.2,
+   "gap_before": 0.81,
+   "block": "laptop_buying.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then yes, your mum deserves to see your face in focus.",
+   "est_sec": 3.51,
+   "gap_before": 0.84,
+   "block": "laptop_buying.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha. Okay, silver it is.",
    "est_sec": 1.65,
-   "gap_before": 1.09,
+   "gap_before": 0.56,
+   "block": "laptop_buying.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "And it'll show fewer fingerprints than the black one.",
+   "est_sec": 2.89,
+   "gap_before": 3.1,
+   "block": "laptop_buying.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it still raining outside?",
+   "est_sec": 1.65,
+   "gap_before": 0.93,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_09"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just a little now.",
+   "est_sec": 1.34,
+   "gap_before": 0.33,
+   "phrasing": "dq_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm all yours.",
+   "est_sec": 1.34,
+   "gap_before": 1.6,
    "event": "return_cue",
    "kind": "implicit",
-   "phrasing": "implicit_07"
+   "phrasing": "implicit_03"
   },
   {
    "speaker": "moshi",
-   "text": "Sure. We were working around the rain forecast for your picnic.",
-   "est_sec": 3.51,
-   "gap_before": 1.49,
-   "role": "resume",
-   "block": "picnic.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Morning. Nobody wants a soggy picnic.",
+   "text": "Right. Okay, painting outside, which one?",
    "est_sec": 1.96,
-   "gap_before": 2.12,
-   "event": "ordinary_request",
-   "block": "picnic.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Smart. A brunch picnic with fruit and pastries could be really nice.",
-   "est_sec": 3.82,
-   "gap_before": 0.45,
-   "role": "followup",
-   "block": "picnic.ctx3",
+   "gap_before": 0.92,
+   "role": "resume",
+   "block": "painting_art.ctx16",
    "reference_only": true
   }
  ],

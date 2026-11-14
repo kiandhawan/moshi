@@ -7,15 +7,23 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "camping"
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
  ],
- "topic": "camping",
+ "topics": [
+  "home_office"
+ ],
+ "reading": {
+  "material": "recipe",
+  "sec": 14.6
+ },
+ "topic": "home_office",
  "voices": {
   "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "friend": null,
@@ -24,112 +32,145 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_24"
+  "greet_06",
+  "greet_ans_18",
+  "read_instr_04",
+  "murmur_05",
+  "murmur_04",
+  "implicit_13"
  ],
  "block_ids": [
-  "camping.dlg2"
+  "home_office.ctx5"
  ],
- "est_total_sec": 53.77,
- "est_speech_sec": 45.74,
+ "est_total_sec": 57.53,
+ "est_speech_sec": 37.57,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
-   "est_sec": 1.96,
-   "gap_before": 0.68,
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.43,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_06",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Ah, it's been a long day.",
-   "est_sec": 1.96,
-   "gap_before": 0.38,
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.95,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_24"
+   "phrasing": "greet_ans_18"
   },
   {
    "speaker": "user",
-   "text": "I've never camped in the rain. Should I just cancel?",
-   "est_sec": 3.2,
+   "text": "Everyone on my team has these nice bookshelves behind them on video calls.",
+   "est_sec": 4.13,
    "gap_before": 0.47,
    "event": "ordinary_request",
-   "block": "camping.dlg2"
+   "block": "home_office.ctx5"
   },
   {
    "speaker": "moshi",
-   "text": "Not necessarily. With a good rain fly and a tarp over your sitting area, light rain can actually be pretty cozy.",
-   "est_sec": 6.61,
-   "gap_before": 0.98,
+   "text": "What's behind you right now?",
+   "est_sec": 1.65,
+   "gap_before": 0.74,
    "role": "reply",
-   "block": "camping.dlg2",
+   "block": "home_office.ctx5",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "My tent's kind of cheap though. I'm not sure",
-   "est_sec": 2.89,
-   "gap_before": 0.45,
+   "text": "It's literally the laundry rack.",
+   "est_sec": 1.65,
+   "gap_before": 0.96,
+   "event": "ordinary_request",
+   "block": "home_office.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, honest answer. You could blur it, or tidy one corner into a real backdrop. Which appeals?",
+   "est_sec": 5.37,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "home_office.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, let me read this recipe first. Don't talk until I'm finished.",
+   "est_sec": 4.13,
+   "gap_before": 1.48,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Bake for twenty minutes, okay.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 5.08
+   },
    "event": "distractor",
-   "kind": "pause",
-   "block": "camping.dlg2"
+   "kind": "self_talk",
+   "phrasing": "murmur_05"
   },
   {
    "speaker": "user",
-   "text": "it's really waterproof.",
-   "est_sec": 1.03,
-   "gap_before": 1.53,
-   "event": "ordinary_request",
-   "block": "camping.dlg2"
+   "text": "Two cups of flour, right.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 9.54
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, you were saying?",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 14.6
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_13"
   },
   {
    "speaker": "moshi",
-   "text": "Try setting it up in the yard and spraying it with a hose. If it leaks, a seam sealer from any outdoor shop fixes most problems.",
-   "est_sec": 8.16,
-   "gap_before": 0.33,
-   "role": "reply",
-   "block": "camping.dlg2",
+   "text": "Of course. So for your video background, quick blur or a real corner?",
+   "est_sec": 4.13,
+   "gap_before": 0.38,
+   "role": "resume",
+   "block": "home_office.ctx5",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "That's smart. What about keeping my clothes dry?",
-   "est_sec": 2.58,
-   "gap_before": 0.33,
+   "text": "Blur for now. I'll fix the corner on the weekend.",
+   "est_sec": 3.2,
+   "gap_before": 0.6,
    "event": "ordinary_request",
-   "block": "camping.dlg2"
+   "block": "home_office.ctx5"
   },
   {
    "speaker": "moshi",
-   "text": "Pack them in zip bags or a dry bag inside your backpack. And keep one dry set just for sleeping, no matter what.",
-   "est_sec": 7.23,
-   "gap_before": 0.39,
-   "role": "reply",
-   "block": "camping.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Actually, if there's thunder in the forecast, I think I'll skip it.",
-   "est_sec": 3.82,
-   "gap_before": 0.46,
-   "event": "ordinary_request",
-   "block": "camping.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's a sensible line to draw. Thunderstorms are the one kind of weather where staying home is the better choice.",
-   "est_sec": 6.3,
-   "gap_before": 0.53,
-   "role": "reply",
-   "block": "camping.dlg2",
+   "text": "Sensible. Just move the rack anyway, blur struggles when something sticks out right behind your head.",
+   "est_sec": 5.06,
+   "gap_before": 0.4,
+   "role": "followup",
+   "block": "home_office.ctx5",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_reading",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

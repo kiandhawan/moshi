@@ -7,120 +7,124 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
  "wait_type": null,
  "conditions": [],
  "topics": [
-  "shopping"
+  "pets"
  ],
- "topic": "shopping",
+ "topic": "pets",
  "voices": {
-  "user": "bd45448dd6f84f9ebd06f369f93f4410",
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_23"
+  "greet_20",
+  "greet_ans_05"
  ],
  "block_ids": [
-  "shopping.dlg3"
+  "pets.dlg1"
  ],
- "est_total_sec": 47.6,
- "est_speech_sec": 37.37,
+ "est_total_sec": 52.07,
+ "est_speech_sec": 41.4,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.73,
-   "role": "greeting",
-   "phrasing": "greet_22"
-  },
-  {
-   "speaker": "user",
-   "text": "Good, good. Thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.91,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_23"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to buy my grandkids some clothes, but I don't know their sizes anymore.",
-   "est_sec": 4.75,
-   "gap_before": 0.51,
-   "event": "ordinary_request",
-   "block": "shopping.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Kids grow so fast. How old are they?",
-   "est_sec": 2.58,
-   "gap_before": 0.67,
-   "role": "reply",
-   "block": "shopping.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "One is four and the other just turned seven.",
+   "text": "Hey, good to have you here. How are you?",
    "est_sec": 2.89,
-   "gap_before": 0.76,
-   "event": "ordinary_request",
-   "block": "shopping.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Kids' sizes roughly follow age, so a size five and a size eight would give them room to grow.",
-   "est_sec": 5.99,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "shopping.dlg3"
+   "gap_before": 0.79,
+   "role": "greeting",
+   "phrasing": "greet_20"
   },
   {
    "speaker": "user",
-   "text": "Oh, so buy a little bigger.",
-   "est_sec": 1.96,
-   "gap_before": 0.87,
-   "event": "ordinary_request",
-   "block": "shopping.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Exactly. Slightly big is fine, too small is useless. And keep the receipt just in case.",
-   "est_sec": 5.06,
-   "gap_before": 0.33,
-   "role": "reply",
-   "block": "shopping.dlg3"
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "Maybe I should ask my daughter",
-   "est_sec": 1.96,
+   "text": "How often should I take my dog to the vet?",
+   "est_sec": 3.2,
    "gap_before": 0.44,
+   "event": "ordinary_request",
+   "block": "pets.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For a healthy adult dog, a checkup once a year is standard. Puppies and older dogs need visits more often.",
+   "est_sec": 6.3,
+   "gap_before": 0.58,
+   "role": "reply",
+   "block": "pets.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "She's about nine now. Is that considered old?",
+   "est_sec": 2.58,
+   "gap_before": 0.66,
+   "event": "ordinary_request",
+   "block": "pets.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For many breeds, yes, that's senior. Twice a year checkups are a good idea from here on.",
+   "est_sec": 5.37,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "pets.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "She's been sleeping a lot more lately",
+   "est_sec": 2.27,
+   "gap_before": 1.2,
    "event": "distractor",
    "kind": "pause",
-   "block": "shopping.dlg3"
+   "block": "pets.dlg1"
   },
   {
    "speaker": "user",
-   "text": "no, I want it to be a surprise.",
-   "est_sec": 2.58,
-   "gap_before": 1.52,
+   "text": "is that something to worry about?",
+   "est_sec": 1.96,
+   "gap_before": 2.58,
    "event": "ordinary_request",
-   "block": "shopping.dlg3"
+   "block": "pets.dlg1"
   },
   {
    "speaker": "moshi",
-   "text": "Then go one size up and pick something soft and comfy, like pajamas or a hoodie. Those are hard to get wrong.",
-   "est_sec": 6.92,
-   "gap_before": 1.17,
+   "text": "Some extra sleep is normal with age. But if she's also eating less or seems stiff, mention it to the vet.",
+   "est_sec": 6.61,
+   "gap_before": 0.32,
    "role": "reply",
-   "block": "shopping.dlg3"
+   "block": "pets.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "She does seem slow on the stairs.",
+   "est_sec": 2.27,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "pets.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That could be joint pain, which is very common and treatable. Ask the vet about it at her next visit.",
+   "est_sec": 6.3,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "pets.dlg1"
   }
  ]
 }

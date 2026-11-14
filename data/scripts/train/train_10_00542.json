@@ -7,17 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "shopping"
+  "home_repair"
  ],
- "topic": "shopping",
+ "topic": "home_repair",
  "voices": {
-  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "user": "cc7f8544c64a439080193e9560100c5a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,87 +27,102 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_04",
-  "greet_ans_29",
-  "describe_instr_10",
-  "describe_cue_14"
+  "greet_ans_23"
  ],
  "block_ids": [
-  "shopping.opt1"
+  "home_repair.dlg30"
  ],
- "est_total_sec": 53.06,
- "est_speech_sec": 42.44,
+ "est_total_sec": 49.44,
+ "est_speech_sec": 37.68,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey there, how are you?",
    "est_sec": 1.65,
-   "gap_before": 0.6,
+   "gap_before": 0.42,
    "role": "greeting",
    "phrasing": "greet_04"
   },
   {
    "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.97,
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.98,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
+   "phrasing": "greet_ans_23"
   },
   {
    "speaker": "user",
-   "text": "I need a new winter coat and I've narrowed it down to a few.",
-   "est_sec": 4.44,
-   "gap_before": 0.4,
-   "block": "shopping.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me get through all the options before you weigh in.",
-   "est_sec": 3.51,
-   "gap_before": 0.8,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_10"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is a long puffy coat that's super warm, but it makes me look like a sleeping bag.",
-   "est_sec": 6.3,
-   "gap_before": 1.18,
-   "block": "shopping.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a wool coat, really stylish, but it's not waterproof at all.",
-   "est_sec": 4.13,
-   "gap_before": 1.8,
-   "block": "shopping.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a shorter parka with a hood, waterproof and pretty warm, but a bit expensive.",
-   "est_sec": 5.99,
-   "gap_before": 1.44,
-   "block": "shopping.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'm finished. What's your opinion?",
-   "est_sec": 1.96,
-   "gap_before": 1.21,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_14"
+   "text": "The paint is peeling off my window frames outside. Do I need to strip all of it?",
+   "est_sec": 5.37,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg30"
   },
   {
    "speaker": "moshi",
-   "text": "The parka sounds like the best all rounder, warm and waterproof with a hood. The long puffy coat is the warmest, which matters if your winters are brutal. The wool coat looks great, but it'll be miserable in rain or wet snow.",
-   "est_sec": 13.12,
-   "gap_before": 0.72,
-   "role": "resume",
-   "block": "shopping.opt1"
+   "text": "Not necessarily all. Scrape off anything loose or flaky until you hit paint that's firmly stuck.",
+   "est_sec": 5.06,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "home_repair.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "Then sand?",
+   "est_sec": 0.72,
+   "gap_before": 0.75,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, sand the edges so there's no ridge, then fill any cracks in the wood with exterior filler.",
+   "est_sec": 5.68,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "home_repair.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "Is there special paint for outside?",
+   "est_sec": 1.96,
+   "gap_before": 1.25,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Use an exterior wood paint, and a primer on any bare wood. It'll last much longer against the rain.",
+   "est_sec": 5.99,
+   "gap_before": 1.42,
+   "role": "reply",
+   "block": "home_repair.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "My house is",
+   "est_sec": 1.03,
+   "gap_before": 1.34,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "home_repair.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "pretty close to the sea. Does that matter?",
+   "est_sec": 2.58,
+   "gap_before": 1.99,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It does. Salt air is tough on paint, so pick a high quality marine or coastal grade product if you can.",
+   "est_sec": 6.61,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "home_repair.dlg30"
   }
  ]
 }

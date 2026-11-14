@@ -7,15 +7,17 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "smartphones"
+  "board_games"
  ],
- "topic": "smartphones",
+ "topic": "board_games",
  "voices": {
   "user": "705690224f264386b87fb598083ab022",
   "friend": null,
@@ -24,103 +26,88 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_13",
-  "greet_ans_10"
+  "greet_23",
+  "greet_ans_11",
+  "describe_instr_14",
+  "describe_cue_10"
  ],
  "block_ids": [
-  "smartphones.dlg1"
+  "board_games.opt4"
  ],
- "est_total_sec": 51.44,
- "est_speech_sec": 41.4,
+ "est_total_sec": 51.57,
+ "est_speech_sec": 42.13,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, nice to hear from you. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.38,
-   "role": "greeting",
-   "phrasing": "greet_13"
-  },
-  {
-   "speaker": "user",
-   "text": "Doing well, thank you.",
-   "est_sec": 1.34,
-   "gap_before": 0.46,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_10"
-  },
-  {
-   "speaker": "user",
-   "text": "My phone gets really hot when I'm using maps in the car. Is that bad for it?",
-   "est_sec": 5.37,
-   "gap_before": 0.31,
-   "event": "ordinary_request",
-   "block": "smartphones.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A little warmth is normal, but sitting in direct sun on the dashboard can really heat it up. Heat is hard on the battery over time.",
-   "est_sec": 8.16,
-   "gap_before": 1.19,
-   "role": "reply",
-   "block": "smartphones.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "It's in one of those holders on the windshield.",
-   "est_sec": 2.89,
-   "gap_before": 0.37,
-   "event": "ordinary_request",
-   "block": "smartphones.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try moving it to a vent mount with the air conditioning on. That keeps it much cooler.",
-   "est_sec": 5.37,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "smartphones.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "And should I",
-   "est_sec": 1.03,
-   "gap_before": 1.13,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "smartphones.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "take it off the charger while I drive?",
-   "est_sec": 2.58,
-   "gap_before": 2.12,
-   "event": "ordinary_request",
-   "block": "smartphones.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Charging and navigating at the same time makes the most heat. If the battery is above half, you can skip charging on short trips.",
-   "est_sec": 7.54,
-   "gap_before": 0.44,
-   "role": "reply",
-   "block": "smartphones.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's easy enough. Thanks.",
+   "text": "Hey! How are you feeling?",
    "est_sec": 1.65,
-   "gap_before": 0.54,
-   "event": "ordinary_request",
-   "block": "smartphones.dlg1"
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_23"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "We want a regular game night with the neighbours but can't agree how often or where.",
+   "est_sec": 5.06,
+   "gap_before": 0.28,
+   "block": "board_games.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me lay out all the options first. Don't interrupt.",
+   "est_sec": 3.2,
+   "gap_before": 0.82,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_14"
+  },
+  {
+   "speaker": "user",
+   "text": "We could rotate houses every other Friday, so everyone hosts and nobody gets stuck cleaning up every time.",
+   "est_sec": 5.68,
+   "gap_before": 0.91,
+   "block": "board_games.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or always do it at ours, since we have the biggest table, and the others bring food.",
+   "est_sec": 5.37,
+   "gap_before": 1.82,
+   "block": "board_games.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "A third idea is meeting monthly at the pub on the corner, which has a back room and lends games.",
+   "est_sec": 6.3,
+   "gap_before": 1.05,
+   "block": "board_games.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. What would you recommend?",
+   "est_sec": 1.65,
+   "gap_before": 0.68,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_10"
   },
   {
    "speaker": "moshi",
-   "text": "You're welcome. Your battery will thank you too.",
-   "est_sec": 2.58,
-   "gap_before": 0.78,
-   "role": "reply",
-   "block": "smartphones.dlg1"
+   "text": "Rotating keeps it fair and everyone feels involved, but it can fizzle if one house is tiny. Hosting at yours is easiest to keep going. The pub is relaxed, though monthly might feel too rare to build a habit.",
+   "est_sec": 12.19,
+   "gap_before": 0.92,
+   "role": "resume",
+   "block": "board_games.opt4"
   }
  ]
 }

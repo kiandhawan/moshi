@@ -7,6 +7,10 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
@@ -15,117 +19,108 @@
   "wait_like"
  ],
  "topics": [
-  "fitness"
+  "books"
  ],
- "topic": "fitness",
+ "topic": "books",
  "voices": {
-  "user": "050df12e0f30484fb882a9a5410e5d66",
+  "user": "8784f1c03bdd41c3a381f65eae08e814",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_13",
-  "greet_ans_07",
-  "waitlike_16"
+  "greet_02",
+  "greet_ans_14",
+  "waitlike_13"
  ],
  "block_ids": [
-  "fitness.dlg2"
+  "books.dlg27"
  ],
- "est_total_sec": 57.1,
- "est_speech_sec": 44.19,
+ "est_total_sec": 48.04,
+ "est_speech_sec": 37.89,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, nice to hear from you. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.7,
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
    "role": "greeting",
-   "phrasing": "greet_13"
+   "phrasing": "greet_02"
   },
   {
    "speaker": "user",
-   "text": "Honestly, a little stressed, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.99,
+   "text": "Hanging in there.",
+   "est_sec": 1.03,
+   "gap_before": 0.36,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_07"
+   "phrasing": "greet_ans_14"
   },
   {
    "speaker": "user",
-   "text": "I sit at a desk all day and my back is killing me. Are there exercises that help?",
-   "est_sec": 5.68,
-   "gap_before": 0.59,
+   "text": "Do you know any good books set in space that aren't too technical?",
+   "est_sec": 4.13,
+   "gap_before": 0.6,
    "event": "ordinary_request",
-   "block": "fitness.dlg2"
+   "block": "books.dlg27"
   },
   {
    "speaker": "moshi",
-   "text": "Yes. Bridges, bird dogs and gentle cat cow stretches strengthen and loosen your back. A few minutes a day helps.",
-   "est_sec": 6.3,
-   "gap_before": 0.66,
+   "text": "Plenty. Do you want adventure, or something quieter and more about the people on the ship?",
+   "est_sec": 5.06,
+   "gap_before": 0.84,
    "role": "reply",
-   "block": "fitness.dlg2"
+   "block": "books.dlg27"
   },
   {
    "speaker": "user",
-   "text": "Wait a second, what's a bird dog?",
-   "est_sec": 2.27,
-   "gap_before": 0.46,
+   "text": "The people. I don't care how the engines work.",
+   "est_sec": 2.89,
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "block": "books.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then look for character driven science fiction, like stories about a small crew on a long journey. They feel like found family dramas.",
+   "est_sec": 7.23,
+   "gap_before": 0.99,
+   "role": "reply",
+   "block": "books.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, found family, I love that.",
+   "est_sec": 1.96,
+   "gap_before": 1.21,
    "event": "ordinary_request",
    "kind": "wait_like",
-   "phrasing": "waitlike_16",
-   "block": "fitness.dlg2"
+   "phrasing": "waitlike_13",
+   "block": "books.dlg27"
   },
   {
    "speaker": "moshi",
-   "text": "On your hands and knees, you stretch one arm forward and the opposite leg back, hold for a few seconds, then switch.",
+   "text": "Then you'll be happy. There's a whole wave of cozy space novels where the biggest problem is getting along with your crewmates.",
    "est_sec": 6.92,
-   "gap_before": 1.18,
+   "gap_before": 0.47,
    "role": "reply",
-   "block": "fitness.dlg2"
+   "block": "books.dlg27"
   },
   {
    "speaker": "user",
-   "text": "Sounds doable. Should I also get a standing desk or",
-   "est_sec": 3.2,
-   "gap_before": 0.42,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "fitness.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "is that overrated?",
-   "est_sec": 1.03,
-   "gap_before": 2.86,
+   "text": "Is there romance in them?",
+   "est_sec": 1.65,
+   "gap_before": 1.32,
    "event": "ordinary_request",
-   "block": "fitness.dlg2"
+   "block": "books.dlg27"
   },
   {
    "speaker": "moshi",
-   "text": "It can help, but mostly by making you change position. Getting up and walking around every half hour matters more.",
-   "est_sec": 6.3,
-   "gap_before": 1.12,
+   "text": "Often a little, but it's usually gentle and part of the bigger story. Nothing that takes over.",
+   "est_sec": 5.37,
+   "gap_before": 1.59,
    "role": "reply",
-   "block": "fitness.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'll set a reminder on my phone.",
-   "est_sec": 2.58,
-   "gap_before": 1.37,
-   "event": "ordinary_request",
-   "block": "fitness.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Good plan. And if the pain is sharp or doesn't improve, it's worth seeing a doctor.",
-   "est_sec": 5.06,
-   "gap_before": 1.06,
-   "role": "reply",
-   "block": "fitness.dlg2"
+   "block": "books.dlg27"
   }
  ]
 }

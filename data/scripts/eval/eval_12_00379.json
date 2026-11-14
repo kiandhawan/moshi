@@ -7,158 +7,123 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "extension",
-  "self_talk"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
   "laptop_buying"
  ],
- "wait_sec": 15,
- "extension": {
-  "extra_sec": 5,
-  "said_before_deadline_sec": 1.01
- },
- "deadline": {
-  "after_turn": 7,
-  "sec": 5
- },
  "topic": "laptop_buying",
  "voices": {
-  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "user": "732ea755bd9e446eb31dc79966b50428",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_24",
-  "think_instr_21",
-  "ack_07",
-  "self_18",
-  "extension_05"
+  "greet_12",
+  "greet_ans_06",
+  "describe_instr_09",
+  "ack_08",
+  "describe_cue_15"
  ],
  "block_ids": [
-  "laptop_buying.ctx3"
+  "laptop_buying.opt3"
  ],
- "est_total_sec": 58.34,
- "est_speech_sec": 35.2,
+ "est_total_sec": 57.69,
+ "est_speech_sec": 46.57,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.75,
-   "role": "greeting",
-   "phrasing": "greet_21",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Ah, it's been a long day.",
-   "est_sec": 1.96,
-   "gap_before": 0.91,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_24"
-  },
-  {
-   "speaker": "user",
-   "text": "Should I buy a laptop now or wait for the sales?",
-   "est_sec": 3.51,
-   "gap_before": 0.44,
-   "event": "ordinary_request",
-   "block": "laptop_buying.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Prices usually drop in about three weeks. Can you get by with your current one until then, or do you need it right away?",
-   "est_sec": 7.54,
-   "gap_before": 0.34,
-   "role": "reply",
-   "block": "laptop_buying.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, let me think for fifteen seconds. Ask me again after that.",
-   "est_sec": 3.82,
-   "gap_before": 0.63,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_21"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Got it.",
-   "est_sec": 0.72,
-   "gap_before": 0.44,
-   "role": "ack",
-   "phrasing": "ack_07",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Mmm, yeah, maybe that.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 8.18
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_18"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, give me another five seconds.",
+   "text": "Hello there, how are you doing today?",
    "est_sec": 2.27,
-   "event": "extension",
-   "extra_sec": 5,
-   "phrasing": "extension_05",
-   "anchor": {
-    "turn": 4,
-    "offset": 13.99
-   }
-  },
-  {
-   "speaker": "moshi",
-   "text": "So, can you wait for the sales, or do you need the laptop now?",
-   "est_sec": 4.44,
-   "role": "resume",
-   "block": "laptop_buying.ctx3",
-   "anchor": {
-    "turn": 7,
-    "offset": 5.01
-   },
+   "gap_before": 0.47,
+   "role": "greeting",
+   "phrasing": "greet_12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I need it now, I've got a big project starting Monday.",
-   "est_sec": 3.51,
-   "gap_before": 0.77,
-   "event": "ordinary_request",
-   "block": "laptop_buying.ctx3"
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.54,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm a freelance writer and I need help picking a new laptop.",
+   "est_sec": 3.82,
+   "gap_before": 0.3,
+   "block": "laptop_buying.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to describe each one. Save your comments until the end.",
+   "est_sec": 3.82,
+   "gap_before": 0.68,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_09"
   },
   {
    "speaker": "moshi",
-   "text": "Then buy it now. A missed deadline would cost more than the discount.",
-   "est_sec": 4.13,
-   "gap_before": 0.86,
-   "role": "followup",
-   "block": "laptop_buying.ctx3",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.47,
+   "role": "ack",
+   "phrasing": "ack_08",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A small light laptop with an amazing keyboard and eighteen hours of battery, but a fairly dim screen.",
+   "est_sec": 5.68,
+   "gap_before": 1.5,
+   "block": "laptop_buying.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A two in one with a pen and a touchscreen, nice for notes, but the keyboard is a bit shallow.",
+   "est_sec": 6.3,
+   "gap_before": 2.4,
+   "block": "laptop_buying.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "A big fifteen inch one with a great screen and number pad, though it weighs over two kilos.",
+   "est_sec": 5.68,
+   "gap_before": 1.36,
+   "block": "laptop_buying.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "So that's the list. Thoughts?",
+   "est_sec": 1.65,
+   "gap_before": 1.08,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For a writer, the keyboard and battery of the small one are hard to beat, the dim screen matters less indoors. The two in one is fun but a shallow keyboard gets tiring. The big one is great at a desk, but heavy if you work in cafes.",
+   "est_sec": 14.98,
+   "gap_before": 0.82,
+   "role": "resume",
+   "block": "laptop_buying.opt3",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

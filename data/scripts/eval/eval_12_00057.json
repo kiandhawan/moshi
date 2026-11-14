@@ -7,193 +7,148 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question",
-  "near_miss"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "cycling",
-  "camping"
+  "learning_language"
  ],
- "topic": "cycling",
+ "topic": "learning_language",
  "voices": {
-  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
-  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Kenji",
- "friend_name_id": "name_21",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_18",
-  "side_instr_24",
-  "ack_11",
-  "dn_21",
-  "dq_12",
-  "side_cue_09"
+  "greet_27",
+  "greet_ans_03"
  ],
  "block_ids": [
-  "cycling.ctx1",
-  "camping.side2"
+  "learning_language.dlg4"
  ],
- "est_total_sec": 73.23,
- "est_speech_sec": 54.81,
+ "est_total_sec": 59.67,
+ "est_speech_sec": 43.46,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.67,
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.32,
    "role": "greeting",
-   "phrasing": "greet_03",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
+   "text": "Doing okay, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.53,
+   "gap_before": 0.5,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "I want to start biking to work instead of taking the bus.",
-   "est_sec": 3.82,
-   "gap_before": 0.33,
-   "event": "ordinary_request",
-   "block": "cycling.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Love that. There's the quick route along the main road or the longer one through the park. Which sounds better to you?",
-   "est_sec": 6.92,
-   "gap_before": 0.57,
-   "role": "reply",
-   "block": "cycling.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Can you give me a moment? Kenji wants to show me something. I'll let you know when I'm back.",
-   "est_sec": 5.99,
-   "gap_before": 0.99,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_24"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright.",
-   "est_sec": 0.41,
-   "gap_before": 0.62,
-   "role": "ack",
-   "phrasing": "ack_11",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Kenji, so where were we on the plan for Saturday?",
-   "est_sec": 3.2,
-   "gap_before": 1.43,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_21"
-  },
-  {
-   "speaker": "friend",
-   "text": "We were picking a time.",
-   "est_sec": 1.65,
-   "gap_before": 1.08,
-   "phrasing": "dn_21"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait, who has the campsite reservation number?",
-   "est_sec": 2.27,
-   "gap_before": 1.2,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "camping.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "It's in my email somewhere. Why?",
-   "est_sec": 1.96,
-   "gap_before": 1.17,
-   "block": "camping.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "The ranger station might ask for it when we check in.",
-   "est_sec": 3.51,
-   "gap_before": 0.43,
-   "block": "camping.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "There's probably no signal up there either. I'll screenshot it now.",
-   "est_sec": 3.51,
-   "gap_before": 1.2,
-   "block": "camping.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Good idea. And can you check what time check-in closes?",
-   "est_sec": 3.2,
-   "gap_before": 0.43,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "camping.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Says eight in the evening. We should leave by three at the latest.",
+   "text": "Can you explain ser and estar in Spanish? I keep getting them wrong.",
    "est_sec": 4.13,
-   "gap_before": 1.29,
-   "block": "camping.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Are you coming to the party on Friday?",
-   "est_sec": 2.58,
-   "gap_before": 2.31,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_12"
-  },
-  {
-   "speaker": "friend",
-   "text": "Probably, if I finish work on time.",
-   "est_sec": 2.27,
-   "gap_before": 0.6,
-   "phrasing": "dq_12"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'm back. Let's keep going.",
-   "est_sec": 1.96,
-   "gap_before": 1.61,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_09"
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg4"
   },
   {
    "speaker": "moshi",
-   "text": "No problem. Did you settle on a commute route, the fast road or the park?",
-   "est_sec": 4.75,
-   "gap_before": 0.46,
-   "role": "resume",
-   "block": "cycling.ctx1",
+   "text": "Sure. Both mean to be. Ser is for what something is, its identity or nature. Estar is for states and locations, how or where something is right now.",
+   "est_sec": 8.78,
+   "gap_before": 1.42,
+   "role": "reply",
+   "block": "learning_language.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "So I'm tired would be estar?",
+   "est_sec": 1.96,
+   "gap_before": 1.12,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exactly, estoy cansado. It's a state that will change. But I'm tall is soy alto, because it's part of who you are.",
+   "est_sec": 6.92,
+   "gap_before": 1.65,
+   "role": "reply",
+   "block": "learning_language.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "What about I'm at home?",
+   "est_sec": 1.65,
+   "gap_before": 2.07,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Estoy en casa. Location is almost always estar.",
+   "est_sec": 2.58,
+   "gap_before": 1.14,
+   "role": "reply",
+   "block": "learning_language.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay but then, why is it",
+   "est_sec": 1.96,
+   "gap_before": 0.95,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "learning_language.dlg4"
+  },
+  {
+   "speaker": "user",
+   "text": "soy de Londres, with ser?",
+   "est_sec": 1.65,
+   "gap_before": 2.25,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good catch. Where you're from is part of your identity, so it's ser. Your origin doesn't change.",
+   "est_sec": 5.37,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "learning_language.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Huh. That actually makes sense now.",
+   "est_sec": 1.96,
+   "gap_before": 0.73,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Practise a few sentences about yourself, and it'll start feeling natural.",
+   "est_sec": 3.51,
+   "gap_before": 1.31,
+   "role": "reply",
+   "block": "learning_language.dlg4",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

@@ -1,64 +1,119 @@
 {
   "id": "train_10_00203",
-  "group": "ordinary",
-  "user_start": 3.04,
-  "type": "ordinary",
-  "conditions": [],
+  "group": "side_conversation",
+  "user_start": 2.56,
+  "type": "side_conversation",
+  "conditions": [
+    "near_miss"
+  ],
+  "cluster": "cooking.ctx4",
+  "instruction_start": 20.16,
+  "instruction_end": 25.46,
+  "wait_end": 61.63,
+  "resume_window": [
+    61.63,
+    66.63
+  ],
+  "wait_sec": 36.17,
   "distractors": [
-    26.75
+    30.2,
+    36.73,
+    48.46
   ],
   "distractor_kinds": [
-    "pause"
+    "near_miss",
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      26.75,
-      29.38
+      30.2,
+      30.86
+    ],
+    [
+      36.73,
+      40.19
+    ],
+    [
+      48.46,
+      48.8
     ]
   ],
   "ordinary_requests": [
-    7.16,
-    17.29,
-    30.22,
-    38.53
+    10.32
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 3.04,
-      "end": 3.89,
+      "start": 2.56,
+      "end": 4.01,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.34,
-      "end": 7.16,
+      "start": 4.48,
+      "end": 10.32,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 14.32,
-      "end": 17.29,
-      "event": "ordinary_request"
+      "start": 20.16,
+      "end": 25.46,
+      "event": "instruction",
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 24.39,
-      "end": 26.75,
+      "start": 26.54,
+      "end": 30.2,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 30.86,
+      "end": 32.29
     },
     {
       "speaker": "user",
-      "start": 29.38,
-      "end": 30.22,
-      "event": "ordinary_request"
+      "start": 33.3,
+      "end": 36.73,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 40.19,
+      "end": 43.97
     },
     {
       "speaker": "user",
-      "start": 37.41,
-      "end": 38.53,
-      "event": "ordinary_request"
+      "start": 44.79,
+      "end": 48.46,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 48.8,
+      "end": 53.16
+    },
+    {
+      "speaker": "user",
+      "start": 53.68,
+      "end": 56.39
+    },
+    {
+      "speaker": "friend",
+      "start": 56.83,
+      "end": 58.72
+    },
+    {
+      "speaker": "user",
+      "start": 60.01,
+      "end": 61.63,
+      "event": "return_cue",
+      "kind": "explicit"
     }
   ],
   "notes": "Rendered from script train_10_00203 by scripts/render.py.",
@@ -66,33 +121,21 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.5,
-      "end": 2.23,
-      "text": "Hi! How's life treating you?"
+      "start": 0.44,
+      "end": 2.12,
+      "text": "Hi, how are you doing right now?"
     },
     {
       "kind": "reply",
-      "start": 8.13,
-      "end": 13.02,
-      "text": "That's completely okay. Some people prefer something quiet. What would make the day feel good to you?"
+      "start": 12.22,
+      "end": 19.61,
+      "text": "That's sweet of you. A mushroom stroganoff with cashew cream or a big chickpea curry would both feel special. Which way do you want to go?"
     },
     {
-      "kind": "reply",
-      "start": 18.29,
-      "end": 23.32,
-      "text": "That sounds wonderful. You could plan a day trip somewhere new and finish with dinner at your favorite place."
-    },
-    {
-      "kind": "reply",
-      "start": 31.25,
-      "end": 37.0,
-      "text": "Maybe a small family dinner the weekend after. That way they get to celebrate you, and you still get your quiet day."
-    },
-    {
-      "kind": "reply",
-      "start": 39.98,
-      "end": 44.03,
-      "text": "It's your birthday, so do it your way. Forty is a good year to start that habit."
+      "kind": "resume",
+      "start": 62.17,
+      "end": 65.79,
+      "text": "Okay. So, her birthday dinner. Stroganoff or curry?"
     }
   ]
 }

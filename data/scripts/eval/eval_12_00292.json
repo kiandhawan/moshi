@@ -7,113 +7,137 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "reading",
+ "wait_type": "reading",
  "conditions": [],
  "topics": [
-  "laptop_buying"
+  "picnic"
  ],
- "topic": "laptop_buying",
+ "reading": {
+  "material": "text message",
+  "sec": 17.0
+ },
+ "topic": "picnic",
  "voices": {
-  "user": "026218fe0c054374838d934016f34082",
+  "user": "7bb342e710854139b1d6e12411229f1f",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_12",
-  "greet_ans_15",
-  "describe_instr_03",
-  "describe_cue_09"
+  "greet_21",
+  "greet_ans_24",
+  "read_instr_08",
+  "murmur_09",
+  "read_cue_06"
  ],
  "block_ids": [
-  "laptop_buying.opt1"
+  "picnic.ctx19"
  ],
- "est_total_sec": 54.15,
- "est_speech_sec": 42.13,
+ "est_total_sec": 52.78,
+ "est_speech_sec": 29.52,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there, how are you doing today?",
-   "est_sec": 2.27,
-   "gap_before": 0.7,
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.47,
    "role": "greeting",
-   "phrasing": "greet_12",
+   "phrasing": "greet_21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm fine, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.73,
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.78,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_15"
+   "phrasing": "greet_ans_24"
   },
   {
    "speaker": "user",
-   "text": "I need help picking a laptop for school.",
-   "est_sec": 2.58,
-   "gap_before": 0.4,
-   "block": "laptop_buying.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me go through every option before you say anything.",
+   "text": "I want to try foraging for picnic food. Berries, maybe.",
    "est_sec": 3.2,
-   "gap_before": 0.51,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_03"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is a really thin laptop, very light, great battery, but only eight gigs of memory.",
-   "est_sec": 5.68,
-   "gap_before": 0.97,
-   "block": "laptop_buying.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a gaming laptop that's super powerful, but it's heavy and the battery lasts maybe three hours.",
-   "est_sec": 5.68,
-   "gap_before": 2.59,
-   "block": "laptop_buying.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a basic model, cheaper than the others, with a slightly dim screen.",
-   "est_sec": 5.37,
-   "gap_before": 2.3,
-   "block": "laptop_buying.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "So, that's all of them. Tell me what you think.",
-   "est_sec": 3.2,
-   "gap_before": 1.28,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_09"
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "picnic.ctx19"
   },
   {
    "speaker": "moshi",
-   "text": "Do you play games or use any demanding programs for your classes? If not, I'd go with the thin one, eight gigs is enough for notes and browsing. The gaming laptop's short battery would be a real pain on campus.",
-   "est_sec": 12.5,
-   "gap_before": 1.04,
+   "text": "Fun, but be careful. Would you go with a guide who knows the plants, or stick to things you're certain about, like blackberries?",
+   "est_sec": 7.23,
+   "gap_before": 1.16,
+   "role": "reply",
+   "block": "picnic.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, a message just came in. Let me read it, don't talk yet.",
+   "est_sec": 4.13,
+   "gap_before": 1.0,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha, okay.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 11.43
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, done with the text.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 17.0
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, all read? So how are we doing this?",
+   "est_sec": 2.89,
+   "gap_before": 0.34,
    "role": "resume",
-   "block": "laptop_buying.opt1",
+   "block": "picnic.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A guide. I don't want to poison anyone.",
+   "est_sec": 2.58,
+   "gap_before": 0.78,
+   "event": "ordinary_request",
+   "block": "picnic.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Very wise. Many parks run foraging walks in late summer.",
+   "est_sec": 3.2,
+   "gap_before": 0.41,
+   "role": "followup",
+   "block": "picnic.ctx19",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "new_type_reading"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

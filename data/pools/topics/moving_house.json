@@ -1,159 +1,1877 @@
 {
-  "topic": "moving_house",
-  "contexts": [
+ "topic": "moving_house",
+ "contexts": [
+  {
+   "id": "moving_house.ctx1",
+   "turns": [
     {
-      "id": "moving_house.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I've found two flats I like. One's near my work, the other has a huge living room, and I have to tell the agent by tonight."},
-        {"speaker": "moshi", "text": "Exciting. So it's a short commute against more space. Which matters more to you day to day?"}
-      ],
-      "pending": "the flat closer to work or the one with the bigger living room",
-      "think_reask": [
-        "So, which flat is it? The short commute or the bigger living room?",
-        "Okay, time's up. Closer to work, or more space at home?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing between the two flats, commute or living room?",
-        "Hi again. Have you picked a flat before you call the agent?"
-      ],
-      "endings": [
-        {"user": "The one near work. I'd get an extra hour every day.", "moshi": "That's a lot of time back. Let the agent know before they close for the day."},
-        {"user": "The bigger one. I work from home half the week anyway.", "moshi": "Then the space will really pay off. Call the agent and confirm it tonight."}
-      ]
+     "speaker": "user",
+     "text": "I've found two flats I like. One's near my work, the other has a huge living room, and I have to tell the agent by tonight."
     },
     {
-      "id": "moving_house.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "We're moving at the end of the month and I'm dreading the packing."},
-        {"speaker": "moshi", "text": "It's a big job. Do you want to hire movers to pack for you, or do it yourselves and save the money?"}
-      ],
-      "pending": "hire movers to pack or pack themselves",
-      "think_reask": [
-        "So, hire movers to do the packing, or tackle it yourselves?",
-        "Have you decided? Pay for packing help, or do it on your own?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were talking about the packing. Movers or do it yourselves?",
-        "There you are. Any thoughts on whether to hire packers?"
-      ],
-      "endings": [
-        {"user": "We'll do it ourselves. Movers are so expensive.", "moshi": "Okay. Start with the rooms you use least, a few boxes each evening."},
-        {"user": "Movers. With two kids I just don't have the time.", "moshi": "Totally worth it then. Get at least three quotes, prices vary a lot."}
-      ]
-    },
-    {
-      "id": "moving_house.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I've got way too much stuff for the new place. It's half the size."},
-        {"speaker": "moshi", "text": "That's common when downsizing. Would you rather sell the extra furniture, or donate it and get it out quickly?"}
-      ],
-      "pending": "sell or donate the extra furniture",
-      "think_reask": [
-        "So, sell the extra furniture, or just donate it?",
-        "Okay, what do you think? Make some money back, or clear it out quickly?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were deciding what to do with the extra furniture, sell or donate?",
-        "Hi again. Have you thought about the furniture that won't fit?"
-      ],
-      "endings": [
-        {"user": "Sell the good pieces, donate the rest.", "moshi": "Best of both. Take photos this week so you have time to find buyers."},
-        {"user": "Donate it all. I don't want the hassle of strangers coming round.", "moshi": "Fair. Many charities will collect larger items for free, so book a pickup."}
-      ]
+     "speaker": "moshi",
+     "text": "Exciting. So it's a short commute against more space. Which matters more to you day to day?"
     }
-  ],
-  "side_conversations": [
-    {"id": "moving_house.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, which box did you put the kettle in?"},
-      {"speaker": "friend", "text": "The one that says kitchen. Or maybe the one that says misc."},
-      {"speaker": "user", "text": "There are like six that say misc."},
-      {"speaker": "friend", "text": "Yeah, I got a bit lazy with the labels near the end."},
-      {"speaker": "user", "text": "Can you help me look? I really need a tea."},
-      {"speaker": "friend", "text": "Start with the small ones. I'll check the ones by the door."}
-    ]},
-    {"id": "moving_house.side2", "turns": [
-      {"speaker": "user", "text": "Did the landlord say anything about painting the walls?"},
-      {"speaker": "friend", "text": "She said it's fine as long as it's a light colour."},
-      {"speaker": "user", "text": "So no dark green bedroom then."},
-      {"speaker": "friend", "text": "Probably not. Maybe a pale green?"},
-      {"speaker": "user", "text": "I guess. Do you want to go to the hardware shop on Saturday and look at samples?"},
-      {"speaker": "friend", "text": "Sure, if we can get breakfast first."},
-      {"speaker": "user", "text": "Obviously. That's half the reason to go."}
-    ]},
-    {"id": "moving_house.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, are you sure the sofa will fit through the door?"},
-      {"speaker": "friend", "text": "I measured it twice. It's tight, but it should go."},
-      {"speaker": "user", "text": "What if we have to take the legs off?"},
-      {"speaker": "friend", "text": "Then we take the legs off. I've got a screwdriver in my bag."},
-      {"speaker": "user", "text": "Okay. And the stairs?"},
-      {"speaker": "friend", "text": "Let's not think about the stairs yet."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "moving_house.dlg1", "turns": [
-      {"speaker": "user", "text": "What should I ask when I go to see a flat?"},
-      {"speaker": "moshi", "text": "Ask what's included in the rent, how much bills usually are, and how long the lease is. Also ask why the last tenant left."},
-      {"speaker": "user", "text": "Anything I should check myself?"},
-      {"speaker": "moshi", "text": "Run the taps and the shower to test the water pressure, look for damp or mould in corners, and check your phone signal in each room."},
-      {"speaker": "user", "text": "Phone signal, I never would have thought of that."},
-      {"speaker": "moshi", "text": "It's easy to miss. Same with noise, try to visit in the evening if you can."},
-      {"speaker": "user", "text": "And if I like it, should I / just say yes on the spot?"},
-      {"speaker": "moshi", "text": "In a busy market you might have to move fast. Have your documents ready so you can apply the same day."}
-    ]},
-    {"id": "moving_house.dlg2", "turns": [
-      {"speaker": "user", "text": "How do I pack plates so they don't break?"},
-      {"speaker": "moshi", "text": "Wrap each one in paper and stand them on their edge in the box, like records. They're much stronger that way than stacked flat."},
-      {"speaker": "user", "text": "On their edge? Really?"},
-      {"speaker": "moshi", "text": "Really. Put some crumpled paper at the bottom of the box too, and fill any gaps so nothing moves."},
-      {"speaker": "user", "text": "What about glasses? We have / a lot of wine glasses."},
-      {"speaker": "moshi", "text": "Stuff a bit of paper inside each glass, then wrap the outside. Liquor stores often give away boxes with dividers, which are perfect."},
-      {"speaker": "user", "text": "Oh nice, I'll ask at the shop down the road."},
-      {"speaker": "moshi", "text": "Good idea. And mark those boxes fragile on every side, not just the top."}
-    ]},
-    {"id": "moving_house.dlg3", "turns": [
-      {"speaker": "user", "text": "My kids are really upset about moving to a new town."},
-      {"speaker": "moshi", "text": "That's understandable, it's a big change. How old are they?"},
-      {"speaker": "user", "text": "Six and eleven."},
-      {"speaker": "moshi", "text": "Letting them have some say helps a lot. The younger one could choose a paint colour for their room, the older one could help plan the layout."},
-      {"speaker": "user", "text": "My eleven year old is mostly sad about / leaving her best friend."},
-      {"speaker": "moshi", "text": "That's the hardest part. Plan a visit or a sleepover in the first couple of months, so she knows the friendship doesn't have to end."},
-      {"speaker": "user", "text": "That's a good idea. They could video call too."},
-      {"speaker": "moshi", "text": "Exactly. And finding a club in the new town quickly will help her meet people her age."}
-    ]},
-    {"id": "moving_house.dlg4", "turns": [
-      {"speaker": "user", "text": "Who do I need to tell when I move?"},
-      {"speaker": "moshi", "text": "Your bank, your employer, your doctor and dentist, and any utility companies. Don't forget the council and your insurance."},
-      {"speaker": "user", "text": "That's a lot. Is there a way to do it all at once?"},
-      {"speaker": "moshi", "text": "Not really, but setting up mail forwarding for a few months catches anything you forget."},
-      {"speaker": "user", "text": "Good. Oh, and the internet. Should I / set that up before I move in?"},
-      {"speaker": "moshi", "text": "Yes, as early as possible. Installation can take a couple of weeks, so book it as soon as you have the address."},
-      {"speaker": "user", "text": "I'll do that today then."},
-      {"speaker": "moshi", "text": "Great. Make a quick checklist too, so you can tick things off as you go."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "moving_house.opt1",
-     "lead_in": "We're moving next month and I'm stuck on how to actually do the move.",
-     "options": [
-      "The first option is hiring a full service moving company that packs everything, but it's expensive.",
-      "Then there's renting a big truck and getting friends to help in exchange for pizza.",
-      "Option three is one of those portable storage containers they drop off and pick up later.",
-      "And the last one is hiring movers just for the heavy furniture and packing the rest ourselves."
-     ],
-     "moshi_comment": [
-      "Hiring movers just for the heavy stuff is often the sweet spot, you save money and your back. The full service company is worth it if you're short on time. The truck with friends is cheapest, but it depends on how reliable your friends are.",
-      "How far are you moving, and do you have a gap between leaving and moving in? If there's a gap, the storage container solves two problems at once. Otherwise I'd go with movers for the heavy furniture."
-     ]},
-    {"id": "moving_house.opt2",
-     "lead_in": "I've seen a few apartments and I need to choose one before Friday.",
-     "options": [
-      "One is a bright two bedroom near the train station, but the rent is at the top of my budget.",
-      "Another is a cheaper place in a quiet neighborhood, but it's a forty minute bus ride to work.",
-      "Or there's a small studio right downtown with a gym in the building and no parking."
-     ],
-     "moshi_comment": [
-      "The two bedroom near the station gives you space and an easy commute, if you can handle the rent. The cheaper place saves money but that long bus ride adds up every day. The studio is great for city life if you don't own a car.",
-      "Do you work from home at all? If you do, the extra bedroom near the station is really valuable. If not, the studio downtown could be fun and simple."
-     ]}
-  ]
+   ],
+   "pending": "the flat closer to work or the one with the bigger living room",
+   "think_reask": [
+    "So, which flat is it? The short commute or the bigger living room?",
+    "Okay, time's up. Closer to work, or more space at home?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing between the two flats, commute or living room?",
+    "Hi again. Have you picked a flat before you call the agent?"
+   ],
+   "endings": [
+    {
+     "user": "The one near work. I'd get an extra hour every day.",
+     "moshi": "That's a lot of time back. Let the agent know before they close for the day."
+    },
+    {
+     "user": "The bigger one. I work from home half the week anyway.",
+     "moshi": "Then the space will really pay off. Call the agent and confirm it tonight."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're moving at the end of the month and I'm dreading the packing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a big job. Do you want to hire movers to pack for you, or do it yourselves and save the money?"
+    }
+   ],
+   "pending": "hire movers to pack or pack themselves",
+   "think_reask": [
+    "So, hire movers to do the packing, or tackle it yourselves?",
+    "Have you decided? Pay for packing help, or do it on your own?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were talking about the packing. Movers or do it yourselves?",
+    "There you are. Any thoughts on whether to hire packers?"
+   ],
+   "endings": [
+    {
+     "user": "We'll do it ourselves. Movers are so expensive.",
+     "moshi": "Okay. Start with the rooms you use least, a few boxes each evening."
+    },
+    {
+     "user": "Movers. With two kids I just don't have the time.",
+     "moshi": "Totally worth it then. Get at least three quotes, prices vary a lot."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got way too much stuff for the new place. It's half the size."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's common when downsizing. Would you rather sell the extra furniture, or donate it and get it out quickly?"
+    }
+   ],
+   "pending": "sell or donate the extra furniture",
+   "think_reask": [
+    "So, sell the extra furniture, or just donate it?",
+    "Okay, what do you think? Make some money back, or clear it out quickly?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were deciding what to do with the extra furniture, sell or donate?",
+    "Hi again. Have you thought about the furniture that won't fit?"
+   ],
+   "endings": [
+    {
+     "user": "Sell the good pieces, donate the rest.",
+     "moshi": "Best of both. Take photos this week so you have time to find buyers."
+    },
+    {
+     "user": "Donate it all. I don't want the hassle of strangers coming round.",
+     "moshi": "Fair. Many charities will collect larger items for free, so book a pickup."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our cat Biscuit hates the car and we're moving three hours away."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Poor Biscuit. You could drive her on moving day with a calming spray, or leave her with your neighbour for a few days and fetch her once the house is quiet. Which feels easier on her?"
+    }
+   ],
+   "pending": "drive the cat on moving day or fetch her later from the neighbour",
+   "think_reask": [
+    "So for Biscuit, the car on moving day, or a few days with the neighbour first?",
+    "Moving day trip, or fetch her once things are calm?"
+   ],
+   "welcome_back": [
+    "Back to Biscuit. Moving day drive, or a stay with the neighbour?",
+    "So, the cat. Bring her straight away, or collect her later?"
+   ],
+   "endings": [
+    {
+     "user": "Neighbour. She'd go mad with all the boxes and strangers.",
+     "moshi": "Good call. Set up one quiet room for her with her bed and litter before she arrives."
+    },
+    {
+     "user": "We'll take her on the day. I'd miss her too much.",
+     "moshi": "Fair. Keep her in the carrier in a closed room until the movers have gone."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "First year of uni, and I have to pick a room in the shared house."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. What are the choices?"
+    },
+    {
+     "speaker": "user",
+     "text": "A small one with its own bathroom, or a big one where I'd share with three people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic dilemma. Would you rather have space or a bathroom to yourself?"
+    }
+   ],
+   "pending": "small en suite room or big room with shared bathroom",
+   "think_reask": [
+    "So, your own tiny bathroom, or the big room and a bathroom queue?",
+    "Space or privacy? Which room are you taking?"
+   ],
+   "welcome_back": [
+    "The uni room. Small with a bathroom, or big and sharing?",
+    "So, which room in the shared house? Own bathroom or extra space?"
+   ],
+   "endings": [
+    {
+     "user": "Own bathroom. I've seen what boys do to bathrooms.",
+     "moshi": "Ha, fair. Get some good storage boxes for under the bed, then."
+    },
+    {
+     "user": "The big one. I'll have friends over and need the space.",
+     "moshi": "Makes sense. Buy some flip flops for the shared shower, you'll thank me."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My mum is moving into a bungalow, and the big question is her old piano."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a tough one. She could keep it and give up a bit of living room, or give it to a school and keep the space. Does she still play?"
+    }
+   ],
+   "pending": "keep mum's piano or give it to a school",
+   "think_reask": [
+    "So what's the verdict on the piano? Keep it, or pass it on to a school?",
+    "Does she want to keep playing? Is the piano coming with her?"
+   ],
+   "welcome_back": [
+    "Your mum's piano. Into the bungalow, or off to a school?",
+    "The piano question. Squeeze it in, or give it away?"
+   ],
+   "endings": [
+    {
+     "user": "She plays every Sunday. It's coming.",
+     "moshi": "Then measure the living room wall first, and book specialist movers for it."
+    },
+    {
+     "user": "Hardly ever. A school would get much more use out of it.",
+     "moshi": "That's a lovely way to pass it on. She could ask to hear the kids play it."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're moving from Edinburgh to Bristol with a one bedroom flat's worth of stuff."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big trip. You could rent a van and drive it yourselves over two days, or pay a removal company and take the train down. Is it more about money or about sanity?"
+    }
+   ],
+   "pending": "drive the van themselves or pay a removal firm and take the train",
+   "think_reask": [
+    "So, the two day van road trip, or removals and a train?",
+    "Money or sanity? Which way are you going for the big move?"
+   ],
+   "welcome_back": [
+    "Back to the long move. Drive it yourselves, or hire a firm?",
+    "The Edinburgh to Bristol trip. Van, or removal company?"
+   ],
+   "endings": [
+    {
+     "user": "We'll drive. It could be a fun little adventure.",
+     "moshi": "Then break it up with a night halfway, and load the heaviest stuff at the front of the van."
+    },
+    {
+     "user": "Removal company. We're not doing nine hours in a van.",
+     "moshi": "Fair. Get three quotes and book soon, the end of the month fills up fast."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The landlord wants to keep two hundred pounds of my deposit for a stain on the carpet."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Annoying. Is the stain really yours?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, red wine. But the carpet was ancient."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you could challenge the amount through the deposit scheme, or accept it and move on. Which matters more, the money or the hassle?"
+    }
+   ],
+   "pending": "challenge the deposit deduction or accept it",
+   "think_reask": [
+    "So, fight the two hundred through the deposit scheme, or let it go?",
+    "Money or hassle? Are you challenging the carpet charge?"
+   ],
+   "welcome_back": [
+    "The carpet charge. Challenging it, or letting it go?",
+    "Your deposit. Disputing the two hundred, or accepting it?"
+   ],
+   "endings": [
+    {
+     "user": "I'll challenge it. That carpet was older than me.",
+     "moshi": "Worth it. Mention its age, a deduction should reflect wear and tear."
+    },
+    {
+     "user": "I'll pay. I just want it done.",
+     "moshi": "Understandable. Ask for the deduction in writing so the rest comes back quickly."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The neighbours in our new street seem really friendly. We're thinking of a housewarming."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely. Would you invite them now, while the boxes are still everywhere, or wait a few weeks until the house looks like a home?"
+    }
+   ],
+   "pending": "invite the neighbours now or wait until unpacked",
+   "think_reask": [
+    "So, a boxes everywhere party now, or wait until you're settled?",
+    "Now or in a few weeks? When's the housewarming?"
+   ],
+   "welcome_back": [
+    "The housewarming. Straight away, or in a few weeks?",
+    "So, are you inviting the street now, or once you've unpacked?"
+   ],
+   "endings": [
+    {
+     "user": "Now. People don't care about boxes, and it'll break the ice.",
+     "moshi": "True. Keep it simple, drinks and nibbles, and use the boxes as tables."
+    },
+    {
+     "user": "Let's wait. I'd want to show the place off a bit.",
+     "moshi": "Fair enough. Maybe just knock and say hello in the meantime."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Right. Keys collected, van's gone, I'm sitting on a box in a sea of other boxes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Congratulations. Before you melt, pick one room to make liveable tonight. The kitchen, so you can eat, or the bedroom, so you can sleep?"
+    }
+   ],
+   "pending": "unpack the kitchen or the bedroom first",
+   "think_reask": [
+    "So, kitchen first or bedroom first tonight?",
+    "Which room are you tackling first, food or sleep?"
+   ],
+   "welcome_back": [
+    "Back to the sea of boxes. Kitchen or bedroom first?",
+    "Your first night there. Unpacking where you eat, or where you sleep?"
+   ],
+   "endings": [
+    {
+     "user": "Bedroom. I'll order takeaway and fall into bed.",
+     "moshi": "Perfect. Make the bed first, before you do anything else in there."
+    },
+    {
+     "user": "Kitchen. I need a cup of tea more than anything.",
+     "moshi": "Fair. Kettle, mugs and the fridge, and the rest can wait."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got about forty houseplants and I'm moving across the country."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a jungle. You could give most of them to friends and take just your favourites, or pack them all in the car and risk a few casualties. How attached are you?"
+    }
+   ],
+   "pending": "give away most of the plants or take them all",
+   "think_reask": [
+    "So, the whole jungle in the car, or only the favourites?",
+    "So, is the whole jungle coming, or just the stars of the collection?"
+   ],
+   "welcome_back": [
+    "Your forty plants. All of them, or just the favourites?",
+    "The plant question. Pack them all, or give most away?"
+   ],
+   "endings": [
+    {
+     "user": "Only the favourites. Maybe ten.",
+     "moshi": "Good compromise. Water them a day or two before, and keep them out of the boot if it's hot."
+    },
+    {
+     "user": "All of them. They're my babies.",
+     "moshi": "Then pack them snugly in boxes so they don't tip, and put them in last so they come out first."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We've bought a house, but my son is halfway through the school year."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tricky timing. Is the new house in a different school area?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes, twenty minutes away."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you could move now and switch schools mid year, or move now and drive him to his old school until summer. Which would he prefer?"
+    }
+   ],
+   "pending": "switch schools mid year or drive to the old school until summer",
+   "think_reask": [
+    "So, new school straight away, or keep driving him until the summer?",
+    "Which way for your son, switch now or finish the year?"
+   ],
+   "welcome_back": [
+    "The school question. Switch now, or finish the year at the old one?",
+    "So, your son. New school mid year, or the school run until summer?"
+   ],
+   "endings": [
+    {
+     "user": "We'll drive him. He's got exams and his friends are there.",
+     "moshi": "Sensible. It's only a few months, and he can visit the new school before September."
+    },
+    {
+     "user": "Switch now. He's actually keen to start fresh.",
+     "moshi": "Great. Ask the new school if he can meet a buddy before his first day."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "moving_house.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, which box did you put the kettle in?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The one that says kitchen. Or maybe the one that says misc."
+    },
+    {
+     "speaker": "user",
+     "text": "There are like six that say misc."
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, I got a bit lazy with the labels near the end."
+    },
+    {
+     "speaker": "user",
+     "text": "Can you help me look? I really need a tea."
+    },
+    {
+     "speaker": "friend",
+     "text": "Start with the small ones. I'll check the ones by the door."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did the landlord say anything about painting the walls?"
+    },
+    {
+     "speaker": "friend",
+     "text": "She said it's fine as long as it's a light colour."
+    },
+    {
+     "speaker": "user",
+     "text": "So no dark green bedroom then."
+    },
+    {
+     "speaker": "friend",
+     "text": "Probably not. Maybe a pale green?"
+    },
+    {
+     "speaker": "user",
+     "text": "I guess. Do you want to go to the hardware shop on Saturday and look at samples?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, if we can get breakfast first."
+    },
+    {
+     "speaker": "user",
+     "text": "Obviously. That's half the reason to go."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, are you sure the sofa will fit through the door?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I measured it twice. It's tight, but it should go."
+    },
+    {
+     "speaker": "user",
+     "text": "What if we have to take the legs off?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Then we take the legs off. I've got a screwdriver in my bag."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And the stairs?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Let's not think about the stairs yet."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, where's the tape gun?"
+    },
+    {
+     "speaker": "friend",
+     "text": "You had it. Two minutes ago."
+    },
+    {
+     "speaker": "user",
+     "text": "I put it down on a box."
+    },
+    {
+     "speaker": "friend",
+     "text": "Which box? There are eighty boxes."
+    },
+    {
+     "speaker": "user",
+     "text": "Can you just check the ones in the hall?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Found it. You taped it into the box with the towels."
+    },
+    {
+     "speaker": "user",
+     "text": "Of course I did."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, the mattress won't fit in the lift."
+    },
+    {
+     "speaker": "friend",
+     "text": "Told you. We'll have to take the stairs."
+    },
+    {
+     "speaker": "user",
+     "text": "Four floors with a king size mattress?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It bends. Fold it in half and I'll take the top end."
+    },
+    {
+     "speaker": "user",
+     "text": "Are you sure it won't break the springs?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It's foam, there are no springs. Come on, before the van parking runs out."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine, but if I fall, you're cushioning me."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you notice the smell in the bathroom?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Like old socks and wet dog? Yeah."
+    },
+    {
+     "speaker": "user",
+     "text": "The agent said it just needs airing out."
+    },
+    {
+     "speaker": "friend",
+     "text": "Agents say that about everything. Did you see the black spots on the ceiling?"
+    },
+    {
+     "speaker": "user",
+     "text": "I thought that was shadow."
+    },
+    {
+     "speaker": "friend",
+     "text": "That's damp. Ask them when the extractor fan was last checked."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they dodge the question?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Then we keep looking. The one on Mill Road was nicer anyway."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "moving_house.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What should I ask when I go to see a flat?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask what's included in the rent, how much bills usually are, and how long the lease is. Also ask why the last tenant left."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything I should check myself?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Run the taps and the shower to test the water pressure, look for damp or mould in corners, and check your phone signal in each room."
+    },
+    {
+     "speaker": "user",
+     "text": "Phone signal, I never would have thought of that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's easy to miss. Same with noise, try to visit in the evening if you can."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I like it, should I / just say yes on the spot?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "In a busy market you might have to move fast. Have your documents ready so you can apply the same day."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I pack plates so they don't break?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wrap each one in paper and stand them on their edge in the box, like records. They're much stronger that way than stacked flat."
+    },
+    {
+     "speaker": "user",
+     "text": "On their edge? Really?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Really. Put some crumpled paper at the bottom of the box too, and fill any gaps so nothing moves."
+    },
+    {
+     "speaker": "user",
+     "text": "What about glasses? We have / a lot of wine glasses."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stuff a bit of paper inside each glass, then wrap the outside. Liquor stores often give away boxes with dividers, which are perfect."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh nice, I'll ask at the shop down the road."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. And mark those boxes fragile on every side, not just the top."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kids are really upset about moving to a new town."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's understandable, it's a big change. How old are they?"
+    },
+    {
+     "speaker": "user",
+     "text": "Six and eleven."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Letting them have some say helps a lot. The younger one could choose a paint colour for their room, the older one could help plan the layout."
+    },
+    {
+     "speaker": "user",
+     "text": "My eleven year old is mostly sad about / leaving her best friend."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the hardest part. Plan a visit or a sleepover in the first couple of months, so she knows the friendship doesn't have to end."
+    },
+    {
+     "speaker": "user",
+     "text": "That's a good idea. They could video call too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. And finding a club in the new town quickly will help her meet people her age."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Who do I need to tell when I move?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Your bank, your employer, your doctor and dentist, and any utility companies. Don't forget the council and your insurance."
+    },
+    {
+     "speaker": "user",
+     "text": "That's a lot. Is there a way to do it all at once?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really, but setting up mail forwarding for a few months catches anything you forget."
+    },
+    {
+     "speaker": "user",
+     "text": "Good. Oh, and the internet. Should I / set that up before I move in?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, as early as possible. Installation can take a couple of weeks, so book it as soon as you have the address."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll do that today then."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great. Make a quick checklist too, so you can tick things off as you go."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Roughly how many boxes do I need for a one bed flat?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually somewhere between thirty and forty, depending on how much you own. Books and kitchen stuff take up more than people expect."
+    },
+    {
+     "speaker": "user",
+     "text": "Thirty! I thought maybe ten."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Everyone does. Get a mix of sizes, small for heavy things like books, big for light things like bedding."
+    },
+    {
+     "speaker": "user",
+     "text": "Where do I even get that many? Buying them / seems like a waste."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask supermarkets and off licences, or check local groups where people give away boxes after moving."
+    },
+    {
+     "speaker": "user",
+     "text": "Good shout. My neighbour just moved in, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Knock and ask, she'll probably be thrilled to get rid of them."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I make sure I get my whole deposit back?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with your check in inventory, if you have one. You want to leave the place as it was then, apart from normal wear and tear."
+    },
+    {
+     "speaker": "user",
+     "text": "I think I've got it somewhere in my email."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Find it. Then clean properly, especially the oven, fridge and bathroom. Those are where most deductions come from."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I pay for professional cleaning?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Only if your contract requires it. Otherwise a thorough clean yourself is usually fine."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Anything / on the last day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take dated photos and a video of every room after you clean. It's your best evidence if there's a disagreement."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My rescue dog gets anxious with change. How do I move house without stressing him out?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep his routine as normal as possible during packing. Same walks, same feeding times."
+    },
+    {
+     "speaker": "user",
+     "text": "And on moving day itself?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you can, have a friend look after him away from the chaos. Doors open all day are a risk for an anxious dog."
+    },
+    {
+     "speaker": "user",
+     "text": "Right, he'd bolt. What about the new place?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Set up his bed, bowls and toys in one room first, with something that smells of the old house. Let him explore slowly."
+    },
+    {
+     "speaker": "user",
+     "text": "He does love / my old hoodie."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect, put that in his bed. And walk him around the new area a lot in the first week so it starts smelling like home."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just moved into a block of flats and I don't know a single neighbour."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pretty normal in flats. A quick hello in the corridor or lift is a fine start."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm quite shy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then keep it tiny. Hi, I've just moved into number twelve, is enough. Most people are happy to be friendly back."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it weird to / leave a note under doors?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not weird in the slightest. A short friendly note introducing yourself is lovely, especially if you mention being shy about knocking."
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe with biscuits."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Biscuits always help. You'll probably get invited for tea."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm interviewing people for the spare room in my flat. What should I ask them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask about their routine, like when they work and when they go to bed. Clashing schedules cause a lot of friction."
+    },
+    {
+     "speaker": "user",
+     "text": "Good one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask how they feel about guests, cleaning and shared food. And how they handled problems with past flatmates."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I ask about money?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, gently. Ask if they're comfortable with the rent and bills, and whether they'd do a reference check."
+    },
+    {
+     "speaker": "user",
+     "text": "And how / do I know if I actually like them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Trust your gut. Could you happily share a kitchen with them on a Sunday morning? That's usually the real test."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Someone told me to pack a first night box. What goes in it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Everything you'll need before you've unpacked anything else. Think toothbrushes, phone chargers, toilet paper and a change of clothes."
+    },
+    {
+     "speaker": "user",
+     "text": "Bedding?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely bedding, or at least a sheet and duvet. Making the bed at midnight from a random box is no fun."
+    },
+    {
+     "speaker": "user",
+     "text": "Snacks, kettle, mugs?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes to all three, plus tea or coffee. And a few basic tools like scissors and a screwdriver."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm going to label it in / massive letters."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. Even better, keep it in your car so it doesn't get lost with everything else."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I own about five hundred books. Moving them is going to destroy me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use small boxes only. A big box full of books is too heavy to lift safely."
+    },
+    {
+     "speaker": "user",
+     "text": "Small boxes, got it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pack them flat or with the spines down, not standing on their edges or they'll warp. Fill gaps with paper so they don't slide."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I get rid of some?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "This is the perfect moment to cull. Keep what you'd reread or love on your shelf, and donate the rest."
+    },
+    {
+     "speaker": "user",
+     "text": "That's going to be / emotionally difficult."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take it slowly. A good rule is, if you can't remember what it's about, it can go."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "A landlord wants me to send a holding deposit before I've seen the flat. He says he's abroad."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Please be careful. That's one of the most common rental scams."
+    },
+    {
+     "speaker": "user",
+     "text": "Really? The photos look amazing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Scammers often copy photos from real listings. A rent that seems too good for the area is another warning sign."
+    },
+    {
+     "speaker": "user",
+     "text": "It is really cheap for the area, now that / I think about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Never pay before you've seen the place in person, or had a trusted person view it. And never send money by bank transfer to someone you can't verify."
+    },
+    {
+     "speaker": "user",
+     "text": "What should I do with the listing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Report it to the website. You might save someone else from losing their money."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I know if my wardrobe will fit in the new bedroom?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Measure the wardrobe's height, width and depth, then measure the room, including the ceiling height."
+    },
+    {
+     "speaker": "user",
+     "text": "And the doors?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, every doorway and corridor it has to pass through. Tight corners on stairs are usually the real problem."
+    },
+    {
+     "speaker": "user",
+     "text": "It's one of those / tall ones that doesn't come apart."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then also measure it diagonally. Furniture often fits through by tilting, and the diagonal tells you if that works."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. Clever."
+    },
+    {
+     "speaker": "moshi",
+     "text": "If it still won't fit, see if the new place has space for it in the living room, or consider selling it before the move."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm moving to Lisbon for a new job and I'm already feeling homesick and I haven't even left."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's very common. It's a huge change, even if it's a good one."
+    },
+    {
+     "speaker": "user",
+     "text": "How do people deal with it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Building a small routine quickly helps, like a favourite cafe, a gym or a weekly class. Familiar places make a city feel like home."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't speak Portuguese. At all."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A beginner class would help twice, you'd learn the language and meet other newcomers. Many cities have expat meetups too."
+    },
+    {
+     "speaker": "user",
+     "text": "And with my family?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Schedule regular calls instead of random ones. Something to look forward to makes the distance easier."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So I'm thirty one and moving back in with my parents to save for a house. Mixed feelings."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a really common and sensible move these days, even if it feels strange."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm worried we'll drive each other mad."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Talk about expectations early. Things like chores, guests, cooking and whether they'll wait up for you."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, my mum will absolutely wait up."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then agree on something like a text if you're late. It's much easier to set the rules at the start than mid argument."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I pay / rent or something?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Offering some money or covering the food shop shows respect, even if it's less than market rent. It also keeps you feeling like an adult."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm trying to declutter my clothes before I move, but I can't let anything go."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try asking yourself whether you'd buy it again today. If the answer is no, it's probably time."
+    },
+    {
+     "speaker": "user",
+     "text": "What about stuff I might fit into again one day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep a small box of those, and set a date. If you haven't worn them by then, they go."
+    },
+    {
+     "speaker": "user",
+     "text": "That's a bit harsh. But / probably fair."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Another trick is turning all your hangers backwards. Turn them the right way when you wear something, and after a few months you'll see what you never touch."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't have a few months. I move in three weeks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then just keep what you've worn in the last year, and donate the rest."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Some mates are helping me move on Saturday. What should I do to say thanks?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep them fed and watered on the day, lots of drinks and snacks, and a proper meal at the end."
+    },
+    {
+     "speaker": "user",
+     "text": "Pizza, basically."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pizza is the classic for a reason. Also have a plan ready so they're not standing around waiting for instructions."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I offer money?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most friends won't want it. Offering to help them back when they move means a lot more."
+    },
+    {
+     "speaker": "user",
+     "text": "And maybe / a crate of beer for afterwards."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That works too. Just save it until the heavy lifting is done."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I need to take apart my flat pack bed. Any tips so I can put it back together?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take photos at each step as you go. They're like a reverse instruction manual."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, smart."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put all the screws and bolts in a zip bag, and tape the bag firmly to one of the bed's main pieces."
+    },
+    {
+     "speaker": "user",
+     "text": "I always lose the little / Allen key."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put that in the same bag. If you still have the original instructions, you can often find them online by searching the model name."
+    },
+    {
+     "speaker": "user",
+     "text": "And the slats?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tie them together with string or tape, so they travel as one bundle and don't get lost in the van."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The new flat smells of the last tenant's cigarettes. Help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ugh, that smell gets into everything. Start by opening every window and washing all the walls with warm water and a bit of vinegar or sugar soap."
+    },
+    {
+     "speaker": "user",
+     "text": "The walls themselves?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, smoke sticks to walls and ceilings. Then clean the carpets and curtains, they hold most of it."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it's still there after?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A stain blocking primer and fresh paint seals it in. Ask the landlord first, they may even pay for it."
+    },
+    {
+     "speaker": "user",
+     "text": "Bowls of bicarb / help at all?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little, in small rooms. But they won't fix it alone, the cleaning does the real work."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dad keeps saying renting is throwing money away. Is he right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not entirely. Renting gives you flexibility and no repair bills, while buying builds equity but ties you down."
+    },
+    {
+     "speaker": "user",
+     "text": "I might move cities in a couple of years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then renting often makes more sense. Buying and selling within a few years can cost more than you'd save."
+    },
+    {
+     "speaker": "user",
+     "text": "He'll still / say I'm wasting money."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could tell him you're paying for flexibility. That's worth something too."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I want to buy eventually?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start saving for a deposit now while you rent. Then you'll have options when you decide to settle."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My boyfriend and I broke up and I'm moving out of our flat next week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'm sorry, that's a lot at once. How are you holding up?"
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I guess. The hardest bit is splitting all our stuff."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It helps to make a simple list together, while things are calm, rather than deciding item by item on the day."
+    },
+    {
+     "speaker": "user",
+     "text": "We bought the sofa together, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "One of you could keep it and pay the other half, or sell it and split the money. Either is fair."
+    },
+    {
+     "speaker": "user",
+     "text": "I think I'd rather / just start fresh, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's completely okay. Take what matters to you, and let a friend help on moving day so you're not alone."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why do people keep telling me to take meter readings on moving day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "So you only pay for the energy you used. Without readings, you might be charged for the last tenant's use, or the next one's."
+    },
+    {
+     "speaker": "user",
+     "text": "Where's the meter, though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often in a cupboard under the stairs, in the hall, or in a box outside. Ask the landlord or agent if you can't find it."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I just write it down?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take a clear photo with the date on it, then send the readings to your energy supplier."
+    },
+    {
+     "speaker": "user",
+     "text": "Both places? Old / and new?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, both. A final reading at the old place and a first reading at the new one."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How on earth do I move a big tropical fish tank?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Carefully. Start by putting the fish in bags or buckets with water from their own tank."
+    },
+    {
+     "speaker": "user",
+     "text": "How long can they stay in there?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few hours is usually fine if they're kept warm and dark. Bring a battery air pump for longer trips."
+    },
+    {
+     "speaker": "user",
+     "text": "And the tank?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Empty it completely before moving. Even a small amount of water makes it heavy and can crack the glass."
+    },
+    {
+     "speaker": "user",
+     "text": "What about the filter? I'd / rather not start from scratch."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep the filter wet in tank water so the good bacteria survive. That way the tank settles much faster in the new place."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We've moved in, but the place still feels like someone else's house."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's normal for a while. Small touches make a big difference, like hanging a few of your own pictures."
+    },
+    {
+     "speaker": "user",
+     "text": "We haven't put a single thing on the walls."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start there. Then add soft lighting, lamps instead of the big ceiling light make a room feel warmer instantly."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, we only have the ceiling lights."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A couple of cheap lamps would help a lot. Plants and a rug do the same."
+    },
+    {
+     "speaker": "user",
+     "text": "And maybe / cook something that smells nice?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. A big Sunday dinner in the new kitchen is one of the best ways to make it feel like yours."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're moving house with a three month old baby. Are we mad?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not mad, but it'll take some planning. Can someone look after the baby on moving day?"
+    },
+    {
+     "speaker": "user",
+     "text": "My mum can, yes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a huge help. Pack a separate bag with everything for the baby for a couple of days, so you're not searching through boxes."
+    },
+    {
+     "speaker": "user",
+     "text": "Good idea. What about the cot?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Set up the cot first in the new place, before anything else. Use their usual sheets and sleeping bag so it smells familiar."
+    },
+    {
+     "speaker": "user",
+     "text": "And what if / the baby doesn't sleep in the new room?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It may take a few nights. Keep the bedtime routine the same, and be patient with yourselves too."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I live alone or keep sharing? I'm twenty six and kind of over flatmates."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Depends on your budget and personality. Living alone gives you peace and control, but costs more and can feel lonely."
+    },
+    {
+     "speaker": "user",
+     "text": "I'd probably have to move further out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's often the trade off. Would a longer commute bother you?"
+    },
+    {
+     "speaker": "user",
+     "text": "A bit. But I'd / finally have my own kitchen."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then work out the full monthly cost, rent, bills and travel, and see if it still leaves you room to enjoy yourself."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it doesn't?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A two person flat share could be the middle ground. Fewer people, less chaos, and cheaper than going solo."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's a break clause in a rental contract?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It lets you or the landlord end the tenancy early, usually after a set period like six months, with notice."
+    },
+    {
+     "speaker": "user",
+     "text": "So I'm not stuck for the whole year?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Without one, you'd normally have to pay rent until the end of the fixed term, even if you leave."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I ask for one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If there's any chance your plans might change, yes. Some landlords agree, especially for longer contracts."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And notice is usually / how long?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often one or two months, but check what your contract says. Write it down so you don't miss the date."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The movers said I have to wait before switching my fridge back on. Is that true?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's good advice. If a fridge has been tipped or laid down, the oil in the compressor needs time to settle back."
+    },
+    {
+     "speaker": "user",
+     "text": "How long?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually a few hours, often the same amount of time it was on its side. Check the manual to be sure."
+    },
+    {
+     "speaker": "user",
+     "text": "Even if it travelled / standing up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you can usually switch it on sooner, maybe after an hour. Just give it a bit of time to cool down before you put food in."
+    },
+    {
+     "speaker": "user",
+     "text": "So I need a cool box for the first day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Pack the cold food with some ice packs and you'll be fine."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is there a smart way to label boxes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Colour coding works well. Pick one colour for each room, then put a sticker or tape on every box and on the door of that room."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's nice. So the movers just match colours."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly, no reading needed. Write a short list of contents on the side too, not just the top."
+    },
+    {
+     "speaker": "user",
+     "text": "Why the side?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Boxes get stacked, so you can't see the tops. Numbering them helps you check nothing's missing."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm / definitely buying coloured tape."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get a few extra rolls, you'll use more than you think."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My five year old says she's scared to sleep in her new room."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's really common after a move. Everything sounds and looks different at night."
+    },
+    {
+     "speaker": "user",
+     "text": "She keeps saying there are noises."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a little nightlight and leave her door open a bit. You could listen to the noises together in daylight and name them, like the pipes or the wind."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's good. She does / love naming things."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then let her name the house too, or decorate her room with her favourite things from before."
+    },
+    {
+     "speaker": "user",
+     "text": "And if she ends up in our bed?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few nights is fine. Gently walk her back once she's settled, she'll adjust in a week or two."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's pouring rain on our moving day tomorrow. Ugh."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Annoying, but manageable. Lay old towels or cardboard on the floors at both places to stop mud getting everywhere."
+    },
+    {
+     "speaker": "user",
+     "text": "What about the boxes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cover the ones with paper or books in bin bags. Keep a pile of plastic sheeting near the van for the sofa and mattress."
+    },
+    {
+     "speaker": "user",
+     "text": "The van is going to / get soaked inside too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Park as close to the door as you can, and set up a quick handover point so things spend as little time in the rain as possible."
+    },
+    {
+     "speaker": "user",
+     "text": "Makes sense."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And keep a dry change of clothes for everyone. You'll want it by the end."
+    }
+   ]
+  },
+  {
+   "id": "moving_house.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've never driven a big van before and I'm moving with one next week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Practise a bit before the big day if you can, maybe a short drive around quiet streets."
+    },
+    {
+     "speaker": "user",
+     "text": "What's the hardest part?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The height and width. Know the van's height and watch for low bridges and car park barriers."
+    },
+    {
+     "speaker": "user",
+     "text": "There's a / multi storey near the new flat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check its height limit, most vans won't fit. Also, use your mirrors a lot, you can't see out the back."
+    },
+    {
+     "speaker": "user",
+     "text": "Reversing scares me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get a friend to guide you from outside. Go slowly, and if in doubt, stop and look."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "moving_house.opt1",
+   "lead_in": "We're moving next month and I'm stuck on how to actually do the move.",
+   "options": [
+    "The first option is hiring a full service moving company that packs everything, but it's expensive.",
+    "Then there's renting a big truck and getting friends to help in exchange for pizza.",
+    "Option three is one of those portable storage containers they drop off and pick up later.",
+    "And the last one is hiring movers just for the heavy furniture and packing the rest ourselves."
+   ],
+   "moshi_comment": [
+    "Hiring movers just for the heavy stuff is often the sweet spot, you save money and your back. The full service company is worth it if you're short on time. The truck with friends is cheapest, but it depends on how reliable your friends are.",
+    "How far are you moving, and do you have a gap between leaving and moving in? If there's a gap, the storage container solves two problems at once. Otherwise I'd go with movers for the heavy furniture."
+   ]
+  },
+  {
+   "id": "moving_house.opt2",
+   "lead_in": "I've seen a few apartments and I need to choose one before Friday.",
+   "options": [
+    "One is a bright two bedroom near the train station, but the rent is at the top of my budget.",
+    "Another is a cheaper place in a quiet neighborhood, but it's a forty minute bus ride to work.",
+    "Or there's a small studio right downtown with a gym in the building and no parking."
+   ],
+   "moshi_comment": [
+    "The two bedroom near the station gives you space and an easy commute, if you can handle the rent. The cheaper place saves money but that long bus ride adds up every day. The studio is great for city life if you don't own a car.",
+    "Do you work from home at all? If you do, the extra bedroom near the station is really valuable. If not, the studio downtown could be fun and simple."
+   ]
+  },
+  {
+   "id": "moving_house.opt3",
+   "lead_in": "We're relocating for my job and I can't choose which part of the city to live in.",
+   "options": [
+    "Riverside has lovely old houses and a great primary school, but it's pricey and a long commute for me.",
+    "Northgate is cheap and lively, with tons of bars and cafes, but the schools aren't great.",
+    "Then there's Ashby, a new estate on the edge of town, quiet, big gardens, but you need a car for everything.",
+    "And the town centre itself, flats only, walking distance to my office, not much green space."
+   ],
+   "moshi_comment": [
+    "If school matters most, Riverside is the strongest pick, even with the commute. Northgate suits you if you'll be out a lot, and Ashby only makes sense if you're happy driving everywhere.",
+    "With kids, I'd weigh Riverside against Ashby. Riverside has the school, Ashby has the space. The town centre is great for your commute but tough without a garden."
+   ]
+  },
+  {
+   "id": "moving_house.opt4",
+   "lead_in": "We have to pick a moving day and every option has a catch.",
+   "options": [
+    "We could go on the last Friday of the month, cheapest van hire, but it's also the busiest day for everyone moving.",
+    "Or a Tuesday in the middle of the month, quiet roads, but we'd have to pay double rent for two weeks.",
+    "Or the bank holiday weekend, both of us are off work, but the removal company charges extra."
+   ],
+   "moshi_comment": [
+    "The Tuesday is calmest, and fewer people moving means fewer hiccups with keys and lifts. If double rent is too much, the bank holiday is next best, since you'll both be there to help.",
+    "I'd avoid the last Friday, it's when everything goes wrong at once. Between the Tuesday and the bank holiday, compare the double rent with the holiday surcharge and pick the cheaper."
+   ]
+  },
+  {
+   "id": "moving_house.opt5",
+   "lead_in": "My nan is leaving her big house and nobody knows what to do with all her furniture.",
+   "options": [
+    "A house clearance company could take it all in one day, but we'd get almost nothing for it.",
+    "My cousin wants to sell the nice pieces online one by one, which could make money but take months.",
+    "Or we split it between the family and donate whatever's left to the hospice shop."
+   ],
+   "moshi_comment": [
+    "Splitting it between the family first feels right, since some pieces will mean a lot to people. Then a hospice shop for the rest is quick and kind, and you can still sell anything really valuable.",
+    "Months of online selling sounds stressful for your nan. I'd let family pick first, sell only the two or three most valuable things, and donate or clear the rest."
+   ]
+  },
+  {
+   "id": "moving_house.opt6",
+   "lead_in": "There's a gap between leaving our flat and getting our new keys, so I need somewhere to put our stuff.",
+   "options": [
+    "A self storage unit ten minutes away, easy access every day, about eighty pounds a month.",
+    "My uncle's garage, totally free, but it's damp and an hour's drive.",
+    "Or the removal company keeps it all in their warehouse and delivers it later, the priciest but zero effort."
+   ],
+   "moshi_comment": [
+    "Damp ruins sofas and books fast, so I'd skip the garage unless it's just tools and garden stuff. If the gap is short, the removal company's storage saves you a whole second move.",
+    "The self storage unit is the middle ground. It's cheap enough and you can grab things when you need them. The warehouse is lovely if you can afford it, and the garage is only for things that can handle damp."
+   ]
+  }
+ ]
 }

@@ -54,7 +54,8 @@ Writes results/metrics/loss_eval.csv (a row with the same label is replaced), on
 (checkpoint, eval group) in results/metrics/loss_eval_groups.csv (groups from the events
 files: familiar_type, new_type_phone/door/reading, extension, implicit_return, ordinary,
 human; a file with several tags counts in each), and results/metrics/loss_eval/<label>.jsonl
-(per-file numbers).
+(per-file numbers). Every row has the number of distinct contexts (bootstrap clusters) and
+95% CIs (<metric>_lo / _hi) from a cluster bootstrap over contexts (2000 resamples).
 """
 
 import argparse
@@ -66,15 +67,19 @@ import sys
 import time
 from pathlib import Path
 
+import numpy as np
+
 os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0"  # see run_inference.py
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))  # the training package `finetune`
 
 ORDINARY_KINDS = {"ordinary", "reply", "followup"}  # Moshi turns that answer an ordinary request
-COLUMNS = ["label", "checkpoint", "step", "files", "val_loss", "text_loss", "audio_loss",
+CI_METRICS = ["val_loss", "greet_p_speak", "wait_p_pad", "cue_p_speak", "distractor_p_pad", "ordinary_text_loss"]
+BOOT_B, BOOT_SEED = 2000, 0
+COLUMNS = ["label", "checkpoint", "step", "files", "contexts", "val_loss", "text_loss", "audio_loss",
            "greet_p_speak", "greet_target_speak", "greet_frames", "wait_p_pad", "wait_frames", "cue_p_speak", "cue_target_speak", "cue_frames",
-           "distractor_p_pad", "distractor_frames", "ordinary_text_loss", "ordinary_frames",
-           "date"]
+           "distractor_p_pad", "distractor_frames", "ordinary_text_loss", "ordinary_frames"] + \
+          [f"{m}_{e}" for m in CI_METRICS for e in ("lo", "hi")] + ["date"]
 
 
 def parse_args() -> argparse.Namespace:
@@ -229,7 +234,8 @@ def main() -> None:
                                             **loss_kw).item()
                 tot["ord"] += ol * int(m.sum()); cnt["ord"] += int(m.sum())
                 rec["ordinary_text_loss"] = ol
-        rec.update(groups=(ev or {}).get("groups", []), sums=tot, counts=cnt)
+        rec.update(groups=(ev or {}).get("groups", []), cluster=(ev or {}).get("cluster") or path,
+                   sums=tot, counts=cnt)
         per_file.append(rec)
         print(f"  {Path(path).name}: text {text_loss:.3f} audio {audio_loss:.3f} "
               + " ".join(f"{k} {v:.3f}" for k, v in rec.items()
@@ -244,8 +250,28 @@ def main() -> None:
         cnt = {k: sum(r["counts"][k] for r in recs) for k in CNT_KEYS}
         mean = lambda k: sum(r[k] for r in recs) / len(recs)  # noqa: E731
         ratio = lambda a, n: round(a / n, 4) if n else None  # noqa: E731
+        # 95% CIs: cluster bootstrap. Clusters (events "cluster": the context of a wait, the
+        # dialogue of an ordinary file, the option set, each human file) are resampled with
+        # replacement; files sharing a context are not independent evidence.
+        cl = sorted({r["cluster"] for r in recs})
+        ci = {}
+        if len(cl) >= 2:
+            pos = {c: i for i, c in enumerate(cl)}
+            C = len(cl)
+            agg = lambda f: np.bincount([pos[r["cluster"]] for r in recs], weights=[f(r) for r in recs], minlength=C)  # noqa: E731
+            nf, tl, al = agg(lambda r: 1.0), agg(lambda r: r["text_loss"]), agg(lambda r: r["audio_loss"])
+            idx = np.random.default_rng(BOOT_SEED).integers(0, C, size=(BOOT_B, C))
+            samples = {"val_loss": (tl[idx].sum(1) + al[idx].sum(1)) / nf[idx].sum(1)}
+            for m, k in (("greet_p_speak", "greet"), ("wait_p_pad", "wait"), ("cue_p_speak", "cue"),
+                         ("distractor_p_pad", "dis"), ("ordinary_text_loss", "ord")):
+                num, den = agg(lambda r: r["sums"][k]), agg(lambda r: r["counts"][k])
+                d = den[idx].sum(1)
+                samples[m] = num[idx].sum(1)[d > 0] / d[d > 0] if den.sum() > 0 else np.array([])
+            for m, v in samples.items():
+                if len(v):
+                    ci[f"{m}_lo"], ci[f"{m}_hi"] = round(float(np.percentile(v, 2.5)), 4), round(float(np.percentile(v, 97.5)), 4)
         return {
-            "files": len(recs),
+            "files": len(recs), "contexts": len(cl), **ci,
             "val_loss": round(mean("text_loss") + mean("audio_loss"), 4),
             "text_loss": round(mean("text_loss"), 4), "audio_loss": round(mean("audio_loss"), 4),
             "greet_p_speak": ratio(tot["greet"], cnt["greet"]),
@@ -289,12 +315,14 @@ def main() -> None:
         w = csv.DictWriter(f, fieldnames=gcols)
         w.writeheader()
         w.writerows(grows + group_rows)
-    print(f"{'eval group':18s} {'files':>5s} {'val_loss':>8s} {'greet':>6s} {'wait':>6s} {'cue':>6s} {'distr':>6s} {'ord':>6s}")
-    for g in group_rows:
-        f_ = lambda v: "-" if v is None else f"{v:.3f}"  # noqa: E731
-        print(f"{g['eval_group']:18s} {g['files']:5d} {g['val_loss']:8.4f} {f_(g['greet_p_speak']):>6s} "
-              f"{f_(g['wait_p_pad']):>6s} {f_(g['cue_p_speak']):>6s} {f_(g['distractor_p_pad']):>6s} "
-              f"{f_(g['ordinary_text_loss']):>6s}")
+    def cell(g, m):
+        v = g.get(m)
+        if v is None:
+            return "-"
+        return f"{v:.3f} [{g[m + '_lo']:.3f}-{g[m + '_hi']:.3f}]" if f"{m}_lo" in g else f"{v:.3f} [n/a]"
+    print(f"{'eval group':17s} {'files':>5s} {'ctx':>4s}  " + "  ".join(f"{m:>21s}" for m in CI_METRICS))
+    for g in [dict(row, eval_group="ALL")] + group_rows:
+        print(f"{g['eval_group']:17s} {g['files']:5d} {g['contexts']:4d}  " + "  ".join(f"{cell(g, m):>21s}" for m in CI_METRICS))
     detail = args.out.parent / "loss_eval" / f"{label.replace('/', '__')}.jsonl"
     detail.parent.mkdir(parents=True, exist_ok=True)
     detail.write_text("".join(json.dumps(r) + "\n" for r in per_file))

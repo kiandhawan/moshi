@@ -7,105 +7,148 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
   "podcasts"
  ],
- "reading": {
-  "material": "recipe",
-  "sec": 20.0
- },
  "topic": "podcasts",
  "voices": {
-  "user": "732ea755bd9e446eb31dc79966b50428",
+  "user": "7bb342e710854139b1d6e12411229f1f",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_06",
-  "read_instr_04",
-  "read_cue_04"
+  "greet_30",
+  "greet_ans_21"
  ],
  "block_ids": [
-  "podcasts.ctx1"
+  "podcasts.dlg4"
  ],
- "est_total_sec": 46.93,
- "est_speech_sec": 21.78,
+ "est_total_sec": 48.02,
+ "est_speech_sec": 35.71,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
-   "est_sec": 1.96,
-   "gap_before": 0.74,
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.65,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_30",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.58,
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.74,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_21"
   },
   {
    "speaker": "user",
-   "text": "I need a new podcast for my drive to work.",
-   "est_sec": 3.2,
-   "gap_before": 0.32,
+   "text": "How do podcasts actually make money? Most of them are free.",
+   "est_sec": 3.51,
+   "gap_before": 0.26,
    "event": "ordinary_request",
-   "block": "podcasts.ctx1"
+   "block": "podcasts.dlg4"
   },
   {
    "speaker": "moshi",
-   "text": "How long is the drive, and are you in the mood for true crime, comedy, or something you'd actually learn from?",
-   "est_sec": 6.61,
-   "gap_before": 0.37,
+   "text": "Mostly through ads. Hosts read sponsor messages, and companies pay based on how many people listen.",
+   "est_sec": 5.06,
+   "gap_before": 0.76,
    "role": "reply",
-   "block": "podcasts.ctx1",
+   "block": "podcasts.dlg4",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hang on, let me read this recipe first. Don't talk until I'm finished.",
-   "est_sec": 4.13,
-   "gap_before": 0.35,
-   "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_04"
-  },
-  {
-   "speaker": "user",
-   "text": "Done, I read through it.",
+   "text": "So tiny shows make nothing?",
    "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 20.0
-   },
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "read_cue_04"
+   "gap_before": 0.9,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg4"
   },
   {
    "speaker": "moshi",
-   "text": "All done? Still want that driving podcast? What kind?",
-   "est_sec": 2.89,
-   "gap_before": 1.29,
-   "role": "resume",
-   "block": "podcasts.ctx1",
+   "text": "Often very little from ads. Smaller shows lean on listener support, like monthly memberships with bonus episodes.",
+   "est_sec": 5.37,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "podcasts.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "People pay for bonus episodes?",
+   "est_sec": 1.65,
+   "gap_before": 1.03,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Loyal fans do. Some shows also sell merch or do live tours.",
+   "est_sec": 3.82,
+   "gap_before": 0.83,
+   "role": "reply",
+   "block": "podcasts.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Live tours? For a podcast?",
+   "est_sec": 1.65,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, big shows sell out theatres. Fans love seeing hosts in person.",
+   "est_sec": 3.82,
+   "gap_before": 0.59,
+   "role": "reply",
+   "block": "podcasts.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "That's wild.",
+   "est_sec": 0.72,
+   "gap_before": 0.71,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "podcasts.dlg4"
+  },
+  {
+   "speaker": "user",
+   "text": "I should start a podcast.",
+   "est_sec": 1.65,
+   "gap_before": 1.86,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, maybe. Just know most shows take years to earn anything.",
+   "est_sec": 3.51,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "podcasts.dlg4",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

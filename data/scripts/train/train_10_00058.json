@@ -7,19 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [
-  "wait_like"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "studying"
+  "sleep"
  ],
- "topic": "studying",
+ "topic": "sleep",
  "voices": {
-  "user": "b47bb94bf3ce42b2a7643c31af62c553",
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -27,121 +27,87 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_13",
-  "greet_ans_14",
-  "waitlike_07"
+  "greet_ans_02",
+  "describe_instr_20",
+  "describe_cue_02"
  ],
  "block_ids": [
-  "studying.dlg4"
+  "sleep.opt3"
  ],
- "est_total_sec": 61.73,
- "est_speech_sec": 48.42,
+ "est_total_sec": 48.4,
+ "est_speech_sec": 38.72,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey, nice to hear from you. How are you?",
    "est_sec": 2.89,
-   "gap_before": 0.69,
+   "gap_before": 0.58,
    "role": "greeting",
    "phrasing": "greet_13"
   },
   {
    "speaker": "user",
-   "text": "Hanging in there.",
-   "est_sec": 1.03,
-   "gap_before": 0.31,
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.38,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_14"
+   "phrasing": "greet_ans_02"
   },
   {
    "speaker": "user",
-   "text": "I'm going back to college at fifty-five and I haven't written an essay in thirty years.",
-   "est_sec": 5.06,
-   "gap_before": 0.47,
-   "event": "ordinary_request",
-   "block": "studying.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's exciting. The basics haven't changed much. Have a clear argument, back it up, and keep each paragraph to one idea.",
-   "est_sec": 6.61,
-   "gap_before": 0.77,
-   "role": "reply",
-   "block": "studying.dlg4"
+   "text": "My neck hurts every morning, so I'm shopping for a new pillow.",
+   "est_sec": 3.82,
+   "gap_before": 0.51,
+   "block": "sleep.opt3"
   },
   {
    "speaker": "user",
-   "text": "What about all the referencing? That's what scares me.",
-   "est_sec": 2.89,
-   "gap_before": 1.49,
-   "event": "ordinary_request",
-   "block": "studying.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Most colleges use one standard style and have a guide online. A free reference manager can format everything for you.",
-   "est_sec": 6.3,
-   "gap_before": 0.41,
-   "role": "reply",
-   "block": "studying.dlg4"
+   "text": "Let me describe everything first, and then I'll ask for your thoughts.",
+   "est_sec": 3.82,
+   "gap_before": 0.69,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_20"
   },
   {
    "speaker": "user",
-   "text": "So I don't have to type it all by hand?",
-   "est_sec": 3.2,
-   "gap_before": 0.35,
-   "event": "ordinary_request",
-   "block": "studying.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Not at all. You save the sources as you read, and it builds the list at the end.",
-   "est_sec": 5.68,
-   "gap_before": 0.71,
-   "role": "reply",
-   "block": "studying.dlg4"
+   "text": "There's a contoured memory foam pillow with a dip in the middle for your head.",
+   "est_sec": 4.75,
+   "gap_before": 0.8,
+   "block": "sleep.opt3"
   },
   {
    "speaker": "user",
-   "text": "Hold on, that's not right.",
-   "est_sec": 1.65,
-   "gap_before": 1.1,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_07",
-   "block": "studying.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Hmm, I believe it is. Which part doesn't sound right?",
-   "est_sec": 3.2,
-   "gap_before": 0.74,
-   "role": "reply",
-   "block": "studying.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "Well that's a relief. I was picturing",
-   "est_sec": 2.27,
-   "gap_before": 1.89,
+   "text": "Or a classic feather pillow, soft and squishy, that you can punch into shape.",
+   "est_sec": 4.44,
+   "gap_before": 1.05,
+   "block": "sleep.opt3",
    "event": "distractor",
-   "kind": "pause",
-   "block": "studying.dlg4"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "index cards and a typewriter.",
-   "est_sec": 1.65,
-   "gap_before": 2.06,
-   "event": "ordinary_request",
-   "block": "studying.dlg4"
+   "text": "A buckwheat pillow full of little husks, which apparently stays cool and supports well but rustles.",
+   "est_sec": 5.06,
+   "gap_before": 2.98,
+   "block": "sleep.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 0.8,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_02"
   },
   {
    "speaker": "moshi",
-   "text": "Things have gotten a lot easier. Your library will likely run a short workshop on it too, worth asking.",
-   "est_sec": 5.99,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "studying.dlg4"
+   "text": "For neck pain, the contoured foam is often the most supportive. Feathers are comfy but flatten during the night, and buckwheat is a great middle ground if the rustling doesn't bother you.",
+   "est_sec": 10.02,
+   "gap_before": 0.39,
+   "role": "resume",
+   "block": "sleep.opt3"
   }
  ]
 }

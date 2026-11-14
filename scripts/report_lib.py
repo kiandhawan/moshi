@@ -2,13 +2,17 @@
 
 Rows are the per-run dicts written to results/metrics/<model>.jsonl (one per file and seed).
 Run-level metrics (booleans) are counted over runs; list metrics (one boolean per distractor
-or ordinary request) are counted over those events. All rates come with a 95% Wilson
-confidence interval.
+or ordinary request) are counted over those events. All rates come with a 95% confidence
+interval from a cluster bootstrap: whole clusters (events "cluster": the context of a wait,
+the dialogue of an ordinary file, the option set of describe-options, each human file on its
+own) are resampled with replacement, so files and seeds that share a context move together.
 """
 
 import json
 import math
 import statistics
+
+import numpy as np
 from collections import defaultdict
 from pathlib import Path
 
@@ -50,7 +54,65 @@ def count(rows: list[dict], key: str, kind: str) -> tuple[int, int]:
     return sum(vals), len(vals)
 
 
+BOOT_B, BOOT_SEED = 2000, 0
+
+
+def cluster_of(r: dict) -> str:
+    return r.get("cluster") or r["id"]
+
+
+def bootstrap_ratio(num: np.ndarray, den: np.ndarray, b: int = BOOT_B, seed: int = BOOT_SEED) -> tuple[float, float]:
+    """95% percentile CI of sum(num) / sum(den), resampling clusters (one entry per cluster)
+    with replacement. NaN if fewer than 2 clusters."""
+    num, den = np.asarray(num, float), np.asarray(den, float)
+    if len(num) < 2:
+        return (math.nan, math.nan)
+    idx = np.random.default_rng(seed).integers(0, len(num), size=(b, len(num)))
+    d = den[idx].sum(1)
+    est = num[idx].sum(1)[d > 0] / d[d > 0]
+    return (float(np.percentile(est, 2.5)), float(np.percentile(est, 97.5)))
+
+
+def cluster_counts(rows: list[dict], key: str, kind: str) -> tuple[np.ndarray, np.ndarray]:
+    k: dict[str, int] = defaultdict(int)
+    n: dict[str, int] = defaultdict(int)
+    for r in rows:
+        if kind == "run":
+            vals = [bool(r[key])] if r.get(key) is not None else []
+        else:
+            vals = [bool(v) for v in r.get(key) or []]
+        c = cluster_of(r)
+        k[c] += sum(vals)
+        n[c] += len(vals)
+    cs = [c for c in n if n[c]]
+    return np.array([k[c] for c in cs]), np.array([n[c] for c in cs])
+
+
+def rate_cell(rows: list[dict], key: str, kind: str) -> str:
+    """'% (k/n) [95% CI]' with the cluster bootstrap; '[1 cluster]' when no CI is possible."""
+    kc, nc = cluster_counts(rows, key, kind)
+    k, n = int(kc.sum()), int(nc.sum())
+    if n == 0:
+        return "-"
+    if len(nc) < 2:
+        ci = "[1 cluster]"
+    elif k in (0, n):
+        # Every cluster has the same outcome, so the bootstrap collapses to a single point:
+        # use a Wilson interval over the number of clusters instead (conservative), marked *.
+        lo, hi = wilson(k * len(nc) // n, len(nc))
+        ci = f"[{lo:.0%}-{hi:.0%}]*"
+    else:
+        lo, hi = bootstrap_ratio(kc, nc)
+        ci = f"[{lo:.0%}-{hi:.0%}]"
+    return f"{k / n:.0%} ({k}/{n}) {ci}"
+
+
+def n_clusters(rows: list[dict]) -> int:
+    return len({cluster_of(r) for r in rows})
+
+
 def fmt_rate(k: int, n: int) -> str:
+    """Wilson interval (kept for reference; the tables use rate_cell's cluster bootstrap)."""
     if n == 0:
         return "-"
     lo, hi = wilson(k, n)
@@ -110,28 +172,29 @@ def summary_markdown(models: dict[str, list[dict]]) -> str:
     prim, sec = [], []
     for model, rows in models.items():
         for group, rs in by_group(rows).items():
-            prim.append([model, group, str(n_files(rs)), str(len(rs))]
-                        + [fmt_rate(*count(rs, key, kind)) for _, key, kind in PRIMARY])
+            prim.append([model, group, str(n_files(rs)), str(n_clusters(rs)), str(len(rs))]
+                        + [rate_cell(rs, key, kind) for _, key, kind in PRIMARY])
             sec.append([model, group]
-                       + [fmt_rate(*count(rs, key, kind)) for _, key, kind in SECONDARY]
+                       + [rate_cell(rs, key, kind) for _, key, kind in SECONDARY]
                        + [latency_cell(rs), iou_cell(rs)])
     tag_rows = []
     for model, rows in models.items():
         for tag, rs in by_tag(rows).items():
-            tag_rows.append([model, tag, str(n_files(rs)), str(len(rs))]
-                            + [fmt_rate(*count(rs, key, kind)) for _, key, kind in PRIMARY]
-                            + [fmt_rate(*count(rs, "greeted_at_start", "run")), latency_cell(rs)])
+            tag_rows.append([model, tag, str(n_files(rs)), str(n_clusters(rs)), str(len(rs))]
+                            + [rate_cell(rs, key, kind) for _, key, kind in PRIMARY]
+                            + [rate_cell(rs, "greeted_at_start", "run"), latency_cell(rs)])
     tag_part = ("" if not tag_rows else
                 "\n## By eval group\n\n"
                 "What is new about each file (events `groups`): familiar_type, new_type_phone, new_type_door, "
                 "new_type_reading, extension, implicit_return, ordinary, human. A file with several tags is "
                 "counted in each.\n\n"
-                + md_table(["model", "eval group", "files", "runs"] + [lbl for lbl, _, _ in PRIMARY]
+                + md_table(["model", "eval group", "files", "contexts", "runs"] + [lbl for lbl, _, _ in PRIMARY]
                            + ["greeted at start", "resume latency median"], tag_rows) + "\n")
     return ("## Primary metrics\n\n"
-            "Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); "
+            "Rates: % (k/n) [95% CI, cluster bootstrap over contexts; * = all clusters had the same outcome, so a Wilson interval "
+            "over the number of clusters]. Run-level rates are over runs (files x seeds); "
             "distractor and ordinary rates are over individual events x seeds.\n\n"
-            + md_table(["model", "group", "files", "runs"] + [lbl for lbl, _, _ in PRIMARY], prim)
+            + md_table(["model", "group", "files", "contexts", "runs"] + [lbl for lbl, _, _ in PRIMARY], prim)
             + "\n\n## Secondary metrics\n\n"
             + md_table(["model", "group"] + [lbl for lbl, _, _ in SECONDARY]
                        + ["resume latency median", "VAD/text IoU"], sec) + "\n" + tag_part)
@@ -141,7 +204,8 @@ def comparison_markdown(models: dict[str, list[dict]]) -> str:
     """One table per group: metrics as rows, models as columns."""
     names = list(models)
     groups = sorted({r["group"] for rows in models.values() for r in rows})
-    parts = ["Rates: % (k/n) [95% Wilson CI]. Run-level rates are over runs (files x seeds); "
+    parts = ["Rates: % (k/n) [95% CI, cluster bootstrap over contexts; * = all clusters had the same outcome, so a Wilson interval "
+            "over the number of clusters]. Run-level rates are over runs (files x seeds); "
              "distractor and ordinary rates are over individual events x seeds.\n"]
     tags = sorted({t for rows in models.values() for r in rows for t in r.get("groups") or []})
     sections = [(g, lambda r, g=g: r["group"] == g) for g in groups] + \
@@ -149,11 +213,12 @@ def comparison_markdown(models: dict[str, list[dict]]) -> str:
     for group, keep in sections:
         per = {m: [r for r in models[m] if keep(r)] for m in names}
         body = [["files"] + [str(n_files(per[m])) if per[m] else "-" for m in names],
+                ["contexts"] + [str(n_clusters(per[m])) if per[m] else "-" for m in names],
                 ["runs"] + [str(len(per[m])) if per[m] else "-" for m in names]]
         for lbl, key, kind in PRIMARY:  # always shown, "-" when nothing to count
-            body.append([lbl] + [fmt_rate(*count(per[m], key, kind)) for m in names])
+            body.append([lbl] + [rate_cell(per[m], key, kind) for m in names])
         for lbl, key, kind in SECONDARY:  # shown only when some model has data
-            cells = [fmt_rate(*count(per[m], key, kind)) for m in names]
+            cells = [rate_cell(per[m], key, kind) for m in names]
             if any(c != "-" for c in cells):
                 body.append([lbl] + cells)
         body.append(["resume latency median"] + [latency_cell(per[m]) for m in names])

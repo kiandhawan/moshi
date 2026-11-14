@@ -7,106 +7,107 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "cleaning"
+  "cooking"
  ],
- "wait_sec": 5,
- "deadline": {
-  "after_turn": 4,
-  "sec": 5
- },
- "topic": "cleaning",
+ "topic": "cooking",
  "voices": {
-  "user": "e7de86b388864b8cbd50d0d70a3494e5",
+  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_10",
-  "greet_ans_07",
-  "think_instr_14"
+  "greet_11",
+  "greet_ans_17",
+  "describe_instr_13",
+  "describe_cue_07"
  ],
  "block_ids": [
-  "cleaning.ctx1"
+  "cooking.opt1"
  ],
- "est_total_sec": 43.28,
- "est_speech_sec": 30.87,
+ "est_total_sec": 59.12,
+ "est_speech_sec": 47.71,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your day been so far?",
-   "est_sec": 2.27,
-   "gap_before": 0.79,
-   "role": "greeting",
-   "phrasing": "greet_10"
-  },
-  {
-   "speaker": "user",
-   "text": "Honestly, a little stressed, but okay.",
+   "text": "Hi, how are things with you?",
    "est_sec": 1.96,
-   "gap_before": 0.9,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_07"
+   "gap_before": 0.75,
+   "role": "greeting",
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "Guests are coming Saturday and the whole place is a mess. I've got maybe two hours tomorrow.",
-   "est_sec": 5.37,
-   "gap_before": 0.5,
-   "event": "ordinary_request",
-   "block": "cleaning.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Two hours is enough if you focus. Should we start with the kitchen and bathroom, or the living room where everyone will sit?",
-   "est_sec": 7.23,
-   "gap_before": 0.49,
-   "role": "reply",
-   "block": "cleaning.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait five seconds, then ask me that again.",
-   "est_sec": 2.58,
-   "gap_before": 0.94,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 5,
-   "phrasing": "think_instr_14"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, back to the cleaning plan. Kitchen and bath, or living room first?",
-   "est_sec": 4.13,
-   "role": "resume",
-   "block": "cleaning.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 5.07
-   }
-  },
-  {
-   "speaker": "user",
-   "text": "Living room. That's what people will actually see.",
-   "est_sec": 2.58,
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
    "gap_before": 0.31,
-   "event": "ordinary_request",
-   "block": "cleaning.ctx1"
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "I can't decide what to make for dinner on Saturday when my in-laws come over.",
+   "est_sec": 4.75,
+   "gap_before": 0.44,
+   "block": "cooking.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait until I've listed everything before you jump in.",
+   "est_sec": 2.89,
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_13"
+  },
+  {
+   "speaker": "user",
+   "text": "The first idea is a big roast chicken with potatoes and carrots, all in one tray in the oven.",
+   "est_sec": 5.99,
+   "gap_before": 1.21,
+   "block": "cooking.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's homemade lasagna, which I could make the night before and just bake when they arrive.",
+   "est_sec": 5.37,
+   "gap_before": 2.37,
+   "block": "cooking.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is grilled salmon with a lemon sauce and a green salad, lighter but more last minute.",
+   "est_sec": 6.3,
+   "gap_before": 1.29,
+   "block": "cooking.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "That's it. Now you can comment.",
+   "est_sec": 1.96,
+   "gap_before": 1.11,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_07"
   },
   {
    "speaker": "moshi",
-   "text": "Fair enough. Clear the surfaces, vacuum, and fluff the cushions, and it'll look great fast.",
-   "est_sec": 4.75,
-   "gap_before": 1.91,
-   "role": "followup",
-   "block": "cleaning.ctx1"
+   "text": "The lasagna is the least stressful, since you can make it ahead and actually enjoy your guests. The roast chicken is a safe crowd pleaser too, but timing the oven can be tricky. The salmon is lovely, though cooking it at the last minute while people are chatting is a lot of pressure.",
+   "est_sec": 16.53,
+   "gap_before": 1.68,
+   "role": "resume",
+   "block": "cooking.opt1"
   }
  ]
 }

@@ -7,120 +7,118 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "coffee"
+  "studying"
  ],
- "topic": "coffee",
+ "topic": "studying",
  "voices": {
-  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_01",
-  "greet_ans_28"
+  "greet_05",
+  "greet_ans_17",
+  "describe_instr_13",
+  "describe_cue_13"
  ],
  "block_ids": [
-  "coffee.dlg1"
+  "studying.opt5"
  ],
- "est_total_sec": 48.79,
- "est_speech_sec": 35.82,
+ "est_total_sec": 53.9,
+ "est_speech_sec": 39.75,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how are you doing?",
+   "text": "Hi, how have you been?",
    "est_sec": 1.65,
-   "gap_before": 0.72,
+   "gap_before": 0.63,
    "role": "greeting",
-   "phrasing": "greet_01"
+   "phrasing": "greet_05"
   },
   {
    "speaker": "user",
-   "text": "Doing alright, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.88,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
-  },
-  {
-   "speaker": "user",
-   "text": "What's the difference between a latte and a flat white?",
-   "est_sec": 3.2,
-   "gap_before": 0.37,
-   "event": "ordinary_request",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A flat white has less milk and a thinner layer of foam, so it tastes stronger. A latte is bigger and milkier.",
-   "est_sec": 6.92,
-   "gap_before": 1.97,
-   "role": "reply",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "And a cappuccino?",
-   "est_sec": 1.03,
-   "gap_before": 0.65,
-   "event": "ordinary_request",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A cappuccino has a thick layer of foam on top, and it's usually smaller than a latte.",
-   "est_sec": 5.37,
-   "gap_before": 0.58,
-   "role": "reply",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "So if I want something",
-   "est_sec": 1.65,
-   "gap_before": 0.74,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "not too milky but still creamy?",
+   "text": "A bit tired today, but okay.",
    "est_sec": 1.96,
-   "gap_before": 2.79,
-   "event": "ordinary_request",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A flat white is probably your best bet. Strong coffee flavour with a smooth, velvety texture.",
-   "est_sec": 5.06,
    "gap_before": 0.99,
-   "role": "reply",
-   "block": "coffee.dlg1"
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'm going to order one tomorrow and see.",
+   "text": "I keep trying different ways of taking notes in lectures and nothing is working.",
+   "est_sec": 4.44,
+   "gap_before": 0.39,
+   "block": "studying.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait until I've listed everything before you jump in.",
    "est_sec": 2.89,
-   "gap_before": 1.46,
-   "event": "ordinary_request",
-   "block": "coffee.dlg1"
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Typing everything on my laptop, which is fast, but I don't remember any of it.",
+   "est_sec": 4.75,
+   "gap_before": 0.64,
+   "block": "studying.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Writing by hand in a notebook, slower, but it feels like it sticks better.",
+   "est_sec": 4.44,
+   "gap_before": 2.47,
+   "block": "studying.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Just listening and then writing a summary afterwards from the slides.",
+   "est_sec": 3.51,
+   "gap_before": 2.16,
+   "block": "studying.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or recording the lecture and making notes from the recording at home.",
+   "est_sec": 3.82,
+   "gap_before": 2.25,
+   "block": "studying.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 1.37,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
   },
   {
    "speaker": "moshi",
-   "text": "Enjoy it. If it's too strong, you can always ask for an extra splash of milk.",
-   "est_sec": 5.06,
-   "gap_before": 0.32,
-   "role": "reply",
-   "block": "coffee.dlg1"
+   "text": "Recording lectures sounds good but doubles your time, so I'd avoid it except for hard topics. Handwritten notes plus a quick summary that evening is a strong combination for most people.",
+   "est_sec": 9.71,
+   "gap_before": 1.0,
+   "role": "resume",
+   "block": "studying.opt5"
   }
  ]
 }

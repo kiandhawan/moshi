@@ -7,120 +7,108 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "weekend_plans"
+  "pets"
  ],
- "topic": "weekend_plans",
+ "wait_sec": 5,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 5
+ },
+ "topic": "pets",
  "voices": {
-  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_25",
-  "greet_ans_05"
+  "greet_19",
+  "greet_ans_28",
+  "think_instr_04"
  ],
  "block_ids": [
-  "weekend_plans.dlg3"
+  "pets.ctx8"
  ],
- "est_total_sec": 51.1,
- "est_speech_sec": 38.61,
+ "est_total_sec": 39.47,
+ "est_speech_sec": 27.77,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there! How's your day treating you?",
-   "est_sec": 2.27,
-   "gap_before": 0.32,
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.73,
    "role": "greeting",
-   "phrasing": "greet_25"
+   "phrasing": "greet_19"
   },
   {
    "speaker": "user",
-   "text": "I'm alright, a bit tired.",
-   "est_sec": 1.65,
-   "gap_before": 0.44,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_05"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm thinking of doing a little day trip on Sunday. Somewhere I can get to by train.",
-   "est_sec": 5.37,
-   "gap_before": 0.36,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sounds fun. Do you prefer the seaside, a historic town, or countryside walks?",
-   "est_sec": 4.13,
-   "gap_before": 0.56,
-   "role": "reply",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Seaside, I think. I haven't seen the sea in ages.",
-   "est_sec": 3.2,
-   "gap_before": 2.3,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then pick a coastal town within about two hours by train. Leave early so you get a full day there.",
-   "est_sec": 6.3,
-   "gap_before": 0.54,
-   "role": "reply",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "What if the weather's bad?",
-   "est_sec": 1.65,
-   "gap_before": 2.48,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Seaside towns are still nice in grey weather. A cozy cafe, the pier, maybe an aquarium if there's one.",
-   "est_sec": 5.99,
-   "gap_before": 0.35,
-   "role": "reply",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Actually, I might",
+   "text": "Doing alright, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.52,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "weekend_plans.dlg3"
+   "gap_before": 0.53,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
   },
   {
    "speaker": "user",
-   "text": "bring my sister along.",
-   "est_sec": 1.34,
-   "gap_before": 1.94,
+   "text": "My spaniel rolled in something unspeakable and he smells like a bin.",
+   "est_sec": 3.82,
+   "gap_before": 0.39,
    "event": "ordinary_request",
-   "block": "weekend_plans.dlg3"
+   "block": "pets.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "Even better. Check if there's a two together railcard or group ticket, it can save you a lot.",
-   "est_sec": 5.68,
-   "gap_before": 1.18,
+   "text": "Oh no. Are you going to wrestle him into the bath yourself, or book him in at a groomer?",
+   "est_sec": 5.99,
+   "gap_before": 0.41,
    "role": "reply",
-   "block": "weekend_plans.dlg3"
+   "block": "pets.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "I don't know yet. Ask me again in five seconds.",
+   "est_sec": 3.2,
+   "gap_before": 1.49,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 5,
+   "phrasing": "think_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, bath at home, or off to the groomer?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "pets.ctx8",
+   "anchor": {
+    "turn": 4,
+    "offset": 5.33
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "At home. I can't wait three days for an appointment.",
+   "est_sec": 3.2,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "pets.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Use a dog shampoo, not your own, and rinse twice. Put a towel down, he'll shake on everything.",
+   "est_sec": 5.99,
+   "gap_before": 0.92,
+   "role": "followup",
+   "block": "pets.ctx8"
   }
  ]
 }

@@ -7,129 +7,126 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "learning_language"
+  "camping"
  ],
- "topic": "learning_language",
+ "wait_sec": 15,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 15
+ },
+ "topic": "camping",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
+  "user": "732ea755bd9e446eb31dc79966b50428",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_30",
-  "greet_ans_15"
+  "greet_27",
+  "greet_ans_24",
+  "think_instr_24",
+  "ack_08"
  ],
  "block_ids": [
-  "learning_language.dlg2"
+  "camping.ctx5"
  ],
- "est_total_sec": 53.02,
- "est_speech_sec": 42.64,
+ "est_total_sec": 55.33,
+ "est_speech_sec": 33.14,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's it going? You doing okay?",
-   "est_sec": 2.27,
-   "gap_before": 0.31,
-   "role": "greeting",
-   "phrasing": "greet_30",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I'm fine, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.89,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_15"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it too late to learn a language at fifty?",
-   "est_sec": 3.2,
-   "gap_before": 0.52,
-   "event": "ordinary_request",
-   "block": "learning_language.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Not at all. Adults often learn grammar and vocabulary faster than kids, they just take longer with the accent.",
-   "est_sec": 5.99,
-   "gap_before": 0.5,
-   "role": "reply",
-   "block": "learning_language.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "My accent is going to be awful.",
-   "est_sec": 2.27,
-   "gap_before": 0.46,
-   "event": "ordinary_request",
-   "block": "learning_language.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Maybe a little, but people care much more about whether they understand you. A clear accent beats a perfect one.",
-   "est_sec": 6.3,
-   "gap_before": 0.74,
-   "role": "reply",
-   "block": "learning_language.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Fair. I was thinking Portuguese, or",
+   "text": "Hey there, how have things been?",
    "est_sec": 1.96,
-   "gap_before": 0.78,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "learning_language.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "maybe Greek, since we go there every summer.",
-   "est_sec": 2.58,
-   "gap_before": 2.51,
-   "event": "ordinary_request",
-   "block": "learning_language.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Greek would be lovely if you visit every year, you'd get real practice each trip. The alphabet takes a week or two to learn, then it's fine.",
-   "est_sec": 8.47,
-   "gap_before": 0.52,
-   "role": "reply",
-   "block": "learning_language.dlg2",
+   "gap_before": 0.38,
+   "role": "greeting",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Okay, Greek it is. Where do I start?",
-   "est_sec": 2.58,
-   "gap_before": 1.24,
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.4,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm sixty-eight and I've decided to go camping alone for the first time. My kids think I've lost it.",
+   "est_sec": 5.99,
+   "gap_before": 0.42,
    "event": "ordinary_request",
-   "block": "learning_language.dlg2"
+   "block": "camping.ctx5"
   },
   {
    "speaker": "moshi",
-   "text": "Learn the alphabet first, then basic greetings and food words. Locals really appreciate even a little effort.",
-   "est_sec": 5.37,
-   "gap_before": 0.41,
+   "text": "Good for you. Would you feel more at ease at a campground with a host on site, or are you after somewhere truly remote?",
+   "est_sec": 7.54,
+   "gap_before": 1.15,
    "role": "reply",
-   "block": "learning_language.dlg2",
+   "block": "camping.ctx5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I need a moment, like fifteen seconds. Ask me again then.",
+   "est_sec": 3.51,
+   "gap_before": 1.38,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_08",
+   "reference_only": true
+  },
+  {
+   "speaker": "moshi",
+   "text": "Any answer yet? Someone nearby, or properly off on your own?",
+   "est_sec": 3.51,
+   "role": "resume",
+   "block": "camping.ctx5",
+   "anchor": {
+    "turn": 4,
+    "offset": 15.52
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A host, I think. Just this first time.",
+   "est_sec": 2.58,
+   "gap_before": 1.45,
+   "event": "ordinary_request",
+   "block": "camping.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sensible. You'll still have your own quiet site, with help close by if you need it.",
+   "est_sec": 5.06,
+   "gap_before": 1.02,
+   "role": "followup",
+   "block": "camping.ctx5",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

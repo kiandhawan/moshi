@@ -7,120 +7,140 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
  "wait_type": null,
  "conditions": [],
  "topics": [
-  "photography"
+  "cars"
  ],
- "topic": "photography",
+ "topic": "cars",
  "voices": {
-  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_20",
-  "greet_ans_01"
+  "greet_04",
+  "greet_ans_28"
  ],
  "block_ids": [
-  "photography.dlg4"
+  "cars.dlg30"
  ],
- "est_total_sec": 53.02,
- "est_speech_sec": 43.57,
+ "est_total_sec": 68.75,
+ "est_speech_sec": 53.38,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, good to have you here. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.74,
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.34,
    "role": "greeting",
-   "phrasing": "greet_20"
+   "phrasing": "greet_04"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
+   "text": "Doing alright, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.99,
+   "gap_before": 0.47,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_28"
   },
   {
    "speaker": "user",
-   "text": "I'm a retired teacher and I just bought my first camera. I want to photograph birds in my garden.",
+   "text": "We're taking our electric car on holiday for the first time. I'm worried we'll run out of charge somewhere.",
    "est_sec": 5.99,
-   "gap_before": 0.46,
+   "gap_before": 0.36,
    "event": "ordinary_request",
-   "block": "photography.dlg4"
+   "block": "cars.dlg30"
   },
   {
    "speaker": "moshi",
-   "text": "Lovely hobby. A bird feeder near a window gives you a steady stream of subjects without scaring them off.",
-   "est_sec": 5.99,
-   "gap_before": 0.78,
+   "text": "Totally normal worry. How far is the trip, and what's your car's real range in practice?",
+   "est_sec": 5.06,
+   "gap_before": 1.21,
    "role": "reply",
-   "block": "photography.dlg4"
+   "block": "cars.dlg30"
   },
   {
    "speaker": "user",
-   "text": "They fly off as soon as",
+   "text": "About four hundred miles. It does maybe two hundred and twenty on a full charge.",
+   "est_sec": 4.75,
+   "gap_before": 0.44,
+   "event": "ordinary_request",
+   "block": "cars.dlg30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then plan on two charging stops, maybe three to be relaxed. A route planning app can show fast chargers along the way.",
+   "est_sec": 6.92,
+   "gap_before": 1.19,
+   "role": "reply",
+   "block": "cars.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "How long does each stop take?",
    "est_sec": 1.96,
-   "gap_before": 0.39,
+   "gap_before": 0.59,
+   "event": "ordinary_request",
+   "block": "cars.dlg30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "On a fast charger, usually twenty to forty minutes to get from low to about eighty percent. Charging slows down a lot after that, so it's rarely worth waiting for full.",
+   "est_sec": 9.71,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "cars.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "Eighty percent, okay. And if a charger is broken?",
+   "est_sec": 2.89,
+   "gap_before": 1.12,
+   "event": "ordinary_request",
+   "block": "cars.dlg30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's why it's good to arrive at each stop with some buffer, and have a backup charger in mind nearby.",
+   "est_sec": 6.3,
+   "gap_before": 1.05,
+   "role": "reply",
+   "block": "cars.dlg30"
+  },
+  {
+   "speaker": "user",
+   "text": "The kids will",
+   "est_sec": 1.03,
+   "gap_before": 2.34,
    "event": "distractor",
    "kind": "pause",
-   "block": "photography.dlg4"
+   "block": "cars.dlg30"
   },
   {
    "speaker": "user",
-   "text": "I open the back door.",
-   "est_sec": 1.65,
-   "gap_before": 2.01,
+   "text": "be happy with lunch breaks anyway.",
+   "est_sec": 1.96,
+   "gap_before": 2.7,
    "event": "ordinary_request",
-   "block": "photography.dlg4"
+   "block": "cars.dlg30"
   },
   {
    "speaker": "moshi",
-   "text": "Shoot from inside through an open window, or sit very still outside for ten minutes. Birds get used to a quiet person surprisingly fast.",
-   "est_sec": 7.54,
-   "gap_before": 0.78,
+   "text": "Exactly, line the stops up with meals and it barely feels like waiting.",
+   "est_sec": 4.13,
+   "gap_before": 1.12,
    "role": "reply",
-   "block": "photography.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "And what setting should I use? They move so quickly.",
-   "est_sec": 3.2,
-   "gap_before": 0.54,
-   "event": "ordinary_request",
-   "block": "photography.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Use a fast shutter speed, around one thousandth of a second, and burst mode. Then keep the sharpest shot.",
-   "est_sec": 5.99,
-   "gap_before": 0.32,
-   "role": "reply",
-   "block": "photography.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "Burst mode is the one that clicks a lot?",
-   "est_sec": 2.89,
-   "gap_before": 0.41,
-   "event": "ordinary_request",
-   "block": "photography.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's the one. Hold the button down and it takes several photos per second.",
-   "est_sec": 4.44,
-   "gap_before": 0.53,
-   "role": "reply",
-   "block": "photography.dlg4"
+   "block": "cars.dlg30"
   }
  ]
 }

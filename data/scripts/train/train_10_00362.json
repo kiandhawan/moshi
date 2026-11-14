@@ -7,114 +7,145 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "smartphones"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "smartphones",
+ "topics": [
+  "travel_planning"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "travel_planning",
  "voices": {
-  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "user": "5ce84bbd213b4943bc89e1951e17848a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_10",
-  "greet_ans_14",
-  "describe_instr_17",
-  "ack_10",
-  "describe_cue_10"
+  "greet_08",
+  "greet_ans_01",
+  "think_instr_20",
+  "ack_13",
+  "self_04",
+  "self_11"
  ],
  "block_ids": [
-  "smartphones.opt2"
+  "travel_planning.ctx11"
  ],
- "est_total_sec": 49.93,
- "est_speech_sec": 39.44,
+ "est_total_sec": 55.47,
+ "est_speech_sec": 33.65,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your day been so far?",
+   "text": "Hi there, how are you feeling today?",
    "est_sec": 2.27,
-   "gap_before": 0.58,
+   "gap_before": 0.48,
    "role": "greeting",
-   "phrasing": "greet_10"
+   "phrasing": "greet_08"
   },
   {
    "speaker": "user",
-   "text": "Hanging in there.",
+   "text": "I'm good, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.99,
+   "gap_before": 0.48,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_14"
+   "phrasing": "greet_ans_01"
   },
   {
    "speaker": "user",
-   "text": "I'm getting my dad a new phone and I want to pick the right one.",
-   "est_sec": 4.75,
-   "gap_before": 0.43,
-   "block": "smartphones.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me finish describing every option before you respond.",
-   "est_sec": 2.89,
-   "gap_before": 0.73,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_17"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, no rush.",
-   "est_sec": 1.03,
-   "gap_before": 0.61,
-   "role": "ack",
-   "phrasing": "ack_10"
-  },
-  {
-   "speaker": "user",
-   "text": "One is a simple phone with big buttons and a large screen, made for people who aren't techy.",
+   "text": "We're going to Ireland for a family reunion in Kerry. Should we rent a car or use buses?",
    "est_sec": 5.68,
-   "gap_before": 1.24,
-   "block": "smartphones.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is the same brand he's using now, just the newer version, so everything feels familiar.",
-   "est_sec": 5.06,
-   "gap_before": 1.05,
-   "block": "smartphones.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a cheap basic smartphone that mostly does calls, texts and photos.",
-   "est_sec": 4.13,
-   "gap_before": 1.8,
-   "block": "smartphones.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Done. What would you recommend?",
-   "est_sec": 1.65,
-   "gap_before": 0.59,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_10"
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "travel_planning.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Does he struggle with his current phone, or is it just old? If he's comfortable with it, get the newer version of the same one. If he struggles, the big screen phone could really help.",
-   "est_sec": 10.95,
-   "gap_before": 0.97,
+   "text": "Buses connect the towns, but the countryside is much easier by car. Are you comfortable driving on the left on narrow roads?",
+   "est_sec": 6.92,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "travel_planning.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I need twenty seconds to think. Then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 1.72,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.54,
+   "role": "ack",
+   "phrasing": "ack_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, what did I do last time?",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 12.44
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, pros and cons.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 16.73
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, car or buses for Kerry?",
+   "est_sec": 1.96,
    "role": "resume",
-   "block": "smartphones.opt2"
+   "block": "travel_planning.ctx11",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.3
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Buses. I'd be terrified on those roads.",
+   "est_sec": 2.27,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "travel_planning.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's fine. Base yourselves in Killarney, it has good connections and lots of local tours.",
+   "est_sec": 4.75,
+   "gap_before": 0.33,
+   "role": "followup",
+   "block": "travel_planning.ctx11"
   }
  ]
 }

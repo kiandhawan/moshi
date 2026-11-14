@@ -7,165 +7,167 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "door",
- "wait_type": "door",
- "conditions": [],
- "topics": [
-  "learning_language"
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
  ],
- "topic": "learning_language",
+ "topics": [
+  "podcasts"
+ ],
+ "reading": {
+  "material": "email",
+  "sec": 17.2
+ },
+ "topic": "podcasts",
  "voices": {
-  "user": "026218fe0c054374838d934016f34082",
-  "friend": "b121b91872f54f04ba9f6da08b8b6253",
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_09",
-  "greet_ans_15",
-  "door_instr_06",
-  "ack_11",
-  "door_07",
-  "door_cue_02"
+  "greet_24",
+  "greet_ans_03",
+  "read_instr_01",
+  "ack_16",
+  "murmur_02",
+  "implicit_12"
  ],
  "block_ids": [
-  "learning_language.ctx1"
+  "podcasts.ctx15"
  ],
- "est_total_sec": 56.78,
- "est_speech_sec": 36.84,
+ "est_total_sec": 56.83,
+ "est_speech_sec": 34.47,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's it going?",
-   "est_sec": 1.34,
-   "gap_before": 0.53,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.42,
    "role": "greeting",
-   "phrasing": "greet_09",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm fine, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.46,
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.56,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_15"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "I want to start learning a new language this year.",
-   "est_sec": 3.2,
+   "text": "I need a name for my gardening podcast and I'm stuck.",
+   "est_sec": 3.51,
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun. Do you lean toward puns, or something plain?",
+   "est_sec": 2.89,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "podcasts.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My friends all want puns.",
+   "est_sec": 1.65,
+   "gap_before": 0.91,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Puns are memorable but can get cheesy. A clever pun, or a simple name people can search easily?",
+   "est_sec": 5.68,
+   "gap_before": 0.98,
+   "role": "reply",
+   "block": "podcasts.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I just got an email I need to read. Don't say anything until I'm done.",
+   "est_sec": 5.37,
+   "gap_before": 1.2,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.7,
+   "role": "ack",
+   "phrasing": "ack_16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, the meeting moved to Thursday.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 6,
+    "offset": 7.43
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm all yours again.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 17.2
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. Your podcast name. Pun, or plain?",
+   "est_sec": 2.58,
+   "gap_before": 0.37,
+   "role": "resume",
+   "block": "podcasts.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A pun. Something like Lettuce Talk.",
+   "est_sec": 1.96,
    "gap_before": 0.58,
    "event": "ordinary_request",
-   "block": "learning_language.ctx1"
+   "block": "podcasts.ctx15"
   },
   {
    "speaker": "moshi",
-   "text": "Great goal. Is there a language you need for work or travel, or would you rather pick one just because it sounds fun?",
-   "est_sec": 7.23,
-   "gap_before": 0.56,
-   "role": "reply",
-   "block": "learning_language.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Wait, that's the door. Hold on and don't talk until I'm back.",
-   "est_sec": 3.82,
-   "gap_before": 1.38,
-   "event": "instruction",
-   "kind": "door",
-   "phrasing": "door_instr_06"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright.",
-   "est_sec": 0.41,
-   "gap_before": 0.36,
-   "role": "ack",
-   "phrasing": "ack_11",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hello?",
-   "est_sec": 0.41,
-   "gap_before": 4.53,
-   "phrasing": "door_07",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Hi, we're collecting for the school fundraiser.",
-   "est_sec": 2.27,
-   "gap_before": 0.93,
-   "phrasing": "door_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Sure, how much are people giving?",
-   "est_sec": 1.96,
-   "gap_before": 0.56,
-   "phrasing": "door_07",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Anything helps, really.",
-   "est_sec": 1.03,
-   "gap_before": 0.66,
-   "phrasing": "door_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Here you go.",
-   "est_sec": 1.03,
-   "gap_before": 0.86,
-   "phrasing": "door_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Sorry, that took a minute. I'm back.",
-   "est_sec": 2.27,
-   "gap_before": 3.94,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "door_cue_02"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Welcome back. Have you thought about which language you'd like to start?",
-   "est_sec": 3.82,
-   "gap_before": 0.42,
-   "role": "resume",
-   "block": "learning_language.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Japanese, honestly just because I love the culture.",
-   "est_sec": 2.58,
-   "gap_before": 1.67,
-   "event": "ordinary_request",
-   "block": "learning_language.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Wonderful. Learn the two kana alphabets first, they make everything else easier.",
-   "est_sec": 3.82,
-   "gap_before": 1.0,
+   "text": "Ha, that's cute. Just check nobody else already uses it.",
+   "est_sec": 3.2,
+   "gap_before": 0.45,
    "role": "followup",
-   "block": "learning_language.ctx1",
+   "block": "podcasts.ctx15",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_door"
+  "new_type_reading",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

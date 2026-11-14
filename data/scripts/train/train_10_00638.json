@@ -7,106 +7,117 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
  "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "books"
+  "music"
  ],
  "wait_sec": 10,
  "deadline": {
-  "after_turn": 6,
+  "after_turn": 4,
   "sec": 10
  },
- "topic": "books",
+ "topic": "music",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "705690224f264386b87fb598083ab022",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_23",
-  "think_instr_02"
+  "greet_07",
+  "greet_ans_22",
+  "think_instr_23",
+  "ack_13"
  ],
  "block_ids": [
-  "books.ctx3"
+  "music.ctx1"
  ],
- "est_total_sec": 42.33,
- "est_speech_sec": 24.36,
+ "est_total_sec": 48.39,
+ "est_speech_sec": 29.11,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.66,
-   "role": "greeting",
-   "phrasing": "greet_22"
-  },
-  {
-   "speaker": "user",
-   "text": "Good, good. Thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.52,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_23"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to read more, but I'm always on the go.",
-   "est_sec": 3.51,
-   "gap_before": 0.34,
-   "event": "ordinary_request",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Audiobooks might help, or an e-reader that fits in your pocket.",
-   "est_sec": 3.51,
-   "gap_before": 0.79,
-   "role": "reply",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, both sound good.",
+   "text": "Hey! How's everything going?",
    "est_sec": 1.34,
-   "gap_before": 1.5,
-   "event": "ordinary_request",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Which fits your day better, listening on the bus and at the gym, or reading in short quiet moments?",
-   "est_sec": 5.99,
-   "gap_before": 1.18,
-   "role": "reply",
-   "block": "books.ctx3"
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_07"
   },
   {
    "speaker": "user",
-   "text": "Let me think about it for ten seconds and then ask me again.",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.38,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm forty-five and I've always wanted to learn an instrument. Is it too late?",
+   "est_sec": 4.44,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "music.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not at all, adults learn quickly because they practice with purpose. Are you drawn more to the guitar, the piano, or something else?",
+   "est_sec": 7.23,
+   "gap_before": 1.23,
+   "role": "reply",
+   "block": "music.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me ten seconds, I want to think about it. Then ask again.",
    "est_sec": 4.13,
-   "gap_before": 1.42,
+   "gap_before": 1.21,
    "event": "instruction",
    "kind": "think_time",
    "wait_sec": 10,
-   "phrasing": "think_instr_02"
+   "phrasing": "think_instr_23"
   },
   {
    "speaker": "moshi",
-   "text": "Have you decided between listening and reading on the go?",
-   "est_sec": 3.2,
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.21,
+   "role": "ack",
+   "phrasing": "ack_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Any decision yet on guitar versus piano?",
+   "est_sec": 2.27,
    "role": "resume",
-   "block": "books.ctx3",
+   "block": "music.ctx1",
    "anchor": {
-    "turn": 6,
-    "offset": 10.06
+    "turn": 4,
+    "offset": 10.59
    }
+  },
+  {
+   "speaker": "user",
+   "text": "Guitar, I think. It's easier to carry around.",
+   "est_sec": 2.58,
+   "gap_before": 3.45,
+   "event": "ordinary_request",
+   "block": "music.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good choice. Start with a few basic chords, you'll be playing simple songs within weeks.",
+   "est_sec": 4.75,
+   "gap_before": 1.16,
+   "role": "followup",
+   "block": "music.ctx1"
   }
  ]
 }

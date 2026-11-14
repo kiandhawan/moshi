@@ -7,187 +7,136 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [],
- "topics": [
-  "smartphones",
-  "moving_house"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "smartphones",
+ "topics": [
+  "personal_finance"
+ ],
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 10
+ },
+ "topic": "personal_finance",
  "voices": {
-  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
-  "friend": "c70cfb98867a4bfb9ae20d2401257b92",
+  "user": "b47bb94bf3ce42b2a7643c31af62c553",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Ben",
- "friend_name_id": "name_11",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_08",
-  "greet_ans_11",
-  "side_instr_02",
-  "ack_05",
-  "side_cue_02"
+  "greet_13",
+  "greet_ans_13",
+  "think_instr_02",
+  "self_25",
+  "self_08"
  ],
  "block_ids": [
-  "smartphones.ctx3",
-  "moving_house.side2"
+  "personal_finance.ctx6"
  ],
- "est_total_sec": 78.62,
- "est_speech_sec": 59.25,
+ "est_total_sec": 49.23,
+ "est_speech_sec": 34.48,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there, how are you feeling today?",
-   "est_sec": 2.27,
-   "gap_before": 0.48,
-   "role": "greeting",
-   "phrasing": "greet_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Not too bad.",
-   "est_sec": 1.03,
-   "gap_before": 0.52,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_11"
-  },
-  {
-   "speaker": "user",
-   "text": "My storage is full again and I can't even take a picture.",
-   "est_sec": 3.82,
-   "gap_before": 0.43,
-   "event": "ordinary_request",
-   "block": "smartphones.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Annoying. Do you want to pay for cloud storage, or clear things out by hand?",
-   "est_sec": 4.75,
-   "gap_before": 0.71,
-   "role": "reply",
-   "block": "smartphones.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, both sound kind of bad.",
-   "est_sec": 1.96,
-   "gap_before": 0.61,
-   "event": "ordinary_request",
-   "block": "smartphones.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "They each have a cost, time or money. Which one would you rather spend?",
-   "est_sec": 4.44,
-   "gap_before": 0.55,
-   "role": "reply",
-   "block": "smartphones.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Give me a minute, my friend just walked in. Don't say anything until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 0.47,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_02"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, I'll wait.",
-   "est_sec": 1.03,
-   "gap_before": 0.7,
-   "role": "ack",
-   "phrasing": "ack_05"
-  },
-  {
-   "speaker": "user",
-   "text": "Did the landlord say anything about painting the walls?",
+   "text": "Hey, nice to hear from you. How are you?",
    "est_sec": 2.89,
-   "gap_before": 1.42,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "moving_house.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "She said it's fine as long as it's a light colour.",
-   "est_sec": 3.51,
-   "gap_before": 0.3,
-   "block": "moving_house.side2"
+   "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_13"
   },
   {
    "speaker": "user",
-   "text": "So no dark green bedroom then.",
-   "est_sec": 1.96,
-   "gap_before": 0.86,
-   "block": "moving_house.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Probably not. Maybe a pale green?",
-   "est_sec": 1.96,
-   "gap_before": 0.54,
-   "block": "moving_house.side2"
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_13"
   },
   {
    "speaker": "user",
-   "text": "I guess. Do you want to go to the hardware shop on Saturday and look at samples?",
-   "est_sec": 5.37,
-   "gap_before": 2.83,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "moving_house.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Sure, if we can get breakfast first.",
-   "est_sec": 2.27,
-   "gap_before": 1.18,
-   "block": "moving_house.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Obviously. That's half the reason to go.",
-   "est_sec": 2.27,
-   "gap_before": 1.41,
-   "block": "moving_house.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'm back now.",
-   "est_sec": 1.34,
-   "gap_before": 1.45,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_02"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay. We were stuck on time versus money for your phone storage.",
-   "est_sec": 3.82,
-   "gap_before": 0.86,
-   "role": "resume",
-   "block": "smartphones.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll clean it up myself. I probably have a thousand blurry photos anyway.",
-   "est_sec": 4.13,
-   "gap_before": 1.37,
+   "text": "I'm nineteen and I just got my first proper paycheck.",
+   "est_sec": 3.2,
+   "gap_before": 0.23,
    "event": "ordinary_request",
-   "block": "smartphones.ctx3"
+   "block": "personal_finance.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "Start with videos, they take the most space. Sorting by size will show you the biggest ones first.",
-   "est_sec": 5.68,
-   "gap_before": 1.18,
+   "text": "Congrats! Before it disappears, do you want to set up an automatic transfer to savings, or try a budget for a month first and see where it goes?",
+   "est_sec": 8.78,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "personal_finance.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about it for ten seconds and then ask me again.",
+   "est_sec": 4.13,
+   "gap_before": 1.21,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so, the thing is",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 3.07
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, no, the other one.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 6.76
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, automatic savings from day one, or a trial month first?",
+   "est_sec": 3.51,
+   "role": "resume",
+   "block": "personal_finance.ctx6",
+   "anchor": {
+    "turn": 4,
+    "offset": 10.53
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Budget first. I don't even know what I spend.",
+   "est_sec": 2.89,
+   "gap_before": 1.48,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good thinking. Note everything for a month, then set the transfer based on what's left.",
+   "est_sec": 4.75,
+   "gap_before": 1.12,
    "role": "followup",
-   "block": "smartphones.ctx3"
+   "block": "personal_finance.ctx6"
   }
  ]
 }

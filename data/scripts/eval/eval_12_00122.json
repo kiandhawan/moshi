@@ -7,135 +7,187 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
- "conditions": [],
- "topics": [
-  "podcasts"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit",
+  "near_miss"
  ],
- "reading": {
-  "material": "email",
-  "sec": 15.1
- },
- "topic": "podcasts",
+ "topics": [
+  "picnic",
+  "camping"
+ ],
+ "topic": "picnic",
  "voices": {
-  "user": "7bb342e710854139b1d6e12411229f1f",
-  "friend": null,
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "732ea755bd9e446eb31dc79966b50428",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Kenji",
+ "friend_name_id": "name_21",
  "phrasing_ids": [
   "greet_30",
-  "greet_ans_27",
-  "read_instr_03",
-  "murmur_01",
-  "read_cue_03"
+  "greet_ans_21",
+  "side_instr_27",
+  "dn_78",
+  "implicit_09"
  ],
  "block_ids": [
-  "podcasts.ctx1"
+  "picnic.ctx21",
+  "camping.side2",
+  "dn_78"
  ],
- "est_total_sec": 51.0,
- "est_speech_sec": 28.59,
+ "est_total_sec": 70.74,
+ "est_speech_sec": 53.16,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey, how's it going? You doing okay?",
    "est_sec": 2.27,
-   "gap_before": 0.66,
+   "gap_before": 0.71,
    "role": "greeting",
    "phrasing": "greet_30",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "All good here.",
+   "text": "I'm okay, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.69,
+   "gap_before": 0.4,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_27"
+   "phrasing": "greet_ans_21"
   },
   {
    "speaker": "user",
-   "text": "I need a new podcast for my drive to work.",
-   "est_sec": 3.2,
-   "gap_before": 0.26,
+   "text": "It's our anniversary and I want to recreate our first date picnic.",
+   "est_sec": 3.82,
+   "gap_before": 0.37,
    "event": "ordinary_request",
-   "block": "podcasts.ctx1"
+   "block": "picnic.ctx21"
   },
   {
    "speaker": "moshi",
-   "text": "How long is the drive, and are you in the mood for true crime, comedy, or something you'd actually learn from?",
-   "est_sec": 6.61,
-   "gap_before": 0.9,
+   "text": "So sweet. Would you go to the exact same spot, or recreate the food and go somewhere new?",
+   "est_sec": 5.68,
+   "gap_before": 0.63,
    "role": "reply",
-   "block": "podcasts.ctx1",
+   "block": "picnic.ctx21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "One second, I have to read this work email. Stay quiet till I'm done.",
-   "est_sec": 4.44,
-   "gap_before": 0.94,
+   "text": "Just a minute, I have to answer my roommate. Please stay quiet until I return.",
+   "est_sec": 4.75,
+   "gap_before": 1.04,
    "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_03"
+   "kind": "side_conversation",
+   "phrasing": "side_instr_27"
   },
   {
    "speaker": "user",
-   "text": "Please confirm by Friday, okay.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 6.08
-   },
+   "text": "Wait, who has the campsite reservation number?",
+   "est_sec": 2.27,
+   "gap_before": 0.79,
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "murmur_01"
+   "kind": "friend_question",
+   "block": "camping.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's in my email somewhere. Why?",
+   "est_sec": 1.96,
+   "gap_before": 1.07,
+   "block": "camping.side2"
   },
   {
    "speaker": "user",
-   "text": "Okay, I've read the recipe.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 15.1
-   },
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "read_cue_03"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Finished reading? So, true crime, comedy or learning something?",
-   "est_sec": 2.89,
-   "gap_before": 0.88,
-   "role": "resume",
-   "block": "podcasts.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Something educational, maybe history.",
-   "est_sec": 1.34,
-   "gap_before": 1.96,
-   "event": "ordinary_request",
-   "block": "podcasts.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Great pick. Narrative history shows work really well on long drives.",
+   "text": "The ranger station might ask for it when we check in.",
    "est_sec": 3.51,
    "gap_before": 1.17,
+   "block": "camping.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "There's probably no signal up there either. I'll screenshot it now.",
+   "est_sec": 3.51,
+   "gap_before": 1.28,
+   "block": "camping.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Good idea. And can you check what time check-in closes?",
+   "est_sec": 3.2,
+   "gap_before": 1.24,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "camping.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Says eight in the evening. We should leave by three at the latest.",
+   "est_sec": 4.13,
+   "gap_before": 0.73,
+   "block": "camping.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry I'm so grumpy today, I barely slept.",
+   "est_sec": 2.58,
+   "gap_before": 1.34,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_78"
+  },
+  {
+   "speaker": "friend",
+   "text": "Don't worry, I can tell.",
+   "est_sec": 1.65,
+   "gap_before": 1.01,
+   "phrasing": "dn_78"
+  },
+  {
+   "speaker": "user",
+   "text": "So where did we leave it?",
+   "est_sec": 1.96,
+   "gap_before": 0.85,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. So which way are you going to surprise them?",
+   "est_sec": 3.2,
+   "gap_before": 0.95,
+   "role": "resume",
+   "block": "picnic.ctx21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Same food, new place. The old spot is a car park now.",
+   "est_sec": 3.82,
+   "gap_before": 1.37,
+   "event": "ordinary_request",
+   "block": "picnic.ctx21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, that settles it. A new spot can start a new tradition.",
+   "est_sec": 3.82,
+   "gap_before": 1.13,
    "role": "followup",
-   "block": "podcasts.ctx1",
+   "block": "picnic.ctx21",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading"
+  "familiar_type",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

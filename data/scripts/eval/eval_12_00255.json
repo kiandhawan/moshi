@@ -7,134 +7,113 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [
-  "wait_like"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "painting_art"
+  "holiday_gifts"
  ],
- "topic": "painting_art",
+ "topic": "holiday_gifts",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "user": "933563129e564b19a115bedd57b7406a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_24",
-  "greet_ans_18",
-  "waitlike_15"
+  "greet_27",
+  "greet_ans_21",
+  "describe_instr_12",
+  "describe_cue_12"
  ],
  "block_ids": [
-  "painting_art.dlg3"
+  "holiday_gifts.opt5"
  ],
- "est_total_sec": 52.9,
- "est_speech_sec": 39.85,
+ "est_total_sec": 45.56,
+ "est_speech_sec": 36.86,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, what's up? How are you doing?",
-   "est_sec": 2.27,
-   "gap_before": 0.51,
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.59,
    "role": "greeting",
-   "phrasing": "greet_24",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
+   "text": "I'm okay, thanks.",
    "est_sec": 1.03,
    "gap_before": 0.45,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
+   "phrasing": "greet_ans_21"
   },
   {
    "speaker": "user",
-   "text": "Can you explain what a complementary color is?",
-   "est_sec": 2.58,
-   "gap_before": 0.31,
-   "event": "ordinary_request",
-   "block": "painting_art.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure. Complementary colors sit opposite each other on the color wheel, like blue and orange or red and green.",
-   "est_sec": 5.99,
-   "gap_before": 0.54,
-   "role": "reply",
-   "block": "painting_art.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Why does that matter for painting?",
-   "est_sec": 1.96,
-   "gap_before": 0.82,
-   "event": "ordinary_request",
-   "block": "painting_art.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Put side by side, they make each other look brighter. Mixed together, they cancel out into a soft gray or brown.",
-   "est_sec": 6.61,
-   "gap_before": 0.62,
-   "role": "reply",
-   "block": "painting_art.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hang on, oh, so I could use that instead of black for shadows?",
+   "text": "Our book club does gifts and I have to pick for the organiser.",
    "est_sec": 4.13,
-   "gap_before": 3.2,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_15",
-   "block": "painting_art.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Exactly. A shadow on an orange made with a little blue looks much more alive than plain black.",
-   "est_sec": 5.68,
-   "gap_before": 0.61,
-   "role": "reply",
-   "block": "painting_art.dlg3",
-   "reference_only": true
+   "gap_before": 0.23,
+   "block": "holiday_gifts.opt5"
   },
   {
    "speaker": "user",
-   "text": "Actually, I was going to buy black paint",
-   "est_sec": 2.58,
-   "gap_before": 0.69,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "painting_art.dlg3"
+   "text": "I'll describe them all, so please hold off until I'm done.",
+   "est_sec": 3.51,
+   "gap_before": 0.46,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_12"
   },
   {
    "speaker": "user",
-   "text": "but maybe I'll skip it.",
-   "est_sec": 1.65,
-   "gap_before": 1.89,
-   "event": "ordinary_request",
-   "block": "painting_art.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You can always get it later. Plenty of painters work without black and mix their darks instead.",
+   "text": "A personalised stamp that says from the library of, with her name, which is cute and cheap.",
    "est_sec": 5.37,
-   "gap_before": 1.91,
-   "role": "reply",
-   "block": "painting_art.dlg3",
+   "gap_before": 1.09,
+   "block": "holiday_gifts.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A reading light that clips onto books, practical but kind of boring.",
+   "est_sec": 3.82,
+   "gap_before": 1.61,
+   "block": "holiday_gifts.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "A subscription box that sends a surprise novel every month, about forty dollars.",
+   "est_sec": 4.13,
+   "gap_before": 1.39,
+   "block": "holiday_gifts.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 0.84,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd go with the stamp, it fits a book club organiser perfectly. If the group has a higher budget, the subscription box is a treat. The reading light feels more like a stocking stuffer.",
+   "est_sec": 10.64,
+   "gap_before": 0.54,
+   "role": "resume",
+   "block": "holiday_gifts.opt5",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

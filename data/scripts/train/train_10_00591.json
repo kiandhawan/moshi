@@ -7,120 +7,141 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "hiking"
+  "birthday_party",
+  "books"
  ],
- "topic": "hiking",
+ "topic": "birthday_party",
  "voices": {
-  "user": "b47bb94bf3ce42b2a7643c31af62c553",
-  "friend": null,
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "friend": "10b2254869cf4340bdb801928e2fc88e",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
  "phrasing_ids": [
-  "greet_10",
-  "greet_ans_13"
+  "greet_08",
+  "greet_ans_26",
+  "side_instr_20",
+  "side_cue_04"
  ],
  "block_ids": [
-  "hiking.dlg4"
+  "birthday_party.ctx7",
+  "books.side4"
  ],
- "est_total_sec": 47.5,
- "est_speech_sec": 34.58,
+ "est_total_sec": 58.47,
+ "est_speech_sec": 44.08,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your day been so far?",
+   "text": "Hi there, how are you feeling today?",
    "est_sec": 2.27,
-   "gap_before": 0.39,
+   "gap_before": 0.72,
    "role": "greeting",
-   "phrasing": "greet_10"
+   "phrasing": "greet_08"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.73,
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.94,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
+   "phrasing": "greet_ans_26"
   },
   {
    "speaker": "user",
-   "text": "Can I take my dog on a long hike?",
-   "est_sec": 2.89,
-   "gap_before": 0.32,
+   "text": "My daughter's turning sixteen and she says parties are cringe.",
+   "est_sec": 3.2,
+   "gap_before": 0.55,
    "event": "ordinary_request",
-   "block": "hiking.dlg4"
+   "block": "birthday_party.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Most healthy adult dogs love it. How old is your dog, and what breed?",
-   "est_sec": 4.44,
-   "gap_before": 0.51,
+   "text": "Ha, classic sixteen. Would she go for a small outing with a few friends, like an escape room, or a nice dinner with just the family?",
+   "est_sec": 8.16,
+   "gap_before": 1.35,
    "role": "reply",
-   "block": "hiking.dlg4"
+   "block": "birthday_party.ctx7"
   },
   {
    "speaker": "user",
-   "text": "She's a three year old border collie.",
-   "est_sec": 2.27,
-   "gap_before": 2.38,
-   "event": "ordinary_request",
-   "block": "hiking.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect, collies have tons of energy. She'll probably outlast you. Just build up the distance gradually.",
-   "est_sec": 5.06,
-   "gap_before": 1.19,
-   "role": "reply",
-   "block": "hiking.dlg4"
+   "text": "Let me talk to Sam for a bit, so please stay quiet until I say I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 1.78,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_20"
   },
   {
    "speaker": "user",
-   "text": "What does she need to bring?",
-   "est_sec": 1.96,
-   "gap_before": 1.43,
-   "event": "ordinary_request",
-   "block": "hiking.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Water and a collapsible bowl, some treats, and poo bags. Check her paws during breaks, rocky trails can hurt them.",
-   "est_sec": 6.3,
-   "gap_before": 1.11,
-   "role": "reply",
-   "block": "hiking.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "Should I",
-   "est_sec": 0.72,
-   "gap_before": 0.73,
+   "text": "Sam, why is my bookmark in the middle of your book?",
+   "est_sec": 3.51,
+   "gap_before": 1.22,
    "event": "distractor",
-   "kind": "pause",
-   "block": "hiking.dlg4"
+   "kind": "friend_question",
+   "block": "books.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh, I ran out of bookmarks. Yours was just lying there.",
+   "est_sec": 3.51,
+   "gap_before": 0.41,
+   "block": "books.side4"
   },
   {
    "speaker": "user",
-   "text": "keep her on the lead the whole time?",
-   "est_sec": 2.58,
-   "gap_before": 2.32,
-   "event": "ordinary_request",
-   "block": "hiking.dlg4"
+   "text": "That's my lucky bookmark. I've had it since college.",
+   "est_sec": 2.89,
+   "gap_before": 0.68,
+   "block": "books.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's a train ticket.",
+   "est_sec": 1.34,
+   "gap_before": 0.85,
+   "block": "books.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "It's a lucky train ticket. Can I have it back after this chapter?",
+   "est_sec": 4.13,
+   "gap_before": 1.32,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "books.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine, I'm almost done anyway.",
+   "est_sec": 1.65,
+   "gap_before": 0.77,
+   "block": "books.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, sorry for the wait.",
+   "est_sec": 1.96,
+   "gap_before": 1.92,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_04"
   },
   {
    "speaker": "moshi",
-   "text": "Check the trail rules first. Near livestock or wildlife, a lead is always the safer choice.",
-   "est_sec": 5.06,
-   "gap_before": 0.31,
-   "role": "reply",
-   "block": "hiking.dlg4"
+   "text": "Okay. Your sixteen year old. Escape room with her friends, or dinner with the family?",
+   "est_sec": 4.75,
+   "gap_before": 0.38,
+   "role": "resume",
+   "block": "birthday_party.ctx7"
   }
  ]
 }

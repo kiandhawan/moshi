@@ -1,49 +1,124 @@
 {
   "id": "train_10_00603",
-  "group": "think_time",
-  "user_start": 2.99,
-  "type": "think_time",
-  "conditions": [],
-  "instruction_start": 13.67,
-  "instruction_end": 16.53,
-  "wait_end": 36.53,
-  "resume_window": [
-    36.53,
-    40.53
+  "group": "side_conversation",
+  "user_start": 2.19,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question"
   ],
-  "wait_sec": 20.0,
-  "distractors": [],
-  "distractor_kinds": [],
-  "distractor_windows": [],
+  "cluster": "board_games.ctx4",
+  "instruction_start": 19.38,
+  "instruction_end": 23.52,
+  "wait_end": 66.61,
+  "resume_window": [
+    66.61,
+    71.61
+  ],
+  "wait_sec": 43.09,
+  "distractors": [
+    28.32,
+    36.34,
+    55.32
+  ],
+  "distractor_kinds": [
+    "friend_question",
+    "friend_question",
+    "friend_question"
+  ],
+  "distractor_windows": [
+    [
+      28.32,
+      29.03
+    ],
+    [
+      36.34,
+      38.99
+    ],
+    [
+      55.32,
+      56.15
+    ]
+  ],
   "ordinary_requests": [
-    7.88,
-    48.0
+    7.62
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.99,
-      "end": 4.03,
+      "start": 2.19,
+      "end": 3.39,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.51,
-      "end": 7.88,
+      "start": 3.79,
+      "end": 7.62,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 13.67,
-      "end": 16.53,
+      "start": 19.38,
+      "end": 23.52,
       "event": "instruction",
-      "kind": "think_time"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 44.62,
-      "end": 48.0,
-      "event": "ordinary_request"
+      "start": 26.37,
+      "end": 28.32,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 29.03,
+      "end": 31.1
+    },
+    {
+      "speaker": "user",
+      "start": 34.01,
+      "end": 36.34,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 38.99,
+      "end": 43.3
+    },
+    {
+      "speaker": "user",
+      "start": 44.72,
+      "end": 46.99
+    },
+    {
+      "speaker": "friend",
+      "start": 47.33,
+      "end": 50.39
+    },
+    {
+      "speaker": "user",
+      "start": 51.64,
+      "end": 55.32,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 56.15,
+      "end": 58.32
+    },
+    {
+      "speaker": "user",
+      "start": 60.21,
+      "end": 63.32
+    },
+    {
+      "speaker": "user",
+      "start": 64.76,
+      "end": 66.61,
+      "event": "return_cue",
+      "kind": "explicit"
     }
   ],
   "notes": "Rendered from script train_10_00603 by scripts/render.py.",
@@ -51,33 +126,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.55,
-      "end": 2.17,
-      "text": "Hello, how are things going?"
+      "start": 0.32,
+      "end": 1.85,
+      "text": "Hi, how's everything with you?"
     },
     {
       "kind": "reply",
-      "start": 8.49,
-      "end": 12.71,
-      "text": "How exciting! Are you leaning toward a puppy, or an older dog from a shelter?"
+      "start": 8.74,
+      "end": 15.98,
+      "text": "That's really common at six. Do you want to let her win sometimes while she's little, or play cooperative games so nobody loses to anyone?"
     },
     {
       "kind": "ack",
-      "start": 17.2,
-      "end": 18.0,
-      "text": "Okay, I'll wait."
+      "start": 24.16,
+      "end": 24.88,
+      "text": "Sure, go ahead."
     },
     {
       "kind": "resume",
-      "start": 36.93,
-      "end": 41.22,
-      "text": "Okay, have you decided? A puppy, or a grown up dog that needs a home?"
-    },
-    {
-      "kind": "followup",
-      "start": 49.96,
-      "end": 56.22,
-      "text": "Great choice. Many adult shelter dogs are already house trained, and the staff can tell you about their personality."
+      "start": 67.12,
+      "end": 71.34,
+      "text": "Alright. Your daughter and the crying. Letting her win, or cooperative games?"
     }
   ]
 }

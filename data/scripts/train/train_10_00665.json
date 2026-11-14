@@ -7,185 +7,109 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "baking",
-  "moving_house"
+  "coffee"
  ],
- "topic": "baking",
+ "topic": "coffee",
  "voices": {
-  "user": "cbc3add1f54546e6a4a1964bacb8b122",
-  "friend": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Jordan",
- "friend_name_id": "name_05",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
   "greet_11",
-  "greet_ans_13",
-  "side_instr_13",
-  "ack_06",
-  "dq_19",
-  "side_cue_13"
+  "greet_ans_26",
+  "describe_instr_02",
+  "describe_cue_02"
  ],
  "block_ids": [
-  "baking.ctx2",
-  "moving_house.side3"
+  "coffee.opt6"
  ],
- "est_total_sec": 70.54,
- "est_speech_sec": 52.95,
+ "est_total_sec": 50.99,
+ "est_speech_sec": 39.65,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi, how are things with you?",
    "est_sec": 1.96,
-   "gap_before": 0.72,
+   "gap_before": 0.6,
    "role": "greeting",
    "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.74,
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.97,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
+   "phrasing": "greet_ans_26"
   },
   {
    "speaker": "user",
-   "text": "I want to start baking my own bread.",
-   "est_sec": 2.58,
-   "gap_before": 0.24,
-   "event": "ordinary_request",
-   "block": "baking.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Great project. Do you want to start with a quick yeast loaf you can make in an afternoon, or grow a sourdough starter, which takes about a week?",
-   "est_sec": 8.78,
-   "gap_before": 0.94,
-   "role": "reply",
-   "block": "baking.ctx2"
+   "text": "I'm trying to cut down on caffeine, and I've got a few ideas about how.",
+   "est_sec": 4.75,
+   "gap_before": 0.27,
+   "block": "coffee.opt6"
   },
   {
    "speaker": "user",
-   "text": "Just a sec, I need to sort something out with my roommate. I'll say when I'm back.",
-   "est_sec": 5.37,
-   "gap_before": 1.12,
+   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
+   "est_sec": 4.75,
+   "gap_before": 0.85,
    "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_13"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Of course.",
-   "est_sec": 0.72,
-   "gap_before": 0.36,
-   "role": "ack",
-   "phrasing": "ack_06"
+   "kind": "describe_options",
+   "phrasing": "describe_instr_02"
   },
   {
    "speaker": "user",
-   "text": "Are you hungry?",
-   "est_sec": 1.03,
-   "gap_before": 0.93,
+   "text": "I could switch my afternoon cup to decaf and keep the morning one normal.",
+   "est_sec": 4.44,
+   "gap_before": 1.31,
+   "block": "coffee.opt6",
    "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_19"
-  },
-  {
-   "speaker": "friend",
-   "text": "A little, yeah.",
-   "est_sec": 1.03,
-   "gap_before": 0.72,
-   "phrasing": "dq_19"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Jordan, are you sure the sofa will fit through the door?",
-   "est_sec": 3.51,
-   "gap_before": 0.69,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "I measured it twice. It's tight, but it should go.",
-   "est_sec": 3.2,
-   "gap_before": 1.03,
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "What if we have to take the legs off?",
-   "est_sec": 2.89,
-   "gap_before": 1.21,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Then we take the legs off. I've got a screwdriver in my bag.",
+   "text": "Another idea is half caf, mixing regular and decaf beans for every cup.",
    "est_sec": 4.13,
-   "gap_before": 2.82,
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay. And the stairs?",
-   "est_sec": 1.34,
-   "gap_before": 0.71,
+   "gap_before": 1.61,
+   "block": "coffee.opt6",
    "event": "distractor",
-   "kind": "friend_question",
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Let's not think about the stairs yet.",
-   "est_sec": 2.27,
-   "gap_before": 0.53,
-   "block": "moving_house.side3"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Alright, back to you.",
-   "est_sec": 1.34,
-   "gap_before": 1.11,
+   "text": "Or swap coffee for green tea, which has less caffeine but still gives a little lift.",
+   "est_sec": 5.06,
+   "gap_before": 2.52,
+   "block": "coffee.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 0.86,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_13"
+   "phrasing": "describe_cue_02"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. You were deciding between a quick yeast loaf and sourdough.",
-   "est_sec": 3.51,
-   "gap_before": 0.42,
+   "text": "I'd start with the afternoon decaf, it's a small change with a big effect. Half caf is nice if you drink many cups, and green tea is a good fit if you're open to change.",
+   "est_sec": 10.95,
+   "gap_before": 0.85,
    "role": "resume",
-   "block": "baking.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Quick yeast loaf. I want bread this weekend.",
-   "est_sec": 2.58,
-   "gap_before": 0.73,
-   "event": "ordinary_request",
-   "block": "baking.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then a simple sandwich loaf is perfect. Flour, water, yeast, salt, and about three hours start to finish.",
-   "est_sec": 5.68,
-   "gap_before": 1.07,
-   "role": "followup",
-   "block": "baking.ctx2"
+   "block": "coffee.opt6"
   }
  ]
 }

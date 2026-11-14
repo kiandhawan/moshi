@@ -7,120 +7,125 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "gardening"
+  "travel_planning"
  ],
- "topic": "gardening",
+ "topic": "travel_planning",
  "voices": {
-  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_05",
-  "greet_ans_08"
+  "greet_14",
+  "greet_ans_23",
+  "describe_instr_19",
+  "ack_03",
+  "describe_cue_13"
  ],
  "block_ids": [
-  "gardening.dlg1"
+  "travel_planning.opt5"
  ],
- "est_total_sec": 53.24,
- "est_speech_sec": 40.16,
+ "est_total_sec": 59.76,
+ "est_speech_sec": 47.91,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how have you been?",
+   "text": "Hi! How's life treating you?",
    "est_sec": 1.65,
-   "gap_before": 0.48,
+   "gap_before": 0.55,
    "role": "greeting",
-   "phrasing": "greet_05"
+   "phrasing": "greet_14"
   },
   {
    "speaker": "user",
-   "text": "I'm great, thanks.",
+   "text": "Good, good. Thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.59,
+   "gap_before": 0.32,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
+   "phrasing": "greet_ans_23"
   },
   {
    "speaker": "user",
-   "text": "How often should I water my houseplants?",
-   "est_sec": 2.27,
-   "gap_before": 0.4,
-   "event": "ordinary_request",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Most like to dry out a bit between waterings. Push a finger into the soil, and if the top few centimeters are dry, it's time.",
-   "est_sec": 7.85,
-   "gap_before": 0.35,
-   "role": "reply",
-   "block": "gardening.dlg1"
+   "text": "Summer holiday with three kids under ten, and my husband and I want different things.",
+   "est_sec": 4.75,
+   "gap_before": 0.32,
+   "block": "travel_planning.opt5"
   },
   {
    "speaker": "user",
-   "text": "So not on a fixed schedule?",
-   "est_sec": 1.96,
-   "gap_before": 1.44,
-   "event": "ordinary_request",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Not really. In winter they need much less, and in summer they might need it twice a week.",
-   "est_sec": 5.68,
-   "gap_before": 0.59,
-   "role": "reply",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "I have a cactus and a",
-   "est_sec": 1.96,
-   "gap_before": 2.42,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "what's it called, a peace lily.",
-   "est_sec": 1.96,
-   "gap_before": 2.0,
-   "event": "ordinary_request",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Those are opposites. Water the cactus maybe once a month, and the peace lily when its leaves start to droop a little.",
-   "est_sec": 6.92,
-   "gap_before": 0.65,
-   "role": "reply",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, it droops? I thought that meant it was dying.",
+   "text": "Hear me out on all the options before you comment.",
    "est_sec": 3.2,
-   "gap_before": 1.94,
-   "event": "ordinary_request",
-   "block": "gardening.dlg1"
+   "gap_before": 0.7,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_19"
   },
   {
    "speaker": "moshi",
-   "text": "It's just being dramatic. Give it a good drink and it usually perks up within a few hours.",
-   "est_sec": 5.68,
-   "gap_before": 0.72,
-   "role": "reply",
-   "block": "gardening.dlg1"
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.21,
+   "role": "ack",
+   "phrasing": "ack_03"
+  },
+  {
+   "speaker": "user",
+   "text": "He wants a theme park resort in Florida, which the kids would adore but it's crazy expensive.",
+   "est_sec": 5.37,
+   "gap_before": 1.38,
+   "block": "travel_planning.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "I'd love a lake cabin up north where they swim, catch frogs and go to bed early.",
+   "est_sec": 5.37,
+   "gap_before": 2.58,
+   "block": "travel_planning.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "My mum suggested we stay with her in the city and do day trips to the zoo and the beach.",
+   "est_sec": 6.3,
+   "gap_before": 1.82,
+   "block": "travel_planning.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a camping style holiday park with pools and kids' clubs, somewhere in between.",
+   "est_sec": 4.44,
+   "gap_before": 1.21,
+   "block": "travel_planning.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 0.59,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Florida would be magical for that age but it's a lot of money and queues. The lake cabin and your mum's place are both relaxed and cheaper. If you need a compromise, the holiday park splits the difference.",
+   "est_sec": 11.88,
+   "gap_before": 0.67,
+   "role": "resume",
+   "block": "travel_planning.opt5"
   }
  ]
 }

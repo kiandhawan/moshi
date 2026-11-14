@@ -7,130 +7,161 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "wedding_planning"
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
  ],
- "topic": "wedding_planning",
+ "topics": [
+  "podcasts"
+ ],
+ "topic": "podcasts",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_12",
-  "greet_ans_30",
-  "describe_instr_12",
-  "ack_13",
-  "describe_cue_06"
+  "greet_27",
+  "greet_ans_21",
+  "waitlike_06"
  ],
  "block_ids": [
-  "wedding_planning.opt2"
+  "podcasts.dlg7"
  ],
- "est_total_sec": 55.44,
- "est_speech_sec": 42.02,
+ "est_total_sec": 61.41,
+ "est_speech_sec": 48.52,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there, how are you doing today?",
-   "est_sec": 2.27,
-   "gap_before": 0.59,
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
    "role": "greeting",
-   "phrasing": "greet_12",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.73,
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.72,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
+   "phrasing": "greet_ans_21"
   },
   {
    "speaker": "user",
-   "text": "I can't decide what to do about catering for the reception.",
-   "est_sec": 3.51,
-   "gap_before": 0.44,
-   "block": "wedding_planning.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll describe them all, so please hold off until I'm done.",
-   "est_sec": 3.51,
-   "gap_before": 0.86,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_12"
+   "text": "Is it weird that I love true crime podcasts? My sister thinks it's creepy.",
+   "est_sec": 4.44,
+   "gap_before": 0.25,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg7"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, I'll hold on.",
-   "est_sec": 1.34,
-   "gap_before": 0.33,
-   "role": "ack",
-   "phrasing": "ack_13",
+   "text": "Not weird at all, millions of people love them. They're often about puzzles, justice and understanding people.",
+   "est_sec": 5.37,
+   "gap_before": 1.17,
+   "role": "reply",
+   "block": "podcasts.dlg7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "One idea is a classic plated dinner, chicken or fish, served at the tables.",
-   "est_sec": 4.44,
-   "gap_before": 0.7,
-   "block": "wedding_planning.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a big buffet with a bit of everything, which is cheaper per person.",
-   "est_sec": 4.75,
-   "gap_before": 1.02,
-   "block": "wedding_planning.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "There's also a couple of food trucks, tacos and pizza, parked outside the venue.",
-   "est_sec": 4.44,
-   "gap_before": 2.9,
-   "block": "wedding_planning.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And finally, my aunt offered to cook everything herself for free.",
-   "est_sec": 3.51,
-   "gap_before": 2.46,
-   "block": "wedding_planning.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, those are all the choices. Your thoughts?",
-   "est_sec": 2.58,
-   "gap_before": 1.16,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_06"
+   "text": "Hold on, repeat that please.",
+   "est_sec": 1.65,
+   "gap_before": 0.91,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_06",
+   "block": "podcasts.dlg7"
   },
   {
    "speaker": "moshi",
-   "text": "Your aunt's offer is generous, but cooking for a whole reception is a huge job on the day itself. I'd lean toward the buffet, it's flexible and cheaper than a plated dinner.",
-   "est_sec": 10.02,
-   "gap_before": 0.73,
-   "role": "resume",
-   "block": "wedding_planning.opt2",
+   "text": "Sure, here it is again. Not weird at all, millions of people love them. They're often about puzzles, justice and understanding people.",
+   "est_sec": 6.92,
+   "gap_before": 0.39,
+   "role": "reply",
+   "block": "podcasts.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "That's how I feel. It's the mystery.",
+   "est_sec": 2.27,
+   "gap_before": 1.09,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exactly. Some people also find them a way to process fears in a safe setting.",
+   "est_sec": 4.75,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "podcasts.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "But do you think it's disrespectful to the victims?",
+   "est_sec": 2.89,
+   "gap_before": 0.52,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It can be, depending on the show. The better ones focus on the victims' stories and treat families with care.",
+   "est_sec": 6.3,
+   "gap_before": 1.9,
+   "role": "reply",
+   "block": "podcasts.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, some of mine are pretty jokey.",
+   "est_sec": 2.27,
+   "gap_before": 0.9,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Maybe check if their tone sits well with you. There are good serious shows out there.",
+   "est_sec": 5.06,
+   "gap_before": 0.3,
+   "role": "reply",
+   "block": "podcasts.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fair. I'll be pickier.",
+   "est_sec": 1.34,
+   "gap_before": 1.15,
+   "event": "ordinary_request",
+   "block": "podcasts.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a thoughtful way to enjoy it.",
+   "est_sec": 2.27,
+   "gap_before": 0.51,
+   "role": "reply",
+   "block": "podcasts.dlg7",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

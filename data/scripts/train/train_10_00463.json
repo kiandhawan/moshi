@@ -7,147 +7,132 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [
-  "near_miss"
+  "self_talk"
  ],
  "topics": [
-  "birthday_party",
-  "smartphones"
+  "job_interview"
  ],
- "topic": "birthday_party",
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 10
+ },
+ "topic": "job_interview",
  "voices": {
-  "user": "9a9cf47702da476aa4629e2506d4a857",
-  "friend": "b47bb94bf3ce42b2a7643c31af62c553",
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Chloe",
- "friend_name_id": "name_08",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_25",
-  "greet_ans_04",
-  "side_instr_11",
-  "dn_14",
-  "side_cue_10"
+  "greet_22",
+  "greet_ans_08",
+  "think_instr_28",
+  "ack_15",
+  "self_11"
  ],
  "block_ids": [
-  "birthday_party.ctx3",
-  "smartphones.side1"
+  "job_interview.ctx4"
  ],
- "est_total_sec": 57.33,
- "est_speech_sec": 44.49,
+ "est_total_sec": 48.85,
+ "est_speech_sec": 34.48,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there! How's your day treating you?",
-   "est_sec": 2.27,
-   "gap_before": 0.76,
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.58,
    "role": "greeting",
-   "phrasing": "greet_25"
+   "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "Pretty well, actually.",
+   "text": "I'm great, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.84,
+   "gap_before": 0.6,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_04"
+   "phrasing": "greet_ans_08"
   },
   {
    "speaker": "user",
-   "text": "I still haven't ordered the cake for Saturday.",
-   "est_sec": 2.58,
-   "gap_before": 0.29,
-   "event": "ordinary_request",
-   "block": "birthday_party.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "There's still time if you order today. Chocolate is always popular, or would a fruity one like lemon fit better?",
-   "est_sec": 6.3,
-   "gap_before": 0.34,
-   "role": "reply",
-   "block": "birthday_party.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Excuse me for a moment, my friend has a question. Don't talk until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 1.02,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, so where were we with the shopping list?",
-   "est_sec": 2.89,
-   "gap_before": 1.09,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_14"
-  },
-  {
-   "speaker": "friend",
-   "text": "We still need eggs and bread.",
-   "est_sec": 1.96,
-   "gap_before": 0.77,
-   "phrasing": "dn_14"
-  },
-  {
-   "speaker": "user",
-   "text": "Chloe, do you know the wifi password here? My phone keeps dropping off.",
-   "est_sec": 4.13,
-   "gap_before": 1.14,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "It's on the back of the router, I think. The long one with all the letters.",
-   "est_sec": 5.06,
-   "gap_before": 0.5,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Ugh, I typed that in twice already.",
-   "est_sec": 2.27,
-   "gap_before": 0.54,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Did you try forgetting the network and joining again? That fixed mine last week.",
+   "text": "They're definitely going to ask my salary expectations tomorrow and I freeze every time.",
    "est_sec": 4.44,
-   "gap_before": 0.4,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "No, I'll try that now. Hold on.",
-   "est_sec": 2.27,
-   "gap_before": 2.01,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Sorry, I'm back now. Go ahead.",
-   "est_sec": 1.96,
-   "gap_before": 0.92,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_10"
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "job_interview.ctx4"
   },
   {
    "speaker": "moshi",
-   "text": "Alright. Did you decide on the cake flavor?",
-   "est_sec": 2.58,
-   "gap_before": 0.72,
+   "text": "Let's plan it. Would you rather name a range you've researched, or turn it back and ask what budget they have for the role?",
+   "est_sec": 7.54,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "job_interview.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll need ten seconds to think. Ask me again after that.",
+   "est_sec": 3.51,
+   "gap_before": 1.04,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.66,
+   "role": "ack",
+   "phrasing": "ack_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, pros and cons.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 7.4
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, when salary comes up, will you give a range or ask for theirs first?",
+   "est_sec": 4.75,
    "role": "resume",
-   "block": "birthday_party.ctx3"
+   "block": "job_interview.ctx4",
+   "anchor": {
+    "turn": 4,
+    "offset": 10.02
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "I'll name a range. I looked it up and I know what's fair.",
+   "est_sec": 4.13,
+   "gap_before": 1.31,
+   "event": "ordinary_request",
+   "block": "job_interview.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good. Put the number you actually want near the bottom of the range, not the top.",
+   "est_sec": 5.06,
+   "gap_before": 0.78,
+   "role": "followup",
+   "block": "job_interview.ctx4"
   }
  ]
 }

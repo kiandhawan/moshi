@@ -7,160 +7,119 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "family_visit",
-  "home_office"
+  "restaurant_choice"
  ],
- "topic": "family_visit",
+ "topic": "restaurant_choice",
  "voices": {
   "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
-  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Priya",
- "friend_name_id": "name_06",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
   "greet_09",
-  "greet_ans_09",
-  "side_instr_21",
-  "dq_21",
-  "side_cue_12"
+  "greet_ans_06",
+  "describe_instr_15",
+  "describe_cue_09"
  ],
  "block_ids": [
-  "family_visit.ctx1",
-  "home_office.side1"
+  "restaurant_choice.opt4"
  ],
- "est_total_sec": 67.42,
- "est_speech_sec": 45.21,
+ "est_total_sec": 65.21,
+ "est_speech_sec": 49.67,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello! How's it going?",
    "est_sec": 1.34,
-   "gap_before": 0.57,
+   "gap_before": 0.52,
    "role": "greeting",
    "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
    "gap_before": 0.58,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_06"
   },
   {
    "speaker": "user",
-   "text": "My parents are staying with us next week and our apartment is tiny.",
-   "est_sec": 4.13,
-   "gap_before": 0.36,
-   "event": "ordinary_request",
-   "block": "family_visit.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That can be tricky. Would you give them your bedroom and take the couch, or book them a hotel nearby?",
+   "text": "Me and three friends are doing a food crawl downtown and we can only fit in one dinner stop. Which?",
    "est_sec": 6.3,
-   "gap_before": 1.92,
-   "role": "reply",
-   "block": "family_visit.ctx1",
-   "reference_only": true
+   "gap_before": 0.27,
+   "block": "restaurant_choice.opt4"
   },
   {
    "speaker": "user",
-   "text": "Wait, my friend just got here. Can you hold on and stay quiet until I'm back?",
-   "est_sec": 5.06,
-   "gap_before": 2.5,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_21"
-  },
-  {
-   "speaker": "user",
-   "text": "Priya, are you on a call right now?",
-   "est_sec": 2.58,
-   "gap_before": 0.64,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "In five minutes. Why?",
-   "est_sec": 1.34,
-   "gap_before": 0.8,
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "I have a big meeting at ten too. Can you take yours in the bedroom?",
-   "est_sec": 4.75,
-   "gap_before": 1.0,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Only if I can borrow your headphones.",
-   "est_sec": 2.27,
-   "gap_before": 0.93,
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Deal. They're on the shelf by the printer.",
-   "est_sec": 2.58,
-   "gap_before": 1.98,
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Got them. Close the door when you start, the dog keeps barking.",
+   "text": "I want to describe all the options before I hear your opinion.",
    "est_sec": 3.82,
-   "gap_before": 0.43,
-   "block": "home_office.side1"
+   "gap_before": 0.77,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_15"
   },
   {
    "speaker": "user",
-   "text": "Did you take the trash out?",
-   "est_sec": 1.96,
-   "gap_before": 2.84,
+   "text": "A tiny taco stand with only stools outside, cash only, but the reviews are ridiculous.",
+   "est_sec": 4.75,
+   "gap_before": 0.91,
+   "block": "restaurant_choice.opt4",
    "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_21"
-  },
-  {
-   "speaker": "friend",
-   "text": "Not yet, I'll do it now.",
-   "est_sec": 1.96,
-   "gap_before": 3.42,
-   "phrasing": "dq_21"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "I'm back. Where did we leave off?",
-   "est_sec": 2.27,
-   "gap_before": 0.98,
+   "text": "A new Korean fried chicken spot that just opened, apparently the lines are long on Fridays.",
+   "est_sec": 5.06,
+   "gap_before": 2.65,
+   "block": "restaurant_choice.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A classic old diner that's been there for fifty years, famous for its pie.",
+   "est_sec": 4.44,
+   "gap_before": 2.94,
+   "block": "restaurant_choice.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a fancy small plates bar where everything costs about twelve dollars a plate.",
+   "est_sec": 4.44,
+   "gap_before": 2.44,
+   "block": "restaurant_choice.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "So, that's all of them. Tell me what you think.",
+   "est_sec": 3.2,
+   "gap_before": 1.3,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_12"
+   "phrasing": "describe_cue_09"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. Still torn between giving up your bedroom and finding them a hotel?",
-   "est_sec": 4.13,
-   "gap_before": 1.76,
+   "text": "On a food crawl you want something quick and memorable, so the taco stand is a strong pick, just bring cash. The Korean chicken is great for sharing if the line isn't too bad. I'd save the diner for the dessert leg, that pie sounds like a finale.",
+   "est_sec": 14.98,
+   "gap_before": 1.66,
    "role": "resume",
-   "block": "family_visit.ctx1",
+   "block": "restaurant_choice.opt4",
    "reference_only": true
   }
  ],

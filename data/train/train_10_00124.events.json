@@ -1,64 +1,148 @@
 {
   "id": "train_10_00124",
-  "group": "ordinary",
-  "user_start": 3.24,
-  "type": "ordinary",
-  "conditions": [],
+  "group": "side_conversation",
+  "user_start": 3.03,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question",
+    "near_miss"
+  ],
+  "cluster": "books.ctx7",
+  "instruction_start": 16.15,
+  "instruction_end": 20.22,
+  "wait_end": 60.35,
+  "resume_window": [
+    60.35,
+    65.35
+  ],
+  "wait_sec": 40.13,
   "distractors": [
-    27.82
+    23.45,
+    30.05,
+    50.97,
+    55.91
   ],
   "distractor_kinds": [
-    "pause"
+    "friend_question",
+    "friend_question",
+    "friend_question",
+    "near_miss"
   ],
   "distractor_windows": [
     [
-      27.82,
-      29.59
+      23.45,
+      24.74
+    ],
+    [
+      30.05,
+      31.4
+    ],
+    [
+      50.97,
+      51.51
+    ],
+    [
+      55.91,
+      56.33
     ]
   ],
   "ordinary_requests": [
-    8.62,
-    18.04,
-    30.69,
-    41.52
+    8.28
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 3.24,
-      "end": 4.46,
+      "start": 3.03,
+      "end": 4.64,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.79,
-      "end": 8.62,
+      "start": 5.11,
+      "end": 8.28,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 15.97,
-      "end": 18.04,
-      "event": "ordinary_request"
+      "start": 16.15,
+      "end": 20.22,
+      "event": "instruction",
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 25.11,
-      "end": 27.82,
+      "start": 21.66,
+      "end": 23.45,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 24.74,
+      "end": 25.99
     },
     {
       "speaker": "user",
-      "start": 29.59,
-      "end": 30.69,
-      "event": "ordinary_request"
+      "start": 28.43,
+      "end": 30.05,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 31.4,
+      "end": 34.54
     },
     {
       "speaker": "user",
-      "start": 38.14,
-      "end": 41.52,
-      "event": "ordinary_request"
+      "start": 35.73,
+      "end": 38.61
+    },
+    {
+      "speaker": "friend",
+      "start": 41.22,
+      "end": 43.15
+    },
+    {
+      "speaker": "user",
+      "start": 43.85,
+      "end": 47.31
+    },
+    {
+      "speaker": "friend",
+      "start": 47.88,
+      "end": 49.07
+    },
+    {
+      "speaker": "user",
+      "start": 50.07,
+      "end": 50.97,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 51.51,
+      "end": 53.57
+    },
+    {
+      "speaker": "user",
+      "start": 53.98,
+      "end": 55.91,
+      "event": "distractor",
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 56.33,
+      "end": 57.46
+    },
+    {
+      "speaker": "user",
+      "start": 58.44,
+      "end": 60.35,
+      "event": "return_cue",
+      "kind": "explicit"
     }
   ],
   "notes": "Rendered from script train_10_00124 by scripts/render.py.",
@@ -66,33 +150,21 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.66,
-      "end": 2.58,
-      "text": "Hey, good to have you here. How are you?"
+      "start": 0.75,
+      "end": 2.56,
+      "text": "Hi! How are you doing these days?"
     },
     {
       "kind": "reply",
-      "start": 9.35,
-      "end": 14.69,
-      "text": "Try a fast, funny adventure with short chapters, or a graphic novel. They feel quick and rewarding."
+      "start": 8.9,
+      "end": 14.79,
+      "text": "That happens to a lot of writers. Do you want to push through to the end of a messy draft, or fix the opening first?"
     },
     {
-      "kind": "reply",
-      "start": 19.04,
-      "end": 24.54,
-      "text": "Absolutely. They build vocabulary and following a story, and they're often a gateway to longer books."
-    },
-    {
-      "kind": "reply",
-      "start": 31.08,
-      "end": 36.9,
-      "text": "There are lots of middle grade novels about kids on football teams. Ask a librarian, they'll know the popular ones."
-    },
-    {
-      "kind": "reply",
-      "start": 42.53,
-      "end": 46.39,
-      "text": "Perfect. Let him choose a couple himself, that helps a lot with motivation."
+      "kind": "resume",
+      "start": 61.16,
+      "end": 64.73,
+      "text": "Alright. Right, the restarting problem. Which way are you leaning?"
     }
   ]
 }

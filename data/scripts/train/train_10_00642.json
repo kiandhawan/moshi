@@ -7,190 +7,113 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "near_miss"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "cooking",
-  "shopping"
+  "home_repair"
  ],
- "topic": "cooking",
+ "topic": "home_repair",
  "voices": {
-  "user": "18b1276891524bd786fb8a59ecd3630a",
-  "friend": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Ben",
- "friend_name_id": "name_11",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_17",
-  "greet_ans_05",
-  "side_instr_14",
-  "dn_08",
-  "side_cue_08"
+  "greet_11",
+  "greet_ans_13"
  ],
  "block_ids": [
-  "cooking.ctx3",
-  "shopping.side3"
+  "home_repair.dlg15"
  ],
- "est_total_sec": 77.72,
- "est_speech_sec": 59.25,
+ "est_total_sec": 46.8,
+ "est_speech_sec": 37.58,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there! How's your day?",
-   "est_sec": 1.65,
-   "gap_before": 0.76,
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.53,
    "role": "greeting",
-   "phrasing": "greet_17"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "I'm alright, a bit tired.",
-   "est_sec": 1.65,
-   "gap_before": 0.47,
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_05"
+   "phrasing": "greet_ans_13"
   },
   {
    "speaker": "user",
-   "text": "I'm trying to meal prep lunches for the week. Cheap and not boring, please.",
-   "est_sec": 4.44,
-   "gap_before": 0.33,
+   "text": "What's the minimum toolkit I need as a first time homeowner?",
+   "est_sec": 3.51,
+   "gap_before": 0.23,
    "event": "ordinary_request",
-   "block": "cooking.ctx3"
+   "block": "home_repair.dlg15"
   },
   {
    "speaker": "moshi",
-   "text": "Sure. Do you want one big batch of the same thing, like a chili, or two smaller recipes you can alternate?",
-   "est_sec": 6.61,
+   "text": "Start with a hammer, a set of screwdrivers, a tape measure, a level, pliers and an adjustable wrench.",
+   "est_sec": 5.68,
+   "gap_before": 0.36,
+   "role": "reply",
+   "block": "home_repair.dlg15"
+  },
+  {
+   "speaker": "user",
+   "text": "No drill?",
+   "est_sec": 0.72,
+   "gap_before": 1.45,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A cordless drill is the next thing to buy, you'll use it constantly. I'd say it's worth it in the first month.",
+   "est_sec": 6.92,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "home_repair.dlg15"
+  },
+  {
+   "speaker": "user",
+   "text": "What about one of those big boxed kits with a hundred pieces?",
+   "est_sec": 3.82,
+   "gap_before": 1.06,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "They can be handy, but the cheap ones often have flimsy tools. Better to buy fewer, decent quality basics.",
+   "est_sec": 5.99,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "home_repair.dlg15"
+  },
+  {
+   "speaker": "user",
+   "text": "Got it. Anything people always forget?",
+   "est_sec": 1.96,
+   "gap_before": 1.27,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A utility knife, a stud finder, and a torch. And a little box of assorted screws and wall plugs.",
+   "est_sec": 5.99,
    "gap_before": 0.34,
    "role": "reply",
-   "block": "cooking.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, good question.",
-   "est_sec": 1.03,
-   "gap_before": 0.43,
-   "event": "ordinary_request",
-   "block": "cooking.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No rush, it really depends on how much variety you need.",
-   "est_sec": 3.51,
-   "gap_before": 0.42,
-   "role": "reply",
-   "block": "cooking.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait a moment, my coworker is here. Please be quiet until I tell you I'm back.",
-   "est_sec": 5.06,
-   "gap_before": 0.58,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_14"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait, are you back for good or just visiting?",
-   "est_sec": 2.89,
-   "gap_before": 1.36,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_08"
-  },
-  {
-   "speaker": "friend",
-   "text": "Just for the weekend.",
-   "est_sec": 1.34,
-   "gap_before": 0.79,
-   "phrasing": "dn_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Ben, which of these two pans do you think is better?",
-   "est_sec": 3.51,
-   "gap_before": 1.5,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "shopping.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "The heavier one. Thin pans burn everything.",
-   "est_sec": 2.27,
-   "gap_before": 1.26,
-   "block": "shopping.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "It's almost twice the price though.",
-   "est_sec": 1.96,
-   "gap_before": 2.76,
-   "block": "shopping.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "It'll last you ten years. The other one will be scratched by spring.",
-   "est_sec": 4.13,
-   "gap_before": 1.06,
-   "block": "shopping.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, you've convinced me. Can you hold it while I find a basket?",
-   "est_sec": 4.13,
-   "gap_before": 1.06,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "shopping.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Sure, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.54,
-   "block": "shopping.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's sorted. I'm back.",
-   "est_sec": 1.65,
-   "gap_before": 0.86,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_08"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem. We were planning your lunches. One big batch or two smaller recipes?",
-   "est_sec": 4.44,
-   "gap_before": 1.31,
-   "role": "resume",
-   "block": "cooking.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Two, I'd get sick of chili by Wednesday.",
-   "est_sec": 2.58,
-   "gap_before": 0.59,
-   "event": "ordinary_request",
-   "block": "cooking.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Makes sense. How about a lentil curry and a pasta salad, both keep well for four days.",
-   "est_sec": 5.37,
-   "gap_before": 0.55,
-   "role": "followup",
-   "block": "cooking.ctx3"
+   "block": "home_repair.dlg15"
   }
  ]
 }

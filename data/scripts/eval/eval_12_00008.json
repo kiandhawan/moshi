@@ -7,6 +7,8 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "side_conversation",
@@ -15,37 +17,38 @@
   "extra_question"
  ],
  "topics": [
-  "podcasts",
-  "family_visit"
+  "restaurant_choice",
+  "home_office"
  ],
- "topic": "podcasts",
+ "topic": "restaurant_choice",
  "voices": {
-  "user": "026218fe0c054374838d934016f34082",
-  "friend": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "b121b91872f54f04ba9f6da08b8b6253",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Aisha",
- "friend_name_id": "name_18",
+ "friend_name": "Zoe",
+ "friend_name_id": "name_24",
  "phrasing_ids": [
   "greet_27",
   "greet_ans_30",
-  "side_instr_27",
-  "ack_01",
-  "dq_24",
+  "side_instr_18",
+  "ack_06",
+  "dq_15",
   "side_cue_03"
  ],
  "block_ids": [
-  "podcasts.ctx1",
-  "family_visit.side1"
+  "restaurant_choice.ctx21",
+  "home_office.side6",
+  "dq_15"
  ],
- "est_total_sec": 65.68,
- "est_speech_sec": 48.82,
+ "est_total_sec": 76.74,
+ "est_speech_sec": 57.08,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey there, how have things been?",
    "est_sec": 1.96,
-   "gap_before": 0.78,
+   "gap_before": 0.75,
    "role": "greeting",
    "phrasing": "greet_27",
    "reference_only": true
@@ -54,133 +57,145 @@
    "speaker": "user",
    "text": "Not bad at all, thanks.",
    "est_sec": 1.65,
-   "gap_before": 0.84,
+   "gap_before": 0.43,
    "event": "greeting_answer",
    "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "I need a new podcast for my drive to work.",
-   "est_sec": 3.2,
-   "gap_before": 0.53,
+   "text": "My girlfriend's parents picked a seafood place, but she's allergic to shellfish.",
+   "est_sec": 3.82,
+   "gap_before": 0.22,
    "event": "ordinary_request",
-   "block": "podcasts.ctx1"
+   "block": "restaurant_choice.ctx21"
   },
   {
    "speaker": "moshi",
-   "text": "How long is the drive, and are you in the mood for true crime, comedy, or something you'd actually learn from?",
-   "est_sec": 6.61,
-   "gap_before": 0.97,
+   "text": "That needs care. How severe is it? Is it just eating it, or does she react to traces in the kitchen too?",
+   "est_sec": 6.92,
+   "gap_before": 1.09,
    "role": "reply",
-   "block": "podcasts.ctx1",
+   "block": "restaurant_choice.ctx21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Just a minute, I have to answer my roommate. Please stay quiet until I return.",
+   "text": "Hold up, my mom is asking me something. Please don't say anything until I'm back.",
    "est_sec": 4.75,
-   "gap_before": 1.84,
+   "gap_before": 1.0,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_27"
+   "phrasing": "side_instr_18"
   },
   {
    "speaker": "moshi",
-   "text": "Sure.",
-   "est_sec": 0.41,
-   "gap_before": 0.54,
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.57,
    "role": "ack",
-   "phrasing": "ack_01",
+   "phrasing": "ack_06",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Aisha, did my mom call you about dinner on Sunday?",
-   "est_sec": 3.2,
-   "gap_before": 1.14,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "family_visit.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "She texted me. She wants to bring her lasagna.",
+   "text": "Zoe, can you grab me a glass of water?",
    "est_sec": 2.89,
-   "gap_before": 0.56,
-   "block": "family_visit.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Of course she does. Do we have a dish big enough to warm it up?",
-   "est_sec": 4.75,
-   "gap_before": 0.51,
+   "gap_before": 1.2,
    "event": "distractor",
    "kind": "friend_question",
-   "block": "family_visit.side1"
+   "phrasing": "dq_15"
   },
   {
    "speaker": "friend",
-   "text": "We have that big glass one. It should fit.",
+   "text": "Sure, one second.",
+   "est_sec": 1.03,
+   "gap_before": 3.43,
+   "phrasing": "dq_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Zoe, did you take the good chair again?",
+   "est_sec": 2.58,
+   "gap_before": 1.26,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_office.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Mine squeaks! I've got a long day of calls.",
    "est_sec": 2.89,
-   "gap_before": 0.44,
-   "block": "family_visit.side1"
+   "gap_before": 1.31,
+   "block": "home_office.side6"
   },
   {
    "speaker": "user",
-   "text": "Okay, good. I'll make a salad so it's not just pasta.",
-   "est_sec": 3.51,
-   "gap_before": 1.38,
-   "block": "family_visit.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Have you finished with the laptop?",
-   "est_sec": 1.96,
-   "gap_before": 1.37,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_24"
+   "text": "So I get the squeaky one? It wobbles too.",
+   "est_sec": 2.89,
+   "gap_before": 0.67,
+   "block": "home_office.side6"
   },
   {
    "speaker": "friend",
-   "text": "Almost, give me ten minutes.",
+   "text": "Okay, okay. Swap at lunch?",
    "est_sec": 1.65,
-   "gap_before": 1.41,
-   "phrasing": "dq_24"
+   "gap_before": 0.61,
+   "block": "home_office.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine. But we're ordering a second decent chair this weekend.",
+   "est_sec": 3.2,
+   "gap_before": 0.88,
+   "block": "home_office.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Agreed. The neighbour upstairs is selling hers, actually.",
+   "est_sec": 2.58,
+   "gap_before": 0.9,
+   "block": "home_office.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it the grey mesh one? I'd buy that tomorrow.",
+   "est_sec": 3.2,
+   "gap_before": 0.49,
+   "block": "home_office.side6"
   },
   {
    "speaker": "user",
    "text": "Sorry about that, I'm back.",
    "est_sec": 1.65,
-   "gap_before": 0.77,
+   "gap_before": 1.5,
    "event": "return_cue",
    "kind": "explicit",
    "phrasing": "side_cue_03"
   },
   {
    "speaker": "moshi",
-   "text": "Sure thing. Still want that driving podcast? What kind?",
-   "est_sec": 2.89,
-   "gap_before": 0.32,
+   "text": "Alright. Still need to know about her allergy before the seafood dinner. How bad is it?",
+   "est_sec": 5.06,
+   "gap_before": 1.15,
    "role": "resume",
-   "block": "podcasts.ctx1",
+   "block": "restaurant_choice.ctx21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Something educational, maybe history.",
-   "est_sec": 1.34,
-   "gap_before": 0.63,
+   "text": "Pretty severe. She carries an epipen.",
+   "est_sec": 1.96,
+   "gap_before": 0.33,
    "event": "ordinary_request",
-   "block": "podcasts.ctx1"
+   "block": "restaurant_choice.ctx21"
   },
   {
    "speaker": "moshi",
-   "text": "Great pick. Narrative history shows work really well on long drives.",
-   "est_sec": 3.51,
-   "gap_before": 1.33,
+   "text": "Then I'd gently suggest a different restaurant. Cross contact in a seafood kitchen is really hard to avoid.",
+   "est_sec": 5.68,
+   "gap_before": 0.37,
    "role": "followup",
-   "block": "podcasts.ctx1",
+   "block": "restaurant_choice.ctx21",
    "reference_only": true
   }
  ],

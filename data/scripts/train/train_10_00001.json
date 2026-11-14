@@ -7,115 +7,92 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
  "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "cars"
+  "pets"
  ],
- "wait_sec": 5,
+ "wait_sec": 45,
  "deadline": {
   "after_turn": 4,
-  "sec": 5
+  "sec": 45
  },
- "topic": "cars",
+ "topic": "pets",
  "voices": {
-  "user": "cbc3add1f54546e6a4a1964bacb8b122",
+  "user": "ce9db9be1ecb4c8a832802626864595d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_04",
-  "greet_ans_19",
-  "think_instr_16",
-  "ack_16"
+  "greet_25",
+  "greet_ans_28",
+  "think_instr_04"
  ],
  "block_ids": [
-  "cars.ctx3"
+  "pets.ctx9"
  ],
- "est_total_sec": 36.32,
- "est_speech_sec": 25.7,
+ "est_total_sec": 70.32,
+ "est_speech_sec": 20.44,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how are you?",
-   "est_sec": 1.65,
-   "gap_before": 0.35,
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.37,
    "role": "greeting",
-   "phrasing": "greet_04"
+   "phrasing": "greet_25"
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Just got home.",
-   "est_sec": 1.65,
-   "gap_before": 0.71,
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.87,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_19"
+   "phrasing": "greet_ans_28"
   },
   {
    "speaker": "user",
-   "text": "I'm finally buying my first car.",
-   "est_sec": 1.96,
-   "gap_before": 0.59,
+   "text": "We're moving to a house near a quiet road, and our cat has only ever lived in a flat.",
+   "est_sec": 5.99,
+   "gap_before": 0.56,
    "event": "ordinary_request",
-   "block": "cars.ctx3"
+   "block": "pets.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Congratulations! Have you thought about whether you want something new with a warranty, or a cheaper used one?",
-   "est_sec": 5.68,
-   "gap_before": 0.79,
+   "text": "Big change for her. Are you thinking of keeping her indoors, or letting her start going outside?",
+   "est_sec": 5.37,
+   "gap_before": 0.81,
    "role": "reply",
-   "block": "cars.ctx3"
+   "block": "pets.ctx9"
   },
   {
    "speaker": "user",
-   "text": "Can I have five seconds to think? Ask me again after.",
-   "est_sec": 3.51,
-   "gap_before": 0.52,
+   "text": "I don't know yet. Ask me again in forty-five seconds.",
+   "est_sec": 3.2,
+   "gap_before": 0.4,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 5,
-   "phrasing": "think_instr_16"
+   "wait_sec": 45,
+   "phrasing": "think_instr_04"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, sure.",
-   "est_sec": 0.72,
-   "gap_before": 0.58,
-   "role": "ack",
-   "phrasing": "ack_16"
-  },
-  {
-   "speaker": "moshi",
-   "text": "So, new with a warranty, or used and cheaper?",
-   "est_sec": 2.89,
+   "text": "Any thoughts yet? Indoors or outdoors for her?",
+   "est_sec": 2.58,
    "role": "resume",
-   "block": "cars.ctx3",
+   "block": "pets.ctx9",
    "anchor": {
     "turn": 4,
-    "offset": 5.4
+    "offset": 45.37
    }
-  },
-  {
-   "speaker": "user",
-   "text": "New. I want something that won't break down on the motorway.",
-   "est_sec": 3.51,
-   "gap_before": 0.66,
-   "event": "ordinary_request",
-   "block": "cars.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's fair. Look at smaller models, they're often much cheaper to insure too.",
-   "est_sec": 4.13,
-   "gap_before": 0.82,
-   "role": "followup",
-   "block": "cars.ctx3"
   }
  ]
 }

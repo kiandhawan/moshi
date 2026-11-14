@@ -1,72 +1,118 @@
 {
   "id": "train_10_00660",
-  "group": "describe_options",
-  "user_start": 2.45,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 8.3,
-  "instruction_end": 12.1,
-  "wait_end": 35.6,
-  "resume_window": [
-    35.6,
-    40.6
+  "group": "side_conversation",
+  "user_start": 2.73,
+  "type": "side_conversation",
+  "conditions": [
+    "near_miss"
   ],
-  "wait_sec": 23.5,
+  "cluster": "public_transport.ctx8",
+  "instruction_start": 16.14,
+  "instruction_end": 20.3,
+  "wait_end": 51.09,
+  "resume_window": [
+    51.09,
+    56.09
+  ],
+  "wait_sec": 30.79,
   "distractors": [
-    25.74
+    24.08,
+    31.79
   ],
   "distractor_kinds": [
-    "pause"
+    "near_miss",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      25.74,
-      28.5
+      24.08,
+      25.51
+    ],
+    [
+      31.79,
+      33.55
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    8.03,
+    59.29
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.45,
-      "end": 3.48,
+      "start": 2.73,
+      "end": 3.87,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 3.88,
-      "end": 7.48
+      "start": 4.14,
+      "end": 8.03,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 8.3,
-      "end": 12.1,
+      "start": 16.14,
+      "end": 20.3,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 13.84,
-      "end": 19.39
-    },
-    {
-      "speaker": "user",
-      "start": 20.81,
-      "end": 25.74,
+      "start": 22.11,
+      "end": 24.08,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 25.51,
+      "end": 27.97
     },
     {
       "speaker": "user",
-      "start": 28.5,
-      "end": 32.88
+      "start": 28.46,
+      "end": 31.79,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 33.55,
+      "end": 36.0
     },
     {
       "speaker": "user",
-      "start": 33.78,
-      "end": 35.6,
+      "start": 36.67,
+      "end": 39.54
+    },
+    {
+      "speaker": "friend",
+      "start": 40.07,
+      "end": 42.17
+    },
+    {
+      "speaker": "user",
+      "start": 43.3,
+      "end": 45.8
+    },
+    {
+      "speaker": "friend",
+      "start": 46.46,
+      "end": 48.56
+    },
+    {
+      "speaker": "user",
+      "start": 49.55,
+      "end": 51.09,
       "event": "return_cue",
       "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 57.16,
+      "end": 59.29,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00660 by scripts/render.py.",
@@ -74,21 +120,33 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.65,
-      "end": 2.06,
-      "text": "Hey! How are you feeling?"
+      "start": 0.37,
+      "end": 2.05,
+      "text": "Hi, how are you doing right now?"
+    },
+    {
+      "kind": "reply",
+      "start": 8.43,
+      "end": 14.83,
+      "text": "Stressful timing. There's a replacement bus service, or you could take a bike from the share scheme. Which do you trust more?"
     },
     {
       "kind": "ack",
-      "start": 12.53,
-      "end": 12.97,
-      "text": "Sure."
+      "start": 20.59,
+      "end": 21.31,
+      "text": "Sure, go ahead."
     },
     {
       "kind": "resume",
-      "start": 36.35,
-      "end": 46.98,
-      "text": "How old is the faucet? If it's fairly new, try the washer first, it's cheap and you'll learn something. If it's ancient, a new faucet might be worth it, and you can call the plumber if you get stuck."
+      "start": 51.84,
+      "end": 56.23,
+      "text": "Sure thing. Getting to the interview was still the open bit. Bus, or bike?"
+    },
+    {
+      "kind": "followup",
+      "start": 59.74,
+      "end": 65.29,
+      "text": "Smart. Replacement buses fill up fast, so the earliest one gives you a safety margin."
     }
   ]
 }

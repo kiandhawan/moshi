@@ -7,141 +7,108 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [
-  "wait_like"
- ],
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
  "topics": [
-  "smartphones"
+  "hiking"
  ],
- "topic": "smartphones",
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 10
+ },
+ "topic": "hiking",
  "voices": {
-  "user": "4210f97652d14bec82edc1c2ee8296d2",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_28",
-  "greet_ans_20",
-  "waitlike_07"
+  "greet_05",
+  "greet_ans_10",
+  "think_instr_23"
  ],
  "block_ids": [
-  "smartphones.dlg3"
+  "hiking.ctx10"
  ],
- "est_total_sec": 53.34,
- "est_speech_sec": 41.6,
+ "est_total_sec": 51.34,
+ "est_speech_sec": 33.04,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's everything today?",
-   "est_sec": 1.34,
-   "gap_before": 0.35,
+   "text": "Hi, how have you been?",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
    "role": "greeting",
-   "phrasing": "greet_28"
+   "phrasing": "greet_05"
   },
   {
    "speaker": "user",
-   "text": "Can't complain.",
-   "est_sec": 0.72,
-   "gap_before": 0.81,
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.46,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_20"
+   "phrasing": "greet_ans_10"
   },
   {
    "speaker": "user",
-   "text": "Quick question. Is it okay to leave my phone charging overnight?",
-   "est_sec": 3.51,
-   "gap_before": 0.42,
+   "text": "I moved here in spring and I still haven't found anyone to hike with.",
+   "est_sec": 4.44,
+   "gap_before": 0.21,
    "event": "ordinary_request",
-   "block": "smartphones.dlg3"
+   "block": "hiking.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "Modern phones stop charging when they're full, so it's generally safe. Many also have an optimized charging setting that waits to finish until just before you wake up.",
-   "est_sec": 8.78,
-   "gap_before": 0.61,
+   "text": "That can be lonely. There's a local rambling club with a small yearly fee, or a free app where people post group walks. Would you prefer regular faces or more flexibility?",
+   "est_sec": 9.71,
+   "gap_before": 0.36,
    "role": "reply",
-   "block": "smartphones.dlg3"
+   "block": "hiking.ctx10"
   },
   {
    "speaker": "user",
-   "text": "Where do I find that?",
-   "est_sec": 1.65,
-   "gap_before": 0.93,
-   "event": "ordinary_request",
-   "block": "smartphones.dlg3"
+   "text": "Give me ten seconds, I want to think about it. Then ask again.",
+   "est_sec": 4.13,
+   "gap_before": 0.92,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_23"
   },
   {
    "speaker": "moshi",
-   "text": "It's usually under battery in your settings. Look for something like optimized or adaptive charging.",
+   "text": "Regular faces or flexibility? Which way are you leaning?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "hiking.ctx10",
+   "anchor": {
+    "turn": 4,
+    "offset": 10.36
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The club. I want to see the same people and actually make friends.",
+   "est_sec": 4.13,
+   "gap_before": 3.26,
+   "event": "ordinary_request",
+   "block": "hiking.ctx10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good thinking. Go to three walks before you judge it, the first one's always awkward.",
    "est_sec": 4.75,
-   "gap_before": 0.63,
-   "role": "reply",
-   "block": "smartphones.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, that's not right.",
-   "est_sec": 1.65,
-   "gap_before": 0.41,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_07",
-   "block": "smartphones.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "I'm fairly sure about it, but I could be wrong. What sounds off to you?",
-   "est_sec": 4.75,
-   "gap_before": 0.79,
-   "role": "reply",
-   "block": "smartphones.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Found it, it was already on. Huh.",
-   "est_sec": 2.27,
-   "gap_before": 0.73,
-   "event": "ordinary_request",
-   "block": "smartphones.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Nice, then you're already set. Just keep the phone out from under your pillow so it can cool down.",
-   "est_sec": 5.99,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "smartphones.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Ha, I definitely",
-   "est_sec": 1.03,
-   "gap_before": 0.98,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "smartphones.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "do that sometimes. I'll stop.",
-   "est_sec": 1.65,
-   "gap_before": 1.9,
-   "event": "ordinary_request",
-   "block": "smartphones.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Good plan. A nightstand is much better for both of you.",
-   "est_sec": 3.51,
-   "gap_before": 0.87,
-   "role": "reply",
-   "block": "smartphones.dlg3"
+   "gap_before": 0.72,
+   "role": "followup",
+   "block": "hiking.ctx10"
   }
  ]
 }

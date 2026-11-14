@@ -7,158 +7,120 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "restaurant_choice",
-  "family_visit"
+  "painting_art"
  ],
- "topic": "restaurant_choice",
+ "topic": "painting_art",
  "voices": {
-  "user": "ca1a4fbf6702400a863d60be2fe8062d",
-  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Marcus",
- "friend_name_id": "name_09",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
   "greet_03",
-  "greet_ans_09",
-  "side_instr_27",
-  "dq_03",
-  "side_cue_03"
+  "greet_ans_27",
+  "describe_instr_03",
+  "ack_15",
+  "describe_cue_06"
  ],
  "block_ids": [
-  "restaurant_choice.ctx2",
-  "family_visit.side2"
+  "painting_art.opt5"
  ],
- "est_total_sec": 62.11,
- "est_speech_sec": 43.97,
+ "est_total_sec": 49.31,
+ "est_speech_sec": 38.2,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello, how's your day going?",
    "est_sec": 1.65,
-   "gap_before": 0.8,
+   "gap_before": 0.55,
    "role": "greeting",
    "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.32,
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.62,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_27"
   },
   {
    "speaker": "user",
-   "text": "My parents are visiting and I want to take them out for dinner.",
-   "est_sec": 4.13,
-   "gap_before": 0.42,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.ctx2"
+   "text": "I'm redecorating and want to choose art for the living room wall.",
+   "est_sec": 3.82,
+   "gap_before": 0.31,
+   "block": "painting_art.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me go through every option before you say anything.",
+   "est_sec": 3.2,
+   "gap_before": 0.47,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_03"
   },
   {
    "speaker": "moshi",
-   "text": "Nice. Do they like trying new kinds of food, or would they be happier with something familiar like a steakhouse?",
-   "est_sec": 6.3,
-   "gap_before": 0.48,
-   "role": "reply",
-   "block": "restaurant_choice.ctx2",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.22,
+   "role": "ack",
+   "phrasing": "ack_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Just a minute, I have to answer my roommate. Please stay quiet until I return.",
-   "est_sec": 4.75,
-   "gap_before": 0.87,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_27"
-  },
-  {
-   "speaker": "user",
-   "text": "What time does my uncle's train get in?",
-   "est_sec": 2.58,
-   "gap_before": 1.13,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "family_visit.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Quarter past four, I think. Want me to pick him up?",
-   "est_sec": 3.51,
-   "gap_before": 2.53,
-   "block": "family_visit.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Would you? I have a call until five.",
-   "est_sec": 2.58,
-   "gap_before": 1.27,
-   "block": "family_visit.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "No problem. Does he have a lot of luggage?",
-   "est_sec": 2.89,
-   "gap_before": 1.89,
-   "block": "family_visit.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Knowing him, two big suitcases and a bag of cheese.",
-   "est_sec": 3.2,
-   "gap_before": 0.33,
-   "block": "family_visit.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Then I'll take the car, not the bike.",
-   "est_sec": 2.58,
+   "text": "I could hang one of my own big acrylic paintings, the orange abstract one.",
+   "est_sec": 4.44,
    "gap_before": 1.19,
-   "block": "family_visit.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, have you seen my keys anywhere?",
-   "est_sec": 2.27,
-   "gap_before": 3.25,
+   "block": "painting_art.opt5",
    "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_03"
-  },
-  {
-   "speaker": "friend",
-   "text": "They're on the kitchen counter.",
-   "est_sec": 1.65,
-   "gap_before": 0.74,
-   "phrasing": "dq_03"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Sorry about that, I'm back.",
-   "est_sec": 1.65,
-   "gap_before": 1.09,
+   "text": "Or buy a print from a local artist I follow, a misty forest scene in soft greens.",
+   "est_sec": 5.37,
+   "gap_before": 1.77,
+   "block": "painting_art.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or do a gallery wall with lots of small framed sketches and postcards.",
+   "est_sec": 4.13,
+   "gap_before": 2.34,
+   "block": "painting_art.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, those are all the choices. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.49,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_03"
+   "phrasing": "describe_cue_06"
   },
   {
    "speaker": "moshi",
-   "text": "Alright. So, would your parents like something new or something familiar?",
-   "est_sec": 3.51,
-   "gap_before": 0.33,
+   "text": "I'd hang your orange abstract, nothing beats your own work on the main wall. If the room is already colorful though, the misty forest might be more restful. What color are the walls and sofa?",
+   "est_sec": 10.95,
+   "gap_before": 0.65,
    "role": "resume",
-   "block": "restaurant_choice.ctx2",
+   "block": "painting_art.opt5",
    "reference_only": true
   }
  ],

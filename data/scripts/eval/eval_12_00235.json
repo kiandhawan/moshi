@@ -7,151 +7,131 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "phone_call",
- "wait_type": "phone_call",
- "conditions": [
-  "implicit"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "camping"
+  "picnic"
  ],
- "topic": "camping",
+ "topic": "picnic",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_12",
-  "greet_ans_06",
-  "phone_instr_01",
-  "call_12",
-  "implicit_10"
+  "greet_06",
+  "greet_ans_09"
  ],
  "block_ids": [
-  "camping.ctx1"
+  "picnic.dlg11"
  ],
- "est_total_sec": 59.16,
- "est_speech_sec": 36.95,
+ "est_total_sec": 48.3,
+ "est_speech_sec": 35.2,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there, how are you doing today?",
-   "est_sec": 2.27,
-   "gap_before": 0.42,
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.36,
    "role": "greeting",
-   "phrasing": "greet_12",
+   "phrasing": "greet_06",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.8,
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.99,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "We're finally going camping next weekend, just me and my partner.",
-   "est_sec": 3.51,
-   "gap_before": 0.47,
+   "text": "Hi, I'm hosting my first picnic and I'm worried I'll forget something. Can you help me make a list?",
+   "est_sec": 5.99,
+   "gap_before": 0.52,
    "event": "ordinary_request",
-   "block": "camping.ctx1"
+   "block": "picnic.dlg11"
   },
   {
    "speaker": "moshi",
-   "text": "Nice! Do you want a spot by the lake with more people around, or a quieter site up in the forest?",
-   "est_sec": 6.61,
-   "gap_before": 1.83,
+   "text": "Of course. Start with a blanket, plates, cups, napkins, a knife and a bin bag for rubbish.",
+   "est_sec": 5.37,
+   "gap_before": 1.73,
    "role": "reply",
-   "block": "camping.ctx1",
+   "block": "picnic.dlg11",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Sorry, I have to take this call. Hang on and stay quiet until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 1.14,
-   "event": "instruction",
-   "kind": "phone_call",
-   "phrasing": "phone_instr_01"
-  },
-  {
-   "speaker": "user",
-   "text": "Hello?",
-   "est_sec": 0.41,
-   "gap_before": 1.98,
-   "phrasing": "call_12",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Hi, yes, about the dentist appointment.",
-   "est_sec": 1.96,
-   "gap_before": 3.79,
-   "phrasing": "call_12"
-  },
-  {
-   "speaker": "user",
-   "text": "Could we move it to next week?",
-   "est_sec": 2.27,
-   "gap_before": 3.46,
-   "phrasing": "call_12",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Monday works. Thank you so much.",
-   "est_sec": 1.96,
-   "gap_before": 2.17,
-   "phrasing": "call_12"
-  },
-  {
-   "speaker": "user",
-   "text": "Anyway, what do you think?",
-   "est_sec": 1.65,
-   "gap_before": 1.94,
-   "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_10"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Right. So, lake or forest for your camping trip?",
-   "est_sec": 2.89,
-   "gap_before": 0.44,
-   "role": "resume",
-   "block": "camping.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "The forest, definitely. We want some peace and quiet.",
-   "est_sec": 2.89,
-   "gap_before": 1.35,
+   "text": "And food wise?",
+   "est_sec": 1.03,
+   "gap_before": 0.6,
    "event": "ordinary_request",
-   "block": "camping.ctx1"
+   "block": "picnic.dlg11"
   },
   {
    "speaker": "moshi",
-   "text": "Good call. Just bring extra layers, it gets cold under the trees at night.",
+   "text": "One main thing like sandwiches or a salad, something sweet, fruit and plenty of water.",
+   "est_sec": 4.75,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "picnic.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "What about sun stuff?",
+   "est_sec": 1.34,
+   "gap_before": 0.66,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "picnic.dlg11"
+  },
+  {
+   "speaker": "user",
+   "text": "We're going at noon.",
+   "est_sec": 1.34,
+   "gap_before": 2.3,
+   "event": "ordinary_request",
+   "block": "picnic.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sunscreen, hats, and something for shade. Noon is the hottest part of the day.",
    "est_sec": 4.44,
-   "gap_before": 0.92,
-   "role": "followup",
-   "block": "camping.ctx1",
+   "gap_before": 1.66,
+   "role": "reply",
+   "block": "picnic.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Anything people usually forget?",
+   "est_sec": 1.34,
+   "gap_before": 1.14,
+   "event": "ordinary_request",
+   "block": "picnic.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A bottle opener, wet wipes and a little bag for leftovers. And a spare jumper in case it gets breezy.",
+   "est_sec": 6.3,
+   "gap_before": 1.24,
+   "role": "reply",
+   "block": "picnic.dlg11",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_phone",
-  "implicit_return"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

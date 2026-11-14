@@ -7,151 +7,160 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [
-  "implicit"
+  "extension",
+  "self_talk"
  ],
  "topics": [
-  "home_office"
+  "learning_language"
  ],
- "reading": {
-  "material": "recipe",
-  "sec": 16.5
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 2.28
  },
- "topic": "home_office",
+ "deadline": {
+  "after_turn": 7,
+  "sec": 10
+ },
+ "topic": "learning_language",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_12",
-  "greet_ans_06",
-  "read_instr_04",
-  "murmur_05",
-  "murmur_06",
-  "implicit_04"
+  "greet_09",
+  "greet_ans_27",
+  "think_instr_15",
+  "ack_11",
+  "self_30",
+  "extension_04"
  ],
  "block_ids": [
-  "home_office.ctx3"
+  "learning_language.ctx1"
  ],
- "est_total_sec": 52.93,
- "est_speech_sec": 33.03,
+ "est_total_sec": 58.72,
+ "est_speech_sec": 29.93,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there, how are you doing today?",
-   "est_sec": 2.27,
-   "gap_before": 0.61,
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.43,
    "role": "greeting",
-   "phrasing": "greet_12",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.46,
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.45,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_27"
   },
   {
    "speaker": "user",
-   "text": "Working from home is great, but I never really stop working.",
-   "est_sec": 3.51,
-   "gap_before": 0.51,
+   "text": "I want to start learning a new language this year.",
+   "est_sec": 3.2,
+   "gap_before": 0.31,
    "event": "ordinary_request",
-   "block": "home_office.ctx3"
+   "block": "learning_language.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "That's a common trap. What could be your end of the day ritual, something that tells your brain work is over?",
-   "est_sec": 6.61,
-   "gap_before": 0.35,
+   "text": "Great goal. Is there a language you need for work or travel, or would you rather pick one just because it sounds fun?",
+   "est_sec": 7.23,
+   "gap_before": 0.72,
    "role": "reply",
-   "block": "home_office.ctx3",
+   "block": "learning_language.ctx1",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hang on, let me read this recipe first. Don't talk until I'm finished.",
-   "est_sec": 4.13,
-   "gap_before": 1.23,
-   "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_04"
-  },
-  {
-   "speaker": "user",
-   "text": "Bake for twenty minutes, okay.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 5.64
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "murmur_05"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, a pinch of salt.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 13.4
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "murmur_06"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, where were we?",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 16.5
-   },
-   "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_04"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Right. Did you think of a way to mark the end of work?",
-   "est_sec": 4.13,
-   "gap_before": 0.77,
-   "role": "resume",
-   "block": "home_office.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Maybe a short walk around the block at six.",
-   "est_sec": 2.89,
-   "gap_before": 0.87,
-   "event": "ordinary_request",
-   "block": "home_office.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect, a fake commute. It really helps your brain switch off.",
+   "text": "Hmm, tough one. Give me fifteen seconds and ask me again.",
    "est_sec": 3.51,
-   "gap_before": 0.4,
+   "gap_before": 3.4,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright.",
+   "est_sec": 0.41,
+   "gap_before": 0.53,
+   "role": "ack",
+   "phrasing": "ack_11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Mm, hold on, hold on.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 6.47
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Actually, wait ten more seconds.",
+   "est_sec": 1.65,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_04",
+   "anchor": {
+    "turn": 4,
+    "offset": 12.72
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Any ideas yet? Work, travel, or just for the joy of it?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "learning_language.ctx1",
+   "anchor": {
+    "turn": 7,
+    "offset": 10.05
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Italian. We're going to Rome next spring.",
+   "est_sec": 2.27,
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect. Start with travel phrases and food vocabulary, you'll use those constantly.",
+   "est_sec": 3.82,
+   "gap_before": 0.69,
    "role": "followup",
-   "block": "home_office.ctx3",
+   "block": "learning_language.ctx1",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading",
-  "implicit_return"
+  "familiar_type",
+  "extension"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

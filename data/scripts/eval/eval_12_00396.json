@@ -7,129 +7,151 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "phone_call",
+ "wait_type": "phone_call",
  "conditions": [],
  "topics": [
-  "family_visit"
+  "holiday_gifts"
  ],
- "topic": "family_visit",
+ "topic": "holiday_gifts",
  "voices": {
-  "user": "732ea755bd9e446eb31dc79966b50428",
+  "user": "026218fe0c054374838d934016f34082",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_09",
-  "greet_ans_03"
+  "greet_15",
+  "greet_ans_06",
+  "phone_instr_08",
+  "call_16",
+  "phone_cue_06"
  ],
  "block_ids": [
-  "family_visit.dlg1"
+  "holiday_gifts.ctx10",
+  "call_16"
  ],
- "est_total_sec": 54.15,
- "est_speech_sec": 39.54,
+ "est_total_sec": 59.45,
+ "est_speech_sec": 42.22,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's it going?",
-   "est_sec": 1.34,
-   "gap_before": 0.74,
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.63,
    "role": "greeting",
-   "phrasing": "greet_09",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Doing okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.49,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_03"
-  },
-  {
-   "speaker": "user",
-   "text": "My in-laws are visiting and I want the guest room to feel welcoming. Any ideas?",
-   "est_sec": 4.75,
-   "gap_before": 0.51,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fresh sheets, an extra blanket and a couple of clean towels go a long way. A small lamp by the bed is nice too.",
-   "est_sec": 7.54,
-   "gap_before": 0.84,
-   "role": "reply",
-   "block": "family_visit.dlg1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Should I leave some snacks or water in there?",
-   "est_sec": 2.89,
-   "gap_before": 1.46,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A bottle of water and a little basket of snacks is a lovely touch. Guests often feel shy raiding someone else's kitchen.",
-   "est_sec": 6.92,
-   "gap_before": 0.92,
-   "role": "reply",
-   "block": "family_visit.dlg1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "What about the wifi password, is it weird to",
-   "est_sec": 2.89,
-   "gap_before": 0.95,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "family_visit.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "just leave a note?",
+   "text": "Good, thanks. Busy day.",
    "est_sec": 1.34,
-   "gap_before": 2.46,
+   "gap_before": 0.86,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "My boss gave everyone gifts last year and I didn't get her anything. Should I this year?",
+   "est_sec": 5.37,
+   "gap_before": 0.4,
    "event": "ordinary_request",
-   "block": "family_visit.dlg1"
+   "block": "holiday_gifts.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "Not weird at all, it's really helpful. A small card on the nightstand works perfectly.",
-   "est_sec": 4.75,
-   "gap_before": 1.04,
+   "text": "It's thoughtful but not expected. Would you rather give her something small yourself, or chip in on a group gift from the team?",
+   "est_sec": 7.23,
+   "gap_before": 0.41,
    "role": "reply",
-   "block": "family_visit.dlg1",
+   "block": "holiday_gifts.ctx10",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Great. Maybe some flowers as well?",
+   "text": "I need to take this, it's important. Please hold on until I'm done.",
+   "est_sec": 4.13,
+   "gap_before": 1.02,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, I'm outside your building.",
+   "est_sec": 1.65,
+   "gap_before": 1.19,
+   "phrasing": "call_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Which buzzer is it again?",
+   "est_sec": 1.65,
+   "gap_before": 2.41,
+   "phrasing": "call_16",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, you broke up, say it once more. Okay, I've got you back now.",
+   "est_sec": 4.44,
+   "gap_before": 2.4,
+   "phrasing": "call_16",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "Flat nine, got it, coming up.",
    "est_sec": 1.96,
-   "gap_before": 3.01,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg1"
+   "gap_before": 3.9,
+   "phrasing": "call_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Done with the call. I'm back.",
+   "est_sec": 1.96,
+   "gap_before": 0.7,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_06"
   },
   {
    "speaker": "moshi",
-   "text": "Sure, just pick something without a strong scent in case anyone has allergies.",
-   "est_sec": 4.13,
-   "gap_before": 0.69,
-   "role": "reply",
-   "block": "family_visit.dlg1",
+   "text": "Okay, you're off the phone. Did you work out what to do for her?",
+   "est_sec": 4.44,
+   "gap_before": 0.48,
+   "role": "resume",
+   "block": "holiday_gifts.ctx10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Just me. She really helped me this year.",
+   "est_sec": 2.58,
+   "gap_before": 0.74,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then a card saying exactly that, with a small treat, is perfect.",
+   "est_sec": 3.82,
+   "gap_before": 0.59,
+   "role": "followup",
+   "block": "holiday_gifts.ctx10",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_phone"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

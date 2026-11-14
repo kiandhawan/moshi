@@ -7,90 +7,166 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [],
- "topics": [
-  "hiking"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
  ],
- "wait_sec": 45,
- "deadline": {
-  "after_turn": 4,
-  "sec": 45
- },
- "topic": "hiking",
+ "topics": [
+  "smartphones",
+  "books"
+ ],
+ "topic": "smartphones",
  "voices": {
-  "user": "c913e2f3869449568fc3fc08dfa21dfe",
-  "friend": null,
+  "user": "5ce84bbd213b4943bc89e1951e17848a",
+  "friend": "be9ce4282d8e414daad6fa1797f1cee8",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Grace",
+ "friend_name_id": "name_16",
  "phrasing_ids": [
-  "greet_19",
-  "greet_ans_16",
-  "think_instr_01"
+  "greet_07",
+  "greet_ans_20",
+  "side_instr_10",
+  "dq_61",
+  "side_cue_19"
  ],
  "block_ids": [
-  "hiking.ctx1"
+  "smartphones.ctx12",
+  "books.side5",
+  "dq_61"
  ],
- "est_total_sec": 73.48,
- "est_speech_sec": 23.23,
+ "est_total_sec": 74.88,
+ "est_speech_sec": 52.75,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how's everything with you?",
-   "est_sec": 1.65,
-   "gap_before": 0.34,
-   "role": "greeting",
-   "phrasing": "greet_19"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty busy, but good.",
+   "text": "Hey! How's everything going?",
    "est_sec": 1.34,
-   "gap_before": 0.75,
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.86,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_16"
+   "phrasing": "greet_ans_20"
   },
   {
    "speaker": "user",
-   "text": "I want to do a day hike on Sunday but I'm not super fit.",
-   "est_sec": 4.44,
-   "gap_before": 0.23,
+   "text": "My thumb aches after using my phone. It's huge, like a small tablet.",
+   "est_sec": 4.13,
+   "gap_before": 0.51,
    "event": "ordinary_request",
-   "block": "hiking.ctx1"
+   "block": "smartphones.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "No problem. There's a flat lakeside loop of about five miles, or a shorter trail with a steep climb and a great view. Which appeals more?",
-   "est_sec": 8.16,
-   "gap_before": 0.56,
+   "text": "That's a real thing. Want to try one-handed mode first, or is it time for a smaller phone?",
+   "est_sec": 5.68,
+   "gap_before": 1.37,
    "role": "reply",
-   "block": "hiking.ctx1"
+   "block": "smartphones.ctx12"
   },
   {
    "speaker": "user",
-   "text": "Give me forty-five seconds to think, then ask me again.",
-   "est_sec": 3.2,
-   "gap_before": 1.31,
+   "text": "Hey, can you stay quiet for a minute? I need to talk to my partner. I'll come back to you.",
+   "est_sec": 6.3,
+   "gap_before": 3.28,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 45,
-   "phrasing": "think_instr_01"
+   "kind": "side_conversation",
+   "phrasing": "side_instr_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you return the library books? They were due Monday.",
+   "est_sec": 3.2,
+   "gap_before": 1.17,
+   "block": "books.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Which ones?",
+   "est_sec": 0.72,
+   "gap_before": 1.08,
+   "block": "books.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "The three on the hall table. The cookbook, the bird guide and that thriller.",
+   "est_sec": 4.44,
+   "gap_before": 1.33,
+   "block": "books.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "I took the thriller back. I didn't know the other two were due too.",
+   "est_sec": 4.44,
+   "gap_before": 0.31,
+   "block": "books.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Great, so we've got fines on two. How much is it per day now?",
+   "est_sec": 4.44,
+   "gap_before": 1.38,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "books.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think it's twenty cents. I'll take them on my way to work tomorrow, promise.",
+   "est_sec": 4.75,
+   "gap_before": 1.03,
+   "block": "books.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Thanks. And maybe check under the couch, I think the bird guide's under there.",
+   "est_sec": 4.44,
+   "gap_before": 0.8,
+   "block": "books.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you get a reply about the job?",
+   "est_sec": 2.58,
+   "gap_before": 3.15,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_61"
+  },
+  {
+   "speaker": "friend",
+   "text": "Still waiting, fingers crossed.",
+   "est_sec": 1.34,
+   "gap_before": 1.05,
+   "phrasing": "dq_61"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 1.58,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_19"
   },
   {
    "speaker": "moshi",
-   "text": "So, the flat loop around the lake, or the steep one with the view?",
-   "est_sec": 4.44,
+   "text": "Alright. So, the oversized phone. Keeping it or downsizing?",
+   "est_sec": 2.89,
+   "gap_before": 1.12,
    "role": "resume",
-   "block": "hiking.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 45.56
-   }
+   "block": "smartphones.ctx12"
   }
  ]
 }

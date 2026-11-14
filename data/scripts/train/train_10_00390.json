@@ -7,120 +7,107 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "personal_finance"
+  "moving_house"
  ],
- "topic": "personal_finance",
+ "topic": "moving_house",
  "voices": {
-  "user": "6d7a45828f6a432c9233cd93bb93e5be",
+  "user": "676f1654c4f747a69a5921ad94886fa1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_28"
+  "greet_17",
+  "greet_ans_11",
+  "describe_instr_13",
+  "describe_cue_08"
  ],
  "block_ids": [
-  "personal_finance.dlg3"
+  "moving_house.opt4"
  ],
- "est_total_sec": 54.13,
- "est_speech_sec": 39.85,
+ "est_total_sec": 50.38,
+ "est_speech_sec": 40.89,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
-   "est_sec": 1.96,
-   "gap_before": 0.41,
-   "role": "greeting",
-   "phrasing": "greet_16"
-  },
-  {
-   "speaker": "user",
-   "text": "Doing alright, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.61,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
-  },
-  {
-   "speaker": "user",
-   "text": "I keep forgetting due dates and paying late fees. Any tricks?",
-   "est_sec": 3.51,
-   "gap_before": 0.51,
-   "event": "ordinary_request",
-   "block": "personal_finance.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Set up autopay for the minimum on every bill, so you're never late. You can still pay extra by hand.",
-   "est_sec": 6.3,
-   "gap_before": 1.02,
-   "role": "reply",
-   "block": "personal_finance.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Autopay makes me nervous though. What if there's not enough in the account?",
-   "est_sec": 4.13,
-   "gap_before": 0.77,
-   "event": "ordinary_request",
-   "block": "personal_finance.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then line up the due dates with your payday. Most companies let you change your billing date if you ask.",
-   "est_sec": 6.3,
-   "gap_before": 1.1,
-   "role": "reply",
-   "block": "personal_finance.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, I didn't know that was possible.",
-   "est_sec": 2.27,
-   "gap_before": 0.66,
-   "event": "ordinary_request",
-   "block": "personal_finance.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It usually is, just call or check the settings online. Having everything due right after payday makes life easier.",
-   "est_sec": 5.99,
-   "gap_before": 1.05,
-   "role": "reply",
-   "block": "personal_finance.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'll try that with the phone bill first",
-   "est_sec": 2.89,
-   "gap_before": 3.12,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "personal_finance.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "and see how it goes.",
+   "text": "Hey there! How's your day?",
    "est_sec": 1.65,
-   "gap_before": 2.59,
-   "event": "ordinary_request",
-   "block": "personal_finance.dlg3"
+   "gap_before": 0.48,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.42,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "We have to pick a moving day and every option has a catch.",
+   "est_sec": 4.13,
+   "gap_before": 0.41,
+   "block": "moving_house.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait until I've listed everything before you jump in.",
+   "est_sec": 2.89,
+   "gap_before": 0.52,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_13"
+  },
+  {
+   "speaker": "user",
+   "text": "We could go on the last Friday of the month, cheapest van hire, but it's also the busiest day for everyone moving.",
+   "est_sec": 6.92,
+   "gap_before": 0.9,
+   "block": "moving_house.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a Tuesday in the middle of the month, quiet roads, but we'd have to pay double rent for two weeks.",
+   "est_sec": 6.61,
+   "gap_before": 2.37,
+   "block": "moving_house.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Or the bank holiday weekend, both of us are off work, but the removal company charges extra.",
+   "est_sec": 5.37,
+   "gap_before": 1.1,
+   "block": "moving_house.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all. Which sounds best to you?",
+   "est_sec": 2.58,
+   "gap_before": 0.5,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_08"
   },
   {
    "speaker": "moshi",
-   "text": "Good plan. Once it works, move the others over one by one.",
-   "est_sec": 3.82,
-   "gap_before": 0.94,
-   "role": "reply",
-   "block": "personal_finance.dlg3"
+   "text": "I'd avoid the last Friday, it's when everything goes wrong at once. Between the Tuesday and the bank holiday, compare the double rent with the holiday surcharge and pick the cheaper.",
+   "est_sec": 9.71,
+   "gap_before": 1.29,
+   "role": "resume",
+   "block": "moving_house.opt4"
   }
  ]
 }

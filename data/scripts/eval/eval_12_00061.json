@@ -7,129 +7,146 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "podcasts"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension"
  ],
- "topic": "podcasts",
+ "topics": [
+  "learning_language"
+ ],
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 5,
+  "said_before_deadline_sec": 2.67
+ },
+ "deadline": {
+  "after_turn": 6,
+  "sec": 5
+ },
+ "topic": "learning_language",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_21"
+  "greet_30",
+  "greet_ans_30",
+  "think_instr_24",
+  "ack_10",
+  "extension_02"
  ],
  "block_ids": [
-  "podcasts.dlg2"
+  "learning_language.ctx7"
  ],
- "est_total_sec": 47.05,
- "est_speech_sec": 35.2,
+ "est_total_sec": 53.0,
+ "est_speech_sec": 30.76,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.72,
+   "text": "Hey, how's it going? You doing okay?",
+   "est_sec": 2.27,
+   "gap_before": 0.55,
    "role": "greeting",
-   "phrasing": "greet_03",
+   "phrasing": "greet_30",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.5,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.3,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
+   "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "How do people listen to podcasts at double speed? I can't understand anything.",
-   "est_sec": 4.13,
-   "gap_before": 0.49,
+   "text": "I just lost a four hundred day streak on my language app and I'm weirdly devastated.",
+   "est_sec": 5.06,
+   "gap_before": 0.28,
    "event": "ordinary_request",
-   "block": "podcasts.dlg2"
+   "block": "learning_language.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Most people build up gradually. Try one and a quarter speed for a week, then nudge it up.",
-   "est_sec": 5.68,
-   "gap_before": 0.5,
-   "role": "reply",
-   "block": "podcasts.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Is it even worth it?",
-   "est_sec": 1.65,
-   "gap_before": 1.34,
-   "event": "ordinary_request",
-   "block": "podcasts.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "For slow talk shows, it saves a lot of time. For stories or comedy, normal speed usually works better because timing matters.",
-   "est_sec": 6.92,
-   "gap_before": 1.58,
-   "role": "reply",
-   "block": "podcasts.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Makes sense. I mostly listen to",
-   "est_sec": 1.96,
-   "gap_before": 0.37,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "podcasts.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "long interviews with scientists.",
-   "est_sec": 1.34,
-   "gap_before": 2.32,
-   "event": "ordinary_request",
-   "block": "podcasts.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Those are perfect for a slight speed boost. Many apps also trim silences automatically, which helps without sounding rushed.",
+   "text": "That's a real loss, honestly. Start the streak again, or take it as a sign to try something new?",
    "est_sec": 5.99,
-   "gap_before": 0.79,
+   "gap_before": 0.87,
    "role": "reply",
-   "block": "podcasts.dlg2",
+   "block": "learning_language.ctx7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Oh, I'll turn that on.",
-   "est_sec": 1.65,
-   "gap_before": 1.14,
-   "event": "ordinary_request",
-   "block": "podcasts.dlg2"
+   "text": "I need a moment, like fifteen seconds. Ask me again then.",
+   "est_sec": 3.51,
+   "gap_before": 0.71,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_24"
   },
   {
    "speaker": "moshi",
-   "text": "It's usually in the playback settings. You'll barely notice it.",
-   "est_sec": 3.2,
-   "gap_before": 0.6,
-   "role": "reply",
-   "block": "podcasts.dlg2",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.66,
+   "role": "ack",
+   "phrasing": "ack_10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, I need five more seconds.",
+   "est_sec": 1.96,
+   "event": "extension",
+   "extra_sec": 5,
+   "phrasing": "extension_02",
+   "anchor": {
+    "turn": 4,
+    "offset": 12.33
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, rebuild the streak, or switch it up?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "learning_language.ctx7",
+   "anchor": {
+    "turn": 6,
+    "offset": 5.04
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Start again. Day one, here I come.",
+   "est_sec": 2.27,
+   "gap_before": 1.21,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's the spirit. Your skills didn't vanish with the number, only the counter did.",
+   "est_sec": 4.44,
+   "gap_before": 0.48,
+   "role": "followup",
+   "block": "learning_language.ctx7",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type",
+  "extension"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

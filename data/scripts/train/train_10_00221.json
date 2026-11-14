@@ -7,25 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "early_end",
-  "self_talk"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
   "fitness"
  ],
- "wait_sec": 10,
- "early_end": {
-  "after_sec": 7.39,
-  "direct": false
- },
  "topic": "fitness",
  "voices": {
-  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "user": "536d3a5e000945adb7038665781a4aca",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -33,107 +27,94 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_28",
-  "greet_ans_02",
-  "think_instr_10",
-  "ack_12",
-  "self_16",
-  "early_end_05"
+  "greet_ans_28",
+  "describe_instr_19",
+  "describe_cue_04"
  ],
  "block_ids": [
-  "fitness.ctx2"
+  "fitness.opt6"
  ],
- "est_total_sec": 41.8,
- "est_speech_sec": 30.45,
+ "est_total_sec": 57.88,
+ "est_speech_sec": 45.95,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello! How's everything today?",
    "est_sec": 1.34,
-   "gap_before": 0.46,
+   "gap_before": 0.78,
    "role": "greeting",
    "phrasing": "greet_28"
   },
   {
    "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.71,
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
+   "phrasing": "greet_ans_28"
   },
   {
    "speaker": "user",
-   "text": "I signed up for a ten kilometer race in two months. I've never run that far.",
+   "text": "My rest days are a mess. I've got some ideas for what to do on them.",
    "est_sec": 5.06,
-   "gap_before": 0.44,
-   "event": "ordinary_request",
-   "block": "fitness.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Two months is enough if you build up gradually. What's the longest you can run comfortably right now?",
-   "est_sec": 5.68,
-   "gap_before": 0.41,
-   "role": "reply",
-   "block": "fitness.ctx2"
+   "gap_before": 0.59,
+   "block": "fitness.opt6"
   },
   {
    "speaker": "user",
-   "text": "Um, give me ten seconds to think it over, then ask me.",
-   "est_sec": 3.82,
-   "gap_before": 0.72,
+   "text": "Hear me out on all the options before you comment.",
+   "est_sec": 3.2,
+   "gap_before": 0.84,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 10,
-   "phrasing": "think_instr_10"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
-   "gap_before": 0.65,
-   "role": "ack",
-   "phrasing": "ack_12"
+   "kind": "describe_options",
+   "phrasing": "describe_instr_19"
   },
   {
    "speaker": "user",
-   "text": "Hmm, tough.",
-   "est_sec": 0.72,
-   "anchor": {
-    "turn": 4,
-    "offset": 4.24
-   },
+   "text": "Total rest, sofa, films, nothing at all, which feels great but makes me stiff the next day.",
+   "est_sec": 5.37,
+   "gap_before": 1.3,
+   "block": "fitness.opt6",
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_16"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Got it, I don't need the full time.",
-   "est_sec": 2.58,
-   "anchor": {
-    "turn": 4,
-    "offset": 7.39
-   },
+   "text": "A long easy walk with the dog, maybe an hour, just to keep moving.",
+   "est_sec": 4.44,
+   "gap_before": 2.26,
+   "block": "fitness.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "A stretching and foam rolling session, about thirty minutes, which I always say I'll do and never do.",
+   "est_sec": 5.68,
+   "gap_before": 1.33,
+   "block": "fitness.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a gentle swim, which loosens everything up but means going to the pool and back.",
+   "est_sec": 5.06,
+   "gap_before": 1.44,
+   "block": "fitness.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 0.62,
    "event": "return_cue",
-   "kind": "early_end",
-   "phrasing": "early_end_05"
-  },
-  {
-   "speaker": "user",
-   "text": "Maybe three kilometers before I need to walk.",
-   "est_sec": 2.58,
-   "gap_before": 0.45,
-   "event": "ordinary_request",
-   "block": "fitness.ctx2"
+   "kind": "explicit",
+   "phrasing": "describe_cue_04"
   },
   {
    "speaker": "moshi",
-   "text": "That's a fine starting point. Add about half a kilometer to your long run each week and you'll be ready.",
-   "est_sec": 6.3,
-   "gap_before": 0.71,
-   "role": "followup",
-   "block": "fitness.ctx2"
+   "text": "Active recovery usually beats doing nothing, so the walk or the swim are good bets. Stretching is useful but only if you'll actually do it, so keep it short. Total rest is fine now and then, just not every time.",
+   "est_sec": 12.5,
+   "gap_before": 0.49,
+   "role": "resume",
+   "block": "fitness.opt6"
   }
  ]
 }

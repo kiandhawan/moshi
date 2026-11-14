@@ -7,120 +7,116 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "hiking"
+  "baking"
  ],
- "topic": "hiking",
+ "topic": "baking",
  "voices": {
-  "user": "a52fdd0e957b4c288d8ec590bdd10288",
+  "user": "536d3a5e000945adb7038665781a4aca",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_29",
-  "greet_ans_13"
+  "greet_22",
+  "greet_ans_23",
+  "describe_instr_19",
+  "describe_cue_02"
  ],
  "block_ids": [
-  "hiking.dlg2"
+  "baking.opt1"
  ],
- "est_total_sec": 52.26,
- "est_speech_sec": 37.68,
+ "est_total_sec": 52.62,
+ "est_speech_sec": 40.99,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you doing right now?",
-   "est_sec": 2.27,
-   "gap_before": 0.41,
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.33,
    "role": "greeting",
-   "phrasing": "greet_29"
+   "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
+   "text": "Good, good. Thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.53,
+   "gap_before": 0.99,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
+   "phrasing": "greet_ans_23"
   },
   {
    "speaker": "user",
-   "text": "I keep getting blisters on my heels when I hike.",
+   "text": "I'm baking something for my friend's birthday, and I can't decide what.",
+   "est_sec": 3.82,
+   "gap_before": 0.31,
+   "block": "baking.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hear me out on all the options before you comment.",
    "est_sec": 3.2,
-   "gap_before": 0.27,
-   "event": "ordinary_request",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's usually friction from your heel sliding in the boot. Are your boots well broken in?",
-   "est_sec": 5.06,
-   "gap_before": 1.2,
-   "role": "reply",
-   "block": "hiking.dlg2"
+   "gap_before": 0.54,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_19"
   },
   {
    "speaker": "user",
-   "text": "They're pretty new, yeah.",
-   "est_sec": 1.34,
-   "gap_before": 1.35,
-   "event": "ordinary_request",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's likely the cause. Wear them around the house and on short walks first. Proper hiking socks help a lot too, not cotton ones.",
-   "est_sec": 7.54,
-   "gap_before": 0.56,
-   "role": "reply",
-   "block": "hiking.dlg2"
+   "text": "The first idea is a classic chocolate layer cake with fudge frosting, which takes most of a day.",
+   "est_sec": 5.68,
+   "gap_before": 0.66,
+   "block": "baking.opt1"
   },
   {
    "speaker": "user",
-   "text": "And if I feel one starting on the trail?",
-   "est_sec": 2.89,
-   "gap_before": 3.13,
-   "event": "ordinary_request",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Stop right away and put a blister plaster or some tape on the spot. Waiting until it hurts usually means it's already formed.",
-   "est_sec": 7.23,
-   "gap_before": 0.61,
-   "role": "reply",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "I always think I'll",
-   "est_sec": 1.34,
-   "gap_before": 1.25,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "just push through it.",
-   "est_sec": 1.34,
-   "gap_before": 2.81,
-   "event": "ordinary_request",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Most people do. A two minute stop early saves you a miserable walk back.",
+   "text": "Then there's a lemon drizzle loaf, which is simple and I've made it before.",
    "est_sec": 4.44,
-   "gap_before": 0.96,
-   "role": "reply",
-   "block": "hiking.dlg2"
+   "gap_before": 1.12,
+   "block": "baking.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Option three is a big batch of decorated cupcakes so everyone gets their own.",
+   "est_sec": 4.44,
+   "gap_before": 2.49,
+   "block": "baking.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is a fruit tart with a homemade crust, which looks really fancy.",
+   "est_sec": 5.06,
+   "gap_before": 2.29,
+   "block": "baking.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 0.7,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What's your friend's favorite flavor? If they love chocolate, go for the layer cake. If you're short on time, the lemon loaf with a candle on top is still lovely.",
+   "est_sec": 9.4,
+   "gap_before": 0.7,
+   "role": "resume",
+   "block": "baking.opt1"
   }
  ]
 }

@@ -1,159 +1,1882 @@
 {
-  "topic": "coffee",
-  "contexts": [
+ "topic": "coffee",
+ "contexts": [
+  {
+   "id": "coffee.ctx1",
+   "turns": [
     {
-      "id": "coffee.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I want to stop buying coffee every morning and make it at home instead."},
-        {"speaker": "moshi", "text": "Good plan, you'll save a lot. Do you want something simple like a French press, or are you ready to invest in an espresso machine?"}
-      ],
-      "pending": "French press or espresso machine",
-      "think_reask": [
-        "So, a simple French press, or going all in with an espresso machine?",
-        "Okay, what's it going to be for your home coffee, press or espresso machine?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing how to make coffee at home, a press or an espresso machine?",
-        "Hi again. Decided between the French press and the espresso machine?"
-      ],
-      "endings": [
-        {"user": "French press. I just want something that works at six in the morning.", "moshi": "Great choice. Use coarse ground coffee and let it steep for about four minutes."},
-        {"user": "Espresso. I mostly drink lattes, so I might as well.", "moshi": "Then get one with a steam wand for the milk. It'll pay for itself in a few months."}
-      ]
+     "speaker": "user",
+     "text": "I want to stop buying coffee every morning and make it at home instead."
     },
     {
-      "id": "coffee.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I'm meeting a friend I haven't seen in years."},
-        {"speaker": "moshi", "text": "How nice. Would you prefer a cozy little cafe where you can talk for hours, or somewhere livelier in the town centre?"}
-      ],
-      "pending": "cozy quiet cafe or livelier place in town",
-      "think_reask": [
-        "So, a quiet cozy cafe or somewhere busier in town?",
-        "Time's up. What kind of place feels right for catching up?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were picking a cafe for meeting your old friend, quiet or lively?",
-        "There you are. Still thinking about where to meet your friend?"
-      ],
-      "endings": [
-        {"user": "Somewhere quiet. We've got years to catch up on.", "moshi": "Then go mid-morning on a weekday, when cafes are calmest."},
-        {"user": "Lively, actually. It might feel less awkward with some noise around.", "moshi": "That's a good instinct. A busy cafe with a nice terrace would be perfect."}
-      ]
-    },
-    {
-      "id": "coffee.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I think I'm drinking way too much coffee. Like five cups a day."},
-        {"speaker": "moshi", "text": "That's a fair amount. Would you rather cut down gradually, or switch some of those cups to decaf?"}
-      ],
-      "pending": "cut down gradually or switch some cups to decaf",
-      "think_reask": [
-        "So, cutting down slowly, or swapping a few cups for decaf?",
-        "Okay, which feels more doable, fewer cups or some decaf?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were talking about your coffee habit. Cut down, or try decaf?",
-        "Hi again. Have you thought about how you want to drink less coffee?"
-      ],
-      "endings": [
-        {"user": "Decaf in the afternoon. I still want the ritual.", "moshi": "That's a nice approach. You keep the habit and probably sleep better too."},
-        {"user": "Cut down. One cup less each week until I'm at two.", "moshi": "Very sensible. Drink some water when you'd normally reach for a cup, it helps."}
-      ]
+     "speaker": "moshi",
+     "text": "Good plan, you'll save a lot. Do you want something simple like a French press, or are you ready to invest in an espresso machine?"
     }
-  ],
-  "side_conversations": [
-    {"id": "coffee.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you finish the milk?"},
-      {"speaker": "friend", "text": "There should be a little left, check behind the juice."},
-      {"speaker": "user", "text": "Found it. Barely enough for one coffee."},
-      {"speaker": "friend", "text": "Make it for yourself. I'll grab one on the way to work."},
-      {"speaker": "user", "text": "Are you sure? I can share it."},
-      {"speaker": "friend", "text": "No, really. There's a new place near the station I want to try anyway."}
-    ]},
-    {"id": "coffee.side2", "turns": [
-      {"speaker": "user", "text": "Which beans did you buy this time?"},
-      {"speaker": "friend", "text": "Some Ethiopian ones. The guy at the market said they're fruity."},
-      {"speaker": "user", "text": "Fruity coffee? That sounds wrong."},
-      {"speaker": "friend", "text": "Just try it. It tastes a bit like berries, honestly."},
-      {"speaker": "user", "text": "Fine. Should I grind them fine or coarse for the pour-over?"},
-      {"speaker": "friend", "text": "Medium, like sand. Not too fine or it gets bitter."},
-      {"speaker": "user", "text": "Medium, okay. I'll make us both one."}
-    ]},
-    {"id": "coffee.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, what's that thing you ordered last time? The cold one?"},
-      {"speaker": "friend", "text": "Cold brew with oat milk. It's really smooth."},
-      {"speaker": "user", "text": "Is it strong? I don't want to be awake all night."},
-      {"speaker": "friend", "text": "Pretty strong. Maybe get a small one."},
-      {"speaker": "user", "text": "Or I'll just have a tea and steal a sip of yours."},
-      {"speaker": "friend", "text": "One sip. I know what you're like."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "coffee.dlg1", "turns": [
-      {"speaker": "user", "text": "What's the difference between a latte and a flat white?"},
-      {"speaker": "moshi", "text": "A flat white has less milk and a thinner layer of foam, so it tastes stronger. A latte is bigger and milkier."},
-      {"speaker": "user", "text": "And a cappuccino?"},
-      {"speaker": "moshi", "text": "A cappuccino has a thick layer of foam on top, and it's usually smaller than a latte."},
-      {"speaker": "user", "text": "So if I want something / not too milky but still creamy?"},
-      {"speaker": "moshi", "text": "A flat white is probably your best bet. Strong coffee flavour with a smooth, velvety texture."},
-      {"speaker": "user", "text": "Okay, I'm going to order one tomorrow and see."},
-      {"speaker": "moshi", "text": "Enjoy it. If it's too strong, you can always ask for an extra splash of milk."}
-    ]},
-    {"id": "coffee.dlg2", "turns": [
-      {"speaker": "user", "text": "My coffee from the drip machine always tastes bitter. What am I doing wrong?"},
-      {"speaker": "moshi", "text": "A few things can cause that. Are you using pre-ground coffee, and how long does it sit on the hot plate?"},
-      {"speaker": "user", "text": "Pre-ground, and it sits there most of the morning."},
-      {"speaker": "moshi", "text": "That's likely it. The hot plate keeps cooking the coffee, which makes it bitter. Try pouring it into a thermos right after brewing."},
-      {"speaker": "user", "text": "Oh, I'd never have guessed that. Anything else?"},
-      {"speaker": "moshi", "text": "Clean the machine with vinegar every month or so. Old oils and scale build up and taste awful."},
-      {"speaker": "user", "text": "I don't think I've ever / descaled it, to be honest."},
-      {"speaker": "moshi", "text": "Then you'll probably notice a big difference. Run a couple of rounds of plain water afterwards to rinse it."}
-    ]},
-    {"id": "coffee.dlg3", "turns": [
-      {"speaker": "user", "text": "How late in the day can I drink coffee and still sleep?"},
-      {"speaker": "moshi", "text": "Caffeine stays in your system for quite a while, about half of it is still there five or six hours later. Many people stop around early afternoon."},
-      {"speaker": "user", "text": "So no coffee after lunch?"},
-      {"speaker": "moshi", "text": "If you go to bed around eleven, try to have your last cup by about two. Everyone's a bit different though."},
-      {"speaker": "user", "text": "What about decaf? Is that / totally caffeine free?"},
-      {"speaker": "moshi", "text": "Not totally, but close. A cup of decaf has only a tiny amount, so it's usually fine in the evening."},
-      {"speaker": "user", "text": "Great, decaf after dinner it is."},
-      {"speaker": "moshi", "text": "Sounds like a good compromise. You keep the taste without the sleepless night."}
-    ]},
-    {"id": "coffee.dlg4", "turns": [
-      {"speaker": "user", "text": "I want to make iced coffee at home this summer. Where do I start?"},
-      {"speaker": "moshi", "text": "The easiest way is to brew your coffee a bit stronger than usual and pour it over lots of ice, so it doesn't get watery."},
-      {"speaker": "user", "text": "What about cold brew? Is that hard?"},
-      {"speaker": "moshi", "text": "It's really easy, just slow. Mix coarse coffee with cold water, leave it in the fridge overnight, and strain it in the morning."},
-      {"speaker": "user", "text": "How long does it keep?"},
-      {"speaker": "moshi", "text": "About a week in the fridge. Make a big jar on Sunday and you're set for the week."},
-      {"speaker": "user", "text": "Actually, maybe I'll / try both and see which I like."},
-      {"speaker": "moshi", "text": "Good idea. Freeze some coffee in an ice cube tray too, so your drink never gets diluted."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "coffee.opt1",
-     "lead_in": "I want to start making better coffee at home, and I've got a few choices.",
-     "options": [
-      "The first one is a French press, cheap and simple, but you have to clean out the grounds.",
-      "Then there's a pour over cone, which makes a really clean cup but takes some practice.",
-      "Option three is a pod machine, super fast and easy, but the pods add up over time.",
-      "And the last one is an espresso machine with a milk steamer, which is pretty expensive."
-     ],
-     "moshi_comment": [
-      "If you love lattes, the espresso machine is the only one that really gets you there, but it's a big investment. For plain black coffee, the French press or pour over give great flavor for little money. The pod machine wins on convenience but not taste.",
-      "Do you usually drink your coffee black or with milk? If it's black, I'd start with the pour over, it's cheap and rewarding. If you want milk drinks, the espresso machine is worth saving for."
-     ]},
-    {"id": "coffee.opt2",
-     "lead_in": "I can't figure out which coffee beans to order for the office.",
-     "options": [
-      "One is a dark roast that's bold and smoky, the kind most people expect from office coffee.",
-      "Another is a light roast from a small farm, fruity and bright, but some people find it sour.",
-      "Or we could get a medium blend that's smooth and balanced and a bit cheaper by the pound."
-     ],
-     "moshi_comment": [
-      "For a whole office, the medium blend is the safest choice, it pleases most people and saves money. The dark roast is good if your coworkers like it strong with milk. The light roast is lovely but might get complaints.",
-      "Do people mostly drink it with milk and sugar? If so, the dark roast holds up better. If not, the medium blend is a nice middle ground."
-     ]}
-  ]
+   ],
+   "pending": "French press or espresso machine",
+   "think_reask": [
+    "So, a simple French press, or going all in with an espresso machine?",
+    "Okay, what's it going to be for your home coffee, press or espresso machine?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing how to make coffee at home, a press or an espresso machine?",
+    "Hi again. Decided between the French press and the espresso machine?"
+   ],
+   "endings": [
+    {
+     "user": "French press. I just want something that works at six in the morning.",
+     "moshi": "Great choice. Use coarse ground coffee and let it steep for about four minutes."
+    },
+    {
+     "user": "Espresso. I mostly drink lattes, so I might as well.",
+     "moshi": "Then get one with a steam wand for the milk. It'll pay for itself in a few months."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm meeting a friend I haven't seen in years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How nice. Would you prefer a cozy little cafe where you can talk for hours, or somewhere livelier in the town centre?"
+    }
+   ],
+   "pending": "cozy quiet cafe or livelier place in town",
+   "think_reask": [
+    "So, a quiet cozy cafe or somewhere busier in town?",
+    "Time's up. What kind of place feels right for catching up?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were picking a cafe for meeting your old friend, quiet or lively?",
+    "There you are. Still thinking about where to meet your friend?"
+   ],
+   "endings": [
+    {
+     "user": "Somewhere quiet. We've got years to catch up on.",
+     "moshi": "Then go mid-morning on a weekday, when cafes are calmest."
+    },
+    {
+     "user": "Lively, actually. It might feel less awkward with some noise around.",
+     "moshi": "That's a good instinct. A busy cafe with a nice terrace would be perfect."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I think I'm drinking way too much coffee. Like five cups a day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a fair amount. Would you rather cut down gradually, or switch some of those cups to decaf?"
+    }
+   ],
+   "pending": "cut down gradually or switch some cups to decaf",
+   "think_reask": [
+    "So, cutting down slowly, or swapping a few cups for decaf?",
+    "Okay, which feels more doable, fewer cups or some decaf?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were talking about your coffee habit. Cut down, or try decaf?",
+    "Hi again. Have you thought about how you want to drink less coffee?"
+   ],
+   "endings": [
+    {
+     "user": "Decaf in the afternoon. I still want the ritual.",
+     "moshi": "That's a nice approach. You keep the habit and probably sleep better too."
+    },
+    {
+     "user": "Cut down. One cup less each week until I'm at two.",
+     "moshi": "Very sensible. Drink some water when you'd normally reach for a cup, it helps."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm running a little coffee cart at the farmers market this summer and I want one signature drink."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Love that. A honey lavender latte would feel special and floral, or a maple cold brew would be great on hot mornings. Which way are you leaning?"
+    }
+   ],
+   "pending": "honey lavender latte or maple cold brew",
+   "think_reask": [
+    "The signature drink. Honey lavender, or maple cold brew?",
+    "So, for the cart, which one gets the chalkboard?"
+   ],
+   "welcome_back": [
+    "Your coffee cart drink. Lavender latte or maple cold brew?",
+    "So, the signature drink. Floral or maple?"
+   ],
+   "endings": [
+    {
+     "user": "Maple cold brew. Summer mornings get hot at that market.",
+     "moshi": "Good thinking. You can batch it the night before, which makes busy mornings easier."
+    },
+    {
+     "user": "The lavender one. Nobody else there does anything like it.",
+     "moshi": "Standing out is a great reason. Make the syrup yourself, it'll taste much fresher."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My father in law is a total coffee snob and his birthday's on Sunday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh, the hardest person to buy for. Would you go for a proper burr grinder, or a monthly subscription of beans from small roasters?"
+    }
+   ],
+   "pending": "grinder or bean subscription for the father in law",
+   "think_reask": [
+    "The coffee snob's present. Grinder, or bean subscription?",
+    "So, a gadget for him, or beans every month?"
+   ],
+   "welcome_back": [
+    "Your father in law's birthday. Grinder or subscription?",
+    "That gift. Did you pick between the grinder and the beans?"
+   ],
+   "endings": [
+    {
+     "user": "Subscription. He probably already has a fancy grinder.",
+     "moshi": "Smart. He'll think of you every month when a new bag arrives."
+    },
+    {
+     "user": "The grinder. He still uses an awful blade one.",
+     "moshi": "Then he'll notice the difference straight away. Buy a bag of good beans to go with it."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've just started night shifts at the hospital and I'm a zombie by four in the morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Night shifts are tough. Do you tend to drink one big coffee at the start, or would small cups spread through the first half of the shift suit you better?"
+    }
+   ],
+   "pending": "one big coffee or small cups through the shift",
+   "think_reask": [
+    "Your night shift coffee. One big cup at the start, or little ones along the way?",
+    "So, how are you going to time the coffee for your shifts?"
+   ],
+   "welcome_back": [
+    "The night shift caffeine plan. One big cup or several small ones?",
+    "So, for your shifts, big coffee or small and often?"
+   ],
+   "endings": [
+    {
+     "user": "Small cups, and stop around three so I can sleep after.",
+     "moshi": "Great plan. Stopping early really helps your daytime sleep."
+    },
+    {
+     "user": "One big one at the start, I hate stopping.",
+     "moshi": "Fair. Maybe add a small one around midnight if you still crash."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to learn latte art, but I'll waste so much milk practising."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It does go fast."
+    },
+    {
+     "speaker": "user",
+     "text": "Someone said practise with water and a drop of soap instead."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That trick works for the pouring motion. Soapy water to save money, or real milk so you learn the texture?"
+    }
+   ],
+   "pending": "practise latte art with soapy water or real milk",
+   "think_reask": [
+    "Latte art practice. Soapy water, or real milk?",
+    "So, cheap practice or proper milk?"
+   ],
+   "welcome_back": [
+    "The latte art. Soap and water, or milk from day one?",
+    "So, how are you going to practise those hearts?"
+   ],
+   "endings": [
+    {
+     "user": "Soapy water first, then milk on weekends.",
+     "moshi": "Nice balance. You'll get the wrist movement down without pouring money away."
+    },
+    {
+     "user": "Real milk. I'll just drink all the failures.",
+     "moshi": "Ha, very efficient. Use cheaper milk and small jugs so it's less waste."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The coffee machine at the office died, and people are acting like it's a national emergency."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Understandable. Is the team going to chip in for a new machine, or switch to a kettle and some decent instant for now?"
+    }
+   ],
+   "pending": "new office coffee machine or kettle and instant",
+   "think_reask": [
+    "The office coffee crisis. Chip in for a machine, or kettle and instant?",
+    "So, a new machine, or make do?"
+   ],
+   "welcome_back": [
+    "The broken office machine. Replace it or switch to a kettle?",
+    "So, what's the plan for the office coffee?"
+   ],
+   "endings": [
+    {
+     "user": "We're chipping in. Morale depends on it.",
+     "moshi": "Wise. A simple bean to cup machine is a good shared choice, and easy to clean."
+    },
+    {
+     "user": "Kettle and instant until the boss agrees to pay.",
+     "moshi": "Fair. A couple of French presses would make that a lot nicer too."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm hosting brunch for eight people on Saturday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely. For coffee, would you rather brew big pots of filter coffee as people arrive, or make a jug of cold brew the night before so you're not busy that morning?"
+    }
+   ],
+   "pending": "filter coffee pots or cold brew for the brunch",
+   "think_reask": [
+    "Brunch coffee. Hot filter pots, or cold brew made the night before?",
+    "So, for your eight guests, filter or cold brew?"
+   ],
+   "welcome_back": [
+    "The brunch on Saturday. Filter coffee or cold brew?",
+    "So, the coffee for your guests. Hot or cold?"
+   ],
+   "endings": [
+    {
+     "user": "Filter. It's still chilly in the mornings.",
+     "moshi": "Good call. Keep a big thermos jug ready so the second round stays hot."
+    },
+    {
+     "user": "Cold brew. Less stress on the day.",
+     "moshi": "Perfect for a host. Put out ice, milk and a little syrup so people can make their own."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I really want to like black coffee, but right now I need two sugars and loads of milk."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can definitely train your taste. Would you rather cut the sugar and milk down bit by bit, or try a lighter roast that's naturally less bitter?"
+    }
+   ],
+   "pending": "cut down slowly or try a lighter roast",
+   "think_reask": [
+    "Learning to drink it black. Slowly cut the sugar, or try a lighter roast?",
+    "So, gradual or a gentler coffee?"
+   ],
+   "welcome_back": [
+    "Your black coffee mission. Cut down step by step, or switch roasts?",
+    "So, the black coffee plan. Slowly, or a lighter bean?"
+   ],
+   "endings": [
+    {
+     "user": "Bit by bit. One sugar starting tomorrow.",
+     "moshi": "Good start. After a couple of weeks your taste adjusts more than you'd think."
+    },
+    {
+     "user": "A lighter roast. I think I just hate the bitterness.",
+     "moshi": "Then you'll probably like it. Look for one with fruity or chocolate notes on the bag."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm freelancing and I need a cafe to work from three days a week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. Any front runners?"
+    },
+    {
+     "speaker": "user",
+     "text": "There's a quiet one with awful wifi, and a busy one where the wifi's amazing but it's loud."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic trade off. Is it focus you need most, or a fast connection?"
+    }
+   ],
+   "pending": "quiet cafe with bad wifi or loud cafe with good wifi",
+   "think_reask": [
+    "The cafe office. Quiet with bad wifi, or loud with great wifi?",
+    "So, peace and quiet, or the fast connection?"
+   ],
+   "welcome_back": [
+    "Your freelance cafe. The quiet one, or the busy one?",
+    "So, which cafe gets your three days?"
+   ],
+   "endings": [
+    {
+     "user": "The busy one. I'll bring noise cancelling headphones.",
+     "moshi": "Smart. Headphones fix noise, but nothing fixes bad wifi."
+    },
+    {
+     "user": "The quiet one. I'll use my phone as a hotspot.",
+     "moshi": "That can work well. Just keep an eye on your data allowance."
+    }
+   ]
+  },
+  {
+   "id": "coffee.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I found my grandmother's old stovetop moka pot in the attic. It's dented but kind of beautiful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What a find. Do you want to restore it with a new rubber seal and use it every morning, or keep it as a memento on a shelf?"
+    }
+   ],
+   "pending": "restore and use grandma's moka pot or display it",
+   "think_reask": [
+    "Your grandmother's moka pot. Restore it and use it, or put it on display?",
+    "So, back into service, or onto the shelf?"
+   ],
+   "welcome_back": [
+    "The old moka pot. Use it, or keep it as decoration?",
+    "So, about grandma's pot. Coffee or shelf?"
+   ],
+   "endings": [
+    {
+     "user": "Restore it. She'd want it to be used.",
+     "moshi": "That's lovely. A new gasket and filter are cheap, and it'll make great coffee."
+    },
+    {
+     "user": "Shelf. I'm scared I'll ruin it.",
+     "moshi": "Understandable. It'll be a beautiful reminder of her in the kitchen."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "coffee.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you finish the milk?"
+    },
+    {
+     "speaker": "friend",
+     "text": "There should be a little left, check behind the juice."
+    },
+    {
+     "speaker": "user",
+     "text": "Found it. Barely enough for one coffee."
+    },
+    {
+     "speaker": "friend",
+     "text": "Make it for yourself. I'll grab one on the way to work."
+    },
+    {
+     "speaker": "user",
+     "text": "Are you sure? I can share it."
+    },
+    {
+     "speaker": "friend",
+     "text": "No, really. There's a new place near the station I want to try anyway."
+    }
+   ]
+  },
+  {
+   "id": "coffee.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Which beans did you buy this time?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Some Ethiopian ones. The guy at the market said they're fruity."
+    },
+    {
+     "speaker": "user",
+     "text": "Fruity coffee? That sounds wrong."
+    },
+    {
+     "speaker": "friend",
+     "text": "Just try it. It tastes a bit like berries, honestly."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine. Should I grind them fine or coarse for the pour-over?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Medium, like sand. Not too fine or it gets bitter."
+    },
+    {
+     "speaker": "user",
+     "text": "Medium, okay. I'll make us both one."
+    }
+   ]
+  },
+  {
+   "id": "coffee.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, what's that thing you ordered last time? The cold one?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Cold brew with oat milk. It's really smooth."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it strong? I don't want to be awake all night."
+    },
+    {
+     "speaker": "friend",
+     "text": "Pretty strong. Maybe get a small one."
+    },
+    {
+     "speaker": "user",
+     "text": "Or I'll just have a tea and steal a sip of yours."
+    },
+    {
+     "speaker": "friend",
+     "text": "One sip. I know what you're like."
+    }
+   ]
+  },
+  {
+   "id": "coffee.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, what is that noise? It sounds like a jet engine."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's the new espresso machine. It's supposed to do that."
+    },
+    {
+     "speaker": "user",
+     "text": "Every morning at six?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It needs to heat up. Good coffee takes sacrifice."
+    },
+    {
+     "speaker": "user",
+     "text": "Can it sacrifice a bit later? Like eight?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I'll put a towel over it."
+    },
+    {
+     "speaker": "user",
+     "text": "That's not how sound works."
+    }
+   ]
+  },
+  {
+   "id": "coffee.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Whose turn is it for the coffee run?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yours. I went yesterday and the day before."
+    },
+    {
+     "speaker": "user",
+     "text": "Really? I feel like I went on Monday."
+    },
+    {
+     "speaker": "friend",
+     "text": "Monday was a holiday."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, fine. Same as usual, oat flat white?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Extra hot. And get a pastry for the new guy, it's his first week."
+    },
+    {
+     "speaker": "user",
+     "text": "That's sweet. Any idea what he likes?"
+    },
+    {
+     "speaker": "friend",
+     "text": "No clue. Get something with chocolate, that's always safe."
+    }
+   ]
+  },
+  {
+   "id": "coffee.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How's the no caffeine thing going?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Day four. My head is pounding and I hate everyone."
+    },
+    {
+     "speaker": "user",
+     "text": "Including me?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Especially you. You're drinking a latte right in front of me."
+    },
+    {
+     "speaker": "user",
+     "text": "Do you want me to make you a herbal tea?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Mint. And put a lot of honey in it, please."
+    },
+    {
+     "speaker": "user",
+     "text": "Coming up. It gets easier after a week, apparently."
+    },
+    {
+     "speaker": "friend",
+     "text": "It better."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "coffee.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the difference between a latte and a flat white?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A flat white has less milk and a thinner layer of foam, so it tastes stronger. A latte is bigger and milkier."
+    },
+    {
+     "speaker": "user",
+     "text": "And a cappuccino?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A cappuccino has a thick layer of foam on top, and it's usually smaller than a latte."
+    },
+    {
+     "speaker": "user",
+     "text": "So if I want something / not too milky but still creamy?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A flat white is probably your best bet. Strong coffee flavour with a smooth, velvety texture."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'm going to order one tomorrow and see."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Enjoy it. If it's too strong, you can always ask for an extra splash of milk."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My coffee from the drip machine always tastes bitter. What am I doing wrong?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few things can cause that. Are you using pre-ground coffee, and how long does it sit on the hot plate?"
+    },
+    {
+     "speaker": "user",
+     "text": "Pre-ground, and it sits there most of the morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's likely it. The hot plate keeps cooking the coffee, which makes it bitter. Try pouring it into a thermos right after brewing."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I'd never have guessed that. Anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Clean the machine with vinegar every month or so. Old oils and scale build up and taste awful."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't think I've ever / descaled it, to be honest."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you'll probably notice a big difference. Run a couple of rounds of plain water afterwards to rinse it."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How late in the day can I drink coffee and still sleep?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Caffeine stays in your system for quite a while, about half of it is still there five or six hours later. Many people stop around early afternoon."
+    },
+    {
+     "speaker": "user",
+     "text": "So no coffee after lunch?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you go to bed around eleven, try to have your last cup by about two. Everyone's a bit different though."
+    },
+    {
+     "speaker": "user",
+     "text": "What about decaf? Is that / totally caffeine free?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not totally, but close. A cup of decaf has only a tiny amount, so it's usually fine in the evening."
+    },
+    {
+     "speaker": "user",
+     "text": "Great, decaf after dinner it is."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like a good compromise. You keep the taste without the sleepless night."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to make iced coffee at home this summer. Where do I start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The easiest way is to brew your coffee a bit stronger than usual and pour it over lots of ice, so it doesn't get watery."
+    },
+    {
+     "speaker": "user",
+     "text": "What about cold brew? Is that hard?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's really easy, just slow. Mix coarse coffee with cold water, leave it in the fridge overnight, and strain it in the morning."
+    },
+    {
+     "speaker": "user",
+     "text": "How long does it keep?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About a week in the fridge. Make a big jar on Sunday and you're set for the week."
+    },
+    {
+     "speaker": "user",
+     "text": "Actually, maybe I'll / try both and see which I like."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. Freeze some coffee in an ice cube tray too, so your drink never gets diluted."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My espresso shots taste really sour, and they come out in like ten seconds."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a classic sign of the grind being too coarse. Water rushes through without pulling out enough flavour."
+    },
+    {
+     "speaker": "user",
+     "text": "So, finer?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a little finer at a time. You're aiming for roughly twenty five to thirty seconds for a standard shot."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it starts / dripping really slowly?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you've gone too fine, and it'll taste bitter. Somewhere in the middle is the sweet spot."
+    },
+    {
+     "speaker": "user",
+     "text": "How much coffee should I put in?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Weigh it if you can. Keep the dose the same each time and only change the grind, so you know what's making the difference."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just found out I'm pregnant. Do I have to give up coffee completely?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Congratulations! Many health guidelines say a moderate amount is okay, often up to about two hundred milligrams of caffeine a day. Your doctor or midwife can tell you what's right for you."
+    },
+    {
+     "speaker": "user",
+     "text": "How much coffee is that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Roughly one or two regular cups, depending on how strong they are. A big cafe coffee can have quite a lot more than one made at home."
+    },
+    {
+     "speaker": "user",
+     "text": "What about / tea and chocolate?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those count too, though they usually have less. It's the total across the day that matters."
+    },
+    {
+     "speaker": "user",
+     "text": "Decaf is fine, then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Decaf has very little caffeine, so it's a nice way to keep the ritual. Just check with your midwife if you have any doubts."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm in a hotel room with just a kettle and some sad instant sachets. Any way to make decent coffee?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little creativity helps. If you have ground coffee, you can make cowboy style coffee in a mug."
+    },
+    {
+     "speaker": "user",
+     "text": "I could grab some ground coffee from the shop downstairs. How does that work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put a spoonful or two in a mug, pour hot water just off the boil, stir, and wait about four minutes. Then let the grounds sink to the bottom."
+    },
+    {
+     "speaker": "user",
+     "text": "Won't I drink / a mouthful of grit?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A tiny bit, maybe. A splash of cold water on top helps the grounds settle. Pour slowly into a second cup if you have one."
+    },
+    {
+     "speaker": "user",
+     "text": "Genius. Better than the sachets anyway."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Much better. Some shops also sell single serve drip bags that hang on the mug, perfect for travelling."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a fancy new cafe near me, and the menu is so complicated I just ordered a tea last time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally understandable, those menus can be a lot. What kind of coffee do you usually like at home?"
+    },
+    {
+     "speaker": "user",
+     "text": "Milky, not too strong."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a latte or a cortado in a bigger size would be safe. Or just tell the barista exactly that, milky and not too strong."
+    },
+    {
+     "speaker": "user",
+     "text": "Won't they / judge me for not knowing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most baristas love helping people find something they like. Asking for a recommendation is the best thing you can do."
+    },
+    {
+     "speaker": "user",
+     "text": "What's a cortado anyway?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's espresso with a roughly equal amount of warm milk. Smaller and stronger than a latte, so maybe start with the latte."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm vegan and I want a plant milk that actually foams for cappuccinos."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oat milk is usually the winner. Look for barista versions, they add a bit of fat so it froths like dairy."
+    },
+    {
+     "speaker": "user",
+     "text": "I tried regular oat milk and it went flat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's very common with the regular kind. The barista ones hold the foam much better and don't split in hot coffee."
+    },
+    {
+     "speaker": "user",
+     "text": "What about soy? / Is soy any good?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Soy foams well too, and some people prefer its creamier texture. Almond is the trickiest, it tends to make big bubbles that collapse quickly."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I heat it as hot as dairy milk?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bit less hot, actually. Plant milks taste best and foam best when they're warm but not scalding."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Coffee keeps upsetting my stomach, but I really don't want to quit."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's frustrating. Do you usually drink it on an empty stomach, first thing in the morning?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yep. Before breakfast, always."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That might be part of it. Try having it with or after some food, even a piece of toast can help a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Are some coffees / easier on the stomach?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many people find darker roasts or cold brew gentler. Cold brew tends to taste less acidic, and dark roasts are often softer on the stomach."
+    },
+    {
+     "speaker": "user",
+     "text": "I drink about four cups a day, too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cutting down to two might help as well. If it keeps bothering you, it's worth mentioning to a doctor."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My flatmate keeps our coffee beans in the freezer. Is that right? It seems weird."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a common debate. For beans you'll use within a couple of weeks, an airtight container in a cool, dark cupboard is best."
+    },
+    {
+     "speaker": "user",
+     "text": "So the freezer is wrong?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not wrong, just not needed for everyday beans. Taking them in and out of the freezer causes condensation, which isn't great for flavour."
+    },
+    {
+     "speaker": "user",
+     "text": "When would freezing / make sense?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you buy a big bag and won't use it for a month or more. Freeze it in small portions and only take out what you need."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'll negotiate with him."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Diplomacy is key. And keep them away from the fridge, beans soak up smells like onions surprisingly fast."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hand grinder or electric grinder? I only make one cup a day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "For one cup, a good hand grinder is great value. You get a consistent grind for much less money than a similar electric one."
+    },
+    {
+     "speaker": "user",
+     "text": "How long does it take to grind by hand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually somewhere between thirty seconds and a minute for one cup, depending on how fine you go."
+    },
+    {
+     "speaker": "user",
+     "text": "That's fine for filter, but / what about espresso?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Espresso takes longer by hand because it's very fine. Some people find it a nice morning ritual, others find it tiring."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm not exactly a morning person."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then an electric burr grinder might be worth the extra. Just avoid blade grinders, they chop the beans unevenly."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why does my coffee taste different at my parents' house? Same beans, same press."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The water is probably the difference. Hard water, with lots of minerals, can make coffee taste flat or chalky."
+    },
+    {
+     "speaker": "user",
+     "text": "Their kettle is full of white crust."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a sure sign of hard water. You could try filtered water there, or a bottle of still water, and compare."
+    },
+    {
+     "speaker": "user",
+     "text": "Is soft water / always better then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not always. Water with almost no minerals can make coffee taste thin and sour. Something in the middle is ideal."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. I never thought water mattered."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's most of what's in your cup, so it matters a lot. Fresh cold water and a clean kettle make a real difference."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm helping with refreshments after my uncle's funeral. We need coffee for about sixty people in the church hall."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'm sorry for your loss. That's a kind thing to take on. Does the hall have a big hot water urn or a catering coffee machine?"
+    },
+    {
+     "speaker": "user",
+     "text": "There's an urn. And some large flasks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the simplest way is brewing big batches of filter coffee or using cafetieres and decanting into the flasks. Roughly two tablespoons of ground coffee per mug."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I worry about / people who want decaf?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, it's thoughtful to have one flask of decaf, clearly labelled. Many older guests prefer it in the afternoon."
+    },
+    {
+     "speaker": "user",
+     "text": "What else should go on the table?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Milk, sugar, stirrers and maybe a plant milk. And ask someone to keep an eye on the flasks so they never run empty."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want a quick, fancy dessert tonight. I've got coffee and vanilla ice cream."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you're one step from an affogato. It's a scoop of ice cream with a hot shot of espresso poured over it."
+    },
+    {
+     "speaker": "user",
+     "text": "That's it? That's the whole recipe?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's it. Pour it at the table so everyone sees it melt. It looks impressive and takes two minutes."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't have an espresso / machine, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use very strong coffee from a moka pot or a French press. It won't be quite the same, but it'll still be delicious."
+    },
+    {
+     "speaker": "user",
+     "text": "Could I add something?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little grated dark chocolate or a crushed biscuit on top is lovely. Some adults add a splash of nut liqueur."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My Turkish neighbour made me coffee in a little pot and it was amazing. Can I make it at home?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can. You'll want a small long handled pot, very finely ground coffee, almost like powder, and cold water."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need special coffee?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many shops sell coffee ground specifically for it. Regular coffee ground on the finest setting can work if your grinder goes that fine."
+    },
+    {
+     "speaker": "user",
+     "text": "And sugar? She asked me / how sweet I wanted it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's because the sugar goes in at the start. You mix coffee, sugar and water in the pot, then heat it slowly without boiling."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know when it's done?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "When a thick foam rises up to the top, take it off the heat just before it boils over. Pour gently to keep the foam, and let the grounds settle before sipping."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "First shift as a barista tomorrow. I'm terrified of steaming milk wrong in front of customers."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Everyone starts there. The main thing is to start with the steam wand tip just under the surface, so you hear a gentle tearing sound."
+    },
+    {
+     "speaker": "user",
+     "text": "Like paper ripping?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly like that. That's air going in. After a few seconds, lower the jug a little so the milk spins like a whirlpool."
+    },
+    {
+     "speaker": "user",
+     "text": "And how do I know / when it's hot enough?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put your hand on the side of the jug. When it's too hot to hold for more than a second or two, it's ready. Some cafes use a thermometer too."
+    },
+    {
+     "speaker": "user",
+     "text": "What if it screams?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the tip being too high or too deep. Adjust slowly. And ask your colleagues for help, nobody expects you to be perfect on day one."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I quit coffee three days ago and my head is killing me. Is this normal?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very normal, sadly. Caffeine withdrawal headaches usually peak in the first couple of days and fade within about a week."
+    },
+    {
+     "speaker": "user",
+     "text": "A week? I can't function like this."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Going cold turkey is the hardest way. Many people find it easier to cut down slowly, like half a cup less every few days."
+    },
+    {
+     "speaker": "user",
+     "text": "So I could / have a small one now?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could, and it would probably ease the headache. Then taper down more gently from there."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything else that helps?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Drink plenty of water, get some fresh air, and try to sleep a bit more. Your energy usually comes back within a couple of weeks."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I made cold brew concentrate and I have no idea how much to dilute it. My first glass nearly launched me into orbit."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Concentrate is strong stuff, yes. What ratio of coffee to water did you use when you made it?"
+    },
+    {
+     "speaker": "user",
+     "text": "About one cup of grounds to four cups of water."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a typical concentrate. Try mixing it about half and half with water or milk, then adjust to taste."
+    },
+    {
+     "speaker": "user",
+     "text": "Half and half. And with ice / it'll get weaker anyway?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Right, the ice melts a bit and softens it. Some people make coffee ice cubes from leftover cold brew so the drink stays strong."
+    },
+    {
+     "speaker": "user",
+     "text": "How long will the jar last in the fridge?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Concentrate keeps for about two weeks if it's sealed. Diluted, it's best within a few days."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My fifteen year old wants to start drinking coffee like her friends. Should I let her?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many health guidelines say small amounts are okay for teenagers, but recommend limiting caffeine. The bigger concern is usually sleep."
+    },
+    {
+     "speaker": "user",
+     "text": "She already stays up way too late."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the timing matters most. A small coffee in the morning is very different from an iced coffee after school."
+    },
+    {
+     "speaker": "user",
+     "text": "Those sweet frappe drinks are / what she really wants."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those are often more sugar than coffee, so they're more of a dessert. Maybe agree they're an occasional treat, not a daily thing."
+    },
+    {
+     "speaker": "user",
+     "text": "That feels like a fair deal."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It sounds reasonable. Letting her try it with some ground rules usually works better than a total ban."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The steam wand on our espresso machine smells funky. Like old milk."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's milk getting sucked up inside the wand and going off. Luckily it's easy to fix."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I clean inside it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Soak the tip in a cup of hot water with a little milk system cleaner, then purge steam through it a few times. Wipe the outside too."
+    },
+    {
+     "speaker": "user",
+     "text": "There's a little / hole that seems blocked."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use a pin or the small tool that came with the machine to gently clear it. Some tips unscrew so you can soak them properly."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I stop it happening again?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "After every use, wipe the wand with a damp cloth and blast a short burst of steam. Two seconds of habit saves a lot of smell."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why do coffees from different countries taste so different? I thought coffee was coffee."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a bit like wine. The type of plant, the soil, the altitude and the climate all shape the flavour."
+    },
+    {
+     "speaker": "user",
+     "text": "So what does Ethiopian taste like compared to, say, Brazilian?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ethiopian coffees are often bright and fruity, sometimes floral. Brazilian ones tend to be nutty and chocolatey, with less acidity."
+    },
+    {
+     "speaker": "user",
+     "text": "And Colombian?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually balanced, a little sweet, medium body. Many people find it a great everyday coffee."
+    },
+    {
+     "speaker": "user",
+     "text": "Does how it's processed / matter too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hugely. Natural process coffees, dried with the fruit still on, taste fruitier. Washed coffees taste cleaner and crisper."
+    },
+    {
+     "speaker": "user",
+     "text": "I should do a tasting at home."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a fun idea. Brew a few side by side the same way, and you'll really notice the differences."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do they even get the caffeine out of decaf? Is it chemicals?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sometimes, but not always. There are a few methods. One uses only water, soaking the green beans and filtering the caffeine out."
+    },
+    {
+     "speaker": "user",
+     "text": "Only water? That's it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Water and a special carbon filter. Another method uses carbon dioxide under pressure. And some use solvents that are mostly removed afterwards."
+    },
+    {
+     "speaker": "user",
+     "text": "Which one / tastes best?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Taste depends more on the beans and roasting, but many people like the water and carbon dioxide processed ones. The bag often says which method was used."
+    },
+    {
+     "speaker": "user",
+     "text": "I always thought decaf tasted like cardboard."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It used to, often. Good decaf today can be really delicious. Try one from a specialty roaster, you might be surprised."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm throwing a little winter party and I want a cosy spiced coffee. Ideas?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely. You could brew a big pot of coffee with a cinnamon stick, a few cardamom pods and a strip of orange peel."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I put the spices in the coffee grounds?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can mix ground cinnamon into the grounds, or simmer whole spices in milk and pour the coffee into it. Simmering gives a gentler, rounder flavour."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I sweeten it / or let people choose?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'd keep the coffee unsweetened and put out honey or brown sugar. People's tastes vary a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Could I make it ahead?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brew the spiced milk ahead and keep it warm in a slow cooker. Add fresh coffee as guests arrive so it doesn't taste stewed."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I own a small cafe and I want to add a new seasonal drink. How do I price it without scaring people off?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start by working out the cost of each ingredient per cup, including the milk, syrup and even the cup and lid."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that's maybe a third of what I'd charge."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a healthy range for drinks. Many cafes aim for ingredients to be roughly a quarter to a third of the price."
+    },
+    {
+     "speaker": "user",
+     "text": "But if it's / way more than a latte, will people buy it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Seasonal drinks can usually carry a small premium, because they feel special. Keep it close to your other specialty drinks so it doesn't stick out."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I do a taster day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great idea. Little sample cups at the counter get people curious, and you'll get honest feedback before committing to a big batch of syrup."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My commute is an hour and a half and my coffee is cold by the time I'm halfway."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a long trip. A vacuum insulated travel mug makes a big difference, the good ones keep coffee hot for hours."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine says it's insulated, but it's useless."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some cheaper ones only have a single wall. Look for double walled stainless steel and a lid that seals properly. A lot of heat escapes through the lid."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there a trick / to make it last longer?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, warm the mug first by filling it with hot water for a minute, then pour that out and add your coffee. It stops the cold metal stealing heat."
+    },
+    {
+     "speaker": "user",
+     "text": "And leak proof? It's going in my bag."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then check the lid locks closed. Some reviews test them upside down in a bag, worth reading before you buy."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have a huge bag of used coffee grounds every week. Seems a shame to bin them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're right, they're surprisingly useful. Many people add them to compost, they break down nicely."
+    },
+    {
+     "speaker": "user",
+     "text": "I've heard you can put them / straight on plants."
+    },
+    {
+     "speaker": "moshi",
+     "text": "In small amounts, mixed into the soil. Too much in a thick layer can form a crust that keeps water out, so sprinkle lightly."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Dried grounds in a bowl in the fridge can absorb smells. Some people use them as a gentle scrub for pots, or even for hands after chopping garlic."
+    },
+    {
+     "speaker": "user",
+     "text": "Coffee hands instead of garlic hands. Sold."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair trade. Just let them dry out first if you store them, damp grounds go mouldy quickly."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I tried Vietnamese iced coffee on holiday and I've been dreaming about it since."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's so good. The classic version uses strong dark roast coffee, sweetened condensed milk and lots of ice."
+    },
+    {
+     "speaker": "user",
+     "text": "They had this little metal thing / on top of the glass."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a phin, a small drip filter. You put the coffee in, press it down gently, add hot water, and it slowly drips into the glass."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I make it without the filter?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, use very strong coffee from a moka pot or a French press. Stir it into the condensed milk while it's hot, then pour over ice."
+    },
+    {
+     "speaker": "user",
+     "text": "How much condensed milk?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with a couple of tablespoons and adjust. It's meant to be sweet, but you can go lighter. A phin is cheap though, worth getting for the full experience."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Every day at three I crash and grab another coffee. Then I can't sleep. It's a stupid cycle."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a very common cycle, not a stupid one. That afternoon dip is partly natural, your body clock dips after lunch."
+    },
+    {
+     "speaker": "user",
+     "text": "So what am I supposed to do instead?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A short walk outside, ideally in daylight, gives a surprising lift. So does a big glass of cold water, since mild dehydration makes the slump worse."
+    },
+    {
+     "speaker": "user",
+     "text": "A walk. Groundbreaking."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, I know it sounds boring. But ten minutes outside often works as well as half a coffee, without wrecking your sleep."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I / really, really need caffeine?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try a small green tea or a half decaf coffee. Less caffeine, still a little boost, and kinder to your bedtime."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it possible to roast coffee beans at home? I keep seeing green beans for sale."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is, and it's a fun hobby. You can start with a heavy pan on the stove or a cheap popcorn popper."
+    },
+    {
+     "speaker": "user",
+     "text": "A popcorn popper? Really?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Really. The hot air keeps the beans moving so they roast evenly. Just do it outside or near an open window, there's a lot of smoke and chaff."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know / when they're done?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Listen for the first crack, a popping sound like popcorn. Stopping shortly after gives a light roast, and keeping going towards a second crack gets darker."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I drink them straight away?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's best to let them rest for a day or two. Fresh roasted beans release a lot of gas, and the flavour settles after a short rest."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The bag says notes of chocolate, cherry and almond. I just taste coffee. Am I broken?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely not. Those notes are subtle hints, not added flavours. Most people need a bit of practice to pick them out."
+    },
+    {
+     "speaker": "user",
+     "text": "So it's a bit of / a marketing gimmick?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Partly description, partly a guide. The beans really do have different flavour compounds, but the words are the roaster's best attempt to describe them."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I practise?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Taste two very different coffees side by side, like a light African roast and a dark Brazilian one. Differences jump out much more when you compare."
+    },
+    {
+     "speaker": "user",
+     "text": "And let it cool?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, good instinct. Flavours often get clearer as the coffee cools a bit. Very hot coffee mostly just tastes hot."
+    }
+   ]
+  },
+  {
+   "id": "coffee.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My coworker puts butter in his coffee and says it's the secret to productivity. Is that a thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a trend, often called butter coffee. People blend coffee with butter and sometimes coconut oil."
+    },
+    {
+     "speaker": "user",
+     "text": "Does it actually do anything?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The fat makes it more filling, so some people feel steady energy without wanting breakfast. But there isn't strong evidence that it boosts focus."
+    },
+    {
+     "speaker": "user",
+     "text": "It sounds like / a lot of calories."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be, often as much as a small meal. If it replaces breakfast, fine, but on top of breakfast it adds up quickly."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I try it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you're curious, try it once with a small amount. Blend it well, otherwise you just get an oily layer on top."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "coffee.opt1",
+   "lead_in": "I want to start making better coffee at home, and I've got a few choices.",
+   "options": [
+    "The first one is a French press, cheap and simple, but you have to clean out the grounds.",
+    "Then there's a pour over cone, which makes a really clean cup but takes some practice.",
+    "Option three is a pod machine, super fast and easy, but the pods add up over time.",
+    "And the last one is an espresso machine with a milk steamer, which is pretty expensive."
+   ],
+   "moshi_comment": [
+    "If you love lattes, the espresso machine is the only one that really gets you there, but it's a big investment. For plain black coffee, the French press or pour over give great flavor for little money. The pod machine wins on convenience but not taste.",
+    "Do you usually drink your coffee black or with milk? If it's black, I'd start with the pour over, it's cheap and rewarding. If you want milk drinks, the espresso machine is worth saving for."
+   ]
+  },
+  {
+   "id": "coffee.opt2",
+   "lead_in": "I can't figure out which coffee beans to order for the office.",
+   "options": [
+    "One is a dark roast that's bold and smoky, the kind most people expect from office coffee.",
+    "Another is a light roast from a small farm, fruity and bright, but some people find it sour.",
+    "Or we could get a medium blend that's smooth and balanced and a bit cheaper by the pound."
+   ],
+   "moshi_comment": [
+    "For a whole office, the medium blend is the safest choice, it pleases most people and saves money. The dark roast is good if your coworkers like it strong with milk. The light roast is lovely but might get complaints.",
+    "Do people mostly drink it with milk and sugar? If so, the dark roast holds up better. If not, the medium blend is a nice middle ground."
+   ]
+  },
+  {
+   "id": "coffee.opt3",
+   "lead_in": "My partner and I are buying our first proper coffee machine together, and we can't agree.",
+   "options": [
+    "He wants a manual espresso machine with a steam wand, a bit fiddly but very satisfying.",
+    "I'd prefer a bean to cup machine that grinds and brews with one button.",
+    "There's also a filter machine with a timer, so coffee's ready when the alarm goes off.",
+    "Or we keep our cheap French press and spend the money on really good beans."
+   ],
+   "moshi_comment": [
+    "The manual espresso machine is great if he enjoys the ritual, but it takes practice. The bean to cup is the easy everyday option. The timed filter is lovely for slow mornings, and better beans in the French press is the budget winner.",
+    "It depends on your mornings. If you're rushed, the bean to cup or the timed filter make life easy. The manual machine suits a hobbyist, and honestly, great beans in your French press might surprise you both."
+   ]
+  },
+  {
+   "id": "coffee.opt4",
+   "lead_in": "My cafe needs a new plant milk option, and the supplier offered a few.",
+   "options": [
+    "Oat milk is the most popular, foams beautifully and tastes a bit sweet.",
+    "Almond milk is lighter and nutty, but it can split in hot coffee.",
+    "Soy is cheap and creamy, though some customers say it tastes beany.",
+    "And there's a coconut milk blend that's great in iced drinks but strong tasting."
+   ],
+   "moshi_comment": [
+    "Oat is the safe bet, people know it and it steams well. Almond and soy each have fans, but almond can split. Coconut is fun for a summer menu rather than an everyday choice.",
+    "I'd make oat your main one and maybe keep soy as a cheaper second. Almond is tricky in hot drinks, and coconut is best saved for iced specials."
+   ]
+  },
+  {
+   "id": "coffee.opt5",
+   "lead_in": "I'm visiting a new city for one morning and I've found three cafes I want to try.",
+   "options": [
+    "A tiny specialty roaster near the station that only does pour overs, standing room only.",
+    "A big old fashioned coffee house with chandeliers, cakes and waiters in waistcoats.",
+    "Or a little rooftop place with a view over the river, but it's a twenty minute walk uphill."
+   ],
+   "moshi_comment": [
+    "If you love coffee itself, the roaster is the one, though you'll be standing. The coffee house is about the atmosphere and the cake. The rooftop is the most memorable view, if you don't mind the climb.",
+    "For one morning, I'd pick based on what you'll remember. The grand coffee house is a real experience, the roaster is best for the actual cup, and the rooftop wins on scenery. Could you grab a pour over at the station and then walk up for the view?"
+   ]
+  },
+  {
+   "id": "coffee.opt6",
+   "lead_in": "I'm trying to cut down on caffeine, and I've got a few ideas about how.",
+   "options": [
+    "I could switch my afternoon cup to decaf and keep the morning one normal.",
+    "Another idea is half caf, mixing regular and decaf beans for every cup.",
+    "Or swap coffee for green tea, which has less caffeine but still gives a little lift."
+   ],
+   "moshi_comment": [
+    "Switching the afternoon cup to decaf is the easiest, and it helps sleep the most. Half caf is a gentle way to cut back across the whole day. Green tea works if you're happy with a different drink entirely.",
+    "I'd start with the afternoon decaf, it's a small change with a big effect. Half caf is nice if you drink many cups, and green tea is a good fit if you're open to change."
+   ]
+  }
+ ]
 }

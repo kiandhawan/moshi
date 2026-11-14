@@ -31,7 +31,14 @@ ROOT = Path(__file__).resolve().parents[1]
 IDX, MAN = ROOT / "data/indexes", ROOT / "data/manifests"
 TTS_PER_BYTE, ASR_PER_SEC = 15 / 1e6, 0.36 / 3600
 KINDS = ["friend_question", "question_to_other", "near_miss", "pause", "self_talk"]
-BLOCK_KEYS = {"ctx": "contexts", "side": "side_conversations", "dlg": "ordinary_dialogues", "opt": "option_sets"}
+BLOCK_KEYS = {"ctx": "contexts", "side": "side_conversations", "dlg": "ordinary_dialogues", "opt": "option_sets",
+              "dq": "distractor_exchanges", "dn": "distractor_exchanges", "call": "phone_calls", "door": "door_visits"}
+
+
+def block_kind(b: str) -> str:
+    """'cooking.ctx4' -> contexts, 'dq_31' -> distractor_exchanges, 'call_13' -> phone_calls."""
+    key = re.sub(r"\d+$", "", b.split(".")[1]) if "." in b else b.split("_")[0]
+    return BLOCK_KEYS[key]
 
 
 def load(split_dir: str) -> list[dict]:
@@ -90,20 +97,25 @@ def stats(name: str, rows: list[dict], moshi: str) -> dict:
     uses: dict[str, Counter] = defaultdict(Counter)
     for s in scripts:
         for b in s["block_ids"]:
-            kind = re.sub(r"\d+$", "", b.split(".")[1])
-            uses[BLOCK_KEYS[kind]][b] += 1
+            uses[block_kind(b)][b] += 1
     pools = defaultdict(int)  # pool sizes for this split
     split = scripts[0]["split"]
     for t in json.loads((ROOT / "data/splits/topics.json").read_text())[split]:
         d = json.loads((ROOT / f"data/pools/topics/{t}.json").read_text())
-        for k in BLOCK_KEYS.values():
+        for k in ("contexts", "side_conversations", "ordinary_dialogues", "option_sets"):
             pools[k] += len(d.get(k, []))
+    gen = json.loads((ROOT / "data/pools/generic.json").read_text())
+    pools["distractor_exchanges"] = sum(x["split"] in (split, "both") for x in gen["distractors"])
+    pools["phone_calls"] = sum(x["split"] in (split, "both") for x in gen["phone_calls"])
+    pools["door_visits"] = sum(x["split"] in (split, "both") for x in gen["door_visits"])
     voices = {s["voices"]["user"] for s in scripts} | {s["voices"]["friend"] for s in scripts if s["voices"].get("friend")}
     tts, asr, clips = fish_cost(rows, moshi)
     cond = Counter(c for s in scripts for c in s.get("conditions", []))
     groups = Counter(g for s in scripts for g in s.get("groups", []) or [])
     return {
         "name": name, "files": n, "unique_scripts": len({r["id"] for r in rows}),
+        "unique_conversations": len({tuple(r["script"]["block_ids"]) for r in rows}),
+        "max_reuse": max((max(u.values()) for u in uses.values()), default=0),
         "total_h": sum(r["total_sec"] for r in rows) / 3600, "speech_h": sum(r["speech_sec"] for r in rows) / 3600,
         "silence_h": sum(r["silence_sec"] for r in rows) / 3600,
         "moshi_h": sum(r["moshi_speech_sec"] for r in rows) / 3600,
@@ -118,7 +130,9 @@ def stats(name: str, rows: list[dict], moshi: str) -> dict:
 def md(st: dict, extra: str = "") -> str:
     n = st["files"]
     lines = [f"## {st['name']}", "", extra, "" if extra else None,
-             f"- Files / unique scripts: **{n} / {st['unique_scripts']}**; length {st['min_sec']:.1f}-{st['max_sec']:.1f} s",
+             f"- Files / unique scripts / unique conversations: **{n} / {st['unique_scripts']} / "
+             f"{st['unique_conversations']}**; max reuse of any building block within the set: "
+             f"**{st['max_reuse']}**; length {st['min_sec']:.1f}-{st['max_sec']:.1f} s",
              f"- Audio: **{st['total_h']:.2f} h** total, {st['speech_h']:.2f} h speech (either channel), "
              f"{st['silence_h']:.2f} h silence; Moshi speaks {st['moshi_h']:.2f} h",
              f"- Wait time (instruction end to wait end): **{st['wait_h']:.2f} h**",
@@ -136,7 +150,7 @@ def md(st: dict, extra: str = "") -> str:
         lines.append(f"| {t} | " + " | ".join(f"{d[k]:.0%}" for k in KINDS) + " |")
     lines += ["", "Building-block reuse (uses per block among blocks used; pool = blocks available in this split):", "",
               "| block | used | pool | max uses | mean uses |", "|---|---|---|---|---|"]
-    for k in BLOCK_KEYS.values():
+    for k in dict.fromkeys(BLOCK_KEYS.values()):
         u = st["uses"].get(k)
         if u:
             lines.append(f"| {k} | {len(u)} | {st['pools'][k]} | {max(u.values())} | {sum(u.values()) / len(u):.1f} |")
@@ -167,23 +181,29 @@ def main() -> None:
         if too_long:
             raise SystemExit(f"{name}: files of 90 s or more: {too_long[:5]}")
     st = {k: stats(k, v[0], moshi) for k, v in sets.items()}
+    for k, v in st.items():  # content-unique: no block in more than one file of a set
+        if v["max_reuse"] > 1:
+            raise SystemExit(f"{k}: a building block is used {v['max_reuse']} times")
     full = [json.loads(l) for l in open(IDX / "eval_full.jsonl")]
     notes = {
         "train_1h": f"`data/indexes/train_1h.jsonl`: the first {len(t1)} files of the ordered training list "
                     "(a strict prefix of train_10h, cut at a 20-script block so the mix is exact).",
         "train_10h": f"`data/indexes/train_10h.jsonl`: the first {len(t10)} files of the ordered training list "
-                     f"({len(train)} rendered; the rest are the start of a longer list for later sets). Extending to "
-                     "100 h: `generate_scripts.py --split train --ordered --seed 10 --n <more>` reproduces these "
-                     "scripts exactly and appends new ones.",
+                     f"({len(train)} rendered; the rest are the start of a longer list). Extending to 100 h needs more "
+                     "blocks (about 10x): write them, then generate the continuation with `--exclude-blocks-from "
+                     "data/scripts/train` so these files stay unchanged and the longer set stays content-unique.",
         "control_10h": f"`data/indexes/control_10h.jsonl`: the {len(base)} ordinary files of train_10h, then "
-                       f"{len(c10) - len(base)} ordinary-only files (seed 11) in order. Same train voices and pools.",
+                       f"{len(c10) - len(base)} ordinary-only files (seed 11, drawn from dialogues not used anywhere "
+                       f"in the training list) in order. Same train voices and pools.",
         "eval": f"`data/indexes/eval.jsonl`: {len(ev)} user-side files + events for run_inference.py/score.py; "
                 f"`data/indexes/eval_full.jsonl`: their ideal stereo versions + transcripts plus the "
                 f"{sum('/human_' in r['path'] for r in full)} human answer keys ({len(full)} files) for eval_loss.py.",
     }
     out = ["# Data summary", "",
            "Generated by `scripts/build_datasets.py` from the render manifests. Scripts: "
-           "`scripts/generate_scripts.py --ordered` (train seed 10, control seed 11 with `--only ordinary`, eval seed 12); "
+           "`scripts/gen_datasets.sh` = `generate_scripts.py --ordered --unique` (train seed 10, control seed 11 with "
+           "`--only ordinary --exclude-blocks-from data/scripts/train`, eval seed 12); every set is content-unique "
+           "(no building block in more than one file of a set; see results/LOG.md); "
            "audio: `scripts/render.py` via `scripts/render_all.sh`. Every manifest row in `data/manifests/` records "
            "the seed, order_index and generator settings. Fish costs are computed from the text and the cached "
            "Moshi clips ($15 per million bytes TTS, $0.36 per hour ASR); a set's cost counts every clip it "
@@ -200,7 +220,8 @@ def main() -> None:
     longest = max(max(r["total_sec"] for r in v[0]) for v in sets.values())
     out += ["## Verification", "", *ver,
             f"- Longest file in any set: {longest:.1f} s (limit: under 90 s; render.py refuses longer files).",
-            "- `check_split_leakage.py`: train_10h vs eval and control_10h: 0 problems.", ""]
+            "- `check_split_leakage.py`: train_10h vs eval and control_10h: 0 problems.",
+            "- `check_duplicates.py` (near-duplicates across all pools): 0 flagged pairs (1 before fixing).", ""]
     if len(sys.argv) > 2:
         out += ["## Fish Audio billing", "",
                 f"- API credit before rendering: ${float(sys.argv[1]):.2f}; after: ${float(sys.argv[2]):.2f}; "

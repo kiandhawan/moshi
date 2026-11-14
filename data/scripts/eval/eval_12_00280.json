@@ -7,170 +7,213 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "phone_call",
- "wait_type": "phone_call",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [
-  "implicit"
+  "extra_question"
  ],
  "topics": [
-  "cycling"
+  "holiday_gifts",
+  "learning_language"
  ],
- "topic": "cycling",
+ "topic": "holiday_gifts",
  "voices": {
-  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
-  "friend": null,
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": "026218fe0c054374838d934016f34082",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Theo",
+ "friend_name_id": "name_15",
  "phrasing_ids": [
   "greet_24",
-  "greet_ans_03",
-  "phone_instr_05",
-  "ack_01",
-  "call_05",
-  "implicit_06"
+  "greet_ans_18",
+  "side_instr_15",
+  "ack_13",
+  "dq_74",
+  "side_cue_18"
  ],
  "block_ids": [
-  "cycling.ctx3"
+  "holiday_gifts.ctx16",
+  "learning_language.side6",
+  "dq_74"
  ],
- "est_total_sec": 61.48,
- "est_speech_sec": 40.25,
+ "est_total_sec": 81.57,
+ "est_speech_sec": 60.28,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey, what's up? How are you doing?",
    "est_sec": 2.27,
-   "gap_before": 0.59,
+   "gap_before": 0.71,
    "role": "greeting",
    "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Doing okay, thanks.",
+   "text": "I'm doing great.",
    "est_sec": 1.03,
-   "gap_before": 0.9,
+   "gap_before": 0.37,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_03"
+   "phrasing": "greet_ans_18"
   },
   {
    "speaker": "user",
-   "text": "A few friends invited me on a long weekend ride.",
-   "est_sec": 3.2,
-   "gap_before": 0.31,
+   "text": "My coworker just lost her dad and we usually swap gifts.",
+   "est_sec": 3.51,
+   "gap_before": 0.34,
    "event": "ordinary_request",
-   "block": "cycling.ctx3"
+   "block": "holiday_gifts.ctx16"
   },
   {
    "speaker": "moshi",
-   "text": "Fun! They're doing either the flat forty mile loop or the hilly twenty five mile one. Which do you think your legs can handle?",
-   "est_sec": 7.54,
-   "gap_before": 0.72,
+   "text": "That's sad. Would you still give her something small and comforting, or skip gifts and just write her a heartfelt card?",
+   "est_sec": 6.61,
+   "gap_before": 0.37,
    "role": "reply",
-   "block": "cycling.ctx3",
+   "block": "holiday_gifts.ctx16",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hang on, I've got to pick this up. Stay quiet until I come back to you.",
-   "est_sec": 5.06,
-   "gap_before": 1.39,
-   "event": "instruction",
-   "kind": "phone_call",
-   "phrasing": "phone_instr_05"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure.",
-   "est_sec": 0.41,
-   "gap_before": 0.69,
-   "role": "ack",
-   "phrasing": "ack_01",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, what's up?",
-   "est_sec": 1.03,
-   "gap_before": 1.77,
-   "phrasing": "call_05",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Seriously? That's great news!",
-   "est_sec": 1.34,
-   "gap_before": 2.51,
-   "phrasing": "call_05"
-  },
-  {
-   "speaker": "user",
-   "text": "When did you find out?",
-   "est_sec": 1.65,
-   "gap_before": 2.1,
-   "phrasing": "call_05",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "We have to celebrate. Are you free Friday?",
-   "est_sec": 2.58,
-   "gap_before": 2.14,
-   "phrasing": "call_05",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, talk soon.",
-   "est_sec": 1.03,
-   "gap_before": 2.9,
-   "phrasing": "call_05"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, done. Where were we?",
-   "est_sec": 1.65,
-   "gap_before": 1.61,
-   "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_06"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Of course. You were picking the weekend ride, flat and long or short and hilly.",
+   "text": "Give me a second, my brother needs help with something. Stay quiet until I'm back.",
    "est_sec": 4.75,
-   "gap_before": 0.45,
-   "role": "resume",
-   "block": "cycling.ctx3",
+   "gap_before": 1.31,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.22,
+   "role": "ack",
+   "phrasing": "ack_13",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "The flat one. Hills and I are not friends.",
+   "text": "Theo, do you want the window seat or the aisle?",
+   "est_sec": 3.2,
+   "gap_before": 1.08,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_74"
+  },
+  {
+   "speaker": "friend",
+   "text": "Window, if that's okay.",
+   "est_sec": 1.34,
+   "gap_before": 1.28,
+   "phrasing": "dq_74"
+  },
+  {
+   "speaker": "user",
+   "text": "So how much English did people speak in Japan?",
    "est_sec": 2.89,
-   "gap_before": 0.66,
-   "event": "ordinary_request",
-   "block": "cycling.ctx3"
+   "gap_before": 1.08,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "In Tokyo, quite a bit at hotels and stations. Outside the city, way less.",
+   "est_sec": 4.44,
+   "gap_before": 1.7,
+   "block": "learning_language.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you manage with your Japanese?",
+   "est_sec": 1.96,
+   "gap_before": 0.38,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Barely. I could say thank you, excuse me and where's the toilet. That covered a lot.",
+   "est_sec": 5.06,
+   "gap_before": 0.56,
+   "block": "learning_language.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Should I bother learning more before I go?",
+   "est_sec": 2.58,
+   "gap_before": 3.14,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yes, even a few more phrases. People lit up when I tried.",
+   "est_sec": 3.82,
+   "gap_before": 1.35,
+   "block": "learning_language.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay. Which phrase was the most useful?",
+   "est_sec": 2.27,
+   "gap_before": 0.65,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Excuse me. Sumimasen. You use it for everything.",
+   "est_sec": 2.58,
+   "gap_before": 0.55,
+   "block": "learning_language.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back with you.",
+   "est_sec": 1.65,
+   "gap_before": 1.73,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_18"
   },
   {
    "speaker": "moshi",
-   "text": "Fair. Bring two water bottles and a snack for the halfway point.",
-   "est_sec": 3.82,
-   "gap_before": 0.99,
+   "text": "Sure thing. So what feels right for her this year?",
+   "est_sec": 3.2,
+   "gap_before": 1.34,
+   "role": "resume",
+   "block": "holiday_gifts.ctx16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A card. And maybe offer to take her to lunch.",
+   "est_sec": 3.2,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's thoughtful. Lunch gives her company without pressure.",
+   "est_sec": 2.58,
+   "gap_before": 1.18,
    "role": "followup",
-   "block": "cycling.ctx3",
+   "block": "holiday_gifts.ctx16",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_phone",
-  "implicit_return"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

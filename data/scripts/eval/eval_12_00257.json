@@ -7,129 +7,146 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension"
+ ],
  "topics": [
   "restaurant_choice"
  ],
+ "wait_sec": 30,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 2.74
+ },
+ "deadline": {
+  "after_turn": 6,
+  "sec": 10
+ },
  "topic": "restaurant_choice",
  "voices": {
-  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_06"
+  "greet_24",
+  "greet_ans_03",
+  "think_instr_18",
+  "ack_06",
+  "extension_06"
  ],
  "block_ids": [
-  "restaurant_choice.dlg3"
+  "restaurant_choice.ctx2"
  ],
- "est_total_sec": 56.69,
- "est_speech_sec": 42.64,
+ "est_total_sec": 74.8,
+ "est_speech_sec": 29.52,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
    "gap_before": 0.39,
    "role": "greeting",
-   "phrasing": "greet_03",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.76,
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.6,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "Is it rude to ask for the check right after we finish eating?",
+   "text": "My parents are visiting and I want to take them out for dinner.",
    "est_sec": 4.13,
-   "gap_before": 0.39,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Not at all, especially if the restaurant is busy. A simple, could we get the check when you have a moment, is perfectly polite.",
-   "est_sec": 7.54,
    "gap_before": 0.42,
-   "role": "reply",
-   "block": "restaurant_choice.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "What about splitting the bill between five people?",
-   "est_sec": 2.58,
-   "gap_before": 1.31,
    "event": "ordinary_request",
-   "block": "restaurant_choice.dlg3"
+   "block": "restaurant_choice.ctx2"
   },
   {
    "speaker": "moshi",
-   "text": "Tell the server at the start of the meal if you can. It makes things much easier for them at the end.",
-   "est_sec": 6.92,
-   "gap_before": 1.52,
+   "text": "Nice. Do they like trying new kinds of food, or would they be happier with something familiar like a steakhouse?",
+   "est_sec": 6.3,
+   "gap_before": 0.93,
    "role": "reply",
-   "block": "restaurant_choice.dlg3",
+   "block": "restaurant_choice.ctx2",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "And how much should we",
-   "est_sec": 1.65,
-   "gap_before": 0.53,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "restaurant_choice.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "tip for a big group?",
-   "est_sec": 1.65,
-   "gap_before": 2.95,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg3"
+   "text": "Let me think. Ask me again in about thirty seconds.",
+   "est_sec": 3.2,
+   "gap_before": 2.58,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_18"
   },
   {
    "speaker": "moshi",
-   "text": "In the United States, eighteen to twenty percent is standard. Some places add it automatically for groups of six or more, so check the bill first.",
-   "est_sec": 8.16,
-   "gap_before": 0.62,
-   "role": "reply",
-   "block": "restaurant_choice.dlg3",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.49,
+   "role": "ack",
+   "phrasing": "ack_06",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Oh, I didn't know that. Good thing I asked.",
+   "text": "Can I have ten more seconds?",
+   "est_sec": 1.96,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_06",
+   "anchor": {
+    "turn": 4,
+    "offset": 27.26
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, for your parents, something new or something familiar?",
    "est_sec": 2.89,
-   "gap_before": 3.26,
+   "role": "resume",
+   "block": "restaurant_choice.ctx2",
+   "anchor": {
+    "turn": 6,
+    "offset": 10.15
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let's try something new, my mom loves surprises.",
+   "est_sec": 2.58,
+   "gap_before": 1.11,
    "event": "ordinary_request",
-   "block": "restaurant_choice.dlg3"
+   "block": "restaurant_choice.ctx2"
   },
   {
    "speaker": "moshi",
-   "text": "It catches a lot of people out. Otherwise you might accidentally tip twice.",
-   "est_sec": 4.13,
-   "gap_before": 0.4,
-   "role": "reply",
-   "block": "restaurant_choice.dlg3",
+   "text": "Fun. A Lebanese or Ethiopian place with sharing plates could be a great experience.",
+   "est_sec": 4.44,
+   "gap_before": 1.06,
+   "role": "followup",
+   "block": "restaurant_choice.ctx2",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type",
+  "extension"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

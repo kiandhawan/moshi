@@ -7,17 +7,27 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "public_transport"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end"
  ],
- "topic": "public_transport",
+ "topics": [
+  "coffee"
+ ],
+ "wait_sec": 10,
+ "early_end": {
+  "after_sec": 8.39,
+  "direct": true
+ },
+ "topic": "coffee",
  "voices": {
-  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,96 +35,102 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_02",
-  "greet_ans_25",
-  "describe_instr_19",
-  "describe_cue_08"
+  "greet_ans_16",
+  "think_instr_29",
+  "ack_06",
+  "early_end_04"
  ],
  "block_ids": [
-  "public_transport.opt1"
+  "coffee.ctx8"
  ],
- "est_total_sec": 54.7,
- "est_speech_sec": 42.54,
+ "est_total_sec": 46.4,
+ "est_speech_sec": 31.69,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi! How are you today?",
    "est_sec": 1.65,
-   "gap_before": 0.79,
+   "gap_before": 0.37,
    "role": "greeting",
    "phrasing": "greet_02"
   },
   {
    "speaker": "user",
-   "text": "I'm well, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.64,
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.73,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_25"
+   "phrasing": "greet_ans_16"
   },
   {
    "speaker": "user",
-   "text": "I just started a new job across town and I'm choosing how to get there.",
-   "est_sec": 4.75,
-   "gap_before": 0.53,
-   "block": "public_transport.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Hear me out on all the options before you comment.",
-   "est_sec": 3.2,
-   "gap_before": 0.57,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_19"
-  },
-  {
-   "speaker": "user",
-   "text": "The first option is the express bus, about thirty five minutes, but it's often packed.",
-   "est_sec": 4.75,
-   "gap_before": 1.19,
-   "block": "public_transport.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's the train, which is faster, but I'd have to walk fifteen minutes to the station.",
-   "est_sec": 5.37,
-   "gap_before": 1.14,
-   "block": "public_transport.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a tram that's slower but stops right outside my building.",
-   "est_sec": 4.13,
-   "gap_before": 1.94,
-   "block": "public_transport.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is biking to the train station and taking the train from there.",
+   "text": "The coffee machine at the office died, and people are acting like it's a national emergency.",
    "est_sec": 5.06,
-   "gap_before": 2.05,
-   "block": "public_transport.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all. Which sounds best to you?",
-   "est_sec": 2.58,
-   "gap_before": 0.5,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_08"
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "block": "coffee.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "Do you mind a bit of walking or biking in the morning? If not, the train is a great choice. If you want zero hassle, the tram's convenience is hard to beat.",
-   "est_sec": 10.02,
-   "gap_before": 1.31,
+   "text": "Understandable. Is the team going to chip in for a new machine, or switch to a kettle and some decent instant for now?",
+   "est_sec": 7.23,
+   "gap_before": 1.57,
+   "role": "reply",
+   "block": "coffee.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about that for ten seconds, then ask me once more.",
+   "est_sec": 4.13,
+   "gap_before": 0.81,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.57,
+   "role": "ack",
+   "phrasing": "ack_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I know what I want.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 8.39
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, a new machine, or make do?",
+   "est_sec": 2.27,
+   "gap_before": 0.75,
    "role": "resume",
-   "block": "public_transport.opt1"
+   "block": "coffee.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "We're chipping in. Morale depends on it.",
+   "est_sec": 2.27,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "coffee.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wise. A simple bean to cup machine is a good shared choice, and easy to clean.",
+   "est_sec": 5.06,
+   "gap_before": 0.33,
+   "role": "followup",
+   "block": "coffee.ctx8"
   }
  ]
 }

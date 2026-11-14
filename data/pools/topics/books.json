@@ -1,162 +1,1887 @@
 {
-  "topic": "books",
-  "contexts": [
+ "topic": "books",
+ "contexts": [
+  {
+   "id": "books.ctx1",
+   "turns": [
     {
-      "id": "books.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I just finished a really long fantasy series and now I feel kind of lost."},
-        {"speaker": "moshi", "text": "That book hangover is real. Do you want another big series to sink into, or something short and different as a palate cleanser?"}
-      ],
-      "pending": "another long series or a short palate cleanser",
-      "think_reask": [
-        "So, another big series, or something short and different?",
-        "Okay, have you decided what you're in the mood for next?",
-        "Time's up! Long series or quick palate cleanser?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were finding your next read. Big series or something short?",
-        "Hi again. Still deciding between a new series and a short book?",
-        "There you are. Any idea yet what you want to read next?"
-      ],
-      "endings": [
-        {"user": "Something short. I need a break from dragons.", "moshi": "Then try a slim literary novel or a cozy mystery. You'll finish it in a weekend."},
-        {"user": "Another series, I can't help myself.", "moshi": "Ha, fair. Look for a finished trilogy, so you don't have to wait for the next book."}
-      ]
+     "speaker": "user",
+     "text": "I just finished a really long fantasy series and now I feel kind of lost."
     },
     {
-      "id": "books.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "It's my turn to pick the book for our book club."},
-        {"speaker": "moshi", "text": "Nice. What does the group usually enjoy, and would you rather pick something safe or something that sparks a big debate?"}
-      ],
-      "pending": "safe pick or debate-sparking book club pick",
-      "think_reask": [
-        "So, for your book club, safe pick or something to argue about?",
-        "Have you decided which way to go for the club?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing a book club pick, safe or debate-worthy?",
-        "Good to have you back. Any thoughts on the book club choice?"
-      ],
-      "endings": [
-        {"user": "Let's stir things up. They're getting too comfortable.", "moshi": "Love it. A novel with a morally gray narrator always gets people talking."},
-        {"user": "Safe. Last month's pick nearly started a fight.", "moshi": "Understood. A warm, funny family story is a crowd pleaser and still gives you plenty to discuss."}
-      ]
-    },
-    {
-      "id": "books.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I want to read more, but I'm always on the go."},
-        {"speaker": "moshi", "text": "Audiobooks might help, or an e-reader that fits in your pocket."},
-        {"speaker": "user", "text": "Hmm, both sound good."},
-        {"speaker": "moshi", "text": "Which fits your day better, listening on the bus and at the gym, or reading in short quiet moments?"}
-      ],
-      "pending": "audiobooks or e-reader",
-      "think_reask": [
-        "So, audiobooks or an e-reader, which fits your day better?",
-        "Have you decided between listening and reading on the go?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were figuring out how you can read more. Audiobooks or e-reader?",
-        "Hey, you're back. Still choosing between audiobooks and an e-reader?"
-      ],
-      "endings": [
-        {"user": "Audiobooks. I'm driving like two hours a day.", "moshi": "Perfect, that's a lot of books a year. Check if your library lends audiobooks for free."},
-        {"user": "E-reader. I like seeing the words.", "moshi": "Good. Keep it in your bag and read a few pages whenever you're waiting somewhere."}
-      ]
+     "speaker": "moshi",
+     "text": "That book hangover is real. Do you want another big series to sink into, or something short and different as a palate cleanser?"
     }
-  ],
-  "side_conversations": [
-    {"id": "books.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you ever finish that mystery I lent you?"},
-      {"speaker": "friend", "text": "Last night! I stayed up way too late."},
-      {"speaker": "user", "text": "Did you guess who did it?"},
-      {"speaker": "friend", "text": "Not even close. I was sure it was the sister."},
-      {"speaker": "user", "text": "Everyone thinks that. Can I have it back? My mom wants to read it."},
-      {"speaker": "friend", "text": "It's on my nightstand. I'll bring it down."}
-    ]},
-    {"id": "books.side2", "turns": [
-      {"speaker": "user", "text": "Are you going to the book club on Thursday?"},
-      {"speaker": "friend", "text": "I want to, but I'm only halfway through the book."},
-      {"speaker": "user", "text": "Same. It's so slow in the middle."},
-      {"speaker": "friend", "text": "Right? Pages and pages about the weather."},
-      {"speaker": "user", "text": "Should we just go and listen? Nobody will mind."},
-      {"speaker": "friend", "text": "True, and there's always cake. Let's go."}
-    ]},
-    {"id": "books.side3", "turns": [
-      {"speaker": "user", "text": "Hey {friend}, what are you reading at the moment?"},
-      {"speaker": "friend", "text": "A history book about lighthouses. It's surprisingly gripping."},
-      {"speaker": "user", "text": "Lighthouses? Really?"},
-      {"speaker": "friend", "text": "Seriously, there's shipwrecks, storms, keepers going mad from loneliness."},
-      {"speaker": "user", "text": "Okay, that does sound good. Can I borrow it when you're done?"},
-      {"speaker": "friend", "text": "Sure, give me a week or so."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "books.dlg1", "turns": [
-      {"speaker": "user", "text": "Can you suggest a book for a twelve year old who says reading is boring?"},
-      {"speaker": "moshi", "text": "Try a fast, funny adventure with short chapters, or a graphic novel. They feel quick and rewarding."},
-      {"speaker": "user", "text": "Graphic novels count as reading?"},
-      {"speaker": "moshi", "text": "Absolutely. They build vocabulary and following a story, and they're often a gateway to longer books."},
-      {"speaker": "user", "text": "He loves football. Is there anything / you know, sporty?"},
-      {"speaker": "moshi", "text": "There are lots of middle grade novels about kids on football teams. Ask a librarian, they'll know the popular ones."},
-      {"speaker": "user", "text": "Good idea, we go to the library on Saturdays anyway."},
-      {"speaker": "moshi", "text": "Perfect. Let him choose a couple himself, that helps a lot with motivation."}
-    ]},
-    {"id": "books.dlg2", "turns": [
-      {"speaker": "user", "text": "How do people read fifty books a year? I barely manage five."},
-      {"speaker": "moshi", "text": "Mostly small habits. Twenty minutes before bed, a book always in your bag, and audiobooks during chores add up fast."},
-      {"speaker": "user", "text": "I always fall asleep reading in bed though."},
-      {"speaker": "moshi", "text": "Then try reading in the morning with your coffee, or at lunch. Some people find that sticks better."},
-      {"speaker": "user", "text": "Is it okay to quit a book halfway if I'm not enjoying it?"},
-      {"speaker": "moshi", "text": "Definitely. Life's too short. Dropping a dull book is one of the best ways to read more."},
-      {"speaker": "user", "text": "That makes me feel better. I've been stuck on the same one / since July, honestly."},
-      {"speaker": "moshi", "text": "Then it's time to let it go. Pick something you're excited about and see how fast you get through it."}
-    ]},
-    {"id": "books.dlg3", "turns": [
-      {"speaker": "user", "text": "I'm writing a book review for school. How should I structure it?"},
-      {"speaker": "moshi", "text": "Start with a short summary without spoilers, then say what worked and what didn't, and end with who you'd recommend it to."},
-      {"speaker": "user", "text": "How long should the summary be?"},
-      {"speaker": "moshi", "text": "Keep it brief, maybe a paragraph. The teacher mostly wants your opinion and your reasons."},
-      {"speaker": "user", "text": "I didn't like the ending but / I'm not sure if I'm allowed to say that."},
-      {"speaker": "moshi", "text": "Of course you are. Just explain why, like it felt rushed or it didn't fit the characters."},
-      {"speaker": "user", "text": "It totally felt rushed. Should I use quotes from the book?"},
-      {"speaker": "moshi", "text": "One or two short ones are great to back up your points. Don't use too many, though."}
-    ]},
-    {"id": "books.dlg4", "turns": [
-      {"speaker": "user", "text": "My eyes get tired with small print these days. Any suggestions?"},
-      {"speaker": "moshi", "text": "Large print editions are easy to find at most libraries. An e-reader also lets you make the text as big as you like."},
-      {"speaker": "user", "text": "I've never used an e-reader. Are they complicated?"},
-      {"speaker": "moshi", "text": "Not really. You mostly just tap the side of the screen to turn the page, and the font size is one button away."},
-      {"speaker": "user", "text": "Does the screen hurt your eyes like a phone?"},
-      {"speaker": "moshi", "text": "No, most e-readers use a special screen that looks like paper. It's much gentler than a phone."},
-      {"speaker": "user", "text": "My granddaughter offered to / set one up for me, so maybe I'll let her."},
-      {"speaker": "moshi", "text": "That's a lovely idea. She can load a few books for you to get started."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "books.opt1",
-     "lead_in": "My book club gets to pick next month's book and it's my turn to choose.",
-     "options": [
-       "The first one is a long fantasy novel, about eight hundred pages, with dragons and a huge cast.",
-       "Then there's a short memoir about a woman who sailed around the world by herself.",
-       "Option three is a mystery set in a small fishing town, the kind you can't put down.",
-       "And the last one is a book about the history of salt, which sounds odd but has great reviews."
-     ],
-     "moshi_comment": [
-       "Eight hundred pages is a lot for a month, so the fantasy novel might lose half the club. The mystery is a safe choice, easy to read and fun to discuss who did it. The sailing memoir is short and inspiring, which could spark a nice conversation.",
-       "How much reading does your club usually manage in a month? If people are busy, the memoir or the mystery are the best bets. The salt book is a fun wild card if the group likes something different."
-     ]},
-    {"id": "books.opt2",
-     "lead_in": "I'm going on vacation and I want to bring one book, but I can't decide which.",
-     "options": [
-       "One is a light romance set on an island, perfect for lying by the pool.",
-       "Another is a thick science fiction novel my brother keeps telling me to read.",
-       "Or I could finally read that classic novel I've been pretending I read in school."
-     ],
-     "moshi_comment": [
-       "The island romance fits the vacation mood perfectly, easy and relaxing. The science fiction one might be great if you'll have long flights or quiet evenings. The classic could feel like homework on a beach.",
-       "Do you want to switch off or get really absorbed in something? For switching off, take the romance. If you have a long flight, the science fiction novel will make the time fly."
-     ]}
-  ]
+   ],
+   "pending": "another long series or a short palate cleanser",
+   "think_reask": [
+    "So, another big series, or something short and different?",
+    "Okay, have you decided what you're in the mood for next?",
+    "Time's up! Long series or quick palate cleanser?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were finding your next read. Big series or something short?",
+    "Hi again. Still deciding between a new series and a short book?",
+    "There you are. Any idea yet what you want to read next?"
+   ],
+   "endings": [
+    {
+     "user": "Something short. I need a break from dragons.",
+     "moshi": "Then try a slim literary novel or a cozy mystery. You'll finish it in a weekend."
+    },
+    {
+     "user": "Another series, I can't help myself.",
+     "moshi": "Ha, fair. Look for a finished trilogy, so you don't have to wait for the next book."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's my turn to pick the book for our book club."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. What does the group usually enjoy, and would you rather pick something safe or something that sparks a big debate?"
+    }
+   ],
+   "pending": "safe pick or debate-sparking book club pick",
+   "think_reask": [
+    "So, for your book club, safe pick or something to argue about?",
+    "Have you decided which way to go for the club?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing a book club pick, safe or debate-worthy?",
+    "Good to have you back. Any thoughts on the book club choice?"
+   ],
+   "endings": [
+    {
+     "user": "Let's stir things up. They're getting too comfortable.",
+     "moshi": "Love it. A novel with a morally gray narrator always gets people talking."
+    },
+    {
+     "user": "Safe. Last month's pick nearly started a fight.",
+     "moshi": "Understood. A warm, funny family story is a crowd pleaser and still gives you plenty to discuss."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to read more, but I'm always on the go."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Audiobooks might help, or an e-reader that fits in your pocket."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm, both sound good."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Which fits your day better, listening on the bus and at the gym, or reading in short quiet moments?"
+    }
+   ],
+   "pending": "audiobooks or e-reader",
+   "think_reask": [
+    "So, audiobooks or an e-reader, which fits your day better?",
+    "Have you decided between listening and reading on the go?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were figuring out how you can read more. Audiobooks or e-reader?",
+    "Hey, you're back. Still choosing between audiobooks and an e-reader?"
+   ],
+   "endings": [
+    {
+     "user": "Audiobooks. I'm driving like two hours a day.",
+     "moshi": "Perfect, that's a lot of books a year. Check if your library lends audiobooks for free."
+    },
+    {
+     "user": "E-reader. I like seeing the words.",
+     "moshi": "Good. Keep it in your bag and read a few pages whenever you're waiting somewhere."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My nephew wants me to read his favorite comic so we can talk about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's sweet of you. Would you rather start at the very first volume, or jump into the arc he's reading right now?"
+    }
+   ],
+   "pending": "start the comic from volume one or jump into his current arc",
+   "think_reask": [
+    "So, from the very beginning, or straight into the arc your nephew is on?",
+    "Right, the comic. Volume one, or wherever he is now?"
+   ],
+   "welcome_back": [
+    "Your nephew's comic. Start at the beginning or jump to his current arc?",
+    "We'd got to the comic question. Volume one or the newer stuff?"
+   ],
+   "endings": [
+    {
+     "user": "From the start. I want to get the jokes he's quoting.",
+     "moshi": "Good call. The early volumes are short, so you'll catch up faster than you think."
+    },
+    {
+     "user": "His current arc. He won't stop talking about it.",
+     "moshi": "Then dive in there. He'll love filling you in on the backstory."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Ugh, I left my book on the train this morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh no, that's the worst. Were you near the end?"
+    },
+    {
+     "speaker": "user",
+     "text": "Like forty pages from the end."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Painful. Do you want to buy a new copy, or wait and see if lost property has it?"
+    }
+   ],
+   "pending": "rebuy the lost book or wait for lost property",
+   "think_reask": [
+    "So, buy another copy now, or give lost property a chance?",
+    "Forty pages left. Rebuy it, or hold out for the train office?"
+   ],
+   "welcome_back": [
+    "Your book on the train. Buying a new copy, or waiting on lost property?",
+    "Those last forty pages. Still deciding whether to rebuy?"
+   ],
+   "endings": [
+    {
+     "user": "I'll wait a couple of days. Someone might hand it in.",
+     "moshi": "Fair enough. Call them tomorrow, they usually log things within a day."
+    },
+    {
+     "user": "Buying it. I can't sleep without knowing how it ends.",
+     "moshi": "Totally understandable. Grab the e-book and you'll know tonight."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm seventy-two and I've never read any poetry. Is it too late to start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. Would you like to begin with short modern poems, or with the older classics you might have heard of?"
+    }
+   ],
+   "pending": "modern short poems or older classics",
+   "think_reask": [
+    "Have you had a think? Short modern poems, or the classics?",
+    "So where would you like to begin with poetry, new or old?"
+   ],
+   "welcome_back": [
+    "About starting poetry. Modern and short, or the old classics?",
+    "We'd left off at where to start with poems. Any preference?"
+   ],
+   "endings": [
+    {
+     "user": "The classics. I want to know the ones people quote.",
+     "moshi": "Lovely. A small anthology of well loved poems is a gentle place to start."
+    },
+    {
+     "user": "Modern, please. I'm worried the old ones will feel stiff.",
+     "moshi": "That's a good instinct. Plenty of modern poets write in plain everyday language."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm trying to write a short story but I keep starting over."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That happens to a lot of writers. Do you want to push through to the end of a messy draft, or fix the opening first?"
+    }
+   ],
+   "pending": "finish a messy draft or polish the opening",
+   "think_reask": [
+    "So, power through the messy draft, or get the opening right first?",
+    "Your story. Push on or fix the start?"
+   ],
+   "welcome_back": [
+    "Your short story. Messy draft to the end, or polish the opening?",
+    "Right, the restarting problem. Which way are you leaning?"
+   ],
+   "endings": [
+    {
+     "user": "Push through. I've rewritten that first page nine times.",
+     "moshi": "Then leave it alone for now. You'll know what the opening needs once the ending exists."
+    },
+    {
+     "user": "I need the opening right or I can't move on.",
+     "moshi": "Okay, give yourself one more pass on it, then promise yourself you'll keep going."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My partner and I want to read the same book together."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a fun idea. Would you both read separately and compare notes, or read it aloud to each other?"
+    }
+   ],
+   "pending": "read separately and compare or read aloud together",
+   "think_reask": [
+    "So, read on your own and compare, or take turns reading aloud?",
+    "Reading together. Separately or out loud?"
+   ],
+   "welcome_back": [
+    "The book with your partner. Reading aloud or comparing notes?",
+    "We'd got as far as how you two would read it. Decided?"
+   ],
+   "endings": [
+    {
+     "user": "Aloud. We do a chapter before bed.",
+     "moshi": "That's lovely. Pick something with short chapters so nobody falls asleep mid page."
+    },
+    {
+     "user": "Separately, he reads way faster than me.",
+     "moshi": "Then agree on a stopping point each week so he can't spoil anything."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The library sale has a whole box of old paperbacks for five dollars."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What a bargain. Are you thinking of keeping them all, or picking a few and leaving the rest for others?"
+    }
+   ],
+   "pending": "take the whole box or pick a few",
+   "think_reask": [
+    "So, the whole box or just a handful?",
+    "That box of paperbacks. All of it or a few?"
+   ],
+   "welcome_back": [
+    "The library sale box. Taking it all, or cherry picking?",
+    "Still weighing up that box of paperbacks?"
+   ],
+   "endings": [
+    {
+     "user": "The whole box. I'll donate what I don't like.",
+     "moshi": "Nice plan. You might find a gem you'd never have picked yourself."
+    },
+    {
+     "user": "Just a few, my shelves are already bursting.",
+     "moshi": "Sensible. Go for the ones with the most worn spines, people loved those."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My teenager says the books on her school list are boring."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's common. Would you rather find her a modern book on the same themes, or help her get into the assigned one?"
+    }
+   ],
+   "pending": "a modern alternative or help with the assigned book",
+   "think_reask": [
+    "So, a modern swap, or helping her through the school book?",
+    "Your daughter's reading list. Which way do you want to go?"
+   ],
+   "welcome_back": [
+    "Your teenager and her reading list. Alternative or stick with the assigned one?",
+    "We'd reached the school book problem. Any decision?"
+   ],
+   "endings": [
+    {
+     "user": "She has to read the assigned one, so let's make it bearable.",
+     "moshi": "Try the audiobook alongside the text. A good narrator can make old language click."
+    },
+    {
+     "user": "Find her something modern first, just to get her reading again.",
+     "moshi": "Good idea. A recent novel with a teenage narrator might win her back."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm moving abroad and I have about four hundred books."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lot to ship. Do you want to bring them all, or keep a small favorites shelf and give the rest away?"
+    }
+   ],
+   "pending": "ship all the books or keep a favorites shelf",
+   "think_reask": [
+    "So, all four hundred, or just a favorites shelf?",
+    "The books and the move. Ship them or slim down?"
+   ],
+   "welcome_back": [
+    "Your four hundred books. Taking them all abroad?",
+    "We'd stopped at what to do with the books before the move. Has anything made the cut yet?"
+   ],
+   "endings": [
+    {
+     "user": "Favorites only. Maybe thirty books.",
+     "moshi": "That's brave. Photograph the shelves before you give them away, it helps with letting go."
+    },
+    {
+     "user": "All of them. They're half my personality.",
+     "moshi": "Then look into sea freight for books, it's much cheaper than flying them."
+    }
+   ]
+  },
+  {
+   "id": "books.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you help me pick a genre for my reading challenge?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. The challenge says one genre you've never tried. Horror, westerns, or science writing, which sounds least scary?"
+    }
+   ],
+   "pending": "horror, westerns or science writing for the challenge",
+   "think_reask": [
+    "So, horror, westerns or science writing?",
+    "Your reading challenge. Which new genre is it going to be?"
+   ],
+   "welcome_back": [
+    "The reading challenge genre. Horror, westerns or science?",
+    "Picked a brave new genre yet?"
+   ],
+   "endings": [
+    {
+     "user": "Westerns. I don't think I've ever even opened one.",
+     "moshi": "Great choice. Look for a modern western, they're often more character driven than you'd expect."
+    },
+    {
+     "user": "Horror, but nothing with clowns.",
+     "moshi": "Ha, noted. A slow creepy ghost story might be the perfect gentle start."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "books.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you ever finish that mystery I lent you?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Last night! I stayed up way too late."
+    },
+    {
+     "speaker": "user",
+     "text": "Did you guess who did it?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not even close. I was sure it was the sister."
+    },
+    {
+     "speaker": "user",
+     "text": "Everyone thinks that. Can I have it back? My mom wants to read it."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's on my nightstand. I'll bring it down."
+    }
+   ]
+  },
+  {
+   "id": "books.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Are you going to the book club on Thursday?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I want to, but I'm only halfway through the book."
+    },
+    {
+     "speaker": "user",
+     "text": "Same. It's so slow in the middle."
+    },
+    {
+     "speaker": "friend",
+     "text": "Right? Pages and pages about the weather."
+    },
+    {
+     "speaker": "user",
+     "text": "Should we just go and listen? Nobody will mind."
+    },
+    {
+     "speaker": "friend",
+     "text": "True, and there's always cake. Let's go."
+    }
+   ]
+  },
+  {
+   "id": "books.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey {friend}, what are you reading at the moment?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A history book about lighthouses. It's surprisingly gripping."
+    },
+    {
+     "speaker": "user",
+     "text": "Lighthouses? Really?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Seriously, there's shipwrecks, storms, keepers going mad from loneliness."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that does sound good. Can I borrow it when you're done?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, give me a week or so."
+    }
+   ]
+  },
+  {
+   "id": "books.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, why is my bookmark in the middle of your book?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh, I ran out of bookmarks. Yours was just lying there."
+    },
+    {
+     "speaker": "user",
+     "text": "That's my lucky bookmark. I've had it since college."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's a train ticket."
+    },
+    {
+     "speaker": "user",
+     "text": "It's a lucky train ticket. Can I have it back after this chapter?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine, I'm almost done anyway."
+    }
+   ]
+  },
+  {
+   "id": "books.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you return the library books? They were due Monday."
+    },
+    {
+     "speaker": "friend",
+     "text": "Which ones?"
+    },
+    {
+     "speaker": "user",
+     "text": "The three on the hall table. The cookbook, the bird guide and that thriller."
+    },
+    {
+     "speaker": "friend",
+     "text": "I took the thriller back. I didn't know the other two were due too."
+    },
+    {
+     "speaker": "user",
+     "text": "Great, so we've got fines on two. How much is it per day now?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I think it's twenty cents. I'll take them on my way to work tomorrow, promise."
+    },
+    {
+     "speaker": "user",
+     "text": "Thanks. And maybe check under the couch, I think the bird guide's under there."
+    }
+   ]
+  },
+  {
+   "id": "books.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey {friend}, are you still doing that thing where you read the last page first?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Always. I need to know who survives."
+    },
+    {
+     "speaker": "user",
+     "text": "That ruins everything though."
+    },
+    {
+     "speaker": "friend",
+     "text": "No, it lets me relax and enjoy the writing."
+    },
+    {
+     "speaker": "user",
+     "text": "So do you know how the one you're reading now ends?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yep. Don't ask, you'll want to read it next."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "books.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you suggest a book for a twelve year old who says reading is boring?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a fast, funny adventure with short chapters, or a graphic novel. They feel quick and rewarding."
+    },
+    {
+     "speaker": "user",
+     "text": "Graphic novels count as reading?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Absolutely. They build vocabulary and following a story, and they're often a gateway to longer books."
+    },
+    {
+     "speaker": "user",
+     "text": "He loves football. Is there anything / you know, sporty?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "There are lots of middle grade novels about kids on football teams. Ask a librarian, they'll know the popular ones."
+    },
+    {
+     "speaker": "user",
+     "text": "Good idea, we go to the library on Saturdays anyway."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Let him choose a couple himself, that helps a lot with motivation."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do people read fifty books a year? I barely manage five."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly small habits. Twenty minutes before bed, a book always in your bag, and audiobooks during chores add up fast."
+    },
+    {
+     "speaker": "user",
+     "text": "I always fall asleep reading in bed though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try reading in the morning with your coffee, or at lunch. Some people find that sticks better."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it okay to quit a book halfway if I'm not enjoying it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. Life's too short. Dropping a dull book is one of the best ways to read more."
+    },
+    {
+     "speaker": "user",
+     "text": "That makes me feel better. I've been stuck on the same one / since July, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's time to let it go. Pick something you're excited about and see how fast you get through it."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm writing a book review for school. How should I structure it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with a short summary without spoilers, then say what worked and what didn't, and end with who you'd recommend it to."
+    },
+    {
+     "speaker": "user",
+     "text": "How long should the summary be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it brief, maybe a paragraph. The teacher mostly wants your opinion and your reasons."
+    },
+    {
+     "speaker": "user",
+     "text": "I didn't like the ending but / I'm not sure if I'm allowed to say that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Of course you are. Just explain why, like it felt rushed or it didn't fit the characters."
+    },
+    {
+     "speaker": "user",
+     "text": "It totally felt rushed. Should I use quotes from the book?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "One or two short ones are great to back up your points. Don't use too many, though."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My eyes get tired with small print these days. Any suggestions?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Large print editions are easy to find at most libraries. An e-reader also lets you make the text as big as you like."
+    },
+    {
+     "speaker": "user",
+     "text": "I've never used an e-reader. Are they complicated?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really. You mostly just tap the side of the screen to turn the page, and the font size is one button away."
+    },
+    {
+     "speaker": "user",
+     "text": "Does the screen hurt your eyes like a phone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, most e-readers use a special screen that looks like paper. It's much gentler than a phone."
+    },
+    {
+     "speaker": "user",
+     "text": "My granddaughter offered to / set one up for me, so maybe I'll let her."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lovely idea. She can load a few books for you to get started."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, weird question. Is it normal to cry at the end of a book about a dog?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Completely normal. Stories about animals hit hard because the love in them is so simple and loyal."
+    },
+    {
+     "speaker": "user",
+     "text": "My roommate laughed at me. She said it's just ink on paper."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then she hasn't met the right book yet. Feeling something that strongly is kind of the whole point of reading."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I read something cheerful next? I feel / kind of wrung out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a good idea. A light comedy or a cozy mystery can be like a warm bath after a sad ending."
+    },
+    {
+     "speaker": "user",
+     "text": "Any cozy mystery you'd point me to?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look for one set in a small village with a nosy amateur detective. The genre is full of them, and they're gentle and funny."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I run a tiny bookshop and sales have been slow. Any ideas to get people in?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few things work well for small shops. Hand written staff picks, a regular author evening, or a children's story hour on weekends."
+    },
+    {
+     "speaker": "user",
+     "text": "Story hour sounds sweet. Who reads, though? It's just me and my cat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could read yourself, or ask a local retired teacher. People often love volunteering for something like that."
+    },
+    {
+     "speaker": "user",
+     "text": "Hm, there's a lady who comes in every Tuesday. She used to teach primary school."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect, ask her. Parents who come for story hour usually stay and browse."
+    },
+    {
+     "speaker": "user",
+     "text": "And the cat?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The cat is honestly a marketing asset. Put a photo of it in the window with a little sign recommending a book."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you explain what an unreliable narrator is? We keep saying it in class and I just nod."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. It's when the person telling the story can't be fully trusted, because they lie, forget things, or misunderstand what's happening."
+    },
+    {
+     "speaker": "user",
+     "text": "So the author does it on purpose?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, it's deliberate. The fun is that you slowly realize the story you've been told isn't quite what really happened."
+    },
+    {
+     "speaker": "user",
+     "text": "Is that like when a kid narrates and doesn't get / what the adults are doing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly, that's a classic example. The kid isn't lying, they just don't understand, and the reader sees more than they do."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's actually cool. I thought it was just a fancy word for a bad narrator."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Far from it. Done well, it's one of the cleverest tricks a writer can pull."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've been reading the same page for ten minutes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like your brain's somewhere else. Are you tired, or is the book just not grabbing you?"
+    },
+    {
+     "speaker": "user",
+     "text": "Both, probably. It's a book about economics my boss recommended."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah. Nonfiction you feel you should read is hard to focus on. Try reading just the chapter summaries first to get the big picture."
+    },
+    {
+     "speaker": "user",
+     "text": "Is that cheating?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really. Lots of people skim nonfiction and then dive into the chapters that matter to them."
+    },
+    {
+     "speaker": "user",
+     "text": "He's going to ask me about it on Friday though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then read the introduction and the conclusion properly. Those usually hold the main argument, and you'll have something to say."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is there a way to read in bed without keeping my wife awake?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small clip on reading light with a warm, dim bulb works well. Or an e-reader with a backlight you can turn way down."
+    },
+    {
+     "speaker": "user",
+     "text": "She says even turning pages bugs her."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then an e-reader is your friend, it's completely silent. Some people also switch to audiobooks with one earbud in."
+    },
+    {
+     "speaker": "user",
+     "text": "I'd fall asleep in two minutes with an audiobook."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most apps have a sleep timer, so it stops after fifteen or thirty minutes and you won't lose your place too badly."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll / try the timer thing tonight and see who falls asleep first."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good luck. My money's on you."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandmother wrote a memoir by hand and we want to turn it into a little printed book for the family."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What a wonderful project. The first step is typing it up, then you can use a print on demand service to make a few copies."
+    },
+    {
+     "speaker": "user",
+     "text": "Her handwriting is really hard to read in places."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask a couple of relatives to each take a chapter. Different eyes catch different words, and it becomes a family thing."
+    },
+    {
+     "speaker": "user",
+     "text": "Should we fix her spelling mistakes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fix the obvious typos, but keep her voice, her phrases and her quirks. That's what people will treasure."
+    },
+    {
+     "speaker": "user",
+     "text": "Can we add photos?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, most services let you add photos. Scan them at a high resolution and place them near the stories they belong to."
+    },
+    {
+     "speaker": "user",
+     "text": "She's going to be ninety next spring. I'd love to / give it to her then."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a beautiful deadline. Start typing this month and you'll have plenty of time."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Speed reading. Real or a scam?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly oversold. You can get somewhat faster with practice, but reading really fast usually means understanding less."
+    },
+    {
+     "speaker": "user",
+     "text": "So those apps that flash one word at a time?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They can help with simple text, but they make it hard to go back and reread, which is how we actually understand tricky parts."
+    },
+    {
+     "speaker": "user",
+     "text": "I just want to get through more books."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the honest trick is more reading time, not faster reading. And letting yourself skim the boring bits."
+    },
+    {
+     "speaker": "user",
+     "text": "Boring. But fair."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I know. The good news is that people who read a lot do naturally get faster over time."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hi. I'm learning English and I want to read a novel. Which is good for me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great goal. Graded readers are a good start, they're real stories written with simpler words for learners."
+    },
+    {
+     "speaker": "user",
+     "text": "I read some already. I want a real book now, not for students."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try a short modern novel with lots of dialogue. Conversations are easier to follow than long descriptions."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I use a dictionary for every word I / I don't know?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try not to. Only look up words that come back again and again, or that you need to understand the scene."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And if I don't understand a whole page?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Read it once more, then keep going. You'll often understand it a few pages later from the story."
+    },
+    {
+     "speaker": "user",
+     "text": "Thank you, that helps. I'm a little nervous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's normal. Your English is already strong, you'll enjoy it more than you think."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the deal with people sniffing old books? My boyfriend does it in every secondhand shop."
+    },
+    {
+     "speaker": "moshi",
+     "text": "He's not alone. Old paper breaks down slowly and gives off a sweet, slightly vanilla smell that a lot of people love."
+    },
+    {
+     "speaker": "user",
+     "text": "Vanilla? Really?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Really. One of the chemicals in aging paper is related to the one in vanilla. So he's basically smelling a dusty cake."
+    },
+    {
+     "speaker": "user",
+     "text": "That's both lovely and a bit gross."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, that's fair. Book lovers tend to get sentimental about it, it reminds them of libraries and childhood."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll / stop teasing him so much. Maybe just a little."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little teasing seems healthy. You could buy him an old copy of something he loves and let him sniff in peace."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son has dyslexia and he's started saying he hates books. What can I do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That must be hard to hear. Audiobooks are a great way to keep him loving stories while reading gets easier."
+    },
+    {
+     "speaker": "user",
+     "text": "Isn't that kind of giving up on reading, though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, it's a different road to the same place. Listening builds vocabulary and imagination. Many kids do both, listening and following along in the printed book."
+    },
+    {
+     "speaker": "user",
+     "text": "His teacher mentioned special fonts. Do those actually help?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some kids find them easier, some don't notice a difference. It's worth a try, along with bigger spacing between lines."
+    },
+    {
+     "speaker": "user",
+     "text": "He loves dinosaurs. Like, obsessed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then use that. Short nonfiction books about dinosaurs with big pictures can make reading feel like his thing again."
+    },
+    {
+     "speaker": "user",
+     "text": "Thank you. I've been / worrying about this for months."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're clearly paying attention, and that matters a lot. Keep it fun and low pressure."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I write in my books? My friend says it's a crime."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's really personal. Some people love a clean copy, others think a book full of notes is a book that's been loved."
+    },
+    {
+     "speaker": "user",
+     "text": "I want to underline the good bits."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then underline away, especially in your own copies. A pencil is a nice compromise if you might change your mind."
+    },
+    {
+     "speaker": "user",
+     "text": "What about library books?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those are off limits, sorry. Use sticky notes or write your favorite lines in a little notebook instead."
+    },
+    {
+     "speaker": "user",
+     "text": "A notebook of quotes. That's kind of nice actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is. Years later it reads like a diary of what you were thinking about."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I need a book for my dad. He's sixty, grumpy, and only reads about the war."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like a man of focus. Does he prefer big history books, or personal stories from soldiers?"
+    },
+    {
+     "speaker": "user",
+     "text": "Personal stories, I think. He gets bored by maps and dates."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a memoir or a collection of letters from soldiers could be perfect. They're very human and often moving."
+    },
+    {
+     "speaker": "user",
+     "text": "He'll pretend he doesn't care, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's fine. Grumpy dads often read the whole thing in two days and then never mention it again."
+    },
+    {
+     "speaker": "user",
+     "text": "That's / honestly exactly what he'd do."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's a winner. Ask in a good bookshop for a well reviewed soldier memoir, they'll have favorites."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Help, I'm hosting book club tonight and I didn't finish the book."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't panic. How far did you get?"
+    },
+    {
+     "speaker": "user",
+     "text": "About halfway. Everyone is going to know."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, half the club probably didn't finish either. You could ask open questions and let others lead."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Things like which character people related to most, or whether the title makes sense now. Those work no matter where you stopped."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I just confess?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A cheerful confession at the start often goes down well. Then ask them not to spoil the ending, and you're the one with the most to look forward to."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you recommend a book that's funny? Like actually funny, not just mildly amusing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Laugh out loud funny is rarer. Do you like absurd humor, or more dry, observational stuff?"
+    },
+    {
+     "speaker": "user",
+     "text": "Absurd. The weirder the better."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then look at comic science fiction, the kind with bureaucratic aliens and talking spaceships. That genre goes properly silly."
+    },
+    {
+     "speaker": "user",
+     "text": "I've read the famous one, the towel one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you know the style. There's a whole tradition of British comic fantasy in that vein, with long running series set in strange worlds."
+    },
+    {
+     "speaker": "user",
+     "text": "I've / heard of the one with the flat world on the turtle, but never tried."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the perfect next step. Don't start at book one, though, a lot of fans say the later ones are funnier."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How should I organize my bookshelves? Right now it's pure chaos."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's no single right way. Some people go alphabetical by author, some by genre, and some by color because it looks pretty."
+    },
+    {
+     "speaker": "user",
+     "text": "By color? Can you ever find anything?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Surprisingly often, people remember what a cover looks like. But it's tricky for books with plain spines."
+    },
+    {
+     "speaker": "user",
+     "text": "I have a lot of cookbooks and travel guides mixed with novels."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then start by splitting fiction from nonfiction. Give cookbooks their own shelf near the kitchen if you can."
+    },
+    {
+     "speaker": "user",
+     "text": "I've also got a stack I haven't read yet."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give those a special shelf at eye level. Seeing them every day makes you more likely to pick one up."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that's / a weekend project I can actually manage."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put on some music and make it fun. You'll probably rediscover a few books along the way."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a nurse and I work night shifts. When am I supposed to read?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Night shifts are tough on routines. Do you get any proper breaks during the night?"
+    },
+    {
+     "speaker": "user",
+     "text": "A short one, maybe twenty minutes, but I'm usually too wired."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then something easy might fit, like short stories or essays you can finish in one sitting."
+    },
+    {
+     "speaker": "user",
+     "text": "I used to love long novels."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could save those for your days off, when you're rested. Treat them like a little holiday."
+    },
+    {
+     "speaker": "user",
+     "text": "And on the way home? I take the bus."
+    },
+    {
+     "speaker": "moshi",
+     "text": "An audiobook could be lovely then, as long as it's calm. Nothing too gripping, or you won't sleep when you get home."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kid just asked me why some books are banned. I didn't know what to say."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a big question for a kid. How old are they?"
+    },
+    {
+     "speaker": "user",
+     "text": "Eleven. She heard it at school."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could say that sometimes people worry a book has ideas or words that aren't right for kids, and they try to remove it from schools or libraries."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I tell her what I think about it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure, kids like knowing what their parents believe. You can also ask her what she thinks, which tends to start a great conversation."
+    },
+    {
+     "speaker": "user",
+     "text": "She'll probably / want to read every banned book now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Quite possibly. That's a pretty classic reaction. You could read one together and talk about why it was controversial."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I get a library card or just keep buying books? I spend a fortune."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A library card is free and most libraries now lend e-books and audiobooks too, right from your phone."
+    },
+    {
+     "speaker": "user",
+     "text": "The waiting lists are huge though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "True for new bestsellers. You can put holds on several at once, so something is always arriving."
+    },
+    {
+     "speaker": "user",
+     "text": "I do like owning books."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try a mix. Borrow first, and only buy the ones you loved enough to want to keep."
+    },
+    {
+     "speaker": "user",
+     "text": "That would cut my spending in half, probably."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably more. And the books you buy will feel more special."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I keep buying books and never reading them. Is that a problem?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's even a word for it in Japanese, for a pile of unread books. You're in good company."
+    },
+    {
+     "speaker": "user",
+     "text": "My partner says it's out of control. There's a pile by the bed taller than the lamp."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, that's a strong pile. Maybe set a little rule, like reading one from the pile before buying a new one."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds horrible."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It sounds strict, but it can make the pile feel less like guilt and more like a treasure chest."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I / start one and hate it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then give it fifty pages and move on. That still counts as clearing it from the pile."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So I've been asked to read a poem at my friend's wedding."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What an honor. Do you get to choose it, or did they pick one?"
+    },
+    {
+     "speaker": "user",
+     "text": "I choose. And I'm terrified of public speaking."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then pick something short, maybe a minute long. Short love poems are often the most powerful anyway."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I memorize it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No need. Print it in large font on a card. Looking up now and then is plenty."
+    },
+    {
+     "speaker": "user",
+     "text": "What if my voice shakes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Read slower than feels natural and breathe at the line breaks. People are rooting for you, nobody minds a shaky voice at a wedding."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do audiobooks count as reading? My brother says no."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Your brain does a lot of the same work, following the story, picturing scenes, remembering characters. So in most ways, yes."
+    },
+    {
+     "speaker": "user",
+     "text": "He says it's cheating because you're not looking at words."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Reading text does help with spelling and noticing sentences. But for enjoying and understanding a story, listening is just as real."
+    },
+    {
+     "speaker": "user",
+     "text": "I listen while I garden. I've done / like thirty this year."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's fantastic. Thirty books is a lot of stories, whatever your brother says."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm going to tell him you agree with me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Go ahead. Maybe recommend him your favorite one, too."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to start a book club at work but I don't want it to be awkward."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it low pressure. Lunchtime meetings, short books, and no shame for not finishing."
+    },
+    {
+     "speaker": "user",
+     "text": "How many people do I need?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Four to eight is a nice size. Big enough for different opinions, small enough that everyone talks."
+    },
+    {
+     "speaker": "user",
+     "text": "My boss wants to join. Is that weird?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be fine if everyone's relaxed. Maybe rotate who picks the book, so it doesn't feel like homework from the boss."
+    },
+    {
+     "speaker": "user",
+     "text": "Good point. What should the first book be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Something short and easy to talk about, like a recent novel with a twist ending. Twists get people chatting."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do you know any good books set in space that aren't too technical?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty. Do you want adventure, or something quieter and more about the people on the ship?"
+    },
+    {
+     "speaker": "user",
+     "text": "The people. I don't care how the engines work."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then look for character driven science fiction, like stories about a small crew on a long journey. They feel like found family dramas."
+    },
+    {
+     "speaker": "user",
+     "text": "Found family, I love that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you'll be happy. There's a whole wave of cozy space novels where the biggest problem is getting along with your crewmates."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there romance in them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often a little, but it's usually gentle and part of the bigger story. Nothing that takes over."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cat knocked a glass of water onto my library book. The pages are all wavy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh no. Is it still dripping, or just damp?"
+    },
+    {
+     "speaker": "user",
+     "text": "Just damp now. It happened an hour ago."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stand it up with the pages fanned out, near a fan but not a heater. Paper towels between the wettest pages help too."
+    },
+    {
+     "speaker": "user",
+     "text": "Will the library make me pay for it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They might, if it's badly damaged. Being honest usually helps, and some libraries just charge a small fee."
+    },
+    {
+     "speaker": "user",
+     "text": "I feel so guilty. It's / a brand new book too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Accidents happen, and cats are cats. Bring it back with an apology and you'll probably be fine."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a slow reader and it embarrasses me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people read slowly, and there's nothing wrong with it. Slow readers often notice details fast readers miss."
+    },
+    {
+     "speaker": "user",
+     "text": "In my book club I'm always the last to finish."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could start the book a little earlier than everyone else. That small head start takes the pressure off."
+    },
+    {
+     "speaker": "user",
+     "text": "Or pick shorter books, I suppose."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That works too. Or suggest the club alternates between long and short ones, so everyone gets a breather."
+    },
+    {
+     "speaker": "user",
+     "text": "Do you think I'd get faster if I read more?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually, yes, a bit. But enjoying the book is what matters, not the speed."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey, can you tell me what a novella is? Is it just a short novel?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pretty much. It's longer than a short story but shorter than a novel, often somewhere around a hundred pages."
+    },
+    {
+     "speaker": "user",
+     "text": "Why would someone write one instead of a full novel?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some stories just fit that size. A single idea or a tight situation can feel stretched in a longer book."
+    },
+    {
+     "speaker": "user",
+     "text": "Are they good for someone who hasn't read in years?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're perfect for that. You get a full story arc, and you can finish one in a weekend, which feels great."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, sold. I'll / grab one this weekend."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. Ask the bookseller for their favorite novella, they love that question."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is there a polite way to tell my aunt I don't want her old books? She keeps giving me boxes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's tricky, since she's being generous. You could thank her and say you're running out of space."
+    },
+    {
+     "speaker": "user",
+     "text": "She'll just say I should buy another shelf."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, determined aunt. Maybe offer to help her find a good home for them instead, like a library sale or a school."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's clever. She'd love the idea of kids reading them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly, she still gets to share them. You could keep one or two that really speak to you, so she feels heard."
+    },
+    {
+     "speaker": "user",
+     "text": "There's / one old atlas in there I actually like."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep the atlas then. Tell her it's your favorite, and she'll be delighted."
+    }
+   ]
+  },
+  {
+   "id": "books.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Quick one. Hardcover or paperback for a gift?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hardcover feels more special and lasts longer, so it's lovely for a gift. Paperbacks are cheaper and easier to carry around."
+    },
+    {
+     "speaker": "user",
+     "text": "It's for my best friend who reads on the subway."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a paperback might actually be more thoughtful. She'll really use it."
+    },
+    {
+     "speaker": "user",
+     "text": "But a hardcover looks nicer wrapped."
+    },
+    {
+     "speaker": "moshi",
+     "text": "True. You could do the paperback and write a little note inside the cover. That makes it feel personal."
+    },
+    {
+     "speaker": "user",
+     "text": "A note. Yeah. She'd keep that forever."
+    },
+    {
+     "speaker": "moshi",
+     "text": "She probably would. Notes in books are some of the best things people find years later."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "books.opt1",
+   "lead_in": "My book club gets to pick next month's book and it's my turn to choose.",
+   "options": [
+    "The first one is a long fantasy novel, about eight hundred pages, with dragons and a huge cast.",
+    "Then there's a short memoir about a woman who sailed around the world by herself.",
+    "Option three is a mystery set in a small fishing town, the kind you can't put down.",
+    "And the last one is a book about the history of salt, which sounds odd but has great reviews."
+   ],
+   "moshi_comment": [
+    "Eight hundred pages is a lot for a month, so the fantasy novel might lose half the club. The mystery is a safe choice, easy to read and fun to discuss who did it. The sailing memoir is short and inspiring, which could spark a nice conversation.",
+    "How much reading does your club usually manage in a month? If people are busy, the memoir or the mystery are the best bets. The salt book is a fun wild card if the group likes something different."
+   ]
+  },
+  {
+   "id": "books.opt2",
+   "lead_in": "I'm going on vacation and I want to bring one book, but I can't decide which.",
+   "options": [
+    "One is a light romance set on an island, perfect for lying by the pool.",
+    "Another is a thick science fiction novel my brother keeps telling me to read.",
+    "Or I could finally read that classic novel I've been pretending I read in school."
+   ],
+   "moshi_comment": [
+    "The island romance fits the vacation mood perfectly, easy and relaxing. The science fiction one might be great if you'll have long flights or quiet evenings. The classic could feel like homework on a beach.",
+    "Do you want to switch off or get really absorbed in something? For switching off, take the romance. If you have a long flight, the science fiction novel will make the time fly."
+   ]
+  },
+  {
+   "id": "books.opt3",
+   "lead_in": "I want to start reading in the mornings before work, and I'm torn about what kind of book to use.",
+   "options": [
+    "A big collection of short stories, so I can finish one each morning over coffee.",
+    "A slow philosophy book that I'd read a few pages of at a time and think about all day.",
+    "Or a fast paced thriller, which would definitely get me out of bed earlier."
+   ],
+   "moshi_comment": [
+    "A short story a morning gives you a little ending every day, which is satisfying when time is tight. The thriller might make you late for work because you won't want to stop. The philosophy book suits slow mornings, but it can feel heavy before coffee kicks in.",
+    "If your mornings are rushed, the short stories fit best. Save the thriller for weekends when you can binge it, and keep the philosophy book for a quiet evening."
+   ]
+  },
+  {
+   "id": "books.opt4",
+   "lead_in": "My daughter's eighth birthday is coming up and I want to give her a book, but there are a few in my basket.",
+   "options": [
+    "There's a funny chapter book about a girl who runs a detective agency from her treehouse.",
+    "Or a big illustrated encyclopedia of animals with fold out pages and amazing photos.",
+    "And a fantasy book about a dragon school, which is a bit long but her friends love it."
+   ],
+   "moshi_comment": [
+    "The dragon school book has the advantage that her friends are reading it, so she'll have people to talk to. The treehouse detective is easier and very funny, a great choice if she's still building confidence. The animal encyclopedia is something she'll pick up again and again.",
+    "Does she like to read on her own yet, or with you? For reading alone, the detective story is perfect. The encyclopedia is great to share, and the dragon book might be a fun one to read together at bedtime."
+   ]
+  },
+  {
+   "id": "books.opt5",
+   "lead_in": "I've got a long flight next week and I can only fit two of these in my bag.",
+   "options": [
+    "My cousin lent me a huge historical novel about a shipbuilding family, nearly a thousand pages.",
+    "There's a short funny memoir by a chef about working in terrible restaurants.",
+    "I also have a book of crossword puzzles, which is not reading exactly but it kills time.",
+    "And a travel guide for the city I'm going to, which I really should read before I land."
+   ],
+   "moshi_comment": [
+    "Read the travel guide on the flight out, since you'll actually need it when you land. Then pair it with the chef memoir, it's light and funny for when you're tired. The thousand page novel would eat half your bag.",
+    "The crosswords are great for when you can't focus, but the memoir does the same job and makes you laugh. I'd take the guide and the memoir, and save the shipbuilding saga for home."
+   ]
+  },
+  {
+   "id": "books.opt6",
+   "lead_in": "My book club wants to try a new format and I have to suggest one tonight.",
+   "options": [
+    "We could all read different books on the same theme and then swap recommendations.",
+    "Another idea is picking one very short book and reading it right there at the meeting.",
+    "Or we pick a book that was turned into a film, read it, and then watch the film together."
+   ],
+   "moshi_comment": [
+    "The film night is the easiest sell, since people get a reward for finishing. Reading a short book at the meeting is cozy but might feel like school. The theme idea is great for variety but discussions can get scattered.",
+    "If your group struggles to finish books, try the film version first. The theme swap works best for a club that already reads a lot, because everyone leaves with new ideas."
+   ]
+  }
+ ]
 }

@@ -7,114 +7,121 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "cooking"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_direct",
+  "early_end"
  ],
- "topic": "cooking",
+ "topics": [
+  "video_games"
+ ],
+ "wait_sec": 45,
+ "early_end": {
+  "after_sec": 38.43,
+  "direct": true
+ },
+ "topic": "video_games",
  "voices": {
-  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "user": "cbc3add1f54546e6a4a1964bacb8b122",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_05",
-  "greet_ans_26",
-  "describe_instr_07",
-  "ack_14",
-  "describe_cue_14"
+  "greet_19",
+  "greet_ans_05",
+  "think_instr_02",
+  "early_end_02"
  ],
  "block_ids": [
-  "cooking.opt2"
+  "video_games.ctx1"
  ],
- "est_total_sec": 59.76,
- "est_speech_sec": 48.74,
+ "est_total_sec": 78.81,
+ "est_speech_sec": 32.52,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how have you been?",
+   "text": "Hi, how's everything with you?",
    "est_sec": 1.65,
-   "gap_before": 0.8,
+   "gap_before": 0.51,
    "role": "greeting",
-   "phrasing": "greet_05"
+   "phrasing": "greet_19"
   },
   {
    "speaker": "user",
-   "text": "Kind of tired, honestly.",
-   "est_sec": 1.34,
-   "gap_before": 0.72,
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_26"
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "I want to bake something for the office bake sale and I've got three ideas.",
-   "est_sec": 4.75,
-   "gap_before": 0.28,
-   "block": "cooking.opt2"
+   "text": "I've got a free weekend and I want to start a new game.",
+   "est_sec": 4.13,
+   "gap_before": 0.59,
+   "event": "ordinary_request",
+   "block": "video_games.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun. Are you in the mood for a big story you can sink into, or something quick you can pick up and put down?",
+   "est_sec": 7.54,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "video_games.ctx1"
   },
   {
    "speaker": "user",
-   "text": "Let me walk you through all the options, then you can tell me what you think.",
-   "est_sec": 5.06,
-   "gap_before": 0.58,
+   "text": "Let me think about it for forty-five seconds and then ask me again.",
+   "est_sec": 4.13,
+   "gap_before": 1.59,
    "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_07"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No worries.",
-   "est_sec": 0.72,
-   "gap_before": 0.49,
-   "role": "ack",
-   "phrasing": "ack_14"
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_02"
   },
   {
    "speaker": "user",
-   "text": "One is chocolate chip cookies, easy and quick, and I can make like four dozen in an hour.",
-   "est_sec": 5.68,
-   "gap_before": 1.16,
-   "block": "cooking.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another option is a lemon drizzle cake, which looks nice but has to be sliced up on the day.",
-   "est_sec": 5.99,
-   "gap_before": 2.69,
-   "block": "cooking.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Or I could do brownies with a salted caramel swirl, a bit messier but people always go crazy for them.",
-   "est_sec": 6.3,
-   "gap_before": 1.27,
-   "block": "cooking.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'm finished. What's your opinion?",
+   "text": "Actually, never mind, I know now.",
    "est_sec": 1.96,
-   "gap_before": 0.64,
+   "anchor": {
+    "turn": 4,
+    "offset": 38.43
+   },
    "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_14"
+   "kind": "early_end",
+   "phrasing": "early_end_02"
   },
   {
    "speaker": "moshi",
-   "text": "For a bake sale, the cookies are hard to beat, they're quick, cheap, and easy to sell one at a time. The brownies would probably sell out first, though, so they might be worth the mess. The lemon cake looks pretty, but slicing it on the day adds work.",
-   "est_sec": 15.29,
-   "gap_before": 0.89,
+   "text": "So, a big story to sink into, or something quick and casual?",
+   "est_sec": 3.82,
+   "gap_before": 0.42,
    "role": "resume",
-   "block": "cooking.opt2"
+   "block": "video_games.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Something quick. I'll be in and out all weekend.",
+   "est_sec": 2.89,
+   "gap_before": 2.08,
+   "event": "ordinary_request",
+   "block": "video_games.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A roguelike or a puzzle game would suit you, short runs that still feel satisfying.",
+   "est_sec": 4.75,
+   "gap_before": 0.42,
+   "role": "followup",
+   "block": "video_games.ctx1"
   }
  ]
 }

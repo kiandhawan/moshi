@@ -7,120 +7,191 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "studying"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
  ],
- "topic": "studying",
+ "topics": [
+  "weekend_plans",
+  "fitness"
+ ],
+ "topic": "weekend_plans",
  "voices": {
-  "user": "2680da81de8348a68e1f4dbaa79272f1",
-  "friend": null,
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": "536d3a5e000945adb7038665781a4aca",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Rosa",
+ "friend_name_id": "name_22",
  "phrasing_ids": [
-  "greet_26",
-  "greet_ans_11"
+  "greet_10",
+  "greet_ans_14",
+  "side_instr_07",
+  "dq_16",
+  "side_cue_26"
  ],
  "block_ids": [
-  "studying.dlg2"
+  "weekend_plans.ctx5",
+  "fitness.side4",
+  "dq_16"
  ],
- "est_total_sec": 52.58,
- "est_speech_sec": 40.47,
+ "est_total_sec": 77.63,
+ "est_speech_sec": 55.53,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you doing these days?",
+   "text": "Hey, how's your day been so far?",
    "est_sec": 2.27,
-   "gap_before": 0.69,
+   "gap_before": 0.77,
    "role": "greeting",
-   "phrasing": "greet_26"
+   "phrasing": "greet_10"
   },
   {
    "speaker": "user",
-   "text": "Not too bad.",
+   "text": "Hanging in there.",
    "est_sec": 1.03,
-   "gap_before": 0.97,
+   "gap_before": 0.6,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_11"
+   "phrasing": "greet_ans_14"
   },
   {
    "speaker": "user",
-   "text": "My son has a spelling test tomorrow and he's getting really upset about it.",
-   "est_sec": 4.44,
-   "gap_before": 0.3,
+   "text": "Saturday there's a sleepover and a concert, and my parents say I can only do one.",
+   "est_sec": 5.06,
+   "gap_before": 0.42,
    "event": "ordinary_request",
-   "block": "studying.dlg2"
+   "block": "weekend_plans.ctx5"
   },
   {
    "speaker": "moshi",
-   "text": "Poor thing. How many words does he need to learn?",
-   "est_sec": 3.2,
-   "gap_before": 0.7,
+   "text": "Tough call. Is it a band you might not see again soon?",
+   "est_sec": 3.82,
+   "gap_before": 0.43,
    "role": "reply",
-   "block": "studying.dlg2"
+   "block": "weekend_plans.ctx5"
   },
   {
    "speaker": "user",
-   "text": "Fifteen, and he's only got about half of them.",
+   "text": "Probably not for years.",
+   "est_sec": 1.34,
+   "gap_before": 1.32,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "And the sleepover, is it a big one or just your usual crowd?",
+   "est_sec": 4.13,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "weekend_plans.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold that thought, I need to talk to Rosa real quick. Stay quiet until I return.",
+   "est_sec": 5.06,
+   "gap_before": 1.19,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "What was the name of that show we watched?",
    "est_sec": 2.89,
-   "gap_before": 1.78,
-   "event": "ordinary_request",
-   "block": "studying.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's a good start. Focus on the ones he's missing and make it a game, like spelling them out loud while bouncing a ball.",
-   "est_sec": 7.54,
-   "gap_before": 0.74,
-   "role": "reply",
-   "block": "studying.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "He'd love that actually. Should we keep going tonight or",
-   "est_sec": 3.2,
-   "gap_before": 1.05,
+   "gap_before": 1.48,
    "event": "distractor",
-   "kind": "pause",
-   "block": "studying.dlg2"
+   "kind": "friend_question",
+   "phrasing": "dq_16"
+  },
+  {
+   "speaker": "friend",
+   "text": "I can't remember either.",
+   "est_sec": 1.34,
+   "gap_before": 3.19,
+   "phrasing": "dq_16"
   },
   {
    "speaker": "user",
-   "text": "let him rest?",
-   "est_sec": 1.03,
-   "gap_before": 2.02,
-   "event": "ordinary_request",
-   "block": "studying.dlg2"
+   "text": "Rosa, if we shared a personal trainer, would you actually show up?",
+   "est_sec": 3.82,
+   "gap_before": 0.32,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "fitness.side4"
   },
   {
-   "speaker": "moshi",
-   "text": "Do one short round of ten minutes, then stop. A quick review at breakfast will help more than a long session tonight.",
-   "est_sec": 6.92,
-   "gap_before": 0.84,
-   "role": "reply",
-   "block": "studying.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Breakfast, good idea. He's always more cheerful in the morning.",
-   "est_sec": 3.2,
+   "speaker": "friend",
+   "text": "Rude. I show up to things.",
+   "est_sec": 1.96,
    "gap_before": 0.82,
-   "event": "ordinary_request",
-   "block": "studying.dlg2"
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "You cancelled yoga three times last month.",
+   "est_sec": 2.27,
+   "gap_before": 0.99,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yoga was at seven in the morning. That's not fair.",
+   "est_sec": 3.2,
+   "gap_before": 1.11,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so evenings. Would you do Tuesdays and Thursdays?",
+   "est_sec": 2.89,
+   "gap_before": 1.5,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Thursdays, yes. Tuesdays I have choir.",
+   "est_sec": 1.96,
+   "gap_before": 1.17,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Then I'll ask if he does Thursdays and maybe a Sunday morning.",
+   "est_sec": 3.82,
+   "gap_before": 1.19,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not too early on Sunday. Ten at the earliest.",
+   "est_sec": 2.89,
+   "gap_before": 1.32,
+   "block": "fitness.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm here again.",
+   "est_sec": 1.34,
+   "gap_before": 0.92,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_26"
   },
   {
    "speaker": "moshi",
-   "text": "Perfect. And remind him that getting most of them right is still a great result.",
-   "est_sec": 4.75,
-   "gap_before": 0.7,
-   "role": "reply",
-   "block": "studying.dlg2"
+   "text": "Okay. So, the gig you might not see again for years, or the sleepover?",
+   "est_sec": 4.44,
+   "gap_before": 0.8,
+   "role": "resume",
+   "block": "weekend_plans.ctx5"
   }
  ]
 }

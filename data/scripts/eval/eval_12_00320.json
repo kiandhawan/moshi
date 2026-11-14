@@ -7,26 +7,17 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "extension"
- ],
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [],
  "topics": [
-  "holiday_gifts"
+  "restaurant_choice"
  ],
- "wait_sec": 30,
- "extension": {
-  "extra_sec": 10,
-  "said_before_deadline_sec": 1.79
- },
- "deadline": {
-  "after_turn": 8,
-  "sec": 10
- },
- "topic": "holiday_gifts",
+ "topic": "restaurant_choice",
  "voices": {
   "user": "7bb342e710854139b1d6e12411229f1f",
   "friend": null,
@@ -35,133 +26,132 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_18",
-  "think_instr_21",
-  "ack_12",
-  "extension_07"
+  "greet_09",
+  "greet_ans_15",
+  "phone_instr_03",
+  "call_28",
+  "phone_cue_04"
  ],
  "block_ids": [
-  "holiday_gifts.ctx3"
+  "restaurant_choice.ctx12",
+  "call_28"
  ],
- "est_total_sec": 82.53,
- "est_speech_sec": 33.75,
+ "est_total_sec": 57.35,
+ "est_speech_sec": 39.12,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.69,
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.32,
    "role": "greeting",
-   "phrasing": "greet_03",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
-   "est_sec": 1.03,
-   "gap_before": 0.53,
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.92,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
+   "phrasing": "greet_ans_15"
   },
   {
    "speaker": "user",
-   "text": "I want to get my best friend something special this year.",
-   "est_sec": 3.51,
-   "gap_before": 0.41,
+   "text": "Every time I ask my husband where he wants to eat, he says I don't mind.",
+   "est_sec": 5.06,
+   "gap_before": 0.36,
    "event": "ordinary_request",
-   "block": "holiday_gifts.ctx3"
+   "block": "restaurant_choice.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "Sweet. Would you rather make something by hand, like a photo book of your trips, or buy something she's been wanting?",
-   "est_sec": 6.61,
-   "gap_before": 0.5,
+   "text": "Classic. Try this, you name three places and he vetoes one. Which three would you put on the list?",
+   "est_sec": 5.99,
+   "gap_before": 0.79,
    "role": "reply",
-   "block": "holiday_gifts.ctx3",
+   "block": "restaurant_choice.ctx12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Oh, both sound good.",
-   "est_sec": 1.34,
-   "gap_before": 3.12,
-   "event": "ordinary_request",
-   "block": "holiday_gifts.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Take a moment. Homemade or store bought?",
-   "est_sec": 2.27,
-   "gap_before": 0.96,
-   "role": "reply",
-   "block": "holiday_gifts.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, let me think for thirty seconds. Ask me again after that.",
-   "est_sec": 3.82,
-   "gap_before": 1.15,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 30,
-   "phrasing": "think_instr_21"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
-   "gap_before": 0.47,
-   "role": "ack",
-   "phrasing": "ack_12",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Sorry, ten more seconds.",
-   "est_sec": 1.34,
-   "event": "extension",
-   "extra_sec": 10,
-   "phrasing": "extension_07",
-   "anchor": {
-    "turn": 6,
-    "offset": 28.21
-   }
-  },
-  {
-   "speaker": "moshi",
-   "text": "So, for your best friend, a homemade photo book or something she's been wanting?",
+   "text": "Hold on, I need to answer this call. I'll tell you when I'm back.",
    "est_sec": 4.44,
+   "gap_before": 0.51,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi, Mr Patel? It's about the boiler service.",
+   "est_sec": 2.58,
+   "gap_before": 1.03,
+   "phrasing": "call_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Would Wednesday suit you?",
+   "est_sec": 1.34,
+   "gap_before": 2.39,
+   "phrasing": "call_28",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "And roughly how long does it take?",
+   "est_sec": 2.27,
+   "gap_before": 2.08,
+   "phrasing": "call_28",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Lovely, see you then.",
+   "est_sec": 1.34,
+   "gap_before": 3.72,
+   "phrasing": "call_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that call. I'm back now.",
+   "est_sec": 2.27,
+   "gap_before": 1.84,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. The veto game still needs three places. Which ones?",
+   "est_sec": 3.51,
+   "gap_before": 0.33,
    "role": "resume",
-   "block": "holiday_gifts.ctx3",
-   "anchor": {
-    "turn": 8,
-    "offset": 10.48
-   },
+   "block": "restaurant_choice.ctx12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'll buy her the headphones she keeps talking about.",
+   "text": "Sushi, pizza and the Thai place down the road.",
    "est_sec": 2.89,
-   "gap_before": 1.38,
+   "gap_before": 1.35,
    "event": "ordinary_request",
-   "block": "holiday_gifts.ctx3"
+   "block": "restaurant_choice.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "Great choice. Tuck a handwritten note in the box to make it personal.",
-   "est_sec": 4.13,
-   "gap_before": 0.57,
+   "text": "Nice mix. Whatever survives, at least you won't be the one who decided alone.",
+   "est_sec": 4.44,
+   "gap_before": 1.09,
    "role": "followup",
-   "block": "holiday_gifts.ctx3",
+   "block": "restaurant_choice.ctx12",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "new_type_phone"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

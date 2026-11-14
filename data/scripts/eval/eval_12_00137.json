@@ -7,163 +7,141 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "phone_call",
- "wait_type": "phone_call",
+ "type": "reading",
+ "wait_type": "reading",
  "conditions": [],
  "topics": [
-  "home_office"
+  "painting_art"
  ],
- "topic": "home_office",
+ "reading": {
+  "material": "email",
+  "sec": 9.6
+ },
+ "topic": "painting_art",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_18",
-  "greet_ans_06",
-  "phone_instr_02",
-  "ack_05",
-  "call_08",
-  "phone_cue_05"
+  "greet_12",
+  "greet_ans_24",
+  "read_instr_03",
+  "read_cue_03"
  ],
  "block_ids": [
-  "home_office.ctx2"
+  "painting_art.ctx11"
  ],
- "est_total_sec": 59.8,
- "est_speech_sec": 39.01,
+ "est_total_sec": 56.26,
+ "est_speech_sec": 36.13,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.69,
-   "role": "greeting",
-   "phrasing": "greet_18",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.3,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
-  },
-  {
-   "speaker": "user",
-   "text": "My back hurts after every workday at the kitchen table.",
-   "est_sec": 3.2,
-   "gap_before": 0.25,
-   "event": "ordinary_request",
-   "block": "home_office.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That table is probably the wrong height. Would you rather invest in a proper office chair first, or a standing desk?",
-   "est_sec": 6.61,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "home_office.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "My phone's ringing, give me a minute. Don't say anything until I'm done.",
-   "est_sec": 4.13,
-   "gap_before": 0.4,
-   "event": "instruction",
-   "kind": "phone_call",
-   "phrasing": "phone_instr_02"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, I'll wait.",
-   "est_sec": 1.03,
-   "gap_before": 0.69,
-   "role": "ack",
-   "phrasing": "ack_05",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, Dad.",
-   "est_sec": 0.72,
-   "gap_before": 1.56,
-   "phrasing": "call_08"
-  },
-  {
-   "speaker": "user",
-   "text": "No, I haven't forgotten.",
-   "est_sec": 1.34,
-   "gap_before": 2.38,
-   "phrasing": "call_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Do you want me to call the plumber?",
-   "est_sec": 2.58,
-   "gap_before": 2.84,
-   "phrasing": "call_08",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'll do it this afternoon.",
-   "est_sec": 1.96,
-   "gap_before": 2.65,
-   "phrasing": "call_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Bye.",
-   "est_sec": 0.41,
-   "gap_before": 3.44,
-   "phrasing": "call_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I hung up. I'm all yours.",
+   "text": "Hello there, how are you doing today?",
    "est_sec": 2.27,
-   "gap_before": 0.97,
+   "gap_before": 0.79,
+   "role": "greeting",
+   "phrasing": "greet_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "Going backpacking for a month and I want to sketch on the road.",
+   "est_sec": 4.13,
+   "gap_before": 0.29,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Love that. What are you planning to bring?",
+   "est_sec": 2.58,
+   "gap_before": 1.82,
+   "role": "reply",
+   "block": "painting_art.ctx11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm trying to pack light.",
+   "est_sec": 1.65,
+   "gap_before": 0.88,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then it's pencils and a pen only, or a tiny pocket watercolor set as well. Which way?",
+   "est_sec": 5.37,
+   "gap_before": 0.31,
+   "role": "reply",
+   "block": "painting_art.ctx11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One second, I have to read this work email. Stay quiet till I'm done.",
+   "est_sec": 4.44,
+   "gap_before": 2.76,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I've read the recipe.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 6,
+    "offset": 9.6
+   },
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "phone_cue_05"
+   "phrasing": "read_cue_03"
   },
   {
    "speaker": "moshi",
-   "text": "Welcome back. Still thinking about the chair versus the standing desk?",
-   "est_sec": 3.51,
-   "gap_before": 0.71,
+   "text": "All done? For the backpacking trip, pencil kit or tiny paints too?",
+   "est_sec": 3.82,
+   "gap_before": 0.87,
    "role": "resume",
-   "block": "home_office.ctx2",
+   "block": "painting_art.ctx11",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "The chair. I sit most of the day anyway.",
-   "est_sec": 2.89,
-   "gap_before": 0.31,
+   "text": "Just a pen and a small sketchbook. Keep it simple.",
+   "est_sec": 3.2,
+   "gap_before": 0.47,
    "event": "ordinary_request",
-   "block": "home_office.ctx2"
+   "block": "painting_art.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Then get one with adjustable lumbar support, and try it before you buy if you can.",
+   "text": "Good. A waterproof fine liner means you can add color later if you change your mind.",
    "est_sec": 5.06,
-   "gap_before": 1.29,
+   "gap_before": 0.34,
    "role": "followup",
-   "block": "home_office.ctx2",
+   "block": "painting_art.ctx11",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_phone"
+  "new_type_reading"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

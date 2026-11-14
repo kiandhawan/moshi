@@ -7,139 +7,144 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
- "conditions": [],
- "topics": [
-  "family_visit"
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
  ],
- "reading": {
-  "material": "email",
-  "sec": 13.0
- },
- "topic": "family_visit",
+ "topics": [
+  "restaurant_choice"
+ ],
+ "topic": "restaurant_choice",
  "voices": {
-  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_21",
+  "greet_15",
   "greet_ans_03",
-  "read_instr_03",
-  "read_cue_04"
+  "waitlike_09"
  ],
  "block_ids": [
-  "family_visit.ctx2"
+  "restaurant_choice.dlg5"
  ],
- "est_total_sec": 62.34,
- "est_speech_sec": 38.61,
+ "est_total_sec": 56.01,
+ "est_speech_sec": 46.46,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.33,
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.54,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "Doing okay, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.67,
+   "gap_before": 0.34,
    "event": "greeting_answer",
    "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "I'm flying home to see my grandma for the holidays.",
-   "est_sec": 3.2,
-   "gap_before": 0.23,
+   "text": "I hate it when I order the wrong thing. How do you pick from a big menu?",
+   "est_sec": 5.37,
+   "gap_before": 0.38,
    "event": "ordinary_request",
-   "block": "family_visit.ctx2"
+   "block": "restaurant_choice.dlg5"
   },
   {
    "speaker": "moshi",
-   "text": "How nice. Do you want to stay the whole week, or just a long weekend so you don't miss too much work?",
-   "est_sec": 6.92,
-   "gap_before": 1.16,
+   "text": "Ask the server what the kitchen is proudest of. That question gets a more honest answer than what's popular.",
+   "est_sec": 5.99,
+   "gap_before": 0.73,
    "role": "reply",
-   "block": "family_visit.ctx2",
+   "block": "restaurant_choice.dlg5",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good question, I hadn't really thought about that.",
+   "text": "And if they just say everything is good?",
    "est_sec": 2.58,
-   "gap_before": 1.1,
+   "gap_before": 0.98,
    "event": "ordinary_request",
-   "block": "family_visit.ctx2"
+   "block": "restaurant_choice.dlg5"
   },
   {
    "speaker": "moshi",
-   "text": "No rush. So, a full week or a long weekend?",
-   "est_sec": 3.2,
-   "gap_before": 0.58,
-   "role": "reply",
-   "block": "family_visit.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "One second, I have to read this work email. Stay quiet till I'm done.",
+   "text": "Then try, what would you order tonight? People answer that one much more personally.",
    "est_sec": 4.44,
-   "gap_before": 3.24,
-   "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_03"
-  },
-  {
-   "speaker": "user",
-   "text": "Done, I read through it.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 6,
-    "offset": 13.0
-   },
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "read_cue_04"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, all read? Did you figure out whether it's a week or a long weekend at your grandma's?",
-   "est_sec": 5.68,
-   "gap_before": 0.33,
-   "role": "resume",
-   "block": "family_visit.ctx2",
+   "gap_before": 1.08,
+   "role": "reply",
+   "block": "restaurant_choice.dlg5",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "The whole week. She's getting older and I want the time with her.",
-   "est_sec": 4.13,
-   "gap_before": 0.87,
+   "text": "Hang on, is that true?",
+   "est_sec": 1.65,
+   "gap_before": 0.42,
    "event": "ordinary_request",
-   "block": "family_visit.ctx2"
+   "kind": "wait_like",
+   "phrasing": "waitlike_09",
+   "block": "restaurant_choice.dlg5"
   },
   {
    "speaker": "moshi",
-   "text": "That sounds right. I'll look for flights that leave on a Saturday.",
-   "est_sec": 3.82,
-   "gap_before": 0.72,
-   "role": "followup",
-   "block": "family_visit.ctx2",
+   "text": "Hmm, I believe it is. Which part doesn't sound right?",
+   "est_sec": 3.2,
+   "gap_before": 1.15,
+   "role": "reply",
+   "block": "restaurant_choice.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ha, okay. What about specials, are they a trick to get rid of old stock?",
+   "est_sec": 4.75,
+   "gap_before": 0.71,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sometimes, but usually they're seasonal ingredients the chef is excited about. If the special is fish on a Monday, I'd be a bit more cautious.",
+   "est_sec": 7.85,
+   "gap_before": 0.44,
+   "role": "reply",
+   "block": "restaurant_choice.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Why Monday?",
+   "est_sec": 0.72,
+   "gap_before": 0.34,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Many fish markets are closed on Sundays, so Monday fish might be a few days old. It's not a rule, just a hint.",
+   "est_sec": 7.23,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "restaurant_choice.dlg5",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

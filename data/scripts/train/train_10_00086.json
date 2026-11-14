@@ -7,120 +7,107 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "gardening"
+  "home_repair"
  ],
- "topic": "gardening",
+ "topic": "home_repair",
  "voices": {
-  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_08"
+  "greet_08",
+  "greet_ans_10",
+  "describe_instr_20",
+  "describe_cue_11"
  ],
  "block_ids": [
-  "gardening.dlg1"
+  "home_repair.opt6"
  ],
- "est_total_sec": 51.53,
- "est_speech_sec": 40.16,
+ "est_total_sec": 50.44,
+ "est_speech_sec": 38.72,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.56,
-   "role": "greeting",
-   "phrasing": "greet_22"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm great, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.59,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
-  },
-  {
-   "speaker": "user",
-   "text": "How often should I water my houseplants?",
+   "text": "Hi there, how are you feeling today?",
    "est_sec": 2.27,
-   "gap_before": 0.45,
-   "event": "ordinary_request",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Most like to dry out a bit between waterings. Push a finger into the soil, and if the top few centimeters are dry, it's time.",
-   "est_sec": 7.85,
-   "gap_before": 0.59,
-   "role": "reply",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "So not on a fixed schedule?",
-   "est_sec": 1.96,
-   "gap_before": 1.0,
-   "event": "ordinary_request",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Not really. In winter they need much less, and in summer they might need it twice a week.",
-   "est_sec": 5.68,
-   "gap_before": 0.32,
-   "role": "reply",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "I have a cactus and a",
-   "est_sec": 1.96,
    "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.69,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "My grandma's old wooden chair has a wobbly leg and I really want to save it.",
+   "est_sec": 5.06,
+   "gap_before": 0.53,
+   "block": "home_repair.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me describe everything first, and then I'll ask for your thoughts.",
+   "est_sec": 3.82,
+   "gap_before": 0.84,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I could squeeze some wood glue into the loose joint and clamp it overnight.",
+   "est_sec": 4.44,
+   "gap_before": 1.14,
+   "block": "home_repair.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Or take the whole chair apart, clean off the old glue, and reglue every joint.",
+   "est_sec": 4.75,
+   "gap_before": 1.44,
+   "block": "home_repair.opt6",
    "event": "distractor",
-   "kind": "pause",
-   "block": "gardening.dlg1"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "what's it called, a peace lily.",
-   "est_sec": 1.96,
-   "gap_before": 2.9,
-   "event": "ordinary_request",
-   "block": "gardening.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Those are opposites. Water the cactus maybe once a month, and the peace lily when its leaves start to droop a little.",
-   "est_sec": 6.92,
-   "gap_before": 1.05,
-   "role": "reply",
-   "block": "gardening.dlg1"
+   "text": "Or bring it to the furniture restorer in town, who's lovely but expensive.",
+   "est_sec": 4.13,
+   "gap_before": 2.48,
+   "block": "home_repair.opt6"
   },
   {
    "speaker": "user",
-   "text": "Oh, it droops? I thought that meant it was dying.",
-   "est_sec": 3.2,
-   "gap_before": 1.42,
-   "event": "ordinary_request",
-   "block": "gardening.dlg1"
+   "text": "And that's the last one. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 1.46,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_11"
   },
   {
    "speaker": "moshi",
-   "text": "It's just being dramatic. Give it a good drink and it usually perks up within a few hours.",
-   "est_sec": 5.68,
-   "gap_before": 0.31,
-   "role": "reply",
-   "block": "gardening.dlg1"
+   "text": "Since it's your grandma's and means a lot, I'd lean towards doing it properly. Either take it apart yourself carefully, or let the restorer handle it so you don't risk cracking anything.",
+   "est_sec": 10.02,
+   "gap_before": 0.96,
+   "role": "resume",
+   "block": "home_repair.opt6"
   }
  ]
 }

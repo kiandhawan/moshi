@@ -7,105 +7,127 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "describe_options",
  "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "baking"
+  "public_transport"
  ],
- "topic": "baking",
+ "topic": "public_transport",
  "voices": {
-  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "user": "6d7a45828f6a432c9233cd93bb93e5be",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_17",
-  "greet_ans_26",
-  "describe_instr_07",
-  "describe_cue_08"
+  "greet_25",
+  "greet_ans_11",
+  "describe_instr_04",
+  "ack_05",
+  "describe_cue_04"
  ],
  "block_ids": [
-  "baking.opt2"
+  "public_transport.opt1"
  ],
- "est_total_sec": 51.9,
- "est_speech_sec": 41.51,
+ "est_total_sec": 56.28,
+ "est_speech_sec": 43.57,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there! How's your day?",
-   "est_sec": 1.65,
-   "gap_before": 0.79,
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.54,
    "role": "greeting",
-   "phrasing": "greet_17"
+   "phrasing": "greet_25"
   },
   {
    "speaker": "user",
-   "text": "Kind of tired, honestly.",
-   "est_sec": 1.34,
-   "gap_before": 0.66,
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.67,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_26"
+   "phrasing": "greet_ans_11"
   },
   {
    "speaker": "user",
-   "text": "I want to start baking bread at home and I have a few ways to begin.",
-   "est_sec": 5.06,
-   "gap_before": 0.38,
-   "block": "baking.opt2"
+   "text": "I just started a new job across town and I'm choosing how to get there.",
+   "est_sec": 4.75,
+   "gap_before": 0.37,
+   "block": "public_transport.opt1"
   },
   {
    "speaker": "user",
-   "text": "Let me walk you through all the options, then you can tell me what you think.",
-   "est_sec": 5.06,
-   "gap_before": 0.42,
+   "text": "Hold your thoughts until I've described all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.89,
    "event": "instruction",
    "kind": "describe_options",
-   "phrasing": "describe_instr_07"
+   "phrasing": "describe_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.21,
+   "role": "ack",
+   "phrasing": "ack_05"
   },
   {
    "speaker": "user",
-   "text": "One is a simple no knead loaf that rises overnight and bakes in a heavy pot.",
-   "est_sec": 5.06,
-   "gap_before": 0.98,
-   "block": "baking.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is starting a sourdough starter, which takes about a week before I can even bake.",
-   "est_sec": 5.06,
-   "gap_before": 1.43,
-   "block": "baking.opt2",
+   "text": "The first option is the express bus, about thirty five minutes, but it's often packed.",
+   "est_sec": 4.75,
+   "gap_before": 0.78,
+   "block": "public_transport.opt1",
    "event": "distractor",
    "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Or I could just buy a bread machine that does everything for me.",
-   "est_sec": 4.13,
-   "gap_before": 1.87,
-   "block": "baking.opt2"
+   "text": "Then there's the train, which is faster, but I'd have to walk fifteen minutes to the station.",
+   "est_sec": 5.37,
+   "gap_before": 1.71,
+   "block": "public_transport.opt1",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Okay, that's all. Which sounds best to you?",
-   "est_sec": 2.58,
-   "gap_before": 1.13,
+   "text": "Option three is a tram that's slower but stops right outside my building.",
+   "est_sec": 4.13,
+   "gap_before": 2.41,
+   "block": "public_transport.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is biking to the train station and taking the train from there.",
+   "est_sec": 5.06,
+   "gap_before": 1.89,
+   "block": "public_transport.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 1.17,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_08"
+   "phrasing": "describe_cue_04"
   },
   {
    "speaker": "moshi",
-   "text": "Do you want to learn baking, or mostly just have fresh bread? If you want to learn, start with the no knead loaf and move to sourdough later. If you just want bread, the machine is fine.",
-   "est_sec": 11.57,
-   "gap_before": 1.23,
+   "text": "Do you mind a bit of walking or biking in the morning? If not, the train is a great choice. If you want zero hassle, the tram's convenience is hard to beat.",
+   "est_sec": 10.02,
+   "gap_before": 0.57,
    "role": "resume",
-   "block": "baking.opt2"
+   "block": "public_transport.opt1"
   }
  ]
 }

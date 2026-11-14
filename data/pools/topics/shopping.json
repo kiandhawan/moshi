@@ -1,159 +1,1940 @@
 {
-  "topic": "shopping",
-  "contexts": [
+ "topic": "shopping",
+ "contexts": [
+  {
+   "id": "shopping.ctx1",
+   "turns": [
     {
-      "id": "shopping.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I need a new winter coat. My old one has a broken zipper."},
-        {"speaker": "moshi", "text": "Got it. Are you thinking a long warm parka, or a shorter jacket that's easier to move in?"}
-      ],
-      "pending": "long parka or shorter jacket",
-      "think_reask": [
-        "So, which coat are we hunting for, a long parka or something shorter?",
-        "Okay, did you decide? Parka or a shorter jacket?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing between a long parka and a shorter winter jacket.",
-        "Hi again! Still deciding on the coat, long or short?"
-      ],
-      "endings": [
-        {"user": "Long parka. I wait for the bus a lot and my legs freeze.", "moshi": "Then go for one that reaches your knees with a good hood. Down or a synthetic fill both work well."},
-        {"user": "A shorter one, I bike to work most days.", "moshi": "Makes sense. Look for something windproof with a bit of stretch so you can move your arms easily."}
-      ]
+     "speaker": "user",
+     "text": "I need a new winter coat. My old one has a broken zipper."
     },
     {
-      "id": "shopping.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I'm doing the big grocery run for the week."},
-        {"speaker": "moshi", "text": "Nice. Do you have a list or are you winging it?"},
-        {"speaker": "user", "text": "Winging it, as usual."},
-        {"speaker": "moshi", "text": "Let's plan a bit. What are you cooking for dinners this week?"}
-      ],
-      "pending": "what to cook for dinners this week",
-      "think_reask": [
-        "So, any ideas for this week's dinners?",
-        "Alright, have you figured out what you're cooking this week?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were planning your dinners before the grocery run.",
-        "There you are. Did any dinner ideas come to mind for this week?"
-      ],
-      "endings": [
-        {"user": "Tacos, a stir fry, and probably pasta twice.", "moshi": "Easy list then. Tortillas, ground meat, veggies, rice, soy sauce, and two kinds of pasta sauce."},
-        {"user": "No clue, honestly. Something quick every night.", "moshi": "Then grab eggs, frozen veggies, a rotisserie chicken and some wraps. You can mix those into lots of quick meals."}
-      ]
-    },
-    {
-      "id": "shopping.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "Our vacuum finally died. I need to buy a new one this weekend."},
-        {"speaker": "moshi", "text": "Do you want a cordless stick vacuum that's light and handy, or a full size one with more suction?"}
-      ],
-      "pending": "cordless stick vacuum or full size vacuum",
-      "think_reask": [
-        "So what's it going to be, a cordless stick or a full size vacuum?",
-        "Okay, have you picked a vacuum type yet?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing between a cordless stick vacuum and a full size one.",
-        "Hi again. Any decision on the new vacuum?"
-      ],
-      "endings": [
-        {"user": "Cordless. I hate dragging a cord around.", "moshi": "Fair. Check the battery life, at least half an hour is good for a whole apartment."},
-        {"user": "Full size. We have two dogs and carpets everywhere.", "moshi": "Then that's the right choice. Look for one with a pet hair brush and a washable filter."}
-      ]
+     "speaker": "moshi",
+     "text": "Got it. Are you thinking a long warm parka, or a shorter jacket that's easier to move in?"
     }
-  ],
-  "side_conversations": [
-    {"id": "shopping.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, are we out of dish soap?"},
-      {"speaker": "friend", "text": "Almost. There's maybe one more load in the bottle."},
-      {"speaker": "user", "text": "Okay, adding it to the list. Anything else you need from the store?"},
-      {"speaker": "friend", "text": "Oat milk, and those crackers I like."},
-      {"speaker": "user", "text": "The rosemary ones?"},
-      {"speaker": "friend", "text": "Yes, those. Get two boxes if they're on sale."}
-    ]},
-    {"id": "shopping.side2", "turns": [
-      {"speaker": "user", "text": "Be honest, does this shirt look okay on me?"},
-      {"speaker": "friend", "text": "The color's great but it's kind of big in the shoulders."},
-      {"speaker": "user", "text": "Yeah, I thought so too. Should I try a smaller size?"},
-      {"speaker": "friend", "text": "Definitely. And maybe that green one next to it."},
-      {"speaker": "user", "text": "The green? I never wear green."},
-      {"speaker": "friend", "text": "That's exactly why you should try it."}
-    ]},
-    {"id": "shopping.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, which of these two pans do you think is better?"},
-      {"speaker": "friend", "text": "The heavier one. Thin pans burn everything."},
-      {"speaker": "user", "text": "It's almost twice the price though."},
-      {"speaker": "friend", "text": "It'll last you ten years. The other one will be scratched by spring."},
-      {"speaker": "user", "text": "Okay, you've convinced me. Can you hold it while I find a basket?"},
-      {"speaker": "friend", "text": "Sure, go ahead."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "shopping.dlg1", "turns": [
-      {"speaker": "user", "text": "I need new running shoes but I have no idea what to look for."},
-      {"speaker": "moshi", "text": "Start with comfort. They should feel good right away, with about a thumb's width of space in front of your toes."},
-      {"speaker": "user", "text": "Should I buy them online or in a store?"},
-      {"speaker": "moshi", "text": "For your first pair, a store is better. Some running shops will even watch you jog and suggest a model."},
-      {"speaker": "user", "text": "And what time of day should I go? I heard / feet swell or something?"},
-      {"speaker": "moshi", "text": "You heard right. Try shoes in the late afternoon, when your feet are a bit bigger, like they get on a run."},
-      {"speaker": "user", "text": "Good to know. How often do they need replacing?"},
-      {"speaker": "moshi", "text": "Roughly every few hundred miles, or when the cushioning feels flat. For most casual runners, about once a year."}
-    ]},
-    {"id": "shopping.dlg2", "turns": [
-      {"speaker": "user", "text": "Is it actually cheaper to buy in bulk?"},
-      {"speaker": "moshi", "text": "Often, yes, but only for things you'll use before they go bad. Toilet paper, rice and canned goods are safe bets."},
-      {"speaker": "user", "text": "What about fresh stuff?"},
-      {"speaker": "moshi", "text": "That's where people waste money. A huge bag of spinach is no deal if half of it wilts."},
-      {"speaker": "user", "text": "Fair. I live alone, so maybe bulk / isn't really for me."},
-      {"speaker": "moshi", "text": "It can still work. Split a bulk order with a friend or neighbor, or stick to things that freeze well."},
-      {"speaker": "user", "text": "Like what?"},
-      {"speaker": "moshi", "text": "Bread, chicken, berries and butter all freeze nicely. Just portion them out before freezing."}
-    ]},
-    {"id": "shopping.dlg3", "turns": [
-      {"speaker": "user", "text": "I want to buy my grandkids some clothes, but I don't know their sizes anymore."},
-      {"speaker": "moshi", "text": "Kids grow so fast. How old are they?"},
-      {"speaker": "user", "text": "One is four and the other just turned seven."},
-      {"speaker": "moshi", "text": "Kids' sizes roughly follow age, so a size five and a size eight would give them room to grow."},
-      {"speaker": "user", "text": "Oh, so buy a little bigger."},
-      {"speaker": "moshi", "text": "Exactly. Slightly big is fine, too small is useless. And keep the receipt just in case."},
-      {"speaker": "user", "text": "Maybe I should ask my daughter / no, I want it to be a surprise."},
-      {"speaker": "moshi", "text": "Then go one size up and pick something soft and comfy, like pajamas or a hoodie. Those are hard to get wrong."}
-    ]},
-    {"id": "shopping.dlg4", "turns": [
-      {"speaker": "user", "text": "How do I stop impulse buying online? My cart is always full of random stuff."},
-      {"speaker": "moshi", "text": "Try a waiting rule. Leave things in the cart for two days before buying, and see if you still want them."},
-      {"speaker": "user", "text": "That's smart. Most of it I'd forget about."},
-      {"speaker": "moshi", "text": "That's the idea. It also helps to remove your saved card so checkout takes a bit more effort."},
-      {"speaker": "user", "text": "Ugh, but that's so annoying."},
-      {"speaker": "moshi", "text": "That's kind of the point. And unsubscribe from store emails, the sales announcements are designed to make you click."},
-      {"speaker": "user", "text": "Okay, I'm going to / actually, I'll start by deleting the shopping apps on my phone."},
-      {"speaker": "moshi", "text": "That's a strong first step. You can always use the website when you really need something."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "shopping.opt1",
-     "lead_in": "I need a new winter coat and I've narrowed it down to a few.",
-     "options": [
-       "The first one is a long puffy coat that's super warm, but it makes me look like a sleeping bag.",
-       "Then there's a wool coat, really stylish, but it's not waterproof at all.",
-       "And the last one is a shorter parka with a hood, waterproof and pretty warm, but a bit expensive."
-     ],
-     "moshi_comment": [
-       "The parka sounds like the best all rounder, warm and waterproof with a hood. The long puffy coat is the warmest, which matters if your winters are brutal. The wool coat looks great, but it'll be miserable in rain or wet snow.",
-       "How cold and wet do your winters get? If it's really freezing, the puffy coat is worth looking a bit silly. If it's more wet than cold, I'd spend a little extra on the parka."
-     ]},
-    {"id": "shopping.opt2",
-     "lead_in": "We need a new couch and I can't decide between the ones we saw this weekend.",
-     "options": [
-       "One is a big sectional in grey, really comfy, but it might not fit through our door.",
-       "Another is a leather sofa, easy to clean, but it gets cold in winter and sticky in summer.",
-       "Or there's a smaller blue velvet couch that looks gorgeous but only seats three."
-     ],
-     "moshi_comment": [
-       "The sectional sounds the comfiest, but definitely measure the doorway before buying it. Leather is great with kids or pets since it wipes clean. The velvet couch is beautiful, but seating three could be tight if you have guests over often.",
-       "Do you have kids or pets? If yes, the leather sofa will save you a lot of stress. If not, and the sectional fits through the door, that's the one I'd go for."
-     ]}
-  ]
+   ],
+   "pending": "long parka or shorter jacket",
+   "think_reask": [
+    "So, which coat are we hunting for, a long parka or something shorter?",
+    "Okay, did you decide? Parka or a shorter jacket?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing between a long parka and a shorter winter jacket.",
+    "Hi again! Still deciding on the coat, long or short?"
+   ],
+   "endings": [
+    {
+     "user": "Long parka. I wait for the bus a lot and my legs freeze.",
+     "moshi": "Then go for one that reaches your knees with a good hood. Down or a synthetic fill both work well."
+    },
+    {
+     "user": "A shorter one, I bike to work most days.",
+     "moshi": "Makes sense. Look for something windproof with a bit of stretch so you can move your arms easily."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm doing the big grocery run for the week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. Do you have a list or are you winging it?"
+    },
+    {
+     "speaker": "user",
+     "text": "Winging it, as usual."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let's plan a bit. What are you cooking for dinners this week?"
+    }
+   ],
+   "pending": "what to cook for dinners this week",
+   "think_reask": [
+    "So, any ideas for this week's dinners?",
+    "Alright, have you figured out what you're cooking this week?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were planning your dinners before the grocery run.",
+    "There you are. Did any dinner ideas come to mind for this week?"
+   ],
+   "endings": [
+    {
+     "user": "Tacos, a stir fry, and probably pasta twice.",
+     "moshi": "Easy list then. Tortillas, ground meat, veggies, rice, soy sauce, and two kinds of pasta sauce."
+    },
+    {
+     "user": "No clue, honestly. Something quick every night.",
+     "moshi": "Then grab eggs, frozen veggies, a rotisserie chicken and some wraps. You can mix those into lots of quick meals."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our vacuum finally died. I need to buy a new one this weekend."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Do you want a cordless stick vacuum that's light and handy, or a full size one with more suction?"
+    }
+   ],
+   "pending": "cordless stick vacuum or full size vacuum",
+   "think_reask": [
+    "So what's it going to be, a cordless stick or a full size vacuum?",
+    "Okay, have you picked a vacuum type yet?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing between a cordless stick vacuum and a full size one.",
+    "Hi again. Any decision on the new vacuum?"
+   ],
+   "endings": [
+    {
+     "user": "Cordless. I hate dragging a cord around.",
+     "moshi": "Fair. Check the battery life, at least half an hour is good for a whole apartment."
+    },
+    {
+     "user": "Full size. We have two dogs and carpets everywhere.",
+     "moshi": "Then that's the right choice. Look for one with a pet hair brush and a washable filter."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son has his prom in three weeks and he's grown out of every nice thing he owns."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like it's suit time. Is this a one night thing, or would he wear a suit again for interviews and such? That decides whether you rent or buy."
+    }
+   ],
+   "pending": "rent a suit for prom or buy one he can keep",
+   "think_reask": [
+    "So, renting just for the night, or buying one he'll keep?",
+    "Any verdict on the suit? Rent it or own it?"
+   ],
+   "welcome_back": [
+    "Okay, the prom suit. Is it going to be a rental or a keeper?",
+    "Still on your son's suit. Did you land on renting or buying?"
+   ],
+   "endings": [
+    {
+     "user": "Buy it. He starts college applications soon and he'll need it for interviews.",
+     "moshi": "Then go for navy or charcoal, they work everywhere. Get the trousers hemmed after he's tried them with his actual shoes."
+    },
+    {
+     "user": "Rent, honestly. He'll be another two inches taller by summer.",
+     "moshi": "Fair point with a growing kid. Book the fitting at least a week ahead, prom season gets busy."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay so my back is killing me and I think it's the mattress. It's older than my car."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That would do it. When you lie down, do you usually sleep on your side, or more on your back or stomach?"
+    }
+   ],
+   "pending": "whether they sleep on their side or their back or stomach",
+   "think_reask": [
+    "So, side sleeper, or back and stomach?",
+    "Alright, how do you usually end up sleeping, on your side or flat?"
+   ],
+   "welcome_back": [
+    "Back to the mattress. Which way do you mostly sleep?",
+    "Your aching back and that ancient mattress. Side, or back and stomach?"
+   ],
+   "endings": [
+    {
+     "user": "Side, always. Curled up like a shrimp.",
+     "moshi": "Then you want something medium, soft enough at the top that your shoulder and hip can sink in a bit."
+    },
+    {
+     "user": "Mostly on my back, sometimes I flip onto my stomach.",
+     "moshi": "Go a bit firmer then, so your hips don't sag. A medium firm mattress is a good place to start testing."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We need a stroller before the baby comes and the shop had about forty of them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's overwhelming, I know. Will you mostly be on city pavements and buses, or out on gravel paths and rough ground?"
+    }
+   ],
+   "pending": "whether the stroller is for city pavements or rough paths",
+   "think_reask": [
+    "So, where will this stroller mostly roll, city streets or rougher paths?",
+    "Okay, buses and pavements, or gravel and parks?"
+   ],
+   "welcome_back": [
+    "The stroller question. City pavements or rough ground?",
+    "We'd narrowed the stroller down to where you'll use it. Town or trails?"
+   ],
+   "endings": [
+    {
+     "user": "City. We don't have a car, so it'll be on the bus every day.",
+     "moshi": "Then something light that folds with one hand. Try folding it in the shop while holding a bag, that's real life."
+    },
+    {
+     "user": "Rough paths. We live out by the woods and walk the dog a lot.",
+     "moshi": "Look for big air filled wheels and decent suspension. They're heavier, so check it fits in your car boot too."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The blender I bought last week already smells like burning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's not right. Do you still have the receipt?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yep, it's in the box."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good. Would you rather get your money back, or swap it for a different model?"
+    }
+   ],
+   "pending": "a refund or an exchange for the broken blender",
+   "think_reask": [
+    "So, money back, or a different blender?",
+    "Decided yet? Refund or swap?"
+   ],
+   "welcome_back": [
+    "About the burning blender. Refund, or exchange it for another model?",
+    "Your smoky blender. Are you after the money or a replacement?"
+   ],
+   "endings": [
+    {
+     "user": "Refund. I don't trust that brand anymore.",
+     "moshi": "Fair enough. Bring the box and receipt, and mention the smell, that counts as a defect, not just changing your mind."
+    },
+    {
+     "user": "Swap it, but for something sturdier.",
+     "moshi": "Then ask for one with a higher wattage and a glass jug. Pay the difference if you need to, it'll last longer."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm in charge of the office snack order now. Thirty people, everybody has opinions."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brave of you. Do you want to keep it mostly healthy, or just give people the crisps and chocolate they actually eat?"
+    }
+   ],
+   "pending": "a healthy office snack order or the popular junk food",
+   "think_reask": [
+    "So, the snack order. Healthy or crowd pleasers?",
+    "Alright, fruit and nuts, or crisps and chocolate for the office?"
+   ],
+   "welcome_back": [
+    "Your office snack order. Are we going healthy or giving the people what they want?",
+    "Still deciding the snacks for those thirty opinions. Healthy or crowd pleasing?"
+   ],
+   "endings": [
+    {
+     "user": "Half and half, honestly. I don't want a revolt.",
+     "moshi": "Smart. Put the fruit, nuts and rice cakes at eye level and the chocolate on a lower shelf, people still find it."
+    },
+    {
+     "user": "Healthy. Management wants it, so they can take the complaints.",
+     "moshi": "Then pick tasty healthy things, like roasted chickpeas, dried mango and good granola bars, so the order doesn't just sit there."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm getting new glasses and I'm stuck at the frames stage."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun part, though. Are you drawn to bold thick frames, or thin wire ones that kind of disappear?"
+    }
+   ],
+   "pending": "bold thick glasses frames or thin wire ones",
+   "think_reask": [
+    "So, bold frames or barely there wire?",
+    "Okay, did you pick a style? Thick or thin?"
+   ],
+   "welcome_back": [
+    "The glasses. Bold thick frames, or thin wire?",
+    "We'd got to frames. Are you going for statement or subtle?"
+   ],
+   "endings": [
+    {
+     "user": "Thick black ones. I want to look like an architect.",
+     "moshi": "Bold choice, I like it. Just check they don't sit on your cheeks when you smile."
+    },
+    {
+     "user": "Thin wire. I don't want my face to be all about the glasses.",
+     "moshi": "Then a light gold or silver metal frame is nice and subtle. Ask for adjustable nose pads, they're more comfortable all day."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our hallway rug is disgusting. Muddy boots, the dog, my kids, all of it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hallways take a beating. Would you go for a flat woven one you can throw in the washing machine, or something thicker that's nicer underfoot?"
+    }
+   ],
+   "pending": "a washable flat hallway rug or a thicker plush one",
+   "think_reask": [
+    "So, machine washable flat rug, or the cosy thick kind?",
+    "Any decision on the hallway rug? Washable or plush?"
+   ],
+   "welcome_back": [
+    "Your poor muddy hallway. Washable flat rug or a thicker one?",
+    "The rug. Practical and washable, or soft and plush?"
+   ],
+   "endings": [
+    {
+     "user": "Washable, no question. Have you met my kids?",
+     "moshi": "Ha, fair. Get a non slip pad under it too, flat rugs slide around on hard floors."
+    },
+    {
+     "user": "Thick. I'll just make everyone take their shoes off.",
+     "moshi": "Good luck with that rule. A darker pattern will at least hide the dirt between cleanings."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to stop buying new clothes all the time. Thinking of trying secondhand."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice idea. Are you up for digging through charity shops in person, or would you rather browse resale apps from your sofa?"
+    }
+   ],
+   "pending": "secondhand clothes from charity shops in person or resale apps",
+   "think_reask": [
+    "So, rummaging in charity shops, or scrolling resale apps?",
+    "Have you settled it? In person or online for the secondhand stuff?"
+   ],
+   "welcome_back": [
+    "The secondhand plan. Shops in person, or apps from the sofa?",
+    "So, charity shops or resale apps, which way are you going?"
+   ],
+   "endings": [
+    {
+     "user": "In person. I like trying things on before I pay.",
+     "moshi": "Then go midweek mornings, that's often when new donations are out. Shops in wealthier areas tend to have better labels."
+    },
+    {
+     "user": "Apps. I don't have the patience to dig through racks.",
+     "moshi": "Then save searches for your exact sizes and favourite brands, and ask sellers for measurements before buying."
+    }
+   ]
+  },
+  {
+   "id": "shopping.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The TV I wanted is on sale, but apparently it'll be even cheaper next month. Great."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic. Can you live without a new TV for a few more weeks, or is the old one already dying?"
+    }
+   ],
+   "pending": "buying the TV now on sale or waiting for next month",
+   "think_reask": [
+    "So, grab the TV now or hold out for next month?",
+    "Alright, buy today or wait it out?"
+   ],
+   "welcome_back": [
+    "The TV deal. Now, or gamble on next month?",
+    "Where did you land on the television, buy now or wait?"
+   ],
+   "endings": [
+    {
+     "user": "The old one has a green stripe across the screen. I'm buying now.",
+     "moshi": "Fair, a green stripe is no way to live. Check if the shop does price matching, some refund the difference if it drops."
+    },
+    {
+     "user": "I can wait. The old one still works, it's just small.",
+     "moshi": "Then set a price alert and give yourself a limit. If it doesn't drop, buy it anyway and stop thinking about it."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "shopping.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, are we out of dish soap?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Almost. There's maybe one more load in the bottle."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, adding it to the list. Anything else you need from the store?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Oat milk, and those crackers I like."
+    },
+    {
+     "speaker": "user",
+     "text": "The rosemary ones?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yes, those. Get two boxes if they're on sale."
+    }
+   ]
+  },
+  {
+   "id": "shopping.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Be honest, does this shirt look okay on me?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The color's great but it's kind of big in the shoulders."
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, I thought so too. Should I try a smaller size?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Definitely. And maybe that green one next to it."
+    },
+    {
+     "speaker": "user",
+     "text": "The green? I never wear green."
+    },
+    {
+     "speaker": "friend",
+     "text": "That's exactly why you should try it."
+    }
+   ]
+  },
+  {
+   "id": "shopping.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, which of these two pans do you think is better?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The heavier one. Thin pans burn everything."
+    },
+    {
+     "speaker": "user",
+     "text": "It's almost twice the price though."
+    },
+    {
+     "speaker": "friend",
+     "text": "It'll last you ten years. The other one will be scratched by spring."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, you've convinced me. Can you hold it while I find a basket?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, go ahead."
+    }
+   ]
+  },
+  {
+   "id": "shopping.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, why are you putting the fancy cereal in the trolley again?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Because the cheap one tastes like cardboard."
+    },
+    {
+     "speaker": "user",
+     "text": "It's literally the same flakes in a different box."
+    },
+    {
+     "speaker": "friend",
+     "text": "It is not. The store one goes soggy in about ten seconds."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine, but then you're eating it dry next week when we're broke."
+    },
+    {
+     "speaker": "friend",
+     "text": "Deal. Can we at least get the big box so it's less per bowl?"
+    },
+    {
+     "speaker": "user",
+     "text": "Now you're thinking like me."
+    }
+   ]
+  },
+  {
+   "id": "shopping.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you bring the tape measure?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I thought you had it."
+    },
+    {
+     "speaker": "user",
+     "text": "No, I said remind me to bring it. That's different."
+    },
+    {
+     "speaker": "friend",
+     "text": "Well, I'm reminding you now."
+    },
+    {
+     "speaker": "user",
+     "text": "Very helpful. Okay, that alcove is about as wide as my arms out, right?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Your arms or my arms? Mine are longer."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh. Let's just take a photo of the shelf label and measure at home tonight."
+    },
+    {
+     "speaker": "friend",
+     "text": "Good. And if it fits, we come back Saturday and borrow my dad's van."
+    }
+   ]
+  },
+  {
+   "id": "shopping.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, those trainers are bright orange."
+    },
+    {
+     "speaker": "friend",
+     "text": "I know. Aren't they amazing?"
+    },
+    {
+     "speaker": "user",
+     "text": "You'll see them from space. Does Mum know you're spending your birthday money on traffic cones?"
+    },
+    {
+     "speaker": "friend",
+     "text": "She gave me the money, she doesn't get a vote."
+    },
+    {
+     "speaker": "user",
+     "text": "Fair. Do they at least fit?"
+    },
+    {
+     "speaker": "friend",
+     "text": "They're a bit tight at the toes, but they'll stretch."
+    },
+    {
+     "speaker": "user",
+     "text": "They won't. Ask the guy for the next size up, please."
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine. But I'm still getting orange."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "shopping.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I need new running shoes but I have no idea what to look for."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with comfort. They should feel good right away, with about a thumb's width of space in front of your toes."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I buy them online or in a store?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For your first pair, a store is better. Some running shops will even watch you jog and suggest a model."
+    },
+    {
+     "speaker": "user",
+     "text": "And what time of day should I go? I heard / feet swell or something?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You heard right. Try shoes in the late afternoon, when your feet are a bit bigger, like they get on a run."
+    },
+    {
+     "speaker": "user",
+     "text": "Good to know. How often do they need replacing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Roughly every few hundred miles, or when the cushioning feels flat. For most casual runners, about once a year."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it actually cheaper to buy in bulk?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often, yes, but only for things you'll use before they go bad. Toilet paper, rice and canned goods are safe bets."
+    },
+    {
+     "speaker": "user",
+     "text": "What about fresh stuff?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's where people waste money. A huge bag of spinach is no deal if half of it wilts."
+    },
+    {
+     "speaker": "user",
+     "text": "Fair. I live alone, so maybe bulk / isn't really for me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can still work. Split a bulk order with a friend or neighbor, or stick to things that freeze well."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bread, chicken, berries and butter all freeze nicely. Just portion them out before freezing."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to buy my grandkids some clothes, but I don't know their sizes anymore."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Kids grow so fast. How old are they?"
+    },
+    {
+     "speaker": "user",
+     "text": "One is four and the other just turned seven."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Kids' sizes roughly follow age, so a size five and a size eight would give them room to grow."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, so buy a little bigger."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Slightly big is fine, too small is useless. And keep the receipt just in case."
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe I should ask my daughter / no, I want it to be a surprise."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then go one size up and pick something soft and comfy, like pajamas or a hoodie. Those are hard to get wrong."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I stop impulse buying online? My cart is always full of random stuff."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a waiting rule. Leave things in the cart for two days before buying, and see if you still want them."
+    },
+    {
+     "speaker": "user",
+     "text": "That's smart. Most of it I'd forget about."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the idea. It also helps to remove your saved card so checkout takes a bit more effort."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, but that's so annoying."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's kind of the point. And unsubscribe from store emails, the sales announcements are designed to make you click."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'm going to / actually, I'll start by deleting the shopping apps on my phone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a strong first step. You can always use the website when you really need something."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Quick one, I'm standing at the avocados. How do I know which ones are ready?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give one a gentle squeeze in your palm, not with your fingertips. Ripe ones give a little, like a firm peach."
+    },
+    {
+     "speaker": "user",
+     "text": "These are all rock hard."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then buy them anyway if you need them in a few days. Leave them on the counter and they'll soften."
+    },
+    {
+     "speaker": "user",
+     "text": "I need one for tonight though. / Oh wait, there's a bag of softer ones on the bottom shelf."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those are often the ripe ones they've marked down. Check under the little stem cap, green underneath is good, brown means it's gone too far."
+    },
+    {
+     "speaker": "user",
+     "text": "Green. Perfect. And if I only use half?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep the stone in the other half, cover the cut side tightly and put it in the fridge. It'll be fine until tomorrow."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So I wore a dress once to a dinner and now I kind of hate it. Can I return it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That depends on the shop's policy, but honestly, most only take back clothes that are unworn with the tags still on."
+    },
+    {
+     "speaker": "user",
+     "text": "The tags are off. I cut them off in the car."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a normal return is unlikely. Some places will still offer store credit if it looks brand new, it doesn't hurt to ask politely."
+    },
+    {
+     "speaker": "user",
+     "text": "Isn't that a bit cheeky?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's fine to ask, as long as you're honest that you wore it. Don't pretend otherwise, staff can usually tell."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And if they say no?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then sell it on a resale app or swap it with a friend. A once worn dress is a nice find for someone else."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I need a new duvet and every packet has a number called a tog. What does that even mean?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tog is just a warmth rating. Low numbers are light and cool, high numbers are thick and toasty."
+    },
+    {
+     "speaker": "user",
+     "text": "My bedroom is freezing in winter but like a sauna in summer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then look at all seasons duvets. They come as two layers that clip together, a light one and a medium one, so you use one or both."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's clever. Are feather ones better than the synthetic ones?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Feather and down are lighter for the same warmth and breathe nicely. Synthetic is cheaper, easier to wash, and better if you have allergies."
+    },
+    {
+     "speaker": "user",
+     "text": "I sneeze at everything, so / yeah, synthetic it is."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good call. Look for one labelled hypoallergenic and check it fits in your washing machine, or you'll be off to the launderette."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a student and I've got about thirty quid a week for food. Help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's doable with a plan. Build meals around cheap bases like rice, pasta, oats, lentils and eggs."
+    },
+    {
+     "speaker": "user",
+     "text": "I can't cook much."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's fine. A big pot of chilli or a lentil curry takes one pan and gives you four or five meals."
+    },
+    {
+     "speaker": "user",
+     "text": "Four meals of the same thing though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Change the toppings. Have it with rice one night, in a wrap the next, on a baked potato after that."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. Okay, where should I shop?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The discount supermarkets, and go near closing time for the yellow sticker reductions on bread and meat."
+    },
+    {
+     "speaker": "user",
+     "text": "And frozen veg, is that sad?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all, it's frozen right after picking, so it's often just as good. It also never goes off in your fridge."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm six foot one and a woman and buying jeans is my personal nightmare."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds really frustrating. Have you tried brands that do a separate tall range? They usually have a longer leg and a higher rise."
+    },
+    {
+     "speaker": "user",
+     "text": "I have, online. Half of them still come out ankle length."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the inside leg measurement in the size guide instead of trusting the word tall. Measure a pair you like and match that."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh. I've never actually measured mine."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It takes a minute. Lay them flat and measure from the crotch seam down to the hem."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I love a pair that's just slightly too short?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wear them cropped on purpose with a nice ankle boot, or look for ones with a deep hem a tailor could let down."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I tell if online reviews are fake? This bluetooth speaker has like five thousand stars and I don't believe it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Healthy suspicion. Look at the bad reviews first, they're often more honest about what actually breaks."
+    },
+    {
+     "speaker": "user",
+     "text": "There are almost no bad ones."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a warning sign by itself. Also watch for lots of short, vague reviews posted around the same few days."
+    },
+    {
+     "speaker": "user",
+     "text": "Yes, loads of them say great product, fast shipping. That's it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly the pattern. Reviews with photos, details and some complaints alongside the praise are usually the real ones."
+    },
+    {
+     "speaker": "user",
+     "text": "So should I just / skip it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'd look up the speaker on a proper review site, or pick a brand you recognise. Paying a little more for something reliable often saves money."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our water is so hard the kettle looks like it's full of snow. Is there a kettle that deals with that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some come with a built in limescale filter at the spout, which stops the flakes getting in your tea."
+    },
+    {
+     "speaker": "user",
+     "text": "Does that stop the build up though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really, it just catches the bits. To stop the crust you'll want to descale it every few weeks."
+    },
+    {
+     "speaker": "user",
+     "text": "With what? Those little sachets?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those work, or just boil half water and half white vinegar, leave it an hour, then rinse and boil fresh water twice."
+    },
+    {
+     "speaker": "user",
+     "text": "My tea will taste of vinegar."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not if you rinse properly. And a stainless steel kettle with a hidden element is much easier to clean than one with a coil inside."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandson says I should do my shopping on the computer now. I've never done it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's easier than it sounds. You pick a supermarket's website, put things in a basket, and choose a time for them to bring it to your door."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I have to pay the driver?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, you pay by card on the website when you order. The driver just hands over the bags."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they bring me the wrong thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can say no at the door, and they'll take it back and refund you. They usually list any swaps on your receipt."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm worried I'll / press the wrong button and order fifty tins of beans."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Before you pay, there's always a page that lists everything with the amounts. Read it slowly, and you can change anything there."
+    },
+    {
+     "speaker": "user",
+     "text": "Well, that's reassuring."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe do the first order with your grandson sitting next to you. After that, it'll save you whole afternoons."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What sunscreen should I buy for my face? I get greasy really easily."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look for one labelled for oily skin, often called gel, fluid or matte. They feel a lot lighter than the thick lotions."
+    },
+    {
+     "speaker": "user",
+     "text": "Does the factor number matter that much?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For daily use, thirty or fifty is good. Higher than that adds very little protection."
+    },
+    {
+     "speaker": "user",
+     "text": "And the broad spectrum thing on the label?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's important, it means it protects against both kinds of rays, the burning ones and the ageing ones."
+    },
+    {
+     "speaker": "user",
+     "text": "I always forget to reapply."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's very common. If you're mostly indoors, a morning layer is fine. If you're outside all day, a small stick or spray is easy to top up."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why are some towels so scratchy? I bought new ones and it's like drying off with a doormat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cheap towels are often thin with short fibres. Fabric softener on them also coats the fibres and makes them less absorbent."
+    },
+    {
+     "speaker": "user",
+     "text": "I do use loads of softener."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try skipping it for a few washes. A splash of vinegar in the rinse helps them go soft and fluffy again."
+    },
+    {
+     "speaker": "user",
+     "text": "And when I buy new ones?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Feel the weight. Heavier towels are usually thicker and plusher. Long fibre cotton like Egyptian or Turkish dries you better."
+    },
+    {
+     "speaker": "user",
+     "text": "Turkish ones are those thin flat ones, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some are, those are lovely for the beach and dry fast. For a cosy bath towel, look for a thick terry loop instead."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is haggling at a flea market rude, or is it expected?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "At most flea markets it's expected, especially on bigger items. Sellers often price things with a bit of room built in."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm terrible at it. I just pay whatever they say."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start friendly. Ask how much, then offer around two thirds and see where you meet."
+    },
+    {
+     "speaker": "user",
+     "text": "What if they get annoyed?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Smile and say no worries. If they won't budge, you can still buy it or walk away, both are fine."
+    },
+    {
+     "speaker": "user",
+     "text": "There's this old lamp I've had my eye on / for three weekends now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you know it hasn't sold. Go late in the day, sellers are happier to drop the price than carry things home."
+    },
+    {
+     "speaker": "user",
+     "text": "Sneaky. I like it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring cash in small notes too. Offering exact money makes a lower price feel easier to say yes to."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I hate malls. I need one plain white dress shirt for tomorrow and I want to be in and out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally doable. Do you know your collar and sleeve size?"
+    },
+    {
+     "speaker": "user",
+     "text": "No idea."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then go straight to a menswear department and ask them to measure you, it takes about a minute."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, talking to people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "One short conversation saves you buying the wrong size twice. Ask for a non iron cotton shirt, so you don't need to press it tonight."
+    },
+    {
+     "speaker": "user",
+     "text": "Slim fit or regular?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try both on. If the buttons pull across your chest when you sit, go regular."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine. In, measured, two shirts tried, out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the plan. You'll be back in the car park in twenty minutes."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My sister's coming to stay and she's vegan. I have no idea what to buy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "No stress. Start with things that are naturally vegan, like pasta, rice, beans, bread, fruit, nuts and most veg."
+    },
+    {
+     "speaker": "user",
+     "text": "What about breakfast? I usually just do eggs."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oats with a plant milk and some berries, or toast with peanut butter and banana. Most supermarkets have oat or soy milk right by the regular milk."
+    },
+    {
+     "speaker": "user",
+     "text": "And for dinner, I wanted to do something a bit nice."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A big vegetable curry with coconut milk and chickpeas is easy and feels generous. Serve it with rice and flatbreads."
+    },
+    {
+     "speaker": "user",
+     "text": "Are flatbreads vegan?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many are, but some have milk or yogurt. Have a quick look at the ingredients, they're usually marked if they're suitable for vegans."
+    },
+    {
+     "speaker": "user",
+     "text": "This is less scary than I thought."
+    },
+    {
+     "speaker": "moshi",
+     "text": "She'll be really touched you made the effort. Maybe ask her about one snack she loves and have it waiting."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Someone's selling a fridge freezer online for cheap. What should I check before I hand over money?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask to see it running. It should be cold inside and the freezer should be properly frozen, not just cool."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look at the door seals. Close the door on a piece of paper, if it slides out easily, the seal is worn."
+    },
+    {
+     "speaker": "user",
+     "text": "Ooh, that's a good trick."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Also check for rust at the bottom, smells, and a loud buzzing or rattling. Ask how old it is."
+    },
+    {
+     "speaker": "user",
+     "text": "They said around six years, I think. / Or seven."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's fine for a fridge, many last over a decade. Just remember it should stand upright for a few hours after moving before you switch it on."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm ordering a coat from a European shop and the sizes are all different numbers. I'm a medium normally."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sizes vary a lot between countries and brands, so the safest thing is the measurement chart, not the label."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I measure?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a coat, your chest around the widest part, and maybe your arm from shoulder to wrist. Do it over a thin jumper."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I'm between two sizes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a coat, go up. You'll want room for layers underneath."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. They also have free returns, which is nice."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great, then order and try it on at home with your thickest jumper. Keep the tags on until you're sure."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've been waking up with a stiff neck. Is it my pillow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It could be. A pillow that's too high or too flat for how you sleep can definitely do that."
+    },
+    {
+     "speaker": "user",
+     "text": "I sleep on my side."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Side sleepers usually need a thicker, firmer pillow to fill the gap between your ear and your shoulder."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine is completely flat. I've had it for years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's probably part of it. Pillows tend to lose their support after a couple of years."
+    },
+    {
+     "speaker": "user",
+     "text": "There's memory foam, feather, / wait, what's that buckwheat one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Buckwheat pillows are filled with husks that shape around your neck. They're supportive but a bit crunchy and noisy."
+    },
+    {
+     "speaker": "user",
+     "text": "Crunchy pillow sounds weird."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some people love it. If not, a medium firm memory foam pillow is a safe choice for side sleepers."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Three kids starting school in September and the uniform list is long. How do I not go bankrupt?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Only buy the logo items from the official shop. Plain trousers, skirts, polo shirts and jumpers can usually come from any supermarket."
+    },
+    {
+     "speaker": "user",
+     "text": "The school doesn't mind?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most don't, as long as the colour matches. Check the school's uniform policy to be sure."
+    },
+    {
+     "speaker": "user",
+     "text": "My youngest will just get the hand me downs, poor thing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's totally normal. Lots of schools also run a secondhand uniform sale, often for almost nothing."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I didn't know that. / I'll email the office."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. And put name labels on everything, lost jumpers are the hidden cost of the school year."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want one good kitchen knife instead of my drawer full of terrible ones."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great plan. A chef's knife of around eight inches handles nearly everything."
+    },
+    {
+     "speaker": "user",
+     "text": "Is a really expensive one worth it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily. A mid priced knife that feels good in your hand and that you keep sharp will beat a pricey one you neglect."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know it feels good?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hold it in the shop if you can. It should feel balanced, not too heavy at the blade, and the handle shouldn't dig into your fingers."
+    },
+    {
+     "speaker": "user",
+     "text": "And then never put it in the dishwasher, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Hand wash, dry it straight away, and get a simple sharpener. It'll last for years."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Are store loyalty cards actually worth it, or is it just them tracking me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, it's a bit of both. They do collect your shopping data, and in return you get points or member prices."
+    },
+    {
+     "speaker": "user",
+     "text": "Member prices meaning what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some supermarkets now show two prices, and only card holders get the lower one. That can add up over a year."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. I shop at the same place every week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the card probably pays off for you. If the tracking bothers you, check the privacy settings, some let you opt out of marketing."
+    },
+    {
+     "speaker": "user",
+     "text": "And the points thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Points are usually worth very little each, but they build up slowly. Just don't buy things only to earn them."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it okay to buy the supermarket's own brand painkillers? The branded ones cost four times as much."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Generally yes. The active ingredient and dose are what matter, and they're the same if the label says so."
+    },
+    {
+     "speaker": "user",
+     "text": "So I'm paying for the box."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly for the branding and advertising. Compare the ingredient and amount on the back of both packs."
+    },
+    {
+     "speaker": "user",
+     "text": "Same thing. Two hundred milligrams of ibuprofen."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then they'll work the same. If you ever have doubts about mixing medicines, the pharmacist can help."
+    },
+    {
+     "speaker": "user",
+     "text": "And the fast acting ones?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those sometimes use a different form of the drug that absorbs a bit quicker. The shop brand often has a version of that too."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Every checkout online now offers pay in four instalments. Is that a trap?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be. It's a form of credit, so it's easy to lose track if you use it for lots of small things."
+    },
+    {
+     "speaker": "user",
+     "text": "But there's no interest."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often not, if you pay on time. Late fees are where it hurts, and some providers report missed payments too."
+    },
+    {
+     "speaker": "user",
+     "text": "I've got three of them going right now. / Maybe four."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then I'd pause and write them all down with the dates. Knowing the total each month makes a big difference."
+    },
+    {
+     "speaker": "user",
+     "text": "That's a bit scary to look at."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It usually feels better once it's on paper. A simple rule is to only use it for something you could afford to pay in full today."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I work on building sites through the winter. What should I buy to stay warm?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Layers beat one big coat. Start with a thermal base layer, ideally merino wool or a synthetic that pulls sweat away."
+    },
+    {
+     "speaker": "user",
+     "text": "Cotton's no good?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cotton holds onto sweat and then chills you, so avoid it for the bottom layer."
+    },
+    {
+     "speaker": "user",
+     "text": "Right. What about my feet? They're always the worst."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good wool socks and boots with a bit of room. Tight boots cut off circulation and make your toes colder."
+    },
+    {
+     "speaker": "user",
+     "text": "And gloves I can actually work in?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look for insulated work gloves with a grippy palm, or thin liner gloves under a thicker pair you can pull off for fiddly jobs."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why does my new jumper already have little bobbles all over it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's pilling. Short loose fibres rub together and twist into little balls, especially under the arms and on the sides."
+    },
+    {
+     "speaker": "user",
+     "text": "It was not cheap."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sadly price doesn't always mean quality. Blends with lots of acrylic and very soft loose knits pill fastest."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I fix it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A fabric shaver or a de pilling comb takes them off quickly. Wash it inside out on a gentle cycle to slow it down."
+    },
+    {
+     "speaker": "user",
+     "text": "And next time?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Feel the knit. Tighter knits and longer fibres like merino or good cotton hold up better. Check the label before you fall in love."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do people grocery shop with toddlers? Mine screamed through the entire cereal aisle today."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oof, that's exhausting. Going right after a nap and a snack helps a lot, a hungry tired toddler in a shop is tough."
+    },
+    {
+     "speaker": "user",
+     "text": "We went right at nap time. Rookie mistake."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Happens to everyone. Giving them a job can help too, like holding the bananas or finding the yellow box."
+    },
+    {
+     "speaker": "user",
+     "text": "He'd love finding things, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Make it a game. A little picture list he can tick off keeps him busy and feeling important."
+    },
+    {
+     "speaker": "user",
+     "text": "And when he loses it anyway?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep calm, keep moving, and finish what you can. Sometimes leaving early and ordering the rest online is the right call."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm doing delivery next week, honestly. / Just for my sanity."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very sensible. Shopping trips can wait until he's a bit older and they feel like an outing."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The shelf said three ninety nine and the till charged me five. Can I do anything?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, definitely. Go to customer service with your receipt and tell them the shelf price was different."
+    },
+    {
+     "speaker": "user",
+     "text": "I already left the shop."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can still go back with the receipt. It helps if you snapped a photo of the shelf label, but staff can check it themselves."
+    },
+    {
+     "speaker": "user",
+     "text": "I didn't take a photo."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's okay. Most shops will honour the shelf price, and some even refund the item entirely as a goodwill gesture."
+    },
+    {
+     "speaker": "user",
+     "text": "For a pound I don't know if it's worth the trip."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair. Next time you're in, just mention it. And it's worth telling them so they fix the label for everyone else."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to learn to sew. Which sewing machine should a total beginner buy?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A simple mechanical machine is perfect to start. You want a straight stitch, a zigzag, and an easy buttonhole, not two hundred fancy stitches."
+    },
+    {
+     "speaker": "user",
+     "text": "The computerised ones look so cool though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They are, but they cost more and can be fiddly to repair. Many people sew for years on a basic one."
+    },
+    {
+     "speaker": "user",
+     "text": "What about secondhand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great option. Older metal machines are often tanks. Just make sure it comes with the foot pedal and it sews smoothly when you test it."
+    },
+    {
+     "speaker": "user",
+     "text": "I have no idea / how to test it, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring a scrap of cotton and sew a few lines. It should run quietly, the stitches should look even on both sides, and the thread shouldn't keep snapping."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to cut down on plastic when I shop but everything's wrapped in it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is everywhere. Start with the easy wins, like bringing your own bags and buying loose fruit and veg."
+    },
+    {
+     "speaker": "user",
+     "text": "I always forget the bags in the car."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hang them on the front door handle once you unpack, so you grab them next time you go out."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, okay. What about the rest?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look for a refill shop for things like pasta, rice, soap and washing up liquid. You bring jars and fill what you need."
+    },
+    {
+     "speaker": "user",
+     "text": "Isn't that more expensive?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sometimes, sometimes not. Buying just the amount you need can actually save money, especially for spices."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll try it for the dry stuff first."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good place to start. Small swaps you stick with beat a big change you drop after a month."
+    }
+   ]
+  },
+  {
+   "id": "shopping.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do you buy perfume without smelling every bottle in the shop until your nose gives up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick three at most per visit. Spray them on paper strips first, and only put your favourite on your skin."
+    },
+    {
+     "speaker": "user",
+     "text": "Why on skin?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfume changes as it warms up and mixes with your skin. What you smell in the first minute isn't what you'll smell an hour later."
+    },
+    {
+     "speaker": "user",
+     "text": "So I shouldn't buy it on the spot."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ideally not. Walk around for a few hours and see if you still love it by lunchtime."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there a trick to reset your nose?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some people sniff their own sleeve or wrist. The coffee beans they put out don't really work as well as people think."
+    },
+    {
+     "speaker": "user",
+     "text": "And samples?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Always ask. Many counters will give you a little sample vial so you can wear it for a full day before spending the money."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "shopping.opt1",
+   "lead_in": "I need a new winter coat and I've narrowed it down to a few.",
+   "options": [
+    "The first one is a long puffy coat that's super warm, but it makes me look like a sleeping bag.",
+    "Then there's a wool coat, really stylish, but it's not waterproof at all.",
+    "And the last one is a shorter parka with a hood, waterproof and pretty warm, but a bit expensive."
+   ],
+   "moshi_comment": [
+    "The parka sounds like the best all rounder, warm and waterproof with a hood. The long puffy coat is the warmest, which matters if your winters are brutal. The wool coat looks great, but it'll be miserable in rain or wet snow.",
+    "How cold and wet do your winters get? If it's really freezing, the puffy coat is worth looking a bit silly. If it's more wet than cold, I'd spend a little extra on the parka."
+   ]
+  },
+  {
+   "id": "shopping.opt2",
+   "lead_in": "We need a new couch and I can't decide between the ones we saw this weekend.",
+   "options": [
+    "One is a big sectional in grey, really comfy, but it might not fit through our door.",
+    "Another is a leather sofa, easy to clean, but it gets cold in winter and sticky in summer.",
+    "Or there's a smaller blue velvet couch that looks gorgeous but only seats three."
+   ],
+   "moshi_comment": [
+    "The sectional sounds the comfiest, but definitely measure the doorway before buying it. Leather is great with kids or pets since it wipes clean. The velvet couch is beautiful, but seating three could be tight if you have guests over often.",
+    "Do you have kids or pets? If yes, the leather sofa will save you a lot of stress. If not, and the sectional fits through the door, that's the one I'd go for."
+   ]
+  },
+  {
+   "id": "shopping.opt3",
+   "lead_in": "Our washing machine flooded the kitchen, so I need a new one fast.",
+   "options": [
+    "There's a cheap top loader at the hardware store, they can deliver it tomorrow, but it's really loud.",
+    "Then a front loader that's super quiet and saves water, but it's about twice the price and takes a week.",
+    "And my neighbour is selling her two year old machine for almost nothing, though I'd have to collect it myself."
+   ],
+   "moshi_comment": [
+    "The neighbour's machine is a great deal if it's working well and you can borrow someone to help lift it. The quiet front loader is the best long term, it'll save on water bills. The top loader only wins if you really can't go a week without washing.",
+    "How desperate is the laundry pile? If it's bad, the neighbour's machine gets you going cheaply and fast. If you can hold on a week, the front loader is the nicer thing to live with for years."
+   ]
+  },
+  {
+   "id": "shopping.opt4",
+   "lead_in": "I walk to work with my laptop and my current bag is wrecking my shoulder. Help me pick a new one.",
+   "options": [
+    "A leather messenger bag looks really smart for meetings, but it's still one strap on one shoulder.",
+    "There's a waterproof rolltop backpack, very sturdy, but it looks a bit like I'm off hiking.",
+    "Or a slim office backpack with a padded laptop sleeve and a luggage strap, kind of middle of the road."
+   ],
+   "moshi_comment": [
+    "Since your shoulder is the problem, I'd skip the messenger bag, one strap is how you got here. The slim office backpack sounds like the sweet spot, comfortable and still neat. The rolltop is perfect if you get rained on a lot.",
+    "Two straps beat one for your shoulder, so it's really the rolltop or the slim backpack. How wet is your walk? Lots of rain, go rolltop. Mostly dry, the office one will look better at meetings."
+   ]
+  },
+  {
+   "id": "shopping.opt5",
+   "lead_in": "I'm trying to cut our grocery bill and I can't decide where to do the weekly shop.",
+   "options": [
+    "Our usual big supermarket has everything in one place and good loyalty points, but I always overspend there.",
+    "The discount shop across town is way cheaper, though the range is small and it's a twenty minute drive.",
+    "We could do online delivery, no impulse buys, but there's a fee and sometimes they swap things.",
+    "Or the Saturday market for veg and the corner shop for the rest, which is fun but takes ages."
+   ],
+   "moshi_comment": [
+    "If overspending is the problem, online delivery might actually save you money even with the fee, because you only buy what's on the list. The discount shop is cheapest per item, but the drive eats into it. The market is lovely, just not when you're short on time.",
+    "A mix could work best. Do a big monthly stock up at the discount shop for basics, and order the rest online so you dodge the treats aisle. Keep the market for a weekend treat."
+   ]
+  },
+  {
+   "id": "shopping.opt6",
+   "lead_in": "I'm a nurse and I need new shoes for twelve hour shifts. I'm down to a few.",
+   "options": [
+    "One pair is classic clogs, easy to wipe clean and slip on, but my ankles feel a bit wobbly in them.",
+    "Another is thick cushioned running shoes in black, super comfy, though fabric soaks up anything spilled on it.",
+    "Or these leather work trainers, water resistant and supportive, but stiff and they need breaking in."
+   ],
+   "moshi_comment": [
+    "Wobbly ankles over twelve hours is a red flag, so I'd be careful with the clogs. The leather trainers sound like the best mix of support and easy cleaning, once they're broken in. The running shoes are the comfiest but spills could be a real problem.",
+    "If you can survive a week or two of breaking them in, go with the leather trainers. Meanwhile the running shoes could be a backup pair for days on quieter wards. I'd pass on the clogs unless your ankles feel fine after a full shift."
+   ]
+  }
+ ]
 }

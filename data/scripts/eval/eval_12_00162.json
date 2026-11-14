@@ -7,151 +7,159 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [
-  "wait_like"
+  "implicit"
  ],
  "topics": [
-  "wedding_planning"
+  "painting_art",
+  "laptop_buying"
  ],
- "topic": "wedding_planning",
+ "topic": "painting_art",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
-  "friend": null,
+  "user": "732ea755bd9e446eb31dc79966b50428",
+  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Maya",
+ "friend_name_id": "name_03",
  "phrasing_ids": [
   "greet_03",
-  "greet_ans_18",
-  "waitlike_12"
+  "greet_ans_09",
+  "side_instr_06",
+  "implicit_04"
  ],
  "block_ids": [
-  "wedding_planning.dlg3"
+  "painting_art.ctx21",
+  "laptop_buying.side4"
  ],
- "est_total_sec": 63.68,
- "est_speech_sec": 48.42,
+ "est_total_sec": 59.08,
+ "est_speech_sec": 42.01,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello, how's your day going?",
    "est_sec": 1.65,
-   "gap_before": 0.69,
+   "gap_before": 0.42,
    "role": "greeting",
    "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
-   "est_sec": 1.03,
-   "gap_before": 0.59,
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.83,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
+   "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "What's a good first dance song that isn't super cheesy?",
-   "est_sec": 3.2,
-   "gap_before": 0.58,
+   "text": "I'm starting a big seascape and I can't settle on a mood.",
+   "est_sec": 3.82,
+   "gap_before": 0.55,
    "event": "ordinary_request",
-   "block": "wedding_planning.dlg3"
+   "block": "painting_art.ctx21"
   },
   {
    "speaker": "moshi",
-   "text": "It depends on your taste. Something like an old soul ballad or an acoustic cover of a song you both love tends to feel personal without being cheesy.",
-   "est_sec": 8.78,
-   "gap_before": 0.32,
+   "text": "Seascapes can go so many ways. Are you picturing a stormy grey sea, or a bright turquoise summer one?",
+   "est_sec": 5.99,
+   "gap_before": 0.31,
    "role": "reply",
-   "block": "wedding_planning.dlg3",
+   "block": "painting_art.ctx21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Wait, that can't be right.",
-   "est_sec": 1.65,
-   "gap_before": 2.33,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_12",
-   "block": "wedding_planning.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Let me double-check. I'd still stand by it, but tell me what you heard.",
+   "text": "One moment, my sister is asking me something. Please don't interrupt until I'm back.",
    "est_sec": 4.44,
    "gap_before": 1.09,
-   "role": "reply",
-   "block": "wedding_planning.dlg3",
-   "reference_only": true
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_06"
   },
   {
    "speaker": "user",
-   "text": "We met at a jazz bar, if that helps.",
-   "est_sec": 2.89,
-   "gap_before": 1.15,
-   "event": "ordinary_request",
-   "block": "wedding_planning.dlg3"
+   "text": "Did you see this one? It folds all the way back like a tablet.",
+   "est_sec": 4.44,
+   "gap_before": 1.03,
+   "block": "laptop_buying.side4"
   },
   {
-   "speaker": "moshi",
-   "text": "Oh, then a jazz standard would be perfect. Something slow and swingy, maybe even played by a live trio.",
-   "est_sec": 5.99,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "wedding_planning.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "A live band sounds expensive though",
+   "speaker": "friend",
+   "text": "Cute. Does the hinge feel solid?",
    "est_sec": 1.96,
-   "gap_before": 0.91,
+   "gap_before": 3.05,
+   "block": "laptop_buying.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of wobbly, actually. Can you try it?",
+   "est_sec": 2.58,
+   "gap_before": 0.8,
    "event": "distractor",
-   "kind": "pause",
-   "block": "wedding_planning.dlg3"
+   "kind": "friend_question",
+   "block": "laptop_buying.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, it bounces when I type. That would drive me nuts.",
+   "est_sec": 3.51,
+   "gap_before": 1.34,
+   "block": "laptop_buying.side4"
   },
   {
    "speaker": "user",
-   "text": "how much do they usually cost?",
-   "est_sec": 1.96,
-   "gap_before": 2.36,
-   "event": "ordinary_request",
-   "block": "wedding_planning.dlg3"
+   "text": "Okay, crossed off the list.",
+   "est_sec": 1.65,
+   "gap_before": 2.41,
+   "block": "laptop_buying.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, where were we?",
+   "est_sec": 1.34,
+   "gap_before": 1.56,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_04"
   },
   {
    "speaker": "moshi",
-   "text": "A small jazz trio often runs between one and three thousand dollars for an evening, depending on the city.",
-   "est_sec": 5.99,
-   "gap_before": 0.47,
-   "role": "reply",
-   "block": "wedding_planning.dlg3",
+   "text": "Right. Okay, which sea are you painting?",
+   "est_sec": 2.27,
+   "gap_before": 0.74,
+   "role": "resume",
+   "block": "painting_art.ctx21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Yeah, that's too much. We'll just play a recording.",
-   "est_sec": 2.89,
-   "gap_before": 1.45,
+   "text": "Stormy. I want it dramatic.",
+   "est_sec": 1.65,
+   "gap_before": 0.51,
    "event": "ordinary_request",
-   "block": "wedding_planning.dlg3"
+   "block": "painting_art.ctx21"
   },
   {
    "speaker": "moshi",
-   "text": "Totally fine. Ask your DJ to fade it out after two minutes so nobody feels stuck on the floor.",
+   "text": "Great. Use a lot of different greys, warm and cool, and let a small patch of light break through.",
    "est_sec": 5.99,
-   "gap_before": 1.01,
-   "role": "reply",
-   "block": "wedding_planning.dlg3",
+   "gap_before": 0.93,
+   "role": "followup",
+   "block": "painting_art.ctx21",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

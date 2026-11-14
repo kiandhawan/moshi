@@ -7,174 +7,125 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "near_miss"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "cooking",
-  "birthday_party"
+  "personal_finance"
  ],
- "topic": "cooking",
+ "topic": "personal_finance",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
-  "friend": "3fdb457debb744ca9cfe9e2ce99a2deb",
+  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Ethan",
- "friend_name_id": "name_23",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_08",
-  "greet_ans_20",
-  "side_instr_17",
-  "dn_05",
-  "side_cue_19"
+  "greet_13",
+  "greet_ans_23",
+  "describe_instr_20",
+  "ack_15",
+  "describe_cue_05"
  ],
  "block_ids": [
-  "cooking.ctx1",
-  "birthday_party.side3"
+  "personal_finance.opt6"
  ],
- "est_total_sec": 74.39,
- "est_speech_sec": 57.5,
+ "est_total_sec": 61.11,
+ "est_speech_sec": 47.91,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there, how are you feeling today?",
-   "est_sec": 2.27,
-   "gap_before": 0.36,
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.34,
    "role": "greeting",
-   "phrasing": "greet_08"
+   "phrasing": "greet_13"
   },
   {
    "speaker": "user",
-   "text": "Can't complain.",
-   "est_sec": 0.72,
-   "gap_before": 0.82,
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.94,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_20"
+   "phrasing": "greet_ans_23"
   },
   {
    "speaker": "user",
-   "text": "I've got chicken thighs, a bag of spinach and some rice. The kids are hungry and I'm tired.",
-   "est_sec": 5.68,
-   "gap_before": 0.45,
-   "event": "ordinary_request",
-   "block": "cooking.ctx1"
+   "text": "My old car is starting to fall apart and I don't know how to pay for the next one.",
+   "est_sec": 5.99,
+   "gap_before": 0.46,
+   "block": "personal_finance.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me describe everything first, and then I'll ask for your thoughts.",
+   "est_sec": 3.82,
+   "gap_before": 0.41,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_20"
   },
   {
    "speaker": "moshi",
-   "text": "You could do a quick garlic chicken and rice bowl, or a creamy spinach chicken in one pan. Which sounds better tonight?",
-   "est_sec": 6.92,
-   "gap_before": 0.45,
-   "role": "reply",
-   "block": "cooking.ctx1"
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.69,
+   "role": "ack",
+   "phrasing": "ack_15"
   },
   {
    "speaker": "user",
-   "text": "Sorry, can you wait? My friend is talking to me. Keep quiet until I come back.",
-   "est_sec": 5.06,
-   "gap_before": 0.74,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_17"
-  },
-  {
-   "speaker": "user",
-   "text": "Ethan, can you help me figure out the food?",
-   "est_sec": 2.89,
-   "gap_before": 1.17,
+   "text": "I could take out a car loan from my bank, which has a fixed rate.",
+   "est_sec": 4.75,
+   "gap_before": 1.06,
+   "block": "personal_finance.opt6",
    "event": "distractor",
-   "kind": "friend_question",
-   "block": "birthday_party.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Sure. Are we doing a meal or just snacks?",
-   "est_sec": 2.89,
-   "gap_before": 0.81,
-   "block": "birthday_party.side3"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Snacks, I think. People will come and go all evening.",
-   "est_sec": 3.2,
-   "gap_before": 0.61,
-   "block": "birthday_party.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Then a big cheese board, some dips, and maybe mini sandwiches.",
-   "est_sec": 3.51,
-   "gap_before": 1.14,
-   "block": "birthday_party.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "And something for the vegans. Is hummus enough?",
-   "est_sec": 2.58,
-   "gap_before": 0.78,
+   "text": "Or there's a dealer finance deal with zero interest, but only on new cars.",
+   "est_sec": 4.44,
+   "gap_before": 2.24,
+   "block": "personal_finance.opt6",
    "event": "distractor",
-   "kind": "friend_question",
-   "block": "birthday_party.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Add roasted veggies and some fruit. That's plenty.",
-   "est_sec": 2.58,
-   "gap_before": 1.05,
-   "block": "birthday_party.side3"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'm done with the dishes, your turn.",
-   "est_sec": 2.58,
-   "gap_before": 1.37,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_05"
-  },
-  {
-   "speaker": "friend",
-   "text": "Fine, fine.",
-   "est_sec": 0.72,
-   "gap_before": 1.47,
-   "phrasing": "dn_05"
+   "text": "Or I could keep driving the old one another year and save up to pay cash for a used car.",
+   "est_sec": 6.3,
+   "gap_before": 2.89,
+   "block": "personal_finance.opt6"
   },
   {
    "speaker": "user",
-   "text": "Done. I'm back now.",
-   "est_sec": 1.34,
-   "gap_before": 1.57,
+   "text": "And my sister offered to sell me her car cheaply, but it's got quite a few miles on it.",
+   "est_sec": 5.99,
+   "gap_before": 1.43,
+   "block": "personal_finance.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the full list. Go ahead.",
+   "est_sec": 1.96,
+   "gap_before": 0.64,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_19"
+   "phrasing": "describe_cue_05"
   },
   {
    "speaker": "moshi",
-   "text": "Sure thing. Still deciding between the garlic chicken bowl and the creamy one-pan version?",
-   "est_sec": 4.44,
-   "gap_before": 1.05,
+   "text": "I'd get your sister's car checked first, it might solve everything for little money. If not, the bank loan is simpler and more flexible than tying yourself to a new car.",
+   "est_sec": 9.71,
+   "gap_before": 0.6,
    "role": "resume",
-   "block": "cooking.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "The rice bowl. The kids won't eat anything creamy with green bits in it.",
-   "est_sec": 4.44,
-   "gap_before": 0.41,
-   "event": "ordinary_request",
-   "block": "cooking.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fair enough. Start the rice first, it takes about twenty minutes, and fry the chicken while it cooks.",
-   "est_sec": 5.68,
-   "gap_before": 1.14,
-   "role": "followup",
-   "block": "cooking.ctx1"
+   "block": "personal_finance.opt6"
   }
  ]
 }

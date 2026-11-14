@@ -1,72 +1,81 @@
 {
   "id": "train_10_00362",
-  "group": "describe_options",
-  "user_start": 3.68,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 8.56,
-  "instruction_end": 11.43,
-  "wait_end": 33.64,
-  "resume_window": [
-    33.64,
-    38.64
+  "group": "think_time",
+  "user_start": 2.93,
+  "type": "think_time",
+  "conditions": [
+    "self_talk"
   ],
-  "wait_sec": 22.21,
+  "cluster": "travel_planning.ctx11",
+  "instruction_start": 18.87,
+  "instruction_end": 22.69,
+  "wait_end": 42.69,
+  "resume_window": [
+    42.69,
+    46.69
+  ],
+  "wait_sec": 20.0,
   "distractors": [
-    25.22
+    37.19,
+    40.81
   ],
   "distractor_kinds": [
-    "pause"
+    "self_talk",
+    "self_talk"
   ],
   "distractor_windows": [
     [
-      25.22,
-      27.02
+      37.19,
+      39.42
+    ],
+    [
+      40.81,
+      45.56
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    9.51,
+    48.35
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 3.68,
-      "end": 4.54,
+      "start": 2.93,
+      "end": 3.81,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.97,
-      "end": 7.83
+      "start": 4.27,
+      "end": 9.51,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 8.56,
-      "end": 11.43,
+      "start": 18.87,
+      "end": 22.69,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "think_time"
     },
     {
       "speaker": "user",
-      "start": 14.24,
-      "end": 19.04
-    },
-    {
-      "speaker": "user",
-      "start": 20.09,
-      "end": 25.22,
+      "start": 35.13,
+      "end": 37.19,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "self_talk"
     },
     {
       "speaker": "user",
-      "start": 27.02,
-      "end": 31.09
+      "start": 39.42,
+      "end": 40.81,
+      "event": "distractor",
+      "kind": "self_talk"
     },
     {
       "speaker": "user",
-      "start": 31.68,
-      "end": 33.64,
-      "event": "return_cue",
-      "kind": "explicit"
+      "start": 45.56,
+      "end": 48.35,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00362 by scripts/render.py.",
@@ -74,21 +83,33 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.58,
-      "end": 2.69,
-      "text": "Hey, how's your day been so far?"
+      "start": 0.48,
+      "end": 2.45,
+      "text": "Hi there, how are you feeling today?"
+    },
+    {
+      "kind": "reply",
+      "start": 10.69,
+      "end": 17.15,
+      "text": "Buses connect the towns, but the countryside is much easier by car. Are you comfortable driving on the left on narrow roads?"
     },
     {
       "kind": "ack",
-      "start": 12.04,
-      "end": 13.0,
-      "text": "Okay, no rush."
+      "start": 23.23,
+      "end": 24.73,
+      "text": "Okay, I'll hold on."
     },
     {
       "kind": "resume",
-      "start": 34.61,
-      "end": 43.25,
-      "text": "Does he struggle with his current phone, or is it just old? If he's comfortable with it, get the newer version of the same one. If he struggles, the big screen phone could really help."
+      "start": 42.99,
+      "end": 45.24,
+      "text": "So, car or buses for Kerry?"
+    },
+    {
+      "kind": "followup",
+      "start": 48.68,
+      "end": 53.42,
+      "text": "That's fine. Base yourselves in Killarney, it has good connections and lots of local tours."
     }
   ]
 }

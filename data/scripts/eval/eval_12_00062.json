@@ -7,22 +7,17 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "learning_language"
+  "picnic"
  ],
- "wait_sec": 15,
- "deadline": {
-  "after_turn": 4,
-  "sec": 15
- },
- "topic": "learning_language",
+ "topic": "picnic",
  "voices": {
   "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "friend": null,
@@ -31,98 +26,112 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_09",
-  "greet_ans_06",
-  "think_instr_12",
-  "ack_10",
-  "self_06"
+  "greet_24",
+  "greet_ans_06"
  ],
  "block_ids": [
-  "learning_language.ctx1"
+  "picnic.dlg1"
  ],
- "est_total_sec": 39.83,
- "est_speech_sec": 22.81,
+ "est_total_sec": 52.5,
+ "est_speech_sec": 36.75,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's it going?",
-   "est_sec": 1.34,
-   "gap_before": 0.45,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.55,
    "role": "greeting",
-   "phrasing": "greet_09",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "Good, thanks. Busy day.",
    "est_sec": 1.34,
-   "gap_before": 0.58,
+   "gap_before": 0.98,
    "event": "greeting_answer",
    "phrasing": "greet_ans_06"
   },
   {
    "speaker": "user",
-   "text": "I want to start learning a new language this year.",
+   "text": "What are some picnic foods that don't need a fridge?",
    "est_sec": 3.2,
-   "gap_before": 0.4,
+   "gap_before": 0.38,
    "event": "ordinary_request",
-   "block": "learning_language.ctx1"
+   "block": "picnic.dlg1"
   },
   {
    "speaker": "moshi",
-   "text": "Great goal. Is there a language you need for work or travel, or would you rather pick one just because it sounds fun?",
-   "est_sec": 7.23,
-   "gap_before": 1.11,
+   "text": "Hard cheeses, crackers, whole fruit, nuts and pasta salad with oil instead of mayo all hold up well.",
+   "est_sec": 5.68,
+   "gap_before": 0.38,
    "role": "reply",
-   "block": "learning_language.ctx1",
+   "block": "picnic.dlg1",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I need to think. Give me fifteen seconds and then ask me again.",
-   "est_sec": 4.13,
-   "gap_before": 0.86,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_12"
+   "text": "Is chicken okay if it's out for a few hours?",
+   "est_sec": 3.2,
+   "gap_before": 2.3,
+   "event": "ordinary_request",
+   "block": "picnic.dlg1"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, no rush.",
-   "est_sec": 1.03,
-   "gap_before": 0.4,
-   "role": "ack",
-   "phrasing": "ack_10",
+   "text": "Not really. Cooked chicken shouldn't sit out more than two hours, or one hour if it's hot outside.",
+   "est_sec": 5.68,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "picnic.dlg1",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Let me think, let me think.",
+   "text": "Okay so maybe skip the chicken",
    "est_sec": 1.96,
-   "anchor": {
-    "turn": 4,
-    "offset": 5.07
-   },
+   "gap_before": 3.4,
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_06"
+   "kind": "pause",
+   "block": "picnic.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "or bring it in a cooler.",
+   "est_sec": 1.96,
+   "gap_before": 2.22,
+   "event": "ordinary_request",
+   "block": "picnic.dlg1"
   },
   {
    "speaker": "moshi",
-   "text": "Time's up. Which language is calling to you?",
-   "est_sec": 2.58,
-   "role": "resume",
-   "block": "learning_language.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 15.11
-   },
+   "text": "A cooler with a couple of ice packs would keep it safe. Put it in the shade.",
+   "est_sec": 5.37,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "picnic.dlg1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "What about something sweet?",
+   "est_sec": 1.34,
+   "gap_before": 1.26,
+   "event": "ordinary_request",
+   "block": "picnic.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Brownies or lemon bars travel really well. Avoid anything with whipped cream, it melts fast.",
+   "est_sec": 4.75,
+   "gap_before": 1.0,
+   "role": "reply",
+   "block": "picnic.dlg1",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

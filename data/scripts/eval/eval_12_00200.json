@@ -7,165 +7,115 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "door",
- "wait_type": "door",
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "holiday_gifts"
+  "podcasts"
  ],
- "topic": "holiday_gifts",
+ "topic": "podcasts",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
-  "friend": "933563129e564b19a115bedd57b7406a",
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_18",
-  "door_instr_07",
-  "ack_07",
-  "door_07",
-  "door_cue_01"
+  "greet_27",
+  "greet_ans_03",
+  "describe_instr_18",
+  "describe_cue_15"
  ],
  "block_ids": [
-  "holiday_gifts.ctx2"
+  "podcasts.opt2"
  ],
- "est_total_sec": 57.23,
- "est_speech_sec": 39.01,
+ "est_total_sec": 48.39,
+ "est_speech_sec": 37.48,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.74,
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.56,
    "role": "greeting",
-   "phrasing": "greet_06",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
+   "text": "Doing okay, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.44,
+   "gap_before": 0.56,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "Our office is doing a gift exchange with a twenty dollar limit.",
-   "est_sec": 3.82,
-   "gap_before": 0.37,
-   "event": "ordinary_request",
-   "block": "holiday_gifts.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fun. Do you want to play it safe with something everyone would like, like good chocolate, or go for a funny gag gift?",
-   "est_sec": 7.23,
-   "gap_before": 0.65,
-   "role": "reply",
-   "block": "holiday_gifts.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Give me a minute, someone's at the door. Stay quiet till I'm back.",
+   "text": "I'm buying gear for my podcast and I can't decide what to get.",
    "est_sec": 4.13,
-   "gap_before": 0.57,
+   "gap_before": 0.52,
+   "block": "podcasts.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll go through the options one by one. Don't say anything until I finish.",
+   "est_sec": 4.44,
+   "gap_before": 0.71,
    "event": "instruction",
-   "kind": "door",
-   "phrasing": "door_instr_07"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Got it.",
-   "est_sec": 0.72,
-   "gap_before": 0.29,
-   "role": "ack",
-   "phrasing": "ack_07",
-   "reference_only": true
+   "kind": "describe_options",
+   "phrasing": "describe_instr_18"
   },
   {
    "speaker": "user",
-   "text": "Hello?",
-   "est_sec": 0.41,
-   "gap_before": 4.02,
-   "phrasing": "door_07",
+   "text": "Option one is a USB microphone for about a hundred dollars that plugs right into my laptop.",
+   "est_sec": 5.37,
+   "gap_before": 1.24,
+   "block": "podcasts.opt2",
    "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Hi, we're collecting for the school fundraiser.",
-   "est_sec": 2.27,
-   "gap_before": 0.89,
-   "phrasing": "door_07"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Sure, how much are people giving?",
-   "est_sec": 1.96,
-   "gap_before": 0.57,
-   "phrasing": "door_07",
+   "text": "Option two is a proper mixer and two XLR microphones, which costs around four hundred.",
+   "est_sec": 4.75,
+   "gap_before": 2.49,
+   "block": "podcasts.opt2",
    "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Anything helps, really.",
-   "est_sec": 1.03,
-   "gap_before": 0.51,
-   "phrasing": "door_07"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Here you go.",
-   "est_sec": 1.03,
-   "gap_before": 1.07,
-   "phrasing": "door_07"
+   "text": "Then there's a portable recorder with built-in mics, good for recording on the go.",
+   "est_sec": 4.44,
+   "gap_before": 1.88,
+   "block": "podcasts.opt2"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'm back. Sorry about that.",
-   "est_sec": 1.96,
-   "gap_before": 3.76,
+   "text": "So that's the list. Thoughts?",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "door_cue_01"
+   "phrasing": "describe_cue_15"
   },
   {
    "speaker": "moshi",
-   "text": "Everything okay at the door? Still thinking about the office exchange, safe or silly?",
-   "est_sec": 4.44,
-   "gap_before": 1.11,
+   "text": "The portable recorder is great if you plan to interview people out in the world. For a studio-style show with a co-host, though, the two XLR microphones will sound noticeably better.",
+   "est_sec": 9.71,
+   "gap_before": 0.74,
    "role": "resume",
-   "block": "holiday_gifts.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Funny, our team loves that stuff.",
-   "est_sec": 1.96,
-   "gap_before": 0.79,
-   "event": "ordinary_request",
-   "block": "holiday_gifts.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then go for it. A desk sized punching bag usually gets a good laugh.",
-   "est_sec": 4.44,
-   "gap_before": 0.94,
-   "role": "followup",
-   "block": "holiday_gifts.ctx2",
+   "block": "podcasts.opt2",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_door"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

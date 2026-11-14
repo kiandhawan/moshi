@@ -7,141 +7,161 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [
-  "early_direct",
-  "early_end",
-  "self_talk"
+  "wait_like"
  ],
  "topics": [
-  "restaurant_choice"
+  "learning_language"
  ],
- "wait_sec": 15,
- "early_end": {
-  "after_sec": 12.9,
-  "direct": true
- },
- "topic": "restaurant_choice",
+ "topic": "learning_language",
  "voices": {
-  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_30",
-  "greet_ans_09",
-  "think_instr_30",
-  "self_24",
-  "early_end_12"
+  "greet_24",
+  "greet_ans_21",
+  "waitlike_06"
  ],
  "block_ids": [
-  "restaurant_choice.ctx2"
+  "learning_language.dlg11"
  ],
- "est_total_sec": 51.14,
- "est_speech_sec": 31.07,
+ "est_total_sec": 59.5,
+ "est_speech_sec": 45.42,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's it going? You doing okay?",
+   "text": "Hey, what's up? How are you doing?",
    "est_sec": 2.27,
-   "gap_before": 0.36,
+   "gap_before": 0.63,
    "role": "greeting",
-   "phrasing": "greet_30",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.99,
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.91,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_21"
   },
   {
    "speaker": "user",
-   "text": "My parents are visiting and I want to take them out for dinner.",
-   "est_sec": 4.13,
-   "gap_before": 0.34,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Nice. Do they like trying new kinds of food, or would they be happier with something familiar like a steakhouse?",
-   "est_sec": 6.3,
-   "gap_before": 0.86,
-   "role": "reply",
-   "block": "restaurant_choice.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Wait, give me fifteen seconds to think and then ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 2.56,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_30"
-  },
-  {
-   "speaker": "user",
-   "text": "No, I really don't know.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 9.41
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_24"
-  },
-  {
-   "speaker": "user",
-   "text": "Never mind, I'm ready.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 12.9
-   },
-   "event": "return_cue",
-   "kind": "early_end",
-   "phrasing": "early_end_12"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Time's up. Which way are we going for dinner with your parents?",
-   "est_sec": 3.82,
-   "gap_before": 0.66,
-   "role": "resume",
-   "block": "restaurant_choice.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Let's try something new, my mom loves surprises.",
-   "est_sec": 2.58,
-   "gap_before": 0.67,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fun. A Lebanese or Ethiopian place with sharing plates could be a great experience.",
+   "text": "Last night I dreamed in Spanish for the first time! Does that mean anything?",
    "est_sec": 4.44,
-   "gap_before": 0.88,
-   "role": "followup",
-   "block": "restaurant_choice.ctx2",
+   "gap_before": 0.38,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a fun milestone. It often means your brain is processing the language more deeply.",
+   "est_sec": 4.75,
+   "gap_before": 1.49,
+   "role": "reply",
+   "block": "learning_language.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Was it real Spanish though? I was speaking it perfectly.",
+   "est_sec": 3.2,
+   "gap_before": 3.12,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, dreams are generous. But it does show that the language is becoming part of your everyday thinking.",
+   "est_sec": 5.68,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "learning_language.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I've been watching a lot of shows lately.",
+   "est_sec": 2.58,
+   "gap_before": 1.06,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That probably helped. Lots of input makes the language feel more natural.",
+   "est_sec": 3.82,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "learning_language.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "So should I keep doing exactly that?",
+   "est_sec": 2.27,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, and add some speaking practice, so your real-life Spanish catches up with dream Spanish.",
+   "est_sec": 4.75,
+   "gap_before": 0.64,
+   "role": "reply",
+   "block": "learning_language.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, repeat that please.",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_06",
+   "block": "learning_language.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. Yes, and add some speaking practice, so your real-life Spanish catches up with dream Spanish.",
+   "est_sec": 5.06,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "learning_language.dlg11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Dream me is very fluent.",
+   "est_sec": 1.65,
+   "gap_before": 0.37,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then dream you has set the bar.",
+   "est_sec": 2.27,
+   "gap_before": 0.37,
+   "role": "reply",
+   "block": "learning_language.dlg11",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

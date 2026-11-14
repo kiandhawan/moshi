@@ -7,120 +7,109 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "travel_planning"
+  "weekend_plans"
  ],
- "topic": "travel_planning",
+ "topic": "weekend_plans",
  "voices": {
-  "user": "e7de86b388864b8cbd50d0d70a3494e5",
+  "user": "cbc3add1f54546e6a4a1964bacb8b122",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_13"
+  "greet_14",
+  "greet_ans_17",
+  "describe_instr_10",
+  "describe_cue_13"
  ],
  "block_ids": [
-  "travel_planning.dlg2"
+  "weekend_plans.opt3"
  ],
- "est_total_sec": 51.47,
- "est_speech_sec": 40.47,
+ "est_total_sec": 55.08,
+ "est_speech_sec": 43.99,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
+   "text": "Hi! How's life treating you?",
    "est_sec": 1.65,
-   "gap_before": 0.72,
+   "gap_before": 0.32,
    "role": "greeting",
-   "phrasing": "greet_02"
+   "phrasing": "greet_14"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.58,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm taking my two kids on their first flight next month. Any tips?",
-   "est_sec": 4.13,
-   "gap_before": 0.49,
-   "event": "ordinary_request",
-   "block": "travel_planning.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Bring snacks, headphones and something new for each of them to unwrap on the plane. Novelty buys you a lot of quiet time.",
-   "est_sec": 7.23,
-   "gap_before": 1.16,
-   "role": "reply",
-   "block": "travel_planning.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Ha, good one. They're four and seven. Will their ears hurt?",
-   "est_sec": 3.51,
-   "gap_before": 0.55,
-   "event": "ordinary_request",
-   "block": "travel_planning.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sometimes during takeoff and landing. Chewing or drinking through a straw really helps.",
-   "est_sec": 4.13,
-   "gap_before": 1.16,
-   "role": "reply",
-   "block": "travel_planning.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Should I get seats near the front or",
-   "est_sec": 2.58,
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
    "gap_before": 0.66,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "My group of friends wants to do something on Saturday night and they've put me in charge, help.",
+   "est_sec": 5.68,
+   "gap_before": 0.36,
+   "block": "weekend_plans.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me get through all the options before you weigh in.",
+   "est_sec": 3.51,
+   "gap_before": 0.89,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_10"
+  },
+  {
+   "speaker": "user",
+   "text": "There's an escape room in town that fits six people, about an hour, and then we could grab food after.",
+   "est_sec": 6.3,
+   "gap_before": 1.05,
+   "block": "weekend_plans.opt3",
    "event": "distractor",
-   "kind": "pause",
-   "block": "travel_planning.dlg2"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "actually, does it matter?",
-   "est_sec": 1.34,
-   "gap_before": 2.08,
-   "event": "ordinary_request",
-   "block": "travel_planning.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Near the front means getting off faster, which is nice with tired kids. Window seats keep them entertained too.",
-   "est_sec": 5.99,
-   "gap_before": 0.75,
-   "role": "reply",
-   "block": "travel_planning.dlg2"
+   "text": "Someone suggested karaoke, private booth, but half of us can't sing and one person hates it.",
+   "est_sec": 5.06,
+   "gap_before": 2.65,
+   "block": "weekend_plans.opt3",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "And can I bring their car seat?",
-   "est_sec": 2.27,
-   "gap_before": 0.43,
-   "event": "ordinary_request",
-   "block": "travel_planning.dlg2"
+   "text": "Or a pub quiz at the local, cheap and easy, though it gets super crowded and loud.",
+   "est_sec": 5.37,
+   "gap_before": 2.02,
+   "block": "weekend_plans.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 0.79,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
   },
   {
    "speaker": "moshi",
-   "text": "Most airlines let you check it for free. Some approved seats can even be used on board, so ask your airline.",
-   "est_sec": 6.61,
-   "gap_before": 0.92,
-   "role": "reply",
-   "block": "travel_planning.dlg2"
+   "text": "The escape room sounds like the winner, it's something everyone can join, and food afterwards gives you time to chat. Karaoke is risky if someone really hates it, and the pub quiz is better on a quieter night.",
+   "est_sec": 11.88,
+   "gap_before": 0.85,
+   "role": "resume",
+   "block": "weekend_plans.opt3"
   }
  ]
 }

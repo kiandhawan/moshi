@@ -7,129 +7,130 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "reading",
+ "wait_type": "reading",
  "conditions": [],
  "topics": [
-  "laptop_buying"
+  "learning_language"
  ],
- "topic": "laptop_buying",
+ "reading": {
+  "material": "text message",
+  "sec": 17.6
+ },
+ "topic": "learning_language",
  "voices": {
-  "user": "026218fe0c054374838d934016f34082",
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_24"
+  "greet_09",
+  "greet_ans_21",
+  "read_instr_07",
+  "ack_02",
+  "murmur_07",
+  "read_cue_10"
  ],
  "block_ids": [
-  "laptop_buying.dlg2"
+  "learning_language.ctx20"
  ],
- "est_total_sec": 51.53,
- "est_speech_sec": 37.37,
+ "est_total_sec": 39.95,
+ "est_speech_sec": 17.95,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.53,
-   "role": "greeting",
-   "phrasing": "greet_03",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Ah, it's been a long day.",
-   "est_sec": 1.96,
-   "gap_before": 0.58,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_24"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it worth getting a touchscreen laptop?",
-   "est_sec": 2.27,
-   "gap_before": 0.43,
-   "event": "ordinary_request",
-   "block": "laptop_buying.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It depends. If you like drawing or taking handwritten notes, yes. For typing and browsing, most people barely use it.",
-   "est_sec": 6.3,
-   "gap_before": 0.85,
-   "role": "reply",
-   "block": "laptop_buying.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I do take a lot of notes in meetings.",
-   "est_sec": 2.89,
-   "gap_before": 1.07,
-   "event": "ordinary_request",
-   "block": "laptop_buying.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then a two in one with a stylus could be really handy. You can fold it flat like a notepad.",
-   "est_sec": 6.3,
-   "gap_before": 1.86,
-   "role": "reply",
-   "block": "laptop_buying.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Do those break more easily, with the",
-   "est_sec": 2.27,
-   "gap_before": 0.63,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "laptop_buying.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "folding hinge and everything?",
+   "text": "Hello! How's it going?",
    "est_sec": 1.34,
-   "gap_before": 2.58,
-   "event": "ordinary_request",
-   "block": "laptop_buying.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Good ones are pretty sturdy these days. Just read reviews about the hinge before you buy.",
-   "est_sec": 5.06,
-   "gap_before": 0.39,
-   "role": "reply",
-   "block": "laptop_buying.dlg2",
+   "gap_before": 0.54,
+   "role": "greeting",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "And does the touchscreen drain the battery?",
-   "est_sec": 2.27,
-   "gap_before": 3.05,
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to start using flashcards for vocabulary.",
+   "est_sec": 2.58,
+   "gap_before": 0.4,
    "event": "ordinary_request",
-   "block": "laptop_buying.dlg2"
+   "block": "learning_language.ctx20"
   },
   {
    "speaker": "moshi",
-   "text": "A little, but not much. The screen brightness matters a lot more than the touch part.",
-   "est_sec": 5.06,
-   "gap_before": 0.69,
+   "text": "Smart. Make your own, or use a ready-made deck?",
+   "est_sec": 2.89,
+   "gap_before": 0.36,
    "role": "reply",
-   "block": "laptop_buying.dlg2",
+   "block": "learning_language.ctx20",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, my sister texted me. Let me read it before you say anything.",
+   "est_sec": 4.44,
+   "gap_before": 1.34,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.55,
+   "role": "ack",
+   "phrasing": "ack_02",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Huh, she's running late.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 14.28
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "murmur_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, finished.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 17.6
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Finished reading? So, are you making them or downloading them?",
+   "est_sec": 3.2,
+   "gap_before": 1.5,
+   "role": "resume",
+   "block": "learning_language.ctx20",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_reading"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

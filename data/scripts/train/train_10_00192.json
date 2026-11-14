@@ -7,119 +7,125 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "early_direct",
-  "early_end"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "books"
+  "pets"
  ],
- "wait_sec": 45,
- "early_end": {
-  "after_sec": 21.7,
-  "direct": true
- },
- "topic": "books",
+ "topic": "pets",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_17",
-  "greet_ans_22",
-  "think_instr_02",
-  "early_end_07"
+  "greet_16",
+  "greet_ans_29",
+  "describe_instr_16",
+  "ack_13",
+  "describe_cue_05"
  ],
  "block_ids": [
-  "books.ctx2"
+  "pets.opt6"
  ],
- "est_total_sec": 59.43,
- "est_speech_sec": 30.35,
+ "est_total_sec": 60.74,
+ "est_speech_sec": 47.91,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there! How's your day?",
-   "est_sec": 1.65,
-   "gap_before": 0.58,
+   "text": "Hi, how are you holding up?",
+   "est_sec": 1.96,
+   "gap_before": 0.48,
    "role": "greeting",
-   "phrasing": "greet_17"
+   "phrasing": "greet_16"
   },
   {
    "speaker": "user",
-   "text": "Pretty relaxed today.",
-   "est_sec": 1.03,
-   "gap_before": 0.8,
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.32,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_22"
+   "phrasing": "greet_ans_29"
   },
   {
    "speaker": "user",
-   "text": "It's my turn to pick the book for our book club.",
-   "est_sec": 3.51,
-   "gap_before": 0.33,
-   "event": "ordinary_request",
-   "block": "books.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Nice. What does the group usually enjoy, and would you rather pick something safe or something that sparks a big debate?",
-   "est_sec": 6.61,
-   "gap_before": 0.34,
-   "role": "reply",
-   "block": "books.ctx2"
+   "text": "My dog chews the door frame when I'm at work, and I'm trying a few ideas.",
+   "est_sec": 5.06,
+   "gap_before": 0.49,
+   "block": "pets.opt6"
   },
   {
    "speaker": "user",
-   "text": "Let me think about it for forty-five seconds and then ask me again.",
-   "est_sec": 4.13,
-   "gap_before": 1.13,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 45,
-   "phrasing": "think_instr_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, never mind, I figured it out.",
-   "est_sec": 2.27,
-   "anchor": {
-    "turn": 4,
-    "offset": 21.7
-   },
-   "event": "return_cue",
-   "kind": "early_end",
-   "phrasing": "early_end_07"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Have you decided which way to go for the club?",
-   "est_sec": 3.2,
-   "gap_before": 0.75,
-   "role": "resume",
-   "block": "books.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Safe. Last month's pick nearly started a fight.",
+   "text": "Listen to all of them first, then comment.",
    "est_sec": 2.58,
-   "gap_before": 1.44,
-   "event": "ordinary_request",
-   "block": "books.ctx2"
+   "gap_before": 0.9,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_16"
   },
   {
    "speaker": "moshi",
-   "text": "Understood. A warm, funny family story is a crowd pleaser and still gives you plenty to discuss.",
-   "est_sec": 5.37,
-   "gap_before": 0.51,
-   "role": "followup",
-   "block": "books.ctx2"
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.57,
+   "role": "ack",
+   "phrasing": "ack_13"
+  },
+  {
+   "speaker": "user",
+   "text": "One idea is a puzzle feeder and a frozen stuffed toy, so he has a job while I'm gone.",
+   "est_sec": 5.99,
+   "gap_before": 1.38,
+   "block": "pets.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a camera with a treat dispenser, I could talk to him and toss treats from my phone.",
+   "est_sec": 5.99,
+   "gap_before": 2.05,
+   "block": "pets.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "My sister thinks I should get a second dog to keep him company, which feels like a big leap.",
+   "est_sec": 5.99,
+   "gap_before": 2.5,
+   "block": "pets.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I could book a trainer to come and look at whether it's boredom or anxiety.",
+   "est_sec": 5.06,
+   "gap_before": 1.14,
+   "block": "pets.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the full list. Go ahead.",
+   "est_sec": 1.96,
+   "gap_before": 0.62,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Start with the puzzle feeder and a long walk before you leave. If the chewing continues, the camera will show you whether he's restless or stressed, and a trainer can take it from there.",
+   "est_sec": 10.64,
+   "gap_before": 0.88,
+   "role": "resume",
+   "block": "pets.opt6"
   }
  ]
 }

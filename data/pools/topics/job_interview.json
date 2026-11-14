@@ -1,160 +1,1854 @@
 {
-  "topic": "job_interview",
-  "contexts": [
+ "topic": "job_interview",
+ "contexts": [
+  {
+   "id": "job_interview.ctx1",
+   "turns": [
     {
-      "id": "job_interview.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I have an interview on Thursday and I'm really nervous."},
-        {"speaker": "moshi", "text": "That's normal, we can practice. Do you want to start with tell me about yourself, or with questions about your weaknesses?"}
-      ],
-      "pending": "which interview question to practice first",
-      "think_reask": [
-        "So, where should we start, the tell me about yourself question or weaknesses?",
-        "Okay, which one do you want to practice first?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were picking which interview question to practice first.",
-        "Hi again. Ready to choose, the introduction question or the weakness one?"
-      ],
-      "endings": [
-        {"user": "Let's do tell me about yourself. I always ramble.", "moshi": "Okay. Aim for about a minute, your current role, one proud achievement, and why you want this job."},
-        {"user": "Weaknesses. That one always trips me up.", "moshi": "Good choice. Pick a real weakness, then explain what you're doing to improve it. Honesty plus progress works best."}
-      ]
+     "speaker": "user",
+     "text": "I have an interview on Thursday and I'm really nervous."
     },
     {
-      "id": "job_interview.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I just got invited to a final round interview."},
-        {"speaker": "moshi", "text": "Congratulations! In person or video?"},
-        {"speaker": "user", "text": "In person, at their office."},
-        {"speaker": "moshi", "text": "Then let's talk outfit. Are you thinking a full suit, or smart casual like a blazer and nice trousers?"}
-      ],
-      "pending": "full suit or smart casual for the interview",
-      "think_reask": [
-        "So, full suit or smart casual for the final round?",
-        "Alright, have you decided what you'll wear to the interview?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were deciding between a suit and smart casual for your interview.",
-        "There you are. Any decision on the interview outfit?"
-      ],
-      "endings": [
-        {"user": "Suit. It's a bank, they're pretty formal.", "moshi": "Then a suit is right. Make sure it's pressed and your shoes are polished, the details get noticed."},
-        {"user": "Smart casual. It's a small design studio.", "moshi": "Good read. A clean blazer over a simple shirt looks polished without feeling stiff."}
-      ]
-    },
-    {
-      "id": "job_interview.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "At the end of interviews they always ask if I have questions, and I never do."},
-        {"speaker": "moshi", "text": "Let's fix that. Would you rather ask about the team and daily work, or about growth and where the role leads?"}
-      ],
-      "pending": "ask about the team or about growth in the role",
-      "think_reask": [
-        "So, what kind of question do you want to ask them, team or growth?",
-        "Okay, have you picked a direction for your questions?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing whether to ask about the team or about growth.",
-        "Hi again. Still thinking about which questions to ask at the end?"
-      ],
-      "endings": [
-        {"user": "The team. I want to know who I'd be working with.", "moshi": "Great. Try asking what a typical week looks like and how the team usually works together."},
-        {"user": "Growth. I don't want to be stuck in the same spot.", "moshi": "Then ask what success looks like after the first year, and how people in this role usually move up."}
-      ]
+     "speaker": "moshi",
+     "text": "That's normal, we can practice. Do you want to start with tell me about yourself, or with questions about your weaknesses?"
     }
-  ],
-  "side_conversations": [
-    {"id": "job_interview.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, can you look at my resume for a second?"},
-      {"speaker": "friend", "text": "Sure. Hmm, it's pretty long."},
-      {"speaker": "user", "text": "Is two pages too much?"},
-      {"speaker": "friend", "text": "For you, yeah. Cut the part about your summer job from college."},
-      {"speaker": "user", "text": "But I learned a lot there."},
-      {"speaker": "friend", "text": "Then mention it in the interview. On paper, keep it focused on this job."}
-    ]},
-    {"id": "job_interview.side2", "turns": [
-      {"speaker": "user", "text": "Do you know how long it takes to get downtown at nine in the morning?"},
-      {"speaker": "friend", "text": "With traffic? At least forty minutes."},
-      {"speaker": "user", "text": "Oh wow. My interview is at nine thirty."},
-      {"speaker": "friend", "text": "Then leave by eight, and grab a coffee nearby if you're early."},
-      {"speaker": "user", "text": "Good idea. Can I borrow your nice umbrella too? It's supposed to rain."},
-      {"speaker": "friend", "text": "Of course. Showing up soaked is not the look."}
-    ]},
-    {"id": "job_interview.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, will you do a quick practice round with me?"},
-      {"speaker": "friend", "text": "Okay. Why do you want to work here?"},
-      {"speaker": "user", "text": "Because I really like their products and I think I could grow a lot."},
-      {"speaker": "friend", "text": "That's kind of generic. What exactly do you like about them?"},
-      {"speaker": "user", "text": "Fair. How about how they help small shops sell online?"},
-      {"speaker": "friend", "text": "Much better. Lead with that and give an example."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "job_interview.dlg1", "turns": [
-      {"speaker": "user", "text": "How do I answer what's your biggest weakness without sounding fake?"},
-      {"speaker": "moshi", "text": "Pick something real but not central to the job. Then show what you've done to get better at it."},
-      {"speaker": "user", "text": "Like what? Give me an example."},
-      {"speaker": "moshi", "text": "You could say you used to take on too much alone, so now you check in with your team earlier on big projects."},
-      {"speaker": "user", "text": "Is saying I'm a perfectionist / a bad idea?"},
-      {"speaker": "moshi", "text": "It usually is. Interviewers hear it constantly and it can sound like you're dodging the question."},
-      {"speaker": "user", "text": "Okay. Mine is probably public speaking."},
-      {"speaker": "moshi", "text": "That's a good honest one. Mention a concrete step, like volunteering to present at team meetings."}
-    ]},
-    {"id": "job_interview.dlg2", "turns": [
-      {"speaker": "user", "text": "I'm going back to work after staying home with my kids for five years. How do I explain the gap?"},
-      {"speaker": "moshi", "text": "Be direct and positive. Say you took time to raise your children and you're excited to get back to work."},
-      {"speaker": "user", "text": "Won't they think my skills are out of date?"},
-      {"speaker": "moshi", "text": "Show them otherwise. Mention any courses, volunteering or projects you did, even small ones."},
-      {"speaker": "user", "text": "I did run the fundraising for the school / for about two years."},
-      {"speaker": "moshi", "text": "That's great experience. Talk about how much you raised and how you organized the volunteers."},
-      {"speaker": "user", "text": "I never thought of that as real work."},
-      {"speaker": "moshi", "text": "It absolutely is. Planning, budgeting and leading people are exactly what employers look for."}
-    ]},
-    {"id": "job_interview.dlg3", "turns": [
-      {"speaker": "user", "text": "Should I send a thank you email after an interview?"},
-      {"speaker": "moshi", "text": "Yes, it's a nice touch. Send it within a day, and keep it short and specific."},
-      {"speaker": "user", "text": "What do I even write in it?"},
-      {"speaker": "moshi", "text": "Thank them for their time, mention one thing you enjoyed discussing, and say you're still excited about the role."},
-      {"speaker": "user", "text": "And if I talked to three people / do I email all of them?"},
-      {"speaker": "moshi", "text": "Ideally, yes, a separate short note to each. Change a line or two so they don't look copied."},
-      {"speaker": "user", "text": "What if I don't hear back in a week?"},
-      {"speaker": "moshi", "text": "Then a polite follow up to the recruiter is totally fine. Just ask if there's any update on the timeline."}
-    ]},
-    {"id": "job_interview.dlg4", "turns": [
-      {"speaker": "user", "text": "This is my first real interview ever, for a summer internship. What should I bring?"},
-      {"speaker": "moshi", "text": "Bring a couple of printed copies of your resume, a notebook and a pen. And a few questions you want to ask."},
-      {"speaker": "user", "text": "Do I need a portfolio or anything?"},
-      {"speaker": "moshi", "text": "Only if the role is creative or technical. A class project you're proud of can be a good thing to show."},
-      {"speaker": "user", "text": "I built a small app for a class / but it's kind of basic."},
-      {"speaker": "moshi", "text": "That's still worth mentioning. Explain what problem it solved and what you learned building it."},
-      {"speaker": "user", "text": "Got it. How early should I show up?"},
-      {"speaker": "moshi", "text": "About ten minutes early is perfect. Earlier than that, wait outside so you don't rush their schedule."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "job_interview.opt1",
-     "lead_in": "I've got a job interview on Thursday and I'm trying to decide how to prepare.",
-     "options": [
-       "The first option is writing out answers to common questions and memorizing them.",
-       "Then there's doing a practice interview with my friend who works in hiring.",
-       "And the last one is spending the time researching the company and their recent projects."
-     ],
-     "moshi_comment": [
-       "The practice interview with your friend is probably the most valuable, since you'll get real feedback. Researching the company is important too, it helps you ask good questions. Memorizing answers word for word can make you sound stiff.",
-       "Is this a company you know a lot about already? If not, spend an evening on research, then do the practice interview. Just jot down key points for common questions instead of memorizing full answers."
-     ]},
-    {"id": "job_interview.opt2",
-     "lead_in": "I got two job offers and a maybe on a third, and I need help thinking it through.",
-     "options": [
-       "The first one pays the most, but it's an hour commute each way and the team seemed kind of tense.",
-       "Then there's a smaller company, a bit less money, but fully remote with a really friendly manager.",
-       "Option three is a big company with great benefits and training, but the role is pretty junior.",
-       "And the last one is the maybe, a startup doing something exciting, but they haven't made an offer yet."
-     ],
-     "moshi_comment": [
-       "The remote job with the friendly manager sounds really appealing, a good boss makes a huge difference day to day. The highest paying job might not be worth two hours of commuting and a tense team. The big company is a solid choice if you want training and stability.",
-       "What matters most to you right now, money, growth, or quality of life? If it's quality of life, the remote job is the clear pick. I wouldn't wait too long on the startup, since they haven't even made an offer."
-     ]}
-  ]
+   ],
+   "pending": "which interview question to practice first",
+   "think_reask": [
+    "So, where should we start, the tell me about yourself question or weaknesses?",
+    "Okay, which one do you want to practice first?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were picking which interview question to practice first.",
+    "Hi again. Ready to choose, the introduction question or the weakness one?"
+   ],
+   "endings": [
+    {
+     "user": "Let's do tell me about yourself. I always ramble.",
+     "moshi": "Okay. Aim for about a minute, your current role, one proud achievement, and why you want this job."
+    },
+    {
+     "user": "Weaknesses. That one always trips me up.",
+     "moshi": "Good choice. Pick a real weakness, then explain what you're doing to improve it. Honesty plus progress works best."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just got invited to a final round interview."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Congratulations! In person or video?"
+    },
+    {
+     "speaker": "user",
+     "text": "In person, at their office."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then let's talk outfit. Are you thinking a full suit, or smart casual like a blazer and nice trousers?"
+    }
+   ],
+   "pending": "full suit or smart casual for the interview",
+   "think_reask": [
+    "So, full suit or smart casual for the final round?",
+    "Alright, have you decided what you'll wear to the interview?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were deciding between a suit and smart casual for your interview.",
+    "There you are. Any decision on the interview outfit?"
+   ],
+   "endings": [
+    {
+     "user": "Suit. It's a bank, they're pretty formal.",
+     "moshi": "Then a suit is right. Make sure it's pressed and your shoes are polished, the details get noticed."
+    },
+    {
+     "user": "Smart casual. It's a small design studio.",
+     "moshi": "Good read. A clean blazer over a simple shirt looks polished without feeling stiff."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "At the end of interviews they always ask if I have questions, and I never do."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let's fix that. Would you rather ask about the team and daily work, or about growth and where the role leads?"
+    }
+   ],
+   "pending": "ask about the team or about growth in the role",
+   "think_reask": [
+    "So, what kind of question do you want to ask them, team or growth?",
+    "Okay, have you picked a direction for your questions?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing whether to ask about the team or about growth.",
+    "Hi again. Still thinking about which questions to ask at the end?"
+   ],
+   "endings": [
+    {
+     "user": "The team. I want to know who I'd be working with.",
+     "moshi": "Great. Try asking what a typical week looks like and how the team usually works together."
+    },
+    {
+     "user": "Growth. I don't want to be stuck in the same spot.",
+     "moshi": "Then ask what success looks like after the first year, and how people in this role usually move up."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "They're definitely going to ask my salary expectations tomorrow and I freeze every time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let's plan it. Would you rather name a range you've researched, or turn it back and ask what budget they have for the role?"
+    }
+   ],
+   "pending": "name a salary range or ask for their budget",
+   "think_reask": [
+    "So, when salary comes up, will you give a range or ask for theirs first?",
+    "Okay, tomorrow's money question. Range, or ask them first?"
+   ],
+   "welcome_back": [
+    "The salary question. Are you naming a range or asking for their budget?",
+    "We'd got to the money part. Leaning toward giving a number or flipping it back?"
+   ],
+   "endings": [
+    {
+     "user": "I'll name a range. I looked it up and I know what's fair.",
+     "moshi": "Good. Put the number you actually want near the bottom of the range, not the top."
+    },
+    {
+     "user": "Ask them first. I don't want to lowball myself.",
+     "moshi": "Fair. If they push back, have your range ready anyway so you don't get caught out."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Disaster. Two companies just scheduled interviews at the exact same time on Monday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Annoying, but fixable. Which one would you rather move, the startup or the bank?"
+    }
+   ],
+   "pending": "reschedule the startup or the bank interview",
+   "think_reask": [
+    "So, which interview are you asking to move, the startup or the bank?",
+    "Have you picked? Startup or bank, which one gets the reschedule request?"
+   ],
+   "welcome_back": [
+    "Monday's clash. Moving the startup or the bank?",
+    "Still need to sort out the double booking. Which one are you rescheduling?"
+   ],
+   "endings": [
+    {
+     "user": "The startup. They seemed much more flexible on the phone.",
+     "moshi": "Makes sense. Email them today and offer two or three alternative slots to make it easy."
+    },
+    {
+     "user": "The bank. Honestly, the startup is the one I really want.",
+     "moshi": "Then protect that slot. Big companies usually handle a polite reschedule request just fine."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Final round is a panel interview and then a fifteen minute presentation. I've got three evenings to prepare."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty if we split it well. Want to start with the presentation, or with practising answers for the panel?"
+    }
+   ],
+   "pending": "prepare the presentation first or panel answers first",
+   "think_reask": [
+    "So, presentation first, or the panel questions?",
+    "Three evenings. Which are you tackling first, slides or answers?"
+   ],
+   "welcome_back": [
+    "Where to start with your final round. Presentation or panel practice?",
+    "So, slides tonight, or interview answers tonight?"
+   ],
+   "endings": [
+    {
+     "user": "Presentation. It scares me more.",
+     "moshi": "Good instinct. Draft it tonight, rehearse it tomorrow, and save the last evening for the panel."
+    },
+    {
+     "user": "Panel questions. The presentation is mostly stuff I already know.",
+     "moshi": "Then let's run through likely questions now and leave one evening for timing the talk."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a teacher trying to move into UX design and I have an interview next week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big switch, and teaching is great background for it. Do you want to lead with your classroom skills, or open with the portfolio projects you've done?"
+    }
+   ],
+   "pending": "lead with teaching skills or with portfolio projects",
+   "think_reask": [
+    "So, are you opening with your teaching background or your portfolio?",
+    "Decided how you'll introduce yourself? Classroom first, or projects first?"
+   ],
+   "welcome_back": [
+    "Your UX interview. Starting with teaching, or with the portfolio?",
+    "Back to how you'll open. Classroom experience or design work?"
+   ],
+   "endings": [
+    {
+     "user": "Portfolio first. I want them to see me as a designer.",
+     "moshi": "Good. Then weave teaching in when they ask how you understand users, it's a perfect example."
+    },
+    {
+     "user": "Teaching first. It's the thing that makes me different.",
+     "moshi": "Nice angle. Just link it fast to the design work so they don't think you're still a teacher at heart."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My mum says I should walk into cafes with my CV, but everyone does it online now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How old are you, and what kind of job is it?"
+    },
+    {
+     "speaker": "user",
+     "text": "Sixteen. Just weekend shifts, anywhere."
+    },
+    {
+     "speaker": "moshi",
+     "text": "For weekend cafe work, both can work. Do you want to try dropping in with your CV, or apply online first?"
+    }
+   ],
+   "pending": "hand in CV in person or apply online",
+   "think_reask": [
+    "So, are you walking in with your CV or applying online?",
+    "Okay, weekend job hunt. In person or online?"
+   ],
+   "welcome_back": [
+    "The cafe job. Going in with your CV, or doing it online?",
+    "So, are you going to brave the cafe counters, or start with online forms?"
+   ],
+   "endings": [
+    {
+     "user": "I'll go in. If I chicken out I can always do online after.",
+     "moshi": "Good plan. Go mid afternoon when it's quiet, and ask for the manager by name if you can."
+    },
+    {
+     "user": "Online. Walking in sounds terrifying.",
+     "moshi": "That's fine. Follow up with a short visit a few days later, it makes you stand out."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "A recruiter is calling me tomorrow, and I already have an offer from somewhere else."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a strong position. Do you want to tell her about the other offer, or keep it to yourself for now?"
+    }
+   ],
+   "pending": "mention the other offer to the recruiter or not",
+   "think_reask": [
+    "So, are you telling the recruiter about the other offer?",
+    "Okay, tomorrow's call. Mention the offer or keep quiet?"
+   ],
+   "welcome_back": [
+    "The recruiter call. Telling her about your offer, or not?",
+    "We'd stopped at whether to mention the competing offer. Made up your mind?"
+   ],
+   "endings": [
+    {
+     "user": "I'll tell her. It might speed things up.",
+     "moshi": "It usually does. Share the deadline you're working to, not the exact salary."
+    },
+    {
+     "user": "Not yet. I want to see if they're even interested first.",
+     "moshi": "Reasonable. Just don't let it sit too long, or you'll lose the leverage."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "That interview went so badly. I totally blanked on the question about teamwork."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oof, that happens. For the follow up email, do you want to briefly address that answer, or keep it to a simple thank you?"
+    }
+   ],
+   "pending": "address the bad answer in the follow up or just thank them",
+   "think_reask": [
+    "So, the follow up email. Fix the teamwork answer, or just say thanks?",
+    "Okay, which way for the email, addressing the blank moment or a plain thank you?"
+   ],
+   "welcome_back": [
+    "The follow up email. Are you mentioning the teamwork answer?",
+    "So, plain thank you, or a quick second go at that question?"
+   ],
+   "endings": [
+    {
+     "user": "I'll address it. Two sentences, with the example I should have given.",
+     "moshi": "Good. Keep it confident, not apologetic, and they'll remember the fix more than the blank."
+    },
+    {
+     "user": "Just a thank you. I don't want to draw attention to it.",
+     "moshi": "That's fine too. Keep it warm and mention one thing you liked from the conversation."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Video interview at nine tomorrow. My flat is tiny."
+    },
+    {
+     "speaker": "moshi",
+     "text": "We'll make it work. Is the better spot your kitchen table, or your desk in the bedroom?"
+    }
+   ],
+   "pending": "kitchen table or bedroom desk for the video interview",
+   "think_reask": [
+    "So, kitchen table or bedroom desk for the call?",
+    "Okay, nine o'clock call. Where are you setting up?"
+   ],
+   "welcome_back": [
+    "Your video interview spot. Kitchen or bedroom?",
+    "Still picking where to sit tomorrow. Kitchen or the desk?"
+   ],
+   "endings": [
+    {
+     "user": "Kitchen. Better light from the window.",
+     "moshi": "Great. Face the window, not with it behind you, and move anything messy out of shot."
+    },
+    {
+     "user": "Bedroom desk. It's quieter.",
+     "moshi": "Fine choice. Just make sure the bed isn't in frame, or hang a sheet behind you."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I got let go from my last job and I'm terrified they'll ask about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a fear lots of people have. Would you rather bring it up yourself early on, or wait and answer only if they ask?"
+    }
+   ],
+   "pending": "raise being let go early or wait until asked",
+   "think_reask": [
+    "So, are you bringing up the last job yourself, or waiting for them to ask?",
+    "Decided how to handle it? Raise it first or only if it comes up?"
+   ],
+   "welcome_back": [
+    "About your last job. Mention it up front, or wait?",
+    "We'd stopped on how to handle being let go. Which approach feels right?"
+   ],
+   "endings": [
+    {
+     "user": "Wait. If they ask, I'll be honest and keep it short.",
+     "moshi": "Good. One sentence on what happened, then move straight to what you learned and why this role fits."
+    },
+    {
+     "user": "I'd rather say it early so it's not hanging over me.",
+     "moshi": "That can work. Keep it calm and brief, then steer quickly to your strengths."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "job_interview.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you look at my resume for a second?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. Hmm, it's pretty long."
+    },
+    {
+     "speaker": "user",
+     "text": "Is two pages too much?"
+    },
+    {
+     "speaker": "friend",
+     "text": "For you, yeah. Cut the part about your summer job from college."
+    },
+    {
+     "speaker": "user",
+     "text": "But I learned a lot there."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then mention it in the interview. On paper, keep it focused on this job."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do you know how long it takes to get downtown at nine in the morning?"
+    },
+    {
+     "speaker": "friend",
+     "text": "With traffic? At least forty minutes."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh wow. My interview is at nine thirty."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then leave by eight, and grab a coffee nearby if you're early."
+    },
+    {
+     "speaker": "user",
+     "text": "Good idea. Can I borrow your nice umbrella too? It's supposed to rain."
+    },
+    {
+     "speaker": "friend",
+     "text": "Of course. Showing up soaked is not the look."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, will you do a quick practice round with me?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Okay. Why do you want to work here?"
+    },
+    {
+     "speaker": "user",
+     "text": "Because I really like their products and I think I could grow a lot."
+    },
+    {
+     "speaker": "friend",
+     "text": "That's kind of generic. What exactly do you like about them?"
+    },
+    {
+     "speaker": "user",
+     "text": "Fair. How about how they help small shops sell online?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Much better. Lead with that and give an example."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can I borrow your navy tie? Mine has a stain right in the middle."
+    },
+    {
+     "speaker": "friend",
+     "text": "Which one, the plain one or the one with tiny dots?"
+    },
+    {
+     "speaker": "user",
+     "text": "Plain. Dots feel too cheerful for a law firm."
+    },
+    {
+     "speaker": "friend",
+     "text": "Top drawer. And don't you dare spill coffee on it."
+    },
+    {
+     "speaker": "user",
+     "text": "I won't be drinking coffee, I'm shaking enough already."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So if I get this job, would you actually be okay moving up north?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Honestly? I've been thinking about it all week."
+    },
+    {
+     "speaker": "user",
+     "text": "And?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I'd miss my sister. But my work is remote anyway, so it's not like I'd lose anything there."
+    },
+    {
+     "speaker": "user",
+     "text": "We could come back every month or so."
+    },
+    {
+     "speaker": "friend",
+     "text": "Every month is a lot of driving. Let's see if you even get an offer before we start packing boxes."
+    },
+    {
+     "speaker": "user",
+     "text": "Fair. You're right, one step at a time."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, you worked there for two years. What's the manager actually like?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Diane? Sharp, a bit intimidating at first, but fair."
+    },
+    {
+     "speaker": "user",
+     "text": "Intimidating how?"
+    },
+    {
+     "speaker": "friend",
+     "text": "She asks follow up questions until she gets to the real answer. Don't give her vague stuff."
+    },
+    {
+     "speaker": "user",
+     "text": "Good to know. Does she care about the degree thing? I never finished mine."
+    },
+    {
+     "speaker": "friend",
+     "text": "Not really. She cares whether you can show her actual work. Bring examples."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll print a couple of the reports I did last year."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "job_interview.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I answer what's your biggest weakness without sounding fake?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick something real but not central to the job. Then show what you've done to get better at it."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what? Give me an example."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could say you used to take on too much alone, so now you check in with your team earlier on big projects."
+    },
+    {
+     "speaker": "user",
+     "text": "Is saying I'm a perfectionist / a bad idea?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It usually is. Interviewers hear it constantly and it can sound like you're dodging the question."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Mine is probably public speaking."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a good honest one. Mention a concrete step, like volunteering to present at team meetings."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm going back to work after staying home with my kids for five years. How do I explain the gap?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Be direct and positive. Say you took time to raise your children and you're excited to get back to work."
+    },
+    {
+     "speaker": "user",
+     "text": "Won't they think my skills are out of date?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Show them otherwise. Mention any courses, volunteering or projects you did, even small ones."
+    },
+    {
+     "speaker": "user",
+     "text": "I did run the fundraising for the school / for about two years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's great experience. Talk about how much you raised and how you organized the volunteers."
+    },
+    {
+     "speaker": "user",
+     "text": "I never thought of that as real work."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It absolutely is. Planning, budgeting and leading people are exactly what employers look for."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I send a thank you email after an interview?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, it's a nice touch. Send it within a day, and keep it short and specific."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I even write in it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Thank them for their time, mention one thing you enjoyed discussing, and say you're still excited about the role."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I talked to three people / do I email all of them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ideally, yes, a separate short note to each. Change a line or two so they don't look copied."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I don't hear back in a week?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a polite follow up to the recruiter is totally fine. Just ask if there's any update on the timeline."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "This is my first real interview ever, for a summer internship. What should I bring?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring a couple of printed copies of your resume, a notebook and a pen. And a few questions you want to ask."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need a portfolio or anything?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Only if the role is creative or technical. A class project you're proud of can be a good thing to show."
+    },
+    {
+     "speaker": "user",
+     "text": "I built a small app for a class / but it's kind of basic."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's still worth mentioning. Explain what problem it solved and what you learned building it."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it. How early should I show up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About ten minutes early is perfect. Earlier than that, wait outside so you don't rush their schedule."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a nurse applying for a job in a new hospital. How do I answer tell me about yourself without just reading my CV?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Think of it as a short story in three parts. Where you are now, one thing you're proud of, and why this job is the next step."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Now I'm on a surgical ward, eight years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good start. What's something from those years that you'd love them to know?"
+    },
+    {
+     "speaker": "user",
+     "text": "I set up a / sort of buddy system for new nurses, so nobody's alone on their first night shifts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's excellent. It shows care and leadership. Put that right in the middle."
+    },
+    {
+     "speaker": "user",
+     "text": "And the why this job bit?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Link it to them. Something like, your hospital is investing in training, and that's exactly where I want to grow."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My interview is in English and it's not my first language. I'm scared they will judge my accent."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Your accent isn't the issue, being understood is, and you're very clear right now. What part worries you most?"
+    },
+    {
+     "speaker": "user",
+     "text": "When they ask a question I don't understand fully."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's completely fine to say, sorry, could you repeat that, or could you say it another way? Good interviewers expect that."
+    },
+    {
+     "speaker": "user",
+     "text": "It doesn't look weak?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. It looks careful. Rushing an answer to the wrong question is much worse."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Maybe I can practise / some answers with you now?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Of course. Let's start with an easy one. Why do you want to work for this company?"
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Weird question, but my hands get really sweaty and I hate shaking hands at interviews."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not weird at all, it's really common. A few small things help a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Run your hands under cold water just before you go in, and keep a tissue in your pocket to dab them in reception."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they're still damp?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A firm, quick handshake and a smile. Most people won't notice, and nobody will remember it after the first minute."
+    },
+    {
+     "speaker": "user",
+     "text": "Right. I always think / it's the only thing they'll remember about me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They'll remember your answers. The handshake is two seconds of a forty five minute conversation."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "They've invited me to a group interview. Eight candidates at once. How does that even work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually there are group tasks, like solving a problem together, while assessors watch how everyone interacts."
+    },
+    {
+     "speaker": "user",
+     "text": "So do I need to be the loudest?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, that often backfires. They tend to look for people who listen, build on others' ideas, and help the group get somewhere."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm quite quiet, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That can be a strength. Say something early so you're part of it, then try to bring in someone who hasn't spoken yet."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's a good trick."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It shows teamwork without needing to dominate. And keep an eye on the time if nobody else does."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm sixty three and applying for a part time job at a garden centre. I'm worried they'll think I'm overqualified."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What did you do before?"
+    },
+    {
+     "speaker": "user",
+     "text": "Thirty years as a bank branch manager."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lot of experience with customers and teams. The key is showing why you genuinely want this particular job now."
+    },
+    {
+     "speaker": "user",
+     "text": "Honestly, I just love plants and I want less stress."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Say exactly that. It's honest and it reassures them you won't leave for something bigger in a month."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I play down the manager thing / or is that silly?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't hide it. Just frame it as, I've done the big job, now I want to work with my hands and help people."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm interviewing for a team lead job and the panel includes two of my current colleagues. That's so awkward."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can feel strange. Do you get on with them?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, mostly. One of them also applied, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then be professional and treat it like a real interview, even though they know you. Don't skip details because you assume they already know."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I mention specific things / we did together, or is that weird?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mention them. Concrete examples they witnessed are actually powerful, because they can confirm them."
+    },
+    {
+     "speaker": "user",
+     "text": "And with the colleague who also applied?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stay friendly before and after. However it goes, you'll still be working together on Monday."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I ask about working from home without looking like I don't want to work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask it as a question about how the team works, not about what you want."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what exactly?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Something like, how does the team usually split time between the office and home? It's neutral and practical."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they say everyone's in five days?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you've learned something important before accepting. You don't have to argue in the interview itself."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I bring it up / in the first round already?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually the second round or when an offer is near is better. In the first round, focus on showing you're right for the job."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How early should I actually turn up to an interview?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Aim to be in the building about ten minutes before. Earlier than that can put pressure on the interviewer."
+    },
+    {
+     "speaker": "user",
+     "text": "Really? I thought earlier was always better."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Getting to the area early is great. Just wait in a cafe nearby rather than in their reception for half an hour."
+    },
+    {
+     "speaker": "user",
+     "text": "What if the train's late?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Leave enough buffer for one delay, and save the recruiter's number in your phone so you can call if something goes wrong."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll plan to be / there like forty minutes early and then wander around."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Use that time for a quick look over your notes and a glass of water."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I didn't get the job after the final round. Is it pushy to ask for feedback?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not pushy at all, and it often helps. A short, polite email is the way to go."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I say?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Thank them for their time, say you're disappointed but keen to improve, and ask if they'd share anything you could do differently."
+    },
+    {
+     "speaker": "user",
+     "text": "They probably won't reply."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some won't, but plenty do. And it leaves a good impression if another role opens up."
+    },
+    {
+     "speaker": "user",
+     "text": "I guess. I'm still / pretty gutted honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's completely understandable. Getting to a final round means you were close. Give yourself a day before jumping into the next one."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got a coding interview with a whiteboard round next week and I panic when someone watches me write code."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's really common. The best trick is talking out loud as you go, so they're following your thinking, not just watching."
+    },
+    {
+     "speaker": "user",
+     "text": "Even when I don't know the answer yet?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Especially then. Say what you're considering, why you'd rule something out. Interviewers often care more about that than the perfect solution."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I get totally stuck?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Say so, and try a simpler version of the problem first. It shows you can break things down."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I practise on paper or / on an actual whiteboard?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Paper's fine, but practise without a computer and with a friend or a timer. The pressure is what you're training for."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm autistic and I find eye contact and small talk in interviews really draining. Can I ask for changes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, you can ask for reasonable adjustments. Many employers are used to it and will happily help."
+    },
+    {
+     "speaker": "user",
+     "text": "What kind of adjustments are normal?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Getting the questions in writing beforehand, a quiet waiting area, or knowing exactly who'll be in the room. Some people ask for a little extra time to answer."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I have to say why?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can share as much or as little as you like. Saying it helps you give your best answers is often enough."
+    },
+    {
+     "speaker": "user",
+     "text": "And eye contact during the interview itself?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Looking at the interviewer's forehead or the bridge of their nose looks natural to them and is often easier."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Every interview asks where do you see yourself in five years and I just have no idea."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's fine, they don't need a master plan. They mostly want to know you'll grow and stick around for a while."
+    },
+    {
+     "speaker": "user",
+     "text": "So I can just make something up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Better to say something honest but general. For example, I'd like to be really skilled at this work and maybe leading small projects."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I actually want to change careers eventually?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Leave that out. Focus on the next few years in this kind of role."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. So / honest, but not every detail."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Honest, focused, and tied to what this job can offer you."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have a phone screening tomorrow. Is it different from a normal interview?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's usually shorter and more about checking the basics, like your experience, availability and salary range."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I have notes in front of me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, that's one of the perks. Just don't read them out word for word, it's easy to hear."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I stand or sit?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some people find standing makes their voice more energetic. Smiling while you talk also comes through in your tone."
+    },
+    {
+     "speaker": "user",
+     "text": "I always feel weird talking to a stranger / with no face to look at."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Find a quiet spot and imagine you're chatting to a friendly colleague. It's a conversation, not an exam."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "They offered me the job! But the salary is a bit lower than I hoped. Can I negotiate?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Congratulations! And yes, negotiating a fair offer is normal. How far off is it?"
+    },
+    {
+     "speaker": "user",
+     "text": "About three thousand less than what I asked for."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a reasonable gap to try closing. Thank them warmly, then say you're excited but were hoping for a figure closer to your original number."
+    },
+    {
+     "speaker": "user",
+     "text": "What if they say no?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then ask about other things, like an earlier pay review, extra holiday, or a training budget."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm scared they'll take back the offer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's very rare when you're polite and reasonable. Companies expect some negotiation."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm seventeen, going for a Christmas job at a toy shop. What will they ask?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably simple things. When you're free, why you want to work there, and how you'd handle a busy shop."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I say for why I want to work there? Money?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Money's honest, but add something else. Maybe that you like helping people or that you know lots about games and toys."
+    },
+    {
+     "speaker": "user",
+     "text": "I do know a lot about board games."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect, mention that. Shops love staff who can actually recommend things."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they ask about / a time I worked in a team? I've never had a job."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use school or a club. A group project or a sports team counts. Just say what you did and how it turned out."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I research a company before an interview? I usually just skim the homepage."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Go a bit deeper. Read their about page, a couple of recent news articles, and look at what they post on social media."
+    },
+    {
+     "speaker": "user",
+     "text": "That's a lot of reading."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Half an hour is plenty. You're looking for two or three things you can mention naturally."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what kind of things?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A recent project, a value they talk about, or a new product. Then link it to yourself, like, I saw you launched this, and I'd love to work on something similar."
+    },
+    {
+     "speaker": "user",
+     "text": "And should I look up / the person interviewing me too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A quick look at their professional profile is fine. Just don't bring up anything personal."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a chef and they want me to do a trial shift instead of a normal interview. What should I expect?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually a few hours in the kitchen, working a section or cooking a dish for the head chef. They're watching how you work as much as the food."
+    },
+    {
+     "speaker": "user",
+     "text": "How I work, like speed?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Speed, cleanliness, how you take instructions, and how you get on with the team under pressure."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I bring my own knives?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, and your whites if you have them. Ask beforehand, but most chefs expect you to bring your own kit."
+    },
+    {
+     "speaker": "user",
+     "text": "I always get flustered / when the head chef shouts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stay calm, say yes chef, and keep going. They're often testing how you handle that more than anything."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I spent twelve years in the army and civilian employers don't seem to get what I did."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a common challenge. The trick is translating military language into everyday business terms."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what? I was a logistics sergeant."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Instead of rank, talk about responsibilities. For example, I managed a team of fifteen and moved equipment worth millions across three countries."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds way more impressive."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is impressive. You just need to say it in their language. Leadership, planning, working under pressure, these are all huge."
+    },
+    {
+     "speaker": "user",
+     "text": "What about the jargon / I use without even noticing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask a civilian friend to listen to your answers and stop you every time they don't understand a word."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, confession. I said on my CV that I'm advanced in spreadsheets and I'm really not."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, honest question. How long until the interview?"
+    },
+    {
+     "speaker": "user",
+     "text": "Two weeks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you have two options. Learn enough to be genuinely solid in that time, or be honest in the interview and say intermediate."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I actually learn that much in two weeks?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can get far. Focus on formulas, sorting and filtering, and basic charts. There are free tutorials for all of that."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they test me / on something I don't know?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then admit it and explain how you'd find out. Pretending usually falls apart, but honesty plus curiosity tends to land well."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm four months pregnant and I've got an interview next week. Do I have to tell them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, you're not legally required to tell them in many countries, and they shouldn't ask. It's your choice."
+    },
+    {
+     "speaker": "user",
+     "text": "But won't it feel sneaky if I get the job?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. Lots of people choose to mention it after an offer, when it's about planning, not hiring."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I start showing by then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's up to you whether you say anything. Focus on your skills, that's what the interview is for."
+    },
+    {
+     "speaker": "user",
+     "text": "I just don't want it / to count against me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's understandable. If it ever seemed to affect their decision, that would be discrimination, and you'd have the right to challenge it."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The interviewer was so rude. Checked his phone constantly and cut me off. And now they've offered me the job."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mixed signals. Would he be your direct manager?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes, unfortunately."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's worth thinking about seriously. One bad day can happen, but how someone treats candidates often shows how they treat their team."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I find out if he's always like that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask if you can talk to someone on the team before accepting. A quick chat with a future colleague tells you a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Is that a normal thing to ask?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally normal, especially after an offer. If they say no, that's information too."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friend says I look bored in interviews. I'm not, it's just my face."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, resting serious face. Body language can fix a lot of that."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what? I can't just grin the whole time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, but lean forward slightly when they talk, nod now and then, and smile when you greet them and when you're talking about something you enjoy."
+    },
+    {
+     "speaker": "user",
+     "text": "I also tend to cross my arms."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try resting your hands loosely on the table instead. It looks more open and you'll feel less stiff."
+    },
+    {
+     "speaker": "user",
+     "text": "Feels weird / but okay, I'll try it in the mirror."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even better, record yourself answering a question on your phone. You'll see straight away what your friend means."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you do a quick mock interview with me? Just one question."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. Tell me about a time you made a mistake at work, and what you did about it."
+    },
+    {
+     "speaker": "user",
+     "text": "Um, okay. Once I sent an invoice to the wrong client, and / I didn't notice until they emailed me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Go on, what happened next?"
+    },
+    {
+     "speaker": "user",
+     "text": "I apologised, sent the right one, and set up a checklist so it wouldn't happen again."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a solid answer. The checklist is the best part, so say it with a bit more confidence."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I say how the client reacted?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, if it ended well. Something like, they appreciated the quick fix, rounds it off nicely."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friend's company is hiring and she offered to set up a coffee with her boss. Is that an interview or not?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's informal, but treat it as a gentle interview. First impressions still count."
+    },
+    {
+     "speaker": "user",
+     "text": "So I should dress up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Smart casual is right. Not a suit, but something neat."
+    },
+    {
+     "speaker": "user",
+     "text": "And what do we even talk about?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask about their work and what the team needs. Mention your background briefly, but let it feel like a conversation."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I ask about the job / directly, or is that too forward?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, near the end. Something like, I'd love to hear more about the role your team is hiring for."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have a job talk for a lecturer post. Forty minutes to the whole department. I'm terrified."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a big one. Is it a talk about your research or a teaching demo?"
+    },
+    {
+     "speaker": "user",
+     "text": "Research, and then questions."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then keep it clear for people outside your exact field. Start with why the question matters, then your findings, then where you'd take it next."
+    },
+    {
+     "speaker": "user",
+     "text": "My PhD supervisor says I go too deep into methods."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Listen to that. Give methods just enough to be trusted, and save the details for questions."
+    },
+    {
+     "speaker": "user",
+     "text": "And when someone asks a hostile question?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Thank them, take a breath, and answer the part you can. It's fine to say, that's a great point, I'd want to look into it further."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm retired and I've applied to volunteer as a guide at the local history museum. Is there really an interview?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often there is, though it's usually relaxed. They want to know you're reliable and enjoy talking to visitors."
+    },
+    {
+     "speaker": "user",
+     "text": "I do love talking. My wife says too much."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's actually useful for a guide. Just show you can also listen and adjust to who's in front of you."
+    },
+    {
+     "speaker": "user",
+     "text": "Like children, you mean?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. A school group needs something different from a group of local historians."
+    },
+    {
+     "speaker": "user",
+     "text": "I suppose I could / tell them about the tours I used to give at the church."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's perfect. It shows you've done something similar and enjoyed it."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Consulting firm. Case interview. I have no idea what that is."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They give you a business problem, like why a company's profits are falling, and you work through it out loud with them."
+    },
+    {
+     "speaker": "user",
+     "text": "With no data?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They'll give you some as you ask. The point is to structure the problem, ask good questions, and do some quick maths."
+    },
+    {
+     "speaker": "user",
+     "text": "Maths in my head. Brilliant."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's usually simple percentages and multiplication. Practise doing it out loud and round numbers to keep it easy."
+    },
+    {
+     "speaker": "user",
+     "text": "Any books or anything?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "There are popular case prep books and plenty of free practice cases online. Doing a few with a friend is the best preparation."
+    }
+   ]
+  },
+  {
+   "id": "job_interview.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's midnight, my interview is at ten, and I can't sleep."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's so normal the night before. Have you prepared what you can?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes. I've gone over everything like twenty times."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the preparation is done. Going over it again now will just keep your brain buzzing."
+    },
+    {
+     "speaker": "user",
+     "text": "But what if I forget everything tomorrow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You won't. Preparation sticks. Try writing down any worries on a piece of paper, then put it away."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I still / can't fall asleep?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Just rest with your eyes closed. Even a quiet, lying down rest helps, and nerves will give you energy in the morning."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "job_interview.opt1",
+   "lead_in": "I've got a job interview on Thursday and I'm trying to decide how to prepare.",
+   "options": [
+    "The first option is writing out answers to common questions and memorizing them.",
+    "Then there's doing a practice interview with my friend who works in hiring.",
+    "And the last one is spending the time researching the company and their recent projects."
+   ],
+   "moshi_comment": [
+    "The practice interview with your friend is probably the most valuable, since you'll get real feedback. Researching the company is important too, it helps you ask good questions. Memorizing answers word for word can make you sound stiff.",
+    "Is this a company you know a lot about already? If not, spend an evening on research, then do the practice interview. Just jot down key points for common questions instead of memorizing full answers."
+   ]
+  },
+  {
+   "id": "job_interview.opt2",
+   "lead_in": "I got two job offers and a maybe on a third, and I need help thinking it through.",
+   "options": [
+    "The first one pays the most, but it's an hour commute each way and the team seemed kind of tense.",
+    "Then there's a smaller company, a bit less money, but fully remote with a really friendly manager.",
+    "Option three is a big company with great benefits and training, but the role is pretty junior.",
+    "And the last one is the maybe, a startup doing something exciting, but they haven't made an offer yet."
+   ],
+   "moshi_comment": [
+    "The remote job with the friendly manager sounds really appealing, a good boss makes a huge difference day to day. The highest paying job might not be worth two hours of commuting and a tense team. The big company is a solid choice if you want training and stability.",
+    "What matters most to you right now, money, growth, or quality of life? If it's quality of life, the remote job is the clear pick. I wouldn't wait too long on the startup, since they haven't even made an offer."
+   ]
+  },
+  {
+   "id": "job_interview.opt3",
+   "lead_in": "I found three job postings I like and I can only realistically prepare properly for one this week.",
+   "options": [
+    "A marketing coordinator role at a small charity, lower pay but a mission I really care about.",
+    "A junior brand manager job at a big drinks company, great salary and a long hiring process.",
+    "Or a social media role at an agency, fast paced, and they want someone to start right away."
+   ],
+   "moshi_comment": [
+    "The charity role matches your values, and small teams often hire faster. The drinks company pays best, but a long process means you can apply now and prepare later. The agency is the quickest route to a job, though fast paced can mean burnout.",
+    "If you need income soon, the agency makes sense to prepare for first. If you can wait, the charity is the one you sound most excited about. I'd send the drinks company application now anyway, since that process will take weeks."
+   ]
+  },
+  {
+   "id": "job_interview.opt4",
+   "lead_in": "They'll ask me about a time I handled a challenge, and I've got a few stories but can't pick.",
+   "options": [
+    "There's when our main supplier went bust and I found a new one in three days.",
+    "Another is when I had to calm down a really angry customer who was shouting in the shop.",
+    "There's also the time I trained two new starters while my manager was off sick for a month.",
+    "Or when I caught a big billing mistake that would have cost us thousands."
+   ],
+   "moshi_comment": [
+    "The supplier story shows you act fast under pressure, which is great for an operations role. The angry customer is more about patience and people skills. Training the new starters shows leadership, and the billing catch shows attention to detail.",
+    "Pick based on the job. For a team lead role, the month of training new starters is strongest. For anything with numbers, the billing mistake. Keep the angry customer as a backup for a question about difficult people."
+   ]
+  },
+  {
+   "id": "job_interview.opt5",
+   "lead_in": "I need to present one piece from my design portfolio in the interview and I'm stuck.",
+   "options": [
+    "A rebrand for a local bakery, which is my prettiest work, but the brief was pretty simple.",
+    "An app redesign for a bus company, less pretty, but I ran real user tests and it improved bookings.",
+    "Or a poster series for a music festival, really bold and fun, done as a personal project."
+   ],
+   "moshi_comment": [
+    "The bus app is your strongest story, because you can show a problem, testing, and a measurable result. The bakery looks lovely but there's less to talk about. The festival posters show personality, and might be good to mention briefly at the end.",
+    "Interviewers usually care more about your process than polish, so the bus company redesign wins. Keep the bakery images ready if they want to see visual style. The posters are a nice extra if they ask what you do for fun."
+   ]
+  },
+  {
+   "id": "job_interview.opt6",
+   "lead_in": "I've got to give them two references, and I'm not sure which people to pick.",
+   "options": [
+    "My old team leader from the warehouse, who loved me but that was five years ago.",
+    "My current manager, who's fine, but I haven't told her I'm looking yet.",
+    "A client I worked closely with for two years who always says I'm brilliant.",
+    "Or my college tutor, who knows me well but only from studying."
+   ],
+   "moshi_comment": [
+    "The client sounds like a strong, recent reference who's seen your work directly. The warehouse team leader is enthusiastic but a bit dated. Your current manager is ideal eventually, but only once you're ready to tell her.",
+    "I'd go with the client and the old team leader for now. Ask the company to contact your current manager only after an offer, that's a very normal request. Your tutor is better for a first job than for this one."
+   ]
+  }
+ ]
 }

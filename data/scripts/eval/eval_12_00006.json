@@ -7,22 +7,24 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "think_time",
  "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "podcasts"
+  "laptop_buying"
  ],
  "wait_sec": 30,
  "deadline": {
-  "after_turn": 6,
+  "after_turn": 4,
   "sec": 30
  },
- "topic": "podcasts",
+ "topic": "laptop_buying",
  "voices": {
-  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -31,20 +33,20 @@
  "phrasing_ids": [
   "greet_21",
   "greet_ans_15",
-  "think_instr_03",
-  "ack_04"
+  "think_instr_18",
+  "ack_08"
  ],
  "block_ids": [
-  "podcasts.ctx3"
+  "laptop_buying.ctx8"
  ],
- "est_total_sec": 60.2,
- "est_speech_sec": 23.53,
+ "est_total_sec": 61.79,
+ "est_speech_sec": 24.46,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi there! How's it going today?",
    "est_sec": 1.96,
-   "gap_before": 0.42,
+   "gap_before": 0.43,
    "role": "greeting",
    "phrasing": "greet_21",
    "reference_only": true
@@ -53,73 +55,73 @@
    "speaker": "user",
    "text": "I'm fine, thanks for asking.",
    "est_sec": 1.65,
-   "gap_before": 0.98,
+   "gap_before": 0.48,
    "event": "greeting_answer",
    "phrasing": "greet_ans_15"
   },
   {
    "speaker": "user",
-   "text": "I've subscribed to way too many shows and I'm drowning in episodes.",
-   "est_sec": 3.82,
-   "gap_before": 0.32,
+   "text": "I'm starting a design degree in September.",
+   "est_sec": 2.27,
+   "gap_before": 0.3,
    "event": "ordinary_request",
-   "block": "podcasts.ctx3"
+   "block": "laptop_buying.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "Happens to everyone. Which ones could you drop? Think about which you actually look forward to.",
+   "text": "Exciting. Does your course recommend a Mac, or are you free to pick whatever you like?",
    "est_sec": 5.06,
-   "gap_before": 0.4,
+   "gap_before": 1.85,
    "role": "reply",
-   "block": "podcasts.ctx3",
+   "block": "laptop_buying.ctx8",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Let me think about that.",
-   "est_sec": 1.65,
-   "gap_before": 0.88,
-   "event": "ordinary_request",
-   "block": "podcasts.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure. Aim to keep maybe five.",
-   "est_sec": 1.96,
-   "gap_before": 1.16,
-   "role": "reply",
-   "block": "podcasts.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, I need thirty seconds to think. Ask me again after that.",
-   "est_sec": 3.82,
-   "gap_before": 1.49,
+   "text": "Let me think. Ask me again in about thirty seconds.",
+   "est_sec": 3.2,
+   "gap_before": 1.17,
    "event": "instruction",
    "kind": "think_time",
    "wait_sec": 30,
-   "phrasing": "think_instr_03"
+   "phrasing": "think_instr_18"
   },
   {
    "speaker": "moshi",
-   "text": "No problem.",
-   "est_sec": 0.72,
-   "gap_before": 0.22,
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.28,
    "role": "ack",
-   "phrasing": "ack_04",
+   "phrasing": "ack_08",
    "reference_only": true
   },
   {
    "speaker": "moshi",
-   "text": "So, which shows are you keeping, and which go?",
-   "est_sec": 2.89,
+   "text": "Did you check what your course wants?",
+   "est_sec": 2.27,
    "role": "resume",
-   "block": "podcasts.ctx3",
+   "block": "laptop_buying.ctx8",
    "anchor": {
-    "turn": 6,
-    "offset": 30.24
+    "turn": 4,
+    "offset": 30.04
    },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm free to choose, and I'm used to Windows.",
+   "est_sec": 2.89,
+   "gap_before": 0.8,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then pick one with a colour accurate screen. That matters most for design.",
+   "est_sec": 4.13,
+   "gap_before": 1.79,
+   "role": "followup",
+   "block": "laptop_buying.ctx8",
    "reference_only": true
   }
  ],

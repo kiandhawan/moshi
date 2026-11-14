@@ -7,119 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "early_direct",
-  "early_end"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "personal_finance"
+  "gardening"
  ],
- "wait_sec": 20,
- "early_end": {
-  "after_sec": 15.58,
-  "direct": true
- },
- "topic": "personal_finance",
+ "topic": "gardening",
  "voices": {
-  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_05",
-  "greet_ans_10",
-  "think_instr_10",
-  "early_end_08"
+  "greet_04",
+  "greet_ans_29"
  ],
  "block_ids": [
-  "personal_finance.ctx1"
+  "gardening.dlg22"
  ],
- "est_total_sec": 52.35,
- "est_speech_sec": 31.28,
+ "est_total_sec": 55.83,
+ "est_speech_sec": 42.64,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how have you been?",
+   "text": "Hey there, how are you?",
    "est_sec": 1.65,
-   "gap_before": 0.38,
+   "gap_before": 0.67,
    "role": "greeting",
-   "phrasing": "greet_05"
+   "phrasing": "greet_04"
   },
   {
    "speaker": "user",
-   "text": "Doing well, thank you.",
+   "text": "Pretty good so far.",
    "est_sec": 1.34,
-   "gap_before": 0.38,
+   "gap_before": 0.49,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_10"
+   "phrasing": "greet_ans_29"
   },
   {
    "speaker": "user",
-   "text": "I got a small bonus at work and I don't want to just blow it.",
-   "est_sec": 4.75,
-   "gap_before": 0.39,
+   "text": "I want a gardening thing to do with my four year old. Something quick, she's not patient.",
+   "est_sec": 5.37,
+   "gap_before": 0.35,
    "event": "ordinary_request",
-   "block": "personal_finance.ctx1"
+   "block": "gardening.dlg22"
   },
   {
    "speaker": "moshi",
-   "text": "Nice! You could put it toward your credit card balance or start an emergency fund. Which matters more to you right now?",
+   "text": "Cress is the classic for a reason. Sprinkle seeds on damp cotton wool and you'll see shoots in two or three days.",
    "est_sec": 6.92,
-   "gap_before": 0.74,
+   "gap_before": 1.08,
    "role": "reply",
-   "block": "personal_finance.ctx1"
+   "block": "gardening.dlg22"
   },
   {
    "speaker": "user",
-   "text": "Um, give me twenty seconds to think it over, then ask me.",
-   "est_sec": 3.82,
-   "gap_before": 0.55,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_10"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, I know.",
-   "est_sec": 1.03,
-   "anchor": {
-    "turn": 4,
-    "offset": 15.58
-   },
-   "event": "return_cue",
-   "kind": "early_end",
-   "phrasing": "early_end_08"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, time's up. Where's the bonus going, the card balance or savings?",
-   "est_sec": 3.82,
-   "gap_before": 0.39,
-   "role": "resume",
-   "block": "personal_finance.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Emergency fund, I think. I've got nothing saved at all.",
-   "est_sec": 3.2,
-   "gap_before": 0.46,
+   "text": "Two days, that's perfect. Can we make it fun?",
+   "est_sec": 2.89,
+   "gap_before": 2.96,
    "event": "ordinary_request",
-   "block": "personal_finance.ctx1"
+   "block": "gardening.dlg22"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. Put it in a separate savings account so it's not tempting to spend.",
-   "est_sec": 4.75,
-   "gap_before": 0.7,
-   "role": "followup",
-   "block": "personal_finance.ctx1"
+   "text": "Grow it in an empty eggshell with a face drawn on. The cress becomes hair, and she can give it a haircut with scissors.",
+   "est_sec": 7.54,
+   "gap_before": 1.01,
+   "role": "reply",
+   "block": "gardening.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh she'll love that. Then what?",
+   "est_sec": 1.96,
+   "gap_before": 1.48,
+   "event": "ordinary_request",
+   "block": "gardening.dlg22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then sunflowers or radishes. Radishes go from seed to plate in about a month, and they're bright red.",
+   "est_sec": 5.68,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "gardening.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "Will she actually eat a radish? She's",
+   "est_sec": 2.27,
+   "gap_before": 0.35,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "gardening.dlg22"
+  },
+  {
+   "speaker": "user",
+   "text": "very suspicious of anything red.",
+   "est_sec": 1.65,
+   "gap_before": 2.38,
+   "event": "ordinary_request",
+   "block": "gardening.dlg22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Maybe not, but kids are much more likely to try food they grew themselves. Worth a go.",
+   "est_sec": 5.37,
+   "gap_before": 0.6,
+   "role": "reply",
+   "block": "gardening.dlg22"
   }
  ]
 }

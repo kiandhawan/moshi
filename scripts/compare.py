@@ -2,7 +2,7 @@
 
 Reads results/metrics/<model>.jsonl (written by scripts/score.py) and writes
 results/comparison.md: one table per group, metrics as rows, models as columns in the order
-given. Each rate is shown as % (k/n) [95% Wilson CI].
+given. Each rate is shown as % (k/n) [95% CI, cluster bootstrap over contexts].
 
 Usage:
   python scripts/compare.py                      # all models in results/metrics/

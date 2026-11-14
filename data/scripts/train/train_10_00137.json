@@ -7,105 +7,123 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "cooking"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "cooking",
+ "topics": [
+  "sleep"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "sleep",
  "voices": {
-  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_08",
-  "describe_instr_20",
-  "describe_cue_05"
+  "greet_29",
+  "greet_ans_19",
+  "think_instr_22",
+  "self_17"
  ],
  "block_ids": [
-  "cooking.opt2"
+  "sleep.ctx4"
  ],
- "est_total_sec": 54.9,
- "est_speech_sec": 46.47,
+ "est_total_sec": 84.22,
+ "est_speech_sec": 33.14,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
-   "est_sec": 1.65,
-   "gap_before": 0.72,
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_02"
+   "phrasing": "greet_29"
   },
   {
    "speaker": "user",
-   "text": "I'm great, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.32,
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.9,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "I want to bake something for the office bake sale and I've got three ideas.",
+   "text": "I switch to night shifts on Monday. Seven at night till seven in the morning.",
    "est_sec": 4.75,
-   "gap_before": 0.31,
-   "block": "cooking.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me describe everything first, and then I'll ask for your thoughts.",
-   "est_sec": 3.82,
-   "gap_before": 0.89,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_20"
-  },
-  {
-   "speaker": "user",
-   "text": "One is chocolate chip cookies, easy and quick, and I can make like four dozen in an hour.",
-   "est_sec": 5.68,
-   "gap_before": 0.61,
-   "block": "cooking.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Another option is a lemon drizzle cake, which looks nice but has to be sliced up on the day.",
-   "est_sec": 5.99,
-   "gap_before": 1.23,
-   "block": "cooking.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or I could do brownies with a salted caramel swirl, a bit messier but people always go crazy for them.",
-   "est_sec": 6.3,
-   "gap_before": 1.79,
-   "block": "cooking.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "That's the full list. Go ahead.",
-   "est_sec": 1.96,
-   "gap_before": 0.59,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_05"
+   "gap_before": 0.26,
+   "event": "ordinary_request",
+   "block": "sleep.ctx4"
   },
   {
    "speaker": "moshi",
-   "text": "For a bake sale, the cookies are hard to beat, they're quick, cheap, and easy to sell one at a time. The brownies would probably sell out first, though, so they might be worth the mess. The lemon cake looks pretty, but slicing it on the day adds work.",
-   "est_sec": 15.29,
-   "gap_before": 0.47,
+   "text": "Big change. Before your first shift, would you rather take a long nap in the afternoon, or sleep in really late that morning?",
+   "est_sec": 7.23,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "sleep.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Not sure yet. Check back with me in forty-five seconds.",
+   "est_sec": 3.2,
+   "gap_before": 1.17,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_22"
+  },
+  {
+   "speaker": "user",
+   "text": "If I pick that one, then",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 5.17
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, before that first night shift. Afternoon nap or a big lie-in?",
+   "est_sec": 3.82,
    "role": "resume",
-   "block": "cooking.opt2"
+   "block": "sleep.ctx4",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.32
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Afternoon nap. I'm an early riser no matter what.",
+   "est_sec": 2.89,
+   "gap_before": 1.31,
+   "event": "ordinary_request",
+   "block": "sleep.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fine. Aim for about ninety minutes, from around two, so you wake up before the grogginess hits.",
+   "est_sec": 5.37,
+   "gap_before": 1.13,
+   "role": "followup",
+   "block": "sleep.ctx4"
   }
  ]
 }

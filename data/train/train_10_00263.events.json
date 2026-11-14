@@ -1,64 +1,111 @@
 {
   "id": "train_10_00263",
-  "group": "ordinary",
-  "user_start": 3.44,
-  "type": "ordinary",
-  "conditions": [],
+  "group": "side_conversation",
+  "user_start": 3.02,
+  "type": "side_conversation",
+  "conditions": [
+    "near_miss"
+  ],
+  "cluster": "personal_finance.ctx5",
+  "instruction_start": 16.7,
+  "instruction_end": 20.86,
+  "wait_end": 55.93,
+  "resume_window": [
+    55.93,
+    60.93
+  ],
+  "wait_sec": 35.07,
   "distractors": [
-    43.58
+    25.3,
+    49.2
   ],
   "distractor_kinds": [
-    "pause"
+    "friend_question",
+    "near_miss"
   ],
   "distractor_windows": [
     [
-      43.58,
-      45.89
+      25.3,
+      25.65
+    ],
+    [
+      49.2,
+      49.86
     ]
   ],
   "ordinary_requests": [
-    9.76,
-    20.49,
-    31.62,
-    47.73
+    8.63
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 3.44,
-      "end": 4.84,
+      "start": 3.02,
+      "end": 4.3,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 5.43,
-      "end": 9.76,
+      "start": 4.54,
+      "end": 8.63,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 15.84,
-      "end": 20.49,
-      "event": "ordinary_request"
+      "start": 16.7,
+      "end": 20.86,
+      "event": "instruction",
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 26.85,
-      "end": 31.62,
-      "event": "ordinary_request"
-    },
-    {
-      "speaker": "user",
-      "start": 38.32,
-      "end": 43.58,
+      "start": 22.84,
+      "end": 25.3,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 25.65,
+      "end": 27.83
     },
     {
       "speaker": "user",
-      "start": 45.89,
-      "end": 47.73,
-      "event": "ordinary_request"
+      "start": 28.84,
+      "end": 34.36
+    },
+    {
+      "speaker": "friend",
+      "start": 35.7,
+      "end": 38.59
+    },
+    {
+      "speaker": "user",
+      "start": 39.45,
+      "end": 40.84
+    },
+    {
+      "speaker": "friend",
+      "start": 42.82,
+      "end": 43.57
+    },
+    {
+      "speaker": "user",
+      "start": 46.7,
+      "end": 49.2,
+      "event": "distractor",
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 49.86,
+      "end": 51.91
+    },
+    {
+      "speaker": "user",
+      "start": 53.73,
+      "end": 55.93,
+      "event": "return_cue",
+      "kind": "explicit"
     }
   ],
   "notes": "Rendered from script train_10_00263 by scripts/render.py.",
@@ -66,33 +113,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.62,
-      "end": 2.59,
-      "text": "Hi there, how are you feeling today?"
+      "start": 0.52,
+      "end": 2.1,
+      "text": "Hey there! How's your day?"
     },
     {
       "kind": "reply",
-      "start": 10.38,
-      "end": 15.39,
-      "text": "Mix a cup of regular milk with a tablespoon of lemon juice or vinegar and let it sit for five minutes."
+      "start": 9.12,
+      "end": 15.93,
+      "text": "That gets old fast. Would you rather split everything fifty fifty, or each buy your own food and share only basics?"
     },
     {
-      "kind": "reply",
-      "start": 20.94,
-      "end": 25.54,
-      "text": "Not really. The amount is small and it mostly just helps them rise and stay fluffy."
+      "kind": "ack",
+      "start": 21.31,
+      "end": 21.96,
+      "text": "Sure thing."
     },
     {
-      "kind": "reply",
-      "start": 32.53,
-      "end": 38.01,
-      "text": "Better to sprinkle them on top right after you pour the batter in the pan. That way they don't all sink and burn."
-    },
-    {
-      "kind": "reply",
-      "start": 49.06,
-      "end": 54.87,
-      "text": "Medium heat, no higher. Wait until bubbles pop on the surface before flipping, usually about two minutes."
+      "kind": "resume",
+      "start": 57.58,
+      "end": 62.453,
+      "text": "Alright. We'd left the grocery question with your flatmate open. Which way feels fairer?"
     }
   ]
 }

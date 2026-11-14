@@ -7,105 +7,150 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "video_games"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "topic": "video_games",
+ "topics": [
+  "coffee",
+  "job_interview"
+ ],
+ "topic": "coffee",
  "voices": {
-  "user": "bf322df2096a46f18c579d0baa36f41d",
-  "friend": null,
+  "user": "c250136a9ec74cc0b799be54664a83f2",
+  "friend": "9a9cf47702da476aa4629e2506d4a857",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
  "phrasing_ids": [
   "greet_17",
-  "greet_ans_08",
-  "describe_instr_16",
-  "describe_cue_04"
+  "greet_ans_19",
+  "side_instr_02",
+  "dn_41",
+  "side_cue_02"
  ],
  "block_ids": [
-  "video_games.opt2"
+  "coffee.ctx9",
+  "job_interview.side4",
+  "dn_41"
  ],
- "est_total_sec": 50.48,
- "est_speech_sec": 39.65,
+ "est_total_sec": 63.74,
+ "est_speech_sec": 46.35,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey there! How's your day?",
    "est_sec": 1.65,
-   "gap_before": 0.58,
+   "gap_before": 0.31,
    "role": "greeting",
    "phrasing": "greet_17"
   },
   {
    "speaker": "user",
-   "text": "I'm great, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.63,
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.6,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "I'm trying to decide what to play with my little brother this weekend.",
-   "est_sec": 4.13,
-   "gap_before": 0.5,
-   "block": "video_games.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Listen to all of them first, then comment.",
+   "text": "I'm hosting brunch for eight people on Saturday.",
    "est_sec": 2.58,
-   "gap_before": 0.9,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_16"
-  },
-  {
-   "speaker": "user",
-   "text": "One is a racing game with silly karts that we can both play on the same screen.",
-   "est_sec": 5.37,
-   "gap_before": 0.83,
-   "block": "video_games.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a building game where we make castles and explore caves together.",
-   "est_sec": 4.13,
-   "gap_before": 2.67,
-   "block": "video_games.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a dance game that uses the controllers, which would get us both moving around.",
-   "est_sec": 5.06,
-   "gap_before": 1.3,
-   "block": "video_games.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm done. What do you think?",
-   "est_sec": 2.27,
-   "gap_before": 1.21,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_04"
+   "gap_before": 0.58,
+   "event": "ordinary_request",
+   "block": "coffee.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "The kart racer is a classic for siblings, it's quick to pick up and really fun to compete. The building game is better if you'd rather work together than compete. The dance game is great for a laugh but might tire out fast.",
-   "est_sec": 13.43,
-   "gap_before": 0.71,
+   "text": "Lovely. For coffee, would you rather brew big pots of filter coffee as people arrive, or make a jug of cold brew the night before so you're not busy that morning?",
+   "est_sec": 9.71,
+   "gap_before": 1.56,
+   "role": "reply",
+   "block": "coffee.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a minute, my friend just walked in. Don't say anything until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.01,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Daniel, can I borrow your navy tie? Mine has a stain right in the middle.",
+   "est_sec": 4.75,
+   "gap_before": 1.02,
+   "block": "job_interview.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Which one, the plain one or the one with tiny dots?",
+   "est_sec": 3.51,
+   "gap_before": 1.47,
+   "block": "job_interview.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Plain. Dots feel too cheerful for a law firm.",
+   "est_sec": 2.89,
+   "gap_before": 1.46,
+   "block": "job_interview.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Top drawer. And don't you dare spill coffee on it.",
+   "est_sec": 3.2,
+   "gap_before": 0.37,
+   "block": "job_interview.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "I won't be drinking coffee, I'm shaking enough already.",
+   "est_sec": 2.89,
+   "gap_before": 1.36,
+   "block": "job_interview.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you bring the chairs back inside before it rains?",
+   "est_sec": 3.2,
+   "gap_before": 0.31,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_41"
+  },
+  {
+   "speaker": "friend",
+   "text": "On it.",
+   "est_sec": 0.72,
+   "gap_before": 3.36,
+   "phrasing": "dn_41"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 1.85,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. So, the coffee for your guests. Hot or cold?",
+   "est_sec": 3.51,
+   "gap_before": 0.63,
    "role": "resume",
-   "block": "video_games.opt2"
+   "block": "coffee.ctx9"
   }
  ]
 }

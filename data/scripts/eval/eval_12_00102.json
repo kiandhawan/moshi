@@ -7,113 +7,168 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "door",
+ "wait_type": "door",
  "conditions": [],
  "topics": [
   "painting_art"
  ],
  "topic": "painting_art",
  "voices": {
-  "user": "ca1a4fbf6702400a863d60be2fe8062d",
-  "friend": null,
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": "b121b91872f54f04ba9f6da08b8b6253",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_09",
-  "describe_instr_18",
-  "describe_cue_12"
+  "greet_27",
+  "greet_ans_12",
+  "door_instr_10",
+  "ack_11",
+  "door_21",
+  "door_cue_05"
  ],
  "block_ids": [
-  "painting_art.opt1"
+  "painting_art.ctx2",
+  "door_21"
  ],
- "est_total_sec": 54.06,
- "est_speech_sec": 42.75,
+ "est_total_sec": 65.27,
+ "est_speech_sec": 44.28,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.36,
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.64,
    "role": "greeting",
-   "phrasing": "greet_03",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.81,
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.51,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_12"
   },
   {
    "speaker": "user",
-   "text": "I want to take an art class this spring and I can't pick one.",
-   "est_sec": 4.44,
-   "gap_before": 0.34,
-   "block": "painting_art.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll go through the options one by one. Don't say anything until I finish.",
-   "est_sec": 4.44,
-   "gap_before": 0.65,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_18"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is a six week watercolor course at the community center, pretty cheap, Tuesday nights.",
-   "est_sec": 5.37,
-   "gap_before": 1.28,
-   "block": "painting_art.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a figure drawing class downtown with live models, but it's twice the price.",
-   "est_sec": 4.75,
-   "gap_before": 2.61,
-   "block": "painting_art.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is an online oil painting course I could do whenever I want from home.",
-   "est_sec": 5.68,
-   "gap_before": 1.75,
-   "block": "painting_art.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all the options. Go ahead.",
-   "est_sec": 2.27,
-   "gap_before": 0.66,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_12"
+   "text": "There are two art classes near me, one on weekday evenings and one on Saturday mornings.",
+   "est_sec": 5.06,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx2"
   },
   {
    "speaker": "moshi",
-   "text": "The watercolor course is the easiest start and the cheapest. Figure drawing will improve your skills fastest, but only if the price doesn't bother you. The online oil course is flexible, though it's easy to lose motivation without a teacher in the room.",
-   "est_sec": 13.43,
-   "gap_before": 1.35,
+   "text": "Both sound good. Which fits your week better, a tired evening after work or giving up a slow Saturday morning?",
+   "est_sec": 6.3,
+   "gap_before": 0.42,
+   "role": "reply",
+   "block": "painting_art.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Excuse me, I have to answer the door. I'll come back to you.",
+   "est_sec": 4.13,
+   "gap_before": 0.86,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright.",
+   "est_sec": 0.41,
+   "gap_before": 0.65,
+   "role": "ack",
+   "phrasing": "ack_11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hi, can I help?",
+   "est_sec": 1.34,
+   "gap_before": 4.17,
+   "phrasing": "door_21",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "I'm canvassing for the local election, do you have a minute?",
+   "est_sec": 3.51,
+   "gap_before": 3.04,
+   "phrasing": "door_21"
+  },
+  {
+   "speaker": "user",
+   "text": "Just one, I'm cooking. Who are you with?",
+   "est_sec": 2.58,
+   "gap_before": 0.57,
+   "phrasing": "door_21",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "The independent candidate, I'll leave you a leaflet.",
+   "est_sec": 2.58,
+   "gap_before": 0.91,
+   "phrasing": "door_21"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'll read it later.",
+   "est_sec": 1.65,
+   "gap_before": 1.14,
+   "phrasing": "door_21"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, sorry about the interruption.",
+   "est_sec": 1.96,
+   "gap_before": 3.45,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everything okay at the door? You were choosing between the evening class and the Saturday class.",
+   "est_sec": 5.06,
+   "gap_before": 1.25,
    "role": "resume",
-   "block": "painting_art.opt1",
+   "block": "painting_art.ctx2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Saturday, I'm way too drained after work to focus.",
+   "est_sec": 2.89,
+   "gap_before": 0.69,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Makes sense. A fresh morning brain will help a lot with drawing.",
+   "est_sec": 3.82,
+   "gap_before": 0.78,
+   "role": "followup",
+   "block": "painting_art.ctx2",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "new_type_door"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

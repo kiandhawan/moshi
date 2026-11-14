@@ -7,105 +7,161 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "cleaning"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "topic": "cleaning",
+ "topics": [
+  "sleep",
+  "home_repair"
+ ],
+ "topic": "sleep",
  "voices": {
-  "user": "0efe38923c0b445ab09382e851ae1e30",
-  "friend": null,
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "friend": "705690224f264386b87fb598083ab022",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Jordan",
+ "friend_name_id": "name_05",
  "phrasing_ids": [
   "greet_23",
-  "greet_ans_17",
-  "describe_instr_19",
-  "describe_cue_14"
+  "greet_ans_04",
+  "side_instr_28",
+  "dn_49",
+  "side_cue_17"
  ],
  "block_ids": [
-  "cleaning.opt2"
+  "sleep.ctx9",
+  "home_repair.side6",
+  "dn_49"
  ],
- "est_total_sec": 47.13,
- "est_speech_sec": 35.93,
+ "est_total_sec": 67.14,
+ "est_speech_sec": 47.69,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey! How are you feeling?",
    "est_sec": 1.65,
-   "gap_before": 0.31,
+   "gap_before": 0.51,
    "role": "greeting",
    "phrasing": "greet_23"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.66,
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.91,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "phrasing": "greet_ans_04"
   },
   {
    "speaker": "user",
-   "text": "I need a new vacuum and I'm comparing a few kinds.",
-   "est_sec": 3.51,
+   "text": "I'm always roasting at night. I wake up kicking the duvet off.",
+   "est_sec": 3.82,
    "gap_before": 0.44,
-   "block": "cleaning.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Hear me out on all the options before you comment.",
-   "est_sec": 3.2,
-   "gap_before": 0.77,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_19"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is a robot vacuum that runs on a schedule, but it gets stuck under the couch.",
-   "est_sec": 5.99,
-   "gap_before": 0.86,
-   "block": "cleaning.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a cordless stick vacuum that's light and handy for quick cleanups.",
-   "est_sec": 4.13,
-   "gap_before": 1.25,
-   "block": "cleaning.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a big corded upright with tons of suction, great for thick carpets.",
-   "est_sec": 5.37,
-   "gap_before": 2.83,
-   "block": "cleaning.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'm finished. What's your opinion?",
-   "est_sec": 1.96,
-   "gap_before": 1.43,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_14"
+   "event": "ordinary_request",
+   "block": "sleep.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Is your place mostly carpet or hard floors? For hard floors, the cordless stick is probably all you need. For carpets, I'd go with the upright.",
-   "est_sec": 8.16,
-   "gap_before": 1.15,
+   "text": "A lot of people sleep hot. Would you try a cooling mattress topper, or swap to a lighter duvet and breathable sheets?",
+   "est_sec": 6.92,
+   "gap_before": 0.79,
+   "role": "reply",
+   "block": "sleep.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait for me, I need to talk to Jordan about something. Don't say a word until I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 0.88,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Is the dryer done, or is it still going?",
+   "est_sec": 2.89,
+   "gap_before": 1.12,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_49"
+  },
+  {
+   "speaker": "friend",
+   "text": "It beeped a minute ago.",
+   "est_sec": 1.65,
+   "gap_before": 0.6,
+   "phrasing": "dn_49"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey Jordan, have you ever used one of these tile cutters?",
+   "est_sec": 3.51,
+   "gap_before": 3.48,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Once, at my brother's place. It's easier than it looks.",
+   "est_sec": 3.2,
+   "gap_before": 1.47,
+   "block": "home_repair.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Really? It looks like it wants to bite my fingers off.",
+   "est_sec": 3.51,
+   "gap_before": 1.46,
+   "block": "home_repair.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "You just score the line and then press down on the handle. Snap.",
+   "est_sec": 4.13,
+   "gap_before": 2.64,
+   "block": "home_repair.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you show me on a spare one first?",
+   "est_sec": 2.89,
+   "gap_before": 0.48,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. Give me the broken one from the box.",
+   "est_sec": 2.89,
+   "gap_before": 1.3,
+   "block": "home_repair.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, thanks for waiting.",
+   "est_sec": 1.65,
+   "gap_before": 0.73,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. So, the roasting problem. Any decision?",
+   "est_sec": 2.27,
+   "gap_before": 1.14,
    "role": "resume",
-   "block": "cleaning.opt2"
+   "block": "sleep.ctx9"
   }
  ]
 }

@@ -1,0 +1,130 @@
+{
+ "id": "train_10_00713",
+ "split": "train",
+ "seed": 10,
+ "order_index": 713,
+ "generator": {
+  "ordered": true,
+  "only": null,
+  "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
+  "block": 20
+ },
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
+ "topics": [
+  "weekend_plans"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 45
+ },
+ "topic": "weekend_plans",
+ "voices": {
+  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "friend": null,
+  "moshi": "edb8caefa8f841bbadc24974ae040c28"
+ },
+ "friend_name": null,
+ "friend_name_id": null,
+ "phrasing_ids": [
+  "greet_10",
+  "greet_ans_11",
+  "think_instr_16"
+ ],
+ "block_ids": [
+  "weekend_plans.ctx3"
+ ],
+ "est_total_sec": 83.24,
+ "est_speech_sec": 31.69,
+ "turns": [
+  {
+   "speaker": "moshi",
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.57,
+   "role": "greeting",
+   "phrasing": "greet_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.42,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Two different friends invited me to things on Saturday night.",
+   "est_sec": 3.2,
+   "gap_before": 0.55,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Popular weekend. Is it a choice between a big party and something smaller, or are they both similar?",
+   "est_sec": 5.68,
+   "gap_before": 0.36,
+   "role": "reply",
+   "block": "weekend_plans.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "One's a birthday party, the other is a quiet dinner.",
+   "est_sec": 3.2,
+   "gap_before": 0.5,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it. Which one would you be more disappointed to miss?",
+   "est_sec": 3.51,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "weekend_plans.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I have forty-five seconds to think? Ask me again after.",
+   "est_sec": 3.51,
+   "gap_before": 0.36,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, time's up. Birthday party or quiet dinner?",
+   "est_sec": 2.58,
+   "role": "resume",
+   "block": "weekend_plans.ctx3",
+   "anchor": {
+    "turn": 6,
+    "offset": 45.34
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The party. It's her thirtieth, I can't miss that.",
+   "est_sec": 2.89,
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Maybe suggest a different night for dinner with your other friend.",
+   "est_sec": 3.82,
+   "gap_before": 0.56,
+   "role": "followup",
+   "block": "weekend_plans.ctx3"
+  }
+ ]
+}

@@ -7,120 +7,194 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "near_miss"
+ ],
  "topics": [
-  "books"
+  "books",
+  "video_games"
  ],
  "topic": "books",
  "voices": {
-  "user": "676f1654c4f747a69a5921ad94886fa1",
-  "friend": null,
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "friend": "cc7f8544c64a439080193e9560100c5a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Jordan",
+ "friend_name_id": "name_05",
  "phrasing_ids": [
-  "greet_20",
-  "greet_ans_13"
+  "greet_26",
+  "greet_ans_02",
+  "side_instr_19",
+  "dn_52",
+  "dq_22",
+  "side_cue_08"
  ],
  "block_ids": [
-  "books.dlg1"
+  "books.ctx7",
+  "video_games.side4",
+  "dn_52",
+  "dq_22"
  ],
- "est_total_sec": 48.51,
- "est_speech_sec": 37.37,
+ "est_total_sec": 72.73,
+ "est_speech_sec": 51.81,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, good to have you here. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.66,
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.75,
    "role": "greeting",
-   "phrasing": "greet_20"
+   "phrasing": "greet_26"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.66,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
-  },
-  {
-   "speaker": "user",
-   "text": "Can you suggest a book for a twelve year old who says reading is boring?",
-   "est_sec": 4.75,
-   "gap_before": 0.33,
-   "event": "ordinary_request",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try a fast, funny adventure with short chapters, or a graphic novel. They feel quick and rewarding.",
-   "est_sec": 5.37,
-   "gap_before": 0.73,
-   "role": "reply",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Graphic novels count as reading?",
+   "text": "Pretty good, thanks for asking.",
    "est_sec": 1.65,
-   "gap_before": 1.28,
+   "gap_before": 0.47,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm trying to write a short story but I keep starting over.",
+   "est_sec": 3.82,
+   "gap_before": 0.47,
    "event": "ordinary_request",
-   "block": "books.dlg1"
+   "block": "books.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Absolutely. They build vocabulary and following a story, and they're often a gateway to longer books.",
+   "text": "That happens to a lot of writers. Do you want to push through to the end of a messy draft, or fix the opening first?",
+   "est_sec": 7.85,
+   "gap_before": 0.62,
+   "role": "reply",
+   "block": "books.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, quick break, I need to talk to my roommate. I'll tell you when I'm done.",
    "est_sec": 5.06,
-   "gap_before": 1.0,
-   "role": "reply",
-   "block": "books.dlg1"
+   "gap_before": 1.36,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_19"
   },
   {
    "speaker": "user",
-   "text": "He loves football. Is there anything",
+   "text": "Can I borrow your jacket tomorrow?",
    "est_sec": 1.96,
-   "gap_before": 0.57,
+   "gap_before": 1.44,
    "event": "distractor",
-   "kind": "pause",
-   "block": "books.dlg1"
+   "kind": "friend_question",
+   "phrasing": "dq_22"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure, just bring it back.",
+   "est_sec": 1.65,
+   "gap_before": 1.29,
+   "phrasing": "dq_22"
   },
   {
    "speaker": "user",
-   "text": "you know, sporty?",
-   "est_sec": 1.03,
-   "gap_before": 1.77,
-   "event": "ordinary_request",
-   "block": "books.dlg1"
+   "text": "Did you finish it last night?",
+   "est_sec": 1.96,
+   "gap_before": 2.44,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side4"
   },
   {
-   "speaker": "moshi",
-   "text": "There are lots of middle grade novels about kids on football teams. Ask a librarian, they'll know the popular ones.",
-   "est_sec": 6.3,
-   "gap_before": 0.39,
-   "role": "reply",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Good idea, we go to the library on Saturdays anyway.",
-   "est_sec": 3.2,
-   "gap_before": 1.24,
-   "event": "ordinary_request",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect. Let him choose a couple himself, that helps a lot with motivation.",
+   "speaker": "friend",
+   "text": "Yeah, and that ending, I can't believe the captain was the one who",
    "est_sec": 4.13,
-   "gap_before": 1.01,
-   "role": "reply",
-   "block": "books.dlg1"
+   "gap_before": 1.35,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Stop! Don't! I'm two hours from the end!",
+   "est_sec": 2.58,
+   "gap_before": 1.19,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh no. Did I just ruin it?",
+   "est_sec": 2.27,
+   "gap_before": 2.61,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "You said the captain. Now I'll be suspicious of him the whole time.",
+   "est_sec": 4.13,
+   "gap_before": 0.7,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Maybe I'm bluffing.",
+   "est_sec": 1.03,
+   "gap_before": 0.57,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you bluffing?",
+   "est_sec": 1.03,
+   "gap_before": 1.0,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'm not saying anything else. Go play it.",
+   "est_sec": 2.58,
+   "gap_before": 0.54,
+   "block": "video_games.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm done pretending I like jazz.",
+   "est_sec": 1.96,
+   "gap_before": 0.41,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_52"
+  },
+  {
+   "speaker": "friend",
+   "text": "Finally, you're honest.",
+   "est_sec": 1.03,
+   "gap_before": 0.42,
+   "phrasing": "dn_52"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's sorted. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 0.98,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. Right, the restarting problem. Which way are you leaning?",
+   "est_sec": 3.2,
+   "gap_before": 0.81,
+   "role": "resume",
+   "block": "books.ctx7"
   }
  ]
 }

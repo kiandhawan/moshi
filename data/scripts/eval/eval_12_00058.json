@@ -7,20 +7,20 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "door",
- "wait_type": "door",
- "conditions": [
-  "implicit"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "holiday_gifts"
+  "family_visit"
  ],
- "topic": "holiday_gifts",
+ "topic": "family_visit",
  "voices": {
   "user": "732ea755bd9e446eb31dc79966b50428",
-  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
@@ -28,22 +28,20 @@
  "phrasing_ids": [
   "greet_12",
   "greet_ans_06",
-  "door_instr_08",
-  "ack_06",
-  "door_01",
-  "implicit_11"
+  "describe_instr_03",
+  "describe_cue_09"
  ],
  "block_ids": [
-  "holiday_gifts.ctx1"
+  "family_visit.opt5"
  ],
- "est_total_sec": 49.17,
- "est_speech_sec": 30.75,
+ "est_total_sec": 65.07,
+ "est_speech_sec": 51.22,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello there, how are you doing today?",
    "est_sec": 2.27,
-   "gap_before": 0.44,
+   "gap_before": 0.6,
    "role": "greeting",
    "phrasing": "greet_12",
    "reference_only": true
@@ -52,104 +50,81 @@
    "speaker": "user",
    "text": "Good, thanks. Busy day.",
    "est_sec": 1.34,
-   "gap_before": 0.48,
+   "gap_before": 0.75,
    "event": "greeting_answer",
    "phrasing": "greet_ans_06"
   },
   {
    "speaker": "user",
-   "text": "I still haven't got anything for my dad and the holidays are in two weeks.",
-   "est_sec": 4.75,
-   "gap_before": 0.32,
-   "event": "ordinary_request",
-   "block": "holiday_gifts.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Still time. Does he like gadgets, or would something like a nice sweater or a cooking class feel more like him?",
-   "est_sec": 6.61,
-   "gap_before": 0.87,
-   "role": "reply",
-   "block": "holiday_gifts.ctx1",
-   "reference_only": true
+   "text": "We're planning a weekend away with my husband's family and I'm stuck on where.",
+   "est_sec": 4.44,
+   "gap_before": 0.22,
+   "block": "family_visit.opt5"
   },
   {
    "speaker": "user",
-   "text": "Oh, the doorbell. Hang tight and wait for me.",
-   "est_sec": 2.89,
-   "gap_before": 1.12,
+   "text": "Let me go through every option before you say anything.",
+   "est_sec": 3.2,
+   "gap_before": 0.45,
    "event": "instruction",
-   "kind": "door",
-   "phrasing": "door_instr_08"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Of course.",
-   "est_sec": 0.72,
-   "gap_before": 0.27,
-   "role": "ack",
-   "phrasing": "ack_06",
-   "reference_only": true
+   "kind": "describe_options",
+   "phrasing": "describe_instr_03"
   },
   {
    "speaker": "user",
-   "text": "Hi!",
-   "est_sec": 0.41,
-   "gap_before": 4.1,
-   "phrasing": "door_01"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Delivery for you, can you sign here?",
-   "est_sec": 2.27,
-   "gap_before": 1.46,
-   "phrasing": "door_01"
-  },
-  {
-   "speaker": "user",
-   "text": "Sure. Do you have a pen?",
-   "est_sec": 1.96,
-   "gap_before": 2.45,
-   "phrasing": "door_01",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Here you go.",
-   "est_sec": 1.03,
-   "gap_before": 1.44,
-   "phrasing": "door_01"
-  },
-  {
-   "speaker": "user",
-   "text": "Thanks, have a good one.",
-   "est_sec": 1.65,
-   "gap_before": 0.76,
-   "phrasing": "door_01"
-  },
-  {
-   "speaker": "user",
-   "text": "Right, where was I?",
-   "est_sec": 1.34,
-   "gap_before": 2.18,
-   "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_11"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Of course. We were brainstorming a holiday gift for your dad.",
-   "est_sec": 3.51,
+   "text": "A lake cabin, two hours north, with a dock and a big kitchen, but the wifi is basically nothing.",
+   "est_sec": 5.99,
    "gap_before": 1.03,
+   "block": "family_visit.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A city apartment rental, central and walkable, but we'd be squeezed into three small bedrooms.",
+   "est_sec": 4.75,
+   "gap_before": 2.0,
+   "block": "family_visit.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A beach house on the coast, great for the kids, though it's a five hour drive and pricey in summer.",
+   "est_sec": 6.3,
+   "gap_before": 2.74,
+   "block": "family_visit.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or just everyone at his parents' place, free, familiar, and probably a little chaotic.",
+   "est_sec": 4.44,
+   "gap_before": 2.02,
+   "block": "family_visit.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "So, that's all of them. Tell me what you think.",
+   "est_sec": 3.2,
+   "gap_before": 1.44,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The cabin feels like a real break and the big kitchen helps with a crowd, no wifi might even be a plus. The beach house is great for kids but the drive and price add up. The city place sounds cramped, and his parents' house isn't really getting away.",
+   "est_sec": 15.29,
+   "gap_before": 1.1,
    "role": "resume",
-   "block": "holiday_gifts.ctx1",
+   "block": "family_visit.opt5",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_door",
-  "implicit_return"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

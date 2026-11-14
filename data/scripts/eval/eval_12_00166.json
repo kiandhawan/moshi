@@ -7,151 +7,129 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "phone_call",
- "wait_type": "phone_call",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [
-  "implicit"
+  "early_end"
  ],
  "topics": [
-  "family_visit"
+  "painting_art"
  ],
- "topic": "family_visit",
+ "wait_sec": 30,
+ "early_end": {
+  "after_sec": 21.07,
+  "direct": false
+ },
+ "topic": "painting_art",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
+  "user": "732ea755bd9e446eb31dc79966b50428",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_18",
-  "greet_ans_03",
-  "phone_instr_03",
-  "ack_01",
-  "call_07",
-  "implicit_14"
+  "greet_24",
+  "greet_ans_21",
+  "think_instr_18",
+  "ack_02",
+  "early_end_09"
  ],
  "block_ids": [
-  "family_visit.ctx3"
+  "painting_art.ctx14"
  ],
- "est_total_sec": 52.96,
- "est_speech_sec": 34.16,
+ "est_total_sec": 52.08,
+ "est_speech_sec": 25.39,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.47,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.36,
    "role": "greeting",
-   "phrasing": "greet_18",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Doing okay, thanks.",
+   "text": "I'm okay, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.99,
+   "gap_before": 0.57,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_03"
+   "phrasing": "greet_ans_21"
   },
   {
    "speaker": "user",
-   "text": "My sister and her two kids are coming Saturday and I have no idea what to do with them.",
-   "est_sec": 5.99,
-   "gap_before": 0.52,
+   "text": "I got rejected from the local gallery's open show.",
+   "est_sec": 2.89,
+   "gap_before": 0.56,
    "event": "ordinary_request",
-   "block": "family_visit.ctx3"
+   "block": "painting_art.ctx14"
   },
   {
    "speaker": "moshi",
-   "text": "We could plan something. Would the kids like the zoo, or would you rather keep it relaxed with a movie and pizza at home?",
-   "est_sec": 7.54,
-   "gap_before": 0.44,
+   "text": "I'm sorry, that stings. Do you want to try again next year, or look for other places to show your work now?",
+   "est_sec": 6.92,
+   "gap_before": 0.66,
    "role": "reply",
-   "block": "family_visit.ctx3",
+   "block": "painting_art.ctx14",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hold on, I need to answer this call. I'll tell you when I'm back.",
-   "est_sec": 4.44,
-   "gap_before": 0.35,
+   "text": "Let me think. Ask me again in about thirty seconds.",
+   "est_sec": 3.2,
+   "gap_before": 1.33,
    "event": "instruction",
-   "kind": "phone_call",
-   "phrasing": "phone_instr_03"
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_18"
   },
   {
    "speaker": "moshi",
-   "text": "Sure.",
+   "text": "Okay.",
    "est_sec": 0.41,
-   "gap_before": 0.63,
+   "gap_before": 0.57,
    "role": "ack",
-   "phrasing": "ack_01",
+   "phrasing": "ack_02",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hello?",
-   "est_sec": 0.41,
-   "gap_before": 1.34,
-   "phrasing": "call_07",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Yes, speaking.",
-   "est_sec": 0.72,
-   "gap_before": 3.26,
-   "phrasing": "call_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Sorry, could you repeat that? I'm back, the line went quiet.",
-   "est_sec": 3.51,
-   "gap_before": 3.07,
-   "phrasing": "call_07",
-   "event": "distractor",
-   "kind": "near_miss"
-  },
-  {
-   "speaker": "user",
-   "text": "Thursday morning is fine.",
-   "est_sec": 1.34,
-   "gap_before": 3.09,
-   "phrasing": "call_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Thanks, bye.",
-   "est_sec": 0.72,
-   "gap_before": 1.81,
-   "phrasing": "call_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.7,
+   "text": "Alright, I've made up my mind.",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 21.07
+   },
    "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_14"
+   "kind": "early_end",
+   "phrasing": "early_end_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Elsewhere. Cafes around here hang local art.",
+   "est_sec": 2.27,
+   "gap_before": 0.31,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx14"
   },
   {
    "speaker": "moshi",
-   "text": "Sure. We were planning Saturday with your sister's kids, the zoo or a day at home.",
-   "est_sec": 5.06,
-   "gap_before": 0.63,
-   "role": "resume",
-   "block": "family_visit.ctx3",
+   "text": "Good idea. Cafes often sell more art than small galleries, and people actually linger.",
+   "est_sec": 4.44,
+   "gap_before": 0.74,
+   "role": "followup",
+   "block": "painting_art.ctx14",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_phone",
-  "implicit_return"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

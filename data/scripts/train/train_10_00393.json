@@ -7,115 +7,179 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [],
- "topics": [
-  "gardening"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "wait_sec": 20,
- "deadline": {
-  "after_turn": 4,
-  "sec": 20
- },
- "topic": "gardening",
+ "topics": [
+  "weekend_plans",
+  "shopping"
+ ],
+ "topic": "weekend_plans",
  "voices": {
-  "user": "a52fdd0e957b4c288d8ec590bdd10288",
-  "friend": null,
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "friend": "2e8a3bd7fb474d80b4e7966d678fb777",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Emma",
+ "friend_name_id": "name_20",
  "phrasing_ids": [
-  "greet_04",
-  "greet_ans_16",
-  "think_instr_04",
-  "ack_06"
+  "greet_28",
+  "greet_ans_26",
+  "side_instr_10",
+  "dn_53",
+  "side_cue_19"
  ],
  "block_ids": [
-  "gardening.ctx2"
+  "weekend_plans.ctx8",
+  "shopping.side1",
+  "dn_53"
  ],
- "est_total_sec": 56.95,
- "est_speech_sec": 30.66,
+ "est_total_sec": 70.16,
+ "est_speech_sec": 53.16,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how are you?",
-   "est_sec": 1.65,
-   "gap_before": 0.74,
-   "role": "greeting",
-   "phrasing": "greet_04"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty busy, but good.",
+   "text": "Hello! How's everything today?",
    "est_sec": 1.34,
-   "gap_before": 0.51,
+   "gap_before": 0.59,
+   "role": "greeting",
+   "phrasing": "greet_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.37,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_16"
+   "phrasing": "greet_ans_26"
   },
   {
    "speaker": "user",
-   "text": "There's a bare patch in my back garden, maybe two meters wide, and it gets shade most of the day.",
-   "est_sec": 6.3,
-   "gap_before": 0.38,
+   "text": "I moved here two months ago and I don't really know anyone yet.",
+   "est_sec": 4.13,
+   "gap_before": 0.28,
    "event": "ordinary_request",
-   "block": "gardening.ctx2"
+   "block": "weekend_plans.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "Shade is tricky but doable. Do you want flowers there, or something low-maintenance like ferns and ground cover?",
-   "est_sec": 5.68,
-   "gap_before": 1.19,
+   "text": "That's hard. There's a beginners climbing night on Saturday, and a board game cafe that does a social on Sunday. Would you prefer something active or something chatty?",
+   "est_sec": 8.78,
+   "gap_before": 1.09,
    "role": "reply",
-   "block": "gardening.ctx2"
+   "block": "weekend_plans.ctx8"
   },
   {
    "speaker": "user",
-   "text": "I don't know yet. Ask me again in twenty seconds.",
-   "est_sec": 3.2,
-   "gap_before": 1.17,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_04"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Of course.",
-   "est_sec": 0.72,
+   "text": "Hey, can you stay quiet for a minute? I need to talk to my partner. I'll come back to you.",
+   "est_sec": 6.3,
    "gap_before": 0.58,
-   "role": "ack",
-   "phrasing": "ack_06"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright, have you decided what kind of look you want for the shady spot?",
-   "est_sec": 4.44,
-   "role": "resume",
-   "block": "gardening.ctx2",
-   "anchor": {
-    "turn": 4,
-    "offset": 20.03
-   }
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_10"
   },
   {
    "speaker": "user",
-   "text": "Low-maintenance. I really don't have time.",
-   "est_sec": 1.96,
-   "gap_before": 0.34,
-   "event": "ordinary_request",
-   "block": "gardening.ctx2"
+   "text": "Emma, are we out of dish soap?",
+   "est_sec": 2.27,
+   "gap_before": 0.78,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Almost. There's maybe one more load in the bottle.",
+   "est_sec": 2.89,
+   "gap_before": 1.08,
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, adding it to the list. Anything else you need from the store?",
+   "est_sec": 4.13,
+   "gap_before": 1.1,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oat milk, and those crackers I like.",
+   "est_sec": 2.27,
+   "gap_before": 0.62,
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "The rosemary ones?",
+   "est_sec": 1.03,
+   "gap_before": 0.44,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yes, those. Get two boxes if they're on sale.",
+   "est_sec": 2.89,
+   "gap_before": 2.55,
+   "block": "shopping.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "When are your neighbours back from holiday?",
+   "est_sec": 2.27,
+   "gap_before": 0.88,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_53"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sunday night, I'm feeding their fish till then.",
+   "est_sec": 2.58,
+   "gap_before": 1.47,
+   "phrasing": "dn_53"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 1.03,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_19"
   },
   {
    "speaker": "moshi",
-   "text": "Then ferns and some ivy or periwinkle as ground cover. Once settled, they mostly look after themselves.",
-   "est_sec": 5.37,
-   "gap_before": 1.15,
+   "text": "Alright. Meeting people this weekend. Climbing, or board games?",
+   "est_sec": 2.89,
+   "gap_before": 0.56,
+   "role": "resume",
+   "block": "weekend_plans.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Climbing. I need to move after a week at a desk.",
+   "est_sec": 3.51,
+   "gap_before": 1.1,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Beginners nights are friendly, everyone's a bit wobbly together.",
+   "est_sec": 3.2,
+   "gap_before": 0.98,
    "role": "followup",
-   "block": "gardening.ctx2"
+   "block": "weekend_plans.ctx8"
   }
  ]
 }

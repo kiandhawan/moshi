@@ -7,129 +7,173 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "restaurant_choice"
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
  ],
- "topic": "restaurant_choice",
+ "topics": [
+  "camping"
+ ],
+ "topic": "camping",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_27"
+  "greet_06",
+  "greet_ans_15",
+  "phone_instr_02",
+  "ack_05",
+  "call_10",
+  "implicit_11"
  ],
  "block_ids": [
-  "restaurant_choice.dlg3"
+  "camping.ctx18",
+  "call_10"
  ],
- "est_total_sec": 52.62,
- "est_speech_sec": 42.33,
+ "est_total_sec": 58.52,
+ "est_speech_sec": 38.08,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.42,
-   "role": "greeting",
-   "phrasing": "greet_03",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "All good here.",
-   "est_sec": 1.03,
-   "gap_before": 0.74,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_27"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it rude to ask for the check right after we finish eating?",
-   "est_sec": 4.13,
-   "gap_before": 0.22,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Not at all, especially if the restaurant is busy. A simple, could we get the check when you have a moment, is perfectly polite.",
-   "est_sec": 7.54,
-   "gap_before": 0.42,
-   "role": "reply",
-   "block": "restaurant_choice.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "What about splitting the bill between five people?",
+   "text": "Good to hear from you. How are you?",
    "est_sec": 2.58,
-   "gap_before": 1.5,
+   "gap_before": 0.33,
+   "role": "greeting",
+   "phrasing": "greet_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.84,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "We won't reach the campsite until after dark on Friday.",
+   "est_sec": 3.2,
+   "gap_before": 0.59,
    "event": "ordinary_request",
-   "block": "restaurant_choice.dlg3"
+   "block": "camping.ctx18"
   },
   {
    "speaker": "moshi",
-   "text": "Tell the server at the start of the meal if you can. It makes things much easier for them at the end.",
+   "text": "Doable with a bit of prep. Practice pitching the tent at home first, or just pack a big lantern and wing it?",
    "est_sec": 6.92,
-   "gap_before": 0.43,
+   "gap_before": 0.83,
    "role": "reply",
-   "block": "restaurant_choice.dlg3",
+   "block": "camping.ctx18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "And how much should we",
-   "est_sec": 1.65,
-   "gap_before": 0.52,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "restaurant_choice.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "tip for a big group?",
-   "est_sec": 1.65,
-   "gap_before": 1.61,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "In the United States, eighteen to twenty percent is standard. Some places add it automatically for groups of six or more, so check the bill first.",
-   "est_sec": 8.16,
-   "gap_before": 1.09,
-   "role": "reply",
-   "block": "restaurant_choice.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, I didn't know that. Good thing I asked.",
-   "est_sec": 2.89,
-   "gap_before": 1.03,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It catches a lot of people out. Otherwise you might accidentally tip twice.",
+   "text": "My phone's ringing, give me a minute. Don't say anything until I'm done.",
    "est_sec": 4.13,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "restaurant_choice.dlg3",
+   "gap_before": 0.82,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.49,
+   "role": "ack",
+   "phrasing": "ack_05",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hello, yes.",
+   "est_sec": 0.72,
+   "gap_before": 1.24,
+   "phrasing": "call_10"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm calling back about the apartment.",
+   "est_sec": 1.96,
+   "gap_before": 2.86,
+   "phrasing": "call_10",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "Is it still available?",
+   "est_sec": 1.34,
+   "gap_before": 2.16,
+   "phrasing": "call_10",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Could I see it this weekend?",
+   "est_sec": 1.96,
+   "gap_before": 2.15,
+   "phrasing": "call_10",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Great, Saturday at noon then.",
+   "est_sec": 1.65,
+   "gap_before": 2.94,
+   "phrasing": "call_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, where was I?",
+   "est_sec": 1.34,
+   "gap_before": 0.99,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. So, are you rehearsing that tent or not?",
+   "est_sec": 2.89,
+   "gap_before": 1.01,
+   "role": "resume",
+   "block": "camping.ctx18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wing it, it's a simple tent.",
+   "est_sec": 1.96,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "camping.ctx18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Then park so the headlights face the pitch, it helps more than any lantern.",
+   "est_sec": 4.75,
+   "gap_before": 1.24,
+   "role": "followup",
+   "block": "camping.ctx18",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_phone",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

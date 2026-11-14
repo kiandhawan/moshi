@@ -7,111 +7,177 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "sleep"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "topic": "sleep",
+ "topics": [
+  "video_games",
+  "music"
+ ],
+ "topic": "video_games",
  "voices": {
-  "user": "c70cfb98867a4bfb9ae20d2401257b92",
-  "friend": null,
+  "user": "c250136a9ec74cc0b799be54664a83f2",
+  "friend": "a52fdd0e957b4c288d8ec590bdd10288",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Hannah",
+ "friend_name_id": "name_14",
  "phrasing_ids": [
-  "greet_28",
-  "greet_ans_02"
+  "greet_08",
+  "greet_ans_10",
+  "side_instr_07",
+  "dn_63",
+  "side_cue_16"
  ],
  "block_ids": [
-  "sleep.dlg1"
+  "video_games.ctx9",
+  "music.side6",
+  "dn_63"
  ],
- "est_total_sec": 47.76,
- "est_speech_sec": 34.48,
+ "est_total_sec": 66.66,
+ "est_speech_sec": 50.06,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's everything today?",
-   "est_sec": 1.34,
-   "gap_before": 0.43,
-   "role": "greeting",
-   "phrasing": "greet_28"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.51,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it bad to drink coffee in the afternoon?",
-   "est_sec": 2.89,
-   "gap_before": 0.5,
-   "event": "ordinary_request",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "For a lot of people, yes. Caffeine can stay in your system for six hours or more, so a cup at four can still keep you up at ten.",
-   "est_sec": 9.09,
-   "gap_before": 1.12,
-   "role": "reply",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Wow. What about tea?",
-   "est_sec": 1.34,
-   "gap_before": 0.88,
-   "event": "ordinary_request",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Black and green tea have less caffeine, but still some. Herbal teas like chamomile or mint have none.",
-   "est_sec": 5.68,
-   "gap_before": 1.15,
-   "role": "reply",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "I usually need",
-   "est_sec": 1.03,
-   "gap_before": 1.24,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "something around three to get through work.",
+   "text": "Hi there, how are you feeling today?",
    "est_sec": 2.27,
-   "gap_before": 2.09,
-   "event": "ordinary_request",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try a short walk outside or a glass of cold water instead. A little daylight and movement can wake you up surprisingly well.",
-   "est_sec": 7.23,
-   "gap_before": 0.65,
-   "role": "reply",
-   "block": "sleep.dlg1"
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_08"
   },
   {
    "speaker": "user",
-   "text": "I'll give it a shot tomorrow.",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.6,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Preorders open tonight for the sequel I've been waiting for.",
+   "est_sec": 3.2,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "video_games.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting. Are you getting the standard edition, or splashing out on the collector's box with the statue and art book?",
+   "est_sec": 6.3,
+   "gap_before": 1.19,
+   "role": "reply",
+   "block": "video_games.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold that thought, I need to talk to Hannah real quick. Stay quiet until I return.",
+   "est_sec": 5.06,
+   "gap_before": 1.96,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Hannah, can you hear that bass through the wall? It's midnight.",
+   "est_sec": 3.51,
+   "gap_before": 1.11,
+   "block": "music.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh, I hear it. My water glass is literally shaking.",
+   "est_sec": 3.2,
+   "gap_before": 0.47,
+   "block": "music.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Should we knock? Or is that too much?",
+   "est_sec": 2.58,
+   "gap_before": 0.61,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "music.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's the third night this week. Knock.",
+   "est_sec": 2.27,
+   "gap_before": 1.35,
+   "block": "music.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "What do I even say?",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "music.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just ask nicely if they can turn the bass down a bit. They're probably not even aware.",
+   "est_sec": 5.37,
+   "gap_before": 0.51,
+   "block": "music.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Will you come with me?",
+   "est_sec": 1.65,
+   "gap_before": 0.7,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "music.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine. But you're doing the talking.",
    "est_sec": 1.96,
-   "gap_before": 3.21,
-   "block": "sleep.dlg1"
+   "gap_before": 1.12,
+   "block": "music.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Hannah, did you bring my jumper back from your place?",
+   "est_sec": 3.2,
+   "gap_before": 0.86,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_63"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh no, it's still on my chair.",
+   "est_sec": 2.27,
+   "gap_before": 1.06,
+   "phrasing": "dn_63"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, we can continue now.",
+   "est_sec": 1.65,
+   "gap_before": 1.57,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. So, which edition are you going for?",
+   "est_sec": 2.58,
+   "gap_before": 0.43,
+   "role": "resume",
+   "block": "video_games.ctx9"
   }
  ]
 }

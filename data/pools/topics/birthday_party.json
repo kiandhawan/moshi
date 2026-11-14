@@ -1,160 +1,1866 @@
 {
-  "topic": "birthday_party",
-  "contexts": [
+ "topic": "birthday_party",
+ "contexts": [
+  {
+   "id": "birthday_party.ctx1",
+   "turns": [
     {
-      "id": "birthday_party.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "My son turns six next month and he wants a big party."},
-        {"speaker": "moshi", "text": "Fun! Would you rather host it at home, or book a place like a trampoline park?"}
-      ],
-      "pending": "party at home or at a venue",
-      "think_reask": [
-        "So, home party or somewhere like a trampoline park?",
-        "Okay, have you decided where the birthday party will be?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were choosing between a party at home and booking a venue.",
-        "Hi again. Any thoughts on where to host your son's party?"
-      ],
-      "endings": [
-        {"user": "At home. I'd rather spend the money on a good cake.", "moshi": "Totally fair. A couple of simple games and a craft table will keep six year olds busy."},
-        {"user": "Let's book the trampoline park. Less cleanup for me.", "moshi": "Smart. Call soon, weekend slots fill up fast, and ask what food they include."}
-      ]
+     "speaker": "user",
+     "text": "My son turns six next month and he wants a big party."
     },
     {
-      "id": "birthday_party.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I'm throwing a surprise party for my best friend's thirtieth."},
-        {"speaker": "moshi", "text": "Oh, nice. How many people?"},
-        {"speaker": "user", "text": "Maybe twenty."},
-        {"speaker": "moshi", "text": "Good size. Do you want a sit down dinner at a restaurant, or a relaxed evening at someone's place?"}
-      ],
-      "pending": "restaurant dinner or a relaxed party at home",
-      "think_reask": [
-        "So, for the surprise thirtieth, restaurant dinner or a house party?",
-        "Alright, which way are you leaning for your friend's party?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were deciding between a restaurant dinner and a party at someone's place.",
-        "There you are. Still thinking about the setting for the surprise party?"
-      ],
-      "endings": [
-        {"user": "A restaurant. Nobody has room for twenty people.", "moshi": "Makes sense. Ask about a private room, it makes the surprise moment much easier."},
-        {"user": "House party at my place. It's more personal.", "moshi": "Lovely. Get everyone to arrive half an hour early and park around the corner."}
-      ]
-    },
-    {
-      "id": "birthday_party.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I still haven't ordered the cake for Saturday."},
-        {"speaker": "moshi", "text": "There's still time if you order today. Chocolate is always popular, or would a fruity one like lemon fit better?"}
-      ],
-      "pending": "chocolate or lemon cake",
-      "think_reask": [
-        "So, chocolate cake or lemon?",
-        "Okay, time to choose. Which cake are you ordering for Saturday?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were picking the cake for Saturday, chocolate or lemon.",
-        "Hi again! Did you decide on the cake flavor?"
-      ],
-      "endings": [
-        {"user": "Chocolate. You can't go wrong.", "moshi": "Classic choice. Ask for a raspberry filling if they have it, it cuts the sweetness nicely."},
-        {"user": "Lemon. It's a summer party, so something light.", "moshi": "Perfect for the season. A lemon cake with berries on top always looks great."}
-      ]
+     "speaker": "moshi",
+     "text": "Fun! Would you rather host it at home, or book a place like a trampoline park?"
     }
-  ],
-  "side_conversations": [
-    {"id": "birthday_party.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you send the invites yet?"},
-      {"speaker": "friend", "text": "Most of them. I'm still missing a few addresses."},
-      {"speaker": "user", "text": "Whose?"},
-      {"speaker": "friend", "text": "The neighbors from upstairs and your cousin."},
-      {"speaker": "user", "text": "I'll text you my cousin's. Just knock on the neighbors' door, they're always home."},
-      {"speaker": "friend", "text": "Okay, I'll do it tonight."}
-    ]},
-    {"id": "birthday_party.side2", "turns": [
-      {"speaker": "user", "text": "What do you think, balloons or streamers?"},
-      {"speaker": "friend", "text": "Why not both?"},
-      {"speaker": "user", "text": "Because the last time we had balloons the dog popped every single one."},
-      {"speaker": "friend", "text": "Then streamers and some fairy lights. That looks nicer anyway."},
-      {"speaker": "user", "text": "Fairy lights, good idea. Do you still have the ones from your balcony?"},
-      {"speaker": "friend", "text": "Yeah, I can bring them on Friday."}
-    ]},
-    {"id": "birthday_party.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, can you help me figure out the food?"},
-      {"speaker": "friend", "text": "Sure. Are we doing a meal or just snacks?"},
-      {"speaker": "user", "text": "Snacks, I think. People will come and go all evening."},
-      {"speaker": "friend", "text": "Then a big cheese board, some dips, and maybe mini sandwiches."},
-      {"speaker": "user", "text": "And something for the vegans. Is hummus enough?"},
-      {"speaker": "friend", "text": "Add roasted veggies and some fruit. That's plenty."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "birthday_party.dlg1", "turns": [
-      {"speaker": "user", "text": "Give me some party game ideas for a bunch of eight year olds."},
-      {"speaker": "moshi", "text": "Musical chairs and freeze dance are always hits. A treasure hunt with little clues around the yard is great too."},
-      {"speaker": "user", "text": "Ooh, a treasure hunt. How would that work?"},
-      {"speaker": "moshi", "text": "Hide simple rhyming clues that lead from one spot to the next, ending at a box of small prizes."},
-      {"speaker": "user", "text": "I'm not great at rhymes / could you give me one example?"},
-      {"speaker": "moshi", "text": "Sure. Where you wash your hands each day, the next clue is hiding away. That one leads to the bathroom sink."},
-      {"speaker": "user", "text": "Ha, perfect. How many clues should I do?"},
-      {"speaker": "moshi", "text": "Six to eight is about right for that age. Long enough to be exciting, short enough that nobody gets bored."}
-    ]},
-    {"id": "birthday_party.dlg2", "turns": [
-      {"speaker": "user", "text": "My wife's birthday is Sunday and I've got nothing planned. I'm panicking a little."},
-      {"speaker": "moshi", "text": "Don't worry, there's still time. What does she love doing on a free day?"},
-      {"speaker": "user", "text": "She loves brunch, and anything near the water."},
-      {"speaker": "moshi", "text": "Then book a brunch spot with a view, and plan a walk along the water afterwards. Simple but thoughtful."},
-      {"speaker": "user", "text": "Should I invite her friends or / keep it just the two of us?"},
-      {"speaker": "moshi", "text": "You could do both. Brunch for two, then a small get together with friends in the evening."},
-      {"speaker": "user", "text": "I like that. What about a gift?"},
-      {"speaker": "moshi", "text": "Think of something she mentioned wanting recently. A handwritten card with it goes a long way."}
-    ]},
-    {"id": "birthday_party.dlg3", "turns": [
-      {"speaker": "user", "text": "How far in advance should I send invitations for a birthday party?"},
-      {"speaker": "moshi", "text": "About three to four weeks ahead is ideal. For a kids' party, two to three weeks is usually fine."},
-      {"speaker": "user", "text": "And when should people reply by?"},
-      {"speaker": "moshi", "text": "Ask for replies about a week before. That gives you time to order food and plan seating."},
-      {"speaker": "user", "text": "What if half of them never answer? That always happens / every single year."},
-      {"speaker": "moshi", "text": "Send a friendly reminder a couple of days after the deadline. Then plan for most of the quiet ones not coming."},
-      {"speaker": "user", "text": "Good point. Paper invites or just a group message?"},
-      {"speaker": "moshi", "text": "A group message is quicker and easier to track. Paper is lovely for a milestone birthday, though."}
-    ]},
-    {"id": "birthday_party.dlg4", "turns": [
-      {"speaker": "user", "text": "I'm turning forty and I kind of don't want a party at all."},
-      {"speaker": "moshi", "text": "That's completely okay. Some people prefer something quiet. What would make the day feel good to you?"},
-      {"speaker": "user", "text": "Honestly, a good meal and a day off with no phone."},
-      {"speaker": "moshi", "text": "That sounds wonderful. You could plan a day trip somewhere new and finish with dinner at your favorite place."},
-      {"speaker": "user", "text": "My family will be upset if I don't celebrate / at least a little."},
-      {"speaker": "moshi", "text": "Maybe a small family dinner the weekend after. That way they get to celebrate you, and you still get your quiet day."},
-      {"speaker": "user", "text": "Yeah, that could work."},
-      {"speaker": "moshi", "text": "It's your birthday, so do it your way. Forty is a good year to start that habit."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "birthday_party.opt1",
-     "lead_in": "My son is turning seven and we're choosing where to have his party.",
-     "options": [
-       "The first option is the trampoline park, which the kids love, but it's pretty expensive per child.",
-       "Then there's having it at home with a bouncy castle in the backyard.",
-       "Option three is a picnic at the park with games and a big cake.",
-       "And the last one is a pizza making class at a local restaurant."
-     ],
-     "moshi_comment": [
-       "The trampoline park is a guaranteed hit with seven year olds, but the cost adds up fast with a big guest list. A bouncy castle at home gets a lot of the same fun for less. The pizza class is a fun idea, especially for kids who like to make things.",
-       "How many kids are you inviting? For a big group, the backyard bouncy castle or the park picnic is much easier on the budget. For a small group, the trampoline park or pizza class would feel extra special."
-     ]},
-    {"id": "birthday_party.opt2",
-     "lead_in": "I'm planning a surprise party for my best friend's thirtieth and I have a few ideas.",
-     "options": [
-       "One is renting the back room of her favorite restaurant for a dinner with about twenty people.",
-       "Another option is a house party at my place with music and lots of snacks.",
-       "Or I could plan a smaller weekend trip with just her five closest friends."
-     ],
-     "moshi_comment": [
-       "The restaurant dinner feels special and you don't have to clean up after. A house party is cheaper and more relaxed, but you'd be busy hosting. The weekend trip is the most memorable, though it's harder to keep a surprise when people need to plan time off.",
-       "Does she like being the center of attention in a big crowd? If yes, the restaurant dinner is perfect. If she's more low key, the weekend with close friends would mean a lot."
-     ]}
-  ]
+   ],
+   "pending": "party at home or at a venue",
+   "think_reask": [
+    "So, home party or somewhere like a trampoline park?",
+    "Okay, have you decided where the birthday party will be?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were choosing between a party at home and booking a venue.",
+    "Hi again. Any thoughts on where to host your son's party?"
+   ],
+   "endings": [
+    {
+     "user": "At home. I'd rather spend the money on a good cake.",
+     "moshi": "Totally fair. A couple of simple games and a craft table will keep six year olds busy."
+    },
+    {
+     "user": "Let's book the trampoline park. Less cleanup for me.",
+     "moshi": "Smart. Call soon, weekend slots fill up fast, and ask what food they include."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm throwing a surprise party for my best friend's thirtieth."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh, nice. How many people?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe twenty."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good size. Do you want a sit down dinner at a restaurant, or a relaxed evening at someone's place?"
+    }
+   ],
+   "pending": "restaurant dinner or a relaxed party at home",
+   "think_reask": [
+    "So, for the surprise thirtieth, restaurant dinner or a house party?",
+    "Alright, which way are you leaning for your friend's party?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were deciding between a restaurant dinner and a party at someone's place.",
+    "There you are. Still thinking about the setting for the surprise party?"
+   ],
+   "endings": [
+    {
+     "user": "A restaurant. Nobody has room for twenty people.",
+     "moshi": "Makes sense. Ask about a private room, it makes the surprise moment much easier."
+    },
+    {
+     "user": "House party at my place. It's more personal.",
+     "moshi": "Lovely. Get everyone to arrive half an hour early and park around the corner."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I still haven't ordered the cake for Saturday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's still time if you order today. Chocolate is always popular, or would a fruity one like lemon fit better?"
+    }
+   ],
+   "pending": "chocolate or lemon cake",
+   "think_reask": [
+    "So, chocolate cake or lemon?",
+    "Okay, time to choose. Which cake are you ordering for Saturday?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were picking the cake for Saturday, chocolate or lemon.",
+    "Hi again! Did you decide on the cake flavor?"
+   ],
+   "endings": [
+    {
+     "user": "Chocolate. You can't go wrong.",
+     "moshi": "Classic choice. Ask for a raspberry filling if they have it, it cuts the sweetness nicely."
+    },
+    {
+     "user": "Lemon. It's a summer party, so something light.",
+     "moshi": "Perfect for the season. A lemon cake with berries on top always looks great."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandmother turns ninety in May and the whole family wants to do something."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ninety is huge. Would she enjoy a big lunch with everyone, or a smaller afternoon tea with just her closest people?"
+    }
+   ],
+   "pending": "big family lunch or small afternoon tea for grandmother",
+   "think_reask": [
+    "So, for your grandmother's ninetieth, the big lunch or the quiet afternoon tea?",
+    "Any clearer now? A full family lunch, or something smaller with tea and cake?"
+   ],
+   "welcome_back": [
+    "Your grandmother's ninetieth. Big lunch with the whole clan, or a gentler afternoon tea?",
+    "We'd left it at lunch for everyone versus tea for a few. Leaning either way?"
+   ],
+   "endings": [
+    {
+     "user": "The big lunch. She'd hate to miss anyone.",
+     "moshi": "Then pick a place with step free access and a quiet corner she can rest in if it gets loud."
+    },
+    {
+     "user": "Afternoon tea. Crowds wear her out these days.",
+     "moshi": "Kind choice. Keep it to two hours and maybe ask each guest to bring an old photo of her."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Ugh, the twins want separate parties this year."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a big ask at their age. Are you open to two parties, or would one party with two cakes keep the peace?"
+    }
+   ],
+   "pending": "two separate parties or one shared party with two cakes",
+   "think_reask": [
+    "So, two parties for the twins, or one party with a cake each?",
+    "Alright, decision time on the twins. Separate or shared?"
+   ],
+   "welcome_back": [
+    "The twins. Two parties, or one with two cakes?",
+    "So, are you giving in to separate parties, or holding out for a shared one?"
+   ],
+   "endings": [
+    {
+     "user": "One party, two cakes. I don't have the energy for two.",
+     "moshi": "Fair enough. Let each twin pick half the games so nobody feels left out."
+    },
+    {
+     "user": "Two parties, but small ones on the same weekend.",
+     "moshi": "That works. Keep them simple and give each one a different theme they choose."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to do something for my coworker's birthday at the office tomorrow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice of you. Is there budget for a proper cake, or should we keep it low key with a card everyone signs and some pastries?"
+    }
+   ],
+   "pending": "office cake or a card with pastries",
+   "think_reask": [
+    "So, for your coworker tomorrow, proper cake or card and pastries?",
+    "Okay, office birthday. Going big with a cake, or keeping it simple?"
+   ],
+   "welcome_back": [
+    "Tomorrow's office birthday still needs a plan. Cake, or card and pastries?",
+    "Back to your coworker. Is it a cake kind of day or a pastries kind of day?"
+   ],
+   "endings": [
+    {
+     "user": "Card and pastries. She's quite shy, a big cake would mortify her.",
+     "moshi": "Good read on her. Pass the card around quietly today so it's ready by the morning."
+    },
+    {
+     "user": "A cake. She did it for all of us last year.",
+     "moshi": "Lovely way to return the favour. Order something that slices easily, no tall layered thing."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter's turning sixteen and she says parties are cringe."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, classic sixteen. Would she go for a small outing with a few friends, like an escape room, or a nice dinner with just the family?"
+    }
+   ],
+   "pending": "escape room with friends or family dinner",
+   "think_reask": [
+    "So, which would she grumble at less, an escape room with friends or a family dinner?",
+    "Have you got a feel for it yet? Friends outing or family dinner?"
+   ],
+   "welcome_back": [
+    "Your sixteen year old. Escape room with her friends, or dinner with the family?",
+    "We'd narrowed it to an outing with friends or a family meal. Any instinct?"
+   ],
+   "endings": [
+    {
+     "user": "Escape room. She'd secretly love it.",
+     "moshi": "I bet. Book one with a slightly spooky theme, teenagers tend to enjoy that."
+    },
+    {
+     "user": "Family dinner, but she gets to pick the restaurant.",
+     "moshi": "Smart move. Giving her the choice makes it feel less like a parent thing."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So I'm hosting my own thirty fifth and I've invited way too many people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How many are we talking?"
+    },
+    {
+     "speaker": "user",
+     "text": "Like sixty. My flat holds maybe twenty five."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, that's tight. Do you want to rent a room at a pub, or move the whole thing outdoors to a park?"
+    }
+   ],
+   "pending": "rent a pub room or move to a park",
+   "think_reask": [
+    "So, sixty guests. Pub room or the park?",
+    "Okay, your thirty fifth. Indoors at a pub, or outdoors in the park?"
+   ],
+   "welcome_back": [
+    "Sixty people and a flat for twenty five. Pub room or park?",
+    "Still need a venue for that crowd. Which way are you going?"
+   ],
+   "endings": [
+    {
+     "user": "Pub room. I'm not gambling on the weather.",
+     "moshi": "Sensible. Ask if they'll waive the room fee if the group spends enough at the bar."
+    },
+    {
+     "user": "The park. It's summer and it's free.",
+     "moshi": "Nice. Get there early to claim a spot near some shade and bring a few big blankets."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm useless at this but I want to surprise my boyfriend on his birthday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're not useless, you're asking. Does he light up more with a fancy dinner out, or a cosy night in where you cook?"
+    }
+   ],
+   "pending": "fancy dinner out or cooking at home",
+   "think_reask": [
+    "So, for your boyfriend, dinner out or a night in that you cook?",
+    "Okay, which surprise feels more like him, restaurant or homemade?"
+   ],
+   "welcome_back": [
+    "Your boyfriend's birthday surprise. Out somewhere fancy, or a home cooked night?",
+    "So, restaurant or your own kitchen for his birthday?"
+   ],
+   "endings": [
+    {
+     "user": "Night in. He always says restaurants are too loud.",
+     "moshi": "Then cook his favourite dish, even a simple one, and set the table properly. It'll mean a lot."
+    },
+    {
+     "user": "Dinner out. I can't cook to save my life.",
+     "moshi": "No shame in that. Pick somewhere he's mentioned wanting to try and book a corner table."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, the party's at three and I just realised I forgot party bags."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's still time. Do you want a quick shop run for small toys, or skip bags and give each kid a slice of cake to take home?"
+    }
+   ],
+   "pending": "quick shop run for party bags or cake slices instead",
+   "think_reask": [
+    "So, race to the shop for party bags, or send them home with cake?",
+    "Time's ticking. Party bags from the shop, or cake to go?"
+   ],
+   "welcome_back": [
+    "The party bags. Shop run, or cake slices instead?",
+    "Before three o'clock, are we shopping or wrapping cake?"
+   ],
+   "endings": [
+    {
+     "user": "Cake slices. I'm not going out again today.",
+     "moshi": "Totally fine. Wrap them in napkins and write each kid's name on, they'll love that."
+    },
+    {
+     "user": "I'll do the shop run, it's only five minutes away.",
+     "moshi": "Go for it. Bubbles and stickers are cheap and every kid likes them."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dad never celebrates his birthday, but he's sixty five this year and retiring."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a double milestone. Would he rather be honoured with a few speeches at a dinner, or do something active like a fishing day with family?"
+    }
+   ],
+   "pending": "dinner with speeches or a family fishing day",
+   "think_reask": [
+    "So, for your dad, dinner with speeches or a day out fishing?",
+    "Which suits him better, being toasted or being out on the water?"
+   ],
+   "welcome_back": [
+    "Your dad's sixty fifth. Speeches at dinner, or the fishing trip?",
+    "We had two ideas for your dad. Have you picked one?"
+   ],
+   "endings": [
+    {
+     "user": "Fishing. He'd squirm through speeches.",
+     "moshi": "Then make it the fishing day and maybe slip a card into his tackle box."
+    },
+    {
+     "user": "Dinner. He pretends to hate fuss but he'd love it.",
+     "moshi": "Keep the speeches short, two or three people, and let him have the last word."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm doing a themed party for my seven year old and he can't make up his mind."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What's he torn between?"
+    },
+    {
+     "speaker": "user",
+     "text": "Dinosaurs or space."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Both are great. Dinosaurs are easier to decorate for, but space has cooler games. Which way is he leaning today?"
+    }
+   ],
+   "pending": "dinosaur theme or space theme",
+   "think_reask": [
+    "So, dinosaurs or space for the party?",
+    "Has he decided yet, dinosaurs or rockets?"
+   ],
+   "welcome_back": [
+    "Dinosaurs or space. Any verdict from the birthday boy?",
+    "Still on the theme. Is he a dinosaur kid or a space kid this week?"
+   ],
+   "endings": [
+    {
+     "user": "Dinosaurs. He's been roaring at me all morning.",
+     "moshi": "That settles it. A sandbox dig for toy fossils would be a brilliant activity."
+    },
+    {
+     "user": "Space, definitely. He wants to be an astronaut now.",
+     "moshi": "Then glow in the dark stars and a cardboard rocket photo booth will go down a treat."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "birthday_party.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you send the invites yet?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Most of them. I'm still missing a few addresses."
+    },
+    {
+     "speaker": "user",
+     "text": "Whose?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The neighbors from upstairs and your cousin."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll text you my cousin's. Just knock on the neighbors' door, they're always home."
+    },
+    {
+     "speaker": "friend",
+     "text": "Okay, I'll do it tonight."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What do you think, balloons or streamers?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Why not both?"
+    },
+    {
+     "speaker": "user",
+     "text": "Because the last time we had balloons the dog popped every single one."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then streamers and some fairy lights. That looks nicer anyway."
+    },
+    {
+     "speaker": "user",
+     "text": "Fairy lights, good idea. Do you still have the ones from your balcony?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, I can bring them on Friday."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you help me figure out the food?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. Are we doing a meal or just snacks?"
+    },
+    {
+     "speaker": "user",
+     "text": "Snacks, I think. People will come and go all evening."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then a big cheese board, some dips, and maybe mini sandwiches."
+    },
+    {
+     "speaker": "user",
+     "text": "And something for the vegans. Is hummus enough?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Add roasted veggies and some fruit. That's plenty."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you hide the presents somewhere he won't look?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Top of the wardrobe, behind the winter coats."
+    },
+    {
+     "speaker": "user",
+     "text": "He checks there every year, you know."
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine. Boot of my car, then. He never goes in my car."
+    },
+    {
+     "speaker": "user",
+     "text": "Perfect. And the big one, the bike?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Your neighbour said we can leave it in her shed till Sunday morning."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, be honest, is this banner too much?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It's enormous. It covers the entire window."
+    },
+    {
+     "speaker": "user",
+     "text": "I know, but she loves glitter."
+    },
+    {
+     "speaker": "friend",
+     "text": "She's turning fifty, not five. Maybe just the gold letters and lose the unicorns?"
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, you're right. Can you hold that end while I cut it down?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. Go slowly, the scissors are blunt."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, how many chairs did you manage to borrow?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Eleven. Mrs Patel had four, the church hall lent me the rest."
+    },
+    {
+     "speaker": "user",
+     "text": "We need at least eighteen."
+    },
+    {
+     "speaker": "friend",
+     "text": "People can stand. It's a birthday drinks, not a wedding."
+    },
+    {
+     "speaker": "user",
+     "text": "Grandpa can't stand for two hours, though."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then he gets the armchair. I'll put a cushion on it and a reserved sign, he'll think it's hilarious."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And the folding table, did that come too?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It's in the hallway, but one leg wobbles. Bring some tape."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "birthday_party.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Give me some party game ideas for a bunch of eight year olds."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Musical chairs and freeze dance are always hits. A treasure hunt with little clues around the yard is great too."
+    },
+    {
+     "speaker": "user",
+     "text": "Ooh, a treasure hunt. How would that work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hide simple rhyming clues that lead from one spot to the next, ending at a box of small prizes."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm not great at rhymes / could you give me one example?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. Where you wash your hands each day, the next clue is hiding away. That one leads to the bathroom sink."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, perfect. How many clues should I do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Six to eight is about right for that age. Long enough to be exciting, short enough that nobody gets bored."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My wife's birthday is Sunday and I've got nothing planned. I'm panicking a little."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't worry, there's still time. What does she love doing on a free day?"
+    },
+    {
+     "speaker": "user",
+     "text": "She loves brunch, and anything near the water."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then book a brunch spot with a view, and plan a walk along the water afterwards. Simple but thoughtful."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I invite her friends or / keep it just the two of us?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could do both. Brunch for two, then a small get together with friends in the evening."
+    },
+    {
+     "speaker": "user",
+     "text": "I like that. What about a gift?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Think of something she mentioned wanting recently. A handwritten card with it goes a long way."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How far in advance should I send invitations for a birthday party?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About three to four weeks ahead is ideal. For a kids' party, two to three weeks is usually fine."
+    },
+    {
+     "speaker": "user",
+     "text": "And when should people reply by?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask for replies about a week before. That gives you time to order food and plan seating."
+    },
+    {
+     "speaker": "user",
+     "text": "What if half of them never answer? That always happens / every single year."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Send a friendly reminder a couple of days after the deadline. Then plan for most of the quiet ones not coming."
+    },
+    {
+     "speaker": "user",
+     "text": "Good point. Paper invites or just a group message?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A group message is quicker and easier to track. Paper is lovely for a milestone birthday, though."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm turning forty and I kind of don't want a party at all."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's completely okay. Some people prefer something quiet. What would make the day feel good to you?"
+    },
+    {
+     "speaker": "user",
+     "text": "Honestly, a good meal and a day off with no phone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds wonderful. You could plan a day trip somewhere new and finish with dinner at your favorite place."
+    },
+    {
+     "speaker": "user",
+     "text": "My family will be upset if I don't celebrate / at least a little."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe a small family dinner the weekend after. That way they get to celebrate you, and you still get your quiet day."
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, that could work."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's your birthday, so do it your way. Forty is a good year to start that habit."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got about fifty pounds for my son's whole party. Is that even possible?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is, if you keep it at home or in a park. How many kids are coming?"
+    },
+    {
+     "speaker": "user",
+     "text": "Twelve, maybe fourteen if his cousins come."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then skip the hired stuff. Homemade pizza, a big bowl of popcorn, and one cake you bake yourself will cover food for well under thirty."
+    },
+    {
+     "speaker": "user",
+     "text": "And the other twenty?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Small prizes for games and a few balloons. Kids remember the games far more than the decorations."
+    },
+    {
+     "speaker": "user",
+     "text": "I keep feeling like / he'll be embarrassed that it's not fancy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "At eight, what matters is his friends being there and having a laugh. A sack race in the garden beats a fancy venue nine times out of ten."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My wife turns seventy next month. I'd like music from when we were courting, but I don't know where to start."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lovely idea. Roughly which years were you courting?"
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, the late sixties. We danced a lot back then."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then think Motown, some early soul, and the big pop ballads from that era. Was there one song you danced to together?"
+    },
+    {
+     "speaker": "user",
+     "text": "There was, at a church hall. I'd have to ask my sister for the name."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask her. Playing that one song at the right moment could be the highlight of the evening."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I get a band or just play records?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A playlist on a good speaker is easier, but a small band doing a few of those songs live would feel really special."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Half the kids invited to my daughter's party have nut allergies. Well, three of them. What can I serve?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Three is enough to make the whole table nut free, which keeps it simple. Do you know if any have other allergies?"
+    },
+    {
+     "speaker": "user",
+     "text": "One can't have eggs either."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then for the cake, an egg free chocolate sponge works well, there are reliable recipes using oil and vinegar. Check the cocoa label for nut warnings."
+    },
+    {
+     "speaker": "user",
+     "text": "And snacks? I usually just buy whatever."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Popcorn, fruit kebabs, crisps and cheese cubes are usually safe. Read every label though, nuts hide in odd places like biscuits and some crisps."
+    },
+    {
+     "speaker": "user",
+     "text": "This is more stressful than I thought / but I want them to feel included."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the right instinct. Maybe message the parents with your menu ahead of time, they'll appreciate it and can flag anything you missed."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Toast for my best mate's thirtieth. Short. Help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Happy to. Give me one thing he's known for."
+    },
+    {
+     "speaker": "user",
+     "text": "Getting lost. Always. Even with a map."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good. You could open with how he once got lost on the way to his own party, then turn it into how he always finds his way to his friends when it matters."
+    },
+    {
+     "speaker": "user",
+     "text": "Too cheesy?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Only if you drag it out. Keep the joke quick, the warm bit even quicker, then raise your glass."
+    },
+    {
+     "speaker": "user",
+     "text": "Right. And I end with / what, just cheers?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cheers to thirty years and finally learning to use a map. Short, a little teasing, done."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So I want to have a sleepover for my thirteenth and my mum says only if I plan it properly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds fair. How many friends do you want to invite?"
+    },
+    {
+     "speaker": "user",
+     "text": "Five. Is that too many?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Five is a good number. Make sure there's room for everyone's sleeping bags, and maybe agree a lights out time with your mum so she's happy."
+    },
+    {
+     "speaker": "user",
+     "text": "Lights out? That kills the whole point."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It doesn't have to be early. Suggesting it yourself shows her you've thought about it, and she might be more relaxed in return."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay smart. What should we actually do / besides watching films?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A make your own pancakes breakfast is fun, and a little quiz about each other at night always gets people laughing."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My office keeps doing birthday cake for everyone and now it's my turn. I'd honestly rather disappear."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's more common than people think. Do you mind the cake, or is it the singing and attention?"
+    },
+    {
+     "speaker": "user",
+     "text": "The singing. Twenty people staring at me while I stand next to a candle."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could ask whoever organises it to skip the song and just leave the cake in the kitchen with a card. Most people will happily go along with that."
+    },
+    {
+     "speaker": "user",
+     "text": "Won't that look rude?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not if you say it kindly. Something like, thank you so much, I'd love the cake but I'm not great with the spotlight."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. Okay, I can say that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And if they sing anyway, it's thirty seconds. Smile, blow out the candle and grab the biggest slice."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm having people over for my birthday and I want some games for adults that aren't awkward."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Do your guests mostly know each other, or is it a mix of friend groups?"
+    },
+    {
+     "speaker": "user",
+     "text": "Total mix. Work people, uni friends, my climbing lot."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then start with something that pairs strangers up. Two truths and a lie works, or a team quiz where you mix the teams on purpose."
+    },
+    {
+     "speaker": "user",
+     "text": "A quiz about me, maybe?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's fun, as long as it's not all inside jokes. Mix questions about you with general ones so everyone has a chance."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, and then later in the night / something sillier?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Charades or a drawing game where you guess the picture. They loosen people up quickly once a few drinks are in."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I write no gifts please on an invitation without sounding snooty?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it warm and give a reason. For example, your company is the only present we need."
+    },
+    {
+     "speaker": "user",
+     "text": "That's nice. But some people will bring something anyway."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They will, and that's fine. Just thank them and don't open gifts in front of everyone, so nobody who came empty handed feels awkward."
+    },
+    {
+     "speaker": "user",
+     "text": "Could I suggest a charity instead?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. A line like, if you'd really like to give something, a donation to the local animal shelter would make her day."
+    },
+    {
+     "speaker": "user",
+     "text": "She does love that shelter. / Okay, I'll use that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely. It turns the gift question into something she actually cares about."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My best friend moved to Canada and her birthday is Friday. Can we do a party over video somehow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. What time zone gap are we talking about?"
+    },
+    {
+     "speaker": "user",
+     "text": "She's six hours behind us."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then an evening for her is very late for you. A Saturday afternoon call, morning for her, might suit everyone better."
+    },
+    {
+     "speaker": "user",
+     "text": "And what do we actually do on the call? Just stare at each other?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Send her a small parcel beforehand that she opens live, and have everyone bring a little story or memory about her."
+    },
+    {
+     "speaker": "user",
+     "text": "That might make her cry."
+    },
+    {
+     "speaker": "moshi",
+     "text": "In a good way. You could finish with a quick online quiz to lighten things up again."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it ridiculous to throw my dog a birthday party?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all, lots of people do. How old is your dog turning?"
+    },
+    {
+     "speaker": "user",
+     "text": "Ten. He's a grumpy old terrier, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then keep it small and calm. A couple of dog friends he already knows, a walk, and a dog safe cake."
+    },
+    {
+     "speaker": "user",
+     "text": "What makes a cake dog safe?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No chocolate, no raisins, no xylitol sweetener. A simple mix of oat flour, banana, peanut butter without sweetener, and an egg works well."
+    },
+    {
+     "speaker": "user",
+     "text": "He'll eat it in one go / and then look at me like I've betrayed him."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds about right for a terrier. Take a photo before he gets to it."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Last year my son cried at his own party and hid in his room. He's really shy. I don't know if I should even bother this year."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds hard for both of you. Did he say what upset him?"
+    },
+    {
+     "speaker": "user",
+     "text": "Too many people, I think. We invited the whole class."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the party wasn't the problem, the size was. Would he enjoy something with just two or three close friends?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe. He has one best friend, really."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start there. Ask him who he'd like, and let him pick one activity, like the cinema or baking cookies together."
+    },
+    {
+     "speaker": "user",
+     "text": "He might say no to all of it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's okay too. A special family day can still feel like a celebration, as long as it's on his terms."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm hosting thirty adults on Saturday evening. How much drink do I need?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A rough guide is two drinks per person in the first hour and one per hour after that. How long is the party?"
+    },
+    {
+     "speaker": "user",
+     "text": "Seven till midnight. Ish."
+    },
+    {
+     "speaker": "moshi",
+     "text": "So about six to seven drinks each, call it two hundred in total. Split it between wine, beer, and soft drinks based on your crowd."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds like a lot. Most of my friends / don't drink that much anymore."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then scale down and lean on soft drinks and sparkling water. Plenty of ice is the thing people always forget."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, ice. Good shout."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get more than you think, at least a big bag per ten people. It disappears fast."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you help me make a playlist for a party where the ages go from four to eighty?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun challenge. Do you want it mostly in the background or will people dance?"
+    },
+    {
+     "speaker": "user",
+     "text": "Dancing, hopefully, after cake."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then build it in waves. Start with gentle classics everyone knows, add some cheerful kids' songs around cake time, and save big singalong hits for later."
+    },
+    {
+     "speaker": "user",
+     "text": "Give me an example of a singalong that works for everyone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Old disco tends to bridge the generations. Grandparents know it, parents love it, and kids just like the beat."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I include / the chicken dance? Be honest."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, yes. Once. Right when the kids need to burn off sugar."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I completely forgot my friend's birthday. It was three days ago and I feel awful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It happens to everyone. Have you said anything to her yet?"
+    },
+    {
+     "speaker": "user",
+     "text": "No. I've been too embarrassed to text."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Text her today. Don't over explain, just say you're sorry you missed it and you'd love to take her out to make up for it."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I get her something big to make up for it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not big, thoughtful. Something that shows you know her is better than something expensive."
+    },
+    {
+     "speaker": "user",
+     "text": "She mentioned a pottery class once."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Book one for the two of you. A belated birthday that's actually fun can mean more than a text on the day."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I warn my neighbours about a party? It's a Saturday, not huge."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A quick heads up is always a good idea. It turns a possible complaint into goodwill."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I even say?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Just a short note with the date, a rough end time, and your number in case it gets too loud."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I invite them? I barely know the guy downstairs / and he seems kind of grumpy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Inviting them is a nice touch even if they won't come. People complain far less about a party they were invited to."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, sneaky."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Friendly, not sneaky. And try to move things indoors and quieter after eleven."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to decorate for my girlfriend's birthday but I have no budget and no taste."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two problems, both fixable. Does she have a favourite colour?"
+    },
+    {
+     "speaker": "user",
+     "text": "Green. Like, forest green."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then collect some branches and leaves from a walk, put them in jars with candles, and add a string of fairy lights if you have one."
+    },
+    {
+     "speaker": "user",
+     "text": "That actually sounds nice. What else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Print a few photos of the two of you and peg them along a piece of string. Costs almost nothing, looks personal."
+    },
+    {
+     "speaker": "user",
+     "text": "And she won't think I just picked up rubbish from the park?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not if the photos are there. It'll look intentional, almost like a little woodland theme."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Honestly, is a first birthday party worth it? The baby won't remember it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "True, she won't. But the party is often more for the parents and the family who've helped this year."
+    },
+    {
+     "speaker": "user",
+     "text": "That's kind of how I feel. Everyone's been amazing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a small thank you gathering could be lovely. Keep it short and around nap times so nobody ends up in tears."
+    },
+    {
+     "speaker": "user",
+     "text": "Including me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Including you. Two hours, simple food, and a smash cake for the photos is plenty."
+    },
+    {
+     "speaker": "user",
+     "text": "What's a smash cake?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small cake just for the baby to grab and squash. Messy, but it makes great pictures."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We booked bowling for my son's party. What do I need to sort beforehand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice choice. Have you checked if they do bumpers and lighter balls for kids?"
+    },
+    {
+     "speaker": "user",
+     "text": "I didn't think of that. They're nine."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask for bumpers, they make it more fun and less frustrating at that age. Also check how many kids per lane."
+    },
+    {
+     "speaker": "user",
+     "text": "Six per lane, I think. And food? / Do I bring my own or do they do it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most places offer a party package with food, and often don't allow outside food except the cake. Ask them directly."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring socks for any kid who forgets them, and a list of parent phone numbers, just in case."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The school says if you hand out invitations in class you have to invite everyone. That's twenty eight kids."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a common rule to avoid hurt feelings. Do you want the whole class, or just a few close friends?"
+    },
+    {
+     "speaker": "user",
+     "text": "Just a few. Like six."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then skip the classroom route and invite those six privately, by message to their parents or by post."
+    },
+    {
+     "speaker": "user",
+     "text": "Won't the others hear about it anyway?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Possibly. You can ask your child to keep it low key at school, and most kids understand that not every party is for everyone."
+    },
+    {
+     "speaker": "user",
+     "text": "I just don't want her / to be the mean girl, you know?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small party isn't mean. What matters is how she talks about it at school, and you can help her with that."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Help, the cake just collapsed in the middle and the party's in two hours."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't panic, we can save it. Is it still tasty, just sunken?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, it's chocolate. It just caved in."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then fill the crater. Whipped cream, berries, chocolate buttons, anything piled in the middle, and call it a volcano cake."
+    },
+    {
+     "speaker": "user",
+     "text": "A volcano. That's genius, it's a kids' party."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Add some red sweets or a bit of strawberry sauce running down the sides for lava."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'm calm now. Mostly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You've got this. Honestly, they'll remember the volcano way more than a neat round cake."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm doing a murder mystery party for my birthday. How do I word the invitation?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun. Make the invitation feel like part of the story. Do you have a setting yet?"
+    },
+    {
+     "speaker": "user",
+     "text": "A nineteen twenties country house. Very dramatic."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then something like, you are cordially summoned to Blackwood Manor, where one guest will not survive the evening. Dress for the era."
+    },
+    {
+     "speaker": "user",
+     "text": "Ooh. Should I give people their characters in advance?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a week ahead, with a short secret only they know. It gets people excited and they'll put more effort into costumes."
+    },
+    {
+     "speaker": "user",
+     "text": "Some of my friends / are going to be terrible actors."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's half the fun. Give the shy ones smaller roles, like the butler, so they can join in without pressure."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My birthday is on Christmas Eve, and every year it just disappears into Christmas."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's really common for December birthdays. Have you ever tried celebrating on a different day?"
+    },
+    {
+     "speaker": "user",
+     "text": "My family thinks that's weird."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It isn't. Plenty of people pick a half birthday in June, when nobody's busy and the weather's better."
+    },
+    {
+     "speaker": "user",
+     "text": "A half birthday. That sounds a bit childish though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Call it a summer party then. Same idea, no explaining needed."
+    },
+    {
+     "speaker": "user",
+     "text": "I like that. And on the actual day / just let it be Christmas?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could ask for one small thing that's just yours, like a birthday breakfast before the Christmas chaos starts."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "First year at uni, my birthday's next week, and I don't really know anyone yet."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That can feel lonely, but birthdays are actually a great excuse to get to know people. Who do you chat to most?"
+    },
+    {
+     "speaker": "user",
+     "text": "A couple of people from my flat, and one girl from my seminar."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Invite them for something casual, like pizza in the flat kitchen. Low pressure, and people love a free slice."
+    },
+    {
+     "speaker": "user",
+     "text": "What if nobody comes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask in person rather than in a group chat. People rarely say no to a face to face invite."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'll ask tomorrow. Maybe."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Do it. Worst case you get pizza and a quiet evening. Best case, those three become your people."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's my younger son's birthday Saturday and his big brother is already sulking about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sibling jealousy around birthdays is so normal. How old are they?"
+    },
+    {
+     "speaker": "user",
+     "text": "Four and seven. The seven year old just keeps saying it's not fair."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give the older one a job. Something important, like being in charge of the music or handing out the party bags."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. He would love being in charge of something."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And maybe plan a little one to one time with him on Sunday, so he knows his turn for attention is coming."
+    },
+    {
+     "speaker": "user",
+     "text": "Like a trip just / the two of us to the park?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly that. It doesn't need to be big, just his."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want a photo booth at my party but renting one is crazy expensive."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can make one easily. Do you have a blank wall and a phone tripod?"
+    },
+    {
+     "speaker": "user",
+     "text": "Wall yes, tripod no."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A stack of books works as a tripod. Hang a sheet of shiny curtain or wrapping paper on the wall and add a lamp in front for good light."
+    },
+    {
+     "speaker": "user",
+     "text": "And props?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cardboard speech bubbles, silly hats, big sunglasses. Charity shops are brilliant for cheap props."
+    },
+    {
+     "speaker": "user",
+     "text": "How do people take the photos / if nobody's standing behind the phone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use the phone's timer, or a cheap Bluetooth remote. Put a little sign on the wall explaining how."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm tired of party bags full of plastic tat. Any better ideas?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty. Would you rather give something useful, something edible, or something they grow?"
+    },
+    {
+     "speaker": "user",
+     "text": "Grow? Like seeds?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. A small pot with sunflower seeds and a label with the child's name is cheap and kids love watching it sprout."
+    },
+    {
+     "speaker": "user",
+     "text": "That's sweet. What about the useful option?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A paperback book from a second hand shop, or a little set of coloured pencils. Parents will thank you."
+    },
+    {
+     "speaker": "user",
+     "text": "Honestly, I'm sold on the sunflowers."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good choice. Add a note saying who grows the tallest one by summer wins a prize."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm planning a surprise party for my husband but he's getting suspicious. How do I keep it secret?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The trick is a believable cover story. What does he think is happening that evening?"
+    },
+    {
+     "speaker": "user",
+     "text": "Nothing yet. That's the problem. He keeps asking why I'm on my phone so much."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give him a boring explanation, like you're organising a gift with your sister. Half the truth is easier to keep straight."
+    },
+    {
+     "speaker": "user",
+     "text": "And for the night itself?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plan a simple dinner for two as the reason to go out, then have a friend call with a small emergency that brings you to the party venue."
+    },
+    {
+     "speaker": "user",
+     "text": "That feels very spy film. / I'm terrible at lying."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then say as little as possible. Short answers, change the subject, and let your friend do the acting."
+    }
+   ]
+  },
+  {
+   "id": "birthday_party.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My best friend is in hospital over her birthday. Can we still celebrate somehow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, in a gentle way. Do you know what the ward allows for visitors?"
+    },
+    {
+     "speaker": "user",
+     "text": "Two at a time, and no flowers."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then bring things that don't take space. A card signed by lots of people, some photos, maybe a small cake to share with the nurses if she's allowed."
+    },
+    {
+     "speaker": "user",
+     "text": "She'd love that. She's always feeding people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could also ask friends to send short video messages and play them together on your phone."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I might cry more than her though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's okay. Just being there, on her day, will mean the most."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "birthday_party.opt1",
+   "lead_in": "My son is turning seven and we're choosing where to have his party.",
+   "options": [
+    "The first option is the trampoline park, which the kids love, but it's pretty expensive per child.",
+    "Then there's having it at home with a bouncy castle in the backyard.",
+    "Option three is a picnic at the park with games and a big cake.",
+    "And the last one is a pizza making class at a local restaurant."
+   ],
+   "moshi_comment": [
+    "The trampoline park is a guaranteed hit with seven year olds, but the cost adds up fast with a big guest list. A bouncy castle at home gets a lot of the same fun for less. The pizza class is a fun idea, especially for kids who like to make things.",
+    "How many kids are you inviting? For a big group, the backyard bouncy castle or the park picnic is much easier on the budget. For a small group, the trampoline park or pizza class would feel extra special."
+   ]
+  },
+  {
+   "id": "birthday_party.opt2",
+   "lead_in": "I'm planning a surprise party for my best friend's thirtieth and I have a few ideas.",
+   "options": [
+    "One is renting the back room of her favorite restaurant for a dinner with about twenty people.",
+    "Another option is a house party at my place with music and lots of snacks.",
+    "Or I could plan a smaller weekend trip with just her five closest friends."
+   ],
+   "moshi_comment": [
+    "The restaurant dinner feels special and you don't have to clean up after. A house party is cheaper and more relaxed, but you'd be busy hosting. The weekend trip is the most memorable, though it's harder to keep a surprise when people need to plan time off.",
+    "Does she like being the center of attention in a big crowd? If yes, the restaurant dinner is perfect. If she's more low key, the weekend with close friends would mean a lot."
+   ]
+  },
+  {
+   "id": "birthday_party.opt3",
+   "lead_in": "I need to pick a cake for my sister's fortieth and the bakery sent me a few ideas.",
+   "options": [
+    "There's a three tier sponge with fresh flowers on top, beautiful but really pricey.",
+    "They also do a cheesecake tower, which she'd love because she hates icing.",
+    "Or a tray of forty little cupcakes, each with a different topping, so everyone grabs their own."
+   ],
+   "moshi_comment": [
+    "The flower sponge would look stunning in photos, but if she hates icing she might barely eat it. The cheesecake tower is the one built around her taste. Cupcakes are the easiest to serve, though they feel a bit less like a centrepiece.",
+    "I'd lean towards the cheesecake tower, since it's really about what she likes. The cupcakes are fun if the party is loose and people are wandering. The sponge only makes sense if the look matters more than the eating."
+   ]
+  },
+  {
+   "id": "birthday_party.opt4",
+   "lead_in": "We're trying to work out the entertainment for my nephew's fifth birthday.",
+   "options": [
+    "A magician who does a forty minute show and makes balloon animals at the end.",
+    "Renting a little petting zoo with rabbits, a goat and some chickens in the garden.",
+    "A face painter who stays the whole afternoon so kids can drop in whenever they want.",
+    "Or no entertainer at all, just old school games like sack races and pass the parcel that we run ourselves."
+   ],
+   "moshi_comment": [
+    "Five year olds sit still for a magician only if the show is short and loud, and forty minutes is pushing it. The petting zoo is unforgettable but needs space and a forgiving garden. A face painter plus a couple of your own games is a really solid middle ground.",
+    "How many kids, and how big is the garden? For a big group, the face painter keeps a steady queue busy while games fill the gaps. The petting zoo is magic for a small group, and doing it all yourselves is cheapest but means you'll be running around the whole time."
+   ]
+  },
+  {
+   "id": "birthday_party.opt5",
+   "lead_in": "I'm turning twenty five and I've got three ideas for the night, but I keep flip flopping.",
+   "options": [
+    "Karaoke in a private booth with about ten friends and way too many snacks.",
+    "A rooftop bar downtown, more grown up, people just drop by over the evening.",
+    "Or a house party at mine with a playlist everyone adds to beforehand."
+   ],
+   "moshi_comment": [
+    "Karaoke is the most fun if your friends are up for singing, and the booth keeps it intimate. The rooftop is easy and flexible, but it can turn into you buying drinks and chatting in small groups. A house party is cheapest, though you'll be the host rather than the guest.",
+    "If you want a night you'll laugh about later, karaoke wins. If you'd rather lots of people pass through without pressure, the rooftop bar suits that. The house party is lovely but you'll spend half of it tidying cups."
+   ]
+  },
+  {
+   "id": "birthday_party.opt6",
+   "lead_in": "My mum's birthday is next week and I want to plan something, but money's tight.",
+   "options": [
+    "I could cook her a three course dinner at home and do it all properly with candles.",
+    "Or a picnic by the lake where she used to take us when we were little.",
+    "We could also just go to the cinema and get her favourite fish and chips after.",
+    "My brother suggested a scrapbook of family photos instead of any outing."
+   ],
+   "moshi_comment": [
+    "The lake picnic has real meaning, it brings back those early memories, and it costs almost nothing. A home dinner is lovely but a lot of work for you. The scrapbook could actually go alongside any of the others as the gift.",
+    "I'd pair two of them. Do the picnic at the lake, and give her the scrapbook while you're there. The cinema and chips is fun, but it's a bit like any other evening out."
+   ]
+  }
+ ]
 }

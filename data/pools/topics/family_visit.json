@@ -1,150 +1,1452 @@
 {
-  "topic": "family_visit",
-  "contexts": [
+ "topic": "family_visit",
+ "contexts": [
+  {
+   "id": "family_visit.ctx1",
+   "turns": [
     {
-      "id": "family_visit.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "My parents are staying with us next week and our apartment is tiny."},
-        {"speaker": "moshi", "text": "That can be tricky. Would you give them your bedroom and take the couch, or book them a hotel nearby?"}
-      ],
-      "pending": "give up the bedroom or book a hotel",
-      "think_reask": [
-        "So, for your parents' visit, are you giving them your bedroom or booking a hotel?",
-        "Okay, have you decided? Your bed and the couch for you, or a hotel for them?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were figuring out where your parents will sleep next week.",
-        "Hi again. Still torn between giving up your bedroom and finding them a hotel?"
-      ],
-      "endings": [
-        {"user": "They'd be hurt if we sent them to a hotel. They get the bedroom.", "moshi": "That's kind of you. Maybe put fresh towels and a little night light in there."},
-        {"user": "Hotel. Everyone will sleep better and stay friends.", "moshi": "Very wise. Look for one within walking distance so they can drop by easily."}
-      ]
+     "speaker": "user",
+     "text": "My parents are staying with us next week and our apartment is tiny."
     },
     {
-      "id": "family_visit.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I'm flying home to see my grandma for the holidays."},
-        {"speaker": "moshi", "text": "How nice. Do you want to stay the whole week, or just a long weekend so you don't miss too much work?"},
-        {"speaker": "user", "text": "Good question, I hadn't really thought about that."},
-        {"speaker": "moshi", "text": "No rush. So, a full week or a long weekend?"}
-      ],
-      "pending": "full week or long weekend at grandma's",
-      "think_reask": [
-        "Okay, any thoughts on the trip to your grandma's? A full week or a long weekend?",
-        "So what do you think, the whole week at home or just a few days?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were deciding how long to stay with your grandma.",
-        "There you are. Did you figure out whether it's a week or a long weekend at your grandma's?"
-      ],
-      "endings": [
-        {"user": "The whole week. She's getting older and I want the time with her.", "moshi": "That sounds right. I'll look for flights that leave on a Saturday."},
-        {"user": "Just a long weekend, work is crazy right now.", "moshi": "Understood. A Thursday night flight would give you the most time there."}
-      ]
-    },
-    {
-      "id": "family_visit.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "My sister and her two kids are coming Saturday and I have no idea what to do with them."},
-        {"speaker": "moshi", "text": "We could plan something. Would the kids like the zoo, or would you rather keep it relaxed with a movie and pizza at home?"}
-      ],
-      "pending": "zoo outing or movie and pizza at home",
-      "think_reask": [
-        "So, for Saturday with your sister's kids, the zoo or movie and pizza at home?",
-        "Have you thought about it? An outing to the zoo or a cozy day in?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were planning Saturday with your sister's kids, the zoo or a day at home.",
-        "Hi again. Did you pick between the zoo and a movie day for the kids?"
-      ],
-      "endings": [
-        {"user": "The zoo. They've got way too much energy for a movie.", "moshi": "Good thinking. Go early before it gets crowded and pack plenty of snacks."},
-        {"user": "Home. My sister will be tired from the drive anyway.", "moshi": "Sounds cozy. Let the kids pick the movie and the pizza toppings."}
-      ]
+     "speaker": "moshi",
+     "text": "That can be tricky. Would you give them your bedroom and take the couch, or book them a hotel nearby?"
     }
-  ],
-  "side_conversations": [
-    {"id": "family_visit.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did my mom call you about dinner on Sunday?"},
-      {"speaker": "friend", "text": "She texted me. She wants to bring her lasagna."},
-      {"speaker": "user", "text": "Of course she does. Do we have a dish big enough to warm it up?"},
-      {"speaker": "friend", "text": "We have that big glass one. It should fit."},
-      {"speaker": "user", "text": "Okay, good. I'll make a salad so it's not just pasta."}
-    ]},
-    {"id": "family_visit.side2", "turns": [
-      {"speaker": "user", "text": "What time does my uncle's train get in?"},
-      {"speaker": "friend", "text": "Quarter past four, I think. Want me to pick him up?"},
-      {"speaker": "user", "text": "Would you? I have a call until five."},
-      {"speaker": "friend", "text": "No problem. Does he have a lot of luggage?"},
-      {"speaker": "user", "text": "Knowing him, two big suitcases and a bag of cheese."},
-      {"speaker": "friend", "text": "Then I'll take the car, not the bike."}
-    ]},
-    {"id": "family_visit.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, can you help me move the air mattress into the office?"},
-      {"speaker": "friend", "text": "Sure. Is your cousin really staying for ten days?"},
-      {"speaker": "user", "text": "Apparently. She says it's cheaper than a hotel."},
-      {"speaker": "friend", "text": "Well, it is. Does she know about the cat?"},
-      {"speaker": "user", "text": "Oh no. She's allergic, isn't she?"},
-      {"speaker": "friend", "text": "Very. You should probably tell her tonight."},
-      {"speaker": "user", "text": "Yeah. I'll call her after dinner."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "family_visit.dlg1", "turns": [
-      {"speaker": "user", "text": "My in-laws are visiting and I want the guest room to feel welcoming. Any ideas?"},
-      {"speaker": "moshi", "text": "Fresh sheets, an extra blanket and a couple of clean towels go a long way. A small lamp by the bed is nice too."},
-      {"speaker": "user", "text": "Should I leave some snacks or water in there?"},
-      {"speaker": "moshi", "text": "A bottle of water and a little basket of snacks is a lovely touch. Guests often feel shy raiding someone else's kitchen."},
-      {"speaker": "user", "text": "What about the wifi password, is it weird to / just leave a note?"},
-      {"speaker": "moshi", "text": "Not weird at all, it's really helpful. A small card on the nightstand works perfectly."},
-      {"speaker": "user", "text": "Great. Maybe some flowers as well?"},
-      {"speaker": "moshi", "text": "Sure, just pick something without a strong scent in case anyone has allergies."}
-    ]},
-    {"id": "family_visit.dlg2", "turns": [
-      {"speaker": "user", "text": "I'm driving six hours to see my dad. How often should I stop?"},
-      {"speaker": "moshi", "text": "A good rule is a short break every two hours. Stretch your legs, grab some water and rest your eyes."},
-      {"speaker": "user", "text": "Is it better to leave really early in the morning?"},
-      {"speaker": "moshi", "text": "Early is great for avoiding traffic, as long as you got a full night of sleep. Don't trade sleep for an early start."},
-      {"speaker": "user", "text": "I was planning to leave at five / but maybe seven is smarter."},
-      {"speaker": "moshi", "text": "Seven sounds more reasonable. You'd still arrive by early afternoon with stops."},
-      {"speaker": "user", "text": "Any tips for staying alert on the highway?"},
-      {"speaker": "moshi", "text": "Keep the car a little cool, listen to a podcast you enjoy and skip heavy meals. If you feel sleepy, pull over for a short nap."}
-    ]},
-    {"id": "family_visit.dlg3", "turns": [
-      {"speaker": "user", "text": "My grandparents are coming over and they don't really use phones. What can we do together?"},
-      {"speaker": "moshi", "text": "Card games are usually a hit, or you could look through old photo albums and ask them for stories."},
-      {"speaker": "user", "text": "Ooh, photo albums is a good one. My grandpa loves telling stories."},
-      {"speaker": "moshi", "text": "Then that's perfect. You could even record a few of his stories to keep."},
-      {"speaker": "user", "text": "What about food, they're kind of picky / and my grandma can't eat salt."},
-      {"speaker": "moshi", "text": "Try a simple roast chicken with lemon and herbs instead of salt. Soft roasted vegetables on the side are usually safe too."},
-      {"speaker": "user", "text": "And dessert?"},
-      {"speaker": "moshi", "text": "A fruit crumble is easy and most grandparents love it. Serve it warm with a little cream."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "family_visit.opt1",
-     "lead_in": "My parents are visiting for the first time and I need help planning their big day out.",
-     "options": [
-       "The first option is a boat tour around the harbor, about two hours, with lunch included.",
-       "Then there's the art museum, which my mom would love, but my dad might get bored.",
-       "And there's a big farmers market on Saturdays with live music and lots of local food."
-     ],
-     "moshi_comment": [
-       "The boat tour is a nice compromise, since it's relaxing and lunch is sorted. The museum is perfect for your mom, but you'd need something for your dad afterward. The farmers market is easy and lively, but it can be tiring if they don't like crowds.",
-       "How do your parents feel about walking and crowds? If they're easygoing, I'd do the farmers market in the morning and the boat tour after. The museum could be a short stop on another day."
-     ]},
-    {"id": "family_visit.opt2",
-     "lead_in": "I'm visiting my brother next month and I have to choose how to get there.",
-     "options": [
-       "One way is a direct flight, only an hour, but it leaves at six in the morning.",
-       "Another is the train, about five hours, cheaper, and I could work on my laptop.",
-       "Or I could drive, which takes four hours, but then I'd have the car while I'm there.",
-       "And the last option is the overnight bus, super cheap but probably not very comfortable."
-     ],
-     "moshi_comment": [
-       "The train sounds like the best balance, since you can work and it's cheaper than flying. The flight is fastest, but that early start eats up most of the time you save. Driving only makes sense if you really need a car at your brother's place.",
-       "I'd skip the overnight bus unless money is really tight. Does your brother live somewhere you can get around without a car? If yes, take the train, and if not, driving might be worth it."
-     ]}
-  ]
+   ],
+   "pending": "give up the bedroom or book a hotel",
+   "think_reask": [
+    "So, for your parents' visit, are you giving them your bedroom or booking a hotel?",
+    "Okay, have you decided? Your bed and the couch for you, or a hotel for them?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were figuring out where your parents will sleep next week.",
+    "Hi again. Still torn between giving up your bedroom and finding them a hotel?"
+   ],
+   "endings": [
+    {
+     "user": "They'd be hurt if we sent them to a hotel. They get the bedroom.",
+     "moshi": "That's kind of you. Maybe put fresh towels and a little night light in there."
+    },
+    {
+     "user": "Hotel. Everyone will sleep better and stay friends.",
+     "moshi": "Very wise. Look for one within walking distance so they can drop by easily."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm flying home to see my grandma for the holidays."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How nice. Do you want to stay the whole week, or just a long weekend so you don't miss too much work?"
+    },
+    {
+     "speaker": "user",
+     "text": "Good question, I hadn't really thought about that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "No rush. So, a full week or a long weekend?"
+    }
+   ],
+   "pending": "full week or long weekend at grandma's",
+   "think_reask": [
+    "Okay, any thoughts on the trip to your grandma's? A full week or a long weekend?",
+    "So what do you think, the whole week at home or just a few days?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were deciding how long to stay with your grandma.",
+    "There you are. Did you figure out whether it's a week or a long weekend at your grandma's?"
+   ],
+   "endings": [
+    {
+     "user": "The whole week. She's getting older and I want the time with her.",
+     "moshi": "That sounds right. I'll look for flights that leave on a Saturday."
+    },
+    {
+     "user": "Just a long weekend, work is crazy right now.",
+     "moshi": "Understood. A Thursday night flight would give you the most time there."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My sister and her two kids are coming Saturday and I have no idea what to do with them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "We could plan something. Would the kids like the zoo, or would you rather keep it relaxed with a movie and pizza at home?"
+    }
+   ],
+   "pending": "zoo outing or movie and pizza at home",
+   "think_reask": [
+    "So, for Saturday with your sister's kids, the zoo or movie and pizza at home?",
+    "Have you thought about it? An outing to the zoo or a cozy day in?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were planning Saturday with your sister's kids, the zoo or a day at home.",
+    "Hi again. Did you pick between the zoo and a movie day for the kids?"
+   ],
+   "endings": [
+    {
+     "user": "The zoo. They've got way too much energy for a movie.",
+     "moshi": "Good thinking. Go early before it gets crowded and pack plenty of snacks."
+    },
+    {
+     "user": "Home. My sister will be tired from the drive anyway.",
+     "moshi": "Sounds cozy. Let the kids pick the movie and the pizza toppings."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My mother in law arrives Thursday and she hates clutter."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the living room and the guest bath matter most. Do you want to tackle those tonight, or spread it over the next three evenings?"
+    }
+   ],
+   "pending": "clean tonight or spread over three evenings",
+   "think_reask": [
+    "So, one big push tonight, or a little each evening?",
+    "Have you settled it? Tonight all at once, or split it up?"
+   ],
+   "welcome_back": [
+    "Quick reminder, the guest bath and living room. Tonight, or bit by bit?",
+    "Still need your call on the cleaning plan, one evening or three?"
+   ],
+   "endings": [
+    {
+     "user": "Tonight. If I wait I'll just panic on Wednesday.",
+     "moshi": "Fair enough. Start with the bathroom while you've still got energy."
+    },
+    {
+     "user": "Spread it out, I'm wiped after work.",
+     "moshi": "Sensible. Do the bathroom first and leave the living room for Wednesday."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Ugh. My brother wants to bring his new dog when he visits."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Do you mind having a dog in the house?"
+    },
+    {
+     "speaker": "user",
+     "text": "Not really, but my cat will lose her mind."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a real concern. Would you rather ask him to board the dog, or keep the cat shut in your bedroom for the weekend?"
+    }
+   ],
+   "pending": "board the dog or shut the cat in the bedroom",
+   "think_reask": [
+    "Okay, the dog and the cat. Boarding, or bedroom for the cat?",
+    "Any thoughts yet on the pet situation?"
+   ],
+   "welcome_back": [
+    "So what's the verdict on your brother's dog?",
+    "Back to the cat problem. Ask him to board the dog, or keep her in the bedroom?"
+   ],
+   "endings": [
+    {
+     "user": "I'll ask him to board it. He'll grumble but he'll do it.",
+     "moshi": "Good. Maybe offer to split the kennel cost so it feels less like a favour."
+    },
+    {
+     "user": "The cat can have the bedroom, she sleeps all day anyway.",
+     "moshi": "Then give her food, water and a litter box in there and she'll barely notice."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're driving my grandpa to the coast for his ninetieth."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What a lovely thing to do. Should we pick a route with lots of rest stops, or the faster highway with fewer breaks?"
+    }
+   ],
+   "pending": "scenic route with stops or faster highway",
+   "think_reask": [
+    "So which route for grandpa, the slow one with stops or the highway?",
+    "Have you picked a way to drive him there?"
+   ],
+   "welcome_back": [
+    "Your grandpa's trip to the coast, still deciding on the route?",
+    "We need to pick the road. Lots of stops, or straight down the highway?"
+   ],
+   "endings": [
+    {
+     "user": "The slow one. He gets stiff sitting too long.",
+     "moshi": "Then plan a stop every hour or so. Maybe somewhere with a bench and a coffee."
+    },
+    {
+     "user": "Highway. He'd rather just get there and see the sea.",
+     "moshi": "Okay. Bring a cushion and a blanket so he's comfortable the whole way."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dad's coming for a week and he's retired, so he's going to be bored."
+    },
+    {
+     "speaker": "moshi",
+     "text": "We can give him a few things to do. Is he more of a museum person, or would he enjoy fixing stuff around your place?"
+    }
+   ],
+   "pending": "museums or fixing things for dad",
+   "think_reask": [
+    "So, museums or a little to do list for your dad?",
+    "Which sounds more like him, sightseeing or tinkering?"
+   ],
+   "welcome_back": [
+    "Your dad's week, any idea what'll keep him busy?",
+    "So does he want museums, or a toolbox and a list?"
+   ],
+   "endings": [
+    {
+     "user": "Oh he'd love fixing things. Our kitchen door squeaks like crazy.",
+     "moshi": "Perfect, give him the door and maybe the wobbly shelf too. He'll feel useful."
+    },
+    {
+     "user": "Museums, definitely. He reads every little sign.",
+     "moshi": "Then the history museum is a good start. Plan it for a weekday when it's quieter."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Honestly I'm dreading this. My sister and I haven't talked properly in a year and she's staying with us."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds hard. Do you want to clear the air on the first night, or keep things light and see how it goes?"
+    }
+   ],
+   "pending": "talk with sister first night or keep it light",
+   "think_reask": [
+    "No pressure. Talk early, or wait and see?",
+    "How do you feel now about the first night with your sister?"
+   ],
+   "welcome_back": [
+    "About your sister. Clear the air early, or let it settle first?",
+    "Did you get a sense of how you want to handle things with her?"
+   ],
+   "endings": [
+    {
+     "user": "I think early. Otherwise it'll hang over the whole visit.",
+     "moshi": "That takes courage. Maybe a walk together, it's easier to talk side by side."
+    },
+    {
+     "user": "Light first. Maybe it comes up naturally.",
+     "moshi": "That's okay too. Just leave a little space for it if she seems open."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Twins. Four year old twins. For five days."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, that's a lot of energy. Do you want to childproof the whole flat, or just keep them out of a few rooms?"
+    }
+   ],
+   "pending": "childproof everything or close off rooms",
+   "think_reask": [
+    "So, full childproofing or a few closed doors?",
+    "Have you decided how to handle the twins and the flat?"
+   ],
+   "welcome_back": [
+    "The twins, right. Whole flat, or block off some rooms?",
+    "Still need to sort the childproofing. Which way are you leaning?"
+   ],
+   "endings": [
+    {
+     "user": "Close off the office and the bedroom. Everything else can survive.",
+     "moshi": "Good plan. Just move anything breakable off the low shelves."
+    },
+    {
+     "user": "Everything. I've met these kids.",
+     "moshi": "Understood. Outlet covers, cabinet locks, and move the plants up high."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My parents want to meet my girlfriend's parents while they're in town."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big moment. Should it be a dinner at your place, or a restaurant where nobody has to host?"
+    }
+   ],
+   "pending": "host dinner at home or go to a restaurant",
+   "think_reask": [
+    "So, home dinner or a restaurant for the parents?",
+    "Where's this big meeting going to happen?"
+   ],
+   "welcome_back": [
+    "The parents meeting. Your place or a restaurant?",
+    "Did you land on somewhere for both families?"
+   ],
+   "endings": [
+    {
+     "user": "A restaurant. Neutral ground, less pressure.",
+     "moshi": "Smart. Book a table somewhere a bit quiet so people can actually talk."
+    },
+    {
+     "user": "At home. My mom wants to cook, she insists.",
+     "moshi": "Then let her lead, and you handle drinks and the table."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, my aunt is flying in and lands at midnight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's late. Will you pick her up yourself, or book her a taxi and wait up at home?"
+    }
+   ],
+   "pending": "pick up the aunt or send a taxi",
+   "think_reask": [
+    "Midnight arrival. You driving, or a taxi?",
+    "Have you figured out how your aunt's getting from the airport?"
+   ],
+   "welcome_back": [
+    "Your aunt's late flight. Pick her up, or taxi?",
+    "So how's she getting in at midnight?"
+   ],
+   "endings": [
+    {
+     "user": "I'll go. She'd be nervous in a taxi that late.",
+     "moshi": "Kind of you. Have a nap in the evening so you're alert driving."
+    },
+    {
+     "user": "Taxi. I start work at seven.",
+     "moshi": "Fair. Send her the address and ask her to text when she's in the car."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Grandma's eighty five and she still wants to cook the whole holiday meal herself."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's sweet, but tiring. Would she accept help with the sides, or should someone just quietly take over the dishes afterwards?"
+    }
+   ],
+   "pending": "help grandma with sides or take over cleanup",
+   "think_reask": [
+    "So with grandma, help with the cooking or handle the cleanup?",
+    "Any thoughts on how to take some load off her?"
+   ],
+   "welcome_back": [
+    "About grandma's big meal. Help with sides, or clean up after?",
+    "Did you decide how to help her without hurting her pride?"
+   ],
+   "endings": [
+    {
+     "user": "Cleanup. She'd be offended if we touched her stuffing.",
+     "moshi": "Then let her shine at the stove, and you all own the sink."
+    },
+    {
+     "user": "Sides. She's actually said her hands hurt lately.",
+     "moshi": "Then offer to do the mashing and chopping. She can still be in charge."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cousin's family is coming from abroad and they don't speak much English."
+    },
+    {
+     "speaker": "moshi",
+     "text": "We can make that easier. Would you like a few phrases in their language, or should we plan activities that don't need much talking?"
+    }
+   ],
+   "pending": "learn phrases or plan low-talk activities",
+   "think_reask": [
+    "So, a few phrases, or activities that speak for themselves?",
+    "Which would help more with your cousin's family?"
+   ],
+   "welcome_back": [
+    "The language thing. Learn some phrases, or plan around it?",
+    "Which way do you want to go with your cousins?"
+   ],
+   "endings": [
+    {
+     "user": "Phrases. I want to at least say hello properly.",
+     "moshi": "Lovely. Start with greetings, thank you, and are you hungry, those go a long way."
+    },
+    {
+     "user": "Activities. Cooking together maybe, or a football game.",
+     "moshi": "Great idea. Food and sport need almost no shared words."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My stepdad's visiting and he's a really picky eater."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How picky are we talking?"
+    },
+    {
+     "speaker": "user",
+     "text": "Plain chicken, potatoes, nothing green."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Got it. Do you want to cook one simple meal everyone eats, or make his plain version on the side?"
+    }
+   ],
+   "pending": "one simple meal or a separate plain plate",
+   "think_reask": [
+    "So for your stepdad, one meal for all, or his own plate?",
+    "Did you decide how to feed him?"
+   ],
+   "welcome_back": [
+    "Your stepdad's dinners. Shared simple meal, or a side version?",
+    "So, one menu or two?"
+   ],
+   "endings": [
+    {
+     "user": "One simple meal. Roast chicken and potatoes, everybody likes that.",
+     "moshi": "Easy win. Add a salad for the rest of you and he can just skip it."
+    },
+    {
+     "user": "His own plate. I'm not giving up my curry.",
+     "moshi": "Fair. Keep a little plain rice and chicken aside before you add the spices."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're visiting my wife's family for the first time and there'll be like thirty people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a crowd. Do you want to learn some names in advance, or just focus on her parents and grandparents?"
+    }
+   ],
+   "pending": "learn many names or focus on parents and grandparents",
+   "think_reask": [
+    "So, study the family tree, or start with the key people?",
+    "How do you want to prepare for the thirty relatives?"
+   ],
+   "welcome_back": [
+    "The big family meeting. Learn everyone, or just the core few?",
+    "Still thinking about how to prep for the in-laws?"
+   ],
+   "endings": [
+    {
+     "user": "Just the core. I'll never remember thirty names.",
+     "moshi": "Totally fine. Ask your wife for one fun fact about each of them, it helps a lot."
+    },
+    {
+     "user": "I want to try everyone. She can quiz me in the car.",
+     "moshi": "Ambitious. Grouping them by household makes it much easier."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Mom keeps saying she'll only stay three days, but last time it was two weeks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic. Would you like to set a firm end date now, or leave it open and see how it feels?"
+    }
+   ],
+   "pending": "set a firm end date or leave it open",
+   "think_reask": [
+    "So with your mom, a fixed date or open ended?",
+    "Any decision on how long she stays?"
+   ],
+   "welcome_back": [
+    "About your mom's stay. Set the date, or play it by ear?",
+    "So, firm end date or not?"
+   ],
+   "endings": [
+    {
+     "user": "Firm. I'll book her return train myself.",
+     "moshi": "That's a gentle but clear way to do it. Maybe frame it as a treat."
+    },
+    {
+     "user": "Open. She's lonely since dad passed.",
+     "moshi": "That's kind. Just check in with yourself halfway through so you don't burn out."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kids are visiting their grandparents on the farm for the summer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Without you?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, first time. They're seven and nine."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exciting for them. Would you rather they call every evening, or only a couple of times a week so they settle in?"
+    }
+   ],
+   "pending": "call every evening or a couple of times a week",
+   "think_reask": [
+    "So, nightly calls or just a few a week?",
+    "Have you decided how often the kids should call?"
+   ],
+   "welcome_back": [
+    "The farm summer. How often do you want them calling?",
+    "Still undecided on the call schedule?"
+   ],
+   "endings": [
+    {
+     "user": "Every evening, at least the first week. I'll miss them.",
+     "moshi": "Totally understandable. Keep it short so they don't get homesick."
+    },
+    {
+     "user": "Couple times a week. They need to have their own adventure.",
+     "moshi": "Good instinct. Grandparents can always text a photo in between."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My in laws are staying and we only have one bathroom."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That gets tight in the mornings. Would a shower schedule work, or would it be easier if you showered at the gym that week?"
+    }
+   ],
+   "pending": "shower schedule or showering at the gym",
+   "think_reask": [
+    "So, a bathroom schedule, or gym showers?",
+    "Did you figure out the one bathroom problem?"
+   ],
+   "welcome_back": [
+    "The bathroom squeeze. Schedule, or the gym?",
+    "So how are we handling mornings?"
+   ],
+   "endings": [
+    {
+     "user": "Gym. I go anyway, might as well.",
+     "moshi": "Nice and simple. Just keep a little bag packed by the door."
+    },
+    {
+     "user": "Schedule. My father in law loves a plan anyway.",
+     "moshi": "Then let him write it. He'll probably enjoy being in charge."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey, quick one. My nephew is coming to stay while he looks at universities."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun. Would he want you to come along to the campus tours, or would he rather go alone and tell you after?"
+    }
+   ],
+   "pending": "go along to tours or let nephew go alone",
+   "think_reask": [
+    "So, tag along on the tours, or let him explore?",
+    "Any sense of whether he wants company on the visits?"
+   ],
+   "welcome_back": [
+    "Your nephew's tours. Joining him, or not?",
+    "So, are you going with him?"
+   ],
+   "endings": [
+    {
+     "user": "Alone, I think. He's eighteen and pretty independent.",
+     "moshi": "Then maybe just plan a nice dinner where he can tell you everything."
+    },
+    {
+     "user": "I'll go to one at least. He asked me to.",
+     "moshi": "Lovely. Bring a list of questions, students love to forget the practical ones."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm so tired. My parents are coming tomorrow and I haven't even bought groceries."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let's keep it simple. Would you rather do one quick shop tonight, or order a delivery for the morning?"
+    }
+   ],
+   "pending": "shop tonight or order delivery for morning",
+   "think_reask": [
+    "So, groceries tonight, or delivery tomorrow?",
+    "Did you pick how to get the food in?"
+   ],
+   "welcome_back": [
+    "The groceries. Store tonight, or delivery in the morning?",
+    "So which is it for the shopping?"
+   ],
+   "endings": [
+    {
+     "user": "Delivery. I'm not leaving this couch.",
+     "moshi": "Good call. Order before ten so you get an early slot."
+    },
+    {
+     "user": "Tonight. If I don't, I'll be stressed all morning.",
+     "moshi": "Okay. Keep the list short, breakfast stuff and one easy dinner."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dad and my partner don't get along very well."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a delicate one. Should we plan mostly group outings so there's less one on one time, or give them a shared task to bond over?"
+    }
+   ],
+   "pending": "group outings or a shared task to bond",
+   "think_reask": [
+    "So for your dad and your partner, more group stuff or a shared project?",
+    "Which way feels right with those two?"
+   ],
+   "welcome_back": [
+    "Your dad and your partner. Keep it in groups, or try a project together?",
+    "Did you decide how to handle those two?"
+   ],
+   "endings": [
+    {
+     "user": "Group outings. I don't want any drama this time.",
+     "moshi": "Fair. A market or a walk keeps everyone busy and talking lightly."
+    },
+    {
+     "user": "A task. They both love barbecuing, actually.",
+     "moshi": "Perfect. Put them in charge of the grill and step away."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.ctx22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My godmother's visiting from Ireland and she's never been to the city."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How fun. Should her first day be the big famous sights, or a slow day around your neighbourhood so she can get over the jet lag?"
+    }
+   ],
+   "pending": "big sights or a slow neighbourhood day",
+   "think_reask": [
+    "So, famous sights first, or an easy local day?",
+    "Have you planned her first day yet?"
+   ],
+   "welcome_back": [
+    "Your godmother's first day. Sights, or take it slow?",
+    "So how do we start her visit?"
+   ],
+   "endings": [
+    {
+     "user": "Slow. She'll be wrecked after the flight.",
+     "moshi": "Wise. A cafe, a short walk and an early dinner is plenty."
+    },
+    {
+     "user": "Sights. She's been dreaming about the bridge for years.",
+     "moshi": "Then go early in the morning, before the crowds and before the jet lag hits."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "family_visit.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did my mom call you about dinner on Sunday?"
+    },
+    {
+     "speaker": "friend",
+     "text": "She texted me. She wants to bring her lasagna."
+    },
+    {
+     "speaker": "user",
+     "text": "Of course she does. Do we have a dish big enough to warm it up?"
+    },
+    {
+     "speaker": "friend",
+     "text": "We have that big glass one. It should fit."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, good. I'll make a salad so it's not just pasta."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What time does my uncle's train get in?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Quarter past four, I think. Want me to pick him up?"
+    },
+    {
+     "speaker": "user",
+     "text": "Would you? I have a call until five."
+    },
+    {
+     "speaker": "friend",
+     "text": "No problem. Does he have a lot of luggage?"
+    },
+    {
+     "speaker": "user",
+     "text": "Knowing him, two big suitcases and a bag of cheese."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then I'll take the car, not the bike."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you help me move the air mattress into the office?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. Is your cousin really staying for ten days?"
+    },
+    {
+     "speaker": "user",
+     "text": "Apparently. She says it's cheaper than a hotel."
+    },
+    {
+     "speaker": "friend",
+     "text": "Well, it is. Does she know about the cat?"
+    },
+    {
+     "speaker": "user",
+     "text": "Oh no. She's allergic, isn't she?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Very. You should probably tell her tonight."
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah. I'll call her after dinner."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, be honest. Is the guest room too cold?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Kind of. The radiator in there clicks but never really warms up."
+    },
+    {
+     "speaker": "user",
+     "text": "Great. My grandmother is always freezing."
+    },
+    {
+     "speaker": "friend",
+     "text": "We could put the little heater from the garage in there."
+    },
+    {
+     "speaker": "user",
+     "text": "Isn't that the one that smells like burning dust?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Only the first ten minutes. I'll run it this afternoon so it's done by the time she gets here."
+    },
+    {
+     "speaker": "user",
+     "text": "You're a lifesaver."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did your mum say when they're leaving?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sunday after lunch, I think."
+    },
+    {
+     "speaker": "user",
+     "text": "After lunch meaning two, or after lunch meaning six?"
+    },
+    {
+     "speaker": "friend",
+     "text": "With my mum? Probably six."
+    },
+    {
+     "speaker": "user",
+     "text": "Then I'm cooking dinner too, aren't I."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, you remember my cousin Dara?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The one who did the magic tricks at the wedding?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes! She's coming through town next month with her husband."
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh nice. Are they staying here?"
+    },
+    {
+     "speaker": "user",
+     "text": "She hinted at it. But we've got the painters in that week."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then tell her straight. They can come for dinner instead, and stay at that little inn by the station."
+    },
+    {
+     "speaker": "user",
+     "text": "Would that be rude?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not if you say it warmly. She'll understand, she's got three kids."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "family_visit.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My in-laws are visiting and I want the guest room to feel welcoming. Any ideas?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fresh sheets, an extra blanket and a couple of clean towels go a long way. A small lamp by the bed is nice too."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I leave some snacks or water in there?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bottle of water and a little basket of snacks is a lovely touch. Guests often feel shy raiding someone else's kitchen."
+    },
+    {
+     "speaker": "user",
+     "text": "What about the wifi password, is it weird to / just leave a note?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not weird at all, it's really helpful. A small card on the nightstand works perfectly."
+    },
+    {
+     "speaker": "user",
+     "text": "Great. Maybe some flowers as well?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure, just pick something without a strong scent in case anyone has allergies."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm driving six hours to see my dad. How often should I stop?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A good rule is a short break every two hours. Stretch your legs, grab some water and rest your eyes."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it better to leave really early in the morning?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Early is great for avoiding traffic, as long as you got a full night of sleep. Don't trade sleep for an early start."
+    },
+    {
+     "speaker": "user",
+     "text": "I was planning to leave at five / but maybe seven is smarter."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Seven sounds more reasonable. You'd still arrive by early afternoon with stops."
+    },
+    {
+     "speaker": "user",
+     "text": "Any tips for staying alert on the highway?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep the car a little cool, listen to a podcast you enjoy and skip heavy meals. If you feel sleepy, pull over for a short nap."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandparents are coming over and they don't really use phones. What can we do together?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Card games are usually a hit, or you could look through old photo albums and ask them for stories."
+    },
+    {
+     "speaker": "user",
+     "text": "Ooh, photo albums is a good one. My grandpa loves telling stories."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then that's perfect. You could even record a few of his stories to keep."
+    },
+    {
+     "speaker": "user",
+     "text": "What about food, they're kind of picky / and my grandma can't eat salt."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a simple roast chicken with lemon and herbs instead of salt. Soft roasted vegetables on the side are usually safe too."
+    },
+    {
+     "speaker": "user",
+     "text": "And dessert?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A fruit crumble is easy and most grandparents love it. Serve it warm with a little cream."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My mother's visiting and she always criticises how I keep the house. How do I not get defensive?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It helps to decide in advance which comments you'll just let slide. A calm, I'll think about it, ends most of them without a fight."
+    },
+    {
+     "speaker": "user",
+     "text": "But some of it is really personal, like about my job."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's fair to set a boundary. Something like, I know you care, but I'd rather not talk about work this visit."
+    },
+    {
+     "speaker": "user",
+     "text": "She'll sulk."
+    },
+    {
+     "speaker": "moshi",
+     "text": "She might, for a bit. Sulking usually fades faster than resentment does, though."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And if she starts rearranging my kitchen / which she absolutely will?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give her one cupboard she's allowed to organise. It sounds silly, but it lets her help without taking over."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, that might actually work."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What are good things to do with teenagers who are visiting and clearly don't want to be here?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give them some control. Ask them to pick one activity from a short list, teens hate being dragged around."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what kind of list?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "An escape room, go karts, a food market, or a late movie. Things that feel a bit grown up."
+    },
+    {
+     "speaker": "user",
+     "text": "They're fifteen and seventeen, and the older one / just stays on his phone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then lean into it. Ask him to film or photograph the day, or put him in charge of directions."
+    },
+    {
+     "speaker": "user",
+     "text": "That's clever. Does it actually work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often, yes. Responsibility tends to pull teens in more than enthusiasm from adults does."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm hosting my extended family for a reunion. About twenty people. Where do I even start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with the date and the place, then a rough headcount. Everything else, food, beds, activities, depends on those three."
+    },
+    {
+     "speaker": "user",
+     "text": "We're doing it at my house, in August."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then shade and drinks are your first priorities. Rent a gazebo or borrow a couple of big umbrellas."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I cook for everyone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I wouldn't. Ask each household to bring one dish, and you handle the main course and drinks."
+    },
+    {
+     "speaker": "user",
+     "text": "My aunt will bring her famous potato salad, so at least that's covered."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Make a simple sign up sheet so you don't end up with six desserts and no vegetables."
+    },
+    {
+     "speaker": "user",
+     "text": "And sleeping arrangements?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask who wants to stay over early. A list of nearby hotels in the group chat saves a lot of awkward asking."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandad is visiting and he has trouble with stairs. Our flat is on the third floor, no lift."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's tough. Is there any chance you could meet him somewhere else for most of the visit?"
+    },
+    {
+     "speaker": "user",
+     "text": "Not really, he wants to see where I live."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then plan for one trip up and down per day at most, and take it slowly with rests on each landing."
+    },
+    {
+     "speaker": "user",
+     "text": "Could I put a chair on the landings?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lovely idea, a folding stool on each floor gives him somewhere to pause. Just ask your neighbours first."
+    },
+    {
+     "speaker": "user",
+     "text": "Good point. Anything else / to make it easier once he's inside?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Clear the walkways, add a night light near the bathroom, and keep the things he needs at waist height."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it rude to ask family to pay for their own meals when they visit?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily. It depends a lot on your family's habits and on who invited whom."
+    },
+    {
+     "speaker": "user",
+     "text": "They invited themselves / for ten days."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's very reasonable to share costs. You could cover breakfasts at home and split dinners out."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I bring that up without it being awkward?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Say it early and lightly, before they arrive. Something like, we'll do breakfast here, and for dinners out let's just split as we go."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they act offended?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stay friendly and don't over explain. Most people adjust quickly once it's clear it's normal for you."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hi. My father is coming to visit, and he has dementia, early stage. Any advice?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'm sorry, that's a lot to hold. Familiar routines help the most, so try to keep his meals and bedtime close to what he's used to."
+    },
+    {
+     "speaker": "user",
+     "text": "He gets confused / in new places especially."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Labels on doors can help, like bathroom and bedroom, and a light left on at night."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I plan outings?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Short ones, and quiet ones. A garden, a familiar kind of cafe, or a drive with music he likes. Avoid crowds."
+    },
+    {
+     "speaker": "user",
+     "text": "And for me? I'm worried I'll get frustrated."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's normal. Build in time for yourself each day, even twenty minutes, and ask a friend to take over for an afternoon if you can."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My partner's parents are visiting and I want to make a good impression. I'm a bit nervous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's natural. Do you know much about them, what they enjoy or care about?"
+    },
+    {
+     "speaker": "user",
+     "text": "His mum loves gardening and his dad is / into old cars, I think."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great, those are easy openers. Ask her for advice on a plant, and ask him about the first car he ever owned."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I bring them a gift?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Something small is nice. A plant cutting for her, or a coffee table book about classic cars for him."
+    },
+    {
+     "speaker": "user",
+     "text": "And at dinner, what if I run out of things to say?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask about your partner as a kid. Parents love telling those stories, and you'll learn something too."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do you split time fairly when both sets of parents want you for the holidays?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot of couples alternate years, one family gets the main day and the other gets the next big holiday."
+    },
+    {
+     "speaker": "user",
+     "text": "We tried that. My mother still keeps score."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then maybe make it about something other than the calendar. Invite both families to yours one year, so nobody's the guest."
+    },
+    {
+     "speaker": "user",
+     "text": "Both families together? / I'm not sure they'd survive."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it short then, maybe a lunch instead of a whole day. Lots of food, a walk afterwards, and an easy ending time."
+    },
+    {
+     "speaker": "user",
+     "text": "That's actually doable."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And whatever you pick, tell both sides at the same time. It feels fairer when nobody hears second hand."
+    }
+   ]
+  },
+  {
+   "id": "family_visit.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My niece is staying with me for a week. She's six. What do I feed a six year old?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pretty normal food, just simpler. Pasta, rice, eggs, chicken, fruit, and some vegetables she can pick at."
+    },
+    {
+     "speaker": "user",
+     "text": "She told me she only eats / yellow food."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, that's very six. Corn, bananas, cheese, potatoes and scrambled eggs will get you far."
+    },
+    {
+     "speaker": "user",
+     "text": "And breakfast? I usually just have coffee."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cereal with milk, toast, or yogurt with fruit. Ask her parents what she normally has, kids like it to feel familiar."
+    },
+    {
+     "speaker": "user",
+     "text": "Good idea. Should I let her help cook?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. Stirring, washing veggies and setting the table make kids way more likely to eat what's in front of them."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "family_visit.opt1",
+   "lead_in": "My parents are visiting for the first time and I need help planning their big day out.",
+   "options": [
+    "The first option is a boat tour around the harbor, about two hours, with lunch included.",
+    "Then there's the art museum, which my mom would love, but my dad might get bored.",
+    "And there's a big farmers market on Saturdays with live music and lots of local food."
+   ],
+   "moshi_comment": [
+    "The boat tour is a nice compromise, since it's relaxing and lunch is sorted. The museum is perfect for your mom, but you'd need something for your dad afterward. The farmers market is easy and lively, but it can be tiring if they don't like crowds.",
+    "How do your parents feel about walking and crowds? If they're easygoing, I'd do the farmers market in the morning and the boat tour after. The museum could be a short stop on another day."
+   ]
+  },
+  {
+   "id": "family_visit.opt2",
+   "lead_in": "I'm visiting my brother next month and I have to choose how to get there.",
+   "options": [
+    "One way is a direct flight, only an hour, but it leaves at six in the morning.",
+    "Another is the train, about five hours, cheaper, and I could work on my laptop.",
+    "Or I could drive, which takes four hours, but then I'd have the car while I'm there.",
+    "And the last option is the overnight bus, super cheap but probably not very comfortable."
+   ],
+   "moshi_comment": [
+    "The train sounds like the best balance, since you can work and it's cheaper than flying. The flight is fastest, but that early start eats up most of the time you save. Driving only makes sense if you really need a car at your brother's place.",
+    "I'd skip the overnight bus unless money is really tight. Does your brother live somewhere you can get around without a car? If yes, take the train, and if not, driving might be worth it."
+   ]
+  },
+  {
+   "id": "family_visit.opt3",
+   "lead_in": "My grandparents' anniversary dinner is on me this year and I can't pick where.",
+   "options": [
+    "There's the Italian place they had their first date at, but it's changed owners and the reviews are mixed.",
+    "Or I cook at home, which is cosy, but I'd be stuck in the kitchen the whole night.",
+    "And then a fancy hotel restaurant downtown, lovely food, though Grandpa hates dressing up."
+   ],
+   "moshi_comment": [
+    "The first date spot has the best story behind it, even if the food is a gamble. Cooking at home is cosy but you'd miss the moments. The hotel sounds like more about the setting than about them.",
+    "I'd go with the old Italian place, the memory matters more than the reviews. Maybe call ahead and ask if they'll do a little dessert with a candle. Home is a good backup if Grandpa's tired."
+   ]
+  },
+  {
+   "id": "family_visit.opt4",
+   "lead_in": "My mum's coming to stay and I need to figure out where she sleeps.",
+   "options": [
+    "My bed, and I take the sofa, which is fine for me but I've got a bad back.",
+    "An air mattress in the study, she'd have privacy but it's a bit sad and it deflates by morning.",
+    "Or the little guesthouse two streets over, about sixty a night, with a proper bed and breakfast."
+   ],
+   "moshi_comment": [
+    "With your back, a week on the sofa could leave you miserable. The air mattress saves money but she won't sleep well. The guesthouse costs a bit, but you'd both be rested and happier.",
+    "Honestly, the guesthouse sounds best, as long as she won't feel pushed out. If she would, give her your bed for a few nights and use the guesthouse for the rest."
+   ]
+  },
+  {
+   "id": "family_visit.opt5",
+   "lead_in": "We're planning a weekend away with my husband's family and I'm stuck on where.",
+   "options": [
+    "A lake cabin, two hours north, with a dock and a big kitchen, but the wifi is basically nothing.",
+    "A city apartment rental, central and walkable, but we'd be squeezed into three small bedrooms.",
+    "A beach house on the coast, great for the kids, though it's a five hour drive and pricey in summer.",
+    "Or just everyone at his parents' place, free, familiar, and probably a little chaotic."
+   ],
+   "moshi_comment": [
+    "The cabin feels like a real break and the big kitchen helps with a crowd, no wifi might even be a plus. The beach house is great for kids but the drive and price add up. The city place sounds cramped, and his parents' house isn't really getting away.",
+    "If there are kids, I'd pick between the cabin and the beach house. The cabin is closer and cheaper, so that's my lean. His parents' place is the easy fallback if budgets are tight."
+   ]
+  }
+ ]
 }

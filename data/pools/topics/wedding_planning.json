@@ -1,131 +1,1518 @@
 {
-  "topic": "wedding_planning",
-  "contexts": [
+ "topic": "wedding_planning",
+ "contexts": [
+  {
+   "id": "wedding_planning.ctx1",
+   "turns": [
     {
-      "id": "wedding_planning.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "We got engaged last month and everyone keeps asking about the date."},
-        {"speaker": "moshi", "text": "Congratulations! Are you leaning toward a summer wedding, or would a cozier autumn or winter one suit you better?"}
-      ],
-      "pending": "summer or autumn and winter wedding",
-      "think_reask": ["So, any feeling about the season? Summer, or something cozier?", "Time's up. Are you two summer people or autumn people?", "Back to the big question. Which season for the wedding?"],
-      "welcome_back": ["Welcome back! We were talking about the season for your wedding.", "Hi again. Have you thought more about summer versus autumn or winter?", "There you are. So, which season feels right for the wedding?"],
-      "endings": [
-        {"user": "Autumn, I think. The colors are gorgeous and it's not so hot.", "moshi": "Lovely choice. October dates go quickly though, so start looking at venues soon."},
-        {"user": "Summer, we want everything outdoors in the garden.", "moshi": "Sounds beautiful. Just keep a tent or an indoor backup in case of rain."}
-      ]
+     "speaker": "user",
+     "text": "We got engaged last month and everyone keeps asking about the date."
     },
     {
-      "id": "wedding_planning.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "The guest list is getting out of hand. We're at almost two hundred people."},
-        {"speaker": "moshi", "text": "That's a lot. Would you rather cut it down to close friends and family, or keep everyone and adjust the budget?"}
-      ],
-      "pending": "cut the guest list or raise the budget",
-      "think_reask": ["Okay, the guest list. Trim it down, or keep everyone and stretch the budget?", "So, what's it going to be? A smaller list or a bigger budget?", "Have you decided how to handle those two hundred guests?"],
-      "welcome_back": ["Welcome back! You were deciding whether to cut the guest list or adjust the budget.", "Hi again. Still stuck on the guest list? Smaller, or a bigger budget?", "Good to have you back. So, trim the list or keep everyone?"],
-      "endings": [
-        {"user": "Let's cut it. Close family and friends only.", "moshi": "A good rule is to only invite people you've seen in the last year or so."},
-        {"user": "We'll keep everyone, it's important to my family.", "moshi": "Then a buffet instead of a plated dinner can save a lot per guest."}
-      ]
-    },
-    {
-      "id": "wedding_planning.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "My best friend's wedding is in three weeks and I'm giving a speech."},
-        {"speaker": "moshi", "text": "What an honor. Do you want it to be mostly funny stories, or more heartfelt and sentimental?"}
-      ],
-      "pending": "funny or heartfelt speech",
-      "think_reask": ["So, for the speech, funny or heartfelt?", "Time to decide the tone. Are we going for laughs or for tears?", "Any thoughts? Funny stories, or something more sentimental?"],
-      "welcome_back": ["Welcome back! We were figuring out the tone of your wedding speech.", "Hi again. So, is the speech going to be funny or heartfelt?", "There you are. Still thinking about laughs versus a sentimental speech?"],
-      "endings": [
-        {"user": "Funny, but with a sweet moment at the end.", "moshi": "That's the classic recipe. Open with a story, then finish with a sincere toast to the couple."},
-        {"user": "Heartfelt. She'd hate it if I told embarrassing stories.", "moshi": "Then talk about how you met and what makes her partner right for her. Keep it under five minutes."}
-      ]
+     "speaker": "moshi",
+     "text": "Congratulations! Are you leaning toward a summer wedding, or would a cozier autumn or winter one suit you better?"
     }
-  ],
-  "side_conversations": [
-    {"id": "wedding_planning.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did your cousin ever send back the RSVP card?"},
-      {"speaker": "friend", "text": "No, and I asked her twice already."},
-      {"speaker": "user", "text": "The caterer needs final numbers by Friday."},
-      {"speaker": "friend", "text": "Just count her as a yes. She always shows up anyway."},
-      {"speaker": "user", "text": "And her boyfriend?"},
-      {"speaker": "friend", "text": "Ugh, probably him too. Put down two."}
-    ]},
-    {"id": "wedding_planning.side2", "turns": [
-      {"speaker": "user", "text": "Can you look at these two invitation samples for a second?"},
-      {"speaker": "friend", "text": "Sure. Oh, the cream one is really pretty."},
-      {"speaker": "user", "text": "Right? But the white one is half the price."},
-      {"speaker": "friend", "text": "Honestly, nobody keeps the invitation. Go with the cheaper one."},
-      {"speaker": "user", "text": "My mom will notice though. Which font do you like better?"},
-      {"speaker": "friend", "text": "The curly one. The other looks like a business letter."},
-      {"speaker": "user", "text": "Okay, curly font, white card. Deal."}
-    ]},
-    {"id": "wedding_planning.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, what are you wearing to Sam and Priya's wedding?"},
-      {"speaker": "friend", "text": "The invite says garden formal, so maybe my green dress."},
-      {"speaker": "user", "text": "Is a linen suit too casual for that?"},
-      {"speaker": "friend", "text": "Not if you wear a tie. Linen is perfect for outdoors."},
-      {"speaker": "user", "text": "Cool. Should we split a gift or get our own?"},
-      {"speaker": "friend", "text": "Let's split one. They registered for that fancy blender."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "wedding_planning.dlg1", "turns": [
-      {"speaker": "user", "text": "How much should I spend on a wedding gift for a coworker?"},
-      {"speaker": "moshi", "text": "For a coworker, somewhere around fifty to seventy five dollars is common. Something from their registry is always a safe bet."},
-      {"speaker": "user", "text": "What if I'm not invited to the actual wedding, just the office card?"},
-      {"speaker": "moshi", "text": "Then chipping in for a group gift or adding a small amount to the card is plenty. Nobody expects a full gift in that case."},
-      {"speaker": "user", "text": "Okay. And I was going to / write something in the card but I'm terrible at that."},
-      {"speaker": "moshi", "text": "Keep it short. Something like, wishing you both a lifetime of happiness, congratulations on your big day, works perfectly."},
-      {"speaker": "user", "text": "That's simple enough. Thanks."},
-      {"speaker": "moshi", "text": "You're welcome. A short warm note always beats a long awkward one."}
-    ]},
-    {"id": "wedding_planning.dlg2", "turns": [
-      {"speaker": "user", "text": "We're thinking about a small courthouse wedding instead of a big party. Is that weird?"},
-      {"speaker": "moshi", "text": "Not at all, lots of couples do it now. It saves money and stress, and you can always throw a casual party later."},
-      {"speaker": "user", "text": "What do we actually need to bring?"},
-      {"speaker": "moshi", "text": "Usually a marriage license, photo IDs, and often one or two witnesses. Check your local courthouse, rules vary a lot."},
-      {"speaker": "user", "text": "Hmm, I wonder if we should / still hire a photographer."},
-      {"speaker": "moshi", "text": "Even an hour of photos is worth it. Many photographers offer short elopement packages for courthouse weddings."},
-      {"speaker": "user", "text": "Actually, my sister takes great photos. Maybe she can do it."},
-      {"speaker": "moshi", "text": "That's a sweet idea. Just make sure she gets to be in a few pictures too."}
-    ]},
-    {"id": "wedding_planning.dlg3", "turns": [
-      {"speaker": "user", "text": "What's a good first dance song that isn't super cheesy?"},
-      {"speaker": "moshi", "text": "It depends on your taste. Something like an old soul ballad or an acoustic cover of a song you both love tends to feel personal without being cheesy."},
-      {"speaker": "user", "text": "We met at a jazz bar, if that helps."},
-      {"speaker": "moshi", "text": "Oh, then a jazz standard would be perfect. Something slow and swingy, maybe even played by a live trio."},
-      {"speaker": "user", "text": "A live band sounds expensive though / how much do they usually cost?"},
-      {"speaker": "moshi", "text": "A small jazz trio often runs between one and three thousand dollars for an evening, depending on the city."},
-      {"speaker": "user", "text": "Yeah, that's too much. We'll just play a recording."},
-      {"speaker": "moshi", "text": "Totally fine. Ask your DJ to fade it out after two minutes so nobody feels stuck on the floor."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "wedding_planning.opt1",
-     "lead_in": "We've narrowed the venue down and I need a second opinion.",
-     "options": [
-       "The first one is an old barn on a farm, really charming, but there's no air conditioning.",
-       "Then there's a hotel ballroom downtown, very easy for guests, though it feels a bit generic.",
-       "And the last option is a vineyard about an hour out of town, stunning views, but the most expensive."
-     ],
-     "moshi_comment": [
-       "The vineyard sounds the most memorable, but an hour's drive can be tough for older guests. The hotel is the practical choice, especially if lots of people are traveling in. When is the wedding?",
-       "If it's a summer wedding, I'd worry about the barn without air conditioning. Between the other two, it comes down to whether views or convenience matter more to you."
-     ]},
-    {"id": "wedding_planning.opt2",
-     "lead_in": "I can't decide what to do about catering for the reception.",
-     "options": [
-       "One idea is a classic plated dinner, chicken or fish, served at the tables.",
-       "Another is a big buffet with a bit of everything, which is cheaper per person.",
-       "There's also a couple of food trucks, tacos and pizza, parked outside the venue.",
-       "And finally, my aunt offered to cook everything herself for free."
-     ],
-     "moshi_comment": [
-       "Food trucks are fun and relaxed, and guests usually love them, but lines can get long with a big crowd. The plated dinner feels the most formal. How many guests are you expecting?",
-       "Your aunt's offer is generous, but cooking for a whole reception is a huge job on the day itself. I'd lean toward the buffet, it's flexible and cheaper than a plated dinner."
-     ]}
-  ]
+   ],
+   "pending": "summer or autumn and winter wedding",
+   "think_reask": [
+    "So, any feeling about the season? Summer, or something cozier?",
+    "Time's up. Are you two summer people or autumn people?",
+    "Back to the big question. Which season for the wedding?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were talking about the season for your wedding.",
+    "Hi again. Have you thought more about summer versus autumn or winter?",
+    "There you are. So, which season feels right for the wedding?"
+   ],
+   "endings": [
+    {
+     "user": "Autumn, I think. The colors are gorgeous and it's not so hot.",
+     "moshi": "Lovely choice. October dates go quickly though, so start looking at venues soon."
+    },
+    {
+     "user": "Summer, we want everything outdoors in the garden.",
+     "moshi": "Sounds beautiful. Just keep a tent or an indoor backup in case of rain."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The guest list is getting out of hand. We're at almost two hundred people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lot. Would you rather cut it down to close friends and family, or keep everyone and adjust the budget?"
+    }
+   ],
+   "pending": "cut the guest list or raise the budget",
+   "think_reask": [
+    "Okay, the guest list. Trim it down, or keep everyone and stretch the budget?",
+    "So, what's it going to be? A smaller list or a bigger budget?",
+    "Have you decided how to handle those two hundred guests?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were deciding whether to cut the guest list or adjust the budget.",
+    "Hi again. Still stuck on the guest list? Smaller, or a bigger budget?",
+    "Good to have you back. So, trim the list or keep everyone?"
+   ],
+   "endings": [
+    {
+     "user": "Let's cut it. Close family and friends only.",
+     "moshi": "A good rule is to only invite people you've seen in the last year or so."
+    },
+    {
+     "user": "We'll keep everyone, it's important to my family.",
+     "moshi": "Then a buffet instead of a plated dinner can save a lot per guest."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My best friend's wedding is in three weeks and I'm giving a speech."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What an honor. Do you want it to be mostly funny stories, or more heartfelt and sentimental?"
+    }
+   ],
+   "pending": "funny or heartfelt speech",
+   "think_reask": [
+    "So, for the speech, funny or heartfelt?",
+    "Time to decide the tone. Are we going for laughs or for tears?",
+    "Any thoughts? Funny stories, or something more sentimental?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were figuring out the tone of your wedding speech.",
+    "Hi again. So, is the speech going to be funny or heartfelt?",
+    "There you are. Still thinking about laughs versus a sentimental speech?"
+   ],
+   "endings": [
+    {
+     "user": "Funny, but with a sweet moment at the end.",
+     "moshi": "That's the classic recipe. Open with a story, then finish with a sincere toast to the couple."
+    },
+    {
+     "user": "Heartfelt. She'd hate it if I told embarrassing stories.",
+     "moshi": "Then talk about how you met and what makes her partner right for her. Keep it under five minutes."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have five bridesmaids and they all look completely different. I'm stressing about the dresses."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Understandable. One matching dress for everyone, or same colour and let each of them pick a style that suits her?"
+    }
+   ],
+   "pending": "matching dresses or same colour different styles",
+   "think_reask": [
+    "So, identical dresses, or one colour with their own styles?",
+    "Decided on the bridesmaid look yet?"
+   ],
+   "welcome_back": [
+    "Your bridesmaids. All matching, or same shade, own style?",
+    "So, the dress question. Which way are you leaning?"
+   ],
+   "endings": [
+    {
+     "user": "Same colour, own style. They'll be happier.",
+     "moshi": "Lovely choice. Give them a colour swatch so the shades don't clash in photos."
+    },
+    {
+     "user": "Matching. I want it to look clean.",
+     "moshi": "Fair. Pick a fabric with some stretch, it's kinder to different body shapes."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My fiance's mum really wants a church ceremony. We want to get married outside by the lake."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tricky, and it's your day. Hold your ground on the lake, or look for a middle ground, like a blessing from her priest at the outdoor ceremony?"
+    }
+   ],
+   "pending": "lakeside as planned or a compromise blessing",
+   "think_reask": [
+    "So, stick with the lake, or offer her the blessing idea?",
+    "Any thoughts on handling his mum?"
+   ],
+   "welcome_back": [
+    "The church versus lake problem. Stand firm, or the compromise?",
+    "So, how are you going to play it with his mother?"
+   ],
+   "endings": [
+    {
+     "user": "The blessing idea is perfect, actually. She'd love that.",
+     "moshi": "Great, and it costs you nothing. Ask her priest early, they book up."
+    },
+    {
+     "user": "We're sticking with the lake. It's our wedding.",
+     "moshi": "Totally valid. Maybe let her do a reading, so she still feels part of it."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My college roommate is getting married in Portugal and the trip would cost me about two thousand."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lot to spend on one weekend. Is it a stretch you could manage, or would declining with a really thoughtful gift feel better?"
+    }
+   ],
+   "pending": "go to Portugal or decline with a gift",
+   "think_reask": [
+    "So, Portugal or a lovely gift from home?",
+    "Made the call on the roommate's wedding?"
+   ],
+   "welcome_back": [
+    "The Portugal wedding. Going, or sending something special?",
+    "So, are you booking flights or not?"
+   ],
+   "endings": [
+    {
+     "user": "I'm going. I'll make it a proper holiday.",
+     "moshi": "Then stay a few extra days and it feels a lot less like spending it all on one party."
+    },
+    {
+     "user": "I'll decline. It's just too much right now.",
+     "moshi": "Totally understandable. Call her rather than just ticking no, it'll mean a lot."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The invitation says plus one, and I've been seeing someone for like three weeks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ooh, early days. Bring them along, or go solo and save the big family event for later?"
+    }
+   ],
+   "pending": "bring the new date or go alone",
+   "think_reask": [
+    "So, date or solo?",
+    "Are you bringing your three-week person?"
+   ],
+   "welcome_back": [
+    "The plus one dilemma. Bringing them, or going alone?",
+    "So, any verdict on the date?"
+   ],
+   "endings": [
+    {
+     "user": "Solo. Weddings are a lot for week three.",
+     "moshi": "Agreed, and you'll have more fun dancing with old friends anyway."
+    },
+    {
+     "user": "I'll bring them. It could be fun.",
+     "moshi": "Brave! Just warn them about any nosy aunts in advance."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We can't agree on kids at the wedding."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Common fight. Where are each of you on it?"
+    },
+    {
+     "speaker": "user",
+     "text": "I want adults only. He's got eleven nieces and nephews."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a big crowd of small people. Adults only, or kids at the ceremony and a sitter for the evening?"
+    }
+   ],
+   "pending": "adults only or kids for the ceremony only",
+   "think_reask": [
+    "So, fully adults only, or the ceremony split?",
+    "Any agreement on the kids question?"
+   ],
+   "welcome_back": [
+    "The kids debate. Adults only, or the ceremony compromise?",
+    "So, what are you telling his siblings?"
+   ],
+   "endings": [
+    {
+     "user": "The split is smart. He might go for that.",
+     "moshi": "It usually lands well. Hire one babysitter for a room at the venue and parents will love you."
+    },
+    {
+     "user": "Adults only. I'll talk to him tonight.",
+     "moshi": "Okay. Say it on the invitation clearly, and give parents plenty of notice."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We've got money for either a really great photographer or a videographer. Not both."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hard trade. Are you people who'll print photos and frame them, or more likely to rewatch the day and hear the speeches again?"
+    }
+   ],
+   "pending": "photographer or videographer",
+   "think_reask": [
+    "So, frames on the wall, or rewatching the speeches?",
+    "Which one wins, photo or video?"
+   ],
+   "welcome_back": [
+    "Your budget choice. Photographer or videographer?",
+    "So, where's that money going?"
+   ],
+   "endings": [
+    {
+     "user": "Photos. I'll ask a friend to film the speeches on a phone.",
+     "moshi": "Smart combo. Just put them near the front with a little tripod."
+    },
+    {
+     "user": "Video. I want to hear my grandma's speech again someday.",
+     "moshi": "That's worth a lot. Lots of videographers also pull nice stills from the footage."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're both terrible writers. Do we have to do our own vows?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. Traditional vows are lovely too. Classic words, or a short personal line added on top of them?"
+    }
+   ],
+   "pending": "traditional vows or traditional plus a personal line",
+   "think_reask": [
+    "So, classic vows, or classic with a little extra?",
+    "Landed on the vows yet?"
+   ],
+   "welcome_back": [
+    "Vows. Straight traditional, or one personal line added?",
+    "So, how much writing are you two signing up for?"
+   ],
+   "endings": [
+    {
+     "user": "One personal line each. That we can manage.",
+     "moshi": "Perfect. Keep it to one honest sentence, those land better than long speeches anyway."
+    },
+    {
+     "user": "Traditional, done. No writing.",
+     "moshi": "Totally fine. There's a reason people have said them for centuries."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cousin's wedding is next month. Their registry is mostly kitchen stuff, but they hinted they'd prefer money."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a gift card or cash in a card will probably make them happiest. Or would giving money feel too impersonal to you?"
+    }
+   ],
+   "pending": "cash or a registry gift",
+   "think_reask": [
+    "So, cash in a card, or something from the registry?",
+    "Decided on the cousin's gift?"
+   ],
+   "welcome_back": [
+    "Your cousin's gift. Money, or the registry?",
+    "So, which way did you go on the gift?"
+   ],
+   "endings": [
+    {
+     "user": "Cash, with a really nice note.",
+     "moshi": "Good balance. The note is the personal bit, the money is the useful bit."
+    },
+    {
+     "user": "I'll get the stand mixer. I want them to have something from me.",
+     "moshi": "Lovely, they'll think of you every time they bake."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Two left feet, both of us. And our first dance is in six weeks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty of time. Take a few lessons and learn a little routine, or just hold each other and sway?"
+    }
+   ],
+   "pending": "dance lessons or just swaying",
+   "think_reask": [
+    "So, routine or sway?",
+    "Any decision on the first dance plan?"
+   ],
+   "welcome_back": [
+    "The first dance. Lessons, or just swaying?",
+    "So, are we learning moves or keeping it simple?"
+   ],
+   "endings": [
+    {
+     "user": "Lessons. It could be fun to learn together.",
+     "moshi": "It really is. Three or four sessions is enough for a simple routine."
+    },
+    {
+     "user": "Swaying. Nobody needs to see us try a spin.",
+     "moshi": "Ha, honestly swaying is sweet. Pick a slow song and it'll look lovely."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My parents divorced years ago and they still can't stand each other. Now I need a seating plan."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oof. Put them at separate tables with their own people, or seat them at the same top table and hope they behave?"
+    }
+   ],
+   "pending": "separate tables or same table",
+   "think_reask": [
+    "So, keep them apart, or one table and fingers crossed?",
+    "Any decision on the parents?"
+   ],
+   "welcome_back": [
+    "The seating plan. Your parents apart, or together?",
+    "So, how are we handling Mum and Dad?"
+   ],
+   "endings": [
+    {
+     "user": "Apart. Not risking it.",
+     "moshi": "Wise. Give each of them a table near the front so neither feels pushed aside."
+    },
+    {
+     "user": "Same table, they can manage one dinner.",
+     "moshi": "Okay, brave. Seat a calm friend between them, just in case."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm getting married in spring and I can't decide about my last name."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people wrestle with it. Keep your own, take your partner's, or hyphenate?"
+    }
+   ],
+   "pending": "keep, change or hyphenate the last name",
+   "think_reask": [
+    "So, the name. Keep it, change it, or both?",
+    "Any closer on the surname?"
+   ],
+   "welcome_back": [
+    "Your last name. Keeping, changing, or hyphenating?",
+    "So, which name are you going with?"
+   ],
+   "endings": [
+    {
+     "user": "I'll keep mine. It's my work identity.",
+     "moshi": "Makes total sense. Plenty of people keep theirs professionally and socially."
+    },
+    {
+     "user": "Hyphenate. It feels fair to both families.",
+     "moshi": "Nice. Check the paperwork early, some forms get fussy about hyphens."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hair and makeup quotes are insane. Like, four hundred just for me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yeah, it adds up fast. How confident are you doing your own?"
+    },
+    {
+     "speaker": "user",
+     "text": "I'm okay on a normal day, but this isn't a normal day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "True. A pro just for you, or your own makeup after a practice run?"
+    }
+   ],
+   "pending": "pro for the bride only or do it yourself",
+   "think_reask": [
+    "So, pro for you only, or DIY with a trial?",
+    "Decided on hair and makeup?"
+   ],
+   "welcome_back": [
+    "The makeup quote. Pro just for you, or your own with a trial run?",
+    "So, are you booking someone?"
+   ],
+   "endings": [
+    {
+     "user": "Pro for me. I'll be too nervous on the day.",
+     "moshi": "Fair. Ask for a trial included, and bring photos of looks you like."
+    },
+    {
+     "user": "I'll do it myself. I'll practise twice.",
+     "moshi": "Smart. Take a photo in daylight after each trial, that's how the camera will see it."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm best man and the groom says he wants something low-key for the stag."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay. A weekend away with the close crew, or one good night out in town?"
+    }
+   ],
+   "pending": "weekend away or one night out",
+   "think_reask": [
+    "So, weekend away or a night in town?",
+    "Got a plan for the stag yet?"
+   ],
+   "welcome_back": [
+    "The stag do. A weekend, or one night?",
+    "So, what are you organising for him?"
+   ],
+   "endings": [
+    {
+     "user": "One night. Low-key means low-key.",
+     "moshi": "Respect his wish. A good dinner and a pub with a pool table can be perfect."
+    },
+    {
+     "user": "A weekend in a cabin. Hiking, cooking, that kind of thing.",
+     "moshi": "That's low-key and memorable. Sort out the cabin first, they book up early."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our ceremony is in a garden and the forecast for the day is fifty percent rain."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Coin flip. Rent a clear marquee as backup, or have the venue's indoor room ready and decide that morning?"
+    }
+   ],
+   "pending": "rent a marquee or use the indoor room",
+   "think_reask": [
+    "So, marquee or the indoor room as the rain plan?",
+    "Any decision on the backup?"
+   ],
+   "welcome_back": [
+    "The rain backup. Marquee, or the indoor room?",
+    "So, what's plan B if it pours?"
+   ],
+   "endings": [
+    {
+     "user": "Indoor room. I don't want to pay for a tent we might not use.",
+     "moshi": "Sensible. Ask the venue what time you need to tell them, so they can flip it."
+    },
+    {
+     "user": "Marquee. I want to be outside no matter what.",
+     "moshi": "Lovely, and clear ones look magical in the rain. Add some heaters if it's chilly."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Neither of us really likes cake."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then why have one? A traditional cake anyway for the photos, or a dessert table with stuff you actually love?"
+    }
+   ],
+   "pending": "traditional cake or a dessert table",
+   "think_reask": [
+    "So, cake for tradition, or dessert table?",
+    "Any thoughts on dessert?"
+   ],
+   "welcome_back": [
+    "Dessert. A classic cake, or the dessert table?",
+    "So, what's replacing the cake, if anything?"
+   ],
+   "endings": [
+    {
+     "user": "Dessert table. Doughnuts and my nan's tarts.",
+     "moshi": "That sounds so much more you. Guests will love it."
+    },
+    {
+     "user": "A small cake for cutting, then pies for everyone.",
+     "moshi": "Best of both. You get the photo moment and the food people want."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My brother got ordained online and offered to marry us."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's sweet. How do you feel about it?"
+    },
+    {
+     "speaker": "user",
+     "text": "Touched, but he mumbles when he's nervous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, honest. Say yes and coach him through a rehearsal, or hire a professional and give him a reading instead?"
+    }
+   ],
+   "pending": "brother as officiant or a professional",
+   "think_reask": [
+    "So, your brother, or a pro with him doing a reading?",
+    "Made up your mind about the officiant?"
+   ],
+   "welcome_back": [
+    "Your brother's offer. Yes with coaching, or a pro?",
+    "So, who's marrying you two?"
+   ],
+   "endings": [
+    {
+     "user": "Him. I'll get him a microphone.",
+     "moshi": "Perfect solution. And a short script he can hold, it helps with nerves."
+    },
+    {
+     "user": "A pro, but I'll ask him to do a reading.",
+     "moshi": "Kind way to include him. He'll probably be relieved, honestly."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dad's getting remarried at seventy, and he asked me to walk him down the aisle."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's lovely, and a fun twist. Make a little moment of it, maybe a few words, or keep it simple and let him shine?"
+    }
+   ],
+   "pending": "say a few words or keep it simple",
+   "think_reask": [
+    "So, a few words, or just the walk?",
+    "Decided how you'll do the aisle walk?"
+   ],
+   "welcome_back": [
+    "Your dad's wedding. Saying something, or just walking him?",
+    "So, what's your part going to look like?"
+   ],
+   "endings": [
+    {
+     "user": "Just the walk. It's his day.",
+     "moshi": "That's generous. A quiet squeeze of the hand at the end will say plenty."
+    },
+    {
+     "user": "A few words at the reception, I think.",
+     "moshi": "Nice. A favourite memory of him and a toast to her, done."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We could go on our honeymoon the day after the wedding, or wait until the autumn."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Both have perks. Leave right away while you're on a high, or wait and actually rest first?"
+    }
+   ],
+   "pending": "honeymoon right away or in autumn",
+   "think_reask": [
+    "So, straight off, or later in the year?",
+    "Picked a time for the honeymoon?"
+   ],
+   "welcome_back": [
+    "The honeymoon timing. Right after, or autumn?",
+    "So, when are you two heading off?"
+   ],
+   "endings": [
+    {
+     "user": "Right after. I want to escape all the chaos.",
+     "moshi": "Good call, then you skip the post-wedding admin for a week. Book a late checkout."
+    },
+    {
+     "user": "Autumn. We'll be exhausted otherwise.",
+     "moshi": "Smart. And you get something to look forward to when the wedding buzz fades."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.ctx22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a guest at a wedding on a lawn and I bought these gorgeous heels."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lawns and heels don't get along. Get little heel protectors, or bring flats to switch into?"
+    }
+   ],
+   "pending": "heel protectors or spare flats",
+   "think_reask": [
+    "So, protectors or a spare pair of flats?",
+    "What's the shoe plan?"
+   ],
+   "welcome_back": [
+    "The lawn and the heels. Protectors, or flats in your bag?",
+    "So, how are you saving those heels?"
+   ],
+   "endings": [
+    {
+     "user": "Flats in my bag. I'll want them for dancing anyway.",
+     "moshi": "Exactly. Heels for photos, flats for the dance floor."
+    },
+    {
+     "user": "Protectors. I'm not giving up the heels.",
+     "moshi": "Fair, they're cheap and they really work. Clear ones are almost invisible."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "wedding_planning.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did your cousin ever send back the RSVP card?"
+    },
+    {
+     "speaker": "friend",
+     "text": "No, and I asked her twice already."
+    },
+    {
+     "speaker": "user",
+     "text": "The caterer needs final numbers by Friday."
+    },
+    {
+     "speaker": "friend",
+     "text": "Just count her as a yes. She always shows up anyway."
+    },
+    {
+     "speaker": "user",
+     "text": "And her boyfriend?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Ugh, probably him too. Put down two."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you look at these two invitation samples for a second?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. Oh, the cream one is really pretty."
+    },
+    {
+     "speaker": "user",
+     "text": "Right? But the white one is half the price."
+    },
+    {
+     "speaker": "friend",
+     "text": "Honestly, nobody keeps the invitation. Go with the cheaper one."
+    },
+    {
+     "speaker": "user",
+     "text": "My mom will notice though. Which font do you like better?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The curly one. The other looks like a business letter."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, curly font, white card. Deal."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, what are you wearing to Sam and Priya's wedding?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The invite says garden formal, so maybe my green dress."
+    },
+    {
+     "speaker": "user",
+     "text": "Is a linen suit too casual for that?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not if you wear a tie. Linen is perfect for outdoors."
+    },
+    {
+     "speaker": "user",
+     "text": "Cool. Should we split a gift or get our own?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Let's split one. They registered for that fancy blender."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you read this envelope back to me? Is my handwriting legible?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Mrs. and Mr. Pat Holloway. Yes, but your Ls look like Ts."
+    },
+    {
+     "speaker": "user",
+     "text": "Great. That's sixty envelopes of Ts."
+    },
+    {
+     "speaker": "friend",
+     "text": "Nobody's going to notice. Want me to do the addresses and you do the names?"
+    },
+    {
+     "speaker": "user",
+     "text": "Would you? Your writing is so neat."
+    },
+    {
+     "speaker": "friend",
+     "text": "Years of labelling lunchboxes. Pass me the pen."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, honest opinion. Which of the three mains was best at the tasting?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The lamb, easily. The fish was a bit dry."
+    },
+    {
+     "speaker": "user",
+     "text": "I liked the risotto though."
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, as the vegetarian option. But you can't feed your uncles risotto."
+    },
+    {
+     "speaker": "user",
+     "text": "Why not?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Have you met your uncles? They'll ask where the real food is."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine. Lamb and risotto, and we drop the fish?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Drop the fish. And keep those little potato things, I'd marry those."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you do my tie? I've watched the video four times."
+    },
+    {
+     "speaker": "friend",
+     "text": "Come here. Chin up."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it supposed to be this tight?"
+    },
+    {
+     "speaker": "friend",
+     "text": "You're not even wearing it yet. Stop squirming."
+    },
+    {
+     "speaker": "user",
+     "text": "Sorry. My hands are sweaty. I don't know anyone at this wedding except the groom."
+    },
+    {
+     "speaker": "friend",
+     "text": "You know me. And there's an open bar, you'll know everyone by nine."
+    },
+    {
+     "speaker": "user",
+     "text": "Very reassuring."
+    },
+    {
+     "speaker": "friend",
+     "text": "There. Handsome. Now go find the card, you left it on the fridge."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "wedding_planning.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How much should I spend on a wedding gift for a coworker?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a coworker, somewhere around fifty to seventy five dollars is common. Something from their registry is always a safe bet."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I'm not invited to the actual wedding, just the office card?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then chipping in for a group gift or adding a small amount to the card is plenty. Nobody expects a full gift in that case."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And I was going to / write something in the card but I'm terrible at that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it short. Something like, wishing you both a lifetime of happiness, congratulations on your big day, works perfectly."
+    },
+    {
+     "speaker": "user",
+     "text": "That's simple enough. Thanks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're welcome. A short warm note always beats a long awkward one."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're thinking about a small courthouse wedding instead of a big party. Is that weird?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all, lots of couples do it now. It saves money and stress, and you can always throw a casual party later."
+    },
+    {
+     "speaker": "user",
+     "text": "What do we actually need to bring?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually a marriage license, photo IDs, and often one or two witnesses. Check your local courthouse, rules vary a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm, I wonder if we should / still hire a photographer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even an hour of photos is worth it. Many photographers offer short elopement packages for courthouse weddings."
+    },
+    {
+     "speaker": "user",
+     "text": "Actually, my sister takes great photos. Maybe she can do it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a sweet idea. Just make sure she gets to be in a few pictures too."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's a good first dance song that isn't super cheesy?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends on your taste. Something like an old soul ballad or an acoustic cover of a song you both love tends to feel personal without being cheesy."
+    },
+    {
+     "speaker": "user",
+     "text": "We met at a jazz bar, if that helps."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh, then a jazz standard would be perfect. Something slow and swingy, maybe even played by a live trio."
+    },
+    {
+     "speaker": "user",
+     "text": "A live band sounds expensive though / how much do they usually cost?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small jazz trio often runs between one and three thousand dollars for an evening, depending on the city."
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, that's too much. We'll just play a recording."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally fine. Ask your DJ to fade it out after two minutes so nobody feels stuck on the floor."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're doing a tiny wedding, twenty people. How do I tell my coworkers they're not invited without it being weird?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it simple and don't apologise too much. Something like, we're keeping it really small, just immediate family and a few close friends."
+    },
+    {
+     "speaker": "user",
+     "text": "One of them keeps asking about my dress like she's coming."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then gently say it directly before it gets awkward. People usually understand once they hear the number."
+    },
+    {
+     "speaker": "user",
+     "text": "What if she's hurt?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "She might be a little, and that's okay. You could offer to bring photos in, or have drinks with the team after."
+    },
+    {
+     "speaker": "user",
+     "text": "Ooh, drinks after the honeymoon. / That could actually be nice."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a lovely way to include them without the guest list growing. Most people just want to celebrate with you a bit."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'll tell her tomorrow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good luck. Short and warm is the way."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm going to be late to a wedding ceremony. Like, fifteen minutes. What do I do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't panic. If the ceremony has started, wait at the back until there's a natural pause, like between readings, then slip into a seat at the back."
+    },
+    {
+     "speaker": "user",
+     "text": "Not walk in during the vows?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely not during the vows or the processional. Ushers can usually help you time it."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I text the couple?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, they're busy getting married. Text a friend who's there if you want someone to save you a seat."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, the traffic is horrible."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It happens. Just apologise to the couple at the reception, briefly, and then enjoy the party."
+    },
+    {
+     "speaker": "user",
+     "text": "Thanks. Feeling slightly less doomed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nobody will mind. Drive safely, the cake isn't going anywhere."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do families usually split wedding costs these days?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's no single rule anymore. Many couples pay most of it themselves, and parents contribute what they can or want to."
+    },
+    {
+     "speaker": "user",
+     "text": "My parents offered a fixed amount. His parents haven't said anything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's common. You could gently ask if they'd like to help with something specific, like the rehearsal dinner or the flowers."
+    },
+    {
+     "speaker": "user",
+     "text": "Is that rude?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not if you frame it as an invitation, not a bill. Some parents love having one thing that's theirs."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And if they say no?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you plan with what you have. And try not to compare, it can create tension that lasts longer than the wedding."
+    },
+    {
+     "speaker": "user",
+     "text": "Fair. I'll let my fiance ask them, / since they're his parents."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good instinct. It usually goes better coming from their own kid."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "When should save the dates go out?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually about six to eight months before. For a destination wedding, closer to a year so people can save and book."
+    },
+    {
+     "speaker": "user",
+     "text": "Ours is local, in August."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then sending them in January or February is perfect."
+    },
+    {
+     "speaker": "user",
+     "text": "Do people still mail them, or is email fine?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Email is totally fine now, especially if you're watching costs. Older relatives might appreciate a paper one though."
+    },
+    {
+     "speaker": "user",
+     "text": "My grandma would frame a paper one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then print a handful for the grandparents and email the rest. Everyone's happy."
+    },
+    {
+     "speaker": "user",
+     "text": "And the actual invites?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Around two months before, with an RSVP date about a month before the wedding."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We want a non-religious ceremony. How do we even structure it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A simple shape works well. A welcome from the officiant, a short story about you two, a reading or two, your vows, the rings, and the pronouncement."
+    },
+    {
+     "speaker": "user",
+     "text": "The story part sounds nice. Who tells it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually the officiant, using things you've shared with them. How you met, what you love about each other, a funny moment."
+    },
+    {
+     "speaker": "user",
+     "text": "Can we add something to make it feel like a ritual? / Without it being religious."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. Some couples do a handfasting, tying their hands with a ribbon. Others plant a tree or mix two kinds of sand."
+    },
+    {
+     "speaker": "user",
+     "text": "Planting something is very us. We met at a garden centre."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then that's perfect. Plant a little tree in a pot during the ceremony and take it home."
+    },
+    {
+     "speaker": "user",
+     "text": "I love that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It gives your guests something to watch, and you something to keep."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm invited to a wedding and I have a serious nut allergy. Is it rude to mention it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not rude at all, it's important. Most RSVP cards or wedding websites have a spot for dietary needs."
+    },
+    {
+     "speaker": "user",
+     "text": "This one just says yes or no."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then send the couple a short message. Keep it light, just say you have a nut allergy and ask who to check with about the menu."
+    },
+    {
+     "speaker": "user",
+     "text": "They're stressed enough already."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's why you offer to talk to the caterer directly. It takes the job off their plate."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, smart. Should I bring food just in case?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small snack in your bag is sensible, plus your medication. Then you can relax and enjoy it."
+    },
+    {
+     "speaker": "user",
+     "text": "Thanks. I hate being that guest."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're not that guest, you're being safe. Any good couple would want to know."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is a wedding planner worth the money, honestly?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Depends on your time and stress levels. A full planner can cost a lot, but they know vendors and can save you money and headaches."
+    },
+    {
+     "speaker": "user",
+     "text": "We both work long hours and neither of us is organised."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a planner might be worth it. Or a day-of coordinator, who's cheaper and just handles the final month and the day itself."
+    },
+    {
+     "speaker": "user",
+     "text": "What does day-of actually mean? Just the one day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually they start a few weeks before. They confirm vendors, run the schedule and deal with problems so you don't have to."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds like the dream. / My mum will hate it, though, she wanted that job."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give her a special role then, like greeting guests or the family photos. She'll still feel important."
+    },
+    {
+     "speaker": "user",
+     "text": "Sneaky. I like it."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The wedding's tomorrow and I can't stop shaking."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's completely normal. Have you eaten today?"
+    },
+    {
+     "speaker": "user",
+     "text": "Barely. Some crackers."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Eat something real tonight, and drink water. Nerves get worse on an empty stomach."
+    },
+    {
+     "speaker": "user",
+     "text": "My head is full of everything that could go wrong."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Things might go a little wrong, and nobody will notice. Guests remember how happy you looked, not whether the napkins matched."
+    },
+    {
+     "speaker": "user",
+     "text": "That actually helps."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Also, pick one person to handle problems tomorrow. Anything goes wrong, they deal with it, not you."
+    },
+    {
+     "speaker": "user",
+     "text": "My sister would love that power."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Give her the job, then go to bed early. You've done the work."
+    }
+   ]
+  },
+  {
+   "id": "wedding_planning.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What do I write in a wedding card? I've been staring at it for ten minutes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with a simple wish, then add something personal. How well do you know them?"
+    },
+    {
+     "speaker": "user",
+     "text": "The groom's my oldest friend. I barely know her yet."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you could write about him, and how happy he seems with her. That welcomes her in too."
+    },
+    {
+     "speaker": "user",
+     "text": "Like, I've never seen him smile this much?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly that kind of thing. Then end with something warm, like wishing them a lifetime of adventures."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I add a joke? We have a lot of inside jokes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe one small one, if she'd get it. Save the rest for your speech, or for later."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I think I can write it now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You've got it. Honest beats clever every time."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "wedding_planning.opt1",
+   "lead_in": "We've narrowed the venue down and I need a second opinion.",
+   "options": [
+    "The first one is an old barn on a farm, really charming, but there's no air conditioning.",
+    "Then there's a hotel ballroom downtown, very easy for guests, though it feels a bit generic.",
+    "And the last option is a vineyard about an hour out of town, stunning views, but the most expensive."
+   ],
+   "moshi_comment": [
+    "The vineyard sounds the most memorable, but an hour's drive can be tough for older guests. The hotel is the practical choice, especially if lots of people are traveling in. When is the wedding?",
+    "If it's a summer wedding, I'd worry about the barn without air conditioning. Between the other two, it comes down to whether views or convenience matter more to you."
+   ]
+  },
+  {
+   "id": "wedding_planning.opt2",
+   "lead_in": "I can't decide what to do about catering for the reception.",
+   "options": [
+    "One idea is a classic plated dinner, chicken or fish, served at the tables.",
+    "Another is a big buffet with a bit of everything, which is cheaper per person.",
+    "There's also a couple of food trucks, tacos and pizza, parked outside the venue.",
+    "And finally, my aunt offered to cook everything herself for free."
+   ],
+   "moshi_comment": [
+    "Food trucks are fun and relaxed, and guests usually love them, but lines can get long with a big crowd. The plated dinner feels the most formal. How many guests are you expecting?",
+    "Your aunt's offer is generous, but cooking for a whole reception is a huge job on the day itself. I'd lean toward the buffet, it's flexible and cheaper than a plated dinner."
+   ]
+  },
+  {
+   "id": "wedding_planning.opt3",
+   "lead_in": "We need music for the reception and I'm torn.",
+   "options": [
+    "A live band that plays covers, they're brilliant but they cost about as much as the catering.",
+    "A DJ who's done loads of weddings at the venue and knows how to get the grandparents dancing.",
+    "Or our own playlist on a speaker, basically free, with a friend in charge of the volume."
+   ],
+   "moshi_comment": [
+    "A band brings huge energy, but it's a big chunk of the budget. The DJ is the safe middle, especially since they know the venue, and I'd only do the playlist if your crowd is pretty low-key.",
+    "If dancing is the heart of the night, the DJ who reads the room is hard to beat. The band is the luxury choice, and the playlist risks awkward gaps unless your friend is really on it."
+   ]
+  },
+  {
+   "id": "wedding_planning.opt4",
+   "lead_in": "I've tried on dresses all weekend and I'm stuck between a few.",
+   "options": [
+    "A fitted lace dress with long sleeves, very elegant, but I can barely sit down in it.",
+    "A flowy chiffon one with an open back that moves beautifully, though my mum calls it a nightgown.",
+    "A simple satin slip dress that I could probably wear again, and it's half the price of the others.",
+    "And a big ballgown my sister picked, which made everyone in the shop cry."
+   ],
+   "moshi_comment": [
+    "You'll be in it for twelve hours, so the lace one worries me if you can't sit. The chiffon sounds comfortable and stunning, mums come around. The ballgown clearly had a moment, but did you feel like yourself in it?",
+    "The satin slip is the practical star, simple and wearable again. If you want the wow, it's the ballgown or the chiffon. I'd pick whichever you kept thinking about on the drive home."
+   ]
+  },
+  {
+   "id": "wedding_planning.opt5",
+   "lead_in": "The venue gave us three possible dates and we have to pick by Friday.",
+   "options": [
+    "A Saturday in late June, peak season and perfect weather, but it's the most expensive.",
+    "A Friday in September, cheaper and still warm, but some guests would need a day off work.",
+    "A Sunday in early December, half the price and cosy, though it's close to the holidays."
+   ],
+   "moshi_comment": [
+    "June is the dream if the budget allows, but September is often just as lovely and much cheaper. I'd worry about December, people's calendars get crowded then.",
+    "The September Friday is the sweet spot for me, good weather and a real saving, and most people will happily take a day off for a wedding. December can be beautiful, just less predictable for travel."
+   ]
+  }
+ ]
 }

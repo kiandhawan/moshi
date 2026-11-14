@@ -7,165 +7,105 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "cooking",
-  "gardening"
+  "job_interview"
  ],
- "topic": "cooking",
+ "topic": "job_interview",
  "voices": {
-  "user": "e3cd384158934cc9a01029cd7d278634",
-  "friend": "2680da81de8348a68e1f4dbaa79272f1",
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Ryan",
- "friend_name_id": "name_01",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_20",
-  "greet_ans_02",
-  "side_instr_05",
-  "ack_12",
-  "dq_26",
-  "side_cue_13"
+  "greet_10",
+  "greet_ans_29",
+  "describe_instr_04",
+  "describe_cue_10"
  ],
  "block_ids": [
-  "cooking.ctx1",
-  "gardening.side1"
+  "job_interview.opt3"
  ],
- "est_total_sec": 62.69,
- "est_speech_sec": 49.03,
+ "est_total_sec": 52.07,
+ "est_speech_sec": 43.06,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, good to have you here. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.33,
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.36,
    "role": "greeting",
-   "phrasing": "greet_20"
+   "phrasing": "greet_10"
   },
   {
    "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.49,
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.92,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
+   "phrasing": "greet_ans_29"
   },
   {
    "speaker": "user",
-   "text": "I've got chicken thighs, a bag of spinach and some rice. The kids are hungry and I'm tired.",
+   "text": "I found three job postings I like and I can only realistically prepare properly for one this week.",
    "est_sec": 5.68,
-   "gap_before": 0.21,
-   "event": "ordinary_request",
-   "block": "cooking.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You could do a quick garlic chicken and rice bowl, or a creamy spinach chicken in one pan. Which sounds better tonight?",
-   "est_sec": 6.92,
-   "gap_before": 0.62,
-   "role": "reply",
-   "block": "cooking.ctx1"
+   "gap_before": 0.59,
+   "block": "job_interview.opt3"
   },
   {
    "speaker": "user",
-   "text": "Hang on, I'm going to chat with my friend for a bit. Just wait until I say I'm back.",
-   "est_sec": 5.99,
-   "gap_before": 0.77,
+   "text": "Hold your thoughts until I've described all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.75,
    "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_05"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
-   "gap_before": 0.55,
-   "role": "ack",
-   "phrasing": "ack_12"
+   "kind": "describe_options",
+   "phrasing": "describe_instr_04"
   },
   {
    "speaker": "user",
-   "text": "Want to watch something later?",
-   "est_sec": 1.65,
-   "gap_before": 0.9,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_26"
-  },
-  {
-   "speaker": "friend",
-   "text": "Sure, after I shower.",
-   "est_sec": 1.34,
-   "gap_before": 1.28,
-   "phrasing": "dq_26"
+   "text": "A marketing coordinator role at a small charity, lower pay but a mission I really care about.",
+   "est_sec": 5.37,
+   "gap_before": 0.64,
+   "block": "job_interview.opt3"
   },
   {
    "speaker": "user",
-   "text": "Ryan, did you water the tomatoes this morning?",
-   "est_sec": 2.58,
-   "gap_before": 1.39,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "gardening.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "No, I thought you did.",
-   "est_sec": 1.65,
-   "gap_before": 0.4,
-   "block": "gardening.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh no. They looked really droopy when I walked past.",
-   "est_sec": 3.2,
-   "gap_before": 0.58,
-   "block": "gardening.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "I'll do it now. Should I use the hose or the watering can?",
-   "est_sec": 4.13,
-   "gap_before": 1.44,
-   "block": "gardening.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "The can, the hose is too strong for the seedlings next to them.",
-   "est_sec": 4.13,
-   "gap_before": 0.86,
-   "block": "gardening.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Okay, on it.",
-   "est_sec": 1.03,
-   "gap_before": 0.34,
-   "block": "gardening.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, back to you.",
-   "est_sec": 1.34,
+   "text": "A junior brand manager job at a big drinks company, great salary and a long hiring process.",
+   "est_sec": 5.37,
    "gap_before": 1.24,
+   "block": "job_interview.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a social media role at an agency, fast paced, and they want someone to start right away.",
+   "est_sec": 5.68,
+   "gap_before": 1.4,
+   "block": "job_interview.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. What would you recommend?",
+   "est_sec": 1.65,
+   "gap_before": 0.95,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_13"
+   "phrasing": "describe_cue_10"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. Still deciding between the garlic chicken bowl and the creamy one-pan version?",
-   "est_sec": 4.13,
-   "gap_before": 0.76,
+   "text": "If you need income soon, the agency makes sense to prepare for first. If you can wait, the charity is the one you sound most excited about. I'd send the drinks company application now anyway, since that process will take weeks.",
+   "est_sec": 12.81,
+   "gap_before": 0.66,
    "role": "resume",
-   "block": "cooking.ctx1"
+   "block": "job_interview.opt3"
   }
  ]
 }

@@ -7,180 +7,118 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "books",
-  "hiking"
+  "personal_finance"
  ],
- "topic": "books",
+ "topic": "personal_finance",
  "voices": {
-  "user": "c250136a9ec74cc0b799be54664a83f2",
-  "friend": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Ryan",
- "friend_name_id": "name_01",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_25",
-  "greet_ans_07",
-  "side_instr_13",
-  "ack_06",
-  "side_cue_14"
+  "greet_20",
+  "greet_ans_02",
+  "describe_instr_16",
+  "ack_13",
+  "describe_cue_13"
  ],
  "block_ids": [
-  "books.ctx3",
-  "hiking.side2"
+  "personal_finance.opt5"
  ],
- "est_total_sec": 77.25,
- "est_speech_sec": 56.98,
+ "est_total_sec": 52.62,
+ "est_speech_sec": 41.61,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there! How's your day treating you?",
-   "est_sec": 2.27,
-   "gap_before": 0.71,
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.46,
    "role": "greeting",
-   "phrasing": "greet_25"
+   "phrasing": "greet_20"
   },
   {
    "speaker": "user",
-   "text": "Honestly, a little stressed, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.42,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_07"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to read more, but I'm always on the go.",
-   "est_sec": 3.51,
-   "gap_before": 0.22,
-   "event": "ordinary_request",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Audiobooks might help, or an e-reader that fits in your pocket.",
-   "est_sec": 3.51,
-   "gap_before": 1.1,
-   "role": "reply",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, both sound good.",
-   "est_sec": 1.34,
-   "gap_before": 0.56,
-   "event": "ordinary_request",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Which fits your day better, listening on the bus and at the gym, or reading in short quiet moments?",
-   "est_sec": 5.99,
-   "gap_before": 1.83,
-   "role": "reply",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Just a sec, I need to sort something out with my roommate. I'll say when I'm back.",
-   "est_sec": 5.37,
-   "gap_before": 1.06,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_13"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Of course.",
-   "est_sec": 0.72,
-   "gap_before": 0.69,
-   "role": "ack",
-   "phrasing": "ack_06"
-  },
-  {
-   "speaker": "user",
-   "text": "How was the trail you did last week?",
-   "est_sec": 2.58,
-   "gap_before": 1.12,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "hiking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Beautiful, but really muddy near the waterfall.",
-   "est_sec": 2.27,
-   "gap_before": 1.05,
-   "block": "hiking.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Would it be okay for the kids?",
-   "est_sec": 2.27,
-   "gap_before": 1.48,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "hiking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "The first part, yes. The last mile is steep with loose rocks, I wouldn't bring them up there.",
-   "est_sec": 5.68,
-   "gap_before": 1.2,
-   "block": "hiking.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "We could just go to the waterfall and turn back.",
-   "est_sec": 3.2,
-   "gap_before": 1.29,
-   "block": "hiking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "That's the best bit anyway. They'll love it.",
-   "est_sec": 2.58,
-   "gap_before": 1.47,
-   "block": "hiking.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, finished. I'm back now.",
+   "text": "Pretty good, thanks for asking.",
    "est_sec": 1.65,
-   "gap_before": 1.64,
+   "gap_before": 0.45,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm trying to save for a holiday next summer and I have a few plans in mind.",
+   "est_sec": 5.37,
+   "gap_before": 0.51,
+   "block": "personal_finance.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Listen to all of them first, then comment.",
+   "est_sec": 2.58,
+   "gap_before": 0.53,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.53,
+   "role": "ack",
+   "phrasing": "ack_13"
+  },
+  {
+   "speaker": "user",
+   "text": "One is to save a fixed amount from every paycheck into a separate holiday pot.",
+   "est_sec": 4.75,
+   "gap_before": 1.38,
+   "block": "personal_finance.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is the round up thing, where the app rounds up every purchase and saves the change.",
+   "est_sec": 5.37,
+   "gap_before": 1.93,
+   "block": "personal_finance.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I could pick up extra shifts at the cafe on weekends just for the holiday money.",
+   "est_sec": 5.37,
+   "gap_before": 2.3,
+   "block": "personal_finance.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 1.03,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_14"
+   "phrasing": "describe_cue_13"
   },
   {
    "speaker": "moshi",
-   "text": "No problem. We were figuring out how you can read more. Audiobooks or e-reader?",
-   "est_sec": 4.44,
-   "gap_before": 0.87,
+   "text": "How far off is the holiday? If it's a while, the fixed transfer plus round ups on top is easy and steady. Save the extra shifts in case you fall behind.",
+   "est_sec": 9.71,
+   "gap_before": 0.39,
    "role": "resume",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Audiobooks. I'm driving like two hours a day.",
-   "est_sec": 2.58,
-   "gap_before": 1.41,
-   "event": "ordinary_request",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect, that's a lot of books a year. Check if your library lends audiobooks for free.",
-   "est_sec": 5.06,
-   "gap_before": 0.65,
-   "role": "followup",
-   "block": "books.ctx3"
+   "block": "personal_finance.opt5"
   }
  ]
 }

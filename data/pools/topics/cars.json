@@ -1,159 +1,1926 @@
 {
-  "topic": "cars",
-  "contexts": [
+ "topic": "cars",
+ "contexts": [
+  {
+   "id": "cars.ctx1",
+   "turns": [
     {
-      "id": "cars.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "My car is twelve years old and the repairs keep piling up."},
-        {"speaker": "moshi", "text": "That gets expensive. Are you leaning towards fixing it one more time, or starting to look for a replacement?"}
-      ],
-      "pending": "fix the old car again or replace it",
-      "think_reask": [
-        "So, what's the verdict? Fix the old car once more, or start looking for a new one?",
-        "Time's up. Are you keeping the car or shopping for a replacement?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were weighing up your old car, repair it or replace it?",
-        "Hi again. Did you decide whether to fix the car or look for another one?"
-      ],
-      "endings": [
-        {"user": "Replace it. I'm tired of the garage knowing me by name.", "moshi": "Fair enough. Let's figure out your budget and what you'd need from the next one."},
-        {"user": "I'll fix it one last time. I can't afford a new one until spring.", "moshi": "Sensible. Ask the mechanic what else is likely to go soon, so there are no surprises."}
-      ]
+     "speaker": "user",
+     "text": "My car is twelve years old and the repairs keep piling up."
     },
     {
-      "id": "cars.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "We're driving to the coast next weekend, about six hours."},
-        {"speaker": "moshi", "text": "Nice trip. Would you rather leave really early and get there by lunch, or break the drive with an overnight stop?"}
-      ],
-      "pending": "leave early or stop overnight on the drive to the coast",
-      "think_reask": [
-        "Okay, early start or an overnight stop on the way to the coast?",
-        "So which sounds better for the drive, setting off at dawn or splitting it in two?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were planning your coast trip. Early start, or a night on the way?",
-        "There you are. Still deciding between one long day and an overnight stop?"
-      ],
-      "endings": [
-        {"user": "Early start. The kids will just sleep in the back anyway.", "moshi": "Smart. Pack snacks the night before so you can just get in and go."},
-        {"user": "Let's break it up. Six hours with a toddler sounds like a nightmare.", "moshi": "Good thinking. A town about halfway gives you a nice evening and a short second day."}
-      ]
-    },
-    {
-      "id": "cars.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I'm finally buying my first car."},
-        {"speaker": "moshi", "text": "Congratulations! Have you thought about whether you want something new with a warranty, or a cheaper used one?"}
-      ],
-      "pending": "new car with a warranty or cheaper used car",
-      "think_reask": [
-        "So, new with a warranty, or used and cheaper?",
-        "Alright, have you made up your mind? New car or second hand?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were choosing between a new car and a used one.",
-        "Hi again. So, for your first car, new or used?"
-      ],
-      "endings": [
-        {"user": "Used, I think. I'll probably scratch it in the first month.", "moshi": "Honestly that's what most first-time drivers do. Get it checked by a mechanic before you buy."},
-        {"user": "New. I want something that won't break down on the motorway.", "moshi": "That's fair. Look at smaller models, they're often much cheaper to insure too."}
-      ]
+     "speaker": "moshi",
+     "text": "That gets expensive. Are you leaning towards fixing it one more time, or starting to look for a replacement?"
     }
-  ],
-  "side_conversations": [
-    {"id": "cars.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you hear that rattling noise when we pulled in?"},
-      {"speaker": "friend", "text": "Yeah, it sounded like it was coming from underneath."},
-      {"speaker": "user", "text": "I think it might be the exhaust again."},
-      {"speaker": "friend", "text": "My brother had the same thing. It was just a loose heat shield."},
-      {"speaker": "user", "text": "Was it expensive to fix?"},
-      {"speaker": "friend", "text": "Not really, maybe forty quid. Took them ten minutes."}
-    ]},
-    {"id": "cars.side2", "turns": [
-      {"speaker": "user", "text": "Can I borrow your car on Saturday?"},
-      {"speaker": "friend", "text": "Depends. Where are you going?"},
-      {"speaker": "user", "text": "Just to the garden centre and back. Mine's in the shop."},
-      {"speaker": "friend", "text": "Fine, but it's nearly out of petrol, so fill it up."},
-      {"speaker": "user", "text": "Deal. And I'll wash it too, it needs it."},
-      {"speaker": "friend", "text": "Now you're just showing off."}
-    ]},
-    {"id": "cars.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, which one did you like better, the blue one or the grey one?"},
-      {"speaker": "friend", "text": "The grey one drove nicer. The blue one felt kind of heavy."},
-      {"speaker": "user", "text": "But the blue one has a bigger boot. We need space for the dog."},
-      {"speaker": "friend", "text": "True. The dog doesn't care how it drives."},
-      {"speaker": "user", "text": "Should we go back and test drive them again tomorrow?"},
-      {"speaker": "friend", "text": "Let's do it in the morning, before the dealership gets busy."},
-      {"speaker": "user", "text": "Okay. I'll call them first thing."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "cars.dlg1", "turns": [
-      {"speaker": "user", "text": "My tyre pressure light just came on. Is that urgent?"},
-      {"speaker": "moshi", "text": "It's worth dealing with today. It usually means at least one tyre is low, which hurts grip and wears the tyre faster."},
-      {"speaker": "user", "text": "How do I know what pressure they should be?"},
-      {"speaker": "moshi", "text": "There's usually a sticker inside the driver's door frame, or it's in the manual. Most petrol stations have a pump you can set to that number."},
-      {"speaker": "user", "text": "And if it comes back on after I / fill them up?"},
-      {"speaker": "moshi", "text": "Then you might have a slow puncture. A tyre shop can check it quickly, often for free."},
-      {"speaker": "user", "text": "Okay, I'll stop at the station on the way home."},
-      {"speaker": "moshi", "text": "Good plan. Check them when the tyres are cold if you can, it gives a more accurate reading."}
-    ]},
-    {"id": "cars.dlg2", "turns": [
-      {"speaker": "user", "text": "I'm thinking about getting an electric car. Is it a bad idea if I live in a flat?"},
-      {"speaker": "moshi", "text": "Not necessarily. The main question is where you'd charge it. Is there a charger near your building or at work?"},
-      {"speaker": "user", "text": "There's one at the supermarket down the road."},
-      {"speaker": "moshi", "text": "That can work if you don't drive much. A quick charge while you shop a couple of times a week covers a lot of city driving."},
-      {"speaker": "user", "text": "I mostly just commute, maybe / thirty miles a day."},
-      {"speaker": "moshi", "text": "That's very doable. Most electric cars would only need charging once or twice a week for that."},
-      {"speaker": "user", "text": "Actually, what about a hybrid instead? Less hassle?"},
-      {"speaker": "moshi", "text": "A hybrid is a nice middle ground. You'd never worry about charging, though you'd save a bit less on fuel."}
-    ]},
-    {"id": "cars.dlg3", "turns": [
-      {"speaker": "user", "text": "How often should I really change the oil? My dad says every three thousand miles."},
-      {"speaker": "moshi", "text": "That used to be the rule, but most modern cars go much longer, often around five to ten thousand miles. Your manual will give the exact interval."},
-      {"speaker": "user", "text": "Huh. So I've been wasting money."},
-      {"speaker": "moshi", "text": "Possibly a little. Though if you do lots of short trips or tow things, changing it more often isn't a bad idea."},
-      {"speaker": "user", "text": "I do mostly drive to the shops and back."},
-      {"speaker": "moshi", "text": "Short trips are harder on oil, so stick to the lower end of the range."},
-      {"speaker": "user", "text": "Got it. And can I just / do it myself?"},
-      {"speaker": "moshi", "text": "You can, if you have ramps and somewhere to dispose of the old oil. Many people find a garage isn't much more expensive."}
-    ]},
-    {"id": "cars.dlg4", "turns": [
-      {"speaker": "user", "text": "We're doing a long road trip and I want to keep the kids from going crazy."},
-      {"speaker": "moshi", "text": "Good idea to plan ahead. Audiobooks are great, the whole car can listen together."},
-      {"speaker": "user", "text": "They're seven and ten. Any games that don't need screens?"},
-      {"speaker": "moshi", "text": "Try the alphabet game, where you spot things outside starting with each letter in order. Or twenty questions, kids that age love it."},
-      {"speaker": "user", "text": "We used to play the number plate game when I was little."},
-      {"speaker": "moshi", "text": "That's a classic. You could make a little bingo card with things to spot, like a red truck or a horse."},
-      {"speaker": "user", "text": "Oh they'd love bingo. I'll / print some tonight."},
-      {"speaker": "moshi", "text": "Perfect. Add a small prize for the winner and you'll have a few peaceful hours."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "cars.opt1",
-     "lead_in": "Okay, I'm finally replacing my old car and I've narrowed it down.",
-     "options": [
-      "The first one is a small used hatchback, five years old, cheap to run, with low mileage.",
-      "Then there's a brand new hybrid sedan, really good on fuel, but it costs almost twice as much.",
-      "Option three is a used pickup truck, older and thirsty, but I could haul my bikes and furniture.",
-      "And the last one is leasing an electric car for three years with a pretty low monthly payment."
-     ],
-     "moshi_comment": [
-      "If you mostly drive around town, the used hatchback gives you the most for your money. The hybrid makes sense if you do long commutes and plan to keep it for years. The pickup only pays off if you really haul stuff often.",
-      "How far do you drive on a normal day, and can you charge at home? If you can, the electric lease is a nice low-risk way to try one. Otherwise I'd lean toward the hatchback or the hybrid."
-     ]},
-    {"id": "cars.opt2",
-     "lead_in": "My sister needs a first car and asked me to help her pick.",
-     "options": [
-      "There's a ten year old compact that our neighbor is selling, runs fine, but the paint is pretty rough.",
-      "Another option is a newer small SUV from a dealer, safer, but the payments would be steep for her.",
-      "Or she could get a basic scooter for now and save up for a car next year."
-     ],
-     "moshi_comment": [
-      "For a first car, the neighbor's compact is hard to beat, a rough paint job doesn't matter much when you're learning. The SUV is safer, but big payments can be stressful on a first job. The scooter is cheap but not great in bad weather.",
-      "Does she need to drive on highways or mostly short trips? For short trips, the neighbor's compact is the sensible pick. I'd just have a mechanic look at it before she buys."
-     ]}
-  ]
+   ],
+   "pending": "fix the old car again or replace it",
+   "think_reask": [
+    "So, what's the verdict? Fix the old car once more, or start looking for a new one?",
+    "Time's up. Are you keeping the car or shopping for a replacement?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were weighing up your old car, repair it or replace it?",
+    "Hi again. Did you decide whether to fix the car or look for another one?"
+   ],
+   "endings": [
+    {
+     "user": "Replace it. I'm tired of the garage knowing me by name.",
+     "moshi": "Fair enough. Let's figure out your budget and what you'd need from the next one."
+    },
+    {
+     "user": "I'll fix it one last time. I can't afford a new one until spring.",
+     "moshi": "Sensible. Ask the mechanic what else is likely to go soon, so there are no surprises."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're driving to the coast next weekend, about six hours."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice trip. Would you rather leave really early and get there by lunch, or break the drive with an overnight stop?"
+    }
+   ],
+   "pending": "leave early or stop overnight on the drive to the coast",
+   "think_reask": [
+    "Okay, early start or an overnight stop on the way to the coast?",
+    "So which sounds better for the drive, setting off at dawn or splitting it in two?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were planning your coast trip. Early start, or a night on the way?",
+    "There you are. Still deciding between one long day and an overnight stop?"
+   ],
+   "endings": [
+    {
+     "user": "Early start. The kids will just sleep in the back anyway.",
+     "moshi": "Smart. Pack snacks the night before so you can just get in and go."
+    },
+    {
+     "user": "Let's break it up. Six hours with a toddler sounds like a nightmare.",
+     "moshi": "Good thinking. A town about halfway gives you a nice evening and a short second day."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm finally buying my first car."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Congratulations! Have you thought about whether you want something new with a warranty, or a cheaper used one?"
+    }
+   ],
+   "pending": "new car with a warranty or cheaper used car",
+   "think_reask": [
+    "So, new with a warranty, or used and cheaper?",
+    "Alright, have you made up your mind? New car or second hand?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were choosing between a new car and a used one.",
+    "Hi again. So, for your first car, new or used?"
+   ],
+   "endings": [
+    {
+     "user": "Used, I think. I'll probably scratch it in the first month.",
+     "moshi": "Honestly that's what most first-time drivers do. Get it checked by a mechanic before you buy."
+    },
+    {
+     "user": "New. I want something that won't break down on the motorway.",
+     "moshi": "That's fair. Look at smaller models, they're often much cheaper to insure too."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Ugh, the engine light just came on and I'm still twenty miles from home. It's pitch dark out here."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, stay calm. Is the car driving normally? If so, you could stop at the next services to check it, or carry on gently and look at it at home."
+    }
+   ],
+   "pending": "stop at the services or drive home",
+   "think_reask": [
+    "Right, the engine light. Stopping at the services, or nursing it the last twenty miles home?",
+    "So what's the call, pull in at the next services or keep going?"
+   ],
+   "welcome_back": [
+    "The engine light was still on, and you were deciding whether to stop at the services or push on home. Any thoughts?",
+    "So, about that warning light. Services, or the road home?"
+   ],
+   "endings": [
+    {
+     "user": "I'll pull in at the services, I'd rather not risk it in the dark.",
+     "moshi": "Sensible. Once you're parked, check the oil level and whether the light is steady or flashing."
+    },
+    {
+     "user": "It's driving fine, so I'll just head home slowly.",
+     "moshi": "Fair enough. Keep it under sixty, watch the temperature gauge, and pull over if anything changes."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son turns seventeen next month and he's desperate to start driving."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exciting times. Will he book proper lessons with an instructor, or are you planning to teach him yourself in the family car?"
+    }
+   ],
+   "pending": "instructor lessons or teaching him at home",
+   "think_reask": [
+    "So, instructor or the family car with you in the passenger seat?",
+    "Lessons with a professional, or are you brave enough to teach him yourself?"
+   ],
+   "welcome_back": [
+    "Your son's driving. Proper lessons, or you as his teacher?",
+    "So, an instructor for him, or the family car with you in charge?"
+   ],
+   "endings": [
+    {
+     "user": "Honestly, an instructor. We'd end up shouting at each other.",
+     "moshi": "That's very self-aware. You can still take him out for extra practice once he's got the basics."
+    },
+    {
+     "user": "I'll teach him. I taught his sister and she passed first time.",
+     "moshi": "Then you've got a proven method. Just make sure your insurance covers a learner driver."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Grandma stopped driving last year and her little car is just sitting in the drive."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That happens a lot. Would the family rather sell it, or does someone, maybe a grandchild, need a cheap first car?"
+    }
+   ],
+   "pending": "sell grandma's car or give it to a grandchild",
+   "think_reask": [
+    "So what happens to grandma's car? Sell it, or hand it down to one of the grandkids?",
+    "Have you landed anywhere? Selling it, or keeping it in the family?"
+   ],
+   "welcome_back": [
+    "The little car in the drive. Selling it, or passing it to a grandchild?",
+    "Grandma's car. Any idea yet whether it's being sold or handed down?"
+   ],
+   "endings": [
+    {
+     "user": "My cousin's just passed his test, so it'll go to him.",
+     "moshi": "Lovely, it stays in the family. Get it serviced first, since it's been standing for a year."
+    },
+    {
+     "user": "We'll sell it and give her the money, she'd like that.",
+     "moshi": "That's kind. A small, low mileage car like hers should sell quickly."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We just moved up north and everyone keeps warning me about the winters."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're not wrong. Do you want to swap to proper winter tyres for the cold months, or go with all season tyres you can leave on all year?"
+    }
+   ],
+   "pending": "winter tyres or all season tyres",
+   "think_reask": [
+    "So, winter tyres for a few months, or all season ones and forget about it?",
+    "Tyres for the north. Two sets that you swap, or one set all year?"
+   ],
+   "welcome_back": [
+    "The tyre question. Proper winter ones or all season?",
+    "So, winter tyres, or the all year kind?"
+   ],
+   "endings": [
+    {
+     "user": "Winter ones. I'd rather not end up in a ditch.",
+     "moshi": "Good choice for snowy roads. Most garages will store your summer set for a small fee."
+    },
+    {
+     "user": "All season. I'm not swapping tyres twice a year.",
+     "moshi": "That's fine for most winters. Just drive gently on the icy days and leave extra room."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Me and three flatmates are driving to a wedding in the mountains."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun road trip."
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, but one of them wants the coastal road and the other wants the motorway."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic. The coastal road is gorgeous but adds about two hours. Do you want scenery, or arriving early with time to change?"
+    }
+   ],
+   "pending": "scenic coastal road or faster motorway",
+   "think_reask": [
+    "Have you settled the route fight? The pretty coast road or the quick motorway?",
+    "So, the long scenic way, or straight there on the motorway?"
+   ],
+   "welcome_back": [
+    "The route to the wedding. Coast road or motorway?",
+    "So, were you going for the views or for getting there in time to change?"
+   ],
+   "endings": [
+    {
+     "user": "Motorway there, coast road on the way back.",
+     "moshi": "That's a smart compromise. Everyone gets their way, and nobody's late for the ceremony."
+    },
+    {
+     "user": "Coast road. We'll just leave really early.",
+     "moshi": "Then aim to be out the door at dawn. And pack the suits flat in the boot."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The dealer just rang. My new car's ready to be built and I still haven't picked a colour."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The fun part! Were you still torn between the dark green and the white?"
+    }
+   ],
+   "pending": "dark green or white for the new car",
+   "think_reask": [
+    "So, green or white? The dealer's waiting.",
+    "Colour time. Dark green, or white?"
+   ],
+   "welcome_back": [
+    "The colour for your new car. Green or white, any closer?",
+    "The dealer's still waiting on that colour. Green, or white?"
+   ],
+   "endings": [
+    {
+     "user": "Dark green. White just looks like a fridge to me.",
+     "moshi": "Ha, fair. Dark green also hides dust better than you'd think."
+    },
+    {
+     "user": "White. It's easier to sell later.",
+     "moshi": "Very practical. It stays cooler in summer too."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm at the rental desk at the airport and they're pushing the extra insurance on me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They always do. Does your credit card already cover rental cars, or would you rather pay for the peace of mind?"
+    }
+   ],
+   "pending": "buy the rental insurance or rely on the card",
+   "think_reask": [
+    "The guy at the desk is waiting. Extra insurance, or trust the card?",
+    "So, pay for their cover, or rely on your credit card?"
+   ],
+   "welcome_back": [
+    "The rental insurance. Taking it, or going with the card?",
+    "That rental desk. Did you decide on the extra cover?"
+   ],
+   "endings": [
+    {
+     "user": "I checked, my card covers it, so I'm saying no.",
+     "moshi": "Great. Take photos of every scratch before you drive off, just in case."
+    },
+    {
+     "user": "I'll take it. I don't know these roads at all.",
+     "moshi": "Reasonable. It means you can just hand the keys back without worrying."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My coworker lives on my street and we've started driving in together."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice, that saves money. How do you want to split it? Take turns driving each week, or one of you drives and the other pays for fuel?"
+    }
+   ],
+   "pending": "alternate driving weeks or split fuel costs",
+   "think_reask": [
+    "Carpool rules. Swapping weeks, or one driver and shared fuel?",
+    "So how will you split it with your coworker?"
+   ],
+   "welcome_back": [
+    "The carpool with your coworker. Alternating weeks, or one car and fuel money?",
+    "So, any plan yet for splitting the drive to work?"
+   ],
+   "endings": [
+    {
+     "user": "Swapping weeks. That way nobody owes anyone anything.",
+     "moshi": "Simple and fair. It also means both cars get used, which is good for the batteries."
+    },
+    {
+     "user": "She'll drive, her car's nicer. I'll pay half the fuel.",
+     "moshi": "Easy arrangement. Maybe buy the coffee now and then too."
+    }
+   ]
+  },
+  {
+   "id": "cars.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So the garage says the clutch is going. They want a lot to replace it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Clutches aren't cheap. How old is the car? It might be worth getting a second quote, or putting that money towards something newer."
+    },
+    {
+     "speaker": "user",
+     "text": "It's about nine years old."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's right on the line. Second quote, or start looking around?"
+    }
+   ],
+   "pending": "second quote on the clutch or replace the car",
+   "think_reask": [
+    "The clutch. Getting another quote, or shopping for a new car?",
+    "So, nine year old car with a tired clutch. Fix it or move on?"
+   ],
+   "welcome_back": [
+    "The clutch on your nine year old car. Another quote, or time to look around?",
+    "That clutch bill. Leaning towards a repair or a replacement?"
+   ],
+   "endings": [
+    {
+     "user": "I'll get another quote. Otherwise the car's in great shape.",
+     "moshi": "Good idea. Independent garages are often a fair bit cheaper than the dealer."
+    },
+    {
+     "user": "I think I'm done with it. Time for something newer.",
+     "moshi": "Fair enough. The garage might still give you a little for it as a trade in."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "cars.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you hear that rattling noise when we pulled in?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, it sounded like it was coming from underneath."
+    },
+    {
+     "speaker": "user",
+     "text": "I think it might be the exhaust again."
+    },
+    {
+     "speaker": "friend",
+     "text": "My brother had the same thing. It was just a loose heat shield."
+    },
+    {
+     "speaker": "user",
+     "text": "Was it expensive to fix?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not really, maybe forty quid. Took them ten minutes."
+    }
+   ]
+  },
+  {
+   "id": "cars.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I borrow your car on Saturday?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Depends. Where are you going?"
+    },
+    {
+     "speaker": "user",
+     "text": "Just to the garden centre and back. Mine's in the shop."
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine, but it's nearly out of petrol, so fill it up."
+    },
+    {
+     "speaker": "user",
+     "text": "Deal. And I'll wash it too, it needs it."
+    },
+    {
+     "speaker": "friend",
+     "text": "Now you're just showing off."
+    }
+   ]
+  },
+  {
+   "id": "cars.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, which one did you like better, the blue one or the grey one?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The grey one drove nicer. The blue one felt kind of heavy."
+    },
+    {
+     "speaker": "user",
+     "text": "But the blue one has a bigger boot. We need space for the dog."
+    },
+    {
+     "speaker": "friend",
+     "text": "True. The dog doesn't care how it drives."
+    },
+    {
+     "speaker": "user",
+     "text": "Should we go back and test drive them again tomorrow?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Let's do it in the morning, before the dealership gets busy."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'll call them first thing."
+    }
+   ]
+  },
+  {
+   "id": "cars.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, the boot won't shut. What did you put in here?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Just the tent, the cool box, and my folding chair."
+    },
+    {
+     "speaker": "user",
+     "text": "Your folding chair is the size of a sofa."
+    },
+    {
+     "speaker": "friend",
+     "text": "It has a cup holder! It's essential."
+    },
+    {
+     "speaker": "user",
+     "text": "Can it go on the back seat at least?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Only if you sit on the roof."
+    },
+    {
+     "speaker": "user",
+     "text": "Very funny. Pass me the bungee cords, I'll strap it to the rack."
+    }
+   ]
+  },
+  {
+   "id": "cars.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So when's your driving test again?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Thursday. I can't sleep thinking about it."
+    },
+    {
+     "speaker": "user",
+     "text": "You'll be fine. Is it the parallel parking that's worrying you?"
+    },
+    {
+     "speaker": "friend",
+     "text": "All of it, honestly. Mostly the roundabouts. I freeze."
+    },
+    {
+     "speaker": "user",
+     "text": "Want to go out tomorrow evening and just do roundabouts for an hour?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Would you really? That would help so much."
+    },
+    {
+     "speaker": "user",
+     "text": "Of course. I'll bring snacks for afterwards."
+    }
+   ]
+  },
+  {
+   "id": "cars.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, about the fuel for the trip."
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh, right. How much do I owe you?"
+    },
+    {
+     "speaker": "user",
+     "text": "I filled up twice, so call it half of that. I've got the receipts somewhere."
+    },
+    {
+     "speaker": "friend",
+     "text": "Don't worry about receipts. I'll just send it tonight."
+    },
+    {
+     "speaker": "user",
+     "text": "Are you sure? It feels weird asking."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's weirder if you don't. You drove the whole way."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "cars.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My tyre pressure light just came on. Is that urgent?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's worth dealing with today. It usually means at least one tyre is low, which hurts grip and wears the tyre faster."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know what pressure they should be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's usually a sticker inside the driver's door frame, or it's in the manual. Most petrol stations have a pump you can set to that number."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it comes back on after I / fill them up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you might have a slow puncture. A tyre shop can check it quickly, often for free."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll stop at the station on the way home."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good plan. Check them when the tyres are cold if you can, it gives a more accurate reading."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm thinking about getting an electric car. Is it a bad idea if I live in a flat?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily. The main question is where you'd charge it. Is there a charger near your building or at work?"
+    },
+    {
+     "speaker": "user",
+     "text": "There's one at the supermarket down the road."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That can work if you don't drive much. A quick charge while you shop a couple of times a week covers a lot of city driving."
+    },
+    {
+     "speaker": "user",
+     "text": "I mostly just commute, maybe / thirty miles a day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's very doable. Most electric cars would only need charging once or twice a week for that."
+    },
+    {
+     "speaker": "user",
+     "text": "Actually, what about a hybrid instead? Less hassle?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A hybrid is a nice middle ground. You'd never worry about charging, though you'd save a bit less on fuel."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How often should I really change the oil? My dad says every three thousand miles."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That used to be the rule, but most modern cars go much longer, often around five to ten thousand miles. Your manual will give the exact interval."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. So I've been wasting money."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Possibly a little. Though if you do lots of short trips or tow things, changing it more often isn't a bad idea."
+    },
+    {
+     "speaker": "user",
+     "text": "I do mostly drive to the shops and back."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Short trips are harder on oil, so stick to the lower end of the range."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it. And can I just / do it myself?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, if you have ramps and somewhere to dispose of the old oil. Many people find a garage isn't much more expensive."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're doing a long road trip and I want to keep the kids from going crazy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea to plan ahead. Audiobooks are great, the whole car can listen together."
+    },
+    {
+     "speaker": "user",
+     "text": "They're seven and ten. Any games that don't need screens?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try the alphabet game, where you spot things outside starting with each letter in order. Or twenty questions, kids that age love it."
+    },
+    {
+     "speaker": "user",
+     "text": "We used to play the number plate game when I was little."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a classic. You could make a little bingo card with things to spot, like a red truck or a horse."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh they'd love bingo. I'll / print some tonight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Add a small prize for the winner and you'll have a few peaceful hours."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My neighbour's van won't start and she's asked me to help jump it. I've never done this."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's easier than it sounds. Do you have jump leads, and is your car parked close enough to reach her battery?"
+    },
+    {
+     "speaker": "user",
+     "text": "She's got leads. I can pull right up nose to nose."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Both engines off first. Red clamp goes on her positive terminal, then your positive. Black goes on your negative, and the last black clamp on bare metal on her engine, away from the battery."
+    },
+    {
+     "speaker": "user",
+     "text": "Why not on her battery? That seems / more logical."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a safety thing. The final connection can spark, and batteries can give off gas, so you want that spark away from it."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Then I start mine?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, let yours run for a few minutes, then try hers. Once it starts, take the clamps off in the reverse order."
+    },
+    {
+     "speaker": "user",
+     "text": "And she should drive it around after?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ideally for half an hour or so, to put some charge back in. If it dies again tomorrow, the battery probably needs replacing."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Every time I brake there's this high pitched squeal. It's embarrassing at traffic lights."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's usually the brake pads. Many pads have a little metal tab that squeals on purpose when they're getting thin."
+    },
+    {
+     "speaker": "user",
+     "text": "On purpose? That's a cruel design."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Annoying, but useful. It's the car telling you to book a brake check before the pads wear down to metal."
+    },
+    {
+     "speaker": "user",
+     "text": "How long can I / leave it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I wouldn't leave it more than a couple of weeks. If it turns into a grinding sound, stop driving and get it looked at straight away."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it a big job?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Swapping pads is one of the cheaper repairs, usually under an hour. It gets pricey if the discs get damaged too, so sooner is better."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm going to a used car lot tomorrow and I'm rubbish at haggling. Any advice?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. Look up what similar cars sell for in your area before you go, so you know a fair price."
+    },
+    {
+     "speaker": "user",
+     "text": "I've done that. The one I like is listed a bit high."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good. Start your offer below what you'd really pay, and point to specific things, like worn tyres or a missing service stamp."
+    },
+    {
+     "speaker": "user",
+     "text": "What if the salesman just says no?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Be ready to walk away politely. Often that's when the price moves. And ask about extras, like a full tank or new mats, if they won't drop the price."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I mention / I'm paying cash?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not straight away. Some dealers make money on finance, so settle the car's price first, then talk about how you'll pay."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The garage quoted me a fortune for something called a timing belt. Are they having a laugh?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a real thing, I promise. The timing belt keeps the engine's moving parts in sync. If it snaps, it can wreck the engine."
+    },
+    {
+     "speaker": "user",
+     "text": "So why does it cost so much? It's a belt."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The belt itself is cheap. It's the labour, because it's buried deep in the engine and takes hours to reach."
+    },
+    {
+     "speaker": "user",
+     "text": "Great. And I have to do it now?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check your service book. Most cars need it at a set mileage or age. If you're past that, it's worth doing, because a broken belt costs far more."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine. I'll stop complaining. / Maybe."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Complain away. Just ask them to replace the water pump at the same time if it's driven by the belt, it saves paying that labour twice."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My car insurance renewal came through and it's gone up loads. I haven't even claimed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's frustrating, and sadly common. Renewal prices are often higher than what new customers get offered."
+    },
+    {
+     "speaker": "user",
+     "text": "So I should just switch?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get a few comparison quotes first. Then you can either switch, or call your current insurer and ask them to match it."
+    },
+    {
+     "speaker": "user",
+     "text": "Does that actually work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Quite often, yes. Insurers would rather keep you than lose you. Be polite but clear that you have a cheaper offer."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything else that brings it down?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A higher voluntary excess lowers the price, and so can paying annually instead of monthly. Just make sure the excess is an amount you could actually afford."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Tonight I'm / doing the boring phone call."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good luck. Ten minutes of boredom could save you a decent chunk."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hi. So I just got my first car and my dad told me to check the oil. I don't know where to start."
+    },
+    {
+     "speaker": "moshi",
+     "text": "No problem. Park on flat ground, and wait until the engine's been off for a few minutes. Then open the bonnet and look for a handle with a loop, usually yellow or orange."
+    },
+    {
+     "speaker": "user",
+     "text": "Found it. Do I just pull it out?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. Wipe it clean, push it all the way back in, then pull it out again. The oil should sit between the two marks near the tip."
+    },
+    {
+     "speaker": "user",
+     "text": "It's / kind of near the bottom mark."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's worth topping up a little. Your manual will tell you the right oil type. Add a small amount at a time and recheck, you don't want to overfill."
+    },
+    {
+     "speaker": "user",
+     "text": "How often do I do this?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Once a month is a good habit, and before any long drive. You're already ahead of most new drivers."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "A stone hit my windscreen on the motorway. There's a tiny chip, like a little star."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah, annoying. Is it in the driver's line of sight, and is it smaller than a coin?"
+    },
+    {
+     "speaker": "user",
+     "text": "It's on the passenger side, and it's really small."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good news, then. Small chips like that can usually be repaired with resin instead of replacing the whole screen."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I just ignore it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I wouldn't. Temperature changes and bumps can make a chip crack across the glass, and then you'd need a new windscreen."
+    },
+    {
+     "speaker": "user",
+     "text": "Is the repair expensive?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often it's covered by your insurance without affecting your no claims. Worth a quick call. In the meantime, a bit of clear tape keeps dirt out of it."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I grew up somewhere it never snowed and now there's ten centimetres outside. I have to drive to work."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, a few basics will make a big difference. First, clear all the snow off the car, including the roof, so it doesn't slide onto your windscreen."
+    },
+    {
+     "speaker": "user",
+     "text": "Even the roof? Nobody here does that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even the roof. Then pull away gently in second gear if you have a manual, it stops the wheels spinning."
+    },
+    {
+     "speaker": "user",
+     "text": "It's an automatic."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then just be very light on the accelerator. Brake early and softly, and leave about ten times the usual gap to the car in front."
+    },
+    {
+     "speaker": "user",
+     "text": "Ten times? That feels like / a ridiculous amount."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It does, until you need it. Stopping distances on snow are massive. And avoid sudden steering, smooth inputs are everything."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Slow, gentle, huge gaps."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. And if the roads look really bad, it's okay to call in and work from home."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm driving through the night to get to my sister's. Around seven hours. How do I stay alert?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The best thing is planning breaks. Stop roughly every two hours, even if you feel fine, and get out and walk around."
+    },
+    {
+     "speaker": "user",
+     "text": "I was thinking lots of energy drinks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A coffee can help for a bit, but caffeine takes about twenty minutes to kick in and it wears off suddenly. It's no substitute for rest."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I start / yawning a lot?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's your cue to pull over somewhere safe. A twenty minute nap with a coffee just before it works surprisingly well."
+    },
+    {
+     "speaker": "user",
+     "text": "Coffee before a nap? That sounds backwards."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It sounds odd, but the caffeine kicks in right as you wake up. Also keep the car a bit cool and snack on something light, heavy food makes you drowsy."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm selling my car privately for the first time. What do I need to watch out for?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mainly paperwork and safety. Have the logbook, service history and any receipts ready, buyers love a tidy folder."
+    },
+    {
+     "speaker": "user",
+     "text": "What about test drives? Some stranger driving off in my car scares me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair worry. Ask to see their licence and check they're insured, and always go along with them. Keep your keys in your pocket when you swap seats."
+    },
+    {
+     "speaker": "user",
+     "text": "Ooh, good point. And payment?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bank transfer that has fully cleared is safest. Don't hand over the keys until the money is actually in your account, not just showing as pending."
+    },
+    {
+     "speaker": "user",
+     "text": "Someone offered to / pay half now and half later."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'd politely say no. Full payment before the car leaves, that's the standard for private sales."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our baby's due in three weeks and I'm trying to fit the car seat. The instructions are a nightmare."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're not alone, car seats are famously fiddly. Is it a base that clicks in, or does the seat use the car's seatbelt?"
+    },
+    {
+     "speaker": "user",
+     "text": "There's a base with two metal arms."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those usually slide into anchor points hidden in the gap of the back seat. Push the arms in until you hear a click and see green indicators."
+    },
+    {
+     "speaker": "user",
+     "text": "Got the clicks. There's also a leg thing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the support leg. Lower it until it presses firmly on the floor, again you should see a green marker. Then try wiggling the base, it shouldn't move more than a little."
+    },
+    {
+     "speaker": "user",
+     "text": "It's solid. Rear facing, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, rear facing for a baby, and never in front of an active airbag. Many fire stations or baby shops will check your installation for free if you want reassurance."
+    },
+    {
+     "speaker": "user",
+     "text": "That would help / me sleep a bit better, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally understandable. Good luck with the big arrival."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friend gets car sick every time she sits in the back. We've got a long drive on Saturday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Poor thing. Can she sit in the front? Looking at the road ahead really helps your brain match what your body feels."
+    },
+    {
+     "speaker": "user",
+     "text": "She'll be in the front, but she still felt bad last time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then ask her to avoid reading or her phone, keep a window open a crack, and eat something plain beforehand, not a big greasy meal."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything she can take?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "There are travel sickness tablets at the pharmacy. Some make you drowsy, so a pharmacist can help her pick. Ginger sweets help some people too."
+    },
+    {
+     "speaker": "user",
+     "text": "And driving wise, anything / I should do differently?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, smooth driving matters a lot. Gentle braking, easy on the corners, and regular stops for fresh air."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Petrol's so expensive now. I'm retired and I want to squeeze every mile out of a tank."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's quite a lot you can do. Smooth driving is the biggest one, accelerating gently and anticipating stops so you brake less."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm a pretty calm driver already."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then check the tyre pressures monthly, soft tyres use more fuel. And take any roof box or bike rack off when you're not using it."
+    },
+    {
+     "speaker": "user",
+     "text": "I've had a roof box on / since the summer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's probably costing you a fair bit, they create a lot of drag. Also clear heavy stuff out of the boot."
+    },
+    {
+     "speaker": "user",
+     "text": "What about the air conditioning?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "At low speeds, windows down is usually cheaper. On the motorway, windows up with air con is better, because open windows add drag."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm seventeen and about to learn. Should I learn in a manual or an automatic?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good question. An automatic is easier to learn, you don't need to worry about gears or stalling. But in many places an automatic licence only lets you drive automatics."
+    },
+    {
+     "speaker": "user",
+     "text": "Most new cars are automatic though, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "More and more, especially electric ones, which are all automatic. So the restriction matters less than it used to."
+    },
+    {
+     "speaker": "user",
+     "text": "My parents' car is a manual."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a big point. If you'll practise in their car, or borrow it later, learning manual makes sense."
+    },
+    {
+     "speaker": "user",
+     "text": "I keep stalling it / in the car park when dad lets me try."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's completely normal at the start. Most people get the clutch after a few lessons. If it really stresses you out, automatic is a perfectly good choice."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Third morning in a row my car's barely started. It does this weird slow cranking."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds like a weak battery, especially if it's cold out. How old is the battery, do you know?"
+    },
+    {
+     "speaker": "user",
+     "text": "No idea. It came with the car, so at least five years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's probably near the end of its life. Most last around four to six years, and cold mornings expose a tired one."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I get it tested somewhere?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many parts shops and garages test batteries for free in a few minutes. They'll tell you if it's just low or actually failing."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it's / just low?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A long drive or a battery charger overnight can bring it back. If it keeps happening, something might be draining it while the car's parked."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm working abroad for three months and my car will just sit in the garage. Will it be okay?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It should be, with a bit of preparation. The main risks are a flat battery and tyres getting flat spots."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I do about the battery?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The easiest option is a trickle charger, which keeps it topped up. If there's no power socket, you could disconnect the negative terminal instead."
+    },
+    {
+     "speaker": "user",
+     "text": "There's a socket. And the tyres?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pump them up a little above normal pressure. Fill the fuel tank too, it helps stop moisture building up inside."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I leave the handbrake on?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a long stay, it's better to leave it off and chock the wheels or leave it in gear, so the brakes don't stick."
+    },
+    {
+     "speaker": "user",
+     "text": "Brilliant. And insurance / I can probably pause?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some insurers offer reduced cover for a car that's off the road. Worth asking, it could save you a bit while you're away."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Somebody's trolley left a long scratch on my door at the supermarket."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ugh, that's infuriating. Can you catch your fingernail in it, or is it just on the surface?"
+    },
+    {
+     "speaker": "user",
+     "text": "My nail catches a little."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's through the clear coat but maybe not to bare metal. A touch up pen in your car's exact paint colour can hide it well."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I find the exact colour?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's a paint code on a sticker, often in the door frame or under the bonnet. Shops and dealers can match it from that."
+    },
+    {
+     "speaker": "user",
+     "text": "Will it look / like a kid painted it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not if you go slowly. Clean the area, use thin layers, and let each dry. A polishing compound afterwards blends the edges nicely."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We adopted a rescue dog and she panics in the car. Whines, drools, the lot."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Poor girl, that's very common with rescues. Short positive trips help. Start with just sitting in the parked car with treats, engine off."
+    },
+    {
+     "speaker": "user",
+     "text": "Just sitting there? Not even driving?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Then engine on, then a drive to the end of the road. Build it up slowly, and end each trip somewhere fun, like the park."
+    },
+    {
+     "speaker": "user",
+     "text": "She's always in the boot now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some dogs feel safer in a covered crate, where they can't see everything rushing past. Others prefer a harness on the back seat near a person."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll try the crate. Should I / feed her before?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Better not right before. A light meal a few hours earlier helps with the drooling and the nausea."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My headlights have gone all yellow and cloudy. It looks really dodgy at night."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the plastic lens oxidising from the sun. It also makes the lights dimmer, so it's worth fixing."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need new headlights?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually not. A headlight restoration kit sands the cloudy layer off and polishes it clear, then adds a protective coating."
+    },
+    {
+     "speaker": "user",
+     "text": "I saw someone online use toothpaste."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Toothpaste can help a little for light haze, but it doesn't last. A proper kit with a UV sealant stays clear for a year or more."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it hard?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really. Mask off the paint around the light with tape, take your time with each sanding step, and do it on a dry day."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, weekend job then."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. You'll be surprised how much brighter the road looks afterwards."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My partner and I want to rent a campervan for a week in the mountains. Is that a silly idea if we've never driven one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not silly at all, lots of people do it. Smaller vans drive a lot like a big car. The main things are the height and the width."
+    },
+    {
+     "speaker": "user",
+     "text": "Height, like bridges?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bridges, car parks, drive throughs, low branches. Write the height on a sticky note on the dashboard so you don't forget."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, okay. What about mountain roads?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use lower gears going downhill so you don't overheat the brakes, and pull into passing places to let faster cars by."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it cheaper than / hotels, though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be, but add up rental, fuel and campsite fees. It's often about the same, you're really paying for the freedom."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I passed my test ages ago but I still hate merging onto the motorway. My hands literally sweat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's really common, and fixable. The key is matching the speed of the traffic before you merge, so use the whole slip road to accelerate."
+    },
+    {
+     "speaker": "user",
+     "text": "I tend to slow down because I'm scared."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the instinct, but it makes merging harder. Going too slowly means the gap you need is much bigger."
+    },
+    {
+     "speaker": "user",
+     "text": "And the blind spot terrifies me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check your mirror early, then a quick look over your shoulder. Signal clearly so people know what you're doing, most drivers will make room."
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe I should / practise at quiet times."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great idea. Early on a Sunday morning is perfect. A couple of calm runs builds a lot of confidence."
+    },
+    {
+     "speaker": "user",
+     "text": "Or I could book a refresher lesson."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Also very smart. An instructor can spot little habits you don't notice."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We just came down a really steep hill and now there's a burning smell. Should I panic?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No panic needed, but let's be careful. A burning smell after a long descent is usually hot brakes. Can you pull over somewhere safe?"
+    },
+    {
+     "speaker": "user",
+     "text": "I'm in a lay-by now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good. Let the car sit for a while so the brakes cool down. Don't pour water on them, the sudden cooling can damage the discs."
+    },
+    {
+     "speaker": "user",
+     "text": "How long do I wait?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fifteen to twenty minutes is usually enough. If there's smoke from one wheel, or the brake pedal felt soft, get it checked before driving far."
+    },
+    {
+     "speaker": "user",
+     "text": "Pedal felt normal. / I was braking the whole way down, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That explains it. Next time, drop to a lower gear and let the engine do most of the slowing, with short firm brakes in between."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I run a small flower shop and I want to start doing my own deliveries. What kind of vehicle should I get?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice step. How many deliveries a day are you imagining, and mostly in the city?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe ten or fifteen, all local, lots of tight streets."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a small van makes sense, easy to park and cheap to run. An electric one could work well, since you'd come back to the shop to charge each night."
+    },
+    {
+     "speaker": "user",
+     "text": "Flowers need to stay cool, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good point. Look for a van with a bulkhead between the cab and the back, so the heater doesn't cook the bouquets. Some people add a simple insulated lining too."
+    },
+    {
+     "speaker": "user",
+     "text": "And racks? Buckets / tip over constantly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fitted shelving with lips or bucket holders is worth every penny. You could also get your logo on the side, it's free advertising every time you park."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've just retired and I want a project. I'm thinking of restoring an old classic car."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds like a wonderful hobby. Do you have a garage to work in, and some mechanical experience?"
+    },
+    {
+     "speaker": "user",
+     "text": "A big garage, yes. Experience, a bit. I used to fix my own cars when I was young."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That helps a lot. I'd pick a model that was popular in its day, so parts and advice are easy to find."
+    },
+    {
+     "speaker": "user",
+     "text": "I was looking at one that needs / pretty much everything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Be careful with those. Rust repairs eat time and money. A car that runs but needs cosmetic work is a gentler first project."
+    },
+    {
+     "speaker": "user",
+     "text": "My wife will be relieved to hear that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I bet. Joining a local owners' club is also great, people share tools, parts and a lot of hard earned wisdom."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it actually worth washing the car in winter? It'll just get filthy again in a day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is, mainly because of the road salt. Salt sticks to the underside and speeds up rust, especially around the wheel arches."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. I thought it was just about looks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Looks too, but the underneath matters more. A rinse every couple of weeks during salty months makes a real difference."
+    },
+    {
+     "speaker": "user",
+     "text": "It's freezing though. Won't the water / freeze on the car?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can. Wash it on a milder day if possible, and dry the door seals and locks so they don't freeze shut overnight."
+    },
+    {
+     "speaker": "user",
+     "text": "Car wash or by hand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A car wash with an underbody spray is perfect in winter. It gets the bits you'd never reach with a bucket."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're taking our electric car on holiday for the first time. I'm worried we'll run out of charge somewhere."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally normal worry. How far is the trip, and what's your car's real range in practice?"
+    },
+    {
+     "speaker": "user",
+     "text": "About four hundred miles. It does maybe two hundred and twenty on a full charge."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then plan on two charging stops, maybe three to be relaxed. A route planning app can show fast chargers along the way."
+    },
+    {
+     "speaker": "user",
+     "text": "How long does each stop take?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "On a fast charger, usually twenty to forty minutes to get from low to about eighty percent. Charging slows down a lot after that, so it's rarely worth waiting for full."
+    },
+    {
+     "speaker": "user",
+     "text": "Eighty percent, okay. And if a charger is broken?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's why it's good to arrive at each stop with some buffer, and have a backup charger in mind nearby."
+    },
+    {
+     "speaker": "user",
+     "text": "The kids will / be happy with lunch breaks anyway."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly, line the stops up with meals and it barely feels like waiting."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a rattle somewhere in my dashboard and it's driving me up the wall."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rattles are maddening. Does it happen all the time, or only on bumpy roads or at certain speeds?"
+    },
+    {
+     "speaker": "user",
+     "text": "Bumpy roads. And when it's cold."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cold makes plastic shrink a little, so panels can rub. First check the simple stuff, the glovebox, the door pockets, sunglasses holder, loose coins."
+    },
+    {
+     "speaker": "user",
+     "text": "I already emptied the glovebox. Still rattles."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try pressing on different parts of the dashboard while someone else drives over a bumpy patch. When the noise stops, you've found it."
+    },
+    {
+     "speaker": "user",
+     "text": "Then what, / glue it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually a bit of felt tape or foam pushed into the gap does the trick. No glue needed, and it's easy to undo later."
+    }
+   ]
+  },
+  {
+   "id": "cars.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandad is ninety and still driving. I think he's getting unsafe but I don't know how to bring it up."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a hard conversation, and it's kind that you're thinking it through. What have you noticed that worries you?"
+    },
+    {
+     "speaker": "user",
+     "text": "He clipped the gate twice, and he gets lost on routes he's done for years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those are real warning signs. It might help to start by asking about his eyesight or suggesting a check up, rather than leading with taking the keys."
+    },
+    {
+     "speaker": "user",
+     "text": "He'll be so hurt. Driving is his freedom."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the heart of it. Talk about how he'd still get around, like lifts from family, a taxi account, or a bus pass. Losing the car feels smaller if his independence stays."
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe I should / ask his doctor to help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's often a good idea. Hearing it from a doctor can feel less personal than hearing it from family."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "cars.opt1",
+   "lead_in": "Okay, I'm finally replacing my old car and I've narrowed it down.",
+   "options": [
+    "The first one is a small used hatchback, five years old, cheap to run, with low mileage.",
+    "Then there's a brand new hybrid sedan, really good on fuel, but it costs almost twice as much.",
+    "Option three is a used pickup truck, older and thirsty, but I could haul my bikes and furniture.",
+    "And the last one is leasing an electric car for three years with a pretty low monthly payment."
+   ],
+   "moshi_comment": [
+    "If you mostly drive around town, the used hatchback gives you the most for your money. The hybrid makes sense if you do long commutes and plan to keep it for years. The pickup only pays off if you really haul stuff often.",
+    "How far do you drive on a normal day, and can you charge at home? If you can, the electric lease is a nice low-risk way to try one. Otherwise I'd lean toward the hatchback or the hybrid."
+   ]
+  },
+  {
+   "id": "cars.opt2",
+   "lead_in": "My sister needs a first car and asked me to help her pick.",
+   "options": [
+    "There's a ten year old compact that our neighbor is selling, runs fine, but the paint is pretty rough.",
+    "Another option is a newer small SUV from a dealer, safer, but the payments would be steep for her.",
+    "Or she could get a basic scooter for now and save up for a car next year."
+   ],
+   "moshi_comment": [
+    "For a first car, the neighbor's compact is hard to beat, a rough paint job doesn't matter much when you're learning. The SUV is safer, but big payments can be stressful on a first job. The scooter is cheap but not great in bad weather.",
+    "Does she need to drive on highways or mostly short trips? For short trips, the neighbor's compact is the sensible pick. I'd just have a mechanic look at it before she buys."
+   ]
+  },
+  {
+   "id": "cars.opt3",
+   "lead_in": "My car got written off in a hailstorm and the insurance money just came through, so I need a new one fast.",
+   "options": [
+    "My uncle's selling his estate car, it's high mileage but he's looked after it really carefully.",
+    "There's a nearly new small crossover at the dealer in town, with a warranty, but it eats most of the payout.",
+    "I could also buy a cheap runaround for now and keep the rest of the money in savings."
+   ],
+   "moshi_comment": [
+    "Your uncle's estate is a known quantity, which counts for a lot with used cars. The crossover is the safest bet but leaves you nothing spare. If money's tight, the cheap runaround buys you time.",
+    "I'd lean towards the uncle's car if the service history checks out. The dealer crossover gives you peace of mind at a high price, and the runaround is only worth it if you plan to upgrade soon."
+   ]
+  },
+  {
+   "id": "cars.opt4",
+   "lead_in": "We're driving to my parents' place for the holidays and I can't decide how to do it.",
+   "options": [
+    "We could drive straight through overnight while the kids sleep, about nine hours.",
+    "Or we leave after lunch, stop at a cheap hotel halfway, and finish the next morning.",
+    "My partner suggested putting the car on the overnight train, which costs more but nobody has to drive.",
+    "Then again, we could just skip driving, fly, and rent a car when we land."
+   ],
+   "moshi_comment": [
+    "Driving overnight is quick, but it's tiring and risky after a long day. The hotel stop is calmer for everyone, and the car train is a lovely treat if the budget allows. Flying makes sense only if the fares are cheap.",
+    "With kids, I'd pick the halfway hotel or the car train. The overnight drive puts a lot on whoever's behind the wheel, and flying plus a rental often ends up costing the most."
+   ]
+  },
+  {
+   "id": "cars.opt5",
+   "lead_in": "My car's due a service and three places have given me quotes.",
+   "options": [
+    "The main dealer is the most expensive, but they'll keep the warranty spotless and lend me a courtesy car.",
+    "A small independent garage down the road is about half the price, and my neighbour swears by them.",
+    "There's also a mobile mechanic who comes to your house, cheapest of all, but I've never used one."
+   ],
+   "moshi_comment": [
+    "If the warranty matters, the dealer is the safe choice. Otherwise the independent garage is great value, especially with your neighbour's recommendation. The mobile mechanic is handy for simple jobs, but check reviews first.",
+    "I'd go with the local garage your neighbour trusts, as long as they use approved parts so the warranty stays valid. The dealer is mainly worth it for the courtesy car, and the mobile option suits small jobs best."
+   ]
+  },
+  {
+   "id": "cars.opt6",
+   "lead_in": "I've got one week off and I want a proper road trip, but I'm stuck on where.",
+   "options": [
+    "Up north there's a lake district loop with tiny villages, narrow roads and loads of walking.",
+    "Down south I could follow the coast, stopping in a different seaside town every night.",
+    "Or I head inland to the wine region, flat easy driving and lots of tastings, though I'd need a designated driver.",
+    "My mate also suggested a ferry across and just driving wherever on the continent."
+   ],
+   "moshi_comment": [
+    "The lake loop and the coast are both relaxed solo trips, and the coast is easier driving. The wine region only really works with someone else at the wheel. The ferry is the big adventure if you're up for planning less.",
+    "For a week alone, the seaside towns sound ideal, a new place every night with simple roads. The lakes are lovely but the narrow lanes get tiring, the wine trip needs a driver, and the ferry is great if you love improvising."
+   ]
+  }
+ ]
 }

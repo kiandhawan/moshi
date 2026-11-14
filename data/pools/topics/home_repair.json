@@ -1,158 +1,1877 @@
 {
-  "topic": "home_repair",
-  "contexts": [
+ "topic": "home_repair",
+ "contexts": [
+  {
+   "id": "home_repair.ctx1",
+   "turns": [
     {
-      "id": "home_repair.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "The bathroom faucet keeps dripping all night and it's driving me nuts."},
-        {"speaker": "moshi", "text": "That's usually a worn washer or cartridge. Do you want to try fixing it yourself, or would you rather call a plumber?"}
-      ],
-      "pending": "fix the faucet yourself or call a plumber",
-      "think_reask": [
-        "So, what's the plan for that faucet? Fix it yourself or bring in a plumber?",
-        "Time's up. Are you going the do it yourself route on the drip, or calling someone?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were deciding whether you'd fix the dripping faucet yourself or call a plumber.",
-        "Good to have you back. Any thoughts on the faucet, yourself or a plumber?"
-      ],
-      "endings": [
-        {"user": "I'll give it a shot myself. How hard can a washer be?", "moshi": "Not too hard. Shut off the water under the sink first, then take the handle off and bring the old washer to the hardware store."},
-        {"user": "Honestly, I'd rather just call someone. I don't trust myself with pipes.", "moshi": "Fair enough. Ask for a quote up front, a simple drip repair shouldn't take them long."}
-      ]
+     "speaker": "user",
+     "text": "The bathroom faucet keeps dripping all night and it's driving me nuts."
     },
     {
-      "id": "home_repair.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I finally want to patch the hole my kid put in the hallway wall."},
-        {"speaker": "moshi", "text": "Oh no. How big is it?"},
-        {"speaker": "user", "text": "About the size of a fist."},
-        {"speaker": "moshi", "text": "Then you can use a mesh patch kit or cut in a small piece of new drywall. Which sounds more like you?"}
-      ],
-      "pending": "mesh patch kit or a new piece of drywall",
-      "think_reask": [
-        "Okay, have you picked? Patch kit or a fresh piece of drywall for that hallway hole?",
-        "So which way are you leaning for the wall, the quick mesh patch or cutting in new drywall?"
-      ],
-      "welcome_back": [
-        "Hi again. You were choosing between a mesh patch and new drywall for the hole in the hallway.",
-        "Welcome back. Still thinking about that fist sized hole, patch kit or drywall piece?"
-      ],
-      "endings": [
-        {"user": "The patch kit. I want this done before the weekend's over.", "moshi": "Smart. Stick it on, spread two thin coats of compound, then sand and paint once it's dry."},
-        {"user": "Let's do it properly with a new piece of drywall.", "moshi": "Good call for a hole that size. Cut the opening into a neat square first so the new piece fits snugly."}
-      ]
-    },
-    {
-      "id": "home_repair.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "My front door sticks every time it rains. I have to shove it with my shoulder."},
-        {"speaker": "moshi", "text": "The wood is probably swelling. You could tighten the hinges first or plane down the edge. Where would you like to start?"}
-      ],
-      "pending": "tighten the hinges or plane the door edge",
-      "think_reask": [
-        "Alright, so for the sticky door, hinges first or straight to planing the edge?",
-        "Did you decide where to start with that front door?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were figuring out whether to tighten the hinges or plane the door.",
-        "There you are. Any decision on the sticking door, hinges or planing?"
-      ],
-      "endings": [
-        {"user": "Hinges first. That sounds a lot less scary.", "moshi": "Good plan. Try swapping one top hinge screw for a longer one, that often pulls the door back into line."},
-        {"user": "I think I'll just plane it. It's been like this for years.", "moshi": "Okay. Mark where it rubs, take the door off its hinges, and shave off only a little at a time."}
-      ]
+     "speaker": "moshi",
+     "text": "That's usually a worn washer or cartridge. Do you want to try fixing it yourself, or would you rather call a plumber?"
     }
-  ],
-  "side_conversations": [
-    {"id": "home_repair.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you borrow my cordless drill last week?"},
-      {"speaker": "friend", "text": "Oh yeah, it's still in my car. I needed it for the shelves."},
-      {"speaker": "user", "text": "No worries. Is the battery still charged?"},
-      {"speaker": "friend", "text": "Probably not. I used it a lot. I'll grab the charger too."},
-      {"speaker": "user", "text": "Thanks, I want to hang the curtain rod tonight."}
-    ]},
-    {"id": "home_repair.side2", "turns": [
-      {"speaker": "user", "text": "Do you know what kind of paint the landlord used in the kitchen?"},
-      {"speaker": "friend", "text": "No idea. Why, are you touching up the scuffs?"},
-      {"speaker": "user", "text": "I want to, but if it's glossy and I use matte, it'll look patchy."},
-      {"speaker": "friend", "text": "Just take a chip off behind the fridge and bring it to the store. They can match it."},
-      {"speaker": "user", "text": "Oh, that's clever. Can you help me pull the fridge out later?"},
-      {"speaker": "friend", "text": "Sure, after dinner."}
-    ]},
-    {"id": "home_repair.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, come look at this. Is that water stain on the ceiling getting bigger?"},
-      {"speaker": "friend", "text": "Hmm, yeah, it looks darker than yesterday."},
-      {"speaker": "user", "text": "Great. Do you think it's the roof or the upstairs bathroom?"},
-      {"speaker": "friend", "text": "It's right under the tub, so my bet's the bathroom."},
-      {"speaker": "user", "text": "Okay, I'll check the seal around the tub tomorrow morning."},
-      {"speaker": "friend", "text": "Put a towel down in the meantime, just in case."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "home_repair.dlg1", "turns": [
-      {"speaker": "user", "text": "My toilet keeps running after I flush. What's going on?"},
-      {"speaker": "moshi", "text": "Most likely the flapper at the bottom of the tank isn't sealing. It's a cheap rubber part and easy to replace."},
-      {"speaker": "user", "text": "Do I need to turn off the water for that?"},
-      {"speaker": "moshi", "text": "Yes, close the valve behind the toilet and flush to empty the tank. Then the old flapper just unhooks."},
-      {"speaker": "user", "text": "And how do I know which one to buy? There are / like a dozen kinds at the store."},
-      {"speaker": "moshi", "text": "Take the old one with you and match the size, most are two inch or three inch. A universal one usually works too."},
-      {"speaker": "user", "text": "Okay, that sounds doable. Anything else I should check while I'm in there?"},
-      {"speaker": "moshi", "text": "Look at the chain length. If it's too tight or too loose, the flapper won't close properly."}
-    ]},
-    {"id": "home_repair.dlg2", "turns": [
-      {"speaker": "user", "text": "I'm retired now and finally have time to fix up the deck. Where do I even begin?"},
-      {"speaker": "moshi", "text": "Start with a good look for loose boards, popped nails and soft spots. Soft wood means rot and should be replaced first."},
-      {"speaker": "user", "text": "There are a few soft boards near the steps, yes."},
-      {"speaker": "moshi", "text": "Replace those, then give the whole deck a scrub with a deck cleaner and let it dry for a couple of days."},
-      {"speaker": "user", "text": "Then stain it?"},
-      {"speaker": "moshi", "text": "Exactly. Pick a dry stretch of weather and apply a thin, even coat. Two thin coats beat one thick one."},
-      {"speaker": "user", "text": "I was going to do it all / well, maybe over two weekends instead."},
-      {"speaker": "moshi", "text": "That's a sensible pace. Repairs and cleaning one weekend, staining the next."}
-    ]},
-    {"id": "home_repair.dlg3", "turns": [
-      {"speaker": "user", "text": "Quick question, what's the difference between a flathead and a Phillips screwdriver?"},
-      {"speaker": "moshi", "text": "A flathead has a single straight blade. A Phillips has a cross shaped tip for screws with a plus sign on top."},
-      {"speaker": "user", "text": "Ha, okay. I just moved into my first apartment and I own zero tools."},
-      {"speaker": "moshi", "text": "Congrats on the place! A basic kit with a hammer, a couple of screwdrivers, pliers and a tape measure will cover most things."},
-      {"speaker": "user", "text": "Should I get a drill too, or is that overkill?"},
-      {"speaker": "moshi", "text": "A small cordless drill is worth it if you plan to hang shelves or assemble furniture. Otherwise you can wait."},
-      {"speaker": "user", "text": "I do have a bookshelf to put together / and a mirror to hang, so maybe yes."},
-      {"speaker": "moshi", "text": "Then a drill will save you a lot of wrist pain. Grab some wall anchors for the mirror too."}
-    ]},
-    {"id": "home_repair.dlg4", "turns": [
-      {"speaker": "user", "text": "The caulk around my tub is all moldy and gross. Can I just put new caulk over it?"},
-      {"speaker": "moshi", "text": "It's better not to. New caulk won't stick well over old caulk, and the mold will come right back."},
-      {"speaker": "user", "text": "Ugh. So I have to scrape it all off?"},
-      {"speaker": "moshi", "text": "Yes, a plastic scraper or a utility knife works. Then clean the gap with some rubbing alcohol and let it dry completely."},
-      {"speaker": "user", "text": "How long does it need before I can shower again?"},
-      {"speaker": "moshi", "text": "Most silicone caulk wants about a full day. Check the tube, some fast cure ones are ready sooner."},
-      {"speaker": "user", "text": "Okay, I'll do it Friday night / so it's ready by Saturday evening."},
-      {"speaker": "moshi", "text": "Perfect timing. Tape both edges before you caulk and you'll get a really clean line."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "home_repair.opt1",
-     "lead_in": "The bathroom faucet keeps dripping and I'm not sure how to deal with it.",
-     "options": [
-       "The first option is to replace the little washer inside myself, which is cheap but I've never done it.",
-       "Then there's buying a whole new faucet, which looks nicer but I'd still have to install it.",
-       "And the last one is calling a plumber, who said he can come next week but charges a lot."
-     ],
-     "moshi_comment": [
-       "Replacing the washer is usually a simple fix, and there are lots of guides for it. A new faucet makes sense if the old one is worn or ugly anyway. The plumber is the safest choice, but paying a lot for a drip feels like overkill.",
-       "How old is the faucet? If it's fairly new, try the washer first, it's cheap and you'll learn something. If it's ancient, a new faucet might be worth it, and you can call the plumber if you get stuck."
-     ]},
-    {"id": "home_repair.opt2",
-     "lead_in": "We need to fix the old wooden fence in the backyard and I'm weighing a few choices.",
-     "options": [
-       "One is just replacing the few broken boards and painting the whole thing.",
-       "Another option is tearing it down and putting in a new wooden fence, which is a big weekend project.",
-       "Or there's a vinyl fence, more expensive at first but it basically never needs paint again."
-     ],
-     "moshi_comment": [
-       "If most of the fence is still solid, replacing the broken boards and painting is the cheapest and quickest fix. A new wooden fence gives you a fresh start but takes real work. Vinyl costs more up front, but saves you painting for years.",
-       "Are the posts still solid, or are they rotting too? If the posts are fine, just fix the boards. If they're going, I'd skip patching and go with the vinyl, since you'd be rebuilding anyway."
-     ]}
-  ]
+   ],
+   "pending": "fix the faucet yourself or call a plumber",
+   "think_reask": [
+    "So, what's the plan for that faucet? Fix it yourself or bring in a plumber?",
+    "Time's up. Are you going the do it yourself route on the drip, or calling someone?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were deciding whether you'd fix the dripping faucet yourself or call a plumber.",
+    "Good to have you back. Any thoughts on the faucet, yourself or a plumber?"
+   ],
+   "endings": [
+    {
+     "user": "I'll give it a shot myself. How hard can a washer be?",
+     "moshi": "Not too hard. Shut off the water under the sink first, then take the handle off and bring the old washer to the hardware store."
+    },
+    {
+     "user": "Honestly, I'd rather just call someone. I don't trust myself with pipes.",
+     "moshi": "Fair enough. Ask for a quote up front, a simple drip repair shouldn't take them long."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I finally want to patch the hole my kid put in the hallway wall."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh no. How big is it?"
+    },
+    {
+     "speaker": "user",
+     "text": "About the size of a fist."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you can use a mesh patch kit or cut in a small piece of new drywall. Which sounds more like you?"
+    }
+   ],
+   "pending": "mesh patch kit or a new piece of drywall",
+   "think_reask": [
+    "Okay, have you picked? Patch kit or a fresh piece of drywall for that hallway hole?",
+    "So which way are you leaning for the wall, the quick mesh patch or cutting in new drywall?"
+   ],
+   "welcome_back": [
+    "Hi again. You were choosing between a mesh patch and new drywall for the hole in the hallway.",
+    "Welcome back. Still thinking about that fist sized hole, patch kit or drywall piece?"
+   ],
+   "endings": [
+    {
+     "user": "The patch kit. I want this done before the weekend's over.",
+     "moshi": "Smart. Stick it on, spread two thin coats of compound, then sand and paint once it's dry."
+    },
+    {
+     "user": "Let's do it properly with a new piece of drywall.",
+     "moshi": "Good call for a hole that size. Cut the opening into a neat square first so the new piece fits snugly."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My front door sticks every time it rains. I have to shove it with my shoulder."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The wood is probably swelling. You could tighten the hinges first or plane down the edge. Where would you like to start?"
+    }
+   ],
+   "pending": "tighten the hinges or plane the door edge",
+   "think_reask": [
+    "Alright, so for the sticky door, hinges first or straight to planing the edge?",
+    "Did you decide where to start with that front door?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were figuring out whether to tighten the hinges or plane the door.",
+    "There you are. Any decision on the sticking door, hinges or planing?"
+   ],
+   "endings": [
+    {
+     "user": "Hinges first. That sounds a lot less scary.",
+     "moshi": "Good plan. Try swapping one top hinge screw for a longer one, that often pulls the door back into line."
+    },
+    {
+     "user": "I think I'll just plane it. It's been like this for years.",
+     "moshi": "Okay. Mark where it rubs, take the door off its hinges, and shave off only a little at a time."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "A cabinet door in my kitchen is hanging crooked."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's usually the hinge screws. Would you rather tighten what's there, or swap in new hinges while you're at it?"
+    }
+   ],
+   "pending": "tighten the old hinges or fit new ones",
+   "think_reask": [
+    "So, just tighten the screws, or put in new hinges?",
+    "That crooked cabinet door. Quick fix or new hinges?"
+   ],
+   "welcome_back": [
+    "The cabinet door. Tightening it up, or new hinges?",
+    "We'd stopped at the hinges. Which way?"
+   ],
+   "endings": [
+    {
+     "user": "Just tighten them, I'm lazy today.",
+     "moshi": "Fair. If a screw spins without biting, a wooden toothpick in the hole gives it something to grab."
+    },
+    {
+     "user": "New hinges. These ones are ancient.",
+     "moshi": "Good plan. Take an old one to the shop so you get the same size and shape."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our smoke alarm keeps chirping at three in the morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That chirp almost always means a low battery. Do you want to just swap the battery, or replace the whole alarm?"
+    },
+    {
+     "speaker": "user",
+     "text": "How old do they get?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're usually good for about ten years. Is yours older than that, or not sure?"
+    }
+   ],
+   "pending": "replace the battery or the whole smoke alarm",
+   "think_reask": [
+    "So, new battery, or new alarm altogether?",
+    "The chirping alarm. Battery or a full replacement?"
+   ],
+   "welcome_back": [
+    "Your smoke alarm. Just the battery, or replacing it?",
+    "Back to the chirping. Decided what to do?"
+   ],
+   "endings": [
+    {
+     "user": "It came with the house, so probably ancient.",
+     "moshi": "Then replace it. There should be a date printed on the back to confirm."
+    },
+    {
+     "user": "Pretty new actually, so just the battery.",
+     "moshi": "Easy then. Pop in a fresh one and press the test button to make sure it's happy."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My landlord said I can paint the bedroom if I fix any holes first."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice of them. Do you want to fill the nail holes with ready made filler, or skim the whole wall for a really smooth finish?"
+    }
+   ],
+   "pending": "spot filling holes or skimming the whole wall",
+   "think_reask": [
+    "So, fill just the holes, or skim the whole wall?",
+    "Your bedroom wall. Quick patches or full skim?"
+   ],
+   "welcome_back": [
+    "The bedroom wall. Spot filling, or skimming it all?",
+    "We'd got as far as fixing holes before painting. Any decision?"
+   ],
+   "endings": [
+    {
+     "user": "Just the holes. It's a rental, not a palace.",
+     "moshi": "Sensible. Overfill them a little, let them dry, then sand flat."
+    },
+    {
+     "user": "Skim it. The wall is a bit of a mess honestly.",
+     "moshi": "Okay, that's more work but worth it. Thin coats, and sand gently between them."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a draft coming under the back door and my feet are freezing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brr. You could stick on a foam strip, screw on a brush sweep, or use a fabric draft stopper. Which sounds doable today?"
+    }
+   ],
+   "pending": "foam strip, brush sweep, or fabric draft stopper",
+   "think_reask": [
+    "Okay, so which one for the back door? Foam, brush or fabric?",
+    "The drafty door. Which fix are you going with?"
+   ],
+   "welcome_back": [
+    "Your cold back door. Foam strip, brush sweep, or a draft snake?",
+    "Picked a fix for the draft yet?"
+   ],
+   "endings": [
+    {
+     "user": "The brush sweep. I want it to last.",
+     "moshi": "Good choice. Measure the door width and trim the sweep with a hacksaw if needed."
+    },
+    {
+     "user": "Fabric snake, I can make one from an old sweater.",
+     "moshi": "Love that. Stuff it with rice or sand so it's heavy enough to stay put."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Me and my dad want to build a shelf for my records."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun project together. Are you picturing floating shelves on the wall, or a standing unit you build on the floor?"
+    }
+   ],
+   "pending": "floating wall shelves or a standing unit",
+   "think_reask": [
+    "So, floating shelves, or a standing unit?",
+    "Your record shelf. Wall or floor?"
+   ],
+   "welcome_back": [
+    "The shelf with your dad. Floating or standing?",
+    "We'd got to the record shelf design. Made up your mind?"
+   ],
+   "endings": [
+    {
+     "user": "Standing. Records are heavy and our walls are kind of crumbly.",
+     "moshi": "Wise. A sturdy cube unit is great for records, they fit perfectly upright."
+    },
+    {
+     "user": "Floating. Dad has a stud finder he's dying to use.",
+     "moshi": "Perfect, let him find those studs. Records are heavy, so screw right into them."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just noticed a crack running across the bathroom tiles."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Is it one cracked tile, or does the crack go across several tiles in a line?"
+    },
+    {
+     "speaker": "user",
+     "text": "Several, kind of in a line."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That can mean movement underneath. Do you want to call someone to check, or watch it for a few weeks first?"
+    }
+   ],
+   "pending": "call someone now or monitor the crack",
+   "think_reask": [
+    "So, get someone to look at it, or keep an eye on it for now?",
+    "That line of cracked tiles. Call a pro or wait and watch?"
+   ],
+   "welcome_back": [
+    "The cracked tiles. Calling someone, or monitoring it?",
+    "We'd left the crack question open. What's your gut saying?"
+   ],
+   "endings": [
+    {
+     "user": "I'll watch it. I'll mark the ends with a pencil.",
+     "moshi": "Smart. If it grows past your marks, that's your sign to call someone."
+    },
+    {
+     "user": "Call someone. I don't want the floor falling in.",
+     "moshi": "Good call. A builder or surveyor can tell you quickly if it's serious."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The grout in my shower has gone all grey and grim."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can deep clean it, paint over it with a grout pen, or scrape it out and regrout. How much effort do you want to put in?"
+    }
+   ],
+   "pending": "clean, grout pen, or full regrout",
+   "think_reask": [
+    "So, scrub, grout pen, or full regrout?",
+    "How much effort for the grout, did you decide?"
+   ],
+   "welcome_back": [
+    "Your shower grout. Cleaning, a pen, or redoing it?",
+    "Still deciding how far to go with the grout?"
+   ],
+   "endings": [
+    {
+     "user": "The pen, that sounds oddly satisfying.",
+     "moshi": "It really is. Clean and dry the lines first, or it won't stick."
+    },
+    {
+     "user": "Regrout. If I'm doing it, I'm doing it properly.",
+     "moshi": "Respect. A grout rake makes the scraping much faster."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My garden gate won't latch anymore, it just swings open."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably the gate has sagged a little. Would you rather adjust the hinges, or move the latch to where the gate now sits?"
+    }
+   ],
+   "pending": "adjust the gate hinges or move the latch",
+   "think_reask": [
+    "So, fix the hinges, or just move the latch?",
+    "The swinging gate. Hinges or latch?"
+   ],
+   "welcome_back": [
+    "Your garden gate. Lifting it on the hinges, or moving the latch?",
+    "We'd got to the gate problem. Any thoughts?"
+   ],
+   "endings": [
+    {
+     "user": "Move the latch, it's ten minutes.",
+     "moshi": "True. Close the gate where it naturally rests and mark the new spot."
+    },
+    {
+     "user": "Hinges. Otherwise it'll keep sagging.",
+     "moshi": "Right, fix the cause. A diagonal brace across the gate helps it stay square too."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My partner wants a ceiling fan in the bedroom and I'm the handy one apparently."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, congratulations. Is there already a light fitting up there you'd replace, or would it need new wiring?"
+    }
+   ],
+   "pending": "swap an existing light for the fan or new wiring",
+   "think_reask": [
+    "So, is there a light to swap out, or would it need new wiring?",
+    "The ceiling fan. Existing fitting or new wiring?"
+   ],
+   "welcome_back": [
+    "That ceiling fan. Replacing the light, or running new wires?",
+    "We'd stopped at the wiring question. Did you check?"
+   ],
+   "endings": [
+    {
+     "user": "There's a light already, so just a swap.",
+     "moshi": "Good. Turn off the breaker, not just the switch, and check the box is rated for a fan."
+    },
+    {
+     "user": "No fitting at all. New wiring.",
+     "moshi": "Then I'd get an electrician for the wiring part. You can still do the assembly."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "home_repair.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you borrow my cordless drill last week?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh yeah, it's still in my car. I needed it for the shelves."
+    },
+    {
+     "speaker": "user",
+     "text": "No worries. Is the battery still charged?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Probably not. I used it a lot. I'll grab the charger too."
+    },
+    {
+     "speaker": "user",
+     "text": "Thanks, I want to hang the curtain rod tonight."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do you know what kind of paint the landlord used in the kitchen?"
+    },
+    {
+     "speaker": "friend",
+     "text": "No idea. Why, are you touching up the scuffs?"
+    },
+    {
+     "speaker": "user",
+     "text": "I want to, but if it's glossy and I use matte, it'll look patchy."
+    },
+    {
+     "speaker": "friend",
+     "text": "Just take a chip off behind the fridge and bring it to the store. They can match it."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's clever. Can you help me pull the fridge out later?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, after dinner."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, come look at this. Is that water stain on the ceiling getting bigger?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Hmm, yeah, it looks darker than yesterday."
+    },
+    {
+     "speaker": "user",
+     "text": "Great. Do you think it's the roof or the upstairs bathroom?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It's right under the tub, so my bet's the bathroom."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll check the seal around the tub tomorrow morning."
+    },
+    {
+     "speaker": "friend",
+     "text": "Put a towel down in the meantime, just in case."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you hold the ladder for a sec?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I'm holding it. Why is it wobbling?"
+    },
+    {
+     "speaker": "user",
+     "text": "Because one leg is on the rug. Hang on."
+    },
+    {
+     "speaker": "friend",
+     "text": "You know you're supposed to do that before you climb up."
+    },
+    {
+     "speaker": "user",
+     "text": "Yes, thank you. Okay, can you pass me the small screwdriver? The red one."
+    },
+    {
+     "speaker": "friend",
+     "text": "This one?"
+    },
+    {
+     "speaker": "user",
+     "text": "That's the big one. The small red one."
+    },
+    {
+     "speaker": "friend",
+     "text": "Here. Honestly, you'd be lost without me."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did the plumber call you back?"
+    },
+    {
+     "speaker": "friend",
+     "text": "He did. He can come Thursday morning."
+    },
+    {
+     "speaker": "user",
+     "text": "Thursday? The sink's been leaking since Sunday."
+    },
+    {
+     "speaker": "friend",
+     "text": "I know. He said everyone's pipes are freezing this week."
+    },
+    {
+     "speaker": "user",
+     "text": "Did he say how much it would be?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not really. Just that it depends what he finds."
+    },
+    {
+     "speaker": "user",
+     "text": "Great, very reassuring. Can you put a bucket under it in the meantime?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Already did. And a towel."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey {friend}, have you ever used one of these tile cutters?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Once, at my brother's place. It's easier than it looks."
+    },
+    {
+     "speaker": "user",
+     "text": "Really? It looks like it wants to bite my fingers off."
+    },
+    {
+     "speaker": "friend",
+     "text": "You just score the line and then press down on the handle. Snap."
+    },
+    {
+     "speaker": "user",
+     "text": "Can you show me on a spare one first?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. Give me the broken one from the box."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "home_repair.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My toilet keeps running after I flush. What's going on?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most likely the flapper at the bottom of the tank isn't sealing. It's a cheap rubber part and easy to replace."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need to turn off the water for that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, close the valve behind the toilet and flush to empty the tank. Then the old flapper just unhooks."
+    },
+    {
+     "speaker": "user",
+     "text": "And how do I know which one to buy? There are / like a dozen kinds at the store."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take the old one with you and match the size, most are two inch or three inch. A universal one usually works too."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that sounds doable. Anything else I should check while I'm in there?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look at the chain length. If it's too tight or too loose, the flapper won't close properly."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm retired now and finally have time to fix up the deck. Where do I even begin?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with a good look for loose boards, popped nails and soft spots. Soft wood means rot and should be replaced first."
+    },
+    {
+     "speaker": "user",
+     "text": "There are a few soft boards near the steps, yes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Replace those, then give the whole deck a scrub with a deck cleaner and let it dry for a couple of days."
+    },
+    {
+     "speaker": "user",
+     "text": "Then stain it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Pick a dry stretch of weather and apply a thin, even coat. Two thin coats beat one thick one."
+    },
+    {
+     "speaker": "user",
+     "text": "I was going to do it all / well, maybe over two weekends instead."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a sensible pace. Repairs and cleaning one weekend, staining the next."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Quick question, what's the difference between a flathead and a Phillips screwdriver?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A flathead has a single straight blade. A Phillips has a cross shaped tip for screws with a plus sign on top."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, okay. I just moved into my first apartment and I own zero tools."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Congrats on the place! A basic kit with a hammer, a couple of screwdrivers, pliers and a tape measure will cover most things."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I get a drill too, or is that overkill?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small cordless drill is worth it if you plan to hang shelves or assemble furniture. Otherwise you can wait."
+    },
+    {
+     "speaker": "user",
+     "text": "I do have a bookshelf to put together / and a mirror to hang, so maybe yes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a drill will save you a lot of wrist pain. Grab some wall anchors for the mirror too."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The caulk around my tub is all moldy and gross. Can I just put new caulk over it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's better not to. New caulk won't stick well over old caulk, and the mold will come right back."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh. So I have to scrape it all off?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a plastic scraper or a utility knife works. Then clean the gap with some rubbing alcohol and let it dry completely."
+    },
+    {
+     "speaker": "user",
+     "text": "How long does it need before I can shower again?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most silicone caulk wants about a full day. Check the tube, some fast cure ones are ready sooner."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll do it Friday night / so it's ready by Saturday evening."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect timing. Tape both edges before you caulk and you'll get a really clean line."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I hang a heavy mirror without it falling on my head?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "First find out what the wall is made of. Knock on it. Does it sound hollow or solid?"
+    },
+    {
+     "speaker": "user",
+     "text": "Hollow, kind of like a drum."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's probably plasterboard. Either screw into a wooden stud behind it, or use heavy duty hollow wall anchors."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I find a stud without a fancy gadget?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Knock along the wall. Where the hollow sound turns dull, there's often a stud. A strong magnet can also find the screws in them."
+    },
+    {
+     "speaker": "user",
+     "text": "The mirror is about / twenty kilos, I think."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's heavy. Use two fixings, ideally both in studs, and check the anchors are rated for more than that."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The light in my hallway flickers. Is my house haunted?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, probably not. The most common cause is a loose bulb, or a bulb that doesn't match the dimmer."
+    },
+    {
+     "speaker": "user",
+     "text": "There is a dimmer, yeah."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some LED bulbs don't play nicely with older dimmers. Look on the box for the word dimmable."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh. I bought the cheapest ones."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's likely it. Swap in a dimmable bulb and see if the flicker stops."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it doesn't?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it could be a loose connection in the switch or fitting. That one's worth having an electrician check."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've never used a drill before and I'm honestly scared of it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally understandable. A cordless drill is pretty friendly, it's not as wild as it looks."
+    },
+    {
+     "speaker": "user",
+     "text": "What if it jumps out of my hand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hold it with both hands, start on the slowest speed, and let the drill do the work. Don't push too hard."
+    },
+    {
+     "speaker": "user",
+     "text": "And goggles? Are those really needed?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For drilling into walls, yes. Dust and little bits of plaster fly out right at eye level."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'm going to / practice on a scrap of wood first."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great idea. Drill a few holes, drive a few screws, and you'll feel much more confident."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hi, my washing machine shakes like crazy on the spin cycle."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's usually the machine not being level, or the load being unbalanced. Is it a big load?"
+    },
+    {
+     "speaker": "user",
+     "text": "It does it even with just a few towels."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then check the feet. Put a level on top, and twist the feet up or down until it sits flat and doesn't rock."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't have a level."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's probably a level app on your phone. Or put a glass of water on top and see if it looks even."
+    },
+    {
+     "speaker": "user",
+     "text": "Also, I moved house last month. Could that matter?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, actually. Check the back for transit bolts. If they weren't removed after the move, it'll shake terribly."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you tell me how to bleed a radiator? My mum says I should."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. If it's hot at the bottom and cold at the top, there's air trapped inside. Bleeding lets it out."
+    },
+    {
+     "speaker": "user",
+     "text": "It is cold at the top, yeah."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Turn the heating off first. Then use a radiator key on the little valve at the top corner, and turn it slowly a quarter turn."
+    },
+    {
+     "speaker": "user",
+     "text": "Where do I get a radiator key?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Any hardware store, they're cheap. Some valves just take a flat screwdriver."
+    },
+    {
+     "speaker": "user",
+     "text": "What happens then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You'll hear hissing. When water starts to dribble out, close it. Keep a cloth under it, the water can be dirty."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to put up wallpaper for the first time. Any advice before I ruin a wall?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few big ones. Start next to a window or door, and draw a straight line with a level, because walls are rarely straight."
+    },
+    {
+     "speaker": "user",
+     "text": "Paste the paper or paste the wall?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends on the wallpaper. Check the label. Many modern ones are paste the wall, which is easier."
+    },
+    {
+     "speaker": "user",
+     "text": "And bubbles? I'm terrified of bubbles."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Smooth from the middle out with a brush or a plastic smoother. Small bubbles often disappear as it dries."
+    },
+    {
+     "speaker": "user",
+     "text": "I picked a pattern with / big leaves, is that harder?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Patterns need matching at the joins, so you'll waste a bit more paper. Buy an extra roll to be safe."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son broke the handle off his bedroom door. Classic."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Kids and door handles. Does the handle just need screwing back on, or is the part inside broken?"
+    },
+    {
+     "speaker": "user",
+     "text": "The bit inside is snapped. The square metal bit."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the spindle. You can buy a new one cheaply, just measure the door thickness so you get the right length."
+    },
+    {
+     "speaker": "user",
+     "text": "And the handle itself is fine?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If it's not cracked, reuse it. Slide the new spindle through, fit both handles, and screw them back on."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I make him / help me fix it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Absolutely. It's a nice little lesson, and he might be gentler with it next time."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kitchen sink drains really slowly. I've tried that blue gel stuff."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Chemical drain cleaners often don't reach the real clog. Have you tried a plunger?"
+    },
+    {
+     "speaker": "user",
+     "text": "On a kitchen sink? I thought those were for toilets."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small cup plunger works on sinks too. Fill the sink a little so it seals, and give it some firm pumps."
+    },
+    {
+     "speaker": "user",
+     "text": "And if that doesn't do it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then check the U shaped pipe under the sink. Put a bucket underneath, unscrew it, and clean out the gunk."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds disgusting."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is, honestly. Wear gloves. But it's the most common spot for grease and food to build up."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, gloves and / a lot of courage. Got it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You'll be fine. It's one of those jobs that looks scary and takes ten minutes."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm seventy-eight and my bathroom floor gets slippery. Is there anything simple I can do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a few easy things. A good rubber backed mat outside the shower makes a big difference."
+    },
+    {
+     "speaker": "user",
+     "text": "I have a mat, but it slides around."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then put a non slip underlay beneath it, or get a mat with suction cups. Also anti slip stickers inside the shower help."
+    },
+    {
+     "speaker": "user",
+     "text": "My son keeps saying I should get a grab rail."
+    },
+    {
+     "speaker": "moshi",
+     "text": "He's right, they're really useful. A rail next to the shower and one by the toilet give you something solid to hold."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need a builder for that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It needs to be screwed firmly into the wall, so a handyman is a good idea. Some councils even help with the cost for older people."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our neighbour's music comes straight through the wall. Can I soundproof it myself?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can reduce it, though fully soundproofing a wall is a big job. How bad is it?"
+    },
+    {
+     "speaker": "user",
+     "text": "Bass mostly. Every night until eleven."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bass is the hardest to block. Heavy things help, like a full bookshelf against that wall, or thick curtains."
+    },
+    {
+     "speaker": "user",
+     "text": "What about those foam panels?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those mostly stop echo inside your room, not sound coming through. They won't do much for bass."
+    },
+    {
+     "speaker": "user",
+     "text": "So the real fix is / talking to him, isn't it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, often yes. A friendly chat about the time can go a long way. Then add the bookshelf too."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the minimum toolkit I need as a first time homeowner?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with a hammer, a set of screwdrivers, a tape measure, a level, pliers and an adjustable wrench."
+    },
+    {
+     "speaker": "user",
+     "text": "No drill?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A cordless drill is the next thing to buy, you'll use it constantly. I'd say it's worth it in the first month."
+    },
+    {
+     "speaker": "user",
+     "text": "What about one of those big boxed kits with a hundred pieces?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They can be handy, but the cheap ones often have flimsy tools. Better to buy fewer, decent quality basics."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it. Anything people always forget?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A utility knife, a stud finder, and a torch. And a little box of assorted screws and wall plugs."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The silicone around my kitchen sink is peeling off. Can I just glue it back down?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sadly no, silicone won't stick to itself well. You need to cut all the old stuff out and start fresh."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I get it all off?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use a sharp blade or a special silicone remover tool. Then wipe with surgical spirit so there's no residue left."
+    },
+    {
+     "speaker": "user",
+     "text": "Then I just squeeze in new silicone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, but tape both sides first with masking tape. It gives you crisp neat lines."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, clever. And then / peel the tape off when it's dry?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Peel it off while the silicone is still wet, right after smoothing. If you wait, it can tear the edge."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I fix a chipped bathtub myself? There's a white chip on the edge."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Small chips are very fixable. You can buy an enamel repair kit that matches standard white baths."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it hard to do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really. Clean and dry the chip, apply thin layers with the little brush, and let each layer dry fully."
+    },
+    {
+     "speaker": "user",
+     "text": "Will it look obvious?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you go slowly and keep layers thin, it'll be hard to spot. Sanding it lightly at the end helps it blend."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. My landlord's coming / next week, so I'd better do it this weekend."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty of time. Just don't use the bath for a day or so after."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it okay to paint over wallpaper?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, but it's a bit of a gamble. If the paper is firmly stuck, it can work. If it's loose, the paint can make it bubble."
+    },
+    {
+     "speaker": "user",
+     "text": "It's stuck really well. It's from the eighties."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's probably fine. Prime it first, especially if it's patterned or shiny."
+    },
+    {
+     "speaker": "user",
+     "text": "Why prime?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Primer helps the paint grip and stops the pattern showing through. Otherwise you might see those flowers ghosting under your new color."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha. I don't want ghost flowers."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely not. Test a small patch first, and check after a day that nothing bubbled up."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The window in my bedroom won't stay open. It just slams down."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Is it a sash window, the kind that slides up and down?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes, an old one. Wooden."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those use cords and weights hidden in the frame. If it slams down, a cord has probably snapped."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I fix that, or is it a nightmare?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's fiddly but doable if you're patient. You remove the beading, take out the sash, and tie in a new cord."
+    },
+    {
+     "speaker": "user",
+     "text": "Honestly, / that sounds above my pay grade."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair enough. A window restorer can do it quickly. For now, prop it with a block of wood so it doesn't trap any fingers."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hi, I'm a student in a rented flat. There's mold on the ceiling above the shower."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's really common in bathrooms. Do you have a fan or a window in there?"
+    },
+    {
+     "speaker": "user",
+     "text": "A tiny window that's painted shut."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then moisture has nowhere to go. Tell your landlord about the window, that's their job to fix."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I clean the mold myself in the meantime?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. A mold spray or diluted bleach on a cloth works. Wear gloves and open the door while you do it."
+    },
+    {
+     "speaker": "user",
+     "text": "Will it come back?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably, unless the steam can escape. Leave the door open after showers and wipe the walls down. Small habits help a lot."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I unclog a shower drain? It's basically a lake in there every morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most of the time it's hair. Can you remove the drain cover?"
+    },
+    {
+     "speaker": "user",
+     "text": "There's one screw in the middle, so yeah."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great. Take it off and look. A cheap plastic drain snake, the long thing with little teeth, pulls hair out brilliantly."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't have one of those."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can bend a wire coat hanger into a small hook as a backup. Fish around gently and pull up."
+    },
+    {
+     "speaker": "user",
+     "text": "My housemate has very / very long hair, so I'm expecting horrors."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brace yourself then. Afterwards, a hair catcher over the drain will save you from doing this again."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I fix the dripping tap on my kitchen mixer or just replace the whole tap?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "How old is the tap, and does it look worn out?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe five years. It looks fine, just drips."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's worth a repair. Most modern mixers have a cartridge inside that you can replace."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know which cartridge?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Turn off the water, pull the old one out, and take it to the shop. Or find the tap's brand and model on the box or website."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I mess it up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Worst case, you end up replacing the tap anyway. But cartridge swaps are one of the easier plumbing jobs."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to put a lock on my shed. It's just a little latch right now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea, sheds are easy targets. A hasp and padlock is the simplest upgrade."
+    },
+    {
+     "speaker": "user",
+     "text": "What's a hasp?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a hinged metal plate that folds over a loop. The padlock goes through the loop."
+    },
+    {
+     "speaker": "user",
+     "text": "Will screws be enough? The shed wood is kind of soft."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use coach bolts instead of screws if you can. They go right through, so nobody can just unscrew it from outside."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, sneaky. I wouldn't / have thought of that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It makes a big difference. And put the hinges on the inside if possible."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My front step is crumbling. Is that a concrete job or what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like it. Is it just the edges breaking off, or are there big chunks missing?"
+    },
+    {
+     "speaker": "user",
+     "text": "Mostly the front edge. Bits come off when I sweep."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a concrete patching mix should do it. You can buy small bags that only need water."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need to build a frame thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For an edge, yes, a simple board held in front of it as a mold. Brush off loose bits first and wet the old concrete."
+    },
+    {
+     "speaker": "user",
+     "text": "How long before I can walk on it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give it at least a day, ideally two. Put a little sign up so the postman doesn't step on it."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why does my floor creak right by the bed? It wakes my wife when I get up."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Creaks usually come from floorboards rubbing against each other or against a loose nail."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it a big job to fix?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily. If you can get under the floor, a screw through the board into the joist often stops it."
+    },
+    {
+     "speaker": "user",
+     "text": "There's carpet over it, so I can't see."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There are kits for that, special screws that go through carpet and snap off below the surface."
+    },
+    {
+     "speaker": "user",
+     "text": "Really? That / sounds like magic."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Almost. Find the joist by pressing around until the creak stops, then screw into that spot."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, I'm trying to put together a flatpack wardrobe and I've got three screws left over."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic. Do you know which step they belong to?"
+    },
+    {
+     "speaker": "user",
+     "text": "No idea. The wardrobe seems fine though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the instructions for the hardware list. Some kits include spares, especially for small parts."
+    },
+    {
+     "speaker": "user",
+     "text": "There's two extra hinge screws on the list, I think. And one mystery screw."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The hinge spares are normal. The mystery one is worth tracking down, it might be for the back panel or the anti tip strap."
+    },
+    {
+     "speaker": "user",
+     "text": "Anti tip strap?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A strap that fixes the top of the wardrobe to the wall. Really worth using, especially with kids around."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the deal with fuse boxes? Mine just tripped and half the house went dark."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A switch flipped off to protect the circuit, usually because something overloaded it or there's a fault."
+    },
+    {
+     "speaker": "user",
+     "text": "I was using the kettle and the toaster at once."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That might be it. Open the box, find the switch that's pointing the other way, and flip it back up."
+    },
+    {
+     "speaker": "user",
+     "text": "It flipped right back down again."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then unplug things on that circuit, reset it, and plug them back in one by one. You might find a faulty appliance."
+    },
+    {
+     "speaker": "user",
+     "text": "The toaster is / pretty old, now that I think about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a prime suspect. If the switch trips every time with the toaster, retire the toaster."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My wife wants me to regrout the kitchen backsplash before her parents visit. I've got two days."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two days is enough if you start today. Is the grout cracked, or just stained?"
+    },
+    {
+     "speaker": "user",
+     "text": "Cracked and falling out in places."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then scrape out the damaged grout with a grout rake, vacuum the dust, and press new grout in with a rubber float."
+    },
+    {
+     "speaker": "user",
+     "text": "How long does it take to set?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually it's dry to touch in a few hours, but give it a full day before wiping the backsplash hard."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need to seal it after?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a good idea in a kitchen, it stops grease staining it again. Many sealers need a day though, so do it tomorrow evening."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey. Random question. Why do my doors swing open on their own?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually the door isn't hanging quite straight, so gravity pulls it. Older houses with sloping floors do this a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Ours is from the twenties, so yeah, sloping everything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A simple trick is to take one hinge pin out and give it a very slight bend. It adds friction so the door stays where you leave it."
+    },
+    {
+     "speaker": "user",
+     "text": "Bend it? With what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rest it on something hard and tap the middle with a hammer, just a tiny bit. Then slide it back in."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds like the kind of fix my granddad would do."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is an old school trick, and it works well. Do one door first and see how you like it."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The paint is peeling off my window frames outside. Do I need to strip all of it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily all. Scrape off anything loose or flaky until you hit paint that's firmly stuck."
+    },
+    {
+     "speaker": "user",
+     "text": "Then sand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, sand the edges so there's no ridge, then fill any cracks in the wood with exterior filler."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there special paint for outside?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use an exterior wood paint, and a primer on any bare wood. It'll last much longer against the rain."
+    },
+    {
+     "speaker": "user",
+     "text": "My house is / pretty close to the sea. Does that matter?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It does. Salt air is tough on paint, so pick a high quality marine or coastal grade product if you can."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My teenage daughter wants to learn some basic DIY. Where should she start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Love that. Hanging a picture properly is a great first job, it teaches measuring, drilling and using a level."
+    },
+    {
+     "speaker": "user",
+     "text": "She actually wants to fix her wobbly desk."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even better, she has a reason to care. Tightening the bolts and adding a small bracket is a nice achievable job."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I just let her do it alone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stand nearby but let her hold the tools. Kids learn way faster when nobody grabs the drill from them."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm terrible at not grabbing the drill."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then keep your hands in your pockets. Pretend you're the supervisor, not the worker."
+    }
+   ]
+  },
+  {
+   "id": "home_repair.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hi, my hot water tank is making a weird rumbling sound."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's often a build up of sediment at the bottom of the tank. As the water heats, it bubbles through and rumbles."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it dangerous?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not usually right away, but it makes the heater work harder and wear out sooner. Flushing the tank helps."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I flush it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Turn off the power or gas, attach a hose to the drain valve at the bottom, and let some water run out until it's clear."
+    },
+    {
+     "speaker": "user",
+     "text": "I live / in an apartment with a shared boiler. Is that the same thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah, then it's not your job. Report the noise to the building manager and let them handle it."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "home_repair.opt1",
+   "lead_in": "The bathroom faucet keeps dripping and I'm not sure how to deal with it.",
+   "options": [
+    "The first option is to replace the little washer inside myself, which is cheap but I've never done it.",
+    "Then there's buying a whole new faucet, which looks nicer but I'd still have to install it.",
+    "And the last one is calling a plumber, who said he can come next week but charges a lot."
+   ],
+   "moshi_comment": [
+    "Replacing the washer is usually a simple fix, and there are lots of guides for it. A new faucet makes sense if the old one is worn or ugly anyway. The plumber is the safest choice, but paying a lot for a drip feels like overkill.",
+    "How old is the faucet? If it's fairly new, try the washer first, it's cheap and you'll learn something. If it's ancient, a new faucet might be worth it, and you can call the plumber if you get stuck."
+   ]
+  },
+  {
+   "id": "home_repair.opt2",
+   "lead_in": "We need to fix the old wooden fence in the backyard and I'm weighing a few choices.",
+   "options": [
+    "One is just replacing the few broken boards and painting the whole thing.",
+    "Another option is tearing it down and putting in a new wooden fence, which is a big weekend project.",
+    "Or there's a vinyl fence, more expensive at first but it basically never needs paint again."
+   ],
+   "moshi_comment": [
+    "If most of the fence is still solid, replacing the broken boards and painting is the cheapest and quickest fix. A new wooden fence gives you a fresh start but takes real work. Vinyl costs more up front, but saves you painting for years.",
+    "Are the posts still solid, or are they rotting too? If the posts are fine, just fix the boards. If they're going, I'd skip patching and go with the vinyl, since you'd be rebuilding anyway."
+   ]
+  },
+  {
+   "id": "home_repair.opt3",
+   "lead_in": "My old bathroom extractor fan is basically just noise now, and I have a few ways to deal with it.",
+   "options": [
+    "I could just clean it properly, take the cover off and get all the dust out of the blades.",
+    "Or buy a cheap replacement fan from the hardware store and fit it into the same hole myself.",
+    "Or pay an electrician to put in a proper quiet fan with a humidity sensor."
+   ],
+   "moshi_comment": [
+    "Cleaning it is free and sometimes fixes the noise completely, so try that first. If it's still loud, the cheap swap is doable if the wiring is simple. The humidity sensor fan is the nicest, especially if you get mold.",
+    "How old is the fan? A really old motor won't get quieter with cleaning. In that case, the electrician option costs more but you'll never think about it again."
+   ]
+  },
+  {
+   "id": "home_repair.opt4",
+   "lead_in": "Our wooden kitchen worktop is stained and cut up, and I'm deciding what to do.",
+   "options": [
+    "Sand it all the way down and re-oil it, which takes a whole weekend.",
+    "Just sand the worst spots and live with a slightly patchy look.",
+    "Cover it with a stick on vinyl wrap that looks like marble.",
+    "Or bite the bullet and replace it with a new laminate one."
+   ],
+   "moshi_comment": [
+    "A full sand and oil will make wood look brand new, and it's cheap, just tiring. The vinyl wrap is quick but can peel near the sink. Replacing it is the priciest, worth it only if the wood is damaged deep down.",
+    "If the cuts are shallow, sanding the whole thing is the best value. Spot sanding often looks worse than leaving it, because the fresh patches stand out. I'd skip the vinyl near any heat or water."
+   ]
+  },
+  {
+   "id": "home_repair.opt5",
+   "lead_in": "There's a big damp patch on our basement wall and I need to choose a plan.",
+   "options": [
+    "We could paint it with special damp proof paint, which is quick but might just hide the problem.",
+    "Another plan is to clean out the gutters and check if rainwater is pooling by that wall outside.",
+    "We could also buy a dehumidifier and run it down there all the time.",
+    "Or call a damp specialist to find where the water is really coming from."
+   ],
+   "moshi_comment": [
+    "I'd start with the gutters, it's cheap and fixes a surprising number of damp walls. The paint only hides things if water is still getting in. A dehumidifier helps with the air but doesn't stop the source.",
+    "If the gutters look fine, the specialist is worth it, because guessing gets expensive. The dehumidifier is a good helper either way while you sort out the cause."
+   ]
+  },
+  {
+   "id": "home_repair.opt6",
+   "lead_in": "My grandma's old wooden chair has a wobbly leg and I really want to save it.",
+   "options": [
+    "I could squeeze some wood glue into the loose joint and clamp it overnight.",
+    "Or take the whole chair apart, clean off the old glue, and reglue every joint.",
+    "Or bring it to the furniture restorer in town, who's lovely but expensive."
+   ],
+   "moshi_comment": [
+    "If it's just one loose joint, the glue and clamp trick often works. Taking the chair apart is the proper fix, because new glue doesn't stick well to old glue. The restorer makes sense if it's valuable or has carvings.",
+    "Since it's your grandma's and means a lot, I'd lean towards doing it properly. Either take it apart yourself carefully, or let the restorer handle it so you don't risk cracking anything."
+   ]
+  }
+ ]
 }

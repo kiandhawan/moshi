@@ -7,196 +7,115 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question",
-  "implicit"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "home_office",
-  "learning_language"
+  "laptop_buying"
  ],
- "topic": "home_office",
+ "topic": "laptop_buying",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
-  "friend": "732ea755bd9e446eb31dc79966b50428",
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Theo",
- "friend_name_id": "name_15",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_30",
-  "side_instr_15",
-  "ack_14",
-  "dq_21",
-  "implicit_10"
+  "greet_03",
+  "greet_ans_03",
+  "describe_instr_15",
+  "describe_cue_09"
  ],
  "block_ids": [
-  "home_office.ctx2",
-  "learning_language.side1"
+  "laptop_buying.opt5"
  ],
- "est_total_sec": 70.77,
- "est_speech_sec": 51.71,
+ "est_total_sec": 55.47,
+ "est_speech_sec": 45.23,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
-   "est_sec": 1.96,
-   "gap_before": 0.66,
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.42,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.72,
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.45,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "My back hurts after every workday at the kitchen table.",
-   "est_sec": 3.2,
-   "gap_before": 0.29,
-   "event": "ordinary_request",
-   "block": "home_office.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That table is probably the wrong height. Would you rather invest in a proper office chair first, or a standing desk?",
-   "est_sec": 6.61,
-   "gap_before": 0.31,
-   "role": "reply",
-   "block": "home_office.ctx2",
-   "reference_only": true
+   "text": "I play music and I'm looking for a laptop for recording at home.",
+   "est_sec": 4.13,
+   "gap_before": 0.45,
+   "block": "laptop_buying.opt5"
   },
   {
    "speaker": "user",
-   "text": "Give me a second, my brother needs help with something. Stay quiet until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 3.21,
+   "text": "I want to describe all the options before I hear your opinion.",
+   "est_sec": 3.82,
+   "gap_before": 0.45,
    "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_15"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No worries.",
-   "est_sec": 0.72,
-   "gap_before": 0.69,
-   "role": "ack",
-   "phrasing": "ack_14",
-   "reference_only": true
+   "kind": "describe_options",
+   "phrasing": "describe_instr_15"
   },
   {
    "speaker": "user",
-   "text": "Theo, how do you say I'm hungry in German again?",
+   "text": "A Mac with a fast chip and a silent fan, which is great for music apps but pricey to upgrade storage.",
+   "est_sec": 6.61,
+   "gap_before": 0.77,
+   "block": "laptop_buying.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A Windows laptop with lots of ports and a big drive, cheaper, though the fan gets loud under load.",
+   "est_sec": 5.99,
+   "gap_before": 1.74,
+   "block": "laptop_buying.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A secondhand pro laptop from a friend, two years old, very powerful, but no warranty at all.",
+   "est_sec": 5.37,
+   "gap_before": 2.61,
+   "block": "laptop_buying.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "So, that's all of them. Tell me what you think.",
    "est_sec": 3.2,
-   "gap_before": 0.79,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "learning_language.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Ich habe Hunger. Literally, I have hunger.",
-   "est_sec": 2.27,
-   "gap_before": 0.45,
-   "block": "learning_language.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "That's so weird. Why not just I am hungry?",
-   "est_sec": 2.89,
-   "gap_before": 1.28,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "learning_language.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Same with thirst. Lots of languages do it that way.",
-   "est_sec": 3.2,
-   "gap_before": 0.82,
-   "block": "learning_language.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, ich habe Hunger. Did I say it right?",
-   "est_sec": 2.89,
-   "gap_before": 0.99,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "learning_language.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Pretty close. Make the H a bit softer.",
-   "est_sec": 2.58,
-   "gap_before": 0.63,
-   "block": "learning_language.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Did you take the trash out?",
-   "est_sec": 1.96,
-   "gap_before": 2.18,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_21"
-  },
-  {
-   "speaker": "friend",
-   "text": "Not yet, I'll do it now.",
-   "est_sec": 1.96,
-   "gap_before": 0.76,
-   "phrasing": "dq_21"
-  },
-  {
-   "speaker": "user",
-   "text": "Anyway, what do you think?",
-   "est_sec": 1.65,
-   "gap_before": 0.63,
+   "gap_before": 0.7,
    "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_10"
+   "kind": "explicit",
+   "phrasing": "describe_cue_09"
   },
   {
    "speaker": "moshi",
-   "text": "Right. So, which one for your back?",
-   "est_sec": 2.27,
-   "gap_before": 0.76,
+   "text": "For recording, a silent machine is a big deal, so the Mac has a real edge. The Windows laptop's loud fan could end up on your tracks. The secondhand one is tempting, as long as you trust your friend and test it well.",
+   "est_sec": 13.43,
+   "gap_before": 1.15,
    "role": "resume",
-   "block": "home_office.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "The chair. I sit most of the day anyway.",
-   "est_sec": 2.89,
-   "gap_before": 1.94,
-   "event": "ordinary_request",
-   "block": "home_office.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then get one with adjustable lumbar support, and try it before you buy if you can.",
-   "est_sec": 5.06,
-   "gap_before": 0.45,
-   "role": "followup",
-   "block": "home_office.ctx2",
+   "block": "laptop_buying.opt5",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "implicit_return"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

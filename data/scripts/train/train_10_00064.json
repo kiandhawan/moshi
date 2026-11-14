@@ -7,146 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "weekend_plans"
+  "fitness"
  ],
- "wait_sec": 20,
- "deadline": {
-  "after_turn": 6,
-  "sec": 20
- },
- "topic": "weekend_plans",
+ "topic": "fitness",
  "voices": {
-  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "user": "c250136a9ec74cc0b799be54664a83f2",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_19",
-  "greet_ans_01",
-  "think_instr_23",
-  "ack_16",
-  "self_20"
+  "greet_11",
+  "greet_ans_22"
  ],
  "block_ids": [
-  "weekend_plans.ctx3"
+  "fitness.dlg3"
  ],
- "est_total_sec": 62.25,
- "est_speech_sec": 35.92,
+ "est_total_sec": 49.41,
+ "est_speech_sec": 36.75,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how's everything with you?",
-   "est_sec": 1.65,
-   "gap_before": 0.74,
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.62,
    "role": "greeting",
-   "phrasing": "greet_19"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
+   "text": "Pretty relaxed today.",
    "est_sec": 1.03,
-   "gap_before": 0.55,
+   "gap_before": 0.86,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_22"
   },
   {
    "speaker": "user",
-   "text": "Two different friends invited me to things on Saturday night.",
+   "text": "Is it better to stretch before or after a run?",
    "est_sec": 3.2,
-   "gap_before": 0.32,
+   "gap_before": 0.34,
    "event": "ordinary_request",
-   "block": "weekend_plans.ctx3"
+   "block": "fitness.dlg3"
   },
   {
    "speaker": "moshi",
-   "text": "Popular weekend. Is it a choice between a big party and something smaller, or are they both similar?",
-   "est_sec": 5.68,
-   "gap_before": 1.07,
+   "text": "Before a run, do a dynamic warm-up like leg swings and easy jogging. Save the longer, held stretches for after.",
+   "est_sec": 6.3,
+   "gap_before": 0.58,
    "role": "reply",
-   "block": "weekend_plans.ctx3"
+   "block": "fitness.dlg3"
   },
   {
    "speaker": "user",
-   "text": "One's a birthday party, the other is a quiet dinner.",
-   "est_sec": 3.2,
-   "gap_before": 0.94,
+   "text": "Why not hold stretches before?",
+   "est_sec": 1.65,
+   "gap_before": 2.68,
    "event": "ordinary_request",
-   "block": "weekend_plans.ctx3"
+   "block": "fitness.dlg3"
   },
   {
    "speaker": "moshi",
-   "text": "Got it. Which one would you be more disappointed to miss?",
-   "est_sec": 3.51,
-   "gap_before": 0.83,
+   "text": "Long static stretches can make your muscles feel a bit weaker right away. Moving warm-ups get them ready instead.",
+   "est_sec": 5.99,
+   "gap_before": 0.54,
    "role": "reply",
-   "block": "weekend_plans.ctx3"
+   "block": "fitness.dlg3"
   },
   {
    "speaker": "user",
-   "text": "Give me twenty seconds, I want to think about it. Then ask again.",
-   "est_sec": 4.13,
-   "gap_before": 1.17,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_23"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, sure.",
-   "est_sec": 0.72,
-   "gap_before": 0.5,
-   "role": "ack",
-   "phrasing": "ack_16"
-  },
-  {
-   "speaker": "user",
-   "text": "Let's see, let's see.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 6,
-    "offset": 3.21
-   },
+   "text": "Makes sense. I usually just",
+   "est_sec": 1.65,
+   "gap_before": 1.38,
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_20"
-  },
-  {
-   "speaker": "moshi",
-   "text": "So, which would you hate to miss more, the party or the dinner?",
-   "est_sec": 4.13,
-   "role": "resume",
-   "block": "weekend_plans.ctx3",
-   "anchor": {
-    "turn": 6,
-    "offset": 20.01
-   }
+   "kind": "pause",
+   "block": "fitness.dlg3"
   },
   {
    "speaker": "user",
-   "text": "The dinner. I barely get to see that friend.",
-   "est_sec": 2.89,
-   "gap_before": 0.73,
+   "text": "start running and hope for the best.",
+   "est_sec": 2.27,
+   "gap_before": 2.42,
    "event": "ordinary_request",
-   "block": "weekend_plans.ctx3"
+   "block": "fitness.dlg3"
   },
   {
    "speaker": "moshi",
-   "text": "Then go to the dinner and send a nice message to the birthday person.",
-   "est_sec": 4.44,
-   "gap_before": 0.53,
-   "role": "followup",
-   "block": "weekend_plans.ctx3"
+   "text": "Lots of people do. Even five minutes of brisk walking first makes a real difference.",
+   "est_sec": 4.75,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "fitness.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay. And after, how long should I hold each stretch?",
+   "est_sec": 3.2,
+   "gap_before": 0.31,
+   "event": "ordinary_request",
+   "block": "fitness.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "About thirty seconds each. Focus on calves, hamstrings and hips, those get tight from running.",
+   "est_sec": 4.75,
+   "gap_before": 0.4,
+   "role": "reply",
+   "block": "fitness.dlg3"
   }
  ]
 }

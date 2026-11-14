@@ -7,158 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "pets",
-  "baking"
+  "board_games"
  ],
- "topic": "pets",
+ "topic": "board_games",
  "voices": {
-  "user": "0efe38923c0b445ab09382e851ae1e30",
-  "friend": "10b2254869cf4340bdb801928e2fc88e",
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Chloe",
- "friend_name_id": "name_08",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_07",
-  "side_instr_11",
-  "dq_25",
-  "side_cue_05"
+  "greet_17",
+  "greet_ans_20"
  ],
  "block_ids": [
-  "pets.ctx3",
-  "baking.side2"
+  "board_games.dlg25"
  ],
- "est_total_sec": 62.03,
- "est_speech_sec": 46.14,
+ "est_total_sec": 53.3,
+ "est_speech_sec": 41.09,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
+   "text": "Hey there! How's your day?",
    "est_sec": 1.65,
-   "gap_before": 0.65,
+   "gap_before": 0.71,
    "role": "greeting",
-   "phrasing": "greet_02"
+   "phrasing": "greet_17"
   },
   {
    "speaker": "user",
-   "text": "Honestly, a little stressed, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.63,
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.99,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_07"
+   "phrasing": "greet_ans_20"
   },
   {
    "speaker": "user",
-   "text": "I'm going away for a week and I don't know what to do with my dog.",
-   "est_sec": 5.06,
-   "gap_before": 0.43,
+   "text": "Those escape room games in a box, can you play them more than once?",
+   "est_sec": 4.44,
+   "gap_before": 0.59,
    "event": "ordinary_request",
-   "block": "pets.ctx3"
+   "block": "board_games.dlg25"
   },
   {
    "speaker": "moshi",
-   "text": "You've got a few options. Would you prefer a boarding kennel, or a sitter who comes to your home?",
-   "est_sec": 5.99,
-   "gap_before": 0.62,
+   "text": "Most of them only once, sadly. You often cut, fold or write on the components, and once you know the puzzles, the surprise is gone.",
+   "est_sec": 7.85,
+   "gap_before": 0.52,
    "role": "reply",
-   "block": "pets.ctx3"
+   "block": "board_games.dlg25"
   },
   {
    "speaker": "user",
-   "text": "Excuse me for a moment, my friend has a question. Don't talk until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 3.24,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_11"
+   "text": "That seems wasteful.",
+   "est_sec": 1.03,
+   "gap_before": 1.25,
+   "event": "ordinary_request",
+   "block": "board_games.dlg25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Some are designed so you don't destroy anything, so you can pass them on to friends afterward. The box usually says so.",
+   "est_sec": 6.92,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "board_games.dlg25"
   },
   {
    "speaker": "user",
-   "text": "Does this smell like it's burning to you?",
-   "est_sec": 2.58,
-   "gap_before": 1.01,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "baking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "A little, yeah. How long has it been in?",
-   "est_sec": 2.89,
-   "gap_before": 0.89,
-   "block": "baking.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Only twenty minutes. The recipe says forty.",
-   "est_sec": 2.27,
-   "gap_before": 0.83,
-   "block": "baking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Our oven runs hot though. Remember the pizza?",
-   "est_sec": 2.58,
-   "gap_before": 1.0,
-   "block": "baking.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Ugh, right. Should I cover it with foil?",
+   "text": "Oh, swapping with friends is a good idea.",
    "est_sec": 2.58,
    "gap_before": 0.33,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "baking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Yeah, and turn it down a bit. The middle probably still needs time.",
-   "est_sec": 4.13,
-   "gap_before": 0.63,
-   "block": "baking.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Chloe, did you hear that noise?",
-   "est_sec": 1.96,
-   "gap_before": 0.46,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_25"
-  },
-  {
-   "speaker": "friend",
-   "text": "I think it was the neighbors.",
-   "est_sec": 1.96,
-   "gap_before": 0.91,
-   "phrasing": "dq_25"
-  },
-  {
-   "speaker": "user",
-   "text": "Back again. What were we talking about?",
-   "est_sec": 2.27,
-   "gap_before": 1.63,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_05"
+   "event": "ordinary_request",
+   "block": "board_games.dlg25"
   },
   {
    "speaker": "moshi",
-   "text": "Sure thing. Any decision on the kennel versus a home sitter?",
-   "est_sec": 3.51,
-   "gap_before": 1.13,
-   "role": "resume",
-   "block": "pets.ctx3"
+   "text": "A lot of groups do that. You play one, they play another, then you swap.",
+   "est_sec": 4.75,
+   "gap_before": 1.05,
+   "role": "reply",
+   "block": "board_games.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "How hard are they? I'm",
+   "est_sec": 1.65,
+   "gap_before": 1.41,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "board_games.dlg25"
+  },
+  {
+   "speaker": "user",
+   "text": "not great with puzzles.",
+   "est_sec": 1.34,
+   "gap_before": 2.6,
+   "event": "ordinary_request",
+   "block": "board_games.dlg25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "They have difficulty ratings on the box, and a hint system if you get stuck. Start with an easy one, it's more fun when you finish.",
+   "est_sec": 8.16,
+   "gap_before": 0.85,
+   "role": "reply",
+   "block": "board_games.dlg25"
   }
  ]
 }

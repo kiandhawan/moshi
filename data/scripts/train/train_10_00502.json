@@ -7,99 +7,107 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "weather_plans"
+  "music"
  ],
- "wait_sec": 20,
- "deadline": {
-  "after_turn": 4,
-  "sec": 20
- },
- "topic": "weather_plans",
+ "topic": "music",
  "voices": {
-  "user": "ba875f2fb2ea4a4e9b175821014984b6",
+  "user": "536d3a5e000945adb7038665781a4aca",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_08",
-  "greet_ans_13",
-  "think_instr_20",
-  "ack_15"
+  "greet_19",
+  "greet_ans_17",
+  "describe_instr_07",
+  "describe_cue_02"
  ],
  "block_ids": [
-  "weather_plans.ctx3"
+  "music.opt6"
  ],
- "est_total_sec": 46.81,
- "est_speech_sec": 23.02,
+ "est_total_sec": 54.7,
+ "est_speech_sec": 43.68,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there, how are you feeling today?",
-   "est_sec": 2.27,
-   "gap_before": 0.44,
-   "role": "greeting",
-   "phrasing": "greet_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.99,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
-  },
-  {
-   "speaker": "user",
-   "text": "There's a snowstorm coming Thursday night and I'm supposed to drive to my sister's on Friday.",
-   "est_sec": 5.06,
-   "gap_before": 0.42,
-   "event": "ordinary_request",
-   "block": "weather_plans.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That could make the roads rough. Would you rather leave Thursday afternoon before it hits, or wait and go Saturday?",
-   "est_sec": 6.3,
-   "gap_before": 0.69,
-   "role": "reply",
-   "block": "weather_plans.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hang on, I need twenty seconds to think. Then ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 0.65,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_20"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright, go ahead.",
-   "est_sec": 1.03,
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
    "gap_before": 0.53,
-   "role": "ack",
-   "phrasing": "ack_15"
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.61,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
+  },
+  {
+   "speaker": "user",
+   "text": "My son wants to do something for the school talent show and he's asking me to help him choose.",
+   "est_sec": 5.99,
+   "gap_before": 0.3,
+   "block": "music.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me walk you through all the options, then you can tell me what you think.",
+   "est_sec": 5.06,
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "He could play a solo piano piece he's been practising for months.",
+   "est_sec": 3.82,
+   "gap_before": 1.3,
+   "block": "music.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Or start a little band with his two best mates, they'd have about three weeks to rehearse.",
+   "est_sec": 5.37,
+   "gap_before": 1.24,
+   "block": "music.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "He also mentioned writing a rap about the school dinners, which would be funny.",
+   "est_sec": 4.44,
+   "gap_before": 2.44,
+   "block": "music.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 1.05,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_02"
   },
   {
    "speaker": "moshi",
-   "text": "Time's up. What's the plan for the drive to your sister's?",
-   "est_sec": 3.51,
+   "text": "The piano piece is the polished choice, he's ready and it'll show his hard work. The band is the most fun, but three weeks is tight for a group. The school dinners rap would get big laughs, if he's confident performing it.",
+   "est_sec": 13.12,
+   "gap_before": 1.3,
    "role": "resume",
-   "block": "weather_plans.ctx3",
-   "anchor": {
-    "turn": 4,
-    "offset": 20.13
-   }
+   "block": "music.opt6"
   }
  ]
 }

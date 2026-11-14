@@ -7,17 +7,17 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "phone_call",
- "wait_type": "phone_call",
- "conditions": [
-  "implicit"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "painting_art"
+  "laptop_buying"
  ],
- "topic": "painting_art",
+ "topic": "laptop_buying",
  "voices": {
   "user": "ca1a4fbf6702400a863d60be2fe8062d",
   "friend": null,
@@ -26,130 +26,112 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_21",
-  "phone_instr_05",
-  "call_02",
-  "implicit_14"
+  "greet_18",
+  "greet_ans_06"
  ],
  "block_ids": [
-  "painting_art.ctx2"
+  "laptop_buying.dlg1"
  ],
- "est_total_sec": 55.78,
- "est_speech_sec": 37.88,
+ "est_total_sec": 49.13,
+ "est_speech_sec": 36.75,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
+   "text": "Hello! How have you been lately?",
    "est_sec": 1.96,
-   "gap_before": 0.57,
+   "gap_before": 0.3,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.96,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
-  },
-  {
-   "speaker": "user",
-   "text": "There are two art classes near me, one on weekday evenings and one on Saturday mornings.",
-   "est_sec": 5.06,
-   "gap_before": 0.55,
-   "event": "ordinary_request",
-   "block": "painting_art.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Both sound good. Which fits your week better, a tired evening after work or giving up a slow Saturday morning?",
-   "est_sec": 6.3,
-   "gap_before": 0.89,
-   "role": "reply",
-   "block": "painting_art.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hang on, I've got to pick this up. Stay quiet until I come back to you.",
-   "est_sec": 5.06,
-   "gap_before": 1.04,
-   "event": "instruction",
-   "kind": "phone_call",
-   "phrasing": "phone_instr_05"
-  },
-  {
-   "speaker": "user",
-   "text": "Hi, yes, this is me.",
-   "est_sec": 1.65,
-   "gap_before": 1.07,
-   "phrasing": "call_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Tuesday at three works for me.",
-   "est_sec": 1.96,
-   "gap_before": 2.09,
-   "phrasing": "call_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Do I need to bring anything?",
-   "est_sec": 1.96,
-   "gap_before": 2.34,
-   "phrasing": "call_02",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, great. Thank you.",
+   "text": "Good, thanks. Busy day.",
    "est_sec": 1.34,
-   "gap_before": 3.53,
-   "phrasing": "call_02"
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
   },
   {
    "speaker": "user",
-   "text": "Okay, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.73,
-   "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_14"
+   "text": "What laptop specs actually matter for college?",
+   "est_sec": 2.27,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg1"
   },
   {
    "speaker": "moshi",
-   "text": "Sure. You were choosing between the evening class and the Saturday class.",
-   "est_sec": 3.82,
-   "gap_before": 1.35,
-   "role": "resume",
-   "block": "painting_art.ctx2",
+   "text": "For most students, good battery life, at least eight gigs of memory and a comfortable keyboard. Raw speed matters less than people think.",
+   "est_sec": 7.23,
+   "gap_before": 1.19,
+   "role": "reply",
+   "block": "laptop_buying.dlg1",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Saturday, I'm way too drained after work to focus.",
-   "est_sec": 2.89,
-   "gap_before": 0.88,
+   "text": "I'm studying architecture, does that change things?",
+   "est_sec": 2.27,
+   "gap_before": 0.76,
    "event": "ordinary_request",
-   "block": "painting_art.ctx2"
+   "block": "laptop_buying.dlg1"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. A fresh morning brain will help a lot with drawing.",
-   "est_sec": 3.82,
-   "gap_before": 0.4,
-   "role": "followup",
-   "block": "painting_art.ctx2",
+   "text": "Yes, quite a bit. Design software needs sixteen gigs of memory or more and a decent graphics chip.",
+   "est_sec": 5.68,
+   "gap_before": 1.0,
+   "role": "reply",
+   "block": "laptop_buying.dlg1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, that sounds expensive. Is there",
+   "est_sec": 1.96,
+   "gap_before": 1.94,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "laptop_buying.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "a cheaper way around it?",
+   "est_sec": 1.65,
+   "gap_before": 2.4,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Check if your school has computer labs with the software installed. Then a mid range laptop could be enough.",
+   "est_sec": 5.99,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "laptop_buying.dlg1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Good point. I'll ask at orientation.",
+   "est_sec": 1.96,
+   "gap_before": 0.65,
+   "event": "ordinary_request",
+   "block": "laptop_buying.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great idea. Ask older students too, they'll know what really works for the program.",
+   "est_sec": 4.44,
+   "gap_before": 0.62,
+   "role": "reply",
+   "block": "laptop_buying.dlg1",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_phone",
-  "implicit_return"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

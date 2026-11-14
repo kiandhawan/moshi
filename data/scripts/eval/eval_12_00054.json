@@ -7,127 +7,166 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "extension"
- ],
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
  "topics": [
-  "laptop_buying"
+  "picnic"
  ],
- "wait_sec": 15,
- "extension": {
-  "extra_sec": 10,
-  "said_before_deadline_sec": 2.84
- },
- "deadline": {
-  "after_turn": 6,
-  "sec": 10
- },
- "topic": "laptop_buying",
+ "topic": "picnic",
  "voices": {
-  "user": "7bb342e710854139b1d6e12411229f1f",
-  "friend": null,
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "732ea755bd9e446eb31dc79966b50428",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_21",
-  "think_instr_06",
-  "ack_13",
-  "extension_08"
+  "greet_06",
+  "greet_ans_24",
+  "door_instr_08",
+  "ack_06",
+  "door_12",
+  "door_cue_06"
  ],
  "block_ids": [
-  "laptop_buying.ctx3"
+  "picnic.ctx6",
+  "door_12"
  ],
- "est_total_sec": 51.34,
- "est_speech_sec": 24.98,
+ "est_total_sec": 54.24,
+ "est_speech_sec": 32.81,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.45,
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.33,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_06",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.41,
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
+   "phrasing": "greet_ans_24"
   },
   {
    "speaker": "user",
-   "text": "Should I buy a laptop now or wait for the sales?",
-   "est_sec": 3.51,
-   "gap_before": 0.55,
+   "text": "I'm proposing to my partner at a picnic next weekend.",
+   "est_sec": 3.2,
+   "gap_before": 0.57,
    "event": "ordinary_request",
-   "block": "laptop_buying.ctx3"
+   "block": "picnic.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "Prices usually drop in about three weeks. Can you get by with your current one until then, or do you need it right away?",
-   "est_sec": 7.54,
-   "gap_before": 0.85,
+   "text": "Oh wow!",
+   "est_sec": 0.72,
+   "gap_before": 1.96,
    "role": "reply",
-   "block": "laptop_buying.ctx3",
+   "block": "picnic.ctx6",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Let me think for fifteen seconds, then check back with me.",
-   "est_sec": 3.51,
-   "gap_before": 1.44,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_06"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, I'll hold on.",
+   "text": "Yeah, I'm so nervous.",
    "est_sec": 1.34,
-   "gap_before": 0.63,
-   "role": "ack",
-   "phrasing": "ack_13",
+   "gap_before": 1.01,
+   "event": "ordinary_request",
+   "block": "picnic.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally understandable. Do you want to propose right at the start, or wait until after you've eaten and relaxed?",
+   "est_sec": 5.99,
+   "gap_before": 0.6,
+   "role": "reply",
+   "block": "picnic.ctx6",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Not yet, give me ten more seconds.",
-   "est_sec": 2.27,
-   "event": "extension",
-   "extra_sec": 10,
-   "phrasing": "extension_08",
-   "anchor": {
-    "turn": 4,
-    "offset": 12.16
-   }
+   "text": "Oh, the doorbell. Hang tight and wait for me.",
+   "est_sec": 2.89,
+   "gap_before": 0.34,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_08"
   },
   {
    "speaker": "moshi",
-   "text": "Have you decided? Buy it now or hold out a few weeks?",
-   "est_sec": 3.82,
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.67,
+   "role": "ack",
+   "phrasing": "ack_06",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, look at you!",
+   "est_sec": 1.34,
+   "gap_before": 4.27,
+   "phrasing": "door_12"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Trick or treat!",
+   "est_sec": 1.03,
+   "gap_before": 1.54,
+   "phrasing": "door_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Wow, what are you supposed to be?",
+   "est_sec": 2.27,
+   "gap_before": 1.0,
+   "phrasing": "door_12",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "A dinosaur astronaut!",
+   "est_sec": 1.03,
+   "gap_before": 1.91,
+   "phrasing": "door_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Of course you are. Take two each.",
+   "est_sec": 2.27,
+   "gap_before": 0.99,
+   "phrasing": "door_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, they're gone. I'm back now.",
+   "est_sec": 1.96,
+   "gap_before": 3.78,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. The proposal. Start of the picnic, or after lunch?",
+   "est_sec": 3.51,
+   "gap_before": 0.46,
    "role": "resume",
-   "block": "laptop_buying.ctx3",
-   "anchor": {
-    "turn": 6,
-    "offset": 10.34
-   },
+   "block": "picnic.ctx6",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "new_type_door"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

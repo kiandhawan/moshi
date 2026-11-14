@@ -7,132 +7,151 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "painting_art"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit"
  ],
- "topic": "painting_art",
+ "topics": [
+  "picnic",
+  "cycling"
+ ],
+ "topic": "picnic",
  "voices": {
-  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
-  "friend": null,
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Aisha",
+ "friend_name_id": "name_18",
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_09",
-  "describe_instr_03",
-  "ack_15",
-  "describe_cue_06"
+  "greet_15",
+  "greet_ans_30",
+  "side_instr_18",
+  "implicit_14"
  ],
  "block_ids": [
-  "painting_art.opt2"
+  "picnic.ctx12",
+  "cycling.side5"
  ],
- "est_total_sec": 59.24,
- "est_speech_sec": 44.19,
+ "est_total_sec": 52.94,
+ "est_speech_sec": 37.88,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.73,
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.47,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.31,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "I'm trying to choose what to paint for my mom's birthday.",
-   "est_sec": 3.51,
-   "gap_before": 0.3,
-   "block": "painting_art.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me go through every option before you say anything.",
+   "text": "We're doing a picnic with three families, about fifteen people.",
    "est_sec": 3.2,
-   "gap_before": 0.79,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_03"
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "block": "picnic.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "Alright, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.61,
-   "role": "ack",
-   "phrasing": "ack_15",
+   "text": "Nice crowd. Would you split the food by family, like one brings mains and one brings desserts, or just do potluck and hope for the best?",
+   "est_sec": 8.16,
+   "gap_before": 1.21,
+   "role": "reply",
+   "block": "picnic.ctx12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "One idea is a portrait of her and her dog, copied from a photo I took last summer.",
-   "est_sec": 5.68,
-   "gap_before": 1.5,
-   "block": "painting_art.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a painting of the lake house where we went every year when I was little.",
-   "est_sec": 5.37,
-   "gap_before": 2.28,
-   "block": "painting_art.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or I could just do a big bunch of sunflowers, since those are her favorite.",
+   "text": "Hold up, my mom is asking me something. Please don't say anything until I'm back.",
    "est_sec": 4.75,
-   "gap_before": 2.93,
-   "block": "painting_art.opt2",
+   "gap_before": 3.25,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_18"
+  },
+  {
+   "speaker": "user",
+   "text": "Aisha, honest opinion. Do these lycra shorts look ridiculous?",
+   "est_sec": 2.89,
+   "gap_before": 1.39,
    "event": "distractor",
-   "kind": "pause"
+   "kind": "friend_question",
+   "block": "cycling.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Do you want the honest honest answer?",
+   "est_sec": 2.27,
+   "gap_before": 0.98,
+   "block": "cycling.side5"
   },
   {
    "speaker": "user",
-   "text": "The last option is a small series of three tiny paintings of her garden.",
-   "est_sec": 4.44,
-   "gap_before": 2.6,
-   "block": "painting_art.opt2"
+   "text": "Yes.",
+   "est_sec": 0.41,
+   "gap_before": 1.24,
+   "block": "cycling.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "They look very professional. And very tight.",
+   "est_sec": 2.27,
+   "gap_before": 1.18,
+   "block": "cycling.side5"
   },
   {
    "speaker": "user",
-   "text": "Alright, those are all the choices. Your thoughts?",
+   "text": "Ugh. Should I wear normal shorts over them?",
    "est_sec": 2.58,
-   "gap_before": 0.55,
+   "gap_before": 0.87,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cycling.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Loads of people do. Then you get the padding and nobody has to see everything.",
+   "est_sec": 4.75,
+   "gap_before": 0.84,
+   "block": "cycling.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.87,
    "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_06"
+   "kind": "implicit",
+   "phrasing": "implicit_14"
   },
   {
    "speaker": "moshi",
-   "text": "I love the lake house idea, but how much time do you have before her birthday? If it's only a week or two, the sunflowers or the three little garden paintings are much more doable.",
-   "est_sec": 10.95,
-   "gap_before": 0.79,
+   "text": "Right. So how's the food being organised?",
+   "est_sec": 2.27,
+   "gap_before": 0.36,
    "role": "resume",
-   "block": "painting_art.opt2",
+   "block": "picnic.ctx12",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "familiar_type",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

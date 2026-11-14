@@ -1,70 +1,117 @@
 {
   "id": "train_10_00422",
-  "group": "describe_options",
-  "user_start": 2.38,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 9.1,
-  "instruction_end": 12.1,
-  "wait_end": 38.27,
-  "resume_window": [
-    38.27,
-    43.27
+  "group": "side_conversation",
+  "user_start": 2.83,
+  "type": "side_conversation",
+  "conditions": [
+    "near_miss"
   ],
-  "wait_sec": 26.17,
+  "cluster": "sleep.ctx9",
+  "instruction_start": 15.68,
+  "instruction_end": 20.2,
+  "wait_end": 55.25,
+  "resume_window": [
+    55.25,
+    60.25
+  ],
+  "wait_sec": 35.05,
   "distractors": [
-    25.17
+    23.5,
+    31.59,
+    49.22
   ],
   "distractor_kinds": [
-    "pause"
+    "near_miss",
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      25.17,
-      28.0
+      23.5,
+      24.1
+    ],
+    [
+      31.59,
+      33.06
+    ],
+    [
+      49.22,
+      50.52
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    7.67
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.38,
-      "end": 4.43,
+      "start": 2.83,
+      "end": 4.07,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.87,
-      "end": 8.33
+      "start": 4.51,
+      "end": 7.67,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 9.1,
-      "end": 12.1,
+      "start": 15.68,
+      "end": 20.2,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 12.96,
-      "end": 19.14
-    },
-    {
-      "speaker": "user",
-      "start": 20.39,
-      "end": 25.17,
+      "start": 21.32,
+      "end": 23.5,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 24.1,
+      "end": 25.4
     },
     {
       "speaker": "user",
-      "start": 28.0,
-      "end": 33.62
+      "start": 28.88,
+      "end": 31.59,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 33.06,
+      "end": 36.62
     },
     {
       "speaker": "user",
-      "start": 35.05,
-      "end": 38.27,
+      "start": 38.08,
+      "end": 40.89
+    },
+    {
+      "speaker": "friend",
+      "start": 43.53,
+      "end": 47.04
+    },
+    {
+      "speaker": "user",
+      "start": 47.52,
+      "end": 49.22,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 50.52,
+      "end": 53.07
+    },
+    {
+      "speaker": "user",
+      "start": 53.8,
+      "end": 55.25,
       "event": "return_cue",
       "kind": "explicit"
     }
@@ -74,15 +121,21 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.31,
-      "end": 1.72,
+      "start": 0.51,
+      "end": 1.92,
       "text": "Hey! How are you feeling?"
     },
     {
+      "kind": "reply",
+      "start": 8.46,
+      "end": 14.8,
+      "text": "A lot of people sleep hot. Would you try a cooling mattress topper, or swap to a lighter duvet and breathable sheets?"
+    },
+    {
       "kind": "resume",
-      "start": 39.42,
-      "end": 47.71,
-      "text": "Is your place mostly carpet or hard floors? For hard floors, the cordless stick is probably all you need. For carpets, I'd go with the upright."
+      "start": 56.39,
+      "end": 59.53,
+      "text": "Okay. So, the roasting problem. Any decision?"
     }
   ]
 }

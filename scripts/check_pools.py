@@ -4,7 +4,9 @@ Checks the format, ID prefixes, counts and text rules (no digits or odd symbols,
 return-cue wording in side conversations, lengths). Prints problems and a summary.
 Exit code 1 if any problem is found.
 
-Usage: python scripts/check_pools.py [topic ...]   (default: every topic in topics.json)
+Usage: python scripts/check_pools.py [--new] [topic ...]   (default: every topic in topics.json)
+  --new  check the new-blocks files data/pools/new/<topic>.json (new items only, NEW_WANT counts;
+         IDs must not clash with the existing topic file; welcome_back lines without a greeting)
 """
 
 import json
@@ -30,6 +32,8 @@ def check_text(where: str, t: str, problems: list[str]) -> None:
         return
     if re.search(r"\d", t):
         problems.append(f"{where}: digits in {t!r}")
+    if ".." in t:
+        problems.append(f"{where}: ellipsis in {t!r}")
     bad = set(BAD_CHARS.findall(t.replace("{friend}", "")))
     if bad:
         problems.append(f"{where}: characters {sorted(bad)} in {t!r}")
@@ -37,8 +41,15 @@ def check_text(where: str, t: str, problems: list[str]) -> None:
         problems.append(f"{where}: unknown slot in {t!r}")
 
 
-def check_topic(topic: str, split: str) -> tuple[list[str], dict]:
-    p = ROOT / f"data/pools/topics/{topic}.json"
+# New blocks for the content-unique sets (data/pools/new/<topic>.json, new items only)
+NEW_WANT = {"train": {"contexts": 9, "side_conversations": 3, "ordinary_dialogues": 28, "option_sets": 4},
+            "eval": {"contexts": 19, "side_conversations": 3, "ordinary_dialogues": 9, "option_sets": 3}}
+GREETING_START = re.compile(r"^(welcome back|hi again|hey again|oh, hi|there you are|good to have you|"
+                            r"hey, you're back|you're back|hello again|hi there|hey there)\b", re.I)
+
+
+def check_topic(topic: str, split: str, new: bool = False) -> tuple[list[str], dict]:
+    p = ROOT / (f"data/pools/new/{topic}.json" if new else f"data/pools/topics/{topic}.json")
     if not p.exists():
         return [f"{topic}: missing {p.relative_to(ROOT)}"], {}
     problems: list[str] = []
@@ -50,7 +61,10 @@ def check_topic(topic: str, split: str) -> tuple[list[str], dict]:
         problems.append(f"{topic}: 'topic' field is {d.get('topic')!r}")
     stats = {"words": 0}
     ids = set()
-    for key, n in WANT[split].items():
+    if new:  # IDs must not clash with the existing topic file
+        old = json.loads((ROOT / f"data/pools/topics/{topic}.json").read_text())
+        ids = {it["id"] for k in WANT[split] for it in old.get(k, [])}
+    for key, n in (NEW_WANT if new else WANT)[split].items():
         items = d.get(key, [])
         stats[key] = len(items)
         if len(items) < n:
@@ -97,6 +111,10 @@ def check_topic(topic: str, split: str) -> tuple[list[str], dict]:
                         problems.append(f"{w}: want at least {lo} {f}")
                 for t in it.get("think_reask", []) + it.get("welcome_back", []):
                     check_text(w, t, problems)
+                if new:
+                    for t in it.get("welcome_back", []):
+                        if GREETING_START.search(t) or re.search(r"welcome back|you're back|have you back", t, re.I):
+                            problems.append(f"{w}: welcome_back must not greet (the generator adds the opener): {t!r}")
                 for e in it.get("endings", []):
                     check_text(w, e.get("user", ""), problems)
                     check_text(w, e.get("moshi", ""), problems)
@@ -128,14 +146,16 @@ def check_topic(topic: str, split: str) -> tuple[list[str], dict]:
 
 
 def main() -> None:
-    wanted = sys.argv[1:]
+    args = sys.argv[1:]
+    new = "--new" in args
+    wanted = [a for a in args if a != "--new"]
     all_topics = {t: s for s in ("train", "eval") for t in TOPICS[s]}
     problems, total = [], 0
     for topic in wanted or all_topics:
         if topic not in all_topics:
             problems.append(f"{topic}: not in topics.json")
             continue
-        pr, st = check_topic(topic, all_topics[topic])
+        pr, st = check_topic(topic, all_topics[topic], new)
         problems += pr
         total += st.get("words", 0)
         if st:

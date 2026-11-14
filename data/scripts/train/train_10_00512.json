@@ -7,155 +7,117 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "board_games",
   "job_interview"
  ],
- "topic": "board_games",
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "job_interview",
  "voices": {
-  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
-  "friend": "18b1276891524bd786fb8a59ecd3630a",
+  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Alex",
- "friend_name_id": "name_04",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_13",
-  "greet_ans_01",
-  "side_instr_19",
-  "side_cue_11"
+  "greet_14",
+  "greet_ans_02",
+  "think_instr_14",
+  "ack_12"
  ],
  "block_ids": [
-  "board_games.ctx3",
-  "job_interview.side3"
+  "job_interview.ctx7"
  ],
- "est_total_sec": 69.78,
- "est_speech_sec": 54.82,
+ "est_total_sec": 83.4,
+ "est_speech_sec": 31.9,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, nice to hear from you. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.31,
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.55,
    "role": "greeting",
-   "phrasing": "greet_13"
+   "phrasing": "greet_14"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.97,
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.92,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_02"
   },
   {
    "speaker": "user",
-   "text": "We've played the same three games every week for a year. I'm bored.",
-   "est_sec": 4.13,
-   "gap_before": 0.59,
+   "text": "I'm a teacher trying to move into UX design and I have an interview next week.",
+   "est_sec": 5.06,
+   "gap_before": 0.38,
    "event": "ordinary_request",
-   "block": "board_games.ctx3"
+   "block": "job_interview.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Time for something new. Do you want a short game you can play a few rounds of, or one long epic game for the whole evening?",
+   "text": "Big switch, and teaching is great background for it. Do you want to lead with your classroom skills, or open with the portfolio projects you've done?",
    "est_sec": 8.16,
-   "gap_before": 1.01,
+   "gap_before": 0.3,
    "role": "reply",
-   "block": "board_games.ctx3"
+   "block": "job_interview.ctx7"
   },
   {
    "speaker": "user",
-   "text": "Okay, quick break, I need to talk to my roommate. I'll tell you when I'm done.",
-   "est_sec": 5.06,
-   "gap_before": 0.98,
+   "text": "Wait forty-five seconds, then ask me that again.",
+   "est_sec": 2.58,
+   "gap_before": 2.22,
    "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_19"
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_14"
   },
   {
-   "speaker": "user",
-   "text": "Alex, will you do a quick practice round with me?",
-   "est_sec": 3.2,
-   "gap_before": 0.98,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "job_interview.side3"
+   "speaker": "moshi",
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.43,
+   "role": "ack",
+   "phrasing": "ack_12"
   },
   {
-   "speaker": "friend",
-   "text": "Okay. Why do you want to work here?",
-   "est_sec": 2.58,
-   "gap_before": 2.0,
-   "block": "job_interview.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Because I really like their products and I think I could grow a lot.",
-   "est_sec": 4.44,
-   "gap_before": 1.43,
-   "block": "job_interview.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "That's kind of generic. What exactly do you like about them?",
+   "speaker": "moshi",
+   "text": "So, are you opening with your teaching background or your portfolio?",
    "est_sec": 3.51,
-   "gap_before": 0.62,
-   "block": "job_interview.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Fair. How about how they help small shops sell online?",
-   "est_sec": 3.2,
-   "gap_before": 0.61,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "job_interview.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Much better. Lead with that and give an example.",
-   "est_sec": 2.89,
-   "gap_before": 0.88,
-   "block": "job_interview.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm done talking to them. I'm back.",
-   "est_sec": 2.58,
-   "gap_before": 1.32,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_11"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem. We were finding something new for your weekly game night.",
-   "est_sec": 3.82,
-   "gap_before": 0.61,
    "role": "resume",
-   "block": "board_games.ctx3"
+   "block": "job_interview.ctx7",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.42
+   }
   },
   {
    "speaker": "user",
-   "text": "Something long. We have all evening anyway.",
-   "est_sec": 2.27,
-   "gap_before": 0.48,
+   "text": "Portfolio first. I want them to see me as a designer.",
+   "est_sec": 3.51,
+   "gap_before": 0.47,
    "event": "ordinary_request",
-   "block": "board_games.ctx3"
+   "block": "job_interview.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Then try a big strategy game like Terraforming Mars. Expect around three hours the first time.",
+   "text": "Good. Then weave teaching in when they ask how you understand users, it's a perfect example.",
    "est_sec": 5.06,
-   "gap_before": 0.67,
+   "gap_before": 0.46,
    "role": "followup",
-   "block": "board_games.ctx3"
+   "block": "job_interview.ctx7"
   }
  ]
 }

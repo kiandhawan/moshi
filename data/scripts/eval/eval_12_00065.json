@@ -7,26 +7,17 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "extension"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "painting_art"
+  "family_visit"
  ],
- "wait_sec": 15,
- "extension": {
-  "extra_sec": 5,
-  "said_before_deadline_sec": 2.77
- },
- "deadline": {
-  "after_turn": 6,
-  "sec": 5
- },
- "topic": "painting_art",
+ "topic": "family_visit",
  "voices": {
   "user": "732ea755bd9e446eb31dc79966b50428",
   "friend": null,
@@ -35,116 +26,112 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_15",
-  "greet_ans_12",
-  "think_instr_27",
-  "ack_08",
-  "extension_04"
+  "greet_27",
+  "greet_ans_03"
  ],
  "block_ids": [
-  "painting_art.ctx2"
+  "family_visit.dlg8"
  ],
- "est_total_sec": 55.15,
- "est_speech_sec": 31.38,
+ "est_total_sec": 49.83,
+ "est_speech_sec": 37.68,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your week going?",
-   "est_sec": 1.65,
-   "gap_before": 0.69,
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.51,
    "role": "greeting",
-   "phrasing": "greet_15",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Okay, I guess.",
+   "text": "Doing okay, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.8,
+   "gap_before": 0.81,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_12"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "There are two art classes near me, one on weekday evenings and one on Saturday mornings.",
-   "est_sec": 5.06,
-   "gap_before": 0.28,
+   "text": "Is it rude to ask family to pay for their own meals when they visit?",
+   "est_sec": 4.75,
+   "gap_before": 0.58,
    "event": "ordinary_request",
-   "block": "painting_art.ctx2"
+   "block": "family_visit.dlg8"
   },
   {
    "speaker": "moshi",
-   "text": "Both sound good. Which fits your week better, a tired evening after work or giving up a slow Saturday morning?",
-   "est_sec": 6.3,
-   "gap_before": 0.43,
+   "text": "Not necessarily. It depends a lot on your family's habits and on who invited whom.",
+   "est_sec": 4.75,
+   "gap_before": 0.93,
    "role": "reply",
-   "block": "painting_art.ctx2",
+   "block": "family_visit.dlg8",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Give me fifteen seconds. I'll know by then, so ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 1.52,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_27"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, go ahead.",
+   "text": "They invited themselves",
    "est_sec": 1.03,
-   "gap_before": 0.47,
-   "role": "ack",
-   "phrasing": "ack_08",
-   "reference_only": true
+   "gap_before": 0.44,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "family_visit.dlg8"
   },
   {
    "speaker": "user",
-   "text": "Actually, wait five more seconds.",
-   "est_sec": 1.65,
-   "event": "extension",
-   "extra_sec": 5,
-   "phrasing": "extension_04",
-   "anchor": {
-    "turn": 4,
-    "offset": 12.23
-   }
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright, have you decided? The weekday evening class or the Saturday morning one?",
-   "est_sec": 4.13,
-   "role": "resume",
-   "block": "painting_art.ctx2",
-   "anchor": {
-    "turn": 6,
-    "offset": 5.38
-   },
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Saturday, I'm way too drained after work to focus.",
-   "est_sec": 2.89,
-   "gap_before": 1.36,
+   "text": "for ten days.",
+   "est_sec": 1.03,
+   "gap_before": 2.71,
    "event": "ordinary_request",
-   "block": "painting_art.ctx2"
+   "block": "family_visit.dlg8"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. A fresh morning brain will help a lot with drawing.",
-   "est_sec": 3.82,
-   "gap_before": 0.61,
-   "role": "followup",
-   "block": "painting_art.ctx2",
+   "text": "Then it's very reasonable to share costs. You could cover breakfasts at home and split dinners out.",
+   "est_sec": 5.37,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "family_visit.dlg8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "How do I bring that up without it being awkward?",
+   "est_sec": 3.2,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "family_visit.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Say it early and lightly, before they arrive. Something like, we'll do breakfast here, and for dinners out let's just split as we go.",
+   "est_sec": 7.54,
+   "gap_before": 1.05,
+   "role": "reply",
+   "block": "family_visit.dlg8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "And if they act offended?",
+   "est_sec": 1.65,
+   "gap_before": 1.37,
+   "event": "ordinary_request",
+   "block": "family_visit.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Stay friendly and don't over explain. Most people adjust quickly once it's clear it's normal for you.",
+   "est_sec": 5.37,
+   "gap_before": 1.09,
+   "role": "reply",
+   "block": "family_visit.dlg8",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

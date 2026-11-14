@@ -7,90 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "shopping"
+  "video_games"
  ],
- "wait_sec": 5,
- "deadline": {
-  "after_turn": 4,
-  "sec": 5
- },
- "topic": "shopping",
+ "topic": "video_games",
  "voices": {
-  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "user": "5ce84bbd213b4943bc89e1951e17848a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_05",
-  "greet_ans_17",
-  "think_instr_25"
+  "greet_29",
+  "greet_ans_20"
  ],
  "block_ids": [
-  "shopping.ctx3"
+  "video_games.dlg3"
  ],
- "est_total_sec": 32.14,
- "est_speech_sec": 21.99,
+ "est_total_sec": 51.0,
+ "est_speech_sec": 37.06,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how have you been?",
-   "est_sec": 1.65,
-   "gap_before": 0.73,
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.36,
    "role": "greeting",
-   "phrasing": "greet_05"
+   "phrasing": "greet_29"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.5,
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.71,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "phrasing": "greet_ans_20"
   },
   {
    "speaker": "user",
-   "text": "Our vacuum finally died. I need to buy a new one this weekend.",
-   "est_sec": 4.13,
-   "gap_before": 0.56,
-   "event": "ordinary_request",
-   "block": "shopping.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Do you want a cordless stick vacuum that's light and handy, or a full size one with more suction?",
-   "est_sec": 5.99,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "shopping.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me take five seconds to think, and then ask me again.",
+   "text": "Is it worth upgrading to the new console or should I wait?",
    "est_sec": 3.82,
-   "gap_before": 0.84,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 5,
-   "phrasing": "think_instr_25"
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "video_games.dlg3"
   },
   {
    "speaker": "moshi",
-   "text": "So what's it going to be, a cordless stick or a full size vacuum?",
-   "est_sec": 4.44,
-   "role": "resume",
-   "block": "shopping.ctx3",
-   "anchor": {
-    "turn": 4,
-    "offset": 5.21
-   }
+   "text": "It depends on what you play. Are there games coming out that only run on the new one?",
+   "est_sec": 5.68,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "video_games.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "Not really. I mostly play older stuff.",
+   "est_sec": 2.27,
+   "gap_before": 3.48,
+   "event": "ordinary_request",
+   "block": "video_games.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then I'd wait. Prices usually drop after the first year or so, and more games come out for it.",
+   "est_sec": 5.99,
+   "gap_before": 0.39,
+   "role": "reply",
+   "block": "video_games.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, but my current one is",
+   "est_sec": 1.96,
+   "gap_before": 0.74,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "video_games.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "getting really loud.",
+   "est_sec": 1.03,
+   "gap_before": 2.44,
+   "event": "ordinary_request",
+   "block": "video_games.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's often just dust in the fan. Cleaning the vents with compressed air can make a big difference.",
+   "est_sec": 5.68,
+   "gap_before": 1.35,
+   "role": "reply",
+   "block": "video_games.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "I've literally never cleaned it. It's eight years old.",
+   "est_sec": 2.89,
+   "gap_before": 0.99,
+   "event": "ordinary_request",
+   "block": "video_games.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then it's definitely worth a try first. It might buy you another year or two.",
+   "est_sec": 4.75,
+   "gap_before": 1.01,
+   "role": "reply",
+   "block": "video_games.dlg3"
   }
  ]
 }

@@ -7,6 +7,8 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
@@ -16,119 +18,135 @@
   "early_end"
  ],
  "topics": [
-  "hiking"
+  "job_interview"
  ],
- "wait_sec": 20,
+ "wait_sec": 10,
  "early_end": {
-  "after_sec": 15.55,
+  "after_sec": 7.44,
   "direct": true
  },
- "topic": "hiking",
+ "topic": "job_interview",
  "voices": {
-  "user": "676f1654c4f747a69a5921ad94886fa1",
+  "user": "bf322df2096a46f18c579d0baa36f41d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_19",
-  "greet_ans_29",
-  "think_instr_17",
-  "ack_15",
-  "early_end_04"
+  "greet_04",
+  "greet_ans_23",
+  "think_instr_05",
+  "ack_12",
+  "early_end_08"
  ],
  "block_ids": [
-  "hiking.ctx1"
+  "job_interview.ctx8"
  ],
- "est_total_sec": 55.14,
- "est_speech_sec": 32.93,
+ "est_total_sec": 50.11,
+ "est_speech_sec": 34.37,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how's everything with you?",
+   "text": "Hey there, how are you?",
    "est_sec": 1.65,
-   "gap_before": 0.49,
+   "gap_before": 0.36,
    "role": "greeting",
-   "phrasing": "greet_19"
+   "phrasing": "greet_04"
   },
   {
    "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.75,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to do a day hike on Sunday but I'm not super fit.",
-   "est_sec": 4.44,
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
    "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_23"
+  },
+  {
+   "speaker": "user",
+   "text": "My mum says I should walk into cafes with my CV, but everyone does it online now.",
+   "est_sec": 5.37,
+   "gap_before": 0.44,
    "event": "ordinary_request",
-   "block": "hiking.ctx1"
+   "block": "job_interview.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "No problem. There's a flat lakeside loop of about five miles, or a shorter trail with a steep climb and a great view. Which appeals more?",
-   "est_sec": 8.16,
-   "gap_before": 0.82,
+   "text": "How old are you, and what kind of job is it?",
+   "est_sec": 3.51,
+   "gap_before": 0.32,
    "role": "reply",
-   "block": "hiking.ctx1"
+   "block": "job_interview.ctx8"
   },
   {
    "speaker": "user",
-   "text": "I haven't decided. Give me twenty seconds, then ask me again.",
-   "est_sec": 3.51,
-   "gap_before": 1.2,
+   "text": "Sixteen. Just weekend shifts, anywhere.",
+   "est_sec": 1.65,
+   "gap_before": 1.26,
+   "event": "ordinary_request",
+   "block": "job_interview.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For weekend cafe work, both can work. Do you want to try dropping in with your CV, or apply online first?",
+   "est_sec": 6.61,
+   "gap_before": 1.05,
+   "role": "reply",
+   "block": "job_interview.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you give me ten seconds? Then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 1.91,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_17"
+   "wait_sec": 10,
+   "phrasing": "think_instr_05"
   },
   {
    "speaker": "moshi",
-   "text": "Alright, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.33,
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.42,
    "role": "ack",
-   "phrasing": "ack_15"
+   "phrasing": "ack_12"
   },
   {
    "speaker": "user",
-   "text": "Okay, I know what I want.",
-   "est_sec": 1.96,
+   "text": "Oh, I know.",
+   "est_sec": 1.03,
    "anchor": {
-    "turn": 4,
-    "offset": 15.55
+    "turn": 6,
+    "offset": 7.44
    },
    "event": "return_cue",
    "kind": "early_end",
-   "phrasing": "early_end_04"
+   "phrasing": "early_end_08"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, time's up. Lakeside loop or the short climb?",
-   "est_sec": 2.89,
-   "gap_before": 0.33,
+   "text": "Okay, weekend job hunt. In person or online?",
+   "est_sec": 2.58,
+   "gap_before": 0.31,
    "role": "resume",
-   "block": "hiking.ctx1"
+   "block": "job_interview.ctx8"
   },
   {
    "speaker": "user",
-   "text": "The steep one. I want the view, even if I'm slow.",
-   "est_sec": 3.51,
-   "gap_before": 1.44,
+   "text": "Online. Walking in sounds terrifying.",
+   "est_sec": 1.65,
+   "gap_before": 0.68,
    "event": "ordinary_request",
-   "block": "hiking.ctx1"
+   "block": "job_interview.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "Go for it. Take plenty of breaks and start early before it gets hot.",
-   "est_sec": 4.44,
-   "gap_before": 0.65,
+   "text": "That's fine. Follow up with a short visit a few days later, it makes you stand out.",
+   "est_sec": 5.37,
+   "gap_before": 0.68,
    "role": "followup",
-   "block": "hiking.ctx1"
+   "block": "job_interview.ctx8"
   }
  ]
 }

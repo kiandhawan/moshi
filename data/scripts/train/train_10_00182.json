@@ -7,120 +7,186 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "hiking"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
  ],
- "topic": "hiking",
+ "topics": [
+  "movies",
+  "baking"
+ ],
+ "topic": "movies",
  "voices": {
-  "user": "f3a2b90078d54a65af4b95f63bc7798e",
-  "friend": null,
+  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "friend": "cfc0d21e0b5947d08b957b2061670c0a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Hannah",
+ "friend_name_id": "name_14",
  "phrasing_ids": [
-  "greet_17",
-  "greet_ans_11"
+  "greet_26",
+  "greet_ans_17",
+  "side_instr_01",
+  "ack_07",
+  "dq_53",
+  "side_cue_08"
  ],
  "block_ids": [
-  "hiking.dlg4"
+  "movies.ctx10",
+  "baking.side5",
+  "dq_53"
  ],
- "est_total_sec": 47.96,
- "est_speech_sec": 33.96,
+ "est_total_sec": 77.21,
+ "est_speech_sec": 59.15,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there! How's your day?",
-   "est_sec": 1.65,
-   "gap_before": 0.71,
-   "role": "greeting",
-   "phrasing": "greet_17"
-  },
-  {
-   "speaker": "user",
-   "text": "Not too bad.",
-   "est_sec": 1.03,
-   "gap_before": 0.79,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Can I take my dog on a long hike?",
-   "est_sec": 2.89,
-   "gap_before": 0.56,
-   "event": "ordinary_request",
-   "block": "hiking.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Most healthy adult dogs love it. How old is your dog, and what breed?",
-   "est_sec": 4.44,
-   "gap_before": 0.96,
-   "role": "reply",
-   "block": "hiking.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "She's a three year old border collie.",
+   "text": "Hi! How are you doing these days?",
    "est_sec": 2.27,
-   "gap_before": 0.3,
-   "event": "ordinary_request",
-   "block": "hiking.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect, collies have tons of energy. She'll probably outlast you. Just build up the distance gradually.",
-   "est_sec": 5.06,
-   "gap_before": 0.94,
-   "role": "reply",
-   "block": "hiking.dlg4"
+   "gap_before": 0.58,
+   "role": "greeting",
+   "phrasing": "greet_26"
   },
   {
    "speaker": "user",
-   "text": "What does she need to bring?",
+   "text": "A bit tired today, but okay.",
    "est_sec": 1.96,
-   "gap_before": 2.6,
-   "event": "ordinary_request",
-   "block": "hiking.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Water and a collapsible bowl, some treats, and poo bags. Check her paws during breaks, rocky trails can hurt them.",
-   "est_sec": 6.3,
-   "gap_before": 0.42,
-   "role": "reply",
-   "block": "hiking.dlg4"
+   "gap_before": 0.56,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
   },
   {
    "speaker": "user",
-   "text": "Should I",
-   "est_sec": 0.72,
-   "gap_before": 2.64,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "hiking.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "keep her on the lead the whole time?",
-   "est_sec": 2.58,
-   "gap_before": 1.69,
-   "event": "ordinary_request",
-   "block": "hiking.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Check the trail rules first. Near livestock or wildlife, a lead is always the safer choice.",
+   "text": "I'm reviewing the new spy film for the student paper and I kind of hated it.",
    "est_sec": 5.06,
-   "gap_before": 0.89,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "movies.ctx10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's okay, honest reviews are more interesting. Would you open with what didn't work, or start with the few things you did like?",
+   "est_sec": 7.23,
+   "gap_before": 0.52,
    "role": "reply",
-   "block": "hiking.dlg4"
+   "block": "movies.ctx10"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I need to talk to my roommate for a second. Stay quiet until I say I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 1.29,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.27,
+   "role": "ack",
+   "phrasing": "ack_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you check if the baby monitor is on?",
+   "est_sec": 2.89,
+   "gap_before": 0.72,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_53"
+  },
+  {
+   "speaker": "friend",
+   "text": "The little light's green, so yes.",
+   "est_sec": 1.96,
+   "gap_before": 1.44,
+   "phrasing": "dq_53"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you read this? Is that a teaspoon or a tablespoon of salt?",
+   "est_sec": 4.13,
+   "gap_before": 2.25,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "baking.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Your gran's handwriting is something else. Looks like a big T to me.",
+   "est_sec": 4.13,
+   "gap_before": 0.53,
+   "block": "baking.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "A big T means tablespoon, right?",
+   "est_sec": 1.96,
+   "gap_before": 0.55,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "baking.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Usually. But a tablespoon of salt in one loaf sounds like a lot.",
+   "est_sec": 4.13,
+   "gap_before": 0.99,
+   "block": "baking.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "She did like things salty.",
+   "est_sec": 1.65,
+   "gap_before": 1.37,
+   "block": "baking.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not that salty. Do half and taste the dough.",
+   "est_sec": 2.89,
+   "gap_before": 1.36,
+   "block": "baking.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "You can't really taste raw dough with yeast in it, can you?",
+   "est_sec": 3.82,
+   "gap_before": 0.57,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "baking.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "A tiny pinch won't kill you. Go on.",
+   "est_sec": 2.58,
+   "gap_before": 1.27,
+   "block": "baking.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's sorted. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.47,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. So, back to your review. Which end are you starting from?",
+   "est_sec": 4.13,
+   "gap_before": 0.41,
+   "role": "resume",
+   "block": "movies.ctx10"
   }
  ]
 }

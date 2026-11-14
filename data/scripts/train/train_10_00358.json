@@ -7,116 +7,173 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "smartphones"
+  "sleep",
+  "music"
  ],
- "topic": "smartphones",
+ "topic": "sleep",
  "voices": {
-  "user": "cbc3add1f54546e6a4a1964bacb8b122",
-  "friend": null,
+  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "friend": "bd45448dd6f84f9ebd06f369f93f4410",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
  "phrasing_ids": [
-  "greet_07",
-  "greet_ans_19",
-  "describe_instr_19",
-  "describe_cue_01"
+  "greet_01",
+  "greet_ans_13",
+  "side_instr_05",
+  "ack_16",
+  "side_cue_23"
  ],
  "block_ids": [
-  "smartphones.opt1"
+  "sleep.ctx10",
+  "music.side1"
  ],
- "est_total_sec": 58.13,
- "est_speech_sec": 43.47,
+ "est_total_sec": 70.61,
+ "est_speech_sec": 51.61,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How's everything going?",
-   "est_sec": 1.34,
-   "gap_before": 0.48,
-   "role": "greeting",
-   "phrasing": "greet_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Good, thanks. Just got home.",
+   "text": "Hey, how are you doing?",
    "est_sec": 1.65,
-   "gap_before": 0.45,
+   "gap_before": 0.78,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.87,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_19"
+   "phrasing": "greet_ans_13"
   },
   {
    "speaker": "user",
-   "text": "My phone finally died, and I'm choosing between a few replacements.",
+   "text": "I'm studying for finals and I crash after lunch every day.",
    "est_sec": 3.51,
-   "gap_before": 0.42,
-   "block": "smartphones.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Hear me out on all the options before you comment.",
-   "est_sec": 3.2,
-   "gap_before": 0.9,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_19"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is the latest flagship with an amazing camera, but it costs over a thousand dollars.",
-   "est_sec": 5.68,
-   "gap_before": 1.16,
-   "block": "smartphones.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's last year's model of the same phone, almost as good and a few hundred cheaper.",
-   "est_sec": 5.37,
-   "gap_before": 2.71,
-   "block": "smartphones.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a mid range phone with a huge battery that lasts two full days.",
-   "est_sec": 5.06,
-   "gap_before": 2.74,
-   "block": "smartphones.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a small compact phone that fits easily in my pocket.",
-   "est_sec": 4.75,
-   "gap_before": 2.3,
-   "block": "smartphones.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all of them. What do you think?",
-   "est_sec": 2.89,
-   "gap_before": 1.28,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_01"
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "sleep.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "What bugged you most about your old phone? If it was the battery, the mid range phone is a clear win. If you take lots of photos, go with last year's flagship.",
-   "est_sec": 10.02,
-   "gap_before": 0.72,
+   "text": "Normal dip. Would you rather take a twenty minute power nap, or skip napping and take a walk outside instead?",
+   "est_sec": 6.3,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "sleep.ctx10"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I'm going to chat with my friend for a bit. Just wait until I say I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 1.47,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.27,
+   "role": "ack",
+   "phrasing": "ack_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Sam, can you turn that down a bit? I can barely hear myself think.",
+   "est_sec": 4.44,
+   "gap_before": 1.4,
+   "block": "music.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oops, it's my new favorite album. Isn't it great?",
+   "est_sec": 2.89,
+   "gap_before": 1.31,
+   "block": "music.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "It's not bad. Who is it?",
+   "est_sec": 1.96,
+   "gap_before": 1.22,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "music.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "A band from Glasgow. They're playing here in March.",
+   "est_sec": 2.89,
+   "gap_before": 1.21,
+   "block": "music.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh nice, are you going?",
+   "est_sec": 1.65,
+   "gap_before": 1.4,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "music.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "If I can get tickets. Want to come?",
+   "est_sec": 2.58,
+   "gap_before": 2.79,
+   "block": "music.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe. Send me a song and I'll let you know.",
+   "est_sec": 3.2,
+   "gap_before": 0.53,
+   "block": "music.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, all done. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 0.88,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. So, the afternoon dip during finals. What's your pick?",
+   "est_sec": 3.51,
+   "gap_before": 0.48,
    "role": "resume",
-   "block": "smartphones.opt1"
+   "block": "sleep.ctx10"
+  },
+  {
+   "speaker": "user",
+   "text": "A walk. If I nap I'll sleep for three hours.",
+   "est_sec": 3.2,
+   "gap_before": 0.93,
+   "event": "ordinary_request",
+   "block": "sleep.ctx10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Know yourself. Ten minutes in daylight and some water can be just as good.",
+   "est_sec": 4.44,
+   "gap_before": 0.53,
+   "role": "followup",
+   "block": "sleep.ctx10"
   }
  ]
 }

@@ -7,120 +7,108 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "hiking"
+  "board_games"
  ],
- "topic": "hiking",
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "board_games",
  "voices": {
-  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_05",
-  "greet_ans_17"
+  "greet_25",
+  "greet_ans_10",
+  "think_instr_20"
  ],
  "block_ids": [
-  "hiking.dlg1"
+  "board_games.ctx1"
  ],
- "est_total_sec": 56.23,
- "est_speech_sec": 44.81,
+ "est_total_sec": 83.33,
+ "est_speech_sec": 31.18,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how have you been?",
-   "est_sec": 1.65,
-   "gap_before": 0.31,
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.79,
    "role": "greeting",
-   "phrasing": "greet_05"
+   "phrasing": "greet_25"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
    "gap_before": 0.72,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "phrasing": "greet_ans_10"
   },
   {
    "speaker": "user",
-   "text": "What should I pack for a day hike? It's my first one.",
-   "est_sec": 3.82,
-   "gap_before": 0.29,
+   "text": "I'm hosting a game night Friday. There'll be six of us, and two have never really played board games.",
+   "est_sec": 5.99,
+   "gap_before": 0.31,
    "event": "ordinary_request",
-   "block": "hiking.dlg1"
+   "block": "board_games.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "The basics are water, snacks, a light rain jacket, sunscreen and a charged phone. A small first aid kit is a good idea too.",
-   "est_sec": 7.54,
-   "gap_before": 0.75,
-   "role": "reply",
-   "block": "hiking.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "How much water are we talking?",
-   "est_sec": 1.96,
-   "gap_before": 0.95,
-   "event": "ordinary_request",
-   "block": "hiking.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "About half a litre per hour of hiking, more if it's hot. For a four hour walk, two litres is a safe amount.",
-   "est_sec": 7.23,
-   "gap_before": 0.36,
-   "role": "reply",
-   "block": "hiking.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "That's heavy. Can I",
-   "est_sec": 1.34,
-   "gap_before": 0.7,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "hiking.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "just bring one bottle and refill it?",
-   "est_sec": 2.27,
-   "gap_before": 2.64,
-   "event": "ordinary_request",
-   "block": "hiking.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Only if you know there's safe water along the way. Streams aren't safe to drink without a filter.",
+   "text": "Fun! Do you want one easy party game everyone can join, or two smaller groups playing different games?",
    "est_sec": 5.68,
-   "gap_before": 0.42,
+   "gap_before": 0.99,
    "role": "reply",
-   "block": "hiking.dlg1"
+   "block": "board_games.ctx1"
   },
   {
    "speaker": "user",
-   "text": "Okay, two litres it is. What kind of snacks?",
-   "est_sec": 2.89,
-   "gap_before": 1.11,
-   "event": "ordinary_request",
-   "block": "hiking.dlg1"
+   "text": "Hang on, I need forty-five seconds to think. Then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.79,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_20"
   },
   {
    "speaker": "moshi",
-   "text": "Things that are easy to eat on the move, like nuts, dried fruit, cereal bars or a sandwich. Salty snacks are nice if you sweat a lot.",
-   "est_sec": 8.47,
-   "gap_before": 1.67,
-   "role": "reply",
-   "block": "hiking.dlg1"
+   "text": "Okay, time's up. Everyone together, or split into two tables?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "board_games.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.37
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "One big game. I want everyone in on the fun.",
+   "est_sec": 3.2,
+   "gap_before": 0.88,
+   "event": "ordinary_request",
+   "block": "board_games.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great. Codenames or a drawing game works well with six, and the rules take two minutes to explain.",
+   "est_sec": 5.68,
+   "gap_before": 0.8,
+   "role": "followup",
+   "block": "board_games.ctx1"
   }
  ]
 }

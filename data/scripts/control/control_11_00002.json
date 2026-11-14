@@ -7,6 +7,10 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
@@ -15,11 +19,11 @@
   "wait_like"
  ],
  "topics": [
-  "fitness"
+  "job_interview"
  ],
- "topic": "fitness",
+ "topic": "job_interview",
  "voices": {
-  "user": "e3cd384158934cc9a01029cd7d278634",
+  "user": "9a9cf47702da476aa4629e2506d4a857",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -28,19 +32,19 @@
  "phrasing_ids": [
   "greet_04",
   "greet_ans_14",
-  "waitlike_11"
+  "waitlike_14"
  ],
  "block_ids": [
-  "fitness.dlg3"
+  "job_interview.dlg23"
  ],
- "est_total_sec": 55.64,
- "est_speech_sec": 42.22,
+ "est_total_sec": 51.39,
+ "est_speech_sec": 38.3,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey there, how are you?",
    "est_sec": 1.65,
-   "gap_before": 0.46,
+   "gap_before": 0.75,
    "role": "greeting",
    "phrasing": "greet_04"
   },
@@ -48,100 +52,84 @@
    "speaker": "user",
    "text": "Hanging in there.",
    "est_sec": 1.03,
-   "gap_before": 0.58,
+   "gap_before": 0.84,
    "event": "greeting_answer",
    "phrasing": "greet_ans_14"
   },
   {
    "speaker": "user",
-   "text": "Is it better to stretch before or after a run?",
-   "est_sec": 3.2,
-   "gap_before": 0.51,
+   "text": "Okay, confession. I said on my CV that I'm advanced in spreadsheets and I'm really not.",
+   "est_sec": 5.06,
+   "gap_before": 0.39,
    "event": "ordinary_request",
-   "block": "fitness.dlg3"
+   "block": "job_interview.dlg23"
   },
   {
    "speaker": "moshi",
-   "text": "Before a run, do a dynamic warm-up like leg swings and easy jogging. Save the longer, held stretches for after.",
-   "est_sec": 6.3,
-   "gap_before": 0.8,
+   "text": "Okay, honest question. How long until the interview?",
+   "est_sec": 2.58,
+   "gap_before": 0.5,
    "role": "reply",
-   "block": "fitness.dlg3"
+   "block": "job_interview.dlg23"
   },
   {
    "speaker": "user",
-   "text": "Hold on, really?",
-   "est_sec": 1.03,
-   "gap_before": 0.36,
+   "text": "Two weeks.",
+   "est_sec": 0.72,
+   "gap_before": 1.28,
+   "event": "ordinary_request",
+   "block": "job_interview.dlg23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then you have two options. Learn enough to be genuinely solid in that time, or be honest in the interview and say intermediate.",
+   "est_sec": 7.23,
+   "gap_before": 1.13,
+   "role": "reply",
+   "block": "job_interview.dlg23"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, can I actually learn that much in two weeks?",
+   "est_sec": 3.51,
+   "gap_before": 0.45,
    "event": "ordinary_request",
    "kind": "wait_like",
-   "phrasing": "waitlike_11",
-   "block": "fitness.dlg3"
+   "phrasing": "waitlike_14",
+   "block": "job_interview.dlg23"
   },
   {
    "speaker": "moshi",
-   "text": "Good to question it. I still think it's right, though you know your situation best.",
-   "est_sec": 4.75,
-   "gap_before": 0.53,
+   "text": "You can get far. Focus on formulas, sorting and filtering, and basic charts. There are free tutorials for all of that.",
+   "est_sec": 6.61,
+   "gap_before": 0.7,
    "role": "reply",
-   "block": "fitness.dlg3"
+   "block": "job_interview.dlg23"
   },
   {
    "speaker": "user",
-   "text": "Why not hold stretches before?",
+   "text": "And if they test me",
    "est_sec": 1.65,
-   "gap_before": 1.47,
-   "event": "ordinary_request",
-   "block": "fitness.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Long static stretches can make your muscles feel a bit weaker right away. Moving warm-ups get them ready instead.",
-   "est_sec": 5.99,
-   "gap_before": 0.73,
-   "role": "reply",
-   "block": "fitness.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Makes sense. I usually just",
-   "est_sec": 1.65,
-   "gap_before": 1.59,
+   "gap_before": 1.86,
    "event": "distractor",
    "kind": "pause",
-   "block": "fitness.dlg3"
+   "block": "job_interview.dlg23"
   },
   {
    "speaker": "user",
-   "text": "start running and hope for the best.",
-   "est_sec": 2.27,
-   "gap_before": 1.69,
+   "text": "on something I don't know?",
+   "est_sec": 1.65,
+   "gap_before": 2.86,
    "event": "ordinary_request",
-   "block": "fitness.dlg3"
+   "block": "job_interview.dlg23"
   },
   {
    "speaker": "moshi",
-   "text": "Lots of people do. Even five minutes of brisk walking first makes a real difference.",
-   "est_sec": 4.75,
-   "gap_before": 0.57,
+   "text": "Then admit it and explain how you'd find out. Pretending usually falls apart, but honesty plus curiosity tends to land well.",
+   "est_sec": 6.61,
+   "gap_before": 0.83,
    "role": "reply",
-   "block": "fitness.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay. And after, how long should I hold each stretch?",
-   "est_sec": 3.2,
-   "gap_before": 0.65,
-   "event": "ordinary_request",
-   "block": "fitness.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "About thirty seconds each. Focus on calves, hamstrings and hips, those get tight from running.",
-   "est_sec": 4.75,
-   "gap_before": 1.98,
-   "role": "reply",
-   "block": "fitness.dlg3"
+   "block": "job_interview.dlg23"
   }
  ]
 }

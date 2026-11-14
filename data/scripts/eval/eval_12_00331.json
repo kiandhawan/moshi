@@ -7,109 +7,161 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "cycling"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit"
  ],
- "topic": "cycling",
+ "topics": [
+  "camping",
+  "picnic"
+ ],
+ "topic": "camping",
  "voices": {
-  "user": "732ea755bd9e446eb31dc79966b50428",
-  "friend": null,
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Maya",
+ "friend_name_id": "name_03",
  "phrasing_ids": [
-  "greet_18",
+  "greet_24",
   "greet_ans_27",
-  "describe_instr_03",
-  "describe_cue_03"
+  "side_instr_30",
+  "ack_16",
+  "implicit_07"
  ],
  "block_ids": [
-  "cycling.opt1"
+  "camping.ctx11",
+  "picnic.side3"
  ],
- "est_total_sec": 48.69,
- "est_speech_sec": 39.65,
+ "est_total_sec": 57.98,
+ "est_speech_sec": 42.63,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.42,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.66,
    "role": "greeting",
-   "phrasing": "greet_18",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "All good here.",
    "est_sec": 1.03,
-   "gap_before": 0.94,
+   "gap_before": 0.51,
    "event": "greeting_answer",
    "phrasing": "greet_ans_27"
   },
   {
    "speaker": "user",
-   "text": "I need a new bike and I've narrowed it down, but I'm stuck.",
-   "est_sec": 4.13,
-   "gap_before": 0.39,
-   "block": "cycling.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me go through every option before you say anything.",
-   "est_sec": 3.2,
-   "gap_before": 0.56,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_03"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is a light road bike, really fast, but it has thin tires and no rack.",
-   "est_sec": 5.68,
-   "gap_before": 0.88,
-   "block": "cycling.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a hybrid with wider tires, a rack on the back and a more upright seat.",
-   "est_sec": 5.37,
-   "gap_before": 1.48,
-   "block": "cycling.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is an electric bike, heavy and pricey, but hills would be no problem at all.",
-   "est_sec": 5.99,
-   "gap_before": 1.16,
-   "block": "cycling.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "So those are the options. What's your take?",
-   "est_sec": 2.58,
-   "gap_before": 1.34,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_03"
+   "text": "Bookings for the national park open at seven tomorrow morning and they sell out in minutes.",
+   "est_sec": 5.06,
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "camping.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "The hybrid sounds like the best all rounder of the three. How long and how hilly is your usual ride? If it's steep, the electric bike might be worth the price.",
-   "est_sec": 9.71,
+   "text": "Then go in with a backup. If your favourite loop is gone, would you take a weekday slot, or a less scenic loop on the weekend?",
+   "est_sec": 8.16,
+   "gap_before": 0.58,
+   "role": "reply",
+   "block": "camping.ctx11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment, I'm going to talk to my friend. Stay quiet until you hear I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 1.38,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_30"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.59,
+   "role": "ack",
+   "phrasing": "ack_16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Maya, what time should we head out tomorrow?",
+   "est_sec": 2.58,
+   "gap_before": 1.1,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "picnic.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Maybe eleven? The park gets packed around noon.",
+   "est_sec": 2.58,
    "gap_before": 0.37,
+   "block": "picnic.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Eleven works. Are you making your potato salad?",
+   "est_sec": 2.58,
+   "gap_before": 1.29,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "picnic.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Only if you do the lemonade.",
+   "est_sec": 1.96,
+   "gap_before": 0.49,
+   "block": "picnic.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Deal. I'll squeeze the lemons tonight.",
+   "est_sec": 1.96,
+   "gap_before": 2.55,
+   "block": "picnic.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "And don't forget the frisbee this time.",
+   "est_sec": 2.27,
+   "gap_before": 2.07,
+   "block": "picnic.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "So, what were you saying?",
+   "est_sec": 1.65,
+   "gap_before": 1.24,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. Your booking plan. If the best loop's gone, weekday or weekend?",
+   "est_sec": 4.13,
+   "gap_before": 0.51,
    "role": "resume",
-   "block": "cycling.opt1",
+   "block": "camping.ctx11",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "familiar_type",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

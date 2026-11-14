@@ -7,201 +7,125 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question",
-  "near_miss"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "baking",
-  "cooking"
+  "job_interview"
  ],
- "topic": "baking",
+ "topic": "job_interview",
  "voices": {
-  "user": "536d3a5e000945adb7038665781a4aca",
-  "friend": "e3cd384158934cc9a01029cd7d278634",
+  "user": "676f1654c4f747a69a5921ad94886fa1",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Omar",
- "friend_name_id": "name_13",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_08",
-  "side_instr_14",
-  "ack_07",
-  "dn_07",
-  "dq_13",
-  "side_cue_05"
+  "greet_16",
+  "greet_ans_11",
+  "describe_instr_08",
+  "ack_04",
+  "describe_cue_05"
  ],
  "block_ids": [
-  "baking.ctx3",
-  "cooking.side1"
+  "job_interview.opt2"
  ],
- "est_total_sec": 80.79,
- "est_speech_sec": 58.11,
+ "est_total_sec": 62.84,
+ "est_speech_sec": 49.77,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
+   "text": "Hi, how are you holding up?",
    "est_sec": 1.96,
-   "gap_before": 0.34,
+   "gap_before": 0.65,
    "role": "greeting",
-   "phrasing": "greet_11"
+   "phrasing": "greet_16"
   },
   {
    "speaker": "user",
-   "text": "I'm great, thanks.",
+   "text": "Not too bad.",
    "est_sec": 1.03,
-   "gap_before": 0.92,
+   "gap_before": 0.57,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
+   "phrasing": "greet_ans_11"
   },
   {
    "speaker": "user",
-   "text": "My daughter wants to bake with me on Sunday. She's seven.",
-   "est_sec": 3.51,
-   "gap_before": 0.23,
-   "event": "ordinary_request",
-   "block": "baking.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's sweet. What sounds more fun for her, decorating sugar cookies, or making a simple banana bread she can mash and stir?",
-   "est_sec": 6.92,
-   "gap_before": 0.96,
-   "role": "reply",
-   "block": "baking.ctx3"
+   "text": "I got two job offers and a maybe on a third, and I need help thinking it through.",
+   "est_sec": 5.68,
+   "gap_before": 0.58,
+   "block": "job_interview.opt2"
   },
   {
    "speaker": "user",
-   "text": "Oh, she'd love both.",
-   "est_sec": 1.34,
-   "gap_before": 1.3,
-   "event": "ordinary_request",
-   "block": "baking.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Ha, then you get to pick. Which one?",
-   "est_sec": 2.58,
-   "gap_before": 1.19,
-   "role": "reply",
-   "block": "baking.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait a moment, my coworker is here. Please be quiet until I tell you I'm back.",
-   "est_sec": 5.06,
-   "gap_before": 0.56,
+   "text": "Please wait until I've gone through all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.82,
    "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_14"
+   "kind": "describe_options",
+   "phrasing": "describe_instr_08"
   },
   {
    "speaker": "moshi",
-   "text": "Got it.",
+   "text": "No problem.",
    "est_sec": 0.72,
-   "gap_before": 0.47,
+   "gap_before": 0.32,
    "role": "ack",
-   "phrasing": "ack_07"
+   "phrasing": "ack_04"
   },
   {
    "speaker": "user",
-   "text": "Do we have any coffee left?",
+   "text": "The first one pays the most, but it's an hour commute each way and the team seemed kind of tense.",
+   "est_sec": 6.3,
+   "gap_before": 1.36,
+   "block": "job_interview.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a smaller company, a bit less money, but fully remote with a really friendly manager.",
+   "est_sec": 5.37,
+   "gap_before": 1.36,
+   "block": "job_interview.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Option three is a big company with great benefits and training, but the role is pretty junior.",
+   "est_sec": 5.37,
+   "gap_before": 1.58,
+   "block": "job_interview.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last one is the maybe, a startup doing something exciting, but they haven't made an offer yet.",
+   "est_sec": 5.99,
+   "gap_before": 2.33,
+   "block": "job_interview.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the full list. Go ahead.",
    "est_sec": 1.96,
-   "gap_before": 1.17,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_13"
-  },
-  {
-   "speaker": "friend",
-   "text": "There's a little bit in the jar.",
-   "est_sec": 2.27,
-   "gap_before": 1.13,
-   "phrasing": "dq_13"
-  },
-  {
-   "speaker": "user",
-   "text": "Omar, do we still have garlic or did you use the last of it?",
-   "est_sec": 4.44,
-   "gap_before": 0.56,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "cooking.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "I think there's half a bulb in the cupboard by the kettle.",
-   "est_sec": 3.82,
-   "gap_before": 0.75,
-   "block": "cooking.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Half a bulb won't be enough. Could you grab some on your way back from work?",
-   "est_sec": 5.06,
-   "gap_before": 1.48,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "cooking.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Sure, anything else while I'm there?",
-   "est_sec": 1.96,
-   "gap_before": 1.35,
-   "block": "cooking.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Maybe a lemon. And check if they have fresh parsley.",
-   "est_sec": 3.2,
-   "gap_before": 2.34,
-   "block": "cooking.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Got it, garlic, lemon, parsley.",
-   "est_sec": 1.65,
-   "gap_before": 2.06,
-   "block": "cooking.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm ready, let's go after this.",
-   "est_sec": 2.27,
-   "gap_before": 1.14,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_07"
-  },
-  {
-   "speaker": "friend",
-   "text": "Give me a minute to find my shoes.",
-   "est_sec": 2.58,
-   "gap_before": 1.0,
-   "phrasing": "dn_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Back again. What were we talking about?",
-   "est_sec": 2.27,
-   "gap_before": 1.57,
+   "gap_before": 1.16,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_05"
+   "phrasing": "describe_cue_05"
   },
   {
    "speaker": "moshi",
-   "text": "Sure thing. You were choosing a Sunday bake with your daughter.",
-   "est_sec": 3.51,
-   "gap_before": 0.66,
+   "text": "What matters most to you right now, money, growth, or quality of life? If it's quality of life, the remote job is the clear pick. I wouldn't wait too long on the startup, since they haven't even made an offer.",
+   "est_sec": 12.5,
+   "gap_before": 0.84,
    "role": "resume",
-   "block": "baking.ctx3"
+   "block": "job_interview.opt2"
   }
  ]
 }

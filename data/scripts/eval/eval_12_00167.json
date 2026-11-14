@@ -7,129 +7,171 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "podcasts"
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
  ],
- "topic": "podcasts",
+ "topics": [
+  "wedding_planning"
+ ],
+ "topic": "wedding_planning",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "user": "026218fe0c054374838d934016f34082",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_24"
+  "greet_18",
+  "greet_ans_30",
+  "phone_instr_03",
+  "ack_08",
+  "call_41",
+  "implicit_06"
  ],
  "block_ids": [
-  "podcasts.dlg2"
+  "wedding_planning.ctx12",
+  "call_41"
  ],
- "est_total_sec": 47.2,
- "est_speech_sec": 36.44,
+ "est_total_sec": 60.42,
+ "est_speech_sec": 40.25,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
+   "text": "Hello! How have you been lately?",
    "est_sec": 1.96,
-   "gap_before": 0.41,
+   "gap_before": 0.57,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Ah, it's been a long day.",
-   "est_sec": 1.96,
-   "gap_before": 0.65,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.92,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_24"
+   "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "How do people listen to podcasts at double speed? I can't understand anything.",
-   "est_sec": 4.13,
-   "gap_before": 0.35,
+   "text": "Two left feet, both of us. And our first dance is in six weeks.",
+   "est_sec": 4.44,
+   "gap_before": 0.28,
    "event": "ordinary_request",
-   "block": "podcasts.dlg2"
+   "block": "wedding_planning.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "Most people build up gradually. Try one and a quarter speed for a week, then nudge it up.",
-   "est_sec": 5.68,
-   "gap_before": 0.84,
+   "text": "Plenty of time. Take a few lessons and learn a little routine, or just hold each other and sway?",
+   "est_sec": 5.99,
+   "gap_before": 0.94,
    "role": "reply",
-   "block": "podcasts.dlg2",
+   "block": "wedding_planning.ctx12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Is it even worth it?",
+   "text": "Hold on, I need to answer this call. I'll tell you when I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.94,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.32,
+   "role": "ack",
+   "phrasing": "ack_08",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hi, sorry, I'm returning a missed call?",
+   "est_sec": 2.27,
+   "gap_before": 1.54,
+   "phrasing": "call_41",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, from the bank.",
+   "est_sec": 1.34,
+   "gap_before": 2.03,
+   "phrasing": "call_41"
+  },
+  {
+   "speaker": "user",
+   "text": "Was there a problem with my card?",
+   "est_sec": 2.27,
+   "gap_before": 2.5,
+   "phrasing": "call_41",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "No, I didn't buy anything in Lisbon.",
+   "est_sec": 2.27,
+   "gap_before": 2.21,
+   "phrasing": "call_41"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, please block it.",
+   "est_sec": 1.34,
+   "gap_before": 1.97,
+   "phrasing": "call_41"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, done. Where were we?",
    "est_sec": 1.65,
    "gap_before": 1.15,
-   "event": "ordinary_request",
-   "block": "podcasts.dlg2"
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_06"
   },
   {
    "speaker": "moshi",
-   "text": "For slow talk shows, it saves a lot of time. For stories or comedy, normal speed usually works better because timing matters.",
-   "est_sec": 6.92,
-   "gap_before": 0.3,
-   "role": "reply",
-   "block": "podcasts.dlg2",
+   "text": "Right. The first dance. Lessons, or just swaying?",
+   "est_sec": 2.58,
+   "gap_before": 0.94,
+   "role": "resume",
+   "block": "wedding_planning.ctx12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Makes sense. I mostly listen to",
-   "est_sec": 1.96,
-   "gap_before": 1.26,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "podcasts.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "long interviews with scientists.",
-   "est_sec": 1.34,
-   "gap_before": 2.51,
+   "text": "Swaying. Nobody needs to see us try a spin.",
+   "est_sec": 2.89,
+   "gap_before": 2.03,
    "event": "ordinary_request",
-   "block": "podcasts.dlg2"
+   "block": "wedding_planning.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "Those are perfect for a slight speed boost. Many apps also trim silences automatically, which helps without sounding rushed.",
-   "est_sec": 5.99,
-   "gap_before": 0.42,
-   "role": "reply",
-   "block": "podcasts.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, I'll turn that on.",
-   "est_sec": 1.65,
-   "gap_before": 0.34,
-   "event": "ordinary_request",
-   "block": "podcasts.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It's usually in the playback settings. You'll barely notice it.",
-   "est_sec": 3.2,
-   "gap_before": 1.03,
-   "role": "reply",
-   "block": "podcasts.dlg2",
+   "text": "Ha, honestly swaying is sweet. Pick a slow song and it'll look lovely.",
+   "est_sec": 4.13,
+   "gap_before": 0.33,
+   "role": "followup",
+   "block": "wedding_planning.ctx12",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_phone",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

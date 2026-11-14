@@ -1,42 +1,121 @@
 {
   "id": "train_10_00508",
-  "group": "think_time",
-  "user_start": 2.36,
-  "type": "think_time",
-  "conditions": [],
-  "instruction_start": 15.86,
-  "instruction_end": 18.98,
-  "wait_end": 23.98,
-  "resume_window": [
-    23.98,
-    27.98
+  "group": "side_conversation",
+  "user_start": 2.81,
+  "type": "side_conversation",
+  "conditions": [
+    "near_miss"
   ],
-  "wait_sec": 5.0,
-  "distractors": [],
-  "distractor_kinds": [],
-  "distractor_windows": [],
+  "cluster": "cooking.ctx9",
+  "instruction_start": 20.23,
+  "instruction_end": 24.84,
+  "wait_end": 60.247,
+  "resume_window": [
+    60.247,
+    65.247
+  ],
+  "wait_sec": 35.407,
+  "distractors": [
+    28.89,
+    41.017,
+    52.657
+  ],
+  "distractor_kinds": [
+    "friend_question",
+    "friend_question",
+    "near_miss"
+  ],
+  "distractor_windows": [
+    [
+      28.89,
+      31.77
+    ],
+    [
+      41.017,
+      42.207
+    ],
+    [
+      52.657,
+      54.787
+    ]
+  ],
   "ordinary_requests": [
-    7.65
+    9.32,
+    66.937
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.36,
-      "end": 3.73,
+      "start": 2.81,
+      "end": 4.01,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 3.96,
-      "end": 7.65,
+      "start": 4.53,
+      "end": 9.32,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 15.86,
-      "end": 18.98,
+      "start": 20.23,
+      "end": 24.84,
       "event": "instruction",
-      "kind": "think_time"
+      "kind": "side_conversation"
+    },
+    {
+      "speaker": "user",
+      "start": 26.6,
+      "end": 28.89,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 31.77,
+      "end": 35.947
+    },
+    {
+      "speaker": "user",
+      "start": 37.407,
+      "end": 41.017,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 42.207,
+      "end": 46.187
+    },
+    {
+      "speaker": "user",
+      "start": 47.397,
+      "end": 49.317
+    },
+    {
+      "speaker": "user",
+      "start": 50.287,
+      "end": 52.657,
+      "event": "distractor",
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 54.787,
+      "end": 56.577
+    },
+    {
+      "speaker": "user",
+      "start": 58.347,
+      "end": 60.247,
+      "event": "return_cue",
+      "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 65.727,
+      "end": 66.937,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00508 by scripts/render.py.",
@@ -44,27 +123,33 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.76,
-      "end": 1.89,
-      "text": "Hi, how are things with you?"
+      "start": 0.3,
+      "end": 2.27,
+      "text": "Hi there, how are you feeling today?"
     },
     {
       "kind": "reply",
-      "start": 8.67,
-      "end": 13.8,
-      "text": "Lovely feeling. Do you want a lazy weekend at home to recharge, or would you like to get out and do something?"
+      "start": 10.47,
+      "end": 19.32,
+      "text": "That happens if it stays wet. You can scrub it and re-season it in the oven, or just cook a lot of bacon in it and let the fat do the work. How patient are you feeling?"
     },
     {
       "kind": "ack",
-      "start": 19.32,
-      "end": 19.76,
-      "text": "Sure."
+      "start": 25.22,
+      "end": 25.63,
+      "text": "Alright."
     },
     {
       "kind": "resume",
-      "start": 24.46,
-      "end": 27.52,
-      "text": "So, a lazy weekend at home, or getting out and about?"
+      "start": 60.687,
+      "end": 64.857,
+      "text": "Okay. So, are we fixing that pan the patient way or the bacon way?"
+    },
+    {
+      "kind": "followup",
+      "start": 67.647,
+      "end": 75.087,
+      "text": "Scrub the rust off first with steel wool. Then fry a whole pack slowly, and wipe it with a little oil afterwards."
     }
   ]
 }

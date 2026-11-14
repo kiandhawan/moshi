@@ -1,131 +1,1546 @@
 {
-  "topic": "podcasts",
-  "contexts": [
+ "topic": "podcasts",
+ "contexts": [
+  {
+   "id": "podcasts.ctx1",
+   "turns": [
     {
-      "id": "podcasts.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I need a new podcast for my drive to work."},
-        {"speaker": "moshi", "text": "How long is the drive, and are you in the mood for true crime, comedy, or something you'd actually learn from?"}
-      ],
-      "pending": "drive length and podcast genre",
-      "think_reask": ["So, what are you in the mood for? True crime, comedy, or something educational?", "Time's up. Which kind of podcast for the drive?", "Any thoughts? Tell me the genre and I'll find something."],
-      "welcome_back": ["Welcome back! We were finding a podcast for your commute. What genre sounds good?", "Hi again. So, true crime, comedy or learning something?", "There you are. Still want that driving podcast? What kind?"],
-      "endings": [
-        {"user": "Comedy, please. Mornings are rough enough.", "moshi": "Fair. Look for a chatty improv or panel show, the episodes are easy to jump into."},
-        {"user": "Something educational, maybe history.", "moshi": "Great pick. Narrative history shows work really well on long drives."}
-      ]
+     "speaker": "user",
+     "text": "I need a new podcast for my drive to work."
     },
     {
-      "id": "podcasts.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "My friend and I want to start our own podcast."},
-        {"speaker": "moshi", "text": "Fun! What would it be about? Having a clear theme makes it much easier to find listeners."}
-      ],
-      "pending": "theme of their podcast",
-      "think_reask": ["So, have you landed on a theme for the podcast?", "Okay, what's the show going to be about?", "Time's up. Any ideas for the podcast's topic?"],
-      "welcome_back": ["Welcome back! We were brainstorming a theme for your new podcast.", "Hi again. Did you come up with a topic for the show?", "Good to have you back. So, what will your podcast be about?"],
-      "endings": [
-        {"user": "We both love bad movies, so we'll review terrible films.", "moshi": "That's a proven format. Pick one movie per episode and give it a silly rating system."},
-        {"user": "Maybe local food, trying a new restaurant in town each week.", "moshi": "Nice, very focused. Local businesses might even help promote it."}
-      ]
-    },
-    {
-      "id": "podcasts.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I've subscribed to way too many shows and I'm drowning in episodes."},
-        {"speaker": "moshi", "text": "Happens to everyone. Which ones could you drop? Think about which you actually look forward to."},
-        {"speaker": "user", "text": "Let me think about that."},
-        {"speaker": "moshi", "text": "Sure. Aim to keep maybe five."}
-      ],
-      "pending": "which podcasts to drop",
-      "think_reask": ["So, which shows are you keeping, and which go?", "Time's up. Which podcasts make the cut?", "Okay, have you figured out which ones you'd drop?"],
-      "welcome_back": ["Welcome back! We were trimming your podcast list. Which ones could go?", "Hi again. Any idea which shows you'll unsubscribe from?", "There you are. So, which podcasts are you keeping?"],
-      "endings": [
-        {"user": "I'll drop the news ones, they repeat what I read anyway.", "moshi": "Smart. That alone will probably cut your backlog in half."},
-        {"user": "Honestly, I'll only keep the three interview shows.", "moshi": "Great. Mark everything older than a month as played and start fresh."}
-      ]
+     "speaker": "moshi",
+     "text": "How long is the drive, and are you in the mood for true crime, comedy, or something you'd actually learn from?"
     }
-  ],
-  "side_conversations": [
-    {"id": "podcasts.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you finish that murder podcast you told me about?"},
-      {"speaker": "friend", "text": "Last night. Don't spoil it for yourself, the ending is wild."},
-      {"speaker": "user", "text": "I'm only on episode four. Is it worth pushing through the slow part?"},
-      {"speaker": "friend", "text": "Totally. Episode six is where it gets really good."},
-      {"speaker": "user", "text": "Okay, I'll listen while I cook tonight."}
-    ]},
-    {"id": "podcasts.side2", "turns": [
-      {"speaker": "user", "text": "Can you turn the speaker down a little? That host is so loud."},
-      {"speaker": "friend", "text": "Sorry, he gets really excited about space stuff."},
-      {"speaker": "user", "text": "What's this episode about anyway?"},
-      {"speaker": "friend", "text": "Whether we could ever live on Mars. Spoiler, probably not."},
-      {"speaker": "user", "text": "Ha. Send me the link, I'll listen later with headphones."},
-      {"speaker": "friend", "text": "Already did. Check your messages."}
-    ]},
-    {"id": "podcasts.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, which microphone did you buy for your show?"},
-      {"speaker": "friend", "text": "A cheap USB one. It's honestly fine for talking."},
-      {"speaker": "user", "text": "Does it pick up a lot of background noise?"},
-      {"speaker": "friend", "text": "A bit. I record in the closet now, the clothes soak up the echo."},
-      {"speaker": "user", "text": "The closet? That's genius."},
-      {"speaker": "friend", "text": "It's cramped though. You learn to sit very still."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "podcasts.dlg1", "turns": [
-      {"speaker": "user", "text": "Can you recommend a podcast that helps me fall asleep?"},
-      {"speaker": "moshi", "text": "There are shows made just for that, where someone reads slow, gentle stories. Calm nature documentaries in audio form work well too."},
-      {"speaker": "user", "text": "I tried one but the guy's voice was / kind of annoying."},
-      {"speaker": "moshi", "text": "Voice matters a lot for sleep. Try a few episodes from different hosts and keep the one that feels most soothing."},
-      {"speaker": "user", "text": "Should I use a sleep timer?"},
-      {"speaker": "moshi", "text": "Yes, set it for about thirty minutes. Otherwise you'll wake up halfway through the next episode."},
-      {"speaker": "user", "text": "That happened last week. Very confusing."},
-      {"speaker": "moshi", "text": "It's a common surprise. Turning off autoplay helps too."}
-    ]},
-    {"id": "podcasts.dlg2", "turns": [
-      {"speaker": "user", "text": "How do people listen to podcasts at double speed? I can't understand anything."},
-      {"speaker": "moshi", "text": "Most people build up gradually. Try one and a quarter speed for a week, then nudge it up."},
-      {"speaker": "user", "text": "Is it even worth it?"},
-      {"speaker": "moshi", "text": "For slow talk shows, it saves a lot of time. For stories or comedy, normal speed usually works better because timing matters."},
-      {"speaker": "user", "text": "Makes sense. I mostly listen to / long interviews with scientists."},
-      {"speaker": "moshi", "text": "Those are perfect for a slight speed boost. Many apps also trim silences automatically, which helps without sounding rushed."},
-      {"speaker": "user", "text": "Oh, I'll turn that on."},
-      {"speaker": "moshi", "text": "It's usually in the playback settings. You'll barely notice it."}
-    ]},
-    {"id": "podcasts.dlg3", "turns": [
-      {"speaker": "user", "text": "I want to get into podcasts but I don't know where to start."},
-      {"speaker": "moshi", "text": "Think about what you already enjoy, like a hobby, a sport or a kind of book. There's a podcast for almost every interest."},
-      {"speaker": "user", "text": "I really like cooking and / weird history facts."},
-      {"speaker": "moshi", "text": "Food history shows combine both, they tell stories about where dishes came from. Plenty of history shows also do short bite-sized episodes."},
-      {"speaker": "user", "text": "Do I need a special app?"},
-      {"speaker": "moshi", "text": "Most phones come with a podcast app already. Just search the topic, subscribe, and new episodes download on their own."},
-      {"speaker": "user", "text": "Actually, I'd rather start with something short."},
-      {"speaker": "moshi", "text": "Good idea. Look for daily shows, they're often under fifteen minutes, perfect for a coffee break."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "podcasts.opt1",
-     "lead_in": "I've got a twelve-hour flight coming up and I need help choosing what to listen to.",
-     "options": [
-       "The first one is a true crime series with ten episodes about a bank robbery in the seventies.",
-       "Then there's a comedy podcast where three friends rank random things, like cereals or holidays.",
-       "There's also a long history show about the Roman Empire, something like twenty hours.",
-       "And the last option is a self-improvement podcast about building better habits."
-     ],
-     "moshi_comment": [
-       "The Roman history show could easily fill the whole flight, and it's absorbing enough to make the time pass. The comedy one is better if you want to drift in and out. Are you hoping to sleep on the plane?",
-       "I'd take the true crime series. Ten episodes is a great binge for a long flight, and the story will pull you along. Save the habits podcast for when you can actually take notes."
-     ]},
-    {"id": "podcasts.opt2",
-     "lead_in": "I'm buying gear for my podcast and I can't decide what to get.",
-     "options": [
-       "Option one is a USB microphone for about a hundred dollars that plugs right into my laptop.",
-       "Option two is a proper mixer and two XLR microphones, which costs around four hundred.",
-       "Then there's a portable recorder with built-in mics, good for recording on the go."
-     ],
-     "moshi_comment": [
-       "If it's just you at your desk, the USB microphone is plenty and much easier to set up. The mixer setup only makes sense if you'll regularly have a guest in the same room. Will you record alone?",
-       "The portable recorder is great if you plan to interview people out in the world. For a studio-style show with a co-host, though, the two XLR microphones will sound noticeably better."
-     ]}
-  ]
+   ],
+   "pending": "drive length and podcast genre",
+   "think_reask": [
+    "So, what are you in the mood for? True crime, comedy, or something educational?",
+    "Time's up. Which kind of podcast for the drive?",
+    "Any thoughts? Tell me the genre and I'll find something."
+   ],
+   "welcome_back": [
+    "Welcome back! We were finding a podcast for your commute. What genre sounds good?",
+    "Hi again. So, true crime, comedy or learning something?",
+    "There you are. Still want that driving podcast? What kind?"
+   ],
+   "endings": [
+    {
+     "user": "Comedy, please. Mornings are rough enough.",
+     "moshi": "Fair. Look for a chatty improv or panel show, the episodes are easy to jump into."
+    },
+    {
+     "user": "Something educational, maybe history.",
+     "moshi": "Great pick. Narrative history shows work really well on long drives."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friend and I want to start our own podcast."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun! What would it be about? Having a clear theme makes it much easier to find listeners."
+    }
+   ],
+   "pending": "theme of their podcast",
+   "think_reask": [
+    "So, have you landed on a theme for the podcast?",
+    "Okay, what's the show going to be about?",
+    "Time's up. Any ideas for the podcast's topic?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were brainstorming a theme for your new podcast.",
+    "Hi again. Did you come up with a topic for the show?",
+    "Good to have you back. So, what will your podcast be about?"
+   ],
+   "endings": [
+    {
+     "user": "We both love bad movies, so we'll review terrible films.",
+     "moshi": "That's a proven format. Pick one movie per episode and give it a silly rating system."
+    },
+    {
+     "user": "Maybe local food, trying a new restaurant in town each week.",
+     "moshi": "Nice, very focused. Local businesses might even help promote it."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've subscribed to way too many shows and I'm drowning in episodes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Happens to everyone. Which ones could you drop? Think about which you actually look forward to."
+    },
+    {
+     "speaker": "user",
+     "text": "Let me think about that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. Aim to keep maybe five."
+    }
+   ],
+   "pending": "which podcasts to drop",
+   "think_reask": [
+    "So, which shows are you keeping, and which go?",
+    "Time's up. Which podcasts make the cut?",
+    "Okay, have you figured out which ones you'd drop?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were trimming your podcast list. Which ones could go?",
+    "Hi again. Any idea which shows you'll unsubscribe from?",
+    "There you are. So, which podcasts are you keeping?"
+   ],
+   "endings": [
+    {
+     "user": "I'll drop the news ones, they repeat what I read anyway.",
+     "moshi": "Smart. That alone will probably cut your backlog in half."
+    },
+    {
+     "user": "Honestly, I'll only keep the three interview shows.",
+     "moshi": "Great. Mark everything older than a month as played and start fresh."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I fall asleep to podcasts, but my wife wants total silence at night."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair on both sides. One earbud in, or the speaker on low with a sleep timer so it cuts out once you drift off?"
+    }
+   ],
+   "pending": "one earbud or speaker with a sleep timer",
+   "think_reask": [
+    "So, earbud or timer?",
+    "Which would keep the peace, earbud or the timer?"
+   ],
+   "welcome_back": [
+    "The bedtime standoff. Earbud, or speaker with a timer?",
+    "So, how are you keeping both of you happy at night?"
+   ],
+   "endings": [
+    {
+     "user": "Earbud. She'll never hear a thing.",
+     "moshi": "Get a flat, soft one, normal earbuds hurt if you sleep on your side."
+    },
+    {
+     "user": "Timer. Fifteen minutes and done.",
+     "moshi": "Nice compromise. Pick calm episodes, so you're not wide awake waiting for the ending."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm training for a half marathon and I need something for my long runs."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. A chatty interview show that you can drift in and out of, or a story series that pulls you along?"
+    }
+   ],
+   "pending": "interview show or story series for running",
+   "think_reask": [
+    "So, chatty interviews or a gripping story?",
+    "Decided what to run to?"
+   ],
+   "welcome_back": [
+    "Your long runs. Interviews, or a story series?",
+    "So, what's going in your ears on Sunday?"
+   ],
+   "endings": [
+    {
+     "user": "A story. I'll run further just to find out what happens.",
+     "moshi": "Ha, that's the trick. Save new episodes only for runs."
+    },
+    {
+     "user": "Interviews. I zone out a lot, a story would lose me.",
+     "moshi": "Then go for something easygoing, where you can miss a minute and not care."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My podcast has been going for a year and it's got about twelve listeners."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Twelve loyal people is still something. Is it getting to you?"
+    },
+    {
+     "speaker": "user",
+     "text": "Tired, honestly. I put hours into every episode."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then let's be strategic. Keep the format and push harder on promotion, or rethink the show itself?"
+    }
+   ],
+   "pending": "more promotion or rethink the show",
+   "think_reask": [
+    "So, promote harder, or reinvent the show?",
+    "Any decision on your podcast's future?"
+   ],
+   "welcome_back": [
+    "Your show. Push promotion, or change the format?",
+    "So, where do you go from here with it?"
+   ],
+   "endings": [
+    {
+     "user": "Rethink it. I'm bored of it too.",
+     "moshi": "That's telling. If you're bored, listeners probably feel it. Try a shorter, sharper format."
+    },
+    {
+     "user": "Promotion. I believe in it, nobody's found it yet.",
+     "moshi": "Then guest on similar shows and share short clips, that's where most growth comes from."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want a guest for my local history podcast."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. Start with someone nearby, like a neighbour with a great story, or reach out to a well-known historian?"
+    }
+   ],
+   "pending": "local guest or a well-known historian",
+   "think_reask": [
+    "So, local storyteller or big name?",
+    "Who are you going to invite?"
+   ],
+   "welcome_back": [
+    "Your first guest. Someone local, or a bigger name?",
+    "So, who's getting the invite?"
+   ],
+   "endings": [
+    {
+     "user": "The old man who runs the hardware shop. He knows everything.",
+     "moshi": "Perfect, those are the best episodes. Record at the shop if he'll let you."
+    },
+    {
+     "user": "A historian. Might as well aim high.",
+     "moshi": "Why not. Keep your email short, and mention a specific episode they'd fit."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dad only ever listens to the radio. I want to get him into podcasts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun mission. What's he into, history, sport, or something else?"
+    }
+   ],
+   "pending": "what the dad is into",
+   "think_reask": [
+    "So, what's your dad into?",
+    "What would hook him, history or sport?"
+   ],
+   "welcome_back": [
+    "Your dad and podcasts. What does he like?",
+    "So, what might win him over?"
+   ],
+   "endings": [
+    {
+     "user": "Sport, absolutely. He talks to the TV during football.",
+     "moshi": "Then a football chat show will feel just like radio for him. Set it up on his phone yourself."
+    },
+    {
+     "user": "History. He reads about old wars constantly.",
+     "moshi": "Great, a long narrative history series will suit him perfectly. Start him on the first episode."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My co-host and I are fighting about episode length."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic. Where do you each stand?"
+    },
+    {
+     "speaker": "user",
+     "text": "I want twenty minutes. He wants an hour."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big gap. Go short and tight, or long and chatty, or alternate between the two?"
+    }
+   ],
+   "pending": "short episodes, long episodes or alternate",
+   "think_reask": [
+    "So, short, long, or both?",
+    "Did you land on an episode length?"
+   ],
+   "welcome_back": [
+    "Episode length. Short, long, or alternating?",
+    "So, who wins the length fight?"
+   ],
+   "endings": [
+    {
+     "user": "Alternate. Short weekly, long once a month.",
+     "moshi": "Clever. You'll find out from the numbers which one people actually like."
+    },
+    {
+     "user": "Short. People are busy.",
+     "moshi": "Agreed for many listeners. Just make sure there's no filler."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "A mattress company offered to sponsor my podcast!"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Congrats! Take the money and read the ad, or keep the show ad-free for now?"
+    }
+   ],
+   "pending": "accept the sponsor or stay ad-free",
+   "think_reask": [
+    "So, sponsor or ad-free?",
+    "Decided on the mattress deal?"
+   ],
+   "welcome_back": [
+    "The sponsor offer. Taking it, or staying ad-free?",
+    "So, what are you telling the mattress people?"
+   ],
+   "endings": [
+    {
+     "user": "Taking it. Microphones aren't free.",
+     "moshi": "True. Read the ad in your own voice, it lands better than a script."
+    },
+    {
+     "user": "No. I don't even like their mattresses.",
+     "moshi": "Fair enough. Only promote things you'd actually recommend to a friend."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're driving eight hours with three kids this weekend. I need podcasts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Smart. A kids' mystery series to keep them guessing, or a science show full of weird facts?"
+    }
+   ],
+   "pending": "mystery series or science show for kids",
+   "think_reask": [
+    "So, mystery or weird science?",
+    "What are the kids listening to?"
+   ],
+   "welcome_back": [
+    "Your road trip. Mystery series, or science facts?",
+    "So, which one for the kids?"
+   ],
+   "endings": [
+    {
+     "user": "Mystery. They'll beg for the next episode.",
+     "moshi": "Exactly. Pause at the cliffhangers for snack breaks."
+    },
+    {
+     "user": "Science. My oldest asks questions all day anyway.",
+     "moshi": "Perfect, and he'll have a hundred new questions by the end of the drive."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just found a show I love, but it has six hundred episodes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh no, the backlog. Start from the very beginning, or jump to recent episodes and the fan favourites?"
+    }
+   ],
+   "pending": "start from the beginning or recent and best-of",
+   "think_reask": [
+    "So, episode one, or the greatest hits?",
+    "Where are you starting the big show?"
+   ],
+   "welcome_back": [
+    "Your six hundred episodes. From the start, or the best ones?",
+    "So, how are you tackling that backlog?"
+   ],
+   "endings": [
+    {
+     "user": "The beginning. I want the whole journey.",
+     "moshi": "Committed! Early episodes are often rough, so give it a few before judging."
+    },
+    {
+     "user": "Fan favourites. I don't have a spare year.",
+     "moshi": "Wise. Fans usually post lists of the best ones, start there."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My manager wants the whole team to listen to a leadership podcast and discuss it on Monday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Homework, nice. How long is it?"
+    },
+    {
+     "speaker": "user",
+     "text": "Ninety minutes. Ugh."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay. Listen properly and take notes, or speed it up and just catch the main points?"
+    }
+   ],
+   "pending": "full listen with notes or sped up for the gist",
+   "think_reask": [
+    "So, proper notes, or the fast version?",
+    "How are you getting through the homework podcast?"
+   ],
+   "welcome_back": [
+    "The Monday podcast. Full listen, or speed run?",
+    "So, notes or the gist?"
+   ],
+   "endings": [
+    {
+     "user": "Fast. I'll just grab two points to mention.",
+     "moshi": "Perfect for a team chat. One thing you agreed with and one you didn't."
+    },
+    {
+     "user": "Notes. I want to impress her, honestly.",
+     "moshi": "Then jot down one idea you'd actually try at work. Managers love that."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My co-host moved to another city, so our podcast is in trouble."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can survive this. Record remotely each week, or meet up in person once a month and batch a few episodes?"
+    }
+   ],
+   "pending": "remote recording or monthly in-person batches",
+   "think_reask": [
+    "So, remote, or batch in person?",
+    "Any plan for the long-distance show?"
+   ],
+   "welcome_back": [
+    "Your co-host problem. Remote, or monthly batches?",
+    "So, how is the show going to survive?"
+   ],
+   "endings": [
+    {
+     "user": "Remote. We'll each record our own track.",
+     "moshi": "Good, that keeps the sound clean. Do a quick test before every session."
+    },
+    {
+     "user": "Batches. The chemistry's better in a room.",
+     "moshi": "Agreed, it often is. Just record extra so you've got a buffer."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I need a name for my gardening podcast and I'm stuck."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun. Do you lean toward puns, or something plain?"
+    },
+    {
+     "speaker": "user",
+     "text": "My friends all want puns."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Puns are memorable but can get cheesy. A clever pun, or a simple name people can search easily?"
+    }
+   ],
+   "pending": "pun name or plain searchable name",
+   "think_reask": [
+    "So, pun or plain?",
+    "Settled on a name style?"
+   ],
+   "welcome_back": [
+    "Your podcast name. Pun, or plain?",
+    "So, which direction for the name?"
+   ],
+   "endings": [
+    {
+     "user": "Plain. I want people to find it.",
+     "moshi": "Smart. Put the word gardening in the title, that helps a lot with search."
+    },
+    {
+     "user": "A pun. Something like Lettuce Talk.",
+     "moshi": "Ha, that's cute. Just check nobody else already uses it."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should my podcast be video too? Everyone seems to do video now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots do, but it's more work. Add a camera and go video, or stay audio only and keep it simple?"
+    }
+   ],
+   "pending": "video or audio only",
+   "think_reask": [
+    "So, video or audio only?",
+    "Decided on the camera question?"
+   ],
+   "welcome_back": [
+    "Video, or staying audio?",
+    "So, is the camera going on?"
+   ],
+   "endings": [
+    {
+     "user": "Audio. I record in my pyjamas.",
+     "moshi": "Ha, a strong argument. Audio is perfectly fine for most shows."
+    },
+    {
+     "user": "Video. I'll set up a camera on a shelf.",
+     "moshi": "Great. Get the lighting right, that matters more than the camera."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want a scary audio drama for Halloween night."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun. Something mildly spooky with candles and snacks, or properly terrifying, lights out?"
+    }
+   ],
+   "pending": "mildly spooky or terrifying",
+   "think_reask": [
+    "So, mild or terrifying?",
+    "How scared do you want to be?"
+   ],
+   "welcome_back": [
+    "Halloween listening. Spooky, or truly scary?",
+    "So, how brave are you feeling?"
+   ],
+   "endings": [
+    {
+     "user": "Terrifying. Lights out.",
+     "moshi": "Then pick one with good sound design and wear headphones. Good luck sleeping."
+    },
+    {
+     "user": "Mild. My little brother's listening too.",
+     "moshi": "Good choice. A ghost story series with a bit of humour would be perfect."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandparents have amazing stories and I want to record them as a podcast."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What a treasure. Keep it private for the family, or publish it for anyone to hear?"
+    }
+   ],
+   "pending": "private family podcast or public",
+   "think_reask": [
+    "So, private or public?",
+    "Decided who it's for?"
+   ],
+   "welcome_back": [
+    "Your grandparents' stories. Family only, or public?",
+    "So, who gets to hear it?"
+   ],
+   "endings": [
+    {
+     "user": "Family only. Some stories are pretty personal.",
+     "moshi": "Wise. You can share it through a private link."
+    },
+    {
+     "user": "Public. Other people would love them too.",
+     "moshi": "Lovely idea. Just check they're happy with that before publishing."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friend asked me to be a guest on her podcast next week. I'm nervous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's exciting. What's the topic?"
+    },
+    {
+     "speaker": "user",
+     "text": "My job, I'm a nurse in an emergency room."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great topic. Prepare a few notes and stories, or go in spontaneous and just chat?"
+    }
+   ],
+   "pending": "prepare notes or go spontaneous",
+   "think_reask": [
+    "So, notes or spontaneous?",
+    "How are you preparing for the guest spot?"
+   ],
+   "welcome_back": [
+    "The guest appearance. Notes, or winging it?",
+    "So, are you planning anything for it?"
+   ],
+   "endings": [
+    {
+     "user": "A few notes. Three stories I can tell well.",
+     "moshi": "Perfect. That's enough to feel safe without sounding scripted."
+    },
+    {
+     "user": "Spontaneous. I talk about it every day.",
+     "moshi": "True, you know it inside out. Maybe just think of one story to start with."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I started biking to work, so I've lost my podcast time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah. Use bone conduction headphones so you can still hear traffic, or save podcasts for the evenings?"
+    }
+   ],
+   "pending": "bone conduction headphones or evening listening",
+   "think_reask": [
+    "So, special headphones or evenings?",
+    "Decided what to do about your podcast time?"
+   ],
+   "welcome_back": [
+    "Your bike commute. Bone conduction, or evenings?",
+    "So, how are you fitting podcasts in now?"
+   ],
+   "endings": [
+    {
+     "user": "Evenings. I'd rather focus on the road.",
+     "moshi": "Very sensible. Maybe while cooking dinner."
+    },
+    {
+     "user": "Bone conduction. I need my shows.",
+     "moshi": "Okay. Keep the volume low, and skip anything that needs full concentration."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "A few friends and I keep talking about the same podcasts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds like a club waiting to happen. Start a group chat, or meet up once a month to talk properly?"
+    }
+   ],
+   "pending": "group chat or monthly meetup",
+   "think_reask": [
+    "So, group chat, or meetup?",
+    "How are you going to organise the podcast crew?"
+   ],
+   "welcome_back": [
+    "Your podcast friends. Chat, or monthly meetups?",
+    "So, what's the plan for your little club?"
+   ],
+   "endings": [
+    {
+     "user": "Monthly meetups. With food.",
+     "moshi": "Perfect. Pick one episode each time so everyone listens to the same one."
+    },
+    {
+     "user": "Group chat. We're all too busy.",
+     "moshi": "Fair. Pin one episode a week so the chat has a focus."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.ctx22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Editing my podcast takes me longer than recording it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most podcasters hit that wall. Keep editing it yourself and speed up, or pay an editor?"
+    }
+   ],
+   "pending": "edit yourself or pay an editor",
+   "think_reask": [
+    "So, keep editing, or hire someone?",
+    "Decided about the editing?"
+   ],
+   "welcome_back": [
+    "Editing. Yourself, or an editor?",
+    "So, are you hiring help?"
+   ],
+   "endings": [
+    {
+     "user": "Hire someone. My time is worth more.",
+     "moshi": "Worth it. Many editors do it for a set price per episode."
+    },
+    {
+     "user": "Myself, but less fussy.",
+     "moshi": "Fair. Cut only the big mistakes, listeners don't mind little ums."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "podcasts.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you finish that murder podcast you told me about?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Last night. Don't spoil it for yourself, the ending is wild."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm only on episode four. Is it worth pushing through the slow part?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Totally. Episode six is where it gets really good."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll listen while I cook tonight."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you turn the speaker down a little? That host is so loud."
+    },
+    {
+     "speaker": "friend",
+     "text": "Sorry, he gets really excited about space stuff."
+    },
+    {
+     "speaker": "user",
+     "text": "What's this episode about anyway?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Whether we could ever live on Mars. Spoiler, probably not."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha. Send me the link, I'll listen later with headphones."
+    },
+    {
+     "speaker": "friend",
+     "text": "Already did. Check your messages."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, which microphone did you buy for your show?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A cheap USB one. It's honestly fine for talking."
+    },
+    {
+     "speaker": "user",
+     "text": "Does it pick up a lot of background noise?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A bit. I record in the closet now, the clothes soak up the echo."
+    },
+    {
+     "speaker": "user",
+     "text": "The closet? That's genius."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's cramped though. You learn to sit very still."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, we can't use that intro music. It sounds like a phone commercial."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's upbeat. People like upbeat."
+    },
+    {
+     "speaker": "user",
+     "text": "It's aggressively upbeat. Can we try the guitar one again?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The guitar one is so sleepy. Nobody's staying past ten seconds."
+    },
+    {
+     "speaker": "user",
+     "text": "What if we use the guitar but speed it up?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Then it sounds like a chipmunk wedding."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, compromise. Let's each pick three and play them for my sister."
+    },
+    {
+     "speaker": "friend",
+     "text": "Deal. She'll pick mine, obviously."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you skip the ad? It's the third one this episode."
+    },
+    {
+     "speaker": "friend",
+     "text": "No way, I love this guy's ad voice."
+    },
+    {
+     "speaker": "user",
+     "text": "You love an ad for socks?"
+    },
+    {
+     "speaker": "friend",
+     "text": "He makes socks sound like a spiritual experience."
+    },
+    {
+     "speaker": "user",
+     "text": "We're losing a minute of my life here."
+    },
+    {
+     "speaker": "friend",
+     "text": "Thirty seconds. Look, it's back to the show."
+    },
+    {
+     "speaker": "user",
+     "text": "Finally. Wait, did they say what happened to the missing boat?"
+    },
+    {
+     "speaker": "friend",
+     "text": "That's what you missed while complaining."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can we still record tonight?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Ugh, I'm so tired. Can we push it to Thursday?"
+    },
+    {
+     "speaker": "user",
+     "text": "We pushed it last week too. The episode's due Friday."
+    },
+    {
+     "speaker": "friend",
+     "text": "I know, I know."
+    },
+    {
+     "speaker": "user",
+     "text": "How about we just do a short one tonight? Thirty minutes, tops."
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine. But you're bringing snacks."
+    },
+    {
+     "speaker": "user",
+     "text": "Deal. Crisps and that awful lemonade you like."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's not awful, it's an acquired taste."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "podcasts.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you recommend a podcast that helps me fall asleep?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "There are shows made just for that, where someone reads slow, gentle stories. Calm nature documentaries in audio form work well too."
+    },
+    {
+     "speaker": "user",
+     "text": "I tried one but the guy's voice was / kind of annoying."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Voice matters a lot for sleep. Try a few episodes from different hosts and keep the one that feels most soothing."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I use a sleep timer?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, set it for about thirty minutes. Otherwise you'll wake up halfway through the next episode."
+    },
+    {
+     "speaker": "user",
+     "text": "That happened last week. Very confusing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a common surprise. Turning off autoplay helps too."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do people listen to podcasts at double speed? I can't understand anything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most people build up gradually. Try one and a quarter speed for a week, then nudge it up."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it even worth it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For slow talk shows, it saves a lot of time. For stories or comedy, normal speed usually works better because timing matters."
+    },
+    {
+     "speaker": "user",
+     "text": "Makes sense. I mostly listen to / long interviews with scientists."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those are perfect for a slight speed boost. Many apps also trim silences automatically, which helps without sounding rushed."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I'll turn that on."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's usually in the playback settings. You'll barely notice it."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to get into podcasts but I don't know where to start."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Think about what you already enjoy, like a hobby, a sport or a kind of book. There's a podcast for almost every interest."
+    },
+    {
+     "speaker": "user",
+     "text": "I really like cooking and / weird history facts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Food history shows combine both, they tell stories about where dishes came from. Plenty of history shows also do short bite-sized episodes."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need a special app?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most phones come with a podcast app already. Just search the topic, subscribe, and new episodes download on their own."
+    },
+    {
+     "speaker": "user",
+     "text": "Actually, I'd rather start with something short."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. Look for daily shows, they're often under fifteen minutes, perfect for a coffee break."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do podcasts actually make money? Most of them are free."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly through ads. Hosts read sponsor messages, and companies pay based on how many people listen."
+    },
+    {
+     "speaker": "user",
+     "text": "So tiny shows make nothing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often very little from ads. Smaller shows lean on listener support, like monthly memberships with bonus episodes."
+    },
+    {
+     "speaker": "user",
+     "text": "People pay for bonus episodes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Loyal fans do. Some shows also sell merch or do live tours."
+    },
+    {
+     "speaker": "user",
+     "text": "Live tours? For a podcast?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, big shows sell out theatres. Fans love seeing hosts in person."
+    },
+    {
+     "speaker": "user",
+     "text": "That's wild. / I should start a podcast."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, maybe. Just know most shows take years to earn anything."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you recommend a history podcast? I've finished all the ones I know."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. What period do you like? Ancient history, medieval, or more modern stuff?"
+    },
+    {
+     "speaker": "user",
+     "text": "Ancient, especially Rome."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then look for a long narrative series on the Roman Republic. Some have over a hundred episodes, told like a story."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds perfect. Is it dry?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The good ones aren't. They focus on the people and the drama, the betrayals and the battles."
+    },
+    {
+     "speaker": "user",
+     "text": "And something shorter, for when I'm in the car?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a show that answers one history question per episode. Twenty minutes, easy to follow."
+    },
+    {
+     "speaker": "user",
+     "text": "Great. I'll look for both."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Enjoy. Rome has enough drama for years of listening."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My podcast recordings sound so echoey. What can I do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Echo usually comes from hard surfaces. Record in a room with soft things, like a bedroom with carpet and curtains."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm in my kitchen right now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Kitchens are the worst for echo, lots of hard surfaces. Even moving to the living room would help."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I can't move?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hang blankets around you, or put pillows on the table. Also get closer to the mic, so it picks up more of you and less of the room."
+    },
+    {
+     "speaker": "user",
+     "text": "How close?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About a hand's width away. Speak slightly to the side so you don't pop the Ps."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. / I'll try the bedroom tonight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great. Record a short test and compare."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it weird that I love true crime podcasts? My sister thinks it's creepy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not weird at all, millions of people love them. They're often about puzzles, justice and understanding people."
+    },
+    {
+     "speaker": "user",
+     "text": "That's how I feel. It's the mystery."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Some people also find them a way to process fears in a safe setting."
+    },
+    {
+     "speaker": "user",
+     "text": "But do you think it's disrespectful to the victims?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be, depending on the show. The better ones focus on the victims' stories and treat families with care."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm, some of mine are pretty jokey."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe check if their tone sits well with you. There are good serious shows out there."
+    },
+    {
+     "speaker": "user",
+     "text": "Fair. I'll be pickier."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a thoughtful way to enjoy it."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My phone storage is full and it says podcasts are taking up twelve gigabytes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah, that's probably automatic downloads. Your app may be saving every new episode of every show."
+    },
+    {
+     "speaker": "user",
+     "text": "I follow like forty shows."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That'll do it. In the app settings, look for automatic downloads and turn them off, or limit them to the latest episode."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I delete the old ones?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, there's usually an option to remove played episodes. You can also set it to do that automatically."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, found it. / Wait, does it delete my unplayed ones too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Only if you choose that. Pick remove played episodes only."
+    },
+    {
+     "speaker": "user",
+     "text": "Done. That's much better."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. Your phone will thank you."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm interviewing my first guest on my podcast tomorrow. How do I ask good questions?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask open questions, ones that can't be answered with yes or no. Start with how or what, or tell me about."
+    },
+    {
+     "speaker": "user",
+     "text": "Like, tell me about the first time you baked?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Then listen and follow up on what they say, rather than rushing to your next question."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm scared of awkward silences."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Silences are often when guests say the best things. Count to three in your head before jumping in."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I send them the questions beforehand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Send the topics, not the exact questions. That keeps answers natural."
+    },
+    {
+     "speaker": "user",
+     "text": "Good tip. Thanks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Have fun with it. Enjoy the conversation, that's what listeners will hear."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My nine-year-old wants to listen to podcasts. What's good for kids?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of options. Story podcasts with fairy tales, science shows that answer kids' questions, or funny quiz shows."
+    },
+    {
+     "speaker": "user",
+     "text": "She loves animals."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then look for a nature show for kids, where a host explores one animal per episode. Usually fifteen minutes or so."
+    },
+    {
+     "speaker": "user",
+     "text": "Are they safe? / Like, no weird ads?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most kids' shows keep ads child-friendly, but check a couple of episodes first."
+    },
+    {
+     "speaker": "user",
+     "text": "Should she listen alone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "At first, listen together. Then she can pick her own, and you'll know the shows."
+    },
+    {
+     "speaker": "user",
+     "text": "Great. She'll love this."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Animal facts at dinner, here you come."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I get more people to listen to my podcast?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few things work well. Be a guest on similar podcasts, that puts you in front of listeners who already like your kind of show."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, what else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Share short clips on social media, the funniest or most surprising moments. Clips grab attention better than links."
+    },
+    {
+     "speaker": "user",
+     "text": "I hate social media though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then focus on guesting and asking listeners to tell a friend. Word of mouth is powerful."
+    },
+    {
+     "speaker": "user",
+     "text": "Does posting regularly matter?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot. Pick a schedule you can keep, even every two weeks, and stick to it."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. That's doable."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Consistency beats everything. Keep going."
+    }
+   ]
+  },
+  {
+   "id": "podcasts.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just listened to an episode about octopuses and my mind is blown."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Octopuses are amazing. What part blew your mind?"
+    },
+    {
+     "speaker": "user",
+     "text": "They have three hearts! And blue blood!"
+    },
+    {
+     "speaker": "moshi",
+     "text": "True. And most of their neurons are in their arms, so each arm can sort of think for itself."
+    },
+    {
+     "speaker": "user",
+     "text": "Wait, the arms think? / That's terrifying."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little. They can also change colour and texture in a split second, even though they're colourblind."
+    },
+    {
+     "speaker": "user",
+     "text": "How do they do that if they can't see colour?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Scientists are still working it out. One idea is their skin can sense light."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'm going to need a whole series on octopuses now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair. There's plenty to learn."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "podcasts.opt1",
+   "lead_in": "I've got a twelve-hour flight coming up and I need help choosing what to listen to.",
+   "options": [
+    "The first one is a true crime series with ten episodes about a bank robbery in the seventies.",
+    "Then there's a comedy podcast where three friends rank random things, like cereals or holidays.",
+    "There's also a long history show about the Roman Empire, something like twenty hours.",
+    "And the last option is a self-improvement podcast about building better habits."
+   ],
+   "moshi_comment": [
+    "The Roman history show could easily fill the whole flight, and it's absorbing enough to make the time pass. The comedy one is better if you want to drift in and out. Are you hoping to sleep on the plane?",
+    "I'd take the true crime series. Ten episodes is a great binge for a long flight, and the story will pull you along. Save the habits podcast for when you can actually take notes."
+   ]
+  },
+  {
+   "id": "podcasts.opt2",
+   "lead_in": "I'm buying gear for my podcast and I can't decide what to get.",
+   "options": [
+    "Option one is a USB microphone for about a hundred dollars that plugs right into my laptop.",
+    "Option two is a proper mixer and two XLR microphones, which costs around four hundred.",
+    "Then there's a portable recorder with built-in mics, good for recording on the go."
+   ],
+   "moshi_comment": [
+    "If it's just you at your desk, the USB microphone is plenty and much easier to set up. The mixer setup only makes sense if you'll regularly have a guest in the same room. Will you record alone?",
+    "The portable recorder is great if you plan to interview people out in the world. For a studio-style show with a co-host, though, the two XLR microphones will sound noticeably better."
+   ]
+  },
+  {
+   "id": "podcasts.opt3",
+   "lead_in": "I need a new show to binge and I've got three recommendations.",
+   "options": [
+    "A comedy podcast where three friends rank random things, like sandwiches and weather.",
+    "A deep investigation into a small-town scandal, twelve episodes with interviews and court tapes.",
+    "A calm science show where a host explains one strange fact about nature every episode."
+   ],
+   "moshi_comment": [
+    "If you want to laugh, the ranking show sounds like great company. The investigation is the most bingeable, and the science show is perfect for winding down at night.",
+    "For a proper binge, I'd go with the investigation, twelve episodes with a real story arc. The comedy one is better for dipping in and out, and the science show is a nice palate cleanser."
+   ]
+  },
+  {
+   "id": "podcasts.opt4",
+   "lead_in": "I'm launching my own podcast and I can't pick a format.",
+   "options": [
+    "Me alone, talking about a topic each week, which is easy to schedule but might get lonely.",
+    "Interviews with a different guest every episode, more variety, but booking people is a lot of work.",
+    "Me and my best friend chatting together, which would be fun, though we tend to go off topic.",
+    "Or a mix, mostly solo with a guest once a month."
+   ],
+   "moshi_comment": [
+    "Chatting with your best friend sounds the most fun, which helps you stick with it. Interviews add variety but cost time, and the mix could be a nice way to start.",
+    "Solo is the simplest, but it's hard to keep energy up alone. I'd try the mix, solo episodes to build your voice and a guest now and then to keep things fresh."
+   ]
+  },
+  {
+   "id": "podcasts.opt5",
+   "lead_in": "I need somewhere to record my podcast and I've got three options.",
+   "options": [
+    "My walk-in wardrobe, which is free and quiet thanks to all the clothes, but it's hot and cramped.",
+    "A rented studio downtown, fifty an hour, with proper soundproofing and an engineer.",
+    "The library's free recording booth, but you have to book it a week in advance."
+   ],
+   "moshi_comment": [
+    "The wardrobe is a classic for a reason, clothes kill echo. The library booth is a great free upgrade if you can plan ahead, and the studio is worth it for special episodes.",
+    "I'd start in the wardrobe and see how it goes. If the heat gets too much, try the library booth, and keep the studio for interviews with important guests."
+   ]
+  }
+ ]
 }

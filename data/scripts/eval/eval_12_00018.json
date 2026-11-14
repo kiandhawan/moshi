@@ -7,151 +7,137 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "door",
  "wait_type": "door",
  "conditions": [],
  "topics": [
-  "family_visit"
+  "cycling"
  ],
- "topic": "family_visit",
+ "topic": "cycling",
  "voices": {
-  "user": "7bb342e710854139b1d6e12411229f1f",
-  "friend": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "933563129e564b19a115bedd57b7406a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_24",
+  "greet_06",
   "greet_ans_15",
-  "door_instr_02",
-  "ack_07",
-  "door_08",
-  "door_cue_04"
+  "door_instr_05",
+  "ack_15",
+  "door_37",
+  "door_cue_08"
  ],
  "block_ids": [
-  "family_visit.ctx1"
+  "cycling.ctx22",
+  "door_37"
  ],
- "est_total_sec": 58.67,
- "est_speech_sec": 40.77,
+ "est_total_sec": 51.89,
+ "est_speech_sec": 32.82,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, what's up? How are you doing?",
-   "est_sec": 2.27,
-   "gap_before": 0.64,
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.4,
    "role": "greeting",
-   "phrasing": "greet_24",
+   "phrasing": "greet_06",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "I'm fine, thanks for asking.",
    "est_sec": 1.65,
-   "gap_before": 0.84,
+   "gap_before": 0.35,
    "event": "greeting_answer",
    "phrasing": "greet_ans_15"
   },
   {
    "speaker": "user",
-   "text": "My parents are staying with us next week and our apartment is tiny.",
-   "est_sec": 4.13,
-   "gap_before": 0.28,
+   "text": "First race Sunday. I'm panicking. Should I cram in loads of training?",
+   "est_sec": 3.82,
+   "gap_before": 0.49,
    "event": "ordinary_request",
-   "block": "family_visit.ctx1"
+   "block": "cycling.ctx22"
   },
   {
    "speaker": "moshi",
-   "text": "That can be tricky. Would you give them your bedroom and take the couch, or book them a hotel nearby?",
-   "est_sec": 6.3,
-   "gap_before": 1.2,
+   "text": "Please don't, it's too late for that to help. How do your legs feel right now, heavy or fresh?",
+   "est_sec": 5.99,
+   "gap_before": 0.91,
    "role": "reply",
-   "block": "family_visit.ctx1",
+   "block": "cycling.ctx22",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hang on, the doorbell just rang. Don't say anything until I come back.",
-   "est_sec": 4.13,
-   "gap_before": 1.39,
+   "text": "One moment, I need to get the door. I'll tell you when I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.87,
    "event": "instruction",
    "kind": "door",
-   "phrasing": "door_instr_02"
+   "phrasing": "door_instr_05"
   },
   {
    "speaker": "moshi",
-   "text": "Got it.",
-   "est_sec": 0.72,
-   "gap_before": 0.3,
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.7,
    "role": "ack",
-   "phrasing": "ack_07",
+   "phrasing": "ack_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Yes?",
+   "text": "Evening.",
    "est_sec": 0.41,
-   "gap_before": 4.16,
-   "phrasing": "door_08",
+   "gap_before": 4.72,
+   "phrasing": "door_37"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi! Is Mia home? We're going to the park.",
+   "est_sec": 2.89,
+   "gap_before": 1.32,
+   "phrasing": "door_37"
+  },
+  {
+   "speaker": "user",
+   "text": "She's just finishing her homework. Can you wait five minutes?",
+   "est_sec": 3.2,
+   "gap_before": 0.74,
+   "phrasing": "door_37",
    "event": "distractor",
    "kind": "question_to_other"
   },
   {
    "speaker": "visitor",
-   "text": "Hi, is this the right address for Jordan?",
-   "est_sec": 2.58,
-   "gap_before": 1.49,
-   "phrasing": "door_08"
-  },
-  {
-   "speaker": "user",
-   "text": "No, I think that's next door.",
+   "text": "Okay, we'll sit on the wall.",
    "est_sec": 1.96,
-   "gap_before": 1.14,
-   "phrasing": "door_08"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Oh, sorry, thanks!",
-   "est_sec": 1.03,
-   "gap_before": 0.69,
-   "phrasing": "door_08"
+   "gap_before": 2.15,
+   "phrasing": "door_37"
   },
   {
    "speaker": "user",
-   "text": "Okay, back. All sorted.",
-   "est_sec": 1.34,
-   "gap_before": 2.87,
+   "text": "Okay, back from the door.",
+   "est_sec": 1.65,
+   "gap_before": 3.1,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "door_cue_04"
+   "phrasing": "door_cue_08"
   },
   {
    "speaker": "moshi",
-   "text": "Hope that was nothing urgent. We were figuring out where your parents will sleep next week.",
-   "est_sec": 5.06,
-   "gap_before": 0.31,
+   "text": "Welcome back. Okay, are you tired or fresh this week?",
+   "est_sec": 3.2,
+   "gap_before": 1.82,
    "role": "resume",
-   "block": "family_visit.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "They'd be hurt if we sent them to a hotel. They get the bedroom.",
-   "est_sec": 4.44,
-   "gap_before": 0.71,
-   "event": "ordinary_request",
-   "block": "family_visit.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's kind of you. Maybe put fresh towels and a little night light in there.",
-   "est_sec": 4.75,
-   "gap_before": 0.38,
-   "role": "followup",
-   "block": "family_visit.ctx1",
+   "block": "cycling.ctx22",
    "reference_only": true
   }
  ],

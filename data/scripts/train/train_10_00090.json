@@ -7,107 +7,168 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
+ ],
  "topics": [
+  "board_games",
   "public_transport"
  ],
- "topic": "public_transport",
+ "topic": "board_games",
  "voices": {
-  "user": "f3a2b90078d54a65af4b95f63bc7798e",
-  "friend": null,
+  "user": "5ce84bbd213b4943bc89e1951e17848a",
+  "friend": "cbc3add1f54546e6a4a1964bacb8b122",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Leo",
+ "friend_name_id": "name_07",
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_28",
-  "describe_instr_19",
-  "describe_cue_08"
+  "greet_10",
+  "greet_ans_14",
+  "side_instr_05",
+  "ack_01",
+  "dq_60",
+  "side_cue_10"
  ],
  "block_ids": [
-  "public_transport.opt2"
+  "board_games.ctx12",
+  "public_transport.side1",
+  "dq_60"
  ],
- "est_total_sec": 51.72,
- "est_speech_sec": 40.27,
+ "est_total_sec": 72.22,
+ "est_speech_sec": 52.13,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
-   "est_sec": 1.96,
-   "gap_before": 0.64,
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.79,
    "role": "greeting",
-   "phrasing": "greet_11"
+   "phrasing": "greet_10"
   },
   {
    "speaker": "user",
-   "text": "Doing alright, thanks.",
+   "text": "Hanging in there.",
    "est_sec": 1.03,
-   "gap_before": 0.96,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm trying to figure out which transit pass to buy for the month.",
-   "est_sec": 4.13,
-   "gap_before": 0.52,
-   "block": "public_transport.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Hear me out on all the options before you comment.",
-   "est_sec": 3.2,
    "gap_before": 0.56,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_19"
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_14"
   },
   {
    "speaker": "user",
-   "text": "One option is a monthly unlimited pass, which pays off if I ride more than about twice a day.",
-   "est_sec": 5.99,
-   "gap_before": 0.95,
-   "block": "public_transport.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a pay as you go card, which is cheaper if I only ride a few times a week.",
-   "est_sec": 6.3,
-   "gap_before": 2.1,
-   "block": "public_transport.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a weekly pass, which I could buy only for the weeks I'm busy.",
-   "est_sec": 4.75,
-   "gap_before": 1.59,
-   "block": "public_transport.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all. Which sounds best to you?",
-   "est_sec": 2.58,
-   "gap_before": 0.72,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_08"
+   "text": "I'm moving abroad next month and I can't take my game collection. There's about forty games.",
+   "est_sec": 5.06,
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "block": "board_games.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "How many days a week do you usually ride? If it's four or five, get the monthly pass. If it's only one or two, pay as you go is the way to go.",
-   "est_sec": 10.33,
-   "gap_before": 1.91,
+   "text": "That's a hard goodbye. Do you want to sell them online for some money, or donate them somewhere like a local school or youth club?",
+   "est_sec": 7.85,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "board_games.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I'm going to chat with my friend for a bit. Just wait until I say I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 0.91,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.46,
+   "role": "ack",
+   "phrasing": "ack_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Leo, which stop do we get off at for the museum?",
+   "est_sec": 3.51,
+   "gap_before": 1.02,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "public_transport.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think it's the one after the big park. Central Square?",
+   "est_sec": 3.51,
+   "gap_before": 2.36,
+   "block": "public_transport.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you sure? The map says there's a stop called Museum Road.",
+   "est_sec": 3.82,
+   "gap_before": 1.43,
+   "block": "public_transport.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh, maybe that's closer. Let me look.",
+   "est_sec": 2.27,
+   "gap_before": 1.78,
+   "block": "public_transport.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "It's two stops from here.",
+   "est_sec": 1.65,
+   "gap_before": 0.92,
+   "block": "public_transport.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay, Museum Road then. Get ready, it's coming up fast.",
+   "est_sec": 3.2,
+   "gap_before": 3.42,
+   "block": "public_transport.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Leo, what's the name of the bakery on the corner?",
+   "est_sec": 3.2,
+   "gap_before": 0.62,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_60"
+  },
+  {
+   "speaker": "friend",
+   "text": "I always forget, the one with the blue sign.",
+   "est_sec": 2.89,
+   "gap_before": 0.97,
+   "phrasing": "dq_60"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, I'm back now. Go ahead.",
+   "est_sec": 1.96,
+   "gap_before": 1.37,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. We'd left the forty games hanging. What's their fate?",
+   "est_sec": 3.51,
+   "gap_before": 0.48,
    "role": "resume",
-   "block": "public_transport.opt2"
+   "block": "board_games.ctx12"
   }
  ]
 }

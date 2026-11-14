@@ -1,161 +1,1899 @@
 {
-  "topic": "movies",
-  "contexts": [
+ "topic": "movies",
+ "contexts": [
+  {
+   "id": "movies.ctx1",
+   "turns": [
     {
-      "id": "movies.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "It's movie night and nobody can agree on anything. Help."},
-        {"speaker": "moshi", "text": "Let's narrow it down. Are you in the mood for something funny, something scary, or a big action film?"}
-      ],
-      "pending": "funny, scary or action movie",
-      "think_reask": [
-        "Alright, what's the verdict? Funny, scary or action?",
-        "So, for movie night, which mood are you going with?",
-        "Time's up! Comedy, horror or action?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were picking a movie. Funny, scary or action?",
-        "Hi again. Did the group agree on a mood for movie night?",
-        "There you are. So, which kind of film tonight?"
-      ],
-      "endings": [
-        {"user": "Funny. Everyone's had a long week.", "moshi": "Then go for a light comedy you can all talk over. Nothing too long, under two hours."},
-        {"user": "Scary, but not too gory please.", "moshi": "A good haunted house film then. More tension and jump scares, less blood."}
-      ]
+     "speaker": "user",
+     "text": "It's movie night and nobody can agree on anything. Help."
     },
     {
-      "id": "movies.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I want to get into older films but I don't know where to start."},
-        {"speaker": "moshi", "text": "Great idea. Would you like to start with classic Hollywood from the forties and fifties, or with foreign classics from Europe and Japan?"}
-      ],
-      "pending": "classic Hollywood or foreign classics",
-      "think_reask": [
-        "So, where would you like to start, classic Hollywood or foreign classics?",
-        "Okay, have you decided which old films to begin with?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were talking about getting into older films. Hollywood or foreign classics?",
-        "Good to have you back. Any thoughts on where to start with the classics?"
-      ],
-      "endings": [
-        {"user": "Hollywood first. Subtitles put me to sleep.", "moshi": "No problem. Start with a screwball comedy and a film noir, they're both fast and easy to love."},
-        {"user": "Let's try the Japanese ones.", "moshi": "Wonderful. The samurai films from the fifties are a great way in, gripping and beautifully shot."}
-      ]
-    },
-    {
-      "id": "movies.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "There's a new sci-fi film out. Should I see it in the cinema or wait for streaming?"},
-        {"speaker": "moshi", "text": "Big sci-fi often looks amazing on a huge screen. How much do you care about the visuals compared to watching on your couch?"}
-      ],
-      "pending": "cinema or wait for streaming",
-      "think_reask": [
-        "So, cinema or couch for the new sci-fi film?",
-        "Have you decided? Big screen now, or wait for streaming?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were deciding whether to see the sci-fi film in the cinema.",
-        "Hey, you're back. Big screen or streaming, what do you think?"
-      ],
-      "endings": [
-        {"user": "Cinema. If I wait I'll get spoiled anyway.", "moshi": "True. Try a weekday evening, it's usually quieter and sometimes cheaper."},
-        {"user": "I'll wait. My couch is very comfortable.", "moshi": "Fair enough. It'll probably be streaming in a couple of months."}
-      ]
+     "speaker": "moshi",
+     "text": "Let's narrow it down. Are you in the mood for something funny, something scary, or a big action film?"
     }
-  ],
-  "side_conversations": [
-    {"id": "movies.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, have you seen the new one with the space station?"},
-      {"speaker": "friend", "text": "Yeah, last weekend. It was okay. The ending was a bit weird."},
-      {"speaker": "user", "text": "Weird how? Don't spoil it."},
-      {"speaker": "friend", "text": "I won't. Let's just say you'll have questions."},
-      {"speaker": "user", "text": "Ugh, now I have to watch it. Would you see it again?"},
-      {"speaker": "friend", "text": "Maybe, if you're buying the popcorn."}
-    ]},
-    {"id": "movies.side2", "turns": [
-      {"speaker": "user", "text": "Do you want to watch something tonight or are you too tired?"},
-      {"speaker": "friend", "text": "Something short. I'll fall asleep if it's over two hours."},
-      {"speaker": "user", "text": "There's that animated one your sister recommended."},
-      {"speaker": "friend", "text": "Oh, that's supposed to be really good. How long is it?"},
-      {"speaker": "user", "text": "About an hour and a half."},
-      {"speaker": "friend", "text": "Perfect. I'll make tea, you find the remote."},
-      {"speaker": "user", "text": "Deal. Do we have any of those biscuits left?"},
-      {"speaker": "friend", "text": "Top cupboard, if you didn't eat them all."}
-    ]},
-    {"id": "movies.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, who was the actor in that heist film we watched in the summer?"},
-      {"speaker": "friend", "text": "The one with the train? I can't remember his name either."},
-      {"speaker": "user", "text": "It's driving me crazy. He's in this trailer I just saw."},
-      {"speaker": "friend", "text": "Was he the tall one with the beard?"},
-      {"speaker": "user", "text": "Yes! The getaway driver."},
-      {"speaker": "friend", "text": "No idea. Look it up later or it'll bug you all night."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "movies.dlg1", "turns": [
-      {"speaker": "user", "text": "Can you recommend a good movie for a ten year old who loves animals?"},
-      {"speaker": "moshi", "text": "An animated adventure about a lost dog or a fox trying to get home would be perfect. Funny, warm and not too scary."},
-      {"speaker": "user", "text": "She cries at sad endings though."},
-      {"speaker": "moshi", "text": "Then skip the classic animal dramas. Lots of them have a heartbreaking twist."},
-      {"speaker": "user", "text": "What about nature documentaries? She might / actually like those more."},
-      {"speaker": "moshi", "text": "Great idea. Ocean and jungle series are gorgeous and full of amazing facts. Just skip the predator scenes if she's sensitive."},
-      {"speaker": "user", "text": "Ha, yes, the cheetah ones were a disaster last time."},
-      {"speaker": "moshi", "text": "Then go for something about whales or baby animals. Much gentler."}
-    ]},
-    {"id": "movies.dlg2", "turns": [
-      {"speaker": "user", "text": "Why do people say the book is always better than the movie?"},
-      {"speaker": "moshi", "text": "A book can spend pages inside a character's head, while a film has to show everything in about two hours. So a lot gets cut."},
-      {"speaker": "user", "text": "Are there movies that are better than the book?"},
-      {"speaker": "moshi", "text": "Definitely. Sometimes a director tightens a slow story or a great actor adds something the book didn't have."},
-      {"speaker": "user", "text": "I usually read the book first, but / maybe I should try the other way round."},
-      {"speaker": "moshi", "text": "That can be fun. You get to enjoy the film without comparing, and the book then fills in the details."},
-      {"speaker": "user", "text": "Okay, I'll try it with the next adaptation."}
-    ]},
-    {"id": "movies.dlg3", "turns": [
-      {"speaker": "user", "text": "I'm doing a horror marathon on Halloween. How many films is reasonable?"},
-      {"speaker": "moshi", "text": "Three is a good number. Four if you start early and have plenty of snacks."},
-      {"speaker": "user", "text": "Should I start with the scariest one or end with it?"},
-      {"speaker": "moshi", "text": "Build up. Start with a fun, campy one, then something creepy, and finish with the most intense."},
-      {"speaker": "user", "text": "My friend wants to include a really old black and white one / is that a mood killer?"},
-      {"speaker": "moshi", "text": "Not at all. Old horror can be surprisingly eerie. Put it first or second, while everyone's still fresh."},
-      {"speaker": "user", "text": "Nice. And what snacks go with horror?"},
-      {"speaker": "moshi", "text": "Popcorn, obviously. And something like red gummy sweets for the theme."}
-    ]},
-    {"id": "movies.dlg4", "turns": [
-      {"speaker": "user", "text": "My film studies essay is about how music shapes a scene. Any examples I could use?"},
-      {"speaker": "moshi", "text": "Think of a shark film where just two notes make you nervous before you see anything. That's a classic example."},
-      {"speaker": "user", "text": "Oh, good one. What about the opposite, like when there's no music?"},
-      {"speaker": "moshi", "text": "Silence can be powerful too. Many thrillers drop the score right before something shocking, so the quiet itself becomes tense."},
-      {"speaker": "user", "text": "I need one more. Something / maybe where happy music plays over something dark?"},
-      {"speaker": "moshi", "text": "That's called contrast or ironic scoring. Gangster films do it a lot, with a cheerful pop song over a violent scene."},
-      {"speaker": "user", "text": "Perfect, that's my three sections. Thanks!"},
-      {"speaker": "moshi", "text": "Good luck with the essay. Describe the scene briefly, then explain what the music makes you feel."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "movies.opt1",
-     "lead_in": "It's movie night and I need help picking something for the group.",
-     "options": [
-       "The first one is a new superhero movie that everyone's talking about, but it's almost three hours long.",
-       "Then there's an old comedy we've all seen before but always laugh at.",
-       "Option three is a scary movie that's supposed to be really good, but two of my friends hate horror.",
-       "And the last one is a foreign drama with subtitles that got great reviews."
-     ],
-     "moshi_comment": [
-       "With two friends who hate horror, I'd drop the scary movie right away. The old comedy is a safe bet for a group, everyone knows it and laughs. The superhero movie is fun, but three hours is a big ask if people want to talk.",
-       "What's the mood tonight, chatty and relaxed or ready to really watch something? For a relaxed night, the comedy is perfect. If everyone's up for it, the superhero movie is the one people will want to discuss."
-     ]},
-    {"id": "movies.opt2",
-     "lead_in": "My partner and I are trying to choose a movie for date night.",
-     "options": [
-       "One is a romantic comedy about two chefs who own rival restaurants on the same street.",
-       "Another is a thriller about a heist on a train, which my partner really wants to see.",
-       "Or there's an animated movie about a lost robot that's supposed to make everyone cry."
-     ],
-     "moshi_comment": [
-       "The rival chefs one sounds like a classic date night pick, light and fun. The train heist could be exciting, and it's the one your partner is keen on, which counts for a lot. The robot movie might be lovely, but maybe not if you want a cheerful night.",
-       "Do you want something light or something gripping? If your partner really wants the heist movie, it might be nice to go with that. You could save the chef comedy for next time."
-     ]}
-  ]
+   ],
+   "pending": "funny, scary or action movie",
+   "think_reask": [
+    "Alright, what's the verdict? Funny, scary or action?",
+    "So, for movie night, which mood are you going with?",
+    "Time's up! Comedy, horror or action?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were picking a movie. Funny, scary or action?",
+    "Hi again. Did the group agree on a mood for movie night?",
+    "There you are. So, which kind of film tonight?"
+   ],
+   "endings": [
+    {
+     "user": "Funny. Everyone's had a long week.",
+     "moshi": "Then go for a light comedy you can all talk over. Nothing too long, under two hours."
+    },
+    {
+     "user": "Scary, but not too gory please.",
+     "moshi": "A good haunted house film then. More tension and jump scares, less blood."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to get into older films but I don't know where to start."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great idea. Would you like to start with classic Hollywood from the forties and fifties, or with foreign classics from Europe and Japan?"
+    }
+   ],
+   "pending": "classic Hollywood or foreign classics",
+   "think_reask": [
+    "So, where would you like to start, classic Hollywood or foreign classics?",
+    "Okay, have you decided which old films to begin with?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were talking about getting into older films. Hollywood or foreign classics?",
+    "Good to have you back. Any thoughts on where to start with the classics?"
+   ],
+   "endings": [
+    {
+     "user": "Hollywood first. Subtitles put me to sleep.",
+     "moshi": "No problem. Start with a screwball comedy and a film noir, they're both fast and easy to love."
+    },
+    {
+     "user": "Let's try the Japanese ones.",
+     "moshi": "Wonderful. The samurai films from the fifties are a great way in, gripping and beautifully shot."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a new sci-fi film out. Should I see it in the cinema or wait for streaming?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big sci-fi often looks amazing on a huge screen. How much do you care about the visuals compared to watching on your couch?"
+    }
+   ],
+   "pending": "cinema or wait for streaming",
+   "think_reask": [
+    "So, cinema or couch for the new sci-fi film?",
+    "Have you decided? Big screen now, or wait for streaming?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were deciding whether to see the sci-fi film in the cinema.",
+    "Hey, you're back. Big screen or streaming, what do you think?"
+   ],
+   "endings": [
+    {
+     "user": "Cinema. If I wait I'll get spoiled anyway.",
+     "moshi": "True. Try a weekday evening, it's usually quieter and sometimes cheaper."
+    },
+    {
+     "user": "I'll wait. My couch is very comfortable.",
+     "moshi": "Fair enough. It'll probably be streaming in a couple of months."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I run the Thursday film afternoon at our care home. Next week it's a French film."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How lovely. Since some residents might struggle to read small text, would you show it dubbed, or with big subtitles and a short intro first?"
+    }
+   ],
+   "pending": "dubbed or subtitled for the care home screening",
+   "think_reask": [
+    "So, for Thursday, dubbed or big subtitles?",
+    "Okay, which way are you leaning for the French film?"
+   ],
+   "welcome_back": [
+    "The Thursday screening. Dubbed, or subtitles with an intro?",
+    "Back to the French film at the care home. Have you decided how to show it?"
+   ],
+   "endings": [
+    {
+     "user": "Subtitles. A couple of them actually speak French.",
+     "moshi": "Wonderful. Turn the subtitle size up as far as it goes and sit the readers near the front."
+    },
+    {
+     "user": "Dubbed. Half of them forget their glasses.",
+     "moshi": "Fair enough. A quick two minute summary before it starts will help everyone follow along."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We have to make a five minute film for media class and I've got nothing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Five minutes is a nice size. Would you rather make a tiny horror story, or a short documentary about someone you know?"
+    }
+   ],
+   "pending": "short horror or a documentary for media class",
+   "think_reask": [
+    "So, spooky short or real life documentary?",
+    "Have you picked? Horror or documentary for the class?"
+   ],
+   "welcome_back": [
+    "Your media class film. Horror, or a documentary about someone?",
+    "We'd got to your five minute film. Where did you land on it?"
+   ],
+   "endings": [
+    {
+     "user": "Documentary. My grandad used to be a lighthouse keeper.",
+     "moshi": "That's a brilliant subject. Interview him somewhere quiet and film his hands and old photos while he talks."
+    },
+    {
+     "user": "Horror. My little brother can be the creepy kid.",
+     "moshi": "Perfect casting. Keep it to one location and use darkness and sound, what you don't show is scarier."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's our tenth anniversary on Saturday. We met at a cinema, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's so sweet. Would you go back and rewatch the film you saw that night, or go see something brand new together?"
+    }
+   ],
+   "pending": "rewatch the first date film or see something new",
+   "think_reask": [
+    "So, nostalgia or something new for Saturday?",
+    "Okay, the anniversary. The old film or a new one?"
+   ],
+   "welcome_back": [
+    "Your anniversary plan. The same film again, or a fresh one?",
+    "So, for Saturday, have you picked between nostalgia and something new?"
+   ],
+   "endings": [
+    {
+     "user": "The old one. I'll find a way to stream it.",
+     "moshi": "Lovely. Recreate the snacks you had back then too, that'll make it feel special."
+    },
+    {
+     "user": "New. We barely remember the first one, we were too nervous.",
+     "moshi": "Ha, that's honest. Pick something neither of you knows anything about, it'll feel like a first date again."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got eight nine year olds sleeping over tonight and they all want different films."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic sleepover chaos. Is this group more likely to sing along to an animated musical, or yell at a live action adventure?"
+    }
+   ],
+   "pending": "animated musical or live action adventure for the sleepover",
+   "think_reask": [
+    "So, for the sleepover, singing or shouting?",
+    "Okay, musical or adventure for the nine year olds?"
+   ],
+   "welcome_back": [
+    "The sleepover film. Animated musical, or live action adventure?",
+    "So, have you sussed out the crowd? Musical or adventure?"
+   ],
+   "endings": [
+    {
+     "user": "Musical. Most of them are in the school choir.",
+     "moshi": "Then go for it, and maybe print the lyrics. It'll burn off energy before bed, hopefully."
+    },
+    {
+     "user": "Adventure. Half are boys who'll groan at singing.",
+     "moshi": "Then pick a treasure hunt or a jungle quest. Lots of action, nothing too frightening at bedtime."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got a fourteen hour flight next week and I want to download films for it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fourteen hours is a lot of screen time. Would you rather binge one long trilogy, or catch up on a bunch of different films you've missed?"
+    }
+   ],
+   "pending": "a trilogy or a mix of missed films for the flight",
+   "think_reask": [
+    "So, one trilogy or a mixed bag for the flight?",
+    "Have you decided how to fill those fourteen hours?"
+   ],
+   "welcome_back": [
+    "Your flight downloads. A trilogy, or a mix?",
+    "So for the long haul, are you going with one big saga or a bit of everything?"
+   ],
+   "endings": [
+    {
+     "user": "Trilogy. I've been putting it off for years.",
+     "moshi": "Perfect timing. Save the last one for after a nap so you're awake for the ending."
+    },
+    {
+     "user": "A mix. I get bored of one story.",
+     "moshi": "Then download one comedy, one thriller and something slow for when you're half asleep."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We got a projector to watch films in the garden this summer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Outdoor cinema, fantastic. For the screen, would you buy a proper inflatable one, or try a white sheet on the fence first?"
+    }
+   ],
+   "pending": "inflatable screen or bedsheet on the fence",
+   "think_reask": [
+    "So, proper screen or bedsheet?",
+    "Okay, what's the screen going to be?"
+   ],
+   "welcome_back": [
+    "The garden cinema. Inflatable screen, or a sheet?",
+    "So for the projector, have you settled on a screen?"
+   ],
+   "endings": [
+    {
+     "user": "Bedsheet. Let's see if we actually use it first.",
+     "moshi": "Good plan. Pull it tight so there are no wrinkles, and wait until it's properly dark."
+    },
+    {
+     "user": "The inflatable one. The kids will love it.",
+     "moshi": "Then get one with tie down ropes. A gust of wind mid film is a whole different movie."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm reviewing the new spy film for the student paper and I kind of hated it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's okay, honest reviews are more interesting. Would you open with what didn't work, or start with the few things you did like?"
+    }
+   ],
+   "pending": "open the review with the negatives or the positives",
+   "think_reask": [
+    "So, how's the review opening, the bad news or the good bits?",
+    "Have you picked a way in for the spy film review?"
+   ],
+   "welcome_back": [
+    "The spy film review. Lead with the problems, or with the positives?",
+    "So, back to your review. Which end are you starting from?"
+   ],
+   "endings": [
+    {
+     "user": "The problems. People want to know if it's worth paying for.",
+     "moshi": "Fair. Just give one clear reason up front rather than a list of complaints, it reads stronger."
+    },
+    {
+     "user": "The good bits, then I'll go in hard.",
+     "moshi": "Nice structure. It shows you were fair before you got critical, readers trust that."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I need to cut down to one streaming service. Money's tight this month."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally understandable. For films, do you care more about a huge back catalogue of older stuff, or getting the new releases quickly?"
+    }
+   ],
+   "pending": "streaming service with older catalogue or new releases",
+   "think_reask": [
+    "So, the old classics library or the new releases?",
+    "Okay, which matters more for the one service you keep?"
+   ],
+   "welcome_back": [
+    "Your streaming cut. Back catalogue, or new releases?",
+    "So, which one are you keeping, the classics or the fresh stuff?"
+   ],
+   "endings": [
+    {
+     "user": "Older stuff. I rewatch the same films anyway.",
+     "moshi": "Then keep the one with the biggest library. You can always rent a new film once in a while."
+    },
+    {
+     "user": "New releases. My kids would riot otherwise.",
+     "moshi": "Fair enough. Cancel the others now and set a reminder to check again in a few months."
+    }
+   ]
+  },
+  {
+   "id": "movies.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son is dragging me to a sequel tomorrow and I never saw the first film."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah. You could watch the first one tonight, or just go in blind and I'll give you a quick summary. Which sounds better?"
+    }
+   ],
+   "pending": "watch the first film tonight or go in with a summary",
+   "think_reask": [
+    "So, homework tonight or a quick recap?",
+    "Have you decided? Watch the first one, or wing it?"
+   ],
+   "welcome_back": [
+    "The sequel tomorrow. Watching the first one tonight, or a recap?",
+    "So, are you doing your homework before the sequel, or not?"
+   ],
+   "endings": [
+    {
+     "user": "Recap please. I'm too tired for a whole film.",
+     "moshi": "No problem. Ask your son for one minute of key plot on the way there too, he'll love explaining it."
+    },
+    {
+     "user": "I'll watch it. Might as well make it a double bill.",
+     "moshi": "Good on you. You'll catch all the jokes and callbacks tomorrow."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "movies.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, have you seen the new one with the space station?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, last weekend. It was okay. The ending was a bit weird."
+    },
+    {
+     "speaker": "user",
+     "text": "Weird how? Don't spoil it."
+    },
+    {
+     "speaker": "friend",
+     "text": "I won't. Let's just say you'll have questions."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, now I have to watch it. Would you see it again?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Maybe, if you're buying the popcorn."
+    }
+   ]
+  },
+  {
+   "id": "movies.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do you want to watch something tonight or are you too tired?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Something short. I'll fall asleep if it's over two hours."
+    },
+    {
+     "speaker": "user",
+     "text": "There's that animated one your sister recommended."
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh, that's supposed to be really good. How long is it?"
+    },
+    {
+     "speaker": "user",
+     "text": "About an hour and a half."
+    },
+    {
+     "speaker": "friend",
+     "text": "Perfect. I'll make tea, you find the remote."
+    },
+    {
+     "speaker": "user",
+     "text": "Deal. Do we have any of those biscuits left?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Top cupboard, if you didn't eat them all."
+    }
+   ]
+  },
+  {
+   "id": "movies.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, who was the actor in that heist film we watched in the summer?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The one with the train? I can't remember his name either."
+    },
+    {
+     "speaker": "user",
+     "text": "It's driving me crazy. He's in this trailer I just saw."
+    },
+    {
+     "speaker": "friend",
+     "text": "Was he the tall one with the beard?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes! The getaway driver."
+    },
+    {
+     "speaker": "friend",
+     "text": "No idea. Look it up later or it'll bug you all night."
+    }
+   ]
+  },
+  {
+   "id": "movies.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, you fell asleep last night. How much did you miss?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I saw the bit where they escape the boat."
+    },
+    {
+     "speaker": "user",
+     "text": "That was like twenty minutes in!"
+    },
+    {
+     "speaker": "friend",
+     "text": "It was very warm on that sofa, okay?"
+    },
+    {
+     "speaker": "user",
+     "text": "You missed the whole twist."
+    },
+    {
+     "speaker": "friend",
+     "text": "Don't tell me. I'll finish it on my own."
+    },
+    {
+     "speaker": "user",
+     "text": "You said that last time and never did."
+    },
+    {
+     "speaker": "friend",
+     "text": "This time I mean it. Is there any of that pizza left?"
+    }
+   ]
+  },
+  {
+   "id": "movies.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Front row or back row? I'm booking now."
+    },
+    {
+     "speaker": "friend",
+     "text": "Not front row. I'll get a sore neck."
+    },
+    {
+     "speaker": "user",
+     "text": "Middle then?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Middle's perfect. And the aisle, I always need the loo."
+    },
+    {
+     "speaker": "user",
+     "text": "Of course you do. Do you want the big popcorn deal?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Only if it comes with a drink. Otherwise it's a rip off."
+    },
+    {
+     "speaker": "user",
+     "text": "It does. Okay, two tickets, half past seven."
+    },
+    {
+     "speaker": "friend",
+     "text": "Great. Can you pay and I'll send you the money later?"
+    },
+    {
+     "speaker": "user",
+     "text": "Sure. Remember to actually send it this time."
+    }
+   ]
+  },
+  {
+   "id": "movies.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, are you crying? It's a cartoon."
+    },
+    {
+     "speaker": "friend",
+     "text": "Shut up. The little robot just wanted a friend."
+    },
+    {
+     "speaker": "user",
+     "text": "Here, have a tissue."
+    },
+    {
+     "speaker": "friend",
+     "text": "Thanks. Don't you dare tell anyone."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm telling everyone. Was it the bit with the flower?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Obviously it was the bit with the flower."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I teared up a bit too, honestly."
+    },
+    {
+     "speaker": "friend",
+     "text": "Ha! I knew it. Want to put the next one on?"
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "movies.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you recommend a good movie for a ten year old who loves animals?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "An animated adventure about a lost dog or a fox trying to get home would be perfect. Funny, warm and not too scary."
+    },
+    {
+     "speaker": "user",
+     "text": "She cries at sad endings though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then skip the classic animal dramas. Lots of them have a heartbreaking twist."
+    },
+    {
+     "speaker": "user",
+     "text": "What about nature documentaries? She might / actually like those more."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great idea. Ocean and jungle series are gorgeous and full of amazing facts. Just skip the predator scenes if she's sensitive."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, yes, the cheetah ones were a disaster last time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then go for something about whales or baby animals. Much gentler."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why do people say the book is always better than the movie?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A book can spend pages inside a character's head, while a film has to show everything in about two hours. So a lot gets cut."
+    },
+    {
+     "speaker": "user",
+     "text": "Are there movies that are better than the book?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. Sometimes a director tightens a slow story or a great actor adds something the book didn't have."
+    },
+    {
+     "speaker": "user",
+     "text": "I usually read the book first, but / maybe I should try the other way round."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That can be fun. You get to enjoy the film without comparing, and the book then fills in the details."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll try it with the next adaptation."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm doing a horror marathon on Halloween. How many films is reasonable?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Three is a good number. Four if you start early and have plenty of snacks."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I start with the scariest one or end with it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Build up. Start with a fun, campy one, then something creepy, and finish with the most intense."
+    },
+    {
+     "speaker": "user",
+     "text": "My friend wants to include a really old black and white one / is that a mood killer?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. Old horror can be surprisingly eerie. Put it first or second, while everyone's still fresh."
+    },
+    {
+     "speaker": "user",
+     "text": "Nice. And what snacks go with horror?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Popcorn, obviously. And something like red gummy sweets for the theme."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My film studies essay is about how music shapes a scene. Any examples I could use?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Think of a shark film where just two notes make you nervous before you see anything. That's a classic example."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, good one. What about the opposite, like when there's no music?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Silence can be powerful too. Many thrillers drop the score right before something shocking, so the quiet itself becomes tense."
+    },
+    {
+     "speaker": "user",
+     "text": "I need one more. Something / maybe where happy music plays over something dark?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's called contrast or ironic scoring. Gangster films do it a lot, with a cheerful pop song over a violent scene."
+    },
+    {
+     "speaker": "user",
+     "text": "Perfect, that's my three sections. Thanks!"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good luck with the essay. Describe the scene briefly, then explain what the music makes you feel."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why do trailers give away the whole plot now? I watched one yesterday and basically saw the ending."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's frustrating. Studios test trailers on audiences, and the ones that show more often make more people buy tickets."
+    },
+    {
+     "speaker": "user",
+     "text": "So it's on purpose."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly, yes. People like knowing roughly what they're paying for, even if it ruins surprises for the rest of us."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I avoid it then? I / can't exactly close my eyes at the cinema."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You sort of can. Some people look at the screen floor during trailers or step out for snacks. Or just watch the first teaser and stop there."
+    },
+    {
+     "speaker": "user",
+     "text": "The teaser being the short one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Right, the first short one usually shows mood, not story. The later full trailers are the spoilery ones."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What actually is a director's cut? Is it always better?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a version of the film closer to what the director wanted, often before the studio asked for changes, like trimming it shorter."
+    },
+    {
+     "speaker": "user",
+     "text": "So it's longer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually longer, sometimes with a different ending or extra scenes that explain things."
+    },
+    {
+     "speaker": "user",
+     "text": "Always better though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not always. Sometimes the studio was right and the shorter version is tighter. Other times the director's cut fixes a film that felt rushed."
+    },
+    {
+     "speaker": "user",
+     "text": "There's one I like that / apparently has a forty minute longer version."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then watch it on a lazy weekend with no expectations. You might love the extra time with the characters, or miss the pace of the original."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Rainy Sunday, a two year old and a very tired me. Film suggestions?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a two year old, short and gentle is the way. Look for animated shorts or a series of ten minute episodes rather than a full film."
+    },
+    {
+     "speaker": "user",
+     "text": "She does sit for the full thing sometimes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then pick something with lots of music, bright colours and animals. Avoid anything with a scary villain, even the cute ones can upset little kids."
+    },
+    {
+     "speaker": "user",
+     "text": "Good point. The last one / had a witch and she hid behind the sofa."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, yes, that happens. Soft stories about friendship or a lost toy finding its way home are safer."
+    },
+    {
+     "speaker": "user",
+     "text": "And can I nap on the sofa while it's on?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I won't tell. Just make sure she's in a safe spot next to you."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why does my TV show black bars at the top and bottom on some films?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those films are shot wider than your TV's shape. The bars keep the full picture without cutting off the sides."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I get rid of them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can use the zoom setting on the TV, but it'll crop the edges of the image. The director framed it that way on purpose."
+    },
+    {
+     "speaker": "user",
+     "text": "So I'd lose / bits of the actual picture?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly, sometimes people at the edges of the frame just vanish. Most film fans keep the bars."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. I always thought my TV was broken."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nope, it's doing its job. Some newer films even switch ratio for big scenes, so the bars come and go."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cousin's flying in from Brazil tonight, she'll be jetlagged. What film should we put on?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Something easy to follow that you can talk over. A light comedy or a heartwarming film is ideal, nothing with a complicated plot."
+    },
+    {
+     "speaker": "user",
+     "text": "She's into thrillers usually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then save the thriller for tomorrow when she's rested. Jetlagged brains struggle with twists."
+    },
+    {
+     "speaker": "user",
+     "text": "Fair. Should I put on / something with Portuguese audio for her?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a kind thought. If her English is good, she may prefer English with subtitles. Just ask her, it's a nice welcome either way."
+    },
+    {
+     "speaker": "user",
+     "text": "And snacks, any ideas?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Something light. People with jetlag often don't feel like a big meal, so maybe fruit and a few salty nibbles."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to start a little film club with my neighbours. How do I make it not awkward?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it simple at first. Same night every month, someone's living room, and one film everyone agrees on in advance."
+    },
+    {
+     "speaker": "user",
+     "text": "Who picks the film?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rotate it. Each host picks, which gives everyone a turn and mixes up the genres."
+    },
+    {
+     "speaker": "user",
+     "text": "And afterwards? Do people / just go home, or do we talk?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A short chat is the best bit. Ask one easy question, like which character people liked most. It gets everyone talking without feeling like homework."
+    },
+    {
+     "speaker": "user",
+     "text": "Snacks?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask everyone to bring something. It lowers the cost for the host and makes it feel shared."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll put a note through the doors this weekend."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely. Include a date and your film pick, so people have something concrete to say yes to."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just watched a time travel film and I'm so confused. Is it me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably not, time travel plots are designed to twist your brain. What part lost you?"
+    },
+    {
+     "speaker": "user",
+     "text": "The part where the guy meets himself. Is he the old one or the new one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "In a lot of these films, the version you've been following is the newer timeline, and the other one is from a loop that already happened."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, but then / who is actually telling the story?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually the version who loops the most. Try drawing a simple timeline on paper, with arrows for each jump. It suddenly clicks."
+    },
+    {
+     "speaker": "user",
+     "text": "That's very nerdy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is. But the people who love those films are doing exactly that, so you're in good company."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I make proper cinema popcorn at home? Mine always tastes like cardboard."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The secret is fat and salt. Pop the kernels in a heavy pot with a good coating of oil, rather than in the microwave."
+    },
+    {
+     "speaker": "user",
+     "text": "What oil?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Coconut oil gives that cinema taste. A neutral oil works too, but coconut is the classic."
+    },
+    {
+     "speaker": "user",
+     "text": "And the salt never sticks to mine."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use very fine salt, even blitzed in a blender. It clings much better than chunky flakes."
+    },
+    {
+     "speaker": "user",
+     "text": "Butter too? I / feel like butter is the whole point."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Melt it and pour it on in thin streams while you toss the popcorn. Not too much at once, or it goes soggy."
+    },
+    {
+     "speaker": "user",
+     "text": "This is a game changer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep the lid slightly open while it pops. The steam escapes and you get crunchier popcorn."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Any tricks for cheap cinema tickets? I'm a student and they cost a fortune."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty. Student discounts are common, so always carry your card and ask."
+    },
+    {
+     "speaker": "user",
+     "text": "I do that already."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then look at weekday matinees, they're often much cheaper. Some cinemas have one discount day a week, often Tuesday."
+    },
+    {
+     "speaker": "user",
+     "text": "Tuesday, okay. What about / those monthly passes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you go more than twice a month, they usually pay for themselves. Just check the small print, some exclude the big premium screens."
+    },
+    {
+     "speaker": "user",
+     "text": "And snacks, can I bring my own?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some cinemas allow it, some don't. Check their rules, and if they're strict, eat before you go."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why are films so badly mixed? I can't hear anyone talking and then an explosion wakes the baby."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a very common complaint. Films are mixed for big cinema speakers, so the quiet bits get very quiet at home."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I do anything?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check your TV settings for something like night mode or dialogue boost. It squashes the loud and quiet parts together."
+    },
+    {
+     "speaker": "user",
+     "text": "I've never even / looked at those settings."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most people haven't. A small soundbar with a speech mode helps a lot too, since TV speakers are tiny."
+    },
+    {
+     "speaker": "user",
+     "text": "And subtitles, I guess."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, loads of people use them now. Combined with night mode, you'll catch every line and the baby stays asleep."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My eight year old watched a scary film at a friend's house and now he won't sleep."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Poor thing. Talk about it during the day, not at bedtime. Ask him what part scared him most."
+    },
+    {
+     "speaker": "user",
+     "text": "He says it's the monster in the wardrobe."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can help to explain how films are made, like the monster being an actor in a costume, or a puppet. Making it less magic makes it less scary."
+    },
+    {
+     "speaker": "user",
+     "text": "Ooh, could we / watch a behind the scenes video together?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a great idea, if one exists for that film. Seeing the crew laughing on set really shrinks the fear."
+    },
+    {
+     "speaker": "user",
+     "text": "And tonight?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A nightlight, the wardrobe doors shut, and a calm, funny story before bed. Most kids get over it within a week."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I stay for the credits? My friends always just leave."
+    },
+    {
+     "speaker": "moshi",
+     "text": "These days, often yes. Lots of big films hide a little scene during or after the credits."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know if there is one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can search the film name plus credits scene before you go. People post about it without spoiling what happens."
+    },
+    {
+     "speaker": "user",
+     "text": "I hate sitting there for / ten minutes just in case."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair enough. Sometimes the scene is right after the first set of names, and you can leave after that."
+    },
+    {
+     "speaker": "user",
+     "text": "And if there isn't one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you've had a quiet moment to digest the film. Plus, the music is often really good."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dad refuses to watch foreign films because he hates subtitles. Any way around that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot of international films now have good English dubs. Dubbing has improved a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "He'd probably say dubbing is worse."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then maybe ease him in with films that don't have much dialogue. Some great action films or animations are mostly visual."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, he does love / a good chase scene."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Start with a fast action film from Korea or Hong Kong. Once he's hooked, the subtitles won't feel like reading."
+    },
+    {
+     "speaker": "user",
+     "text": "Sneaky. I like it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And sit him close to the screen. Subtitles are much easier to read when you're not squinting from across the room."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm learning Spanish. Would watching films actually help?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, especially if you're past the absolute beginner stage. You'll hear real speed, accents and slang."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm about a year in."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great level for it. Start with Spanish audio and Spanish subtitles, so you can see the words as you hear them."
+    },
+    {
+     "speaker": "user",
+     "text": "Not English subtitles?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "English subtitles are fine for fun, but your brain will just read them. Spanish ones keep you learning."
+    },
+    {
+     "speaker": "user",
+     "text": "Any kind of film work best? I / tried a drama and got totally lost."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Comedies and family films are easier, the language is simpler and the action tells you what's going on. Rewatching a film you already know in English is a great trick too."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, projector's out of the box. Now what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exciting. First, find a blank light wall or a screen, and set the projector straight in front of it at the right distance."
+    },
+    {
+     "speaker": "user",
+     "text": "How far back?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the manual for its throw ratio, but for a big living room picture, usually two to three metres works."
+    },
+    {
+     "speaker": "user",
+     "text": "The picture's kind of / slanted at the top."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the keystone. Ideally raise the projector to the middle of the screen height instead of tilting it. Use keystone correction only if you have to."
+    },
+    {
+     "speaker": "user",
+     "text": "And it looks washed out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Darken the room as much as you can. Projectors hate daylight. Even closing the curtains makes a huge difference."
+    },
+    {
+     "speaker": "user",
+     "text": "Perfect, it's looking way better already."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do you have a favourite kind of film?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I don't watch films the way you do, but I find heist films fun to talk about. Everything has to fit together like clockwork."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, that's very you."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair. What about you, what do you end up watching most?"
+    },
+    {
+     "speaker": "user",
+     "text": "Honestly, anything with / a big dramatic courtroom scene."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh, the final speech, the surprise witness, the jury looking shocked. Those scenes are made to be satisfying."
+    },
+    {
+     "speaker": "user",
+     "text": "Exactly! Even when I can tell what's coming."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's part of the pleasure. You know the shape and you still get the payoff. A bit like comfort food."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it just me or are films getting longer? Everything's nearly three hours."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's not just you. Big blockbusters especially have been creeping longer over the last couple of decades."
+    },
+    {
+     "speaker": "user",
+     "text": "Why though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Partly streaming, since people are used to long series. And bigger films have so many characters and set pieces to fit in."
+    },
+    {
+     "speaker": "user",
+     "text": "I just get restless after two hours."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people do. Some cinemas abroad still do an intermission for really long ones, which helps."
+    },
+    {
+     "speaker": "user",
+     "text": "I wish ours did. My / knees can't take three hours."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick an aisle seat so you can stretch, or wait for streaming so you can pause. Your knees will thank you."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a silent film screening with a live pianist next week. Is that going to be boring?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably not. Live music changes everything. The pianist reacts to the film, so it feels like a performance, not an old movie."
+    },
+    {
+     "speaker": "user",
+     "text": "I've never seen a silent film. Is it hard to follow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really. They tell the story with big expressions and title cards between scenes. Comedies especially are very easy to enjoy."
+    },
+    {
+     "speaker": "user",
+     "text": "Is this one a comedy?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If it's a slapstick one, expect stunts that are genuinely jaw dropping. People did insane things without special effects."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, now I'm / actually kind of curious."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Go. Sit somewhere you can see the pianist too, watching them follow the action is half the fun."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm writing my first screenplay. How should it look on the page?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Screenplays have a very standard format. Courier font, scene headings in capitals saying inside or outside, the place and the time."
+    },
+    {
+     "speaker": "user",
+     "text": "Like inside, kitchen, night?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Under that, short action lines in the present tense, then character names in capitals, centred, with their dialogue below."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there software for it? Doing that / in a normal word processor sounds painful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, there are free screenwriting apps that format everything automatically. You just type and press tab."
+    },
+    {
+     "speaker": "user",
+     "text": "And how long should a page be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Roughly one page equals one minute on screen. So a short film of ten minutes is about ten pages."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandad's hearing is going and he's stopped coming to family film nights."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a shame, but very fixable. Turning on captions is the simplest step, and they're on almost everything now."
+    },
+    {
+     "speaker": "user",
+     "text": "He says captions make him feel old."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could just turn them on for everyone. Lots of younger people use them anyway, so he won't feel singled out."
+    },
+    {
+     "speaker": "user",
+     "text": "That's sweet. What else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some TVs connect to wireless headphones, so he can have his own volume while everyone else listens normally."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, he'd like that. He / loves his gadgets, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then pitch it as a cool new gadget. Seat him nearest the screen too, it helps with both the captions and the sound."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm hosting a movie trivia night at the pub. I need some question ideas."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun. Mix categories so everyone has a chance, like famous quotes, film soundtracks, and guess the film from a single picture."
+    },
+    {
+     "speaker": "user",
+     "text": "The picture round sounds good."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could do close ups of a famous prop, or the poster with the title blurred out. Teams love those."
+    },
+    {
+     "speaker": "user",
+     "text": "How hard should / the questions be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Aim for most teams getting about half right. A couple of easy ones per round keep the mood up."
+    },
+    {
+     "speaker": "user",
+     "text": "And a tiebreaker?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A number question, like the year a famous film came out. Closest answer wins."
+    },
+    {
+     "speaker": "user",
+     "text": "Love it. I'll start writing tonight."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Gore really bothers me. Is there a way to check a film before I see it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. Age ratings give you a rough idea, but parents' guide websites are much more detailed. They list violence and gore scene by scene."
+    },
+    {
+     "speaker": "user",
+     "text": "Without spoiling the plot?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly they describe the kind of content, like a stabbing in the second half, not the story. You can skim just the violence section."
+    },
+    {
+     "speaker": "user",
+     "text": "That's actually / really helpful, I didn't know those existed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're popular with parents, but anyone can use them. Plenty of adults are squeamish."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I'm already in the cinema?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look slightly away from the screen, or focus on the exit sign. Tense music usually warns you a few seconds before."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Weird question. I saw my dad cry at a film yesterday for the first time ever."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's not weird, that's a big moment. What was the film?"
+    },
+    {
+     "speaker": "user",
+     "text": "One about a father and son fixing up an old boat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah, that makes sense. Films like that sometimes hit things people don't say out loud."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I mention it? He / kind of pretended he had something in his eye."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You don't have to make it a big talk. Maybe just say you liked the film too, and that it made you think of him. Let him take it from there."
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah. That feels right."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It might mean more to him than you think."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it sad to go to the cinema alone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. Lots of people love it. You pick the film, the seat and the snacks, and no one talks over the good bits."
+    },
+    {
+     "speaker": "user",
+     "text": "I just feel like everyone will stare."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, once the lights go down, nobody's looking at anyone. And plenty of solo viewers go to weekday showings."
+    },
+    {
+     "speaker": "user",
+     "text": "Weekday afternoon could / be a good first try."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Quieter, cheaper, and you'll probably get the best seat in the room."
+    },
+    {
+     "speaker": "user",
+     "text": "Any other tips?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring a jacket, cinemas are cold. And maybe grab a coffee afterwards to think about the film. It turns it into a little treat."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got about two hundred DVDs in the loft. Worth keeping?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Depends. Some films vanish from streaming, and a disc means you always have them. Others you'll never watch again."
+    },
+    {
+     "speaker": "user",
+     "text": "I barely have a DVD player anymore."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then keep the ones you love or can't easily stream, and donate the rest. Charity shops and libraries often take them."
+    },
+    {
+     "speaker": "user",
+     "text": "Some are / special editions with extras."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those are worth checking. Collectors sometimes pay well for rare editions, especially boxed sets."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, sorting weekend it is."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Make three piles, keep, sell, donate. And don't watch them all while you sort, or it'll take a month."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kids want to make a stop motion film with their toys. Where do we start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great project. All you need is a phone, a free stop motion app, and something to keep the phone completely still."
+    },
+    {
+     "speaker": "user",
+     "text": "Like a tripod?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A tripod is perfect, but a stack of books and some tape works too. Any wobble shows up in the film."
+    },
+    {
+     "speaker": "user",
+     "text": "How many photos / are we talking for a short scene?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually around twelve photos for every second of film. So a ten second clip is over a hundred tiny moves."
+    },
+    {
+     "speaker": "user",
+     "text": "That's a lot of moving dinosaurs."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is, but kids love it. Start with something tiny, like a dinosaur walking across the table and eating a biscuit."
+    },
+    {
+     "speaker": "user",
+     "text": "They'll definitely want the biscuit bit."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you've got your first film. Add some sound effects in the app and you're done."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What actually makes a villain good? Some are amazing and some are just boring."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The best ones usually believe they're right. Their goal makes some kind of sense, even if their methods are awful."
+    },
+    {
+     "speaker": "user",
+     "text": "So not evil just for fun."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. When you can almost see their point, they become scary. A cartoon baddie who only wants chaos is harder to care about."
+    },
+    {
+     "speaker": "user",
+     "text": "What else? There's one / I loved that barely did anything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Presence matters too. A calm, quiet villain who appears in a few scenes can feel more threatening than one who's shouting all the time."
+    },
+    {
+     "speaker": "user",
+     "text": "Ooh, yes, that's it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Less is often more. If the hero talks about them before they ever show up, the tension builds on its own."
+    }
+   ]
+  },
+  {
+   "id": "movies.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Someone in the row in front keeps checking their phone in the cinema. It's so bright."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That is annoying. A quiet, polite word usually works, like asking if they could turn the brightness down."
+    },
+    {
+     "speaker": "user",
+     "text": "I hate confrontation."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then tell a staff member at the next chance. They deal with it all the time and won't mention you."
+    },
+    {
+     "speaker": "user",
+     "text": "But I'd miss / part of the film walking out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "True. You could also quietly move seats, if there's space further away."
+    },
+    {
+     "speaker": "user",
+     "text": "There's a free seat two rows back."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then grab it. Sometimes the easiest fix is just getting out of the glow."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "movies.opt1",
+   "lead_in": "It's movie night and I need help picking something for the group.",
+   "options": [
+    "The first one is a new superhero movie that everyone's talking about, but it's almost three hours long.",
+    "Then there's an old comedy we've all seen before but always laugh at.",
+    "Option three is a scary movie that's supposed to be really good, but two of my friends hate horror.",
+    "And the last one is a foreign drama with subtitles that got great reviews."
+   ],
+   "moshi_comment": [
+    "With two friends who hate horror, I'd drop the scary movie right away. The old comedy is a safe bet for a group, everyone knows it and laughs. The superhero movie is fun, but three hours is a big ask if people want to talk.",
+    "What's the mood tonight, chatty and relaxed or ready to really watch something? For a relaxed night, the comedy is perfect. If everyone's up for it, the superhero movie is the one people will want to discuss."
+   ]
+  },
+  {
+   "id": "movies.opt2",
+   "lead_in": "My partner and I are trying to choose a movie for date night.",
+   "options": [
+    "One is a romantic comedy about two chefs who own rival restaurants on the same street.",
+    "Another is a thriller about a heist on a train, which my partner really wants to see.",
+    "Or there's an animated movie about a lost robot that's supposed to make everyone cry."
+   ],
+   "moshi_comment": [
+    "The rival chefs one sounds like a classic date night pick, light and fun. The train heist could be exciting, and it's the one your partner is keen on, which counts for a lot. The robot movie might be lovely, but maybe not if you want a cheerful night.",
+    "Do you want something light or something gripping? If your partner really wants the heist movie, it might be nice to go with that. You could save the chef comedy for next time."
+   ]
+  },
+  {
+   "id": "movies.opt3",
+   "lead_in": "It's my gran's ninetieth and I want to show a film at the party. I've got a few ideas.",
+   "options": [
+    "There's an old musical she says she saw at the cinema with my grandad back when they were courting.",
+    "Or a nature documentary about the seaside town she grew up in, very gentle and pretty.",
+    "Another idea is a black and white comedy that she still quotes at Christmas every year."
+   ],
+   "moshi_comment": [
+    "The musical has the most meaning, it's tied to a memory of your grandad, which could be really moving. The comedy is a guaranteed laugh since she already loves it. The documentary is lovely but maybe better as background than the main event.",
+    "Would she enjoy a happy cry, or would that be too much on the day? If she'd love it, the musical is the heartfelt choice. If you want lightness, put the comedy on and let her deliver her favourite lines."
+   ]
+  },
+  {
+   "id": "movies.opt4",
+   "lead_in": "My friends and I want to see the new monster film on Friday and we can't agree where.",
+   "options": [
+    "There's the big multiplex with reclining seats, but tickets are pretty pricey.",
+    "A tiny independent cinema near the station, cheap, cosy, and they serve proper cake.",
+    "Or a drive in about forty minutes out of town, which we've never been to."
+   ],
+   "moshi_comment": [
+    "For a big monster film, the multiplex will have the best sound and screen, if the price is okay. The independent is cheap and cosy, though the screen is smaller. The drive in is the most memorable night out, just check the weather first.",
+    "If the goal is the film itself, go to the multiplex. If it's more about a fun night together, the drive in is an adventure you'll talk about for ages, and you can save the indie for a quieter film."
+   ]
+  },
+  {
+   "id": "movies.opt5",
+   "lead_in": "I'm starting a monthly film night at work and I need a theme for the year.",
+   "options": [
+    "We could do heist films, one every month, which most people seem to love.",
+    "Or go decade by decade, starting in the nineteen thirties and ending with something recent.",
+    "Another thought is films that are all set in the same city, to compare how it changes.",
+    "Or the so bad it's good night, where we pick famously terrible films and laugh at them."
+   ],
+   "moshi_comment": [
+    "Heist films are crowd pleasers but might feel samey by month eight. Decade by decade gives you natural variety and a sense of progress. The same city idea is clever but could be hard to fill. The bad films night is fantastic fun for coworkers.",
+    "Maybe combine two. Go decade by decade, and save one month as a terrible film special. People will look forward to that one and it keeps the mood light."
+   ]
+  },
+  {
+   "id": "movies.opt6",
+   "lead_in": "I teach year nine and I'm showing a film on the last day of term. Help me pick.",
+   "options": [
+    "One is an underdog sports film about a tiny school basketball team that ends up in the finals.",
+    "There's also a space survival story where an astronaut gets stranded and has to solve problems with science.",
+    "Or a courtroom drama about a teenager wrongly accused, which could start a good discussion."
+   ],
+   "moshi_comment": [
+    "The sports film is easy and upbeat, perfect when everyone's tired. The space one keeps them hooked and sneaks in a bit of science. The courtroom drama is the most thoughtful, but it might feel like work on the last day.",
+    "Last day energy is usually low and chatty. I'd go with the space survival film, it's gripping without being heavy. Keep the courtroom drama for a normal lesson where you can discuss it properly."
+   ]
+  }
+ ]
 }

@@ -1,160 +1,1898 @@
 {
-  "topic": "pets",
-  "contexts": [
+ "topic": "pets",
+ "contexts": [
+  {
+   "id": "pets.ctx1",
+   "turns": [
     {
-      "id": "pets.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "We're finally getting a dog! The kids have been begging for years."},
-        {"speaker": "moshi", "text": "How exciting! Are you leaning toward a puppy, or an older dog from a shelter?"}
-      ],
-      "pending": "a puppy or an older shelter dog",
-      "think_reask": [
-        "So, puppy or an older shelter dog?",
-        "Okay, have you decided? A puppy, or a grown up dog that needs a home?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were talking about whether to get a puppy or an older dog.",
-        "Hi again. Any thoughts on the new family dog, puppy or shelter adult?"
-      ],
-      "endings": [
-        {"user": "A puppy. The kids want to raise it from the start.", "moshi": "That'll be fun and a bit chaotic. Plan for lots of short potty breaks and a puppy class early on."},
-        {"user": "An older one, I think. I can't handle puppy training right now.", "moshi": "Great choice. Many adult shelter dogs are already house trained, and the staff can tell you about their personality."}
-      ]
+     "speaker": "user",
+     "text": "We're finally getting a dog! The kids have been begging for years."
     },
     {
-      "id": "pets.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "My cat keeps scratching the couch. It's shredded on one side."},
-        {"speaker": "moshi", "text": "Poor couch. Does she have a scratching post?"},
-        {"speaker": "user", "text": "A little one, she ignores it."},
-        {"speaker": "moshi", "text": "Then try either a tall sturdy post right by the couch, or a flat cardboard scratcher. Which do you think she'd like?"}
-      ],
-      "pending": "tall scratching post or flat cardboard scratcher",
-      "think_reask": [
-        "So, for your cat, a tall post or a flat cardboard scratcher?",
-        "Time's up! Which one do you think she'd go for?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were picking between a tall scratching post and a flat scratcher for your cat.",
-        "There you are. Still thinking about how to save that couch?"
-      ],
-      "endings": [
-        {"user": "She stretches up really high, so the tall post.", "moshi": "Perfect. Get one that doesn't wobble and rub a bit of catnip on it to get her interested."},
-        {"user": "Probably the flat one, she loves scratching the rug too.", "moshi": "Then a cardboard scratcher on the floor next to the couch is a great bet. They're cheap, so try a couple."}
-      ]
-    },
-    {
-      "id": "pets.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I'm going away for a week and I don't know what to do with my dog."},
-        {"speaker": "moshi", "text": "You've got a few options. Would you prefer a boarding kennel, or a sitter who comes to your home?"}
-      ],
-      "pending": "boarding kennel or a home pet sitter",
-      "think_reask": [
-        "So, kennel or a sitter at home for your dog?",
-        "Alright, have you decided where your dog will stay while you're away?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were figuring out whether your dog goes to a kennel or gets a sitter.",
-        "Hi again. Any decision on the kennel versus a home sitter?"
-      ],
-      "endings": [
-        {"user": "A sitter. He gets really stressed in new places.", "moshi": "Good thinking. Meet the sitter beforehand and leave clear notes about feeding and walks."},
-        {"user": "The kennel. He loves other dogs.", "moshi": "He'll have a blast then. Book early and check what vaccinations they require."}
-      ]
+     "speaker": "moshi",
+     "text": "How exciting! Are you leaning toward a puppy, or an older dog from a shelter?"
     }
-  ],
-  "side_conversations": [
-    {"id": "pets.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you feed the cat this morning?"},
-      {"speaker": "friend", "text": "No, I thought you did."},
-      {"speaker": "user", "text": "Oh no, that's why she's yelling at me."},
-      {"speaker": "friend", "text": "She's so dramatic. I'll do it now."},
-      {"speaker": "user", "text": "Thanks. Half a can, not the whole thing, okay?"},
-      {"speaker": "friend", "text": "Got it. Half a can."}
-    ]},
-    {"id": "pets.side2", "turns": [
-      {"speaker": "user", "text": "Can you take the dog out tonight? I have to work late."},
-      {"speaker": "friend", "text": "Sure, what time does he usually go?"},
-      {"speaker": "user", "text": "Around seven, and then once more before bed."},
-      {"speaker": "friend", "text": "Does he pull on the leash? Last time he dragged me toward every squirrel."},
-      {"speaker": "user", "text": "Use the harness, it's on the hook by the door. Much better."},
-      {"speaker": "friend", "text": "Okay, harness it is."}
-    ]},
-    {"id": "pets.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, look at the fish tank. Does the water look cloudy to you?"},
-      {"speaker": "friend", "text": "A little, yeah. When did you last change it?"},
-      {"speaker": "user", "text": "Maybe three weeks ago? I kind of lost track."},
-      {"speaker": "friend", "text": "That's probably it. Do a partial change this weekend and go easy on the food."},
-      {"speaker": "user", "text": "Do you still have that siphon thing?"},
-      {"speaker": "friend", "text": "It's under my sink, I'll bring it over."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "pets.dlg1", "turns": [
-      {"speaker": "user", "text": "How often should I take my dog to the vet?"},
-      {"speaker": "moshi", "text": "For a healthy adult dog, a checkup once a year is standard. Puppies and older dogs need visits more often."},
-      {"speaker": "user", "text": "She's about nine now. Is that considered old?"},
-      {"speaker": "moshi", "text": "For many breeds, yes, that's senior. Twice a year checkups are a good idea from here on."},
-      {"speaker": "user", "text": "She's been sleeping a lot more lately / is that something to worry about?"},
-      {"speaker": "moshi", "text": "Some extra sleep is normal with age. But if she's also eating less or seems stiff, mention it to the vet."},
-      {"speaker": "user", "text": "She does seem slow on the stairs."},
-      {"speaker": "moshi", "text": "That could be joint pain, which is very common and treatable. Ask the vet about it at her next visit."}
-    ]},
-    {"id": "pets.dlg2", "turns": [
-      {"speaker": "user", "text": "My daughter wants a hamster for her birthday. Are they good first pets?"},
-      {"speaker": "moshi", "text": "They can be, but they're awake mostly at night and can nip if handled roughly. How old is she?"},
-      {"speaker": "user", "text": "She's turning eight."},
-      {"speaker": "moshi", "text": "That's a fine age with some supervision. A big cage, a wheel and a deep layer of bedding are the essentials."},
-      {"speaker": "user", "text": "Would a guinea pig be better? I've heard / they're friendlier."},
-      {"speaker": "moshi", "text": "Guinea pigs are usually calmer and awake during the day, so they're great with kids. But they're happier in pairs."},
-      {"speaker": "user", "text": "Two of them? That's double the cleaning."},
-      {"speaker": "moshi", "text": "True, but one cage and they keep each other company. It's honestly not much more work."}
-    ]},
-    {"id": "pets.dlg3", "turns": [
-      {"speaker": "user", "text": "Can dogs eat grapes? Mine just grabbed one off the floor."},
-      {"speaker": "moshi", "text": "Grapes can be toxic to dogs, even in small amounts. Please call your vet or a pet poison line right away."},
-      {"speaker": "user", "text": "It was just one grape. He's a big dog."},
-      {"speaker": "moshi", "text": "Even so, it's best to call. The reaction varies a lot between dogs, and they can tell you what to watch for."},
-      {"speaker": "user", "text": "Okay, I'll call them now. What else should I keep away from him?"},
-      {"speaker": "moshi", "text": "Chocolate, raisins, onions, garlic and anything with xylitol, which is a sweetener in some gum and peanut butter."},
-      {"speaker": "user", "text": "Wow, I had no idea about the / the peanut butter one."},
-      {"speaker": "moshi", "text": "Most peanut butter is fine, just check the label for xylitol before sharing."}
-    ]},
-    {"id": "pets.dlg4", "turns": [
-      {"speaker": "user", "text": "I adopted a cat last week and she's hiding under the bed all day."},
-      {"speaker": "moshi", "text": "That's really normal for a new cat. Give her a quiet room with food, water and a litter box nearby."},
-      {"speaker": "user", "text": "Should I try to pull her out so she gets used to me?"},
-      {"speaker": "moshi", "text": "Better not. Let her come out on her own. Sit nearby and read or talk softly so she learns you're safe."},
-      {"speaker": "user", "text": "How long does it usually take?"},
-      {"speaker": "moshi", "text": "Anywhere from a few days to a few weeks. Treats and a feather toy can speed things up."},
-      {"speaker": "user", "text": "I'll pick up a feather toy tomorrow / and maybe some of those lickable treats."},
-      {"speaker": "moshi", "text": "Great idea. Cats tend to love those, and it's a nice way to build trust."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "pets.opt1",
-     "lead_in": "We're finally getting a dog and we're choosing between a few at the shelter.",
-     "options": [
-       "The first one is a young lab mix, super energetic, who needs a lot of walks and space.",
-       "Then there's an older beagle, calm and sweet, but he howls when he's left alone.",
-       "Option three is a small terrier mix that's great with kids but not with cats.",
-       "And the last one is a big shy greyhound who mostly wants to nap on the couch."
-     ],
-     "moshi_comment": [
-       "It really depends on your home. The lab mix is great if you're active and have space, but needs a lot of time. The greyhound sounds surprisingly easy, since they're often happy to nap all day. The beagle's howling could be a problem if you're out at work.",
-       "Do you have a cat, and how long are you out of the house each day? If you have a cat, skip the terrier. If you're out a lot, the greyhound is probably the best fit."
-     ]},
-    {"id": "pets.opt2",
-     "lead_in": "My cat keeps scratching the furniture and I'm trying to pick a fix.",
-     "options": [
-       "One option is a really tall scratching post right next to the couch.",
-       "Another is putting sticky tape on the arms of the sofa so she hates touching it.",
-       "Or I could get those soft caps that go over her claws, which last about a month."
-     ],
-     "moshi_comment": [
-       "The tall scratching post is the best long term fix, since it gives her a place she's allowed to scratch. The sticky tape works well alongside it to steer her away from the couch. The soft caps work, but you'd have to keep putting them back on.",
-       "Have you tried a scratching post before? If not, I'd start with the tall post plus the tape for a few weeks. If she ignores the post completely, the claw caps are a good backup."
-     ]}
-  ]
+   ],
+   "pending": "a puppy or an older shelter dog",
+   "think_reask": [
+    "So, puppy or an older shelter dog?",
+    "Okay, have you decided? A puppy, or a grown up dog that needs a home?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were talking about whether to get a puppy or an older dog.",
+    "Hi again. Any thoughts on the new family dog, puppy or shelter adult?"
+   ],
+   "endings": [
+    {
+     "user": "A puppy. The kids want to raise it from the start.",
+     "moshi": "That'll be fun and a bit chaotic. Plan for lots of short potty breaks and a puppy class early on."
+    },
+    {
+     "user": "An older one, I think. I can't handle puppy training right now.",
+     "moshi": "Great choice. Many adult shelter dogs are already house trained, and the staff can tell you about their personality."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cat keeps scratching the couch. It's shredded on one side."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Poor couch. Does she have a scratching post?"
+    },
+    {
+     "speaker": "user",
+     "text": "A little one, she ignores it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try either a tall sturdy post right by the couch, or a flat cardboard scratcher. Which do you think she'd like?"
+    }
+   ],
+   "pending": "tall scratching post or flat cardboard scratcher",
+   "think_reask": [
+    "So, for your cat, a tall post or a flat cardboard scratcher?",
+    "Time's up! Which one do you think she'd go for?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were picking between a tall scratching post and a flat scratcher for your cat.",
+    "There you are. Still thinking about how to save that couch?"
+   ],
+   "endings": [
+    {
+     "user": "She stretches up really high, so the tall post.",
+     "moshi": "Perfect. Get one that doesn't wobble and rub a bit of catnip on it to get her interested."
+    },
+    {
+     "user": "Probably the flat one, she loves scratching the rug too.",
+     "moshi": "Then a cardboard scratcher on the floor next to the couch is a great bet. They're cheap, so try a couple."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm going away for a week and I don't know what to do with my dog."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You've got a few options. Would you prefer a boarding kennel, or a sitter who comes to your home?"
+    }
+   ],
+   "pending": "boarding kennel or a home pet sitter",
+   "think_reask": [
+    "So, kennel or a sitter at home for your dog?",
+    "Alright, have you decided where your dog will stay while you're away?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were figuring out whether your dog goes to a kennel or gets a sitter.",
+    "Hi again. Any decision on the kennel versus a home sitter?"
+   ],
+   "endings": [
+    {
+     "user": "A sitter. He gets really stressed in new places.",
+     "moshi": "Good thinking. Meet the sitter beforehand and leave clear notes about feeding and walks."
+    },
+    {
+     "user": "The kennel. He loves other dogs.",
+     "moshi": "He'll have a blast then. Book early and check what vaccinations they require."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter wants a rabbit for the garden hutch."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely. Rabbits are really social though. Would you get one on its own, or a bonded pair that already get along?"
+    }
+   ],
+   "pending": "one rabbit on its own or a bonded pair",
+   "think_reask": [
+    "So, one bunny, or a pair that come together?",
+    "Alright, any decision? A single rabbit or two?"
+   ],
+   "welcome_back": [
+    "The rabbit question. Just one, or a bonded pair?",
+    "Still on the hutch. Are you going for one rabbit or two?"
+   ],
+   "endings": [
+    {
+     "user": "A pair, then. I'd hate for it to be lonely.",
+     "moshi": "Great. Ask a rescue for a neutered pair that's already bonded, it saves all the tricky introductions."
+    },
+    {
+     "user": "Just one. Two feels like a lot for an eight year old.",
+     "moshi": "Then she'll need to spend real time with it every day. Rabbits on their own get bored and sad quite quickly."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dog pulls on the lead so hard I've nearly been dragged into a hedge. Twice."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ouch. Would you rather try a front clip harness to make walks easier right now, or sign up for some training classes to fix the habit?"
+    }
+   ],
+   "pending": "a front clip harness or training classes for the pulling dog",
+   "think_reask": [
+    "So, harness for a quick fix, or proper training classes?",
+    "Okay, the pulling. Gear or classes?"
+   ],
+   "welcome_back": [
+    "Back to your hedge diving dog. Harness or training?",
+    "The pulling problem. Are we going with a harness or classes?"
+   ],
+   "endings": [
+    {
+     "user": "Both, honestly. I'm desperate.",
+     "moshi": "That's actually the ideal combo. The harness keeps you safe while the classes teach him to walk nicely."
+    },
+    {
+     "user": "Classes. I want him to actually learn it.",
+     "moshi": "Good. Look for reward based classes, and practise in short sessions at home between them."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The vet says my cat is a bit overweight and I should rethink her food."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay. At the moment is she mostly on dry biscuits, or wet food from pouches and tins?"
+    }
+   ],
+   "pending": "whether the cat eats mostly dry or wet food",
+   "think_reask": [
+    "So, what's she eating now, mostly dry or mostly wet?",
+    "Alright, biscuits or pouches at the moment?"
+   ],
+   "welcome_back": [
+    "Your chubby cat. Is she on dry food or wet food right now?",
+    "The diet question. Mostly biscuits, or tins and pouches?"
+   ],
+   "endings": [
+    {
+     "user": "Dry. I just leave a full bowl out all day.",
+     "moshi": "That's probably the culprit. Measure her daily amount instead and split it into two or three meals."
+    },
+    {
+     "user": "Wet, but she gets three pouches and begs for more.",
+     "moshi": "Then check the pack for her weight and cut back slowly. A puzzle feeder can make a smaller meal last longer."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We got a kitten! Tiny, grey, absolutely feral. We can't agree on a name."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Congratulations! What's on the shortlist?"
+    },
+    {
+     "speaker": "user",
+     "text": "Pickle or Biscuit."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Both very good. Which one does she look more like when she's attacking your feet?"
+    }
+   ],
+   "pending": "naming the kitten Pickle or Biscuit",
+   "think_reask": [
+    "So, is she a Pickle or a Biscuit?",
+    "Alright, the kitten's name. Which one wins?"
+   ],
+   "welcome_back": [
+    "The grey menace still needs a name. Pickle or Biscuit?",
+    "Your kitten. Have you picked between Pickle and Biscuit?"
+   ],
+   "endings": [
+    {
+     "user": "Pickle. She's a bit sour and a bit chaotic.",
+     "moshi": "Pickle it is. Say it when you feed her, she'll learn it quicker than you'd think."
+    },
+    {
+     "user": "Biscuit. She curls up exactly like one.",
+     "moshi": "Perfect, very cosy. Use it with treats and she'll be coming when called in no time."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My spaniel rolled in something unspeakable and he smells like a bin."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh no. Are you going to wrestle him into the bath yourself, or book him in at a groomer?"
+    }
+   ],
+   "pending": "bathing the smelly spaniel at home or booking a groomer",
+   "think_reask": [
+    "So, bath at home, or off to the groomer?",
+    "Okay, the stinky spaniel. Do it yourself or pay someone?"
+   ],
+   "welcome_back": [
+    "Your smelly spaniel. Home bath or groomer?",
+    "Still deciding about that bin smell. DIY wash, or professional?"
+   ],
+   "endings": [
+    {
+     "user": "At home. I can't wait three days for an appointment.",
+     "moshi": "Fair. Use a dog shampoo, not your own, and rinse twice. Put a towel down, he'll shake on everything."
+    },
+    {
+     "user": "Groomer. He also needs his ears and feet trimmed anyway.",
+     "moshi": "Good plan. Until then, a damp towel and some dog wipes will at least make the car ride bearable."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're moving to a house near a quiet road, and our cat has only ever lived in a flat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big change for her. Are you thinking of keeping her indoors, or letting her start going outside?"
+    }
+   ],
+   "pending": "keeping the cat indoors or letting her go outside after the move",
+   "think_reask": [
+    "So, indoor cat still, or time to let her out?",
+    "Any thoughts yet? Indoors or outdoors for her?"
+   ],
+   "welcome_back": [
+    "The cat and the new house. Inside only, or outside too?",
+    "So, will she stay an indoor cat or get some garden time?"
+   ],
+   "endings": [
+    {
+     "user": "I'd like to let her out eventually.",
+     "moshi": "Then keep her in for a few weeks first so she learns it's home. Start with short supervised trips before dinner, so she comes back hungry."
+    },
+    {
+     "user": "Indoors. I'd worry about the road.",
+     "moshi": "That's completely okay. A window perch, a cat tree and some daily play will keep her happy inside."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Fireworks start tonight and my dog completely falls apart every year."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Poor thing. Would you rather stay home and make a safe den for him, or take him somewhere quieter, like out of town?"
+    }
+   ],
+   "pending": "staying home with a den or taking the dog somewhere quieter",
+   "think_reask": [
+    "So, tonight. Stay in with a den, or get out of town?",
+    "Okay, have you decided where he'll be during the fireworks?"
+   ],
+   "welcome_back": [
+    "Tonight's fireworks. Den at home, or escaping somewhere quiet?",
+    "Your nervous dog. Staying put, or heading somewhere calmer?"
+   ],
+   "endings": [
+    {
+     "user": "My parents live in the countryside, we'll go there.",
+     "moshi": "Great idea. Leave before dark, and bring his bed and a favourite toy so he settles faster."
+    },
+    {
+     "user": "We'll stay home, I can't drive tonight.",
+     "moshi": "Then shut the curtains, put on the telly or some music, and build a covered den with blankets in a corner he likes."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Puppy arrives on Saturday. Where should her crate go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exciting! For the first few nights, do you want her in your bedroom, or downstairs in the kitchen?"
+    }
+   ],
+   "pending": "putting the puppy's crate in the bedroom or the kitchen",
+   "think_reask": [
+    "So, bedroom or kitchen for the crate?",
+    "Alright, where's the crate going? Near you, or downstairs?"
+   ],
+   "welcome_back": [
+    "The crate. Bedroom with you, or the kitchen?",
+    "About Saturday's puppy. Have you chosen the crate spot?"
+   ],
+   "endings": [
+    {
+     "user": "Bedroom, I think. I'm a soft touch.",
+     "moshi": "That's actually kind for the first weeks. She'll feel safer near you, and you'll hear when she needs the toilet."
+    },
+    {
+     "user": "The kitchen. I don't want her in the bedroom forever.",
+     "moshi": "Fair. Maybe sleep downstairs on the sofa the first night or two, then move up once she's settled."
+    }
+   ]
+  },
+  {
+   "id": "pets.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm finally getting pet insurance for my two year old lab. The choices are confusing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They really are. Would you go for a cheaper accident only policy, or a lifetime one that covers illness every year?"
+    }
+   ],
+   "pending": "accident only or lifetime pet insurance for the labrador",
+   "think_reask": [
+    "So, accident only or lifetime cover?",
+    "Any decision on the insurance? Cheap and basic, or lifetime?"
+   ],
+   "welcome_back": [
+    "The lab's insurance. Accident only, or lifetime?",
+    "Back to the policies. Which way are you leaning?"
+   ],
+   "endings": [
+    {
+     "user": "Lifetime. Labs get joint problems, right?",
+     "moshi": "They often do, so lifetime makes sense. Check the yearly limit per condition, that's the bit that really matters."
+    },
+    {
+     "user": "Accident only, and I'll save some money each month for the rest.",
+     "moshi": "That can work if you're disciplined. Set up a separate savings pot so it's not touched for anything else."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "pets.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, is that the dog's lead hanging on your bike?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, I took him round the park on the way back. He pulled the whole time."
+    },
+    {
+     "speaker": "user",
+     "text": "He does that with everyone but me. Did he stop at the pond?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Stop? He tried to swim in it. I had to drag him out by the harness."
+    },
+    {
+     "speaker": "user",
+     "text": "So that explains the smell in the hallway."
+    },
+    {
+     "speaker": "friend",
+     "text": "I'll give him a bath tonight, promise."
+    }
+   ]
+  },
+  {
+   "id": "pets.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you take the dog out tonight? I have to work late."
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, what time does he usually go?"
+    },
+    {
+     "speaker": "user",
+     "text": "Around seven, and then once more before bed."
+    },
+    {
+     "speaker": "friend",
+     "text": "Does he pull on the leash? Last time he dragged me toward every squirrel."
+    },
+    {
+     "speaker": "user",
+     "text": "Use the harness, it's on the hook by the door. Much better."
+    },
+    {
+     "speaker": "friend",
+     "text": "Okay, harness it is."
+    }
+   ]
+  },
+  {
+   "id": "pets.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, look at the fish tank. Does the water look cloudy to you?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A little, yeah. When did you last change it?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe three weeks ago? I kind of lost track."
+    },
+    {
+     "speaker": "friend",
+     "text": "That's probably it. Do a partial change this weekend and go easy on the food."
+    },
+    {
+     "speaker": "user",
+     "text": "Do you still have that siphon thing?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It's under my sink, I'll bring it over."
+    }
+   ]
+  },
+  {
+   "id": "pets.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did Mango throw up on my duvet?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Possibly. I heard a very dramatic noise from your room at about six."
+    },
+    {
+     "speaker": "user",
+     "text": "And you didn't check?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I was asleep. Mostly."
+    },
+    {
+     "speaker": "user",
+     "text": "It's a hairball, I think. Do we still have that paste the vet gave us?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Top shelf, next to the vitamins. She hates it though."
+    },
+    {
+     "speaker": "user",
+     "text": "She hates everything that's good for her. Hold her while I put some on her paw?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine, but if she scratches me, you're buying dinner."
+    }
+   ]
+  },
+  {
+   "id": "pets.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Whose turn is it to clean the guinea pig cage?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yours. I did it last Sunday, remember? With the hay explosion."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh right. They kicked it all over the carpet."
+    },
+    {
+     "speaker": "friend",
+     "text": "And then Peanut sat in the food bowl looking proud of himself."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll do it tonight. Can you grab more bedding on your way home?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The paper stuff or the wood shavings?"
+    },
+    {
+     "speaker": "user",
+     "text": "Paper. The shavings made you sneeze for a week."
+    }
+   ]
+  },
+  {
+   "id": "pets.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Your dog has stolen that poor kid's ball again."
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh no. Rufus! Drop it!"
+    },
+    {
+     "speaker": "user",
+     "text": "He's not dropping it. He's doing laps."
+    },
+    {
+     "speaker": "friend",
+     "text": "He thinks it's a game now. Have you got any treats on you?"
+    },
+    {
+     "speaker": "user",
+     "text": "Some liver ones in my pocket. Here."
+    },
+    {
+     "speaker": "friend",
+     "text": "Rufus, look! Treat! Okay, good boy, give."
+    },
+    {
+     "speaker": "user",
+     "text": "There we go. Should we apologise to the dad?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, and offer him a sticky, slightly chewed ball back. Lovely."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll go. You put the lead on before he spots the frisbee."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "pets.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How often should I take my dog to the vet?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a healthy adult dog, a checkup once a year is standard. Puppies and older dogs need visits more often."
+    },
+    {
+     "speaker": "user",
+     "text": "She's about nine now. Is that considered old?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For many breeds, yes, that's senior. Twice a year checkups are a good idea from here on."
+    },
+    {
+     "speaker": "user",
+     "text": "She's been sleeping a lot more lately / is that something to worry about?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some extra sleep is normal with age. But if she's also eating less or seems stiff, mention it to the vet."
+    },
+    {
+     "speaker": "user",
+     "text": "She does seem slow on the stairs."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That could be joint pain, which is very common and treatable. Ask the vet about it at her next visit."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter wants a hamster for her birthday. Are they good first pets?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They can be, but they're awake mostly at night and can nip if handled roughly. How old is she?"
+    },
+    {
+     "speaker": "user",
+     "text": "She's turning eight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a fine age with some supervision. A big cage, a wheel and a deep layer of bedding are the essentials."
+    },
+    {
+     "speaker": "user",
+     "text": "Would a guinea pig be better? I've heard / they're friendlier."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Guinea pigs are usually calmer and awake during the day, so they're great with kids. But they're happier in pairs."
+    },
+    {
+     "speaker": "user",
+     "text": "Two of them? That's double the cleaning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "True, but one cage and they keep each other company. It's honestly not much more work."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can dogs eat grapes? Mine just grabbed one off the floor."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Grapes can be toxic to dogs, even in small amounts. Please call your vet or a pet poison line right away."
+    },
+    {
+     "speaker": "user",
+     "text": "It was just one grape. He's a big dog."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even so, it's best to call. The reaction varies a lot between dogs, and they can tell you what to watch for."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll call them now. What else should I keep away from him?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Chocolate, raisins, onions, garlic and anything with xylitol, which is a sweetener in some gum and peanut butter."
+    },
+    {
+     "speaker": "user",
+     "text": "Wow, I had no idea about the / the peanut butter one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most peanut butter is fine, just check the label for xylitol before sharing."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I adopted a cat last week and she's hiding under the bed all day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's really normal for a new cat. Give her a quiet room with food, water and a litter box nearby."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I try to pull her out so she gets used to me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Better not. Let her come out on her own. Sit nearby and read or talk softly so she learns you're safe."
+    },
+    {
+     "speaker": "user",
+     "text": "How long does it usually take?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Anywhere from a few days to a few weeks. Treats and a feather toy can speed things up."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll pick up a feather toy tomorrow / and maybe some of those lickable treats."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great idea. Cats tend to love those, and it's a nice way to build trust."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why does my dog eat grass and then throw up? Is he sick?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of dogs eat grass, and most of the time it's harmless. Some just like the taste, others do it when their tummy feels a bit off."
+    },
+    {
+     "speaker": "user",
+     "text": "He does it every single walk."
+    },
+    {
+     "speaker": "moshi",
+     "text": "If he's otherwise eating, playing and pooping normally, it's usually nothing to worry about."
+    },
+    {
+     "speaker": "user",
+     "text": "He seems totally fine. / Annoyingly fine, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's probably habit. Just keep him off grass that might be sprayed with weedkiller."
+    },
+    {
+     "speaker": "user",
+     "text": "And when should I worry?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If he's vomiting a lot, not eating, seems tired or the sick has blood in it, call your vet."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cat yowls at four in the morning. Every morning. I'm losing my mind."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds rough. Cats are naturally most active around dawn, and she's probably learned that yowling gets you up."
+    },
+    {
+     "speaker": "user",
+     "text": "I do get up and feed her, yeah."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the reward she's after. Try an automatic feeder that opens at dawn, so the food doesn't come from you."
+    },
+    {
+     "speaker": "user",
+     "text": "Smart. What else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Play with her hard in the evening, like ten or fifteen minutes with a wand toy, then give her dinner. Tired, full cats sleep longer."
+    },
+    {
+     "speaker": "user",
+     "text": "And if she still screams?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ignore it completely, no talking, no getting up. It usually gets worse for a few nights before it stops, so hang in there."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We just got a border collie. How much exercise does she actually need?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot. Most collies want a couple of hours of activity a day, and just as importantly, things for their brain to do."
+    },
+    {
+     "speaker": "user",
+     "text": "Two hours? We both work."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It doesn't all have to be walking. Training games, sniffing hunts and puzzle toys tire them out surprisingly well."
+    },
+    {
+     "speaker": "user",
+     "text": "What happens if she doesn't get enough?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bored collies tend to invent their own jobs, like herding the kids, chewing furniture, or barking at everything."
+    },
+    {
+     "speaker": "user",
+     "text": "She already herds my son. / He thinks it's hilarious."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's sweet now, but nipping at heels can grow into a habit. Give her a proper outlet, like fetch or a beginner agility class."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm bringing home a second cat next week. How do I introduce them without a war?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Go slowly. Keep the new cat in a separate room for the first few days with her own food, water and litter tray."
+    },
+    {
+     "speaker": "user",
+     "text": "They can't see each other at all?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not yet. Let them get used to each other's smell first. Swap their bedding or rub a cloth on one and leave it near the other."
+    },
+    {
+     "speaker": "user",
+     "text": "And then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Feed them on either side of a closed door, then a door open a crack, then a baby gate. Move on only when both are eating calmly."
+    },
+    {
+     "speaker": "user",
+     "text": "How long does all this take?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Anything from a week to a month. Hissing at first is normal, so don't panic if it's not instant friendship."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm terrified of cutting my dog's nails. I'm scared I'll hit the quick."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally understandable. Take tiny slices off the tip rather than one big cut, and stop when you see a darker dot in the middle."
+    },
+    {
+     "speaker": "user",
+     "text": "His nails are black. I can't see anything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Black nails are harder. Just trim a thin sliver at a time and look at the cut surface, when it starts looking moist or chalky in the centre, stop."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I make it bleed?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Press some styptic powder or even cornflour onto the tip for a minute. It looks worse than it is."
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe I'll / just pay the vet nurse to do it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's fine too. Some people walk their dogs on pavements more, which wears the nails down naturally between trims."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My tortoise has gone very sleepy. Is she trying to hibernate?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Possibly, if the weather's cooling down. What kind of tortoise is she?"
+    },
+    {
+     "speaker": "user",
+     "text": "A Hermann's, I think. She's about ten."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hermann's do hibernate. But before letting her, it's important she's healthy and has had a vet check this autumn."
+    },
+    {
+     "speaker": "user",
+     "text": "Why a vet check?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A tortoise that's underweight or ill can struggle to survive the winter. The vet will weigh her and check she's ready."
+    },
+    {
+     "speaker": "user",
+     "text": "And then she just sleeps in a box?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Somewhere with a steady temperature, just above freezing, often in a fridge set up for it. Weigh her every couple of weeks to make sure she isn't losing too much."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you teach an old dog new tricks? Mine's eleven and he's never learned to give a paw."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Absolutely. Older dogs learn just fine, sometimes better, since they're calmer."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hold a treat in your closed hand near his paw. The moment he lifts his paw to touch it, say yes and give him the treat."
+    },
+    {
+     "speaker": "user",
+     "text": "What if he just sniffs it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's normal. Wait. He'll try different things, and as soon as the paw lifts even a little, reward it."
+    },
+    {
+     "speaker": "user",
+     "text": "He's got a bad hip though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then make sure he's comfy lying down, and keep sessions short, two or three minutes. Maybe teach him to touch your hand with his nose instead, it's gentler."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just found a flea on my cat. Do I need to panic?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No panic needed, but it's worth acting now. Where there's one flea there are usually more."
+    },
+    {
+     "speaker": "user",
+     "text": "Gross. What do I do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get a vet recommended spot on treatment for cats. Never use a dog one, some of them are really toxic to cats."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh wow, I didn't know that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's an important one. Treat every pet in the house, not just her."
+    },
+    {
+     "speaker": "user",
+     "text": "And the house itself? / Do I have to burn the sofa?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No burning required. Vacuum everything thoroughly for a few weeks, wash her bedding hot, and empty the vacuum bag outside each time."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My puppy bites my hands constantly. Her teeth are like needles."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Puppy teeth are vicious. Biting is normal at that age, she's exploring and teething, but you can teach her to be gentle."
+    },
+    {
+     "speaker": "user",
+     "text": "How? She thinks it's a game."
+    },
+    {
+     "speaker": "moshi",
+     "text": "When she bites, stop playing immediately and go still. Then offer a toy she's allowed to chew instead."
+    },
+    {
+     "speaker": "user",
+     "text": "And if she goes for my ankles?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Same thing. Freeze, be boring, then redirect to a tug toy. Running away makes it more exciting."
+    },
+    {
+     "speaker": "user",
+     "text": "My kids keep squealing and running."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Teach them to be trees, stand still with arms folded. It's hard for kids, but it works fast if everyone does it."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My budgie used to sing all day, and now he's really quiet. Should I worry?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's worth keeping an eye on. Has anything changed lately, like the cage spot, a new pet, or less daylight?"
+    },
+    {
+     "speaker": "user",
+     "text": "We moved his cage into the bedroom because of the cat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That might be it. Budgies like being near the action and they get lonely easily."
+    },
+    {
+     "speaker": "user",
+     "text": "Is he eating okay?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the key question. If he's eating, preening and his droppings look normal, it's probably mood. If he's fluffed up and sleepy, see an avian vet."
+    },
+    {
+     "speaker": "user",
+     "text": "He's eating. He just / sits there looking sad."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try moving him to a busy room that's safe from the cat, and talk to him through the day. Some people get a second budgie for company."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's scorching today. Is it safe to walk my dog at lunchtime?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably not on pavement. Try the back of your hand on the ground for seven seconds, if it's too hot for you, it's too hot for his paws."
+    },
+    {
+     "speaker": "user",
+     "text": "Seven seconds is a long time on that tarmac."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Walk early in the morning or late in the evening instead, and stick to grass and shade."
+    },
+    {
+     "speaker": "user",
+     "text": "He'll go mad if he doesn't go out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A short sniff around the garden and some indoor games will do for today. Frozen treats in a mat are great on hot days."
+    },
+    {
+     "speaker": "user",
+     "text": "What signs would mean he's overheating?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Heavy panting, drooling a lot, being wobbly or very sleepy. If that happens, cool him with lukewarm water and call a vet."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cat has started weeing on the bath mat instead of in her tray."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's frustrating. The first step is a vet visit, because urinary problems are a really common cause."
+    },
+    {
+     "speaker": "user",
+     "text": "She seems healthy otherwise."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cats hide pain well, so it's still worth ruling out. If she's fine, then it's usually something about the tray."
+    },
+    {
+     "speaker": "user",
+     "text": "I did change the litter brand last week. / Because it was on offer."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That could be it. Cats can be really fussy about texture and smell. Go back to the old one and see if she returns."
+    },
+    {
+     "speaker": "user",
+     "text": "And should I clean the bath mat with bleach?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use an enzyme cleaner instead. Bleach can smell like urine to cats and might draw her back to the same spot."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We have a baby due in two months and a very spoiled dog. How do we prepare him?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good thinking to start now. Begin making small changes, like where he sleeps or which rooms he's allowed in, before the baby arrives."
+    },
+    {
+     "speaker": "user",
+     "text": "He sleeps on our bed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "If that'll change, change it now, so he doesn't connect losing his spot with the baby."
+    },
+    {
+     "speaker": "user",
+     "text": "That's a good point."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can also play recordings of baby crying at a low volume while giving him treats, so the sound becomes normal."
+    },
+    {
+     "speaker": "user",
+     "text": "And when we bring her home?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let him sniff a blanket she's used first. Then let him meet her calmly with you holding her, and never leave them alone together."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I pick a good vet? We've just moved here."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask neighbours with pets and check local reviews. Then ring a couple of practices and see how they treat you on the phone."
+    },
+    {
+     "speaker": "user",
+     "text": "What should I ask them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask about out of hours emergencies, whether they have a vet that likes cats or exotics if you need that, and how easy appointments are to get."
+    },
+    {
+     "speaker": "user",
+     "text": "I've got a rabbit and a dog."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then check they're comfortable with rabbits, not every vet is. Some practices have a special interest in them."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I register now even if no one's sick?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, do it now. It's much less stressful than trying to find one in an emergency at midnight."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dog's breath could strip paint. What can I do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bad breath is often a sign of plaque or gum problems. A vet check is a good first step to look at his teeth."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I just brush them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, brushing is the gold standard. Use a dog toothpaste, never human, and a soft brush or a finger brush."
+    },
+    {
+     "speaker": "user",
+     "text": "He'd bite the brush in half."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start small. Let him lick the toothpaste off your finger for a few days, then rub his gums gently, and build up from there."
+    },
+    {
+     "speaker": "user",
+     "text": "And dental chews?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They help a bit, but they're not a replacement for brushing. Pick ones approved for dental health and count them as part of his food."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We had to say goodbye to our old dog yesterday. The house feels so empty."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'm really sorry. That first stretch after losing a dog is so hard, especially with all the little routines that are suddenly gone."
+    },
+    {
+     "speaker": "user",
+     "text": "I keep reaching for the lead at seven."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's completely normal. Grief often shows up in those habits. It might help to still go for a short walk at that time, just for you."
+    },
+    {
+     "speaker": "user",
+     "text": "My son keeps asking if we'll get another one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Kids often process grief that way. It's okay to say we'll think about it when we're ready."
+    },
+    {
+     "speaker": "user",
+     "text": "I feel guilty even thinking about another dog. / It feels like replacing him."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people feel that. A new dog wouldn't replace him, it'd be its own relationship. There's no right timing, only what feels right for your family."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I bring my dog to a cafe? I've never tried it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of cafes welcome dogs, just check first. Go at a quieter time for your first visit so it's not overwhelming."
+    },
+    {
+     "speaker": "user",
+     "text": "He's quite excitable around food."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then walk him well beforehand, so he's tired. Bring a mat and a long lasting chew so he has a job to do under the table."
+    },
+    {
+     "speaker": "user",
+     "text": "What if he barks?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Calmly take him outside for a minute, then try again. If he can't settle, keep the visit short and try again another day."
+    },
+    {
+     "speaker": "user",
+     "text": "And a water bowl?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many places put one out, but a collapsible bowl in your bag is handy. Short positive visits will teach him cafes are boring, which is the goal."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter is allergic to cats and dogs but desperate for a pet. Are hypoallergenic dogs a real thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sort of. No dog is completely allergy free, but some breeds that shed less, like poodles, can cause fewer symptoms for some people."
+    },
+    {
+     "speaker": "user",
+     "text": "So it's a gamble."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bit. The best test is to spend time with that specific dog several times before committing."
+    },
+    {
+     "speaker": "user",
+     "text": "And other pets?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fish and reptiles are good options, since they don't have fur. Some kids with allergies do fine with certain birds too, though that varies."
+    },
+    {
+     "speaker": "user",
+     "text": "She'd love a gecko, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Leopard geckos are a popular first reptile, calm and easy to handle. They need a heated tank and a bit of research, but they're low allergy."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cat is a bit of a round boy. The vet said lose a kilo. How?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Slowly is the key, cats shouldn't lose weight too fast. Ask the vet for his exact daily food amount and weigh it out with kitchen scales."
+    },
+    {
+     "speaker": "user",
+     "text": "He screams if his bowl's empty."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Split the daily amount into four or five small meals. More frequent meals feel like more food."
+    },
+    {
+     "speaker": "user",
+     "text": "And treats? / He gets a few. Okay, a lot."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take treats out of his daily allowance, or swap to tiny bits of cooked chicken."
+    },
+    {
+     "speaker": "user",
+     "text": "He also doesn't really move much."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get him chasing a feather wand for a few minutes twice a day. Even lazy cats will hunt something if it's interesting."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We adopted a rescue dog and she's terrified of my husband. Just him."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's actually common. Some rescue dogs had bad experiences with men, or just weren't around many when they were young."
+    },
+    {
+     "speaker": "user",
+     "text": "He's heartbroken, he's the dog person in the family."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask him to ignore her for a while, no eye contact, no reaching for her. Let her come to him."
+    },
+    {
+     "speaker": "user",
+     "text": "That's going to be hard for him."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's the fastest way though. He can sit on the floor and toss her really tasty treats without looking at her."
+    },
+    {
+     "speaker": "user",
+     "text": "Should he feed her meals too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, that's a great idea. If he's the one who brings dinner and walks, she'll learn that good things come from him."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've moved house. Do I need to update my dog's microchip?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, you do. The chip only stores a number, and the database links it to your address and phone, so those need to be current."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I do it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Find which database the chip is registered with, usually on the paperwork from the breeder or rescue. Then log in or call to update."
+    },
+    {
+     "speaker": "user",
+     "text": "I've lost all the paperwork. / Of course."
+    },
+    {
+     "speaker": "moshi",
+     "text": "No problem. Ask your vet to scan him. They'll get the chip number, and you can look up which database it's on."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there a fee?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some databases charge a small fee for changes, some are free. Either way, it's much cheaper than losing him."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm getting a leopard gecko. What temperature does the tank need to be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They need a warm side and a cool side, so they can move between them. The warm spot should be around thirty degrees."
+    },
+    {
+     "speaker": "user",
+     "text": "Celsius?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, Celsius. The cool end can be a lot lower, more like room temperature."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I heat it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most people use a heat mat under one end controlled by a thermostat, or an overhead heat lamp. The thermostat is the important bit, so it doesn't overheat."
+    },
+    {
+     "speaker": "user",
+     "text": "And a light at night?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, they need darkness at night to keep a healthy rhythm. Just keep the room from getting too cold."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dog ignores me completely at the park. He comes back when he feels like it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's frustrating and can be dangerous. Recall is all about making coming back the best thing ever."
+    },
+    {
+     "speaker": "user",
+     "text": "I give him treats."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use the really good stuff for recall only, like chicken or cheese, not his normal biscuits."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And when he ignores me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't keep repeating his name. Practise in the garden first, then on a long training lead at the park, so he can't practise ignoring you."
+    },
+    {
+     "speaker": "user",
+     "text": "A long lead? Like a really long one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Five or ten metres. It gives him freedom while you can still reel him in."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds like a tangle waiting to happen."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be, so wear gloves and keep it short in busy areas. It's worth it, recall can save his life one day."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My neighbour is feeding my cats for a week. What should I write down for her?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it simple. How much food, what time, and where the food and bowls are."
+    },
+    {
+     "speaker": "user",
+     "text": "She's never had cats."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then add the basics, like how to scoop the litter, where the bags go, and to check they have fresh water."
+    },
+    {
+     "speaker": "user",
+     "text": "One of them is on tablets."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Write exactly how and when to give them, and maybe show her once before you go. Leave the pill packet out with the doses."
+    },
+    {
+     "speaker": "user",
+     "text": "And emergencies?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put your vet's number and address at the top, plus your number and a friend's backup. It'll make her feel much more confident."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I / leave her some money in case?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's thoughtful. A small amount in an envelope for a taxi to the vet or extra food would put both your minds at rest."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're thinking of getting backyard chickens. Is it a lot of work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bit, but less than a dog. They need feeding and water every day, eggs collecting, and a coop clean once a week or so."
+    },
+    {
+     "speaker": "user",
+     "text": "Do they need a lot of space?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few chickens are happy in a medium garden, as long as the coop is secure and they get time to scratch around."
+    },
+    {
+     "speaker": "user",
+     "text": "What about foxes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the big one. The coop needs to be fox proof, with a solid lock and wire buried under the run."
+    },
+    {
+     "speaker": "user",
+     "text": "And noise?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hens are fairly quiet, just a bit of clucking. Roosters are the loud ones, and you don't need one to get eggs."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh, news to me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot of people don't. Start with three hens, chickens are social and shouldn't live alone."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My husky is shedding so much the house looks like it snowed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Huskies blow their coat twice a year, it's a lot. Brushing every day during these weeks really helps."
+    },
+    {
+     "speaker": "user",
+     "text": "Every day? I barely brush my own hair."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, I get it. A good undercoat rake gets most of it out in ten minutes or so."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I shave him for summer?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Please don't. That double coat actually helps keep him cool, and it might not grow back properly."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine. / So just suffer?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brush outside, vacuum often, and put a washable throw on his favourite spot. It passes in a few weeks."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our hamster escaped last night. The cage door was open. Help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't worry, they're usually still in the house. Close doors to keep him in one area and check behind sofas and under the fridge."
+    },
+    {
+     "speaker": "user",
+     "text": "I've looked everywhere."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hamsters come out at night. Put small piles of food in a few rooms and see which one gets eaten."
+    },
+    {
+     "speaker": "user",
+     "text": "That's clever."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can also put a bit of flour around the food, so you'll see little footprints showing where he's going."
+    },
+    {
+     "speaker": "user",
+     "text": "And then how do I catch him?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put a deep bucket with some bedding and a treat at the bottom, with a ramp up to it. He'll climb in and can't get back out."
+    }
+   ]
+  },
+  {
+   "id": "pets.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cat keeps leaving dead mice on the doormat. Is she trying to tell me something?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "In a way. It's natural hunting behaviour, and some think cats bring prey home to the place they feel safe, or to share with their family."
+    },
+    {
+     "speaker": "user",
+     "text": "It's very disgusting sharing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, I understand. Don't tell her off, she won't connect it with the mouse."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I stop her hunting?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bright collar with a quick release clasp can warn birds and mice. Keeping her in at dawn and dusk also cuts down on hunting."
+    },
+    {
+     "speaker": "user",
+     "text": "And playing with her more?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, that helps a lot. Hunting style play with a wand toy, ending with a treat, can satisfy that instinct before she goes out."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "pets.opt1",
+   "lead_in": "We're finally getting a dog and we're choosing between a few at the shelter.",
+   "options": [
+    "The first one is a young lab mix, super energetic, who needs a lot of walks and space.",
+    "Then there's an older beagle, calm and sweet, but he howls when he's left alone.",
+    "Option three is a small terrier mix that's great with kids but not with cats.",
+    "And the last one is a big shy greyhound who mostly wants to nap on the couch."
+   ],
+   "moshi_comment": [
+    "It really depends on your home. The lab mix is great if you're active and have space, but needs a lot of time. The greyhound sounds surprisingly easy, since they're often happy to nap all day. The beagle's howling could be a problem if you're out at work.",
+    "Do you have a cat, and how long are you out of the house each day? If you have a cat, skip the terrier. If you're out a lot, the greyhound is probably the best fit."
+   ]
+  },
+  {
+   "id": "pets.opt2",
+   "lead_in": "My cat keeps scratching the furniture and I'm trying to pick a fix.",
+   "options": [
+    "One option is a really tall scratching post right next to the couch.",
+    "Another is putting sticky tape on the arms of the sofa so she hates touching it.",
+    "Or I could get those soft caps that go over her claws, which last about a month."
+   ],
+   "moshi_comment": [
+    "The tall scratching post is the best long term fix, since it gives her a place she's allowed to scratch. The sticky tape works well alongside it to steer her away from the couch. The soft caps work, but you'd have to keep putting them back on.",
+    "Have you tried a scratching post before? If not, I'd start with the tall post plus the tape for a few weeks. If she ignores the post completely, the claw caps are a good backup."
+   ]
+  },
+  {
+   "id": "pets.opt3",
+   "lead_in": "I'm working in the office three days a week again, and I need to sort out my dog during the day.",
+   "options": [
+    "There's a doggy daycare near work, he'd play with other dogs all day, but it's pricey and he can be shy.",
+    "A dog walker could come at lunch for an hour, much cheaper, but he'd be home alone the rest of the time.",
+    "Or my retired neighbour offered to have him at her place, free, though she's not that strong on a lead."
+   ],
+   "moshi_comment": [
+    "If he's shy, a whole day at daycare might be a lot for him at first. The lunchtime walker is a good middle ground if he's okay napping alone. The neighbour is lovely and free, but a strong puller and a not so strong walker is a worry.",
+    "How does he cope alone at the moment? If he's calm, the walker is the easy, affordable pick. If he gets anxious, the neighbour's company might suit him, as long as she just lets him snooze in the garden rather than walking him."
+   ]
+  },
+  {
+   "id": "pets.opt4",
+   "lead_in": "I live in a small flat and work long hours, but I'd really love some kind of pet.",
+   "options": [
+    "I keep coming back to a cat, independent and cuddly, but my landlord would need to agree.",
+    "A pair of budgies would be cheerful and fit in a corner, though they can be pretty noisy.",
+    "There's also a fish tank, very calm and nice to look at, but you can't exactly cuddle a fish.",
+    "Or I could skip owning and volunteer walking dogs at the shelter on weekends."
+   ],
+   "moshi_comment": [
+    "With long hours, the cat fits your life best, as long as the landlord agrees, cats cope well with being alone in the day. Budgies need more attention than people think. Fish are low effort if you want something calm.",
+    "If what you want is cuddles, the cat or the shelter walks are your real options. The volunteering is a great way to start without the commitment, and it'll show you how much time you really have."
+   ]
+  },
+  {
+   "id": "pets.opt5",
+   "lead_in": "Our kitten is about to graduate to a proper litter tray and I can't pick a litter.",
+   "options": [
+    "The clumping clay one is cheap and easy to scoop, but it's dusty and gets tracked everywhere.",
+    "Pine pellets smell nice and are biodegradable, though some cats hate the feel under their paws.",
+    "And silica crystals soak up smells really well, but they're expensive and crunchy."
+   ],
+   "moshi_comment": [
+    "Kittens are often fine with clumping clay since it feels like sand. The pine pellets are nice for the planet, but try a small bag first in case she refuses it. Crystals are great at smells, just pricey for a messy kitten.",
+    "I'd start her on a low dust clumping litter, it's the closest to what most cats like naturally. If you want to switch to pine later, mix it in slowly over a couple of weeks."
+   ]
+  },
+  {
+   "id": "pets.opt6",
+   "lead_in": "My dog chews the door frame when I'm at work, and I'm trying a few ideas.",
+   "options": [
+    "One idea is a puzzle feeder and a frozen stuffed toy, so he has a job while I'm gone.",
+    "Another is a camera with a treat dispenser, I could talk to him and toss treats from my phone.",
+    "My sister thinks I should get a second dog to keep him company, which feels like a big leap.",
+    "Or I could book a trainer to come and look at whether it's boredom or anxiety."
+   ],
+   "moshi_comment": [
+    "The trainer is the smartest first step, because boredom and anxiety need different fixes. The puzzle feeder is cheap and helps either way. I'd hold off on a second dog, it doesn't always calm the first one down.",
+    "Start with the puzzle feeder and a long walk before you leave. If the chewing continues, the camera will show you whether he's restless or stressed, and a trainer can take it from there."
+   ]
+  }
+ ]
 }

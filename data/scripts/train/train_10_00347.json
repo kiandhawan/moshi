@@ -7,90 +7,186 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [],
- "topics": [
-  "shopping"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "wait_sec": 60,
- "deadline": {
-  "after_turn": 4,
-  "sec": 60
- },
- "topic": "shopping",
+ "topics": [
+  "cooking",
+  "hiking"
+ ],
+ "topic": "cooking",
  "voices": {
-  "user": "705690224f264386b87fb598083ab022",
-  "friend": null,
+  "user": "050df12e0f30484fb882a9a5410e5d66",
+  "friend": "676f1654c4f747a69a5921ad94886fa1",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Rosa",
+ "friend_name_id": "name_22",
  "phrasing_ids": [
-  "greet_14",
-  "greet_ans_22",
-  "think_instr_05"
+  "greet_11",
+  "greet_ans_14",
+  "side_instr_01",
+  "ack_04",
+  "dn_05",
+  "side_cue_08"
  ],
  "block_ids": [
-  "shopping.ctx1"
+  "cooking.ctx3",
+  "hiking.side6",
+  "dn_05"
  ],
- "est_total_sec": 84.43,
- "est_speech_sec": 19.82,
+ "est_total_sec": 69.94,
+ "est_speech_sec": 51.09,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How's life treating you?",
-   "est_sec": 1.65,
-   "gap_before": 0.61,
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.57,
    "role": "greeting",
-   "phrasing": "greet_14"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "Pretty relaxed today.",
+   "text": "Hanging in there.",
    "est_sec": 1.03,
-   "gap_before": 0.43,
+   "gap_before": 0.65,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_22"
+   "phrasing": "greet_ans_14"
   },
   {
    "speaker": "user",
-   "text": "I need a new winter coat. My old one has a broken zipper.",
-   "est_sec": 4.13,
-   "gap_before": 0.33,
+   "text": "I'm trying to meal prep lunches for the week. Cheap and not boring, please.",
+   "est_sec": 4.44,
+   "gap_before": 0.28,
    "event": "ordinary_request",
-   "block": "shopping.ctx1"
+   "block": "cooking.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "Got it. Are you thinking a long warm parka, or a shorter jacket that's easier to move in?",
-   "est_sec": 5.68,
-   "gap_before": 0.89,
+   "text": "Sure. Do you want one big batch of the same thing, like a chili, or two smaller recipes you can alternate?",
+   "est_sec": 6.61,
+   "gap_before": 1.93,
    "role": "reply",
-   "block": "shopping.ctx1"
+   "block": "cooking.ctx3"
   },
   {
    "speaker": "user",
-   "text": "Can you give me sixty seconds? Then ask me again.",
-   "est_sec": 3.2,
-   "gap_before": 0.32,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 60,
-   "phrasing": "think_instr_05"
+   "text": "Hmm, good question.",
+   "est_sec": 1.03,
+   "gap_before": 0.71,
+   "event": "ordinary_request",
+   "block": "cooking.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "So, which coat are we hunting for, a long parka or something shorter?",
-   "est_sec": 4.13,
+   "text": "No rush, it really depends on how much variety you need.",
+   "est_sec": 3.51,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "cooking.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I need to talk to my roommate for a second. Stay quiet until I say I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 2.35,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.51,
+   "role": "ack",
+   "phrasing": "ack_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Rosa, can I borrow your gaiters for the bog walk?",
+   "est_sec": 3.2,
+   "gap_before": 0.77,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "hiking.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "The blue ones? You gave them back covered in mud last time.",
+   "est_sec": 3.82,
+   "gap_before": 0.67,
+   "block": "hiking.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll wash them this time, honestly.",
+   "est_sec": 1.96,
+   "gap_before": 1.43,
+   "block": "hiking.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "You said that last time too.",
+   "est_sec": 1.96,
+   "gap_before": 0.4,
+   "block": "hiking.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, what if I wash them and buy you a pint?",
+   "est_sec": 3.51,
+   "gap_before": 0.33,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "hiking.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Two pints and you can keep them till Tuesday.",
+   "est_sec": 2.89,
+   "gap_before": 1.18,
+   "block": "hiking.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done with the dishes, your turn.",
+   "est_sec": 2.58,
+   "gap_before": 0.93,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_05"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine, fine.",
+   "est_sec": 0.72,
+   "gap_before": 1.29,
+   "phrasing": "dn_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's sorted. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.36,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright. Did you decide between one batch and two alternating recipes?",
+   "est_sec": 3.51,
+   "gap_before": 1.11,
    "role": "resume",
-   "block": "shopping.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 60.53
-   }
+   "block": "cooking.ctx3"
   }
  ]
 }

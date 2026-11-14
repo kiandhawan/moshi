@@ -1,147 +1,1439 @@
 {
-  "topic": "cycling",
-  "contexts": [
+ "topic": "cycling",
+ "contexts": [
+  {
+   "id": "cycling.ctx1",
+   "turns": [
     {
-      "id": "cycling.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I want to start biking to work instead of taking the bus."},
-        {"speaker": "moshi", "text": "Love that. There's the quick route along the main road or the longer one through the park. Which sounds better to you?"}
-      ],
-      "pending": "main road route or park route to work",
-      "think_reask": [
-        "So, have you picked a route? The quicker main road or the longer park path?",
-        "Okay, time's up. Main road or through the park for your commute?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing your bike route to work, main road or park.",
-        "Hi again. Did you settle on a commute route, the fast road or the park?"
-      ],
-      "endings": [
-        {"user": "The park, I'd rather not ride next to all those trucks.", "moshi": "Good call. Leave about ten minutes earlier and you'll be fine."},
-        {"user": "Main road, I really can't spare the extra time in the morning.", "moshi": "Okay. Wear something bright and use a front light, even in daylight."}
-      ]
+     "speaker": "user",
+     "text": "I want to start biking to work instead of taking the bus."
     },
     {
-      "id": "cycling.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "My bike's back tire has gone flat again."},
-        {"speaker": "moshi", "text": "Annoying. You could patch the inner tube yourself tonight, or take it to the shop tomorrow and get a sturdier tire. What would you like to do?"}
-      ],
-      "pending": "patch the tube or take it to the shop",
-      "think_reask": [
-        "So what's the plan for that flat tire? Patch it yourself or go to the shop?",
-        "Have you decided? Fix the tube tonight or let the shop handle it?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were sorting out your flat tire, patching it or taking it in.",
-        "There you are. Still deciding between patching the tube and visiting the bike shop?"
-      ],
-      "endings": [
-        {"user": "I'll patch it, I've got a kit somewhere in the garage.", "moshi": "Great. Check the inside of the tire for a thorn first, or it'll go flat again."},
-        {"user": "Shop, I think. If it keeps happening I want a better tire.", "moshi": "That makes sense. Ask them about a puncture resistant tire."}
-      ]
-    },
-    {
-      "id": "cycling.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "A few friends invited me on a long weekend ride."},
-        {"speaker": "moshi", "text": "Fun! They're doing either the flat forty mile loop or the hilly twenty five mile one. Which do you think your legs can handle?"}
-      ],
-      "pending": "flat long loop or short hilly ride",
-      "think_reask": [
-        "Okay, so which ride are you joining? The flat long loop or the short hilly one?",
-        "Have you made up your mind? Forty flat miles or twenty five with hills?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were picking the weekend ride, flat and long or short and hilly.",
-        "Hi again. Did you decide which group ride to do?"
-      ],
-      "endings": [
-        {"user": "The flat one. Hills and I are not friends.", "moshi": "Fair. Bring two water bottles and a snack for the halfway point."},
-        {"user": "Let's do the hilly one, I could use the challenge.", "moshi": "Nice. Shift into an easy gear early before each climb."}
-      ]
+     "speaker": "moshi",
+     "text": "Love that. There's the quick route along the main road or the longer one through the park. Which sounds better to you?"
     }
-  ],
-  "side_conversations": [
-    {"id": "cycling.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, can I borrow your helmet tomorrow? Mine's cracked."},
-      {"speaker": "friend", "text": "Sure, but it might be a little big for you."},
-      {"speaker": "user", "text": "It has that little dial in the back, right?"},
-      {"speaker": "friend", "text": "Yeah, just tighten it. It's on the hook by the door."},
-      {"speaker": "user", "text": "Thanks, I'll order a new one tonight."}
-    ]},
-    {"id": "cycling.side2", "turns": [
-      {"speaker": "user", "text": "Did you lock the bikes up outside?"},
-      {"speaker": "friend", "text": "I locked mine. I thought you did yours."},
-      {"speaker": "user", "text": "No, I came in through the back. Is it just leaning against the fence?"},
-      {"speaker": "friend", "text": "I think so. Want me to go check?"},
-      {"speaker": "user", "text": "Would you? The key is on the little table."},
-      {"speaker": "friend", "text": "Got it. Back in a minute."}
-    ]},
-    {"id": "cycling.side3", "turns": [
-      {"speaker": "user", "text": "So how was the ride along the river this morning?"},
-      {"speaker": "friend", "text": "Beautiful, but so windy on the way back."},
-      {"speaker": "user", "text": "How far did you go?"},
-      {"speaker": "friend", "text": "All the way to the old bridge and back. My legs are dead."},
-      {"speaker": "user", "text": "Next time wake me up, I want to come."},
-      {"speaker": "friend", "text": "I tried! You told me to go away."},
-      {"speaker": "user", "text": "Okay, fair. Set an alarm for both of us then."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "cycling.dlg1", "turns": [
-      {"speaker": "user", "text": "How often should I pump up my bike tires?"},
-      {"speaker": "moshi", "text": "For a road bike, about once a week. Thinner tires lose air faster than you'd think."},
-      {"speaker": "user", "text": "And how do I know the right pressure?"},
-      {"speaker": "moshi", "text": "It's printed on the side of the tire as a range. Aim somewhere in the middle for everyday riding."},
-      {"speaker": "user", "text": "I've just been squeezing them / and guessing, honestly."},
-      {"speaker": "moshi", "text": "A lot of people do. A floor pump with a gauge takes the guessing out and isn't expensive."},
-      {"speaker": "user", "text": "Should I go lower if it's raining?"},
-      {"speaker": "moshi", "text": "A little lower, yes. It gives you more grip on wet roads."}
-    ]},
-    {"id": "cycling.dlg2", "turns": [
-      {"speaker": "user", "text": "My chain makes this squeaking noise every time I pedal."},
-      {"speaker": "moshi", "text": "That usually means it's dry. A bit of chain lube should fix it."},
-      {"speaker": "user", "text": "Can I just use cooking oil?"},
-      {"speaker": "moshi", "text": "I wouldn't. It gets sticky and collects dirt. Proper bike lube is cheap and lasts a long time."},
-      {"speaker": "user", "text": "Okay. How do I put it on?"},
-      {"speaker": "moshi", "text": "Put one drop on each link while you slowly turn the pedals backward. Then wipe off the extra with a rag."},
-      {"speaker": "user", "text": "Should I clean it first, or / is that overkill?"},
-      {"speaker": "moshi", "text": "If it looks black and gritty, wipe it down first. Otherwise you're just mixing new oil with old dirt."}
-    ]},
-    {"id": "cycling.dlg3", "turns": [
-      {"speaker": "user", "text": "Is it a bad idea to bike in the winter?"},
-      {"speaker": "moshi", "text": "Not at all, lots of people do. You just need good lights, warm gloves and a bit more caution on ice."},
-      {"speaker": "user", "text": "What about my hands? They freeze even in fall."},
-      {"speaker": "moshi", "text": "Try lobster style gloves, they keep fingers together for warmth but still let you brake easily."},
-      {"speaker": "user", "text": "Hmm, actually maybe I'll just / take the bus when it snows."},
-      {"speaker": "moshi", "text": "That's a sensible compromise. Ride on dry days and skip the icy ones."},
-      {"speaker": "user", "text": "Do I need special tires for the cold days?"},
-      {"speaker": "moshi", "text": "Not for dry cold. Studded tires only really matter if you plan to ride on ice."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "cycling.opt1",
-     "lead_in": "I need a new bike and I've narrowed it down, but I'm stuck.",
-     "options": [
-       "The first one is a light road bike, really fast, but it has thin tires and no rack.",
-       "Then there's a hybrid with wider tires, a rack on the back and a more upright seat.",
-       "And the last one is an electric bike, heavy and pricey, but hills would be no problem at all."
-     ],
-     "moshi_comment": [
-       "It depends on what you'll use it for. The road bike is great for fitness rides but awkward for carrying groceries, while the hybrid handles commuting and errands easily. The electric bike makes sense if your route is hilly and you don't want to arrive sweaty.",
-       "The hybrid sounds like the best all rounder of the three. How long and how hilly is your usual ride? If it's steep, the electric bike might be worth the price."
-     ]},
-    {"id": "cycling.opt2",
-     "lead_in": "We're planning a cycling day trip and I can't decide on the route.",
-     "options": [
-       "One route follows the coast, about thirty miles, flat, with a nice cafe at the end.",
-       "Another one goes up through the vineyards, shorter, but with two pretty steep climbs.",
-       "The third is a forest trail, mostly gravel, quiet and shady, maybe twenty miles."
-     ],
-     "moshi_comment": [
-       "The coast route is the easiest and the cafe makes a great finish. The vineyard route has the best views, but those climbs could wear out a mixed group. The forest trail is lovely on a hot day, as long as everyone's bike can handle gravel.",
-       "I'd pick the coast unless your group loves hills. Are all of you on road bikes? If so, I'd skip the gravel forest trail."
-     ]}
-  ]
+   ],
+   "pending": "main road route or park route to work",
+   "think_reask": [
+    "So, have you picked a route? The quicker main road or the longer park path?",
+    "Okay, time's up. Main road or through the park for your commute?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing your bike route to work, main road or park.",
+    "Hi again. Did you settle on a commute route, the fast road or the park?"
+   ],
+   "endings": [
+    {
+     "user": "The park, I'd rather not ride next to all those trucks.",
+     "moshi": "Good call. Leave about ten minutes earlier and you'll be fine."
+    },
+    {
+     "user": "Main road, I really can't spare the extra time in the morning.",
+     "moshi": "Okay. Wear something bright and use a front light, even in daylight."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My bike's back tire has gone flat again."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Annoying. You could patch the inner tube yourself tonight, or take it to the shop tomorrow and get a sturdier tire. What would you like to do?"
+    }
+   ],
+   "pending": "patch the tube or take it to the shop",
+   "think_reask": [
+    "So what's the plan for that flat tire? Patch it yourself or go to the shop?",
+    "Have you decided? Fix the tube tonight or let the shop handle it?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were sorting out your flat tire, patching it or taking it in.",
+    "There you are. Still deciding between patching the tube and visiting the bike shop?"
+   ],
+   "endings": [
+    {
+     "user": "I'll patch it, I've got a kit somewhere in the garage.",
+     "moshi": "Great. Check the inside of the tire for a thorn first, or it'll go flat again."
+    },
+    {
+     "user": "Shop, I think. If it keeps happening I want a better tire.",
+     "moshi": "That makes sense. Ask them about a puncture resistant tire."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "A few friends invited me on a long weekend ride."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun! They're doing either the flat forty mile loop or the hilly twenty five mile one. Which do you think your legs can handle?"
+    }
+   ],
+   "pending": "flat long loop or short hilly ride",
+   "think_reask": [
+    "Okay, so which ride are you joining? The flat long loop or the short hilly one?",
+    "Have you made up your mind? Forty flat miles or twenty five with hills?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were picking the weekend ride, flat and long or short and hilly.",
+    "Hi again. Did you decide which group ride to do?"
+   ],
+   "endings": [
+    {
+     "user": "The flat one. Hills and I are not friends.",
+     "moshi": "Fair. Bring two water bottles and a snack for the halfway point."
+    },
+    {
+     "user": "Let's do the hilly one, I could use the challenge.",
+     "moshi": "Nice. Shift into an easy gear early before each climb."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter's four and she wants to learn to ride a bike."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sweet age to start. Would you go for a balance bike with no pedals, or a regular small bike with stabilisers?"
+    }
+   ],
+   "pending": "balance bike or stabilisers",
+   "think_reask": [
+    "So, balance bike, or stabilisers?",
+    "For your daughter, no pedals or training wheels?"
+   ],
+   "welcome_back": [
+    "Your daughter's first bike is still undecided. Balance bike or stabilisers?",
+    "Now then, which way for her to learn?"
+   ],
+   "endings": [
+    {
+     "user": "Balance bike. My nephew learned that way super fast.",
+     "moshi": "Good choice. Most kids skip stabilisers entirely and go straight to pedals after."
+    },
+    {
+     "user": "Stabilisers. She's a bit nervous.",
+     "moshi": "That's fine. Raise them a little over time, so she starts balancing on her own."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Someone stole my bike from outside the library. Again."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh, that's awful, I'm sorry. Do you want to replace it with a cheap secondhand bike nobody wants, or buy a nicer one and insure it properly?"
+    }
+   ],
+   "pending": "cheap secondhand or new insured bike",
+   "think_reask": [
+    "Cheap and ugly, or nice and insured?",
+    "After the theft, budget bike or a proper one with insurance?"
+   ],
+   "welcome_back": [
+    "Still need a replacement bike. Cheap secondhand, or a nicer insured one?",
+    "Anyway, what's the plan after the theft?"
+   ],
+   "endings": [
+    {
+     "user": "Cheap and ugly. I'm done losing nice bikes.",
+     "moshi": "Fair. Even then, get a solid D lock, thieves go for whatever's easiest."
+    },
+    {
+     "user": "A nice one, insured. I ride every day.",
+     "moshi": "Then register the frame number and keep the receipts, insurers often ask for both."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I signed up for a hundred mile charity ride in three months. What was I thinking."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big goal, but doable. Can you fit in longer rides on weekends, or is it more short rides on weekday evenings?"
+    }
+   ],
+   "pending": "weekend long rides or weekday short rides",
+   "think_reask": [
+    "So, weekend long rides, or short weekday ones?",
+    "Which fits your life better for training?"
+   ],
+   "welcome_back": [
+    "For the charity ride training, weekends or weekdays?",
+    "So, when can you actually ride?"
+   ],
+   "endings": [
+    {
+     "user": "Weekends. My weekdays are packed.",
+     "moshi": "Then build one long ride each weekend, adding about ten miles every two weeks."
+    },
+    {
+     "user": "Weekday evenings mostly, an hour at a time.",
+     "moshi": "That works. Make one of them hilly, and try to squeeze in one longer ride a month."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'd love to cycle to work but I'd arrive a sweaty mess."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Understandable. Is there a shower at your office, or anywhere you could change?"
+    }
+   ],
+   "pending": "whether there's a shower or changing space at work",
+   "think_reask": [
+    "Right, any shower or changing room at your work?",
+    "Is there somewhere you could freshen up at the office?"
+   ],
+   "welcome_back": [
+    "About cycling to work, is there a shower there?",
+    "Okay, can you change at the office?"
+   ],
+   "endings": [
+    {
+     "user": "There's a gym in the basement with showers.",
+     "moshi": "Perfect. Keep a towel and a change of clothes there, and you're set."
+    },
+    {
+     "user": "No shower, just a bathroom.",
+     "moshi": "Then ride slower, wear a breathable top, and bring wipes and a fresh shirt."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Clocks went back and now I'm riding home in the dark. Kind of spooky, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It takes some getting used to. What lights have you got?"
+    },
+    {
+     "speaker": "user",
+     "text": "Just a little blinky one my sister gave me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay. Is your way home mostly lit streets, or dark country lanes?"
+    }
+   ],
+   "pending": "lit streets or dark lanes for lights",
+   "think_reask": [
+    "Lit streets, or dark lanes?",
+    "How dark is your ride home?"
+   ],
+   "welcome_back": [
+    "For the night rides, is it streetlights or pitch black?",
+    "Alright, what kind of route at night?"
+   ],
+   "endings": [
+    {
+     "user": "City streets, pretty well lit.",
+     "moshi": "Then a flashing front and rear light is mainly so cars see you. Small rechargeable ones are fine."
+    },
+    {
+     "user": "Dark lanes, no streetlights at all.",
+     "moshi": "Then you need a powerful front light to see the road, at least eight hundred lumens."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My partner and I want to do a cycling holiday in France."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely idea! Would you rather go with a tour company that moves your bags between hotels, or carry everything yourselves on panniers?"
+    }
+   ],
+   "pending": "supported tour or self-supported with panniers",
+   "think_reask": [
+    "So, luggage transfer, or carry it all yourselves?",
+    "Tour company or full independence?"
+   ],
+   "welcome_back": [
+    "Your cycling holiday plan, supported or self-supported?",
+    "Now then, for France, who's carrying the bags?"
+   ],
+   "endings": [
+    {
+     "user": "Tour company. I want to enjoy the riding.",
+     "moshi": "Good call. You can ride light and still have a hot shower and dinner booked each night."
+    },
+    {
+     "user": "Panniers. We like being flexible.",
+     "moshi": "Fun. Pack less than you think, a heavy bike makes every hill twice as long."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Every time I ride more than an hour, my backside is in agony."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah, the classic. Would you start with proper padded shorts, or try a different saddle first?"
+    }
+   ],
+   "pending": "padded shorts or new saddle",
+   "think_reask": [
+    "Padded shorts, or a new saddle?",
+    "Which first, shorts or saddle?"
+   ],
+   "welcome_back": [
+    "Your saddle soreness, shorts first or saddle first?",
+    "Anyway, about the sore backside, what are we trying?"
+   ],
+   "endings": [
+    {
+     "user": "Shorts. Cheaper to test.",
+     "moshi": "Good. Wear them without underwear, that's what they're designed for."
+    },
+    {
+     "user": "Saddle. Mine feels like a brick.",
+     "moshi": "Then get your sit bones measured at a bike shop, saddle width matters more than padding."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My flat's tiny and the bike's taking over the hallway."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hallway bikes are the worst. Would you mount it on the wall with a hook, or swap it for a folding bike?"
+    }
+   ],
+   "pending": "wall hook or folding bike",
+   "think_reask": [
+    "So, wall hook, or folding bike?",
+    "Hang it up, or go folding?"
+   ],
+   "welcome_back": [
+    "The hallway bike is still in the way. Wall hook or folder?",
+    "So, solve it with a hook or a new bike?"
+   ],
+   "endings": [
+    {
+     "user": "Wall hook. I love my bike.",
+     "moshi": "Understandable. A vertical hook takes up the least space, put a mat under the back wheel."
+    },
+    {
+     "user": "Folding bike. Then it goes under my desk.",
+     "moshi": "Nice. It'll fit on trains too, which is a bonus."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Right, so, petrol is mad expensive and the school is only two miles away, so I'm thinking bike with both kids."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ooh, cargo bike time. Would you prefer a box at the front where you can see them, or a longtail where they sit behind you?"
+    }
+   ],
+   "pending": "front box or longtail cargo bike",
+   "think_reask": [
+    "Right, front box or longtail?",
+    "Kids in front, or kids behind?"
+   ],
+   "welcome_back": [
+    "The school run bike is still undecided. Box or longtail?",
+    "Okay, for the two kids, which cargo bike style?"
+   ],
+   "endings": [
+    {
+     "user": "Front box. I want to see them.",
+     "moshi": "Good. Front boxes feel odd for the first ride, practice in a quiet car park."
+    },
+    {
+     "user": "Longtail. It looks more like a normal bike.",
+     "moshi": "True, and it's easier to park. Get the footrests and a handrail for the kids."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cycling friends won't shut up about clip in pedals. Apparently I'm not a real cyclist without them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, peer pressure on two wheels. They help a bit with efficiency, but flats are perfectly real. Are you tempted, or happy as you are?"
+    }
+   ],
+   "pending": "clip in pedals or flats",
+   "think_reask": [
+    "Clip in, or stick with flats?",
+    "Are you going to try the clips?"
+   ],
+   "welcome_back": [
+    "About the pedals, clips or flats?",
+    "Alright, are your friends going to win this one?"
+   ],
+   "endings": [
+    {
+     "user": "I'll try them. Everyone falls over once, right?",
+     "moshi": "Pretty much. Practice clipping out near a wall, and loosen the tension at first."
+    },
+    {
+     "user": "Flats. I stop too often in town.",
+     "moshi": "Completely reasonable. Get good grippy flats with pins, they're more secure than you'd think."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's getting icy and I don't want to stop training over winter."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair. Would you rather get a smart trainer and ride at home, or join an indoor spin class at the gym?"
+    }
+   ],
+   "pending": "home trainer or spin class",
+   "think_reask": [
+    "So, home trainer, or spin class?",
+    "Ride at home, or with a group?"
+   ],
+   "welcome_back": [
+    "For the winter, trainer at home or spin class?",
+    "Now then, how are we keeping you riding?"
+   ],
+   "endings": [
+    {
+     "user": "Home trainer. I can ride on my own bike then.",
+     "moshi": "Good. Put a fan in front of you, indoor riding gets hot fast."
+    },
+    {
+     "user": "Spin class. I need someone yelling at me.",
+     "moshi": "Ha, fair. Pick a class with a set time, it's harder to skip."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My boyfriend just started cycling and he's way slower than me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah, mismatched pace. Would you enjoy slower rides together, or would you rather do your own fast rides and meet up for some easy ones?"
+    }
+   ],
+   "pending": "ride together slowly or separately",
+   "think_reask": [
+    "Ride together slow, or separately?",
+    "Together at his pace, or your own fast rides?"
+   ],
+   "welcome_back": [
+    "About riding with your boyfriend, together or separate?",
+    "Anyway, how do you want to handle the pace gap?"
+   ],
+   "endings": [
+    {
+     "user": "Together. It's nice just being out with him.",
+     "moshi": "Lovely. Plan a cafe stop, it makes slow rides feel like a date."
+    },
+    {
+     "user": "Separate fast rides, plus one easy ride a week together.",
+     "moshi": "Great balance. You get your training, and he doesn't feel rushed."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to try mountain biking for the first time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exciting! Would you rather head to a trail centre and stick to the easy green routes, or book a guided beginner lesson first?"
+    }
+   ],
+   "pending": "easy green route alone or guided lesson",
+   "think_reask": [
+    "So, green trails on your own, or a lesson first?",
+    "Learn by doing, or with a guide?"
+   ],
+   "welcome_back": [
+    "Your first mountain bike day, solo green route or a lesson?",
+    "So, how do you want to start?"
+   ],
+   "endings": [
+    {
+     "user": "A lesson. I don't want to break anything.",
+     "moshi": "Smart. A couple of hours learning braking and body position helps a lot."
+    },
+    {
+     "user": "Green routes. I'll just take it slow.",
+     "moshi": "Reasonable. Rent a bike there, and stand up on the pedals when it gets bumpy."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dad's seventy four and suddenly wants an e-bike."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good for him! Is he an experienced rider?"
+    },
+    {
+     "speaker": "user",
+     "text": "He used to ride everywhere, but his hips are stiff now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the frame matters. Can he still swing his leg over the back, or is that a struggle?"
+    }
+   ],
+   "pending": "whether dad can swing his leg over",
+   "think_reask": [
+    "Right, can your dad still swing his leg over?",
+    "Is getting on the bike an issue for him?"
+   ],
+   "welcome_back": [
+    "About your dad's e-bike, can he manage a normal frame?",
+    "Okay, how's he with getting on a bike?"
+   ],
+   "endings": [
+    {
+     "user": "It's tough for him now, he nearly toppled last time.",
+     "moshi": "Then a step through frame is the way to go. He just steps in, no leg swing."
+    },
+    {
+     "user": "He's fine with that, just tired on hills.",
+     "moshi": "Then a regular frame e-bike works. Look for one with a low assist setting he can start on."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to join a local cycling club but I'm scared of being dropped."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally understandable. Many clubs have a no drop social ride as well as faster groups. Which would you start with?"
+    }
+   ],
+   "pending": "no drop social ride or faster group",
+   "think_reask": [
+    "Social no drop ride, or a faster group?",
+    "Start easy, or jump in with the fast ones?"
+   ],
+   "welcome_back": [
+    "The cycling club, social ride or fast group?",
+    "Alright, which ride will you show up for?"
+   ],
+   "endings": [
+    {
+     "user": "Social ride. Baby steps.",
+     "moshi": "Perfect. You'll learn the group etiquette and meet people without stress."
+    },
+    {
+     "user": "The faster one. I'll be fine.",
+     "moshi": "Bold. Sit near the back, and tell the ride leader it's your first time."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It rains about half the time here and my commute is forty minutes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a soggy ride. Would you go for full waterproof trousers and jacket, or just mudguards and a good jacket?"
+    }
+   ],
+   "pending": "full waterproofs or mudguards and jacket",
+   "think_reask": [
+    "So, full waterproofs, or mudguards and a jacket?",
+    "Head to toe rain gear, or just the basics?"
+   ],
+   "welcome_back": [
+    "Your rainy commute still needs sorting. Full waterproofs or mudguards?",
+    "Now then, how waterproof are we going?"
+   ],
+   "endings": [
+    {
+     "user": "Mudguards and a jacket. I hate rain trousers.",
+     "moshi": "Fair enough. Long mudguards stop most of the spray, and you'll stay surprisingly dry."
+    },
+    {
+     "user": "The full kit. Forty minutes is too long to get wet.",
+     "moshi": "Agreed. Add waterproof overshoes too, wet feet ruin the whole day."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to sell my old road bike. It's been in the garage for years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. Would you rather list it online yourself, or trade it in at a bike shop for something new?"
+    }
+   ],
+   "pending": "sell online or trade in at a shop",
+   "think_reask": [
+    "Sell it online, or trade it in?",
+    "Private sale, or trade in?"
+   ],
+   "welcome_back": [
+    "The old road bike, online sale or shop trade in?",
+    "Anyway, how are you getting rid of it?"
+   ],
+   "endings": [
+    {
+     "user": "Online. I'll get more money that way.",
+     "moshi": "Probably. Clean it, pump the tires, and take photos in daylight, it really helps."
+    },
+    {
+     "user": "Trade in. I can't be bothered with buyers.",
+     "moshi": "Totally fair. Ask a couple of shops, trade in values can vary a lot."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just moved to a new city and there are bike share docks everywhere."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Handy! Do you think you'll ride most days, or just now and then? That decides whether bike share or your own bike makes sense."
+    }
+   ],
+   "pending": "daily or occasional riding",
+   "think_reask": [
+    "So, most days, or just now and then?",
+    "How often do you see yourself riding?"
+   ],
+   "welcome_back": [
+    "In your new city, daily rider or occasional?",
+    "So, how much will you ride?"
+   ],
+   "endings": [
+    {
+     "user": "Occasionally, mostly weekends.",
+     "moshi": "Then bike share is perfect. No storage, no theft worries, no maintenance."
+    },
+    {
+     "user": "Probably every day to work.",
+     "moshi": "Then your own bike will be cheaper over a year, and always there when you need it."
+    }
+   ]
+  },
+  {
+   "id": "cycling.ctx22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "First race Sunday. I'm panicking. Should I cram in loads of training?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Please don't, it's too late for that to help. How do your legs feel right now, heavy or fresh?"
+    }
+   ],
+   "pending": "whether legs feel tired or fresh before race",
+   "think_reask": [
+    "Right, how are your legs, tired or fresh?",
+    "Heavy legs, or feeling good?"
+   ],
+   "welcome_back": [
+    "Race on Sunday, how are your legs feeling?",
+    "Okay, are you tired or fresh this week?"
+   ],
+   "endings": [
+    {
+     "user": "Honestly, pretty tired.",
+     "moshi": "Then rest. Maybe one short easy spin on Friday, that's it."
+    },
+    {
+     "user": "Fresh, I took it easy last week.",
+     "moshi": "Great. A couple of short rides with a few quick efforts will keep you sharp."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "cycling.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can I borrow your helmet tomorrow? Mine's cracked."
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, but it might be a little big for you."
+    },
+    {
+     "speaker": "user",
+     "text": "It has that little dial in the back, right?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, just tighten it. It's on the hook by the door."
+    },
+    {
+     "speaker": "user",
+     "text": "Thanks, I'll order a new one tonight."
+    }
+   ]
+  },
+  {
+   "id": "cycling.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you lock the bikes up outside?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I locked mine. I thought you did yours."
+    },
+    {
+     "speaker": "user",
+     "text": "No, I came in through the back. Is it just leaning against the fence?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I think so. Want me to go check?"
+    },
+    {
+     "speaker": "user",
+     "text": "Would you? The key is on the little table."
+    },
+    {
+     "speaker": "friend",
+     "text": "Got it. Back in a minute."
+    }
+   ]
+  },
+  {
+   "id": "cycling.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So how was the ride along the river this morning?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Beautiful, but so windy on the way back."
+    },
+    {
+     "speaker": "user",
+     "text": "How far did you go?"
+    },
+    {
+     "speaker": "friend",
+     "text": "All the way to the old bridge and back. My legs are dead."
+    },
+    {
+     "speaker": "user",
+     "text": "Next time wake me up, I want to come."
+    },
+    {
+     "speaker": "friend",
+     "text": "I tried! You told me to go away."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, fair. Set an alarm for both of us then."
+    }
+   ]
+  },
+  {
+   "id": "cycling.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you move my pump? It was right here by the shoe rack."
+    },
+    {
+     "speaker": "friend",
+     "text": "The silver one? I used it this morning, it's in my room."
+    },
+    {
+     "speaker": "user",
+     "text": "Can you grab it? My front tire is basically flat."
+    },
+    {
+     "speaker": "friend",
+     "text": "Hold on. Here. Oh, and the head is a bit loose, you have to push it on hard."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it. Thanks."
+    },
+    {
+     "speaker": "friend",
+     "text": "Are you riding to the market?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, want anything?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Bread, if they still have the seeded one."
+    }
+   ]
+  },
+  {
+   "id": "cycling.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, honest opinion. Do these lycra shorts look ridiculous?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Do you want the honest honest answer?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes."
+    },
+    {
+     "speaker": "friend",
+     "text": "They look very professional. And very tight."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh. Should I wear normal shorts over them?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Loads of people do. Then you get the padding and nobody has to see everything."
+    }
+   ]
+  },
+  {
+   "id": "cycling.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Dad, can we ride to the lake on Saturday?"
+    },
+    {
+     "speaker": "friend",
+     "text": "That's quite far, sweetheart. Nearly ten miles there and back."
+    },
+    {
+     "speaker": "user",
+     "text": "I did eight with my class!"
+    },
+    {
+     "speaker": "friend",
+     "text": "You did, didn't you. Okay, but we stop for snacks halfway."
+    },
+    {
+     "speaker": "user",
+     "text": "Can we bring Maya?"
+    },
+    {
+     "speaker": "friend",
+     "text": "If her mum says yes. Ask her at school tomorrow."
+    },
+    {
+     "speaker": "user",
+     "text": "Yes! Can we get ice cream at the lake?"
+    },
+    {
+     "speaker": "friend",
+     "text": "We'll see. Probably."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "cycling.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How often should I pump up my bike tires?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a road bike, about once a week. Thinner tires lose air faster than you'd think."
+    },
+    {
+     "speaker": "user",
+     "text": "And how do I know the right pressure?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's printed on the side of the tire as a range. Aim somewhere in the middle for everyday riding."
+    },
+    {
+     "speaker": "user",
+     "text": "I've just been squeezing them / and guessing, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot of people do. A floor pump with a gauge takes the guessing out and isn't expensive."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I go lower if it's raining?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little lower, yes. It gives you more grip on wet roads."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My chain makes this squeaking noise every time I pedal."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That usually means it's dry. A bit of chain lube should fix it."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I just use cooking oil?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I wouldn't. It gets sticky and collects dirt. Proper bike lube is cheap and lasts a long time."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. How do I put it on?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put one drop on each link while you slowly turn the pedals backward. Then wipe off the extra with a rag."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I clean it first, or / is that overkill?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If it looks black and gritty, wipe it down first. Otherwise you're just mixing new oil with old dirt."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it a bad idea to bike in the winter?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all, lots of people do. You just need good lights, warm gloves and a bit more caution on ice."
+    },
+    {
+     "speaker": "user",
+     "text": "What about my hands? They freeze even in fall."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try lobster style gloves, they keep fingers together for warmth but still let you brake easily."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm, actually maybe I'll just / take the bus when it snows."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a sensible compromise. Ride on dry days and skip the icy ones."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need special tires for the cold days?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not for dry cold. Studded tires only really matter if you plan to ride on ice."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I make sure my bike seat is the right height?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sit on the bike with your heel on the pedal at the bottom of the stroke. Your leg should be almost straight."
+    },
+    {
+     "speaker": "user",
+     "text": "And when I pedal normally?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then, with the ball of your foot on the pedal, you'll have a slight bend in the knee. That's the sweet spot."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine feels kind of low, / my knees come up high."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's very common, and it's tiring for your legs. Raise it a couple of centimeters at a time and test ride each change."
+    },
+    {
+     "speaker": "user",
+     "text": "Will I still reach the ground?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably only on tiptoes, and that's normal. When you stop, slide forward off the saddle."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the safest way to ride past parked cars?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stay about a car door's width away from them. That way, if someone opens a door suddenly, you won't hit it."
+    },
+    {
+     "speaker": "user",
+     "text": "But then cars behind me get annoyed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They might, but your safety matters more. Riding confidently in the lane makes you more visible too."
+    },
+    {
+     "speaker": "user",
+     "text": "What about at junctions?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try to make eye contact with drivers and avoid riding up the inside of big vehicles, especially lorries turning left."
+    },
+    {
+     "speaker": "user",
+     "text": "That's terrifying."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's good to know though. Most rides are completely uneventful, these habits just keep it that way."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I fix a slipping chain? It keeps jumping when I change gears."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often the gear cable just needs a small adjustment. Look for a little barrel adjuster where the cable enters the rear derailleur."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, the little round thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's it. Turn it a quarter turn at a time while you change gears, until the shifting feels smooth."
+    },
+    {
+     "speaker": "user",
+     "text": "Which way do I turn it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If the chain is slow to move to bigger cogs, turn it anticlockwise. If it's slow to drop to smaller ones, clockwise."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, and if that / doesn't fix it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it could be a worn chain or a bent derailleur hanger. That's a quick job for a bike shop."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How much water should I take on a long ride?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Roughly one bottle per hour, more if it's hot. On a three hour ride, two bottles plus a refill stop is a good plan."
+    },
+    {
+     "speaker": "user",
+     "text": "I always forget to drink."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Set a reminder, or take a sip every time you reach a hilltop or a junction."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I bring food too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, for anything over ninety minutes. Bananas, cereal bars, or even a small sandwich."
+    },
+    {
+     "speaker": "user",
+     "text": "Honestly I thought I could just / power through on breakfast."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot of people try that and run out of energy halfway. It's called bonking, and it's not fun."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it okay to ride on the pavement with my kids?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends on local rules. In many places young kids are allowed, but adults are expected to ride on the road."
+    },
+    {
+     "speaker": "user",
+     "text": "But I'm not leaving my seven year old on the pavement alone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally fair. Lots of parents walk their bike next to the child, or use quiet residential streets and cycle paths."
+    },
+    {
+     "speaker": "user",
+     "text": "Are there any cycle paths near parks / usually?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often, yes. Check the local council's cycling map, they usually show the family friendly routes."
+    },
+    {
+     "speaker": "user",
+     "text": "Good idea. My son loves the park."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then plan a loop around it. Kids enjoy having a destination, like the playground or a duck pond."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to ride a century one day. Is that just a hundred miles?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly, a hundred miles in one ride. Some people also do a metric century, which is a hundred kilometers."
+    },
+    {
+     "speaker": "user",
+     "text": "How long would that take me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "At an average of fifteen miles an hour, about seven hours of riding, plus stops."
+    },
+    {
+     "speaker": "user",
+     "text": "Wow. That's a whole day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is. Most people start early, plan a couple of cafe stops, and finish by late afternoon."
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe I'll start / with the metric one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great first goal. It's a big achievement on its own and builds you up for the full hundred."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I train for it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Build up your longest ride gradually, add about ten percent each week, and include an easy week every month."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to start riding but I'm honestly terrified of traffic."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a really common fear. Many people start on quiet routes, like parks and cycle paths, and build confidence from there."
+    },
+    {
+     "speaker": "user",
+     "text": "What about my commute?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try riding it on a Sunday morning first, when it's quiet, so you learn the route without stress."
+    },
+    {
+     "speaker": "user",
+     "text": "That's actually a great idea."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some cities also offer free cycling lessons for adults. They teach you how to position yourself in traffic."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh really? I'd do that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look up your local council's website. And remember, you can always get off and walk a tricky junction."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What does bike fitting mean? A friend said I need one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's when a specialist adjusts your bike to your body, saddle height, handlebar reach, cleat position and so on."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it worth it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you ride a lot and get aches in your knees, back or hands, it can make a big difference."
+    },
+    {
+     "speaker": "user",
+     "text": "My neck hurts after long rides."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That can mean your handlebars are too far away or too low. A fitter would probably raise them or shorten the stem."
+    },
+    {
+     "speaker": "user",
+     "text": "Is that expensive / or just like a quick check?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A full fit can cost about as much as a nice pair of shoes. A basic adjustment at a bike shop is much cheaper."
+    }
+   ]
+  },
+  {
+   "id": "cycling.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I carry groceries on my bike?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A rear rack with panniers is the classic setup. They clip on and hold a surprising amount."
+    },
+    {
+     "speaker": "user",
+     "text": "What about a basket?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A front basket is handy for small things, but heavy loads up front can make steering wobbly."
+    },
+    {
+     "speaker": "user",
+     "text": "I usually do / one big weekly shop."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then two panniers or a bike trailer would be best. Trailers can carry a lot, even a crate of drinks."
+    },
+    {
+     "speaker": "user",
+     "text": "Is a backpack bad?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fine for light stuff, but heavy bags make your back sweaty and sore. Let the bike carry the weight."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "cycling.opt1",
+   "lead_in": "I need a new bike and I've narrowed it down, but I'm stuck.",
+   "options": [
+    "The first one is a light road bike, really fast, but it has thin tires and no rack.",
+    "Then there's a hybrid with wider tires, a rack on the back and a more upright seat.",
+    "And the last one is an electric bike, heavy and pricey, but hills would be no problem at all."
+   ],
+   "moshi_comment": [
+    "It depends on what you'll use it for. The road bike is great for fitness rides but awkward for carrying groceries, while the hybrid handles commuting and errands easily. The electric bike makes sense if your route is hilly and you don't want to arrive sweaty.",
+    "The hybrid sounds like the best all rounder of the three. How long and how hilly is your usual ride? If it's steep, the electric bike might be worth the price."
+   ]
+  },
+  {
+   "id": "cycling.opt2",
+   "lead_in": "We're planning a cycling day trip and I can't decide on the route.",
+   "options": [
+    "One route follows the coast, about thirty miles, flat, with a nice cafe at the end.",
+    "Another one goes up through the vineyards, shorter, but with two pretty steep climbs.",
+    "The third is a forest trail, mostly gravel, quiet and shady, maybe twenty miles."
+   ],
+   "moshi_comment": [
+    "The coast route is the easiest and the cafe makes a great finish. The vineyard route has the best views, but those climbs could wear out a mixed group. The forest trail is lovely on a hot day, as long as everyone's bike can handle gravel.",
+    "I'd pick the coast unless your group loves hills. Are all of you on road bikes? If so, I'd skip the gravel forest trail."
+   ]
+  },
+  {
+   "id": "cycling.opt3",
+   "lead_in": "I'm planning my route for a weekend bikepacking trip and there are three loops I like.",
+   "options": [
+    "A coastal loop, about sixty miles, with a campsite right by the beach and a pub nearby.",
+    "There's also a hill loop that's shorter, around forty miles, but with a big climb and an amazing wild camping spot.",
+    "Or a river valley route, flat and gentle, with a few villages and a farm campsite with hot showers."
+   ],
+   "moshi_comment": [
+    "The river valley is the easiest and the hot showers are a real luxury on a bikepacking trip. The coast loop is the best all rounder, with a beach camp and a pub dinner. The hill loop is for when you want a challenge and real solitude.",
+    "If it's your first bikepacking trip, I'd pick the river valley, it lets you learn how the loaded bike handles without big climbs. The hill loop is great once you're confident. How heavy is your setup?"
+   ]
+  },
+  {
+   "id": "cycling.opt4",
+   "lead_in": "I need a new helmet and I've got it down to a few options.",
+   "options": [
+    "One is a basic commuter helmet, cheap and comfy, with a built in rear light.",
+    "Another is a lightweight road helmet with loads of vents, but no light and quite pricey.",
+    "There's also a folding helmet that collapses flat to fit in my bag.",
+    "Or a full face mountain bike helmet my brother is giving away for free."
+   ],
+   "moshi_comment": [
+    "For daily commuting, the basic helmet with a built in light is really practical. The road helmet only makes sense for long, hot rides. The folding one is great if you use bike share and carry it around.",
+    "Skip the full face, it's overkill for town and hot on a commute. Do you ride your own bike or use bike share? If it's bike share, the folding helmet is a winner."
+   ]
+  },
+  {
+   "id": "cycling.opt5",
+   "lead_in": "My work is offering a cycle to work scheme and I've got three bikes on my shortlist.",
+   "options": [
+    "There's a gravel bike that can handle roads and dirt tracks, with space for mudguards.",
+    "Then a lightweight carbon road bike, really quick, but it eats most of the budget.",
+    "Or a sturdy electric hybrid with a big battery and built in lights."
+   ],
+   "moshi_comment": [
+    "For commuting plus weekend fun, the gravel bike is the most versatile, and mudguards make rainy days easy. The carbon road bike is fast, but less practical day to day. The e-hybrid is great if your commute is long or hilly.",
+    "I'd lean toward the gravel bike unless your commute is really long. How far is your ride to work? If it's over ten miles, the electric hybrid could change everything."
+   ]
+  }
+ ]
 }

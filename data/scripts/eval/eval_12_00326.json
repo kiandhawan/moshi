@@ -7,129 +7,134 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "family_visit"
+  "holiday_gifts"
  ],
- "topic": "family_visit",
+ "topic": "holiday_gifts",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "user": "732ea755bd9e446eb31dc79966b50428",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_09"
+  "greet_21",
+  "greet_ans_27",
+  "describe_instr_18",
+  "ack_02",
+  "describe_cue_09"
  ],
  "block_ids": [
-  "family_visit.dlg2"
+  "holiday_gifts.opt2"
  ],
- "est_total_sec": 55.47,
- "est_speech_sec": 42.64,
+ "est_total_sec": 59.91,
+ "est_speech_sec": 44.19,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.44,
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.57,
    "role": "greeting",
-   "phrasing": "greet_06",
+   "phrasing": "greet_21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.86,
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.65,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_27"
   },
   {
    "speaker": "user",
-   "text": "I'm driving six hours to see my dad. How often should I stop?",
-   "est_sec": 4.13,
-   "gap_before": 0.34,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg2"
+   "text": "I can't decide what to get my roommate for the holidays.",
+   "est_sec": 3.51,
+   "gap_before": 0.56,
+   "block": "holiday_gifts.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll go through the options one by one. Don't say anything until I finish.",
+   "est_sec": 4.44,
+   "gap_before": 0.46,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_18"
   },
   {
    "speaker": "moshi",
-   "text": "A good rule is a short break every two hours. Stretch your legs, grab some water and rest your eyes.",
-   "est_sec": 6.3,
-   "gap_before": 1.73,
-   "role": "reply",
-   "block": "family_visit.dlg2",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.58,
+   "role": "ack",
+   "phrasing": "ack_02",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Is it better to leave really early in the morning?",
-   "est_sec": 3.2,
-   "gap_before": 1.1,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Early is great for avoiding traffic, as long as you got a full night of sleep. Don't trade sleep for an early start.",
-   "est_sec": 7.23,
-   "gap_before": 1.0,
-   "role": "reply",
-   "block": "family_visit.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I was planning to leave at five",
-   "est_sec": 2.27,
-   "gap_before": 1.49,
+   "text": "One option is a fancy pour over coffee set, since she drinks coffee all day.",
+   "est_sec": 4.75,
+   "gap_before": 1.2,
+   "block": "holiday_gifts.opt2",
    "event": "distractor",
-   "kind": "pause",
-   "block": "family_visit.dlg2"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "but maybe seven is smarter.",
-   "est_sec": 1.65,
-   "gap_before": 1.57,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Seven sounds more reasonable. You'd still arrive by early afternoon with stops.",
-   "est_sec": 3.82,
-   "gap_before": 0.95,
-   "role": "reply",
-   "block": "family_visit.dlg2",
-   "reference_only": true
+   "text": "Another is a big soft blanket for the couch, because she's always cold.",
+   "est_sec": 4.13,
+   "gap_before": 2.47,
+   "block": "holiday_gifts.opt2",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Any tips for staying alert on the highway?",
-   "est_sec": 2.58,
-   "gap_before": 1.54,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg2"
+   "text": "Or I could get her tickets to the comedy show she mentioned last week.",
+   "est_sec": 4.44,
+   "gap_before": 2.85,
+   "block": "holiday_gifts.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "The last idea is a plant for her room, maybe one that's really hard to kill.",
+   "est_sec": 5.06,
+   "gap_before": 2.64,
+   "block": "holiday_gifts.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "So, that's all of them. Tell me what you think.",
+   "est_sec": 3.2,
+   "gap_before": 1.04,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_09"
   },
   {
    "speaker": "moshi",
-   "text": "Keep the car a little cool, listen to a podcast you enjoy and skip heavy meals. If you feel sleepy, pull over for a short nap.",
-   "est_sec": 8.16,
-   "gap_before": 0.31,
-   "role": "reply",
-   "block": "family_visit.dlg2",
+   "text": "The comedy tickets show you actually listened, which is always a nice feeling. The coffee set is practical and she'd use it every day. The blanket and the plant are sweet but a bit more generic.",
+   "est_sec": 11.26,
+   "gap_before": 1.2,
+   "role": "resume",
+   "block": "holiday_gifts.opt2",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

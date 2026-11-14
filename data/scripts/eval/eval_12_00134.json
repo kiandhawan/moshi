@@ -7,28 +7,23 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "extension"
- ],
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [],
  "topics": [
-  "home_office"
+  "wedding_planning"
  ],
- "wait_sec": 15,
- "extension": {
-  "extra_sec": 5,
-  "said_before_deadline_sec": 2.43
+ "reading": {
+  "material": "letter",
+  "sec": 22.2
  },
- "deadline": {
-  "after_turn": 5,
-  "sec": 5
- },
- "topic": "home_office",
+ "topic": "wedding_planning",
  "voices": {
-  "user": "026218fe0c054374838d934016f34082",
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -36,88 +31,110 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_03",
-  "greet_ans_18",
-  "think_instr_27",
-  "extension_05"
+  "greet_ans_30",
+  "read_instr_09",
+  "ack_07",
+  "read_cue_07"
  ],
  "block_ids": [
-  "home_office.ctx1"
+  "wedding_planning.ctx20"
  ],
- "est_total_sec": 44.64,
- "est_speech_sec": 22.4,
+ "est_total_sec": 62.5,
+ "est_speech_sec": 31.38,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello, how's your day going?",
    "est_sec": 1.65,
-   "gap_before": 0.42,
+   "gap_before": 0.56,
    "role": "greeting",
    "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
-   "est_sec": 1.03,
-   "gap_before": 0.71,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.44,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
+   "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "I'm finally turning the spare room into a proper office.",
-   "est_sec": 3.2,
-   "gap_before": 0.55,
+   "text": "My dad's getting remarried at seventy, and he asked me to walk him down the aisle.",
+   "est_sec": 5.06,
+   "gap_before": 0.45,
    "event": "ordinary_request",
-   "block": "home_office.ctx1"
+   "block": "wedding_planning.ctx20"
   },
   {
    "speaker": "moshi",
-   "text": "Exciting. Where do you want the desk, facing the window for the light, or against the wall so the screen has no glare?",
-   "est_sec": 7.23,
-   "gap_before": 0.49,
+   "text": "That's lovely, and a fun twist. Make a little moment of it, maybe a few words, or keep it simple and let him shine?",
+   "est_sec": 7.54,
+   "gap_before": 1.45,
    "role": "reply",
-   "block": "home_office.ctx1",
+   "block": "wedding_planning.ctx20",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Give me fifteen seconds. I'll know by then, so ask me again.",
+   "text": "Let me read this letter first, please don't talk until I'm done.",
    "est_sec": 3.82,
-   "gap_before": 0.78,
+   "gap_before": 3.42,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_27"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, give me another five seconds.",
-   "est_sec": 2.27,
-   "event": "extension",
-   "extra_sec": 5,
-   "phrasing": "extension_05",
-   "anchor": {
-    "turn": 4,
-    "offset": 12.57
-   }
+   "kind": "reading",
+   "phrasing": "read_instr_09"
   },
   {
    "speaker": "moshi",
-   "text": "Time's up. Natural light, or no glare on the screen?",
-   "est_sec": 3.2,
-   "role": "resume",
-   "block": "home_office.ctx1",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.25,
+   "role": "ack",
+   "phrasing": "ack_07",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, finished the letter.",
+   "est_sec": 1.34,
    "anchor": {
-    "turn": 5,
-    "offset": 5.22
+    "turn": 4,
+    "offset": 22.2
    },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "All done? So, what's your part going to look like?",
+   "est_sec": 3.2,
+   "gap_before": 1.08,
+   "role": "resume",
+   "block": "wedding_planning.ctx20",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A few words at the reception, I think.",
+   "est_sec": 2.58,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. A favourite memory of him and a toast to her, done.",
+   "est_sec": 3.82,
+   "gap_before": 0.42,
+   "role": "followup",
+   "block": "wedding_planning.ctx20",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "new_type_reading"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

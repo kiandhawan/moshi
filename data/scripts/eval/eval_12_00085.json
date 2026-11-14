@@ -7,192 +7,177 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "side_conversation",
  "wait_type": "side_conversation",
  "conditions": [
-  "near_miss"
+  "implicit"
  ],
  "topics": [
-  "wedding_planning",
-  "painting_art"
+  "painting_art",
+  "learning_language"
  ],
- "topic": "wedding_planning",
+ "topic": "painting_art",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
-  "friend": "732ea755bd9e446eb31dc79966b50428",
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "friend": "7bb342e710854139b1d6e12411229f1f",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": "Aisha",
  "friend_name_id": "name_18",
  "phrasing_ids": [
-  "greet_18",
-  "greet_ans_21",
-  "side_instr_06",
-  "ack_11",
-  "dn_03",
-  "side_cue_18"
+  "greet_03",
+  "greet_ans_06",
+  "side_instr_30",
+  "implicit_14"
  ],
  "block_ids": [
-  "wedding_planning.ctx3",
-  "painting_art.side2"
+  "painting_art.ctx9",
+  "learning_language.side3"
  ],
- "est_total_sec": 68.72,
- "est_speech_sec": 52.64,
+ "est_total_sec": 64.46,
+ "est_speech_sec": 47.17,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.63,
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.49,
    "role": "greeting",
-   "phrasing": "greet_18",
+   "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.88,
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.89,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
+   "phrasing": "greet_ans_06"
   },
   {
    "speaker": "user",
-   "text": "My best friend's wedding is in three weeks and I'm giving a speech.",
-   "est_sec": 4.13,
-   "gap_before": 0.45,
+   "text": "I haven't painted in four months. Every time I sit down, nothing comes out.",
+   "est_sec": 4.44,
+   "gap_before": 0.48,
    "event": "ordinary_request",
-   "block": "wedding_planning.ctx3"
+   "block": "painting_art.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "What an honor. Do you want it to be mostly funny stories, or more heartfelt and sentimental?",
-   "est_sec": 5.37,
-   "gap_before": 0.91,
+   "text": "That's a rough stretch. Would a tiny daily habit help, like one small sketch every morning, or do you need something outside yourself, like a class or a group?",
+   "est_sec": 9.09,
+   "gap_before": 0.39,
    "role": "reply",
-   "block": "wedding_planning.ctx3",
+   "block": "painting_art.ctx9",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "One moment, my sister is asking me something. Please don't interrupt until I'm back.",
-   "est_sec": 4.44,
-   "gap_before": 0.64,
+   "text": "Give me a moment, I'm going to talk to my friend. Stay quiet until you hear I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 0.59,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_06"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright.",
-   "est_sec": 0.41,
-   "gap_before": 0.43,
-   "role": "ack",
-   "phrasing": "ack_11",
-   "reference_only": true
+   "phrasing": "side_instr_30"
   },
   {
    "speaker": "user",
-   "text": "Welcome back! How was the trip?",
+   "text": "Can you quiz me on these flashcards for a minute?",
+   "est_sec": 3.2,
+   "gap_before": 0.78,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. What's the word for window?",
    "est_sec": 1.96,
-   "gap_before": 0.94,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_03"
-  },
-  {
-   "speaker": "friend",
-   "text": "Long, but really fun.",
-   "est_sec": 1.34,
-   "gap_before": 0.45,
-   "phrasing": "dn_03"
+   "gap_before": 0.79,
+   "block": "learning_language.side3"
   },
   {
    "speaker": "user",
-   "text": "Be honest, does this tree look weird to you?",
-   "est_sec": 2.89,
-   "gap_before": 0.88,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "painting_art.side2"
+   "text": "Ventana.",
+   "est_sec": 0.41,
+   "gap_before": 0.6,
+   "block": "learning_language.side3"
   },
   {
    "speaker": "friend",
-   "text": "A little. The trunk is kind of thick at the top.",
-   "est_sec": 3.51,
-   "gap_before": 0.58,
-   "block": "painting_art.side2"
+   "text": "Correct. And spoon?",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
+   "block": "learning_language.side3"
   },
   {
    "speaker": "user",
-   "text": "Ugh, you're right. Should I just paint over it?",
-   "est_sec": 2.89,
-   "gap_before": 0.89,
+   "text": "Uh, cuchillo?",
+   "est_sec": 0.72,
+   "gap_before": 0.86,
    "event": "distractor",
    "kind": "friend_question",
-   "block": "painting_art.side2"
+   "block": "learning_language.side3"
   },
   {
    "speaker": "friend",
-   "text": "No, just thin it out a bit. The leaves look really nice though.",
+   "text": "No, that's knife. Spoon is cuchara.",
+   "est_sec": 1.96,
+   "gap_before": 2.11,
+   "block": "learning_language.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "I always mix those two up. Can you do the kitchen ones again?",
    "est_sec": 4.13,
-   "gap_before": 1.44,
-   "block": "painting_art.side2"
+   "gap_before": 1.3,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side3"
   },
   {
    "speaker": "user",
-   "text": "Thanks. I spent forever on those leaves.",
-   "est_sec": 2.27,
-   "gap_before": 1.39,
-   "block": "painting_art.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "It shows. Hang it in the hallway when it's done.",
-   "est_sec": 3.2,
-   "gap_before": 0.94,
-   "block": "painting_art.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'm back with you.",
-   "est_sec": 1.65,
-   "gap_before": 0.92,
+   "text": "Okay, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.64,
    "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_18"
+   "kind": "implicit",
+   "phrasing": "implicit_14"
   },
   {
    "speaker": "moshi",
-   "text": "Sure thing. Still thinking about laughs versus a sentimental speech?",
-   "est_sec": 3.2,
-   "gap_before": 1.09,
+   "text": "Right. Your painting slump, any thoughts? Daily sketch or a class?",
+   "est_sec": 3.51,
+   "gap_before": 0.8,
    "role": "resume",
-   "block": "wedding_planning.ctx3",
+   "block": "painting_art.ctx9",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Funny, but with a sweet moment at the end.",
-   "est_sec": 2.89,
-   "gap_before": 0.77,
+   "text": "Daily sketches. Low pressure sounds right.",
+   "est_sec": 1.96,
+   "gap_before": 3.35,
    "event": "ordinary_request",
-   "block": "wedding_planning.ctx3"
+   "block": "painting_art.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "That's the classic recipe. Open with a story, then finish with a sincere toast to the couple.",
-   "est_sec": 5.37,
-   "gap_before": 0.35,
+   "text": "Good. Keep the sketchbook by the coffee machine and give each sketch five minutes, no more.",
+   "est_sec": 5.06,
+   "gap_before": 0.96,
    "role": "followup",
-   "block": "wedding_planning.ctx3",
+   "block": "painting_art.ctx9",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "familiar_type",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

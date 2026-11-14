@@ -1,72 +1,74 @@
 {
   "id": "train_10_00334",
-  "group": "describe_options",
-  "user_start": 2.8,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 9.18,
-  "instruction_end": 11.42,
-  "wait_end": 30.66,
-  "resume_window": [
-    30.66,
-    35.66
+  "group": "think_time",
+  "user_start": 2.13,
+  "type": "think_time",
+  "conditions": [
+    "self_talk"
   ],
-  "wait_sec": 19.24,
+  "cluster": "smartphones.ctx1",
+  "instruction_start": 16.24,
+  "instruction_end": 19.65,
+  "wait_end": 29.65,
+  "resume_window": [
+    29.65,
+    33.65
+  ],
+  "wait_sec": 10.0,
   "distractors": [
-    21.95
+    24.29,
+    27.94
   ],
   "distractor_kinds": [
-    "pause"
+    "self_talk",
+    "self_talk"
   ],
   "distractor_windows": [
     [
-      21.95,
-      23.5
+      24.29,
+      26.5
+    ],
+    [
+      27.94,
+      null
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    10.18
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.8,
-      "end": 4.01,
+      "start": 2.13,
+      "end": 3.88,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.58,
-      "end": 8.55
+      "start": 4.36,
+      "end": 10.18,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 9.18,
-      "end": 11.42,
+      "start": 16.24,
+      "end": 19.65,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "think_time"
     },
     {
       "speaker": "user",
-      "start": 12.47,
-      "end": 16.75
-    },
-    {
-      "speaker": "user",
-      "start": 17.97,
-      "end": 21.95,
+      "start": 23.18,
+      "end": 24.29,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "self_talk"
     },
     {
       "speaker": "user",
-      "start": 23.5,
-      "end": 26.99
-    },
-    {
-      "speaker": "user",
-      "start": 27.97,
-      "end": 30.66,
-      "event": "return_cue",
-      "kind": "explicit"
+      "start": 26.5,
+      "end": 27.94,
+      "event": "distractor",
+      "kind": "self_talk"
     }
   ],
   "notes": "Rendered from script train_10_00334 by scripts/render.py.",
@@ -74,15 +76,21 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.36,
-      "end": 1.87,
-      "text": "Hey! How's everything going?"
+      "start": 0.46,
+      "end": 1.54,
+      "text": "Hey, how are you doing?"
+    },
+    {
+      "kind": "reply",
+      "start": 11.17,
+      "end": 15.48,
+      "text": "That's fair. Do you want to stick with the same brand, or are you open to switching to something new?"
     },
     {
       "kind": "resume",
-      "start": 31.74,
-      "end": 44.7,
-      "text": "The restaurant dinner feels special and you don't have to clean up after. A house party is cheaper and more relaxed, but you'd be busy hosting. The weekend trip is the most memorable, though it's harder to keep a surprise when people need to plan time off."
+      "start": 29.86,
+      "end": 34.26,
+      "text": "So, have you made up your mind? Same brand as before, or are you thinking of switching?"
     }
   ]
 }

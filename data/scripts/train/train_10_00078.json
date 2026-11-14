@@ -7,144 +7,117 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "hiking",
-  "travel_planning"
+  "books"
  ],
- "topic": "hiking",
+ "wait_sec": 5,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 5
+ },
+ "topic": "books",
  "voices": {
-  "user": "a52fdd0e957b4c288d8ec590bdd10288",
-  "friend": "f83f2e43d24b4bccb3bd3a63a950aa93",
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Nina",
- "friend_name_id": "name_10",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_04",
-  "greet_ans_29",
-  "side_instr_17",
-  "side_cue_16"
+  "greet_29",
+  "greet_ans_11",
+  "think_instr_25",
+  "ack_11"
  ],
  "block_ids": [
-  "hiking.ctx3",
-  "travel_planning.side1"
+  "books.ctx12"
  ],
- "est_total_sec": 61.19,
- "est_speech_sec": 45.11,
+ "est_total_sec": 37.31,
+ "est_speech_sec": 26.32,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how are you?",
-   "est_sec": 1.65,
-   "gap_before": 0.45,
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.57,
    "role": "greeting",
-   "phrasing": "greet_04"
+   "phrasing": "greet_29"
   },
   {
    "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.74,
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.32,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
+   "phrasing": "greet_ans_11"
   },
   {
    "speaker": "user",
-   "text": "My friends invited me on a hike but the forecast says rain in the afternoon.",
-   "est_sec": 4.75,
-   "gap_before": 0.3,
+   "text": "Can you help me pick a genre for my reading challenge?",
+   "est_sec": 3.51,
+   "gap_before": 0.42,
    "event": "ordinary_request",
-   "block": "hiking.ctx3"
+   "block": "books.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "Tricky. You could start very early and be down before the rain, or move the hike to another day. What do you think?",
-   "est_sec": 7.23,
-   "gap_before": 1.11,
+   "text": "Sure. The challenge says one genre you've never tried. Horror, westerns, or science writing, which sounds least scary?",
+   "est_sec": 5.68,
+   "gap_before": 0.44,
    "role": "reply",
-   "block": "hiking.ctx3"
+   "block": "books.ctx12"
   },
   {
    "speaker": "user",
-   "text": "Sorry, can you wait? My friend is talking to me. Keep quiet until I come back.",
-   "est_sec": 5.06,
-   "gap_before": 1.37,
+   "text": "Let me take five seconds to think, and then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 0.99,
    "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_17"
-  },
-  {
-   "speaker": "user",
-   "text": "Nina, when does your passport expire? I need to check before I book anything.",
-   "est_sec": 4.44,
-   "gap_before": 0.96,
-   "block": "travel_planning.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Uh, sometime next year I think. Let me look.",
-   "est_sec": 2.89,
-   "gap_before": 0.63,
-   "block": "travel_planning.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Some countries want six months left on it, so it matters.",
-   "est_sec": 3.51,
-   "gap_before": 3.04,
-   "block": "travel_planning.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Okay, found it. It's good until next August.",
-   "est_sec": 2.58,
-   "gap_before": 1.38,
-   "block": "travel_planning.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Perfect, that works. Mine's fine too.",
-   "est_sec": 1.96,
-   "gap_before": 1.88,
-   "block": "travel_planning.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, we can continue now.",
-   "est_sec": 1.65,
-   "gap_before": 0.96,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_16"
+   "kind": "think_time",
+   "wait_sec": 5,
+   "phrasing": "think_instr_25"
   },
   {
    "speaker": "moshi",
-   "text": "No problem. Any decision on the rainy hike?",
-   "est_sec": 2.58,
-   "gap_before": 0.38,
+   "text": "Alright.",
+   "est_sec": 0.41,
+   "gap_before": 0.65,
+   "role": "ack",
+   "phrasing": "ack_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, horror, westerns or science writing?",
+   "est_sec": 1.96,
    "role": "resume",
-   "block": "hiking.ctx3"
+   "block": "books.ctx12",
+   "anchor": {
+    "turn": 4,
+    "offset": 5.47
+   }
   },
   {
    "speaker": "user",
-   "text": "Postpone. Muddy trails are no fun.",
-   "est_sec": 1.96,
-   "gap_before": 0.5,
+   "text": "Westerns. I don't think I've ever even opened one.",
+   "est_sec": 2.89,
+   "gap_before": 0.96,
    "event": "ordinary_request",
-   "block": "hiking.ctx3"
+   "block": "books.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "Fair. Next weekend looks drier, so suggest that to the group.",
-   "est_sec": 3.51,
-   "gap_before": 0.88,
+   "text": "Great choice. Look for a modern western, they're often more character driven than you'd expect.",
+   "est_sec": 4.75,
+   "gap_before": 0.73,
    "role": "followup",
-   "block": "hiking.ctx3"
+   "block": "books.ctx12"
   }
  ]
 }

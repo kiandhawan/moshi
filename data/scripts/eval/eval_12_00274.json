@@ -7,129 +7,139 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "door",
+ "wait_type": "door",
  "conditions": [],
  "topics": [
-  "learning_language"
+  "painting_art"
  ],
- "topic": "learning_language",
+ "topic": "painting_art",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
-  "friend": null,
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": "026218fe0c054374838d934016f34082",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_30",
-  "greet_ans_21"
+  "greet_21",
+  "greet_ans_24",
+  "door_instr_01",
+  "door_44",
+  "door_cue_02"
  ],
  "block_ids": [
-  "learning_language.dlg3"
+  "painting_art.ctx19",
+  "door_44"
  ],
- "est_total_sec": 47.48,
- "est_speech_sec": 35.2,
+ "est_total_sec": 54.91,
+ "est_speech_sec": 37.47,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's it going? You doing okay?",
-   "est_sec": 2.27,
-   "gap_before": 0.76,
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.77,
    "role": "greeting",
-   "phrasing": "greet_30",
+   "phrasing": "greet_21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.61,
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
+   "phrasing": "greet_ans_24"
   },
   {
    "speaker": "user",
-   "text": "Does watching shows in another language actually help?",
-   "est_sec": 2.58,
-   "gap_before": 0.53,
-   "event": "ordinary_request",
-   "block": "learning_language.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It does, especially for listening. Subtitles in the target language help more than subtitles in your own.",
-   "est_sec": 5.37,
-   "gap_before": 0.8,
-   "role": "reply",
-   "block": "learning_language.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "But I can't follow anything without English subtitles yet.",
-   "est_sec": 2.89,
-   "gap_before": 0.97,
-   "event": "ordinary_request",
-   "block": "learning_language.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then start with shows you've already seen. Knowing the story lets you focus on the words.",
-   "est_sec": 5.06,
-   "gap_before": 0.54,
-   "role": "reply",
-   "block": "learning_language.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Good idea. How many episodes a week",
-   "est_sec": 2.27,
-   "gap_before": 2.62,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "learning_language.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "should I aim for?",
-   "est_sec": 1.34,
-   "gap_before": 1.64,
-   "event": "ordinary_request",
-   "block": "learning_language.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Two or three, watched actively, is plenty. Pause and repeat lines out loud now and then.",
-   "est_sec": 5.06,
-   "gap_before": 0.38,
-   "role": "reply",
-   "block": "learning_language.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I'll try that with a Korean drama I loved.",
-   "est_sec": 2.89,
-   "gap_before": 1.27,
-   "event": "ordinary_request",
-   "block": "learning_language.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect choice. Dramas repeat lots of everyday phrases, so you'll pick them up quickly.",
+   "text": "My partner looked at my abstract painting and said it looks like spilled soup.",
    "est_sec": 4.44,
-   "gap_before": 0.66,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ouch. Well, abstract work can look rough halfway through. Do you want to push on with it, or start fresh on a new canvas?",
+   "est_sec": 7.54,
+   "gap_before": 0.99,
    "role": "reply",
-   "block": "learning_language.dlg3",
+   "block": "painting_art.ctx19",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Someone's at the door, give me a second. Stay quiet until I'm back.",
+   "est_sec": 4.13,
+   "gap_before": 0.87,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi, come in, it's freezing.",
+   "est_sec": 1.65,
+   "gap_before": 2.82,
+   "phrasing": "door_44"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, I'm the dog walker, I'm here for Rusty.",
+   "est_sec": 2.89,
+   "gap_before": 1.05,
+   "phrasing": "door_44"
+  },
+  {
+   "speaker": "user",
+   "text": "You're new, aren't you? Where's Kim today?",
+   "est_sec": 2.27,
+   "gap_before": 1.99,
+   "phrasing": "door_44",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "She's off sick, I'm covering this week.",
+   "est_sec": 2.27,
+   "gap_before": 1.28,
+   "phrasing": "door_44"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, his lead's on the hook. He pulls a bit.",
+   "est_sec": 3.2,
+   "gap_before": 1.26,
+   "phrasing": "door_44"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, that took a minute. I'm back.",
+   "est_sec": 2.27,
+   "gap_before": 2.92,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. Anyway, are you continuing with that canvas?",
+   "est_sec": 2.89,
+   "gap_before": 0.74,
+   "role": "resume",
+   "block": "painting_art.ctx19",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_door"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

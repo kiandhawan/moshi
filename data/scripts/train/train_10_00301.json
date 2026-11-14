@@ -7,107 +7,184 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "public_transport"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
  ],
- "topic": "public_transport",
+ "topics": [
+  "travel_planning",
+  "cars"
+ ],
+ "topic": "travel_planning",
  "voices": {
-  "user": "2680da81de8348a68e1f4dbaa79272f1",
-  "friend": null,
+  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "friend": "18b1276891524bd786fb8a59ecd3630a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Alex",
+ "friend_name_id": "name_04",
  "phrasing_ids": [
-  "greet_23",
-  "greet_ans_25",
-  "describe_instr_14",
-  "describe_cue_10"
+  "greet_17",
+  "greet_ans_04",
+  "side_instr_13",
+  "dq_54",
+  "side_cue_20"
  ],
  "block_ids": [
-  "public_transport.opt2"
+  "travel_planning.ctx4",
+  "cars.side4",
+  "dq_54"
  ],
- "est_total_sec": 50.09,
- "est_speech_sec": 39.03,
+ "est_total_sec": 81.8,
+ "est_speech_sec": 59.15,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How are you feeling?",
+   "text": "Hey there! How's your day?",
    "est_sec": 1.65,
-   "gap_before": 0.71,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_23"
+   "phrasing": "greet_17"
   },
   {
    "speaker": "user",
-   "text": "I'm well, thanks.",
+   "text": "Pretty well, actually.",
    "est_sec": 1.03,
-   "gap_before": 0.53,
+   "gap_before": 0.89,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_25"
+   "phrasing": "greet_ans_04"
   },
   {
    "speaker": "user",
-   "text": "I'm trying to figure out which transit pass to buy for the month.",
+   "text": "I'm finally doing it. Three months backpacking in Southeast Asia, starting in January.",
    "est_sec": 4.13,
-   "gap_before": 0.37,
-   "block": "public_transport.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me lay out all the options first. Don't interrupt.",
-   "est_sec": 3.2,
-   "gap_before": 0.41,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_14"
-  },
-  {
-   "speaker": "user",
-   "text": "One option is a monthly unlimited pass, which pays off if I ride more than about twice a day.",
-   "est_sec": 5.99,
-   "gap_before": 1.34,
-   "block": "public_transport.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a pay as you go card, which is cheaper if I only ride a few times a week.",
-   "est_sec": 6.3,
-   "gap_before": 1.86,
-   "block": "public_transport.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a weekly pass, which I could buy only for the weeks I'm busy.",
-   "est_sec": 4.75,
-   "gap_before": 2.62,
-   "block": "public_transport.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Done. What would you recommend?",
-   "est_sec": 1.65,
-   "gap_before": 0.85,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_10"
+   "gap_before": 0.39,
+   "event": "ordinary_request",
+   "block": "travel_planning.ctx4"
   },
   {
    "speaker": "moshi",
-   "text": "How many days a week do you usually ride? If it's four or five, get the monthly pass. If it's only one or two, pay as you go is the way to go.",
-   "est_sec": 10.33,
-   "gap_before": 0.87,
+   "text": "Exciting! Thailand is the easiest place to land and find your feet, while Vietnam has amazing food but is a bit more hectic. Where do you want to start?",
+   "est_sec": 9.09,
+   "gap_before": 1.46,
+   "role": "reply",
+   "block": "travel_planning.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Just a sec, I need to sort something out with my roommate. I'll say when I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 0.35,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Alex, the boot won't shut. What did you put in here?",
+   "est_sec": 3.51,
+   "gap_before": 0.71,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just the tent, the cool box, and my folding chair.",
+   "est_sec": 3.2,
+   "gap_before": 0.51,
+   "block": "cars.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Your folding chair is the size of a sofa.",
+   "est_sec": 2.89,
+   "gap_before": 1.93,
+   "block": "cars.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "It has a cup holder! It's essential.",
+   "est_sec": 2.27,
+   "gap_before": 1.48,
+   "block": "cars.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Can it go on the back seat at least?",
+   "est_sec": 2.89,
+   "gap_before": 1.83,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Only if you sit on the roof.",
+   "est_sec": 2.27,
+   "gap_before": 0.96,
+   "block": "cars.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Very funny. Pass me the bungee cords, I'll strap it to the rack.",
+   "est_sec": 4.13,
+   "gap_before": 0.34,
+   "block": "cars.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Who used the last of the toilet paper?",
+   "est_sec": 2.58,
+   "gap_before": 0.3,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_54"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not me, I swear.",
+   "est_sec": 1.34,
+   "gap_before": 3.07,
+   "phrasing": "dq_54"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm free again.",
+   "est_sec": 1.34,
+   "gap_before": 1.93,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. So, your first stop in January. Thailand or Vietnam?",
+   "est_sec": 3.51,
+   "gap_before": 1.05,
    "role": "resume",
-   "block": "public_transport.opt2"
+   "block": "travel_planning.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Thailand. I want an easy first week.",
+   "est_sec": 2.27,
+   "gap_before": 2.72,
+   "event": "ordinary_request",
+   "block": "travel_planning.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sensible. Spend a few days in Bangkok, then head north to Chiang Mai before the islands get busy.",
+   "est_sec": 5.68,
+   "gap_before": 0.88,
+   "role": "followup",
+   "block": "travel_planning.ctx4"
   }
  ]
 }

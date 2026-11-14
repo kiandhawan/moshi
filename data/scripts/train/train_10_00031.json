@@ -7,130 +7,138 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "music"
+  "books"
  ],
- "wait_sec": 20,
- "deadline": {
-  "after_turn": 4,
-  "sec": 20
- },
- "topic": "music",
+ "topic": "books",
  "voices": {
-  "user": "cc7f8544c64a439080193e9560100c5a",
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_05",
-  "think_instr_26",
-  "ack_11",
-  "self_01"
+  "greet_25",
+  "greet_ans_07"
  ],
  "block_ids": [
-  "music.ctx3"
+  "books.dlg14"
  ],
- "est_total_sec": 52.51,
- "est_speech_sec": 27.04,
+ "est_total_sec": 65.71,
+ "est_speech_sec": 50.9,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
-   "est_sec": 1.96,
-   "gap_before": 0.4,
-   "role": "greeting",
-   "phrasing": "greet_16"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm alright, a bit tired.",
-   "est_sec": 1.65,
-   "gap_before": 0.73,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_05"
-  },
-  {
-   "speaker": "user",
-   "text": "Two bands I like are playing on the same night next month.",
-   "est_sec": 3.82,
-   "gap_before": 0.51,
-   "event": "ordinary_request",
-   "block": "music.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's a tough one. Is one of them a band you've never seen live, or one that rarely tours?",
-   "est_sec": 5.99,
-   "gap_before": 0.84,
-   "role": "reply",
-   "block": "music.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, wait twenty seconds and then ask me again, okay?",
-   "est_sec": 3.2,
-   "gap_before": 1.38,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_26"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright.",
-   "est_sec": 0.41,
-   "gap_before": 0.61,
-   "role": "ack",
-   "phrasing": "ack_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, let me see.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 3.63
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_01"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, any thoughts on which band to see that night?",
-   "est_sec": 3.2,
-   "role": "resume",
-   "block": "music.ctx3",
-   "anchor": {
-    "turn": 4,
-    "offset": 20.44
-   }
-  },
-  {
-   "speaker": "user",
-   "text": "The first band rarely tours, so them.",
+   "text": "Hello there! How's your day treating you?",
    "est_sec": 2.27,
-   "gap_before": 1.02,
+   "gap_before": 0.6,
+   "role": "greeting",
+   "phrasing": "greet_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.39,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "My son has dyslexia and he's started saying he hates books. What can I do?",
+   "est_sec": 4.75,
+   "gap_before": 0.49,
    "event": "ordinary_request",
-   "block": "music.ctx3"
+   "block": "books.dlg14"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. You might not get another chance for years.",
-   "est_sec": 3.2,
-   "gap_before": 0.4,
-   "role": "followup",
-   "block": "music.ctx3"
+   "text": "That must be hard to hear. Audiobooks are a great way to keep him loving stories while reading gets easier.",
+   "est_sec": 6.3,
+   "gap_before": 1.09,
+   "role": "reply",
+   "block": "books.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "Isn't that kind of giving up on reading, though?",
+   "est_sec": 2.89,
+   "gap_before": 1.06,
+   "event": "ordinary_request",
+   "block": "books.dlg14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No, it's a different road to the same place. Listening builds vocabulary and imagination. Many kids do both, listening and following along in the printed book.",
+   "est_sec": 8.16,
+   "gap_before": 0.58,
+   "role": "reply",
+   "block": "books.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "His teacher mentioned special fonts. Do those actually help?",
+   "est_sec": 2.89,
+   "gap_before": 0.34,
+   "event": "ordinary_request",
+   "block": "books.dlg14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Some kids find them easier, some don't notice a difference. It's worth a try, along with bigger spacing between lines.",
+   "est_sec": 6.3,
+   "gap_before": 1.53,
+   "role": "reply",
+   "block": "books.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "He loves dinosaurs. Like, obsessed.",
+   "est_sec": 1.65,
+   "gap_before": 2.05,
+   "event": "ordinary_request",
+   "block": "books.dlg14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then use that. Short nonfiction books about dinosaurs with big pictures can make reading feel like his thing again.",
+   "est_sec": 5.99,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "books.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "Thank you. I've been",
+   "est_sec": 1.34,
+   "gap_before": 0.97,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "books.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "worrying about this for months.",
+   "est_sec": 1.65,
+   "gap_before": 2.89,
+   "event": "ordinary_request",
+   "block": "books.dlg14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You're clearly paying attention, and that matters a lot. Keep it fun and low pressure.",
+   "est_sec": 4.75,
+   "gap_before": 0.38,
+   "role": "reply",
+   "block": "books.dlg14"
   }
  ]
 }

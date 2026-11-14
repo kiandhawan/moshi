@@ -7,99 +7,138 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "public_transport"
+  "travel_planning"
  ],
- "wait_sec": 20,
- "deadline": {
-  "after_turn": 4,
-  "sec": 20
- },
- "topic": "public_transport",
+ "topic": "travel_planning",
  "voices": {
-  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "user": "879653fd2b9c4cb0854d68e7e9a049e8",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_17",
-  "think_instr_23",
-  "ack_03"
+  "greet_22",
+  "greet_ans_16"
  ],
  "block_ids": [
-  "public_transport.ctx1"
+  "travel_planning.dlg18"
  ],
- "est_total_sec": 49.13,
- "est_speech_sec": 25.19,
+ "est_total_sec": 59.22,
+ "est_speech_sec": 43.46,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
-   "est_sec": 1.96,
-   "gap_before": 0.76,
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_16"
+   "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.61,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
-  },
-  {
-   "speaker": "user",
-   "text": "I just started a new job across town. I could take the bus or the train.",
-   "est_sec": 5.06,
-   "gap_before": 0.24,
-   "event": "ordinary_request",
-   "block": "public_transport.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "The bus stops closer to your place but takes about fifty minutes. The train is thirty, but it's a ten minute walk. Which matters more to you?",
-   "est_sec": 8.47,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "public_transport.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Give me twenty seconds, I want to think about it. Then ask again.",
-   "est_sec": 4.13,
-   "gap_before": 0.8,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_23"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, take your time.",
+   "text": "Pretty busy, but good.",
    "est_sec": 1.34,
-   "gap_before": 0.68,
-   "role": "ack",
-   "phrasing": "ack_03"
+   "gap_before": 0.74,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm a woman traveling alone for the first time, to Portugal. My mum is very worried.",
+   "est_sec": 5.06,
+   "gap_before": 0.25,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg18"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, have you decided? Bus or train?",
+   "text": "That's natural for her. Portugal is generally considered quite safe, and lots of women travel there solo.",
+   "est_sec": 5.37,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "travel_planning.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "Any actual tips, though? Beyond be careful.",
    "est_sec": 2.27,
-   "role": "resume",
-   "block": "public_transport.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 20.55
-   }
+   "gap_before": 2.76,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Share your plans with someone at home, and arrive in a new city during daylight if you can.",
+   "est_sec": 5.68,
+   "gap_before": 1.37,
+   "role": "reply",
+   "block": "travel_planning.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "That's useful.",
+   "est_sec": 0.72,
+   "gap_before": 0.86,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Stay somewhere with good reviews from other solo women. And keep a little cash and a copy of your passport separate from your wallet.",
+   "est_sec": 7.54,
+   "gap_before": 0.72,
+   "role": "reply",
+   "block": "travel_planning.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "I was thinking of hostels",
+   "est_sec": 1.65,
+   "gap_before": 1.01,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "travel_planning.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "to meet people.",
+   "est_sec": 1.03,
+   "gap_before": 1.98,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good idea. Many have female only dorms, and the common rooms are great for finding company for day trips.",
+   "est_sec": 5.99,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "travel_planning.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'll show this to my mum.",
+   "est_sec": 2.27,
+   "gap_before": 1.32,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I hope it reassures her. Have a wonderful trip.",
+   "est_sec": 2.89,
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "travel_planning.dlg18"
   }
  ]
 }

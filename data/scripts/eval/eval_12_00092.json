@@ -7,132 +7,171 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "podcasts"
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
  ],
- "topic": "podcasts",
+ "topics": [
+  "picnic"
+ ],
+ "topic": "picnic",
  "voices": {
-  "user": "7bb342e710854139b1d6e12411229f1f",
-  "friend": null,
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": "7bb342e710854139b1d6e12411229f1f",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_15",
-  "greet_ans_09",
-  "describe_instr_15",
-  "ack_10",
-  "describe_cue_09"
+  "greet_21",
+  "greet_ans_12",
+  "door_instr_06",
+  "ack_05",
+  "door_07",
+  "implicit_03"
  ],
  "block_ids": [
-  "podcasts.opt1"
+  "picnic.ctx11",
+  "door_07"
  ],
- "est_total_sec": 59.02,
- "est_speech_sec": 44.81,
+ "est_total_sec": 57.19,
+ "est_speech_sec": 36.53,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your week going?",
-   "est_sec": 1.65,
-   "gap_before": 0.65,
-   "role": "greeting",
-   "phrasing": "greet_15",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.58,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
-  },
-  {
-   "speaker": "user",
-   "text": "I've got a twelve-hour flight coming up and I need help choosing what to listen to.",
-   "est_sec": 5.06,
-   "gap_before": 0.48,
-   "block": "podcasts.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to describe all the options before I hear your opinion.",
-   "est_sec": 3.82,
-   "gap_before": 0.46,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_15"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, no rush.",
-   "est_sec": 1.03,
-   "gap_before": 0.56,
-   "role": "ack",
-   "phrasing": "ack_10",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is a true crime series with ten episodes about a bank robbery in the seventies.",
-   "est_sec": 5.68,
-   "gap_before": 1.29,
-   "block": "podcasts.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a comedy podcast where three friends rank random things, like cereals or holidays.",
-   "est_sec": 4.75,
-   "gap_before": 2.48,
-   "block": "podcasts.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "There's also a long history show about the Roman Empire, something like twenty hours.",
-   "est_sec": 4.44,
-   "gap_before": 1.62,
-   "block": "podcasts.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last option is a self-improvement podcast about building better habits.",
-   "est_sec": 3.82,
-   "gap_before": 2.8,
-   "block": "podcasts.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "So, that's all of them. Tell me what you think.",
-   "est_sec": 3.2,
-   "gap_before": 1.04,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_09"
-  },
-  {
-   "speaker": "moshi",
-   "text": "I'd take the true crime series. Ten episodes is a great binge for a long flight, and the story will pull you along. Save the habits podcast for when you can actually take notes.",
-   "est_sec": 10.64,
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
    "gap_before": 0.75,
+   "role": "greeting",
+   "phrasing": "greet_21",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Hm. I want to do a picnic alone. Is that weird?",
+   "est_sec": 3.51,
+   "gap_before": 0.42,
+   "event": "ordinary_request",
+   "block": "picnic.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not weird at all, it sounds peaceful. Would you bring a book and a snack to the park, or go a bit further, like a lake or a hill?",
+   "est_sec": 9.09,
+   "gap_before": 0.49,
+   "role": "reply",
+   "block": "picnic.ctx11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, that's the door. Hold on and don't talk until I'm back.",
+   "est_sec": 3.82,
+   "gap_before": 1.47,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.23,
+   "role": "ack",
+   "phrasing": "ack_05",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hello?",
+   "est_sec": 0.41,
+   "gap_before": 3.38,
+   "phrasing": "door_07",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, we're collecting for the school fundraiser.",
+   "est_sec": 2.27,
+   "gap_before": 1.13,
+   "phrasing": "door_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Sure, how much are people giving?",
+   "est_sec": 1.96,
+   "gap_before": 0.93,
+   "phrasing": "door_07",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Anything helps, really.",
+   "est_sec": 1.03,
+   "gap_before": 3.3,
+   "phrasing": "door_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Here you go.",
+   "est_sec": 1.03,
+   "gap_before": 1.36,
+   "phrasing": "door_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm all yours.",
+   "est_sec": 1.34,
+   "gap_before": 2.5,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. So where are you heading?",
+   "est_sec": 1.96,
+   "gap_before": 1.08,
    "role": "resume",
-   "block": "podcasts.opt1",
+   "block": "picnic.ctx11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Just the park. I want to be lazy about it.",
+   "est_sec": 3.2,
+   "gap_before": 0.66,
+   "event": "ordinary_request",
+   "block": "picnic.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect. A good book, a sandwich, and no plans.",
+   "est_sec": 2.89,
+   "gap_before": 0.7,
+   "role": "followup",
+   "block": "picnic.ctx11",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "new_type_door",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

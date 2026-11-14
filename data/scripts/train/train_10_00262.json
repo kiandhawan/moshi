@@ -7,17 +7,26 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "video_games"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "video_games",
+ "topics": [
+  "public_transport"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 45
+ },
+ "topic": "public_transport",
  "voices": {
-  "user": "c250136a9ec74cc0b799be54664a83f2",
+  "user": "9a9cf47702da476aa4629e2506d4a857",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,13 +34,16 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_04",
-  "greet_ans_17"
+  "greet_ans_25",
+  "think_instr_08",
+  "ack_13",
+  "self_01"
  ],
  "block_ids": [
-  "video_games.dlg4"
+  "public_transport.ctx5"
  ],
- "est_total_sec": 49.48,
- "est_speech_sec": 39.23,
+ "est_total_sec": 84.81,
+ "est_speech_sec": 33.13,
  "turns": [
   {
    "speaker": "moshi",
@@ -43,84 +55,100 @@
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.45,
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.96,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "phrasing": "greet_ans_25"
   },
   {
    "speaker": "user",
-   "text": "My grandson keeps talking about some building game with blocks. What is it?",
-   "est_sec": 4.13,
-   "gap_before": 0.37,
-   "event": "ordinary_request",
-   "block": "video_games.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "He probably means a sandbox game where you build anything you like out of blocks, a bit like digital Lego. It's hugely popular with kids.",
-   "est_sec": 7.85,
-   "gap_before": 1.0,
-   "role": "reply",
-   "block": "video_games.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it violent at all?",
-   "est_sec": 1.65,
+   "text": "I've got my toddler and a big pushchair today.",
+   "est_sec": 2.89,
    "gap_before": 0.47,
    "event": "ordinary_request",
-   "block": "video_games.dlg4"
+   "block": "public_transport.ctx5"
   },
   {
    "speaker": "moshi",
-   "text": "Very mildly. There are a few cartoon monsters at night, but there's also a mode with no monsters, just building.",
-   "est_sec": 6.3,
-   "gap_before": 0.78,
+   "text": "The nearest station only has stairs. The next one has a lift but it's ten minutes further.",
+   "est_sec": 5.37,
+   "gap_before": 1.07,
    "role": "reply",
-   "block": "video_games.dlg4"
+   "block": "public_transport.ctx5"
   },
   {
    "speaker": "user",
-   "text": "Could I play it with him? I'm seventy-three and",
-   "est_sec": 2.89,
-   "gap_before": 1.3,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "video_games.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "hopeless with computers.",
-   "est_sec": 1.03,
-   "gap_before": 2.19,
+   "text": "Ugh. And he's just fallen asleep.",
+   "est_sec": 1.96,
+   "gap_before": 1.27,
    "event": "ordinary_request",
-   "block": "video_games.dlg4"
+   "block": "public_transport.ctx5"
   },
   {
    "speaker": "moshi",
-   "text": "You definitely could. Ask him to teach you, kids love being the expert and the basics are simple.",
-   "est_sec": 5.68,
-   "gap_before": 0.32,
+   "text": "So, risk waking him on the stairs, or take the longer walk?",
+   "est_sec": 3.82,
+   "gap_before": 0.37,
    "role": "reply",
-   "block": "video_games.dlg4"
+   "block": "public_transport.ctx5"
   },
   {
    "speaker": "user",
-   "text": "That's a lovely idea. He'd think it was hilarious.",
-   "est_sec": 2.89,
-   "gap_before": 0.43,
-   "event": "ordinary_request",
-   "block": "video_games.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "He'd probably build you a house on the first day.",
+   "text": "I'm not sure. Wait forty-five seconds and ask me again.",
    "est_sec": 3.2,
-   "gap_before": 0.8,
-   "role": "reply",
-   "block": "video_games.dlg4"
+   "gap_before": 1.01,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.6,
+   "role": "ack",
+   "phrasing": "ack_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, let me see.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 6,
+    "offset": 17.89
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Stairs and carrying, or the walk to the lift?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "public_transport.ctx5",
+   "anchor": {
+    "turn": 6,
+    "offset": 45.55
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The stairs. Someone always offers to help.",
+   "est_sec": 2.27,
+   "gap_before": 1.19,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Often true. Fold anything loose into the basket first so it's easier to lift with a stranger.",
+   "est_sec": 5.37,
+   "gap_before": 0.33,
+   "role": "followup",
+   "block": "public_transport.ctx5"
   }
  ]
 }

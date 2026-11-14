@@ -7,15 +7,17 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "board_games"
+  "weather_plans"
  ],
- "topic": "board_games",
+ "topic": "weather_plans",
  "voices": {
   "user": "4210f97652d14bec82edc1c2ee8296d2",
   "friend": null,
@@ -24,90 +26,94 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_25",
-  "greet_ans_02",
-  "describe_instr_04",
-  "describe_cue_08"
+  "greet_02",
+  "greet_ans_25"
  ],
  "block_ids": [
-  "board_games.opt2"
+  "weather_plans.dlg20"
  ],
- "est_total_sec": 50.02,
- "est_speech_sec": 38.41,
+ "est_total_sec": 44.51,
+ "est_speech_sec": 33.55,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there! How's your day treating you?",
-   "est_sec": 2.27,
-   "gap_before": 0.54,
-   "role": "greeting",
-   "phrasing": "greet_25"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
+   "text": "Hi! How are you today?",
    "est_sec": 1.65,
-   "gap_before": 0.77,
+   "gap_before": 0.69,
+   "role": "greeting",
+   "phrasing": "greet_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.76,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
+   "phrasing": "greet_ans_25"
   },
   {
    "speaker": "user",
-   "text": "I want a board game to play with my partner on quiet evenings.",
-   "est_sec": 4.13,
-   "gap_before": 0.49,
-   "block": "board_games.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold your thoughts until I've described all the options.",
-   "est_sec": 2.89,
+   "text": "Our front path is a sheet of ice. Salt or grit?",
+   "est_sec": 3.51,
    "gap_before": 0.54,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_04"
-  },
-  {
-   "speaker": "user",
-   "text": "One is a two player card game about trading spices, fast and really easy to set up.",
-   "est_sec": 5.37,
-   "gap_before": 1.35,
-   "block": "board_games.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a puzzle style game where you build a pretty garden with tiles.",
-   "est_sec": 4.44,
-   "gap_before": 2.04,
-   "block": "board_games.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a long campaign game where the story changes every time you play.",
-   "est_sec": 4.44,
-   "gap_before": 2.66,
-   "block": "board_games.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all. Which sounds best to you?",
-   "est_sec": 2.58,
-   "gap_before": 1.09,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_08"
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg20"
   },
   {
    "speaker": "moshi",
-   "text": "Do you two like to compete, or would you rather relax? For relaxing, the garden game is a lovely pick. If you want something to look forward to each week, try the campaign game.",
-   "est_sec": 10.64,
-   "gap_before": 0.63,
-   "role": "resume",
-   "block": "board_games.opt2"
+   "text": "Grit is just salt mixed with sand or small stones. Salt melts the ice, grit also adds some grip.",
+   "est_sec": 5.99,
+   "gap_before": 0.36,
+   "role": "reply",
+   "block": "weather_plans.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "I have table salt. Does that work?",
+   "est_sec": 2.27,
+   "gap_before": 0.85,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It does, for a small area. Sprinkle it thinly before the ice forms, it works best that way.",
+   "est_sec": 5.68,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "weather_plans.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "What about hot water?",
+   "est_sec": 1.34,
+   "gap_before": 0.97,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Avoid it. It melts the ice for a bit, then refreezes, often even slipperier.",
+   "est_sec": 4.44,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "weather_plans.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh no, I did that this morning.",
+   "est_sec": 2.27,
+   "gap_before": 3.26,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Easy mistake. Scatter some salt on it now and wear shoes with good soles until it's gone.",
+   "est_sec": 5.37,
+   "gap_before": 0.65,
+   "role": "reply",
+   "block": "weather_plans.dlg20"
   }
  ]
 }

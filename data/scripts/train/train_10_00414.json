@@ -7,107 +7,113 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "cars"
+  "home_repair"
  ],
- "topic": "cars",
+ "topic": "home_repair",
  "voices": {
-  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_04",
-  "greet_ans_10",
-  "describe_instr_11",
-  "describe_cue_11"
+  "greet_25",
+  "greet_ans_05"
  ],
  "block_ids": [
-  "cars.opt2"
+  "home_repair.dlg20"
  ],
- "est_total_sec": 52.48,
- "est_speech_sec": 41.51,
+ "est_total_sec": 48.16,
+ "est_speech_sec": 38.82,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how are you?",
-   "est_sec": 1.65,
-   "gap_before": 0.6,
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.65,
    "role": "greeting",
-   "phrasing": "greet_04"
+   "phrasing": "greet_25"
   },
   {
    "speaker": "user",
-   "text": "Doing well, thank you.",
-   "est_sec": 1.34,
-   "gap_before": 0.77,
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.98,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_10"
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "My sister needs a first car and asked me to help her pick.",
-   "est_sec": 4.13,
-   "gap_before": 0.59,
-   "block": "cars.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "First let me tell you about all of them, then you can comment.",
-   "est_sec": 4.13,
-   "gap_before": 0.61,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_11"
-  },
-  {
-   "speaker": "user",
-   "text": "There's a ten year old compact that our neighbor is selling, runs fine, but the paint is pretty rough.",
-   "est_sec": 5.99,
-   "gap_before": 0.77,
-   "block": "cars.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another option is a newer small SUV from a dealer, safer, but the payments would be steep for her.",
-   "est_sec": 5.99,
-   "gap_before": 2.26,
-   "block": "cars.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or she could get a basic scooter for now and save up for a car next year.",
-   "est_sec": 5.37,
-   "gap_before": 2.2,
-   "block": "cars.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "And that's the last one. What do you think?",
-   "est_sec": 2.89,
-   "gap_before": 0.96,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_11"
+   "text": "Hi, I'm a student in a rented flat. There's mold on the ceiling above the shower.",
+   "est_sec": 5.06,
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg20"
   },
   {
    "speaker": "moshi",
-   "text": "Does she need to drive on highways or mostly short trips? For short trips, the neighbor's compact is the sensible pick. I'd just have a mechanic look at it before she buys.",
-   "est_sec": 10.02,
-   "gap_before": 0.71,
-   "role": "resume",
-   "block": "cars.opt2"
+   "text": "That's really common in bathrooms. Do you have a fan or a window in there?",
+   "est_sec": 4.75,
+   "gap_before": 0.33,
+   "role": "reply",
+   "block": "home_repair.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "A tiny window that's painted shut.",
+   "est_sec": 1.96,
+   "gap_before": 1.24,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then moisture has nowhere to go. Tell your landlord about the window, that's their job to fix.",
+   "est_sec": 5.37,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "home_repair.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I clean the mold myself in the meantime?",
+   "est_sec": 2.89,
+   "gap_before": 0.99,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes. A mold spray or diluted bleach on a cloth works. Wear gloves and open the door while you do it.",
+   "est_sec": 6.61,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "home_repair.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "Will it come back?",
+   "est_sec": 1.34,
+   "gap_before": 0.8,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Probably, unless the steam can escape. Leave the door open after showers and wipe the walls down. Small habits help a lot.",
+   "est_sec": 6.92,
+   "gap_before": 0.33,
+   "role": "reply",
+   "block": "home_repair.dlg20"
   }
  ]
 }

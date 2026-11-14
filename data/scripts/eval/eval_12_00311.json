@@ -7,124 +7,131 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "ordinary",
  "wait_type": null,
- "conditions": [],
+ "conditions": [
+  "wait_like"
+ ],
  "topics": [
   "cycling"
  ],
  "topic": "cycling",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_15",
-  "greet_ans_30"
+  "greet_18",
+  "greet_ans_21",
+  "waitlike_18"
  ],
  "block_ids": [
-  "cycling.dlg2"
+  "cycling.dlg7"
  ],
- "est_total_sec": 47.39,
- "est_speech_sec": 36.13,
+ "est_total_sec": 49.91,
+ "est_speech_sec": 36.44,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your week going?",
-   "est_sec": 1.65,
-   "gap_before": 0.37,
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_15",
+   "phrasing": "greet_18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.35,
+   "text": "I'm okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.89,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
+   "phrasing": "greet_ans_21"
   },
   {
    "speaker": "user",
-   "text": "My chain makes this squeaking noise every time I pedal.",
+   "text": "How much water should I take on a long ride?",
    "est_sec": 3.2,
-   "gap_before": 0.5,
+   "gap_before": 0.4,
    "event": "ordinary_request",
-   "block": "cycling.dlg2"
+   "block": "cycling.dlg7"
   },
   {
    "speaker": "moshi",
-   "text": "That usually means it's dry. A bit of chain lube should fix it.",
-   "est_sec": 4.13,
-   "gap_before": 0.58,
+   "text": "Roughly one bottle per hour, more if it's hot. On a three hour ride, two bottles plus a refill stop is a good plan.",
+   "est_sec": 7.54,
+   "gap_before": 0.32,
    "role": "reply",
-   "block": "cycling.dlg2",
+   "block": "cycling.dlg7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Can I just use cooking oil?",
-   "est_sec": 1.96,
+   "text": "I always forget to drink.",
+   "est_sec": 1.65,
    "gap_before": 1.28,
    "event": "ordinary_request",
-   "block": "cycling.dlg2"
+   "block": "cycling.dlg7"
   },
   {
    "speaker": "moshi",
-   "text": "I wouldn't. It gets sticky and collects dirt. Proper bike lube is cheap and lasts a long time.",
-   "est_sec": 5.68,
-   "gap_before": 0.61,
+   "text": "Set a reminder, or take a sip every time you reach a hilltop or a junction.",
+   "est_sec": 5.06,
+   "gap_before": 1.18,
    "role": "reply",
-   "block": "cycling.dlg2",
+   "block": "cycling.dlg7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Okay. How do I put it on?",
-   "est_sec": 2.27,
-   "gap_before": 1.0,
+   "text": "Should I bring food too?",
+   "est_sec": 1.65,
+   "gap_before": 2.5,
    "event": "ordinary_request",
-   "block": "cycling.dlg2"
+   "block": "cycling.dlg7"
   },
   {
    "speaker": "moshi",
-   "text": "Put one drop on each link while you slowly turn the pedals backward. Then wipe off the extra with a rag.",
-   "est_sec": 6.61,
-   "gap_before": 0.43,
+   "text": "Yes, for anything over ninety minutes. Bananas, cereal bars, or even a small sandwich.",
+   "est_sec": 4.44,
+   "gap_before": 0.91,
    "role": "reply",
-   "block": "cycling.dlg2",
+   "block": "cycling.dlg7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Should I clean it first, or",
-   "est_sec": 1.96,
-   "gap_before": 0.54,
+   "text": "Wait, wait, honestly I thought I could just",
+   "est_sec": 2.58,
+   "gap_before": 1.38,
    "event": "distractor",
    "kind": "pause",
-   "block": "cycling.dlg2"
+   "block": "cycling.dlg7"
   },
   {
    "speaker": "user",
-   "text": "is that overkill?",
-   "est_sec": 1.03,
-   "gap_before": 2.73,
+   "text": "power through on breakfast.",
+   "est_sec": 1.34,
+   "gap_before": 2.3,
    "event": "ordinary_request",
-   "block": "cycling.dlg2"
+   "kind": "wait_like",
+   "phrasing": "waitlike_18",
+   "block": "cycling.dlg7"
   },
   {
    "speaker": "moshi",
-   "text": "If it looks black and gritty, wipe it down first. Otherwise you're just mixing new oil with old dirt.",
+   "text": "A lot of people try that and run out of energy halfway. It's called bonking, and it's not fun.",
    "est_sec": 5.99,
-   "gap_before": 1.37,
+   "gap_before": 0.46,
    "role": "reply",
-   "block": "cycling.dlg2",
+   "block": "cycling.dlg7",
    "reference_only": true
   }
  ],

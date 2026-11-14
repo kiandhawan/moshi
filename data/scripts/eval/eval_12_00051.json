@@ -7,160 +7,166 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "phone_call",
- "wait_type": "phone_call",
- "conditions": [
-  "implicit"
- ],
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
  "topics": [
-  "cycling"
+  "learning_language"
  ],
- "topic": "cycling",
+ "topic": "learning_language",
  "voices": {
-  "user": "732ea755bd9e446eb31dc79966b50428",
-  "friend": null,
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": "b121b91872f54f04ba9f6da08b8b6253",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_15",
-  "phone_instr_08",
-  "call_05",
-  "implicit_13"
+  "greet_18",
+  "greet_ans_12",
+  "door_instr_07",
+  "door_02",
+  "door_cue_04"
  ],
  "block_ids": [
-  "cycling.ctx2"
+  "learning_language.ctx15",
+  "door_02"
  ],
- "est_total_sec": 60.25,
- "est_speech_sec": 39.22,
+ "est_total_sec": 63.4,
+ "est_speech_sec": 40.87,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
+   "text": "Hello! How have you been lately?",
    "est_sec": 1.96,
-   "gap_before": 0.48,
+   "gap_before": 0.37,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm fine, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.44,
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.52,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_15"
+   "phrasing": "greet_ans_12"
   },
   {
    "speaker": "user",
-   "text": "My bike's back tire has gone flat again.",
-   "est_sec": 2.58,
-   "gap_before": 0.33,
-   "event": "ordinary_request",
-   "block": "cycling.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Annoying. You could patch the inner tube yourself tonight, or take it to the shop tomorrow and get a sturdier tire. What would you like to do?",
-   "est_sec": 8.47,
-   "gap_before": 1.64,
-   "role": "reply",
-   "block": "cycling.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I need to take this, it's important. Please hold on until I'm done.",
-   "est_sec": 4.13,
-   "gap_before": 1.33,
-   "event": "instruction",
-   "kind": "phone_call",
-   "phrasing": "phone_instr_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, what's up?",
-   "est_sec": 1.03,
-   "gap_before": 1.02,
-   "phrasing": "call_05",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Seriously? That's great news!",
-   "est_sec": 1.34,
-   "gap_before": 1.94,
-   "phrasing": "call_05"
-  },
-  {
-   "speaker": "user",
-   "text": "When did you find out?",
-   "est_sec": 1.65,
-   "gap_before": 2.92,
-   "phrasing": "call_05",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "We have to celebrate. Are you free Friday?",
-   "est_sec": 2.58,
-   "gap_before": 2.39,
-   "phrasing": "call_05",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, talk soon.",
-   "est_sec": 1.03,
-   "gap_before": 3.83,
-   "phrasing": "call_05"
-  },
-  {
-   "speaker": "user",
-   "text": "Sorry, you were saying?",
-   "est_sec": 1.34,
-   "gap_before": 0.55,
-   "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_13"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Right. We were sorting out your flat tire, patching it or taking it in.",
-   "est_sec": 4.44,
-   "gap_before": 0.79,
-   "role": "resume",
-   "block": "cycling.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Shop, I think. If it keeps happening I want a better tire.",
+   "text": "I started learning Portuguese and Dutch at the same time. Bad idea?",
    "est_sec": 3.82,
-   "gap_before": 1.34,
+   "gap_before": 0.22,
    "event": "ordinary_request",
-   "block": "cycling.ctx2"
+   "block": "learning_language.ctx15"
   },
   {
    "speaker": "moshi",
-   "text": "That makes sense. Ask them about a puncture resistant tire.",
+   "text": "Not necessarily. How's it going?",
+   "est_sec": 1.65,
+   "gap_before": 1.26,
+   "role": "reply",
+   "block": "learning_language.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Honestly, I'm mixing them up and getting nowhere with either.",
    "est_sec": 3.2,
-   "gap_before": 0.53,
+   "gap_before": 3.26,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then something has to give. Pause one for a few months, or keep both but study them on different days?",
+   "est_sec": 6.3,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "learning_language.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a minute, someone's at the door. Stay quiet till I'm back.",
+   "est_sec": 4.13,
+   "gap_before": 1.02,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, hey!",
+   "est_sec": 0.72,
+   "gap_before": 4.82,
+   "phrasing": "door_02"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Sorry to bother you, did a package for me end up here?",
+   "est_sec": 3.82,
+   "gap_before": 0.89,
+   "phrasing": "door_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me check. Is this it?",
+   "est_sec": 1.96,
+   "gap_before": 1.16,
+   "phrasing": "door_02",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Yes, that's it, thanks!",
+   "est_sec": 1.34,
+   "gap_before": 0.8,
+   "phrasing": "door_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, back. All sorted.",
+   "est_sec": 1.34,
+   "gap_before": 3.02,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Welcome back. Your two languages. Pause one, or split the days?",
+   "est_sec": 3.51,
+   "gap_before": 1.07,
+   "role": "resume",
+   "block": "learning_language.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Pause Dutch. Portuguese is the one I need.",
+   "est_sec": 2.58,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sounds right. Get Portuguese solid, and Dutch will be easier later.",
+   "est_sec": 3.51,
+   "gap_before": 1.83,
    "role": "followup",
-   "block": "cycling.ctx2",
+   "block": "learning_language.ctx15",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_phone",
-  "implicit_return"
+  "new_type_door"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

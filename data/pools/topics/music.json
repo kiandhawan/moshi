@@ -1,160 +1,1877 @@
 {
-  "topic": "music",
-  "contexts": [
+ "topic": "music",
+ "contexts": [
+  {
+   "id": "music.ctx1",
+   "turns": [
     {
-      "id": "music.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I'm forty-five and I've always wanted to learn an instrument. Is it too late?"},
-        {"speaker": "moshi", "text": "Not at all, adults learn quickly because they practice with purpose. Are you drawn more to the guitar, the piano, or something else?"}
-      ],
-      "pending": "guitar, piano or another instrument",
-      "think_reask": [
-        "So, which instrument is calling you, guitar, piano or something else?",
-        "Okay, time's up. Have you picked an instrument to learn?",
-        "Any decision yet on guitar versus piano?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were choosing your first instrument. Guitar, piano or something else?",
-        "Hi again. You were thinking about which instrument to learn.",
-        "There you are. So, guitar or piano?"
-      ],
-      "endings": [
-        {"user": "Piano. We have an old one at my mom's house.", "moshi": "Perfect. Get it tuned first, then try ten minutes a day with a beginner method book."},
-        {"user": "Guitar, I think. It's easier to carry around.", "moshi": "Good choice. Start with a few basic chords, you'll be playing simple songs within weeks."}
-      ]
+     "speaker": "user",
+     "text": "I'm forty-five and I've always wanted to learn an instrument. Is it too late?"
     },
     {
-      "id": "music.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I'm making a playlist for my sister's wedding reception."},
-        {"speaker": "moshi", "text": "Fun! For the first dance, do you want something classic and romantic, or something more upbeat and surprising?"}
-      ],
-      "pending": "classic or upbeat first dance song",
-      "think_reask": [
-        "So, for the first dance, classic and romantic, or upbeat?",
-        "Have you decided which direction to take the first dance song?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were working on the wedding playlist. What feel for the first dance?",
-        "Good to have you back. Still thinking about the first dance song?"
-      ],
-      "endings": [
-        {"user": "Classic. My sister's a total romantic.", "moshi": "Then a slow soul ballad is hard to beat. Something everyone's grandparents know too."},
-        {"user": "Upbeat. They're doing a choreographed dance.", "moshi": "Oh, fun! Pick a song that starts slow and then kicks in, that always gets a cheer."}
-      ]
-    },
-    {
-      "id": "music.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "Two bands I like are playing on the same night next month."},
-        {"speaker": "moshi", "text": "That's a tough one. Is one of them a band you've never seen live, or one that rarely tours?"}
-      ],
-      "pending": "which of two concerts to attend",
-      "think_reask": [
-        "So, which concert wins? Have you seen either of them live?",
-        "Okay, any thoughts on which band to see that night?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were choosing between the two concerts on the same night.",
-        "Hey, you're back. Have you figured out which band to go see?"
-      ],
-      "endings": [
-        {"user": "I've never seen the second one, so I'll go with them.", "moshi": "Good thinking. The first live show of a band you love is always special."},
-        {"user": "The first band rarely tours, so them.", "moshi": "Makes sense. You might not get another chance for years."}
-      ]
+     "speaker": "moshi",
+     "text": "Not at all, adults learn quickly because they practice with purpose. Are you drawn more to the guitar, the piano, or something else?"
     }
-  ],
-  "side_conversations": [
-    {"id": "music.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, can you turn that down a bit? I can barely hear myself think."},
-      {"speaker": "friend", "text": "Oops, it's my new favorite album. Isn't it great?"},
-      {"speaker": "user", "text": "It's not bad. Who is it?"},
-      {"speaker": "friend", "text": "A band from Glasgow. They're playing here in March."},
-      {"speaker": "user", "text": "Oh nice, are you going?"},
-      {"speaker": "friend", "text": "If I can get tickets. Want to come?"},
-      {"speaker": "user", "text": "Maybe. Send me a song and I'll let you know."}
-    ]},
-    {"id": "music.side2", "turns": [
-      {"speaker": "user", "text": "Have you been practicing your guitar this week?"},
-      {"speaker": "friend", "text": "A little. My fingertips still hurt on the steel strings."},
-      {"speaker": "user", "text": "That goes away after a few weeks. Which song are you learning?"},
-      {"speaker": "friend", "text": "Just the easy campfire ones. Four chords, over and over."},
-      {"speaker": "user", "text": "That's how everyone starts. Play me one later?"},
-      {"speaker": "friend", "text": "Only if you promise not to laugh."}
-    ]},
-    {"id": "music.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, what should we play for the road trip tomorrow?"},
-      {"speaker": "friend", "text": "Not your eighties playlist again, please."},
-      {"speaker": "user", "text": "Hey, that playlist is a classic! Fine, what do you suggest?"},
-      {"speaker": "friend", "text": "Let's each pick an hour. Then nobody can complain."},
-      {"speaker": "user", "text": "Okay, fair. Do we have the cable for the car stereo?"},
-      {"speaker": "friend", "text": "It's in the glove box, I think."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "music.dlg1", "turns": [
-      {"speaker": "user", "text": "I need music to help me focus while studying. Lyrics distract me."},
-      {"speaker": "moshi", "text": "Try instrumental stuff like lo-fi beats, classical piano or ambient electronic music. They keep you going without pulling your attention."},
-      {"speaker": "user", "text": "Classical always makes me sleepy, though."},
-      {"speaker": "moshi", "text": "Then go for something with a steady beat, like lo-fi hip hop or video game soundtracks. Those are made to stay in the background."},
-      {"speaker": "user", "text": "Video game music, really? I hadn't / thought of that."},
-      {"speaker": "moshi", "text": "It's surprisingly good for studying. It's designed to keep you focused for hours without getting annoying."},
-      {"speaker": "user", "text": "Should I play it loud or quiet?"},
-      {"speaker": "moshi", "text": "Fairly quiet. You want it just loud enough to block out other noise."}
-    ]},
-    {"id": "music.dlg2", "turns": [
-      {"speaker": "user", "text": "What's the difference between a major and a minor chord?"},
-      {"speaker": "moshi", "text": "It comes down to the middle note. In a minor chord it's one half step lower, which gives it that sadder sound."},
-      {"speaker": "user", "text": "So major is happy and minor is sad?"},
-      {"speaker": "moshi", "text": "That's the usual feeling, yes, though it's not a strict rule. Lots of upbeat songs use minor chords too."},
-      {"speaker": "user", "text": "On the piano, how do I find a minor chord from a major one?"},
-      {"speaker": "moshi", "text": "Play the major chord, then move the middle finger down to the very next key. That's your minor chord."},
-      {"speaker": "user", "text": "Oh, I just tried it and / wow, yeah, it really does sound sadder."},
-      {"speaker": "moshi", "text": "Nice! Try switching back and forth between them, it's a good first exercise."}
-    ]},
-    {"id": "music.dlg3", "turns": [
-      {"speaker": "user", "text": "I'm going to my first big outdoor festival. What should I bring?"},
-      {"speaker": "moshi", "text": "Earplugs, a refillable water bottle, sunscreen and a portable phone charger. And comfortable shoes you don't mind getting dirty."},
-      {"speaker": "user", "text": "Earplugs? Won't that ruin the music?"},
-      {"speaker": "moshi", "text": "Good musician earplugs just lower the volume evenly. Everything sounds clear, and your ears won't ring the next day."},
-      {"speaker": "user", "text": "I was going to bring a big backpack but / maybe that's too much."},
-      {"speaker": "moshi", "text": "A small bag is better. Big ones get heavy and many festivals have size limits at the gate."},
-      {"speaker": "user", "text": "And how do we not lose each other in the crowd?"},
-      {"speaker": "moshi", "text": "Pick a fixed meeting spot early on, like a sign or a food stand. Phones often don't work well in big crowds."}
-    ]},
-    {"id": "music.dlg4", "turns": [
-      {"speaker": "user", "text": "My son wants a drum kit for his birthday. Please talk me out of it."},
-      {"speaker": "moshi", "text": "I might talk you into an electronic kit instead. With headphones, you'd barely hear a thing."},
-      {"speaker": "user", "text": "Wait, really? How quiet are they?"},
-      {"speaker": "moshi", "text": "Much quieter than real drums. You'll hear a soft tapping, but nothing like the full noise."},
-      {"speaker": "user", "text": "Are they expensive?"},
-      {"speaker": "moshi", "text": "Beginner kits are often cheaper than acoustic ones. And they take up less room too."},
-      {"speaker": "user", "text": "Okay, you've / sort of convinced me. Should he take lessons?"},
-      {"speaker": "moshi", "text": "A few lessons early on are really worth it. Good habits from the start make practice much more fun."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "music.opt1",
-     "lead_in": "I want to learn an instrument this year and I'm torn between a few.",
-     "options": [
-       "The first one is guitar, which I could use to play songs with friends around a fire.",
-       "Then there's piano, which my neighbor says is the best way to learn music theory.",
-       "And the last one is drums, really fun but loud, and I live in an apartment."
-     ],
-     "moshi_comment": [
-       "Guitar is a great social instrument and it's easy to carry around. Piano really does make music theory clear, since you can see all the notes laid out. Drums sound fun, but in an apartment you'd probably need an electronic kit with headphones.",
-       "What kind of music do you want to play? If it's singing along with friends, guitar is the way to go. If you want a deeper understanding of music, piano is a fantastic start."
-     ]},
-    {"id": "music.opt2",
-     "lead_in": "I'm putting together music for my friend's going away party and I have a few ideas.",
-     "options": [
-       "One option is a playlist of all the songs from our college years, really nostalgic.",
-       "Another is hiring a local band that plays covers, but that eats up half the budget.",
-       "Or I could ask a friend who does DJ sets on weekends, he'd do it for free if we feed him."
-     ],
-     "moshi_comment": [
-       "The college playlist is a sweet touch, it'll get everyone singing along. A live band is memorable, but half the budget is a lot. Your DJ friend sounds like a great deal, especially if he can mix in some of those college songs.",
-       "How big is the party? For a small group, the nostalgic playlist is perfect. For a bigger crowd, I'd ask your DJ friend and give him the college songs as a request list."
-     ]}
-  ]
+   ],
+   "pending": "guitar, piano or another instrument",
+   "think_reask": [
+    "So, which instrument is calling you, guitar, piano or something else?",
+    "Okay, time's up. Have you picked an instrument to learn?",
+    "Any decision yet on guitar versus piano?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were choosing your first instrument. Guitar, piano or something else?",
+    "Hi again. You were thinking about which instrument to learn.",
+    "There you are. So, guitar or piano?"
+   ],
+   "endings": [
+    {
+     "user": "Piano. We have an old one at my mom's house.",
+     "moshi": "Perfect. Get it tuned first, then try ten minutes a day with a beginner method book."
+    },
+    {
+     "user": "Guitar, I think. It's easier to carry around.",
+     "moshi": "Good choice. Start with a few basic chords, you'll be playing simple songs within weeks."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm making a playlist for my sister's wedding reception."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun! For the first dance, do you want something classic and romantic, or something more upbeat and surprising?"
+    }
+   ],
+   "pending": "classic or upbeat first dance song",
+   "think_reask": [
+    "So, for the first dance, classic and romantic, or upbeat?",
+    "Have you decided which direction to take the first dance song?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were working on the wedding playlist. What feel for the first dance?",
+    "Good to have you back. Still thinking about the first dance song?"
+   ],
+   "endings": [
+    {
+     "user": "Classic. My sister's a total romantic.",
+     "moshi": "Then a slow soul ballad is hard to beat. Something everyone's grandparents know too."
+    },
+    {
+     "user": "Upbeat. They're doing a choreographed dance.",
+     "moshi": "Oh, fun! Pick a song that starts slow and then kicks in, that always gets a cheer."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Two bands I like are playing on the same night next month."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a tough one. Is one of them a band you've never seen live, or one that rarely tours?"
+    }
+   ],
+   "pending": "which of two concerts to attend",
+   "think_reask": [
+    "So, which concert wins? Have you seen either of them live?",
+    "Okay, any thoughts on which band to see that night?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were choosing between the two concerts on the same night.",
+    "Hey, you're back. Have you figured out which band to go see?"
+   ],
+   "endings": [
+    {
+     "user": "I've never seen the second one, so I'll go with them.",
+     "moshi": "Good thinking. The first live show of a band you love is always special."
+    },
+    {
+     "user": "The first band rarely tours, so them.",
+     "moshi": "Makes sense. You might not get another chance for years."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm busking for the first time on Saturday, outside the market."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brave, I love it. Would you play mostly covers people will recognise, or mostly your own songs?"
+    }
+   ],
+   "pending": "covers or own songs for busking",
+   "think_reask": [
+    "So, covers or your own songs on Saturday?",
+    "Okay, the busking set. Which way are you going?"
+   ],
+   "welcome_back": [
+    "The market busking. Covers, or your own stuff?",
+    "So for Saturday, have you picked between the songs people know and your own?"
+   ],
+   "endings": [
+    {
+     "user": "Mostly covers, with two of mine sneaked in.",
+     "moshi": "That's a great balance. Familiar songs make people stop, and then they'll listen to yours."
+    },
+    {
+     "user": "My own. That's the whole point for me.",
+     "moshi": "Then play your catchiest one first, and have a sign with where people can find you online."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm auditioning for the community choir next Tuesday. I'm so nervous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's exciting. For your audition piece, would you go with something you know inside out, or something that shows off your range?"
+    }
+   ],
+   "pending": "safe song or range showing song for the choir audition",
+   "think_reask": [
+    "So, the safe song or the one that shows range?",
+    "Have you decided what to sing on Tuesday?"
+   ],
+   "welcome_back": [
+    "The choir audition. Something comfortable, or something to show your range?",
+    "So for Tuesday, which song are you leaning towards?"
+   ],
+   "endings": [
+    {
+     "user": "Something I know well. I'll be shaking enough.",
+     "moshi": "Good call. Confidence carries a voice much further than a high note you're unsure of."
+    },
+    {
+     "user": "Range, I want them to hear what I can do.",
+     "moshi": "Then practise the top note every day this week, and warm up gently on the morning."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter's starting violin at school and they want us to get her one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely. At the start, would you rather rent one through the school, or buy a cheap beginner violin outright?"
+    }
+   ],
+   "pending": "rent or buy a beginner violin",
+   "think_reask": [
+    "So, rent or buy the violin?",
+    "Okay, any decision on getting her the violin?"
+   ],
+   "welcome_back": [
+    "The violin for your daughter. Renting, or buying?",
+    "So, which way did you land on the violin?"
+   ],
+   "endings": [
+    {
+     "user": "Rent. She changes her mind every term.",
+     "moshi": "Smart. Lots of rental schemes let the money count towards buying if she sticks with it."
+    },
+    {
+     "user": "Buy. Her older cousin might take it after.",
+     "moshi": "Then get a decent beginner one from a music shop rather than online. A good setup makes it much easier to play."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just inherited my grandpa's record collection. Boxes and boxes of it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What a treasure. Do you want to get a turntable and play them as they are, or digitise them so they're safe?"
+    }
+   ],
+   "pending": "play the records on a turntable or digitise them",
+   "think_reask": [
+    "So, turntable or digitising?",
+    "Have you decided what to do with grandpa's records?"
+   ],
+   "welcome_back": [
+    "Your grandpa's records. Playing them, or digitising them?",
+    "Back to that record collection. Which way are you leaning?"
+   ],
+   "endings": [
+    {
+     "user": "Turntable. I want to hear them how he did.",
+     "moshi": "That's lovely. Get a turntable with a decent needle, cheap ones can wear the grooves down."
+    },
+    {
+     "user": "Digitise. Some of them are pretty fragile.",
+     "moshi": "Good thinking. A USB turntable can record straight to a laptop, and you'll keep the originals safe."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm running my first half marathon in May and I want a proper playlist."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. Would you like steady songs with the same tempo the whole way, or a playlist that builds up energy towards the end?"
+    }
+   ],
+   "pending": "steady tempo or building playlist for the half marathon",
+   "think_reask": [
+    "So, steady pace or building up for the playlist?",
+    "Okay, how should the run playlist feel?"
+   ],
+   "welcome_back": [
+    "The half marathon playlist. Steady, or building to the finish?",
+    "So, for race day, which kind of playlist are you after?"
+   ],
+   "endings": [
+    {
+     "user": "Build up. I'll need help in the last few miles.",
+     "moshi": "Then save your favourite song for the final stretch. It's amazing what one great track does to tired legs."
+    },
+    {
+     "user": "Steady. I want to lock into a rhythm.",
+     "moshi": "Then pick songs at around your step rate, roughly one hundred and sixty beats a minute for many runners."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our garage band needs a drummer. We've been jamming with a drum machine for months."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Time for a human. Would you ask that quiet guy from your work who said he used to drum, or put an ad up in the local music shop?"
+    }
+   ],
+   "pending": "ask the coworker or advertise for a drummer",
+   "think_reask": [
+    "So, the coworker or the ad?",
+    "Have you picked how to find your drummer?"
+   ],
+   "welcome_back": [
+    "The drummer hunt. Coworker, or an ad in the shop?",
+    "So for the band, are you asking the guy from work or advertising?"
+   ],
+   "endings": [
+    {
+     "user": "The coworker. At least I know he's not a weirdo.",
+     "moshi": "Fair. Invite him for one casual jam, no pressure, and see how it feels."
+    },
+    {
+     "user": "The ad. I'd rather not mix work and band stuff.",
+     "moshi": "Makes sense. Mention the style and how often you practise, so you get the right people."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My piano teacher is retiring after thirty years and I want to give her something."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How thoughtful. Would you give her something personal, like a framed piece of music, or an experience, like tickets to a concert?"
+    }
+   ],
+   "pending": "a personal keepsake or concert tickets for the teacher",
+   "think_reask": [
+    "So, keepsake or concert tickets for your teacher?",
+    "Okay, any decision on her retirement gift?"
+   ],
+   "welcome_back": [
+    "Your teacher's gift. Something to keep, or a concert?",
+    "So, for her retirement, which kind of present?"
+   ],
+   "endings": [
+    {
+     "user": "Framed music. The first piece she ever taught me.",
+     "moshi": "That's beautiful. Write a short note on the back about what her lessons meant to you."
+    },
+    {
+     "user": "Tickets. She always says she never gets to go anymore.",
+     "moshi": "Perfect then. Get two, so she can bring someone, and maybe a dinner voucher too."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The neighbours complained about my trumpet practice. Again."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ouch. Trumpets are loud. Would you try a practice mute at home, or rent a practice room a couple of times a week?"
+    }
+   ],
+   "pending": "practice mute or rent a practice room",
+   "think_reask": [
+    "So, mute or practice room?",
+    "Have you decided how to keep the neighbours happy?"
+   ],
+   "welcome_back": [
+    "The trumpet situation. A mute, or a room somewhere?",
+    "So, are you going quiet at home, or practising elsewhere?"
+   ],
+   "endings": [
+    {
+     "user": "A mute. I can't afford a room every week.",
+     "moshi": "Fair. Some practice mutes cut the volume down massively, just swap back now and then to keep your tone."
+    },
+    {
+     "user": "The room. I miss playing at full blast.",
+     "moshi": "Then check the local music school, they often rent rooms cheaply in the daytime."
+    }
+   ]
+  },
+  {
+   "id": "music.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My uncle's funeral is next week and the family asked me to choose a song."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'm sorry about your uncle. Would you pick something he loved that might be upbeat, or something more traditional and calm?"
+    }
+   ],
+   "pending": "a song he loved or a traditional calm piece",
+   "think_reask": [
+    "When you're ready, a song he loved, or something more traditional?",
+    "Have you had a moment to think about which song to choose?"
+   ],
+   "welcome_back": [
+    "The song for your uncle. One he loved, or something traditional?",
+    "Whenever you're ready, which kind of song feels right for him?"
+   ],
+   "endings": [
+    {
+     "user": "One he loved. He sang it at every family party.",
+     "moshi": "That sounds perfect. People will smile and remember him singing it, that's a lovely tribute."
+    },
+    {
+     "user": "Something traditional. My aunt would prefer that.",
+     "moshi": "That's very caring of you. You could play his favourite song quietly as people leave, as a gentle nod to him."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "music.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you turn that down a bit? I can barely hear myself think."
+    },
+    {
+     "speaker": "friend",
+     "text": "Oops, it's my new favorite album. Isn't it great?"
+    },
+    {
+     "speaker": "user",
+     "text": "It's not bad. Who is it?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A band from Glasgow. They're playing here in March."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh nice, are you going?"
+    },
+    {
+     "speaker": "friend",
+     "text": "If I can get tickets. Want to come?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe. Send me a song and I'll let you know."
+    }
+   ]
+  },
+  {
+   "id": "music.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Have you been practicing your guitar this week?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A little. My fingertips still hurt on the steel strings."
+    },
+    {
+     "speaker": "user",
+     "text": "That goes away after a few weeks. Which song are you learning?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Just the easy campfire ones. Four chords, over and over."
+    },
+    {
+     "speaker": "user",
+     "text": "That's how everyone starts. Play me one later?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Only if you promise not to laugh."
+    }
+   ]
+  },
+  {
+   "id": "music.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, what should we play for the road trip tomorrow?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not your eighties playlist again, please."
+    },
+    {
+     "speaker": "user",
+     "text": "Hey, that playlist is a classic! Fine, what do you suggest?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Let's each pick an hour. Then nobody can complain."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, fair. Do we have the cable for the car stereo?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It's in the glove box, I think."
+    }
+   ]
+  },
+  {
+   "id": "music.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, the tickets sold out in four minutes."
+    },
+    {
+     "speaker": "friend",
+     "text": "You're joking. We were in the queue!"
+    },
+    {
+     "speaker": "user",
+     "text": "There's resale, but they're three times the price."
+    },
+    {
+     "speaker": "friend",
+     "text": "No way. That's robbery."
+    },
+    {
+     "speaker": "user",
+     "text": "So, do we pay it or skip it?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I'd rather wait. Sometimes they release more closer to the date."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they don't?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Then we go to the pub and play the album really loud."
+    },
+    {
+     "speaker": "user",
+     "text": "Deal. But I'm keeping the resale page open."
+    }
+   ]
+  },
+  {
+   "id": "music.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can we try the duet again? You keep speeding up in the middle."
+    },
+    {
+     "speaker": "friend",
+     "text": "I do not."
+    },
+    {
+     "speaker": "user",
+     "text": "You really do. Right where it goes loud."
+    },
+    {
+     "speaker": "friend",
+     "text": "Okay, maybe a little. It's exciting!"
+    },
+    {
+     "speaker": "user",
+     "text": "Shall we use the metronome?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Ugh. Fine, but slower than last time."
+    },
+    {
+     "speaker": "user",
+     "text": "Sixty, then?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sixty. And you count us in."
+    },
+    {
+     "speaker": "user",
+     "text": "One, two, three, four."
+    }
+   ]
+  },
+  {
+   "id": "music.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you hear that bass through the wall? It's midnight."
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh, I hear it. My water glass is literally shaking."
+    },
+    {
+     "speaker": "user",
+     "text": "Should we knock? Or is that too much?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It's the third night this week. Knock."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I even say?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Just ask nicely if they can turn the bass down a bit. They're probably not even aware."
+    },
+    {
+     "speaker": "user",
+     "text": "Will you come with me?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine. But you're doing the talking."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "music.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I need music to help me focus while studying. Lyrics distract me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try instrumental stuff like lo-fi beats, classical piano or ambient electronic music. They keep you going without pulling your attention."
+    },
+    {
+     "speaker": "user",
+     "text": "Classical always makes me sleepy, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then go for something with a steady beat, like lo-fi hip hop or video game soundtracks. Those are made to stay in the background."
+    },
+    {
+     "speaker": "user",
+     "text": "Video game music, really? I hadn't / thought of that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's surprisingly good for studying. It's designed to keep you focused for hours without getting annoying."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I play it loud or quiet?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fairly quiet. You want it just loud enough to block out other noise."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the difference between a major and a minor chord?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It comes down to the middle note. In a minor chord it's one half step lower, which gives it that sadder sound."
+    },
+    {
+     "speaker": "user",
+     "text": "So major is happy and minor is sad?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the usual feeling, yes, though it's not a strict rule. Lots of upbeat songs use minor chords too."
+    },
+    {
+     "speaker": "user",
+     "text": "On the piano, how do I find a minor chord from a major one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Play the major chord, then move the middle finger down to the very next key. That's your minor chord."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I just tried it and / wow, yeah, it really does sound sadder."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice! Try switching back and forth between them, it's a good first exercise."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm going to my first big outdoor festival. What should I bring?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Earplugs, a refillable water bottle, sunscreen and a portable phone charger. And comfortable shoes you don't mind getting dirty."
+    },
+    {
+     "speaker": "user",
+     "text": "Earplugs? Won't that ruin the music?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good musician earplugs just lower the volume evenly. Everything sounds clear, and your ears won't ring the next day."
+    },
+    {
+     "speaker": "user",
+     "text": "I was going to bring a big backpack but / maybe that's too much."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small bag is better. Big ones get heavy and many festivals have size limits at the gate."
+    },
+    {
+     "speaker": "user",
+     "text": "And how do we not lose each other in the crowd?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick a fixed meeting spot early on, like a sign or a food stand. Phones often don't work well in big crowds."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son wants a drum kit for his birthday. Please talk me out of it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I might talk you into an electronic kit instead. With headphones, you'd barely hear a thing."
+    },
+    {
+     "speaker": "user",
+     "text": "Wait, really? How quiet are they?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Much quieter than real drums. You'll hear a soft tapping, but nothing like the full noise."
+    },
+    {
+     "speaker": "user",
+     "text": "Are they expensive?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Beginner kits are often cheaper than acoustic ones. And they take up less room too."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, you've / sort of convinced me. Should he take lessons?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few lessons early on are really worth it. Good habits from the start make practice much more fun."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I tune my guitar without a tuner? Mine's broken."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, with the fifth fret method. If one string is roughly right, you can tune the others to it."
+    },
+    {
+     "speaker": "user",
+     "text": "How does that work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Press the low string at the fifth fret, and the note should match the next string played open. Adjust that next string until they sound the same."
+    },
+    {
+     "speaker": "user",
+     "text": "And then keep / going across the strings?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly, all the way across. Except the second thinnest string, for that one you use the fourth fret instead of the fifth."
+    },
+    {
+     "speaker": "user",
+     "text": "Why's that one different?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's just how guitars are tuned, that gap is a bit smaller. Also, a free tuner app on your phone does the job in a pinch."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why do songs get stuck in my head? I've had the same jingle for three days."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're called earworms. Usually it's a catchy, simple bit of melody that your brain keeps replaying because it feels unfinished."
+    },
+    {
+     "speaker": "user",
+     "text": "Any way to make it stop?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oddly, listening to the whole song all the way through can help. It gives your brain the ending it wants."
+    },
+    {
+     "speaker": "user",
+     "text": "It's a jingle for / a carpet shop, there's no whole song."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah. Then try chewing gum, it really does help some people. Or do a puzzle that keeps your mind busy."
+    },
+    {
+     "speaker": "user",
+     "text": "Chewing gum? Seriously?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Seriously. Your mouth and inner voice are linked, so chewing seems to block the replay a bit."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's this tune I can't stop humming but I have no idea what it's called."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Annoying. Many music apps can find a song if you hum it. They're surprisingly good."
+    },
+    {
+     "speaker": "user",
+     "text": "Really? Even with my terrible humming?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually, if you get the basic shape of the melody right. Hum for ten or fifteen seconds."
+    },
+    {
+     "speaker": "user",
+     "text": "I think I heard it / in a cafe last week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you could also ask the cafe. Staff often know their playlist, or you could check if the cafe shares it online."
+    },
+    {
+     "speaker": "user",
+     "text": "Hold on, let me try humming it into my phone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Go for it. If it doesn't work, try the chorus, that's usually the most recognisable part."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My teacher keeps telling me to practise with a metronome. I find it so boring."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair, it's not thrilling. But it's one of the fastest ways to clean up your playing."
+    },
+    {
+     "speaker": "user",
+     "text": "Why does it matter so much?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most people rush the easy bits and slow down on the hard bits. A metronome shows you exactly where."
+    },
+    {
+     "speaker": "user",
+     "text": "I just feel / kind of robotic with it on."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's normal at first. Try setting it slow and only practising the tricky bars with it, not the whole piece."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that sounds less painful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And make it a game. Every time you play the bit perfectly three times in a row, nudge the speed up a little."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do singers really need to warm up? I just sing in the car."
+    },
+    {
+     "speaker": "moshi",
+     "text": "For casual car singing, not much. But before a rehearsal or a gig, warming up protects your voice and makes high notes easier."
+    },
+    {
+     "speaker": "user",
+     "text": "What do people actually do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Gentle humming, lip trills, which are like blowing a raspberry while you sing, and slides from low to high."
+    },
+    {
+     "speaker": "user",
+     "text": "Lip trills sound / incredibly silly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They really do. Everyone looks ridiculous doing them, but they relax your voice without straining it."
+    },
+    {
+     "speaker": "user",
+     "text": "How long for?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ten minutes is plenty. Start low and gentle, then go a bit higher as you go."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have a gig on Friday and I'm losing my voice. Panicking slightly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, first, rest your voice as much as you can. That means not whispering either, whispering actually strains it."
+    },
+    {
+     "speaker": "user",
+     "text": "Not even whispering? Wow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Afraid so. Drink lots of water, breathe steam from a bowl of hot water, and try to sleep a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I cancel? I / really don't want to."
+    },
+    {
+     "speaker": "moshi",
+     "text": "See how it is on Thursday. If talking still hurts, a doctor's opinion is worth it. Pushing through a sore throat can cause real damage."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it's better?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then drop the song with the highest notes, warm up gently, and keep water on stage."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is vinyl actually better quality than streaming, or is it just trendy?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a bit of both. Vinyl sounds different, warmer for some people, but it's not technically more detailed than a good digital file."
+    },
+    {
+     "speaker": "user",
+     "text": "Then why do people love it so much?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The ritual, mostly. Choosing a record, the big artwork, listening to a whole album side without skipping."
+    },
+    {
+     "speaker": "user",
+     "text": "That actually / sounds really nice."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is. You also tend to listen more closely when you can't just skip to the next song."
+    },
+    {
+     "speaker": "user",
+     "text": "Are records expensive?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "New ones can be. Second hand shops and car boot sales are where the bargains are, and the hunt is half the fun."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Everyone in my family loves jazz and I just don't get it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's okay, jazz can feel a bit slippery at first. What have you heard so far?"
+    },
+    {
+     "speaker": "user",
+     "text": "Mostly long, messy stuff with lots of sax solos."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah, that's the deep end. Try something more melodic, like vocal jazz or a relaxed piano trio. There's usually a clear tune to hold onto."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there a trick / to listening to it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Listen for the main tune at the start. Then the players take turns improvising around it, and the tune comes back at the end."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, so it's like a theme and they all riff on it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Once you hear that shape, the solos make much more sense."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to write song lyrics but everything I write sounds cheesy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most first drafts do. One trick is to swap general words for specific ones. Instead of saying I miss you, describe one small detail."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Like your coffee mug still on the shelf. A concrete image makes people feel it without you saying it."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I like that. What about rhymes? Mine / always feel forced."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try near rhymes, words that almost rhyme, like home and alone. They sound more natural and give you way more options."
+    },
+    {
+     "speaker": "user",
+     "text": "Near rhymes. Got it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And say your lines out loud. If you wouldn't say it in real life, it'll probably sound cheesy when sung."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My first piano recital is in two weeks and I keep imagining my hands shaking."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very normal. The best thing you can do is practise performing, not just practising. Play your piece for family or friends, or even your phone camera."
+    },
+    {
+     "speaker": "user",
+     "text": "Even the camera makes me nervous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's good actually, it's the same feeling in a safer place. The more you do it, the less scary it gets."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I / mess up in the middle?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep going no matter what. Practise starting from a few spots in the piece, so if you slip, you can jump back in."
+    },
+    {
+     "speaker": "user",
+     "text": "And on the day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Warm your hands, breathe slowly before you start, and remember the audience wants you to do well."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is ukulele good for a six year old? She wants an instrument."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's one of the best starter instruments. Small, light, soft nylon strings, and you can play simple songs with just a couple of chords."
+    },
+    {
+     "speaker": "user",
+     "text": "She has tiny hands."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A soprano ukulele, the smallest common size, is perfect for little hands."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need / lessons for her straight away?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily. Lots of kids start with fun video lessons. If she's still keen after a few months, a teacher could be great."
+    },
+    {
+     "speaker": "user",
+     "text": "And the cheap ones in toy shops?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those often don't stay in tune, which is frustrating. A basic one from a music shop is worth the extra few pounds."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's a key change? My friend says the last chorus of every pop song has one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's when a song shifts to a new key, usually higher, often for the final chorus. It gives a lift, like the song is going up a gear."
+    },
+    {
+     "speaker": "user",
+     "text": "Is that why I get goosebumps at the end of some songs?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Quite possibly. A key change paired with a big drum fill is basically designed for goosebumps."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it like / a cheap trick or a real skill?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bit of both. Some songs use it very obviously, some are subtle. Done well, it just feels exciting."
+    },
+    {
+     "speaker": "user",
+     "text": "Now I'm going to notice it everywhere."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You will. It's a fun game, listen for the moment where everything suddenly sounds brighter."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Dinner party tomorrow, ten people. I need background music that isn't awkward."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Aim for something warm and mostly instrumental, so it doesn't compete with conversation. Soul, bossa nova or mellow jazz usually works."
+    },
+    {
+     "speaker": "user",
+     "text": "No lyrics at all?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some lyrics are fine, just avoid anything everyone knows the words to, or people start singing instead of talking."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, that has happened before. How / long should the playlist be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Around three or four hours, so it never loops. Repeating songs at a dinner party is surprisingly noticeable."
+    },
+    {
+     "speaker": "user",
+     "text": "And volume?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Low enough that nobody needs to raise their voice. You can turn it up a bit once dessert is over."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm going to my first ever classical concert. When am I supposed to clap?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good question, it confuses lots of people. Generally you clap at the end of a whole piece, not between the movements."
+    },
+    {
+     "speaker": "user",
+     "text": "What's a movement?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A big piece is often split into sections with short pauses between them. People stay quiet during those pauses."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know / if it's really over?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Watch the conductor. When they lower their arms and turn around, it's over. Or just wait for everyone else to clap first."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I have to dress up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all these days. Smart casual is fine, and lots of people come straight from work."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm fifty two and I want to learn to read sheet music. Feeling a bit silly about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not silly at all. Adults often pick it up faster than kids, because you can understand the logic behind it."
+    },
+    {
+     "speaker": "user",
+     "text": "Where do I begin?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with the lines of the treble clef. The notes on the lines from bottom to top are E, G, B, D, F."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there a trick to / remembering that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A classic one is every good boy deserves fruit. The spaces in between spell face."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's handy. And rhythm?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Learn a few note lengths first, like whole, half and quarter notes. Clap along to simple rhythms and you'll start reading them quickly."
+    },
+    {
+     "speaker": "user",
+     "text": "This is less scary than I thought."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ten minutes a day with a beginner book and you'll be surprised in a month."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to record my songs at home. What's the bare minimum setup?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A laptop, a decent microphone, headphones, and an audio interface to plug the mic into. That's honestly enough to start."
+    },
+    {
+     "speaker": "user",
+     "text": "What kind of microphone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For singing at home, a simple condenser mic works well. It picks up detail, so record in a quiet room."
+    },
+    {
+     "speaker": "user",
+     "text": "My room echoes / like a bathroom."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then hang blankets or duvets around you. Some people record in a wardrobe full of clothes, it sounds great."
+    },
+    {
+     "speaker": "user",
+     "text": "In a wardrobe?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a classic home studio trick. The clothes soak up the echo, so your voice sounds clean and close."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Any music that actually helps a baby sleep? She's three months and fighting it every night."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Soft, slow and repetitive works best. Lullabies, gentle piano or even white noise can help."
+    },
+    {
+     "speaker": "user",
+     "text": "White noise? Like a fan?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a fan or a white noise app. It reminds babies of the sounds in the womb, which is calming."
+    },
+    {
+     "speaker": "user",
+     "text": "I've been singing to her but / I only know about two songs."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's fine, babies love repetition. Your voice is the most soothing sound to her, even if you sing the same song every night."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, she's going to be sick of that song."
+    },
+    {
+     "speaker": "moshi",
+     "text": "She'll probably love it. Keep the volume low and the lights dim, and keep the routine the same each night."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My twelve year old wants to go to her first concert. I'm a bit nervous about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Understandable. A smaller venue or a seated arena show is a gentler first experience than a standing crowd."
+    },
+    {
+     "speaker": "user",
+     "text": "She wants to be at the front, obviously."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Of course she does. If you go with her, maybe stand near the side or the back of the standing area, so you can step out if it gets crushed."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I bring / earplugs for her too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. Kids' ears are more sensitive, and concerts are really loud. The small musician style ones don't spoil the music."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Agree on a meeting point in case you get separated, and write your phone number on her arm or a card in her pocket."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My trumpet smells weird. How often am I meant to clean it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ideally a quick rinse every couple of weeks and a proper bath once a month or so. A smell usually means it's overdue."
+    },
+    {
+     "speaker": "user",
+     "text": "Overdue is putting it mildly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then give it a full bath. Lukewarm water with a bit of washing up liquid, and take the valves and slides out first."
+    },
+    {
+     "speaker": "user",
+     "text": "Won't hot water / ruin the finish?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hot water can damage the lacquer, so stick with lukewarm. Use a snake brush through the tubes and a soft cloth on the outside."
+    },
+    {
+     "speaker": "user",
+     "text": "And the valves?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rinse them, dry them, add a few drops of valve oil, and put each one back in its own slot. They're numbered for a reason."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friend and I want to sing harmonies together but I always end up singing her part."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very common. Your ear naturally follows the melody. Practise your harmony line alone first until it's solid."
+    },
+    {
+     "speaker": "user",
+     "text": "Like on my own?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. Record the melody on your phone, then sing your part over it. When you can hold it against the recording, try it with her."
+    },
+    {
+     "speaker": "user",
+     "text": "We tried that and I / still drifted after a while."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then stand a bit apart, or cover one ear. Hearing yourself more clearly helps you stay on your own note."
+    },
+    {
+     "speaker": "user",
+     "text": "Covering one ear, like proper singers do."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. It looks dramatic, but it works."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My ears have been ringing since the gig last night."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's called tinnitus, and after a loud gig it's quite common. It usually fades within a day or two."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it doesn't?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If it lasts more than a few days, or your hearing feels muffled, see a doctor. It's worth getting checked."
+    },
+    {
+     "speaker": "user",
+     "text": "I go to a lot / of gigs, like every week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then earplugs are a must. Each loud gig without them adds up, and hearing damage doesn't really heal."
+    },
+    {
+     "speaker": "user",
+     "text": "Won't they make it sound dull?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Proper musician earplugs just lower the volume evenly. Most people say the music sounds clearer with them, not worse."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Gran's old upright piano hasn't been tuned in about twenty years. Is it a lost cause?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily. Many old pianos come back nicely, though it might need a few tunings to settle."
+    },
+    {
+     "speaker": "user",
+     "text": "Why a few?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "After so long, the strings have dropped way below pitch. Pulling them up all at once is risky, so tuners often do it in stages."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it expensive?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A single tuning isn't too bad, but if it needs repairs as well, it adds up. A tuner can tell you on the first visit if it's worth it."
+    },
+    {
+     "speaker": "user",
+     "text": "I'd love to keep it. It / was the centre of every Christmas."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's worth a look. Even if it's not perfect, it carries a lot of memories, and that matters too."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Honestly, music was just better when I was young."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people feel that. The music from your teens often sticks with us the most, because it's tied to so many big moments."
+    },
+    {
+     "speaker": "user",
+     "text": "So it's not actually better?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's better for you, maybe. Every decade has great songs and terrible ones. We just remember the great ones from our own time."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. That's annoyingly / reasonable."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha. If you want, tell me a couple of songs you loved back then, and I'll suggest some newer stuff with a similar feel."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, mostly guitar bands with big choruses."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then there's plenty out there now. Lots of newer indie bands are clearly inspired by that sound."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've been asked to DJ my cousin's house party. I've never done it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun. You don't need fancy gear. A laptop with DJ software and a cheap controller is plenty for a house party."
+    },
+    {
+     "speaker": "user",
+     "text": "What about the mixing part?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it simple. Let songs play most of the way through, and fade from one to the next where it feels natural."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I / keep people dancing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Watch the room. Start chill as people arrive, build up once the room fills, and drop the big crowd favourites when the energy peaks."
+    },
+    {
+     "speaker": "user",
+     "text": "And requests?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take them, but play them when they fit the mood. A slow ballad in the middle of a dance bit can empty the floor."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just started drums. My teacher wants me to learn a basic rock beat. What's the pattern?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Count one, two, three, four. Hi hat on every count, kick drum on one and three, snare on two and four."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, so hands and feet together."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. That's the tricky part at first, getting your limbs to do different things."
+    },
+    {
+     "speaker": "user",
+     "text": "My right foot / keeps wanting to copy my hand."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally normal. Go really slowly, even just the hi hat and kick first. Add the snare once that feels easy."
+    },
+    {
+     "speaker": "user",
+     "text": "How slow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Slower than feels useful. Speed comes naturally once your body knows the pattern."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I run a little bakery and I need music for the shop. What works?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Something warm and relaxed that doesn't distract. Acoustic, soft soul or gentle jazz all work well in cafes and bakeries."
+    },
+    {
+     "speaker": "user",
+     "text": "In the morning rush too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could go a bit more upbeat in the morning and slower in the quiet afternoon. Music can actually change how fast people move."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there / a legal thing I need for that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually yes. Playing music in a business often needs a licence, separate from your personal streaming account. Check what applies where you are."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, of course there is."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There are business music services that include the licence, so you can sort it in one go."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've listened to the same five albums for a year. How do I find new music?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A good start is going one step out from what you like. Look up the bands that toured with your favourites, they often have a similar sound."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I never / thought of the support acts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're a goldmine. Also, local radio and small venue listings are great for fresh stuff."
+    },
+    {
+     "speaker": "user",
+     "text": "Algorithms just give me the same thing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "True, they lean safe. Try asking a friend for three songs they love right now. People's picks are much more surprising."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that's actually a fun idea."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Swap with them too. You'll both end up with something new."
+    }
+   ]
+  },
+  {
+   "id": "music.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I played cello until I was eighteen. Now I'm forty and I want to join a community orchestra."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's wonderful. Community orchestras love returning players, especially cellists."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm so rusty though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most people are. Spend a few weeks on scales and easy pieces first, just to get your fingers back."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I get lessons again or / just dive in?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A few lessons can help a lot after a long break. A teacher will spot old habits and get your bowing smooth again."
+    },
+    {
+     "speaker": "user",
+     "text": "And the audition?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many community orchestras don't even hold a proper audition. Email them, ask if you can sit in on a rehearsal, and see how it feels."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "music.opt1",
+   "lead_in": "I want to learn an instrument this year and I'm torn between a few.",
+   "options": [
+    "The first one is guitar, which I could use to play songs with friends around a fire.",
+    "Then there's piano, which my neighbor says is the best way to learn music theory.",
+    "And the last one is drums, really fun but loud, and I live in an apartment."
+   ],
+   "moshi_comment": [
+    "Guitar is a great social instrument and it's easy to carry around. Piano really does make music theory clear, since you can see all the notes laid out. Drums sound fun, but in an apartment you'd probably need an electronic kit with headphones.",
+    "What kind of music do you want to play? If it's singing along with friends, guitar is the way to go. If you want a deeper understanding of music, piano is a fantastic start."
+   ]
+  },
+  {
+   "id": "music.opt2",
+   "lead_in": "I'm putting together music for my friend's going away party and I have a few ideas.",
+   "options": [
+    "One option is a playlist of all the songs from our college years, really nostalgic.",
+    "Another is hiring a local band that plays covers, but that eats up half the budget.",
+    "Or I could ask a friend who does DJ sets on weekends, he'd do it for free if we feed him."
+   ],
+   "moshi_comment": [
+    "The college playlist is a sweet touch, it'll get everyone singing along. A live band is memorable, but half the budget is a lot. Your DJ friend sounds like a great deal, especially if he can mix in some of those college songs.",
+    "How big is the party? For a small group, the nostalgic playlist is perfect. For a bigger crowd, I'd ask your DJ friend and give him the college songs as a request list."
+   ]
+  },
+  {
+   "id": "music.opt3",
+   "lead_in": "It's karaoke night on Friday and I need to choose a song.",
+   "options": [
+    "There's a big power ballad that everyone loves, but the high notes are brutal.",
+    "Or a cheesy duet I could do with my sister, which would be a laugh.",
+    "Another one is a rock anthem with a huge chorus the whole pub can shout along to."
+   ],
+   "moshi_comment": [
+    "The power ballad is a gamble, brilliant if you nail the high notes, painful if you don't. The duet with your sister takes the pressure off and is always fun to watch. The rock anthem is the safest crowd pleaser because everyone joins the chorus.",
+    "Are you after glory or fun? For fun, do the duet or the anthem. If you're feeling brave after a drink or two, try the ballad later in the night, when everyone's warmed up."
+   ]
+  },
+  {
+   "id": "music.opt4",
+   "lead_in": "I finally want to learn guitar properly and I'm not sure how to go about it.",
+   "options": [
+    "I could use one of those apps that listens to you play and gives you points.",
+    "There's a teacher down the road who does weekly lessons, but it's not cheap.",
+    "Or I just follow free online videos and figure it out myself."
+   ],
+   "moshi_comment": [
+    "The app is fun and keeps you motivated, but it won't fix bad habits in your hands. The teacher costs more but spots problems early and keeps you accountable. Free videos are great value if you're disciplined.",
+    "Maybe start with a handful of lessons with the teacher to get your posture and basics right. After that, the app or videos can keep you going between occasional check ins."
+   ]
+  },
+  {
+   "id": "music.opt5",
+   "lead_in": "I need new headphones for my commute and I'm torn.",
+   "options": [
+    "One pair is big wireless noise cancelling ones, really comfy but pricey.",
+    "Then there's a cheap wired pair that sound surprisingly good for the money.",
+    "Or tiny wireless earbuds that fit in my pocket but keep falling out when I run for the bus."
+   ],
+   "moshi_comment": [
+    "The noise cancelling pair is the best for a loud commute, they make trains feel quiet. The wired ones are a bargain and you never worry about charging. The earbuds are handy, but if they fall out when you run, that'll get annoying fast.",
+    "How noisy is your commute? On a busy train or bus, I'd go for the noise cancelling pair, they're worth it. If it's mostly walking, the cheap wired ones are perfectly fine."
+   ]
+  },
+  {
+   "id": "music.opt6",
+   "lead_in": "My son wants to do something for the school talent show and he's asking me to help him choose.",
+   "options": [
+    "He could play a solo piano piece he's been practising for months.",
+    "Or start a little band with his two best mates, they'd have about three weeks to rehearse.",
+    "He also mentioned writing a rap about the school dinners, which would be funny."
+   ],
+   "moshi_comment": [
+    "The piano piece is the polished choice, he's ready and it'll show his hard work. The band is the most fun, but three weeks is tight for a group. The school dinners rap would get big laughs, if he's confident performing it.",
+    "What's he most excited about? If he lights up talking about the rap, that energy will come through on stage. If he wants to impress, the piano solo is the safe and lovely option."
+   ]
+  }
+ ]
 }

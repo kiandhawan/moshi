@@ -7,6 +7,10 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
@@ -15,124 +19,108 @@
   "wait_like"
  ],
  "topics": [
-  "sleep"
+  "home_repair"
  ],
- "topic": "sleep",
+ "topic": "home_repair",
  "voices": {
-  "user": "5ce84bbd213b4943bc89e1951e17848a",
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_25",
-  "greet_ans_26",
-  "waitlike_01"
+  "greet_13",
+  "greet_ans_28",
+  "waitlike_13"
  ],
  "block_ids": [
-  "sleep.dlg1"
+  "home_repair.dlg6"
  ],
- "est_total_sec": 59.15,
- "est_speech_sec": 46.46,
+ "est_total_sec": 43.54,
+ "est_speech_sec": 34.17,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there! How's your day treating you?",
-   "est_sec": 2.27,
-   "gap_before": 0.73,
-   "role": "greeting",
-   "phrasing": "greet_25"
-  },
-  {
-   "speaker": "user",
-   "text": "Kind of tired, honestly.",
-   "est_sec": 1.34,
-   "gap_before": 0.91,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_26"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it bad to drink coffee in the afternoon?",
+   "text": "Hey, nice to hear from you. How are you?",
    "est_sec": 2.89,
-   "gap_before": 0.36,
+   "gap_before": 0.67,
+   "role": "greeting",
+   "phrasing": "greet_13"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.73,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "The light in my hallway flickers. Is my house haunted?",
+   "est_sec": 3.2,
+   "gap_before": 0.34,
    "event": "ordinary_request",
-   "block": "sleep.dlg1"
+   "block": "home_repair.dlg6"
   },
   {
    "speaker": "moshi",
-   "text": "For a lot of people, yes. Caffeine can stay in your system for six hours or more, so a cup at four can still keep you up at ten.",
-   "est_sec": 9.09,
-   "gap_before": 0.92,
+   "text": "Ha, probably not. The most common cause is a loose bulb, or a bulb that doesn't match the dimmer.",
+   "est_sec": 5.99,
+   "gap_before": 0.63,
    "role": "reply",
-   "block": "sleep.dlg1"
+   "block": "home_repair.dlg6"
   },
   {
    "speaker": "user",
-   "text": "Wait, what did you say?",
+   "text": "There is a dimmer, yeah.",
    "est_sec": 1.65,
-   "gap_before": 0.41,
+   "gap_before": 1.18,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Some LED bulbs don't play nicely with older dimmers. Look on the box for the word dimmable.",
+   "est_sec": 5.37,
+   "gap_before": 0.65,
+   "role": "reply",
+   "block": "home_repair.dlg6"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, oh. I bought the cheapest ones.",
+   "est_sec": 2.27,
+   "gap_before": 0.7,
    "event": "ordinary_request",
    "kind": "wait_like",
-   "phrasing": "waitlike_01",
-   "block": "sleep.dlg1"
+   "phrasing": "waitlike_13",
+   "block": "home_repair.dlg6"
   },
   {
    "speaker": "moshi",
-   "text": "No problem. For a lot of people, yes. Caffeine can stay in your system for six hours or more, so a cup at four can still keep you up at ten.",
-   "est_sec": 9.71,
-   "gap_before": 0.37,
+   "text": "That's likely it. Swap in a dimmable bulb and see if the flicker stops.",
+   "est_sec": 4.44,
+   "gap_before": 1.49,
    "role": "reply",
-   "block": "sleep.dlg1"
+   "block": "home_repair.dlg6"
   },
   {
    "speaker": "user",
-   "text": "Wow. What about tea?",
+   "text": "And if it doesn't?",
    "est_sec": 1.34,
-   "gap_before": 2.06,
+   "gap_before": 1.15,
    "event": "ordinary_request",
-   "block": "sleep.dlg1"
+   "block": "home_repair.dlg6"
   },
   {
    "speaker": "moshi",
-   "text": "Black and green tea have less caffeine, but still some. Herbal teas like chamomile or mint have none.",
-   "est_sec": 5.68,
-   "gap_before": 0.9,
+   "text": "Then it could be a loose connection in the switch or fitting. That one's worth having an electrician check.",
+   "est_sec": 5.99,
+   "gap_before": 0.33,
    "role": "reply",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "I usually need",
-   "est_sec": 1.03,
-   "gap_before": 0.44,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "something around three to get through work.",
-   "est_sec": 2.27,
-   "gap_before": 2.23,
-   "event": "ordinary_request",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try a short walk outside or a glass of cold water instead. A little daylight and movement can wake you up surprisingly well.",
-   "est_sec": 7.23,
-   "gap_before": 1.12,
-   "role": "reply",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll give it a shot tomorrow.",
-   "est_sec": 1.96,
-   "gap_before": 0.74,
-   "block": "sleep.dlg1"
+   "block": "home_repair.dlg6"
   }
  ]
 }

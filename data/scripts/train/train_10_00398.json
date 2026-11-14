@@ -7,173 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "home_repair",
-  "moving_house"
+  "studying"
  ],
- "topic": "home_repair",
+ "topic": "studying",
  "voices": {
-  "user": "3fdb457debb744ca9cfe9e2ce99a2deb",
-  "friend": "705690224f264386b87fb598083ab022",
+  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Jordan",
- "friend_name_id": "name_05",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
   "greet_20",
-  "greet_ans_13",
-  "side_instr_14",
-  "side_cue_11"
+  "greet_ans_07"
  ],
  "block_ids": [
-  "home_repair.ctx2",
-  "moving_house.side3"
+  "studying.dlg32"
  ],
- "est_total_sec": 73.17,
- "est_speech_sec": 57.19,
+ "est_total_sec": 48.0,
+ "est_speech_sec": 38.61,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey, good to have you here. How are you?",
    "est_sec": 2.89,
-   "gap_before": 0.42,
+   "gap_before": 0.41,
    "role": "greeting",
    "phrasing": "greet_20"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.56,
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.59,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
+   "phrasing": "greet_ans_07"
   },
   {
    "speaker": "user",
-   "text": "I finally want to patch the hole my kid put in the hallway wall.",
+   "text": "Results day. I missed the grade I needed for my first choice uni.",
+   "est_sec": 4.13,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "studying.dlg32"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'm sorry, that's a hard moment. Have you checked if they'll still accept you?",
    "est_sec": 4.44,
-   "gap_before": 0.55,
-   "event": "ordinary_request",
-   "block": "home_repair.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Oh no. How big is it?",
-   "est_sec": 1.96,
-   "gap_before": 1.01,
+   "gap_before": 0.53,
    "role": "reply",
-   "block": "home_repair.ctx2"
+   "block": "studying.dlg32"
   },
   {
    "speaker": "user",
-   "text": "About the size of a fist.",
-   "est_sec": 1.96,
-   "gap_before": 1.26,
-   "event": "ordinary_request",
-   "block": "home_repair.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then you can use a mesh patch kit or cut in a small piece of new drywall. Which sounds more like you?",
-   "est_sec": 6.92,
-   "gap_before": 1.13,
-   "role": "reply",
-   "block": "home_repair.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait a moment, my coworker is here. Please be quiet until I tell you I'm back.",
-   "est_sec": 5.06,
-   "gap_before": 1.27,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_14"
-  },
-  {
-   "speaker": "user",
-   "text": "Jordan, are you sure the sofa will fit through the door?",
-   "est_sec": 3.51,
-   "gap_before": 1.1,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "I measured it twice. It's tight, but it should go.",
-   "est_sec": 3.2,
-   "gap_before": 0.49,
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "What if we have to take the legs off?",
-   "est_sec": 2.89,
-   "gap_before": 0.89,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Then we take the legs off. I've got a screwdriver in my bag.",
-   "est_sec": 4.13,
-   "gap_before": 1.12,
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay. And the stairs?",
-   "est_sec": 1.34,
-   "gap_before": 0.65,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Let's not think about the stairs yet.",
+   "text": "Not yet. I'm too scared to look.",
    "est_sec": 2.27,
-   "gap_before": 0.39,
-   "block": "moving_house.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm done talking to them. I'm back.",
-   "est_sec": 2.58,
-   "gap_before": 1.64,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_11"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright. Still thinking about that fist sized hole, patch kit or drywall piece?",
-   "est_sec": 4.13,
-   "gap_before": 0.61,
-   "role": "resume",
-   "block": "home_repair.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "The patch kit. I want this done before the weekend's over.",
-   "est_sec": 3.51,
-   "gap_before": 0.58,
+   "gap_before": 0.37,
    "event": "ordinary_request",
-   "block": "home_repair.ctx2"
+   "block": "studying.dlg32"
   },
   {
    "speaker": "moshi",
-   "text": "Smart. Stick it on, spread two thin coats of compound, then sand and paint once it's dry.",
-   "est_sec": 5.37,
-   "gap_before": 0.81,
-   "role": "followup",
-   "block": "home_repair.ctx2"
+   "text": "It's worth checking right away. Sometimes universities accept people who miss by a little.",
+   "est_sec": 4.44,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "studying.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "And if they say no?",
+   "est_sec": 1.65,
+   "gap_before": 0.79,
+   "event": "ordinary_request",
+   "block": "studying.dlg32"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then there's your second choice, or clearing, where unis offer spaces that are still open. Lots of people find great courses that way.",
+   "est_sec": 7.23,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "studying.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "I just feel like",
+   "est_sec": 1.34,
+   "gap_before": 0.49,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "studying.dlg32"
+  },
+  {
+   "speaker": "user",
+   "text": "I've ruined everything.",
+   "est_sec": 1.03,
+   "gap_before": 1.91,
+   "event": "ordinary_request",
+   "block": "studying.dlg32"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You haven't. This feels huge today, but there are still lots of paths forward. Call the uni first, then we'll go from there.",
+   "est_sec": 7.23,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "studying.dlg32"
   }
  ]
 }

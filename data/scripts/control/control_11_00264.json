@@ -7,120 +7,140 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
  "wait_type": null,
  "conditions": [],
  "topics": [
-  "books"
+  "travel_planning"
  ],
- "topic": "books",
+ "topic": "travel_planning",
  "voices": {
-  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "user": "18b1276891524bd786fb8a59ecd3630a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_08",
-  "greet_ans_01"
+  "greet_11",
+  "greet_ans_25"
  ],
  "block_ids": [
-  "books.dlg3"
+  "travel_planning.dlg27"
  ],
- "est_total_sec": 52.04,
- "est_speech_sec": 39.85,
+ "est_total_sec": 57.23,
+ "est_speech_sec": 44.7,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there, how are you feeling today?",
-   "est_sec": 2.27,
-   "gap_before": 0.61,
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_08"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
+   "text": "I'm well, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.9,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm writing a book review for school. How should I structure it?",
-   "est_sec": 3.82,
-   "gap_before": 0.38,
-   "event": "ordinary_request",
-   "block": "books.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Start with a short summary without spoilers, then say what worked and what didn't, and end with who you'd recommend it to.",
-   "est_sec": 6.92,
-   "gap_before": 0.8,
-   "role": "reply",
-   "block": "books.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "How long should the summary be?",
-   "est_sec": 1.96,
-   "gap_before": 1.11,
-   "event": "ordinary_request",
-   "block": "books.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Keep it brief, maybe a paragraph. The teacher mostly wants your opinion and your reasons.",
-   "est_sec": 4.75,
-   "gap_before": 0.31,
-   "role": "reply",
-   "block": "books.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "I didn't like the ending but",
-   "est_sec": 1.96,
    "gap_before": 0.46,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_25"
+  },
+  {
+   "speaker": "user",
+   "text": "My flight got overbooked and they want volunteers to take a later one. Should I do it?",
+   "est_sec": 5.37,
+   "gap_before": 0.37,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It depends on your plans. If you're flexible, you can often get a voucher or cash for it.",
+   "est_sec": 5.68,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "travel_planning.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "What should I ask for?",
+   "est_sec": 1.65,
+   "gap_before": 0.81,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ask what the compensation is, when the new flight leaves, and whether they'll cover meals or a hotel if it's the next day.",
+   "est_sec": 7.23,
+   "gap_before": 0.59,
+   "role": "reply",
+   "block": "travel_planning.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I negotiate?",
+   "est_sec": 1.03,
+   "gap_before": 1.18,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sometimes. If nobody volunteers, the offer often goes up, so you don't have to accept the first one.",
+   "est_sec": 5.68,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "travel_planning.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "It's only a four hour wait",
+   "est_sec": 1.96,
+   "gap_before": 1.21,
    "event": "distractor",
    "kind": "pause",
-   "block": "books.dlg3"
+   "block": "travel_planning.dlg27"
   },
   {
    "speaker": "user",
-   "text": "I'm not sure if I'm allowed to say that.",
-   "est_sec": 2.89,
-   "gap_before": 2.47,
+   "text": "so I'm tempted.",
+   "est_sec": 1.03,
+   "gap_before": 1.76,
    "event": "ordinary_request",
-   "block": "books.dlg3"
+   "block": "travel_planning.dlg27"
   },
   {
    "speaker": "moshi",
-   "text": "Of course you are. Just explain why, like it felt rushed or it didn't fit the characters.",
-   "est_sec": 5.37,
+   "text": "Then it could be a good deal. Make sure your new seat is confirmed before you give up your current one.",
+   "est_sec": 6.61,
    "gap_before": 0.92,
    "role": "reply",
-   "block": "books.dlg3"
+   "block": "travel_planning.dlg27"
   },
   {
    "speaker": "user",
-   "text": "It totally felt rushed. Should I use quotes from the book?",
+   "text": "Smart. Going to the desk now.",
+   "est_sec": 1.96,
+   "gap_before": 0.36,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good luck. Ask for a lounge pass too while you're there.",
    "est_sec": 3.51,
-   "gap_before": 0.92,
-   "event": "ordinary_request",
-   "block": "books.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "One or two short ones are great to back up your points. Don't use too many, though.",
-   "est_sec": 5.37,
-   "gap_before": 1.81,
+   "gap_before": 0.88,
    "role": "reply",
-   "block": "books.dlg3"
+   "block": "travel_planning.dlg27"
   }
  ]
 }

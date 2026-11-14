@@ -7,176 +7,113 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "implicit"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "wedding_planning",
-  "home_office"
+  "laptop_buying"
  ],
- "topic": "wedding_planning",
+ "topic": "laptop_buying",
  "voices": {
-  "user": "026218fe0c054374838d934016f34082",
-  "friend": "7bb342e710854139b1d6e12411229f1f",
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Kenji",
- "friend_name_id": "name_21",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_09",
-  "greet_ans_18",
-  "side_instr_21",
-  "ack_02",
-  "implicit_08"
+  "greet_27",
+  "greet_ans_03",
+  "describe_instr_03",
+  "describe_cue_06"
  ],
  "block_ids": [
-  "wedding_planning.ctx3",
-  "home_office.side2"
+  "laptop_buying.opt2"
  ],
- "est_total_sec": 66.33,
- "est_speech_sec": 49.65,
+ "est_total_sec": 50.82,
+ "est_speech_sec": 40.89,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's it going?",
-   "est_sec": 1.34,
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
    "gap_before": 0.4,
    "role": "greeting",
-   "phrasing": "greet_09",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
+   "text": "Doing okay, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.74,
+   "gap_before": 0.49,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "My best friend's wedding is in three weeks and I'm giving a speech.",
+   "text": "My mom wants a new laptop and asked me to help her decide.",
    "est_sec": 4.13,
-   "gap_before": 0.55,
-   "event": "ordinary_request",
-   "block": "wedding_planning.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "What an honor. Do you want it to be mostly funny stories, or more heartfelt and sentimental?",
-   "est_sec": 5.37,
-   "gap_before": 0.93,
-   "role": "reply",
-   "block": "wedding_planning.ctx3",
-   "reference_only": true
+   "gap_before": 0.26,
+   "block": "laptop_buying.opt2"
   },
   {
    "speaker": "user",
-   "text": "Wait, my friend just got here. Can you hold on and stay quiet until I'm back?",
-   "est_sec": 5.06,
-   "gap_before": 0.73,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_21"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay.",
-   "est_sec": 0.41,
-   "gap_before": 0.42,
-   "role": "ack",
-   "phrasing": "ack_02",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Is the internet slow for you too, or is it just my laptop?",
-   "est_sec": 4.13,
-   "gap_before": 1.01,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "It's crawling. I think someone's downloading a game.",
-   "est_sec": 2.58,
-   "gap_before": 0.35,
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Well, it isn't me. I'm trying to upload a presentation.",
+   "text": "Let me go through every option before you say anything.",
    "est_sec": 3.2,
-   "gap_before": 0.53,
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Let me restart the router, give it two minutes.",
-   "est_sec": 2.89,
-   "gap_before": 0.53,
-   "block": "home_office.side2"
+   "gap_before": 0.89,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_03"
   },
   {
    "speaker": "user",
-   "text": "Thanks. Maybe we should finally get the faster plan?",
-   "est_sec": 2.89,
-   "gap_before": 0.79,
+   "text": "One is a simple Chromebook that's cheap and easy, mostly for email and video calls.",
+   "est_sec": 4.75,
+   "gap_before": 1.1,
+   "block": "laptop_buying.opt2",
    "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Yeah, if we're both working from home, it's probably worth it.",
-   "est_sec": 3.51,
-   "gap_before": 3.4,
-   "block": "home_office.side2"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Anyway, sorry, go on.",
-   "est_sec": 1.34,
-   "gap_before": 1.82,
+   "text": "Another is a regular Windows laptop with a big screen, which is what she's used to.",
+   "est_sec": 5.06,
+   "gap_before": 1.77,
+   "block": "laptop_buying.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's a tablet with a keyboard cover, smaller but really easy to carry around.",
+   "est_sec": 4.75,
+   "gap_before": 1.06,
+   "block": "laptop_buying.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, those are all the choices. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.18,
    "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_08"
+   "kind": "explicit",
+   "phrasing": "describe_cue_06"
   },
   {
    "speaker": "moshi",
-   "text": "Right. Still thinking about laughs versus a sentimental speech?",
-   "est_sec": 2.89,
-   "gap_before": 1.16,
+   "text": "If she mostly does email and video calls, the Chromebook is simple and hard to mess up. The Windows laptop is familiar, which really matters for some people. The tablet is handy, but typing long emails on it can be a little cramped.",
+   "est_sec": 13.43,
+   "gap_before": 1.28,
    "role": "resume",
-   "block": "wedding_planning.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Heartfelt. She'd hate it if I told embarrassing stories.",
-   "est_sec": 2.89,
-   "gap_before": 1.36,
-   "event": "ordinary_request",
-   "block": "wedding_planning.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then talk about how you met and what makes her partner right for her. Keep it under five minutes.",
-   "est_sec": 5.99,
-   "gap_before": 0.46,
-   "role": "followup",
-   "block": "wedding_planning.ctx3",
+   "block": "laptop_buying.opt2",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "implicit_return"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

@@ -7,174 +7,182 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "side_conversation",
  "wait_type": "side_conversation",
  "conditions": [
-  "near_miss"
+  "extra_question"
  ],
  "topics": [
-  "hiking",
-  "personal_finance"
+  "job_interview",
+  "video_games"
  ],
- "topic": "hiking",
+ "topic": "job_interview",
  "voices": {
-  "user": "676f1654c4f747a69a5921ad94886fa1",
-  "friend": "ba875f2fb2ea4a4e9b175821014984b6",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": "705690224f264386b87fb598083ab022",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Omar",
- "friend_name_id": "name_13",
+ "friend_name": "Nina",
+ "friend_name_id": "name_10",
  "phrasing_ids": [
-  "greet_07",
-  "greet_ans_29",
-  "side_instr_17",
-  "dn_04",
+  "greet_28",
+  "greet_ans_07",
+  "side_instr_25",
+  "dq_64",
   "side_cue_19"
  ],
  "block_ids": [
-  "hiking.ctx2",
-  "personal_finance.side1"
+  "job_interview.ctx3",
+  "video_games.side3",
+  "dq_64"
  ],
- "est_total_sec": 63.99,
- "est_speech_sec": 47.58,
+ "est_total_sec": 82.2,
+ "est_speech_sec": 61.01,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How's everything going?",
+   "text": "Hello! How's everything today?",
    "est_sec": 1.34,
-   "gap_before": 0.66,
+   "gap_before": 0.72,
    "role": "greeting",
-   "phrasing": "greet_07"
+   "phrasing": "greet_28"
   },
   {
    "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.66,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
-  },
-  {
-   "speaker": "user",
-   "text": "My old boots finally fell apart.",
+   "text": "Honestly, a little stressed, but okay.",
    "est_sec": 1.96,
-   "gap_before": 0.26,
+   "gap_before": 0.94,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_07"
+  },
+  {
+   "speaker": "user",
+   "text": "At the end of interviews they always ask if I have questions, and I never do.",
+   "est_sec": 5.06,
+   "gap_before": 0.51,
    "event": "ordinary_request",
-   "block": "hiking.ctx2"
+   "block": "job_interview.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "Time for new ones. Do you want proper leather boots with ankle support, or lighter trail shoes?",
-   "est_sec": 5.37,
-   "gap_before": 1.2,
+   "text": "Let's fix that. Would you rather ask about the team and daily work, or about growth and where the role leads?",
+   "est_sec": 6.61,
+   "gap_before": 1.02,
    "role": "reply",
-   "block": "hiking.ctx2"
+   "block": "job_interview.ctx3"
   },
   {
    "speaker": "user",
-   "text": "Sorry, can you wait? My friend is talking to me. Keep quiet until I come back.",
-   "est_sec": 5.06,
-   "gap_before": 1.45,
+   "text": "Hang tight, my dad is calling me over. Don't talk until I say I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 2.22,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_17"
+   "phrasing": "side_instr_25"
   },
   {
    "speaker": "user",
-   "text": "Omar, did you pay the electric bill this month or was it my turn?",
-   "est_sec": 4.44,
-   "gap_before": 0.67,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "personal_finance.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "I paid it last month, so it's yours.",
+   "text": "Is your phone ringing or is that mine?",
    "est_sec": 2.58,
-   "gap_before": 0.53,
-   "block": "personal_finance.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Right. How much was it again?",
-   "est_sec": 1.96,
-   "gap_before": 1.72,
+   "gap_before": 1.37,
    "event": "distractor",
    "kind": "friend_question",
-   "block": "personal_finance.side1"
+   "phrasing": "dq_64"
   },
   {
    "speaker": "friend",
-   "text": "Around ninety, I think. It went up because of the heater.",
-   "est_sec": 3.51,
-   "gap_before": 0.78,
-   "block": "personal_finance.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'll send you half of the internet too while I'm at it.",
-   "est_sec": 4.13,
-   "gap_before": 0.78,
-   "block": "personal_finance.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Thanks, no rush.",
-   "est_sec": 1.03,
-   "gap_before": 1.26,
-   "block": "personal_finance.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm back on Tuesday, by the way.",
+   "text": "That's yours, it's buzzing on the table.",
    "est_sec": 2.27,
-   "gap_before": 1.02,
+   "gap_before": 0.36,
+   "phrasing": "dq_64"
+  },
+  {
+   "speaker": "user",
+   "text": "Nina, do you want to do the raid tonight?",
+   "est_sec": 2.89,
+   "gap_before": 0.72,
    "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_04"
+   "kind": "friend_question",
+   "block": "video_games.side3"
   },
   {
    "speaker": "friend",
-   "text": "Okay, good to know.",
-   "est_sec": 1.34,
-   "gap_before": 0.69,
-   "phrasing": "dn_04"
+   "text": "What time? I've got work early tomorrow.",
+   "est_sec": 2.27,
+   "gap_before": 0.96,
+   "block": "video_games.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Like eight? It should only take a couple of hours.",
+   "est_sec": 3.2,
+   "gap_before": 0.54,
+   "block": "video_games.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Last time you said that we finished at one in the morning.",
+   "est_sec": 3.82,
+   "gap_before": 0.56,
+   "block": "video_games.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "That was because the tank kept disconnecting. We've got a new one now.",
+   "est_sec": 4.13,
+   "gap_before": 0.39,
+   "block": "video_games.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine. Eight, and I'm out by ten whatever happens.",
+   "est_sec": 2.89,
+   "gap_before": 2.71,
+   "block": "video_games.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Deal. I'll send everyone a message.",
+   "est_sec": 1.96,
+   "gap_before": 3.24,
+   "block": "video_games.side3"
   },
   {
    "speaker": "user",
    "text": "Done. I'm back now.",
    "est_sec": 1.34,
-   "gap_before": 1.05,
+   "gap_before": 1.11,
    "event": "return_cue",
    "kind": "explicit",
    "phrasing": "side_cue_19"
   },
   {
    "speaker": "moshi",
-   "text": "Alright. Still deciding between boots and trail shoes?",
-   "est_sec": 2.58,
-   "gap_before": 0.62,
+   "text": "Sure thing. You were choosing whether to ask about the team or about growth.",
+   "est_sec": 4.44,
+   "gap_before": 0.58,
    "role": "resume",
-   "block": "hiking.ctx2"
+   "block": "job_interview.ctx3"
   },
   {
    "speaker": "user",
-   "text": "Trail shoes. I mostly do easy paths in summer.",
-   "est_sec": 2.89,
-   "gap_before": 1.15,
+   "text": "Growth. I don't want to be stuck in the same spot.",
+   "est_sec": 3.51,
+   "gap_before": 0.93,
    "event": "ordinary_request",
-   "block": "hiking.ctx2"
+   "block": "job_interview.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "Then they'll be much more comfortable. Pick a pair with a good grippy sole.",
-   "est_sec": 4.44,
-   "gap_before": 0.41,
+   "text": "Then ask what success looks like after the first year, and how people in this role usually move up.",
+   "est_sec": 5.99,
+   "gap_before": 0.81,
    "role": "followup",
-   "block": "hiking.ctx2"
+   "block": "job_interview.ctx3"
   }
  ]
 }

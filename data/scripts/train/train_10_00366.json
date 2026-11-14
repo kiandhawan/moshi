@@ -7,105 +7,108 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
  "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "conditions": [],
  "topics": [
-  "hiking"
+  "fitness"
  ],
- "wait_sec": 10,
+ "wait_sec": 20,
  "deadline": {
   "after_turn": 4,
-  "sec": 10
+  "sec": 20
  },
- "topic": "hiking",
+ "topic": "fitness",
  "voices": {
-  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "user": "3fdb457debb744ca9cfe9e2ce99a2deb",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_29",
-  "greet_ans_04",
-  "think_instr_16",
-  "self_29"
+  "greet_01",
+  "greet_ans_25",
+  "think_instr_17"
  ],
  "block_ids": [
-  "hiking.ctx3"
+  "fitness.ctx1"
  ],
- "est_total_sec": 37.67,
- "est_speech_sec": 24.26,
+ "est_total_sec": 54.85,
+ "est_speech_sec": 29.01,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you doing right now?",
-   "est_sec": 2.27,
-   "gap_before": 0.61,
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.31,
    "role": "greeting",
-   "phrasing": "greet_29"
+   "phrasing": "greet_01"
   },
   {
    "speaker": "user",
-   "text": "Pretty well, actually.",
+   "text": "I'm well, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.89,
+   "gap_before": 0.6,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_04"
+   "phrasing": "greet_ans_25"
   },
   {
    "speaker": "user",
-   "text": "My friends invited me on a hike but the forecast says rain in the afternoon.",
-   "est_sec": 4.75,
-   "gap_before": 0.55,
+   "text": "I want to start working out again but I can only manage three short sessions a week.",
+   "est_sec": 5.37,
+   "gap_before": 0.24,
    "event": "ordinary_request",
-   "block": "hiking.ctx3"
+   "block": "fitness.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "Tricky. You could start very early and be down before the rain, or move the hike to another day. What do you think?",
-   "est_sec": 7.23,
-   "gap_before": 1.16,
+   "text": "That's plenty to make progress. Would you rather focus on strength with weights, or on cardio like running and cycling?",
+   "est_sec": 6.3,
+   "gap_before": 0.79,
    "role": "reply",
-   "block": "hiking.ctx3"
+   "block": "fitness.ctx1"
   },
   {
    "speaker": "user",
-   "text": "Can I have ten seconds to think? Ask me again after.",
+   "text": "I haven't decided. Give me twenty seconds, then ask me again.",
    "est_sec": 3.51,
-   "gap_before": 0.57,
+   "gap_before": 0.68,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 10,
-   "phrasing": "think_instr_16"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, let me just picture it.",
-   "est_sec": 1.96,
-   "anchor": {
-    "turn": 4,
-    "offset": 6.33
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_29"
+   "wait_sec": 20,
+   "phrasing": "think_instr_17"
   },
   {
    "speaker": "moshi",
-   "text": "So, an early start to beat the rain, or postpone it?",
+   "text": "Time's up. For your three sessions a week, weights or cardio?",
    "est_sec": 3.51,
    "role": "resume",
-   "block": "hiking.ctx3",
+   "block": "fitness.ctx1",
    "anchor": {
     "turn": 4,
-    "offset": 10.09
+    "offset": 20.41
    }
+  },
+  {
+   "speaker": "user",
+   "text": "Strength. I want to feel stronger carrying the groceries.",
+   "est_sec": 2.89,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "fitness.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great goal. Start with squats, push-ups and rows, three sets each, and add weight slowly.",
+   "est_sec": 4.75,
+   "gap_before": 0.96,
+   "role": "followup",
+   "block": "fitness.ctx1"
   }
  ]
 }

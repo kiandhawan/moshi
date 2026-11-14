@@ -7,123 +7,131 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
   "cycling"
  ],
  "topic": "cycling",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "user": "933563129e564b19a115bedd57b7406a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_06",
-  "describe_instr_12",
-  "ack_09",
-  "describe_cue_06"
+  "greet_18",
+  "greet_ans_30"
  ],
  "block_ids": [
-  "cycling.opt1"
+  "cycling.dlg1"
  ],
- "est_total_sec": 56.9,
- "est_speech_sec": 45.64,
+ "est_total_sec": 50.36,
+ "est_speech_sec": 34.58,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.63,
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.46,
    "role": "greeting",
-   "phrasing": "greet_03",
+   "phrasing": "greet_18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.45,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.4,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "I need a new bike and I've narrowed it down, but I'm stuck.",
-   "est_sec": 4.13,
+   "text": "How often should I pump up my bike tires?",
+   "est_sec": 2.89,
    "gap_before": 0.49,
-   "block": "cycling.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll describe them all, so please hold off until I'm done.",
-   "est_sec": 3.51,
-   "gap_before": 0.54,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_12"
+   "event": "ordinary_request",
+   "block": "cycling.dlg1"
   },
   {
    "speaker": "moshi",
-   "text": "Take your time.",
-   "est_sec": 1.03,
-   "gap_before": 0.5,
-   "role": "ack",
-   "phrasing": "ack_09",
+   "text": "For a road bike, about once a week. Thinner tires lose air faster than you'd think.",
+   "est_sec": 5.06,
+   "gap_before": 1.02,
+   "role": "reply",
+   "block": "cycling.dlg1",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "The first one is a light road bike, really fast, but it has thin tires and no rack.",
-   "est_sec": 5.68,
-   "gap_before": 0.83,
-   "block": "cycling.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a hybrid with wider tires, a rack on the back and a more upright seat.",
-   "est_sec": 5.37,
-   "gap_before": 1.93,
-   "block": "cycling.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is an electric bike, heavy and pricey, but hills would be no problem at all.",
-   "est_sec": 5.99,
-   "gap_before": 2.87,
-   "block": "cycling.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, those are all the choices. Your thoughts?",
+   "text": "And how do I know the right pressure?",
    "est_sec": 2.58,
-   "gap_before": 0.88,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_06"
+   "gap_before": 2.35,
+   "event": "ordinary_request",
+   "block": "cycling.dlg1"
   },
   {
    "speaker": "moshi",
-   "text": "It depends on what you'll use it for. The road bike is great for fitness rides but awkward for carrying groceries, while the hybrid handles commuting and errands easily. The electric bike makes sense if your route is hilly and you don't want to arrive sweaty.",
-   "est_sec": 14.36,
-   "gap_before": 0.64,
-   "role": "resume",
-   "block": "cycling.opt1",
+   "text": "It's printed on the side of the tire as a range. Aim somewhere in the middle for everyday riding.",
+   "est_sec": 5.99,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "cycling.dlg1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I've just been squeezing them",
+   "est_sec": 1.65,
+   "gap_before": 0.97,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "cycling.dlg1"
+  },
+  {
+   "speaker": "user",
+   "text": "and guessing, honestly.",
+   "est_sec": 1.03,
+   "gap_before": 2.87,
+   "event": "ordinary_request",
+   "block": "cycling.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A lot of people do. A floor pump with a gauge takes the guessing out and isn't expensive.",
+   "est_sec": 5.68,
+   "gap_before": 1.65,
+   "role": "reply",
+   "block": "cycling.dlg1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Should I go lower if it's raining?",
+   "est_sec": 2.27,
+   "gap_before": 1.07,
+   "event": "ordinary_request",
+   "block": "cycling.dlg1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A little lower, yes. It gives you more grip on wet roads.",
+   "est_sec": 3.82,
+   "gap_before": 1.89,
+   "role": "reply",
+   "block": "cycling.dlg1",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

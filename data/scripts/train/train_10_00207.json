@@ -7,120 +7,116 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "pets"
+  "board_games"
  ],
- "topic": "pets",
+ "topic": "board_games",
  "voices": {
-  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "user": "cc7f8544c64a439080193e9560100c5a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_04",
-  "greet_ans_01"
+  "greet_07",
+  "greet_ans_08",
+  "describe_instr_10",
+  "describe_cue_14"
  ],
  "block_ids": [
-  "pets.dlg4"
+  "board_games.opt3"
  ],
- "est_total_sec": 53.13,
- "est_speech_sec": 41.09,
+ "est_total_sec": 59.26,
+ "est_speech_sec": 46.88,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how are you?",
-   "est_sec": 1.65,
-   "gap_before": 0.53,
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
+   "gap_before": 0.76,
    "role": "greeting",
-   "phrasing": "greet_04"
+   "phrasing": "greet_07"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
+   "text": "I'm great, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.51,
+   "gap_before": 0.96,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_08"
   },
   {
    "speaker": "user",
-   "text": "I adopted a cat last week and she's hiding under the bed all day.",
-   "est_sec": 4.44,
-   "gap_before": 0.59,
-   "event": "ordinary_request",
-   "block": "pets.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's really normal for a new cat. Give her a quiet room with food, water and a litter box nearby.",
-   "est_sec": 6.3,
-   "gap_before": 0.59,
-   "role": "reply",
-   "block": "pets.dlg4"
+   "text": "I'm buying a game for my parents, they're in their seventies and have never played anything modern.",
+   "est_sec": 5.37,
+   "gap_before": 0.55,
+   "block": "board_games.opt3"
   },
   {
    "speaker": "user",
-   "text": "Should I try to pull her out so she gets used to me?",
-   "est_sec": 4.13,
-   "gap_before": 1.08,
-   "event": "ordinary_request",
-   "block": "pets.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Better not. Let her come out on her own. Sit nearby and read or talk softly so she learns you're safe.",
-   "est_sec": 6.61,
-   "gap_before": 0.5,
-   "role": "reply",
-   "block": "pets.dlg4"
+   "text": "Let me get through all the options before you weigh in.",
+   "est_sec": 3.51,
+   "gap_before": 0.43,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_10"
   },
   {
    "speaker": "user",
-   "text": "How long does it usually take?",
-   "est_sec": 1.96,
-   "gap_before": 0.56,
-   "event": "ordinary_request",
-   "block": "pets.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Anywhere from a few days to a few weeks. Treats and a feather toy can speed things up.",
+   "text": "There's a tile laying one where you build a little medieval landscape together, very calm, about forty minutes.",
    "est_sec": 5.68,
-   "gap_before": 1.12,
-   "role": "reply",
-   "block": "pets.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll pick up a feather toy tomorrow",
-   "est_sec": 2.27,
-   "gap_before": 1.4,
+   "gap_before": 0.63,
+   "block": "board_games.opt3",
    "event": "distractor",
-   "kind": "pause",
-   "block": "pets.dlg4"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "and maybe some of those lickable treats.",
-   "est_sec": 2.27,
-   "gap_before": 2.59,
-   "event": "ordinary_request",
-   "block": "pets.dlg4"
+   "text": "Then a quick word game with letter tiles, sort of like crosswords but faster and less serious.",
+   "est_sec": 5.37,
+   "gap_before": 2.64,
+   "block": "board_games.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A trivia game with questions from every decade, which my dad would probably love and my mum might hate.",
+   "est_sec": 5.99,
+   "gap_before": 2.68,
+   "block": "board_games.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a gentle train route game where you collect coloured cards and claim lines across a map.",
+   "est_sec": 5.37,
+   "gap_before": 1.3,
+   "block": "board_games.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm finished. What's your opinion?",
+   "est_sec": 1.96,
+   "gap_before": 0.53,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_14"
   },
   {
    "speaker": "moshi",
-   "text": "Great idea. Cats tend to love those, and it's a nice way to build trust.",
-   "est_sec": 4.75,
-   "gap_before": 1.07,
-   "role": "reply",
-   "block": "pets.dlg4"
+   "text": "I'd go train routes or tiles, both are classics for new players because every turn is just one small choice. The word game is great if they like crosswords, and trivia is risky with your mum.",
+   "est_sec": 11.26,
+   "gap_before": 0.4,
+   "role": "resume",
+   "block": "board_games.opt3"
   }
  ]
 }

@@ -7,172 +7,107 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "reading",
+ "wait_type": "reading",
  "conditions": [],
  "topics": [
-  "picnic",
-  "learning_language"
+  "wedding_planning"
  ],
- "topic": "picnic",
+ "reading": {
+  "material": "article",
+  "sec": 22.8
+ },
+ "topic": "wedding_planning",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
-  "friend": "026218fe0c054374838d934016f34082",
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Marcus",
- "friend_name_id": "name_09",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_12",
+  "greet_06",
   "greet_ans_15",
-  "side_instr_03",
-  "side_cue_09"
+  "read_instr_10",
+  "read_cue_08"
  ],
  "block_ids": [
-  "picnic.ctx3",
-  "learning_language.side3"
+  "wedding_planning.ctx6"
  ],
- "est_total_sec": 63.57,
- "est_speech_sec": 46.86,
+ "est_total_sec": 55.06,
+ "est_speech_sec": 26.74,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there, how are you doing today?",
-   "est_sec": 2.27,
-   "gap_before": 0.34,
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.47,
    "role": "greeting",
-   "phrasing": "greet_12",
+   "phrasing": "greet_06",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "I'm fine, thanks for asking.",
    "est_sec": 1.65,
-   "gap_before": 0.62,
+   "gap_before": 0.6,
    "event": "greeting_answer",
    "phrasing": "greet_ans_15"
   },
   {
    "speaker": "user",
-   "text": "My friends want to do a picnic but the forecast says maybe rain.",
-   "est_sec": 4.13,
-   "gap_before": 0.41,
+   "text": "My college roommate is getting married in Portugal and the trip would cost me about two thousand.",
+   "est_sec": 5.37,
+   "gap_before": 0.4,
    "event": "ordinary_request",
-   "block": "picnic.ctx3"
+   "block": "wedding_planning.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "Hmm, there's a forty percent chance in the afternoon. Do you want to move it to the morning, or keep the plan and bring a tarp just in case?",
-   "est_sec": 9.09,
-   "gap_before": 1.14,
+   "text": "That's a lot to spend on one weekend. Is it a stretch you could manage, or would declining with a really thoughtful gift feel better?",
+   "est_sec": 7.85,
+   "gap_before": 0.95,
    "role": "reply",
-   "block": "picnic.ctx3",
+   "block": "wedding_planning.ctx6",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Wait, Marcus needs me for a sec. Please stay quiet until I come back to you.",
-   "est_sec": 5.06,
-   "gap_before": 0.93,
+   "text": "Hold on, let me finish reading this article. I'll tell you when I'm done.",
+   "est_sec": 4.44,
+   "gap_before": 1.09,
    "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_03"
+   "kind": "reading",
+   "phrasing": "read_instr_10"
   },
   {
    "speaker": "user",
-   "text": "Can you quiz me on these flashcards for a minute?",
-   "est_sec": 3.2,
-   "gap_before": 0.78,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "learning_language.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Sure. What's the word for window?",
-   "est_sec": 1.96,
-   "gap_before": 1.27,
-   "block": "learning_language.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Ventana.",
-   "est_sec": 0.41,
-   "gap_before": 0.78,
-   "block": "learning_language.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Correct. And spoon?",
-   "est_sec": 1.03,
-   "gap_before": 1.54,
-   "block": "learning_language.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Uh, cuchillo?",
-   "est_sec": 0.72,
-   "gap_before": 0.31,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "learning_language.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "No, that's knife. Spoon is cuchara.",
-   "est_sec": 1.96,
-   "gap_before": 1.52,
-   "block": "learning_language.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "I always mix those two up. Can you do the kitchen ones again?",
-   "est_sec": 4.13,
-   "gap_before": 0.57,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "learning_language.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'm back. Let's keep going.",
-   "est_sec": 1.96,
-   "gap_before": 1.78,
+   "text": "Okay, done with the article.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 22.8
+   },
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_09"
+   "phrasing": "read_cue_08"
   },
   {
    "speaker": "moshi",
-   "text": "Alright. We were working around the rain forecast for your picnic.",
-   "est_sec": 3.51,
-   "gap_before": 0.57,
+   "text": "Finished reading? The Portugal wedding. Going, or sending something special?",
+   "est_sec": 3.2,
+   "gap_before": 0.51,
    "role": "resume",
-   "block": "picnic.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Morning. Nobody wants a soggy picnic.",
-   "est_sec": 1.96,
-   "gap_before": 1.48,
-   "event": "ordinary_request",
-   "block": "picnic.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Smart. A brunch picnic with fruit and pastries could be really nice.",
-   "est_sec": 3.82,
-   "gap_before": 1.17,
-   "role": "followup",
-   "block": "picnic.ctx3",
+   "block": "wedding_planning.ctx6",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "new_type_reading"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

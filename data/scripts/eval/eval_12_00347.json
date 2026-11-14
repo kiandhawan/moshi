@@ -7,128 +7,131 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "holiday_gifts"
+  "painting_art"
  ],
- "topic": "holiday_gifts",
+ "topic": "painting_art",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
+  "user": "026218fe0c054374838d934016f34082",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_12",
-  "greet_ans_21",
-  "describe_instr_06",
-  "ack_08",
-  "describe_cue_03"
+  "greet_15",
+  "greet_ans_27"
  ],
  "block_ids": [
-  "holiday_gifts.opt2"
+  "painting_art.dlg2"
  ],
- "est_total_sec": 51.69,
- "est_speech_sec": 39.85,
+ "est_total_sec": 54.84,
+ "est_speech_sec": 42.64,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there, how are you doing today?",
-   "est_sec": 2.27,
-   "gap_before": 0.75,
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.72,
    "role": "greeting",
-   "phrasing": "greet_12",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
+   "text": "All good here.",
    "est_sec": 1.03,
-   "gap_before": 0.83,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
-  },
-  {
-   "speaker": "user",
-   "text": "I can't decide what to get my roommate for the holidays.",
-   "est_sec": 3.51,
-   "gap_before": 0.49,
-   "block": "holiday_gifts.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Don't comment yet, let me describe all of them first.",
-   "est_sec": 3.2,
-   "gap_before": 0.49,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_06"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.56,
-   "role": "ack",
-   "phrasing": "ack_08",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "One option is a fancy pour over coffee set, since she drinks coffee all day.",
-   "est_sec": 4.75,
-   "gap_before": 1.25,
-   "block": "holiday_gifts.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a big soft blanket for the couch, because she's always cold.",
-   "est_sec": 4.13,
-   "gap_before": 1.11,
-   "block": "holiday_gifts.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or I could get her tickets to the comedy show she mentioned last week.",
-   "est_sec": 4.44,
-   "gap_before": 2.03,
-   "block": "holiday_gifts.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "The last idea is a plant for her room, maybe one that's really hard to kill.",
-   "est_sec": 5.06,
-   "gap_before": 1.16,
-   "block": "holiday_gifts.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "So those are the options. What's your take?",
-   "est_sec": 2.58,
-   "gap_before": 0.69,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_03"
-  },
-  {
-   "speaker": "moshi",
-   "text": "I'd go for the comedy show, especially if you could go together. If money's tight, the blanket is cheap and she'd use it all winter.",
-   "est_sec": 7.85,
    "gap_before": 0.98,
-   "role": "resume",
-   "block": "holiday_gifts.opt2",
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "I keep drawing faces and the eyes always end up too high.",
+   "est_sec": 3.82,
+   "gap_before": 0.28,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's really common. The eyes actually sit about halfway down the head, lower than most people expect.",
+   "est_sec": 5.37,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "painting_art.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Halfway? That sounds too low.",
+   "est_sec": 1.65,
+   "gap_before": 1.15,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It feels that way because hair covers the top of the skull. Try drawing a light line across the middle first and put the eyes on it.",
+   "est_sec": 8.47,
+   "gap_before": 0.41,
+   "role": "reply",
+   "block": "painting_art.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "What about the nose, is there a trick for",
+   "est_sec": 2.89,
+   "gap_before": 0.77,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "painting_art.dlg2"
+  },
+  {
+   "speaker": "user",
+   "text": "where that goes?",
+   "est_sec": 1.03,
+   "gap_before": 2.16,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The bottom of the nose is roughly halfway between the eyes and the chin. The mouth sits a bit above the halfway point below that.",
+   "est_sec": 7.85,
+   "gap_before": 0.95,
+   "role": "reply",
+   "block": "painting_art.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "This is helpful. I'll try a few quick sketches tonight.",
+   "est_sec": 3.2,
+   "gap_before": 1.18,
+   "event": "ordinary_request",
+   "block": "painting_art.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good plan. Keep them small and fast, maybe five minutes each, so you don't get stuck on details.",
+   "est_sec": 5.68,
+   "gap_before": 0.92,
+   "role": "reply",
+   "block": "painting_art.dlg2",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

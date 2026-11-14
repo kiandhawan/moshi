@@ -7,6 +7,8 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "door",
@@ -15,118 +17,170 @@
   "implicit"
  ],
  "topics": [
-  "wedding_planning"
+  "family_visit"
  ],
- "topic": "wedding_planning",
+ "topic": "family_visit",
  "voices": {
-  "user": "732ea755bd9e446eb31dc79966b50428",
-  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": "026218fe0c054374838d934016f34082",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_03",
-  "door_instr_05",
-  "door_02",
-  "implicit_12"
+  "greet_12",
+  "greet_ans_27",
+  "door_instr_10",
+  "ack_12",
+  "door_20",
+  "implicit_01"
  ],
  "block_ids": [
-  "wedding_planning.ctx1"
+  "family_visit.ctx17",
+  "door_20"
  ],
- "est_total_sec": 47.31,
- "est_speech_sec": 31.17,
+ "est_total_sec": 60.24,
+ "est_speech_sec": 44.17,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.32,
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.64,
    "role": "greeting",
-   "phrasing": "greet_06",
+   "phrasing": "greet_12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Doing okay, thanks.",
+   "text": "All good here.",
    "est_sec": 1.03,
-   "gap_before": 0.51,
+   "gap_before": 0.64,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_03"
+   "phrasing": "greet_ans_27"
   },
   {
    "speaker": "user",
-   "text": "We got engaged last month and everyone keeps asking about the date.",
+   "text": "My kids are visiting their grandparents on the farm for the summer.",
    "est_sec": 3.82,
-   "gap_before": 0.25,
+   "gap_before": 0.37,
    "event": "ordinary_request",
-   "block": "wedding_planning.ctx1"
+   "block": "family_visit.ctx17"
   },
   {
    "speaker": "moshi",
-   "text": "Congratulations! Are you leaning toward a summer wedding, or would a cozier autumn or winter one suit you better?",
-   "est_sec": 5.99,
-   "gap_before": 0.64,
+   "text": "Without you?",
+   "est_sec": 0.72,
+   "gap_before": 0.76,
    "role": "reply",
-   "block": "wedding_planning.ctx1",
+   "block": "family_visit.ctx17",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "One moment, I need to get the door. I'll tell you when I'm back.",
-   "est_sec": 4.44,
-   "gap_before": 0.92,
-   "event": "instruction",
-   "kind": "door",
-   "phrasing": "door_instr_05"
+   "text": "Yeah, first time. They're seven and nine.",
+   "est_sec": 2.27,
+   "gap_before": 0.75,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exciting for them. Would you rather they call every evening, or only a couple of times a week so they settle in?",
+   "est_sec": 6.92,
+   "gap_before": 0.57,
+   "role": "reply",
+   "block": "family_visit.ctx17",
+   "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Oh, hey!",
+   "text": "Excuse me, I have to answer the door. I'll come back to you.",
+   "est_sec": 4.13,
+   "gap_before": 0.36,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing.",
    "est_sec": 0.72,
-   "gap_before": 4.04,
-   "phrasing": "door_02"
+   "gap_before": 0.32,
+   "role": "ack",
+   "phrasing": "ack_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, morning.",
+   "est_sec": 0.72,
+   "gap_before": 2.31,
+   "phrasing": "door_20"
   },
   {
    "speaker": "visitor",
-   "text": "Sorry to bother you, did a package for me end up here?",
-   "est_sec": 3.82,
-   "gap_before": 1.23,
-   "phrasing": "door_02"
+   "text": "Police, ma'am, nothing to worry about. We're asking about a car break-in last night.",
+   "est_sec": 4.44,
+   "gap_before": 0.84,
+   "phrasing": "door_20"
   },
   {
    "speaker": "user",
-   "text": "Let me check. Is this it?",
-   "est_sec": 1.96,
-   "gap_before": 1.27,
-   "phrasing": "door_02",
+   "text": "Which car? On this street?",
+   "est_sec": 1.65,
+   "gap_before": 0.46,
+   "phrasing": "door_20",
    "event": "distractor",
    "kind": "question_to_other"
   },
   {
    "speaker": "visitor",
-   "text": "Yes, that's it, thanks!",
-   "est_sec": 1.34,
-   "gap_before": 1.04,
-   "phrasing": "door_02"
+   "text": "The blue van by the lamppost. Did you hear anything?",
+   "est_sec": 3.2,
+   "gap_before": 1.16,
+   "phrasing": "door_20"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'm all yours again.",
-   "est_sec": 1.65,
-   "gap_before": 3.52,
+   "text": "Sorry, I sleep like a log.",
+   "est_sec": 1.96,
+   "gap_before": 0.39,
+   "phrasing": "door_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Anyway, where were we?",
+   "est_sec": 1.34,
+   "gap_before": 3.0,
    "event": "return_cue",
    "kind": "implicit",
-   "phrasing": "implicit_12"
+   "phrasing": "implicit_01"
   },
   {
    "speaker": "moshi",
-   "text": "Of course. Have you thought more about summer versus autumn or winter?",
-   "est_sec": 3.82,
-   "gap_before": 0.9,
+   "text": "Sure. Still undecided on the call schedule?",
+   "est_sec": 2.27,
+   "gap_before": 0.38,
    "role": "resume",
-   "block": "wedding_planning.ctx1",
+   "block": "family_visit.ctx17",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Couple times a week. They need to have their own adventure.",
+   "est_sec": 3.51,
+   "gap_before": 1.1,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good instinct. Grandparents can always text a photo in between.",
+   "est_sec": 3.2,
+   "gap_before": 0.52,
+   "role": "followup",
+   "block": "family_visit.ctx17",
    "reference_only": true
   }
  ],

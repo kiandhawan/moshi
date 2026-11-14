@@ -7,129 +7,132 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "picnic"
+  "painting_art"
  ],
- "topic": "picnic",
+ "topic": "painting_art",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_03"
+  "greet_27",
+  "greet_ans_06",
+  "describe_instr_12",
+  "ack_11",
+  "describe_cue_09"
  ],
  "block_ids": [
-  "picnic.dlg3"
+  "painting_art.opt2"
  ],
- "est_total_sec": 48.17,
- "est_speech_sec": 36.44,
+ "est_total_sec": 57.22,
+ "est_speech_sec": 45.12,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.51,
-   "role": "greeting",
-   "phrasing": "greet_06",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Doing okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.85,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_03"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to plan a romantic picnic for my girlfriend. Where do I start?",
-   "est_sec": 4.44,
-   "gap_before": 0.58,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Pick a quiet spot with a nice view, maybe for sunset. Then plan a few simple foods she really likes.",
-   "est_sec": 6.3,
-   "gap_before": 0.67,
-   "role": "reply",
-   "block": "picnic.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "She loves strawberries and fancy cheese.",
+   "text": "Hey there, how have things been?",
    "est_sec": 1.96,
-   "gap_before": 1.13,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect. Add some good bread, a little honey and something sparkling to drink.",
-   "est_sec": 4.13,
-   "gap_before": 0.43,
-   "role": "reply",
-   "block": "picnic.dlg3",
+   "gap_before": 0.49,
+   "role": "greeting",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Should I bring music, or would that be",
-   "est_sec": 2.58,
-   "gap_before": 0.95,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "picnic.dlg3"
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.51,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
   },
   {
    "speaker": "user",
-   "text": "too cheesy?",
-   "est_sec": 0.72,
-   "gap_before": 1.75,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
+   "text": "I'm trying to choose what to paint for my mom's birthday.",
+   "est_sec": 3.51,
+   "gap_before": 0.26,
+   "block": "painting_art.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll describe them all, so please hold off until I'm done.",
+   "est_sec": 3.51,
+   "gap_before": 0.58,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_12"
   },
   {
    "speaker": "moshi",
-   "text": "A small speaker playing quietly is sweet, not cheesy. Just keep the volume low.",
-   "est_sec": 4.44,
-   "gap_before": 0.89,
-   "role": "reply",
-   "block": "picnic.dlg3",
+   "text": "Alright.",
+   "est_sec": 0.41,
+   "gap_before": 0.32,
+   "role": "ack",
+   "phrasing": "ack_11",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Actually, I'm thinking of making it a surprise.",
-   "est_sec": 2.58,
-   "gap_before": 1.38,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Love it. Set everything up first, then bring her there for what she thinks is just a walk.",
+   "text": "One idea is a portrait of her and her dog, copied from a photo I took last summer.",
    "est_sec": 5.68,
-   "gap_before": 1.09,
-   "role": "reply",
-   "block": "picnic.dlg3",
+   "gap_before": 0.74,
+   "block": "painting_art.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is a painting of the lake house where we went every year when I was little.",
+   "est_sec": 5.37,
+   "gap_before": 2.53,
+   "block": "painting_art.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I could just do a big bunch of sunflowers, since those are her favorite.",
+   "est_sec": 4.75,
+   "gap_before": 2.84,
+   "block": "painting_art.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "The last option is a small series of three tiny paintings of her garden.",
+   "est_sec": 4.44,
+   "gap_before": 1.01,
+   "block": "painting_art.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "So, that's all of them. Tell me what you think.",
+   "est_sec": 3.2,
+   "gap_before": 0.63,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I love the lake house idea, but how much time do you have before her birthday? If it's only a week or two, the sunflowers or the three little garden paintings are much more doable.",
+   "est_sec": 10.95,
+   "gap_before": 0.69,
+   "role": "resume",
+   "block": "painting_art.opt2",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

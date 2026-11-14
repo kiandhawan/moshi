@@ -7,111 +7,109 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "movies"
+  "shopping"
  ],
- "topic": "movies",
+ "topic": "shopping",
  "voices": {
-  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_01",
-  "greet_ans_08"
+  "greet_23",
+  "greet_ans_19",
+  "describe_instr_13",
+  "describe_cue_02"
  ],
  "block_ids": [
-  "movies.dlg2"
+  "shopping.opt2"
  ],
- "est_total_sec": 47.41,
- "est_speech_sec": 36.65,
+ "est_total_sec": 52.5,
+ "est_speech_sec": 41.82,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how are you doing?",
+   "text": "Hey! How are you feeling?",
    "est_sec": 1.65,
-   "gap_before": 0.57,
-   "role": "greeting",
-   "phrasing": "greet_01"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm great, thanks.",
-   "est_sec": 1.03,
    "gap_before": 0.36,
+   "role": "greeting",
+   "phrasing": "greet_23"
+  },
+  {
+   "speaker": "user",
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.81,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "Why do people say the book is always better than the movie?",
-   "est_sec": 3.82,
-   "gap_before": 0.38,
-   "event": "ordinary_request",
-   "block": "movies.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A book can spend pages inside a character's head, while a film has to show everything in about two hours. So a lot gets cut.",
-   "est_sec": 7.85,
-   "gap_before": 0.45,
-   "role": "reply",
-   "block": "movies.dlg2"
+   "text": "We need a new couch and I can't decide between the ones we saw this weekend.",
+   "est_sec": 5.06,
+   "gap_before": 0.46,
+   "block": "shopping.opt2"
   },
   {
    "speaker": "user",
-   "text": "Are there movies that are better than the book?",
+   "text": "Wait until I've listed everything before you jump in.",
    "est_sec": 2.89,
-   "gap_before": 1.29,
-   "event": "ordinary_request",
-   "block": "movies.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Definitely. Sometimes a director tightens a slow story or a great actor adds something the book didn't have.",
-   "est_sec": 5.68,
-   "gap_before": 0.7,
-   "role": "reply",
-   "block": "movies.dlg2"
+   "gap_before": 0.63,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_13"
   },
   {
    "speaker": "user",
-   "text": "I usually read the book first, but",
-   "est_sec": 2.27,
-   "gap_before": 0.74,
+   "text": "One is a big sectional in grey, really comfy, but it might not fit through our door.",
+   "est_sec": 5.37,
+   "gap_before": 0.87,
+   "block": "shopping.opt2",
    "event": "distractor",
-   "kind": "pause",
-   "block": "movies.dlg2"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "maybe I should try the other way round.",
-   "est_sec": 2.58,
-   "gap_before": 2.6,
-   "event": "ordinary_request",
-   "block": "movies.dlg2"
+   "text": "Another is a leather sofa, easy to clean, but it gets cold in winter and sticky in summer.",
+   "est_sec": 5.68,
+   "gap_before": 1.56,
+   "block": "shopping.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or there's a smaller blue velvet couch that looks gorgeous but only seats three.",
+   "est_sec": 4.44,
+   "gap_before": 2.76,
+   "block": "shopping.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 0.62,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_02"
   },
   {
    "speaker": "moshi",
-   "text": "That can be fun. You get to enjoy the film without comparing, and the book then fills in the details.",
-   "est_sec": 6.3,
-   "gap_before": 1.08,
-   "role": "reply",
-   "block": "movies.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'll try it with the next adaptation.",
-   "est_sec": 2.58,
-   "gap_before": 1.09,
-   "block": "movies.dlg2"
+   "text": "The sectional sounds the comfiest, but definitely measure the doorway before buying it. Leather is great with kids or pets since it wipes clean. The velvet couch is beautiful, but seating three could be tight if you have guests over often.",
+   "est_sec": 12.81,
+   "gap_before": 1.11,
+   "role": "resume",
+   "block": "shopping.opt2"
   }
  ]
 }

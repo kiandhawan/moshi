@@ -1,147 +1,1434 @@
 {
-  "topic": "laptop_buying",
-  "contexts": [
+ "topic": "laptop_buying",
+ "contexts": [
+  {
+   "id": "laptop_buying.ctx1",
+   "turns": [
     {
-      "id": "laptop_buying.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "My old laptop is dying and I need a new one before next month."},
-        {"speaker": "moshi", "text": "Okay. First big question, do you want something small and light to carry around, or a bigger screen for working at a desk?"}
-      ],
-      "pending": "small and light or bigger screen",
-      "think_reask": [
-        "So, for the new laptop, small and light or a bigger screen?",
-        "Have you thought about it? Portability or screen size, which matters more?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were deciding whether your new laptop should be light or have a big screen.",
-        "Hi again. Any thoughts on size for the new laptop?"
-      ],
-      "endings": [
-        {"user": "Light. I carry it to cafes almost every day.", "moshi": "Then look at thirteen or fourteen inch models with long battery life."},
-        {"user": "Bigger screen. It mostly stays on my desk anyway.", "moshi": "Great, a sixteen inch model would give you lots of room for windows side by side."}
-      ]
+     "speaker": "user",
+     "text": "My old laptop is dying and I need a new one before next month."
     },
     {
-      "id": "laptop_buying.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I found a laptop I like but there are two versions."},
-        {"speaker": "moshi", "text": "Let me guess, more memory or more storage? One has sixteen gigs of memory and the other has a bigger drive. Which do you think you'd miss more?"}
-      ],
-      "pending": "more memory or more storage",
-      "think_reask": [
-        "Okay, so which version, more memory or more storage?",
-        "So, have you decided which you'd miss more, memory or drive space?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were picking between the version with more memory and the one with more storage.",
-        "There you are. Still weighing memory against storage on that laptop?"
-      ],
-      "endings": [
-        {"user": "Memory. I always have a million browser tabs open.", "moshi": "Then memory is the right call. You can always add an external drive later."},
-        {"user": "Storage, I keep all my photos on it.", "moshi": "Makes sense. Just make sure you back those photos up somewhere too."}
-      ]
-    },
-    {
-      "id": "laptop_buying.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "Should I buy a laptop now or wait for the sales?"},
-        {"speaker": "moshi", "text": "Prices usually drop in about three weeks. Can you get by with your current one until then, or do you need it right away?"}
-      ],
-      "pending": "buy now or wait three weeks for sales",
-      "think_reask": [
-        "So, can you wait for the sales, or do you need the laptop now?",
-        "Have you decided? Buy it now or hold out a few weeks?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were working out whether you can wait for the laptop sales.",
-        "Hi again. Did you decide whether to buy now or wait for prices to drop?"
-      ],
-      "endings": [
-        {"user": "I can wait. My old one is slow but it still works.", "moshi": "Good, then set a price alert and grab it when it drops."},
-        {"user": "I need it now, I've got a big project starting Monday.", "moshi": "Then buy it now. A missed deadline would cost more than the discount."}
-      ]
+     "speaker": "moshi",
+     "text": "Okay. First big question, do you want something small and light to carry around, or a bigger screen for working at a desk?"
     }
-  ],
-  "side_conversations": [
-    {"id": "laptop_buying.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, how do you like your laptop? You've had it a while now."},
-      {"speaker": "friend", "text": "Honestly, I love it. The battery lasts all day."},
-      {"speaker": "user", "text": "Does it get hot when you play games?"},
-      {"speaker": "friend", "text": "A little, but the fan isn't loud."},
-      {"speaker": "user", "text": "Hmm. Was it expensive?"},
-      {"speaker": "friend", "text": "Not too bad, I got it on sale. I can send you the link."}
-    ]},
-    {"id": "laptop_buying.side2", "turns": [
-      {"speaker": "user", "text": "Can you hold this laptop for a sec and tell me if it feels heavy?"},
-      {"speaker": "friend", "text": "Hmm, it's fine. Lighter than your old one, for sure."},
-      {"speaker": "user", "text": "I'd carry it on my bike every day though."},
-      {"speaker": "friend", "text": "Then try the silver one next to it. That one's really thin."},
-      {"speaker": "user", "text": "The keyboard felt mushy on that one. Did you try typing on it?"},
-      {"speaker": "friend", "text": "Yeah, I didn't love it either."}
-    ]},
-    {"id": "laptop_buying.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, do you know if the store does student discounts?"},
-      {"speaker": "friend", "text": "I think they do, but you need your student card."},
-      {"speaker": "user", "text": "Mine expired last month."},
-      {"speaker": "friend", "text": "Can't you print a letter from the university?"},
-      {"speaker": "user", "text": "Maybe. I'll check the student portal tonight."},
-      {"speaker": "friend", "text": "Do it, it could save you a lot."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "laptop_buying.dlg1", "turns": [
-      {"speaker": "user", "text": "What laptop specs actually matter for college?"},
-      {"speaker": "moshi", "text": "For most students, good battery life, at least eight gigs of memory and a comfortable keyboard. Raw speed matters less than people think."},
-      {"speaker": "user", "text": "I'm studying architecture, does that change things?"},
-      {"speaker": "moshi", "text": "Yes, quite a bit. Design software needs sixteen gigs of memory or more and a decent graphics chip."},
-      {"speaker": "user", "text": "Ugh, that sounds expensive. Is there / a cheaper way around it?"},
-      {"speaker": "moshi", "text": "Check if your school has computer labs with the software installed. Then a mid range laptop could be enough."},
-      {"speaker": "user", "text": "Good point. I'll ask at orientation."},
-      {"speaker": "moshi", "text": "Great idea. Ask older students too, they'll know what really works for the program."}
-    ]},
-    {"id": "laptop_buying.dlg2", "turns": [
-      {"speaker": "user", "text": "Is it worth getting a touchscreen laptop?"},
-      {"speaker": "moshi", "text": "It depends. If you like drawing or taking handwritten notes, yes. For typing and browsing, most people barely use it."},
-      {"speaker": "user", "text": "I do take a lot of notes in meetings."},
-      {"speaker": "moshi", "text": "Then a two in one with a stylus could be really handy. You can fold it flat like a notepad."},
-      {"speaker": "user", "text": "Do those break more easily, with the / folding hinge and everything?"},
-      {"speaker": "moshi", "text": "Good ones are pretty sturdy these days. Just read reviews about the hinge before you buy."},
-      {"speaker": "user", "text": "And does the touchscreen drain the battery?"},
-      {"speaker": "moshi", "text": "A little, but not much. The screen brightness matters a lot more than the touch part."}
-    ]},
-    {"id": "laptop_buying.dlg3", "turns": [
-      {"speaker": "user", "text": "My budget for a laptop is about six hundred dollars. Is that realistic?"},
-      {"speaker": "moshi", "text": "Definitely. You can get a solid everyday laptop for that, especially on sale."},
-      {"speaker": "user", "text": "What should I avoid at that price?"},
-      {"speaker": "moshi", "text": "Avoid anything with only four gigs of memory or a spinning hard drive. Those feel slow very quickly."},
-      {"speaker": "user", "text": "What about refurbished ones? My friend / swears by them."},
-      {"speaker": "moshi", "text": "They can be a great deal if they come from the manufacturer with a warranty. You often get a better model for the same money."},
-      {"speaker": "user", "text": "Hmm, maybe I'll stretch to seven hundred instead."},
-      {"speaker": "moshi", "text": "That opens up some nicer screens and better build quality. It might be worth it if you'll keep it for years."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "laptop_buying.opt1",
-     "lead_in": "I need help picking a laptop for school.",
-     "options": [
-       "The first one is a really thin laptop, very light, great battery, but only eight gigs of memory.",
-       "Then there's a gaming laptop that's super powerful, but it's heavy and the battery lasts maybe three hours.",
-       "And the last one is a basic model, cheaper than the others, with a slightly dim screen."
-     ],
-     "moshi_comment": [
-       "For school, the thin laptop sounds like the best fit, since you'll carry it around and need the battery to last through classes. The gaming laptop only makes sense if you'll actually game or run heavy software. The basic model is fine if budget is the main concern.",
-       "Do you play games or use any demanding programs for your classes? If not, I'd go with the thin one, eight gigs is enough for notes and browsing. The gaming laptop's short battery would be a real pain on campus."
-     ]},
-    {"id": "laptop_buying.opt2",
-     "lead_in": "My mom wants a new laptop and asked me to help her decide.",
-     "options": [
-       "One is a simple Chromebook that's cheap and easy, mostly for email and video calls.",
-       "Another is a regular Windows laptop with a big screen, which is what she's used to.",
-       "Or there's a tablet with a keyboard cover, smaller but really easy to carry around."
-     ],
-     "moshi_comment": [
-       "If she mostly does email and video calls, the Chromebook is simple and hard to mess up. The Windows laptop is familiar, which really matters for some people. The tablet is handy, but typing long emails on it can be a little cramped.",
-       "I'd lean toward the Windows laptop with the big screen, since familiar and easy to read is a big deal. Does she need any special programs, or is it really just email and calls? If it's just those, the Chromebook would save money."
-     ]}
-  ]
+   ],
+   "pending": "small and light or bigger screen",
+   "think_reask": [
+    "So, for the new laptop, small and light or a bigger screen?",
+    "Have you thought about it? Portability or screen size, which matters more?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were deciding whether your new laptop should be light or have a big screen.",
+    "Hi again. Any thoughts on size for the new laptop?"
+   ],
+   "endings": [
+    {
+     "user": "Light. I carry it to cafes almost every day.",
+     "moshi": "Then look at thirteen or fourteen inch models with long battery life."
+    },
+    {
+     "user": "Bigger screen. It mostly stays on my desk anyway.",
+     "moshi": "Great, a sixteen inch model would give you lots of room for windows side by side."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I found a laptop I like but there are two versions."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let me guess, more memory or more storage? One has sixteen gigs of memory and the other has a bigger drive. Which do you think you'd miss more?"
+    }
+   ],
+   "pending": "more memory or more storage",
+   "think_reask": [
+    "Okay, so which version, more memory or more storage?",
+    "So, have you decided which you'd miss more, memory or drive space?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were picking between the version with more memory and the one with more storage.",
+    "There you are. Still weighing memory against storage on that laptop?"
+   ],
+   "endings": [
+    {
+     "user": "Memory. I always have a million browser tabs open.",
+     "moshi": "Then memory is the right call. You can always add an external drive later."
+    },
+    {
+     "user": "Storage, I keep all my photos on it.",
+     "moshi": "Makes sense. Just make sure you back those photos up somewhere too."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I buy a laptop now or wait for the sales?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Prices usually drop in about three weeks. Can you get by with your current one until then, or do you need it right away?"
+    }
+   ],
+   "pending": "buy now or wait three weeks for sales",
+   "think_reask": [
+    "So, can you wait for the sales, or do you need the laptop now?",
+    "Have you decided? Buy it now or hold out a few weeks?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were working out whether you can wait for the laptop sales.",
+    "Hi again. Did you decide whether to buy now or wait for prices to drop?"
+   ],
+   "endings": [
+    {
+     "user": "I can wait. My old one is slow but it still works.",
+     "moshi": "Good, then set a price alert and grab it when it drops."
+    },
+    {
+     "user": "I need it now, I've got a big project starting Monday.",
+     "moshi": "Then buy it now. A missed deadline would cost more than the discount."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I edit videos for my YouTube channel and my laptop just can't keep up."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Video editing is demanding. Would you rather get a powerful laptop, or a cheaper laptop plus a desktop at home for the heavy work?"
+    }
+   ],
+   "pending": "powerful laptop or laptop plus desktop",
+   "think_reask": [
+    "So, one beast of a laptop, or a split setup?",
+    "Any closer on the editing machine?"
+   ],
+   "welcome_back": [
+    "Your video editing setup. One big laptop, or a laptop and a desktop?",
+    "So which way for the channel?"
+   ],
+   "endings": [
+    {
+     "user": "One laptop. I film and edit on the road a lot.",
+     "moshi": "Then prioritise a strong graphics chip and plenty of memory, at least thirty two gigs."
+    },
+    {
+     "user": "Split. I mostly edit at home anyway.",
+     "moshi": "Makes sense. A desktop gives you way more power per dollar."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandad wants a laptop for emails and video calls with us."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Does he use a smartphone?"
+    },
+    {
+     "speaker": "user",
+     "text": "Barely. He calls it the gadget."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha. Would a tablet with a keyboard be easier for him, or does he really want a proper laptop?"
+    }
+   ],
+   "pending": "tablet with keyboard or proper laptop for grandad",
+   "think_reask": [
+    "So, tablet for grandad, or a real laptop?",
+    "Have you decided what suits him best?"
+   ],
+   "welcome_back": [
+    "Your grandad's computer. Tablet, or laptop?",
+    "So which one feels right for him?"
+   ],
+   "endings": [
+    {
+     "user": "Tablet. Fewer buttons, less panic.",
+     "moshi": "Good call. Set up big icons and a single tap for calls."
+    },
+    {
+     "user": "Laptop. He wants to type his memoirs.",
+     "moshi": "Lovely. Then a comfortable keyboard and a big clear screen matter most."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I keep spilling coffee on my laptops. I've killed two."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oof. Would you pay extra for accident protection, or look for a rugged model that handles spills?"
+    }
+   ],
+   "pending": "accident protection plan or a rugged laptop",
+   "think_reask": [
+    "So, insurance, or a tougher laptop?",
+    "Any thoughts on the coffee problem?"
+   ],
+   "welcome_back": [
+    "The spill prone laptop. Protection plan, or rugged model?",
+    "So how do we save this next one?"
+   ],
+   "endings": [
+    {
+     "user": "Protection plan. Rugged ones are so ugly.",
+     "moshi": "Fair. Read the fine print, some plans cap the number of claims."
+    },
+    {
+     "user": "Rugged. I clearly can't be trusted.",
+     "moshi": "Honest. Look for one with a spill resistant keyboard, they drain liquid away."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do I really need a gaming laptop? I only play like twice a week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily. Would you rather pay up for gaming now, or get a normal laptop and use a cloud gaming service?"
+    }
+   ],
+   "pending": "gaming laptop or normal laptop with cloud gaming",
+   "think_reask": [
+    "So, a gaming laptop, or regular plus cloud gaming?",
+    "Have you decided how much gaming power you need?"
+   ],
+   "welcome_back": [
+    "The gaming question. Dedicated machine, or cloud?",
+    "So which way are you going?"
+   ],
+   "endings": [
+    {
+     "user": "Cloud. My internet is really fast anyway.",
+     "moshi": "Then you'll save a lot. Just make sure the screen and keyboard feel nice."
+    },
+    {
+     "user": "Gaming laptop. I hate lag.",
+     "moshi": "Then focus on the graphics card and a good cooling system."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm starting a design degree in September."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exciting. Does your course recommend a Mac, or are you free to pick whatever you like?"
+    }
+   ],
+   "pending": "a Mac as recommended or any laptop",
+   "think_reask": [
+    "So for the design degree, Mac, or something else?",
+    "Did you check what your course wants?"
+   ],
+   "welcome_back": [
+    "Your design degree laptop. Mac, or open choice?",
+    "So, are you going Mac or not?"
+   ],
+   "endings": [
+    {
+     "user": "They recommend Mac, so I'll just do that.",
+     "moshi": "Easy then. Check for education pricing, it can save quite a bit."
+    },
+    {
+     "user": "I'm free to choose, and I'm used to Windows.",
+     "moshi": "Then pick one with a colour accurate screen. That matters most for design."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My work gave me a budget of fifteen hundred for a new laptop."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. Will you mainly code?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, and run lots of virtual machines."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then memory matters a lot. Would you spend most of it on memory and a fast processor, or save some for a monitor and dock?"
+    }
+   ],
+   "pending": "all budget on the laptop or save for monitor and dock",
+   "think_reask": [
+    "So, all in on the laptop, or keep some for the desk setup?",
+    "Any decision on splitting the budget?"
+   ],
+   "welcome_back": [
+    "The work budget. Laptop only, or laptop plus monitor?",
+    "So how are we spending the fifteen hundred?"
+   ],
+   "endings": [
+    {
+     "user": "All on the laptop. I already have a monitor.",
+     "moshi": "Perfect, go for thirty two gigs of memory and a fast drive."
+    },
+    {
+     "user": "Save some. My neck is wrecked from looking down all day.",
+     "moshi": "Smart. A monitor at eye level is worth every cent."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I buy refurbished? My brother says it's a scam."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not usually, if it's from a trusted seller. Would you rather save money with a certified refurb, or pay full price for peace of mind?"
+    }
+   ],
+   "pending": "certified refurbished or new at full price",
+   "think_reask": [
+    "So, refurbished or brand new?",
+    "Have you made up your mind on refurbished?"
+   ],
+   "welcome_back": [
+    "The refurbished question. Save money, or buy new?",
+    "So which one feels right?"
+   ],
+   "endings": [
+    {
+     "user": "Refurbished. As long as there's a warranty.",
+     "moshi": "Exactly. Get one with at least a year of cover and you're fine."
+    },
+    {
+     "user": "New. I don't want to risk it.",
+     "moshi": "Fair enough. Watch for sales so you still get a decent price."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter's eleven and needs a laptop for school."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good age for a first one. Would you go cheap, knowing it might get dropped, or spend more on something that lasts through high school?"
+    }
+   ],
+   "pending": "cheap first laptop or a longer lasting one",
+   "think_reask": [
+    "So, cheap and cheerful, or built to last?",
+    "Did you decide on your daughter's laptop?"
+   ],
+   "welcome_back": [
+    "Your daughter's school laptop. Budget, or long term?",
+    "So which way for her?"
+   ],
+   "endings": [
+    {
+     "user": "Cheap. She dropped her tablet twice last month.",
+     "moshi": "Totally reasonable. Add a padded sleeve and you're set."
+    },
+    {
+     "user": "Spend more. I don't want to do this again in two years.",
+     "moshi": "Then look for a sturdy case and a solid warranty."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I travel a lot for work. Planes, trains, hotel rooms."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then weight and battery matter. Would you go for the lightest possible laptop, or accept a bit more weight for a bigger battery?"
+    }
+   ],
+   "pending": "lightest laptop or bigger battery",
+   "think_reask": [
+    "So, featherweight, or long battery?",
+    "Any closer on the travel laptop?"
+   ],
+   "welcome_back": [
+    "Your travel laptop. Lightest, or longest battery?",
+    "So what matters more on the road?"
+   ],
+   "endings": [
+    {
+     "user": "Battery. I hate hunting for plugs at airports.",
+     "moshi": "Good choice. Look for at least twelve hours of real use."
+    },
+    {
+     "user": "Lightest. My back is done with heavy bags.",
+     "moshi": "Then something around one kilo. Carry a small power bank for long trips."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey. I want a laptop but also kind of want an iPad. Can't afford both."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a common dilemma. Would you use it mostly for typing and work, or for drawing, reading and watching things?"
+    }
+   ],
+   "pending": "laptop for typing or iPad for media and drawing",
+   "think_reask": [
+    "So, laptop or iPad? Typing, or drawing and watching?",
+    "Did you figure out what you'd use it for most?"
+   ],
+   "welcome_back": [
+    "The laptop or iPad question. Work, or media?",
+    "So which way are you leaning?"
+   ],
+   "endings": [
+    {
+     "user": "Mostly typing. I write a lot for uni.",
+     "moshi": "Then a laptop is the better pick. A tablet keyboard gets tiring fast."
+    },
+    {
+     "user": "Drawing, actually. And Netflix in bed.",
+     "moshi": "Then the iPad with a pen is the one. It's great for both."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The shop guy is pushing an extended warranty for two hundred."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those can be pricey. Is the laptop expensive enough that a repair would hurt, or would you rather keep the money and take the risk?"
+    }
+   ],
+   "pending": "buy the extended warranty or skip it",
+   "think_reask": [
+    "So, the warranty, or take your chances?",
+    "Have you made the warranty call?"
+   ],
+   "welcome_back": [
+    "The two hundred warranty. Yes, or no?",
+    "So what's the verdict on the extended cover?"
+   ],
+   "endings": [
+    {
+     "user": "Skip it. My credit card adds a year anyway.",
+     "moshi": "Nice, check that's true for laptops, but that usually covers it."
+    },
+    {
+     "user": "I'll take it. I'm clumsy and it's a fancy machine.",
+     "moshi": "Then make sure it covers accidents, not just factory faults."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've narrowed it down to two, but one has a really bright screen and the other has a better keyboard."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Both matter. Do you spend more time writing, or watching and working outdoors?"
+    }
+   ],
+   "pending": "brighter screen or better keyboard",
+   "think_reask": [
+    "So, the screen one, or the keyboard one?",
+    "Which one won in the end?"
+   ],
+   "welcome_back": [
+    "The bright screen or the good keyboard. Which do you need more?",
+    "So, have you chosen between those two?"
+   ],
+   "endings": [
+    {
+     "user": "Keyboard. I write reports all day.",
+     "moshi": "Then that's your laptop. A good keyboard makes long days so much nicer."
+    },
+    {
+     "user": "Screen. I work on the balcony half the time.",
+     "moshi": "Then brightness wins. Look for at least four hundred nits."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My laptop's only three years old but it's so slow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Before buying new, would you like to try upgrading it, maybe more memory or a fresh install, or are you ready to replace it?"
+    }
+   ],
+   "pending": "upgrade old laptop or replace it",
+   "think_reask": [
+    "So, try to revive it, or buy a new one?",
+    "Have you decided whether it's worth saving?"
+   ],
+   "welcome_back": [
+    "Your slow laptop. Upgrade, or replace?",
+    "So, give it a second life, or let it go?"
+   ],
+   "endings": [
+    {
+     "user": "Let's try upgrading. Three years feels too soon.",
+     "moshi": "Agreed. A clean install and more memory can make it feel new."
+    },
+    {
+     "user": "Replace. The battery's dying too.",
+     "moshi": "Then it's probably time. Back up your files before you shop."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a nurse and I want a laptop for night shift studying."
+    },
+    {
+     "speaker": "moshi",
+     "text": "On breaks?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, in the staff room."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then something compact and quiet. Would you prefer a small laptop, or a tablet with a detachable keyboard you can use either way?"
+    }
+   ],
+   "pending": "small laptop or tablet with detachable keyboard",
+   "think_reask": [
+    "So for your breaks, small laptop, or tablet with keyboard?",
+    "Did you pick one for the staff room?"
+   ],
+   "welcome_back": [
+    "Your night shift study device. Laptop, or two in one?",
+    "So which one fits your breaks better?"
+   ],
+   "endings": [
+    {
+     "user": "Two in one. I like reading notes like a book.",
+     "moshi": "Good fit. Get a stand so you can prop it up while you eat."
+    },
+    {
+     "user": "Small laptop. I need to type essays.",
+     "moshi": "Then a thirteen inch is ideal, light enough for your locker."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a teacher and I'm sick of my school laptop."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Understandable. Would you buy your own for personal stuff, or push the school for a better one?"
+    }
+   ],
+   "pending": "buy own laptop or ask the school for a better one",
+   "think_reask": [
+    "So, your own laptop, or fight for a better school one?",
+    "Have you decided how to handle it?"
+   ],
+   "welcome_back": [
+    "The school laptop. Buy your own, or push for an upgrade?",
+    "So, which route did you pick in the end?"
+   ],
+   "endings": [
+    {
+     "user": "Ask the school. It's their job to give us proper tools.",
+     "moshi": "True. Bring a list of specific problems, it makes the request harder to ignore."
+    },
+    {
+     "user": "Buy my own. I don't want them seeing my personal files anyway.",
+     "moshi": "Fair point. Keep work and personal separate, that's healthier too."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, decision time. Matte screen or glossy?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, classic debate. Do you work in bright rooms with lots of windows, or mostly in dim light?"
+    }
+   ],
+   "pending": "matte or glossy screen",
+   "think_reask": [
+    "So, matte or glossy?",
+    "Did you settle the screen finish?"
+   ],
+   "welcome_back": [
+    "The screen finish question. Matte, or glossy?",
+    "So what's it going to be?"
+   ],
+   "endings": [
+    {
+     "user": "Bright rooms. My office has huge windows.",
+     "moshi": "Then matte, definitely. Glare would drive you crazy."
+    },
+    {
+     "user": "Dim mostly. I watch a lot of films.",
+     "moshi": "Glossy then. The colours look richer."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son wants a laptop with RGB lights and a huge fan."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How old?"
+    },
+    {
+     "speaker": "user",
+     "text": "Fourteen. And it costs a fortune."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha. Would you buy it and maybe split the cost with him, or offer a more modest gaming laptop as a compromise?"
+    }
+   ],
+   "pending": "split cost of the flashy laptop or compromise on a modest one",
+   "think_reask": [
+    "So, split the fancy one with him, or go modest?",
+    "Did you two reach a deal on the laptop?"
+   ],
+   "welcome_back": [
+    "Your son's laptop. Split it, or compromise?",
+    "So how did the laptop negotiation end?"
+   ],
+   "endings": [
+    {
+     "user": "Split it. He's got savings from his paper round.",
+     "moshi": "Nice, and he'll take better care of it if he paid for half."
+    },
+    {
+     "user": "Compromise. He's fourteen, he'll get over it.",
+     "moshi": "He will. Plenty of mid range ones still have the lights."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a little embarrassed, but I don't really get the difference between processors."
+    },
+    {
+     "speaker": "moshi",
+     "text": "No need to be. The simple version is, the newer generation usually wins. Do you just browse and stream, or do heavier work like editing?"
+    }
+   ],
+   "pending": "light use or heavy work for processor choice",
+   "think_reask": [
+    "So, mostly light stuff, or heavier work?",
+    "Any idea what you'll mostly use it for?"
+   ],
+   "welcome_back": [
+    "The processor question. Light use, or heavy?",
+    "So, which kind of work will you be doing?"
+   ],
+   "endings": [
+    {
+     "user": "Just browsing and streaming, honestly.",
+     "moshi": "Then any recent mid range chip is plenty. Don't overspend."
+    },
+    {
+     "user": "I'm learning to edit photos.",
+     "moshi": "Then go for a faster chip and at least sixteen gigs of memory."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.ctx22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm buying a laptop for my small business. Just me and two part timers."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice. Would you buy one good laptop for yourself, or three cheaper matching ones so everyone has the same setup?"
+    }
+   ],
+   "pending": "one good laptop or three matching cheaper ones",
+   "think_reask": [
+    "So, one strong laptop, or three matching ones?",
+    "Have you decided on the business laptops?"
+   ],
+   "welcome_back": [
+    "The laptops for your business. One good one, or three the same?",
+    "So which plan did you go with?"
+   ],
+   "endings": [
+    {
+     "user": "Three matching. It makes support so much easier.",
+     "moshi": "Exactly. You can set them all up the same way in one afternoon."
+    },
+    {
+     "user": "One for me. The part timers use the shop computer.",
+     "moshi": "Then get yourself something solid with a business warranty."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "laptop_buying.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, how do you like your laptop? You've had it a while now."
+    },
+    {
+     "speaker": "friend",
+     "text": "Honestly, I love it. The battery lasts all day."
+    },
+    {
+     "speaker": "user",
+     "text": "Does it get hot when you play games?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A little, but the fan isn't loud."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. Was it expensive?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not too bad, I got it on sale. I can send you the link."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you hold this laptop for a sec and tell me if it feels heavy?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Hmm, it's fine. Lighter than your old one, for sure."
+    },
+    {
+     "speaker": "user",
+     "text": "I'd carry it on my bike every day though."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then try the silver one next to it. That one's really thin."
+    },
+    {
+     "speaker": "user",
+     "text": "The keyboard felt mushy on that one. Did you try typing on it?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, I didn't love it either."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, do you know if the store does student discounts?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I think they do, but you need your student card."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine expired last month."
+    },
+    {
+     "speaker": "friend",
+     "text": "Can't you print a letter from the university?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe. I'll check the student portal tonight."
+    },
+    {
+     "speaker": "friend",
+     "text": "Do it, it could save you a lot."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you see this one? It folds all the way back like a tablet."
+    },
+    {
+     "speaker": "friend",
+     "text": "Cute. Does the hinge feel solid?"
+    },
+    {
+     "speaker": "user",
+     "text": "Kind of wobbly, actually. Can you try it?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, it bounces when I type. That would drive me nuts."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, crossed off the list."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, what did you do with your old laptop when you upgraded?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sold it online. Got about a third of what I paid."
+    },
+    {
+     "speaker": "user",
+     "text": "Was it a hassle?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A bit. I had to wipe it properly and answer like twenty questions from buyers."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. Maybe I'll just give mine to my niece."
+    },
+    {
+     "speaker": "friend",
+     "text": "That's nicer anyway. She'll use it for school."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, quick, is a hundred dollars more worth it for the silver one?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Is it just the colour?"
+    },
+    {
+     "speaker": "user",
+     "text": "No, it's also got a better webcam."
+    },
+    {
+     "speaker": "friend",
+     "text": "Do you even do video calls?"
+    },
+    {
+     "speaker": "user",
+     "text": "Every Monday with my team. And my mum on Sundays."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then yes, your mum deserves to see your face in focus."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha. Okay, silver it is."
+    },
+    {
+     "speaker": "friend",
+     "text": "And it'll show fewer fingerprints than the black one."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "laptop_buying.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What laptop specs actually matter for college?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For most students, good battery life, at least eight gigs of memory and a comfortable keyboard. Raw speed matters less than people think."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm studying architecture, does that change things?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, quite a bit. Design software needs sixteen gigs of memory or more and a decent graphics chip."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, that sounds expensive. Is there / a cheaper way around it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check if your school has computer labs with the software installed. Then a mid range laptop could be enough."
+    },
+    {
+     "speaker": "user",
+     "text": "Good point. I'll ask at orientation."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great idea. Ask older students too, they'll know what really works for the program."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it worth getting a touchscreen laptop?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends. If you like drawing or taking handwritten notes, yes. For typing and browsing, most people barely use it."
+    },
+    {
+     "speaker": "user",
+     "text": "I do take a lot of notes in meetings."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a two in one with a stylus could be really handy. You can fold it flat like a notepad."
+    },
+    {
+     "speaker": "user",
+     "text": "Do those break more easily, with the / folding hinge and everything?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good ones are pretty sturdy these days. Just read reviews about the hinge before you buy."
+    },
+    {
+     "speaker": "user",
+     "text": "And does the touchscreen drain the battery?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little, but not much. The screen brightness matters a lot more than the touch part."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My budget for a laptop is about six hundred dollars. Is that realistic?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. You can get a solid everyday laptop for that, especially on sale."
+    },
+    {
+     "speaker": "user",
+     "text": "What should I avoid at that price?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Avoid anything with only four gigs of memory or a spinning hard drive. Those feel slow very quickly."
+    },
+    {
+     "speaker": "user",
+     "text": "What about refurbished ones? My friend / swears by them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They can be a great deal if they come from the manufacturer with a warranty. You often get a better model for the same money."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm, maybe I'll stretch to seven hundred instead."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That opens up some nicer screens and better build quality. It might be worth it if you'll keep it for years."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the difference between an SSD and a hard drive, in plain words?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A hard drive has spinning disks inside. An SSD has no moving parts, so it's much faster and quieter."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it really that noticeable?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very. Your laptop will start up in seconds and apps open almost instantly."
+    },
+    {
+     "speaker": "user",
+     "text": "And size wise, how much / do I need?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For most people, five hundred gigs is plenty. If you keep lots of photos or games, go for a terabyte."
+    },
+    {
+     "speaker": "user",
+     "text": "What about cloud storage?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a nice backup, and it helps if your drive is small. Just don't rely on it if your internet is slow."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it worth paying more for a laptop with a better webcam?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you're on calls a lot, yes. Most laptop webcams are pretty bad, so a good one really stands out."
+    },
+    {
+     "speaker": "user",
+     "text": "I do maybe three calls a day for work."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's worth it. Look for at least a full HD camera, and good microphones too."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I just buy an external webcam instead?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, and they're often better. But it's one more thing to carry if you work away from your desk."
+    },
+    {
+     "speaker": "user",
+     "text": "I mostly work from my kitchen table."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then an external webcam on a little stand is a great, cheap fix. You could put the savings toward more memory."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Help, I'm in the store and they have like forty laptops. I'm completely lost."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Breathe. Start with your budget and screen size, that cuts it down fast. What's your budget?"
+    },
+    {
+     "speaker": "user",
+     "text": "About eight hundred."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good. And do you carry it around a lot, or is it mostly at home?"
+    },
+    {
+     "speaker": "user",
+     "text": "Mostly at home. / Sometimes on the train."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a fourteen inch is a good middle ground. Now check for sixteen gigs of memory and an SSD."
+    },
+    {
+     "speaker": "user",
+     "text": "That leaves maybe five."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great. Now type on each one for a minute. Pick the keyboard and screen you like most."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How long should a laptop last?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A good one usually lasts around four to six years, depending on how you use it and how well you treat it."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine is eight years old and still works."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Impressive. It's probably slowed down, though. Do you notice it struggling?"
+    },
+    {
+     "speaker": "user",
+     "text": "Only when I have lots of tabs open."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's usually memory. If it can be upgraded, adding more might buy you another couple of years."
+    },
+    {
+     "speaker": "user",
+     "text": "And the battery?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Batteries wear out first. Many laptops can get a replacement battery for much less than a new machine."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the deal with Chromebooks? / Are they any good?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're great for simple things, browsing, email, documents, video. They're cheap and they start up really fast."
+    },
+    {
+     "speaker": "user",
+     "text": "Can they run regular programs?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly they run web apps and Android apps. Big programs like professional photo editors usually won't work."
+    },
+    {
+     "speaker": "user",
+     "text": "My mum just does email and watches cooking videos."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a Chromebook is perfect for her. Simple, secure, and hard to break with a wrong click."
+    },
+    {
+     "speaker": "user",
+     "text": "Does it get viruses?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very rarely. That's one of their big advantages, especially for less techy users."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm left handed and I hate trackpads. Any laptop tips?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty of left handed people use a mouse, honestly. A small wireless mouse fixes most trackpad frustration."
+    },
+    {
+     "speaker": "user",
+     "text": "Even on the go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, there are tiny travel mice that fit in a pocket. Some fold flat."
+    },
+    {
+     "speaker": "user",
+     "text": "Are there laptops with better trackpads at least?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some have bigger, smoother glass trackpads that feel much nicer. Try a few in a store if you can."
+    },
+    {
+     "speaker": "user",
+     "text": "And keyboards? / Anything specific for left handers?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really, but a laptop with a number pad shifts the keyboard to the left, which some lefties actually like."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What does refresh rate mean on a laptop screen?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's how many times per second the screen updates. Higher means smoother motion, especially when scrolling or gaming."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need a high one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you game, a hundred and twenty or more feels great. For office work and browsing, sixty is fine."
+    },
+    {
+     "speaker": "user",
+     "text": "Does it drain the battery?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bit, yes. Many laptops let you switch it down when you're on battery."
+    },
+    {
+     "speaker": "user",
+     "text": "I mostly watch shows and do spreadsheets."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then don't pay extra for it. Put the money into a brighter, sharper screen instead."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My laptop keeps overheating. Should I just buy a new one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily. Overheating is often just dust in the fans. Have you ever cleaned it?"
+    },
+    {
+     "speaker": "user",
+     "text": "Never. It's four years old."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a cleaning could make a big difference. A repair shop can do it cheaply if you don't want to open it."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything else I can do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use it on a hard surface, not a bed or a couch. A cheap cooling pad can help too."
+    },
+    {
+     "speaker": "user",
+     "text": "And if that doesn't work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it might be the thermal paste drying out. A shop can replace it, it's still way cheaper than a new laptop."
+    }
+   ]
+  },
+  {
+   "id": "laptop_buying.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm thinking of buying a laptop online but I'm scared of getting a dud."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's fair. Buying from a big retailer or the brand directly makes returns a lot easier."
+    },
+    {
+     "speaker": "user",
+     "text": "How long do I usually have to return it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often fourteen to thirty days. Check before you buy, and keep the box and all the bits."
+    },
+    {
+     "speaker": "user",
+     "text": "What should I check when it arrives?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look for dead pixels, test the keyboard and ports, and run it for a few hours to see how it handles heat."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that sounds / doable, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is. And if anything feels off, start the return quickly. Don't wait until the last day."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "laptop_buying.opt1",
+   "lead_in": "I need help picking a laptop for school.",
+   "options": [
+    "The first one is a really thin laptop, very light, great battery, but only eight gigs of memory.",
+    "Then there's a gaming laptop that's super powerful, but it's heavy and the battery lasts maybe three hours.",
+    "And the last one is a basic model, cheaper than the others, with a slightly dim screen."
+   ],
+   "moshi_comment": [
+    "For school, the thin laptop sounds like the best fit, since you'll carry it around and need the battery to last through classes. The gaming laptop only makes sense if you'll actually game or run heavy software. The basic model is fine if budget is the main concern.",
+    "Do you play games or use any demanding programs for your classes? If not, I'd go with the thin one, eight gigs is enough for notes and browsing. The gaming laptop's short battery would be a real pain on campus."
+   ]
+  },
+  {
+   "id": "laptop_buying.opt2",
+   "lead_in": "My mom wants a new laptop and asked me to help her decide.",
+   "options": [
+    "One is a simple Chromebook that's cheap and easy, mostly for email and video calls.",
+    "Another is a regular Windows laptop with a big screen, which is what she's used to.",
+    "Or there's a tablet with a keyboard cover, smaller but really easy to carry around."
+   ],
+   "moshi_comment": [
+    "If she mostly does email and video calls, the Chromebook is simple and hard to mess up. The Windows laptop is familiar, which really matters for some people. The tablet is handy, but typing long emails on it can be a little cramped.",
+    "I'd lean toward the Windows laptop with the big screen, since familiar and easy to read is a big deal. Does she need any special programs, or is it really just email and calls? If it's just those, the Chromebook would save money."
+   ]
+  },
+  {
+   "id": "laptop_buying.opt3",
+   "lead_in": "I'm a freelance writer and I need help picking a new laptop.",
+   "options": [
+    "A small light laptop with an amazing keyboard and eighteen hours of battery, but a fairly dim screen.",
+    "A two in one with a pen and a touchscreen, nice for notes, but the keyboard is a bit shallow.",
+    "A big fifteen inch one with a great screen and number pad, though it weighs over two kilos."
+   ],
+   "moshi_comment": [
+    "For a writer, the keyboard and battery of the small one are hard to beat, the dim screen matters less indoors. The two in one is fun but a shallow keyboard gets tiring. The big one is great at a desk, but heavy if you work in cafes.",
+    "I'd pick the small light one, it's built for long writing days. If you take a lot of handwritten notes, the two in one could be worth a look. The big one only makes sense if you rarely leave your desk."
+   ]
+  },
+  {
+   "id": "laptop_buying.opt4",
+   "lead_in": "My nephew is starting engineering and his parents want my advice on a laptop.",
+   "options": [
+    "A powerful workstation laptop with a strong graphics card, which handles design software but costs nearly two thousand.",
+    "A mid range laptop with good memory, decent graphics, about nine hundred, and a little heavy.",
+    "A cheap thin laptop for notes and emails, with him using the university's computer labs for heavy work."
+   ],
+   "moshi_comment": [
+    "Engineering software can be demanding, so the cheap one might leave him stuck in the labs late at night. The workstation is great but probably overkill for first year. The mid range one sounds like the sweet spot.",
+    "I'd go with the mid range laptop, it handles most first year software and costs half the workstation. Check the course's recommended specs before buying, though. The cheap option only works if the labs are really accessible."
+   ]
+  },
+  {
+   "id": "laptop_buying.opt5",
+   "lead_in": "I play music and I'm looking for a laptop for recording at home.",
+   "options": [
+    "A Mac with a fast chip and a silent fan, which is great for music apps but pricey to upgrade storage.",
+    "A Windows laptop with lots of ports and a big drive, cheaper, though the fan gets loud under load.",
+    "A secondhand pro laptop from a friend, two years old, very powerful, but no warranty at all."
+   ],
+   "moshi_comment": [
+    "For recording, a silent machine is a big deal, so the Mac has a real edge. The Windows laptop's loud fan could end up on your tracks. The secondhand one is tempting, as long as you trust your friend and test it well.",
+    "I'd lean toward the Mac, and use an external drive for storage to save money. The secondhand laptop could be a great deal if you can check it properly. The noisy fan on the Windows one worries me for recording."
+   ]
+  }
+ ]
 }

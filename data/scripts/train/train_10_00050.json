@@ -7,120 +7,109 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "weekend_plans"
+  "pets"
  ],
- "topic": "weekend_plans",
+ "topic": "pets",
  "voices": {
-  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "user": "536d3a5e000945adb7038665781a4aca",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_25",
-  "greet_ans_29"
+  "greet_23",
+  "greet_ans_02",
+  "describe_instr_11",
+  "describe_cue_05"
  ],
  "block_ids": [
-  "weekend_plans.dlg1"
+  "pets.opt2"
  ],
- "est_total_sec": 50.57,
- "est_speech_sec": 40.78,
+ "est_total_sec": 53.81,
+ "est_speech_sec": 42.75,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there! How's your day treating you?",
-   "est_sec": 2.27,
-   "gap_before": 0.57,
+   "text": "Hey! How are you feeling?",
+   "est_sec": 1.65,
+   "gap_before": 0.38,
    "role": "greeting",
-   "phrasing": "greet_25"
+   "phrasing": "greet_23"
   },
   {
    "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.65,
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.77,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
+   "phrasing": "greet_ans_02"
   },
   {
    "speaker": "user",
-   "text": "Give me some ideas for a rainy Saturday with two kids.",
-   "est_sec": 3.51,
-   "gap_before": 0.42,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You could build a blanket fort and have a movie afternoon, or bake cookies together. Indoor swimming pools are great too, kids burn off energy.",
-   "est_sec": 7.85,
-   "gap_before": 0.41,
-   "role": "reply",
-   "block": "weekend_plans.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Swimming is good. What else could we do out of the house?",
-   "est_sec": 3.82,
-   "gap_before": 0.55,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A science museum or an indoor climbing wall are both fun. Many libraries also run free story sessions on Saturday mornings.",
-   "est_sec": 6.61,
-   "gap_before": 0.57,
-   "role": "reply",
-   "block": "weekend_plans.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "The climbing wall sounds fun. Are kids",
-   "est_sec": 2.27,
+   "text": "My cat keeps scratching the furniture and I'm trying to pick a fix.",
+   "est_sec": 4.13,
    "gap_before": 0.54,
+   "block": "pets.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "First let me tell you about all of them, then you can comment.",
+   "est_sec": 4.13,
+   "gap_before": 0.84,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_11"
+  },
+  {
+   "speaker": "user",
+   "text": "One option is a really tall scratching post right next to the couch.",
+   "est_sec": 4.13,
+   "gap_before": 0.89,
+   "block": "pets.opt2",
    "event": "distractor",
-   "kind": "pause",
-   "block": "weekend_plans.dlg1"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "allowed at those?",
-   "est_sec": 1.03,
-   "gap_before": 2.0,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Most have kids sessions, usually from about age five. It's best to book ahead, they fill up on rainy days.",
-   "est_sec": 6.3,
-   "gap_before": 1.41,
-   "role": "reply",
-   "block": "weekend_plans.dlg1"
+   "text": "Another is putting sticky tape on the arms of the sofa so she hates touching it.",
+   "est_sec": 5.06,
+   "gap_before": 2.86,
+   "block": "pets.opt2",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Mine are six and eight, so perfect.",
-   "est_sec": 2.27,
-   "gap_before": 0.55,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg1"
+   "text": "Or I could get those soft caps that go over her claws, which last about a month.",
+   "est_sec": 5.37,
+   "gap_before": 1.77,
+   "block": "pets.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the full list. Go ahead.",
+   "est_sec": 1.96,
+   "gap_before": 0.54,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_05"
   },
   {
    "speaker": "moshi",
-   "text": "Great ages for it. Pack some snacks, they'll be starving afterwards.",
-   "est_sec": 3.51,
-   "gap_before": 0.62,
-   "role": "reply",
-   "block": "weekend_plans.dlg1"
+   "text": "The tall scratching post is the best long term fix, since it gives her a place she's allowed to scratch. The sticky tape works well alongside it to steer her away from the couch. The soft caps work, but you'd have to keep putting them back on.",
+   "est_sec": 14.67,
+   "gap_before": 0.97,
+   "role": "resume",
+   "block": "pets.opt2"
   }
  ]
 }

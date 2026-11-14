@@ -7,120 +7,202 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "board_games"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "topic": "board_games",
+ "topics": [
+  "books",
+  "weather_plans"
+ ],
+ "topic": "books",
  "voices": {
-  "user": "e58a6b7e06f048d0b83836d55d226b90",
-  "friend": null,
+  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
+  "friend": "0efe38923c0b445ab09382e851ae1e30",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
  "phrasing_ids": [
-  "greet_14",
-  "greet_ans_16"
+  "greet_22",
+  "greet_ans_23",
+  "side_instr_16",
+  "dn_28",
+  "side_cue_07"
  ],
  "block_ids": [
-  "board_games.dlg4"
+  "books.ctx3",
+  "weather_plans.side1",
+  "dn_28"
  ],
- "est_total_sec": 49.26,
- "est_speech_sec": 37.99,
+ "est_total_sec": 73.59,
+ "est_speech_sec": 53.46,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How's life treating you?",
+   "text": "Hello, how are things going?",
    "est_sec": 1.65,
-   "gap_before": 0.35,
+   "gap_before": 0.77,
    "role": "greeting",
-   "phrasing": "greet_14"
+   "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "Pretty busy, but good.",
-   "est_sec": 1.34,
-   "gap_before": 0.7,
+   "text": "Good, good. Thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.56,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_16"
+   "phrasing": "greet_ans_23"
   },
   {
    "speaker": "user",
-   "text": "I want a game I can play with my grandkids. They're four and six.",
-   "est_sec": 4.44,
-   "gap_before": 0.57,
-   "event": "ordinary_request",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Wonderful. Outfoxed is a sweet cooperative game for that age, everyone works together to catch a sneaky fox.",
-   "est_sec": 5.68,
+   "text": "I want to read more, but I'm always on the go.",
+   "est_sec": 3.51,
    "gap_before": 0.41,
-   "role": "reply",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "The four year old can't read yet.",
-   "est_sec": 2.27,
-   "gap_before": 0.55,
    "event": "ordinary_request",
-   "block": "board_games.dlg4"
+   "block": "books.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "That's fine, it uses pictures only. Another favorite is Hoot Owl Hoot, which is all colors.",
-   "est_sec": 5.06,
-   "gap_before": 1.91,
+   "text": "Audiobooks might help, or an e-reader that fits in your pocket.",
+   "est_sec": 3.51,
+   "gap_before": 0.69,
    "role": "reply",
-   "block": "board_games.dlg4"
+   "block": "books.ctx3"
   },
   {
    "speaker": "user",
-   "text": "I used to play",
+   "text": "Hmm, both sound good.",
    "est_sec": 1.34,
-   "gap_before": 0.97,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "board_games.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "snakes and ladders with my kids. Is that still good?",
-   "est_sec": 3.2,
-   "gap_before": 2.58,
+   "gap_before": 2.14,
    "event": "ordinary_request",
-   "block": "board_games.dlg4"
+   "block": "books.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "It's still great for counting practice. It's pure luck though, so mix it with one where they make choices.",
+   "text": "Which fits your day better, listening on the bus and at the gym, or reading in short quiet moments?",
    "est_sec": 5.99,
-   "gap_before": 0.42,
+   "gap_before": 1.11,
    "role": "reply",
-   "block": "board_games.dlg4"
+   "block": "books.ctx3"
   },
   {
    "speaker": "user",
-   "text": "I'll get the owl one then.",
+   "text": "Hang on a minute, I want to ask Sam something first. Don't jump in until I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 0.7,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Sam, did you see the forecast for tomorrow?",
+   "est_sec": 2.58,
+   "gap_before": 0.87,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, thunderstorms after three.",
+   "est_sec": 1.34,
+   "gap_before": 0.33,
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh. Do you still want to do the hike?",
+   "est_sec": 2.89,
+   "gap_before": 3.24,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "We could start really early and be down by noon.",
+   "est_sec": 3.2,
+   "gap_before": 0.54,
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "How early is really early?",
+   "est_sec": 1.65,
+   "gap_before": 0.54,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Like leave the house at six.",
    "est_sec": 1.96,
-   "gap_before": 0.93,
-   "event": "ordinary_request",
-   "block": "board_games.dlg4"
+   "gap_before": 0.75,
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, but you're making the coffee.",
+   "est_sec": 1.96,
+   "gap_before": 1.38,
+   "block": "weather_plans.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Is your brother back from university yet?",
+   "est_sec": 2.27,
+   "gap_before": 0.4,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_28"
+  },
+  {
+   "speaker": "friend",
+   "text": "Next Friday, he says.",
+   "est_sec": 1.34,
+   "gap_before": 0.87,
+   "phrasing": "dn_28"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm here again, let's continue.",
+   "est_sec": 1.65,
+   "gap_before": 0.7,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_07"
   },
   {
    "speaker": "moshi",
-   "text": "Lovely. Games for that age usually last about fifteen minutes, just right for little attention spans.",
+   "text": "Alright. Still choosing between audiobooks and an e-reader?",
+   "est_sec": 2.58,
+   "gap_before": 1.14,
+   "role": "resume",
+   "block": "books.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Audiobooks. I'm driving like two hours a day.",
+   "est_sec": 2.58,
+   "gap_before": 1.16,
+   "event": "ordinary_request",
+   "block": "books.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect, that's a lot of books a year. Check if your library lends audiobooks for free.",
    "est_sec": 5.06,
-   "gap_before": 0.38,
-   "role": "reply",
-   "block": "board_games.dlg4"
+   "gap_before": 0.33,
+   "role": "followup",
+   "block": "books.ctx3"
   }
  ]
 }

@@ -7,120 +7,166 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "cleaning"
+  "personal_finance",
+  "hiking"
  ],
- "topic": "cleaning",
+ "topic": "personal_finance",
  "voices": {
-  "user": "e7de86b388864b8cbd50d0d70a3494e5",
-  "friend": null,
+  "user": "e3cd384158934cc9a01029cd7d278634",
+  "friend": "f3a2b90078d54a65af4b95f63bc7798e",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
  "phrasing_ids": [
-  "greet_10",
-  "greet_ans_17"
+  "greet_16",
+  "greet_ans_26",
+  "side_instr_22",
+  "ack_16",
+  "side_cue_11"
  ],
  "block_ids": [
-  "cleaning.dlg3"
+  "personal_finance.ctx9",
+  "hiking.side2"
  ],
- "est_total_sec": 56.14,
- "est_speech_sec": 39.54,
+ "est_total_sec": 63.15,
+ "est_speech_sec": 46.24,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your day been so far?",
-   "est_sec": 2.27,
-   "gap_before": 0.52,
-   "role": "greeting",
-   "phrasing": "greet_10"
-  },
-  {
-   "speaker": "user",
-   "text": "A bit tired today, but okay.",
+   "text": "Hi, how are you holding up?",
    "est_sec": 1.96,
-   "gap_before": 0.43,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "gap_before": 0.31,
+   "role": "greeting",
+   "phrasing": "greet_16"
   },
   {
    "speaker": "user",
-   "text": "Can I use bleach on my wooden cutting board?",
-   "est_sec": 2.89,
-   "gap_before": 0.55,
-   "event": "ordinary_request",
-   "block": "cleaning.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Bleach can dry out and crack wood, so I'd avoid it. Hot soapy water and drying it standing up is usually enough.",
-   "est_sec": 6.92,
-   "gap_before": 1.3,
-   "role": "reply",
-   "block": "cleaning.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "What if I cut raw chicken on it?",
-   "est_sec": 2.58,
-   "gap_before": 2.77,
-   "event": "ordinary_request",
-   "block": "cleaning.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then scrub it well and wipe it with plain white vinegar. Even better, keep a plastic board just for raw meat.",
-   "est_sec": 6.61,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "cleaning.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay. It also smells",
+   "text": "Kind of tired, honestly.",
    "est_sec": 1.34,
-   "gap_before": 3.34,
+   "gap_before": 0.95,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_26"
+  },
+  {
+   "speaker": "user",
+   "text": "My parents offered to lend me money for a deposit on a flat.",
+   "est_sec": 4.13,
+   "gap_before": 0.23,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's generous. A proper loan with a repayment plan, or keep saving alone?",
+   "est_sec": 4.13,
+   "gap_before": 0.74,
+   "role": "reply",
+   "block": "personal_finance.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Both feel weird.",
+   "est_sec": 1.03,
+   "gap_before": 0.72,
+   "event": "ordinary_request",
+   "block": "personal_finance.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Which is less weird, owing them, or waiting longer?",
+   "est_sec": 3.2,
+   "gap_before": 0.74,
+   "role": "reply",
+   "block": "personal_finance.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "One sec, I'm going to talk with my neighbor. Please wait until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 1.24,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.64,
+   "role": "ack",
+   "phrasing": "ack_16"
+  },
+  {
+   "speaker": "user",
+   "text": "How was the trail you did last week?",
+   "est_sec": 2.58,
+   "gap_before": 1.36,
    "event": "distractor",
-   "kind": "pause",
-   "block": "cleaning.dlg3"
+   "kind": "friend_question",
+   "block": "hiking.side2"
   },
   {
-   "speaker": "user",
-   "text": "kind of like onions all the time.",
+   "speaker": "friend",
+   "text": "Beautiful, but really muddy near the waterfall.",
    "est_sec": 2.27,
-   "gap_before": 2.96,
-   "event": "ordinary_request",
-   "block": "cleaning.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Rub it with half a lemon and some coarse salt, then rinse. That takes out most smells.",
-   "est_sec": 5.37,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "cleaning.dlg3"
+   "gap_before": 0.84,
+   "block": "hiking.side2"
   },
   {
    "speaker": "user",
-   "text": "And should I oil it?",
-   "est_sec": 1.65,
-   "gap_before": 1.09,
-   "event": "ordinary_request",
-   "block": "cleaning.dlg3"
+   "text": "Would it be okay for the kids?",
+   "est_sec": 2.27,
+   "gap_before": 2.91,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "The first part, yes. The last mile is steep with loose rocks, I wouldn't bring them up there.",
+   "est_sec": 5.68,
+   "gap_before": 0.95,
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "We could just go to the waterfall and turn back.",
+   "est_sec": 3.2,
+   "gap_before": 0.92,
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "That's the best bit anyway. They'll love it.",
+   "est_sec": 2.58,
+   "gap_before": 0.86,
+   "block": "hiking.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done talking to them. I'm back.",
+   "est_sec": 2.58,
+   "gap_before": 0.93,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_11"
   },
   {
    "speaker": "moshi",
-   "text": "Yes, once a month with food safe mineral oil. It keeps the wood from drying out and cracking.",
-   "est_sec": 5.68,
-   "gap_before": 0.52,
-   "role": "reply",
-   "block": "cleaning.dlg3"
+   "text": "No problem. Your parents' offer. Accepting the loan, or saving on your own?",
+   "est_sec": 4.13,
+   "gap_before": 1.07,
+   "role": "resume",
+   "block": "personal_finance.ctx9"
   }
  ]
 }

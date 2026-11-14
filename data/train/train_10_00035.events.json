@@ -1,85 +1,147 @@
 {
   "id": "train_10_00035",
-  "group": "describe_options",
-  "user_start": 2.88,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 8.69,
-  "instruction_end": 12.29,
-  "wait_end": 39.993,
-  "resume_window": [
-    39.993,
-    44.993
+  "group": "side_conversation",
+  "user_start": 2.28,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question",
+    "near_miss"
   ],
-  "wait_sec": 27.703,
+  "cluster": "sleep.ctx6",
+  "instruction_start": 15.62,
+  "instruction_end": 20.32,
+  "wait_end": 61.88,
+  "resume_window": [
+    61.88,
+    66.88
+  ],
+  "wait_sec": 41.56,
   "distractors": [
-    23.08,
-    29.673
+    23.38,
+    30.18,
+    53.08
   ],
   "distractor_kinds": [
-    "pause",
-    "pause"
+    "friend_question",
+    "near_miss",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      23.08,
-      25.45
+      23.38,
+      24.15
     ],
     [
-      29.673,
-      31.223
+      30.18,
+      31.55
+    ],
+    [
+      53.08,
+      56.55
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    8.81,
+    69.71
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.88,
-      "end": 3.92,
+      "start": 2.28,
+      "end": 3.65,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.47,
-      "end": 7.82
+      "start": 4.09,
+      "end": 8.81,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 8.69,
-      "end": 12.29,
+      "start": 15.62,
+      "end": 20.32,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 13.04,
-      "end": 18.15
-    },
-    {
-      "speaker": "user",
-      "start": 19.4,
-      "end": 23.08,
+      "start": 20.99,
+      "end": 23.38,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 24.15,
+      "end": 26.45
     },
     {
       "speaker": "user",
-      "start": 25.45,
-      "end": 29.673,
+      "start": 27.78,
+      "end": 30.18,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 31.55,
+      "end": 33.11
     },
     {
       "speaker": "user",
-      "start": 31.223,
-      "end": 36.573
+      "start": 34.1,
+      "end": 38.02
+    },
+    {
+      "speaker": "friend",
+      "start": 38.97,
+      "end": 41.03
     },
     {
       "speaker": "user",
-      "start": 38.003,
-      "end": 39.993,
+      "start": 42.13,
+      "end": 43.46
+    },
+    {
+      "speaker": "friend",
+      "start": 44.4,
+      "end": 46.92
+    },
+    {
+      "speaker": "user",
+      "start": 47.42,
+      "end": 49.24
+    },
+    {
+      "speaker": "friend",
+      "start": 49.8,
+      "end": 51.31
+    },
+    {
+      "speaker": "user",
+      "start": 52.37,
+      "end": 53.08,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 56.55,
+      "end": 59.73
+    },
+    {
+      "speaker": "user",
+      "start": 60.88,
+      "end": 61.88,
       "event": "return_cue",
       "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 67.63,
+      "end": 69.71,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00035 by scripts/render.py.",
@@ -87,15 +149,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.55,
-      "end": 2.43,
-      "text": "Hello there! How's your day treating you?"
+      "start": 0.58,
+      "end": 1.66,
+      "text": "Hey, how are you doing?"
+    },
+    {
+      "kind": "reply",
+      "start": 9.44,
+      "end": 14.56,
+      "text": "Rough. Do you want to push through and stay awake till local bedtime, or grab a short nap now?"
     },
     {
       "kind": "resume",
-      "start": 41.543,
-      "end": 53.693,
-      "text": "The practice exams are probably the strongest choice, since they show you exactly what you still don't know. Flashcards on the bus are a nice add-on for terms and definitions. Rereading notes feels productive, but it tends to stick the least."
+      "start": 62.77,
+      "end": 65.94,
+      "text": "Okay. So, fighting the time difference. Which way?"
+    },
+    {
+      "kind": "followup",
+      "start": 70.78,
+      "end": 76.11,
+      "text": "Brave. Walk around outdoors, the daylight helps reset your clock, and go to bed around ten."
     }
   ]
 }

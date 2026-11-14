@@ -1,160 +1,1854 @@
 {
-  "topic": "studying",
-  "contexts": [
+ "topic": "studying",
+ "contexts": [
+  {
+   "id": "studying.ctx1",
+   "turns": [
     {
-      "id": "studying.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I have a chemistry exam on Friday and a history essay due Thursday, and I honestly don't know where to start."},
-        {"speaker": "moshi", "text": "That's a tight week. Do you want to knock out the essay first, or split each evening between the two?"}
-      ],
-      "pending": "essay first or split evenings between essay and chemistry",
-      "think_reask": [
-        "Okay, time's up. Essay first, or splitting your evenings between both?",
-        "So what feels better for this week, finishing the essay first or mixing the two each night?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were planning your week. Essay first, or split the evenings?",
-        "There you are. You were deciding between doing the essay first or splitting your time with chemistry."
-      ],
-      "endings": [
-        {"user": "Essay first, I think. If it's done by Wednesday I can just cram chemistry after.", "moshi": "Makes sense. Aim for a rough draft tonight and polish it tomorrow."},
-        {"user": "Let's split it. I'll forget all the chemistry if I leave it till the end.", "moshi": "Good call. Try an hour of chemistry before the essay each night while you're fresh."}
-      ]
+     "speaker": "user",
+     "text": "I have a chemistry exam on Friday and a history essay due Thursday, and I honestly don't know where to start."
     },
     {
-      "id": "studying.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "My study group wants to meet this weekend but I keep getting distracted when we do."},
-        {"speaker": "moshi", "text": "Would it help to meet somewhere quieter, like the library, or to set a fixed agenda before you start?"}
-      ],
-      "pending": "quieter place or fixed agenda for the study group",
-      "think_reask": [
-        "So, any thoughts? A quieter spot, or a set agenda for the group?",
-        "Alright, what do you reckon would help more, changing the place or planning the session?"
-      ],
-      "welcome_back": [
-        "Hi again. You were thinking about your study group, a quieter place or a fixed agenda?",
-        "Welcome back. Did you settle on the library or an agenda for the weekend session?"
-      ],
-      "endings": [
-        {"user": "The library, definitely. At someone's flat we just end up watching videos.", "moshi": "That'll help a lot. Book a group room early, they fill up fast on weekends."},
-        {"user": "An agenda, I think. The place isn't really the problem, it's that nobody plans anything.", "moshi": "Then send everyone a short list of topics tonight so you all show up ready."}
-      ]
-    },
-    {
-      "id": "studying.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I've been reading my notes over and over but nothing sticks."},
-        {"speaker": "moshi", "text": "Rereading feels productive but it doesn't stick well. Want to try flashcards or practice questions instead?"},
-        {"speaker": "user", "text": "Maybe. Which one do you think?"},
-        {"speaker": "moshi", "text": "Both work. It depends on whether your exam is more about facts or problem solving. Which is it?"}
-      ],
-      "pending": "whether the exam is about facts or problem solving",
-      "think_reask": [
-        "So, is your exam mostly facts to remember, or problems to solve?",
-        "Time's up. Facts or problem solving, what's the exam more like?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were going to tell me if the exam is more facts or problem solving.",
-        "Oh, hi again. So, facts or problems, which kind of exam is it?"
-      ],
-      "endings": [
-        {"user": "Mostly facts. It's biology, so lots of names and processes.", "moshi": "Then flashcards are perfect. Shuffle them and keep the ones you miss in a separate pile."},
-        {"user": "Problem solving, it's a stats course.", "moshi": "Go with practice questions then. Do them without looking at the answers first."}
-      ]
+     "speaker": "moshi",
+     "text": "That's a tight week. Do you want to knock out the essay first, or split each evening between the two?"
     }
-  ],
-  "side_conversations": [
-    {"id": "studying.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you keep the notes from last week's lecture?"},
-      {"speaker": "friend", "text": "Some of them. I missed the last half hour though."},
-      {"speaker": "user", "text": "That's the part I need. The bit about supply curves."},
-      {"speaker": "friend", "text": "Ask Tasha, she records everything on her laptop."},
-      {"speaker": "user", "text": "Good idea. Can you send me her number?"},
-      {"speaker": "friend", "text": "Sure, give me a second."}
-    ]},
-    {"id": "studying.side2", "turns": [
-      {"speaker": "user", "text": "Are you going to keep playing music while I'm studying?"},
-      {"speaker": "friend", "text": "I can put headphones on if it bothers you."},
-      {"speaker": "user", "text": "It kind of does, yeah. I've read this page about four times now."},
-      {"speaker": "friend", "text": "Fair enough. Want me to make you a tea while I'm up?"},
-      {"speaker": "user", "text": "That would be amazing, thanks."}
-    ]},
-    {"id": "studying.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, when's your last exam?"},
-      {"speaker": "friend", "text": "The twentieth. Statistics, the worst one."},
-      {"speaker": "user", "text": "Same here, mine's the twenty-second. Want to quiz each other some evening?"},
-      {"speaker": "friend", "text": "Yes please. I'm hopeless at the probability stuff."},
-      {"speaker": "user", "text": "I'm hopeless at all of it, so we'll be even."},
-      {"speaker": "friend", "text": "Tuesday then? After dinner?"},
-      {"speaker": "user", "text": "Tuesday works. I'll bring snacks."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "studying.dlg1", "turns": [
-      {"speaker": "user", "text": "How long should I study before taking a break?"},
-      {"speaker": "moshi", "text": "A lot of people like about twenty-five minutes of focus, then a five minute break. After four rounds, take a longer one."},
-      {"speaker": "user", "text": "Twenty-five feels short. I usually go for like two hours straight."},
-      {"speaker": "moshi", "text": "You can stretch it to fifty minutes if that suits you. Two hours without a break usually means the last half isn't sinking in."},
-      {"speaker": "user", "text": "Okay, and what should I do during the break? I always / end up on my phone."},
-      {"speaker": "moshi", "text": "Try getting up instead. Walk around, refill your water, stretch. Your phone tends to turn five minutes into twenty."},
-      {"speaker": "user", "text": "Ha, that's exactly what happens. I'll try leaving it in the other room."},
-      {"speaker": "moshi", "text": "That's one of the simplest tricks that actually works. Good luck with it."}
-    ]},
-    {"id": "studying.dlg2", "turns": [
-      {"speaker": "user", "text": "My son has a spelling test tomorrow and he's getting really upset about it."},
-      {"speaker": "moshi", "text": "Poor thing. How many words does he need to learn?"},
-      {"speaker": "user", "text": "Fifteen, and he's only got about half of them."},
-      {"speaker": "moshi", "text": "That's a good start. Focus on the ones he's missing and make it a game, like spelling them out loud while bouncing a ball."},
-      {"speaker": "user", "text": "He'd love that actually. Should we keep going tonight or / let him rest?"},
-      {"speaker": "moshi", "text": "Do one short round of ten minutes, then stop. A quick review at breakfast will help more than a long session tonight."},
-      {"speaker": "user", "text": "Breakfast, good idea. He's always more cheerful in the morning."},
-      {"speaker": "moshi", "text": "Perfect. And remind him that getting most of them right is still a great result."}
-    ]},
-    {"id": "studying.dlg3", "turns": [
-      {"speaker": "user", "text": "Is it better to study in the morning or late at night?"},
-      {"speaker": "moshi", "text": "It depends on you. Most people focus best a few hours after waking up, but some genuinely do their best work at night."},
-      {"speaker": "user", "text": "I'm definitely a night person. But my exam is at nine in the morning."},
-      {"speaker": "moshi", "text": "Then shift your schedule a little earlier over the next week, so your brain is awake at nine on the day."},
-      {"speaker": "user", "text": "How early are we talking?"},
-      {"speaker": "moshi", "text": "Try going to bed and waking up about half an hour earlier every couple of days. And do a few practice questions around nine each morning."},
-      {"speaker": "user", "text": "That's sneaky. I / actually like that."},
-      {"speaker": "moshi", "text": "It's a nice way to rehearse the real thing. You'll feel much less groggy on exam day."}
-    ]},
-    {"id": "studying.dlg4", "turns": [
-      {"speaker": "user", "text": "I'm going back to college at fifty-five and I haven't written an essay in thirty years."},
-      {"speaker": "moshi", "text": "That's exciting. The basics haven't changed much. Have a clear argument, back it up, and keep each paragraph to one idea."},
-      {"speaker": "user", "text": "What about all the referencing? That's what scares me."},
-      {"speaker": "moshi", "text": "Most colleges use one standard style and have a guide online. A free reference manager can format everything for you."},
-      {"speaker": "user", "text": "So I don't have to type it all by hand?"},
-      {"speaker": "moshi", "text": "Not at all. You save the sources as you read, and it builds the list at the end."},
-      {"speaker": "user", "text": "Well that's a relief. I was picturing / index cards and a typewriter."},
-      {"speaker": "moshi", "text": "Things have gotten a lot easier. Your library will likely run a short workshop on it too, worth asking."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "studying.opt1",
-     "lead_in": "I can't decide how to study for my biology final, can you help?",
-     "options": [
-      "The first idea is joining a study group that meets every evening in the library for about two hours.",
-      "Then there's making flashcards on an app and going through them on the bus each morning.",
-      "Option three is just rereading my notes and the textbook chapters over the weekend.",
-      "And the last one is doing old practice exams my teacher posted online and checking the answers."
-     ],
-     "moshi_comment": [
-      "The practice exams are probably the strongest choice, since they show you exactly what you still don't know. Flashcards on the bus are a nice add-on for terms and definitions. Rereading notes feels productive, but it tends to stick the least.",
-      "How many days do you have before the final? If it's a week or more, I'd pair the practice exams with the study group. Rereading alone is the weakest of the four."
-     ]},
-    {"id": "studying.opt2",
-     "lead_in": "I'm trying to figure out where I should study this semester.",
-     "options": [
-      "One option is my bedroom desk, which is quiet but right next to my bed and my phone charger.",
-      "Another is the campus library, a twenty minute walk, but nobody bothers me there.",
-      "Or there's the coffee shop downstairs, a bit noisy, but I always feel weirdly focused there."
-     ],
-     "moshi_comment": [
-      "The library sounds like the best bet for deep work, the walk even gives you a little break. The coffee shop is great if the background noise actually helps you. Your bedroom is the riskiest, with the bed and phone so close.",
-      "Do you get distracted more by noise or by your phone? If it's the phone, the library is the clear winner. The coffee shop could work for lighter tasks like reviewing."
-     ]}
-  ]
+   ],
+   "pending": "essay first or split evenings between essay and chemistry",
+   "think_reask": [
+    "Okay, time's up. Essay first, or splitting your evenings between both?",
+    "So what feels better for this week, finishing the essay first or mixing the two each night?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were planning your week. Essay first, or split the evenings?",
+    "There you are. You were deciding between doing the essay first or splitting your time with chemistry."
+   ],
+   "endings": [
+    {
+     "user": "Essay first, I think. If it's done by Wednesday I can just cram chemistry after.",
+     "moshi": "Makes sense. Aim for a rough draft tonight and polish it tomorrow."
+    },
+    {
+     "user": "Let's split it. I'll forget all the chemistry if I leave it till the end.",
+     "moshi": "Good call. Try an hour of chemistry before the essay each night while you're fresh."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My study group wants to meet this weekend but I keep getting distracted when we do."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Would it help to meet somewhere quieter, like the library, or to set a fixed agenda before you start?"
+    }
+   ],
+   "pending": "quieter place or fixed agenda for the study group",
+   "think_reask": [
+    "So, any thoughts? A quieter spot, or a set agenda for the group?",
+    "Alright, what do you reckon would help more, changing the place or planning the session?"
+   ],
+   "welcome_back": [
+    "Hi again. You were thinking about your study group, a quieter place or a fixed agenda?",
+    "Welcome back. Did you settle on the library or an agenda for the weekend session?"
+   ],
+   "endings": [
+    {
+     "user": "The library, definitely. At someone's flat we just end up watching videos.",
+     "moshi": "That'll help a lot. Book a group room early, they fill up fast on weekends."
+    },
+    {
+     "user": "An agenda, I think. The place isn't really the problem, it's that nobody plans anything.",
+     "moshi": "Then send everyone a short list of topics tonight so you all show up ready."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've been reading my notes over and over but nothing sticks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rereading feels productive but it doesn't stick well. Want to try flashcards or practice questions instead?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe. Which one do you think?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Both work. It depends on whether your exam is more about facts or problem solving. Which is it?"
+    }
+   ],
+   "pending": "whether the exam is about facts or problem solving",
+   "think_reask": [
+    "So, is your exam mostly facts to remember, or problems to solve?",
+    "Time's up. Facts or problem solving, what's the exam more like?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were going to tell me if the exam is more facts or problem solving.",
+    "Oh, hi again. So, facts or problems, which kind of exam is it?"
+   ],
+   "endings": [
+    {
+     "user": "Mostly facts. It's biology, so lots of names and processes.",
+     "moshi": "Then flashcards are perfect. Shuffle them and keep the ones you miss in a separate pile."
+    },
+    {
+     "user": "Problem solving, it's a stats course.",
+     "moshi": "Go with practice questions then. Do them without looking at the answers first."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My driving theory test is in two weeks and I haven't opened anything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two weeks is enough if you're steady. Would you rather drill practice questions on an app, or read through the highway code first?"
+    }
+   ],
+   "pending": "practice question app or read the highway code first",
+   "think_reask": [
+    "So, app questions or the highway code first?",
+    "Okay, theory test. Starting with the app or the book?"
+   ],
+   "welcome_back": [
+    "The theory test plan. Practice app or highway code?",
+    "So, reading first or quizzing first?"
+   ],
+   "endings": [
+    {
+     "user": "App. I learn better when I get stuff wrong.",
+     "moshi": "Good. Do thirty questions a day, and look up every one you miss straight away."
+    },
+    {
+     "user": "Highway code. I need the basics before I start guessing.",
+     "moshi": "Fair. Skim a section each evening, then start the app at the end of the week."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter's maths homework uses a method I've never seen, and she's in tears."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh, the dreaded new methods. Do you want to learn her method together tonight, or show her your way and let the teacher sort it out?"
+    }
+   ],
+   "pending": "learn the new method together or teach the old way",
+   "think_reask": [
+    "So, are you learning her method or showing her yours?",
+    "Okay, tonight's homework. Her method, or your method?"
+   ],
+   "welcome_back": [
+    "The maths homework. Learning her school's method, or using yours?",
+    "Still deciding how to help with the maths. Which way?"
+   ],
+   "endings": [
+    {
+     "user": "Her method. I don't want to confuse her more.",
+     "moshi": "Kind choice. Ask her to explain it to you step by step, that's often how it clicks for both of you."
+    },
+    {
+     "user": "My way tonight, then a note to the teacher.",
+     "moshi": "That works. Just tell her both ways are right, so she doesn't feel she's breaking the rules."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I work nights in a warehouse and I'm doing an accounting course on the side."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lot. Would it be better to study right after your shift, or after you've slept, before the next one?"
+    }
+   ],
+   "pending": "study after the shift or after sleeping",
+   "think_reask": [
+    "So, studying straight after the shift, or after you've slept?",
+    "Any thoughts on timing? Post shift, or pre shift?"
+   ],
+   "welcome_back": [
+    "The study timing around your night shifts. After work, or after sleep?",
+    "So, when are you fitting in the accounting? Before bed or before work?"
+   ],
+   "endings": [
+    {
+     "user": "After sleep. I'm a zombie when I get home.",
+     "moshi": "Makes sense. An hour before your shift, when your head's fresh, will go much further."
+    },
+    {
+     "user": "Straight after. If I sleep first I never get round to it.",
+     "moshi": "Then keep it short, maybe forty minutes, so it doesn't eat into your sleep too much."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Revision timetable time. I've got seven subjects and six weeks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, let's build it. Do you want one subject per day, or two or three short sessions of different subjects each day?"
+    }
+   ],
+   "pending": "one subject per day or mixed sessions daily",
+   "think_reask": [
+    "So, one subject a day, or a mix every day?",
+    "Timetable time. Whole days per subject, or mixing it up?"
+   ],
+   "welcome_back": [
+    "Your revision timetable. Single subject days, or mixed?",
+    "Back to the seven subjects. Which kind of day suits you?"
+   ],
+   "endings": [
+    {
+     "user": "Mixed. I get bored doing one thing all day.",
+     "moshi": "Mixing is great for memory too. Try three sessions of an hour with a break between each."
+    },
+    {
+     "user": "One a day. I like getting properly stuck in.",
+     "moshi": "Fine. Just make sure each subject comes back around within a week so nothing fades."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dissertation is due in March and I've written literally nothing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, let's not panic yet. Would you rather start with the literature review, or jump straight into the methods chapter?"
+    }
+   ],
+   "pending": "start with the literature review or the methods chapter",
+   "think_reask": [
+    "So, literature review first, or methods?",
+    "Decided where to begin the dissertation?"
+   ],
+   "welcome_back": [
+    "Your dissertation. Lit review or methods first?",
+    "So, where's your first chapter going to be?"
+   ],
+   "endings": [
+    {
+     "user": "Methods. I know exactly what I did, so it's easier.",
+     "moshi": "Great choice. An easy first chapter builds momentum, and you can write the rest around it."
+    },
+    {
+     "user": "Lit review. I need to remind myself what everyone else said.",
+     "moshi": "Good. Just set a limit on reading, maybe two weeks, before you start writing."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I keep picking up my phone every five minutes when I study. It's pathetic."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's not pathetic, phones are designed for that. Would you rather put it in another room, or keep it nearby with an app that blocks everything?"
+    }
+   ],
+   "pending": "phone in another room or a blocking app",
+   "think_reask": [
+    "So, phone in another room, or the blocking app?",
+    "Have you picked a phone strategy yet?"
+   ],
+   "welcome_back": [
+    "The phone problem. Other room, or blocker app?",
+    "So, are we banishing the phone or locking it down?"
+   ],
+   "endings": [
+    {
+     "user": "Another room. If it's near me I'll find a way around the app.",
+     "moshi": "Honest answer. Use an old alarm clock for timing your sessions so you don't need it."
+    },
+    {
+     "user": "The app. I need it for my lecture slides.",
+     "moshi": "Makes sense. Block everything except the slides app, and turn notifications off."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Exam at nine tomorrow. It's eleven at night and I've still got two topics left."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, it's late. Do you want to spend thirty minutes on a quick summary of those topics, or call it now and get proper sleep?"
+    }
+   ],
+   "pending": "short last review or go to sleep now",
+   "think_reask": [
+    "So, a quick half hour on the last topics, or straight to bed?",
+    "Okay, it's getting later. Quick review or sleep?"
+   ],
+   "welcome_back": [
+    "The night before your exam. A short review, or bed?",
+    "So, is it sleep or one last look over those topics?"
+   ],
+   "endings": [
+    {
+     "user": "Half an hour, then bed. I'll feel better.",
+     "moshi": "Fine. Set a timer, skim the headings and key points only, and stop when it rings."
+    },
+    {
+     "user": "Bed. I'm too tired to take anything in anyway.",
+     "moshi": "Wise. A rested brain will do more in the morning than a tired one tonight."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I failed my maths resit by two marks. I can take it again in June."
+    },
+    {
+     "speaker": "moshi",
+     "text": "So close. That's frustrating. Would you rather get a tutor for weekly sessions, or work through an online course at your own pace?"
+    }
+   ],
+   "pending": "a tutor or an online course for the maths resit",
+   "think_reask": [
+    "So, a tutor, or an online course for June?",
+    "Okay, resit plan. Person or online?"
+   ],
+   "welcome_back": [
+    "Your maths resit. Tutor or online course?",
+    "So, how are you tackling June?"
+   ],
+   "endings": [
+    {
+     "user": "A tutor. I need someone to keep me on track.",
+     "moshi": "Good. Bring your marked paper to the first session so they can see exactly where those marks went."
+    },
+    {
+     "user": "Online. I can't really afford a tutor.",
+     "moshi": "That's fine. Pick one course, not five, and do past papers every weekend."
+    }
+   ]
+  },
+  {
+   "id": "studying.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Group project, and one guy in our group has done nothing for three weeks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Frustrating. Do you want to talk to him directly first, or go to your teacher about it?"
+    }
+   ],
+   "pending": "talk to the lazy teammate or tell the teacher",
+   "think_reask": [
+    "So, talking to him first, or going to the teacher?",
+    "Decided how to deal with your teammate?"
+   ],
+   "welcome_back": [
+    "The group project guy. Chat with him, or the teacher?",
+    "So, direct or official?"
+   ],
+   "endings": [
+    {
+     "user": "Talk to him. Maybe something's going on.",
+     "moshi": "Kind approach. Give him one clear task with a deadline, so it's easy for him to step back in."
+    },
+    {
+     "user": "Teacher. We've already tried hinting.",
+     "moshi": "Fair. Keep a short record of who did what, it helps the teacher mark it fairly."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "studying.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you keep the notes from last week's lecture?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Some of them. I missed the last half hour though."
+    },
+    {
+     "speaker": "user",
+     "text": "That's the part I need. The bit about supply curves."
+    },
+    {
+     "speaker": "friend",
+     "text": "Ask Tasha, she records everything on her laptop."
+    },
+    {
+     "speaker": "user",
+     "text": "Good idea. Can you send me her number?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, give me a second."
+    }
+   ]
+  },
+  {
+   "id": "studying.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Are you going to keep playing music while I'm studying?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I can put headphones on if it bothers you."
+    },
+    {
+     "speaker": "user",
+     "text": "It kind of does, yeah. I've read this page about four times now."
+    },
+    {
+     "speaker": "friend",
+     "text": "Fair enough. Want me to make you a tea while I'm up?"
+    },
+    {
+     "speaker": "user",
+     "text": "That would be amazing, thanks."
+    }
+   ]
+  },
+  {
+   "id": "studying.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, when's your last exam?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The twentieth. Statistics, the worst one."
+    },
+    {
+     "speaker": "user",
+     "text": "Same here, mine's the twenty-second. Want to quiz each other some evening?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yes please. I'm hopeless at the probability stuff."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm hopeless at all of it, so we'll be even."
+    },
+    {
+     "speaker": "friend",
+     "text": "Tuesday then? After dinner?"
+    },
+    {
+     "speaker": "user",
+     "text": "Tuesday works. I'll bring snacks."
+    }
+   ]
+  },
+  {
+   "id": "studying.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, quiz me. Bones of the arm. Go."
+    },
+    {
+     "speaker": "friend",
+     "text": "Okay, the long one from shoulder to elbow?"
+    },
+    {
+     "speaker": "user",
+     "text": "Humerus."
+    },
+    {
+     "speaker": "friend",
+     "text": "Correct. And the two in the forearm?"
+    },
+    {
+     "speaker": "user",
+     "text": "Radius and ulna. Which one's on the thumb side, though? I always mix them up."
+    },
+    {
+     "speaker": "friend",
+     "text": "Radius. Thumb, radius, think of a radio dial you turn with your thumb."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's good. Did you make that up?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Just now. You're welcome."
+    }
+   ]
+  },
+  {
+   "id": "studying.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Have you seen my calculator? The graphing one."
+    },
+    {
+     "speaker": "friend",
+     "text": "Is it the grey one with the cracked screen?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes! Exam's at two and I can't find it anywhere."
+    },
+    {
+     "speaker": "friend",
+     "text": "I borrowed it on Tuesday, sorry. It's in my bag by the door."
+    },
+    {
+     "speaker": "user",
+     "text": "You could have told me. I nearly bought a new one."
+    },
+    {
+     "speaker": "friend",
+     "text": "I know, I know. I'll buy you a coffee after your exam, deal?"
+    }
+   ]
+  },
+  {
+   "id": "studying.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, does this essay make sense? I've read it so many times the words look fake."
+    },
+    {
+     "speaker": "friend",
+     "text": "Hand it over. How long is it supposed to be?"
+    },
+    {
+     "speaker": "user",
+     "text": "Two thousand words. I'm at two thousand four hundred."
+    },
+    {
+     "speaker": "friend",
+     "text": "This whole paragraph about the history of the factory, do you need it?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe not. I just found it interesting."
+    },
+    {
+     "speaker": "friend",
+     "text": "Then cut it. Your argument starts on page two, it should start on page one."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh. You're right, but it hurts."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "studying.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How long should I study before taking a break?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot of people like about twenty-five minutes of focus, then a five minute break. After four rounds, take a longer one."
+    },
+    {
+     "speaker": "user",
+     "text": "Twenty-five feels short. I usually go for like two hours straight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can stretch it to fifty minutes if that suits you. Two hours without a break usually means the last half isn't sinking in."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, and what should I do during the break? I always / end up on my phone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try getting up instead. Walk around, refill your water, stretch. Your phone tends to turn five minutes into twenty."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, that's exactly what happens. I'll try leaving it in the other room."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's one of the simplest tricks that actually works. Good luck with it."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son has a spelling test tomorrow and he's getting really upset about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Poor thing. How many words does he need to learn?"
+    },
+    {
+     "speaker": "user",
+     "text": "Fifteen, and he's only got about half of them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a good start. Focus on the ones he's missing and make it a game, like spelling them out loud while bouncing a ball."
+    },
+    {
+     "speaker": "user",
+     "text": "He'd love that actually. Should we keep going tonight or / let him rest?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Do one short round of ten minutes, then stop. A quick review at breakfast will help more than a long session tonight."
+    },
+    {
+     "speaker": "user",
+     "text": "Breakfast, good idea. He's always more cheerful in the morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. And remind him that getting most of them right is still a great result."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it better to study in the morning or late at night?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends on you. Most people focus best a few hours after waking up, but some genuinely do their best work at night."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm definitely a night person. But my exam is at nine in the morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then shift your schedule a little earlier over the next week, so your brain is awake at nine on the day."
+    },
+    {
+     "speaker": "user",
+     "text": "How early are we talking?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try going to bed and waking up about half an hour earlier every couple of days. And do a few practice questions around nine each morning."
+    },
+    {
+     "speaker": "user",
+     "text": "That's sneaky. I / actually like that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a nice way to rehearse the real thing. You'll feel much less groggy on exam day."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm going back to college at fifty-five and I haven't written an essay in thirty years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's exciting. The basics haven't changed much. Have a clear argument, back it up, and keep each paragraph to one idea."
+    },
+    {
+     "speaker": "user",
+     "text": "What about all the referencing? That's what scares me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most colleges use one standard style and have a guide online. A free reference manager can format everything for you."
+    },
+    {
+     "speaker": "user",
+     "text": "So I don't have to type it all by hand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. You save the sources as you read, and it builds the list at the end."
+    },
+    {
+     "speaker": "user",
+     "text": "Well that's a relief. I was picturing / index cards and a typewriter."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Things have gotten a lot easier. Your library will likely run a short workshop on it too, worth asking."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've been staring at a blank document for two hours. The essay's due Friday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The blank page is the hardest part. What's the essay question?"
+    },
+    {
+     "speaker": "user",
+     "text": "Whether social media has made politics better or worse."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay. Forget the introduction for now. Just write three sentences, each one a reason for your answer, however messy."
+    },
+    {
+     "speaker": "user",
+     "text": "Messy is about all I can manage."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Messy is perfect. Once you have three reasons, each one becomes a paragraph, and the essay starts to build itself."
+    },
+    {
+     "speaker": "user",
+     "text": "And the intro? / That's where I always get stuck."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Write it last. It's much easier to introduce something that already exists."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "During exams my heart races and my mind goes blank, even when I know the stuff."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds really stressful, and it's very common. Your body's alarm system is just going off at the wrong time."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I switch it off?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Slow breathing helps quickly. Breathe in for four counts, out for six, a few times before you start and whenever you freeze."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I go blank on a question?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Skip it, do one you're sure about, then come back. Getting a few answers down calms the panic."
+    },
+    {
+     "speaker": "user",
+     "text": "I just feel like / everyone else is so calm."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of them aren't, they're just hiding it. It might also help to talk to your school's support team, they can sometimes arrange a quieter room."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have to recite a poem in English class on Monday. Forty lines. I'm going to die."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You'll survive, I promise. Have you got a favourite way of learning things by heart?"
+    },
+    {
+     "speaker": "user",
+     "text": "Not really. I just read it again and again."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try learning it in chunks of four lines. Say the first chunk out loud until you can do it without looking, then add the next."
+    },
+    {
+     "speaker": "user",
+     "text": "That takes forever."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's faster than rereading. Walk around while you practise, moving actually helps memory."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I forget a line / in front of everyone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pause, breathe, and carry on from where you remember. Most people won't even notice."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friend keeps talking about spaced repetition. What is it and is it worth it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It means reviewing things at growing intervals, like after one day, then three days, then a week. It's one of the best ways to remember long term."
+    },
+    {
+     "speaker": "user",
+     "text": "Why does it work better than just studying a lot once?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Because each time you nearly forget and then recall it, the memory gets stronger. Cramming fades fast."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need an app for it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Apps make it easy because they schedule reviews for you. But a box of paper cards sorted into piles works too."
+    },
+    {
+     "speaker": "user",
+     "text": "Paper cards sound / kind of nice, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They are. Writing the cards by hand is a bit of extra learning on its own."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got ADHD and studying normal ways just doesn't work for me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That makes sense. Lots of standard advice isn't built for how your brain works. What helps you focus, even a little?"
+    },
+    {
+     "speaker": "user",
+     "text": "Weirdly, noise. And moving around."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then lean into that. Try studying in a cafe, or with background sound, and take short walking breaks every twenty minutes."
+    },
+    {
+     "speaker": "user",
+     "text": "Twenty minutes feels short."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Short is good. Lots of quick wins keep your motivation going. You could also stand up while you read or use a whiteboard."
+    },
+    {
+     "speaker": "user",
+     "text": "My teachers always told me / to sit still and concentrate."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some people do learn best that way. You might not, and that's fine. What matters is finding what works for you."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son's in reception and he's supposed to read with me every night. He hates it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of little ones push back. How long are the sessions now?"
+    },
+    {
+     "speaker": "user",
+     "text": "About fifteen minutes, and it ends in a fight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try five minutes instead, and stop while he's still enjoying it. Short and happy builds the habit better."
+    },
+    {
+     "speaker": "user",
+     "text": "Will the teacher mind?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Teachers usually care much more about regular reading than long reading. A few calm minutes each night is great."
+    },
+    {
+     "speaker": "user",
+     "text": "He only wants / books about trucks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then read about trucks. Any book that keeps him excited about reading is doing its job."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm doing an online degree while working and raising two kids. I'm exhausted."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a huge amount to carry. When do you usually manage to study?"
+    },
+    {
+     "speaker": "user",
+     "text": "Late at night, after they're asleep. I fall asleep on my laptop half the time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Late nights after a full day are tough. Could you swap a few evenings for early mornings, before everyone's up?"
+    },
+    {
+     "speaker": "user",
+     "text": "Mornings are pretty chaotic too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even thirty minutes before the house wakes up can be your quietest time. And ask your partner or family to take the kids for one long block on the weekend."
+    },
+    {
+     "speaker": "user",
+     "text": "I feel guilty / asking for help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're doing this for your family's future too. Accepting help is part of making it work."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Work's paying for me to get a cloud networking certification and the exam is in a month."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice, a month is a decent runway. Have you looked at what the exam actually covers?"
+    },
+    {
+     "speaker": "user",
+     "text": "There's an official list of topics, like forty of them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use that list as your checklist. Rate each topic as confident, shaky or no idea, then spend most of your time on the shaky ones."
+    },
+    {
+     "speaker": "user",
+     "text": "Why not the no idea ones?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Shaky topics are the quickest marks to gain. Do the unknown ones second, once the basics are solid."
+    },
+    {
+     "speaker": "user",
+     "text": "Practice exams? / I've heard they're key for these."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're essential. Do a full one in week two to see where you are, and one every few days in the last week."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I actually read a textbook chapter? I get to the end and remember nothing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try reading it in three passes. First, skim the headings, pictures and summary, just for two minutes."
+    },
+    {
+     "speaker": "user",
+     "text": "Then read it properly?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then read it, but stop after each section and say out loud, in your own words, what it was about."
+    },
+    {
+     "speaker": "user",
+     "text": "Out loud, alone in my room? I'll feel ridiculous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Whisper it if you like. Explaining it to yourself is what makes it stick."
+    },
+    {
+     "speaker": "user",
+     "text": "And the third pass?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Close the book and jot down everything you remember. Then check what you missed. That's where the learning really happens."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I got a D on my last biology test and now I just don't want to study at all."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a rough feeling. A bad grade can really knock motivation. Do you know what went wrong?"
+    },
+    {
+     "speaker": "user",
+     "text": "Not really. I thought I knew it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's actually useful. It might mean you were reading and recognising things, but not testing yourself."
+    },
+    {
+     "speaker": "user",
+     "text": "So what, I just try harder?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not harder, differently. Go through the test and redo every question you missed, without looking at your notes first."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds painful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little. But it shows you exactly where the gaps are. One test doesn't decide what you're capable of."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's a mind map and do they actually help?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a diagram with the main topic in the middle, and branches going out for ideas and details. Lots of people find them great for seeing connections."
+    },
+    {
+     "speaker": "user",
+     "text": "Like a spider web."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. You can use colours, little drawings, and short words instead of full sentences."
+    },
+    {
+     "speaker": "user",
+     "text": "Would it work / for something like economics?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. Put a big idea like inflation in the middle, with branches for causes, effects, and examples."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, but don't I just end up drawing instead of studying?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you spend an hour on colours, maybe. Keep it quick and messy, the thinking is the useful part."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My grandson is struggling with times tables. Any tricks I can teach him?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots. Which ones give him the most trouble?"
+    },
+    {
+     "speaker": "user",
+     "text": "Sevens and eights, mostly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's a little rhyme for eight times eight. I ate and I ate till I was sick on the floor, eight times eight is sixty four."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, he'll love that. What about the sevens?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For those, practise in short bursts while doing something else, like counting stairs in sevens or clapping a rhythm."
+    },
+    {
+     "speaker": "user",
+     "text": "I was taught by / just repeating them over and over."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That works too, but games make it stick better, and it's more fun for you both."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I write a good introduction to an essay? Mine always sound so boring."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A good intro usually does three things. Hooks the reader, gives a bit of context, and states your main argument."
+    },
+    {
+     "speaker": "user",
+     "text": "What counts as a hook?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A surprising fact, a short story, or a strong question. Something that makes the reader want to keep going."
+    },
+    {
+     "speaker": "user",
+     "text": "My teacher says no rhetorical questions."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try a fact or a short scene. For example, for an essay on cities, start with a busy street at rush hour."
+    },
+    {
+     "speaker": "user",
+     "text": "And the argument bit, / how long should that be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "One or two clear sentences. The reader should know exactly what you're going to argue."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is there a standard way to write a lab report? My teacher just says follow the format."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most use the same sections. Title, aim, method, results, discussion and conclusion."
+    },
+    {
+     "speaker": "user",
+     "text": "What goes in the discussion? That's the one I never get."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's where you explain what your results mean, whether they match what you expected, and what might have gone wrong."
+    },
+    {
+     "speaker": "user",
+     "text": "Like if my measurements were a bit off?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Mention possible errors and how you'd improve the experiment next time."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it okay to say / it didn't work at all?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally. As long as you explain why you think it didn't work. That's real science."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've been studying ten hours a day for a month and I'm starting to feel numb."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds like burnout creeping in. Ten hours every day is a lot for anyone."
+    },
+    {
+     "speaker": "user",
+     "text": "But my exams are so close. I can't stop now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You don't have to stop. But cutting back to six focused hours with real breaks will probably get you more than ten tired ones."
+    },
+    {
+     "speaker": "user",
+     "text": "What counts as a real break?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Away from the desk and away from screens. A walk, a meal with someone, a shower. Anything that lets your brain switch off."
+    },
+    {
+     "speaker": "user",
+     "text": "And a day off? / That feels impossible."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even half a day a week helps. Rest is part of the plan, not a break from it."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Physics word problems. I read them and freeze."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Common one. Try a routine. First, write down every number they give you, with its unit."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, then what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Write down what they're actually asking for. Then look for the formula that connects what you know to what you want."
+    },
+    {
+     "speaker": "user",
+     "text": "Sometimes there are like / two formulas you need, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then work out the missing piece with the first formula, and use it in the second. Draw a quick sketch too, it helps a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "A sketch for physics?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. Even a box with arrows for forces makes the problem much less scary."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I commute an hour each way on the bus. Can I actually study on it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely, it just needs the right kind of studying. Things that don't need much space or writing work best."
+    },
+    {
+     "speaker": "user",
+     "text": "Like flashcards?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Flashcards are perfect. Podcasts or recorded lectures work too, and reading short sections on your phone."
+    },
+    {
+     "speaker": "user",
+     "text": "I get motion sick reading on buses."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then audio is your friend. Record yourself reading your notes and listen back, it's surprisingly effective."
+    },
+    {
+     "speaker": "user",
+     "text": "Listening to my own voice. / That sounds horrible."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Everyone hates their own voice at first. You'll stop noticing it after a few days."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What should I eat on the morning of an exam? I usually just skip breakfast."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try not to skip it. Something with slow energy, like porridge, eggs on toast, or yogurt with fruit, keeps you going."
+    },
+    {
+     "speaker": "user",
+     "text": "I get too nervous to eat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then something small. A banana and a glass of milk is better than nothing."
+    },
+    {
+     "speaker": "user",
+     "text": "And coffee?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you normally drink it, have your usual amount. Don't suddenly drink three cups, that can make the nerves worse."
+    },
+    {
+     "speaker": "user",
+     "text": "And what should I / bring in with me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Spare pens, a clear water bottle, your ID, and a watch if you're allowed. Pack it all the night before."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm terrified of plagiarism. How do I use sources in my essay without getting in trouble?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good that you're thinking about it. The key rule is, whenever you use someone else's words or ideas, you say where they came from."
+    },
+    {
+     "speaker": "user",
+     "text": "Even if I put it in my own words?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. Paraphrasing still needs a reference, because the idea is still theirs."
+    },
+    {
+     "speaker": "user",
+     "text": "And quotes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use quotation marks around the exact words, and reference them too. Most universities have a style guide that shows the format."
+    },
+    {
+     "speaker": "user",
+     "text": "There's software that checks, right? / What if it flags me by accident?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It flags matching text, but a properly referenced quote is fine. Teachers look at the context, not just the number."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My exam is open book. So I don't really need to study, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the trap. Open book exams are often harder, because they test whether you can use the information, not just find it."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh. That's not what I wanted to hear."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The good news is, you can prepare in a smart way. Organise your notes with tabs, and make a one page index of where everything is."
+    },
+    {
+     "speaker": "user",
+     "text": "Like a map of my own notes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. And practise answering questions with the book, under time pressure."
+    },
+    {
+     "speaker": "user",
+     "text": "Because there's / no time to look everything up."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Right. You should know the basics well enough to only check details."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My PhD viva is in three weeks. How do I prepare for being questioned for hours?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "First, reread your thesis carefully, and make a short summary of each chapter on one page."
+    },
+    {
+     "speaker": "user",
+     "text": "I've read it so many times I'm sick of it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's normal. This time, read it like an examiner. Look for weak spots, and prepare how you'd defend them."
+    },
+    {
+     "speaker": "user",
+     "text": "What kind of questions do they ask?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often why you chose your methods, what you'd do differently, and how your work fits into the field."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I do a mock one?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. Ask your supervisor or a colleague to grill you for an hour. It makes the real one feel much more familiar."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We just started homeschooling our ten year old and I have no idea how to plan a week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big change. Start simple. What subjects do you want to cover?"
+    },
+    {
+     "speaker": "user",
+     "text": "Maths, English, science, and some history. And she loves art."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try core subjects like maths and English in the mornings when she's freshest, and lighter things like art and history in the afternoons."
+    },
+    {
+     "speaker": "user",
+     "text": "How long should each lesson be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For ten, about forty five minutes with breaks is plenty. Homeschool days are often shorter than school days, and that's fine."
+    },
+    {
+     "speaker": "user",
+     "text": "I keep worrying / she's falling behind her friends."
+    },
+    {
+     "speaker": "moshi",
+     "text": "One to one time is really efficient. Check in with a simple test now and then, and you'll see how she's doing."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm taking my citizenship test next month. There's a whole book of history and laws to learn."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lot of facts. Do you know how the test is set up, multiple choice?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yes, twenty four questions, and I need eighteen right."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then practice tests are your best friend. Do one each day and write down every question you get wrong."
+    },
+    {
+     "speaker": "user",
+     "text": "Some of the dates are impossible to remember."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Link them to something. A story, an image, or another date you already know. Stories stick much better than numbers."
+    },
+    {
+     "speaker": "user",
+     "text": "My husband passed it / last year without studying much."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Everyone learns differently. A month of steady practice and you'll be well prepared."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I teach year eleven and they're just not revising. Any ideas to help them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Teenagers often don't know how to revise, they just reread. Teaching them a few methods directly can help a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what, flashcards?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Flashcards, self quizzing, and explaining things to a partner. Try short in class quizzes so they see the benefit."
+    },
+    {
+     "speaker": "user",
+     "text": "They groan at quizzes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Make them low stakes, maybe a quick team quiz at the start of lessons. No marks recorded, just practice."
+    },
+    {
+     "speaker": "user",
+     "text": "And getting them to / actually do it at home?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give them a simple weekly plan and check in on it briefly. Small, regular habits beat big revision lectures."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I took a year off before uni and now I feel like I've forgotten everything from school."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally normal after a gap year. The good news is it comes back faster than you'd think."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I study before term starts?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little can help. Look at the reading list for your first module and pick one or two key texts."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm doing engineering. There's a lot of maths."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then refresh your maths basics. Algebra, trigonometry and calculus from school are the foundations they'll build on."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, calculus. / I was never good at that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a few online practice problems each day. Even an hour a week for a month will make the first lectures much easier."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I share a bedroom with my little brother and it's impossible to study."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's tough. Is there anywhere else in the house you could use, even for an hour?"
+    },
+    {
+     "speaker": "user",
+     "text": "The kitchen, but my mum cooks there."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe after dinner, once it's cleared? Or ask if you can have the bedroom for a set time while your brother plays somewhere else."
+    },
+    {
+     "speaker": "user",
+     "text": "He's six. He doesn't care about my schedule."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair. Noise cancelling headphones or earplugs might help, and the school or local library could be a quieter option."
+    },
+    {
+     "speaker": "user",
+     "text": "The library closes at six, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then use it right after school, and save easier tasks for home. Little bits of quiet time can add up."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm seventy and studying for an amateur radio licence. My brain isn't what it used to be."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a great thing to take on. What's the hardest part so far?"
+    },
+    {
+     "speaker": "user",
+     "text": "The electronics. Ohms and volts and all that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's where most people struggle. Try thinking of it like water in pipes. Voltage is the pressure, current is how much flows."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that does make it easier."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And resistance is how narrow the pipe is. Once that picture clicks, the formulas make more sense."
+    },
+    {
+     "speaker": "user",
+     "text": "I write everything down / three times and still forget it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try explaining it out loud to someone, or even to the dog. Teaching it helps more than copying it."
+    }
+   ]
+  },
+  {
+   "id": "studying.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Results day. I missed the grade I needed for my first choice uni."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'm sorry, that's a hard moment. Have you checked if they'll still accept you?"
+    },
+    {
+     "speaker": "user",
+     "text": "Not yet. I'm too scared to look."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's worth checking right away. Sometimes universities accept people who miss by a little."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they say no?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then there's your second choice, or clearing, where unis offer spaces that are still open. Lots of people find great courses that way."
+    },
+    {
+     "speaker": "user",
+     "text": "I just feel like / I've ruined everything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You haven't. This feels huge today, but there are still lots of paths forward. Call the uni first, then we'll go from there."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "studying.opt1",
+   "lead_in": "I can't decide how to study for my biology final, can you help?",
+   "options": [
+    "The first idea is joining a study group that meets every evening in the library for about two hours.",
+    "Then there's making flashcards on an app and going through them on the bus each morning.",
+    "Option three is just rereading my notes and the textbook chapters over the weekend.",
+    "And the last one is doing old practice exams my teacher posted online and checking the answers."
+   ],
+   "moshi_comment": [
+    "The practice exams are probably the strongest choice, since they show you exactly what you still don't know. Flashcards on the bus are a nice add-on for terms and definitions. Rereading notes feels productive, but it tends to stick the least.",
+    "How many days do you have before the final? If it's a week or more, I'd pair the practice exams with the study group. Rereading alone is the weakest of the four."
+   ]
+  },
+  {
+   "id": "studying.opt2",
+   "lead_in": "I'm trying to figure out where I should study this semester.",
+   "options": [
+    "One option is my bedroom desk, which is quiet but right next to my bed and my phone charger.",
+    "Another is the campus library, a twenty minute walk, but nobody bothers me there.",
+    "Or there's the coffee shop downstairs, a bit noisy, but I always feel weirdly focused there."
+   ],
+   "moshi_comment": [
+    "The library sounds like the best bet for deep work, the walk even gives you a little break. The coffee shop is great if the background noise actually helps you. Your bedroom is the riskiest, with the bed and phone so close.",
+    "Do you get distracted more by noise or by your phone? If it's the phone, the library is the clear winner. The coffee shop could work for lighter tasks like reviewing."
+   ]
+  },
+  {
+   "id": "studying.opt3",
+   "lead_in": "I have to pick one elective for next term and I've narrowed it down.",
+   "options": [
+    "Psychology of learning, which sounds useful, but everyone says the exam is brutal.",
+    "Creative writing, purely coursework, and I'd actually enjoy it a lot.",
+    "Intro to statistics, which would look great for the jobs I want later.",
+    "Or film studies, where you basically watch movies and write about them."
+   ],
+   "moshi_comment": [
+    "Statistics is the most useful for your future jobs, even if it's not the most fun. Creative writing would be a nice break and the coursework means no big exam stress. Psychology is interesting, but a brutal exam on top of your main subjects could be a lot.",
+    "How heavy is the rest of your term? If it's already packed, creative writing or film keeps things balanced. If you've got room, statistics will pay off long after the course ends."
+   ]
+  },
+  {
+   "id": "studying.opt4",
+   "lead_in": "I've got a whole free Saturday to study and I can't decide how to use it.",
+   "options": [
+    "I could spend the morning on chemistry past papers and the afternoon reviewing what I got wrong.",
+    "Another idea is to go to the library with my friend and work alongside her all day.",
+    "Or split the day into four short blocks with a different subject in each and long breaks."
+   ],
+   "moshi_comment": [
+    "The past paper plan is the most effective if chemistry is your weakest subject, since mistakes are where the learning is. The library with your friend helps motivation, but only if you actually work. The four blocks are great for keeping everything ticking over.",
+    "I'd combine two. Do the chemistry papers in the library, so your friend keeps you honest, then use the evening for a lighter subject. A whole day on four subjects might feel scattered."
+   ]
+  },
+  {
+   "id": "studying.opt5",
+   "lead_in": "I keep trying different ways of taking notes in lectures and nothing is working.",
+   "options": [
+    "Typing everything on my laptop, which is fast, but I don't remember any of it.",
+    "Writing by hand in a notebook, slower, but it feels like it sticks better.",
+    "Just listening and then writing a summary afterwards from the slides.",
+    "Or recording the lecture and making notes from the recording at home."
+   ],
+   "moshi_comment": [
+    "Typing gets everything down, but it's easy to go on autopilot. Handwriting forces you to choose what matters, which helps memory. Writing a summary afterwards is great too, but only if you do it the same day.",
+    "Recording lectures sounds good but doubles your time, so I'd avoid it except for hard topics. Handwritten notes plus a quick summary that evening is a strong combination for most people."
+   ]
+  },
+  {
+   "id": "studying.opt6",
+   "lead_in": "For my history coursework I can pick any question from a list and I like three of them.",
+   "options": [
+    "Why the printing press changed religion in Europe, which has tons of sources.",
+    "How ordinary women lived during the industrial revolution, which I find really moving.",
+    "Or whether a single battle really decided a whole war, which is a bit of a debate topic."
+   ],
+   "moshi_comment": [
+    "The printing press question is safe because sources are easy to find. The industrial revolution one is the one you sound most excited about, and passion usually shows in the writing. The battle question is great if you like arguing a clear side.",
+    "Go with the women in the industrial revolution if you can find enough sources, because caring about it will carry you through the long writing. Keep the printing press as a backup if your library is thin on material."
+   ]
+  }
+ ]
 }

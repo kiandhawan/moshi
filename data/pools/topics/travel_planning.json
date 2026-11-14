@@ -1,162 +1,1956 @@
 {
-  "topic": "travel_planning",
-  "contexts": [
+ "topic": "travel_planning",
+ "contexts": [
+  {
+   "id": "travel_planning.ctx1",
+   "turns": [
     {
-      "id": "travel_planning.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "We've got a week off in spring and want somewhere warm, but not a twelve hour flight."},
-        {"speaker": "moshi", "text": "Lisbon, Seville or one of the Greek islands would all fit. Are you more in the mood for a city or a beach?"}
-      ],
-      "pending": "city break or beach for spring week",
-      "think_reask": [
-        "So, have you made up your mind? City break or beach?",
-        "Time's up! For your spring week, are we looking at a city or a beach?",
-        "Any thoughts yet, Lisbon and Seville for a city, or a Greek island for the beach?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were planning your spring week. City or beach?",
-        "Hi again. You were deciding between a city trip and somewhere with a beach.",
-        "There you are. Did you settle on city or beach for spring?"
-      ],
-      "endings": [
-        {"user": "City, definitely. I get bored lying on the sand.", "moshi": "Then Lisbon is a great pick. Lots of walking, good food and day trips to the coast if you change your mind."},
-        {"user": "Beach. We need a proper rest this time.", "moshi": "A Greek island it is. Crete is easy to reach and still quiet in spring."}
-      ]
+     "speaker": "user",
+     "text": "We've got a week off in spring and want somewhere warm, but not a twelve hour flight."
     },
     {
-      "id": "travel_planning.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I found two flights to Tokyo. One is cheaper but has a nine hour layover."},
-        {"speaker": "moshi", "text": "That layover is long, but you could leave the airport for a few hours. Is saving the money worth the extra travel time to you?"}
-      ],
-      "pending": "cheap flight with long layover or direct flight",
-      "think_reask": [
-        "So, have you decided? The cheaper flight with the layover, or the faster one?",
-        "Okay, back to the Tokyo flights. Is the money worth the nine hours?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing between the two Tokyo flights.",
-        "Hey, good to have you back. Did you decide whether the long layover is worth the savings?"
-      ],
-      "endings": [
-        {"user": "Yeah, I'll take the cheap one. I'm a student, every bit counts.", "moshi": "Makes sense. Bring a neck pillow and check whether you need a transit visa to leave the airport."},
-        {"user": "No, I'll pay more. I hate airports.", "moshi": "Fair enough. You'll arrive much fresher, and that first day in Tokyo is worth a lot."}
-      ]
-    },
-    {
-      "id": "travel_planning.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "Help me pack for a long weekend in Edinburgh in October."},
-        {"speaker": "moshi", "text": "It'll be cool and probably rainy. First, carry-on only, or are you checking a bag?"},
-        {"speaker": "user", "text": "Oh, I hadn't thought about that."},
-        {"speaker": "moshi", "text": "It changes what you can bring, so it's worth deciding now."}
-      ],
-      "pending": "carry-on only or checked bag",
-      "think_reask": [
-        "So, carry-on only or a checked bag for Edinburgh?",
-        "Have you decided on the bag situation for your trip?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were packing for Edinburgh. Carry-on only, or checking a bag?",
-        "Hi again. Still thinking about carry-on versus a checked bag?"
-      ],
-      "endings": [
-        {"user": "Carry-on. I don't want to wait at baggage claim.", "moshi": "Good. Wear your bulkiest jacket and boots on the plane, and pack layers you can mix."},
-        {"user": "I'll check a bag, I always bring too much.", "moshi": "No judgment. Then pack a proper raincoat and an extra pair of shoes in case one gets soaked."}
-      ]
+     "speaker": "moshi",
+     "text": "Lisbon, Seville or one of the Greek islands would all fit. Are you more in the mood for a city or a beach?"
     }
-  ],
-  "side_conversations": [
-    {"id": "travel_planning.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, when does your passport expire? I need to check before I book anything."},
-      {"speaker": "friend", "text": "Uh, sometime next year I think. Let me look."},
-      {"speaker": "user", "text": "Some countries want six months left on it, so it matters."},
-      {"speaker": "friend", "text": "Okay, found it. It's good until next August."},
-      {"speaker": "user", "text": "Perfect, that works. Mine's fine too."}
-    ]},
-    {"id": "travel_planning.side2", "turns": [
-      {"speaker": "user", "text": "Do you care if we stay in a hotel or would you rather rent an apartment?"},
-      {"speaker": "friend", "text": "Apartment, if it has a kitchen. Eating out every night gets expensive."},
-      {"speaker": "user", "text": "True. But hotels usually have breakfast included."},
-      {"speaker": "friend", "text": "We can buy croissants. Honestly I just want a balcony."},
-      {"speaker": "user", "text": "Ha, okay, balcony and kitchen. I'll filter for that."},
-      {"speaker": "friend", "text": "And not too far from the train station please, with all our bags."}
-    ]},
-    {"id": "travel_planning.side3", "turns": [
-      {"speaker": "user", "text": "Hey {friend}, can you drive us to the airport on Friday morning?"},
-      {"speaker": "friend", "text": "What time is the flight?"},
-      {"speaker": "user", "text": "Seven forty, so we'd need to leave around five."},
-      {"speaker": "friend", "text": "Five in the morning? You owe me big for that one."},
-      {"speaker": "user", "text": "I'll bring you back something nice, I promise. What do you want?"},
-      {"speaker": "friend", "text": "Chocolate. Lots of chocolate."},
-      {"speaker": "user", "text": "Done."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "travel_planning.dlg1", "turns": [
-      {"speaker": "user", "text": "What's the best way to get from Paris to Amsterdam?"},
-      {"speaker": "moshi", "text": "The train is easiest. It takes a bit over three hours and drops you right in the city center."},
-      {"speaker": "user", "text": "Is it expensive?"},
-      {"speaker": "moshi", "text": "It can be if you book late. Book a few weeks ahead and you'll often find much cheaper fares."},
-      {"speaker": "user", "text": "What about flying? It's only / like an hour in the air, right?"},
-      {"speaker": "moshi", "text": "About an hour, yes, but with getting to the airport and security it usually ends up slower than the train."},
-      {"speaker": "user", "text": "Okay, train it is. Should I stop somewhere on the way?"},
-      {"speaker": "moshi", "text": "Brussels or Antwerp make a nice stop. You could spend an afternoon there and catch a later train."}
-    ]},
-    {"id": "travel_planning.dlg2", "turns": [
-      {"speaker": "user", "text": "I'm taking my two kids on their first flight next month. Any tips?"},
-      {"speaker": "moshi", "text": "Bring snacks, headphones and something new for each of them to unwrap on the plane. Novelty buys you a lot of quiet time."},
-      {"speaker": "user", "text": "Ha, good one. They're four and seven. Will their ears hurt?"},
-      {"speaker": "moshi", "text": "Sometimes during takeoff and landing. Chewing or drinking through a straw really helps."},
-      {"speaker": "user", "text": "Should I get seats near the front or / actually, does it matter?"},
-      {"speaker": "moshi", "text": "Near the front means getting off faster, which is nice with tired kids. Window seats keep them entertained too."},
-      {"speaker": "user", "text": "And can I bring their car seat?"},
-      {"speaker": "moshi", "text": "Most airlines let you check it for free. Some approved seats can even be used on board, so ask your airline."}
-    ]},
-    {"id": "travel_planning.dlg3", "turns": [
-      {"speaker": "user", "text": "Do I need travel insurance for a short trip inside Europe?"},
-      {"speaker": "moshi", "text": "It's not required, but it's cheap and covers things like cancellations and lost luggage. Worth it for peace of mind."},
-      {"speaker": "user", "text": "My credit card might already include some. How do I check?"},
-      {"speaker": "moshi", "text": "Look in your card's benefits page or call them. Often you have to pay for the trip with that card for it to count."},
-      {"speaker": "user", "text": "I paid for the hotel with it but the flights / hmm, I think with my debit card."},
-      {"speaker": "moshi", "text": "Then the flights might not be covered. A basic policy just for the trip could fill that gap."},
-      {"speaker": "user", "text": "Got it. Thanks, that's really helpful."},
-      {"speaker": "moshi", "text": "You're welcome. Have a great trip!"}
-    ]},
-    {"id": "travel_planning.dlg4", "turns": [
-      {"speaker": "user", "text": "My wife and I want to do a road trip along the coast for our anniversary. How many days should we plan?"},
-      {"speaker": "moshi", "text": "That depends on the distance, but five to seven days usually lets you drive a few hours a day and still enjoy the stops."},
-      {"speaker": "user", "text": "We're not in a hurry. We're both retired."},
-      {"speaker": "moshi", "text": "Then take your time. Two nights in the nicest spots makes it feel like a holiday instead of a race."},
-      {"speaker": "user", "text": "Should we book the hotels in advance or / just see where we end up?"},
-      {"speaker": "moshi", "text": "Book the weekends and any popular towns ahead. Weekdays you can usually find something on the day."},
-      {"speaker": "user", "text": "That's a good balance. Anything special for an anniversary?"},
-      {"speaker": "moshi", "text": "Pick one night with a really good dinner and a view. Mention the anniversary when you book, places often add a little surprise."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "travel_planning.opt1",
-     "lead_in": "We're trying to pick where to go for a long weekend in the spring.",
-     "options": [
-       "The first option is a beach town about four hours away, warm, but it might still be a little too cold to swim.",
-       "Then there's a big city trip with museums and restaurants, but the hotels there are pretty expensive.",
-       "Option three is a cabin in the mountains, really quiet, with hiking trails right outside the door.",
-       "And the last one is just staying home and doing day trips, which would save a lot of money."
-     ],
-     "moshi_comment": [
-       "If you want to recharge, the mountain cabin sounds perfect, quiet and close to nature. The city trip is great for food and culture, but those hotel prices could add up fast. The beach town might be a bit disappointing if it's too cold to swim.",
-       "What are you hoping to get out of the weekend, rest or excitement? For rest, I'd pick the cabin. For excitement, the city is the clear winner, and day trips from home are a nice backup if money is tight."
-     ]},
-    {"id": "travel_planning.opt2",
-     "lead_in": "My sister and I can't agree on how to get to the wedding next month.",
-     "options": [
-       "One way is to fly, which takes about two hours, but the tickets are expensive this close to the date.",
-       "Another is to take the train, around seven hours, but it's comfortable and we can work on the way.",
-       "Or we could drive, which is cheapest split between two people, though it's a long day in the car."
-     ],
-     "moshi_comment": [
-       "The train sounds like a nice middle ground, it's comfortable and you don't lose the whole day since you can work. Flying is fastest, but those last minute prices hurt. Driving is cheapest, and you'd have a car once you get there, which can be handy.",
-       "Will you need a car at the wedding location? If yes, driving together probably makes the most sense. If not, I'd take the train, it's much more relaxing than seven hours behind the wheel."
-     ]}
-  ]
+   ],
+   "pending": "city break or beach for spring week",
+   "think_reask": [
+    "So, have you made up your mind? City break or beach?",
+    "Time's up! For your spring week, are we looking at a city or a beach?",
+    "Any thoughts yet, Lisbon and Seville for a city, or a Greek island for the beach?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were planning your spring week. City or beach?",
+    "Hi again. You were deciding between a city trip and somewhere with a beach.",
+    "There you are. Did you settle on city or beach for spring?"
+   ],
+   "endings": [
+    {
+     "user": "City, definitely. I get bored lying on the sand.",
+     "moshi": "Then Lisbon is a great pick. Lots of walking, good food and day trips to the coast if you change your mind."
+    },
+    {
+     "user": "Beach. We need a proper rest this time.",
+     "moshi": "A Greek island it is. Crete is easy to reach and still quiet in spring."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I found two flights to Tokyo. One is cheaper but has a nine hour layover."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That layover is long, but you could leave the airport for a few hours. Is saving the money worth the extra travel time to you?"
+    }
+   ],
+   "pending": "cheap flight with long layover or direct flight",
+   "think_reask": [
+    "So, have you decided? The cheaper flight with the layover, or the faster one?",
+    "Okay, back to the Tokyo flights. Is the money worth the nine hours?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing between the two Tokyo flights.",
+    "Hey, good to have you back. Did you decide whether the long layover is worth the savings?"
+   ],
+   "endings": [
+    {
+     "user": "Yeah, I'll take the cheap one. I'm a student, every bit counts.",
+     "moshi": "Makes sense. Bring a neck pillow and check whether you need a transit visa to leave the airport."
+    },
+    {
+     "user": "No, I'll pay more. I hate airports.",
+     "moshi": "Fair enough. You'll arrive much fresher, and that first day in Tokyo is worth a lot."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Help me pack for a long weekend in Edinburgh in October."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It'll be cool and probably rainy. First, carry-on only, or are you checking a bag?"
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I hadn't thought about that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It changes what you can bring, so it's worth deciding now."
+    }
+   ],
+   "pending": "carry-on only or checked bag",
+   "think_reask": [
+    "So, carry-on only or a checked bag for Edinburgh?",
+    "Have you decided on the bag situation for your trip?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were packing for Edinburgh. Carry-on only, or checking a bag?",
+    "Hi again. Still thinking about carry-on versus a checked bag?"
+   ],
+   "endings": [
+    {
+     "user": "Carry-on. I don't want to wait at baggage claim.",
+     "moshi": "Good. Wear your bulkiest jacket and boots on the plane, and pack layers you can mix."
+    },
+    {
+     "user": "I'll check a bag, I always bring too much.",
+     "moshi": "No judgment. Then pack a proper raincoat and an extra pair of shoes in case one gets soaked."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm finally doing it. Three months backpacking in Southeast Asia, starting in January."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exciting! Thailand is the easiest place to land and find your feet, while Vietnam has amazing food but is a bit more hectic. Where do you want to start?"
+    }
+   ],
+   "pending": "starting the backpacking trip in Thailand or Vietnam",
+   "think_reask": [
+    "So, where does the big trip begin, Thailand or Vietnam?",
+    "Which country gets you first, the easy start or the food?"
+   ],
+   "welcome_back": [
+    "So, your first stop in January. Thailand or Vietnam?",
+    "Three months of backpacking, and the first country still open. Any idea?"
+   ],
+   "endings": [
+    {
+     "user": "Thailand. I want an easy first week.",
+     "moshi": "Sensible. Spend a few days in Bangkok, then head north to Chiang Mai before the islands get busy."
+    },
+    {
+     "user": "Vietnam, I'm going for the food.",
+     "moshi": "Great. Fly into Hanoi, eat everything, and work your way south over three or four weeks."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My fiance and I can't agree on the honeymoon. He wants a beach, I want animals."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You might not have to choose. A safari followed by a few days on the coast in Kenya or Tanzania gives you both. Would that work for your budget, or do you need to pick one?"
+    }
+   ],
+   "pending": "a safari plus beach combo or picking only one",
+   "think_reask": [
+    "So, safari and beach together, or just one of them?",
+    "Can the budget stretch to both, or is it one or the other?"
+   ],
+   "welcome_back": [
+    "The honeymoon question. Combo trip or just one?",
+    "Safari and beach, or do you have to pick?"
+   ],
+   "endings": [
+    {
+     "user": "Let's do both, we'll save up a bit more.",
+     "moshi": "Lovely. Four nights on safari, then five on Zanzibar to rest. Book the safari lodges first, they fill up early."
+    },
+    {
+     "user": "Just one. Honestly, I'll let him have the beach.",
+     "moshi": "That's generous. Maybe find a beach resort near a marine park, so you can at least see turtles and dolphins."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My work trip to Chicago ends on a Friday. My company says I can stay the weekend if I pay for the hotel."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a good deal, the flight's already covered. Do you want to explore the city, or would you rather get home to your family?"
+    }
+   ],
+   "pending": "staying the weekend in Chicago or flying home",
+   "think_reask": [
+    "So, a weekend in Chicago, or straight home on Friday?",
+    "Are you staying on or heading back?"
+   ],
+   "welcome_back": [
+    "Your Chicago trip, staying the weekend or going home?",
+    "The free weekend in Chicago. Taking it?"
+   ],
+   "endings": [
+    {
+     "user": "I'll stay. When else will I get to see it?",
+     "moshi": "Great. Do an architecture boat tour on Saturday and the art museum on Sunday morning before your flight."
+    },
+    {
+     "user": "Home. My kids would never forgive me.",
+     "moshi": "Totally fair. Maybe pick up something from the city for them at the airport."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to take my parents somewhere for their fortieth anniversary. They're in their seventies and my dad has a bad knee."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's lovely. A river cruise means no packing and unpacking, while a rail tour shows more scenery but has more walking. Which would suit them better?"
+    }
+   ],
+   "pending": "a river cruise or a rail tour for the parents",
+   "think_reask": [
+    "So for your parents, the river cruise or the rail tour?",
+    "Which one do you think your dad's knee would prefer?"
+   ],
+   "welcome_back": [
+    "Your parents' anniversary trip. Cruise or train?",
+    "So, river or rails for the two of them?"
+   ],
+   "endings": [
+    {
+     "user": "The cruise. Less walking for Dad.",
+     "moshi": "Good call. A Danube or Rhine cruise has short, optional shore trips, so he can rest whenever he likes."
+    },
+    {
+     "user": "Train. Mum loves watching the landscape go by.",
+     "moshi": "Then look for a tour with luggage transfers included, so they never carry bags between hotels."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "For Barcelona, there's a tiny hotel in the old town or a bigger place outside the center with a pool. Same price."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The old town puts you right in the action, but it can be noisy at night. The pool is great in summer, but you'd take the metro in. What matters more to you?"
+    }
+   ],
+   "pending": "the central old town hotel or the one with a pool",
+   "think_reask": [
+    "So, old town or the pool hotel?",
+    "Location or pool, which wins?"
+   ],
+   "welcome_back": [
+    "The Barcelona hotel. Center or pool?",
+    "Still the two Barcelona hotels. Which way are you leaning?"
+   ],
+   "endings": [
+    {
+     "user": "Pool. It's August, I'll melt.",
+     "moshi": "Good point. Just check how close it is to a metro stop, ideally under ten minutes' walk."
+    },
+    {
+     "user": "Old town. I want to walk everywhere.",
+     "moshi": "Then ask for a room at the back, away from the street. Bring earplugs anyway."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm packing for a week in Greece and I can't decide whether to bring my laptop."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Is it for work you really need to do, or just in case?"
+    },
+    {
+     "speaker": "user",
+     "text": "Just in case. Probably."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's mostly about whether you'll actually switch off without it. Would leaving it home be a relief or a worry?"
+    }
+   ],
+   "pending": "taking the laptop to Greece or leaving it behind",
+   "think_reask": [
+    "So, does the laptop come to Greece or stay home?",
+    "Relief or worry, what did you decide?"
+   ],
+   "welcome_back": [
+    "About the laptop. In the bag or not?",
+    "So, Greece with or without the laptop?"
+   ],
+   "endings": [
+    {
+     "user": "Leaving it. My phone is enough.",
+     "moshi": "Good for you. Tell your team you're offline and set an out of office before you go."
+    },
+    {
+     "user": "I'll bring it, but it stays in the hotel safe.",
+     "moshi": "A fair compromise. Maybe allow yourself one check in the evening, and that's it."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The flexible ticket is eighty dollars more than the cheap one. The trip is in four months."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Four months is a long time for plans to change. How likely is it that your dates could move?"
+    }
+   ],
+   "pending": "buying the flexible ticket or the cheap one",
+   "think_reask": [
+    "So, flexible fare or the cheaper one?",
+    "Are you paying the extra eighty or taking the risk?"
+   ],
+   "welcome_back": [
+    "The two tickets. Flexible or cheap?",
+    "So, are your dates solid enough for the cheap fare?"
+   ],
+   "endings": [
+    {
+     "user": "Pretty likely, actually. My sister's due date is close.",
+     "moshi": "Then the flexible one is worth it. Eighty dollars is a lot less than buying a second ticket."
+    },
+    {
+     "user": "They won't change. I've already booked the time off.",
+     "moshi": "Then go cheap and keep the eighty for a nice dinner when you get there."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're going to Ireland for a family reunion in Kerry. Should we rent a car or use buses?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Buses connect the towns, but the countryside is much easier by car. Are you comfortable driving on the left on narrow roads?"
+    }
+   ],
+   "pending": "renting a car or taking buses in Ireland",
+   "think_reask": [
+    "So, car or buses for Kerry?",
+    "Are you up for driving on the left, or sticking to buses?"
+   ],
+   "welcome_back": [
+    "Your trip to Kerry. Hire a car or not?",
+    "We'd stopped at the car question for Ireland. Decided?"
+   ],
+   "endings": [
+    {
+     "user": "I'll drive. My cousin says it's fine once you get used to it.",
+     "moshi": "Then book an automatic, it's one less thing to think about, and avoid the smallest back roads at night."
+    },
+    {
+     "user": "Buses. I'd be terrified on those roads.",
+     "moshi": "That's fine. Base yourselves in Killarney, it has good connections and lots of local tours."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Eight of us are going to Porto for a friend's fortieth. Big villa or separate hotel rooms?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A villa is usually cheaper per person and better for a party, but hotel rooms give everyone their own space. What's the group like?"
+    }
+   ],
+   "pending": "a shared villa or separate hotel rooms for the group",
+   "think_reask": [
+    "So, one villa for all eight, or separate rooms?",
+    "Party house or privacy, which suits your group?"
+   ],
+   "welcome_back": [
+    "The Porto birthday trip. Villa or hotel?",
+    "So, are the eight of you sharing a house or not?"
+   ],
+   "endings": [
+    {
+     "user": "Villa. We're loud and we like cooking together.",
+     "moshi": "Perfect. Look for one with a big table and a terrace, and check the noise rules before booking."
+    },
+    {
+     "user": "Hotel. A couple of them snore like trains.",
+     "moshi": "Ha, then hotel it is. Pick one with a nice bar so you still have a meeting point."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "travel_planning.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, when does your passport expire? I need to check before I book anything."
+    },
+    {
+     "speaker": "friend",
+     "text": "Uh, sometime next year I think. Let me look."
+    },
+    {
+     "speaker": "user",
+     "text": "Some countries want six months left on it, so it matters."
+    },
+    {
+     "speaker": "friend",
+     "text": "Okay, found it. It's good until next August."
+    },
+    {
+     "speaker": "user",
+     "text": "Perfect, that works. Mine's fine too."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do you care if we stay in a hotel or would you rather rent an apartment?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Apartment, if it has a kitchen. Eating out every night gets expensive."
+    },
+    {
+     "speaker": "user",
+     "text": "True. But hotels usually have breakfast included."
+    },
+    {
+     "speaker": "friend",
+     "text": "We can buy croissants. Honestly I just want a balcony."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, okay, balcony and kitchen. I'll filter for that."
+    },
+    {
+     "speaker": "friend",
+     "text": "And not too far from the train station please, with all our bags."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey {friend}, can you drive us to the airport on Friday morning?"
+    },
+    {
+     "speaker": "friend",
+     "text": "What time is the flight?"
+    },
+    {
+     "speaker": "user",
+     "text": "Seven forty, so we'd need to leave around five."
+    },
+    {
+     "speaker": "friend",
+     "text": "Five in the morning? You owe me big for that one."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll bring you back something nice, I promise. What do you want?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Chocolate. Lots of chocolate."
+    },
+    {
+     "speaker": "user",
+     "text": "Done."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Window or aisle? I'm booking our seats now."
+    },
+    {
+     "speaker": "friend",
+     "text": "Aisle. You know I drink a litre of water on every flight."
+    },
+    {
+     "speaker": "user",
+     "text": "Then I'm getting the window and you're not climbing over me."
+    },
+    {
+     "speaker": "friend",
+     "text": "Deal. Is there food included or do we bring snacks?"
+    },
+    {
+     "speaker": "user",
+     "text": "Says here a light meal. Light meaning a cracker, probably."
+    },
+    {
+     "speaker": "friend",
+     "text": "Bring snacks then. And get the seats near the front if they're free."
+    },
+    {
+     "speaker": "user",
+     "text": "Those cost extra. Twelve each."
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine, skip it. We're not in a rush anyway."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, any chance you could feed the cat while we're away?"
+    },
+    {
+     "speaker": "friend",
+     "text": "How long are you gone?"
+    },
+    {
+     "speaker": "user",
+     "text": "Nine days. Just once a day, and maybe scoop the litter."
+    },
+    {
+     "speaker": "friend",
+     "text": "Nine days of litter. You owe me big."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll bring you back something nice. Chocolate? A fridge magnet?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not a magnet. Something edible, please."
+    },
+    {
+     "speaker": "user",
+     "text": "Edible it is. I'll leave the spare key under the plant."
+    },
+    {
+     "speaker": "friend",
+     "text": "Text me her food amounts, I'll forget otherwise."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey {friend}, we only have one free day in the city. Museum or the big market?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The market, obviously. You'd spend six hours reading every little sign in a museum."
+    },
+    {
+     "speaker": "user",
+     "text": "That is unfair. And accurate."
+    },
+    {
+     "speaker": "friend",
+     "text": "We could do the market in the morning and a short museum visit after lunch?"
+    },
+    {
+     "speaker": "user",
+     "text": "A short museum visit. You know that's not how I work."
+    },
+    {
+     "speaker": "friend",
+     "text": "Two hours, max. I'll set an alarm."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine. But I get to pick where we eat dinner."
+    },
+    {
+     "speaker": "friend",
+     "text": "As long as it's not another place with a twenty minute queue."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "travel_planning.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the best way to get from Paris to Amsterdam?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The train is easiest. It takes a bit over three hours and drops you right in the city center."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it expensive?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be if you book late. Book a few weeks ahead and you'll often find much cheaper fares."
+    },
+    {
+     "speaker": "user",
+     "text": "What about flying? It's only / like an hour in the air, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About an hour, yes, but with getting to the airport and security it usually ends up slower than the train."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, train it is. Should I stop somewhere on the way?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brussels or Antwerp make a nice stop. You could spend an afternoon there and catch a later train."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm taking my two kids on their first flight next month. Any tips?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring snacks, headphones and something new for each of them to unwrap on the plane. Novelty buys you a lot of quiet time."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, good one. They're four and seven. Will their ears hurt?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sometimes during takeoff and landing. Chewing or drinking through a straw really helps."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I get seats near the front or / actually, does it matter?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Near the front means getting off faster, which is nice with tired kids. Window seats keep them entertained too."
+    },
+    {
+     "speaker": "user",
+     "text": "And can I bring their car seat?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most airlines let you check it for free. Some approved seats can even be used on board, so ask your airline."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do I need travel insurance for a short trip inside Europe?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's not required, but it's cheap and covers things like cancellations and lost luggage. Worth it for peace of mind."
+    },
+    {
+     "speaker": "user",
+     "text": "My credit card might already include some. How do I check?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look in your card's benefits page or call them. Often you have to pay for the trip with that card for it to count."
+    },
+    {
+     "speaker": "user",
+     "text": "I paid for the hotel with it but the flights / hmm, I think with my debit card."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the flights might not be covered. A basic policy just for the trip could fill that gap."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it. Thanks, that's really helpful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're welcome. Have a great trip!"
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My wife and I want to do a road trip along the coast for our anniversary. How many days should we plan?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That depends on the distance, but five to seven days usually lets you drive a few hours a day and still enjoy the stops."
+    },
+    {
+     "speaker": "user",
+     "text": "We're not in a hurry. We're both retired."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then take your time. Two nights in the nicest spots makes it feel like a holiday instead of a race."
+    },
+    {
+     "speaker": "user",
+     "text": "Should we book the hotels in advance or / just see where we end up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Book the weekends and any popular towns ahead. Weekdays you can usually find something on the day."
+    },
+    {
+     "speaker": "user",
+     "text": "That's a good balance. Anything special for an anniversary?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick one night with a really good dinner and a view. Mention the anniversary when you book, places often add a little surprise."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm flying to Sydney from London next month. How do I not die of jet lag?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start shifting your sleep a little in the few days before you leave, going to bed an hour earlier each night."
+    },
+    {
+     "speaker": "user",
+     "text": "Earlier? I'm a total night owl."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I know, but Sydney is way ahead of London, so even small shifts help. On the plane, set your watch to Sydney time and sleep when it's night there."
+    },
+    {
+     "speaker": "user",
+     "text": "And when I land?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get outside in daylight and stay awake until a normal bedtime. A short nap is okay, but keep it under half an hour."
+    },
+    {
+     "speaker": "user",
+     "text": "Coffee? Because I'm going to / need a lot of it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Coffee in the morning is fine. Skip it after lunch or you'll be wide awake at two in the morning."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "This is my first international flight and I'm honestly a bit anxious. When should I get to the airport?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For international flights, about three hours before departure is a safe rule."
+    },
+    {
+     "speaker": "user",
+     "text": "Three hours? What do I do for three hours?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check in, bag drop and security can take a while. Once you're through, you can relax, eat something and find your gate."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I check in online first?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, most airlines open it a day before. You'll get your seat and boarding pass on your phone, which saves time."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And at security / do I take my shoes off?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends on the airport. Just watch the signs and the people ahead of you, the staff will tell you."
+    },
+    {
+     "speaker": "user",
+     "text": "That helps. I feel a bit less nervous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You'll be fine. Everyone was a first-timer once."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the deal with liquids in hand luggage? I keep getting stuff taken off me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most airports allow containers up to a hundred millilitres each, all in one small clear bag."
+    },
+    {
+     "speaker": "user",
+     "text": "Even toothpaste?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, toothpaste counts as a liquid. So do creams, gels and peanut butter, oddly."
+    },
+    {
+     "speaker": "user",
+     "text": "Peanut butter. So that's what happened."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, that catches lots of people. Some airports with new scanners have looser rules, but it's safest to assume the old ones."
+    },
+    {
+     "speaker": "user",
+     "text": "What about my / um, contact lens solution?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get a travel size bottle under a hundred millilitres, or buy a big one when you land."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just realized my passport expires in five weeks and my trip to Peru is in three."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay, that's worth acting on today. Many countries want your passport valid for six months after you arrive."
+    },
+    {
+     "speaker": "user",
+     "text": "Six months? So it's useless?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Possibly for this trip. Check the official entry rules for Peru, and look at your passport office's fast track service."
+    },
+    {
+     "speaker": "user",
+     "text": "How fast is fast track?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "In many countries it can be a week or even same day, but you usually need an appointment. Book as early as you can."
+    },
+    {
+     "speaker": "user",
+     "text": "This is so stressful. I already / paid for everything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I know, but three weeks is often enough if you move now. Call the passport office first thing and check your airline's rules too."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Should I bring cash to Japan or just use my card?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring some cash. Cards are widely accepted in cities now, but smaller restaurants, temples and rural places often still want cash."
+    },
+    {
+     "speaker": "user",
+     "text": "How much?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Enough for a couple of days is a good start. Convenience store cash machines usually accept foreign cards, so you can top up."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I get yen before I go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, but rates at home are often worse. Taking some out at the airport when you land is usually fine."
+    },
+    {
+     "speaker": "user",
+     "text": "And do I tell my bank / that I'm traveling? People keep saying that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It doesn't hurt. Many banks don't need it anymore, but a quick message in their app can stop your card being blocked."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My wife uses a wheelchair and we want to visit Amsterdam. Is that realistic?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely realistic, with some planning. The canals and cobbles can be tricky, but trams and many museums are accessible."
+    },
+    {
+     "speaker": "user",
+     "text": "What about hotels? Old buildings with steep stairs worry me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Book a newer hotel and call them directly to confirm a step free entrance, a lift and an accessible bathroom. Photos help too."
+    },
+    {
+     "speaker": "user",
+     "text": "Good idea. And getting from the airport?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The train from the airport to the central station has step free access, and staff can help with a ramp if you book assistance."
+    },
+    {
+     "speaker": "user",
+     "text": "She'd love a canal boat. Can she / actually get on one of those?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some operators have wheelchair accessible boats. Look for them specifically and book ahead, they're limited."
+    },
+    {
+     "speaker": "user",
+     "text": "That would make her trip."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then I'd book it first. Everything else can fit around it."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is the Japan rail pass still worth it? I heard the price went up."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It did go up quite a lot. It's worth it now mainly if you're doing several long bullet train trips in a short time."
+    },
+    {
+     "speaker": "user",
+     "text": "We're doing Tokyo, Kyoto, Hiroshima and back to Tokyo in ten days."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a fair amount of long distance travel. Add up the single fares for those trips and compare it with the pass price."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, that's work."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bit, but there are online fare calculators that do it quickly. Sometimes a regional pass is cheaper too."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine. If it's close, I'll / just get the pass for the convenience."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a reasonable call. It also saves you buying tickets every time."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Everyone online swears by packing cubes. Are they a scam?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not a scam, but not magic either. They don't make clothes smaller, they just keep things organized."
+    },
+    {
+     "speaker": "user",
+     "text": "So my suitcase won't suddenly hold twice as much."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sadly no. Compression cubes squeeze things a bit, but then the bag gets heavier."
+    },
+    {
+     "speaker": "user",
+     "text": "What's the actual best way to fit more in?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Roll soft things like t-shirts, fold stiff things like shirts, and stuff socks inside your shoes."
+    },
+    {
+     "speaker": "user",
+     "text": "Socks in shoes. I like that. And I always / overpack on shoes, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then limit yourself to two pairs plus whatever you wear on the plane. Wear the bulkiest ones while traveling."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it true flights are cheaper if you book on a Tuesday?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's mostly an old myth. Prices change all the time based on demand, not the day you search."
+    },
+    {
+     "speaker": "user",
+     "text": "So when should I book?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For short flights, roughly one to three months ahead tends to be good. For long haul, a bit earlier."
+    },
+    {
+     "speaker": "user",
+     "text": "What about incognito mode? My brother insists the prices go up if you keep searching."
+    },
+    {
+     "speaker": "moshi",
+     "text": "There's little evidence for that. Setting up a price alert is more useful than hiding your browsing."
+    },
+    {
+     "speaker": "user",
+     "text": "A price alert. Where do I do that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most flight search sites have a button for it. You'll get an email when the fare for your route drops."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, setting one up / for Toronto right now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good luck. If it drops to a price you're happy with, just book it."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're flying with our eighteen month old. Do we need to bring the car seat?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You don't have to, but it's often worth it, both for the flight if she has her own seat, and for taxis or rental cars at the other end."
+    },
+    {
+     "speaker": "user",
+     "text": "She'll be on my lap, we didn't buy her a seat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you can usually check the car seat for free at the gate. Put it in a padded bag to protect it."
+    },
+    {
+     "speaker": "user",
+     "text": "Free? That's a relief."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most airlines don't charge for car seats or strollers. Check yours to be sure."
+    },
+    {
+     "speaker": "user",
+     "text": "Any tips for keeping her / you know, not screaming the whole time?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Feed her or give her a dummy during takeoff and landing to help her ears. Pack new little toys she hasn't seen yet."
+    },
+    {
+     "speaker": "user",
+     "text": "New toys. Smart."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And snacks, lots of snacks."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have three days in Rome. Help me not waste them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Three days is good. I'd group things by area so you're not crossing the city all the time."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, how?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Day one, the Colosseum and the Forum. Day two, the Vatican museums and Saint Peter's. Day three, wander the center, Trevi Fountain and the Pantheon."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need to book things?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, book the Colosseum and the Vatican ahead online. The queues without tickets can be hours long."
+    },
+    {
+     "speaker": "user",
+     "text": "Hours. Wow. And I want / one really good dinner somewhere."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try Trastevere in the evening. Walk the side streets and pick a place where you hear more Italian than English."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I use my phone abroad without paying a fortune?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The cheapest option is usually a local or travel eSIM. You buy a data plan online and install it before you leave."
+    },
+    {
+     "speaker": "user",
+     "text": "What's an eSIM? Is it a physical thing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, it's digital. Your phone downloads it, like an app, as long as your phone supports it."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I check that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look in your settings under mobile data or cellular. If there's an option to add an eSIM, you're good."
+    },
+    {
+     "speaker": "user",
+     "text": "And my normal number / still works for texts?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, you can keep your normal SIM active for calls and texts. Just turn off its data roaming so you're not charged."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're taking a ferry to the islands and I get seasick on basically anything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sit in the middle of the boat on a lower deck, where there's the least movement, and look at the horizon."
+    },
+    {
+     "speaker": "user",
+     "text": "Not inside reading?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely not reading. That's one of the worst things for seasickness."
+    },
+    {
+     "speaker": "user",
+     "text": "What about pills?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Motion sickness tablets work well for many people. Take them before you get on, not after you start feeling sick."
+    },
+    {
+     "speaker": "user",
+     "text": "They make me drowsy though / is there anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some people find ginger sweets or wristbands helpful. Fresh air on deck helps too, if it's not too rough."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a woman traveling alone for the first time, to Portugal. My mum is very worried."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's natural for her. Portugal is generally considered quite safe, and lots of women travel there solo."
+    },
+    {
+     "speaker": "user",
+     "text": "Any actual tips, though? Beyond be careful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Share your plans with someone at home, and arrive in a new city during daylight if you can."
+    },
+    {
+     "speaker": "user",
+     "text": "That's useful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stay somewhere with good reviews from other solo women. And keep a little cash and a copy of your passport separate from your wallet."
+    },
+    {
+     "speaker": "user",
+     "text": "I was thinking of hostels / to meet people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. Many have female only dorms, and the common rooms are great for finding company for day trips."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll show this to my mum."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I hope it reassures her. Have a wonderful trip."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm forty-five and I've never stayed in a hostel. Am I too old?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. Plenty of hostels have guests of every age, and many have private rooms too."
+    },
+    {
+     "speaker": "user",
+     "text": "A private room in a hostel? Then what's the point?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's usually cheaper than a hotel, and you still get the social side, like the kitchen, the bar and organized walks."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. I do like meeting people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then look for hostels described as relaxed or social, not party hostels. Reviews tell you a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need to bring / my own towel and stuff?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sometimes. Many charge a small fee for towels, so a light travel towel is handy. A padlock for the lockers is useful too."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My flight lands in Madrid at half past eleven at night. Taxi or train into the city?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "At that hour, a taxi is probably easiest. Madrid has a fixed taxi fare from the airport to the center."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, fixed? So no surprises."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Just use the official taxi rank outside arrivals."
+    },
+    {
+     "speaker": "user",
+     "text": "Would the metro still be running?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It usually runs until about half past one, but with luggage and a late arrival, it's more hassle."
+    },
+    {
+     "speaker": "user",
+     "text": "Right. I'll be tired and / probably grumpy, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the taxi is worth it. You'll be at your hotel in about half an hour."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I take daily medication. What do I need to know for flying abroad?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Always pack it in your hand luggage, in its original packaging with the label on."
+    },
+    {
+     "speaker": "user",
+     "text": "Not my suitcase?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, bags get delayed. You don't want to land without your medication for two days."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need a letter from my doctor?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's a good idea, especially for injections or controlled medicines. Some countries have strict rules, so check the embassy website of where you're going."
+    },
+    {
+     "speaker": "user",
+     "text": "And how much should I bring? It's a two week trip / I was thinking exactly two weeks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring a few extra days' worth, in case of delays. Splitting it between two bags is smart too."
+    },
+    {
+     "speaker": "user",
+     "text": "Good idea. I'll ask my pharmacist for a bit extra."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. And set reminders for the time difference, so you don't miss a dose."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My sister and I are going to the Christmas markets in Germany. What do I wear? I'm from Florida."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Layers, lots of them. It can be around freezing, and you'll be standing outside for hours."
+    },
+    {
+     "speaker": "user",
+     "text": "Freezing. Okay. I own exactly one coat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Make sure it's warm and ideally waterproof. Add thermal underwear, a thick jumper, a hat, a scarf and gloves."
+    },
+    {
+     "speaker": "user",
+     "text": "Thermal underwear. Very glamorous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's the secret of every happy market visitor. Good boots with thick socks matter too, cold feet ruin everything."
+    },
+    {
+     "speaker": "user",
+     "text": "And the mulled wine / keeps you warm, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It helps your hands at least. You often pay a deposit for the mug, and you can keep it as a souvenir."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have about sixty thousand air miles. Is it smarter to use them for flights or upgrades?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually, long haul business class upgrades or reward seats give the most value per mile."
+    },
+    {
+     "speaker": "user",
+     "text": "What about short flights?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Short flights often give poor value, since cash fares are cheap and taxes on rewards can be high."
+    },
+    {
+     "speaker": "user",
+     "text": "My partner wants to use them for a hotel."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hotels are usually one of the worst uses of airline miles. I'd save them for a flight."
+    },
+    {
+     "speaker": "user",
+     "text": "We were looking at New York in spring. Could I / get two economy tickets with that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Quite possibly, depending on where you're flying from and the airline. Check the reward chart and book early, reward seats sell out."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What are my chances of seeing the northern lights in Iceland in late February?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Late February is actually a decent time. The nights are still long, and the season runs roughly from September to April."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I need a tour?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not necessarily, but tours know where the skies are clear. If you rent a car, check the aurora forecast and cloud cover each evening."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there an app or something?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, the Icelandic weather office has an aurora forecast online, and there are several apps."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it's cloudy all week? / I'll be so sad."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can happen, so plan other things too, like hot springs and waterfalls. Staying four or five nights gives you more chances."
+    },
+    {
+     "speaker": "user",
+     "text": "Five nights then."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good choice. Pack warm, the waiting outside can get chilly."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My teenagers hate sightseeing. How do I plan a city trip they won't sulk through?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let each of them choose one thing for the trip. Ownership makes a huge difference with teens."
+    },
+    {
+     "speaker": "user",
+     "text": "One of them will choose a shopping mall."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's okay. Balance it with activities that don't feel like sightseeing, like bike tours, food markets or a climbing park."
+    },
+    {
+     "speaker": "user",
+     "text": "Food markets might work. They're always hungry."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect, use that. A street food tour can feel more like an adventure than a museum."
+    },
+    {
+     "speaker": "user",
+     "text": "And mornings? They / sleep until noon on holiday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let them. Plan the big activity for the afternoon and keep mornings for things you and your partner want to do."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm visiting the States for the first time. The tipping thing confuses me. Who do I tip?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "In restaurants with table service, around fifteen to twenty percent of the bill is normal."
+    },
+    {
+     "speaker": "user",
+     "text": "Twenty percent? On top of the price?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, and tax is often added at the till too, so the menu price isn't what you'll pay."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that's a shock. What about taxis?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Roughly fifteen percent for taxis and rideshares. Hotel staff who carry bags usually get a couple of dollars per bag."
+    },
+    {
+     "speaker": "user",
+     "text": "And coffee shops? There's always / that little tip screen."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's optional for counter service. Tip if you want to, but nobody expects it the way restaurants do."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My flight got overbooked and they want volunteers to take a later one. Should I do it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends on your plans. If you're flexible, you can often get a voucher or cash for it."
+    },
+    {
+     "speaker": "user",
+     "text": "What should I ask for?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask what the compensation is, when the new flight leaves, and whether they'll cover meals or a hotel if it's the next day."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I negotiate?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sometimes. If nobody volunteers, the offer often goes up, so you don't have to accept the first one."
+    },
+    {
+     "speaker": "user",
+     "text": "It's only a four hour wait / so I'm tempted."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it could be a good deal. Make sure your new seat is confirmed before you give up your current one."
+    },
+    {
+     "speaker": "user",
+     "text": "Smart. Going to the desk now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good luck. Ask for a lounge pass too while you're there."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We want to go to the Edinburgh festival in August. When should we book somewhere to stay?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "As soon as possible. Accommodation fills up months ahead and prices climb a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "It's January now. Is that already late?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not too late, but don't wait much longer. Look at places with free cancellation so you can lock something in now."
+    },
+    {
+     "speaker": "user",
+     "text": "Could we stay outside the city?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, towns along the train line can be much cheaper. Check the last train times though, shows run late."
+    },
+    {
+     "speaker": "user",
+     "text": "Good point. We'll want / to see some of the late night comedy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then staying central is worth the money, or plan on taxis back."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How much should I budget per day in Mexico City? I'm a student, so, not much."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can do it fairly cheaply. A hostel bed, street food and the metro keep costs very low."
+    },
+    {
+     "speaker": "user",
+     "text": "Like how low?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many backpackers spend somewhere around thirty to forty dollars a day, but prices change, so check recent travel forums."
+    },
+    {
+     "speaker": "user",
+     "text": "Is street food safe?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Busy stalls with lots of locals are usually a good sign. Avoid tap water and ice from places you're unsure about."
+    },
+    {
+     "speaker": "user",
+     "text": "What's the one thing / I shouldn't skip?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A day at Teotihuacan, the ancient pyramids just outside the city. Get there early to beat the heat and the crowds."
+    },
+    {
+     "speaker": "user",
+     "text": "Pyramids. Okay, adding it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And try the tacos al pastor. They're worth the trip on their own."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Vienna to Venice. Night train or a quick flight?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The night train saves you a hotel night and drops you in the city center. The flight is faster but you'd still need to get from the airport."
+    },
+    {
+     "speaker": "user",
+     "text": "Do night trains have proper beds?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, you can book a sleeper cabin with beds, or a cheaper couchette that you share."
+    },
+    {
+     "speaker": "user",
+     "text": "Shared with strangers? Hmm."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Couchettes can be fine, but if you want privacy, a private sleeper is worth it. Book early, they're popular."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, private. And I arrive / around breakfast time, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually in the morning, yes. Arriving in Venice by train and walking straight out onto the Grand Canal is a lovely way to start."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hello. My grandson usually books things for me, but he's away. I'd like to book a train to visit my sister."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Of course, I can help. Do you know which station you're traveling from and to, and the day?"
+    },
+    {
+     "speaker": "user",
+     "text": "From the main station here to Bath, on Thursday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely. The simplest way is the train company's website, or you could buy a ticket at the station counter."
+    },
+    {
+     "speaker": "user",
+     "text": "The website frightens me a little, to be honest."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's perfectly fine. Buying at the counter is easy, and the staff can find you the best price. Mention if you have a senior railcard."
+    },
+    {
+     "speaker": "user",
+     "text": "I believe I do. It's / somewhere in my handbag."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring it along, it can save you about a third. And ask for a seat reservation so you have a guaranteed seat."
+    },
+    {
+     "speaker": "user",
+     "text": "Thank you, dear. That's very helpful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're welcome. Enjoy your visit with your sister."
+    }
+   ]
+  },
+  {
+   "id": "travel_planning.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What do I do with leftover foreign coins? I've got a jar full from about six countries."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Banks and exchange offices rarely take coins, only notes. So the options are a bit limited."
+    },
+    {
+     "speaker": "user",
+     "text": "So they're useless?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not quite. Many airlines and airports have charity collection boxes that take any currency."
+    },
+    {
+     "speaker": "user",
+     "text": "That's nice actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is. Or keep them for your next trip to those countries, or give them to a kid who collects coins."
+    },
+    {
+     "speaker": "user",
+     "text": "My nephew might like that / he's into maps right now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. He could match each coin to its country on a map."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "travel_planning.opt1",
+   "lead_in": "We're trying to pick where to go for a long weekend in the spring.",
+   "options": [
+    "The first option is a beach town about four hours away, warm, but it might still be a little too cold to swim.",
+    "Then there's a big city trip with museums and restaurants, but the hotels there are pretty expensive.",
+    "Option three is a cabin in the mountains, really quiet, with hiking trails right outside the door.",
+    "And the last one is just staying home and doing day trips, which would save a lot of money."
+   ],
+   "moshi_comment": [
+    "If you want to recharge, the mountain cabin sounds perfect, quiet and close to nature. The city trip is great for food and culture, but those hotel prices could add up fast. The beach town might be a bit disappointing if it's too cold to swim.",
+    "What are you hoping to get out of the weekend, rest or excitement? For rest, I'd pick the cabin. For excitement, the city is the clear winner, and day trips from home are a nice backup if money is tight."
+   ]
+  },
+  {
+   "id": "travel_planning.opt2",
+   "lead_in": "My sister and I can't agree on how to get to the wedding next month.",
+   "options": [
+    "One way is to fly, which takes about two hours, but the tickets are expensive this close to the date.",
+    "Another is to take the train, around seven hours, but it's comfortable and we can work on the way.",
+    "Or we could drive, which is cheapest split between two people, though it's a long day in the car."
+   ],
+   "moshi_comment": [
+    "The train sounds like a nice middle ground, it's comfortable and you don't lose the whole day since you can work. Flying is fastest, but those last minute prices hurt. Driving is cheapest, and you'd have a car once you get there, which can be handy.",
+    "Will you need a car at the wedding location? If yes, driving together probably makes the most sense. If not, I'd take the train, it's much more relaxing than seven hours behind the wheel."
+   ]
+  },
+  {
+   "id": "travel_planning.opt3",
+   "lead_in": "We want a ski trip in February but none of us are great skiers. I found three places.",
+   "options": [
+    "There's a big famous resort with tons of slopes, lively nightlife, and prices to match.",
+    "A small family resort in the next valley, cheaper and quieter, with mostly gentle beginner runs.",
+    "Or a ski school package, where lessons, boots and lift passes are all included in one price."
+   ],
+   "moshi_comment": [
+    "For a group of not great skiers, the small family resort makes a lot of sense, you'd use most of the slopes. The big resort is fun, but you'd pay for runs you won't ski. The package is the safest if anyone is a real beginner.",
+    "I'd look hard at the package, lessons make the week far more fun when you're still learning. If some of you are confident already, the small resort plus a couple of lessons could be cheaper. The famous resort is better saved for when you've improved."
+   ]
+  },
+  {
+   "id": "travel_planning.opt4",
+   "lead_in": "I've got a ten hour layover in Istanbul and I'm not sure what to do with it.",
+   "options": [
+    "I could stay in the airport lounge, shower, nap and eat, nice and stress free.",
+    "Or take the metro into the old city, see a mosque or two and get back in time, hopefully.",
+    "There's also a short guided tour the airline offers for transit passengers, about six hours with a guide."
+   ],
+   "moshi_comment": [
+    "Ten hours is enough to leave the airport, so I'd go for the airline tour, it handles the timing and the visa questions for you. Going alone is fine too if you're confident, just leave plenty of buffer. The lounge is good if you're exhausted.",
+    "If you've never seen the city, the guided tour gives you a taste without the risk of missing your flight. Doing it alone gives more freedom but you'd have to watch the clock. The lounge is a sensible fallback if you're tired."
+   ]
+  },
+  {
+   "id": "travel_planning.opt5",
+   "lead_in": "Summer holiday with three kids under ten, and my husband and I want different things.",
+   "options": [
+    "He wants a theme park resort in Florida, which the kids would adore but it's crazy expensive.",
+    "I'd love a lake cabin up north where they swim, catch frogs and go to bed early.",
+    "My mum suggested we stay with her in the city and do day trips to the zoo and the beach.",
+    "Or a camping style holiday park with pools and kids' clubs, somewhere in between."
+   ],
+   "moshi_comment": [
+    "The holiday park might be the sweet spot, it has the fun the kids would get in Florida for much less money, and you still get some quiet. The lake cabin is lovely but might feel slow for him. Your mum's offer is the cheapest and a nice bonus for her.",
+    "Florida would be magical for that age but it's a lot of money and queues. The lake cabin and your mum's place are both relaxed and cheaper. If you need a compromise, the holiday park splits the difference."
+   ]
+  },
+  {
+   "id": "travel_planning.opt6",
+   "lead_in": "I'm taking a gap year after school and I've narrowed it down to a few plans.",
+   "options": [
+    "Working at a ski lodge in Canada for the winter, then traveling with the money I've saved.",
+    "Volunteering on an organic farm in New Zealand, which gives me free food and a bed.",
+    "Teaching English in South Korea, with a proper salary but a one year contract.",
+    "Interrailing around Europe, which would be amazing, but I'd need to save for months first."
+   ],
+   "moshi_comment": [
+    "Teaching in Korea gives you real savings and work experience, but a year contract is a big commitment. The ski lodge is a classic, fun and flexible. The farm is cheap and relaxing. Interrailing is great, maybe as the final trip after one of the others.",
+    "You could chain two of them, like the ski lodge for the winter and then interrailing with what you earn. The farm in New Zealand is good if you want calm. Korea is the most serious choice, best if you're curious about teaching."
+   ]
+  }
+ ]
 }

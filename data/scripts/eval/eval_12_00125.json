@@ -7,134 +7,110 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "family_visit"
+  "picnic"
  ],
- "wait_sec": 15,
- "deadline": {
-  "after_turn": 6,
-  "sec": 15
- },
- "topic": "family_visit",
+ "topic": "picnic",
  "voices": {
-  "user": "026218fe0c054374838d934016f34082",
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_24",
-  "greet_ans_09",
-  "think_instr_24",
-  "ack_01",
-  "self_12"
+  "greet_12",
+  "greet_ans_03",
+  "describe_instr_06",
+  "describe_cue_12"
  ],
  "block_ids": [
-  "family_visit.ctx2"
+  "picnic.opt3"
  ],
- "est_total_sec": 52.02,
- "est_speech_sec": 28.59,
+ "est_total_sec": 53.23,
+ "est_speech_sec": 41.2,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, what's up? How are you doing?",
+   "text": "Hello there, how are you doing today?",
    "est_sec": 2.27,
-   "gap_before": 0.78,
+   "gap_before": 0.46,
    "role": "greeting",
-   "phrasing": "greet_24",
+   "phrasing": "greet_12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.66,
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.64,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "I'm flying home to see my grandma for the holidays.",
+   "text": "I need help deciding where to take my grandkids for a picnic.",
+   "est_sec": 3.82,
+   "gap_before": 0.24,
+   "block": "picnic.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Don't comment yet, let me describe all of them first.",
    "est_sec": 3.2,
-   "gap_before": 0.28,
-   "event": "ordinary_request",
-   "block": "family_visit.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "How nice. Do you want to stay the whole week, or just a long weekend so you don't miss too much work?",
-   "est_sec": 6.92,
-   "gap_before": 1.28,
-   "role": "reply",
-   "block": "family_visit.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Good question, I hadn't really thought about that.",
-   "est_sec": 2.58,
-   "gap_before": 1.11,
-   "event": "ordinary_request",
-   "block": "family_visit.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No rush. So, a full week or a long weekend?",
-   "est_sec": 3.2,
-   "gap_before": 1.49,
-   "role": "reply",
-   "block": "family_visit.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I need a moment, like fifteen seconds. Ask me again then.",
-   "est_sec": 3.51,
-   "gap_before": 1.92,
+   "gap_before": 0.4,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_24"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure.",
-   "est_sec": 0.41,
-   "gap_before": 0.65,
-   "role": "ack",
-   "phrasing": "ack_01",
-   "reference_only": true
+   "kind": "describe_options",
+   "phrasing": "describe_instr_06"
   },
   {
    "speaker": "user",
-   "text": "Hmm, maybe.",
-   "est_sec": 0.72,
-   "anchor": {
-    "turn": 6,
-    "offset": 5.37
-   },
+   "text": "There's a farm park with animals, a playground and picnic tables, but it costs about eight dollars each.",
+   "est_sec": 5.68,
+   "gap_before": 1.47,
+   "block": "picnic.opt3",
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_12"
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or the free park near our house, which is big and green but has no shade at all.",
+   "est_sec": 5.68,
+   "gap_before": 2.74,
+   "block": "picnic.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or the beach, which they love, though sand gets into absolutely everything we eat.",
+   "est_sec": 4.44,
+   "gap_before": 2.06,
+   "block": "picnic.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all the options. Go ahead.",
+   "est_sec": 2.27,
+   "gap_before": 1.42,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_12"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, any thoughts on the trip to your grandma's? A full week or a long weekend?",
-   "est_sec": 5.06,
+   "text": "I'd lean toward the farm park, animals and a playground will keep them happy for hours. The local park works if you bring a sun shade. The beach is lovely, but you'll spend half the day shaking sand off the food.",
+   "est_sec": 12.81,
+   "gap_before": 1.1,
    "role": "resume",
-   "block": "family_visit.ctx2",
-   "anchor": {
-    "turn": 6,
-    "offset": 15.54
-   },
+   "block": "picnic.opt3",
    "reference_only": true
   }
  ],

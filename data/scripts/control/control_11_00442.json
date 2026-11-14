@@ -7,6 +7,10 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
@@ -15,133 +19,117 @@
   "wait_like"
  ],
  "topics": [
-  "weather_plans"
+  "cars"
  ],
- "topic": "weather_plans",
+ "topic": "cars",
  "voices": {
-  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "user": "e7de86b388864b8cbd50d0d70a3494e5",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_07",
-  "waitlike_11"
+  "greet_26",
+  "greet_ans_01",
+  "waitlike_16"
  ],
  "block_ids": [
-  "weather_plans.dlg3"
+  "cars.dlg26"
  ],
- "est_total_sec": 62.33,
- "est_speech_sec": 47.8,
+ "est_total_sec": 58.78,
+ "est_speech_sec": 47.6,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
-   "est_sec": 1.96,
-   "gap_before": 0.42,
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.32,
    "role": "greeting",
-   "phrasing": "greet_16"
+   "phrasing": "greet_26"
   },
   {
    "speaker": "user",
-   "text": "Honestly, a little stressed, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.88,
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.65,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_07"
+   "phrasing": "greet_ans_01"
   },
   {
    "speaker": "user",
-   "text": "My running club meets outside at six in the morning. It's going to be below freezing all week.",
-   "est_sec": 5.68,
-   "gap_before": 0.28,
+   "text": "We just came down a really steep hill and now there's a burning smell. Should I panic?",
+   "est_sec": 5.37,
+   "gap_before": 0.52,
    "event": "ordinary_request",
-   "block": "weather_plans.dlg3"
+   "block": "cars.dlg26"
   },
   {
    "speaker": "moshi",
-   "text": "Running in the cold is fine with the right gear. Wear a base layer that wicks sweat, plus gloves and a hat.",
-   "est_sec": 6.92,
-   "gap_before": 0.42,
+   "text": "No panic needed, but let's be careful. A burning smell after a long descent is usually hot brakes. Can you pull over somewhere safe?",
+   "est_sec": 7.54,
+   "gap_before": 1.18,
    "role": "reply",
-   "block": "weather_plans.dlg3"
+   "block": "cars.dlg26"
   },
   {
    "speaker": "user",
-   "text": "I always feel freezing for the first ten minutes.",
-   "est_sec": 2.89,
-   "gap_before": 0.31,
+   "text": "I'm in a lay-by now.",
+   "est_sec": 1.65,
+   "gap_before": 0.7,
    "event": "ordinary_request",
-   "block": "weather_plans.dlg3"
+   "block": "cars.dlg26"
   },
   {
    "speaker": "moshi",
-   "text": "That's normal. Dress as if it's about ten degrees warmer than it is, because you'll heat up quickly.",
-   "est_sec": 5.68,
-   "gap_before": 1.06,
+   "text": "Good. Let the car sit for a while so the brakes cool down. Don't pour water on them, the sudden cooling can damage the discs.",
+   "est_sec": 7.85,
+   "gap_before": 1.02,
    "role": "reply",
-   "block": "weather_plans.dlg3"
+   "block": "cars.dlg26"
   },
   {
    "speaker": "user",
-   "text": "What about ice on the paths?",
+   "text": "How long do I wait?",
+   "est_sec": 1.65,
+   "gap_before": 1.04,
+   "event": "ordinary_request",
+   "block": "cars.dlg26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fifteen to twenty minutes is usually enough. If there's smoke from one wheel, or the brake pedal felt soft, get it checked before driving far.",
+   "est_sec": 7.85,
+   "gap_before": 0.49,
+   "role": "reply",
+   "block": "cars.dlg26"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait a second, pedal felt normal.",
    "est_sec": 1.96,
-   "gap_before": 3.29,
-   "event": "ordinary_request",
-   "block": "weather_plans.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's the real risk. Shorten your stride, slow down on corners, and consider slip-on traction cleats.",
-   "est_sec": 5.06,
-   "gap_before": 0.86,
-   "role": "reply",
-   "block": "weather_plans.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, really?",
-   "est_sec": 1.03,
-   "gap_before": 0.82,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_11",
-   "block": "weather_plans.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "I'm fairly sure about it, but I could be wrong. What sounds off to you?",
-   "est_sec": 4.75,
-   "gap_before": 1.16,
-   "role": "reply",
-   "block": "weather_plans.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Maybe I'll just",
-   "est_sec": 1.03,
-   "gap_before": 1.07,
+   "gap_before": 1.05,
    "event": "distractor",
    "kind": "pause",
-   "block": "weather_plans.dlg3"
+   "block": "cars.dlg26"
   },
   {
    "speaker": "user",
-   "text": "no, I'll still go, I don't want to lose my streak.",
-   "est_sec": 3.51,
-   "gap_before": 1.83,
+   "text": "I was braking the whole way down, though.",
+   "est_sec": 2.58,
+   "gap_before": 2.1,
    "event": "ordinary_request",
-   "block": "weather_plans.dlg3"
+   "kind": "wait_like",
+   "phrasing": "waitlike_16",
+   "block": "cars.dlg26"
   },
   {
    "speaker": "moshi",
-   "text": "Good for you. Just warm up indoors for a few minutes first so your muscles aren't cold.",
-   "est_sec": 5.37,
-   "gap_before": 0.63,
+   "text": "That explains it. Next time, drop to a lower gear and let the engine do most of the slowing, with short firm brakes in between.",
+   "est_sec": 7.85,
+   "gap_before": 0.61,
    "role": "reply",
-   "block": "weather_plans.dlg3"
+   "block": "cars.dlg26"
   }
  ]
 }

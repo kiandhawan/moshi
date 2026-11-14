@@ -7,17 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "birthday_party"
+  "fitness"
  ],
- "topic": "birthday_party",
+ "topic": "fitness",
  "voices": {
-  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "user": "e3cd384158934cc9a01029cd7d278634",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,98 +27,102 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_14",
-  "greet_ans_28",
-  "describe_instr_07",
-  "describe_cue_02"
+  "greet_ans_23"
  ],
  "block_ids": [
-  "birthday_party.opt1"
+  "fitness.dlg5"
  ],
- "est_total_sec": 55.93,
- "est_speech_sec": 44.09,
+ "est_total_sec": 47.39,
+ "est_speech_sec": 36.13,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi! How's life treating you?",
    "est_sec": 1.65,
-   "gap_before": 0.6,
+   "gap_before": 0.75,
    "role": "greeting",
    "phrasing": "greet_14"
   },
   {
    "speaker": "user",
-   "text": "Doing alright, thanks.",
+   "text": "Good, good. Thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.72,
+   "gap_before": 0.52,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
+   "phrasing": "greet_ans_23"
   },
   {
    "speaker": "user",
-   "text": "My son is turning seven and we're choosing where to have his party.",
-   "est_sec": 4.13,
-   "gap_before": 0.28,
-   "block": "birthday_party.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me walk you through all the options, then you can tell me what you think.",
+   "text": "I tried running today and I was gasping after one minute. Is something wrong with me?",
    "est_sec": 5.06,
-   "gap_before": 0.41,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_07"
-  },
-  {
-   "speaker": "user",
-   "text": "The first option is the trampoline park, which the kids love, but it's pretty expensive per child.",
-   "est_sec": 5.37,
-   "gap_before": 1.2,
-   "block": "birthday_party.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's having it at home with a bouncy castle in the backyard.",
-   "est_sec": 4.13,
-   "gap_before": 1.82,
-   "block": "birthday_party.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a picnic at the park with games and a big cake.",
-   "est_sec": 4.44,
-   "gap_before": 1.8,
-   "block": "birthday_party.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a pizza making class at a local restaurant.",
-   "est_sec": 4.13,
-   "gap_before": 2.19,
-   "block": "birthday_party.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "That's everything. Which one would you pick?",
-   "est_sec": 2.27,
-   "gap_before": 0.79,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_02"
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "fitness.dlg5"
   },
   {
    "speaker": "moshi",
-   "text": "How many kids are you inviting? For a big group, the backyard bouncy castle or the park picnic is much easier on the budget. For a small group, the trampoline park or pizza class would feel extra special.",
-   "est_sec": 11.88,
-   "gap_before": 0.53,
-   "role": "resume",
-   "block": "birthday_party.opt1"
+   "text": "Not at all, that's really normal when you're starting out. Most beginners go too fast.",
+   "est_sec": 4.75,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "fitness.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "I wasn't even going fast. I don't think.",
+   "est_sec": 2.58,
+   "gap_before": 1.27,
+   "event": "ordinary_request",
+   "block": "fitness.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Try slowing down until you could hold a conversation. It'll feel almost silly slow.",
+   "est_sec": 4.44,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "fitness.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "And if I still can't last?",
+   "est_sec": 1.96,
+   "gap_before": 1.29,
+   "event": "ordinary_request",
+   "block": "fitness.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Mix running and walking. Run one minute, walk two, and repeat that six or seven times.",
+   "est_sec": 5.06,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "fitness.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "That sounds doable. How often",
+   "est_sec": 1.65,
+   "gap_before": 0.34,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "fitness.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "should I go out?",
+   "est_sec": 1.34,
+   "gap_before": 2.2,
+   "event": "ordinary_request",
+   "block": "fitness.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Three times a week, with a rest day in between. Each week, run a little longer and walk a little less.",
+   "est_sec": 6.61,
+   "gap_before": 0.36,
+   "role": "reply",
+   "block": "fitness.dlg5"
   }
  ]
 }

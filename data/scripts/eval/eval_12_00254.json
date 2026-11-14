@@ -7,132 +7,149 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "phone_call",
+ "wait_type": "phone_call",
  "conditions": [],
  "topics": [
-  "picnic"
+  "restaurant_choice"
  ],
- "topic": "picnic",
+ "topic": "restaurant_choice",
  "voices": {
-  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_30",
-  "describe_instr_06",
-  "ack_03",
-  "describe_cue_09"
+  "greet_15",
+  "greet_ans_24",
+  "phone_instr_08",
+  "call_06",
+  "phone_cue_08"
  ],
  "block_ids": [
-  "picnic.opt2"
+  "restaurant_choice.ctx6",
+  "call_06"
  ],
- "est_total_sec": 61.88,
- "est_speech_sec": 47.91,
+ "est_total_sec": 56.9,
+ "est_speech_sec": 40.67,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.51,
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.47,
    "role": "greeting",
-   "phrasing": "greet_06",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.96,
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.53,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
+   "phrasing": "greet_ans_24"
   },
   {
    "speaker": "user",
-   "text": "We're doing a picnic for my son's class and I can't pick a main food.",
-   "est_sec": 4.75,
-   "gap_before": 0.33,
-   "block": "picnic.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Don't comment yet, let me describe all of them first.",
+   "text": "Honestly I'm wiped. Two toddlers, no food in the house.",
    "est_sec": 3.2,
-   "gap_before": 0.88,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_06"
+   "gap_before": 0.34,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "Sure, take your time.",
-   "est_sec": 1.34,
-   "gap_before": 0.25,
-   "role": "ack",
-   "phrasing": "ack_03",
+   "text": "Oof. Do you want to brave a restaurant with high chairs, or should we find a place that does good takeout you can grab on the way home?",
+   "est_sec": 8.78,
+   "gap_before": 0.38,
+   "role": "reply",
+   "block": "restaurant_choice.ctx6",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "One idea is little sandwiches, cut into shapes, with cheese and ham or peanut butter.",
-   "est_sec": 4.75,
-   "gap_before": 1.39,
-   "block": "picnic.opt2",
+   "text": "I need to take this, it's important. Please hold on until I'm done.",
+   "est_sec": 4.13,
+   "gap_before": 0.58,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_08"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi, it's me.",
+   "est_sec": 1.03,
+   "gap_before": 1.98,
+   "phrasing": "call_06"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm running about ten minutes late.",
+   "est_sec": 1.96,
+   "gap_before": 1.8,
+   "phrasing": "call_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you already there?",
+   "est_sec": 1.34,
+   "gap_before": 2.11,
+   "phrasing": "call_06",
    "event": "distractor",
-   "kind": "pause"
+   "kind": "question_to_other"
   },
   {
    "speaker": "user",
-   "text": "Another is homemade pizza slices, which kids love but might get cold and greasy.",
-   "est_sec": 4.44,
-   "gap_before": 2.08,
-   "block": "picnic.opt2",
-   "event": "distractor",
-   "kind": "pause"
+   "text": "Okay, grab a table, I'll be right there.",
+   "est_sec": 2.58,
+   "gap_before": 3.46,
+   "phrasing": "call_06"
   },
   {
    "speaker": "user",
-   "text": "Or we could do wraps with chicken and veggies that the kids roll up themselves.",
-   "est_sec": 4.75,
-   "gap_before": 2.0,
-   "block": "picnic.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "The last idea is a big pasta salad that's easy to make ahead the night before.",
-   "est_sec": 5.06,
-   "gap_before": 1.93,
-   "block": "picnic.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "So, that's all of them. Tell me what you think.",
-   "est_sec": 3.2,
-   "gap_before": 1.38,
+   "text": "Alright, finished the call. I'm back.",
+   "est_sec": 1.96,
+   "gap_before": 0.81,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_09"
+   "phrasing": "phone_cue_08"
   },
   {
    "speaker": "moshi",
-   "text": "Shaped sandwiches are a classic for kids and easy to eat with your hands. Pizza is popular but gets messy once it's cold. The build your own wraps are fun, but with a whole class it could get chaotic.",
-   "est_sec": 12.19,
-   "gap_before": 0.76,
+   "text": "Hope the call went okay. Still two hungry toddlers waiting. Restaurant or takeout?",
+   "est_sec": 4.13,
+   "gap_before": 0.43,
    "role": "resume",
-   "block": "picnic.opt2",
+   "block": "restaurant_choice.ctx6",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Takeout. I can't do the whole high chair circus tonight.",
+   "est_sec": 3.2,
+   "gap_before": 0.89,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally fair. A rotisserie chicken place is quick and both kids will probably eat it.",
+   "est_sec": 4.75,
+   "gap_before": 0.95,
+   "role": "followup",
+   "block": "restaurant_choice.ctx6",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "new_type_phone"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

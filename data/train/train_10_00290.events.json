@@ -1,70 +1,122 @@
 {
   "id": "train_10_00290",
-  "group": "describe_options",
-  "user_start": 2.34,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 8.79,
-  "instruction_end": 12.38,
-  "wait_end": 35.08,
-  "resume_window": [
-    35.08,
-    40.08
+  "group": "side_conversation",
+  "user_start": 2.13,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question"
   ],
-  "wait_sec": 22.7,
+  "cluster": "pets.ctx1",
+  "instruction_start": 12.82,
+  "instruction_end": 17.53,
+  "wait_end": 50.159,
+  "resume_window": [
+    50.159,
+    55.159
+  ],
+  "wait_sec": 32.629,
   "distractors": [
-    18.78
+    22.049,
+    26.819,
+    41.749
   ],
   "distractor_kinds": [
-    "pause"
+    "friend_question",
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      18.78,
-      20.81
+      22.049,
+      22.459
+    ],
+    [
+      26.819,
+      27.959
+    ],
+    [
+      41.749,
+      42.819
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    7.48
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.34,
-      "end": 3.57,
+      "start": 2.13,
+      "end": 3.43,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.02,
-      "end": 7.95
+      "start": 3.87,
+      "end": 7.48,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 8.79,
-      "end": 12.38,
+      "start": 12.82,
+      "end": 17.53,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 13.38,
-      "end": 18.78,
+      "start": 19.889,
+      "end": 22.049,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 22.459,
+      "end": 23.759
     },
     {
       "speaker": "user",
-      "start": 20.81,
-      "end": 25.52
+      "start": 24.089,
+      "end": 26.819,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 27.959,
+      "end": 30.289
     },
     {
       "speaker": "user",
-      "start": 26.65,
-      "end": 32.29
+      "start": 31.319,
+      "end": 33.299
+    },
+    {
+      "speaker": "friend",
+      "start": 34.269,
+      "end": 36.479
     },
     {
       "speaker": "user",
-      "start": 32.94,
-      "end": 35.08,
+      "start": 37.619,
+      "end": 41.749,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 42.819,
+      "end": 44.929
+    },
+    {
+      "speaker": "user",
+      "start": 45.299,
+      "end": 48.039
+    },
+    {
+      "speaker": "user",
+      "start": 48.749,
+      "end": 50.159,
       "event": "return_cue",
       "kind": "explicit"
     }
@@ -74,15 +126,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.6,
-      "end": 1.68,
-      "text": "Hey, how are you doing?"
+      "start": 0.44,
+      "end": 1.65,
+      "text": "Hey there, how are you?"
+    },
+    {
+      "kind": "reply",
+      "start": 8.07,
+      "end": 12.29,
+      "text": "How exciting! Are you leaning toward a puppy, or an older dog from a shelter?"
+    },
+    {
+      "kind": "ack",
+      "start": 18.21,
+      "end": 18.579,
+      "text": "Okay."
     },
     {
       "kind": "resume",
-      "start": 36.92,
-      "end": 51.28,
-      "text": "The lasagna is the least stressful, since you can make it ahead and actually enjoy your guests. The roast chicken is a safe crowd pleaser too, but timing the oven can be tricky. The salmon is lovely, though cooking it at the last minute while people are chatting is a lot of pressure."
+      "start": 50.469,
+      "end": 54.639,
+      "text": "No problem. Any thoughts on the new family dog, puppy or shelter adult?"
     }
   ]
 }

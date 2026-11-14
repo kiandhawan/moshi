@@ -7,120 +7,177 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "pets"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "topic": "pets",
+ "topics": [
+  "photography",
+  "books"
+ ],
+ "topic": "photography",
  "voices": {
-  "user": "bd45448dd6f84f9ebd06f369f93f4410",
-  "friend": null,
+  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "friend": "ec3f1730c4494386accf1e86625bfe6d",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Chloe",
+ "friend_name_id": "name_08",
  "phrasing_ids": [
-  "greet_14",
-  "greet_ans_01"
+  "greet_13",
+  "greet_ans_22",
+  "side_instr_23",
+  "dn_04",
+  "side_cue_05"
  ],
  "block_ids": [
-  "pets.dlg2"
+  "photography.ctx6",
+  "books.side1",
+  "dn_04"
  ],
- "est_total_sec": 52.59,
- "est_speech_sec": 37.37,
+ "est_total_sec": 77.34,
+ "est_speech_sec": 59.05,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How's life treating you?",
-   "est_sec": 1.65,
-   "gap_before": 0.68,
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.47,
    "role": "greeting",
-   "phrasing": "greet_14"
+   "phrasing": "greet_13"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
+   "text": "Pretty relaxed today.",
    "est_sec": 1.03,
-   "gap_before": 0.98,
+   "gap_before": 0.36,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_22"
   },
   {
    "speaker": "user",
-   "text": "My daughter wants a hamster for her birthday. Are they good first pets?",
-   "est_sec": 4.13,
-   "gap_before": 0.4,
+   "text": "Found my dad's old film camera in the attic. It still clicks.",
+   "est_sec": 3.82,
+   "gap_before": 0.46,
    "event": "ordinary_request",
-   "block": "pets.dlg2"
+   "block": "photography.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "They can be, but they're awake mostly at night and can nip if handled roughly. How old is she?",
-   "est_sec": 5.99,
-   "gap_before": 0.52,
+   "text": "What a find. Are you tempted to actually shoot with it, or would you rather get it cleaned up and keep it on a shelf?",
+   "est_sec": 7.85,
+   "gap_before": 0.74,
    "role": "reply",
-   "block": "pets.dlg2"
+   "block": "photography.ctx6"
   },
   {
    "speaker": "user",
-   "text": "She's turning eight.",
-   "est_sec": 1.03,
-   "gap_before": 3.25,
-   "event": "ordinary_request",
-   "block": "pets.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's a fine age with some supervision. A big cage, a wheel and a deep layer of bedding are the essentials.",
-   "est_sec": 6.61,
-   "gap_before": 1.01,
-   "role": "reply",
-   "block": "pets.dlg2"
+   "text": "Hold on, I need a minute with my roommate. Just stay silent until I come back to you.",
+   "est_sec": 5.68,
+   "gap_before": 0.69,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_23"
   },
   {
    "speaker": "user",
-   "text": "Would a guinea pig be better? I've heard",
-   "est_sec": 2.58,
-   "gap_before": 1.89,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "pets.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "they're friendlier.",
-   "est_sec": 0.72,
-   "gap_before": 2.02,
-   "event": "ordinary_request",
-   "block": "pets.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Guinea pigs are usually calmer and awake during the day, so they're great with kids. But they're happier in pairs.",
-   "est_sec": 6.3,
-   "gap_before": 0.8,
-   "role": "reply",
-   "block": "pets.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Two of them? That's double the cleaning.",
+   "text": "I'm back on Tuesday, by the way.",
    "est_sec": 2.27,
-   "gap_before": 1.35,
-   "event": "ordinary_request",
-   "block": "pets.dlg2"
+   "gap_before": 1.15,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_04"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay, good to know.",
+   "est_sec": 1.34,
+   "gap_before": 1.47,
+   "phrasing": "dn_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Chloe, did you ever finish that mystery I lent you?",
+   "est_sec": 3.2,
+   "gap_before": 0.95,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "books.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Last night! I stayed up way too late.",
+   "est_sec": 2.58,
+   "gap_before": 1.48,
+   "block": "books.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you guess who did it?",
+   "est_sec": 1.96,
+   "gap_before": 1.11,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "books.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not even close. I was sure it was the sister.",
+   "est_sec": 3.2,
+   "gap_before": 0.78,
+   "block": "books.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Everyone thinks that. Can I have it back? My mom wants to read it.",
+   "est_sec": 4.44,
+   "gap_before": 1.17,
+   "block": "books.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's on my nightstand. I'll bring it down.",
+   "est_sec": 2.58,
+   "gap_before": 1.29,
+   "block": "books.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Back again. What were we talking about?",
+   "est_sec": 2.27,
+   "gap_before": 1.94,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_05"
   },
   {
    "speaker": "moshi",
-   "text": "True, but one cage and they keep each other company. It's honestly not much more work.",
-   "est_sec": 5.06,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "pets.dlg2"
+   "text": "Sure thing. Your dad's film camera was still waiting on a verdict. Shoot or shelf?",
+   "est_sec": 4.75,
+   "gap_before": 0.68,
+   "role": "resume",
+   "block": "photography.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "Shelf, honestly. I'd be terrified of breaking it.",
+   "est_sec": 2.58,
+   "gap_before": 1.47,
+   "event": "ordinary_request",
+   "block": "photography.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's fair. A little stand and a lens cap and it'll look great, and you can always change your mind later.",
+   "est_sec": 6.61,
+   "gap_before": 0.58,
+   "role": "followup",
+   "block": "photography.ctx6"
   }
  ]
 }

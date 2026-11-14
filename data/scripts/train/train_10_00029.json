@@ -7,89 +7,116 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
  "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "music"
+  "pets"
  ],
- "wait_sec": 5,
+ "wait_sec": 20,
  "deadline": {
-  "after_turn": 4,
-  "sec": 5
+  "after_turn": 6,
+  "sec": 20
  },
- "topic": "music",
+ "topic": "pets",
  "voices": {
-  "user": "e7de86b388864b8cbd50d0d70a3494e5",
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_04",
-  "greet_ans_11",
-  "think_instr_17"
+  "greet_26",
+  "greet_ans_13",
+  "think_instr_29",
+  "ack_15"
  ],
  "block_ids": [
-  "music.ctx1"
+  "pets.ctx7"
  ],
- "est_total_sec": 33.98,
- "est_speech_sec": 21.37,
+ "est_total_sec": 50.18,
+ "est_speech_sec": 22.91,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how are you?",
-   "est_sec": 1.65,
-   "gap_before": 0.76,
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.38,
    "role": "greeting",
-   "phrasing": "greet_04"
+   "phrasing": "greet_26"
   },
   {
    "speaker": "user",
-   "text": "Not too bad.",
+   "text": "Really good, actually.",
    "est_sec": 1.03,
-   "gap_before": 0.41,
+   "gap_before": 0.67,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_11"
+   "phrasing": "greet_ans_13"
   },
   {
    "speaker": "user",
-   "text": "I'm forty-five and I've always wanted to learn an instrument. Is it too late?",
+   "text": "We got a kitten! Tiny, grey, absolutely feral. We can't agree on a name.",
    "est_sec": 4.44,
-   "gap_before": 0.57,
+   "gap_before": 0.52,
    "event": "ordinary_request",
-   "block": "music.ctx1"
+   "block": "pets.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Not at all, adults learn quickly because they practice with purpose. Are you drawn more to the guitar, the piano, or something else?",
-   "est_sec": 7.23,
-   "gap_before": 0.89,
+   "text": "Congratulations! What's on the shortlist?",
+   "est_sec": 1.65,
+   "gap_before": 0.39,
    "role": "reply",
-   "block": "music.ctx1"
+   "block": "pets.ctx7"
   },
   {
    "speaker": "user",
-   "text": "I haven't decided. Give me five seconds, then ask me again.",
-   "est_sec": 3.51,
-   "gap_before": 3.26,
+   "text": "Pickle or Biscuit.",
+   "est_sec": 1.03,
+   "gap_before": 2.57,
+   "event": "ordinary_request",
+   "block": "pets.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Both very good. Which one does she look more like when she's attacking your feet?",
+   "est_sec": 4.75,
+   "gap_before": 0.39,
+   "role": "reply",
+   "block": "pets.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about that for twenty seconds, then ask me once more.",
+   "est_sec": 4.13,
+   "gap_before": 1.32,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 5,
-   "phrasing": "think_instr_17"
+   "wait_sec": 20,
+   "phrasing": "think_instr_29"
   },
   {
    "speaker": "moshi",
-   "text": "So, which instrument is calling you, guitar, piano or something else?",
-   "est_sec": 3.51,
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, is she a Pickle or a Biscuit?",
+   "est_sec": 2.58,
    "role": "resume",
-   "block": "music.ctx1",
+   "block": "pets.ctx7",
    "anchor": {
-    "turn": 4,
-    "offset": 5.22
+    "turn": 6,
+    "offset": 20.56
    }
   }
  ]

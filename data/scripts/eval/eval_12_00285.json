@@ -7,161 +7,146 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "door",
- "wait_type": "door",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [
-  "implicit"
+  "extension"
  ],
  "topics": [
-  "family_visit"
+  "home_office"
  ],
- "topic": "family_visit",
+ "wait_sec": 30,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 2.92
+ },
+ "deadline": {
+  "after_turn": 6,
+  "sec": 10
+ },
+ "topic": "home_office",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
-  "friend": "7bb342e710854139b1d6e12411229f1f",
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_09",
-  "greet_ans_30",
-  "door_instr_02",
-  "ack_12",
-  "door_06",
-  "implicit_01"
+  "greet_15",
+  "greet_ans_03",
+  "think_instr_27",
+  "ack_03",
+  "extension_03"
  ],
  "block_ids": [
-  "family_visit.ctx3"
+  "home_office.ctx11"
  ],
- "est_total_sec": 60.63,
- "est_speech_sec": 42.63,
+ "est_total_sec": 76.36,
+ "est_speech_sec": 32.62,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's it going?",
-   "est_sec": 1.34,
-   "gap_before": 0.67,
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.43,
    "role": "greeting",
-   "phrasing": "greet_09",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.33,
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.9,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "My sister and her two kids are coming Saturday and I have no idea what to do with them.",
-   "est_sec": 5.99,
-   "gap_before": 0.55,
+   "text": "Working from home, I just graze on crackers all day instead of eating lunch.",
+   "est_sec": 4.44,
+   "gap_before": 0.5,
    "event": "ordinary_request",
-   "block": "family_visit.ctx3"
+   "block": "home_office.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "We could plan something. Would the kids like the zoo, or would you rather keep it relaxed with a movie and pizza at home?",
-   "est_sec": 7.54,
-   "gap_before": 1.18,
+   "text": "Ha, the cracker diet. Would cooking a quick lunch each day work for you, or would you rather batch cook on Sunday and just reheat?",
+   "est_sec": 7.85,
+   "gap_before": 1.19,
    "role": "reply",
-   "block": "family_visit.ctx3",
+   "block": "home_office.ctx11",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hang on, the doorbell just rang. Don't say anything until I come back.",
-   "est_sec": 4.13,
-   "gap_before": 0.63,
-   "event": "instruction",
-   "kind": "door",
-   "phrasing": "door_instr_02"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
-   "gap_before": 0.67,
-   "role": "ack",
-   "phrasing": "ack_12",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, hi!",
-   "est_sec": 0.72,
-   "gap_before": 2.41,
-   "phrasing": "door_06"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Hey, I'm back from the trip, brought you something.",
-   "est_sec": 2.89,
-   "gap_before": 3.27,
-   "phrasing": "door_06",
-   "event": "distractor",
-   "kind": "near_miss"
-  },
-  {
-   "speaker": "user",
-   "text": "You didn't have to! How was it?",
-   "est_sec": 2.27,
-   "gap_before": 0.86,
-   "phrasing": "door_06",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Amazing, I'll tell you later.",
-   "est_sec": 1.65,
-   "gap_before": 0.57,
-   "phrasing": "door_06"
-  },
-  {
-   "speaker": "user",
-   "text": "Anyway, where were we?",
-   "est_sec": 1.34,
-   "gap_before": 3.08,
-   "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_01"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Of course. We were planning Saturday with your sister's kids, the zoo or a day at home.",
-   "est_sec": 5.37,
-   "gap_before": 0.75,
-   "role": "resume",
-   "block": "family_visit.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Home. My sister will be tired from the drive anyway.",
-   "est_sec": 3.2,
-   "gap_before": 1.13,
-   "event": "ordinary_request",
-   "block": "family_visit.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sounds cozy. Let the kids pick the movie and the pizza toppings.",
+   "text": "Give me thirty seconds. I'll know by then, so ask me again.",
    "est_sec": 3.82,
-   "gap_before": 0.4,
+   "gap_before": 0.94,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 30,
+   "phrasing": "think_instr_27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.45,
+   "role": "ack",
+   "phrasing": "ack_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, ten more seconds please.",
+   "est_sec": 1.65,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_03",
+   "anchor": {
+    "turn": 4,
+    "offset": 27.08
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, cook every day, or batch cook on Sunday?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "home_office.ctx11",
+   "anchor": {
+    "turn": 6,
+    "offset": 10.4
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Sunday prep. I'll never stop mid-day to cook.",
+   "est_sec": 2.58,
+   "gap_before": 0.96,
+   "event": "ordinary_request",
+   "block": "home_office.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then make one big pot of something, like a curry or soup, and portion it into boxes.",
+   "est_sec": 5.37,
+   "gap_before": 1.18,
    "role": "followup",
-   "block": "family_visit.ctx3",
+   "block": "home_office.ctx11",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_door",
-  "implicit_return"
+  "familiar_type",
+  "extension"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

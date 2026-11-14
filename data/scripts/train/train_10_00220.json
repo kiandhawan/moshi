@@ -7,17 +7,27 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "travel_planning"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "early_end",
+  "self_talk"
  ],
- "topic": "travel_planning",
+ "topics": [
+  "gardening"
+ ],
+ "wait_sec": 20,
+ "early_end": {
+  "after_sec": 8.03,
+  "direct": false
+ },
+ "topic": "gardening",
  "voices": {
-  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "user": "bf322df2096a46f18c579d0baa36f41d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,102 +35,98 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_29",
-  "greet_ans_05"
+  "greet_ans_11",
+  "think_instr_01",
+  "self_26",
+  "early_end_05"
  ],
  "block_ids": [
-  "travel_planning.dlg3"
+  "gardening.ctx1"
  ],
- "est_total_sec": 52.51,
- "est_speech_sec": 39.85,
+ "est_total_sec": 41.47,
+ "est_speech_sec": 29.42,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi, how are you doing right now?",
    "est_sec": 2.27,
-   "gap_before": 0.33,
+   "gap_before": 0.76,
    "role": "greeting",
    "phrasing": "greet_29"
   },
   {
    "speaker": "user",
-   "text": "I'm alright, a bit tired.",
-   "est_sec": 1.65,
-   "gap_before": 0.45,
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.62,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_05"
+   "phrasing": "greet_ans_11"
   },
   {
    "speaker": "user",
-   "text": "Do I need travel insurance for a short trip inside Europe?",
-   "est_sec": 3.51,
-   "gap_before": 0.29,
+   "text": "I've got a sunny balcony and I want to grow something I can actually eat.",
+   "est_sec": 4.75,
+   "gap_before": 0.28,
    "event": "ordinary_request",
-   "block": "travel_planning.dlg3"
+   "block": "gardening.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "It's not required, but it's cheap and covers things like cancellations and lost luggage. Worth it for peace of mind.",
+   "text": "Lovely. Herbs, cherry tomatoes and salad greens all do well in pots. Which of those would you use the most?",
    "est_sec": 6.3,
-   "gap_before": 0.45,
+   "gap_before": 0.51,
    "role": "reply",
-   "block": "travel_planning.dlg3"
+   "block": "gardening.ctx1"
   },
   {
    "speaker": "user",
-   "text": "My credit card might already include some. How do I check?",
-   "est_sec": 3.51,
-   "gap_before": 2.97,
-   "event": "ordinary_request",
-   "block": "travel_planning.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Look in your card's benefits page or call them. Often you have to pay for the trip with that card for it to count.",
-   "est_sec": 7.54,
-   "gap_before": 1.02,
-   "role": "reply",
-   "block": "travel_planning.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "I paid for the hotel with it but the flights",
+   "text": "Give me twenty seconds to think, then ask me again.",
    "est_sec": 3.2,
-   "gap_before": 1.03,
+   "gap_before": 0.5,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, decisions, decisions.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 3.62
+   },
    "event": "distractor",
-   "kind": "pause",
-   "block": "travel_planning.dlg3"
+   "kind": "self_talk",
+   "phrasing": "self_26"
   },
   {
    "speaker": "user",
-   "text": "hmm, I think with my debit card.",
-   "est_sec": 2.27,
-   "gap_before": 2.71,
+   "text": "Got it, I don't need the full time.",
+   "est_sec": 2.58,
+   "anchor": {
+    "turn": 4,
+    "offset": 8.03
+   },
+   "event": "return_cue",
+   "kind": "early_end",
+   "phrasing": "early_end_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Cherry tomatoes. My kids would love picking them.",
+   "est_sec": 2.58,
+   "gap_before": 0.57,
    "event": "ordinary_request",
-   "block": "travel_planning.dlg3"
+   "block": "gardening.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "Then the flights might not be covered. A basic policy just for the trip could fill that gap.",
+   "text": "Great choice. Get a big pot, a stake for support, and water them every day when it's hot.",
    "est_sec": 5.68,
-   "gap_before": 0.58,
-   "role": "reply",
-   "block": "travel_planning.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Got it. Thanks, that's really helpful.",
-   "est_sec": 1.96,
-   "gap_before": 0.45,
-   "event": "ordinary_request",
-   "block": "travel_planning.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You're welcome. Have a great trip!",
-   "est_sec": 1.96,
-   "gap_before": 0.88,
-   "role": "reply",
-   "block": "travel_planning.dlg3"
+   "gap_before": 0.31,
+   "role": "followup",
+   "block": "gardening.ctx1"
   }
  ]
 }

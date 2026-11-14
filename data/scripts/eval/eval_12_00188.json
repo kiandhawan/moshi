@@ -7,165 +7,153 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "phone_call",
- "wait_type": "phone_call",
- "conditions": [],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
+ ],
  "topics": [
   "wedding_planning"
  ],
  "topic": "wedding_planning",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_30",
-  "phone_instr_07",
-  "ack_14",
-  "call_04",
-  "phone_cue_08"
+  "greet_27",
+  "greet_ans_15",
+  "waitlike_12"
  ],
  "block_ids": [
-  "wedding_planning.ctx3"
+  "wedding_planning.dlg3"
  ],
- "est_total_sec": 67.29,
- "est_speech_sec": 40.25,
+ "est_total_sec": 60.87,
+ "est_speech_sec": 48.11,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.72,
-   "role": "greeting",
-   "phrasing": "greet_03",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.86,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
-  },
-  {
-   "speaker": "user",
-   "text": "My best friend's wedding is in three weeks and I'm giving a speech.",
-   "est_sec": 4.13,
-   "gap_before": 0.48,
-   "event": "ordinary_request",
-   "block": "wedding_planning.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "What an honor. Do you want it to be mostly funny stories, or more heartfelt and sentimental?",
-   "est_sec": 5.37,
-   "gap_before": 0.85,
-   "role": "reply",
-   "block": "wedding_planning.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "One second, someone's calling me. Don't talk until I say I'm back.",
-   "est_sec": 3.82,
-   "gap_before": 3.26,
-   "event": "instruction",
-   "kind": "phone_call",
-   "phrasing": "phone_instr_07"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No worries.",
-   "est_sec": 0.72,
-   "gap_before": 0.61,
-   "role": "ack",
-   "phrasing": "ack_14",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hello, yes?",
-   "est_sec": 0.72,
-   "gap_before": 1.69,
-   "phrasing": "call_04",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, about the order.",
-   "est_sec": 1.34,
-   "gap_before": 2.58,
-   "phrasing": "call_04"
-  },
-  {
-   "speaker": "user",
-   "text": "No, it still hasn't arrived.",
-   "est_sec": 1.65,
-   "gap_before": 3.34,
-   "phrasing": "call_04"
-  },
-  {
-   "speaker": "user",
-   "text": "Could you check the tracking number for me?",
-   "est_sec": 2.58,
-   "gap_before": 3.35,
-   "phrasing": "call_04",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'll wait for the email. Thanks.",
-   "est_sec": 2.27,
-   "gap_before": 3.84,
-   "phrasing": "call_04"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, finished the call. I'm back.",
+   "text": "Hey there, how have things been?",
    "est_sec": 1.96,
-   "gap_before": 1.94,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "phone_cue_08"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Hope the call went okay. Still thinking about laughs versus a sentimental speech?",
-   "est_sec": 4.13,
-   "gap_before": 0.6,
-   "role": "resume",
-   "block": "wedding_planning.ctx3",
+   "gap_before": 0.37,
+   "role": "greeting",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Funny, but with a sweet moment at the end.",
-   "est_sec": 2.89,
-   "gap_before": 0.44,
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_15"
+  },
+  {
+   "speaker": "user",
+   "text": "What's a good first dance song that isn't super cheesy?",
+   "est_sec": 3.2,
+   "gap_before": 0.33,
    "event": "ordinary_request",
-   "block": "wedding_planning.ctx3"
+   "block": "wedding_planning.dlg3"
   },
   {
    "speaker": "moshi",
-   "text": "That's the classic recipe. Open with a story, then finish with a sincere toast to the couple.",
-   "est_sec": 5.37,
-   "gap_before": 0.98,
-   "role": "followup",
-   "block": "wedding_planning.ctx3",
+   "text": "It depends on your taste. Something like an old soul ballad or an acoustic cover of a song you both love tends to feel personal without being cheesy.",
+   "est_sec": 8.78,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "We met at a jazz bar, if that helps.",
+   "est_sec": 2.89,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Oh, then a jazz standard would be perfect. Something slow and swingy, maybe even played by a live trio.",
+   "est_sec": 5.99,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, that can't be right.",
+   "est_sec": 1.65,
+   "gap_before": 1.16,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_12",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hmm, I believe it is. Which part doesn't sound right?",
+   "est_sec": 3.2,
+   "gap_before": 1.64,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A live band sounds expensive though",
+   "est_sec": 1.96,
+   "gap_before": 0.92,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "how much do they usually cost?",
+   "est_sec": 1.96,
+   "gap_before": 2.44,
+   "event": "ordinary_request",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A small jazz trio often runs between one and three thousand dollars for an evening, depending on the city.",
+   "est_sec": 5.99,
+   "gap_before": 1.29,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah, that's too much. We'll just play a recording.",
+   "est_sec": 2.89,
+   "gap_before": 0.32,
+   "event": "ordinary_request",
+   "block": "wedding_planning.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally fine. Ask your DJ to fade it out after two minutes so nobody feels stuck on the floor.",
+   "est_sec": 5.99,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "wedding_planning.dlg3",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_phone"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

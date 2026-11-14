@@ -7,15 +7,23 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "picnic"
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
  ],
- "topic": "picnic",
+ "topics": [
+  "learning_language"
+ ],
+ "reading": {
+  "material": "email",
+  "sec": 8.4
+ },
+ "topic": "learning_language",
  "voices": {
   "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "friend": null,
@@ -24,112 +32,102 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_15",
-  "greet_ans_12"
+  "greet_12",
+  "greet_ans_24",
+  "read_instr_02",
+  "implicit_14"
  ],
  "block_ids": [
-  "picnic.dlg3"
+  "learning_language.ctx4"
  ],
- "est_total_sec": 49.56,
- "est_speech_sec": 35.51,
+ "est_total_sec": 45.25,
+ "est_speech_sec": 28.18,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your week going?",
-   "est_sec": 1.65,
-   "gap_before": 0.67,
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.33,
    "role": "greeting",
-   "phrasing": "greet_15",
+   "phrasing": "greet_12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Okay, I guess.",
-   "est_sec": 1.03,
-   "gap_before": 0.54,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_12"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to plan a romantic picnic for my girlfriend. Where do I start?",
-   "est_sec": 4.44,
-   "gap_before": 0.26,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Pick a quiet spot with a nice view, maybe for sunset. Then plan a few simple foods she really likes.",
-   "est_sec": 6.3,
-   "gap_before": 0.97,
-   "role": "reply",
-   "block": "picnic.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "She loves strawberries and fancy cheese.",
+   "text": "Ah, it's been a long day.",
    "est_sec": 1.96,
-   "gap_before": 3.28,
+   "gap_before": 0.76,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "My boyfriend's whole family speaks Italian, and we're visiting them at Christmas.",
+   "est_sec": 3.82,
+   "gap_before": 0.55,
    "event": "ordinary_request",
-   "block": "picnic.dlg3"
+   "block": "learning_language.ctx4"
   },
   {
    "speaker": "moshi",
-   "text": "Perfect. Add some good bread, a little honey and something sparkling to drink.",
-   "est_sec": 4.13,
-   "gap_before": 0.99,
+   "text": "That's a great motivator. Focus on everyday conversation phrases, or build up proper grammar foundations first?",
+   "est_sec": 5.06,
+   "gap_before": 1.31,
    "role": "reply",
-   "block": "picnic.dlg3",
+   "block": "learning_language.ctx4",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Should I bring music, or would that be",
-   "est_sec": 2.58,
-   "gap_before": 0.42,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "picnic.dlg3"
+   "text": "Let me read this email first before you comment.",
+   "est_sec": 2.89,
+   "gap_before": 0.75,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_02"
   },
   {
    "speaker": "user",
-   "text": "too cheesy?",
-   "est_sec": 0.72,
-   "gap_before": 2.66,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
+   "text": "Okay, go ahead.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 8.4
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_14"
   },
   {
    "speaker": "moshi",
-   "text": "A small speaker playing quietly is sweet, not cheesy. Just keep the volume low.",
-   "est_sec": 4.44,
-   "gap_before": 1.05,
-   "role": "reply",
-   "block": "picnic.dlg3",
+   "text": "Of course. So, how are you tackling it before the visit?",
+   "est_sec": 3.51,
+   "gap_before": 1.19,
+   "role": "resume",
+   "block": "learning_language.ctx4",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Actually, I'm thinking of making it a surprise.",
-   "est_sec": 2.58,
-   "gap_before": 1.26,
+   "text": "Phrases. I just want to chat with his nonna.",
+   "est_sec": 2.89,
+   "gap_before": 1.12,
    "event": "ordinary_request",
-   "block": "picnic.dlg3"
+   "block": "learning_language.ctx4"
   },
   {
    "speaker": "moshi",
-   "text": "Love it. Set everything up first, then bring her there for what she thinks is just a walk.",
-   "est_sec": 5.68,
-   "gap_before": 0.45,
-   "role": "reply",
-   "block": "picnic.dlg3",
+   "text": "Perfect, start with greetings, compliments on the food and questions about family. Nonnas love questions.",
+   "est_sec": 4.75,
+   "gap_before": 1.16,
+   "role": "followup",
+   "block": "learning_language.ctx4",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_reading",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

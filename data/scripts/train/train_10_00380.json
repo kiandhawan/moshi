@@ -7,125 +7,136 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "weather_plans"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "weather_plans",
+ "topics": [
+  "birthday_party"
+ ],
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "birthday_party",
  "voices": {
-  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_07",
-  "greet_ans_08",
-  "describe_instr_20",
-  "ack_12",
-  "describe_cue_14"
+  "greet_17",
+  "greet_ans_28",
+  "think_instr_02",
+  "self_25",
+  "self_14"
  ],
  "block_ids": [
-  "weather_plans.opt2"
+  "birthday_party.ctx4"
  ],
- "est_total_sec": 62.53,
- "est_speech_sec": 50.7,
+ "est_total_sec": 58.22,
+ "est_speech_sec": 34.17,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How's everything going?",
-   "est_sec": 1.34,
-   "gap_before": 0.33,
-   "role": "greeting",
-   "phrasing": "greet_07"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm great, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.31,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
-  },
-  {
-   "speaker": "user",
-   "text": "There's a heat wave coming and I'm trying to figure out what to do on my day off.",
-   "est_sec": 5.68,
-   "gap_before": 0.41,
-   "block": "weather_plans.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me describe everything first, and then I'll ask for your thoughts.",
-   "est_sec": 3.82,
-   "gap_before": 0.54,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_20"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
    "gap_before": 0.36,
-   "role": "ack",
-   "phrasing": "ack_12"
+   "role": "greeting",
+   "phrasing": "greet_17"
   },
   {
    "speaker": "user",
-   "text": "One option is going to the lake, but it's an hour drive and the beach has no shade.",
-   "est_sec": 5.68,
-   "gap_before": 0.62,
-   "block": "weather_plans.opt2",
-   "event": "distractor",
-   "kind": "pause"
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.83,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
   },
   {
    "speaker": "user",
-   "text": "Another is spending the afternoon at the mall, which is boring but at least air conditioned.",
-   "est_sec": 5.06,
-   "gap_before": 1.73,
-   "block": "weather_plans.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is going to the public pool in the morning before it gets too hot.",
-   "est_sec": 5.06,
-   "gap_before": 2.96,
-   "block": "weather_plans.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is staying home with the fan on and catching up on my shows.",
-   "est_sec": 5.37,
-   "gap_before": 1.77,
-   "block": "weather_plans.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, I'm finished. What's your opinion?",
-   "est_sec": 1.96,
-   "gap_before": 0.74,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_14"
+   "text": "My grandmother turns ninety in May and the whole family wants to do something.",
+   "est_sec": 4.44,
+   "gap_before": 0.36,
+   "event": "ordinary_request",
+   "block": "birthday_party.ctx4"
   },
   {
    "speaker": "moshi",
-   "text": "The morning pool trip sounds smart, you get to swim and you're home before the worst of the heat. The lake is lovely, but no shade in a heat wave can be rough. The mall is a fine backup if you need to cool off in the afternoon.",
-   "est_sec": 14.98,
-   "gap_before": 0.56,
+   "text": "Ninety is huge. Would she enjoy a big lunch with everyone, or a smaller afternoon tea with just her closest people?",
+   "est_sec": 6.61,
+   "gap_before": 0.54,
+   "role": "reply",
+   "block": "birthday_party.ctx4"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think about it for twenty seconds and then ask me again.",
+   "est_sec": 4.13,
+   "gap_before": 1.1,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, so, the thing is",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 4.78
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_25"
+  },
+  {
+   "speaker": "user",
+   "text": "No, hang on, that's silly.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 14.28
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Any clearer now? A full family lunch, or something smaller with tea and cake?",
+   "est_sec": 4.44,
    "role": "resume",
-   "block": "weather_plans.opt2"
+   "block": "birthday_party.ctx4",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.44
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Afternoon tea. Crowds wear her out these days.",
+   "est_sec": 2.58,
+   "gap_before": 1.03,
+   "event": "ordinary_request",
+   "block": "birthday_party.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Kind choice. Keep it to two hours and maybe ask each guest to bring an old photo of her.",
+   "est_sec": 5.99,
+   "gap_before": 1.19,
+   "role": "followup",
+   "block": "birthday_party.ctx4"
   }
  ]
 }

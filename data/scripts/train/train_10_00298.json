@@ -7,17 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "describe_options",
  "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "weather_plans"
+  "shopping"
  ],
- "topic": "weather_plans",
+ "topic": "shopping",
  "voices": {
-  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,96 +27,89 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_22",
-  "greet_ans_28",
-  "describe_instr_17",
-  "ack_07",
-  "describe_cue_04"
+  "greet_ans_11",
+  "describe_instr_10",
+  "describe_cue_02"
  ],
  "block_ids": [
-  "weather_plans.opt1"
+  "shopping.opt3"
  ],
- "est_total_sec": 52.23,
- "est_speech_sec": 41.3,
+ "est_total_sec": 58.51,
+ "est_speech_sec": 45.85,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello, how are things going?",
    "est_sec": 1.65,
-   "gap_before": 0.54,
+   "gap_before": 0.47,
    "role": "greeting",
    "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "Doing alright, thanks.",
+   "text": "Not too bad.",
    "est_sec": 1.03,
-   "gap_before": 0.46,
+   "gap_before": 0.58,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
+   "phrasing": "greet_ans_11"
   },
   {
    "speaker": "user",
-   "text": "It might rain on Saturday and we need to pick a plan for the kids.",
-   "est_sec": 4.75,
-   "gap_before": 0.43,
-   "block": "weather_plans.opt1"
+   "text": "Our washing machine flooded the kitchen, so I need a new one fast.",
+   "est_sec": 4.13,
+   "gap_before": 0.27,
+   "block": "shopping.opt3"
   },
   {
    "speaker": "user",
-   "text": "Let me finish describing every option before you respond.",
-   "est_sec": 2.89,
-   "gap_before": 0.8,
+   "text": "Let me get through all the options before you weigh in.",
+   "est_sec": 3.51,
+   "gap_before": 0.67,
    "event": "instruction",
    "kind": "describe_options",
-   "phrasing": "describe_instr_17"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Got it.",
-   "est_sec": 0.72,
-   "gap_before": 0.55,
-   "role": "ack",
-   "phrasing": "ack_07"
+   "phrasing": "describe_instr_10"
   },
   {
    "speaker": "user",
-   "text": "The first idea is the zoo, which is fun but mostly outdoors.",
-   "est_sec": 3.82,
-   "gap_before": 0.98,
-   "block": "weather_plans.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's the science museum, all indoors, but it gets really crowded on rainy days.",
-   "est_sec": 4.75,
-   "gap_before": 1.33,
-   "block": "weather_plans.opt1",
+   "text": "There's a cheap top loader at the hardware store, they can deliver it tomorrow, but it's really loud.",
+   "est_sec": 5.68,
+   "gap_before": 1.31,
+   "block": "shopping.opt3",
    "event": "distractor",
    "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "And the last one is staying in with a fort, board games and a movie marathon.",
-   "est_sec": 5.06,
+   "text": "Then a front loader that's super quiet and saves water, but it's about twice the price and takes a week.",
+   "est_sec": 6.3,
    "gap_before": 2.44,
-   "block": "weather_plans.opt1"
+   "block": "shopping.opt3",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'm done. What do you think?",
+   "text": "And my neighbour is selling her two year old machine for almost nothing, though I'd have to collect it myself.",
+   "est_sec": 6.3,
+   "gap_before": 2.16,
+   "block": "shopping.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
    "est_sec": 2.27,
-   "gap_before": 0.77,
+   "gap_before": 1.39,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_04"
+   "phrasing": "describe_cue_02"
   },
   {
    "speaker": "moshi",
-   "text": "The science museum is safe from the rain, but expect crowds since everyone else will have the same idea. The zoo could be great if the rain holds off, and it might even be quieter. Staying in is cozy and cheap, but kids can get restless.",
-   "est_sec": 14.36,
-   "gap_before": 1.13,
+   "text": "The neighbour's machine is a great deal if it's working well and you can borrow someone to help lift it. The quiet front loader is the best long term, it'll save on water bills. The top loader only wins if you really can't go a week without washing.",
+   "est_sec": 14.98,
+   "gap_before": 1.87,
    "role": "resume",
-   "block": "weather_plans.opt1"
+   "block": "shopping.opt3"
   }
  ]
 }

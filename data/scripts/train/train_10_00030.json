@@ -7,155 +7,109 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "sleep",
-  "home_repair"
+  "smartphones"
  ],
- "topic": "sleep",
+ "topic": "smartphones",
  "voices": {
-  "user": "e3cd384158934cc9a01029cd7d278634",
-  "friend": "c70cfb98867a4bfb9ae20d2401257b92",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Ben",
- "friend_name_id": "name_11",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_08",
-  "greet_ans_29",
-  "side_instr_23",
-  "side_cue_17"
+  "greet_17",
+  "greet_ans_16",
+  "describe_instr_05",
+  "describe_cue_02"
  ],
  "block_ids": [
-  "sleep.ctx3",
-  "home_repair.side3"
+  "smartphones.opt3"
  ],
- "est_total_sec": 70.21,
- "est_speech_sec": 53.27,
+ "est_total_sec": 56.61,
+ "est_speech_sec": 43.99,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there, how are you feeling today?",
-   "est_sec": 2.27,
-   "gap_before": 0.72,
-   "role": "greeting",
-   "phrasing": "greet_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.82,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
-  },
-  {
-   "speaker": "user",
-   "text": "I want a better bedtime routine. Right now I just scroll until I pass out.",
-   "est_sec": 4.75,
-   "gap_before": 0.55,
-   "event": "ordinary_request",
-   "block": "sleep.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A wind down routine can really help. What would you enjoy doing in the last half hour instead, reading, stretching, or maybe a warm shower?",
-   "est_sec": 7.85,
-   "gap_before": 0.6,
-   "role": "reply",
-   "block": "sleep.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, I need a minute with my roommate. Just stay silent until I come back to you.",
-   "est_sec": 5.68,
-   "gap_before": 1.39,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_23"
-  },
-  {
-   "speaker": "user",
-   "text": "Ben, come look at this. Is that water stain on the ceiling getting bigger?",
-   "est_sec": 4.44,
-   "gap_before": 0.94,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_repair.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Hmm, yeah, it looks darker than yesterday.",
-   "est_sec": 2.27,
-   "gap_before": 0.41,
-   "block": "home_repair.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Great. Do you think it's the roof or the upstairs bathroom?",
-   "est_sec": 3.51,
-   "gap_before": 1.23,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_repair.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "It's right under the tub, so my bet's the bathroom.",
-   "est_sec": 3.2,
-   "gap_before": 0.85,
-   "block": "home_repair.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'll check the seal around the tub tomorrow morning.",
-   "est_sec": 3.2,
-   "gap_before": 0.79,
-   "block": "home_repair.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Put a towel down in the meantime, just in case.",
-   "est_sec": 3.2,
-   "gap_before": 3.39,
-   "block": "home_repair.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm back, thanks for waiting.",
+   "text": "Hey there! How's your day?",
    "est_sec": 1.65,
-   "gap_before": 0.69,
+   "gap_before": 0.77,
+   "role": "greeting",
+   "phrasing": "greet_17"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.77,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "My contract ends next month and I need to pick a new phone plan.",
+   "est_sec": 4.44,
+   "gap_before": 0.27,
+   "block": "smartphones.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll tell you all the choices first. Wait until I'm finished before you comment.",
+   "est_sec": 4.44,
+   "gap_before": 0.46,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_05"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a cheap prepaid plan, ten gigs of data, no contract, but the coverage at my parents' place is patchy.",
+   "est_sec": 6.3,
+   "gap_before": 1.41,
+   "block": "smartphones.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "My current carrier offered unlimited data for a bit more each month if I sign up for two years.",
+   "est_sec": 5.99,
+   "gap_before": 1.78,
+   "block": "smartphones.opt3",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A family plan with my sister would split the cost, though I'd be tied to her paying on time.",
+   "est_sec": 5.99,
+   "gap_before": 2.25,
+   "block": "smartphones.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 1.43,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_17"
+   "phrasing": "describe_cue_02"
   },
   {
    "speaker": "moshi",
-   "text": "Sure thing. We were building your bedtime routine.",
-   "est_sec": 2.58,
-   "gap_before": 1.08,
+   "text": "If you use a lot of data, your carrier's unlimited deal is the safe pick, even with the two-year lock. The prepaid plan wins on flexibility, and the family split saves money but mixes in family politics.",
+   "est_sec": 11.57,
+   "gap_before": 1.98,
    "role": "resume",
-   "block": "sleep.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "A shower and some stretching, I think.",
-   "est_sec": 2.27,
-   "gap_before": 1.47,
-   "event": "ordinary_request",
-   "block": "sleep.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Nice combo. The drop in body temperature after a warm shower actually helps you fall asleep.",
-   "est_sec": 5.06,
-   "gap_before": 0.51,
-   "role": "followup",
-   "block": "sleep.ctx3"
+   "block": "smartphones.opt3"
   }
  ]
 }

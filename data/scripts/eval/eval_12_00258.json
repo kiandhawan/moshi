@@ -7,118 +7,166 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
- "conditions": [],
- "topics": [
-  "painting_art"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit"
  ],
- "reading": {
-  "material": "letter",
-  "sec": 20.6
- },
+ "topics": [
+  "painting_art",
+  "podcasts"
+ ],
  "topic": "painting_art",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
-  "friend": null,
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Maya",
+ "friend_name_id": "name_03",
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_21",
-  "read_instr_09",
-  "murmur_11",
-  "read_cue_07"
+  "greet_18",
+  "greet_ans_06",
+  "side_instr_09",
+  "implicit_06"
  ],
  "block_ids": [
-  "painting_art.ctx2"
+  "painting_art.ctx1",
+  "podcasts.side2"
  ],
- "est_total_sec": 50.31,
- "est_speech_sec": 26.22,
+ "est_total_sec": 67.79,
+ "est_speech_sec": 51.72,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
+   "text": "Hello! How have you been lately?",
    "est_sec": 1.96,
-   "gap_before": 0.4,
+   "gap_before": 0.45,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.7,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
-  },
-  {
-   "speaker": "user",
-   "text": "There are two art classes near me, one on weekday evenings and one on Saturday mornings.",
-   "est_sec": 5.06,
-   "gap_before": 0.24,
-   "event": "ordinary_request",
-   "block": "painting_art.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Both sound good. Which fits your week better, a tired evening after work or giving up a slow Saturday morning?",
-   "est_sec": 6.3,
-   "gap_before": 0.54,
-   "role": "reply",
-   "block": "painting_art.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Let me read this letter first, please don't talk until I'm done.",
-   "est_sec": 3.82,
-   "gap_before": 1.19,
-   "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_09"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, by the end of the month.",
-   "est_sec": 2.27,
-   "anchor": {
-    "turn": 4,
-    "offset": 15.35
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "murmur_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, finished the letter.",
+   "text": "Good, thanks. Busy day.",
    "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 20.6
-   },
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "read_cue_07"
+   "gap_before": 0.72,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_06"
+  },
+  {
+   "speaker": "user",
+   "text": "I finally bought some paints and I want to start a little hobby.",
+   "est_sec": 4.13,
+   "gap_before": 0.26,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, all read? You were choosing between the evening class and the Saturday class.",
+   "text": "That's exciting. Did you get watercolors or acrylics, and do you want to start with landscapes or something simpler like fruit on a table?",
+   "est_sec": 7.54,
+   "gap_before": 0.33,
+   "role": "reply",
+   "block": "painting_art.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, give me a bit, someone's at my door. Wait quietly until I say I'm back.",
+   "est_sec": 5.06,
+   "gap_before": 1.26,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you turn the speaker down a little? That host is so loud.",
+   "est_sec": 4.13,
+   "gap_before": 1.2,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sorry, he gets really excited about space stuff.",
+   "est_sec": 2.58,
+   "gap_before": 0.47,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "What's this episode about anyway?",
+   "est_sec": 1.65,
+   "gap_before": 3.07,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Whether we could ever live on Mars. Spoiler, probably not.",
+   "est_sec": 3.2,
+   "gap_before": 0.63,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha. Send me the link, I'll listen later with headphones.",
+   "est_sec": 3.2,
+   "gap_before": 1.13,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Already did. Check your messages.",
+   "est_sec": 1.65,
+   "gap_before": 0.83,
+   "block": "podcasts.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, done. Where were we?",
+   "est_sec": 1.65,
+   "gap_before": 1.72,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. We were picking your first subject, a landscape or a still life.",
    "est_sec": 4.44,
-   "gap_before": 1.19,
+   "gap_before": 0.91,
    "role": "resume",
-   "block": "painting_art.ctx2",
+   "block": "painting_art.ctx1",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let's keep it easy, I'll paint a couple of lemons and a mug.",
+   "est_sec": 4.13,
+   "gap_before": 0.87,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good pick. Set them near a window so you get one clear shadow to work with.",
+   "est_sec": 5.06,
+   "gap_before": 0.72,
+   "role": "followup",
+   "block": "painting_art.ctx1",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading"
+  "familiar_type",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

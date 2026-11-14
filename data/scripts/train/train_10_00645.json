@@ -7,111 +7,109 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "sleep"
+  "baking"
  ],
- "topic": "sleep",
+ "topic": "baking",
  "voices": {
-  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_16"
+  "greet_25",
+  "greet_ans_01",
+  "describe_instr_13",
+  "describe_cue_04"
  ],
  "block_ids": [
-  "sleep.dlg4"
+  "baking.opt2"
  ],
- "est_total_sec": 44.72,
- "est_speech_sec": 34.79,
+ "est_total_sec": 50.15,
+ "est_speech_sec": 39.34,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
-   "est_sec": 1.65,
-   "gap_before": 0.58,
-   "role": "greeting",
-   "phrasing": "greet_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty busy, but good.",
-   "est_sec": 1.34,
-   "gap_before": 0.57,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_16"
-  },
-  {
-   "speaker": "user",
-   "text": "How warm or cold should my bedroom be for sleeping?",
-   "est_sec": 3.2,
-   "gap_before": 0.6,
-   "event": "ordinary_request",
-   "block": "sleep.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Most people sleep best in a cool room, around sixty five degrees Fahrenheit or about eighteen Celsius.",
-   "est_sec": 5.37,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "sleep.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "That sounds cold. I'm always freezing.",
-   "est_sec": 1.96,
-   "gap_before": 0.59,
-   "event": "ordinary_request",
-   "block": "sleep.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You can keep the room cool and still be cozy with warm socks or a heavier blanket. Cold feet actually make it harder to fall asleep.",
-   "est_sec": 8.16,
-   "gap_before": 1.52,
-   "role": "reply",
-   "block": "sleep.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, I didn't know that. What about",
+   "text": "Hello there! How's your day treating you?",
    "est_sec": 2.27,
-   "gap_before": 0.75,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "sleep.dlg4"
+   "gap_before": 0.32,
+   "role": "greeting",
+   "phrasing": "greet_25"
   },
   {
    "speaker": "user",
-   "text": "blackout curtains, are those worth it?",
-   "est_sec": 1.96,
-   "gap_before": 1.55,
-   "event": "ordinary_request",
-   "block": "sleep.dlg4"
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.88,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to start baking bread at home and I have a few ways to begin.",
+   "est_sec": 5.06,
+   "gap_before": 0.21,
+   "block": "baking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait until I've listed everything before you jump in.",
+   "est_sec": 2.89,
+   "gap_before": 0.89,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_13"
+  },
+  {
+   "speaker": "user",
+   "text": "One is a simple no knead loaf that rises overnight and bakes in a heavy pot.",
+   "est_sec": 5.06,
+   "gap_before": 0.72,
+   "block": "baking.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another is starting a sourdough starter, which takes about a week before I can even bake.",
+   "est_sec": 5.06,
+   "gap_before": 1.92,
+   "block": "baking.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I could just buy a bread machine that does everything for me.",
+   "est_sec": 4.13,
+   "gap_before": 2.97,
+   "block": "baking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 0.72,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_04"
   },
   {
    "speaker": "moshi",
-   "text": "Yes, especially if there are streetlights outside or you sleep past sunrise. A sleep mask is a cheaper way to test it first.",
-   "est_sec": 7.23,
-   "gap_before": 0.85,
-   "role": "reply",
-   "block": "sleep.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll try the mask then.",
-   "est_sec": 1.65,
-   "gap_before": 0.61,
-   "block": "sleep.dlg4"
+   "text": "Do you want to learn baking, or mostly just have fresh bread? If you want to learn, start with the no knead loaf and move to sourdough later. If you just want bread, the machine is fine.",
+   "est_sec": 11.57,
+   "gap_before": 0.68,
+   "role": "resume",
+   "block": "baking.opt2"
   }
  ]
 }

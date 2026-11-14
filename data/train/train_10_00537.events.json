@@ -1,80 +1,145 @@
 {
   "id": "train_10_00537",
-  "group": "describe_options",
-  "user_start": 2.83,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 10.14,
-  "instruction_end": 14.688,
-  "wait_end": 42.091,
-  "resume_window": [
-    42.091,
-    47.091
+  "group": "side_conversation",
+  "user_start": 2.34,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question",
+    "near_miss"
   ],
-  "wait_sec": 27.403,
+  "cluster": "job_interview.ctx9",
+  "instruction_start": 14.52,
+  "instruction_end": 18.2,
+  "wait_end": 57.17,
+  "resume_window": [
+    57.17,
+    62.17
+  ],
+  "wait_sec": 38.97,
   "distractors": [
-    21.88,
-    29.211
+    21.09,
+    27.59,
+    46.23,
+    53.6
   ],
   "distractor_kinds": [
-    "pause",
-    "pause"
+    "near_miss",
+    "friend_question",
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      21.88,
-      23.92
+      21.09,
+      22.48
     ],
     [
-      29.211,
-      32.171
+      27.59,
+      28.55
+    ],
+    [
+      46.23,
+      48.34
+    ],
+    [
+      53.6,
+      54.01
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    8.2,
+    65.61
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.83,
-      "end": 4.95,
+      "start": 2.34,
+      "end": 3.73,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 5.29,
-      "end": 9.6
+      "start": 4.32,
+      "end": 8.2,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 10.14,
-      "end": 14.688,
+      "start": 14.52,
+      "end": 18.2,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 16.356,
-      "end": 21.88,
+      "start": 19.34,
+      "end": 21.09,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 22.48,
+      "end": 24.58
     },
     {
       "speaker": "user",
-      "start": 23.92,
-      "end": 29.211,
+      "start": 25.74,
+      "end": 27.59,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 28.55,
+      "end": 29.44
     },
     {
       "speaker": "user",
-      "start": 32.171,
-      "end": 38.252
+      "start": 32.64,
+      "end": 36.09
+    },
+    {
+      "speaker": "friend",
+      "start": 37.23,
+      "end": 41.23
     },
     {
       "speaker": "user",
-      "start": 39.262,
-      "end": 42.091,
+      "start": 42.59,
+      "end": 46.23,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 48.34,
+      "end": 50.47
+    },
+    {
+      "speaker": "user",
+      "start": 51.93,
+      "end": 53.6,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 54.01,
+      "end": 55.23
+    },
+    {
+      "speaker": "user",
+      "start": 56.18,
+      "end": 57.17,
       "event": "return_cue",
       "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 62.57,
+      "end": 65.61,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00537 by scripts/render.py.",
@@ -82,21 +147,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.63,
-      "end": 2.16,
-      "text": "Hi, how's everything with you?"
+      "start": 0.52,
+      "end": 2.02,
+      "text": "Hi, how are you holding up?"
     },
     {
-      "kind": "ack",
-      "start": 15.238,
-      "end": 15.607,
-      "text": "Okay."
+      "kind": "reply",
+      "start": 9.01,
+      "end": 13.71,
+      "text": "That's a strong position. Do you want to tell her about the other offer, or keep it to yourself for now?"
     },
     {
       "kind": "resume",
-      "start": 42.551,
-      "end": 54.661,
-      "text": "For a bake sale, the cookies are hard to beat, they're quick, cheap, and easy to sell one at a time. The brownies would probably sell out first, though, so they might be worth the mess. The lemon cake looks pretty, but slicing it on the day adds work."
+      "start": 58.33,
+      "end": 62.16,
+      "text": "Okay. The recruiter call. Telling her about your offer, or not?"
+    },
+    {
+      "kind": "followup",
+      "start": 66.45,
+      "end": 70.28,
+      "text": "Reasonable. Just don't let it sit too long, or you'll lose the leverage."
     }
   ]
 }

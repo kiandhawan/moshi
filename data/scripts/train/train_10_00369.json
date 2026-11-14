@@ -7,17 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "cleaning"
+  "pets"
  ],
- "topic": "cleaning",
+ "topic": "pets",
  "voices": {
-  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "user": "536d3a5e000945adb7038665781a4aca",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,96 +27,118 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_22",
-  "greet_ans_25",
-  "describe_instr_08",
-  "describe_cue_02"
+  "greet_ans_29"
  ],
  "block_ids": [
-  "cleaning.opt1"
+  "pets.dlg28"
  ],
- "est_total_sec": 54.95,
- "est_speech_sec": 42.85,
+ "est_total_sec": 63.59,
+ "est_speech_sec": 48.42,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello, how are things going?",
    "est_sec": 1.65,
-   "gap_before": 0.65,
+   "gap_before": 0.36,
    "role": "greeting",
    "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "I'm well, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.52,
+   "text": "Pretty good so far.",
+   "est_sec": 1.34,
+   "gap_before": 0.62,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_25"
+   "phrasing": "greet_ans_29"
   },
   {
    "speaker": "user",
-   "text": "Our place is always a mess, and I want to pick a cleaning system that sticks.",
+   "text": "My neighbour is feeding my cats for a week. What should I write down for her?",
    "est_sec": 5.06,
-   "gap_before": 0.36,
-   "block": "cleaning.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Please wait until I've gone through all the options.",
-   "est_sec": 2.89,
-   "gap_before": 0.75,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_08"
-  },
-  {
-   "speaker": "user",
-   "text": "The first idea is a chore chart where each person gets assigned rooms that rotate every week.",
-   "est_sec": 5.37,
-   "gap_before": 1.29,
-   "block": "cleaning.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's doing fifteen minutes of tidying together every evening before dinner.",
-   "est_sec": 3.82,
-   "gap_before": 1.01,
-   "block": "cleaning.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is one big cleaning session every Saturday morning for the whole house.",
-   "est_sec": 4.44,
-   "gap_before": 2.89,
-   "block": "cleaning.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is just hiring a cleaner to come every two weeks.",
-   "est_sec": 4.44,
-   "gap_before": 1.6,
-   "block": "cleaning.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "That's everything. Which one would you pick?",
-   "est_sec": 2.27,
-   "gap_before": 0.92,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_02"
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "pets.dlg28"
   },
   {
    "speaker": "moshi",
-   "text": "The fifteen minutes every evening tends to work best, because the mess never piles up. A chore chart helps if people argue about who does what. The big Saturday session works, but it can eat your whole morning.",
-   "est_sec": 11.88,
-   "gap_before": 0.61,
-   "role": "resume",
-   "block": "cleaning.opt1"
+   "text": "Keep it simple. How much food, what time, and where the food and bowls are.",
+   "est_sec": 4.75,
+   "gap_before": 0.71,
+   "role": "reply",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "She's never had cats.",
+   "est_sec": 1.34,
+   "gap_before": 3.25,
+   "event": "ordinary_request",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then add the basics, like how to scoop the litter, where the bags go, and to check they have fresh water.",
+   "est_sec": 6.61,
+   "gap_before": 0.92,
+   "role": "reply",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "One of them is on tablets.",
+   "est_sec": 1.96,
+   "gap_before": 0.77,
+   "event": "ordinary_request",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Write exactly how and when to give them, and maybe show her once before you go. Leave the pill packet out with the doses.",
+   "est_sec": 7.54,
+   "gap_before": 0.34,
+   "role": "reply",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "And emergencies?",
+   "est_sec": 0.72,
+   "gap_before": 0.86,
+   "event": "ordinary_request",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Put your vet's number and address at the top, plus your number and a friend's backup. It'll make her feel much more confident.",
+   "est_sec": 7.23,
+   "gap_before": 1.35,
+   "role": "reply",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "Should I",
+   "est_sec": 0.72,
+   "gap_before": 0.39,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "user",
+   "text": "leave her some money in case?",
+   "est_sec": 1.96,
+   "gap_before": 2.57,
+   "event": "ordinary_request",
+   "block": "pets.dlg28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's thoughtful. A small amount in an envelope for a taxi to the vet or extra food would put both your minds at rest.",
+   "est_sec": 7.54,
+   "gap_before": 1.02,
+   "role": "reply",
+   "block": "pets.dlg28"
   }
  ]
 }

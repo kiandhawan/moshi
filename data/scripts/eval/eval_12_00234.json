@@ -7,129 +7,214 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "podcasts"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "implicit"
  ],
- "topic": "podcasts",
+ "topics": [
+  "laptop_buying",
+  "holiday_gifts"
+ ],
+ "topic": "laptop_buying",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
-  "friend": null,
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": "b121b91872f54f04ba9f6da08b8b6253",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
  "phrasing_ids": [
   "greet_03",
-  "greet_ans_12"
+  "greet_ans_27",
+  "side_instr_18",
+  "ack_09",
+  "dq_75",
+  "implicit_07"
  ],
  "block_ids": [
-  "podcasts.dlg3"
+  "laptop_buying.ctx9",
+  "holiday_gifts.side2",
+  "dq_75"
  ],
- "est_total_sec": 51.69,
- "est_speech_sec": 39.23,
+ "est_total_sec": 78.16,
+ "est_speech_sec": 58.73,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello, how's your day going?",
    "est_sec": 1.65,
-   "gap_before": 0.73,
+   "gap_before": 0.39,
    "role": "greeting",
    "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Okay, I guess.",
+   "text": "All good here.",
    "est_sec": 1.03,
-   "gap_before": 0.35,
+   "gap_before": 0.99,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_12"
+   "phrasing": "greet_ans_27"
   },
   {
    "speaker": "user",
-   "text": "I want to get into podcasts but I don't know where to start.",
+   "text": "My work gave me a budget of fifteen hundred for a new laptop.",
    "est_sec": 4.13,
-   "gap_before": 0.26,
+   "gap_before": 0.49,
    "event": "ordinary_request",
-   "block": "podcasts.dlg3"
+   "block": "laptop_buying.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Think about what you already enjoy, like a hobby, a sport or a kind of book. There's a podcast for almost every interest.",
-   "est_sec": 7.23,
-   "gap_before": 0.91,
-   "role": "reply",
-   "block": "podcasts.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I really like cooking and",
+   "text": "Nice. Will you mainly code?",
    "est_sec": 1.65,
-   "gap_before": 0.96,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "podcasts.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "weird history facts.",
-   "est_sec": 1.03,
-   "gap_before": 2.34,
-   "event": "ordinary_request",
-   "block": "podcasts.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Food history shows combine both, they tell stories about where dishes came from. Plenty of history shows also do short bite-sized episodes.",
-   "est_sec": 6.92,
-   "gap_before": 1.75,
+   "gap_before": 1.19,
    "role": "reply",
-   "block": "podcasts.dlg3",
+   "block": "laptop_buying.ctx9",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Do I need a special app?",
-   "est_sec": 1.96,
-   "gap_before": 1.25,
-   "event": "ordinary_request",
-   "block": "podcasts.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Most phones come with a podcast app already. Just search the topic, subscribe, and new episodes download on their own.",
-   "est_sec": 6.3,
-   "gap_before": 0.54,
-   "role": "reply",
-   "block": "podcasts.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Actually, I'd rather start with something short.",
+   "text": "Yeah, and run lots of virtual machines.",
    "est_sec": 2.27,
-   "gap_before": 0.73,
+   "gap_before": 0.86,
    "event": "ordinary_request",
-   "block": "podcasts.dlg3"
+   "block": "laptop_buying.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Good idea. Look for daily shows, they're often under fifteen minutes, perfect for a coffee break.",
-   "est_sec": 5.06,
-   "gap_before": 1.14,
+   "text": "Then memory matters a lot. Would you spend most of it on memory and a fast processor, or save some for a monitor and dock?",
+   "est_sec": 7.85,
+   "gap_before": 1.94,
    "role": "reply",
-   "block": "podcasts.dlg3",
+   "block": "laptop_buying.ctx9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold up, my mom is asking me something. Please don't say anything until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.48,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Take your time.",
+   "est_sec": 1.03,
+   "gap_before": 0.58,
+   "role": "ack",
+   "phrasing": "ack_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Did we ever buy wrapping paper?",
+   "est_sec": 1.96,
+   "gap_before": 0.72,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "holiday_gifts.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "There's half a roll in the closet, the one with the reindeer.",
+   "est_sec": 3.82,
+   "gap_before": 1.58,
+   "block": "holiday_gifts.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's not going to be enough for all of these.",
+   "est_sec": 3.2,
+   "gap_before": 0.7,
+   "block": "holiday_gifts.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Use the brown paper from the moving boxes. It looks kind of fancy with string.",
+   "est_sec": 4.75,
+   "gap_before": 0.33,
+   "block": "holiday_gifts.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, that's a good idea. Do we have string?",
+   "est_sec": 2.89,
+   "gap_before": 0.69,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "holiday_gifts.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Kitchen drawer, next to the scissors.",
+   "est_sec": 1.96,
+   "gap_before": 0.83,
+   "block": "holiday_gifts.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Marcus, can you reach that box on the top shelf?",
+   "est_sec": 3.2,
+   "gap_before": 0.46,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_75"
+  },
+  {
+   "speaker": "friend",
+   "text": "Barely, hold on.",
+   "est_sec": 1.03,
+   "gap_before": 1.41,
+   "phrasing": "dq_75"
+  },
+  {
+   "speaker": "user",
+   "text": "So, what were you saying?",
+   "est_sec": 1.65,
+   "gap_before": 1.05,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right. The work budget. Laptop only, or laptop plus monitor?",
+   "est_sec": 3.2,
+   "gap_before": 0.71,
+   "role": "resume",
+   "block": "laptop_buying.ctx9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "All on the laptop. I already have a monitor.",
+   "est_sec": 2.89,
+   "gap_before": 0.89,
+   "event": "ordinary_request",
+   "block": "laptop_buying.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect, go for thirty two gigs of memory and a fast drive.",
+   "est_sec": 3.82,
+   "gap_before": 0.64,
+   "role": "followup",
+   "block": "laptop_buying.ctx9",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

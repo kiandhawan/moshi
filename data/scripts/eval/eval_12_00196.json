@@ -7,124 +7,167 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [
   "implicit"
  ],
  "topics": [
-  "laptop_buying"
+  "holiday_gifts",
+  "painting_art"
  ],
- "reading": {
-  "material": "text message",
-  "sec": 15.7
- },
- "topic": "laptop_buying",
+ "topic": "holiday_gifts",
  "voices": {
-  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
-  "friend": null,
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "friend": "7bb342e710854139b1d6e12411229f1f",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Sofia",
+ "friend_name_id": "name_12",
  "phrasing_ids": [
-  "greet_24",
-  "greet_ans_24",
-  "read_instr_08",
-  "implicit_05"
+  "greet_12",
+  "greet_ans_03",
+  "side_instr_03",
+  "implicit_02"
  ],
  "block_ids": [
-  "laptop_buying.ctx1"
+  "holiday_gifts.ctx7",
+  "painting_art.side5"
  ],
- "est_total_sec": 55.14,
- "est_speech_sec": 31.59,
+ "est_total_sec": 66.92,
+ "est_speech_sec": 52.96,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, what's up? How are you doing?",
+   "text": "Hello there, how are you doing today?",
    "est_sec": 2.27,
-   "gap_before": 0.59,
+   "gap_before": 0.74,
    "role": "greeting",
-   "phrasing": "greet_24",
+   "phrasing": "greet_12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Ah, it's been a long day.",
-   "est_sec": 1.96,
-   "gap_before": 0.88,
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.6,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_24"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "My old laptop is dying and I need a new one before next month.",
-   "est_sec": 4.44,
-   "gap_before": 0.34,
+   "text": "My girlfriend and I agreed on no gifts but I feel weird showing up with nothing.",
+   "est_sec": 5.06,
+   "gap_before": 0.43,
    "event": "ordinary_request",
-   "block": "laptop_buying.ctx1"
+   "block": "holiday_gifts.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. First big question, do you want something small and light to carry around, or a bigger screen for working at a desk?",
-   "est_sec": 7.23,
-   "gap_before": 1.14,
+   "text": "That's common. Do you want to respect the deal fully, or bring something tiny and handmade that doesn't really count?",
+   "est_sec": 6.3,
+   "gap_before": 0.61,
    "role": "reply",
-   "block": "laptop_buying.ctx1",
+   "block": "holiday_gifts.ctx7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Wait, a message just came in. Let me read it, don't talk yet.",
-   "est_sec": 4.13,
-   "gap_before": 1.03,
+   "text": "Wait, Sofia needs me for a sec. Please stay quiet until I come back to you.",
+   "est_sec": 5.06,
+   "gap_before": 0.87,
    "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_08"
+   "kind": "side_conversation",
+   "phrasing": "side_instr_03"
   },
   {
    "speaker": "user",
-   "text": "Okay, sorry, where were we again?",
-   "est_sec": 1.96,
-   "anchor": {
-    "turn": 4,
-    "offset": 15.7
-   },
+   "text": "Sofia, can you hold this canvas still for a sec?",
+   "est_sec": 3.2,
+   "gap_before": 1.15,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "painting_art.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. Why is it all sticky on the back?",
+   "est_sec": 2.89,
+   "gap_before": 0.72,
+   "block": "painting_art.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "I used way too much gel medium. Is it dripping on you?",
+   "est_sec": 3.82,
+   "gap_before": 1.38,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "painting_art.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Only a little. What even is this, a face?",
+   "est_sec": 2.89,
+   "gap_before": 0.8,
+   "block": "painting_art.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "It's supposed to be a sunflower field.",
+   "est_sec": 2.27,
+   "gap_before": 0.99,
+   "block": "painting_art.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Oh. Yeah, I see it now. Sort of. From far away.",
+   "est_sec": 3.51,
+   "gap_before": 0.43,
+   "block": "painting_art.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, what were you saying?",
+   "est_sec": 2.27,
+   "gap_before": 0.98,
    "event": "return_cue",
    "kind": "implicit",
-   "phrasing": "implicit_05"
+   "phrasing": "implicit_02"
   },
   {
    "speaker": "moshi",
-   "text": "Sure. Any thoughts on size for the new laptop?",
-   "est_sec": 2.89,
-   "gap_before": 0.89,
+   "text": "Of course. The no gifts agreement. Stick to it, or bend it a little?",
+   "est_sec": 4.44,
+   "gap_before": 0.71,
    "role": "resume",
-   "block": "laptop_buying.ctx1",
+   "block": "holiday_gifts.ctx7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Light. I carry it to cafes almost every day.",
-   "est_sec": 2.89,
-   "gap_before": 0.53,
+   "text": "I'll stick to it. She'd be annoyed if I didn't.",
+   "est_sec": 3.2,
+   "gap_before": 1.33,
    "event": "ordinary_request",
-   "block": "laptop_buying.ctx1"
+   "block": "holiday_gifts.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Then look at thirteen or fourteen inch models with long battery life.",
-   "est_sec": 3.82,
-   "gap_before": 0.95,
+   "text": "That's respecting her, which is a gift in itself. Maybe plan a nice evening instead.",
+   "est_sec": 4.75,
+   "gap_before": 0.72,
    "role": "followup",
-   "block": "laptop_buying.ctx1",
+   "block": "holiday_gifts.ctx7",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading",
+  "familiar_type",
   "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."

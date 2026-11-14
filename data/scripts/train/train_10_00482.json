@@ -7,120 +7,182 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "shopping"
+  "photography",
+  "home_repair"
  ],
- "topic": "shopping",
+ "topic": "photography",
  "voices": {
-  "user": "2680da81de8348a68e1f4dbaa79272f1",
-  "friend": null,
+  "user": "705690224f264386b87fb598083ab022",
+  "friend": "458abe2c9c0b41f793c7235a230caa8c",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Emma",
+ "friend_name_id": "name_20",
  "phrasing_ids": [
-  "greet_26",
-  "greet_ans_23"
+  "greet_08",
+  "greet_ans_16",
+  "side_instr_16",
+  "ack_04",
+  "side_cue_25"
  ],
  "block_ids": [
-  "shopping.dlg3"
+  "photography.ctx9",
+  "home_repair.side5"
  ],
- "est_total_sec": 48.92,
- "est_speech_sec": 37.99,
+ "est_total_sec": 79.28,
+ "est_speech_sec": 58.84,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you doing these days?",
+   "text": "Hi there, how are you feeling today?",
    "est_sec": 2.27,
-   "gap_before": 0.31,
+   "gap_before": 0.55,
    "role": "greeting",
-   "phrasing": "greet_26"
+   "phrasing": "greet_08"
   },
   {
    "speaker": "user",
-   "text": "Good, good. Thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.35,
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.53,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_23"
+   "phrasing": "greet_ans_16"
   },
   {
    "speaker": "user",
-   "text": "I want to buy my grandkids some clothes, but I don't know their sizes anymore.",
-   "est_sec": 4.75,
-   "gap_before": 0.21,
+   "text": "There's a meteor shower Saturday night and I really want to photograph it.",
+   "est_sec": 4.13,
+   "gap_before": 0.47,
    "event": "ordinary_request",
-   "block": "shopping.dlg3"
+   "block": "photography.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Kids grow so fast. How old are they?",
-   "est_sec": 2.58,
-   "gap_before": 0.61,
+   "text": "Great plan. Would you drive out somewhere properly dark, maybe two hours away, or try from your back garden and see what you get?",
+   "est_sec": 7.54,
+   "gap_before": 0.32,
    "role": "reply",
-   "block": "shopping.dlg3"
+   "block": "photography.ctx9"
   },
   {
    "speaker": "user",
-   "text": "One is four and the other just turned seven.",
-   "est_sec": 2.89,
-   "gap_before": 0.73,
-   "event": "ordinary_request",
-   "block": "shopping.dlg3"
+   "text": "Hang on a minute, I want to ask Emma something first. Don't jump in until I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 0.92,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_16"
   },
   {
    "speaker": "moshi",
-   "text": "Kids' sizes roughly follow age, so a size five and a size eight would give them room to grow.",
-   "est_sec": 5.99,
-   "gap_before": 0.38,
-   "role": "reply",
-   "block": "shopping.dlg3"
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.24,
+   "role": "ack",
+   "phrasing": "ack_04"
   },
   {
    "speaker": "user",
-   "text": "Oh, so buy a little bigger.",
+   "text": "Did the plumber call you back?",
    "est_sec": 1.96,
-   "gap_before": 1.48,
-   "event": "ordinary_request",
-   "block": "shopping.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Exactly. Slightly big is fine, too small is useless. And keep the receipt just in case.",
-   "est_sec": 5.06,
-   "gap_before": 1.0,
-   "role": "reply",
-   "block": "shopping.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Maybe I should ask my daughter",
-   "est_sec": 1.96,
-   "gap_before": 1.46,
+   "gap_before": 1.4,
    "event": "distractor",
-   "kind": "pause",
-   "block": "shopping.dlg3"
+   "kind": "friend_question",
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "He did. He can come Thursday morning.",
+   "est_sec": 2.27,
+   "gap_before": 1.92,
+   "block": "home_repair.side5"
   },
   {
    "speaker": "user",
-   "text": "no, I want it to be a surprise.",
+   "text": "Thursday? The sink's been leaking since Sunday.",
+   "est_sec": 2.27,
+   "gap_before": 0.43,
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "I know. He said everyone's pipes are freezing this week.",
+   "est_sec": 3.2,
+   "gap_before": 0.42,
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Did he say how much it would be?",
    "est_sec": 2.58,
-   "gap_before": 2.42,
-   "event": "ordinary_request",
-   "block": "shopping.dlg3"
+   "gap_before": 2.08,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not really. Just that it depends what he finds.",
+   "est_sec": 2.89,
+   "gap_before": 1.06,
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Great, very reassuring. Can you put a bucket under it in the meantime?",
+   "est_sec": 4.13,
+   "gap_before": 1.08,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Already did. And a towel.",
+   "est_sec": 1.65,
+   "gap_before": 0.82,
+   "block": "home_repair.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, that took a while. I'm back.",
+   "est_sec": 2.27,
+   "gap_before": 1.74,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_25"
   },
   {
    "speaker": "moshi",
-   "text": "Then go one size up and pick something soft and comfy, like pajamas or a hoodie. Those are hard to get wrong.",
-   "est_sec": 6.92,
-   "gap_before": 0.48,
-   "role": "reply",
-   "block": "shopping.dlg3"
+   "text": "Sure thing. The meteor shower on Saturday. Driving out, or staying in the garden?",
+   "est_sec": 4.44,
+   "gap_before": 0.31,
+   "role": "resume",
+   "block": "photography.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll drive out. If I'm doing it, I want it done right.",
+   "est_sec": 3.82,
+   "gap_before": 2.93,
+   "event": "ordinary_request",
+   "block": "photography.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then pack a tripod, a warm coat and a red torch, and check the cloud forecast before you leave.",
+   "est_sec": 5.99,
+   "gap_before": 1.72,
+   "role": "followup",
+   "block": "photography.ctx9"
   }
  ]
 }

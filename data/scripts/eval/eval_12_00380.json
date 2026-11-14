@@ -7,129 +7,134 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "reading",
+ "wait_type": "reading",
  "conditions": [],
  "topics": [
-  "family_visit"
+  "holiday_gifts"
  ],
- "topic": "family_visit",
+ "reading": {
+  "material": "recipe",
+  "sec": 16.5
+ },
+ "topic": "holiday_gifts",
  "voices": {
-  "user": "732ea755bd9e446eb31dc79966b50428",
+  "user": "933563129e564b19a115bedd57b7406a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_24",
-  "greet_ans_30"
+  "greet_21",
+  "greet_ans_27",
+  "read_instr_05",
+  "ack_16",
+  "read_cue_03"
  ],
  "block_ids": [
-  "family_visit.dlg3"
+  "holiday_gifts.ctx17"
  ],
- "est_total_sec": 51.59,
- "est_speech_sec": 40.47,
+ "est_total_sec": 54.94,
+ "est_speech_sec": 27.35,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, what's up? How are you doing?",
-   "est_sec": 2.27,
-   "gap_before": 0.43,
-   "role": "greeting",
-   "phrasing": "greet_24",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.83,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
-  },
-  {
-   "speaker": "user",
-   "text": "My grandparents are coming over and they don't really use phones. What can we do together?",
-   "est_sec": 5.06,
-   "gap_before": 0.48,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Card games are usually a hit, or you could look through old photo albums and ask them for stories.",
-   "est_sec": 5.99,
-   "gap_before": 1.21,
-   "role": "reply",
-   "block": "family_visit.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Ooh, photo albums is a good one. My grandpa loves telling stories.",
-   "est_sec": 3.82,
-   "gap_before": 1.41,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then that's perfect. You could even record a few of his stories to keep.",
-   "est_sec": 4.44,
-   "gap_before": 0.39,
-   "role": "reply",
-   "block": "family_visit.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "What about food, they're kind of picky",
-   "est_sec": 2.27,
-   "gap_before": 0.42,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "family_visit.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "and my grandma can't eat salt.",
+   "text": "Hi there! How's it going today?",
    "est_sec": 1.96,
-   "gap_before": 2.28,
-   "event": "ordinary_request",
-   "block": "family_visit.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try a simple roast chicken with lemon and herbs instead of salt. Soft roasted vegetables on the side are usually safe too.",
-   "est_sec": 6.92,
-   "gap_before": 0.73,
-   "role": "reply",
-   "block": "family_visit.dlg3",
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "And dessert?",
-   "est_sec": 0.72,
-   "gap_before": 0.41,
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.7,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Twelve nieces and nephews. Twelve!",
+   "est_sec": 1.65,
+   "gap_before": 0.43,
    "event": "ordinary_request",
-   "block": "family_visit.dlg3"
+   "block": "holiday_gifts.ctx17"
   },
   {
    "speaker": "moshi",
-   "text": "A fruit crumble is easy and most grandparents love it. Serve it warm with a little cream.",
-   "est_sec": 5.37,
-   "gap_before": 1.03,
+   "text": "That's a big crew. Would you do the same gift for all of them, or set a small budget and pick something for each kid?",
+   "est_sec": 7.85,
+   "gap_before": 1.36,
    "role": "reply",
-   "block": "family_visit.dlg3",
+   "block": "holiday_gifts.ctx17",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Give me a moment to read through the recipe before you say anything.",
+   "est_sec": 4.13,
+   "gap_before": 1.35,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.35,
+   "role": "ack",
+   "phrasing": "ack_16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I've read the recipe.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 16.5
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Finished reading? All twelve kids. One gift in bulk, or something each?",
+   "est_sec": 3.82,
+   "gap_before": 1.91,
+   "role": "resume",
+   "block": "holiday_gifts.ctx17",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Individual. They'd compare everything otherwise.",
+   "est_sec": 1.65,
+   "gap_before": 2.73,
+   "event": "ordinary_request",
+   "block": "holiday_gifts.ctx17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Keep a spreadsheet so the budget stays even.",
+   "est_sec": 2.89,
+   "gap_before": 1.15,
+   "role": "followup",
+   "block": "holiday_gifts.ctx17",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_reading"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

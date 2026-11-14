@@ -7,114 +7,173 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "music"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "topic": "music",
+ "topics": [
+  "baking",
+  "home_repair"
+ ],
+ "topic": "baking",
  "voices": {
-  "user": "5ce84bbd213b4943bc89e1951e17848a",
-  "friend": null,
+  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "friend": "2680da81de8348a68e1f4dbaa79272f1",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Ben",
+ "friend_name_id": "name_11",
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_02",
-  "describe_instr_14",
-  "ack_01",
-  "describe_cue_01"
+  "greet_08",
+  "greet_ans_07",
+  "side_instr_25",
+  "dn_57",
+  "side_cue_17"
  ],
  "block_ids": [
-  "music.opt2"
+  "baking.ctx1",
+  "home_repair.side4",
+  "dn_57"
  ],
- "est_total_sec": 55.33,
- "est_speech_sec": 44.71,
+ "est_total_sec": 73.12,
+ "est_speech_sec": 52.54,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.46,
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.76,
    "role": "greeting",
-   "phrasing": "greet_22"
+   "phrasing": "greet_08"
   },
   {
    "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.52,
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.35,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
+   "phrasing": "greet_ans_07"
   },
   {
    "speaker": "user",
-   "text": "I'm putting together music for my friend's going away party and I have a few ideas.",
-   "est_sec": 5.06,
-   "gap_before": 0.3,
-   "block": "music.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me lay out all the options first. Don't interrupt.",
-   "est_sec": 3.2,
-   "gap_before": 0.6,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_14"
+   "text": "It's my coworker's last day on Monday and I said I'd bake something.",
+   "est_sec": 4.13,
+   "gap_before": 0.38,
+   "event": "ordinary_request",
+   "block": "baking.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "Sure.",
-   "est_sec": 0.41,
-   "gap_before": 0.68,
-   "role": "ack",
-   "phrasing": "ack_01"
-  },
-  {
-   "speaker": "user",
-   "text": "One option is a playlist of all the songs from our college years, really nostalgic.",
-   "est_sec": 4.75,
-   "gap_before": 0.84,
-   "block": "music.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is hiring a local band that plays covers, but that eats up half the budget.",
-   "est_sec": 5.06,
-   "gap_before": 1.99,
-   "block": "music.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Or I could ask a friend who does DJ sets on weekends, he'd do it for free if we feed him.",
+   "text": "How kind. Would you rather make one big cake to share, or a batch of cookies or cupcakes people can grab?",
    "est_sec": 6.61,
-   "gap_before": 1.41,
-   "block": "music.opt2"
+   "gap_before": 1.49,
+   "role": "reply",
+   "block": "baking.ctx1"
   },
   {
    "speaker": "user",
-   "text": "Okay, that's all of them. What do you think?",
+   "text": "Hang tight, my dad is calling me over. Don't talk until I say I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 0.39,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Ben, where were we on the guest list, did we add your cousins?",
+   "est_sec": 4.13,
+   "gap_before": 0.87,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_57"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not yet, put them down.",
+   "est_sec": 1.65,
+   "gap_before": 1.04,
+   "phrasing": "dn_57"
+  },
+  {
+   "speaker": "user",
+   "text": "Ben, can you hold the ladder for a sec?",
    "est_sec": 2.89,
-   "gap_before": 1.08,
+   "gap_before": 1.42,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'm holding it. Why is it wobbling?",
+   "est_sec": 2.27,
+   "gap_before": 0.47,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Because one leg is on the rug. Hang on.",
+   "est_sec": 2.89,
+   "gap_before": 1.47,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "You know you're supposed to do that before you climb up.",
+   "est_sec": 3.51,
+   "gap_before": 1.16,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, thank you. Okay, can you pass me the small screwdriver? The red one.",
+   "est_sec": 4.44,
+   "gap_before": 2.54,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "This one?",
+   "est_sec": 0.72,
+   "gap_before": 0.63,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the big one. The small red one.",
+   "est_sec": 2.58,
+   "gap_before": 0.41,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Here. Honestly, you'd be lost without me.",
+   "est_sec": 2.27,
+   "gap_before": 3.48,
+   "block": "home_repair.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, thanks for waiting.",
+   "est_sec": 1.65,
+   "gap_before": 1.84,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_01"
+   "phrasing": "side_cue_17"
   },
   {
    "speaker": "moshi",
-   "text": "The college playlist is a sweet touch, it'll get everyone singing along. A live band is memorable, but half the budget is a lot. Your DJ friend sounds like a great deal, especially if he can mix in some of those college songs.",
-   "est_sec": 13.43,
-   "gap_before": 1.24,
+   "text": "Alright. So, a big cake to share, or something people can grab?",
+   "est_sec": 3.82,
+   "gap_before": 0.38,
    "role": "resume",
-   "block": "music.opt2"
+   "block": "baking.ctx1"
   }
  ]
 }

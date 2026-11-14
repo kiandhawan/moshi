@@ -1,85 +1,60 @@
 {
   "id": "train_10_00188",
-  "group": "describe_options",
-  "user_start": 2.62,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 8.61,
-  "instruction_end": 10.83,
-  "wait_end": 37.23,
+  "group": "think_time",
+  "user_start": 2.46,
+  "type": "think_time",
+  "conditions": [
+    "early_direct",
+    "early_end"
+  ],
+  "cluster": "public_transport.ctx4",
+  "instruction_start": 18.18,
+  "instruction_end": 21.54,
+  "wait_end": 34.59,
   "resume_window": [
-    37.23,
-    42.23
+    34.59,
+    38.59
   ],
-  "wait_sec": 26.4,
-  "distractors": [
-    17.29,
-    23.21
+  "wait_sec": 13.05,
+  "distractors": [],
+  "distractor_kinds": [],
+  "distractor_windows": [],
+  "ordinary_requests": [
+    8.63,
+    40.94
   ],
-  "distractor_kinds": [
-    "pause",
-    "pause"
-  ],
-  "distractor_windows": [
-    [
-      17.29,
-      18.92
-    ],
-    [
-      23.21,
-      25.23
-    ]
-  ],
-  "ordinary_requests": [],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.62,
-      "end": 3.75,
+      "start": 2.46,
+      "end": 4.66,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.31,
-      "end": 7.84
+      "start": 4.91,
+      "end": 8.63,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 8.61,
-      "end": 10.83,
+      "start": 18.18,
+      "end": 21.54,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "think_time"
     },
     {
       "speaker": "user",
-      "start": 12.65,
-      "end": 17.29,
-      "event": "distractor",
-      "kind": "pause"
-    },
-    {
-      "speaker": "user",
-      "start": 18.92,
-      "end": 23.21,
-      "event": "distractor",
-      "kind": "pause"
-    },
-    {
-      "speaker": "user",
-      "start": 25.23,
-      "end": 29.18
-    },
-    {
-      "speaker": "user",
-      "start": 30.51,
-      "end": 34.33
-    },
-    {
-      "speaker": "user",
-      "start": 35.48,
-      "end": 37.23,
+      "start": 32.1,
+      "end": 34.59,
       "event": "return_cue",
-      "kind": "explicit"
+      "kind": "early_end"
+    },
+    {
+      "speaker": "user",
+      "start": 38.8,
+      "end": 40.94,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00188 by scripts/render.py.",
@@ -87,21 +62,33 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.45,
-      "end": 1.95,
-      "text": "Hi, how are you holding up?"
+      "start": 0.69,
+      "end": 1.9,
+      "text": "Hey there, how are you?"
+    },
+    {
+      "kind": "reply",
+      "start": 9.2,
+      "end": 16.59,
+      "text": "Nice. The night bus leaves in twenty minutes and takes about an hour. Split four ways, a taxi wouldn't cost much each. Which way?"
     },
     {
       "kind": "ack",
-      "start": 11.3,
-      "end": 11.59,
-      "text": "Got it."
+      "start": 21.96,
+      "end": 22.4,
+      "text": "Sure."
     },
     {
       "kind": "resume",
-      "start": 38.3,
-      "end": 50.06,
-      "text": "Biking to the station and taking the train is probably the fastest and adds some exercise. The tram is the most relaxed choice since it's door to door. The express bus is fine, but crowding every day can wear you down."
+      "start": 35.17,
+      "end": 37.75,
+      "text": "Right, the four of you. Bus or cab?"
+    },
+    {
+      "kind": "followup",
+      "start": 42.11,
+      "end": 47.1,
+      "text": "Fair. Agree who pays up front and settle up after, it saves an awkward moment at the door."
     }
   ]
 }

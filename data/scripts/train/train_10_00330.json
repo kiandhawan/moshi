@@ -7,160 +7,116 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "smartphones",
-  "smartphones"
+  "books"
  ],
- "topic": "smartphones",
+ "topic": "books",
  "voices": {
-  "user": "e7de86b388864b8cbd50d0d70a3494e5",
-  "friend": "ba875f2fb2ea4a4e9b175821014984b6",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Sam",
- "friend_name_id": "name_02",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
   "greet_26",
-  "greet_ans_28",
-  "side_instr_25",
+  "greet_ans_25",
+  "describe_instr_20",
   "ack_08",
-  "side_cue_07"
+  "describe_cue_10"
  ],
  "block_ids": [
-  "smartphones.ctx1",
-  "smartphones.side3"
+  "books.opt2"
  ],
- "est_total_sec": 70.17,
- "est_speech_sec": 56.16,
+ "est_total_sec": 48.89,
+ "est_speech_sec": 39.13,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi! How are you doing these days?",
    "est_sec": 2.27,
-   "gap_before": 0.74,
+   "gap_before": 0.61,
    "role": "greeting",
    "phrasing": "greet_26"
   },
   {
    "speaker": "user",
-   "text": "Doing alright, thanks.",
+   "text": "I'm well, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.41,
+   "gap_before": 0.71,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
+   "phrasing": "greet_ans_25"
   },
   {
    "speaker": "user",
-   "text": "My phone is three years old and the battery dies by lunchtime. I think it's time to replace it.",
-   "est_sec": 5.99,
-   "gap_before": 0.43,
-   "event": "ordinary_request",
-   "block": "smartphones.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's fair. Do you want to stick with the same brand, or are you open to switching to something new?",
-   "est_sec": 6.3,
-   "gap_before": 0.7,
-   "role": "reply",
-   "block": "smartphones.ctx1"
+   "text": "I'm going on vacation and I want to bring one book, but I can't decide which.",
+   "est_sec": 5.06,
+   "gap_before": 0.3,
+   "block": "books.opt2"
   },
   {
    "speaker": "user",
-   "text": "Hang tight, my dad is calling me over. Don't talk until I say I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 1.01,
+   "text": "Let me describe everything first, and then I'll ask for your thoughts.",
+   "est_sec": 3.82,
+   "gap_before": 0.61,
    "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_25"
+   "kind": "describe_options",
+   "phrasing": "describe_instr_20"
   },
   {
    "speaker": "moshi",
    "text": "Sure, go ahead.",
    "est_sec": 1.03,
-   "gap_before": 0.41,
+   "gap_before": 0.7,
    "role": "ack",
    "phrasing": "ack_08"
   },
   {
    "speaker": "user",
-   "text": "Sam, have you seen my charger? The white one with the short cable.",
-   "est_sec": 4.13,
-   "gap_before": 0.63,
-   "block": "smartphones.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "I borrowed it this morning, sorry. It's next to my bed.",
-   "est_sec": 3.51,
-   "gap_before": 1.48,
-   "block": "smartphones.side3"
+   "text": "One is a light romance set on an island, perfect for lying by the pool.",
+   "est_sec": 4.75,
+   "gap_before": 1.43,
+   "block": "books.opt2",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Can I grab it? I'm down to five percent.",
-   "est_sec": 2.89,
-   "gap_before": 0.66,
-   "block": "smartphones.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Go for it. We really need to buy a second one.",
-   "est_sec": 3.51,
-   "gap_before": 1.33,
-   "block": "smartphones.side3"
+   "text": "Another is a thick science fiction novel my brother keeps telling me to read.",
+   "est_sec": 4.44,
+   "gap_before": 1.87,
+   "block": "books.opt2"
   },
   {
    "speaker": "user",
-   "text": "Agreed. Maybe a long cable so it reaches the couch.",
-   "est_sec": 3.2,
-   "gap_before": 0.88,
-   "block": "smartphones.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Good idea. Add it to the shopping list.",
-   "est_sec": 2.58,
-   "gap_before": 0.67,
-   "block": "smartphones.side3"
+   "text": "Or I could finally read that classic novel I've been pretending I read in school.",
+   "est_sec": 4.75,
+   "gap_before": 1.17,
+   "block": "books.opt2"
   },
   {
    "speaker": "user",
-   "text": "I'm here again, let's continue.",
+   "text": "Done. What would you recommend?",
    "est_sec": 1.65,
-   "gap_before": 0.92,
+   "gap_before": 0.53,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_07"
+   "phrasing": "describe_cue_10"
   },
   {
    "speaker": "moshi",
-   "text": "No problem. So, same brand for the new phone, or a change?",
-   "est_sec": 3.82,
-   "gap_before": 0.81,
-   "role": "resume",
-   "block": "smartphones.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Honestly, I want to try something new this time.",
-   "est_sec": 2.89,
-   "gap_before": 1.1,
-   "event": "ordinary_request",
-   "block": "smartphones.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fun. Most phones have a transfer app now, so moving your photos and contacts is easier than it used to be.",
-   "est_sec": 6.61,
+   "text": "Do you want to switch off or get really absorbed in something? For switching off, take the romance. If you have a long flight, the science fiction novel will make the time fly.",
+   "est_sec": 10.33,
    "gap_before": 0.33,
-   "role": "followup",
-   "block": "smartphones.ctx1"
+   "role": "resume",
+   "block": "books.opt2"
   }
  ]
 }

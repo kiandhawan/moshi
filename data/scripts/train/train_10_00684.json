@@ -7,167 +7,116 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "shopping",
-  "birthday_party"
+  "baking"
  ],
- "topic": "shopping",
+ "topic": "baking",
  "voices": {
-  "user": "6d7a45828f6a432c9233cd93bb93e5be",
-  "friend": "0efe38923c0b445ab09382e851ae1e30",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Sam",
- "friend_name_id": "name_02",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_23",
-  "greet_ans_23",
-  "side_instr_26",
-  "ack_06",
-  "dq_28",
-  "side_cue_20"
+  "greet_02",
+  "greet_ans_29",
+  "describe_instr_19",
+  "describe_cue_04"
  ],
  "block_ids": [
-  "shopping.ctx3",
-  "birthday_party.side2"
+  "baking.opt4"
  ],
- "est_total_sec": 60.23,
- "est_speech_sec": 41.9,
+ "est_total_sec": 60.51,
+ "est_speech_sec": 46.88,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How are you feeling?",
+   "text": "Hi! How are you today?",
    "est_sec": 1.65,
-   "gap_before": 0.34,
+   "gap_before": 0.58,
    "role": "greeting",
-   "phrasing": "greet_23"
+   "phrasing": "greet_02"
   },
   {
    "speaker": "user",
-   "text": "Good, good. Thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.51,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_23"
-  },
-  {
-   "speaker": "user",
-   "text": "Our vacuum finally died. I need to buy a new one this weekend.",
-   "est_sec": 4.13,
-   "gap_before": 0.21,
-   "event": "ordinary_request",
-   "block": "shopping.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Do you want a cordless stick vacuum that's light and handy, or a full size one with more suction?",
-   "est_sec": 5.99,
-   "gap_before": 0.65,
-   "role": "reply",
-   "block": "shopping.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, my friend and I need to figure something out. Wait until I'm back, okay?",
-   "est_sec": 5.06,
-   "gap_before": 2.6,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_26"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Of course.",
-   "est_sec": 0.72,
-   "gap_before": 0.49,
-   "role": "ack",
-   "phrasing": "ack_06"
-  },
-  {
-   "speaker": "user",
-   "text": "What do you think, balloons or streamers?",
-   "est_sec": 2.27,
-   "gap_before": 0.64,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "birthday_party.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Why not both?",
-   "est_sec": 1.03,
-   "gap_before": 0.86,
-   "block": "birthday_party.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Because the last time we had balloons the dog popped every single one.",
-   "est_sec": 4.13,
-   "gap_before": 1.12,
-   "block": "birthday_party.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Then streamers and some fairy lights. That looks nicer anyway.",
-   "est_sec": 3.2,
-   "gap_before": 1.14,
-   "block": "birthday_party.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Fairy lights, good idea. Do you still have the ones from your balcony?",
-   "est_sec": 4.13,
-   "gap_before": 1.81,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "birthday_party.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Yeah, I can bring them on Friday.",
-   "est_sec": 2.27,
-   "gap_before": 1.28,
-   "block": "birthday_party.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Should we order pizza tonight?",
-   "est_sec": 1.65,
-   "gap_before": 1.03,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_28"
-  },
-  {
-   "speaker": "friend",
-   "text": "Yes, definitely.",
-   "est_sec": 0.72,
-   "gap_before": 1.85,
-   "phrasing": "dq_28"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm free again.",
+   "text": "Pretty good so far.",
    "est_sec": 1.34,
-   "gap_before": 1.84,
+   "gap_before": 0.75,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_29"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to buy one piece of baking kit this month and I've narrowed it down.",
+   "est_sec": 5.06,
+   "gap_before": 0.27,
+   "block": "baking.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Hear me out on all the options before you comment.",
+   "est_sec": 3.2,
+   "gap_before": 0.86,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_19"
+  },
+  {
+   "speaker": "user",
+   "text": "A digital kitchen scale, so I can stop guessing with cups and weigh everything properly.",
+   "est_sec": 4.75,
+   "gap_before": 1.3,
+   "block": "baking.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe a stand mixer instead, it's expensive but would save my arms on bread and meringue.",
+   "est_sec": 5.06,
+   "gap_before": 2.83,
+   "block": "baking.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "There's also a cast iron pot for crusty bread, which people online swear by.",
+   "est_sec": 4.44,
+   "gap_before": 1.19,
+   "block": "baking.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or just a good set of heavy baking trays, because mine warp in the oven.",
+   "est_sec": 4.75,
+   "gap_before": 2.35,
+   "block": "baking.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done. What do you think?",
+   "est_sec": 2.27,
+   "gap_before": 1.49,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_20"
+   "phrasing": "describe_cue_04"
   },
   {
    "speaker": "moshi",
-   "text": "No problem. Any decision on the new vacuum?",
-   "est_sec": 2.58,
-   "gap_before": 0.46,
+   "text": "The scale is cheap and will improve almost everything you bake straight away. The stand mixer is a joy, but it's a big spend for one month. The pot and the trays are great upgrades if you already know you'll bake lots of bread or cookies.",
+   "est_sec": 14.36,
+   "gap_before": 0.51,
    "role": "resume",
-   "block": "shopping.ctx3"
+   "block": "baking.opt4"
   }
  ]
 }

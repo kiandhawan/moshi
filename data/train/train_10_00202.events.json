@@ -1,74 +1,116 @@
 {
   "id": "train_10_00202",
-  "group": "ordinary",
-  "user_start": 3.19,
-  "type": "ordinary",
+  "group": "side_conversation",
+  "user_start": 2.51,
+  "type": "side_conversation",
   "conditions": [
-    "wait_like"
+    "extra_question"
   ],
+  "cluster": "public_transport.ctx10",
+  "instruction_start": 18.75,
+  "instruction_end": 23.38,
+  "wait_end": 55.86,
+  "resume_window": [
+    55.86,
+    60.86
+  ],
+  "wait_sec": 32.48,
   "distractors": [
-    45.88
+    27.76,
+    35.14
   ],
   "distractor_kinds": [
-    "pause"
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      45.88,
-      48.74
+      27.76,
+      28.82
+    ],
+    [
+      35.14,
+      36.47
     ]
   ],
   "ordinary_requests": [
-    9.26,
-    19.45,
-    30.81,
-    39.19,
-    50.49
+    8.56
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 3.19,
-      "end": 4.91,
+      "start": 2.51,
+      "end": 4.04,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 5.23,
-      "end": 9.26,
+      "start": 4.41,
+      "end": 8.56,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 17.02,
-      "end": 19.45,
-      "event": "ordinary_request"
+      "start": 18.75,
+      "end": 23.38,
+      "event": "instruction",
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 28.17,
-      "end": 30.81,
-      "event": "ordinary_request"
-    },
-    {
-      "speaker": "user",
-      "start": 37.63,
-      "end": 39.19,
-      "event": "ordinary_request",
-      "kind": "wait_like"
-    },
-    {
-      "speaker": "user",
-      "start": 44.94,
-      "end": 45.88,
+      "start": 26.0,
+      "end": 27.76,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 28.82,
+      "end": 31.33
     },
     {
       "speaker": "user",
-      "start": 48.74,
-      "end": 50.49,
-      "event": "ordinary_request"
+      "start": 32.31,
+      "end": 35.14,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 36.47,
+      "end": 40.0
+    },
+    {
+      "speaker": "user",
+      "start": 40.39,
+      "end": 41.83
+    },
+    {
+      "speaker": "friend",
+      "start": 42.7,
+      "end": 45.44
+    },
+    {
+      "speaker": "user",
+      "start": 46.65,
+      "end": 48.69
+    },
+    {
+      "speaker": "friend",
+      "start": 49.21,
+      "end": 50.97
+    },
+    {
+      "speaker": "user",
+      "start": 51.38,
+      "end": 52.64
+    },
+    {
+      "speaker": "user",
+      "start": 53.66,
+      "end": 55.86,
+      "event": "return_cue",
+      "kind": "explicit"
     }
   ],
   "notes": "Rendered from script train_10_00202 by scripts/render.py.",
@@ -76,39 +118,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.34,
-      "end": 2.45,
-      "text": "Hey, how's your day been so far?"
+      "start": 0.46,
+      "end": 1.59,
+      "text": "Hi, how are things with you?"
     },
     {
       "kind": "reply",
-      "start": 10.64,
-      "end": 15.98,
-      "text": "A few things can cause that. Are you using pre-ground coffee, and how long does it sit on the hot plate?"
+      "start": 9.39,
+      "end": 17.37,
+      "text": "That's a lot of lost time. You could pay for the quiet carriage upgrade, or keep standard and try noise cancelling headphones. Which sounds better?"
     },
     {
-      "kind": "reply",
-      "start": 19.92,
-      "end": 27.18,
-      "text": "That's likely it. The hot plate keeps cooking the coffee, which makes it bitter. Try pouring it into a thermos right after brewing."
+      "kind": "ack",
+      "start": 24.01,
+      "end": 24.84,
+      "text": "No problem."
     },
     {
-      "kind": "reply",
-      "start": 31.58,
-      "end": 36.9,
-      "text": "Clean the machine with vinegar every month or so. Old oils and scale build up and taste awful."
-    },
-    {
-      "kind": "reply",
-      "start": 40.01,
-      "end": 43.81,
-      "text": "I'm fairly sure about it, but I could be wrong. What sounds off to you?"
-    },
-    {
-      "kind": "reply",
-      "start": 51.15,
-      "end": 56.1,
-      "text": "Then you'll probably notice a big difference. Run a couple of rounds of plain water afterwards to rinse it."
+      "kind": "resume",
+      "start": 56.6,
+      "end": 62.08,
+      "text": "No problem. The work on the train question is still open. Quiet carriage, or headphones?"
     }
   ]
 }

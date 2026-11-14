@@ -7,142 +7,139 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
  "topics": [
-  "cycling"
+  "home_office"
  ],
- "wait_sec": 30,
- "deadline": {
-  "after_turn": 4,
-  "sec": 30
- },
- "topic": "cycling",
+ "topic": "home_office",
  "voices": {
-  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
-  "friend": null,
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": "08b4100b4c3747fe84ed8b57d26a95ba",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_09",
-  "think_instr_27",
-  "self_06",
-  "self_09"
+  "greet_06",
+  "greet_ans_27",
+  "door_instr_09",
+  "door_09",
+  "door_cue_01"
  ],
  "block_ids": [
-  "cycling.ctx3"
+  "home_office.ctx4",
+  "door_09"
  ],
- "est_total_sec": 64.96,
- "est_speech_sec": 32.62,
+ "est_total_sec": 53.29,
+ "est_speech_sec": 38.09,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.31,
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.5,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_06",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.37,
+   "text": "All good here.",
+   "est_sec": 1.03,
+   "gap_before": 0.4,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_27"
   },
   {
    "speaker": "user",
-   "text": "A few friends invited me on a long weekend ride.",
-   "est_sec": 3.2,
-   "gap_before": 0.57,
+   "text": "My flatmate blasts music while I'm on client calls. It's driving me mad.",
+   "est_sec": 4.13,
+   "gap_before": 0.21,
    "event": "ordinary_request",
-   "block": "cycling.ctx3"
+   "block": "home_office.ctx4"
   },
   {
    "speaker": "moshi",
-   "text": "Fun! They're doing either the flat forty mile loop or the hilly twenty five mile one. Which do you think your legs can handle?",
-   "est_sec": 7.54,
-   "gap_before": 0.83,
+   "text": "That's rough. Would you rather get proper noise cancelling headphones, or have a chat with him about quiet hours during your calls?",
+   "est_sec": 6.92,
+   "gap_before": 0.37,
    "role": "reply",
-   "block": "cycling.ctx3",
+   "block": "home_office.ctx4",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Give me thirty seconds. I'll know by then, so ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 1.13,
+   "text": "Hold that thought, someone's here. Don't say anything until I'm back.",
+   "est_sec": 3.51,
+   "gap_before": 1.42,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 30,
-   "phrasing": "think_instr_27"
+   "kind": "door",
+   "phrasing": "door_instr_09"
   },
   {
    "speaker": "user",
-   "text": "Let me think, let me think.",
+   "text": "Coming! Oh, hi.",
+   "est_sec": 1.03,
+   "gap_before": 2.44,
+   "phrasing": "door_09"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Hi, I live upstairs, I think my washing machine leaked into your ceiling.",
+   "est_sec": 4.13,
+   "gap_before": 0.88,
+   "phrasing": "door_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh no, is it still dripping?",
    "est_sec": 1.96,
-   "anchor": {
-    "turn": 4,
-    "offset": 7.83
-   },
+   "gap_before": 1.39,
+   "phrasing": "door_09",
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_06"
+   "kind": "question_to_other"
   },
   {
-   "speaker": "user",
-   "text": "Ugh, this is harder than it sounds.",
-   "est_sec": 2.27,
-   "anchor": {
-    "turn": 4,
-    "offset": 13.45
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_09"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Have you made up your mind? Forty flat miles or twenty five with hills?",
-   "est_sec": 4.44,
-   "role": "resume",
-   "block": "cycling.ctx3",
-   "anchor": {
-    "turn": 4,
-    "offset": 30.07
-   },
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "The flat one. Hills and I are not friends.",
-   "est_sec": 2.89,
-   "gap_before": 1.18,
-   "event": "ordinary_request",
-   "block": "cycling.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fair. Bring two water bottles and a snack for the halfway point.",
+   "speaker": "visitor",
+   "text": "I've turned the water off, but can I come in and look?",
    "est_sec": 3.82,
-   "gap_before": 0.61,
-   "role": "followup",
-   "block": "cycling.ctx3",
+   "gap_before": 0.44,
+   "phrasing": "door_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Sure, mind the shoes.",
+   "est_sec": 1.34,
+   "gap_before": 1.39,
+   "phrasing": "door_09"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back. Sorry about that.",
+   "est_sec": 1.96,
+   "gap_before": 3.82,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everything okay at the door? The music problem is still there. Headphones or a talk with your flatmate?",
+   "est_sec": 5.68,
+   "gap_before": 0.44,
+   "role": "resume",
+   "block": "home_office.ctx4",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "new_type_door"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

@@ -7,116 +7,117 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "shopping"
+  "baking"
  ],
- "topic": "shopping",
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "baking",
  "voices": {
-  "user": "ec3f1730c4494386accf1e86625bfe6d",
+  "user": "ba875f2fb2ea4a4e9b175821014984b6",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_19",
-  "describe_instr_14",
-  "ack_15",
-  "describe_cue_01"
+  "greet_19",
+  "greet_ans_01",
+  "think_instr_28",
+  "ack_01"
  ],
  "block_ids": [
-  "shopping.opt2"
+  "baking.ctx5"
  ],
- "est_total_sec": 55.4,
- "est_speech_sec": 44.09,
+ "est_total_sec": 83.79,
+ "est_speech_sec": 32.21,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
-   "est_sec": 1.96,
-   "gap_before": 0.4,
-   "role": "greeting",
-   "phrasing": "greet_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Good, thanks. Just got home.",
+   "text": "Hi, how's everything with you?",
    "est_sec": 1.65,
-   "gap_before": 0.97,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_19"
+   "gap_before": 0.58,
+   "role": "greeting",
+   "phrasing": "greet_19"
   },
   {
    "speaker": "user",
-   "text": "We need a new couch and I can't decide between the ones we saw this weekend.",
-   "est_sec": 5.06,
-   "gap_before": 0.51,
-   "block": "shopping.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me lay out all the options first. Don't interrupt.",
-   "est_sec": 3.2,
-   "gap_before": 0.42,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_14"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright, go ahead.",
+   "text": "I'm good, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.45,
-   "role": "ack",
-   "phrasing": "ack_15"
+   "gap_before": 0.66,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
   },
   {
    "speaker": "user",
-   "text": "One is a big sectional in grey, really comfy, but it might not fit through our door.",
-   "est_sec": 5.37,
-   "gap_before": 1.42,
-   "block": "shopping.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a leather sofa, easy to clean, but it gets cold in winter and sticky in summer.",
-   "est_sec": 5.68,
-   "gap_before": 1.93,
-   "block": "shopping.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a smaller blue velvet couch that looks gorgeous but only seats three.",
-   "est_sec": 4.44,
-   "gap_before": 1.68,
-   "block": "shopping.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all of them. What do you think?",
-   "est_sec": 2.89,
-   "gap_before": 1.0,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_01"
+   "text": "Okay so I'm making macarons for our six month anniversary and I'm kind of freaking out.",
+   "est_sec": 5.06,
+   "gap_before": 0.5,
+   "event": "ordinary_request",
+   "block": "baking.ctx5"
   },
   {
    "speaker": "moshi",
-   "text": "The sectional sounds the comfiest, but definitely measure the doorway before buying it. Leather is great with kids or pets since it wipes clean. The velvet couch is beautiful, but seating three could be tight if you have guests over often.",
-   "est_sec": 12.81,
-   "gap_before": 1.03,
+   "text": "Totally doable. Do you want the French method, which is simpler but fussier about technique, or the Italian one with hot sugar syrup, which is more stable?",
+   "est_sec": 8.47,
+   "gap_before": 0.62,
+   "role": "reply",
+   "block": "baking.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll need forty-five seconds to think. Ask me again after that.",
+   "est_sec": 3.51,
+   "gap_before": 1.26,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.44,
+   "role": "ack",
+   "phrasing": "ack_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, which meringue are you braving for the anniversary?",
+   "est_sec": 2.89,
    "role": "resume",
-   "block": "shopping.opt2"
+   "block": "baking.ctx5",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.1
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "French. I don't own a sugar thermometer.",
+   "est_sec": 2.27,
+   "gap_before": 1.19,
+   "event": "ordinary_request",
+   "block": "baking.ctx5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair enough. Beat the whites until they're glossy and stiff, and fold the almond mix in until it flows like slow lava.",
+   "est_sec": 6.92,
+   "gap_before": 0.58,
+   "role": "followup",
+   "block": "baking.ctx5"
   }
  ]
 }

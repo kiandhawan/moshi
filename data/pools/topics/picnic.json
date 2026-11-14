@@ -1,148 +1,1423 @@
 {
-  "topic": "picnic",
-  "contexts": [
+ "topic": "picnic",
+ "contexts": [
+  {
+   "id": "picnic.ctx1",
+   "turns": [
     {
-      "id": "picnic.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "We're having a picnic on Sunday if the weather holds."},
-        {"speaker": "moshi", "text": "Sounds lovely. Are you thinking of the big park by the river or the quieter hill with the view over town?"}
-      ],
-      "pending": "river park or the hill with the view",
-      "think_reask": [
-        "So, where's the picnic going to be? The river park or the hill?",
-        "Have you picked a spot yet, by the river or up on the hill?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were choosing a spot for Sunday's picnic.",
-        "Hi again. Did you decide between the river park and the hill?"
-      ],
-      "endings": [
-        {"user": "The hill. The view is worth the walk.", "moshi": "Nice. Pack light then, and bring a blanket that can handle some grass."},
-        {"user": "The river, there's shade and it's close to the parking.", "moshi": "Good choice. Get there early to grab a spot under the trees."}
-      ]
+     "speaker": "user",
+     "text": "We're having a picnic on Sunday if the weather holds."
     },
     {
-      "id": "picnic.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I'm in charge of food for the picnic and I'm overwhelmed."},
-        {"speaker": "moshi", "text": "Let's keep it easy. Do you want to make sandwiches at home, or pick up a few things from the deli on the way?"}
-      ],
-      "pending": "homemade sandwiches or deli food",
-      "think_reask": [
-        "Okay, for the picnic food, are you making sandwiches or grabbing stuff from the deli?",
-        "So, homemade or store bought for the picnic?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were sorting out the picnic food, homemade sandwiches or the deli.",
-        "There you are. Still deciding how to handle the picnic food?"
-      ],
-      "endings": [
-        {"user": "I'll make them, it's way cheaper.", "moshi": "Great. Keep the tomatoes separate so the bread doesn't get soggy."},
-        {"user": "Deli. I have zero time on Saturday.", "moshi": "Totally fine. Grab some cheese, olives and bread and you're set."}
-      ]
-    },
-    {
-      "id": "picnic.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "My friends want to do a picnic but the forecast says maybe rain."},
-        {"speaker": "moshi", "text": "Hmm, there's a forty percent chance in the afternoon. Do you want to move it to the morning, or keep the plan and bring a tarp just in case?"}
-      ],
-      "pending": "move the picnic to morning or keep it with a tarp",
-      "think_reask": [
-        "So, with the rain chance, morning picnic or stick with the afternoon and a tarp?",
-        "Have you decided? Move it earlier or risk it with a tarp?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were working around the rain forecast for your picnic.",
-        "Hi again. Did you figure out what to do about the possible rain?"
-      ],
-      "endings": [
-        {"user": "Morning. Nobody wants a soggy picnic.", "moshi": "Smart. A brunch picnic with fruit and pastries could be really nice."},
-        {"user": "We'll keep it and bring the tarp.", "moshi": "Okay. Pick a spot near a shelter, just in case it really pours."}
-      ]
+     "speaker": "moshi",
+     "text": "Sounds lovely. Are you thinking of the big park by the river or the quieter hill with the view over town?"
     }
-  ],
-  "side_conversations": [
-    {"id": "picnic.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, do we still have that big checkered blanket?"},
-      {"speaker": "friend", "text": "It's in the car trunk from the beach trip."},
-      {"speaker": "user", "text": "Is it clean, though?"},
-      {"speaker": "friend", "text": "Probably still has sand on it. Just shake it out."},
-      {"speaker": "user", "text": "Okay. Can you grab the cooler from the basement too?"},
-      {"speaker": "friend", "text": "Sure, the blue one or the small one?"},
-      {"speaker": "user", "text": "The blue one, we've got a lot of drinks."}
-    ]},
-    {"id": "picnic.side2", "turns": [
-      {"speaker": "user", "text": "Did you invite your sister to the picnic?"},
-      {"speaker": "friend", "text": "Yeah, she's coming with the kids."},
-      {"speaker": "user", "text": "Oh, then we need way more food. What do the kids eat?"},
-      {"speaker": "friend", "text": "Honestly, anything with peanut butter. And juice boxes."},
-      {"speaker": "user", "text": "Easy. I'll pick some up tomorrow."}
-    ]},
-    {"id": "picnic.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, what time should we head out tomorrow?"},
-      {"speaker": "friend", "text": "Maybe eleven? The park gets packed around noon."},
-      {"speaker": "user", "text": "Eleven works. Are you making your potato salad?"},
-      {"speaker": "friend", "text": "Only if you do the lemonade."},
-      {"speaker": "user", "text": "Deal. I'll squeeze the lemons tonight."},
-      {"speaker": "friend", "text": "And don't forget the frisbee this time."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "picnic.dlg1", "turns": [
-      {"speaker": "user", "text": "What are some picnic foods that don't need a fridge?"},
-      {"speaker": "moshi", "text": "Hard cheeses, crackers, whole fruit, nuts and pasta salad with oil instead of mayo all hold up well."},
-      {"speaker": "user", "text": "Is chicken okay if it's out for a few hours?"},
-      {"speaker": "moshi", "text": "Not really. Cooked chicken shouldn't sit out more than two hours, or one hour if it's hot outside."},
-      {"speaker": "user", "text": "Okay so maybe skip the chicken / or bring it in a cooler."},
-      {"speaker": "moshi", "text": "A cooler with a couple of ice packs would keep it safe. Put it in the shade."},
-      {"speaker": "user", "text": "What about something sweet?"},
-      {"speaker": "moshi", "text": "Brownies or lemon bars travel really well. Avoid anything with whipped cream, it melts fast."}
-    ]},
-    {"id": "picnic.dlg2", "turns": [
-      {"speaker": "user", "text": "How do I keep bugs away from a picnic?"},
-      {"speaker": "moshi", "text": "Keep food covered when nobody's eating, and set up away from trash cans and standing water."},
-      {"speaker": "user", "text": "Do those citronella candles actually work?"},
-      {"speaker": "moshi", "text": "They help a little, mostly close by. A gentle breeze helps more, so a slightly windy spot is better."},
-      {"speaker": "user", "text": "The wasps are the worst. Last time they / went straight for the lemonade."},
-      {"speaker": "moshi", "text": "Sweet drinks attract them. Use bottles with lids or cups with covers and straws."},
-      {"speaker": "user", "text": "Good tip. I'll bring water bottles instead of a big jug."},
-      {"speaker": "moshi", "text": "That'll help a lot. Wipe up spills quickly too, wasps find them fast."}
-    ]},
-    {"id": "picnic.dlg3", "turns": [
-      {"speaker": "user", "text": "I want to plan a romantic picnic for my girlfriend. Where do I start?"},
-      {"speaker": "moshi", "text": "Pick a quiet spot with a nice view, maybe for sunset. Then plan a few simple foods she really likes."},
-      {"speaker": "user", "text": "She loves strawberries and fancy cheese."},
-      {"speaker": "moshi", "text": "Perfect. Add some good bread, a little honey and something sparkling to drink."},
-      {"speaker": "user", "text": "Should I bring music, or would that be / too cheesy?"},
-      {"speaker": "moshi", "text": "A small speaker playing quietly is sweet, not cheesy. Just keep the volume low."},
-      {"speaker": "user", "text": "Actually, I'm thinking of making it a surprise."},
-      {"speaker": "moshi", "text": "Love it. Set everything up first, then bring her there for what she thinks is just a walk."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "picnic.opt1",
-     "lead_in": "I'm planning a picnic for my book club and I need help choosing a place.",
-     "options": [
-       "The first one is the botanical garden, really pretty, but you have to pay to get in.",
-       "Then there's the lake park, free and big, but it gets noisy on weekends.",
-       "And the last option is my friend's backyard, which has a big table and real bathrooms."
-     ],
-     "moshi_comment": [
-       "For a book club, being able to hear each other matters, so the noisy lake park might be a problem. The botanical garden is beautiful and calm, just check whether people mind the fee. Your friend's backyard is the most comfortable, especially with a table and bathrooms.",
-       "I'd lean toward the backyard, it's quiet and practical for a long chat. Is it a special occasion, though? If you want it to feel a bit more special, the botanical garden is worth the ticket."
-     ]},
-    {"id": "picnic.opt2",
-     "lead_in": "We're doing a picnic for my son's class and I can't pick a main food.",
-     "options": [
-       "One idea is little sandwiches, cut into shapes, with cheese and ham or peanut butter.",
-       "Another is homemade pizza slices, which kids love but might get cold and greasy.",
-       "Or we could do wraps with chicken and veggies that the kids roll up themselves.",
-       "The last idea is a big pasta salad that's easy to make ahead the night before."
-     ],
-     "moshi_comment": [
-       "Shaped sandwiches are a classic for kids and easy to eat with your hands. Pizza is popular but gets messy once it's cold. The build your own wraps are fun, but with a whole class it could get chaotic.",
-       "I'd go with the little sandwiches, but are there any allergies in the class? If peanuts are an issue, skip the peanut butter and maybe add the pasta salad as a backup."
-     ]}
-  ]
+   ],
+   "pending": "river park or the hill with the view",
+   "think_reask": [
+    "So, where's the picnic going to be? The river park or the hill?",
+    "Have you picked a spot yet, by the river or up on the hill?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were choosing a spot for Sunday's picnic.",
+    "Hi again. Did you decide between the river park and the hill?"
+   ],
+   "endings": [
+    {
+     "user": "The hill. The view is worth the walk.",
+     "moshi": "Nice. Pack light then, and bring a blanket that can handle some grass."
+    },
+    {
+     "user": "The river, there's shade and it's close to the parking.",
+     "moshi": "Good choice. Get there early to grab a spot under the trees."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm in charge of food for the picnic and I'm overwhelmed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let's keep it easy. Do you want to make sandwiches at home, or pick up a few things from the deli on the way?"
+    }
+   ],
+   "pending": "homemade sandwiches or deli food",
+   "think_reask": [
+    "Okay, for the picnic food, are you making sandwiches or grabbing stuff from the deli?",
+    "So, homemade or store bought for the picnic?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were sorting out the picnic food, homemade sandwiches or the deli.",
+    "There you are. Still deciding how to handle the picnic food?"
+   ],
+   "endings": [
+    {
+     "user": "I'll make them, it's way cheaper.",
+     "moshi": "Great. Keep the tomatoes separate so the bread doesn't get soggy."
+    },
+    {
+     "user": "Deli. I have zero time on Saturday.",
+     "moshi": "Totally fine. Grab some cheese, olives and bread and you're set."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friends want to do a picnic but the forecast says maybe rain."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hmm, there's a forty percent chance in the afternoon. Do you want to move it to the morning, or keep the plan and bring a tarp just in case?"
+    }
+   ],
+   "pending": "move the picnic to morning or keep it with a tarp",
+   "think_reask": [
+    "So, with the rain chance, morning picnic or stick with the afternoon and a tarp?",
+    "Have you decided? Move it earlier or risk it with a tarp?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were working around the rain forecast for your picnic.",
+    "Hi again. Did you figure out what to do about the possible rain?"
+   ],
+   "endings": [
+    {
+     "user": "Morning. Nobody wants a soggy picnic.",
+     "moshi": "Smart. A brunch picnic with fruit and pastries could be really nice."
+    },
+    {
+     "user": "We'll keep it and bring the tarp.",
+     "moshi": "Okay. Pick a spot near a shelter, just in case it really pours."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My office is doing a team picnic and I got volunteered to organise it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lucky you. Would you rather book a spot with barbecue grills, or keep it simple with catered sandwiches on the lawn?"
+    }
+   ],
+   "pending": "grills or catered sandwiches for the team picnic",
+   "think_reask": [
+    "So for the team picnic, grills or catering?",
+    "Did you choose how to feed everyone?"
+   ],
+   "welcome_back": [
+    "The office picnic. Grill it, or cater it?",
+    "So which way for the food?"
+   ],
+   "endings": [
+    {
+     "user": "Catered. I'm not standing at a grill for my coworkers.",
+     "moshi": "Fair. Order a few vegetarian options and plenty of drinks."
+    },
+    {
+     "user": "Grills. Our manager loves playing chef.",
+     "moshi": "Perfect, let him take over and you just handle the rest."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's going to be really hot tomorrow, like thirty five degrees."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's intense for a picnic. Would you go very early in the morning, or wait until the evening when it cools down?"
+    }
+   ],
+   "pending": "early morning or evening picnic in the heat",
+   "think_reask": [
+    "So, a sunrise picnic, or an evening one?",
+    "Have you picked a time with this heat?"
+   ],
+   "welcome_back": [
+    "The hot day picnic. Morning, or evening?",
+    "So when are we doing it?"
+   ],
+   "endings": [
+    {
+     "user": "Evening. I'm not a morning person at all.",
+     "moshi": "Then aim for about six. Bring a light so you can stay for sunset."
+    },
+    {
+     "user": "Morning. The kids are up at six anyway.",
+     "moshi": "Then pack breakfast picnic food and be home before it gets too hot."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm proposing to my partner at a picnic next weekend."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh wow!"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, I'm so nervous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally understandable. Do you want to propose right at the start, or wait until after you've eaten and relaxed?"
+    }
+   ],
+   "pending": "propose at the start or after eating",
+   "think_reask": [
+    "So, ask at the beginning, or after the food?",
+    "Have you decided on the moment?"
+   ],
+   "welcome_back": [
+    "The proposal. Start of the picnic, or after lunch?",
+    "So when are you going to ask?"
+   ],
+   "endings": [
+    {
+     "user": "After eating. I'll be calmer by then.",
+     "moshi": "Good idea. Just keep the ring somewhere safe, not in the basket."
+    },
+    {
+     "user": "Right away. I won't be able to eat otherwise.",
+     "moshi": "Ha, that makes sense. Then you can celebrate with the picnic."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We want to bring the dog to the picnic, he's a big golden retriever."
+    },
+    {
+     "speaker": "moshi",
+     "text": "He'll have a great time. Would you go to the off leash park, or somewhere quieter where he stays on the lead?"
+    }
+   ],
+   "pending": "off leash park or quiet spot with the dog on lead",
+   "think_reask": [
+    "So for the dog, off leash or on a lead?",
+    "Where's the golden retriever going?"
+   ],
+   "welcome_back": [
+    "Your dog's picnic. Off leash park, or quieter spot?",
+    "So which park did you pick?"
+   ],
+   "endings": [
+    {
+     "user": "Off leash. He needs to run or he'll steal our sandwiches.",
+     "moshi": "Ha, true. Bring a long water bowl and an old towel for the mud."
+    },
+    {
+     "user": "Quieter. He gets overexcited with other dogs.",
+     "moshi": "Then a long lead and a chew toy should keep him happy."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're having a picnic for my mum's seventieth."
+    },
+    {
+     "speaker": "moshi",
+     "text": "How lovely. Would she enjoy a big gathering with lots of family, or a smaller picnic with just a few close people?"
+    }
+   ],
+   "pending": "big family gathering or small close picnic",
+   "think_reask": [
+    "So for your mum's birthday, big crowd or small and cosy?",
+    "Have you settled on how many people?"
+   ],
+   "welcome_back": [
+    "Your mum's seventieth. Big family, or just a few?",
+    "So how big is this picnic going to be?"
+   ],
+   "endings": [
+    {
+     "user": "Big. She loves being surrounded by everyone.",
+     "moshi": "Then grab a spot with shade and some chairs for the older relatives."
+    },
+    {
+     "user": "Small. She gets overwhelmed in crowds.",
+     "moshi": "That's thoughtful. A calm picnic with her favourite people sounds perfect."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do picnics have to be outside? It's raining all week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. Would you do an indoor picnic on the living room floor, or find a covered spot like a park pavilion?"
+    }
+   ],
+   "pending": "indoor picnic at home or covered park pavilion",
+   "think_reask": [
+    "So, living room picnic, or pavilion?",
+    "Did you decide where to have it?"
+   ],
+   "welcome_back": [
+    "The rainy picnic. Indoors, or under cover?",
+    "So which one are we going with?"
+   ],
+   "endings": [
+    {
+     "user": "Indoors. The kids will think it's hilarious.",
+     "moshi": "They will. Spread a blanket, put on some nature sounds, and you're set."
+    },
+    {
+     "user": "The pavilion. I still want fresh air.",
+     "moshi": "Nice. Bring a warm layer, covered spots can still get chilly."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter's class picnic is tomorrow and I have to bring a dessert."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun. Would you bake something yourself, or buy a big tray of cookies from the bakery?"
+    }
+   ],
+   "pending": "bake dessert or buy from the bakery",
+   "think_reask": [
+    "So, baking, or a bakery tray?",
+    "Did you decide on the dessert?"
+   ],
+   "welcome_back": [
+    "The class dessert. Homemade, or bought?",
+    "So what are you bringing tomorrow?"
+   ],
+   "endings": [
+    {
+     "user": "Bakery. It's already nine at night.",
+     "moshi": "Very fair. Check for nut free options if the school is strict about it."
+    },
+    {
+     "user": "I'll bake. Brownies only take thirty minutes.",
+     "moshi": "Great choice. Cut them small, kids love lots of little pieces."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hm. I want to do a picnic alone. Is that weird?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not weird at all, it sounds peaceful. Would you bring a book and a snack to the park, or go a bit further, like a lake or a hill?"
+    }
+   ],
+   "pending": "solo picnic at the park or further away",
+   "think_reask": [
+    "So, close by in the park, or somewhere further?",
+    "Where's your solo picnic going to be?"
+   ],
+   "welcome_back": [
+    "The solo picnic. Nearby park, or a longer trip?",
+    "So where are you heading?"
+   ],
+   "endings": [
+    {
+     "user": "The lake. I want to feel properly away.",
+     "moshi": "Lovely. Tell someone where you're going, and enjoy the quiet."
+    },
+    {
+     "user": "Just the park. I want to be lazy about it.",
+     "moshi": "Perfect. A good book, a sandwich, and no plans."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're doing a picnic with three families, about fifteen people."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice crowd. Would you split the food by family, like one brings mains and one brings desserts, or just do potluck and hope for the best?"
+    }
+   ],
+   "pending": "assigned food by family or open potluck",
+   "think_reask": [
+    "So, assign the food, or full potluck?",
+    "Have you sorted out who brings what?"
+   ],
+   "welcome_back": [
+    "The three family picnic. Assigned dishes, or potluck?",
+    "So how's the food being organised?"
+   ],
+   "endings": [
+    {
+     "user": "Assigned. Last time we had four bags of chips and nothing else.",
+     "moshi": "Ha, then definitely assign. A quick group message sorts it."
+    },
+    {
+     "user": "Potluck. It's more fun not knowing.",
+     "moshi": "Sure, maybe just ask one family to bring drinks to be safe."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friends want a picnic at the beach."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds fun. Would you go in the morning for a quieter beach, or later in the day for the sunset?"
+    }
+   ],
+   "pending": "morning beach picnic or sunset",
+   "think_reask": [
+    "So, morning at the beach, or sunset?",
+    "Did your friends pick a time?"
+   ],
+   "welcome_back": [
+    "The beach picnic. Morning, or sunset?",
+    "So when are you all going?"
+   ],
+   "endings": [
+    {
+     "user": "Sunset. Morning is too early for this group.",
+     "moshi": "Fair. Bring a lantern and a hoodie, it cools down fast at night."
+    },
+    {
+     "user": "Morning. It's way too crowded later.",
+     "moshi": "Smart. Get there early enough to grab a good spot near the water."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Blanket or folding chairs? My knees aren't what they used to be."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, knees matter. Would you bring a couple of light chairs, or a thick padded blanket with a few cushions?"
+    }
+   ],
+   "pending": "folding chairs or padded blanket and cushions",
+   "think_reask": [
+    "So for your knees, chairs or cushions?",
+    "Did you decide on seating?"
+   ],
+   "welcome_back": [
+    "The seating question. Chairs, or a cushy blanket?",
+    "So what are we sitting on?"
+   ],
+   "endings": [
+    {
+     "user": "Chairs. Getting up off the ground is the hard part.",
+     "moshi": "Totally. Get ones with armrests, they make standing much easier."
+    },
+    {
+     "user": "Blanket and cushions. Chairs feel too formal.",
+     "moshi": "Then bring an extra cushion for your back. You'll thank me."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a student and I've got about ten dollars for a picnic for two."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally doable. Would you go for a sandwich picnic with fruit, or something like a pasta salad you make the night before?"
+    }
+   ],
+   "pending": "sandwiches and fruit or homemade pasta salad",
+   "think_reask": [
+    "So, sandwiches, or pasta salad?",
+    "Have you planned your ten dollar menu?"
+   ],
+   "welcome_back": [
+    "The budget picnic. Sandwiches, or pasta salad?",
+    "So what's on the menu?"
+   ],
+   "endings": [
+    {
+     "user": "Pasta salad. I can make a huge bowl for nothing.",
+     "moshi": "Great, add some cherry tomatoes and cheese and it feels fancy."
+    },
+    {
+     "user": "Sandwiches. Quick and no cooking.",
+     "moshi": "Then grab a loaf, some cheese and a couple of apples, done."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay so my partner wants a fancy picnic with candles, and I want just crisps and a frisbee."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, very different visions. Would you do a bit of both, or take turns, fancy this time and casual next?"
+    }
+   ],
+   "pending": "mix of fancy and casual or take turns",
+   "think_reask": [
+    "So, a mix, or take turns with your partner?",
+    "Have you two worked it out?"
+   ],
+   "welcome_back": [
+    "The fancy versus casual picnic. Mix it, or take turns?",
+    "So whose picnic is it going to be?"
+   ],
+   "endings": [
+    {
+     "user": "A mix. Candles and crisps. Why not.",
+     "moshi": "I love that. Bring the frisbee for after dinner."
+    },
+    {
+     "user": "Take turns. Fancy this time, I'll survive.",
+     "moshi": "Very generous. Maybe slip a frisbee in the basket anyway."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kids get bored at picnics in about ten minutes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very normal. Would you bring games like a ball and bubbles, or choose a picnic spot right next to a playground?"
+    }
+   ],
+   "pending": "bring games or picnic next to a playground",
+   "think_reask": [
+    "So, bring games, or sit by the playground?",
+    "Did you figure out how to keep them busy?"
+   ],
+   "welcome_back": [
+    "The kids' boredom problem. Games, or playground?",
+    "So which plan are we going with?"
+   ],
+   "endings": [
+    {
+     "user": "Playground. Then I can actually sit down.",
+     "moshi": "Ha, smart. Pick a bench with a view of the slides."
+    },
+    {
+     "user": "Games. They need to run around with me.",
+     "moshi": "Lovely. A ball, bubbles and a kite will last hours."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're planning a picnic at an outdoor concert."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun. Would you bring a full spread of food, or keep it to snacks so you can focus on the music?"
+    }
+   ],
+   "pending": "full spread or just snacks at the concert",
+   "think_reask": [
+    "So, full picnic, or just snacks for the concert?",
+    "Have you decided how much food to bring?"
+   ],
+   "welcome_back": [
+    "The concert picnic. Big spread, or light snacks?",
+    "So what's going in the bag?"
+   ],
+   "endings": [
+    {
+     "user": "Snacks. It gets so crowded you can barely spread out.",
+     "moshi": "True. Nuts, cheese and grapes, all easy to share in the dark."
+    },
+    {
+     "user": "Full spread. It's a three hour show.",
+     "moshi": "Then bring a cooler and a small light so you can see what you're eating."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to try foraging for picnic food. Berries, maybe."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun, but be careful. Would you go with a guide who knows the plants, or stick to things you're certain about, like blackberries?"
+    }
+   ],
+   "pending": "foraging with a guide or only familiar berries",
+   "think_reask": [
+    "So, a guided walk, or just blackberries?",
+    "Did you decide how to forage safely?"
+   ],
+   "welcome_back": [
+    "Your foraging plan. With a guide, or stick to blackberries?",
+    "So how are we doing this?"
+   ],
+   "endings": [
+    {
+     "user": "A guide. I don't want to poison anyone.",
+     "moshi": "Very wise. Many parks run foraging walks in late summer."
+    },
+    {
+     "user": "Blackberries only. I know those for sure.",
+     "moshi": "Good. Bring a container and avoid bushes right next to busy roads."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Picnic for my choir. They're all pretty old and posh."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, okay. Would they prefer a proper setup with a table and real plates, or a classic blanket picnic with nice food?"
+    }
+   ],
+   "pending": "table with real plates or classic blanket picnic",
+   "think_reask": [
+    "So for the choir, table or blanket?",
+    "Have you picked the picnic style?"
+   ],
+   "welcome_back": [
+    "The posh choir. Table setup, or blanket?",
+    "So how fancy are we going?"
+   ],
+   "endings": [
+    {
+     "user": "Table. Nobody in that group is sitting on the ground.",
+     "moshi": "Then a folding table, a cloth and some real glasses will impress them."
+    },
+    {
+     "user": "Blanket, but with nice food. Let's keep it relaxed.",
+     "moshi": "Lovely. Maybe some fold out chairs for anyone who needs them."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's our anniversary and I want to recreate our first date picnic."
+    },
+    {
+     "speaker": "moshi",
+     "text": "So sweet. Would you go to the exact same spot, or recreate the food and go somewhere new?"
+    }
+   ],
+   "pending": "same spot or same food somewhere new",
+   "think_reask": [
+    "So, the same spot, or the same food somewhere new?",
+    "Have you decided how to recreate it?"
+   ],
+   "welcome_back": [
+    "The anniversary picnic. Same place, or a new one?",
+    "So which way are you going to surprise them?"
+   ],
+   "endings": [
+    {
+     "user": "Same spot. It's under a big oak by the river.",
+     "moshi": "That's lovely. Bring something small that reminds you of that day."
+    },
+    {
+     "user": "Same food, new place. The old spot is a car park now.",
+     "moshi": "Ha, that settles it. A new spot can start a new tradition."
+    }
+   ]
+  },
+  {
+   "id": "picnic.ctx22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My neighbour just moved in, and I thought we could do a little street picnic to welcome her."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What a kind idea. Would you invite the whole street, or just a few neighbours to keep it relaxed?"
+    }
+   ],
+   "pending": "invite the whole street or a few neighbours",
+   "think_reask": [
+    "So, the whole street, or just a few people?",
+    "Have you decided how big the welcome picnic will be?"
+   ],
+   "welcome_back": [
+    "The welcome picnic. Whole street, or a small group?",
+    "So who's coming?"
+   ],
+   "endings": [
+    {
+     "user": "Just a few. She seems a bit shy.",
+     "moshi": "Thoughtful. A small group will feel much less overwhelming."
+    },
+    {
+     "user": "Whole street. It's a good excuse for everyone to meet.",
+     "moshi": "Great, slip a note under each door and ask everyone to bring one thing."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "picnic.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, do we still have that big checkered blanket?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It's in the car trunk from the beach trip."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it clean, though?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Probably still has sand on it. Just shake it out."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Can you grab the cooler from the basement too?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, the blue one or the small one?"
+    },
+    {
+     "speaker": "user",
+     "text": "The blue one, we've got a lot of drinks."
+    }
+   ]
+  },
+  {
+   "id": "picnic.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you invite your sister to the picnic?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, she's coming with the kids."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, then we need way more food. What do the kids eat?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Honestly, anything with peanut butter. And juice boxes."
+    },
+    {
+     "speaker": "user",
+     "text": "Easy. I'll pick some up tomorrow."
+    }
+   ]
+  },
+  {
+   "id": "picnic.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, what time should we head out tomorrow?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Maybe eleven? The park gets packed around noon."
+    },
+    {
+     "speaker": "user",
+     "text": "Eleven works. Are you making your potato salad?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Only if you do the lemonade."
+    },
+    {
+     "speaker": "user",
+     "text": "Deal. I'll squeeze the lemons tonight."
+    },
+    {
+     "speaker": "friend",
+     "text": "And don't forget the frisbee this time."
+    }
+   ]
+  },
+  {
+   "id": "picnic.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you pack the bottle opener?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Wasn't that your job?"
+    },
+    {
+     "speaker": "user",
+     "text": "I did the food. You did the drinks."
+    },
+    {
+     "speaker": "friend",
+     "text": "Ugh. Fine, I'll run back to the car."
+    },
+    {
+     "speaker": "user",
+     "text": "Wait, there's a corkscrew on my keyring. Never mind."
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh thank goodness."
+    }
+   ]
+  },
+  {
+   "id": "picnic.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, do you think these clouds are going to hold?"
+    },
+    {
+     "speaker": "friend",
+     "text": "They look pretty dark over the hills."
+    },
+    {
+     "speaker": "user",
+     "text": "Should we pack up now or wait it out?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Let's give it ten minutes. If it starts spitting, we run for the bandstand."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'm putting the cake back in the tin, just in case."
+    },
+    {
+     "speaker": "friend",
+     "text": "Good thinking. That cake is the whole reason I came."
+    }
+   ]
+  },
+  {
+   "id": "picnic.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, is that our spot or did someone take it?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Looks like a family set up under the big tree."
+    },
+    {
+     "speaker": "user",
+     "text": "Seriously? We always sit there."
+    },
+    {
+     "speaker": "friend",
+     "text": "We could go by the pond instead. There's shade near the willows."
+    },
+    {
+     "speaker": "user",
+     "text": "Isn't that where the geese hang out?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Only in the mornings, I think."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine, let's try. If a goose steals my sandwich, it's on you."
+    },
+    {
+     "speaker": "friend",
+     "text": "Deal. I'll fight the goose."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "picnic.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What are some picnic foods that don't need a fridge?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hard cheeses, crackers, whole fruit, nuts and pasta salad with oil instead of mayo all hold up well."
+    },
+    {
+     "speaker": "user",
+     "text": "Is chicken okay if it's out for a few hours?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really. Cooked chicken shouldn't sit out more than two hours, or one hour if it's hot outside."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay so maybe skip the chicken / or bring it in a cooler."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A cooler with a couple of ice packs would keep it safe. Put it in the shade."
+    },
+    {
+     "speaker": "user",
+     "text": "What about something sweet?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brownies or lemon bars travel really well. Avoid anything with whipped cream, it melts fast."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I keep bugs away from a picnic?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep food covered when nobody's eating, and set up away from trash cans and standing water."
+    },
+    {
+     "speaker": "user",
+     "text": "Do those citronella candles actually work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They help a little, mostly close by. A gentle breeze helps more, so a slightly windy spot is better."
+    },
+    {
+     "speaker": "user",
+     "text": "The wasps are the worst. Last time they / went straight for the lemonade."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sweet drinks attract them. Use bottles with lids or cups with covers and straws."
+    },
+    {
+     "speaker": "user",
+     "text": "Good tip. I'll bring water bottles instead of a big jug."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That'll help a lot. Wipe up spills quickly too, wasps find them fast."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to plan a romantic picnic for my girlfriend. Where do I start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick a quiet spot with a nice view, maybe for sunset. Then plan a few simple foods she really likes."
+    },
+    {
+     "speaker": "user",
+     "text": "She loves strawberries and fancy cheese."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Add some good bread, a little honey and something sparkling to drink."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I bring music, or would that be / too cheesy?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small speaker playing quietly is sweet, not cheesy. Just keep the volume low."
+    },
+    {
+     "speaker": "user",
+     "text": "Actually, I'm thinking of making it a surprise."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Love it. Set everything up first, then bring her there for what she thinks is just a walk."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the best way to keep drinks cold at a picnic?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Freeze some water bottles the night before. They act like ice packs and you can drink them as they melt."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, clever. What about / a bottle of wine?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wrap the bottle in a wet towel and keep it in the shade. As the water evaporates, it cools the bottle."
+    },
+    {
+     "speaker": "user",
+     "text": "Does that actually work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It does, a little. A cheap insulated wine bag works even better."
+    },
+    {
+     "speaker": "user",
+     "text": "And for the kids' juice boxes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Freeze half of them. By lunch they'll be slushy and cold, and kids usually love that."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you help me plan a picnic for my toddler's playgroup? / There'll be about eight kids."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. Keep the food simple and finger sized. Cut grapes in half, little sandwiches, cheese cubes and crackers."
+    },
+    {
+     "speaker": "user",
+     "text": "Why cut the grapes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Whole grapes are a choking risk for little ones, so halving or quartering them is safer."
+    },
+    {
+     "speaker": "user",
+     "text": "Good to know. What about activities?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bubbles, a ball and a few toy trucks are plenty. Toddlers mostly want to run, dig and chase each other."
+    },
+    {
+     "speaker": "user",
+     "text": "And shade?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very important. A pop up tent or a big umbrella gives them somewhere to nap or cool off."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I bring wipes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of them. More than you think you need."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What are some picnic foods that won't get squashed in a backpack?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wraps travel much better than sandwiches. Also hard fruits like apples, nuts, crackers in a box, and cheese."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm hiking about an hour / to get to the spot."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then go light. Skip anything heavy like big bottles of juice and pack a reusable water bottle each."
+    },
+    {
+     "speaker": "user",
+     "text": "What about dessert?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cookies or flapjacks in a tin hold up well. Chocolate might melt, so keep it near your back, not on top."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I bring plates?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably not. A small cloth and some napkins are enough for a hiking picnic."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it okay to have a picnic in a cemetery? / There's a really pretty one near me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "In some places it's actually a tradition. It's usually fine, as long as you're quiet and respectful."
+    },
+    {
+     "speaker": "user",
+     "text": "Are there rules?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the cemetery's website or signs. Some ask you to stay on certain lawns and avoid sitting near graves."
+    },
+    {
+     "speaker": "user",
+     "text": "What about music?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "I'd skip it, or keep it very low. Other visitors might be grieving."
+    },
+    {
+     "speaker": "user",
+     "text": "That makes sense."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And take everything with you when you leave, of course, even crumbs that might attract birds."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kids want to have a teddy bear picnic in the garden. Ideas?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "How lovely. Lay out a blanket and give each teddy its own little plate and cup."
+    },
+    {
+     "speaker": "user",
+     "text": "What should we eat?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honey sandwiches, tiny cakes and fruit in bowls. Everything mini to match the teddies."
+    },
+    {
+     "speaker": "user",
+     "text": "Could we do games too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sure. A teddy hunt, where you hide a few stuffed animals around the garden, is always a hit."
+    },
+    {
+     "speaker": "user",
+     "text": "My son will insist / that his dinosaur comes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then the dinosaur is the guest of honour. Maybe give him a little crown."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do you plan a picnic for someone who uses a wheelchair?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Choose a park with paved paths and accessible toilets nearby. Many park websites list their accessibility features."
+    },
+    {
+     "speaker": "user",
+     "text": "My friend uses one and I don't want it to be a hassle."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's thoughtful. A folding table at the right height can be easier than eating on a blanket."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I ask her what she prefers?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, definitely. She knows what works for her better than anyone."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Anything else / I might forget?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Shade, and a spot not too far from the car. Little things like that make a big difference."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Ugh, I hate wasps. How do I keep them away from my picnic?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep sugary drinks covered and use cups with lids or straws. Wasps love sweet things."
+    },
+    {
+     "speaker": "user",
+     "text": "They always / find the jam somehow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then bring the jam out only when you're using it, and put it back in the bag right after."
+    },
+    {
+     "speaker": "user",
+     "text": "Does that thing with the fake wasp nest work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some people swear by it. Wasps are territorial, so a decoy nest might keep a few away."
+    },
+    {
+     "speaker": "user",
+     "text": "And if one lands on me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stay calm and still. Swatting at them makes them more likely to sting."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hi, I'm hosting my first picnic and I'm worried I'll forget something. Can you help me make a list?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Of course. Start with a blanket, plates, cups, napkins, a knife and a bin bag for rubbish."
+    },
+    {
+     "speaker": "user",
+     "text": "And food wise?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "One main thing like sandwiches or a salad, something sweet, fruit and plenty of water."
+    },
+    {
+     "speaker": "user",
+     "text": "What about sun stuff? / We're going at noon."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sunscreen, hats, and something for shade. Noon is the hottest part of the day."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything people usually forget?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bottle opener, wet wipes and a little bag for leftovers. And a spare jumper in case it gets breezy."
+    }
+   ]
+  },
+  {
+   "id": "picnic.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do you think a picnic is a good idea for a first date?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be lovely. It's relaxed, cheap, and you can actually talk without loud music around you."
+    },
+    {
+     "speaker": "user",
+     "text": "What if it gets / awkward?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring something to do, like a card game or a frisbee, so there's no pressure to talk the whole time."
+    },
+    {
+     "speaker": "user",
+     "text": "What food would you bring?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Easy, tidy things, nothing too messy. Maybe some cheese, bread, fruit and a couple of nice drinks."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it rains?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Have a backup plan, like a nearby cafe. It shows you thought ahead, which is quietly impressive."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "picnic.opt1",
+   "lead_in": "I'm planning a picnic for my book club and I need help choosing a place.",
+   "options": [
+    "The first one is the botanical garden, really pretty, but you have to pay to get in.",
+    "Then there's the lake park, free and big, but it gets noisy on weekends.",
+    "And the last option is my friend's backyard, which has a big table and real bathrooms."
+   ],
+   "moshi_comment": [
+    "For a book club, being able to hear each other matters, so the noisy lake park might be a problem. The botanical garden is beautiful and calm, just check whether people mind the fee. Your friend's backyard is the most comfortable, especially with a table and bathrooms.",
+    "I'd lean toward the backyard, it's quiet and practical for a long chat. Is it a special occasion, though? If you want it to feel a bit more special, the botanical garden is worth the ticket."
+   ]
+  },
+  {
+   "id": "picnic.opt2",
+   "lead_in": "We're doing a picnic for my son's class and I can't pick a main food.",
+   "options": [
+    "One idea is little sandwiches, cut into shapes, with cheese and ham or peanut butter.",
+    "Another is homemade pizza slices, which kids love but might get cold and greasy.",
+    "Or we could do wraps with chicken and veggies that the kids roll up themselves.",
+    "The last idea is a big pasta salad that's easy to make ahead the night before."
+   ],
+   "moshi_comment": [
+    "Shaped sandwiches are a classic for kids and easy to eat with your hands. Pizza is popular but gets messy once it's cold. The build your own wraps are fun, but with a whole class it could get chaotic.",
+    "I'd go with the little sandwiches, but are there any allergies in the class? If peanuts are an issue, skip the peanut butter and maybe add the pasta salad as a backup."
+   ]
+  },
+  {
+   "id": "picnic.opt3",
+   "lead_in": "I need help deciding where to take my grandkids for a picnic.",
+   "options": [
+    "There's a farm park with animals, a playground and picnic tables, but it costs about eight dollars each.",
+    "Or the free park near our house, which is big and green but has no shade at all.",
+    "Or the beach, which they love, though sand gets into absolutely everything we eat."
+   ],
+   "moshi_comment": [
+    "The farm park has the most to keep kids busy, and tables make eating easier, the fee might be worth it. The local park is free but no shade could be rough on a sunny day. The beach is fun, just plan for sandy sandwiches.",
+    "I'd lean toward the farm park, animals and a playground will keep them happy for hours. The local park works if you bring a sun shade. The beach is lovely, but you'll spend half the day shaking sand off the food."
+   ]
+  },
+  {
+   "id": "picnic.opt4",
+   "lead_in": "We're planning a big picnic for my running club after our race and I can't pick the food.",
+   "options": [
+    "A barbecue with burgers and veggie skewers, filling but someone has to cook while we're all tired.",
+    "A big order of wraps and salads from a cafe, easy, but it costs more.",
+    "Or a potluck where everyone brings something, cheap and fun but a bit unpredictable."
+   ],
+   "moshi_comment": [
+    "After a race, nobody wants to cook, so the barbecue might be a stretch. The cafe order is easy and reliable, just pricier. The potluck is cheap and social, but you might end up with five bags of crisps.",
+    "I'd go with the cafe wraps, people will be hungry and tired, so convenience wins. A potluck could work if you assign categories. Save the barbecue for a day without a race."
+   ]
+  },
+  {
+   "id": "picnic.opt5",
+   "lead_in": "I'm planning a picnic date and I'm stuck on the activity.",
+   "options": [
+    "We could rent a little rowing boat on the lake for an hour after lunch.",
+    "Or bring a pack of cards and a board game and just stay on the blanket.",
+    "Or walk up to the old lighthouse, it's about forty minutes, with a great view at the top."
+   ],
+   "moshi_comment": [
+    "The rowing boat is romantic and a bit adventurous, a nice memory. Games on the blanket are relaxed and good for conversation. The lighthouse walk is lovely if you both like moving, just bring water.",
+    "I'd go with the boat, it's special without being too much. If either of you gets seasick, the lighthouse is a great backup. Games are perfect if you'd rather just talk and laugh."
+   ]
+  }
+ ]
 }

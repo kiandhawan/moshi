@@ -7,99 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "board_games"
+  "coffee"
  ],
- "wait_sec": 45,
- "deadline": {
-  "after_turn": 4,
-  "sec": 45
- },
- "topic": "board_games",
+ "topic": "coffee",
  "voices": {
-  "user": "e3cd384158934cc9a01029cd7d278634",
+  "user": "879653fd2b9c4cb0854d68e7e9a049e8",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_28",
-  "greet_ans_17",
-  "think_instr_28",
-  "ack_09"
+  "greet_08",
+  "greet_ans_04"
  ],
  "block_ids": [
-  "board_games.ctx1"
+  "coffee.dlg14"
  ],
- "est_total_sec": 72.06,
- "est_speech_sec": 22.71,
+ "est_total_sec": 59.12,
+ "est_speech_sec": 46.36,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's everything today?",
-   "est_sec": 1.34,
-   "gap_before": 0.47,
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.65,
    "role": "greeting",
-   "phrasing": "greet_28"
+   "phrasing": "greet_08"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
+   "text": "Pretty well, actually.",
+   "est_sec": 1.03,
    "gap_before": 0.72,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "phrasing": "greet_ans_04"
   },
   {
    "speaker": "user",
-   "text": "I'm hosting a game night Friday. There'll be six of us, and two have never really played board games.",
+   "text": "I'm helping with refreshments after my uncle's funeral. We need coffee for about sixty people in the church hall.",
    "est_sec": 5.99,
-   "gap_before": 0.4,
+   "gap_before": 0.59,
    "event": "ordinary_request",
-   "block": "board_games.ctx1"
+   "block": "coffee.dlg14"
   },
   {
    "speaker": "moshi",
-   "text": "Fun! Do you want one easy party game everyone can join, or two smaller groups playing different games?",
-   "est_sec": 5.68,
-   "gap_before": 1.0,
+   "text": "I'm sorry for your loss. That's a kind thing to take on. Does the hall have a big hot water urn or a catering coffee machine?",
+   "est_sec": 8.16,
+   "gap_before": 1.18,
    "role": "reply",
-   "block": "board_games.ctx1"
+   "block": "coffee.dlg14"
   },
   {
    "speaker": "user",
-   "text": "I'll need forty-five seconds to think. Ask me again after that.",
-   "est_sec": 3.51,
-   "gap_before": 1.27,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 45,
-   "phrasing": "think_instr_28"
+   "text": "There's an urn. And some large flasks.",
+   "est_sec": 2.27,
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "coffee.dlg14"
   },
   {
    "speaker": "moshi",
-   "text": "Take your time.",
-   "est_sec": 1.03,
-   "gap_before": 0.51,
-   "role": "ack",
-   "phrasing": "ack_09"
+   "text": "Then the simplest way is brewing big batches of filter coffee or using cafetieres and decanting into the flasks. Roughly two tablespoons of ground coffee per mug.",
+   "est_sec": 8.47,
+   "gap_before": 1.01,
+   "role": "reply",
+   "block": "coffee.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "Should I worry about",
+   "est_sec": 1.34,
+   "gap_before": 0.73,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "coffee.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "people who want decaf?",
+   "est_sec": 1.34,
+   "gap_before": 2.05,
+   "event": "ordinary_request",
+   "block": "coffee.dlg14"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, time's up. Everyone together, or split into two tables?",
-   "est_sec": 3.2,
-   "role": "resume",
-   "block": "board_games.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 45.02
-   }
+   "text": "Yes, it's thoughtful to have one flask of decaf, clearly labelled. Many older guests prefer it in the afternoon.",
+   "est_sec": 5.99,
+   "gap_before": 1.9,
+   "role": "reply",
+   "block": "coffee.dlg14"
+  },
+  {
+   "speaker": "user",
+   "text": "What else should go on the table?",
+   "est_sec": 2.27,
+   "gap_before": 0.77,
+   "event": "ordinary_request",
+   "block": "coffee.dlg14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Milk, sugar, stirrers and maybe a plant milk. And ask someone to keep an eye on the flasks so they never run empty.",
+   "est_sec": 7.23,
+   "gap_before": 1.17,
+   "role": "reply",
+   "block": "coffee.dlg14"
   }
  ]
 }

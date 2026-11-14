@@ -7,116 +7,145 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "moving_house"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "moving_house",
+ "topics": [
+  "cleaning"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "cleaning",
  "voices": {
-  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "user": "cc7f8544c64a439080193e9560100c5a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_07",
-  "greet_ans_17",
-  "describe_instr_05",
-  "ack_09",
-  "describe_cue_11"
+  "greet_29",
+  "greet_ans_26",
+  "think_instr_13",
+  "ack_02",
+  "self_25",
+  "self_07"
  ],
  "block_ids": [
-  "moving_house.opt2"
+  "cleaning.ctx7"
  ],
- "est_total_sec": 53.96,
- "est_speech_sec": 41.92,
+ "est_total_sec": 81.04,
+ "est_speech_sec": 32.1,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How's everything going?",
-   "est_sec": 1.34,
-   "gap_before": 0.5,
+   "text": "Hi, how are you doing right now?",
+   "est_sec": 2.27,
+   "gap_before": 0.45,
    "role": "greeting",
-   "phrasing": "greet_07"
+   "phrasing": "greet_29"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.72,
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.64,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "phrasing": "greet_ans_26"
   },
   {
    "speaker": "user",
-   "text": "I've seen a few apartments and I need to choose one before Friday.",
-   "est_sec": 4.13,
-   "gap_before": 0.41,
-   "block": "moving_house.opt2"
+   "text": "My kids bring home paintings every day. The fridge is buried.",
+   "est_sec": 3.51,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "cleaning.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Lovely problem, but a real one. Would you photograph them and keep only a few favourites, or have one keepsake box per child per year?",
+   "est_sec": 7.85,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "cleaning.ctx7"
   },
   {
    "speaker": "user",
-   "text": "I'll tell you all the choices first. Wait until I'm finished before you comment.",
-   "est_sec": 4.44,
-   "gap_before": 0.53,
+   "text": "Let me mull it over for forty-five seconds. Then ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 1.15,
    "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_05"
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_13"
   },
   {
    "speaker": "moshi",
-   "text": "Take your time.",
-   "est_sec": 1.03,
-   "gap_before": 0.61,
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.38,
    "role": "ack",
-   "phrasing": "ack_09"
+   "phrasing": "ack_02"
   },
   {
    "speaker": "user",
-   "text": "One is a bright two bedroom near the train station, but the rent is at the top of my budget.",
-   "est_sec": 6.3,
-   "gap_before": 1.1,
-   "block": "moving_house.opt2",
+   "text": "Okay, so, the thing is",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 36.14
+   },
    "event": "distractor",
-   "kind": "pause"
+   "kind": "self_talk",
+   "phrasing": "self_25"
   },
   {
    "speaker": "user",
-   "text": "Another is a cheaper place in a quiet neighborhood, but it's a forty minute bus ride to work.",
-   "est_sec": 5.68,
-   "gap_before": 1.96,
-   "block": "moving_house.opt2",
+   "text": "Hmm, either way, really.",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 41.17
+   },
    "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a small studio right downtown with a gym in the building and no parking.",
-   "est_sec": 5.06,
-   "gap_before": 2.29,
-   "block": "moving_house.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "And that's the last one. What do you think?",
-   "est_sec": 2.89,
-   "gap_before": 0.57,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_11"
+   "kind": "self_talk",
+   "phrasing": "self_07"
   },
   {
    "speaker": "moshi",
-   "text": "Do you work from home at all? If you do, the extra bedroom near the station is really valuable. If not, the studio downtown could be fun and simple.",
-   "est_sec": 9.09,
-   "gap_before": 1.85,
+   "text": "About that buried fridge. Which system?",
+   "est_sec": 1.96,
    "role": "resume",
-   "block": "moving_house.opt2"
+   "block": "cleaning.ctx7",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.16
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Photos. Then I can make a little book at the end of the year.",
+   "est_sec": 4.44,
+   "gap_before": 1.41,
+   "event": "ordinary_request",
+   "block": "cleaning.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a sweet idea. Kids love flipping through their own book.",
+   "est_sec": 3.51,
+   "gap_before": 0.67,
+   "role": "followup",
+   "block": "cleaning.ctx7"
   }
  ]
 }

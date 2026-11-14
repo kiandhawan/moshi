@@ -7,166 +7,143 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "phone_call",
+ "wait_type": "phone_call",
  "conditions": [
-  "extra_question",
   "implicit"
  ],
  "topics": [
-  "home_office",
-  "wedding_planning"
+  "restaurant_choice"
  ],
- "topic": "home_office",
+ "topic": "restaurant_choice",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
-  "friend": "026218fe0c054374838d934016f34082",
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Zoe",
- "friend_name_id": "name_24",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_27",
+  "greet_09",
   "greet_ans_30",
-  "side_instr_12",
-  "dq_06",
-  "implicit_09"
+  "phone_instr_09",
+  "call_15",
+  "implicit_02"
  ],
  "block_ids": [
-  "home_office.ctx1",
-  "wedding_planning.side1"
+  "restaurant_choice.ctx4",
+  "call_15"
  ],
- "est_total_sec": 57.22,
- "est_speech_sec": 42.11,
+ "est_total_sec": 53.92,
+ "est_speech_sec": 33.44,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
-   "est_sec": 1.96,
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
    "gap_before": 0.48,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "Not bad at all, thanks.",
    "est_sec": 1.65,
-   "gap_before": 0.82,
+   "gap_before": 0.59,
    "event": "greeting_answer",
    "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "I'm finally turning the spare room into a proper office.",
-   "est_sec": 3.2,
-   "gap_before": 0.53,
+   "text": "Okay, so prom is next Friday and six of us want to eat somewhere first.",
+   "est_sec": 4.75,
+   "gap_before": 0.31,
    "event": "ordinary_request",
-   "block": "home_office.ctx1"
+   "block": "restaurant_choice.ctx4"
   },
   {
    "speaker": "moshi",
-   "text": "Exciting. Where do you want the desk, facing the window for the light, or against the wall so the screen has no glare?",
-   "est_sec": 7.23,
-   "gap_before": 0.86,
+   "text": "Fun night. Roughly how much can each of you spend? That decides whether we look at steak places or something like a nice noodle bar.",
+   "est_sec": 7.85,
+   "gap_before": 0.95,
    "role": "reply",
-   "block": "home_office.ctx1",
+   "block": "restaurant_choice.ctx4",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hold on, Zoe just called my name. Please wait and stay silent until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 1.61,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_12"
-  },
-  {
-   "speaker": "user",
-   "text": "Did you feed the cat already?",
-   "est_sec": 1.96,
-   "gap_before": 1.33,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_06"
-  },
-  {
-   "speaker": "friend",
-   "text": "Yep, about an hour ago.",
-   "est_sec": 1.65,
-   "gap_before": 0.94,
-   "phrasing": "dq_06"
-  },
-  {
-   "speaker": "user",
-   "text": "Zoe, did your cousin ever send back the RSVP card?",
-   "est_sec": 3.2,
-   "gap_before": 1.04,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "wedding_planning.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "No, and I asked her twice already.",
-   "est_sec": 2.27,
-   "gap_before": 0.58,
-   "block": "wedding_planning.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "The caterer needs final numbers by Friday.",
-   "est_sec": 2.27,
-   "gap_before": 0.86,
-   "block": "wedding_planning.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Just count her as a yes. She always shows up anyway.",
+   "text": "Wait, I need to answer this. Stay quiet till I'm back.",
    "est_sec": 3.51,
-   "gap_before": 1.47,
-   "block": "wedding_planning.side1"
+   "gap_before": 1.64,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_09"
   },
   {
    "speaker": "user",
-   "text": "And her boyfriend?",
+   "text": "Hello, this is she.",
+   "est_sec": 1.34,
+   "gap_before": 1.8,
+   "phrasing": "call_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, the test results.",
+   "est_sec": 1.34,
+   "gap_before": 2.08,
+   "phrasing": "call_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Is everything normal?",
    "est_sec": 1.03,
-   "gap_before": 0.48,
+   "gap_before": 3.44,
+   "phrasing": "call_15",
    "event": "distractor",
-   "kind": "friend_question",
-   "block": "wedding_planning.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Ugh, probably him too. Put down two.",
-   "est_sec": 2.27,
-   "gap_before": 1.33,
-   "block": "wedding_planning.side1"
+   "kind": "question_to_other"
   },
   {
    "speaker": "user",
-   "text": "So where did we leave it?",
-   "est_sec": 1.96,
-   "gap_before": 0.69,
+   "text": "Phew, okay. So no need for a follow-up?",
+   "est_sec": 2.58,
+   "gap_before": 2.95,
+   "phrasing": "call_15",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Thank you, that's a relief.",
+   "est_sec": 1.65,
+   "gap_before": 3.14,
+   "phrasing": "call_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, what were you saying?",
+   "est_sec": 2.27,
+   "gap_before": 1.13,
    "event": "return_cue",
    "kind": "implicit",
-   "phrasing": "implicit_09"
+   "phrasing": "implicit_02"
   },
   {
    "speaker": "moshi",
-   "text": "Right. So, desk by the window or against the wall?",
-   "est_sec": 3.2,
-   "gap_before": 0.59,
+   "text": "Right. Right, the prom dinner. How much per person are we working with?",
+   "est_sec": 4.13,
+   "gap_before": 0.47,
    "role": "resume",
-   "block": "home_office.ctx1",
+   "block": "restaurant_choice.ctx4",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
+  "new_type_phone",
   "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."

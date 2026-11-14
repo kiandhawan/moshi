@@ -34,6 +34,7 @@ The model itself must produce the silence. Do not add an external mute rule.
   - pauses before the user has finished
   - phrases that resemble the return cue (near-miss cues, in at least a quarter of friend-wait scripts)
   - the user's own self-talk during think-time waits
+- **Content-unique sets:** within each set (1h, 10h, control, eval) no building block (context, side conversation, option set, dialogue, distractor exchange, phone call, door visit) appears in more than one file; only short phrasings, greetings and voices repeat. The 1h set is a prefix of the 10h set and control starts with the 10h set's ordinary files. `scripts/gen_datasets.sh` (`--unique`), `scripts/check_duplicates.py` for near-duplicates.
 - Generator: `scripts/generate_scripts.py` (pools in `data/pools/`, splits in `data/splits/`); `scripts/check_split_leakage.py` and `scripts/script_stats.py` check the split and the rates.
 
 ## Experiments

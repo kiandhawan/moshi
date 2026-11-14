@@ -1,62 +1,137 @@
 {
   "id": "train_10_00094",
-  "group": "ordinary",
-  "user_start": 2.72,
-  "type": "ordinary",
-  "conditions": [],
+  "group": "side_conversation",
+  "user_start": 3.17,
+  "type": "side_conversation",
+  "conditions": [
+    "near_miss"
+  ],
+  "cluster": "video_games.ctx9",
+  "instruction_start": 16.58,
+  "instruction_end": 21.21,
+  "wait_end": 54.76,
+  "resume_window": [
+    54.76,
+    59.76
+  ],
+  "wait_sec": 33.55,
   "distractors": [
-    27.51
+    31.61,
+    36.42,
+    42.52,
+    48.95
   ],
   "distractor_kinds": [
-    "pause"
+    "friend_question",
+    "friend_question",
+    "friend_question",
+    "near_miss"
   ],
   "distractor_windows": [
     [
-      27.51,
-      29.6
+      31.61,
+      32.96
+    ],
+    [
+      36.42,
+      36.93
+    ],
+    [
+      42.52,
+      43.64
+    ],
+    [
+      48.95,
+      50.01
     ]
   ],
   "ordinary_requests": [
-    7.2,
-    18.4,
-    31.58
+    7.79
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.72,
-      "end": 4.38,
+      "start": 3.17,
+      "end": 4.47,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.88,
-      "end": 7.2,
+      "start": 4.79,
+      "end": 7.79,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 16.55,
-      "end": 18.4,
-      "event": "ordinary_request"
+      "start": 16.58,
+      "end": 21.21,
+      "event": "instruction",
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 26.34,
-      "end": 27.51,
+      "start": 22.32,
+      "end": 25.44
+    },
+    {
+      "speaker": "friend",
+      "start": 25.91,
+      "end": 29.05
+    },
+    {
+      "speaker": "user",
+      "start": 29.66,
+      "end": 31.61,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 32.96,
+      "end": 34.65
     },
     {
       "speaker": "user",
-      "start": 29.6,
-      "end": 31.58,
-      "event": "ordinary_request"
+      "start": 35.29,
+      "end": 36.42,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 36.93,
+      "end": 40.75
     },
     {
       "speaker": "user",
-      "start": 42.17,
-      "end": 43.61
+      "start": 41.45,
+      "end": 42.52,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 43.64,
+      "end": 45.69
+    },
+    {
+      "speaker": "user",
+      "start": 46.55,
+      "end": 48.95,
+      "event": "distractor",
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 50.01,
+      "end": 51.63
+    },
+    {
+      "speaker": "user",
+      "start": 53.2,
+      "end": 54.76,
+      "event": "return_cue",
+      "kind": "explicit"
     }
   ],
   "notes": "Rendered from script train_10_00094 by scripts/render.py.",
@@ -64,27 +139,21 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.43,
-      "end": 2.21,
-      "text": "Hello! How's everything today?"
+      "start": 0.6,
+      "end": 2.57,
+      "text": "Hi there, how are you feeling today?"
     },
     {
       "kind": "reply",
-      "start": 8.32,
-      "end": 15.67,
-      "text": "For a lot of people, yes. Caffeine can stay in your system for six hours or more, so a cup at four can still keep you up at ten."
+      "start": 8.98,
+      "end": 14.62,
+      "text": "Exciting. Are you getting the standard edition, or splashing out on the collector's box with the statue and art book?"
     },
     {
-      "kind": "reply",
-      "start": 19.55,
-      "end": 25.1,
-      "text": "Black and green tea have less caffeine, but still some. Herbal teas like chamomile or mint have none."
-    },
-    {
-      "kind": "reply",
-      "start": 32.23,
-      "end": 38.96,
-      "text": "Try a short walk outside or a glass of cold water instead. A little daylight and movement can wake you up surprisingly well."
+      "kind": "resume",
+      "start": 55.19,
+      "end": 57.66,
+      "text": "Alright. So, which edition are you going for?"
     }
   ]
 }

@@ -1,73 +1,105 @@
 {
   "id": "train_10_00242",
-  "group": "ordinary",
-  "user_start": 2.56,
-  "type": "ordinary",
-  "conditions": [
-    "wait_like"
+  "group": "side_conversation",
+  "user_start": 3.67,
+  "type": "side_conversation",
+  "conditions": [],
+  "cluster": "personal_finance.ctx4",
+  "instruction_start": 16.36,
+  "instruction_end": 20.32,
+  "wait_end": 47.199,
+  "resume_window": [
+    47.199,
+    52.199
   ],
+  "wait_sec": 26.879,
   "distractors": [
-    19.164
+    24.909,
+    38.429
   ],
   "distractor_kinds": [
-    "pause"
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      19.164,
-      22.134
+      24.909,
+      25.999
+    ],
+    [
+      38.429,
+      41.279
     ]
   ],
   "ordinary_requests": [
-    8.86,
-    23.434,
-    36.044,
-    46.234,
-    55.114
+    8.16,
+    57.283
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.56,
-      "end": 3.6,
+      "start": 3.67,
+      "end": 4.49,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.04,
-      "end": 8.86,
+      "start": 4.91,
+      "end": 8.16,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 18.354,
-      "end": 19.164,
+      "start": 16.36,
+      "end": 20.32,
+      "event": "instruction",
+      "kind": "side_conversation"
+    },
+    {
+      "speaker": "user",
+      "start": 22.519,
+      "end": 24.909,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 25.999,
+      "end": 28.219
     },
     {
       "speaker": "user",
-      "start": 22.134,
-      "end": 23.434,
-      "event": "ordinary_request"
+      "start": 28.879,
+      "end": 31.429
+    },
+    {
+      "speaker": "friend",
+      "start": 32.039,
+      "end": 35.439
     },
     {
       "speaker": "user",
-      "start": 33.284,
-      "end": 36.044,
-      "event": "ordinary_request"
+      "start": 35.999,
+      "end": 38.429,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 41.279,
+      "end": 44.359
     },
     {
       "speaker": "user",
-      "start": 45.294,
-      "end": 46.234,
-      "event": "ordinary_request",
-      "kind": "wait_like"
+      "start": 45.959,
+      "end": 47.199,
+      "event": "return_cue",
+      "kind": "explicit"
     },
     {
       "speaker": "user",
-      "start": 52.604,
-      "end": 55.114,
+      "start": 53.363,
+      "end": 57.283,
       "event": "ordinary_request"
     }
   ],
@@ -76,39 +108,33 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.68,
-      "end": 2.19,
-      "text": "Hey! How's everything going?"
+      "start": 0.78,
+      "end": 2.89,
+      "text": "Hey, how's your day been so far?"
     },
     {
       "kind": "reply",
-      "start": 9.44,
-      "end": 15.614,
-      "text": "Download the city's transit app before you go. It shows routes, live times and which exit to use."
+      "start": 9.28,
+      "end": 14.94,
+      "text": "That's annoying. Do you want to shop around for a new quote, or call your insurer and ask them to match a better price?"
     },
     {
-      "kind": "reply",
-      "start": 24.434,
-      "end": 32.024,
-      "text": "Platforms are usually labeled by the last station on the line. Find your stop on the map, then follow signs for the end station in that direction."
+      "kind": "ack",
+      "start": 20.71,
+      "end": 21.079,
+      "text": "Okay."
     },
     {
-      "kind": "reply",
-      "start": 36.634,
-      "end": 43.934,
-      "text": "Try to avoid roughly seven to nine in the morning and five to seven in the evening. If you can't, stand to the side and let people off first."
+      "kind": "resume",
+      "start": 48.819,
+      "end": 52.113,
+      "text": "Alright. We'd got to the renewal price. Any decision?"
     },
     {
-      "kind": "reply",
-      "start": 47.284,
-      "end": 51.184,
-      "text": "Good to question it. I still think it's right, though you know your situation best."
-    },
-    {
-      "kind": "reply",
-      "start": 56.184,
-      "end": 59.894,
-      "text": "You'll do great. Most people figure it out after one or two rides."
+      "kind": "followup",
+      "start": 58.213,
+      "end": 62.513,
+      "text": "Fair. Loyal customers often pay more, so switching usually pays off."
     }
   ]
 }

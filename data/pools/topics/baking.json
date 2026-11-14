@@ -1,167 +1,1926 @@
 {
-  "topic": "baking",
-  "contexts": [
+ "topic": "baking",
+ "contexts": [
+  {
+   "id": "baking.ctx1",
+   "turns": [
     {
-      "id": "baking.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "It's my coworker's last day on Monday and I said I'd bake something."},
-        {"speaker": "moshi", "text": "How kind. Would you rather make one big cake to share, or a batch of cookies or cupcakes people can grab?"}
-      ],
-      "pending": "big cake or cookies and cupcakes",
-      "think_reask": [
-        "So, what are you baking for Monday? One cake, or something people can grab?",
-        "Okay, have you decided? Cake, or cookies and cupcakes?",
-        "Back to the farewell bake. Which way are you going?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were choosing between a cake and cookies for your coworker's last day.",
-        "Hi again. So, a big cake to share, or something people can grab?",
-        "There you are. We were planning your farewell bake."
-      ],
-      "endings": [
-        {"user": "One big cake. It feels more special.", "moshi": "Agreed. A lemon drizzle travels well and doesn't need fancy frosting."},
-        {"user": "Cupcakes. Nobody has to cut anything at the office.", "moshi": "Very practical. Bake them Sunday and frost them Monday morning so they look fresh."}
-      ]
+     "speaker": "user",
+     "text": "It's my coworker's last day on Monday and I said I'd bake something."
     },
     {
-      "id": "baking.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "I want to start baking my own bread."},
-        {"speaker": "moshi", "text": "Great project. Do you want to start with a quick yeast loaf you can make in an afternoon, or grow a sourdough starter, which takes about a week?"}
-      ],
-      "pending": "quick yeast loaf or sourdough starter",
-      "think_reask": [
-        "So, how do you want to begin? A quick yeast loaf, or a sourdough starter?",
-        "Okay, time's up. Afternoon loaf, or the week long sourdough route?",
-        "Back to your bread plans. Which one?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were deciding between a quick yeast loaf and sourdough.",
-        "Hi again. So, for your first bread, yeast or sourdough?",
-        "Good to have you back. We were getting you started on homemade bread."
-      ],
-      "endings": [
-        {"user": "Quick yeast loaf. I want bread this weekend.", "moshi": "Then a simple sandwich loaf is perfect. Flour, water, yeast, salt, and about three hours start to finish."},
-        {"user": "Sourdough. I'm patient, and I want to do it properly.", "moshi": "Love it. Mix equal parts flour and water in a jar today, and feed it once a day."}
-      ]
-    },
-    {
-      "id": "baking.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "My daughter wants to bake with me on Sunday. She's seven."},
-        {"speaker": "moshi", "text": "That's sweet. What sounds more fun for her, decorating sugar cookies, or making a simple banana bread she can mash and stir?"},
-        {"speaker": "user", "text": "Oh, she'd love both."},
-        {"speaker": "moshi", "text": "Ha, then you get to pick. Which one?"}
-      ],
-      "pending": "sugar cookies or banana bread with daughter",
-      "think_reask": [
-        "So, have you picked? Decorated cookies, or banana bread?",
-        "Okay, for Sunday with your daughter, which one is it?",
-        "Back to your baking day. Cookies or banana bread?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were choosing a Sunday bake with your daughter.",
-        "Hi again. So, sugar cookies or banana bread?",
-        "There you are. We were planning baking with your seven year old."
-      ],
-      "endings": [
-        {"user": "Cookies. She loves sprinkles.", "moshi": "Perfect. Make the dough Saturday night so it's chilled and ready, and Sunday is all decorating."},
-        {"user": "Banana bread. Less mess, honestly.", "moshi": "Fair. Let her mash the bananas with a fork, kids love that part."}
-      ]
+     "speaker": "moshi",
+     "text": "How kind. Would you rather make one big cake to share, or a batch of cookies or cupcakes people can grab?"
     }
-  ],
-  "side_conversations": [
-    {"id": "baking.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you use the last of the butter?"},
-      {"speaker": "friend", "text": "Maybe? I made toast this morning."},
-      {"speaker": "user", "text": "I need a whole cup for these cookies."},
-      {"speaker": "friend", "text": "There might be some in the freezer, check the door."},
-      {"speaker": "user", "text": "Oh, found it. Can you grab me the brown sugar while you're up?"},
-      {"speaker": "friend", "text": "Here. Save me a cookie."}
-    ]},
-    {"id": "baking.side2", "turns": [
-      {"speaker": "user", "text": "Does this smell like it's burning to you?"},
-      {"speaker": "friend", "text": "A little, yeah. How long has it been in?"},
-      {"speaker": "user", "text": "Only twenty minutes. The recipe says forty."},
-      {"speaker": "friend", "text": "Our oven runs hot though. Remember the pizza?"},
-      {"speaker": "user", "text": "Ugh, right. Should I cover it with foil?"},
-      {"speaker": "friend", "text": "Yeah, and turn it down a bit. The middle probably still needs time."}
-    ]},
-    {"id": "baking.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, taste this frosting. Too sweet?"},
-      {"speaker": "friend", "text": "Hmm. It's sweet, but it's a birthday cake, so that's kind of the point."},
-      {"speaker": "user", "text": "I was thinking of adding lemon juice."},
-      {"speaker": "friend", "text": "Ooh, lemon would be nice. Just a little."},
-      {"speaker": "user", "text": "Can you squeeze one for me? My hands are covered in sugar."},
-      {"speaker": "friend", "text": "Sure, where are the lemons?"},
-      {"speaker": "user", "text": "In the bowl by the window."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "baking.dlg1", "turns": [
-      {"speaker": "user", "text": "Why did my cake sink in the middle?"},
-      {"speaker": "moshi", "text": "The most common reason is opening the oven door too early. The cake hasn't set yet, and the cool air makes it collapse."},
-      {"speaker": "user", "text": "I did peek / at about fifteen minutes."},
-      {"speaker": "moshi", "text": "That might be it. Wait until at least three quarters of the baking time before you open the door."},
-      {"speaker": "user", "text": "Could it be anything else?"},
-      {"speaker": "moshi", "text": "Too much baking powder or underbaking can also do it. Check the center with a toothpick, it should come out clean."},
-      {"speaker": "user", "text": "Okay. I'll try again next weekend."},
-      {"speaker": "moshi", "text": "Good luck. A sunken cake still tastes great, so enjoy this one anyway."}
-    ]},
-    {"id": "baking.dlg2", "turns": [
-      {"speaker": "user", "text": "Can I swap regular flour for whole wheat in my muffin recipe?"},
-      {"speaker": "moshi", "text": "You can, but start by swapping only half. Whole wheat makes muffins denser and a little drier."},
-      {"speaker": "user", "text": "Should I add more liquid then?"},
-      {"speaker": "moshi", "text": "Yes, a couple of extra spoonfuls of milk helps. Letting the batter rest ten minutes also softens the bran."},
-      {"speaker": "user", "text": "And if I want to cut / some of the sugar too?"},
-      {"speaker": "moshi", "text": "You can cut about a quarter without problems. Mashed banana or a bit of applesauce adds sweetness back."},
-      {"speaker": "user", "text": "Banana sounds good. I have some brown ones."},
-      {"speaker": "moshi", "text": "Perfect, the browner the better for baking."}
-    ]},
-    {"id": "baking.dlg3", "turns": [
-      {"speaker": "user", "text": "I don't have buttermilk and the recipe needs it. Any way around that?"},
-      {"speaker": "moshi", "text": "Easy fix. Stir a tablespoon of lemon juice or vinegar into a cup of regular milk and let it sit five minutes."},
-      {"speaker": "user", "text": "It'll curdle, right? Is that okay?"},
-      {"speaker": "moshi", "text": "That's exactly what you want. It thickens and gets tangy like buttermilk."},
-      {"speaker": "user", "text": "Great. Oh, and I'm also / out of eggs. Is that a disaster?"},
-      {"speaker": "moshi", "text": "Not for most cakes. A quarter cup of plain yogurt or mashed banana can replace one egg."},
-      {"speaker": "user", "text": "I have yogurt. Okay, I'm saved."},
-      {"speaker": "moshi", "text": "Nice save. Enjoy your baking."}
-    ]},
-    {"id": "baking.dlg4", "turns": [
-      {"speaker": "user", "text": "I'm a student with a tiny oven. Can I still bake cookies?"},
-      {"speaker": "moshi", "text": "Definitely. Bake them in smaller batches on one tray in the middle of the oven, so they cook evenly."},
-      {"speaker": "user", "text": "I don't have / a mixer or anything fancy."},
-      {"speaker": "moshi", "text": "You don't need one. Melted butter cookies can be mixed with just a spoon and a bowl."},
-      {"speaker": "user", "text": "Oh nice. How long do they take?"},
-      {"speaker": "moshi", "text": "Usually ten to twelve minutes. Take them out when the edges are golden and the middle still looks soft."},
-      {"speaker": "user", "text": "They won't be raw?"},
-      {"speaker": "moshi", "text": "They keep cooking on the hot tray for a few minutes. That's the secret to chewy cookies."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "baking.opt1",
-     "lead_in": "I'm baking something for my friend's birthday, and I can't decide what.",
-     "options": [
-      "The first idea is a classic chocolate layer cake with fudge frosting, which takes most of a day.",
-      "Then there's a lemon drizzle loaf, which is simple and I've made it before.",
-      "Option three is a big batch of decorated cupcakes so everyone gets their own.",
-      "And the last one is a fruit tart with a homemade crust, which looks really fancy."
-     ],
-     "moshi_comment": [
-      "The chocolate layer cake is the most classic birthday choice, if you have the time. Cupcakes are easier to share at a party and fun to decorate. The lemon loaf is the safe bet since you've already nailed it.",
-      "What's your friend's favorite flavor? If they love chocolate, go for the layer cake. If you're short on time, the lemon loaf with a candle on top is still lovely."
-     ]},
-    {"id": "baking.opt2",
-     "lead_in": "I want to start baking bread at home and I have a few ways to begin.",
-     "options": [
-      "One is a simple no knead loaf that rises overnight and bakes in a heavy pot.",
-      "Another is starting a sourdough starter, which takes about a week before I can even bake.",
-      "Or I could just buy a bread machine that does everything for me."
-     ],
-     "moshi_comment": [
-      "The no knead loaf is the easiest place to start, and it tastes amazing for so little effort. Sourdough is really rewarding, but it needs patience and daily feeding. The bread machine is convenient but you learn less.",
-      "Do you want to learn baking, or mostly just have fresh bread? If you want to learn, start with the no knead loaf and move to sourdough later. If you just want bread, the machine is fine."
-     ]}
-  ]
+   ],
+   "pending": "big cake or cookies and cupcakes",
+   "think_reask": [
+    "So, what are you baking for Monday? One cake, or something people can grab?",
+    "Okay, have you decided? Cake, or cookies and cupcakes?",
+    "Back to the farewell bake. Which way are you going?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were choosing between a cake and cookies for your coworker's last day.",
+    "Hi again. So, a big cake to share, or something people can grab?",
+    "There you are. We were planning your farewell bake."
+   ],
+   "endings": [
+    {
+     "user": "One big cake. It feels more special.",
+     "moshi": "Agreed. A lemon drizzle travels well and doesn't need fancy frosting."
+    },
+    {
+     "user": "Cupcakes. Nobody has to cut anything at the office.",
+     "moshi": "Very practical. Bake them Sunday and frost them Monday morning so they look fresh."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to start baking my own bread."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great project. Do you want to start with a quick yeast loaf you can make in an afternoon, or grow a sourdough starter, which takes about a week?"
+    }
+   ],
+   "pending": "quick yeast loaf or sourdough starter",
+   "think_reask": [
+    "So, how do you want to begin? A quick yeast loaf, or a sourdough starter?",
+    "Okay, time's up. Afternoon loaf, or the week long sourdough route?",
+    "Back to your bread plans. Which one?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were deciding between a quick yeast loaf and sourdough.",
+    "Hi again. So, for your first bread, yeast or sourdough?",
+    "Good to have you back. We were getting you started on homemade bread."
+   ],
+   "endings": [
+    {
+     "user": "Quick yeast loaf. I want bread this weekend.",
+     "moshi": "Then a simple sandwich loaf is perfect. Flour, water, yeast, salt, and about three hours start to finish."
+    },
+    {
+     "user": "Sourdough. I'm patient, and I want to do it properly.",
+     "moshi": "Love it. Mix equal parts flour and water in a jar today, and feed it once a day."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter wants to bake with me on Sunday. She's seven."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's sweet. What sounds more fun for her, decorating sugar cookies, or making a simple banana bread she can mash and stir?"
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, she'd love both."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, then you get to pick. Which one?"
+    }
+   ],
+   "pending": "sugar cookies or banana bread with daughter",
+   "think_reask": [
+    "So, have you picked? Decorated cookies, or banana bread?",
+    "Okay, for Sunday with your daughter, which one is it?",
+    "Back to your baking day. Cookies or banana bread?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were choosing a Sunday bake with your daughter.",
+    "Hi again. So, sugar cookies or banana bread?",
+    "There you are. We were planning baking with your seven year old."
+   ],
+   "endings": [
+    {
+     "user": "Cookies. She loves sprinkles.",
+     "moshi": "Perfect. Make the dough Saturday night so it's chilled and ready, and Sunday is all decorating."
+    },
+    {
+     "user": "Banana bread. Less mess, honestly.",
+     "moshi": "Fair. Let her mash the bananas with a fork, kids love that part."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our church is having a bake sale and I've signed up for an apple pie. Haven't made pastry since the seventies."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Brave of you. For the crust, do you want all butter for the best flavour, or a butter and shortening mix that's more forgiving to roll out?"
+    }
+   ],
+   "pending": "all butter or butter and shortening pie crust",
+   "think_reask": [
+    "So, for the bake sale pie, all butter, or the easier butter and shortening crust?",
+    "Right, the pastry. Which fat are you going with?",
+    "Any verdict on the crust? Flavour first, or easy handling?"
+   ],
+   "welcome_back": [
+    "The pie crust was still up in the air. All butter, or the half and half mix?",
+    "Still deciding on that apple pie pastry? Butter, or butter with shortening?"
+   ],
+   "endings": [
+    {
+     "user": "Half and half. My hands aren't what they used to be.",
+     "moshi": "Sensible. Keep everything cold, and if it cracks while rolling, just press it back together, nobody at the sale will know."
+    },
+    {
+     "user": "All butter. If I'm doing it, I'm doing it right.",
+     "moshi": "That's the spirit. Chill the dough a full hour before rolling, and pop the pie in the fridge again before it goes in the oven."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay so I'm making macarons for our six month anniversary and I'm kind of freaking out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally doable. Do you want the French method, which is simpler but fussier about technique, or the Italian one with hot sugar syrup, which is more stable?"
+    }
+   ],
+   "pending": "French or Italian meringue for macarons",
+   "think_reask": [
+    "So, macarons. French method, or the sugar syrup one?",
+    "Okay, which meringue are you braving for the anniversary?"
+   ],
+   "welcome_back": [
+    "The macaron method was still open. Simple French, or the sturdier Italian?",
+    "Back on the anniversary macarons. Which way are you leaning?",
+    "So, French or Italian meringue? That's the last thing to settle."
+   ],
+   "endings": [
+    {
+     "user": "French. I don't own a sugar thermometer.",
+     "moshi": "Fair enough. Beat the whites until they're glossy and stiff, and fold the almond mix in until it flows like slow lava."
+    },
+    {
+     "user": "Italian. I want them to actually work the first time.",
+     "moshi": "Smart. Pour the syrup in a thin stream while the mixer runs, and you'll get a really stable meringue."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's seven at night, the school bake sale is tomorrow, and I just found out it has to be nut free."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah, the classic surprise. Would you rather do one big tray bake you cut into squares, or individual cupcakes that take longer but sell more easily?"
+    }
+   ],
+   "pending": "tray bake or cupcakes for nut free bake sale",
+   "think_reask": [
+    "So, tonight's emergency bake. Tray bake or cupcakes?",
+    "Okay, decision time before it gets any later. One tray, or a dozen cupcakes?"
+   ],
+   "welcome_back": [
+    "Still need to pick for tomorrow. A quick tray bake, or the cupcakes?",
+    "The nut free bake is waiting. Squares, or cupcakes?"
+   ],
+   "endings": [
+    {
+     "user": "Tray bake. I want to be in bed by ten.",
+     "moshi": "Good call. Chocolate crispy squares need no oven at all, just melted chocolate, syrup and cereal, then they set in the fridge."
+    },
+    {
+     "user": "Cupcakes. The kids go crazy for frosting.",
+     "moshi": "Then bake them now and frost in the morning when they're fully cool. Check your sprinkles say nut free too."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My sourdough keeps coming out flat as a pancake."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Often that's the last rise. Do you proof it on the counter?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah. Is there another way?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A slow overnight proof in the fridge makes shaping easier. Want to switch, or tweak your counter timing first?"
+    }
+   ],
+   "pending": "switch to fridge proof or adjust counter proof",
+   "think_reask": [
+    "So, for the next loaf, fridge overnight, or tweak the counter rise?",
+    "Okay, flat loaf fix. Which are you trying?"
+   ],
+   "welcome_back": [
+    "Your flat sourdough still needs a plan. Fridge proof, or a shorter counter rise?",
+    "So, fridge or counter for the next attempt?",
+    "The sourdough fix was the open bit. Going with the overnight fridge?"
+   ],
+   "endings": [
+    {
+     "user": "Fridge. Sounds less stressful.",
+     "moshi": "Great. Shape it, cover the basket, and bake it straight from the fridge in the morning. Cold dough holds its shape much better."
+    },
+    {
+     "user": "I'll adjust the counter first, one change at a time.",
+     "moshi": "Very scientific. Try cutting the final rise by about a third and do the poke test, it should spring back slowly."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey, I'm hosting dinner Saturday and one of the guests can't eat gluten. I'd like a dessert everyone can have."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely idea. A flourless chocolate torte, or an almond and orange cake? Both are naturally gluten free."
+    }
+   ],
+   "pending": "flourless chocolate torte or almond orange cake",
+   "think_reask": [
+    "So, Saturday's dessert. Chocolate torte or the almond orange cake?",
+    "Okay, which gluten free cake wins?",
+    "Ready to pick? Rich chocolate, or something lighter with orange?"
+   ],
+   "welcome_back": [
+    "Saturday's dessert was the open question. Torte, or the orange cake?",
+    "We still need a dessert for your dinner. Chocolate, or almond and orange?"
+   ],
+   "endings": [
+    {
+     "user": "The torte. Everyone loves chocolate.",
+     "moshi": "Hard to argue. Serve it with a little whipped cream, and dust it with cocoa just before guests arrive."
+    },
+    {
+     "user": "The orange one. The meal's already pretty heavy.",
+     "moshi": "Good thinking. It's even better made a day ahead, so you can bake it Friday and relax."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So I volunteered to make my sister's wedding cake. In a moment of madness."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a big, generous job. Are you set on a real stacked tiered cake, or would a small display cake plus sheet cakes in the kitchen work?"
+    }
+   ],
+   "pending": "real tiered cake or display cake plus sheet cakes",
+   "think_reask": [
+    "So, the wedding cake. Full tiers, or display cake and sheet cakes?",
+    "Okay, how ambitious are we going? Stacked tiers, or the cheat with sheet cakes?"
+   ],
+   "welcome_back": [
+    "Your sister's cake still needs a plan. Proper tiers, or the display cake trick?",
+    "So, are you stacking tiers, or keeping the real cutting in the kitchen?",
+    "The wedding cake question is still open. Which version?"
+   ],
+   "endings": [
+    {
+     "user": "Display cake and sheet cakes. I'd like to enjoy the wedding too.",
+     "moshi": "Very wise. The guests get the same flavour, and you only need to make one cake look perfect."
+    },
+    {
+     "user": "Real tiers. It's my sister, I want it to be special.",
+     "moshi": "Then get dowels and cake boards for support, and do a practice cake a few weeks before."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Brilliant, my oven just died and I promised my flatmate a birthday cake tonight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh no. Two rescue ideas. A no bake cheesecake you can set in the fridge, or ask a neighbour if you can borrow their oven. Which feels doable?"
+    }
+   ],
+   "pending": "no bake cheesecake or borrow neighbour's oven",
+   "think_reask": [
+    "So, oven emergency. No bake cheesecake, or knock on the neighbour's door?",
+    "Okay, what's the rescue plan for the birthday cake?"
+   ],
+   "welcome_back": [
+    "The dead oven problem still needs solving. Cheesecake in the fridge, or the neighbour's oven?",
+    "So, for your flatmate's cake tonight, which rescue are you going with?"
+   ],
+   "endings": [
+    {
+     "user": "Cheesecake. I barely know my neighbours.",
+     "moshi": "Fair. Crush biscuits with melted butter for the base, then cream cheese, sugar and whipped cream on top. Four hours in the fridge and you're set."
+    },
+    {
+     "user": "The neighbour. She's lovely and she owes me a favour.",
+     "moshi": "Perfect. Mix everything here, carry the tins over, and bring her a slice afterwards."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got four bananas going completely black on the counter. Again."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Prime baking bananas. Do you want to bake with them tonight, or peel and freeze them for later?"
+    }
+   ],
+   "pending": "bake bananas now or freeze them",
+   "think_reask": [
+    "So, the black bananas. Bake tonight, or into the freezer?",
+    "Okay, banana verdict? Now or later?"
+   ],
+   "welcome_back": [
+    "Those bananas are still waiting on you. Baking tonight, or freezing them?",
+    "So, are the bananas getting baked, or frozen?"
+   ],
+   "endings": [
+    {
+     "user": "Tonight. I could do with some banana bread.",
+     "moshi": "Good. Four bananas is perfect for one loaf, and the darker they are, the sweeter it gets."
+    },
+    {
+     "user": "Freeze them. I'm wiped out.",
+     "moshi": "Totally fine. Peel them first, frozen banana skins are a nightmare, and keep them in a bag for up to three months."
+    }
+   ]
+  },
+  {
+   "id": "baking.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm starting a stall at the Saturday market and can only make one bread at first."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exciting. Cinnamon rolls sell fast early on, focaccia suits the lunch crowd. When's the market busiest?"
+    },
+    {
+     "speaker": "user",
+     "text": "Around eleven."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Right in between, then. Sweet or savoury to start?"
+    }
+   ],
+   "pending": "cinnamon rolls or focaccia for market stall",
+   "think_reask": [
+    "So, your market launch. Cinnamon rolls or focaccia?",
+    "Okay, which one are you selling first Saturday?",
+    "Sweet or savoury for the stall?"
+   ],
+   "welcome_back": [
+    "Your stall's first bake was still open. Rolls or focaccia?",
+    "So, for the Saturday market, which bread is it?"
+   ],
+   "endings": [
+    {
+     "user": "Focaccia. I can do a few toppings and it travels well.",
+     "moshi": "Nice. Rosemary and sea salt is a classic, and a tomato and olive one gives people a second choice."
+    },
+    {
+     "user": "Cinnamon rolls. People can smell them from across the square.",
+     "moshi": "Never underestimate that. Bake the last tray at the stall if you can, or at least bring them still warm."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "baking.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you use the last of the butter?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Maybe? I made toast this morning."
+    },
+    {
+     "speaker": "user",
+     "text": "I need a whole cup for these cookies."
+    },
+    {
+     "speaker": "friend",
+     "text": "There might be some in the freezer, check the door."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, found it. Can you grab me the brown sugar while you're up?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Here. Save me a cookie."
+    }
+   ]
+  },
+  {
+   "id": "baking.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Does this smell like it's burning to you?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A little, yeah. How long has it been in?"
+    },
+    {
+     "speaker": "user",
+     "text": "Only twenty minutes. The recipe says forty."
+    },
+    {
+     "speaker": "friend",
+     "text": "Our oven runs hot though. Remember the pizza?"
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, right. Should I cover it with foil?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, and turn it down a bit. The middle probably still needs time."
+    }
+   ]
+  },
+  {
+   "id": "baking.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, taste this frosting. Too sweet?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Hmm. It's sweet, but it's a birthday cake, so that's kind of the point."
+    },
+    {
+     "speaker": "user",
+     "text": "I was thinking of adding lemon juice."
+    },
+    {
+     "speaker": "friend",
+     "text": "Ooh, lemon would be nice. Just a little."
+    },
+    {
+     "speaker": "user",
+     "text": "Can you squeeze one for me? My hands are covered in sugar."
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, where are the lemons?"
+    },
+    {
+     "speaker": "user",
+     "text": "In the bowl by the window."
+    }
+   ]
+  },
+  {
+   "id": "baking.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, who ate four of the cookies off the cooling rack?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Define ate."
+    },
+    {
+     "speaker": "user",
+     "text": "{friend}, they were for my book club."
+    },
+    {
+     "speaker": "friend",
+     "text": "They were just sitting there, warm, looking at me. That's entrapment."
+    },
+    {
+     "speaker": "user",
+     "text": "Now I've got twenty instead of two dozen."
+    },
+    {
+     "speaker": "friend",
+     "text": "Twenty's still loads. Nobody counts cookies at a book club."
+    },
+    {
+     "speaker": "user",
+     "text": "Margaret counts everything. Can you at least wash the tray so I can do another batch?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine, fine. Hand it over."
+    }
+   ]
+  },
+  {
+   "id": "baking.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you read this? Is that a teaspoon or a tablespoon of salt?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Your gran's handwriting is something else. Looks like a big T to me."
+    },
+    {
+     "speaker": "user",
+     "text": "A big T means tablespoon, right?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Usually. But a tablespoon of salt in one loaf sounds like a lot."
+    },
+    {
+     "speaker": "user",
+     "text": "She did like things salty."
+    },
+    {
+     "speaker": "friend",
+     "text": "Not that salty. Do half and taste the dough."
+    },
+    {
+     "speaker": "user",
+     "text": "You can't really taste raw dough with yeast in it, can you?"
+    },
+    {
+     "speaker": "friend",
+     "text": "A tiny pinch won't kill you. Go on."
+    }
+   ]
+  },
+  {
+   "id": "baking.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, could you hold the bowl still? I'm folding the egg whites and it keeps spinning."
+    },
+    {
+     "speaker": "friend",
+     "text": "Like this? Both hands?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, perfect. Don't tilt it."
+    },
+    {
+     "speaker": "friend",
+     "text": "Why are you going so slowly? Just stir it."
+    },
+    {
+     "speaker": "user",
+     "text": "If I stir it, all the air goes and the sponge comes out like a rubber mat."
+    },
+    {
+     "speaker": "friend",
+     "text": "Huh. So that's what happened to mine last Easter."
+    },
+    {
+     "speaker": "user",
+     "text": "Probably. Okay, nearly there. Can you pass me the tin after?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The round one or the square one?"
+    },
+    {
+     "speaker": "user",
+     "text": "The round one, it's already lined."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "baking.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why did my cake sink in the middle?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The most common reason is opening the oven door too early. The cake hasn't set yet, and the cool air makes it collapse."
+    },
+    {
+     "speaker": "user",
+     "text": "I did peek / at about fifteen minutes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That might be it. Wait until at least three quarters of the baking time before you open the door."
+    },
+    {
+     "speaker": "user",
+     "text": "Could it be anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Too much baking powder or underbaking can also do it. Check the center with a toothpick, it should come out clean."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'll try again next weekend."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good luck. A sunken cake still tastes great, so enjoy this one anyway."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I swap regular flour for whole wheat in my muffin recipe?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, but start by swapping only half. Whole wheat makes muffins denser and a little drier."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I add more liquid then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a couple of extra spoonfuls of milk helps. Letting the batter rest ten minutes also softens the bran."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I want to cut / some of the sugar too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can cut about a quarter without problems. Mashed banana or a bit of applesauce adds sweetness back."
+    },
+    {
+     "speaker": "user",
+     "text": "Banana sounds good. I have some brown ones."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect, the browner the better for baking."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I don't have buttermilk and the recipe needs it. Any way around that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Easy fix. Stir a tablespoon of lemon juice or vinegar into a cup of regular milk and let it sit five minutes."
+    },
+    {
+     "speaker": "user",
+     "text": "It'll curdle, right? Is that okay?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's exactly what you want. It thickens and gets tangy like buttermilk."
+    },
+    {
+     "speaker": "user",
+     "text": "Great. Oh, and I'm also / out of eggs. Is that a disaster?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not for most cakes. A quarter cup of plain yogurt or mashed banana can replace one egg."
+    },
+    {
+     "speaker": "user",
+     "text": "I have yogurt. Okay, I'm saved."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nice save. Enjoy your baking."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm a student with a tiny oven. Can I still bake cookies?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. Bake them in smaller batches on one tray in the middle of the oven, so they cook evenly."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't have / a mixer or anything fancy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You don't need one. Melted butter cookies can be mixed with just a spoon and a bowl."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh nice. How long do they take?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually ten to twelve minutes. Take them out when the edges are golden and the middle still looks soft."
+    },
+    {
+     "speaker": "user",
+     "text": "They won't be raw?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "They keep cooking on the hot tray for a few minutes. That's the secret to chewy cookies."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Every time I blind bake a tart case, the sides slump down. What am I doing wrong?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually the pastry is too warm going into the oven. Chill the lined tin for at least thirty minutes first."
+    },
+    {
+     "speaker": "user",
+     "text": "I do use baking beans, though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good, but fill them right up to the rim, not just the bottom. The beans hold the sides in place."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh. I only put / like a single layer in."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That'll be it. Also leave a bit of pastry hanging over the edge and trim it after baking, so any shrinking doesn't matter."
+    },
+    {
+     "speaker": "user",
+     "text": "Trim after? That feels backwards."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It does, but a sharp knife on cooled pastry gives you a really clean edge."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We just moved up to the mountains and my cakes keep overflowing the tin."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the altitude. Air pressure is lower, so the bubbles grow faster and the batter rises too much before it sets."
+    },
+    {
+     "speaker": "user",
+     "text": "So what do I change?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use a little less baking powder, maybe a quarter less, and bump the oven up by about fifteen degrees so it sets sooner."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything about / the sugar or the liquid?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a spoonful less sugar and a spoonful more liquid usually helps. Things dry out faster up there."
+    },
+    {
+     "speaker": "user",
+     "text": "This is a lot of fiddling."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is at first. Change one recipe, note what works, and you'll have a system in a couple of bakes."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My bread is always dense and kind of heavy. I follow the recipe exactly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two big culprits are under kneading and under proofing. How long do you knead?"
+    },
+    {
+     "speaker": "user",
+     "text": "Five minutes maybe? My arms get tired."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most doughs need closer to ten by hand. Try the windowpane test, stretch a small piece thin, and if light shines through without tearing, it's ready."
+    },
+    {
+     "speaker": "user",
+     "text": "And the rising, I just / go by the time in the recipe."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Times are only a guide. Your kitchen might be cooler than theirs. Wait until the dough has properly doubled, even if that takes longer."
+    },
+    {
+     "speaker": "user",
+     "text": "My flat is freezing in winter, so that makes sense."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then put the bowl in the oven with just the light on. It makes a cosy little proofing box."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why do my chocolate chip cookies spread into one giant sheet?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, the cookie puddle. Is your butter very soft, or even melted, when you mix it?"
+    },
+    {
+     "speaker": "user",
+     "text": "I usually microwave it so it's easy to stir."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's likely it. Use butter that's soft but still cool, and chill the dough for an hour before baking."
+    },
+    {
+     "speaker": "user",
+     "text": "An hour? I want cookies now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even twenty minutes in the freezer helps. Also check your baking soda isn't years old."
+    },
+    {
+     "speaker": "user",
+     "text": "It's probably from when I moved in."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then grab a fresh one. It's cheap and it really does make a difference."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Quick question. My bundt cake always sticks in the tin and comes out in pieces."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bundt tins are tricky with all those ridges. Are you greasing it with butter or spray?"
+    },
+    {
+     "speaker": "user",
+     "text": "Spray, mostly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try brushing melted butter into every groove with a pastry brush, then dust it with flour and tap out the extra."
+    },
+    {
+     "speaker": "user",
+     "text": "And when should I / turn it out? Straight away?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About ten minutes after it comes out. Too soon and it's fragile, too late and the sugars start gluing it to the tin."
+    },
+    {
+     "speaker": "user",
+     "text": "Ten minutes. Got it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Set a timer, it's easy to forget. Then flip it onto a rack with confidence, no hesitating."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My niece is vegan and I'd love to make her brownies. Is that even possible without eggs?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Absolutely. A flax egg works well in brownies. Mix one tablespoon of ground flaxseed with three of water and let it go gloopy for ten minutes."
+    },
+    {
+     "speaker": "user",
+     "text": "Gloopy. Lovely. And the butter?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use a good vegan block butter or a neutral oil. Oil actually makes brownies extra fudgy."
+    },
+    {
+     "speaker": "user",
+     "text": "What about the chocolate? I'm not sure / which kinds are vegan."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most plain dark chocolate is, but check the label for milk powder. Cocoa powder is always fine."
+    },
+    {
+     "speaker": "user",
+     "text": "She'll be so surprised."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lovely thing to do for her. Underbake them slightly, they firm up as they cool."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Everyone online keeps saying I should weigh my flour instead of using cups. Is it really such a big deal?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be. A cup of flour can vary a lot depending on how you scoop it. Packed down, you might get a quarter more than the recipe expects."
+    },
+    {
+     "speaker": "user",
+     "text": "That would explain my dry muffins."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very possibly. If you stick with cups, fluff the flour, spoon it in loosely and level it off with a knife."
+    },
+    {
+     "speaker": "user",
+     "text": "Or I could just buy a scale."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, that's easiest. They're inexpensive, and you can weigh everything straight into one bowl, so fewer dishes too."
+    },
+    {
+     "speaker": "user",
+     "text": "Fewer dishes sold me."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got a recipe for a big round cake but I only own a small loaf tin."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can usually make it work. Fill the tin about two thirds full and bake any extra batter as a few cupcakes."
+    },
+    {
+     "speaker": "user",
+     "text": "Will the time change?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes. A loaf is deeper, so lower the oven a little and expect it to take longer, maybe fifteen minutes or so extra."
+    },
+    {
+     "speaker": "user",
+     "text": "How will I know / it's done in the middle?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A skewer in the centre should come out clean, and the top should spring back when you press it gently. If the top browns too fast, lay foil over it."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Right, I've decided. This winter I'm making proper croissants from scratch."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Love the ambition. It's a three day project if you do it properly, but most of that is the dough resting in the fridge."
+    },
+    {
+     "speaker": "user",
+     "text": "Three days? I was hoping for Saturday morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can squeeze it into two. Make the dough Thursday night, laminate Friday, shape and bake Saturday."
+    },
+    {
+     "speaker": "user",
+     "text": "Laminate means / the butter folding thing, yeah?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. You wrap a flat slab of cold butter in dough and roll and fold it a few times to build layers."
+    },
+    {
+     "speaker": "user",
+     "text": "What usually goes wrong?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Butter that's too warm and leaks out, or too cold and shatters. It should bend like modelling clay."
+    },
+    {
+     "speaker": "user",
+     "text": "Modelling clay. Okay, noted."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And keep the kitchen cool. Croissants hate a hot room."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cookies are lovely and chewy on day one, then they're like rocks by day two."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're losing moisture to the air. Keep them in a sealed tin as soon as they're cool."
+    },
+    {
+     "speaker": "user",
+     "text": "I do, but they still go hard."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pop a slice of plain bread in the tin with them. The cookies pull moisture from the bread and stay soft."
+    },
+    {
+     "speaker": "user",
+     "text": "Wait, seriously? That works?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It really does. Swap the bread out every couple of days when it goes stale."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I want to / bake ahead for a party next week?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Freeze the dough in balls instead. Bake them straight from frozen, adding a minute or two, and they taste freshly made."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you freeze bread dough? I'd love fresh bread on weekdays without the effort."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can. Freeze it after the first rise and shaping, wrapped tightly. It keeps for about a month."
+    },
+    {
+     "speaker": "user",
+     "text": "Then what, just bake it frozen?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Better to thaw it in the fridge overnight, then let it rise on the counter for an hour or two before baking."
+    },
+    {
+     "speaker": "user",
+     "text": "Does the yeast / survive the freezer?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most of it does, though some dies off. Adding a little extra yeast to dough you plan to freeze helps."
+    },
+    {
+     "speaker": "user",
+     "text": "Or I could freeze baked loaves?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's even easier. Slice them first, then you can toast slices straight from frozen."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My mother used to make a soda bread when I was a boy, and I've never managed to get it the same."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lovely thing to recreate. Do you remember anything about it, the texture or the crust?"
+    },
+    {
+     "speaker": "user",
+     "text": "It had a hard crust with a cross cut in the top, and it was slightly sour."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The sourness probably came from buttermilk. A traditional soda bread is just flour, baking soda, salt and buttermilk."
+    },
+    {
+     "speaker": "user",
+     "text": "That's all? No butter, nothing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Nothing else. Mix it quickly with a light hand, shape a round, cut a deep cross, and bake it hot."
+    },
+    {
+     "speaker": "user",
+     "text": "She did always say / not to fuss with it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "She was right. The less you handle it, the softer the inside."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll try it Sunday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I hope it tastes just like hers."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why does bread get big and puffy? My dad says there are tiny animals in it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Your dad's kind of right! Yeast is a tiny living thing, too small to see. It eats the sugar in the dough."
+    },
+    {
+     "speaker": "user",
+     "text": "Ew. Then what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "When it eats, it burps out little bubbles of gas. The dough is stretchy, so it traps the bubbles and puffs up like a balloon."
+    },
+    {
+     "speaker": "user",
+     "text": "Bread burps! Does it / hurt the yeast when it goes in the oven?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The oven heat makes the yeast stop working. That's what sets the bubbles in place, so the bread stays fluffy."
+    },
+    {
+     "speaker": "user",
+     "text": "Can we make bread today?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask your dad! You could be in charge of the kneading, it's like squishing playdough."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to make focaccia for a barbecue this weekend. Is it hard?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's one of the friendliest breads. It's a wet dough, so there's almost no kneading."
+    },
+    {
+     "speaker": "user",
+     "text": "How wet are we talking? I hate sticky hands."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pretty sticky. Oil your hands instead of flouring them, and the dough won't cling."
+    },
+    {
+     "speaker": "user",
+     "text": "And the dimples on top, how do I do those?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Press your fingertips right down to the bottom of the tin after the final rise, then drizzle plenty of olive oil into the holes."
+    },
+    {
+     "speaker": "user",
+     "text": "Plenty meaning?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "More than feels reasonable. That's how you get a crispy, golden bottom."
+    },
+    {
+     "speaker": "user",
+     "text": "I like the sound of that."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cheesecake cracked right across the middle. Again. I'm starting to take it personally."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't, it happens to everyone. Cracks usually come from baking too hot or cooling too fast."
+    },
+    {
+     "speaker": "user",
+     "text": "I bake it at the temperature the recipe says."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a water bath. Wrap the tin in foil and set it in a tray of hot water, it keeps the heat gentle and moist."
+    },
+    {
+     "speaker": "user",
+     "text": "And the cooling part?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Turn the oven off when the centre still wobbles slightly, crack the door open, and leave the cheesecake inside for an hour."
+    },
+    {
+     "speaker": "user",
+     "text": "It's supposed to / still wobble? I always bake it until it's firm."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's probably the main issue. It sets as it cools. If it's firm in the oven, it's overbaked."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm decorating biscuits with royal icing for a baby shower and my lines keep running into each other."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like the icing is too thin for outlining. You want two consistencies, a thick one for borders and a runnier one for filling."
+    },
+    {
+     "speaker": "user",
+     "text": "How thick is thick?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Like toothpaste. It should hold a sharp line. For flooding, add water a few drops at a time until a ribbon of it disappears in about ten seconds."
+    },
+    {
+     "speaker": "user",
+     "text": "Ten seconds. Okay. And between / outline and flooding, do I wait?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give the outline ten minutes or so to firm up. Then flood inside it."
+    },
+    {
+     "speaker": "user",
+     "text": "This is very soothing actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is, once it clicks. Let them dry overnight before stacking, or the colours smudge."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is a stand mixer actually worth it, or is it one of those gadgets that sits on the counter?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Depends how you bake. If you make bread, meringues or big batches of cookies often, it saves a lot of time and effort."
+    },
+    {
+     "speaker": "user",
+     "text": "I bake maybe once a month. Banana bread, mostly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then probably not. Banana bread is best mixed by hand anyway, overmixing makes it tough."
+    },
+    {
+     "speaker": "user",
+     "text": "My kitchen is tiny anyway."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A hand mixer might be the sweet spot. It whips cream and egg whites, and it fits in a drawer."
+    },
+    {
+     "speaker": "user",
+     "text": "That I could justify."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And if you get hooked on baking later, you can always upgrade."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dad was just diagnosed with diabetes and he's gutted he can't have my lemon cake anymore."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's tough. He might not have to give it up completely, but it's worth checking with his doctor about portions."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I make it / less sugary somehow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can usually cut the sugar by a third without ruining it. Some people swap part of it for a baking sweetener, but texture changes a bit."
+    },
+    {
+     "speaker": "user",
+     "text": "What about using wholemeal flour?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mixing in some wholemeal or ground almonds adds fibre, which slows down how fast the sugar hits. Almonds also keep it moist."
+    },
+    {
+     "speaker": "user",
+     "text": "And the drizzle on top?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Go lighter, or just grate lemon zest over it for the flavour without the sugar."
+    },
+    {
+     "speaker": "user",
+     "text": "He'll be happy with any version, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then bake a small test loaf and see what he thinks."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to make bagels. Do I really have to boil them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You do, if you want a proper bagel. The boil sets the crust and gives them that chewy, shiny outside."
+    },
+    {
+     "speaker": "user",
+     "text": "For how long?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About a minute on each side. Add a spoonful of honey or baking soda to the water for colour."
+    },
+    {
+     "speaker": "user",
+     "text": "How do you even / shape them? Mine always look like lumpy doughnuts."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Roll a rope, wrap it around your hand, overlap the ends under your palm and roll them together on the counter."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay that sounds more doable than poking a hole."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Both work, but the rope method gives a more even ring. And don't worry about lumps, homemade looks charming."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My scones are always flat and tough. Like hockey pucks."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two likely reasons. Butter that's too warm, and handling the dough too much."
+    },
+    {
+     "speaker": "user",
+     "text": "I knead it until it's smooth."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Skip that. Scone dough should look a bit shaggy and messy. Pat it together gently, don't knead it."
+    },
+    {
+     "speaker": "user",
+     "text": "What about the butter, though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Straight from the fridge, or even grated from frozen. Those cold lumps melt in the oven and puff the scones up."
+    },
+    {
+     "speaker": "user",
+     "text": "Grated frozen butter. That's clever."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Also cut them straight down without twisting the cutter. Twisting seals the edges and stops them rising."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Help, I'm melting chocolate for a ganache and it's gone thick and grainy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's seized. That happens when even a drop of water gets into melting chocolate."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I save it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For ganache, yes. Stir in a spoonful of hot cream at a time, it often smooths out again."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, it's / coming back. Kind of."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep going slowly. Since you're making ganache anyway, the extra cream won't hurt."
+    },
+    {
+     "speaker": "user",
+     "text": "Phew. How do I stop this next time?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use a dry bowl and spoon, and if you melt it over a pan, keep the steam away from the bowl."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Every Swiss roll I make cracks when I roll it up."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Are you rolling it while it's still warm?"
+    },
+    {
+     "speaker": "user",
+     "text": "No, I let it cool first so the cream doesn't melt."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the trick most people miss. Roll the sponge up warm in a clean tea towel without any filling, let it cool in that shape, then unroll and fill."
+    },
+    {
+     "speaker": "user",
+     "text": "So it sort of / remembers the shape?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. The sponge sets in the curl, so it won't fight you later. Also bake it just until it springs back, an overbaked sponge cracks easily."
+    },
+    {
+     "speaker": "user",
+     "text": "My mum is going to be so impressed."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've been gluten free for a year and I really miss proper bread."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Gluten free bread is a different beast, but you can get something good. Start with a flour blend that already contains xanthan gum or psyllium."
+    },
+    {
+     "speaker": "user",
+     "text": "What does psyllium do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It acts a bit like gluten, holding the dough together and trapping air. Bread made with it is far less crumbly."
+    },
+    {
+     "speaker": "user",
+     "text": "The dough I made last time / was like cake batter. Is that normal?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, gluten free dough is usually much wetter. Don't add more flour to make it feel like normal dough, it'll come out dry."
+    },
+    {
+     "speaker": "user",
+     "text": "Any tip for the crust?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bake it in a covered pot for the first part, then uncover it. And let it cool fully before slicing, it finishes setting as it cools."
+    },
+    {
+     "speaker": "user",
+     "text": "That's the hardest part."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It really is. Warm bread smells unfair."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Let me guess, you're going to tell me my oven's the problem. Everything burns on the bottom."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, possibly. But first, what kind of baking trays are you using?"
+    },
+    {
+     "speaker": "user",
+     "text": "Dark ones. Non stick."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Dark trays absorb more heat, so bottoms brown faster. Lowering the temperature a little, or using a lighter tray, often fixes it."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine. And if it's still burning?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then yes, your oven might run hot. A cheap oven thermometer will tell you the real temperature."
+    },
+    {
+     "speaker": "user",
+     "text": "Of course it's the oven."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Could be both! Also move the shelf up one level, away from the bottom heating element."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm doing brunch for eight on Sunday and I want cinnamon rolls without getting up at five."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good news, they're perfect for an overnight rise. Make and shape them Saturday, cover the tray, and put it in the fridge."
+    },
+    {
+     "speaker": "user",
+     "text": "Then in the morning?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take them out about an hour before baking so they warm up and puff a bit. Then into the oven for twenty five minutes or so."
+    },
+    {
+     "speaker": "user",
+     "text": "And the icing, should I / make that ahead too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, a cream cheese icing keeps fine in the fridge. Spread it on while the rolls are still warm so it melts into the swirls."
+    },
+    {
+     "speaker": "user",
+     "text": "Eight people, how many rolls?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "One tray of twelve should do, with a couple of greedy seconds."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I use oil instead of butter in a cake? I've run out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "In most cakes, yes. Use a bit less oil than the butter amount, roughly three quarters."
+    },
+    {
+     "speaker": "user",
+     "text": "Will it taste different?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You lose the buttery flavour, but oil cakes are often moister and stay soft for longer."
+    },
+    {
+     "speaker": "user",
+     "text": "It's a / chocolate cake, if that matters."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's ideal, actually. Chocolate hides the missing butter flavour completely, and lots of chocolate cake recipes use oil anyway."
+    },
+    {
+     "speaker": "user",
+     "text": "Any kind of oil?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Something neutral like sunflower or vegetable. Avoid strong olive oil unless you like the flavour."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son's studying abroad and I want to post him a box of my shortbread. Will it survive?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Shortbread is one of the best things to post. It's sturdy and keeps for a couple of weeks."
+    },
+    {
+     "speaker": "user",
+     "text": "How should I pack it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wrap them in pairs back to back in cling film, stack them in a tin, and fill any gaps with crumpled paper so nothing rattles."
+    },
+    {
+     "speaker": "user",
+     "text": "A tin inside / a box?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, the tin protects them and the box protects the tin. Shake the parcel gently before sealing it. If you hear movement, add more padding."
+    },
+    {
+     "speaker": "user",
+     "text": "He'll probably eat them all in one night."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then send two tins and tell him one is for sharing."
+    }
+   ]
+  },
+  {
+   "id": "baking.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I feel bad throwing away sourdough discard every day. Is there anything useful to do with it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Loads! Pancakes are the classic. Mix the discard with an egg, a little milk, sugar and a pinch of baking soda."
+    },
+    {
+     "speaker": "user",
+     "text": "Does it taste sour?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Slightly tangy, which is lovely with maple syrup. You can also make crackers, just spread it thin with olive oil, salt and herbs."
+    },
+    {
+     "speaker": "user",
+     "text": "Crackers sounds fancy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're dead easy. Bake until crisp and break into shards."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I store it for a while?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it in a jar in the fridge for up to a week and use it when you've collected enough."
+    },
+    {
+     "speaker": "user",
+     "text": "So that's my weekend breakfast sorted."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "baking.opt1",
+   "lead_in": "I'm baking something for my friend's birthday, and I can't decide what.",
+   "options": [
+    "The first idea is a classic chocolate layer cake with fudge frosting, which takes most of a day.",
+    "Then there's a lemon drizzle loaf, which is simple and I've made it before.",
+    "Option three is a big batch of decorated cupcakes so everyone gets their own.",
+    "And the last one is a fruit tart with a homemade crust, which looks really fancy."
+   ],
+   "moshi_comment": [
+    "The chocolate layer cake is the most classic birthday choice, if you have the time. Cupcakes are easier to share at a party and fun to decorate. The lemon loaf is the safe bet since you've already nailed it.",
+    "What's your friend's favorite flavor? If they love chocolate, go for the layer cake. If you're short on time, the lemon loaf with a candle on top is still lovely."
+   ]
+  },
+  {
+   "id": "baking.opt2",
+   "lead_in": "I want to start baking bread at home and I have a few ways to begin.",
+   "options": [
+    "One is a simple no knead loaf that rises overnight and bakes in a heavy pot.",
+    "Another is starting a sourdough starter, which takes about a week before I can even bake.",
+    "Or I could just buy a bread machine that does everything for me."
+   ],
+   "moshi_comment": [
+    "The no knead loaf is the easiest place to start, and it tastes amazing for so little effort. Sourdough is really rewarding, but it needs patience and daily feeding. The bread machine is convenient but you learn less.",
+    "Do you want to learn baking, or mostly just have fresh bread? If you want to learn, start with the no knead loaf and move to sourdough later. If you just want bread, the machine is fine."
+   ]
+  },
+  {
+   "id": "baking.opt3",
+   "lead_in": "My partner's parents are coming for tea on Sunday and I need to pick something to bake.",
+   "options": [
+    "There's a Victoria sponge with jam and cream, which is very traditional and pretty quick.",
+    "I could also do scones, served warm with clotted cream, but they really need to come straight out of the oven.",
+    "Or a coffee and walnut cake, which his dad apparently loves, though I've never made one."
+   ],
+   "moshi_comment": [
+    "The coffee and walnut cake is a lovely gesture since his dad likes it, but try a test run first. Scones are charming warm, yet you'll be stuck in the kitchen while they arrive. The sponge is the calm, reliable middle ground.",
+    "If you want to impress his dad, the coffee and walnut cake wins, and you can bake it the day before. If you'd rather not risk it, a Victoria sponge looks classic and is hard to get wrong."
+   ]
+  },
+  {
+   "id": "baking.opt4",
+   "lead_in": "I want to buy one piece of baking kit this month and I've narrowed it down.",
+   "options": [
+    "A digital kitchen scale, so I can stop guessing with cups and weigh everything properly.",
+    "Maybe a stand mixer instead, it's expensive but would save my arms on bread and meringue.",
+    "There's also a cast iron pot for crusty bread, which people online swear by.",
+    "Or just a good set of heavy baking trays, because mine warp in the oven."
+   ],
+   "moshi_comment": [
+    "The scale is cheap and will improve almost everything you bake straight away. The stand mixer is a joy, but it's a big spend for one month. The pot and the trays are great upgrades if you already know you'll bake lots of bread or cookies.",
+    "Start with the scale, honestly, it makes recipes far more reliable. If your trays warp so badly that cookies slide around, those could be next, and the mixer can wait until you're sure you'll use it weekly."
+   ]
+  },
+  {
+   "id": "baking.opt5",
+   "lead_in": "I'm teaching a beginner baking night at the community centre and I need one recipe for everyone.",
+   "options": [
+    "Soda bread is fast, needs no yeast, and everyone could take a loaf home within an hour.",
+    "Chocolate chip cookies would be popular, but twelve people sharing two ovens could get chaotic.",
+    "Then there's cheese scones, which teach rubbing butter into flour, a skill they'd use again."
+   ],
+   "moshi_comment": [
+    "Soda bread fits a short class beautifully and feels like a real achievement for beginners. Cheese scones teach the most useful technique. Cookies are crowd pleasers, but oven space would be your bottleneck.",
+    "With two ovens, I'd lean towards soda bread or scones, since both bake in one go on a couple of trays. Cookies need batch after batch, so people might end up waiting around."
+   ]
+  },
+  {
+   "id": "baking.opt6",
+   "lead_in": "My nephew wants a dinosaur birthday cake and I'm weighing up how to pull it off.",
+   "options": [
+    "I could carve a sheet cake into a dinosaur shape and cover it in green buttercream.",
+    "There's a simpler idea, a plain round cake with plastic dinosaur toys stomping across the top.",
+    "Or a volcano cake with orange icing dripping down and little dinosaurs around the base.",
+    "My sister also suggested dinosaur shaped cookies instead of a cake at all."
+   ],
+   "moshi_comment": [
+    "The carved dinosaur is the most impressive but also the easiest to go wrong. The volcano is dramatic without needing sculpting skills. The round cake with toys is foolproof, and he gets to keep the dinosaurs.",
+    "For a kid, the volcano is probably the showstopper, it's fun and very forgiving. The toy topped cake is the low stress option, and the cookies could be a sweet extra rather than the main event."
+   ]
+  }
+ ]
 }

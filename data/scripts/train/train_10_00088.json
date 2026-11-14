@@ -7,115 +7,143 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [],
- "topics": [
-  "weather_plans"
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
  ],
- "wait_sec": 45,
- "deadline": {
-  "after_turn": 4,
-  "sec": 45
- },
- "topic": "weather_plans",
+ "topics": [
+  "sleep"
+ ],
+ "topic": "sleep",
  "voices": {
-  "user": "676f1654c4f747a69a5921ad94886fa1",
+  "user": "cc7f8544c64a439080193e9560100c5a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_07",
-  "greet_ans_26",
-  "think_instr_29",
-  "ack_08"
+  "greet_01",
+  "greet_ans_07",
+  "waitlike_04"
  ],
  "block_ids": [
-  "weather_plans.ctx1"
+  "sleep.dlg13"
  ],
- "est_total_sec": 81.41,
- "est_speech_sec": 31.59,
+ "est_total_sec": 62.32,
+ "est_speech_sec": 48.73,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How's everything going?",
-   "est_sec": 1.34,
-   "gap_before": 0.4,
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.66,
    "role": "greeting",
-   "phrasing": "greet_07"
+   "phrasing": "greet_01"
   },
   {
    "speaker": "user",
-   "text": "Kind of tired, honestly.",
-   "est_sec": 1.34,
-   "gap_before": 0.99,
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.4,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_26"
+   "phrasing": "greet_ans_07"
   },
   {
    "speaker": "user",
-   "text": "We planned a barbecue on Saturday, but now they're saying rain in the afternoon.",
-   "est_sec": 4.44,
-   "gap_before": 0.34,
+   "text": "My sixteen-year-old is impossible to wake up. School starts at eight.",
+   "est_sec": 3.51,
+   "gap_before": 0.42,
    "event": "ordinary_request",
-   "block": "weather_plans.ctx1"
+   "block": "sleep.dlg13"
   },
   {
    "speaker": "moshi",
-   "text": "That's annoying. You could move it to the morning, or keep the time and set up a canopy. What do you think?",
-   "est_sec": 6.92,
-   "gap_before": 0.38,
+   "text": "Teens' body clocks genuinely shift later, so it's not just laziness. They often can't feel sleepy before eleven.",
+   "est_sec": 5.68,
+   "gap_before": 1.75,
    "role": "reply",
-   "block": "weather_plans.ctx1"
+   "block": "sleep.dlg13"
   },
   {
    "speaker": "user",
-   "text": "Let me think about that for forty-five seconds, then ask me once more.",
-   "est_sec": 4.13,
-   "gap_before": 0.3,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 45,
-   "phrasing": "think_instr_29"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.61,
-   "role": "ack",
-   "phrasing": "ack_08"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, have you decided? Move it to the morning or stick it out under a canopy?",
-   "est_sec": 5.06,
-   "role": "resume",
-   "block": "weather_plans.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 45.1
-   }
+   "text": "So what do I do?",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "sleep.dlg13"
   },
   {
    "speaker": "user",
-   "text": "Let's move it to late morning. Brunch barbecue!",
-   "est_sec": 2.58,
-   "gap_before": 1.26,
+   "text": "Let him sleep till noon?",
+   "est_sec": 1.65,
+   "gap_before": 2.78,
    "event": "ordinary_request",
-   "block": "weather_plans.ctx1"
+   "block": "sleep.dlg13"
   },
   {
    "speaker": "moshi",
-   "text": "Love it. Send a quick message to everyone today so they can plan around it.",
-   "est_sec": 4.75,
-   "gap_before": 0.58,
-   "role": "followup",
-   "block": "weather_plans.ctx1"
+   "text": "On school days, help him get to bed a little earlier by putting screens away at ten, and open the curtains as soon as he wakes.",
+   "est_sec": 8.16,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "sleep.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I missed that.",
+   "est_sec": 1.65,
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_04",
+   "block": "sleep.dlg13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. On school days, help him get to bed a little earlier by putting screens away at ten, and open the curtains as soon as he wakes.",
+   "est_sec": 8.78,
+   "gap_before": 0.33,
+   "role": "reply",
+   "block": "sleep.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "He'll hate that.",
+   "est_sec": 1.03,
+   "gap_before": 1.11,
+   "event": "ordinary_request",
+   "block": "sleep.dlg13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Probably. Explain the why, teens respond better when they understand it. And keep weekend lie-ins to an hour or two longer, not until afternoon.",
+   "est_sec": 7.54,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "sleep.dlg13"
+  },
+  {
+   "speaker": "user",
+   "text": "An hour or two. Okay, that's fair.",
+   "est_sec": 2.27,
+   "gap_before": 0.83,
+   "event": "ordinary_request",
+   "block": "sleep.dlg13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "And breakfast with some protein helps him actually feel awake.",
+   "est_sec": 3.2,
+   "gap_before": 1.06,
+   "role": "reply",
+   "block": "sleep.dlg13"
   }
  ]
 }

@@ -7,111 +7,144 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "holiday_gifts"
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [
+  "implicit"
  ],
- "topic": "holiday_gifts",
+ "topics": [
+  "family_visit"
+ ],
+ "topic": "family_visit",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
-  "friend": null,
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "933563129e564b19a115bedd57b7406a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_18",
-  "greet_ans_27",
-  "describe_instr_09",
-  "describe_cue_15"
+  "greet_03",
+  "greet_ans_30",
+  "door_instr_02",
+  "door_35",
+  "implicit_05"
  ],
  "block_ids": [
-  "holiday_gifts.opt1"
+  "family_visit.ctx12",
+  "door_35"
  ],
- "est_total_sec": 47.24,
- "est_speech_sec": 37.48,
+ "est_total_sec": 56.68,
+ "est_speech_sec": 34.68,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.47,
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.32,
    "role": "greeting",
-   "phrasing": "greet_18",
+   "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "All good here.",
-   "est_sec": 1.03,
-   "gap_before": 0.53,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_27"
-  },
-  {
-   "speaker": "user",
-   "text": "I need help choosing a holiday gift for my wife.",
-   "est_sec": 3.2,
-   "gap_before": 0.41,
-   "block": "holiday_gifts.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm going to describe each one. Save your comments until the end.",
-   "est_sec": 3.82,
-   "gap_before": 0.85,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_09"
-  },
-  {
-   "speaker": "user",
-   "text": "The first idea is a weekend at a little cabin in the mountains, just the two of us.",
-   "est_sec": 5.68,
-   "gap_before": 0.68,
-   "block": "holiday_gifts.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a really nice leather bag she looked at twice but didn't buy.",
-   "est_sec": 4.44,
-   "gap_before": 2.86,
-   "block": "holiday_gifts.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last option is a pottery class for both of us, every Thursday for a month.",
-   "est_sec": 5.37,
-   "gap_before": 1.47,
-   "block": "holiday_gifts.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "So that's the list. Thoughts?",
+   "text": "Not bad at all, thanks.",
    "est_sec": 1.65,
-   "gap_before": 0.65,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_15"
+   "gap_before": 0.6,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Grandma's eighty five and she still wants to cook the whole holiday meal herself.",
+   "est_sec": 4.44,
+   "gap_before": 0.21,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "All three are lovely. Does she prefer relaxing or trying new things? If she likes new things, the pottery class gives you a month of date nights, otherwise I'd go with the cabin.",
-   "est_sec": 10.33,
-   "gap_before": 0.34,
+   "text": "That's sweet, but tiring. Would she accept help with the sides, or should someone just quietly take over the dishes afterwards?",
+   "est_sec": 6.61,
+   "gap_before": 0.39,
+   "role": "reply",
+   "block": "family_visit.ctx12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, the doorbell just rang. Don't say anything until I come back.",
+   "est_sec": 4.13,
+   "gap_before": 0.46,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, what's up?",
+   "est_sec": 1.03,
+   "gap_before": 2.76,
+   "phrasing": "door_35",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Your car alarm's been going for ten minutes.",
+   "est_sec": 2.58,
+   "gap_before": 3.17,
+   "phrasing": "door_35"
+  },
+  {
+   "speaker": "user",
+   "text": "Seriously? I didn't hear a thing. Is it the silver one?",
+   "est_sec": 3.51,
+   "gap_before": 2.43,
+   "phrasing": "door_35",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Yep, flashing like a disco.",
+   "est_sec": 1.65,
+   "gap_before": 2.8,
+   "phrasing": "door_35"
+  },
+  {
+   "speaker": "user",
+   "text": "Thanks, I'll grab my keys.",
+   "est_sec": 1.65,
+   "gap_before": 3.25,
+   "phrasing": "door_35"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, sorry, where were we again?",
+   "est_sec": 1.96,
+   "gap_before": 3.57,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. About grandma's big meal. Help with sides, or clean up after?",
+   "est_sec": 3.82,
+   "gap_before": 0.54,
    "role": "resume",
-   "block": "holiday_gifts.opt1",
+   "block": "family_visit.ctx12",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "new_type_door",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

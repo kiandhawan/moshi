@@ -7,222 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question",
-  "near_miss"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "birthday_party",
-  "weekend_plans"
+  "sleep"
  ],
- "topic": "birthday_party",
+ "topic": "sleep",
  "voices": {
-  "user": "4210f97652d14bec82edc1c2ee8296d2",
-  "friend": "bd45448dd6f84f9ebd06f369f93f4410",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Nina",
- "friend_name_id": "name_10",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_10",
-  "greet_ans_13",
-  "side_instr_13",
-  "dn_22",
-  "dq_10",
-  "side_cue_22"
+  "greet_11",
+  "greet_ans_14"
  ],
  "block_ids": [
-  "birthday_party.ctx2",
-  "weekend_plans.side2"
+  "sleep.dlg8"
  ],
- "est_total_sec": 84.42,
- "est_speech_sec": 56.55,
+ "est_total_sec": 51.53,
+ "est_speech_sec": 37.06,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your day been so far?",
-   "est_sec": 2.27,
-   "gap_before": 0.79,
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.77,
    "role": "greeting",
-   "phrasing": "greet_10"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
+   "text": "Hanging in there.",
    "est_sec": 1.03,
-   "gap_before": 0.91,
+   "gap_before": 0.42,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
+   "phrasing": "greet_ans_14"
   },
   {
    "speaker": "user",
-   "text": "I'm throwing a surprise party for my best friend's thirtieth.",
-   "est_sec": 3.2,
-   "gap_before": 0.25,
-   "event": "ordinary_request",
-   "block": "birthday_party.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Oh, nice. How many people?",
-   "est_sec": 1.65,
-   "gap_before": 0.46,
-   "role": "reply",
-   "block": "birthday_party.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Maybe twenty.",
-   "est_sec": 0.72,
-   "gap_before": 1.93,
-   "event": "ordinary_request",
-   "block": "birthday_party.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Good size. Do you want a sit down dinner at a restaurant, or a relaxed evening at someone's place?",
-   "est_sec": 5.99,
-   "gap_before": 1.18,
-   "role": "reply",
-   "block": "birthday_party.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Just a sec, I need to sort something out with my roommate. I'll say when I'm back.",
+   "text": "Got a horrible calf cramp at three this morning. I yelled so loud I woke the dog.",
    "est_sec": 5.37,
-   "gap_before": 1.83,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_13"
-  },
-  {
-   "speaker": "user",
-   "text": "Did you book the cinema for Saturday?",
-   "est_sec": 2.27,
-   "gap_before": 1.26,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "weekend_plans.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Not yet. I wasn't sure which film you wanted.",
-   "est_sec": 2.89,
-   "gap_before": 1.87,
-   "block": "weekend_plans.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "I don't mind. Anything but horror.",
-   "est_sec": 1.96,
-   "gap_before": 0.46,
-   "block": "weekend_plans.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "There's that comedy everyone's talking about.",
-   "est_sec": 1.96,
-   "gap_before": 0.73,
-   "block": "weekend_plans.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Fine by me. What time does it start?",
-   "est_sec": 2.58,
-   "gap_before": 0.79,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "weekend_plans.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "There's a seven o'clock and a nine thirty.",
-   "est_sec": 2.58,
-   "gap_before": 0.91,
-   "block": "weekend_plans.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Seven, so we can eat after.",
-   "est_sec": 1.96,
-   "gap_before": 2.77,
-   "block": "weekend_plans.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Booking it now.",
-   "est_sec": 1.03,
-   "gap_before": 0.53,
-   "block": "weekend_plans.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, all done here, back to the game.",
-   "est_sec": 2.58,
-   "gap_before": 0.32,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_22"
-  },
-  {
-   "speaker": "friend",
-   "text": "Finally!",
-   "est_sec": 0.41,
-   "gap_before": 1.05,
-   "phrasing": "dn_22"
-  },
-  {
-   "speaker": "user",
-   "text": "Nina, did you call the landlord?",
-   "est_sec": 1.96,
-   "gap_before": 2.95,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_10"
-  },
-  {
-   "speaker": "friend",
-   "text": "Not yet, I'll do it tonight.",
-   "est_sec": 1.96,
-   "gap_before": 1.25,
-   "phrasing": "dq_10"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, back. Thanks for being patient.",
-   "est_sec": 1.96,
-   "gap_before": 0.93,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_22"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright. Still thinking about the setting for the surprise party?",
-   "est_sec": 3.2,
-   "gap_before": 0.44,
-   "role": "resume",
-   "block": "birthday_party.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "A restaurant. Nobody has room for twenty people.",
-   "est_sec": 2.58,
-   "gap_before": 2.04,
+   "gap_before": 0.23,
    "event": "ordinary_request",
-   "block": "birthday_party.ctx2"
+   "block": "sleep.dlg8"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. Ask about a private room, it makes the surprise moment much easier.",
-   "est_sec": 4.44,
-   "gap_before": 0.72,
-   "role": "followup",
-   "block": "birthday_party.ctx2"
+   "text": "Ouch. When it happens, flex your foot toward your knee, it stretches the muscle and usually eases it.",
+   "est_sec": 5.68,
+   "gap_before": 1.51,
+   "role": "reply",
+   "block": "sleep.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "Why does it even happen?",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "sleep.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Common triggers are dehydration, a long day on your feet, or a lot of exercise. Sometimes there's no clear reason.",
+   "est_sec": 6.3,
+   "gap_before": 0.97,
+   "role": "reply",
+   "block": "sleep.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "I did walk",
+   "est_sec": 1.03,
+   "gap_before": 2.22,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "sleep.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "a lot yesterday, actually.",
+   "est_sec": 1.34,
+   "gap_before": 1.86,
+   "event": "ordinary_request",
+   "block": "sleep.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's likely it. A gentle calf stretch before bed and a glass of water can help prevent the next one.",
+   "est_sec": 6.3,
+   "gap_before": 0.84,
+   "role": "reply",
+   "block": "sleep.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "And if it keeps happening?",
+   "est_sec": 1.65,
+   "gap_before": 3.0,
+   "event": "ordinary_request",
+   "block": "sleep.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then mention it to your doctor, especially if it's often or painful during the day.",
+   "est_sec": 4.75,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "sleep.dlg8"
   }
  ]
 }

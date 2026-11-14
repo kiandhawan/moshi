@@ -7,99 +7,179 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [],
- "topics": [
-  "weekend_plans"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "wait_sec": 5,
- "deadline": {
-  "after_turn": 4,
-  "sec": 5
- },
- "topic": "weekend_plans",
+ "topics": [
+  "cooking",
+  "cleaning"
+ ],
+ "topic": "cooking",
  "voices": {
-  "user": "e7de86b388864b8cbd50d0d70a3494e5",
-  "friend": null,
+  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "friend": "879653fd2b9c4cb0854d68e7e9a049e8",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Omar",
+ "friend_name_id": "name_13",
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_10",
-  "think_instr_26",
-  "ack_01"
+  "greet_08",
+  "greet_ans_28",
+  "side_instr_10",
+  "ack_11",
+  "dn_44",
+  "side_cue_23"
  ],
  "block_ids": [
-  "weekend_plans.ctx1"
+  "cooking.ctx9",
+  "cleaning.side2",
+  "dn_44"
  ],
- "est_total_sec": 31.34,
- "est_speech_sec": 20.23,
+ "est_total_sec": 82.98,
+ "est_speech_sec": 63.08,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
-   "est_sec": 1.96,
-   "gap_before": 0.76,
+   "text": "Hi there, how are you feeling today?",
+   "est_sec": 2.27,
+   "gap_before": 0.3,
    "role": "greeting",
-   "phrasing": "greet_11"
+   "phrasing": "greet_08"
   },
   {
    "speaker": "user",
-   "text": "Doing well, thank you.",
-   "est_sec": 1.34,
-   "gap_before": 0.47,
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.54,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_10"
+   "phrasing": "greet_ans_28"
   },
   {
    "speaker": "user",
-   "text": "It's finally Friday and I have absolutely nothing planned.",
-   "est_sec": 2.89,
-   "gap_before": 0.23,
+   "text": "Dude. I bought a cast iron pan and it's already rusty. I've had it two days.",
+   "est_sec": 5.06,
+   "gap_before": 0.52,
    "event": "ordinary_request",
-   "block": "weekend_plans.ctx1"
+   "block": "cooking.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Lovely feeling. Do you want a lazy weekend at home to recharge, or would you like to get out and do something?",
-   "est_sec": 6.92,
-   "gap_before": 1.02,
+   "text": "That happens if it stays wet. You can scrub it and re-season it in the oven, or just cook a lot of bacon in it and let the fat do the work. How patient are you feeling?",
+   "est_sec": 11.57,
+   "gap_before": 1.15,
    "role": "reply",
-   "block": "weekend_plans.ctx1"
+   "block": "cooking.ctx9"
   },
   {
    "speaker": "user",
-   "text": "Hmm, wait five seconds and then ask me again, okay?",
-   "est_sec": 3.2,
-   "gap_before": 2.06,
+   "text": "Hey, can you stay quiet for a minute? I need to talk to my partner. I'll come back to you.",
+   "est_sec": 6.3,
+   "gap_before": 0.91,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 5,
-   "phrasing": "think_instr_26"
+   "kind": "side_conversation",
+   "phrasing": "side_instr_10"
   },
   {
    "speaker": "moshi",
-   "text": "Sure.",
+   "text": "Alright.",
    "est_sec": 0.41,
-   "gap_before": 0.34,
+   "gap_before": 0.38,
    "role": "ack",
-   "phrasing": "ack_01"
+   "phrasing": "ack_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Do we have any more of that spray for the shower?",
+   "est_sec": 3.51,
+   "gap_before": 0.97,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Under the sink, behind the sponges. There should be a full bottle.",
+   "est_sec": 3.82,
+   "gap_before": 2.88,
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Found it. Did you ever figure out what's causing that black stuff in the corner?",
+   "est_sec": 4.75,
+   "gap_before": 1.46,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think it's just mold. We should open the window after showers.",
+   "est_sec": 3.82,
+   "gap_before": 1.19,
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah, let's both try to remember that.",
+   "est_sec": 2.27,
+   "gap_before": 1.21,
+   "block": "cleaning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Go ahead and start eating, don't wait for me.",
+   "est_sec": 2.89,
+   "gap_before": 0.97,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_44"
+  },
+  {
+   "speaker": "friend",
+   "text": "We'll save you some potatoes.",
+   "est_sec": 1.65,
+   "gap_before": 2.13,
+   "phrasing": "dn_44"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, all done. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.77,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_23"
   },
   {
    "speaker": "moshi",
-   "text": "So, a lazy weekend at home, or getting out and about?",
-   "est_sec": 3.51,
+   "text": "Okay. So, are we fixing that pan the patient way or the bacon way?",
+   "est_sec": 4.44,
+   "gap_before": 0.44,
    "role": "resume",
-   "block": "weekend_plans.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 5.48
-   }
+   "block": "cooking.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Bacon, obviously.",
+   "est_sec": 0.72,
+   "gap_before": 0.87,
+   "event": "ordinary_request",
+   "block": "cooking.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Scrub the rust off first with steel wool. Then fry a whole pack slowly, and wipe it with a little oil afterwards.",
+   "est_sec": 6.92,
+   "gap_before": 0.71,
+   "role": "followup",
+   "block": "cooking.ctx9"
   }
  ]
 }

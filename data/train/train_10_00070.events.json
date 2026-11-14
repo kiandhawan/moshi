@@ -1,77 +1,128 @@
 {
   "id": "train_10_00070",
-  "group": "describe_options",
-  "user_start": 3.43,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 8.73,
-  "instruction_end": 12.05,
-  "wait_end": 38.15,
-  "resume_window": [
-    38.15,
-    43.15
+  "group": "side_conversation",
+  "user_start": 2.94,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question"
   ],
-  "wait_sec": 26.1,
+  "cluster": "board_games.ctx2",
+  "instruction_start": 16.45,
+  "instruction_end": 20.29,
+  "wait_end": 59.134,
+  "resume_window": [
+    59.134,
+    64.134
+  ],
+  "wait_sec": 38.844,
   "distractors": [
-    18.1
+    22.85,
+    46.104
   ],
   "distractor_kinds": [
-    "pause"
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      18.1,
-      19.9
+      22.85,
+      25.59
+    ],
+    [
+      46.104,
+      46.744
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    7.42,
+    68.694
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 3.43,
-      "end": 4.25,
+      "start": 2.94,
+      "end": 4.0,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.74,
-      "end": 8.25
+      "start": 4.33,
+      "end": 7.42,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 8.73,
-      "end": 12.05,
+      "start": 16.45,
+      "end": 20.29,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 12.93,
-      "end": 18.1,
+      "start": 21.3,
+      "end": 22.85,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 25.59,
+      "end": 26.934
     },
     {
       "speaker": "user",
-      "start": 19.9,
-      "end": 24.15
+      "start": 28.124,
+      "end": 31.504
+    },
+    {
+      "speaker": "friend",
+      "start": 32.114,
+      "end": 34.534
     },
     {
       "speaker": "user",
-      "start": 25.41,
-      "end": 29.5
+      "start": 35.194,
+      "end": 37.524
+    },
+    {
+      "speaker": "friend",
+      "start": 38.834,
+      "end": 41.934
     },
     {
       "speaker": "user",
-      "start": 30.68,
-      "end": 35.02
+      "start": 43.404,
+      "end": 46.104,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 46.744,
+      "end": 47.794
     },
     {
       "speaker": "user",
-      "start": 36.41,
-      "end": 38.15,
+      "start": 48.164,
+      "end": 50.884
+    },
+    {
+      "speaker": "friend",
+      "start": 53.594,
+      "end": 55.984
+    },
+    {
+      "speaker": "user",
+      "start": 57.134,
+      "end": 59.134,
       "event": "return_cue",
       "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 66.464,
+      "end": 68.694,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00070 by scripts/render.py.",
@@ -79,15 +130,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.55,
-      "end": 2.73,
-      "text": "Hey, nice to hear from you. How are you?"
+      "start": 0.36,
+      "end": 2.28,
+      "text": "Hey, good to have you here. How are you?"
+    },
+    {
+      "kind": "reply",
+      "start": 8.59,
+      "end": 15.01,
+      "text": "Nice. Would he like something competitive where he can beat the grown-ups, or a cooperative game where everyone plays together?"
     },
     {
       "kind": "resume",
-      "start": 39.54,
-      "end": 47.73,
-      "text": "Do you have a cat, and how long are you out of the house each day? If you have a cat, skip the terrier. If you're out a lot, the greyhound is probably the best fit."
+      "start": 60.304,
+      "end": 64.344,
+      "text": "Okay. You were picking a game for your nephew, competitive or cooperative."
+    },
+    {
+      "kind": "followup",
+      "start": 70.394,
+      "end": 74.804,
+      "text": "Good thinking. Forbidden Island is a great one, the whole family wins or loses together."
     }
   ]
 }

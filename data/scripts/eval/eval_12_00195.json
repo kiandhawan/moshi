@@ -7,15 +7,17 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "describe_options",
  "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "restaurant_choice"
+  "learning_language"
  ],
- "topic": "restaurant_choice",
+ "topic": "learning_language",
  "voices": {
   "user": "08b4100b4c3747fe84ed8b57d26a95ba",
   "friend": null,
@@ -24,91 +26,99 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_30",
-  "greet_ans_06",
-  "describe_instr_15",
-  "describe_cue_12"
+  "greet_21",
+  "greet_ans_09",
+  "describe_instr_18",
+  "ack_12",
+  "describe_cue_03"
  ],
  "block_ids": [
-  "restaurant_choice.opt1"
+  "learning_language.opt5"
  ],
- "est_total_sec": 50.08,
- "est_speech_sec": 39.03,
+ "est_total_sec": 49.35,
+ "est_speech_sec": 39.13,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's it going? You doing okay?",
-   "est_sec": 2.27,
-   "gap_before": 0.59,
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.77,
    "role": "greeting",
-   "phrasing": "greet_30",
+   "phrasing": "greet_21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.97,
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 1.0,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "I'm picking a place for my team dinner on Friday, can you help?",
-   "est_sec": 4.13,
-   "gap_before": 0.31,
-   "block": "restaurant_choice.opt1"
+   "text": "I'm picking a French tutor and I've got three profiles open.",
+   "est_sec": 3.51,
+   "gap_before": 0.29,
+   "block": "learning_language.opt5"
   },
   {
    "speaker": "user",
-   "text": "I want to describe all the options before I hear your opinion.",
-   "est_sec": 3.82,
-   "gap_before": 0.65,
+   "text": "I'll go through the options one by one. Don't say anything until I finish.",
+   "est_sec": 4.44,
+   "gap_before": 0.62,
    "event": "instruction",
    "kind": "describe_options",
-   "phrasing": "describe_instr_15"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is an Italian place downtown, great pasta, but it's quite noisy on weekends.",
-   "est_sec": 5.06,
-   "gap_before": 1.17,
-   "block": "restaurant_choice.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a sushi restaurant near the office with private rooms, but it's pretty expensive.",
-   "est_sec": 4.75,
-   "gap_before": 1.87,
-   "block": "restaurant_choice.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a casual barbecue joint with long picnic tables and a big patio.",
-   "est_sec": 5.37,
-   "gap_before": 2.4,
-   "block": "restaurant_choice.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all the options. Go ahead.",
-   "est_sec": 2.27,
-   "gap_before": 0.66,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_12"
+   "phrasing": "describe_instr_18"
   },
   {
    "speaker": "moshi",
-   "text": "I'd lean toward the barbecue place, long tables are perfect for a group and the vibe is easygoing. The Italian spot sounds tasty, but noise on a Friday could make conversation hard.",
-   "est_sec": 10.02,
-   "gap_before": 0.93,
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.32,
+   "role": "ack",
+   "phrasing": "ack_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A retired teacher from Lyon, very strict, lots of grammar and homework, and great reviews from exam students.",
+   "est_sec": 5.68,
+   "gap_before": 0.61,
+   "block": "learning_language.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A young guy from Montreal who does relaxed chats about films and music, cheap, but a bit disorganised.",
+   "est_sec": 5.68,
+   "gap_before": 1.81,
+   "block": "learning_language.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "A woman in Paris who specialises in business French and pronunciation, pricey but very polished.",
+   "est_sec": 4.75,
+   "gap_before": 1.12,
+   "block": "learning_language.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "So those are the options. What's your take?",
+   "est_sec": 2.58,
+   "gap_before": 1.3,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you're nervous speaking, the relaxed chats might help you most, even if he's a bit messy. If you need results quickly, the strict teacher is probably worth it.",
+   "est_sec": 9.09,
+   "gap_before": 0.88,
    "role": "resume",
-   "block": "restaurant_choice.opt1",
+   "block": "learning_language.opt5",
    "reference_only": true
   }
  ],

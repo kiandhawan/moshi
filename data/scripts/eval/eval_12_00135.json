@@ -7,132 +7,168 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
+ "type": "phone_call",
+ "wait_type": "phone_call",
  "conditions": [],
  "topics": [
-  "painting_art"
+  "cycling"
  ],
- "reading": {
-  "material": "email",
-  "sec": 18.5
- },
- "topic": "painting_art",
+ "topic": "cycling",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_09",
-  "greet_ans_24",
-  "read_instr_01",
-  "ack_09",
-  "read_cue_04"
+  "greet_06",
+  "greet_ans_18",
+  "phone_instr_08",
+  "ack_03",
+  "call_25",
+  "phone_cue_01"
  ],
  "block_ids": [
-  "painting_art.ctx3"
+  "cycling.ctx21",
+  "call_25"
  ],
- "est_total_sec": 59.7,
- "est_speech_sec": 35.72,
+ "est_total_sec": 64.89,
+ "est_speech_sec": 44.59,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's it going?",
-   "est_sec": 1.34,
-   "gap_before": 0.33,
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.8,
    "role": "greeting",
-   "phrasing": "greet_09",
+   "phrasing": "greet_06",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Ah, it's been a long day.",
-   "est_sec": 1.96,
-   "gap_before": 0.91,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_24"
-  },
-  {
-   "speaker": "user",
-   "text": "My painting of the harbor looks kind of flat and boring.",
-   "est_sec": 3.51,
-   "gap_before": 0.45,
-   "event": "ordinary_request",
-   "block": "painting_art.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Hmm, that often comes from contrast. Would you rather darken the shadows on the boats or add a bright color somewhere as a focal point?",
-   "est_sec": 7.85,
-   "gap_before": 0.42,
-   "role": "reply",
-   "block": "painting_art.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, I just got an email I need to read. Don't say anything until I'm done.",
-   "est_sec": 5.37,
-   "gap_before": 0.81,
-   "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_01"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Take your time.",
+   "text": "I'm doing great.",
    "est_sec": 1.03,
-   "gap_before": 0.41,
-   "role": "ack",
-   "phrasing": "ack_09",
+   "gap_before": 0.6,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_18"
+  },
+  {
+   "speaker": "user",
+   "text": "I just moved to a new city and there are bike share docks everywhere.",
+   "est_sec": 4.44,
+   "gap_before": 0.43,
+   "event": "ordinary_request",
+   "block": "cycling.ctx21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Handy! Do you think you'll ride most days, or just now and then? That decides whether bike share or your own bike makes sense.",
+   "est_sec": 7.54,
+   "gap_before": 0.69,
+   "role": "reply",
+   "block": "cycling.ctx21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Done, I read through it.",
+   "text": "I need to take this, it's important. Please hold on until I'm done.",
+   "est_sec": 4.13,
+   "gap_before": 0.52,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.39,
+   "role": "ack",
+   "phrasing": "ack_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hey, did I leave my wallet at your place?",
+   "est_sec": 2.89,
+   "gap_before": 1.71,
+   "phrasing": "call_25",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you check under the cushions?",
+   "est_sec": 1.96,
+   "gap_before": 2.51,
+   "phrasing": "call_25",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh thank goodness.",
+   "est_sec": 1.03,
+   "gap_before": 2.89,
+   "phrasing": "call_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, the signal dropped. Okay, I can hear you again.",
+   "est_sec": 3.2,
+   "gap_before": 2.14,
+   "phrasing": "call_25"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll grab it tomorrow morning.",
    "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 18.5
-   },
+   "gap_before": 3.11,
+   "phrasing": "call_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, sorry, I'm off the phone now.",
+   "est_sec": 2.27,
+   "gap_before": 1.26,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "read_cue_04"
+   "phrasing": "phone_cue_01"
   },
   {
    "speaker": "moshi",
-   "text": "All done? Did you decide how to liven up the harbor, darker shadows or a pop of color?",
-   "est_sec": 5.68,
-   "gap_before": 0.5,
+   "text": "Hope the call went okay. So, how much will you ride?",
+   "est_sec": 3.51,
+   "gap_before": 0.57,
    "role": "resume",
-   "block": "painting_art.ctx3",
+   "block": "cycling.ctx21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Shadows first, I don't want to change the colors yet.",
-   "est_sec": 3.2,
-   "gap_before": 1.16,
+   "text": "Probably every day to work.",
+   "est_sec": 1.65,
+   "gap_before": 0.38,
    "event": "ordinary_request",
-   "block": "painting_art.ctx3"
+   "block": "cycling.ctx21"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. Mix a little blue into your darks so they don't look muddy.",
-   "est_sec": 4.13,
-   "gap_before": 0.43,
+   "text": "Then your own bike will be cheaper over a year, and always there when you need it.",
+   "est_sec": 5.37,
+   "gap_before": 0.8,
    "role": "followup",
-   "block": "painting_art.ctx3",
+   "block": "cycling.ctx21",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading"
+  "new_type_phone"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

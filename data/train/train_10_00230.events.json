@@ -1,67 +1,81 @@
 {
   "id": "train_10_00230",
-  "group": "think_time",
-  "user_start": 2.78,
-  "type": "think_time",
-  "conditions": [
-    "self_talk"
-  ],
-  "instruction_start": 18.74,
-  "instruction_end": 21.99,
-  "wait_end": 31.99,
+  "group": "describe_options",
+  "user_start": 2.3,
+  "type": "describe_options",
+  "conditions": [],
+  "cluster": "travel_planning.opt2",
+  "instruction_start": 7.42,
+  "instruction_end": 9.77,
+  "wait_end": 31.47,
   "resume_window": [
-    31.99,
-    35.99
+    31.47,
+    36.47
   ],
-  "wait_sec": 10.0,
+  "wait_sec": 21.7,
   "distractors": [
-    29.06
+    16.07,
+    22.81
   ],
   "distractor_kinds": [
-    "self_talk"
+    "pause",
+    "pause"
   ],
   "distractor_windows": [
     [
-      29.06,
-      37.11
+      16.07,
+      18.26
+    ],
+    [
+      22.81,
+      24.61
     ]
   ],
-  "ordinary_requests": [
-    9.35,
-    40.84
-  ],
+  "ordinary_requests": [],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.78,
-      "end": 4.28,
+      "start": 2.3,
+      "end": 3.51,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.51,
-      "end": 9.35,
-      "event": "ordinary_request"
+      "start": 4.08,
+      "end": 6.98
     },
     {
       "speaker": "user",
-      "start": 18.74,
-      "end": 21.99,
+      "start": 7.42,
+      "end": 9.77,
       "event": "instruction",
-      "kind": "think_time"
+      "kind": "describe_options"
     },
     {
       "speaker": "user",
-      "start": 26.67,
-      "end": 29.06,
+      "start": 11.52,
+      "end": 16.07,
       "event": "distractor",
-      "kind": "self_talk"
+      "kind": "pause"
     },
     {
       "speaker": "user",
-      "start": 37.11,
-      "end": 40.84,
-      "event": "ordinary_request"
+      "start": 18.26,
+      "end": 22.81,
+      "event": "distractor",
+      "kind": "pause"
+    },
+    {
+      "speaker": "user",
+      "start": 24.61,
+      "end": 29.17
+    },
+    {
+      "speaker": "user",
+      "start": 29.81,
+      "end": 31.47,
+      "event": "return_cue",
+      "kind": "explicit"
     }
   ],
   "notes": "Rendered from script train_10_00230 by scripts/render.py.",
@@ -69,27 +83,21 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.44,
-      "end": 2.32,
-      "text": "Hello there! How's your day treating you?"
+      "start": 0.69,
+      "end": 1.9,
+      "text": "Hey there, how are you?"
     },
     {
-      "kind": "reply",
-      "start": 10.21,
-      "end": 17.51,
-      "text": "The bus stops closer to your place but takes about fifty minutes. The train is thirty, but it's a ten minute walk. Which matters more to you?"
+      "kind": "ack",
+      "start": 10.06,
+      "end": 10.8,
+      "text": "Take your time."
     },
     {
       "kind": "resume",
-      "start": 32.09,
-      "end": 36.51,
-      "text": "So, which commute sounds better? The closer bus, or the faster train?"
-    },
-    {
-      "kind": "followup",
-      "start": 41.86,
-      "end": 45.73,
-      "text": "That's a great reason. Fifty minutes of reading adds up to a lot of books."
+      "start": 32.68,
+      "end": 44.59,
+      "text": "The train sounds like a nice middle ground, it's comfortable and you don't lose the whole day since you can work. Flying is fastest, but those last minute prices hurt. Driving is cheapest, and you'd have a car once you get there, which can be handy."
     }
   ]
 }

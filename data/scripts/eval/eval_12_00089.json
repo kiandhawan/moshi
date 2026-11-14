@@ -7,129 +7,162 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "restaurant_choice"
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [
+  "implicit"
  ],
- "topic": "restaurant_choice",
+ "topics": [
+  "family_visit"
+ ],
+ "topic": "family_visit",
  "voices": {
-  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_12",
-  "greet_ans_24"
+  "greet_21",
+  "greet_ans_09",
+  "phone_instr_01",
+  "ack_05",
+  "call_27",
+  "implicit_02"
  ],
  "block_ids": [
-  "restaurant_choice.dlg2"
+  "family_visit.ctx15",
+  "call_27"
  ],
- "est_total_sec": 53.2,
- "est_speech_sec": 40.78,
+ "est_total_sec": 60.06,
+ "est_speech_sec": 40.46,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there, how are you doing today?",
-   "est_sec": 2.27,
-   "gap_before": 0.54,
+   "text": "Hi there! How's it going today?",
+   "est_sec": 1.96,
+   "gap_before": 0.76,
    "role": "greeting",
-   "phrasing": "greet_12",
+   "phrasing": "greet_21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Ah, it's been a long day.",
-   "est_sec": 1.96,
-   "gap_before": 0.42,
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.69,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_24"
+   "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "I'm eating out alone for the first time tonight and it feels a little awkward.",
+   "text": "We're visiting my wife's family for the first time and there'll be like thirty people.",
    "est_sec": 4.75,
-   "gap_before": 0.44,
+   "gap_before": 0.42,
    "event": "ordinary_request",
-   "block": "restaurant_choice.dlg2"
+   "block": "family_visit.ctx15"
   },
   {
    "speaker": "moshi",
-   "text": "Lots of people enjoy solo dining. Sitting at the bar or a counter feels very natural, and you can chat with the staff.",
-   "est_sec": 7.23,
-   "gap_before": 0.87,
+   "text": "That's a crowd. Do you want to learn some names in advance, or just focus on her parents and grandparents?",
+   "est_sec": 6.3,
+   "gap_before": 0.45,
    "role": "reply",
-   "block": "restaurant_choice.dlg2",
+   "block": "family_visit.ctx15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Should I bring a book?",
+   "text": "Sorry, I have to take this call. Hang on and stay quiet until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.48,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.59,
+   "role": "ack",
+   "phrasing": "ack_05",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hiya.",
+   "est_sec": 0.41,
+   "gap_before": 1.35,
+   "phrasing": "call_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, I'm on my way, I'm just stuck in traffic.",
+   "est_sec": 3.2,
+   "gap_before": 3.98,
+   "phrasing": "call_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you start without me?",
    "est_sec": 1.65,
-   "gap_before": 2.42,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, a book or a podcast is totally normal. Or just people-watch, that's half the fun.",
-   "est_sec": 5.06,
-   "gap_before": 1.07,
-   "role": "reply",
-   "block": "restaurant_choice.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I was thinking of going to",
-   "est_sec": 1.96,
-   "gap_before": 0.5,
+   "gap_before": 1.97,
+   "phrasing": "call_27",
    "event": "distractor",
-   "kind": "pause",
-   "block": "restaurant_choice.dlg2"
+   "kind": "question_to_other"
   },
   {
    "speaker": "user",
-   "text": "that ramen place downtown.",
-   "est_sec": 1.34,
-   "gap_before": 2.81,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg2"
+   "text": "I know, I know. Twenty minutes, tops.",
+   "est_sec": 2.27,
+   "gap_before": 2.08,
+   "phrasing": "call_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, what were you saying?",
+   "est_sec": 2.27,
+   "gap_before": 1.93,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_02"
   },
   {
    "speaker": "moshi",
-   "text": "Ramen is ideal for solo dining. Many ramen shops are built around counters, and the meals are quick.",
-   "est_sec": 5.68,
-   "gap_before": 0.61,
-   "role": "reply",
-   "block": "restaurant_choice.dlg2",
+   "text": "Right. Still thinking about how to prep for the in-laws?",
+   "est_sec": 3.2,
+   "gap_before": 0.33,
+   "role": "resume",
+   "block": "family_visit.ctx15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Actually, maybe I'll do the Italian place instead, I want to linger.",
-   "est_sec": 3.82,
-   "gap_before": 0.83,
+   "text": "Just the core. I'll never remember thirty names.",
+   "est_sec": 2.58,
+   "gap_before": 1.02,
    "event": "ordinary_request",
-   "block": "restaurant_choice.dlg2"
+   "block": "family_visit.ctx15"
   },
   {
    "speaker": "moshi",
-   "text": "Also a great choice. Order a glass of wine and take your time with every course.",
-   "est_sec": 5.06,
-   "gap_before": 0.41,
-   "role": "reply",
-   "block": "restaurant_choice.dlg2",
+   "text": "Totally fine. Ask your wife for one fun fact about each of them, it helps a lot.",
+   "est_sec": 5.37,
+   "gap_before": 1.05,
+   "role": "followup",
+   "block": "family_visit.ctx15",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_phone",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

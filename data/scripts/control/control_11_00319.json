@@ -7,120 +7,124 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
  "wait_type": null,
  "conditions": [],
  "topics": [
-  "books"
+  "movies"
  ],
- "topic": "books",
+ "topic": "movies",
  "voices": {
-  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_25"
+  "greet_11",
+  "greet_ans_28"
  ],
  "block_ids": [
-  "books.dlg1"
+  "movies.dlg11"
  ],
- "est_total_sec": 45.43,
- "est_speech_sec": 36.13,
+ "est_total_sec": 55.34,
+ "est_speech_sec": 42.02,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
-   "est_sec": 1.65,
-   "gap_before": 0.6,
-   "role": "greeting",
-   "phrasing": "greet_02"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm well, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.54,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_25"
-  },
-  {
-   "speaker": "user",
-   "text": "Can you suggest a book for a twelve year old who says reading is boring?",
-   "est_sec": 4.75,
-   "gap_before": 0.38,
-   "event": "ordinary_request",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try a fast, funny adventure with short chapters, or a graphic novel. They feel quick and rewarding.",
-   "est_sec": 5.37,
-   "gap_before": 0.73,
-   "role": "reply",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Graphic novels count as reading?",
-   "est_sec": 1.65,
-   "gap_before": 0.63,
-   "event": "ordinary_request",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Absolutely. They build vocabulary and following a story, and they're often a gateway to longer books.",
-   "est_sec": 5.06,
-   "gap_before": 0.68,
-   "role": "reply",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "He loves football. Is there anything",
+   "text": "Hi, how are things with you?",
    "est_sec": 1.96,
-   "gap_before": 0.49,
+   "gap_before": 0.5,
+   "role": "greeting",
+   "phrasing": "greet_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing alright, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.63,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
+  },
+  {
+   "speaker": "user",
+   "text": "I just watched a time travel film and I'm so confused. Is it me?",
+   "est_sec": 4.44,
+   "gap_before": 0.3,
+   "event": "ordinary_request",
+   "block": "movies.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Probably not, time travel plots are designed to twist your brain. What part lost you?",
+   "est_sec": 4.75,
+   "gap_before": 0.96,
+   "role": "reply",
+   "block": "movies.dlg11"
+  },
+  {
+   "speaker": "user",
+   "text": "The part where the guy meets himself. Is he the old one or the new one?",
+   "est_sec": 5.06,
+   "gap_before": 0.86,
+   "event": "ordinary_request",
+   "block": "movies.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "In a lot of these films, the version you've been following is the newer timeline, and the other one is from a loop that already happened.",
+   "est_sec": 8.16,
+   "gap_before": 1.15,
+   "role": "reply",
+   "block": "movies.dlg11"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, but then",
+   "est_sec": 1.03,
+   "gap_before": 1.49,
    "event": "distractor",
    "kind": "pause",
-   "block": "books.dlg1"
+   "block": "movies.dlg11"
   },
   {
    "speaker": "user",
-   "text": "you know, sporty?",
+   "text": "who is actually telling the story?",
+   "est_sec": 1.96,
+   "gap_before": 2.21,
+   "event": "ordinary_request",
+   "block": "movies.dlg11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Usually the version who loops the most. Try drawing a simple timeline on paper, with arrows for each jump. It suddenly clicks.",
+   "est_sec": 6.92,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "movies.dlg11"
+  },
+  {
+   "speaker": "user",
+   "text": "That's very nerdy.",
    "est_sec": 1.03,
-   "gap_before": 2.14,
+   "gap_before": 1.79,
    "event": "ordinary_request",
-   "block": "books.dlg1"
+   "block": "movies.dlg11"
   },
   {
    "speaker": "moshi",
-   "text": "There are lots of middle grade novels about kids on football teams. Ask a librarian, they'll know the popular ones.",
-   "est_sec": 6.3,
-   "gap_before": 0.53,
+   "text": "It is. But the people who love those films are doing exactly that, so you're in good company.",
+   "est_sec": 5.68,
+   "gap_before": 1.12,
    "role": "reply",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Good idea, we go to the library on Saturdays anyway.",
-   "est_sec": 3.2,
-   "gap_before": 0.48,
-   "event": "ordinary_request",
-   "block": "books.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect. Let him choose a couple himself, that helps a lot with motivation.",
-   "est_sec": 4.13,
-   "gap_before": 0.6,
-   "role": "reply",
-   "block": "books.dlg1"
+   "block": "movies.dlg11"
   }
  ]
 }

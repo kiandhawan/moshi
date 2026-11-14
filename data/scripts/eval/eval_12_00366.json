@@ -7,23 +7,17 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "early_direct",
-  "early_end"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "wedding_planning"
+  "restaurant_choice"
  ],
- "wait_sec": 15,
- "early_end": {
-  "after_sec": 13.09,
-  "direct": true
- },
- "topic": "wedding_planning",
+ "topic": "restaurant_choice",
  "voices": {
   "user": "1258154bb41540c7b9dc0d10cd6704bf",
   "friend": null,
@@ -32,112 +26,112 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_15",
-  "greet_ans_27",
-  "think_instr_27",
-  "ack_10",
-  "early_end_06"
+  "greet_18",
+  "greet_ans_09"
  ],
  "block_ids": [
-  "wedding_planning.ctx2"
+  "restaurant_choice.dlg4"
  ],
- "est_total_sec": 53.17,
- "est_speech_sec": 32.0,
+ "est_total_sec": 53.77,
+ "est_speech_sec": 42.33,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your week going?",
-   "est_sec": 1.65,
-   "gap_before": 0.56,
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
    "role": "greeting",
-   "phrasing": "greet_15",
+   "phrasing": "greet_18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "All good here.",
-   "est_sec": 1.03,
-   "gap_before": 0.47,
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.9,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_27"
+   "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "The guest list is getting out of hand. We're at almost two hundred people.",
-   "est_sec": 4.44,
-   "gap_before": 0.4,
+   "text": "Is it worth paying extra for a chef's table?",
+   "est_sec": 2.89,
+   "gap_before": 0.34,
    "event": "ordinary_request",
-   "block": "wedding_planning.ctx2"
+   "block": "restaurant_choice.dlg4"
   },
   {
    "speaker": "moshi",
-   "text": "That's a lot. Would you rather cut it down to close friends and family, or keep everyone and adjust the budget?",
-   "est_sec": 6.61,
-   "gap_before": 1.11,
+   "text": "It can be. You usually get dishes off the menu and you watch the kitchen work up close, which is a show in itself.",
+   "est_sec": 7.54,
+   "gap_before": 0.82,
    "role": "reply",
-   "block": "wedding_planning.ctx2",
+   "block": "restaurant_choice.dlg4",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Give me fifteen seconds. I'll know by then, so ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 0.97,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_27"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, no rush.",
-   "est_sec": 1.03,
-   "gap_before": 0.36,
-   "role": "ack",
-   "phrasing": "ack_10",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Actually, I'm ready now.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 13.09
-   },
-   "event": "return_cue",
-   "kind": "early_end",
-   "phrasing": "early_end_06"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, the guest list. Trim it down, or keep everyone and stretch the budget?",
-   "est_sec": 4.44,
-   "gap_before": 0.43,
-   "role": "resume",
-   "block": "wedding_planning.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Let's cut it. Close family and friends only.",
-   "est_sec": 2.58,
-   "gap_before": 2.12,
+   "text": "But is it loud? I'm going with my mum.",
+   "est_sec": 2.89,
+   "gap_before": 1.3,
    "event": "ordinary_request",
-   "block": "wedding_planning.ctx2"
+   "block": "restaurant_choice.dlg4"
   },
   {
    "speaker": "moshi",
-   "text": "A good rule is to only invite people you've seen in the last year or so.",
-   "est_sec": 5.06,
-   "gap_before": 1.55,
-   "role": "followup",
-   "block": "wedding_planning.ctx2",
+   "text": "It can be a bit noisy and hot, since you're right by the stoves. If she enjoys cooking, she'll probably love the action though.",
+   "est_sec": 7.54,
+   "gap_before": 1.05,
+   "role": "reply",
+   "block": "restaurant_choice.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "She watches cooking shows all day, so",
+   "est_sec": 2.27,
+   "gap_before": 0.37,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "restaurant_choice.dlg4"
+  },
+  {
+   "speaker": "user",
+   "text": "yeah, she'd probably be thrilled.",
+   "est_sec": 1.65,
+   "gap_before": 2.81,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then it sounds like a great gift. Ask whether you can chat with the chef, some are really happy to explain each course.",
+   "est_sec": 7.23,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "restaurant_choice.dlg4",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "How long does it usually take?",
+   "est_sec": 1.96,
+   "gap_before": 0.83,
+   "event": "ordinary_request",
+   "block": "restaurant_choice.dlg4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Plan for two and a half to three hours. Go with an empty stomach and no rush afterwards.",
+   "est_sec": 5.68,
+   "gap_before": 0.35,
+   "role": "reply",
+   "block": "restaurant_choice.dlg4",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

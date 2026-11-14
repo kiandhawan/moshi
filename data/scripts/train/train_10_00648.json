@@ -7,116 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "sleep"
+  "cars"
  ],
- "topic": "sleep",
+ "topic": "cars",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "cbc3add1f54546e6a4a1964bacb8b122",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_23",
-  "describe_instr_08",
-  "ack_01",
-  "describe_cue_01"
+  "greet_26",
+  "greet_ans_05"
  ],
  "block_ids": [
-  "sleep.opt2"
+  "cars.dlg3"
  ],
- "est_total_sec": 50.13,
- "est_speech_sec": 38.2,
+ "est_total_sec": 57.06,
+ "est_speech_sec": 43.88,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.72,
-   "role": "greeting",
-   "phrasing": "greet_22"
-  },
-  {
-   "speaker": "user",
-   "text": "Good, good. Thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.82,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_23"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm buying a new mattress and I've narrowed it down.",
-   "est_sec": 3.2,
-   "gap_before": 0.54,
-   "block": "sleep.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Please wait until I've gone through all the options.",
-   "est_sec": 2.89,
-   "gap_before": 0.46,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_08"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure.",
-   "est_sec": 0.41,
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
    "gap_before": 0.44,
-   "role": "ack",
-   "phrasing": "ack_01"
+   "role": "greeting",
+   "phrasing": "greet_26"
   },
   {
    "speaker": "user",
-   "text": "One is a firm memory foam mattress that a lot of reviews say is great for back pain.",
-   "est_sec": 5.68,
-   "gap_before": 0.91,
-   "block": "sleep.opt2",
-   "event": "distractor",
-   "kind": "pause"
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.59,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "Another is a soft pillow top spring mattress, really cozy, but it might sag after a few years.",
-   "est_sec": 5.68,
-   "gap_before": 2.25,
-   "block": "sleep.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a hybrid with springs and foam, medium firm, and a bit more expensive.",
+   "text": "How often should I really change the oil? My dad says every three thousand miles.",
    "est_sec": 4.75,
-   "gap_before": 2.8,
-   "block": "sleep.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all of them. What do you think?",
-   "est_sec": 2.89,
-   "gap_before": 1.07,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_01"
+   "gap_before": 0.24,
+   "event": "ordinary_request",
+   "block": "cars.dlg3"
   },
   {
    "speaker": "moshi",
-   "text": "Do you sleep on your side, back or stomach? Side sleepers usually like something softer, so the hybrid could be ideal. If you have back pain, I'd try the firm foam one.",
-   "est_sec": 10.02,
-   "gap_before": 0.42,
-   "role": "resume",
-   "block": "sleep.opt2"
+   "text": "That used to be the rule, but most modern cars go much longer, often around five to ten thousand miles. Your manual will give the exact interval.",
+   "est_sec": 8.47,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "cars.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "Huh. So I've been wasting money.",
+   "est_sec": 1.96,
+   "gap_before": 1.3,
+   "event": "ordinary_request",
+   "block": "cars.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Possibly a little. Though if you do lots of short trips or tow things, changing it more often isn't a bad idea.",
+   "est_sec": 6.92,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "cars.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "I do mostly drive to the shops and back.",
+   "est_sec": 2.89,
+   "gap_before": 2.6,
+   "event": "ordinary_request",
+   "block": "cars.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Short trips are harder on oil, so stick to the lower end of the range.",
+   "est_sec": 4.75,
+   "gap_before": 0.32,
+   "role": "reply",
+   "block": "cars.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "Got it. And can I just",
+   "est_sec": 1.96,
+   "gap_before": 1.05,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "cars.dlg3"
+  },
+  {
+   "speaker": "user",
+   "text": "do it myself?",
+   "est_sec": 1.03,
+   "gap_before": 2.44,
+   "event": "ordinary_request",
+   "block": "cars.dlg3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can, if you have ramps and somewhere to dispose of the old oil. Many people find a garage isn't much more expensive.",
+   "est_sec": 7.23,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "cars.dlg3"
   }
  ]
 }

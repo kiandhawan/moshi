@@ -7,6 +7,8 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "side_conversation",
@@ -15,177 +17,165 @@
   "extra_question"
  ],
  "topics": [
-  "personal_finance",
-  "weekend_plans"
+  "cleaning",
+  "cooking"
  ],
- "topic": "personal_finance",
+ "topic": "cleaning",
  "voices": {
-  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
-  "friend": "3fdb457debb744ca9cfe9e2ce99a2deb",
+  "user": "6d7a45828f6a432c9233cd93bb93e5be",
+  "friend": "705690224f264386b87fb598083ab022",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Ben",
- "friend_name_id": "name_11",
+ "friend_name": "Ryan",
+ "friend_name_id": "name_01",
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_08",
-  "side_instr_26",
-  "ack_08",
-  "dq_23",
-  "side_cue_20"
+  "greet_23",
+  "greet_ans_02",
+  "side_instr_25",
+  "dq_31",
+  "side_cue_02"
  ],
  "block_ids": [
-  "personal_finance.ctx3",
-  "weekend_plans.side1"
+  "cleaning.ctx11",
+  "cooking.side6",
+  "dq_31"
  ],
- "est_total_sec": 60.98,
- "est_speech_sec": 44.27,
+ "est_total_sec": 75.22,
+ "est_speech_sec": 57.19,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
+   "text": "Hey! How are you feeling?",
    "est_sec": 1.65,
-   "gap_before": 0.48,
+   "gap_before": 0.47,
    "role": "greeting",
-   "phrasing": "greet_02"
+   "phrasing": "greet_23"
   },
   {
    "speaker": "user",
-   "text": "I'm great, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.59,
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.89,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
+   "phrasing": "greet_ans_02"
   },
   {
    "speaker": "user",
-   "text": "I'm paying for way too many subscriptions.",
-   "est_sec": 2.27,
+   "text": "My home desk is buried under papers. Bills, receipts, letters from school.",
+   "est_sec": 3.82,
+   "gap_before": 0.59,
+   "event": "ordinary_request",
+   "block": "cleaning.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Two ways to go. Scan everything and go mostly paperless, or set up a small filing box with folders?",
+   "est_sec": 5.99,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "cleaning.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang tight, my dad is calling me over. Don't talk until I say I'm back.",
+   "est_sec": 4.75,
    "gap_before": 0.57,
-   "event": "ordinary_request",
-   "block": "personal_finance.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That adds up fast. How many are we talking?",
-   "est_sec": 2.89,
-   "gap_before": 1.14,
-   "role": "reply",
-   "block": "personal_finance.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Three streaming services, a gym, and some app I forgot about.",
-   "est_sec": 3.51,
-   "gap_before": 0.42,
-   "event": "ordinary_request",
-   "block": "personal_finance.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Which one could you cancel today without really missing it?",
-   "est_sec": 3.2,
-   "gap_before": 0.85,
-   "role": "reply",
-   "block": "personal_finance.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, my friend and I need to figure something out. Wait until I'm back, okay?",
-   "est_sec": 5.06,
-   "gap_before": 0.33,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_26"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.32,
-   "role": "ack",
-   "phrasing": "ack_08"
+   "phrasing": "side_instr_25"
   },
   {
    "speaker": "user",
-   "text": "Is your brother still coming over?",
-   "est_sec": 1.96,
-   "gap_before": 1.44,
+   "text": "Hey Ryan, how long has that chicken been out of the freezer?",
+   "est_sec": 3.82,
+   "gap_before": 0.95,
    "event": "distractor",
    "kind": "friend_question",
-   "phrasing": "dq_23"
+   "block": "cooking.side6"
   },
   {
    "speaker": "friend",
-   "text": "He said around eight.",
-   "est_sec": 1.34,
-   "gap_before": 1.23,
-   "phrasing": "dq_23"
+   "text": "Since this morning? Around eight, I think.",
+   "est_sec": 2.27,
+   "gap_before": 0.79,
+   "block": "cooking.side6"
   },
   {
    "speaker": "user",
-   "text": "Ben, are you free on Sunday?",
-   "est_sec": 1.96,
-   "gap_before": 3.04,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "weekend_plans.side1"
+   "text": "So it's still frozen in the middle, isn't it.",
+   "est_sec": 2.89,
+   "gap_before": 0.51,
+   "block": "cooking.side6"
   },
   {
    "speaker": "friend",
-   "text": "In the afternoon, yeah. Morning I've got football.",
-   "est_sec": 2.58,
-   "gap_before": 0.31,
-   "block": "weekend_plans.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "There's a food festival in the park. Want to go?",
-   "est_sec": 3.2,
-   "gap_before": 0.49,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "weekend_plans.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Oh, the one with the dumplings? I went last year, it was amazing.",
+   "text": "Probably. Sorry, I meant to take it out last night and completely forgot.",
    "est_sec": 4.13,
-   "gap_before": 0.55,
-   "block": "weekend_plans.side1"
+   "gap_before": 1.12,
+   "block": "cooking.side6"
   },
   {
    "speaker": "user",
-   "text": "That's the one. Around two?",
-   "est_sec": 1.65,
-   "gap_before": 1.18,
+   "text": "It's fine, I'll put it in cold water for an hour. Do you mind if we eat a bit later?",
+   "est_sec": 6.3,
+   "gap_before": 1.05,
    "event": "distractor",
    "kind": "friend_question",
-   "block": "weekend_plans.side1"
+   "block": "cooking.side6"
   },
   {
    "speaker": "friend",
-   "text": "Two's perfect. I'll come hungry.",
-   "est_sec": 1.65,
-   "gap_before": 0.62,
-   "block": "weekend_plans.side1"
+   "text": "Not at all, I had a big lunch. Want me to start chopping the onions in the meantime?",
+   "est_sec": 5.68,
+   "gap_before": 1.13,
+   "block": "cooking.side6"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'm free again.",
+   "text": "Yes please, three of them. Thin slices, not chunks.",
+   "est_sec": 2.89,
+   "gap_before": 3.24,
+   "block": "cooking.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Thin slices. Got it, chef.",
+   "est_sec": 1.65,
+   "gap_before": 1.06,
+   "block": "cooking.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Ryan, is the oven still on?",
+   "est_sec": 1.96,
+   "gap_before": 0.57,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_31"
+  },
+  {
+   "speaker": "friend",
+   "text": "No, I turned it off after the bread came out.",
+   "est_sec": 3.2,
+   "gap_before": 1.06,
+   "phrasing": "dq_31"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back now.",
    "est_sec": 1.34,
-   "gap_before": 0.72,
+   "gap_before": 0.75,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_20"
+   "phrasing": "side_cue_02"
   },
   {
    "speaker": "moshi",
-   "text": "No problem. Did you figure out which subscription you could drop first?",
-   "est_sec": 3.82,
-   "gap_before": 0.93,
+   "text": "Okay. So, the pile of bills and letters. Which system?",
+   "est_sec": 3.2,
+   "gap_before": 0.68,
    "role": "resume",
-   "block": "personal_finance.ctx3"
+   "block": "cleaning.ctx11"
   }
  ]
 }

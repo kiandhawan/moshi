@@ -7,108 +7,169 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "laptop_buying"
+  "home_office",
+  "restaurant_choice"
  ],
- "topic": "laptop_buying",
+ "topic": "home_office",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
-  "friend": null,
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": "933563129e564b19a115bedd57b7406a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Sofia",
+ "friend_name_id": "name_12",
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_12",
-  "describe_instr_06",
-  "describe_cue_09"
+  "greet_09",
+  "greet_ans_24",
+  "side_instr_03",
+  "side_cue_09"
  ],
  "block_ids": [
-  "laptop_buying.opt2"
+  "home_office.ctx14",
+  "restaurant_choice.side6"
  ],
- "est_total_sec": 51.55,
- "est_speech_sec": 41.2,
+ "est_total_sec": 71.36,
+ "est_speech_sec": 53.06,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.72,
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.51,
    "role": "greeting",
-   "phrasing": "greet_03",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Okay, I guess.",
-   "est_sec": 1.03,
-   "gap_before": 0.71,
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.56,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_12"
+   "phrasing": "greet_ans_24"
   },
   {
    "speaker": "user",
-   "text": "My mom wants a new laptop and asked me to help her decide.",
+   "text": "My teenage son wants to use my desk for gaming in the evenings.",
    "est_sec": 4.13,
-   "gap_before": 0.23,
-   "block": "laptop_buying.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Don't comment yet, let me describe all of them first.",
-   "est_sec": 3.2,
-   "gap_before": 0.84,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_06"
-  },
-  {
-   "speaker": "user",
-   "text": "One is a simple Chromebook that's cheap and easy, mostly for email and video calls.",
-   "est_sec": 4.75,
-   "gap_before": 0.66,
-   "block": "laptop_buying.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a regular Windows laptop with a big screen, which is what she's used to.",
-   "est_sec": 5.06,
-   "gap_before": 1.8,
-   "block": "laptop_buying.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a tablet with a keyboard cover, smaller but really easy to carry around.",
-   "est_sec": 4.75,
-   "gap_before": 2.72,
-   "block": "laptop_buying.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "So, that's all of them. Tell me what you think.",
-   "est_sec": 3.2,
-   "gap_before": 0.85,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_09"
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "block": "home_office.ctx14"
   },
   {
    "speaker": "moshi",
-   "text": "If she mostly does email and video calls, the Chromebook is simple and hard to mess up. The Windows laptop is familiar, which really matters for some people. The tablet is handy, but typing long emails on it can be a little cramped.",
-   "est_sec": 13.43,
-   "gap_before": 0.32,
+   "text": "So, sharing the desk. Would you rather split the hours, or put a second small desk somewhere for him?",
+   "est_sec": 5.99,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "home_office.ctx14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, Sofia needs me for a sec. Please stay quiet until I come back to you.",
+   "est_sec": 5.06,
+   "gap_before": 1.23,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Sofia, are you actually going to eat anything or just steal my fries again?",
+   "est_sec": 4.44,
+   "gap_before": 1.1,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "restaurant_choice.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'm not that hungry. Just a few.",
+   "est_sec": 2.27,
+   "gap_before": 0.6,
+   "block": "restaurant_choice.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "You say that every time and then the whole plate is gone.",
+   "est_sec": 3.82,
+   "gap_before": 1.16,
+   "block": "restaurant_choice.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "That's slander. Okay, it's true. Order a large then?",
+   "est_sec": 2.89,
+   "gap_before": 0.49,
+   "block": "restaurant_choice.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, large fries and two milkshakes. Chocolate for you?",
+   "est_sec": 2.89,
+   "gap_before": 1.64,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "restaurant_choice.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Strawberry, please. I'm turning over a new leaf.",
+   "est_sec": 2.58,
+   "gap_before": 3.27,
+   "block": "restaurant_choice.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Strawberry. Wow. Who are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.66,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "restaurant_choice.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back. Let's keep going.",
+   "est_sec": 1.96,
+   "gap_before": 1.22,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_09"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. Right, timetable for the desk, or a desk of his own?",
+   "est_sec": 4.13,
+   "gap_before": 1.05,
    "role": "resume",
-   "block": "laptop_buying.opt2",
+   "block": "home_office.ctx14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "We'll share. After seven it's his.",
+   "est_sec": 1.96,
+   "gap_before": 0.52,
+   "event": "ordinary_request",
+   "block": "home_office.ctx14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That can work. Just make sure your work stuff is logged out and put away before he takes over.",
+   "est_sec": 5.99,
+   "gap_before": 1.13,
+   "role": "followup",
+   "block": "home_office.ctx14",
    "reference_only": true
   }
  ],

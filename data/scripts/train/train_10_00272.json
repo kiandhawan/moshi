@@ -7,90 +7,155 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "sleep"
+  "movies",
+  "travel_planning"
  ],
- "wait_sec": 10,
- "deadline": {
-  "after_turn": 4,
-  "sec": 10
- },
- "topic": "sleep",
+ "topic": "movies",
  "voices": {
-  "user": "2680da81de8348a68e1f4dbaa79272f1",
-  "friend": null,
+  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
+  "friend": "676f1654c4f747a69a5921ad94886fa1",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Hannah",
+ "friend_name_id": "name_14",
  "phrasing_ids": [
-  "greet_23",
-  "greet_ans_25",
-  "think_instr_28"
+  "greet_20",
+  "greet_ans_07",
+  "side_instr_20",
+  "side_cue_25"
  ],
  "block_ids": [
-  "sleep.ctx2"
+  "movies.ctx3",
+  "travel_planning.side2"
  ],
- "est_total_sec": 37.25,
- "est_speech_sec": 21.99,
+ "est_total_sec": 70.47,
+ "est_speech_sec": 56.68,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How are you feeling?",
-   "est_sec": 1.65,
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
    "gap_before": 0.42,
    "role": "greeting",
-   "phrasing": "greet_23"
+   "phrasing": "greet_20"
   },
   {
    "speaker": "user",
-   "text": "I'm well, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.59,
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.86,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_25"
+   "phrasing": "greet_ans_07"
   },
   {
    "speaker": "user",
-   "text": "My partner snores and I'm waking up three times a night.",
-   "est_sec": 3.51,
-   "gap_before": 0.48,
+   "text": "There's a new sci-fi film out. Should I see it in the cinema or wait for streaming?",
+   "est_sec": 5.37,
+   "gap_before": 0.55,
    "event": "ordinary_request",
-   "block": "sleep.ctx2"
+   "block": "movies.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "That's rough. Do you want to try earplugs or a white noise machine first, or talk to your partner about seeing a doctor?",
+   "text": "Big sci-fi often looks amazing on a huge screen. How much do you care about the visuals compared to watching on your couch?",
    "est_sec": 7.23,
-   "gap_before": 0.65,
+   "gap_before": 1.11,
    "role": "reply",
-   "block": "sleep.ctx2"
+   "block": "movies.ctx3"
   },
   {
    "speaker": "user",
-   "text": "I'll need ten seconds to think. Ask me again after that.",
-   "est_sec": 3.51,
-   "gap_before": 1.39,
+   "text": "Let me talk to Hannah for a bit, so please stay quiet until I say I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 1.07,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 10,
-   "phrasing": "think_instr_28"
+   "kind": "side_conversation",
+   "phrasing": "side_instr_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Do you care if we stay in a hotel or would you rather rent an apartment?",
+   "est_sec": 5.06,
+   "gap_before": 0.65,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Apartment, if it has a kitchen. Eating out every night gets expensive.",
+   "est_sec": 3.82,
+   "gap_before": 1.29,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "True. But hotels usually have breakfast included.",
+   "est_sec": 2.27,
+   "gap_before": 0.75,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "We can buy croissants. Honestly I just want a balcony.",
+   "est_sec": 3.2,
+   "gap_before": 0.95,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Ha, okay, balcony and kitchen. I'll filter for that.",
+   "est_sec": 2.89,
+   "gap_before": 0.45,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "And not too far from the train station please, with all our bags.",
+   "est_sec": 4.13,
+   "gap_before": 1.31,
+   "block": "travel_planning.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, that took a while. I'm back.",
+   "est_sec": 2.27,
+   "gap_before": 1.13,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_25"
   },
   {
    "speaker": "moshi",
-   "text": "So, what do you want to try first? Earplugs and white noise, or the doctor conversation?",
-   "est_sec": 5.06,
+   "text": "Alright. You were deciding whether to see the sci-fi film in the cinema.",
+   "est_sec": 4.13,
+   "gap_before": 0.37,
    "role": "resume",
-   "block": "sleep.ctx2",
-   "anchor": {
-    "turn": 4,
-    "offset": 10.23
-   }
+   "block": "movies.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Cinema. If I wait I'll get spoiled anyway.",
+   "est_sec": 2.58,
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "block": "movies.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "True. Try a weekday evening, it's usually quieter and sometimes cheaper.",
+   "est_sec": 3.51,
+   "gap_before": 0.85,
+   "role": "followup",
+   "block": "movies.ctx3"
   }
  ]
 }

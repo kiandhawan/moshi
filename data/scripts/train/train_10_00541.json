@@ -7,99 +7,117 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
  "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "cars"
+  "music"
  ],
- "wait_sec": 60,
+ "wait_sec": 45,
  "deadline": {
   "after_turn": 4,
-  "sec": 60
+  "sec": 45
  },
- "topic": "cars",
+ "topic": "music",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "cbc3add1f54546e6a4a1964bacb8b122",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_02",
-  "think_instr_22",
+  "greet_13",
+  "greet_ans_11",
+  "think_instr_10",
   "ack_03"
  ],
  "block_ids": [
-  "cars.ctx3"
+  "music.ctx9"
  ],
- "est_total_sec": 83.22,
- "est_speech_sec": 18.37,
+ "est_total_sec": 82.92,
+ "est_speech_sec": 33.14,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
-   "est_sec": 1.65,
-   "gap_before": 0.67,
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.68,
    "role": "greeting",
-   "phrasing": "greet_02"
+   "phrasing": "greet_13"
   },
   {
    "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.64,
+   "text": "Not too bad.",
+   "est_sec": 1.03,
+   "gap_before": 0.38,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
+   "phrasing": "greet_ans_11"
   },
   {
    "speaker": "user",
-   "text": "I'm finally buying my first car.",
-   "est_sec": 1.96,
+   "text": "Our garage band needs a drummer. We've been jamming with a drum machine for months.",
+   "est_sec": 4.75,
    "gap_before": 0.33,
    "event": "ordinary_request",
-   "block": "cars.ctx3"
+   "block": "music.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Congratulations! Have you thought about whether you want something new with a warranty, or a cheaper used one?",
-   "est_sec": 5.68,
-   "gap_before": 1.53,
+   "text": "Time for a human. Would you ask that quiet guy from your work who said he used to drum, or put an ad up in the local music shop?",
+   "est_sec": 9.09,
+   "gap_before": 0.5,
    "role": "reply",
-   "block": "cars.ctx3"
+   "block": "music.ctx9"
   },
   {
    "speaker": "user",
-   "text": "Not sure yet. Check back with me in sixty seconds.",
-   "est_sec": 3.2,
+   "text": "Um, give me forty-five seconds to think it over, then ask me.",
+   "est_sec": 3.82,
    "gap_before": 1.45,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 60,
-   "phrasing": "think_instr_22"
+   "wait_sec": 45,
+   "phrasing": "think_instr_10"
   },
   {
    "speaker": "moshi",
    "text": "Sure, take your time.",
    "est_sec": 1.34,
-   "gap_before": 0.22,
+   "gap_before": 0.42,
    "role": "ack",
    "phrasing": "ack_03"
   },
   {
    "speaker": "moshi",
-   "text": "So, new with a warranty, or used and cheaper?",
-   "est_sec": 2.89,
+   "text": "Have you picked how to find your drummer?",
+   "est_sec": 2.58,
    "role": "resume",
-   "block": "cars.ctx3",
+   "block": "music.ctx9",
    "anchor": {
     "turn": 4,
-    "offset": 60.07
+    "offset": 45.26
    }
+  },
+  {
+   "speaker": "user",
+   "text": "The coworker. At least I know he's not a weirdo.",
+   "est_sec": 3.2,
+   "gap_before": 0.5,
+   "event": "ordinary_request",
+   "block": "music.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Invite him for one casual jam, no pressure, and see how it feels.",
+   "est_sec": 4.44,
+   "gap_before": 0.52,
+   "role": "followup",
+   "block": "music.ctx9"
   }
  ]
 }

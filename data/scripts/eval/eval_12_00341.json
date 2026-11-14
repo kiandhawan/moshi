@@ -7,121 +7,148 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "restaurant_choice"
+  "learning_language"
  ],
- "topic": "restaurant_choice",
+ "topic": "learning_language",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_30",
-  "describe_instr_15",
-  "ack_10",
-  "describe_cue_09"
+  "greet_18",
+  "greet_ans_21"
  ],
  "block_ids": [
-  "restaurant_choice.opt1"
+  "learning_language.dlg8"
  ],
- "est_total_sec": 51.49,
- "est_speech_sec": 40.68,
+ "est_total_sec": 48.69,
+ "est_speech_sec": 36.33,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.54,
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.7,
    "role": "greeting",
-   "phrasing": "greet_03",
+   "phrasing": "greet_18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.65,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm picking a place for my team dinner on Friday, can you help?",
-   "est_sec": 4.13,
-   "gap_before": 0.53,
-   "block": "restaurant_choice.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to describe all the options before I hear your opinion.",
-   "est_sec": 3.82,
-   "gap_before": 0.78,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_15"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, no rush.",
+   "text": "I'm okay, thanks.",
    "est_sec": 1.03,
+   "gap_before": 0.57,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_21"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to Rome next week. How do I ask for the bill in Italian?",
+   "est_sec": 4.75,
    "gap_before": 0.56,
-   "role": "ack",
-   "phrasing": "ack_10",
+   "event": "ordinary_request",
+   "block": "learning_language.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Il conto, per favore. That means the bill, please.",
+   "est_sec": 2.89,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "learning_language.dlg8",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "The first one is an Italian place downtown, great pasta, but it's quite noisy on weekends.",
-   "est_sec": 5.06,
-   "gap_before": 1.13,
-   "block": "restaurant_choice.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a sushi restaurant near the office with private rooms, but it's pretty expensive.",
-   "est_sec": 4.75,
-   "gap_before": 1.22,
-   "block": "restaurant_choice.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a casual barbecue joint with long picnic tables and a big patio.",
-   "est_sec": 5.37,
-   "gap_before": 1.9,
-   "block": "restaurant_choice.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "So, that's all of them. Tell me what you think.",
-   "est_sec": 3.2,
-   "gap_before": 1.0,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_09"
+   "text": "Il conto. Easy enough. What about asking for a table for two?",
+   "est_sec": 3.82,
+   "gap_before": 0.67,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg8"
   },
   {
    "speaker": "moshi",
-   "text": "I'd lean toward the barbecue place, long tables are perfect for a group and the vibe is easygoing. The Italian spot sounds tasty, but noise on a Friday could make conversation hard.",
-   "est_sec": 10.02,
-   "gap_before": 1.0,
-   "role": "resume",
-   "block": "restaurant_choice.opt1",
+   "text": "Un tavolo per due, per favore.",
+   "est_sec": 1.96,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "learning_language.dlg8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "And if I want to say the food was amazing?",
+   "est_sec": 3.2,
+   "gap_before": 0.73,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Era buonissimo. It was delicious. Waiters love hearing that.",
+   "est_sec": 2.89,
+   "gap_before": 0.51,
+   "role": "reply",
+   "block": "learning_language.dlg8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Era buonissimo. Okay, I'll practise that one.",
+   "est_sec": 2.27,
+   "gap_before": 0.93,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "learning_language.dlg8"
+  },
+  {
+   "speaker": "user",
+   "text": "What if they reply really fast and I'm lost?",
+   "est_sec": 2.89,
+   "gap_before": 2.25,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You can say, piano, per favore, which means slowly please. Or just smile and say grazie.",
+   "est_sec": 5.06,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "learning_language.dlg8",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Grazie I already know.",
+   "est_sec": 1.34,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "learning_language.dlg8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect, you've got the essentials. Enjoy Rome.",
+   "est_sec": 2.27,
+   "gap_before": 0.9,
+   "role": "reply",
+   "block": "learning_language.dlg8",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

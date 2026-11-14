@@ -7,181 +7,134 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [
-  "extra_question"
+  "wait_like"
  ],
  "topics": [
-  "cleaning",
-  "studying"
+  "home_repair"
  ],
- "topic": "cleaning",
+ "topic": "home_repair",
  "voices": {
-  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
-  "friend": "9a9cf47702da476aa4629e2506d4a857",
+  "user": "536d3a5e000945adb7038665781a4aca",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Ben",
- "friend_name_id": "name_11",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_19",
-  "greet_ans_11",
-  "side_instr_28",
-  "dq_07",
-  "side_cue_10"
+  "greet_22",
+  "greet_ans_02",
+  "waitlike_02"
  ],
  "block_ids": [
-  "cleaning.ctx2",
-  "studying.side3"
+  "home_repair.dlg24"
  ],
- "est_total_sec": 75.19,
- "est_speech_sec": 56.05,
+ "est_total_sec": 61.75,
+ "est_speech_sec": 48.32,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how's everything with you?",
+   "text": "Hello, how are things going?",
    "est_sec": 1.65,
-   "gap_before": 0.53,
+   "gap_before": 0.77,
    "role": "greeting",
-   "phrasing": "greet_19"
+   "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "Not too bad.",
-   "est_sec": 1.03,
-   "gap_before": 0.87,
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.98,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_11"
+   "phrasing": "greet_ans_02"
   },
   {
    "speaker": "user",
-   "text": "My closet is overflowing. I can't find anything in there.",
-   "est_sec": 3.2,
-   "gap_before": 0.31,
-   "event": "ordinary_request",
-   "block": "cleaning.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A good sort will help. For the stuff you don't wear anymore, do you want to donate it, sell it online, or just store it in boxes for now?",
-   "est_sec": 9.09,
-   "gap_before": 0.64,
-   "role": "reply",
-   "block": "cleaning.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait for me, I need to talk to Ben about something. Don't say a word until I'm back.",
-   "est_sec": 5.68,
-   "gap_before": 2.09,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_28"
-  },
-  {
-   "speaker": "user",
-   "text": "What do you want for dinner?",
-   "est_sec": 1.96,
-   "gap_before": 0.65,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_07"
-  },
-  {
-   "speaker": "friend",
-   "text": "I don't mind, maybe pasta?",
-   "est_sec": 1.65,
-   "gap_before": 1.13,
-   "phrasing": "dq_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Ben, when's your last exam?",
-   "est_sec": 1.65,
-   "gap_before": 0.93,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "studying.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "The twentieth. Statistics, the worst one.",
-   "est_sec": 1.96,
-   "gap_before": 1.23,
-   "block": "studying.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Same here, mine's the twenty-second. Want to quiz each other some evening?",
+   "text": "My front step is crumbling. Is that a concrete job or what?",
    "est_sec": 3.82,
-   "gap_before": 1.1,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "studying.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Yes please. I'm hopeless at the probability stuff.",
-   "est_sec": 2.58,
-   "gap_before": 1.24,
-   "block": "studying.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm hopeless at all of it, so we'll be even.",
-   "est_sec": 3.2,
-   "gap_before": 0.79,
-   "block": "studying.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Tuesday then? After dinner?",
-   "est_sec": 1.34,
-   "gap_before": 1.17,
-   "block": "studying.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Tuesday works. I'll bring snacks.",
-   "est_sec": 1.65,
-   "gap_before": 1.01,
-   "block": "studying.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Sorry, I'm back now. Go ahead.",
-   "est_sec": 1.96,
-   "gap_before": 1.45,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_10"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem. You were deciding whether to donate, sell or store your old clothes.",
-   "est_sec": 4.44,
-   "gap_before": 0.6,
-   "role": "resume",
-   "block": "cleaning.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Donate. I don't have the patience to sell stuff.",
-   "est_sec": 2.89,
-   "gap_before": 1.29,
+   "gap_before": 0.34,
    "event": "ordinary_request",
-   "block": "cleaning.ctx2"
+   "block": "home_repair.dlg24"
   },
   {
    "speaker": "moshi",
-   "text": "Easy and kind. Bag it up today and drop it off this week before it creeps back into the closet.",
+   "text": "Sounds like it. Is it just the edges breaking off, or are there big chunks missing?",
+   "est_sec": 5.06,
+   "gap_before": 0.53,
+   "role": "reply",
+   "block": "home_repair.dlg24"
+  },
+  {
+   "speaker": "user",
+   "text": "Mostly the front edge. Bits come off when I sweep.",
+   "est_sec": 3.2,
+   "gap_before": 1.31,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then a concrete patching mix should do it. You can buy small bags that only need water.",
+   "est_sec": 5.37,
+   "gap_before": 1.56,
+   "role": "reply",
+   "block": "home_repair.dlg24"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, can you say that again?",
+   "est_sec": 2.27,
+   "gap_before": 0.89,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_02",
+   "block": "home_repair.dlg24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Then a concrete patching mix should do it. You can buy small bags that only need water.",
+   "est_sec": 5.99,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "home_repair.dlg24"
+  },
+  {
+   "speaker": "user",
+   "text": "Do I need to build a frame thing?",
+   "est_sec": 2.58,
+   "gap_before": 0.94,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For an edge, yes, a simple board held in front of it as a mold. Brush off loose bits first and wet the old concrete.",
+   "est_sec": 7.85,
+   "gap_before": 0.33,
+   "role": "reply",
+   "block": "home_repair.dlg24"
+  },
+  {
+   "speaker": "user",
+   "text": "How long before I can walk on it?",
+   "est_sec": 2.58,
+   "gap_before": 3.0,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Give it at least a day, ideally two. Put a little sign up so the postman doesn't step on it.",
    "est_sec": 6.3,
-   "gap_before": 0.61,
-   "role": "followup",
-   "block": "cleaning.ctx2"
+   "gap_before": 0.72,
+   "role": "reply",
+   "block": "home_repair.dlg24"
   }
  ]
 }

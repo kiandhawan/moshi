@@ -7,120 +7,118 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "coffee"
+  "books"
  ],
- "topic": "coffee",
+ "topic": "books",
  "voices": {
-  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_17"
+  "greet_20",
+  "greet_ans_01",
+  "describe_instr_17",
+  "describe_cue_13"
  ],
  "block_ids": [
-  "coffee.dlg1"
+  "books.opt5"
  ],
- "est_total_sec": 49.43,
- "est_speech_sec": 36.75,
+ "est_total_sec": 60.43,
+ "est_speech_sec": 47.81,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
-   "est_sec": 1.65,
-   "gap_before": 0.62,
-   "role": "greeting",
-   "phrasing": "greet_02"
-  },
-  {
-   "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.95,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
-  },
-  {
-   "speaker": "user",
-   "text": "What's the difference between a latte and a flat white?",
-   "est_sec": 3.2,
-   "gap_before": 0.28,
-   "event": "ordinary_request",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A flat white has less milk and a thinner layer of foam, so it tastes stronger. A latte is bigger and milkier.",
-   "est_sec": 6.92,
-   "gap_before": 0.87,
-   "role": "reply",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "And a cappuccino?",
-   "est_sec": 1.03,
-   "gap_before": 0.74,
-   "event": "ordinary_request",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A cappuccino has a thick layer of foam on top, and it's usually smaller than a latte.",
-   "est_sec": 5.37,
-   "gap_before": 0.92,
-   "role": "reply",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "So if I want something",
-   "est_sec": 1.65,
-   "gap_before": 1.16,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "not too milky but still creamy?",
-   "est_sec": 1.96,
-   "gap_before": 1.54,
-   "event": "ordinary_request",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A flat white is probably your best bet. Strong coffee flavour with a smooth, velvety texture.",
-   "est_sec": 5.06,
-   "gap_before": 1.08,
-   "role": "reply",
-   "block": "coffee.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm going to order one tomorrow and see.",
+   "text": "Hey, good to have you here. How are you?",
    "est_sec": 2.89,
-   "gap_before": 1.83,
-   "event": "ordinary_request",
-   "block": "coffee.dlg1"
+   "gap_before": 0.79,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I've got a long flight next week and I can only fit two of these in my bag.",
+   "est_sec": 5.68,
+   "gap_before": 0.32,
+   "block": "books.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me finish describing every option before you respond.",
+   "est_sec": 2.89,
+   "gap_before": 0.6,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_17"
+  },
+  {
+   "speaker": "user",
+   "text": "My cousin lent me a huge historical novel about a shipbuilding family, nearly a thousand pages.",
+   "est_sec": 5.06,
+   "gap_before": 1.13,
+   "block": "books.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a short funny memoir by a chef about working in terrible restaurants.",
+   "est_sec": 4.13,
+   "gap_before": 1.89,
+   "block": "books.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "I also have a book of crossword puzzles, which is not reading exactly but it kills time.",
+   "est_sec": 5.37,
+   "gap_before": 2.46,
+   "block": "books.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And a travel guide for the city I'm going to, which I really should read before I land.",
+   "est_sec": 5.68,
+   "gap_before": 1.81,
+   "block": "books.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 0.52,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
   },
   {
    "speaker": "moshi",
-   "text": "Enjoy it. If it's too strong, you can always ask for an extra splash of milk.",
-   "est_sec": 5.06,
-   "gap_before": 1.19,
-   "role": "reply",
-   "block": "coffee.dlg1"
+   "text": "Read the travel guide on the flight out, since you'll actually need it when you land. Then pair it with the chef memoir, it's light and funny for when you're tired. The thousand page novel would eat half your bag.",
+   "est_sec": 12.5,
+   "gap_before": 0.82,
+   "role": "resume",
+   "block": "books.opt5"
   }
  ]
 }

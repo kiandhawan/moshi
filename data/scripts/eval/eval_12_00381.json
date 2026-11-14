@@ -7,185 +7,202 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "side_conversation",
  "wait_type": "side_conversation",
  "conditions": [
-  "extra_question"
+  "near_miss"
  ],
  "topics": [
-  "family_visit",
-  "laptop_buying"
+  "cycling",
+  "cycling"
  ],
- "topic": "family_visit",
+ "topic": "cycling",
  "voices": {
   "user": "08b4100b4c3747fe84ed8b57d26a95ba",
   "friend": "ca1a4fbf6702400a863d60be2fe8062d",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Zoe",
- "friend_name_id": "name_24",
+ "friend_name": "Maya",
+ "friend_name_id": "name_03",
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_03",
+  "greet_15",
+  "greet_ans_09",
   "side_instr_12",
-  "ack_11",
-  "dq_15",
-  "side_cue_24"
+  "ack_06",
+  "dn_80",
+  "side_cue_18"
  ],
  "block_ids": [
-  "family_visit.ctx1",
-  "laptop_buying.side3"
+  "cycling.ctx15",
+  "cycling.side4",
+  "dn_80"
  ],
- "est_total_sec": 71.4,
- "est_speech_sec": 50.78,
+ "est_total_sec": 81.96,
+ "est_speech_sec": 59.97,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.68,
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.49,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Doing okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.78,
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.92,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_03"
+   "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "My parents are staying with us next week and our apartment is tiny.",
-   "est_sec": 4.13,
-   "gap_before": 0.39,
+   "text": "My boyfriend just started cycling and he's way slower than me.",
+   "est_sec": 3.51,
+   "gap_before": 0.36,
    "event": "ordinary_request",
-   "block": "family_visit.ctx1"
+   "block": "cycling.ctx15"
   },
   {
    "speaker": "moshi",
-   "text": "That can be tricky. Would you give them your bedroom and take the couch, or book them a hotel nearby?",
-   "est_sec": 6.3,
-   "gap_before": 1.37,
+   "text": "Ah, mismatched pace. Would you enjoy slower rides together, or would you rather do your own fast rides and meet up for some easy ones?",
+   "est_sec": 7.85,
+   "gap_before": 1.14,
    "role": "reply",
-   "block": "family_visit.ctx1",
+   "block": "cycling.ctx15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hold on, Zoe just called my name. Please wait and stay silent until I'm back.",
+   "text": "Hold on, Maya just called my name. Please wait and stay silent until I'm back.",
    "est_sec": 4.75,
-   "gap_before": 1.33,
+   "gap_before": 1.17,
    "event": "instruction",
    "kind": "side_conversation",
    "phrasing": "side_instr_12"
   },
   {
    "speaker": "moshi",
-   "text": "Alright.",
-   "est_sec": 0.41,
-   "gap_before": 0.52,
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.4,
    "role": "ack",
-   "phrasing": "ack_11",
+   "phrasing": "ack_06",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Zoe, can you grab me a glass of water?",
-   "est_sec": 2.89,
-   "gap_before": 1.19,
+   "text": "I'm here every Thursday if you want to join the run.",
+   "est_sec": 3.51,
+   "gap_before": 1.39,
    "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_15"
+   "kind": "near_miss",
+   "phrasing": "dn_80"
   },
   {
    "speaker": "friend",
-   "text": "Sure, one second.",
+   "text": "Maybe next week, my knee's sore.",
+   "est_sec": 1.96,
+   "gap_before": 0.74,
+   "phrasing": "dn_80"
+  },
+  {
+   "speaker": "user",
+   "text": "Maya, did you move my pump? It was right here by the shoe rack.",
+   "est_sec": 4.44,
+   "gap_before": 3.49,
+   "block": "cycling.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "The silver one? I used it this morning, it's in my room.",
+   "est_sec": 3.82,
+   "gap_before": 1.47,
+   "block": "cycling.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Can you grab it? My front tire is basically flat.",
+   "est_sec": 3.2,
+   "gap_before": 1.05,
+   "block": "cycling.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Hold on. Here. Oh, and the head is a bit loose, you have to push it on hard.",
+   "est_sec": 5.68,
+   "gap_before": 0.48,
+   "block": "cycling.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Got it. Thanks.",
    "est_sec": 1.03,
-   "gap_before": 1.12,
-   "phrasing": "dq_15"
+   "gap_before": 0.53,
+   "block": "cycling.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Are you riding to the market?",
+   "est_sec": 1.96,
+   "gap_before": 2.11,
+   "block": "cycling.side4"
   },
   {
    "speaker": "user",
-   "text": "Zoe, do you know if the store does student discounts?",
-   "est_sec": 3.2,
-   "gap_before": 0.93,
+   "text": "Yeah, want anything?",
+   "est_sec": 1.03,
+   "gap_before": 0.85,
    "event": "distractor",
    "kind": "friend_question",
-   "block": "laptop_buying.side3"
+   "block": "cycling.side4"
   },
   {
    "speaker": "friend",
-   "text": "I think they do, but you need your student card.",
-   "est_sec": 3.2,
-   "gap_before": 1.06,
-   "block": "laptop_buying.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Mine expired last month.",
-   "est_sec": 1.34,
-   "gap_before": 1.48,
-   "block": "laptop_buying.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Can't you print a letter from the university?",
+   "text": "Bread, if they still have the seeded one.",
    "est_sec": 2.58,
-   "gap_before": 1.24,
-   "block": "laptop_buying.side3"
+   "gap_before": 0.39,
+   "block": "cycling.side4"
   },
   {
    "speaker": "user",
-   "text": "Maybe. I'll check the student portal tonight.",
-   "est_sec": 2.27,
-   "gap_before": 1.4,
-   "block": "laptop_buying.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Do it, it could save you a lot.",
-   "est_sec": 2.58,
-   "gap_before": 2.39,
-   "block": "laptop_buying.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm back. You can talk now.",
-   "est_sec": 2.27,
-   "gap_before": 1.43,
+   "text": "Alright, I'm back with you.",
+   "est_sec": 1.65,
+   "gap_before": 0.7,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_24"
+   "phrasing": "side_cue_18"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. We were figuring out where your parents will sleep next week.",
-   "est_sec": 3.82,
-   "gap_before": 0.93,
+   "text": "Sure thing. About riding with your boyfriend, together or separate?",
+   "est_sec": 3.2,
+   "gap_before": 1.02,
    "role": "resume",
-   "block": "family_visit.ctx1",
+   "block": "cycling.ctx15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hotel. Everyone will sleep better and stay friends.",
-   "est_sec": 2.58,
-   "gap_before": 0.44,
+   "text": "Separate fast rides, plus one easy ride a week together.",
+   "est_sec": 3.2,
+   "gap_before": 0.72,
    "event": "ordinary_request",
-   "block": "family_visit.ctx1"
+   "block": "cycling.ctx15"
   },
   {
    "speaker": "moshi",
-   "text": "Very wise. Look for one within walking distance so they can drop by easily.",
-   "est_sec": 4.44,
-   "gap_before": 0.44,
+   "text": "Great balance. You get your training, and he doesn't feel rushed.",
+   "est_sec": 3.51,
+   "gap_before": 1.07,
    "role": "followup",
-   "block": "family_visit.ctx1",
+   "block": "cycling.ctx15",
    "reference_only": true
   }
  ],

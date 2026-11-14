@@ -7,120 +7,132 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "moving_house"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "moving_house",
+ "topics": [
+  "personal_finance"
+ ],
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 10
+ },
+ "topic": "personal_finance",
  "voices": {
-  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_02",
-  "greet_ans_14"
+  "greet_19",
+  "greet_ans_17",
+  "think_instr_22",
+  "ack_14",
+  "self_02"
  ],
  "block_ids": [
-  "moving_house.dlg3"
+  "personal_finance.ctx11"
  ],
- "est_total_sec": 50.17,
- "est_speech_sec": 38.92,
+ "est_total_sec": 43.66,
+ "est_speech_sec": 30.14,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you today?",
+   "text": "Hi, how's everything with you?",
    "est_sec": 1.65,
-   "gap_before": 0.32,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_02"
+   "phrasing": "greet_19"
   },
   {
    "speaker": "user",
-   "text": "Hanging in there.",
-   "est_sec": 1.03,
-   "gap_before": 0.38,
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.42,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_14"
+   "phrasing": "greet_ans_17"
   },
   {
    "speaker": "user",
-   "text": "My kids are really upset about moving to a new town.",
-   "est_sec": 3.51,
-   "gap_before": 0.25,
+   "text": "I'm thinking about selling stuff I don't use to make some extra cash.",
+   "est_sec": 4.13,
+   "gap_before": 0.54,
    "event": "ordinary_request",
-   "block": "moving_house.dlg3"
+   "block": "personal_finance.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "That's understandable, it's a big change. How old are they?",
+   "text": "Nice. Do you want to do one big weekend yard sale, or list things online one by one?",
+   "est_sec": 5.68,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "personal_finance.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Not sure yet. Check back with me in ten seconds.",
    "est_sec": 3.2,
-   "gap_before": 1.05,
-   "role": "reply",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Six and eleven.",
-   "est_sec": 1.03,
-   "gap_before": 0.74,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg3"
+   "gap_before": 0.6,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_22"
   },
   {
    "speaker": "moshi",
-   "text": "Letting them have some say helps a lot. The younger one could choose a paint colour for their room, the older one could help plan the layout.",
-   "est_sec": 8.47,
-   "gap_before": 0.77,
-   "role": "reply",
-   "block": "moving_house.dlg3"
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.29,
+   "role": "ack",
+   "phrasing": "ack_14"
   },
   {
    "speaker": "user",
-   "text": "My eleven year old is mostly sad about",
-   "est_sec": 2.58,
-   "gap_before": 1.02,
+   "text": "Okay, so if I do that, then",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 5.88
+   },
    "event": "distractor",
-   "kind": "pause",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "leaving her best friend.",
-   "est_sec": 1.34,
-   "gap_before": 2.72,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg3"
+   "kind": "self_talk",
+   "phrasing": "self_02"
   },
   {
    "speaker": "moshi",
-   "text": "That's the hardest part. Plan a visit or a sleepover in the first couple of months, so she knows the friendship doesn't have to end.",
-   "est_sec": 7.85,
-   "gap_before": 1.02,
-   "role": "reply",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "That's a good idea. They could video call too.",
+   "text": "So, yard sale, or selling online bit by bit?",
    "est_sec": 2.89,
-   "gap_before": 0.95,
+   "role": "resume",
+   "block": "personal_finance.ctx11",
+   "anchor": {
+    "turn": 4,
+    "offset": 10.14
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Yard sale. I want it all gone in one day.",
+   "est_sec": 3.2,
+   "gap_before": 1.27,
    "event": "ordinary_request",
-   "block": "moving_house.dlg3"
+   "block": "personal_finance.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Exactly. And finding a club in the new town quickly will help her meet people her age.",
-   "est_sec": 5.37,
-   "gap_before": 0.53,
-   "role": "reply",
-   "block": "moving_house.dlg3"
+   "text": "Then price things low and round. People love a bargain, and you'll clear more.",
+   "est_sec": 4.44,
+   "gap_before": 1.14,
+   "role": "followup",
+   "block": "personal_finance.ctx11"
   }
  ]
 }

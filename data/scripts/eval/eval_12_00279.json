@@ -7,129 +7,156 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "restaurant_choice"
+  "wedding_planning",
+  "painting_art"
  ],
- "topic": "restaurant_choice",
+ "topic": "wedding_planning",
  "voices": {
-  "user": "732ea755bd9e446eb31dc79966b50428",
-  "friend": null,
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": "b121b91872f54f04ba9f6da08b8b6253",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Kenji",
+ "friend_name_id": "name_21",
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_12"
+  "greet_15",
+  "greet_ans_09",
+  "side_instr_12",
+  "side_cue_18"
  ],
  "block_ids": [
-  "restaurant_choice.dlg2"
+  "wedding_planning.ctx16",
+  "painting_art.side1"
  ],
- "est_total_sec": 49.35,
- "est_speech_sec": 40.16,
+ "est_total_sec": 60.09,
+ "est_speech_sec": 45.11,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.67,
-   "role": "greeting",
-   "phrasing": "greet_06",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I guess.",
-   "est_sec": 1.03,
-   "gap_before": 0.33,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_12"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm eating out alone for the first time tonight and it feels a little awkward.",
-   "est_sec": 4.75,
-   "gap_before": 0.41,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Lots of people enjoy solo dining. Sitting at the bar or a counter feels very natural, and you can chat with the staff.",
-   "est_sec": 7.23,
-   "gap_before": 0.41,
-   "role": "reply",
-   "block": "restaurant_choice.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Should I bring a book?",
+   "text": "Hey, how's your week going?",
    "est_sec": 1.65,
-   "gap_before": 0.47,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, a book or a podcast is totally normal. Or just people-watch, that's half the fun.",
-   "est_sec": 5.06,
-   "gap_before": 0.39,
-   "role": "reply",
-   "block": "restaurant_choice.dlg2",
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I was thinking of going to",
-   "est_sec": 1.96,
-   "gap_before": 0.89,
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.86,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm best man and the groom says he wants something low-key for the stag.",
+   "est_sec": 4.44,
+   "gap_before": 0.3,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. A weekend away with the close crew, or one good night out in town?",
+   "est_sec": 4.75,
+   "gap_before": 1.19,
+   "role": "reply",
+   "block": "wedding_planning.ctx16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, Kenji just called my name. Please wait and stay silent until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.3,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_12"
+  },
+  {
+   "speaker": "user",
+   "text": "Kenji, have you seen my small round brush? I left it by the sink.",
+   "est_sec": 4.44,
+   "gap_before": 1.21,
+   "block": "painting_art.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Is it the one with the blue handle? I put it in the jar with the others.",
+   "est_sec": 5.37,
+   "gap_before": 0.31,
+   "block": "painting_art.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, that one. Did you rinse it?",
+   "est_sec": 2.27,
+   "gap_before": 3.43,
    "event": "distractor",
-   "kind": "pause",
-   "block": "restaurant_choice.dlg2"
+   "kind": "friend_question",
+   "block": "painting_art.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just with water. It still had some yellow on it.",
+   "est_sec": 3.2,
+   "gap_before": 0.64,
+   "block": "painting_art.side1"
   },
   {
    "speaker": "user",
-   "text": "that ramen place downtown.",
-   "est_sec": 1.34,
-   "gap_before": 1.75,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.dlg2"
+   "text": "That's fine, I'm using yellow anyway.",
+   "est_sec": 1.96,
+   "gap_before": 0.32,
+   "block": "painting_art.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back with you.",
+   "est_sec": 1.65,
+   "gap_before": 0.65,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_18"
   },
   {
    "speaker": "moshi",
-   "text": "Ramen is ideal for solo dining. Many ramen shops are built around counters, and the meals are quick.",
-   "est_sec": 5.68,
-   "gap_before": 1.04,
-   "role": "reply",
-   "block": "restaurant_choice.dlg2",
+   "text": "No problem. The stag do. A weekend, or one night?",
+   "est_sec": 3.2,
+   "gap_before": 0.69,
+   "role": "resume",
+   "block": "wedding_planning.ctx16",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Actually, maybe I'll do the Italian place instead, I want to linger.",
-   "est_sec": 3.82,
-   "gap_before": 0.98,
+   "text": "One night. Low-key means low-key.",
+   "est_sec": 1.65,
+   "gap_before": 1.27,
    "event": "ordinary_request",
-   "block": "restaurant_choice.dlg2"
+   "block": "wedding_planning.ctx16"
   },
   {
    "speaker": "moshi",
-   "text": "Also a great choice. Order a glass of wine and take your time with every course.",
+   "text": "Respect his wish. A good dinner and a pub with a pool table can be perfect.",
    "est_sec": 5.06,
-   "gap_before": 0.35,
-   "role": "reply",
-   "block": "restaurant_choice.dlg2",
+   "gap_before": 0.63,
+   "role": "followup",
+   "block": "wedding_planning.ctx16",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

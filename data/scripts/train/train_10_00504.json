@@ -7,174 +7,125 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "job_interview",
-  "pets"
+  "cars"
  ],
- "topic": "job_interview",
+ "topic": "cars",
  "voices": {
-  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
-  "friend": "e3cd384158934cc9a01029cd7d278634",
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Rosa",
- "friend_name_id": "name_22",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_28",
-  "greet_ans_29",
-  "side_instr_10",
-  "dq_13",
-  "side_cue_22"
+  "greet_02",
+  "greet_ans_19",
+  "describe_instr_01",
+  "ack_07",
+  "describe_cue_01"
  ],
  "block_ids": [
-  "job_interview.ctx3",
-  "pets.side1"
+  "cars.opt6"
  ],
- "est_total_sec": 70.79,
- "est_speech_sec": 53.47,
+ "est_total_sec": 61.92,
+ "est_speech_sec": 49.15,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's everything today?",
-   "est_sec": 1.34,
-   "gap_before": 0.61,
-   "role": "greeting",
-   "phrasing": "greet_28"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.43,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
-  },
-  {
-   "speaker": "user",
-   "text": "At the end of interviews they always ask if I have questions, and I never do.",
-   "est_sec": 5.06,
-   "gap_before": 0.6,
-   "event": "ordinary_request",
-   "block": "job_interview.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Let's fix that. Would you rather ask about the team and daily work, or about growth and where the role leads?",
-   "est_sec": 6.61,
-   "gap_before": 1.0,
-   "role": "reply",
-   "block": "job_interview.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, can you stay quiet for a minute? I need to talk to my partner. I'll come back to you.",
-   "est_sec": 6.3,
-   "gap_before": 1.43,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_10"
-  },
-  {
-   "speaker": "user",
-   "text": "Do we have any coffee left?",
-   "est_sec": 1.96,
-   "gap_before": 1.04,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_13"
-  },
-  {
-   "speaker": "friend",
-   "text": "There's a little bit in the jar.",
-   "est_sec": 2.27,
-   "gap_before": 0.52,
-   "phrasing": "dq_13"
-  },
-  {
-   "speaker": "user",
-   "text": "Rosa, did you feed the cat this morning?",
-   "est_sec": 2.58,
-   "gap_before": 2.44,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "pets.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "No, I thought you did.",
+   "text": "Hi! How are you today?",
    "est_sec": 1.65,
-   "gap_before": 1.27,
-   "block": "pets.side1"
+   "gap_before": 0.34,
+   "role": "greeting",
+   "phrasing": "greet_02"
   },
   {
    "speaker": "user",
-   "text": "Oh no, that's why she's yelling at me.",
-   "est_sec": 2.58,
-   "gap_before": 1.16,
-   "block": "pets.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "She's so dramatic. I'll do it now.",
-   "est_sec": 2.27,
-   "gap_before": 0.76,
-   "block": "pets.side1"
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.7,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "Thanks. Half a can, not the whole thing, okay?",
+   "text": "I've got one week off and I want a proper road trip, but I'm stuck on where.",
+   "est_sec": 5.37,
+   "gap_before": 0.46,
+   "block": "cars.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me describe all the options before you comment.",
    "est_sec": 2.89,
    "gap_before": 0.67,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "pets.side1"
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_01"
   },
   {
-   "speaker": "friend",
-   "text": "Got it. Half a can.",
-   "est_sec": 1.65,
-   "gap_before": 0.51,
-   "block": "pets.side1"
+   "speaker": "moshi",
+   "text": "Got it.",
+   "est_sec": 0.72,
+   "gap_before": 0.34,
+   "role": "ack",
+   "phrasing": "ack_07"
   },
   {
    "speaker": "user",
-   "text": "Okay, back. Thanks for being patient.",
-   "est_sec": 1.96,
-   "gap_before": 1.43,
+   "text": "Up north there's a lake district loop with tiny villages, narrow roads and loads of walking.",
+   "est_sec": 5.06,
+   "gap_before": 0.94,
+   "block": "cars.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Down south I could follow the coast, stopping in a different seaside town every night.",
+   "est_sec": 4.75,
+   "gap_before": 2.41,
+   "block": "cars.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I head inland to the wine region, flat easy driving and lots of tastings, though I'd need a designated driver.",
+   "est_sec": 6.61,
+   "gap_before": 1.33,
+   "block": "cars.opt6",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "My mate also suggested a ferry across and just driving wherever on the continent.",
+   "est_sec": 4.44,
+   "gap_before": 2.04,
+   "block": "cars.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 1.48,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_22"
+   "phrasing": "describe_cue_01"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. Still thinking about which questions to ask at the end?",
-   "est_sec": 3.51,
-   "gap_before": 0.55,
+   "text": "For a week alone, the seaside towns sound ideal, a new place every night with simple roads. The lakes are lovely but the narrow lanes get tiring, the wine trip needs a driver, and the ferry is great if you love improvising.",
+   "est_sec": 13.12,
+   "gap_before": 0.56,
    "role": "resume",
-   "block": "job_interview.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Growth. I don't want to be stuck in the same spot.",
-   "est_sec": 3.51,
-   "gap_before": 0.81,
-   "event": "ordinary_request",
-   "block": "job_interview.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then ask what success looks like after the first year, and how people in this role usually move up.",
-   "est_sec": 5.99,
-   "gap_before": 0.59,
-   "role": "followup",
-   "block": "job_interview.ctx3"
+   "block": "cars.opt6"
   }
  ]
 }

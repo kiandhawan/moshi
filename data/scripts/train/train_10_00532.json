@@ -7,123 +7,157 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "pets"
+  "job_interview",
+  "board_games"
  ],
- "topic": "pets",
+ "topic": "job_interview",
  "voices": {
-  "user": "2680da81de8348a68e1f4dbaa79272f1",
-  "friend": null,
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": "3fdb457debb744ca9cfe9e2ce99a2deb",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Sam",
+ "friend_name_id": "name_02",
  "phrasing_ids": [
-  "greet_13",
-  "greet_ans_01",
-  "describe_instr_20",
-  "ack_16",
-  "describe_cue_08"
+  "greet_17",
+  "greet_ans_25",
+  "side_instr_22",
+  "side_cue_07"
  ],
  "block_ids": [
-  "pets.opt1"
+  "job_interview.ctx11",
+  "board_games.side3"
  ],
- "est_total_sec": 59.05,
- "est_speech_sec": 47.29,
+ "est_total_sec": 63.85,
+ "est_speech_sec": 47.07,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, nice to hear from you. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.51,
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.54,
    "role": "greeting",
-   "phrasing": "greet_13"
+   "phrasing": "greet_17"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
+   "text": "I'm well, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.38,
+   "gap_before": 0.3,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_25"
   },
   {
    "speaker": "user",
-   "text": "We're finally getting a dog and we're choosing between a few at the shelter.",
-   "est_sec": 4.44,
-   "gap_before": 0.33,
-   "block": "pets.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me describe everything first, and then I'll ask for your thoughts.",
-   "est_sec": 3.82,
-   "gap_before": 0.62,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_20"
+   "text": "Video interview at nine tomorrow. My flat is tiny.",
+   "est_sec": 2.89,
+   "gap_before": 0.6,
+   "event": "ordinary_request",
+   "block": "job_interview.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, sure.",
-   "est_sec": 0.72,
-   "gap_before": 0.67,
-   "role": "ack",
-   "phrasing": "ack_16"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is a young lab mix, super energetic, who needs a lot of walks and space.",
-   "est_sec": 5.68,
-   "gap_before": 1.38,
-   "block": "pets.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's an older beagle, calm and sweet, but he howls when he's left alone.",
-   "est_sec": 4.75,
-   "gap_before": 1.87,
-   "block": "pets.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a small terrier mix that's great with kids but not with cats.",
-   "est_sec": 4.75,
-   "gap_before": 1.54,
-   "block": "pets.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a big shy greyhound who mostly wants to nap on the couch.",
+   "text": "We'll make it work. Is the better spot your kitchen table, or your desk in the bedroom?",
    "est_sec": 5.37,
-   "gap_before": 1.1,
-   "block": "pets.opt1"
+   "gap_before": 0.85,
+   "role": "reply",
+   "block": "job_interview.ctx11"
   },
   {
    "speaker": "user",
-   "text": "Okay, that's all. Which sounds best to you?",
-   "est_sec": 2.58,
-   "gap_before": 0.91,
+   "text": "One sec, I'm going to talk with my neighbor. Please wait until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.72,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Sam, what should we bring to the neighbors' game night?",
+   "est_sec": 3.2,
+   "gap_before": 1.49,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "board_games.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Maybe that card game with the cats. Everyone laughed last time.",
+   "est_sec": 3.51,
+   "gap_before": 0.35,
+   "block": "board_games.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "We played that twice already though. What about the new one?",
+   "est_sec": 3.51,
+   "gap_before": 0.63,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "board_games.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "The rules are pretty long. Have you read them?",
+   "est_sec": 2.89,
+   "gap_before": 3.21,
+   "block": "board_games.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Half of them. I could watch a video tonight.",
+   "est_sec": 2.89,
+   "gap_before": 0.62,
+   "block": "board_games.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay, bring both, and we'll see what people feel like.",
+   "est_sec": 3.2,
+   "gap_before": 1.39,
+   "block": "board_games.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm here again, let's continue.",
+   "est_sec": 1.65,
+   "gap_before": 1.96,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_08"
+   "phrasing": "side_cue_07"
   },
   {
    "speaker": "moshi",
-   "text": "Do you have a cat, and how long are you out of the house each day? If you have a cat, skip the terrier. If you're out a lot, the greyhound is probably the best fit.",
-   "est_sec": 11.26,
-   "gap_before": 0.95,
+   "text": "Sure thing. Still picking where to sit tomorrow. Kitchen or the desk?",
+   "est_sec": 3.82,
+   "gap_before": 0.56,
    "role": "resume",
-   "block": "pets.opt1"
+   "block": "job_interview.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "Kitchen. Better light from the window.",
+   "est_sec": 1.96,
+   "gap_before": 0.89,
+   "event": "ordinary_request",
+   "block": "job_interview.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great. Face the window, not with it behind you, and move anything messy out of shot.",
+   "est_sec": 5.06,
+   "gap_before": 1.17,
+   "role": "followup",
+   "block": "job_interview.ctx11"
   }
  ]
 }

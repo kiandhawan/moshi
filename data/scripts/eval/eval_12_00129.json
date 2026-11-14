@@ -7,129 +7,185 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "holiday_gifts"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
  ],
- "topic": "holiday_gifts",
+ "topics": [
+  "home_office",
+  "learning_language"
+ ],
+ "topic": "home_office",
  "voices": {
-  "user": "026218fe0c054374838d934016f34082",
-  "friend": null,
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Theo",
+ "friend_name_id": "name_15",
  "phrasing_ids": [
-  "greet_09",
-  "greet_ans_06"
+  "greet_03",
+  "greet_ans_12",
+  "side_instr_21",
+  "ack_03",
+  "dq_72",
+  "side_cue_03"
  ],
  "block_ids": [
-  "holiday_gifts.dlg1"
+  "home_office.ctx8",
+  "learning_language.side5",
+  "dq_72"
  ],
- "est_total_sec": 47.14,
- "est_speech_sec": 36.44,
+ "est_total_sec": 72.66,
+ "est_speech_sec": 51.61,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's it going?",
-   "est_sec": 1.34,
-   "gap_before": 0.51,
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.67,
    "role": "greeting",
-   "phrasing": "greet_09",
+   "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.34,
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.46,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_12"
   },
   {
    "speaker": "user",
-   "text": "What's a good gift for someone who says they don't want anything?",
-   "est_sec": 3.82,
-   "gap_before": 0.45,
+   "text": "I live in a studio. My desk has to go in the bedroom, there's no other spot.",
+   "est_sec": 5.37,
+   "gap_before": 0.22,
    "event": "ordinary_request",
-   "block": "holiday_gifts.dlg1"
+   "block": "home_office.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "Something consumable works well, like nice coffee, a good candle or a fancy jam. It won't add clutter.",
-   "est_sec": 5.68,
-   "gap_before": 1.27,
+   "text": "Common problem. Would you prefer a folding desk you can put away each evening, or a wall mounted one that stays but takes up very little room?",
+   "est_sec": 8.47,
+   "gap_before": 1.82,
    "role": "reply",
-   "block": "holiday_gifts.dlg1",
+   "block": "home_office.ctx8",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "She doesn't drink coffee. She's really into",
-   "est_sec": 2.27,
-   "gap_before": 0.58,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "holiday_gifts.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "I guess gardening, mostly.",
-   "est_sec": 1.34,
-   "gap_before": 2.35,
-   "event": "ordinary_request",
-   "block": "holiday_gifts.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then try a set of good seeds or a pair of quality garden gloves. Gardeners always wear gloves out.",
-   "est_sec": 5.99,
-   "gap_before": 0.9,
-   "role": "reply",
-   "block": "holiday_gifts.dlg1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Gloves feel a bit boring though.",
-   "est_sec": 1.96,
-   "gap_before": 0.31,
-   "event": "ordinary_request",
-   "block": "holiday_gifts.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fair. A small herb planter for her kitchen window is more fun and still useful.",
-   "est_sec": 4.75,
-   "gap_before": 0.97,
-   "role": "reply",
-   "block": "holiday_gifts.dlg1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Ooh, I like that. Can I make one myself?",
-   "est_sec": 2.89,
-   "gap_before": 0.91,
-   "event": "ordinary_request",
-   "block": "holiday_gifts.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Definitely. Get a wooden box, some potting soil and three herbs like basil, thyme and mint.",
+   "text": "Wait, my friend just got here. Can you hold on and stay quiet until I'm back?",
    "est_sec": 5.06,
-   "gap_before": 0.61,
-   "role": "reply",
-   "block": "holiday_gifts.dlg1",
+   "gap_before": 2.62,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.21,
+   "role": "ack",
+   "phrasing": "ack_03",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Are you taking the bike or walking?",
+   "est_sec": 2.27,
+   "gap_before": 0.84,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_72"
+  },
+  {
+   "speaker": "friend",
+   "text": "Walking, the tyre's flat.",
+   "est_sec": 1.34,
+   "gap_before": 0.57,
+   "phrasing": "dq_72"
+  },
+  {
+   "speaker": "user",
+   "text": "Who was that tutor you had for Polish? The one you liked.",
+   "est_sec": 3.82,
+   "gap_before": 0.9,
+   "block": "learning_language.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Agnieszka. She does lessons on video, mostly evenings.",
+   "est_sec": 2.58,
+   "gap_before": 3.45,
+   "block": "learning_language.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Is she expensive?",
+   "est_sec": 1.03,
+   "gap_before": 1.29,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not really, cheaper than the language school. And she's really patient.",
+   "est_sec": 3.51,
+   "gap_before": 1.26,
+   "block": "learning_language.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Does she teach total beginners?",
+   "est_sec": 1.65,
+   "gap_before": 0.4,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "learning_language.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "She taught me, and I could barely say hello. I'll send you her number.",
+   "est_sec": 4.44,
+   "gap_before": 0.31,
+   "block": "learning_language.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Thanks. I need someone who won't laugh at me.",
+   "est_sec": 2.89,
+   "gap_before": 2.87,
+   "block": "learning_language.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry about that, I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 0.55,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_03"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Your studio desk, fold it away or mount it?",
+   "est_sec": 3.51,
+   "gap_before": 1.11,
+   "role": "resume",
+   "block": "home_office.ctx8",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

@@ -7,116 +7,171 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "gardening"
+  "pets",
+  "moving_house"
  ],
- "topic": "gardening",
+ "topic": "pets",
  "voices": {
-  "user": "5ce84bbd213b4943bc89e1951e17848a",
-  "friend": null,
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": "cfc0d21e0b5947d08b957b2061670c0a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Leo",
+ "friend_name_id": "name_07",
  "phrasing_ids": [
-  "greet_19",
-  "greet_ans_13",
-  "describe_instr_14",
-  "ack_13",
-  "describe_cue_08"
+  "greet_22",
+  "greet_ans_19",
+  "side_instr_16",
+  "side_cue_13"
  ],
  "block_ids": [
-  "gardening.opt2"
+  "pets.ctx11",
+  "moving_house.side6"
  ],
- "est_total_sec": 55.85,
- "est_speech_sec": 45.33,
+ "est_total_sec": 72.84,
+ "est_speech_sec": 53.78,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how's everything with you?",
+   "text": "Hello, how are things going?",
    "est_sec": 1.65,
-   "gap_before": 0.58,
-   "role": "greeting",
-   "phrasing": "greet_19"
-  },
-  {
-   "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.63,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
-  },
-  {
-   "speaker": "user",
-   "text": "Our lawn looks terrible and I'm trying to figure out what to do with it.",
-   "est_sec": 4.75,
    "gap_before": 0.39,
-   "block": "gardening.opt2"
+   "role": "greeting",
+   "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "Let me lay out all the options first. Don't interrupt.",
-   "est_sec": 3.2,
-   "gap_before": 0.43,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_14"
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.47,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Puppy arrives on Saturday. Where should her crate go?",
+   "est_sec": 2.89,
+   "gap_before": 0.26,
+   "event": "ordinary_request",
+   "block": "pets.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, I'll hold on.",
-   "est_sec": 1.34,
-   "gap_before": 0.42,
-   "role": "ack",
-   "phrasing": "ack_13"
+   "text": "Exciting! For the first few nights, do you want her in your bedroom, or downstairs in the kitchen?",
+   "est_sec": 5.68,
+   "gap_before": 0.33,
+   "role": "reply",
+   "block": "pets.ctx11"
   },
   {
    "speaker": "user",
-   "text": "One option is to reseed the whole thing in the fall and water it a lot for a few weeks.",
-   "est_sec": 6.3,
-   "gap_before": 0.74,
-   "block": "gardening.opt2",
+   "text": "Hang on a minute, I want to ask Leo something first. Don't jump in until I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 0.85,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Leo, did you notice the smell in the bathroom?",
+   "est_sec": 2.89,
+   "gap_before": 1.26,
    "event": "distractor",
-   "kind": "pause"
+   "kind": "friend_question",
+   "block": "moving_house.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Like old socks and wet dog? Yeah.",
+   "est_sec": 2.27,
+   "gap_before": 0.48,
+   "block": "moving_house.side6"
   },
   {
    "speaker": "user",
-   "text": "Another is to lay new sod, which looks perfect right away but costs a lot more.",
-   "est_sec": 5.06,
-   "gap_before": 1.52,
-   "block": "gardening.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or we could replace part of it with a gravel patio and some low plants that don't need much water.",
-   "est_sec": 6.3,
-   "gap_before": 3.0,
-   "block": "gardening.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all. Which sounds best to you?",
+   "text": "The agent said it just needs airing out.",
    "est_sec": 2.58,
-   "gap_before": 0.61,
+   "gap_before": 1.33,
+   "block": "moving_house.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Agents say that about everything. Did you see the black spots on the ceiling?",
+   "est_sec": 4.44,
+   "gap_before": 0.83,
+   "block": "moving_house.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "I thought that was shadow.",
+   "est_sec": 1.65,
+   "gap_before": 1.3,
+   "block": "moving_house.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "That's damp. Ask them when the extractor fan was last checked.",
+   "est_sec": 3.51,
+   "gap_before": 1.21,
+   "block": "moving_house.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "And if they dodge the question?",
+   "est_sec": 1.96,
+   "gap_before": 1.07,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "moving_house.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then we keep looking. The one on Mill Road was nicer anyway.",
+   "est_sec": 3.82,
+   "gap_before": 3.26,
+   "block": "moving_house.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, back to you.",
+   "est_sec": 1.34,
+   "gap_before": 1.76,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_08"
+   "phrasing": "side_cue_13"
   },
   {
    "speaker": "moshi",
-   "text": "Reseeding in the fall is the cheapest way to get a nice lawn, it just takes patience. Sod is instant, but you're paying a lot for that speed. The gravel patio is a nice idea if you're tired of mowing and watering.",
-   "est_sec": 13.12,
-   "gap_before": 0.7,
+   "text": "Sure thing. The crate. Bedroom with you, or the kitchen?",
+   "est_sec": 3.2,
+   "gap_before": 0.92,
    "role": "resume",
-   "block": "gardening.opt2"
+   "block": "pets.ctx11"
+  },
+  {
+   "speaker": "user",
+   "text": "The kitchen. I don't want her in the bedroom forever.",
+   "est_sec": 3.2,
+   "gap_before": 1.42,
+   "event": "ordinary_request",
+   "block": "pets.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fair. Maybe sleep downstairs on the sofa the first night or two, then move up once she's settled.",
+   "est_sec": 5.68,
+   "gap_before": 0.42,
+   "role": "followup",
+   "block": "pets.ctx11"
   }
  ]
 }

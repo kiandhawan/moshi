@@ -1,66 +1,137 @@
 {
   "id": "eval_12_00234",
-  "group": "ordinary",
-  "user_start": 2.66,
-  "type": "ordinary",
-  "conditions": [],
-  "groups": [
-    "ordinary"
+  "group": "side_conversation",
+  "user_start": 2.96,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question",
+    "implicit"
   ],
+  "cluster": "laptop_buying.ctx9",
+  "groups": [
+    "familiar_type",
+    "implicit_return"
+  ],
+  "instruction_start": 24.443,
+  "instruction_end": 29.063,
+  "wait_end": 59.163,
+  "resume_window": [
+    59.163,
+    64.163
+  ],
+  "wait_sec": 30.1,
   "distractors": [
-    16.684
+    32.683,
+    47.473,
+    53.553
   ],
   "distractor_kinds": [
-    "pause"
+    "friend_question",
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      16.684,
-      19.024
+      32.683,
+      34.263
+    ],
+    [
+      47.473,
+      48.303
+    ],
+    [
+      53.553,
+      54.963
     ]
   ],
   "ordinary_requests": [
-    6.77,
-    20.514,
-    32.964,
-    43.144
+    7.963,
+    14.183,
+    67.753
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.66,
-      "end": 3.61,
+      "start": 2.96,
+      "end": 3.793,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 3.87,
-      "end": 6.77,
+      "start": 4.283,
+      "end": 7.963,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 15.34,
-      "end": 16.684,
+      "start": 11.923,
+      "end": 14.183,
+      "event": "ordinary_request"
+    },
+    {
+      "speaker": "user",
+      "start": 24.443,
+      "end": 29.063,
+      "event": "instruction",
+      "kind": "side_conversation"
+    },
+    {
+      "speaker": "user",
+      "start": 31.103,
+      "end": 32.683,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 34.263,
+      "end": 37.213
     },
     {
       "speaker": "user",
-      "start": 19.024,
-      "end": 20.514,
-      "event": "ordinary_request"
+      "start": 37.913,
+      "end": 40.053
+    },
+    {
+      "speaker": "friend",
+      "start": 40.383,
+      "end": 44.303
     },
     {
       "speaker": "user",
-      "start": 31.644,
-      "end": 32.964,
-      "event": "ordinary_request"
+      "start": 44.993,
+      "end": 47.473,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 48.303,
+      "end": 50.203
     },
     {
       "speaker": "user",
-      "start": 40.774,
-      "end": 43.144,
+      "start": 50.663,
+      "end": 53.553,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 54.963,
+      "end": 56.173
+    },
+    {
+      "speaker": "user",
+      "start": 57.223,
+      "end": 59.163,
+      "event": "return_cue",
+      "kind": "implicit"
+    },
+    {
+      "speaker": "user",
+      "start": 65.093,
+      "end": 67.753,
       "event": "ordinary_request"
     }
   ],

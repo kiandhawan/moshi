@@ -7,37 +7,44 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "cars"
+  "shopping",
+  "birthday_party"
  ],
- "topic": "cars",
+ "topic": "shopping",
  "voices": {
-  "user": "e58a6b7e06f048d0b83836d55d226b90",
-  "friend": null,
+  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "friend": "fa4c9eb3dccc4806b382b40d61c6b10a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Omar",
+ "friend_name_id": "name_13",
  "phrasing_ids": [
   "greet_26",
-  "greet_ans_08"
+  "greet_ans_08",
+  "side_instr_28",
+  "ack_05",
+  "side_cue_11"
  ],
  "block_ids": [
-  "cars.dlg1"
+  "shopping.ctx8",
+  "birthday_party.side6"
  ],
- "est_total_sec": 53.4,
- "est_speech_sec": 42.33,
+ "est_total_sec": 71.53,
+ "est_speech_sec": 55.54,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi! How are you doing these days?",
    "est_sec": 2.27,
-   "gap_before": 0.35,
+   "gap_before": 0.36,
    "role": "greeting",
    "phrasing": "greet_26"
   },
@@ -45,82 +52,119 @@
    "speaker": "user",
    "text": "I'm great, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.95,
+   "gap_before": 0.4,
    "event": "greeting_answer",
    "phrasing": "greet_ans_08"
   },
   {
    "speaker": "user",
-   "text": "My tyre pressure light just came on. Is that urgent?",
-   "est_sec": 3.2,
-   "gap_before": 0.56,
+   "text": "I'm in charge of the office snack order now. Thirty people, everybody has opinions.",
+   "est_sec": 4.44,
+   "gap_before": 0.36,
    "event": "ordinary_request",
-   "block": "cars.dlg1"
+   "block": "shopping.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "It's worth dealing with today. It usually means at least one tyre is low, which hurts grip and wears the tyre faster.",
+   "text": "Brave of you. Do you want to keep it mostly healthy, or just give people the crisps and chocolate they actually eat?",
    "est_sec": 6.92,
-   "gap_before": 0.59,
+   "gap_before": 0.71,
    "role": "reply",
-   "block": "cars.dlg1"
+   "block": "shopping.ctx8"
   },
   {
    "speaker": "user",
-   "text": "How do I know what pressure they should be?",
-   "est_sec": 2.89,
-   "gap_before": 1.32,
-   "event": "ordinary_request",
-   "block": "cars.dlg1"
+   "text": "Wait for me, I need to talk to Omar about something. Don't say a word until I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 0.91,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_28"
   },
   {
    "speaker": "moshi",
-   "text": "There's usually a sticker inside the driver's door frame, or it's in the manual. Most petrol stations have a pump you can set to that number.",
-   "est_sec": 8.16,
-   "gap_before": 0.83,
-   "role": "reply",
-   "block": "cars.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "And if it comes back on after I",
-   "est_sec": 2.58,
-   "gap_before": 0.62,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "cars.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "fill them up?",
+   "text": "Okay, I'll wait.",
    "est_sec": 1.03,
-   "gap_before": 1.73,
-   "event": "ordinary_request",
-   "block": "cars.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then you might have a slow puncture. A tyre shop can check it quickly, often for free.",
-   "est_sec": 5.37,
-   "gap_before": 1.11,
-   "role": "reply",
-   "block": "cars.dlg1"
+   "gap_before": 0.63,
+   "role": "ack",
+   "phrasing": "ack_05"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'll stop at the station on the way home.",
+   "text": "Omar, how many chairs did you manage to borrow?",
+   "est_sec": 2.89,
+   "gap_before": 1.14,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Eleven. Mrs Patel had four, the church hall lent me the rest.",
+   "est_sec": 3.82,
+   "gap_before": 0.63,
+   "block": "birthday_party.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "We need at least eighteen.",
+   "est_sec": 1.65,
+   "gap_before": 0.77,
+   "block": "birthday_party.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "People can stand. It's a birthday drinks, not a wedding.",
    "est_sec": 3.2,
    "gap_before": 0.73,
-   "event": "ordinary_request",
-   "block": "cars.dlg1"
+   "block": "birthday_party.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Grandpa can't stand for two hours, though.",
+   "est_sec": 2.27,
+   "gap_before": 3.16,
+   "block": "birthday_party.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then he gets the armchair. I'll put a cushion on it and a reserved sign, he'll think it's hilarious.",
+   "est_sec": 5.99,
+   "gap_before": 1.07,
+   "block": "birthday_party.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay. And the folding table, did that come too?",
+   "est_sec": 2.89,
+   "gap_before": 1.13,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "birthday_party.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's in the hallway, but one leg wobbles. Bring some tape.",
+   "est_sec": 3.51,
+   "gap_before": 0.53,
+   "block": "birthday_party.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done talking to them. I'm back.",
+   "est_sec": 2.58,
+   "gap_before": 1.52,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_11"
   },
   {
    "speaker": "moshi",
-   "text": "Good plan. Check them when the tyres are cold if you can, it gives a more accurate reading.",
-   "est_sec": 5.68,
-   "gap_before": 0.78,
-   "role": "reply",
-   "block": "cars.dlg1"
+   "text": "No problem. Your office snack order. Are we going healthy or giving the people what they want?",
+   "est_sec": 5.37,
+   "gap_before": 0.44,
+   "role": "resume",
+   "block": "shopping.ctx8"
   }
  ]
 }

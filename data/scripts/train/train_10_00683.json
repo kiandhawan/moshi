@@ -7,130 +7,171 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
  "topics": [
-  "travel_planning"
+  "board_games",
+  "weekend_plans"
  ],
- "wait_sec": 20,
- "deadline": {
-  "after_turn": 4,
-  "sec": 20
- },
- "topic": "travel_planning",
+ "topic": "board_games",
  "voices": {
-  "user": "458abe2c9c0b41f793c7235a230caa8c",
-  "friend": null,
+  "user": "6d7a45828f6a432c9233cd93bb93e5be",
+  "friend": "cfc0d21e0b5947d08b957b2061670c0a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Ethan",
+ "friend_name_id": "name_23",
  "phrasing_ids": [
-  "greet_20",
-  "greet_ans_02",
-  "think_instr_29",
-  "ack_12",
-  "self_22"
+  "greet_01",
+  "greet_ans_26",
+  "side_instr_16",
+  "side_cue_17"
  ],
  "block_ids": [
-  "travel_planning.ctx2"
+  "board_games.ctx7",
+  "weekend_plans.side2"
  ],
- "est_total_sec": 61.89,
- "est_speech_sec": 36.65,
+ "est_total_sec": 74.83,
+ "est_speech_sec": 54.4,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, good to have you here. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.52,
-   "role": "greeting",
-   "phrasing": "greet_20"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
+   "text": "Hey, how are you doing?",
    "est_sec": 1.65,
-   "gap_before": 0.63,
+   "gap_before": 0.65,
+   "role": "greeting",
+   "phrasing": "greet_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.52,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
+   "phrasing": "greet_ans_26"
   },
   {
    "speaker": "user",
-   "text": "I found two flights to Tokyo. One is cheaper but has a nine hour layover.",
-   "est_sec": 4.75,
-   "gap_before": 0.29,
+   "text": "My manager asked me to run a games hour for the team. Twelve people, kind of stiff with each other.",
+   "est_sec": 6.3,
+   "gap_before": 0.42,
    "event": "ordinary_request",
-   "block": "travel_planning.ctx2"
+   "block": "board_games.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "That layover is long, but you could leave the airport for a few hours. Is saving the money worth the extra travel time to you?",
-   "est_sec": 7.85,
-   "gap_before": 0.66,
+   "text": "Nice challenge. Should it be a cooperative game where everyone works together, or a bluffing game that gets people laughing at each other?",
+   "est_sec": 7.23,
+   "gap_before": 1.06,
    "role": "reply",
-   "block": "travel_planning.ctx2"
+   "block": "board_games.ctx7"
   },
   {
    "speaker": "user",
-   "text": "Let me think about that for twenty seconds, then ask me once more.",
-   "est_sec": 4.13,
-   "gap_before": 0.33,
+   "text": "Hang on a minute, I want to ask Ethan something first. Don't jump in until I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 0.64,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_29"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
-   "gap_before": 0.67,
-   "role": "ack",
-   "phrasing": "ack_12"
+   "kind": "side_conversation",
+   "phrasing": "side_instr_16"
   },
   {
    "speaker": "user",
-   "text": "Okay, think, think.",
-   "est_sec": 1.03,
-   "anchor": {
-    "turn": 4,
-    "offset": 7.8
-   },
+   "text": "Did you book the cinema for Saturday?",
+   "est_sec": 2.27,
+   "gap_before": 1.21,
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_22"
+   "kind": "friend_question",
+   "block": "weekend_plans.side2"
   },
   {
-   "speaker": "moshi",
-   "text": "Okay, back to the Tokyo flights. Is the money worth the nine hours?",
-   "est_sec": 4.13,
-   "role": "resume",
-   "block": "travel_planning.ctx2",
-   "anchor": {
-    "turn": 4,
-    "offset": 20.47
-   }
+   "speaker": "friend",
+   "text": "Not yet. I wasn't sure which film you wanted.",
+   "est_sec": 2.89,
+   "gap_before": 1.38,
+   "block": "weekend_plans.side2"
   },
   {
    "speaker": "user",
-   "text": "Yeah, I'll take the cheap one. I'm a student, every bit counts.",
-   "est_sec": 3.82,
-   "gap_before": 1.46,
-   "event": "ordinary_request",
-   "block": "travel_planning.ctx2"
+   "text": "I don't mind. Anything but horror.",
+   "est_sec": 1.96,
+   "gap_before": 0.73,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "There's that comedy everyone's talking about.",
+   "est_sec": 1.96,
+   "gap_before": 1.31,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine by me. What time does it start?",
+   "est_sec": 2.58,
+   "gap_before": 3.28,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "There's a seven o'clock and a nine thirty.",
+   "est_sec": 2.58,
+   "gap_before": 1.0,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Seven, so we can eat after.",
+   "est_sec": 1.96,
+   "gap_before": 0.79,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Booking it now.",
+   "est_sec": 1.03,
+   "gap_before": 1.1,
+   "block": "weekend_plans.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, thanks for waiting.",
+   "est_sec": 1.65,
+   "gap_before": 1.59,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_17"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. Bring a neck pillow and check whether you need a transit visa to leave the airport.",
-   "est_sec": 5.68,
-   "gap_before": 1.13,
+   "text": "Sure thing. We'd stopped on what to play with your coworkers. Which feels better?",
+   "est_sec": 4.44,
+   "gap_before": 0.75,
+   "role": "resume",
+   "block": "board_games.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Bluffing. Watching my boss lie badly will break the ice.",
+   "est_sec": 3.2,
+   "gap_before": 1.4,
+   "event": "ordinary_request",
+   "block": "board_games.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, it really does. Pick one with short rounds so everyone gets a turn before the hour runs out.",
+   "est_sec": 5.99,
+   "gap_before": 1.1,
    "role": "followup",
-   "block": "travel_planning.ctx2"
+   "block": "board_games.ctx7"
   }
  ]
 }

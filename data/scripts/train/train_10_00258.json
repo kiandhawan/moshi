@@ -7,125 +7,173 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [
-  "wait_like"
- ],
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
  "topics": [
-  "travel_planning"
+  "cars",
+  "cars"
  ],
- "topic": "travel_planning",
+ "topic": "cars",
  "voices": {
-  "user": "c70cfb98867a4bfb9ae20d2401257b92",
-  "friend": null,
+  "user": "536d3a5e000945adb7038665781a4aca",
+  "friend": "e3cd384158934cc9a01029cd7d278634",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Ben",
+ "friend_name_id": "name_11",
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_23",
-  "waitlike_13"
+  "greet_13",
+  "greet_ans_14",
+  "side_instr_22",
+  "side_cue_01"
  ],
  "block_ids": [
-  "travel_planning.dlg4"
+  "cars.ctx12",
+  "cars.side1"
  ],
- "est_total_sec": 60.54,
- "est_speech_sec": 46.36,
+ "est_total_sec": 79.42,
+ "est_speech_sec": 56.88,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.74,
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.69,
    "role": "greeting",
-   "phrasing": "greet_22"
+   "phrasing": "greet_13"
   },
   {
    "speaker": "user",
-   "text": "Good, good. Thanks.",
+   "text": "Hanging in there.",
    "est_sec": 1.03,
-   "gap_before": 0.56,
+   "gap_before": 0.92,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_23"
+   "phrasing": "greet_ans_14"
   },
   {
    "speaker": "user",
-   "text": "My wife and I want to do a road trip along the coast for our anniversary. How many days should we plan?",
-   "est_sec": 6.92,
-   "gap_before": 0.45,
+   "text": "So the garage says the clutch is going. They want a lot to replace it.",
+   "est_sec": 4.75,
+   "gap_before": 0.28,
    "event": "ordinary_request",
-   "block": "travel_planning.dlg4"
+   "block": "cars.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "That depends on the distance, but five to seven days usually lets you drive a few hours a day and still enjoy the stops.",
-   "est_sec": 7.54,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "travel_planning.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "We're not in a hurry. We're both retired.",
-   "est_sec": 2.58,
-   "gap_before": 0.99,
-   "event": "ordinary_request",
-   "block": "travel_planning.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then take your time. Two nights in the nicest spots makes it feel like a holiday instead of a race.",
-   "est_sec": 6.3,
-   "gap_before": 0.86,
-   "role": "reply",
-   "block": "travel_planning.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "Should we book the hotels in advance or",
-   "est_sec": 2.58,
-   "gap_before": 1.44,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "travel_planning.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "just see where we end up?",
-   "est_sec": 1.96,
-   "gap_before": 2.36,
-   "event": "ordinary_request",
-   "block": "travel_planning.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Book the weekends and any popular towns ahead. Weekdays you can usually find something on the day.",
-   "est_sec": 5.37,
-   "gap_before": 1.26,
-   "role": "reply",
-   "block": "travel_planning.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait, that's a good balance. Anything special for an anniversary?",
-   "est_sec": 3.2,
-   "gap_before": 2.65,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_13",
-   "block": "travel_planning.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Pick one night with a really good dinner and a view. Mention the anniversary when you book, places often add a little surprise.",
+   "text": "Clutches aren't cheap. How old is the car? It might be worth getting a second quote, or putting that money towards something newer.",
    "est_sec": 7.23,
-   "gap_before": 0.55,
+   "gap_before": 0.78,
    "role": "reply",
-   "block": "travel_planning.dlg4"
+   "block": "cars.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "It's about nine years old.",
+   "est_sec": 1.65,
+   "gap_before": 0.31,
+   "event": "ordinary_request",
+   "block": "cars.ctx12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's right on the line. Second quote, or start looking around?",
+   "est_sec": 3.51,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "cars.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "One sec, I'm going to talk with my neighbor. Please wait until I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 0.84,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Ben, did you hear that rattling noise when we pulled in?",
+   "est_sec": 3.51,
+   "gap_before": 1.24,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, it sounded like it was coming from underneath.",
+   "est_sec": 2.89,
+   "gap_before": 3.07,
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "I think it might be the exhaust again.",
+   "est_sec": 2.58,
+   "gap_before": 0.64,
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "My brother had the same thing. It was just a loose heat shield.",
+   "est_sec": 4.13,
+   "gap_before": 2.29,
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Was it expensive to fix?",
+   "est_sec": 1.65,
+   "gap_before": 1.17,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not really, maybe forty quid. Took them ten minutes.",
+   "est_sec": 2.89,
+   "gap_before": 3.08,
+   "block": "cars.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back.",
+   "est_sec": 1.03,
+   "gap_before": 1.73,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure thing. The clutch on your nine year old car. Another quote, or time to look around?",
+   "est_sec": 5.37,
+   "gap_before": 1.1,
+   "role": "resume",
+   "block": "cars.ctx12"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll get another quote. Otherwise the car's in great shape.",
+   "est_sec": 3.2,
+   "gap_before": 1.13,
+   "event": "ordinary_request",
+   "block": "cars.ctx12"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good idea. Independent garages are often a fair bit cheaper than the dealer.",
+   "est_sec": 4.13,
+   "gap_before": 1.01,
+   "role": "followup",
+   "block": "cars.ctx12"
   }
  ]
 }

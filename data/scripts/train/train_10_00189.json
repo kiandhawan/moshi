@@ -7,141 +7,116 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [
-  "wait_like"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "job_interview"
+  "cooking"
  ],
- "topic": "job_interview",
+ "topic": "cooking",
  "voices": {
-  "user": "458abe2c9c0b41f793c7235a230caa8c",
+  "user": "10b2254869cf4340bdb801928e2fc88e",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_07",
-  "greet_ans_29",
-  "waitlike_04"
+  "greet_23",
+  "greet_ans_01",
+  "describe_instr_17",
+  "ack_14",
+  "describe_cue_14"
  ],
  "block_ids": [
-  "job_interview.dlg2"
+  "cooking.opt4"
  ],
- "est_total_sec": 60.15,
- "est_speech_sec": 45.32,
+ "est_total_sec": 54.98,
+ "est_speech_sec": 44.4,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How's everything going?",
-   "est_sec": 1.34,
-   "gap_before": 0.63,
-   "role": "greeting",
-   "phrasing": "greet_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.9,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm going back to work after staying home with my kids for five years. How do I explain the gap?",
-   "est_sec": 6.3,
-   "gap_before": 0.52,
-   "event": "ordinary_request",
-   "block": "job_interview.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Be direct and positive. Say you took time to raise your children and you're excited to get back to work.",
-   "est_sec": 6.3,
-   "gap_before": 1.54,
-   "role": "reply",
-   "block": "job_interview.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Won't they think my skills are out of date?",
-   "est_sec": 2.89,
-   "gap_before": 0.32,
-   "event": "ordinary_request",
-   "block": "job_interview.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Show them otherwise. Mention any courses, volunteering or projects you did, even small ones.",
-   "est_sec": 4.44,
-   "gap_before": 0.49,
-   "role": "reply",
-   "block": "job_interview.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "I did run the fundraising for the school",
-   "est_sec": 2.58,
-   "gap_before": 0.45,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "job_interview.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "for about two years.",
-   "est_sec": 1.34,
-   "gap_before": 1.81,
-   "event": "ordinary_request",
-   "block": "job_interview.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's great experience. Talk about how much you raised and how you organized the volunteers.",
-   "est_sec": 4.75,
-   "gap_before": 1.05,
-   "role": "reply",
-   "block": "job_interview.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Hang on, I missed that.",
+   "text": "Hey! How are you feeling?",
    "est_sec": 1.65,
-   "gap_before": 1.07,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_04",
-   "block": "job_interview.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem. That's great experience. Talk about how much you raised and how you organized the volunteers.",
-   "est_sec": 5.37,
-   "gap_before": 0.52,
-   "role": "reply",
-   "block": "job_interview.dlg2"
+   "gap_before": 0.34,
+   "role": "greeting",
+   "phrasing": "greet_23"
   },
   {
    "speaker": "user",
-   "text": "I never thought of that as real work.",
-   "est_sec": 2.58,
-   "gap_before": 3.31,
-   "event": "ordinary_request",
-   "block": "job_interview.dlg2"
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.78,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm trying to get more vegetables into my week and I've got three plans in mind.",
+   "est_sec": 5.06,
+   "gap_before": 0.28,
+   "block": "cooking.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me finish describing every option before you respond.",
+   "est_sec": 2.89,
+   "gap_before": 0.84,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_17"
   },
   {
    "speaker": "moshi",
-   "text": "It absolutely is. Planning, budgeting and leading people are exactly what employers look for.",
-   "est_sec": 4.44,
-   "gap_before": 0.72,
-   "role": "reply",
-   "block": "job_interview.dlg2"
+   "text": "No worries.",
+   "est_sec": 0.72,
+   "gap_before": 0.25,
+   "role": "ack",
+   "phrasing": "ack_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Plan A is a big soup on Sunday that I eat for lunch every day, mostly lentils, carrots and greens.",
+   "est_sec": 6.3,
+   "gap_before": 1.42,
+   "block": "cooking.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Plan B is sneaking veg into everything, like grated courgette in sauces and spinach in my eggs.",
+   "est_sec": 5.37,
+   "gap_before": 1.27,
+   "block": "cooking.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Plan C is a veg box delivery, which forces me to cook whatever turns up each week, even weird stuff.",
+   "est_sec": 6.3,
+   "gap_before": 2.82,
+   "block": "cooking.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm finished. What's your opinion?",
+   "est_sec": 1.96,
+   "gap_before": 0.67,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Plan B is the easiest to stick with because it doesn't change what you already eat. The Sunday soup is great but you might be bored by Thursday. The veg box is the most adventurous, and good if you like a challenge.",
+   "est_sec": 13.12,
+   "gap_before": 0.41,
+   "role": "resume",
+   "block": "cooking.opt4"
   }
  ]
 }

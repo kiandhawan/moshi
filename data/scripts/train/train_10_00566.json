@@ -7,17 +7,26 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "books"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "books",
+ "topics": [
+  "weather_plans"
+ ],
+ "wait_sec": 10,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 10
+ },
+ "topic": "weather_plans",
  "voices": {
-  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,96 +34,96 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_17",
-  "greet_ans_26",
-  "describe_instr_05",
-  "describe_cue_13"
+  "greet_ans_19",
+  "think_instr_28",
+  "self_16"
  ],
  "block_ids": [
-  "books.opt1"
+  "weather_plans.ctx9"
  ],
- "est_total_sec": 62.76,
- "est_speech_sec": 48.43,
+ "est_total_sec": 46.3,
+ "est_speech_sec": 29.11,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey there! How's your day?",
    "est_sec": 1.65,
-   "gap_before": 0.79,
+   "gap_before": 0.39,
    "role": "greeting",
    "phrasing": "greet_17"
   },
   {
    "speaker": "user",
-   "text": "Kind of tired, honestly.",
-   "est_sec": 1.34,
-   "gap_before": 0.37,
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.53,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_26"
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "My book club gets to pick next month's book and it's my turn to choose.",
-   "est_sec": 4.75,
-   "gap_before": 0.51,
-   "block": "books.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll tell you all the choices first. Wait until I'm finished before you comment.",
-   "est_sec": 4.44,
-   "gap_before": 0.85,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_05"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is a long fantasy novel, about eight hundred pages, with dragons and a huge cast.",
+   "text": "The pavements are like an ice rink this morning and I've got two kids to get to school.",
    "est_sec": 5.68,
-   "gap_before": 1.47,
-   "block": "books.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a short memoir about a woman who sailed around the world by herself.",
-   "est_sec": 4.75,
-   "gap_before": 2.37,
-   "block": "books.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a mystery set in a small fishing town, the kind you can't put down.",
-   "est_sec": 5.37,
-   "gap_before": 1.45,
-   "block": "books.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a book about the history of salt, which sounds odd but has great reviews.",
-   "est_sec": 5.99,
-   "gap_before": 2.7,
-   "block": "books.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "That's all I've got. Which would you choose?",
-   "est_sec": 2.58,
-   "gap_before": 1.3,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_13"
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "How much reading does your club usually manage in a month? If people are busy, the memoir or the mystery are the best bets. The salt book is a fun wild card if the group likes something different.",
-   "est_sec": 11.88,
-   "gap_before": 1.02,
+   "text": "Oof. Would you walk carefully, or drive them even though it's only ten minutes on foot?",
+   "est_sec": 5.06,
+   "gap_before": 1.15,
+   "role": "reply",
+   "block": "weather_plans.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll need ten seconds to think. Ask me again after that.",
+   "est_sec": 3.51,
+   "gap_before": 2.29,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 10,
+   "phrasing": "think_instr_28"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, tough.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 5.39
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, walk on the ice, or take the car?",
+   "est_sec": 2.89,
    "role": "resume",
-   "block": "books.opt1"
+   "block": "weather_plans.ctx9",
+   "anchor": {
+    "turn": 4,
+    "offset": 10.58
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "We'll walk, slowly. The roads are probably worse.",
+   "est_sec": 2.58,
+   "gap_before": 0.69,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Probably right. Walk like a penguin, small steps, and stick to the gritted paths if you can.",
+   "est_sec": 5.37,
+   "gap_before": 0.33,
+   "role": "followup",
+   "block": "weather_plans.ctx9"
   }
  ]
 }

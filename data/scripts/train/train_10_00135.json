@@ -7,114 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "books"
+  "board_games"
  ],
- "topic": "books",
+ "topic": "board_games",
  "voices": {
-  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_29",
-  "describe_instr_02",
-  "describe_cue_10"
+  "greet_11",
+  "greet_ans_07"
  ],
  "block_ids": [
-  "books.opt1"
+  "board_games.dlg17"
  ],
- "est_total_sec": 62.62,
- "est_speech_sec": 50.91,
+ "est_total_sec": 54.62,
+ "est_speech_sec": 42.02,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
+   "text": "Hi, how are things with you?",
    "est_sec": 1.96,
-   "gap_before": 0.41,
+   "gap_before": 0.69,
    "role": "greeting",
-   "phrasing": "greet_16"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.49,
+   "text": "Honestly, a little stressed, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.73,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
+   "phrasing": "greet_ans_07"
   },
   {
    "speaker": "user",
-   "text": "My book club gets to pick next month's book and it's my turn to choose.",
-   "est_sec": 4.75,
-   "gap_before": 0.58,
-   "block": "books.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
-   "est_sec": 4.75,
-   "gap_before": 0.41,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_02"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is a long fantasy novel, about eight hundred pages, with dragons and a huge cast.",
-   "est_sec": 5.68,
-   "gap_before": 0.71,
-   "block": "books.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a short memoir about a woman who sailed around the world by herself.",
-   "est_sec": 4.75,
-   "gap_before": 1.31,
-   "block": "books.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a mystery set in a small fishing town, the kind you can't put down.",
-   "est_sec": 5.37,
-   "gap_before": 1.93,
-   "block": "books.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a book about the history of salt, which sounds odd but has great reviews.",
-   "est_sec": 5.99,
-   "gap_before": 2.91,
-   "block": "books.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Done. What would you recommend?",
-   "est_sec": 1.65,
-   "gap_before": 0.7,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_10"
+   "text": "How do I stop losing at that train game where you claim routes across the map?",
+   "est_sec": 5.06,
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "board_games.dlg17"
   },
   {
    "speaker": "moshi",
-   "text": "Eight hundred pages is a lot for a month, so the fantasy novel might lose half the club. The mystery is a safe choice, easy to read and fun to discuss who did it. The sailing memoir is short and inspiring, which could spark a nice conversation.",
-   "est_sec": 14.67,
-   "gap_before": 0.76,
-   "role": "resume",
-   "block": "books.opt1"
+   "text": "Look at your destination tickets first and plan the route, then grab the most important connections before others do.",
+   "est_sec": 5.99,
+   "gap_before": 0.37,
+   "role": "reply",
+   "block": "board_games.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "I always end up",
+   "est_sec": 1.34,
+   "gap_before": 1.03,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "board_games.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "stuck because someone takes the one route I need.",
+   "est_sec": 2.89,
+   "gap_before": 2.88,
+   "event": "ordinary_request",
+   "block": "board_games.dlg17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's common. Claim the bottleneck routes early, the short ones between cities with only one path. Leave the long open routes for later.",
+   "est_sec": 7.23,
+   "gap_before": 1.18,
+   "role": "reply",
+   "block": "board_games.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "And should I keep drawing tickets?",
+   "est_sec": 1.96,
+   "gap_before": 1.09,
+   "event": "ordinary_request",
+   "block": "board_games.dlg17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Only if you can link them to routes you're already building. Unfinished tickets count against you at the end.",
+   "est_sec": 5.99,
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "board_games.dlg17"
+  },
+  {
+   "speaker": "user",
+   "text": "That's exactly how I lost last time.",
+   "est_sec": 2.27,
+   "gap_before": 0.74,
+   "event": "ordinary_request",
+   "block": "board_games.dlg17"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then you've already learned the hardest lesson. Next game, aim for fewer tickets and more long routes.",
+   "est_sec": 5.37,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "board_games.dlg17"
   }
  ]
 }

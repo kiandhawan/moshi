@@ -7,130 +7,108 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
  "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "conditions": [],
  "topics": [
   "smartphones"
  ],
- "wait_sec": 20,
+ "wait_sec": 5,
  "deadline": {
   "after_turn": 4,
-  "sec": 20
+  "sec": 5
  },
  "topic": "smartphones",
  "voices": {
-  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "user": "676f1654c4f747a69a5921ad94886fa1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_13",
-  "greet_ans_23",
-  "think_instr_04",
-  "ack_08",
-  "self_17"
+  "greet_04",
+  "greet_ans_19",
+  "think_instr_07"
  ],
  "block_ids": [
-  "smartphones.ctx1"
+  "smartphones.ctx9"
  ],
- "est_total_sec": 59.8,
- "est_speech_sec": 35.1,
+ "est_total_sec": 41.05,
+ "est_speech_sec": 28.08,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, nice to hear from you. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.5,
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.57,
    "role": "greeting",
-   "phrasing": "greet_13"
+   "phrasing": "greet_04"
   },
   {
    "speaker": "user",
-   "text": "Good, good. Thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.95,
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.68,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_23"
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "My phone is three years old and the battery dies by lunchtime. I think it's time to replace it.",
+   "text": "Someone at work picked up my phone and just opened it. No lock at all. I felt so exposed.",
    "est_sec": 5.99,
-   "gap_before": 0.46,
+   "gap_before": 0.48,
    "event": "ordinary_request",
-   "block": "smartphones.ctx1"
+   "block": "smartphones.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "That's fair. Do you want to stick with the same brand, or are you open to switching to something new?",
-   "est_sec": 6.3,
-   "gap_before": 0.96,
+   "text": "Time to fix that. Would you prefer face unlock or a six-digit code?",
+   "est_sec": 4.13,
+   "gap_before": 1.18,
    "role": "reply",
-   "block": "smartphones.ctx1"
+   "block": "smartphones.ctx9"
   },
   {
    "speaker": "user",
-   "text": "I don't know yet. Ask me again in twenty seconds.",
-   "est_sec": 3.2,
-   "gap_before": 0.77,
+   "text": "Hold on, give me five seconds to decide and ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 1.73,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_04"
+   "wait_sec": 5,
+   "phrasing": "think_instr_07"
   },
   {
    "speaker": "moshi",
-   "text": "Sure, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.38,
-   "role": "ack",
-   "phrasing": "ack_08"
-  },
-  {
-   "speaker": "user",
-   "text": "If I pick that one, then",
-   "est_sec": 1.96,
-   "anchor": {
-    "turn": 4,
-    "offset": 6.69
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_17"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, back to the phone. Same brand, or a switch?",
-   "est_sec": 3.2,
+   "text": "So, locking your phone. Face unlock or a code?",
+   "est_sec": 2.89,
    "role": "resume",
-   "block": "smartphones.ctx1",
+   "block": "smartphones.ctx9",
    "anchor": {
     "turn": 4,
-    "offset": 20.3
+    "offset": 5.23
    }
   },
   {
    "speaker": "user",
-   "text": "Honestly, I want to try something new this time.",
-   "est_sec": 2.89,
-   "gap_before": 1.62,
+   "text": "Face unlock. I'll never remember another code.",
+   "est_sec": 2.27,
+   "gap_before": 0.98,
    "event": "ordinary_request",
-   "block": "smartphones.ctx1"
+   "block": "smartphones.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Fun. Most phones have a transfer app now, so moving your photos and contacts is easier than it used to be.",
-   "est_sec": 6.61,
-   "gap_before": 0.63,
+   "text": "Fine choice. It'll still ask you for a backup code once, so pick something that isn't your birthday.",
+   "est_sec": 5.68,
+   "gap_before": 0.62,
    "role": "followup",
-   "block": "smartphones.ctx1"
+   "block": "smartphones.ctx9"
   }
  ]
 }

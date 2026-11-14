@@ -7,141 +7,92 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [
-  "wait_like"
- ],
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [],
  "topics": [
-  "cars"
+  "shopping"
  ],
- "topic": "cars",
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "shopping",
  "voices": {
-  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "user": "bd45448dd6f84f9ebd06f369f93f4410",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_22",
-  "waitlike_01"
+  "greet_11",
+  "greet_ans_01",
+  "think_instr_07"
  ],
  "block_ids": [
-  "cars.dlg2"
+  "shopping.ctx11"
  ],
- "est_total_sec": 64.75,
- "est_speech_sec": 50.28,
+ "est_total_sec": 71.24,
+ "est_speech_sec": 21.99,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.51,
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.36,
    "role": "greeting",
-   "phrasing": "greet_22"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "Pretty relaxed today.",
+   "text": "I'm good, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.57,
+   "gap_before": 0.3,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_22"
+   "phrasing": "greet_ans_01"
   },
   {
    "speaker": "user",
-   "text": "I'm thinking about getting an electric car. Is it a bad idea if I live in a flat?",
-   "est_sec": 5.68,
-   "gap_before": 0.44,
+   "text": "I want to stop buying new clothes all the time. Thinking of trying secondhand.",
+   "est_sec": 4.44,
+   "gap_before": 0.37,
    "event": "ordinary_request",
-   "block": "cars.dlg2"
+   "block": "shopping.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Not necessarily. The main question is where you'd charge it. Is there a charger near your building or at work?",
-   "est_sec": 6.3,
-   "gap_before": 1.2,
+   "text": "Nice idea. Are you up for digging through charity shops in person, or would you rather browse resale apps from your sofa?",
+   "est_sec": 6.92,
+   "gap_before": 0.32,
    "role": "reply",
-   "block": "cars.dlg2"
+   "block": "shopping.ctx11"
   },
   {
    "speaker": "user",
-   "text": "There's one at the supermarket down the road.",
-   "est_sec": 2.58,
-   "gap_before": 1.34,
-   "event": "ordinary_request",
-   "block": "cars.dlg2"
+   "text": "Hold on, give me forty-five seconds to decide and ask me again.",
+   "est_sec": 3.82,
+   "gap_before": 1.39,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_07"
   },
   {
    "speaker": "moshi",
-   "text": "That can work if you don't drive much. A quick charge while you shop a couple of times a week covers a lot of city driving.",
-   "est_sec": 8.16,
-   "gap_before": 1.62,
-   "role": "reply",
-   "block": "cars.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "I mostly just commute, maybe",
-   "est_sec": 1.65,
-   "gap_before": 0.82,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "cars.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "thirty miles a day.",
-   "est_sec": 1.34,
-   "gap_before": 2.37,
-   "event": "ordinary_request",
-   "block": "cars.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's very doable. Most electric cars would only need charging once or twice a week for that.",
-   "est_sec": 5.37,
-   "gap_before": 0.39,
-   "role": "reply",
-   "block": "cars.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait, what did you say?",
-   "est_sec": 1.65,
-   "gap_before": 1.43,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_01",
-   "block": "cars.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem. That's very doable. Most electric cars would only need charging once or twice a week for that.",
-   "est_sec": 5.99,
-   "gap_before": 1.17,
-   "role": "reply",
-   "block": "cars.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Actually, what about a hybrid instead? Less hassle?",
-   "est_sec": 2.58,
-   "gap_before": 0.73,
-   "event": "ordinary_request",
-   "block": "cars.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A hybrid is a nice middle ground. You'd never worry about charging, though you'd save a bit less on fuel.",
-   "est_sec": 6.3,
-   "gap_before": 0.38,
-   "role": "reply",
-   "block": "cars.dlg2"
+   "text": "Have you settled it? In person or online for the secondhand stuff?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "shopping.ctx11",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.01
+   }
   }
  ]
 }

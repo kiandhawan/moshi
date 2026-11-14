@@ -7,6 +7,8 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
@@ -15,16 +17,16 @@
   "self_talk"
  ],
  "topics": [
-  "movies"
+  "hiking"
  ],
- "wait_sec": 45,
+ "wait_sec": 10,
  "deadline": {
   "after_turn": 4,
-  "sec": 45
+  "sec": 10
  },
- "topic": "movies",
+ "topic": "hiking",
  "voices": {
-  "user": "050df12e0f30484fb882a9a5410e5d66",
+  "user": "9a9cf47702da476aa4629e2506d4a857",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -32,105 +34,80 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_04",
-  "greet_ans_07",
-  "think_instr_01",
-  "ack_09",
-  "self_25"
+  "greet_ans_01",
+  "think_instr_22",
+  "self_02"
  ],
  "block_ids": [
-  "movies.ctx2"
+  "hiking.ctx11"
  ],
- "est_total_sec": 82.41,
- "est_speech_sec": 32.93,
+ "est_total_sec": 35.87,
+ "est_speech_sec": 23.64,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey there, how are you?",
    "est_sec": 1.65,
-   "gap_before": 0.45,
+   "gap_before": 0.65,
    "role": "greeting",
    "phrasing": "greet_04"
   },
   {
    "speaker": "user",
-   "text": "Honestly, a little stressed, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.78,
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.53,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_07"
+   "phrasing": "greet_ans_01"
   },
   {
    "speaker": "user",
-   "text": "I want to get into older films but I don't know where to start.",
-   "est_sec": 4.44,
-   "gap_before": 0.59,
+   "text": "For Saturday's walk, do I pack lunch?",
+   "est_sec": 2.27,
+   "gap_before": 0.52,
    "event": "ordinary_request",
-   "block": "movies.ctx2"
+   "block": "hiking.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Great idea. Would you like to start with classic Hollywood from the forties and fifties, or with foreign classics from Europe and Japan?",
-   "est_sec": 7.23,
-   "gap_before": 0.66,
+   "text": "Depends. The route passes a mountain hut that's famous for its soup, but it closes at two. A packed lunch means you can stop anywhere. Fancy the gamble on timing?",
+   "est_sec": 9.4,
+   "gap_before": 0.8,
    "role": "reply",
-   "block": "movies.ctx2"
+   "block": "hiking.ctx11"
   },
   {
    "speaker": "user",
-   "text": "Give me forty-five seconds to think, then ask me again.",
+   "text": "Not sure yet. Check back with me in ten seconds.",
    "est_sec": 3.2,
-   "gap_before": 1.35,
+   "gap_before": 0.38,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 45,
-   "phrasing": "think_instr_01"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Take your time.",
-   "est_sec": 1.03,
-   "gap_before": 0.21,
-   "role": "ack",
-   "phrasing": "ack_09"
+   "wait_sec": 10,
+   "phrasing": "think_instr_22"
   },
   {
    "speaker": "user",
-   "text": "Okay, so, the thing is",
-   "est_sec": 1.65,
+   "text": "Okay, so if I do that, then",
+   "est_sec": 2.27,
    "anchor": {
     "turn": 4,
-    "offset": 40.29
+    "offset": 6.69
    },
    "event": "distractor",
    "kind": "self_talk",
-   "phrasing": "self_25"
+   "phrasing": "self_02"
   },
   {
    "speaker": "moshi",
-   "text": "So, where would you like to start, classic Hollywood or foreign classics?",
+   "text": "So, sandwiches in the bag, or race the clock for that soup?",
    "est_sec": 3.82,
    "role": "resume",
-   "block": "movies.ctx2",
+   "block": "hiking.ctx11",
    "anchor": {
     "turn": 4,
-    "offset": 45.45
+    "offset": 10.12
    }
-  },
-  {
-   "speaker": "user",
-   "text": "Hollywood first. Subtitles put me to sleep.",
-   "est_sec": 2.27,
-   "gap_before": 0.61,
-   "event": "ordinary_request",
-   "block": "movies.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem. Start with a screwball comedy and a film noir, they're both fast and easy to love.",
-   "est_sec": 5.68,
-   "gap_before": 0.77,
-   "role": "followup",
-   "block": "movies.ctx2"
   }
  ]
 }

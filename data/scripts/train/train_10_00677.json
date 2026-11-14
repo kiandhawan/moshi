@@ -7,172 +7,129 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "near_miss"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "music",
-  "job_interview"
+  "pets"
  ],
- "topic": "music",
+ "topic": "pets",
  "voices": {
-  "user": "18b1276891524bd786fb8a59ecd3630a",
-  "friend": "6d7a45828f6a432c9233cd93bb93e5be",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Ethan",
- "friend_name_id": "name_23",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_10",
-  "side_instr_16",
-  "dn_10",
-  "side_cue_07"
+  "greet_17",
+  "greet_ans_10"
  ],
  "block_ids": [
-  "music.ctx2",
-  "job_interview.side2"
+  "pets.dlg27"
  ],
- "est_total_sec": 69.76,
- "est_speech_sec": 54.4,
+ "est_total_sec": 58.56,
+ "est_speech_sec": 46.77,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
+   "text": "Hey there! How's your day?",
    "est_sec": 1.65,
-   "gap_before": 0.61,
+   "gap_before": 0.32,
    "role": "greeting",
-   "phrasing": "greet_22"
+   "phrasing": "greet_17"
   },
   {
    "speaker": "user",
    "text": "Doing well, thank you.",
    "est_sec": 1.34,
-   "gap_before": 0.92,
+   "gap_before": 0.63,
    "event": "greeting_answer",
    "phrasing": "greet_ans_10"
   },
   {
    "speaker": "user",
-   "text": "I'm making a playlist for my sister's wedding reception.",
-   "est_sec": 2.89,
-   "gap_before": 0.28,
+   "text": "My dog ignores me completely at the park. He comes back when he feels like it.",
+   "est_sec": 5.06,
+   "gap_before": 0.36,
    "event": "ordinary_request",
-   "block": "music.ctx2"
+   "block": "pets.dlg27"
   },
   {
    "speaker": "moshi",
-   "text": "Fun! For the first dance, do you want something classic and romantic, or something more upbeat and surprising?",
-   "est_sec": 5.68,
-   "gap_before": 0.32,
+   "text": "That's frustrating and can be dangerous. Recall is all about making coming back the best thing ever.",
+   "est_sec": 5.37,
+   "gap_before": 1.15,
    "role": "reply",
-   "block": "music.ctx2"
+   "block": "pets.dlg27"
   },
   {
    "speaker": "user",
-   "text": "Hang on a minute, I want to ask Ethan something first. Don't jump in until I'm back.",
-   "est_sec": 5.37,
-   "gap_before": 0.77,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_16"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, where did we put the remote?",
-   "est_sec": 2.27,
-   "gap_before": 1.35,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_10"
-  },
-  {
-   "speaker": "friend",
-   "text": "Under the cushion, I think.",
-   "est_sec": 1.65,
-   "gap_before": 1.35,
-   "phrasing": "dn_10"
-  },
-  {
-   "speaker": "user",
-   "text": "Do you know how long it takes to get downtown at nine in the morning?",
-   "est_sec": 4.75,
-   "gap_before": 1.22,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "job_interview.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "With traffic? At least forty minutes.",
-   "est_sec": 1.96,
-   "gap_before": 1.18,
-   "block": "job_interview.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh wow. My interview is at nine thirty.",
-   "est_sec": 2.58,
-   "gap_before": 0.5,
-   "block": "job_interview.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Then leave by eight, and grab a coffee nearby if you're early.",
-   "est_sec": 3.82,
-   "gap_before": 0.55,
-   "block": "job_interview.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Good idea. Can I borrow your nice umbrella too? It's supposed to rain.",
-   "est_sec": 4.13,
-   "gap_before": 0.87,
-   "block": "job_interview.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Of course. Showing up soaked is not the look.",
-   "est_sec": 2.89,
-   "gap_before": 0.61,
-   "block": "job_interview.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm here again, let's continue.",
-   "est_sec": 1.65,
-   "gap_before": 0.6,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_07"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright. We were working on the wedding playlist. What feel for the first dance?",
-   "est_sec": 4.44,
-   "gap_before": 0.63,
-   "role": "resume",
-   "block": "music.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Upbeat. They're doing a choreographed dance.",
-   "est_sec": 1.96,
-   "gap_before": 1.49,
+   "text": "I give him treats.",
+   "est_sec": 1.34,
+   "gap_before": 0.34,
    "event": "ordinary_request",
-   "block": "music.ctx2"
+   "block": "pets.dlg27"
   },
   {
    "speaker": "moshi",
-   "text": "Oh, fun! Pick a song that starts slow and then kicks in, that always gets a cheer.",
-   "est_sec": 5.37,
-   "gap_before": 0.61,
-   "role": "followup",
-   "block": "music.ctx2"
+   "text": "Use the really good stuff for recall only, like chicken or cheese, not his normal biscuits.",
+   "est_sec": 5.06,
+   "gap_before": 1.21,
+   "role": "reply",
+   "block": "pets.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay. And when he ignores me?",
+   "est_sec": 1.96,
+   "gap_before": 0.83,
+   "event": "ordinary_request",
+   "block": "pets.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Don't keep repeating his name. Practise in the garden first, then on a long training lead at the park, so he can't practise ignoring you.",
+   "est_sec": 7.85,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "pets.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "A long lead? Like a really long one?",
+   "est_sec": 2.58,
+   "gap_before": 1.2,
+   "event": "ordinary_request",
+   "block": "pets.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Five or ten metres. It gives him freedom while you can still reel him in.",
+   "est_sec": 4.75,
+   "gap_before": 0.94,
+   "role": "reply",
+   "block": "pets.dlg27"
+  },
+  {
+   "speaker": "user",
+   "text": "That sounds like a tangle waiting to happen.",
+   "est_sec": 2.58,
+   "gap_before": 1.18,
+   "event": "ordinary_request",
+   "block": "pets.dlg27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It can be, so wear gloves and keep it short in busy areas. It's worth it, recall can save his life one day.",
+   "est_sec": 7.23,
+   "gap_before": 1.22,
+   "role": "reply",
+   "block": "pets.dlg27"
   }
  ]
 }

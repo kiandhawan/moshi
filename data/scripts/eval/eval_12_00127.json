@@ -7,168 +7,146 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "door",
- "wait_type": "door",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [
-  "implicit"
+  "extension"
  ],
  "topics": [
-  "podcasts"
+  "wedding_planning"
  ],
- "topic": "podcasts",
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 5,
+  "said_before_deadline_sec": 1.25
+ },
+ "deadline": {
+  "after_turn": 6,
+  "sec": 5
+ },
+ "topic": "wedding_planning",
  "voices": {
-  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
-  "friend": "732ea755bd9e446eb31dc79966b50428",
+  "user": "933563129e564b19a115bedd57b7406a",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_03",
-  "greet_ans_24",
-  "door_instr_05",
-  "ack_03",
-  "door_07",
-  "implicit_01"
+  "greet_09",
+  "greet_ans_30",
+  "think_instr_18",
+  "ack_12",
+  "extension_03"
  ],
  "block_ids": [
-  "podcasts.ctx2"
+  "wedding_planning.ctx10"
  ],
- "est_total_sec": 55.15,
- "est_speech_sec": 35.29,
+ "est_total_sec": 50.41,
+ "est_speech_sec": 26.42,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how's your day going?",
-   "est_sec": 1.65,
-   "gap_before": 0.6,
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.66,
    "role": "greeting",
-   "phrasing": "greet_03",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Ah, it's been a long day.",
-   "est_sec": 1.96,
-   "gap_before": 0.9,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_24"
-  },
-  {
-   "speaker": "user",
-   "text": "My friend and I want to start our own podcast.",
-   "est_sec": 3.2,
-   "gap_before": 0.43,
-   "event": "ordinary_request",
-   "block": "podcasts.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fun! What would it be about? Having a clear theme makes it much easier to find listeners.",
-   "est_sec": 5.37,
-   "gap_before": 1.77,
-   "role": "reply",
-   "block": "podcasts.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "One moment, I need to get the door. I'll tell you when I'm back.",
-   "est_sec": 4.44,
-   "gap_before": 0.64,
-   "event": "instruction",
-   "kind": "door",
-   "phrasing": "door_instr_05"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, take your time.",
-   "est_sec": 1.34,
-   "gap_before": 0.35,
-   "role": "ack",
-   "phrasing": "ack_03",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hello?",
-   "est_sec": 0.41,
-   "gap_before": 4.39,
-   "phrasing": "door_07",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Hi, we're collecting for the school fundraiser.",
-   "est_sec": 2.27,
-   "gap_before": 1.03,
-   "phrasing": "door_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Sure, how much are people giving?",
-   "est_sec": 1.96,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
    "gap_before": 0.67,
-   "phrasing": "door_07",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Anything helps, really.",
-   "est_sec": 1.03,
-   "gap_before": 1.0,
-   "phrasing": "door_07"
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "Here you go.",
-   "est_sec": 1.03,
+   "text": "We're both terrible writers. Do we have to do our own vows?",
+   "est_sec": 3.82,
    "gap_before": 0.37,
-   "phrasing": "door_07"
-  },
-  {
-   "speaker": "user",
-   "text": "Anyway, where were we?",
-   "est_sec": 1.34,
-   "gap_before": 2.37,
-   "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_01"
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "Right. So, what will your podcast be about?",
-   "est_sec": 2.58,
-   "gap_before": 1.7,
-   "role": "resume",
-   "block": "podcasts.ctx2",
+   "text": "Not at all. Traditional vows are lovely too. Classic words, or a short personal line added on top of them?",
+   "est_sec": 6.3,
+   "gap_before": 0.88,
+   "role": "reply",
+   "block": "wedding_planning.ctx10",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Maybe local food, trying a new restaurant in town each week.",
-   "est_sec": 3.51,
-   "gap_before": 0.97,
-   "event": "ordinary_request",
-   "block": "podcasts.ctx2"
+   "text": "Let me think. Ask me again in about fifteen seconds.",
+   "est_sec": 3.2,
+   "gap_before": 0.37,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_18"
   },
   {
    "speaker": "moshi",
-   "text": "Nice, very focused. Local businesses might even help promote it.",
-   "est_sec": 3.2,
-   "gap_before": 1.17,
+   "text": "Sure thing.",
+   "est_sec": 0.72,
+   "gap_before": 0.69,
+   "role": "ack",
+   "phrasing": "ack_12",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, five more seconds please.",
+   "est_sec": 1.65,
+   "event": "extension",
+   "extra_sec": 5,
+   "phrasing": "extension_03",
+   "anchor": {
+    "turn": 4,
+    "offset": 13.75
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, classic vows, or classic with a little extra?",
+   "est_sec": 2.89,
+   "role": "resume",
+   "block": "wedding_planning.ctx10",
+   "anchor": {
+    "turn": 6,
+    "offset": 5.25
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Traditional, done. No writing.",
+   "est_sec": 1.34,
+   "gap_before": 0.84,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Totally fine. There's a reason people have said them for centuries.",
+   "est_sec": 3.51,
+   "gap_before": 0.42,
    "role": "followup",
-   "block": "podcasts.ctx2",
+   "block": "wedding_planning.ctx10",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_door",
-  "implicit_return"
+  "familiar_type",
+  "extension"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

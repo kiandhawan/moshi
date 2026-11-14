@@ -7,114 +7,159 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "sleep"
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
  ],
- "topic": "sleep",
+ "topics": [
+  "baking"
+ ],
+ "topic": "baking",
  "voices": {
-  "user": "4210f97652d14bec82edc1c2ee8296d2",
+  "user": "c70cfb98867a4bfb9ae20d2401257b92",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_17",
-  "greet_ans_29",
-  "describe_instr_01",
-  "ack_06",
-  "describe_cue_02"
+  "greet_01",
+  "greet_ans_01",
+  "waitlike_08"
  ],
  "block_ids": [
-  "sleep.opt2"
+  "baking.dlg16"
  ],
- "est_total_sec": 52.04,
- "est_speech_sec": 41.61,
+ "est_total_sec": 67.11,
+ "est_speech_sec": 50.79,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there! How's your day?",
+   "text": "Hey, how are you doing?",
    "est_sec": 1.65,
-   "gap_before": 0.56,
+   "gap_before": 0.3,
    "role": "greeting",
-   "phrasing": "greet_17"
+   "phrasing": "greet_01"
   },
   {
    "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
    "gap_before": 0.32,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
+   "phrasing": "greet_ans_01"
   },
   {
    "speaker": "user",
-   "text": "I'm buying a new mattress and I've narrowed it down.",
-   "est_sec": 3.2,
-   "gap_before": 0.59,
-   "block": "sleep.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me describe all the options before you comment.",
-   "est_sec": 2.89,
-   "gap_before": 0.87,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_01"
+   "text": "My mother used to make a soda bread when I was a boy, and I've never managed to get it the same.",
+   "est_sec": 6.92,
+   "gap_before": 0.51,
+   "event": "ordinary_request",
+   "block": "baking.dlg16"
   },
   {
    "speaker": "moshi",
-   "text": "Of course.",
-   "est_sec": 0.72,
-   "gap_before": 0.21,
-   "role": "ack",
-   "phrasing": "ack_06"
+   "text": "That's a lovely thing to recreate. Do you remember anything about it, the texture or the crust?",
+   "est_sec": 5.37,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "baking.dlg16"
   },
   {
    "speaker": "user",
-   "text": "One is a firm memory foam mattress that a lot of reviews say is great for back pain.",
+   "text": "It had a hard crust with a cross cut in the top, and it was slightly sour.",
+   "est_sec": 5.37,
+   "gap_before": 2.8,
+   "event": "ordinary_request",
+   "block": "baking.dlg16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The sourness probably came from buttermilk. A traditional soda bread is just flour, baking soda, salt and buttermilk.",
    "est_sec": 5.68,
-   "gap_before": 0.89,
-   "block": "sleep.opt2"
+   "gap_before": 0.49,
+   "role": "reply",
+   "block": "baking.dlg16"
   },
   {
    "speaker": "user",
-   "text": "Another is a soft pillow top spring mattress, really cozy, but it might sag after a few years.",
-   "est_sec": 5.68,
-   "gap_before": 1.23,
-   "block": "sleep.opt2",
+   "text": "That's all? No butter, nothing?",
+   "est_sec": 1.65,
+   "gap_before": 1.02,
+   "event": "ordinary_request",
+   "block": "baking.dlg16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nothing else. Mix it quickly with a light hand, shape a round, cut a deep cross, and bake it hot.",
+   "est_sec": 6.3,
+   "gap_before": 0.98,
+   "role": "reply",
+   "block": "baking.dlg16"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, are you sure about that?",
+   "est_sec": 1.96,
+   "gap_before": 0.83,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_08",
+   "block": "baking.dlg16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let me double-check. I'd still stand by it, but tell me what you heard.",
+   "est_sec": 4.44,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "baking.dlg16"
+  },
+  {
+   "speaker": "user",
+   "text": "She did always say",
+   "est_sec": 1.34,
+   "gap_before": 0.85,
    "event": "distractor",
-   "kind": "pause"
+   "kind": "pause",
+   "block": "baking.dlg16"
   },
   {
    "speaker": "user",
-   "text": "Or there's a hybrid with springs and foam, medium firm, and a bit more expensive.",
-   "est_sec": 4.75,
-   "gap_before": 2.03,
-   "block": "sleep.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "That's everything. Which one would you pick?",
-   "est_sec": 2.27,
-   "gap_before": 1.11,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_02"
+   "text": "not to fuss with it.",
+   "est_sec": 1.65,
+   "gap_before": 2.76,
+   "event": "ordinary_request",
+   "block": "baking.dlg16"
   },
   {
    "speaker": "moshi",
-   "text": "The hybrid is often a good balance of support and comfort, and medium firm suits most sleepers. The firm foam one is worth a look if your back hurts. The pillow top feels lovely in the store but may not last as long.",
-   "est_sec": 13.43,
-   "gap_before": 1.12,
-   "role": "resume",
-   "block": "sleep.opt2"
+   "text": "She was right. The less you handle it, the softer the inside.",
+   "est_sec": 3.82,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "baking.dlg16"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll try it Sunday.",
+   "est_sec": 1.34,
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "block": "baking.dlg16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I hope it tastes just like hers.",
+   "est_sec": 2.27,
+   "gap_before": 1.14,
+   "role": "reply",
+   "block": "baking.dlg16"
   }
  ]
 }

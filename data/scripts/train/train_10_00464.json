@@ -7,120 +7,127 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "board_games"
+  "home_repair"
  ],
- "topic": "board_games",
+ "topic": "home_repair",
  "voices": {
-  "user": "b47bb94bf3ce42b2a7643c31af62c553",
+  "user": "e3cd384158934cc9a01029cd7d278634",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_07",
-  "greet_ans_05"
+  "greet_14",
+  "greet_ans_17",
+  "describe_instr_02",
+  "ack_07",
+  "describe_cue_14"
  ],
  "block_ids": [
-  "board_games.dlg2"
+  "home_repair.opt5"
  ],
- "est_total_sec": 47.98,
- "est_speech_sec": 36.13,
+ "est_total_sec": 62.22,
+ "est_speech_sec": 47.91,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How's everything going?",
-   "est_sec": 1.34,
-   "gap_before": 0.59,
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
    "role": "greeting",
-   "phrasing": "greet_07"
+   "phrasing": "greet_14"
   },
   {
    "speaker": "user",
-   "text": "I'm alright, a bit tired.",
-   "est_sec": 1.65,
-   "gap_before": 0.33,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_05"
-  },
-  {
-   "speaker": "user",
-   "text": "My friends always argue about the rules in Monopoly. How do we stop that?",
-   "est_sec": 4.44,
-   "gap_before": 0.57,
-   "event": "ordinary_request",
-   "block": "board_games.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Agree on house rules before you start, like what happens on free parking. Writing them on a note helps.",
-   "est_sec": 5.99,
-   "gap_before": 0.47,
-   "role": "reply",
-   "block": "board_games.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "The game also takes forever.",
-   "est_sec": 1.65,
-   "gap_before": 2.81,
-   "event": "ordinary_request",
-   "block": "board_games.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "The official rules include auctions when someone skips a property. Using them makes the game much faster.",
-   "est_sec": 5.37,
-   "gap_before": 0.72,
-   "role": "reply",
-   "block": "board_games.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "I had no idea. What else?",
+   "text": "A bit tired today, but okay.",
    "est_sec": 1.96,
-   "gap_before": 1.49,
-   "event": "ordinary_request",
-   "block": "board_games.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You can set a time limit, like ninety minutes, and whoever has the most money then wins.",
-   "est_sec": 5.37,
-   "gap_before": 0.35,
-   "role": "reply",
-   "block": "board_games.dlg2"
+   "gap_before": 0.82,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_17"
   },
   {
    "speaker": "user",
-   "text": "Honestly, maybe",
+   "text": "There's a big damp patch on our basement wall and I need to choose a plan.",
+   "est_sec": 5.06,
+   "gap_before": 0.5,
+   "block": "home_repair.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
+   "est_sec": 4.75,
+   "gap_before": 0.81,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it.",
    "est_sec": 0.72,
-   "gap_before": 0.42,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "board_games.dlg2"
+   "gap_before": 0.69,
+   "role": "ack",
+   "phrasing": "ack_07"
   },
   {
    "speaker": "user",
-   "text": "we should just play a different game.",
-   "est_sec": 2.27,
-   "gap_before": 2.12,
-   "event": "ordinary_request",
-   "block": "board_games.dlg2"
+   "text": "We could paint it with special damp proof paint, which is quick but might just hide the problem.",
+   "est_sec": 5.68,
+   "gap_before": 1.28,
+   "block": "home_repair.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another plan is to clean out the gutters and check if rainwater is pooling by that wall outside.",
+   "est_sec": 5.68,
+   "gap_before": 2.87,
+   "block": "home_repair.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "We could also buy a dehumidifier and run it down there all the time.",
+   "est_sec": 4.44,
+   "gap_before": 1.69,
+   "block": "home_repair.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or call a damp specialist to find where the water is really coming from.",
+   "est_sec": 4.44,
+   "gap_before": 1.6,
+   "block": "home_repair.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm finished. What's your opinion?",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_14"
   },
   {
    "speaker": "moshi",
-   "text": "That's an option too. Catan has a similar trading feel and usually ends in about an hour.",
-   "est_sec": 5.37,
-   "gap_before": 0.48,
-   "role": "reply",
-   "block": "board_games.dlg2"
+   "text": "I'd start with the gutters, it's cheap and fixes a surprising number of damp walls. The paint only hides things if water is still getting in. A dehumidifier helps with the air but doesn't stop the source.",
+   "est_sec": 11.57,
+   "gap_before": 1.13,
+   "role": "resume",
+   "block": "home_repair.opt5"
   }
  ]
 }

@@ -7,90 +7,127 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [],
- "topics": [
-  "books"
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
  ],
- "wait_sec": 45,
- "deadline": {
-  "after_turn": 4,
-  "sec": 45
- },
- "topic": "books",
+ "topics": [
+  "video_games"
+ ],
+ "topic": "video_games",
  "voices": {
-  "user": "18b1276891524bd786fb8a59ecd3630a",
+  "user": "ec3f1730c4494386accf1e86625bfe6d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_01",
-  "think_instr_10"
+  "greet_23",
+  "greet_ans_08",
+  "waitlike_17"
  ],
  "block_ids": [
-  "books.ctx2"
+  "video_games.dlg29"
  ],
- "est_total_sec": 69.8,
- "est_speech_sec": 20.75,
+ "est_total_sec": 55.81,
+ "est_speech_sec": 45.12,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
-   "est_sec": 1.96,
-   "gap_before": 0.58,
-   "role": "greeting",
-   "phrasing": "greet_11"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm good, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.7,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
-  },
-  {
-   "speaker": "user",
-   "text": "It's my turn to pick the book for our book club.",
-   "est_sec": 3.51,
-   "gap_before": 0.23,
-   "event": "ordinary_request",
-   "block": "books.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Nice. What does the group usually enjoy, and would you rather pick something safe or something that sparks a big debate?",
-   "est_sec": 6.61,
+   "text": "Hey! How are you feeling?",
+   "est_sec": 1.65,
    "gap_before": 0.63,
-   "role": "reply",
-   "block": "books.ctx2"
+   "role": "greeting",
+   "phrasing": "greet_23"
   },
   {
    "speaker": "user",
-   "text": "Um, give me forty-five seconds to think it over, then ask me.",
-   "est_sec": 3.82,
-   "gap_before": 0.37,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 45,
-   "phrasing": "think_instr_10"
+   "text": "I'm great, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.8,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_08"
+  },
+  {
+   "speaker": "user",
+   "text": "I love the soundtrack of the game I'm playing. I'd like to listen to it while I work.",
+   "est_sec": 5.68,
+   "gap_before": 0.45,
+   "event": "ordinary_request",
+   "block": "video_games.dlg29"
   },
   {
    "speaker": "moshi",
-   "text": "So, for your book club, safe pick or something to argue about?",
-   "est_sec": 3.82,
-   "role": "resume",
-   "block": "books.ctx2",
-   "anchor": {
-    "turn": 4,
-    "offset": 45.04
-   }
+   "text": "Game music is great for focus, it's literally designed to sit in the background while you concentrate. Many soundtracks are on music streaming services.",
+   "est_sec": 7.54,
+   "gap_before": 0.78,
+   "role": "reply",
+   "block": "video_games.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on a sec, really? I assumed they weren't.",
+   "est_sec": 2.89,
+   "gap_before": 0.53,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_17",
+   "block": "video_games.dlg29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A lot of them are now, especially from indie studios. Some also sell them directly with bonus tracks.",
+   "est_sec": 5.68,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "video_games.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "Any others you'd",
+   "est_sec": 1.03,
+   "gap_before": 0.8,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "video_games.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "recommend for working?",
+   "est_sec": 1.03,
+   "gap_before": 2.8,
+   "event": "ordinary_request",
+   "block": "video_games.dlg29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Look for soundtracks from exploration and puzzle games, they tend to be calm and without lyrics. City builders and farming games often have gentle ones too.",
+   "est_sec": 8.16,
+   "gap_before": 0.61,
+   "role": "reply",
+   "block": "video_games.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "Is that a weird thing to do at the office?",
+   "est_sec": 3.2,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "video_games.dlg29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not at all. Plenty of people do it. Nobody will know it's from a game unless it suddenly turns into boss battle music.",
+   "est_sec": 7.23,
+   "gap_before": 0.36,
+   "role": "reply",
+   "block": "video_games.dlg29"
   }
  ]
 }

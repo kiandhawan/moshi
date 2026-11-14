@@ -7,120 +7,127 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "hiking"
+  "photography"
  ],
- "topic": "hiking",
+ "topic": "photography",
  "voices": {
-  "user": "0efe38923c0b445ab09382e851ae1e30",
+  "user": "be9ce4282d8e414daad6fa1797f1cee8",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_08",
-  "greet_ans_13"
+  "greet_22",
+  "greet_ans_05",
+  "describe_instr_14",
+  "ack_04",
+  "describe_cue_10"
  ],
  "block_ids": [
-  "hiking.dlg2"
+  "photography.opt5"
  ],
- "est_total_sec": 49.5,
- "est_speech_sec": 37.68,
+ "est_total_sec": 56.82,
+ "est_speech_sec": 42.64,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there, how are you feeling today?",
-   "est_sec": 2.27,
-   "gap_before": 0.5,
+   "text": "Hello, how are things going?",
+   "est_sec": 1.65,
+   "gap_before": 0.65,
    "role": "greeting",
-   "phrasing": "greet_08"
+   "phrasing": "greet_22"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.43,
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.98,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "I keep getting blisters on my heels when I hike.",
-   "est_sec": 3.2,
-   "gap_before": 0.3,
-   "event": "ordinary_request",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's usually friction from your heel sliding in the boot. Are your boots well broken in?",
-   "est_sec": 5.06,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "They're pretty new, yeah.",
-   "est_sec": 1.34,
-   "gap_before": 0.47,
-   "event": "ordinary_request",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's likely the cause. Wear them around the house and on short walks first. Proper hiking socks help a lot too, not cotton ones.",
-   "est_sec": 7.54,
-   "gap_before": 0.59,
-   "role": "reply",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "And if I feel one starting on the trail?",
-   "est_sec": 2.89,
-   "gap_before": 0.7,
-   "event": "ordinary_request",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Stop right away and put a blister plaster or some tape on the spot. Waiting until it hurts usually means it's already formed.",
-   "est_sec": 7.23,
-   "gap_before": 0.93,
-   "role": "reply",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "I always think I'll",
-   "est_sec": 1.34,
-   "gap_before": 2.73,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "just push through it.",
-   "est_sec": 1.34,
-   "gap_before": 1.82,
-   "event": "ordinary_request",
-   "block": "hiking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Most people do. A two minute stop early saves you a miserable walk back.",
+   "text": "I want to take a photography class this autumn but I can't decide which.",
    "est_sec": 4.44,
-   "gap_before": 1.04,
-   "role": "reply",
-   "block": "hiking.dlg2"
+   "gap_before": 0.27,
+   "block": "photography.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me lay out all the options first. Don't interrupt.",
+   "est_sec": 3.2,
+   "gap_before": 0.74,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.32,
+   "role": "ack",
+   "phrasing": "ack_04"
+  },
+  {
+   "speaker": "user",
+   "text": "A ten week evening course at the community college, with homework and critique every week.",
+   "est_sec": 4.75,
+   "gap_before": 0.68,
+   "block": "photography.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A weekend workshop in the mountains, two full days of shooting landscapes with a pro.",
+   "est_sec": 4.75,
+   "gap_before": 2.2,
+   "block": "photography.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "An online course I can do whenever, with videos and a forum, really cheap.",
+   "est_sec": 4.44,
+   "gap_before": 1.68,
+   "block": "photography.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A street photography walk group that meets every Saturday morning, free, but no real teaching.",
+   "est_sec": 4.75,
+   "gap_before": 2.16,
+   "block": "photography.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Done. What would you recommend?",
+   "est_sec": 1.65,
+   "gap_before": 1.38,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It depends what you're missing. Skills and feedback, take the college course. Motivation and company, the free Saturday group is great, and you could pair it with the cheap online course for the theory.",
+   "est_sec": 10.64,
+   "gap_before": 1.62,
+   "role": "resume",
+   "block": "photography.opt5"
   }
  ]
 }

@@ -7,120 +7,107 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "weather_plans"
+  "public_transport"
  ],
- "topic": "weather_plans",
+ "topic": "public_transport",
  "voices": {
-  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "user": "879653fd2b9c4cb0854d68e7e9a049e8",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_20",
-  "greet_ans_25"
+  "greet_04",
+  "greet_ans_22",
+  "describe_instr_16",
+  "describe_cue_14"
  ],
  "block_ids": [
-  "weather_plans.dlg4"
+  "public_transport.opt4"
  ],
- "est_total_sec": 51.41,
- "est_speech_sec": 39.54,
+ "est_total_sec": 47.94,
+ "est_speech_sec": 38.41,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, good to have you here. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.44,
-   "role": "greeting",
-   "phrasing": "greet_20"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm well, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.6,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_25"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it a good idea to plant tomatoes this weekend? It's been warm.",
-   "est_sec": 4.13,
-   "gap_before": 0.53,
-   "event": "ordinary_request",
-   "block": "weather_plans.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It depends on the nights. Tomatoes don't like it when nights drop much below fifty degrees.",
-   "est_sec": 5.06,
-   "gap_before": 0.97,
-   "role": "reply",
-   "block": "weather_plans.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "The forecast says one more cold night next Tuesday.",
-   "est_sec": 2.89,
-   "gap_before": 1.03,
-   "event": "ordinary_request",
-   "block": "weather_plans.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then you could plant them and cover them that night with a sheet or a bucket. Or just wait a week.",
-   "est_sec": 6.61,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "weather_plans.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm impatient, I want to plant them now",
-   "est_sec": 2.58,
-   "gap_before": 0.79,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "weather_plans.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "but I don't want to lose them.",
-   "est_sec": 2.27,
-   "gap_before": 2.98,
-   "event": "ordinary_request",
-   "block": "weather_plans.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Plant them now and set a reminder for Tuesday evening to cover them. That's a fair compromise.",
-   "est_sec": 5.37,
-   "gap_before": 0.73,
-   "role": "reply",
-   "block": "weather_plans.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "Would an old blanket work?",
+   "text": "Hey there, how are you?",
    "est_sec": 1.65,
+   "gap_before": 0.42,
+   "role": "greeting",
+   "phrasing": "greet_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.37,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "My daughter starts secondary school in September and we're working out how she'll get there.",
+   "est_sec": 4.75,
+   "gap_before": 0.43,
+   "block": "public_transport.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Listen to all of them first, then comment.",
+   "est_sec": 2.58,
+   "gap_before": 0.59,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_16"
+  },
+  {
+   "speaker": "user",
+   "text": "The school bus picks up at the end of our road, but it leaves really early, at ten past seven.",
+   "est_sec": 6.3,
+   "gap_before": 1.07,
+   "block": "public_transport.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "She could take the public bus with her friends, it's later but involves one change in town.",
+   "est_sec": 5.37,
+   "gap_before": 1.9,
+   "block": "public_transport.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I drop her at the train station on my way to work, and she takes one stop.",
+   "est_sec": 5.68,
+   "gap_before": 1.24,
+   "block": "public_transport.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm finished. What's your opinion?",
+   "est_sec": 1.96,
    "gap_before": 1.15,
-   "event": "ordinary_request",
-   "block": "weather_plans.dlg4"
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_14"
   },
   {
    "speaker": "moshi",
-   "text": "Yes, just take it off in the morning so the plants get light and don't overheat.",
-   "est_sec": 5.06,
-   "gap_before": 0.33,
-   "role": "reply",
-   "block": "weather_plans.dlg4"
+   "text": "For the first term, the school bus takes the pressure off everyone. Once she's settled and confident, the public bus with her friends is a nice step towards independence.",
+   "est_sec": 9.09,
+   "gap_before": 0.86,
+   "role": "resume",
+   "block": "public_transport.opt4"
   }
  ]
 }

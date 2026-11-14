@@ -1,160 +1,1910 @@
 {
-  "topic": "gardening",
-  "contexts": [
+ "topic": "gardening",
+ "contexts": [
+  {
+   "id": "gardening.ctx1",
+   "turns": [
     {
-      "id": "gardening.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I've got a sunny balcony and I want to grow something I can actually eat."},
-        {"speaker": "moshi", "text": "Lovely. Herbs, cherry tomatoes and salad greens all do well in pots. Which of those would you use the most?"}
-      ],
-      "pending": "herbs, cherry tomatoes or salad greens",
-      "think_reask": [
-        "So, which would you use most, herbs, tomatoes or salad greens?",
-        "Okay, time's up. What do you want on your balcony first?",
-        "Have you picked yet, herbs, cherry tomatoes or greens?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were planning your balcony garden. Herbs, tomatoes or greens?",
-        "Hi again. You were choosing what to grow on your sunny balcony.",
-        "There you are. Any thoughts on what to plant first?"
-      ],
-      "endings": [
-        {"user": "Herbs, for sure. I'm always buying basil.", "moshi": "Then start with basil, parsley and mint. Keep the mint in its own pot, it spreads like crazy."},
-        {"user": "Cherry tomatoes. My kids would love picking them.", "moshi": "Great choice. Get a big pot, a stake for support, and water them every day when it's hot."}
-      ]
+     "speaker": "user",
+     "text": "I've got a sunny balcony and I want to grow something I can actually eat."
     },
     {
-      "id": "gardening.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "There's a bare patch in my back garden, maybe two meters wide, and it gets shade most of the day."},
-        {"speaker": "moshi", "text": "Shade is tricky but doable. Do you want flowers there, or something low-maintenance like ferns and ground cover?"}
-      ],
-      "pending": "flowers or low-maintenance ferns for shady patch",
-      "think_reask": [
-        "So, for that shady patch, flowers or something low-maintenance?",
-        "Alright, have you decided what kind of look you want for the shady spot?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were talking about your shady patch. Flowers or ferns?",
-        "Good to have you back. Did you decide what to put in that bare spot?"
-      ],
-      "endings": [
-        {"user": "Some flowers would be nice, a bit of color.", "moshi": "Try hostas, foxgloves and impatiens. They're happy in shade and still bring some color."},
-        {"user": "Low-maintenance. I really don't have time.", "moshi": "Then ferns and some ivy or periwinkle as ground cover. Once settled, they mostly look after themselves."}
-      ]
-    },
-    {
-      "id": "gardening.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "We're building raised beds this weekend. Wood or metal?"},
-        {"speaker": "moshi", "text": "Wood looks natural and is cheaper, metal lasts longer and warms up faster in spring. What matters more to you, budget or durability?"}
-      ],
-      "pending": "wood or metal raised beds",
-      "think_reask": [
-        "So, budget or durability? Wood or metal beds?",
-        "Okay, back to the raised beds. Have you decided on wood or metal?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were picking material for your raised beds.",
-        "Hey, you're back. Still weighing up wood against metal?"
-      ],
-      "endings": [
-        {"user": "Budget, so let's go with wood.", "moshi": "Good. Use untreated larch or cedar if you can, they resist rot without any chemicals."},
-        {"user": "Metal. I don't want to rebuild them in five years.", "moshi": "Sensible. Line the bottom with cardboard before you fill them, it smothers the weeds."}
-      ]
+     "speaker": "moshi",
+     "text": "Lovely. Herbs, cherry tomatoes and salad greens all do well in pots. Which of those would you use the most?"
     }
-  ],
-  "side_conversations": [
-    {"id": "gardening.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, did you water the tomatoes this morning?"},
-      {"speaker": "friend", "text": "No, I thought you did."},
-      {"speaker": "user", "text": "Oh no. They looked really droopy when I walked past."},
-      {"speaker": "friend", "text": "I'll do it now. Should I use the hose or the watering can?"},
-      {"speaker": "user", "text": "The can, the hose is too strong for the seedlings next to them."},
-      {"speaker": "friend", "text": "Okay, on it."}
-    ]},
-    {"id": "gardening.side2", "turns": [
-      {"speaker": "user", "text": "Look at these leaves. Do you think something's eating them?"},
-      {"speaker": "friend", "text": "Yeah, those holes look like slugs to me."},
-      {"speaker": "user", "text": "Great. What do your parents use against slugs?"},
-      {"speaker": "friend", "text": "My mom puts crushed eggshells around the plants. Dad just goes out at night with a torch and picks them off."},
-      {"speaker": "user", "text": "I'm not doing the torch thing. Eggshells I can manage."},
-      {"speaker": "friend", "text": "We have loads, I made an omelette yesterday."}
-    ]},
-    {"id": "gardening.side3", "turns": [
-      {"speaker": "user", "text": "Hey {friend}, can I borrow your hedge trimmer this weekend?"},
-      {"speaker": "friend", "text": "Sure, but the battery doesn't last long. Charge it the night before."},
-      {"speaker": "user", "text": "Will do. Is it okay on thick branches?"},
-      {"speaker": "friend", "text": "Not really, anything thicker than a finger you'll need loppers for."},
-      {"speaker": "user", "text": "Got it. I'll bring it back Sunday evening."},
-      {"speaker": "friend", "text": "No rush. Just don't drop it in the pond like last time."},
-      {"speaker": "user", "text": "That was one time!"}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "gardening.dlg1", "turns": [
-      {"speaker": "user", "text": "How often should I water my houseplants?"},
-      {"speaker": "moshi", "text": "Most like to dry out a bit between waterings. Push a finger into the soil, and if the top few centimeters are dry, it's time."},
-      {"speaker": "user", "text": "So not on a fixed schedule?"},
-      {"speaker": "moshi", "text": "Not really. In winter they need much less, and in summer they might need it twice a week."},
-      {"speaker": "user", "text": "I have a cactus and a / what's it called, a peace lily."},
-      {"speaker": "moshi", "text": "Those are opposites. Water the cactus maybe once a month, and the peace lily when its leaves start to droop a little."},
-      {"speaker": "user", "text": "Oh, it droops? I thought that meant it was dying."},
-      {"speaker": "moshi", "text": "It's just being dramatic. Give it a good drink and it usually perks up within a few hours."}
-    ]},
-    {"id": "gardening.dlg2", "turns": [
-      {"speaker": "user", "text": "When should I plant tulip bulbs?"},
-      {"speaker": "moshi", "text": "In autumn, once the soil has cooled down. Late October to November is usually ideal."},
-      {"speaker": "user", "text": "How deep do they go?"},
-      {"speaker": "moshi", "text": "About three times the height of the bulb, so roughly fifteen to twenty centimeters, pointy end up."},
-      {"speaker": "user", "text": "And can I put them in pots? I was hoping to / put a few by the front door."},
-      {"speaker": "moshi", "text": "Yes, tulips look great in pots. Pack them closely together and make sure the pot drains well."},
-      {"speaker": "user", "text": "Do they come back every year?"},
-      {"speaker": "moshi", "text": "Some do, but many fade after the first year. Lots of people just plant fresh ones each autumn."}
-    ]},
-    {"id": "gardening.dlg3", "turns": [
-      {"speaker": "user", "text": "I want to start composting but I live in a flat. Is that even possible?"},
-      {"speaker": "moshi", "text": "It is. A small worm bin or a bokashi bucket can live under your sink and won't smell if you look after it."},
-      {"speaker": "user", "text": "Worms in my kitchen? My partner would / probably move out."},
-      {"speaker": "moshi", "text": "Then bokashi might be easier. It's a sealed bucket where you add scraps and a sprinkle of bran, no worms involved."},
-      {"speaker": "user", "text": "What do I do with it when it's full?"},
-      {"speaker": "moshi", "text": "Bury it in soil, a large planter or a community garden bed. After a few weeks it turns into rich compost."},
-      {"speaker": "user", "text": "There's a community garden two streets over actually."},
-      {"speaker": "moshi", "text": "Perfect, ask them. Most community gardens are happy to take it."}
-    ]},
-    {"id": "gardening.dlg4", "turns": [
-      {"speaker": "user", "text": "My lawn has yellow patches all over. What's going on?"},
-      {"speaker": "moshi", "text": "Common causes are dry weather, dog pee or grubs in the soil. Do you have a dog?"},
-      {"speaker": "user", "text": "Yeah, a big one."},
-      {"speaker": "moshi", "text": "That's likely it then. Watering the spot right after the dog goes can dilute it and stop the burn."},
-      {"speaker": "user", "text": "I can't follow him around with a watering can all day."},
-      {"speaker": "moshi", "text": "Fair. You could train him to use one corner of the garden, or reseed the patches in spring."},
-      {"speaker": "user", "text": "Reseeding sounds easier. Do I just / throw seeds on top?"},
-      {"speaker": "moshi", "text": "Rake the patch first to loosen the soil, then sprinkle the seed and keep it moist for two weeks."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "gardening.opt1",
-     "lead_in": "I've got one empty bed in the backyard and I can't decide what to plant.",
-     "options": [
-       "The first idea is tomatoes and peppers, which need a lot of sun and regular watering.",
-       "Then there's a herb garden with basil, mint and rosemary, small and easy to keep up.",
-       "And the last one is wildflowers for the bees, basically no work once they're in the ground."
-     ],
-     "moshi_comment": [
-       "If that bed gets full sun, tomatoes and peppers would give you the most to eat, but they need daily attention in summer. The herbs are easy and you'll use them all the time in the kitchen. Wildflowers are the lowest effort and great for bees.",
-       "How much time do you want to spend out there each week? If you love being in the garden, go for the tomatoes. If not, herbs give you something useful without much work, just keep the mint in a pot or it'll take over."
-     ]},
-    {"id": "gardening.opt2",
-     "lead_in": "Our lawn looks terrible and I'm trying to figure out what to do with it.",
-     "options": [
-       "One option is to reseed the whole thing in the fall and water it a lot for a few weeks.",
-       "Another is to lay new sod, which looks perfect right away but costs a lot more.",
-       "Or we could replace part of it with a gravel patio and some low plants that don't need much water."
-     ],
-     "moshi_comment": [
-       "Reseeding in the fall is the cheapest way to get a nice lawn, it just takes patience. Sod is instant, but you're paying a lot for that speed. The gravel patio is a nice idea if you're tired of mowing and watering.",
-       "Do you actually use the lawn, like for kids or a dog? If so, I'd reseed in the fall. If it's mostly for looks, the patio with low water plants could save you a lot of work in the long run."
-     ]}
-  ]
+   ],
+   "pending": "herbs, cherry tomatoes or salad greens",
+   "think_reask": [
+    "So, which would you use most, herbs, tomatoes or salad greens?",
+    "Okay, time's up. What do you want on your balcony first?",
+    "Have you picked yet, herbs, cherry tomatoes or greens?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were planning your balcony garden. Herbs, tomatoes or greens?",
+    "Hi again. You were choosing what to grow on your sunny balcony.",
+    "There you are. Any thoughts on what to plant first?"
+   ],
+   "endings": [
+    {
+     "user": "Herbs, for sure. I'm always buying basil.",
+     "moshi": "Then start with basil, parsley and mint. Keep the mint in its own pot, it spreads like crazy."
+    },
+    {
+     "user": "Cherry tomatoes. My kids would love picking them.",
+     "moshi": "Great choice. Get a big pot, a stake for support, and water them every day when it's hot."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a bare patch in my back garden, maybe two meters wide, and it gets shade most of the day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Shade is tricky but doable. Do you want flowers there, or something low-maintenance like ferns and ground cover?"
+    }
+   ],
+   "pending": "flowers or low-maintenance ferns for shady patch",
+   "think_reask": [
+    "So, for that shady patch, flowers or something low-maintenance?",
+    "Alright, have you decided what kind of look you want for the shady spot?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were talking about your shady patch. Flowers or ferns?",
+    "Good to have you back. Did you decide what to put in that bare spot?"
+   ],
+   "endings": [
+    {
+     "user": "Some flowers would be nice, a bit of color.",
+     "moshi": "Try hostas, foxgloves and impatiens. They're happy in shade and still bring some color."
+    },
+    {
+     "user": "Low-maintenance. I really don't have time.",
+     "moshi": "Then ferns and some ivy or periwinkle as ground cover. Once settled, they mostly look after themselves."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're building raised beds this weekend. Wood or metal?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wood looks natural and is cheaper, metal lasts longer and warms up faster in spring. What matters more to you, budget or durability?"
+    }
+   ],
+   "pending": "wood or metal raised beds",
+   "think_reask": [
+    "So, budget or durability? Wood or metal beds?",
+    "Okay, back to the raised beds. Have you decided on wood or metal?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were picking material for your raised beds.",
+    "Hey, you're back. Still weighing up wood against metal?"
+   ],
+   "endings": [
+    {
+     "user": "Budget, so let's go with wood.",
+     "moshi": "Good. Use untreated larch or cedar if you can, they resist rot without any chemicals."
+    },
+    {
+     "user": "Metal. I don't want to rebuild them in five years.",
+     "moshi": "Sensible. Line the bottom with cardboard before you fill them, it smothers the weeds."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So the council finally gave me an allotment plot. It's waist high in brambles."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Congratulations, that's the hard part done. Do you want to clear the whole thing in one go, or cover half with sheeting and grow on the other half this year?"
+    }
+   ],
+   "pending": "clear the whole allotment or cover half and grow on the rest",
+   "think_reask": [
+    "Right, the brambles. All at once, or half under sheeting for now?",
+    "So how are we tackling that plot, one big clearance or half and half?"
+   ],
+   "welcome_back": [
+    "The bramble jungle. One big push, or cover half and plant the rest?",
+    "We'd got to the allotment brambles. Leaning towards clearing it all, or doing half this year?"
+   ],
+   "endings": [
+    {
+     "user": "Half and half. I'd like at least some potatoes this summer.",
+     "moshi": "Sensible. Black sheeting over the far half will weaken the roots while you get growing on the cleared side."
+    },
+    {
+     "user": "All of it. I've got three weeks off and a lot of energy.",
+     "moshi": "Then dig the roots out rather than just cutting the tops, or they'll be back by June."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My gran gave me an orchid for my birthday and the leaves have gone all wrinkly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wrinkly leaves usually mean thirsty roots. Can you see the roots through the pot? Are they silvery grey or green?"
+    }
+   ],
+   "pending": "whether the orchid roots look grey or green",
+   "think_reask": [
+    "Okay, have a peek at those roots. Grey or green?",
+    "So what colour are the roots, silvery or green?"
+   ],
+   "welcome_back": [
+    "The orchid. Did the roots look grey or green?",
+    "Back to your gran's orchid. Any luck spotting what colour the roots are?"
+   ],
+   "endings": [
+    {
+     "user": "Grey, and kind of papery.",
+     "moshi": "Then it's thirsty. Soak the whole pot in a bowl of room temperature water for ten minutes, then let it drain."
+    },
+    {
+     "user": "Some are green but a few are brown and mushy.",
+     "moshi": "That's rot from too much water. Snip the mushy ones off with clean scissors and repot it in fresh bark."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I sit in a windowless office all day and I want one plant on my desk that won't die."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good news, a couple of plants actually cope with office lights. Would you like something that trails over the edge, or something tall and upright?"
+    }
+   ],
+   "pending": "trailing or upright desk plant",
+   "think_reask": [
+    "So, for your desk, trailing or upright?",
+    "Time's up. Something that hangs down or something that stands tall?"
+   ],
+   "welcome_back": [
+    "Your desk plant. Trailing or upright, any preference yet?",
+    "So for that windowless office, are we going for something that spills over or something that stands up straight?"
+   ],
+   "endings": [
+    {
+     "user": "Trailing. I like the idea of it creeping along the monitor.",
+     "moshi": "Then a pothos is your plant. Water it when the soil is dry and it'll forgive almost anything."
+    },
+    {
+     "user": "Upright, I don't have much space.",
+     "moshi": "Go for a snake plant. It barely needs water, maybe once every three weeks under office lights."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My two boys want a sunflower contest this summer. Who grows the best one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "What a fun idea. Best meaning tallest, or best meaning the most flowers? That changes which seeds to buy."
+    }
+   ],
+   "pending": "tallest or most flowers for the sunflower contest",
+   "think_reask": [
+    "So what's the contest, tallest sunflower or most flowers?",
+    "Okay, which rule are you going with for the boys?"
+   ],
+   "welcome_back": [
+    "The sunflower contest. Are the boys competing on height, or on number of flowers?",
+    "So, have you settled the rules? Height or flower count?"
+   ],
+   "endings": [
+    {
+     "user": "Tallest. They want to measure them against the shed.",
+     "moshi": "Then get a giant variety and give each one a strong cane. They'll need a sunny spot and lots of water in July."
+    },
+    {
+     "user": "Most flowers, so nobody cries if one falls over.",
+     "moshi": "Smart parenting. Choose a branching variety, each plant can give you ten or more heads."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My neighbour's sycamore has grown so much it shades my whole veg patch now. I'm fuming."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's frustrating. You've got two routes, move the beds into the sunny side, or keep them and switch to crops that tolerate shade. Which feels less painful?"
+    }
+   ],
+   "pending": "move the veg beds or switch to shade tolerant crops",
+   "think_reask": [
+    "So, shift the beds or change what you grow?",
+    "Right then, moving the patch or switching crops, which one?"
+   ],
+   "welcome_back": [
+    "The shaded veg patch. Moving the beds, or swapping to shade crops?",
+    "So about that sycamore situation. Relocate, or grow different things?"
+   ],
+   "endings": [
+    {
+     "user": "I'll move them. I'm not giving up on tomatoes.",
+     "moshi": "Fair enough. Do it in autumn so the soil can settle over winter, and keep the compost from the old beds."
+    },
+    {
+     "user": "Switch crops. I haven't got the back for moving soil.",
+     "moshi": "Then lettuce, chard, peas and herbs like parsley will still do well with a few hours of sun."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We need a hedge along the front for privacy, the road's got really busy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Okay. Do you want it thick and tall quickly, even if it's a bit plain, or would you wait a few extra years for a mixed native hedge that birds love?"
+    }
+   ],
+   "pending": "fast plain hedge or slower mixed native hedge",
+   "think_reask": [
+    "So which hedge, quick and plain, or slow and wild?",
+    "Have you decided how patient you want to be with this hedge?"
+   ],
+   "welcome_back": [
+    "The front hedge. Fast and plain, or slower and mixed?",
+    "Where did you land on the hedge, speed or wildlife?"
+   ],
+   "endings": [
+    {
+     "user": "Fast. The traffic noise is driving us mad.",
+     "moshi": "Then a privet or laurel hedge will fill out in two or three years. Trim it twice a year to keep it dense."
+    },
+    {
+     "user": "Mixed native. We're in no rush, honestly.",
+     "moshi": "Lovely. Hawthorn, hazel and holly together give you flowers, berries and some green in winter."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to plant garlic this autumn. Never done it before."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Easy and very satisfying. Do you want big cloves that store for months, or the kind with a flower stalk you can eat in early summer?"
+    }
+   ],
+   "pending": "long storing garlic or the kind with edible flower stalks",
+   "think_reask": [
+    "So, storage garlic or the one with the stalks?",
+    "Okay, which garlic are we planting?"
+   ],
+   "welcome_back": [
+    "Your garlic. Long keeping cloves, or the stalky kind?",
+    "We'd got to the garlic choice. Have you picked a type?"
+   ],
+   "endings": [
+    {
+     "user": "The one that keeps. I go through tons of it.",
+     "moshi": "Then go for a softneck variety. Plant the cloves pointy end up, about a hand's width apart."
+    },
+    {
+     "user": "The stalks sound fun, let's do those.",
+     "moshi": "That's hardneck garlic. Snap the curly stalks off in June and fry them in butter, they're delicious."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My daughter's getting married next September and I'd love to grow some of the flowers myself."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a beautiful plan. Are you picturing big showy dahlias, or something soft and scented like sweet peas?"
+    }
+   ],
+   "pending": "dahlias or sweet peas for the wedding",
+   "think_reask": [
+    "So, dahlias or sweet peas for the wedding?",
+    "Have you pictured it yet? Big dahlias or soft sweet peas?"
+   ],
+   "welcome_back": [
+    "The wedding flowers. Showy dahlias or scented sweet peas?",
+    "So, for your daughter's big day, which flowers are you growing?"
+   ],
+   "endings": [
+    {
+     "user": "Dahlias. September is their best month, isn't it?",
+     "moshi": "It is, perfect timing. Order the tubers in spring and plant a few extra in case some sulk."
+    },
+    {
+     "user": "Sweet peas, she loves the smell.",
+     "moshi": "Then sow them early and keep picking. Just know they can fade by September, so a late sowing in June helps."
+    }
+   ]
+  },
+  {
+   "id": "gardening.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're away for two weeks in August and I'm worried about all my pots."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two weeks in August is a long time for pots. Would you rather set up a little drip watering kit, or ask a neighbour to pop round?"
+    }
+   ],
+   "pending": "drip watering kit or ask a neighbour",
+   "think_reask": [
+    "So, gadget or neighbour for the pots?",
+    "Okay, for the holiday, drip kit or a friendly neighbour?"
+   ],
+   "welcome_back": [
+    "The pots while you're away. A drip kit, or a neighbour?",
+    "So for those two weeks, have you picked how the pots get watered?"
+   ],
+   "endings": [
+    {
+     "user": "A kit. I don't want to owe anyone a favour.",
+     "moshi": "Fair. Test it for a few days before you leave, so you can adjust how much each pot gets."
+    },
+    {
+     "user": "The neighbour. She offered last year, actually.",
+     "moshi": "Lovely. Group the pots together in the shade so it's quick for her, and leave a bottle of wine as thanks."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "gardening.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you water the tomatoes this morning?"
+    },
+    {
+     "speaker": "friend",
+     "text": "No, I thought you did."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh no. They looked really droopy when I walked past."
+    },
+    {
+     "speaker": "friend",
+     "text": "I'll do it now. Should I use the hose or the watering can?"
+    },
+    {
+     "speaker": "user",
+     "text": "The can, the hose is too strong for the seedlings next to them."
+    },
+    {
+     "speaker": "friend",
+     "text": "Okay, on it."
+    }
+   ]
+  },
+  {
+   "id": "gardening.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Look at these leaves. Do you think something's eating them?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, those holes look like slugs to me."
+    },
+    {
+     "speaker": "user",
+     "text": "Great. What do your parents use against slugs?"
+    },
+    {
+     "speaker": "friend",
+     "text": "My mom puts crushed eggshells around the plants. Dad just goes out at night with a torch and picks them off."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm not doing the torch thing. Eggshells I can manage."
+    },
+    {
+     "speaker": "friend",
+     "text": "We have loads, I made an omelette yesterday."
+    }
+   ]
+  },
+  {
+   "id": "gardening.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey {friend}, can I borrow your hedge trimmer this weekend?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure, but the battery doesn't last long. Charge it the night before."
+    },
+    {
+     "speaker": "user",
+     "text": "Will do. Is it okay on thick branches?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not really, anything thicker than a finger you'll need loppers for."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it. I'll bring it back Sunday evening."
+    },
+    {
+     "speaker": "friend",
+     "text": "No rush. Just don't drop it in the pond like last time."
+    },
+    {
+     "speaker": "user",
+     "text": "That was one time!"
+    }
+   ]
+  },
+  {
+   "id": "gardening.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you help me lift these compost bags out of the boot?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. Why are there five of them?"
+    },
+    {
+     "speaker": "user",
+     "text": "They were on offer. Three for the price of two."
+    },
+    {
+     "speaker": "friend",
+     "text": "So you bought five."
+    },
+    {
+     "speaker": "user",
+     "text": "I know how maths works, thank you."
+    },
+    {
+     "speaker": "friend",
+     "text": "Wow, this one's leaking."
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, mind your shoes. Where do you reckon we stack them?"
+    },
+    {
+     "speaker": "friend",
+     "text": "By the shed, under the tarp. And please hoover the car later."
+    }
+   ]
+  },
+  {
+   "id": "gardening.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you move my basil off the windowsill?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, it was blocking the blind."
+    },
+    {
+     "speaker": "user",
+     "text": "It's gone completely floppy now. It was fine yesterday."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's a plant, it'll survive."
+    },
+    {
+     "speaker": "user",
+     "text": "It's on the radiator shelf. It's literally cooking."
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh. I didn't think about the radiator."
+    },
+    {
+     "speaker": "user",
+     "text": "Can you just put it back where it was next time?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine, fine. Sorry, little basil."
+    }
+   ]
+  },
+  {
+   "id": "gardening.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, be honest. Is a pond in the middle of the lawn a terrible idea?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not terrible. Just a lot of digging."
+    },
+    {
+     "speaker": "user",
+     "text": "I was thinking small, like the size of a bathtub."
+    },
+    {
+     "speaker": "friend",
+     "text": "Where would the dog go then? He lives on that lawn."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. Could we put it in the corner by the fence?"
+    },
+    {
+     "speaker": "friend",
+     "text": "That corner floods every winter anyway."
+    },
+    {
+     "speaker": "user",
+     "text": "See, nature wants a pond there."
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine, but you're digging it. I'll supervise with a coffee."
+    },
+    {
+     "speaker": "user",
+     "text": "Deal. Do you know where the spade went?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Behind the bins, where you left it."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "gardening.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How often should I water my houseplants?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most like to dry out a bit between waterings. Push a finger into the soil, and if the top few centimeters are dry, it's time."
+    },
+    {
+     "speaker": "user",
+     "text": "So not on a fixed schedule?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not really. In winter they need much less, and in summer they might need it twice a week."
+    },
+    {
+     "speaker": "user",
+     "text": "I have a cactus and a / what's it called, a peace lily."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those are opposites. Water the cactus maybe once a month, and the peace lily when its leaves start to droop a little."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, it droops? I thought that meant it was dying."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's just being dramatic. Give it a good drink and it usually perks up within a few hours."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "When should I plant tulip bulbs?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "In autumn, once the soil has cooled down. Late October to November is usually ideal."
+    },
+    {
+     "speaker": "user",
+     "text": "How deep do they go?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About three times the height of the bulb, so roughly fifteen to twenty centimeters, pointy end up."
+    },
+    {
+     "speaker": "user",
+     "text": "And can I put them in pots? I was hoping to / put a few by the front door."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, tulips look great in pots. Pack them closely together and make sure the pot drains well."
+    },
+    {
+     "speaker": "user",
+     "text": "Do they come back every year?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some do, but many fade after the first year. Lots of people just plant fresh ones each autumn."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to start composting but I live in a flat. Is that even possible?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is. A small worm bin or a bokashi bucket can live under your sink and won't smell if you look after it."
+    },
+    {
+     "speaker": "user",
+     "text": "Worms in my kitchen? My partner would / probably move out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then bokashi might be easier. It's a sealed bucket where you add scraps and a sprinkle of bran, no worms involved."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I do with it when it's full?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bury it in soil, a large planter or a community garden bed. After a few weeks it turns into rich compost."
+    },
+    {
+     "speaker": "user",
+     "text": "There's a community garden two streets over actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect, ask them. Most community gardens are happy to take it."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My lawn has yellow patches all over. What's going on?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Common causes are dry weather, dog pee or grubs in the soil. Do you have a dog?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, a big one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's likely it then. Watering the spot right after the dog goes can dilute it and stop the burn."
+    },
+    {
+     "speaker": "user",
+     "text": "I can't follow him around with a watering can all day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair. You could train him to use one corner of the garden, or reseed the patches in spring."
+    },
+    {
+     "speaker": "user",
+     "text": "Reseeding sounds easier. Do I just / throw seeds on top?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rake the patch first to loosen the soil, then sprinkle the seed and keep it moist for two weeks."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "When am I supposed to prune roses? My mother in law says February, the internet says everything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Late winter is a good rule for most shrub roses, just as the buds start to swell. So February or early March, depending on where you live."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, she wins this round. How much do I cut off?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Roughly a third to a half. Take out anything dead or crossing first, then cut just above an outward facing bud."
+    },
+    {
+     "speaker": "user",
+     "text": "Outward facing, meaning / pointing away from the middle of the bush?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. That keeps the centre open so air moves through, which helps stop black spot."
+    },
+    {
+     "speaker": "user",
+     "text": "And the climbing one on the fence? Same treatment?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Gentler. Tie the long canes in sideways and just shorten the little side shoots to a couple of buds."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My tomato seedlings are tall and spindly and falling over. Did I do something wrong?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's called legginess, and it's really common. They're stretching towards the light because they aren't getting enough."
+    },
+    {
+     "speaker": "user",
+     "text": "They're on the kitchen windowsill though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even a bright window is dim compared to outside in early spring. Turning the tray every day helps, and a cheap grow light helps a lot more."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I save these ones or should I / just start again?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tomatoes are great at this, you can save them. When you pot them on, bury the stem right up to the first leaves. It'll grow roots all along it."
+    },
+    {
+     "speaker": "user",
+     "text": "Wait, really? Bury the stem?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Really. It's one of the few plants that loves it. You'll end up with sturdier plants than if they'd never flopped."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Black bugs all over my broad beans. Thousands of them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like blackfly. They love the soft tips of broad beans. Are they clustered right at the top?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yep. Like a little black hat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then pinch the tops off, bugs and all. The beans are usually tall enough by then, and it stops the worst of it."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't want to spray anything, we've got / a lot of ladybirds around actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good, leave them to it. Ladybird larvae eat aphids like crazy. A spray would kill them too."
+    },
+    {
+     "speaker": "user",
+     "text": "The tops I pinch, can I eat those?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, once you've rinsed the bugs off. Steam them like spinach, they taste a bit like the beans."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want to grow potatoes but I've only got a patio. Is that daft?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not daft at all. Potatoes grow well in big bags or tubs, and tipping them out at harvest is honestly the best bit."
+    },
+    {
+     "speaker": "user",
+     "text": "How big are we talking?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Something around the size of a laundry basket, with drainage holes. Three seed potatoes per bag is plenty."
+    },
+    {
+     "speaker": "user",
+     "text": "Do I fill it all the way up from the start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, start with a bit of compost, put the potatoes in, and cover them lightly. As the leaves grow, keep adding compost around them."
+    },
+    {
+     "speaker": "user",
+     "text": "Why's that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The buried stem makes more potatoes, and it keeps them out of the light so they don't turn green."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, green potatoes are bad, right? My dad always / cut those bits off."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Your dad was right. The green parts can upset your stomach, so cut them away or skip them."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Every autumn I throw out my geraniums and buy new ones in spring. Feels wasteful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is a bit. You can keep them over winter quite easily if you've got a cool, frost free spot, like a porch or a spare room."
+    },
+    {
+     "speaker": "user",
+     "text": "There's an unheated porch. Gets cold but never freezes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's ideal. Dig them up before the first frost, cut them back by about half, and pot them up snugly."
+    },
+    {
+     "speaker": "user",
+     "text": "Do they need watering all winter?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hardly at all. Just a splash once a month so the roots don't completely dry out. They'll look sad, and that's fine."
+    },
+    {
+     "speaker": "user",
+     "text": "And then in spring?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring them somewhere brighter, water more, and they'll push out new shoots. You can even take cuttings and double your plants for free."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How short should I cut the lawn? I just bought a new mower and I'm itching to use it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "For most garden lawns, around four or five centimetres is a happy height. Going shorter tends to stress the grass."
+    },
+    {
+     "speaker": "user",
+     "text": "My neighbour cuts his like a golf course."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It looks sharp, but very short grass dries out faster and lets moss and weeds in. His probably needs a lot more feeding and watering."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, he is always out there with a sprinkler. How often should I mow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "In spring and early summer, about once a week. The rule of thumb is never cut off more than a third of the height at once."
+    },
+    {
+     "speaker": "user",
+     "text": "And in a heatwave?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Raise the blades and mow less. Taller grass shades its own roots and stays greener."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hey, quick one. The garden centre has peat free compost and normal compost. Does it matter which?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It matters for the environment. Peat comes from bogs that take thousands of years to form, so peat free is the kinder choice."
+    },
+    {
+     "speaker": "user",
+     "text": "Is it worse for the plants though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "The good peat free brands are pretty much as good now. They can dry out on top while still being wet underneath, so check with your finger before watering."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And for seeds? I'm doing / chillies and some flowers."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get a fine peat free seed compost for those. It's lighter and has fewer nutrients, which seedlings actually prefer."
+    },
+    {
+     "speaker": "user",
+     "text": "Right, seed compost for seeds, the big bag for everything else."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's it. Simple as that."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "So my nephew put an avocado stone in water with toothpicks and now it's got a root. What now?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a great start. Once the root is a few centimetres long and a shoot appears at the top, it's ready for a pot."
+    },
+    {
+     "speaker": "user",
+     "text": "Will it ever make avocados?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, probably not indoors. Trees from stones can take ten years or more and often need warmth we can't give them. But it makes a lovely leafy houseplant."
+    },
+    {
+     "speaker": "user",
+     "text": "He's going to be gutted. He wanted guacamole."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe sell it to him as a tree he grew himself. Kids usually love watching it shoot up, it can grow really fast."
+    },
+    {
+     "speaker": "user",
+     "text": "Fair point. What pot / should we use, something big?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Medium to start, with good drainage. Leave the top half of the stone above the soil, and keep it in a bright spot."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why are my cucumbers bitter? I was so proud of them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bitterness usually comes from stress, mostly uneven watering or big swings in temperature."
+    },
+    {
+     "speaker": "user",
+     "text": "I did go away for a long weekend. They were bone dry when I got back."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That'll do it. Cucumbers want steady moisture. A deep drink every day or two in hot weather keeps them sweet."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I fix the ones that are already growing?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some bitterness is near the stalk end and in the skin. Peel them and cut off the top bit, and they're often fine."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, phew. Any variety that's / less fussy for next year?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look for ones described as burpless or bitter free. They've been bred to be much less likely to turn bitter."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My lawn is more moss than grass at this point. Is it even worth fighting?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It depends. Moss loves shade, damp and compacted soil. If your lawn has all three, it'll keep coming back."
+    },
+    {
+     "speaker": "user",
+     "text": "Shady, yes. Damp, yes. Compacted, probably, the kids play football on it constantly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you could rake the moss out in autumn, spike the soil with a fork for drainage, and overseed with a shade tolerant grass mix."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds like a lot."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is a solid afternoon. The other option is accepting the moss. It's soft, green and stays that way without mowing much."
+    },
+    {
+     "speaker": "user",
+     "text": "Honestly, a moss lawn / sounds kind of nice."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty of people go that way. It won't love the football though, so maybe keep one patch of tough grass for the goal."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want my garden to be good for bees. Where do I even start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with flowers that are easy for them to get into. Open, simple flowers are better than big fluffy double ones."
+    },
+    {
+     "speaker": "user",
+     "text": "Like what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lavender, foxgloves, catmint, comfrey, and herbs left to flower, like thyme and oregano."
+    },
+    {
+     "speaker": "user",
+     "text": "I didn't know herbs count."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're some of the best. Also aim for something in flower from early spring to late autumn, so there's always food around."
+    },
+    {
+     "speaker": "user",
+     "text": "What's good early? Spring is / kind of bare in my garden."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Crocuses and pussy willow are lifesavers for early bees. Plant some crocus bulbs in the lawn this autumn."
+    },
+    {
+     "speaker": "user",
+     "text": "And I should stop spraying the dandelions, I guess."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes please. Dandelions are a proper bee buffet in April."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Monstera roots are coming out the bottom of the pot. Time to repot?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like it. Spring or early summer is the best time, when it's growing actively."
+    },
+    {
+     "speaker": "user",
+     "text": "It's huge though. How do I even get it out?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Water it the day before, then lay the pot on its side and ease it out. Get someone to hold the stems so nothing snaps."
+    },
+    {
+     "speaker": "user",
+     "text": "How much bigger should the new pot be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Only a size or two up. A pot that's way too big holds extra water and the roots can rot."
+    },
+    {
+     "speaker": "user",
+     "text": "It's also got these long brown / ropey things coming out of the stem."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those are aerial roots. They're normal. You can tuck them into the soil or give it a moss pole to climb."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My rhubarb has these tall stalks with big frilly flower things on top. Is that okay?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's it trying to flower, which pulls energy away from the stalks. Cut the flower stems off at the base as soon as you see them."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I still eat the normal stalks?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, they're fine. Pull them rather than cutting, give a little twist near the base."
+    },
+    {
+     "speaker": "user",
+     "text": "When should I stop picking? I've been / taking loads."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stop around early summer. The plant needs its leaves after that to build up strength for next year."
+    },
+    {
+     "speaker": "user",
+     "text": "And the leaves, those are poisonous right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, don't eat the leaves. They're fine on the compost heap though."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The forecast says frost tonight and my dahlias are still out. Help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't panic. One light frost will blacken the leaves, but the tubers underground are usually fine."
+    },
+    {
+     "speaker": "user",
+     "text": "So should I dig them up now?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wait until after the frost blackens the foliage, then cut the stems down and lift the tubers within a few days."
+    },
+    {
+     "speaker": "user",
+     "text": "Then what? Do I just / shove them in the garage?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let them dry upside down for a day or two, then store them in a box of dry compost or newspaper somewhere cool but frost free."
+    },
+    {
+     "speaker": "user",
+     "text": "And my lemon tree in the pot?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That one needs to come in tonight. Lemons hate frost. A cool bright room or porch is perfect."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My strawberry plants are sending out long stringy runners everywhere."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those runners are baby plants on a leash. You can either snip them off or use them to make new plants for free."
+    },
+    {
+     "speaker": "user",
+     "text": "Free plants, go on."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pin the little plantlet onto a pot of compost with a bent wire or a stone. Once it's rooted in a few weeks, cut the runner."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there a catch?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you leave too many on, the mother plant puts energy into them instead of fruit. Keep two or three per plant, cut the rest."
+    },
+    {
+     "speaker": "user",
+     "text": "And how long do / the old plants last?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About three or four years before they tire out. That's why rooting runners every summer keeps the bed going."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it true you can change hydrangea colours? My blue one went pink after I moved it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's true for many mophead and lacecap hydrangeas. The colour depends on the soil. Acidic soil gives blue, alkaline gives pink."
+    },
+    {
+     "speaker": "user",
+     "text": "So my new spot is alkaline."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very likely. If you want blue back, you can grow it in a pot of ericaceous compost, or add a blueing product to the soil."
+    },
+    {
+     "speaker": "user",
+     "text": "Is that like chemicals?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's aluminium sulphate usually, and it works slowly. Honestly, a pot of acidic compost is the easier route."
+    },
+    {
+     "speaker": "user",
+     "text": "I kind of like the pink though. My wife / says it looks like candy floss."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then leave it. It's happy, it's pink, and you get to skip the chemistry homework."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Morning or evening, when's the best time to water the garden?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Early morning is usually best. The plants get a drink before the heat and the leaves dry off quickly."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm not a morning person."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Evening is fine too, just water the soil rather than the leaves. Wet leaves overnight can invite mildew and slugs."
+    },
+    {
+     "speaker": "user",
+     "text": "Slugs! Those things have eaten / half my lettuces this year."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then morning watering really would help. Slugs love a damp evening."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, fine. How long should I water for?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Less often but deeper is better. A good soak twice a week beats a light sprinkle every day."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. Setting an alarm, apparently."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even ten minutes with a hose before work is enough for most beds."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want a gardening thing to do with my four year old. Something quick, she's not patient."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Cress is the classic for a reason. Sprinkle seeds on damp cotton wool and you'll see shoots in two or three days."
+    },
+    {
+     "speaker": "user",
+     "text": "Two days, that's perfect. Can we make it fun?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Grow it in an empty eggshell with a face drawn on. The cress becomes hair, and she can give it a haircut with scissors."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh she'll love that. Then what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then sunflowers or radishes. Radishes go from seed to plate in about a month, and they're bright red."
+    },
+    {
+     "speaker": "user",
+     "text": "Will she actually eat a radish? She's / very suspicious of anything red."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe not, but kids are much more likely to try food they grew themselves. Worth a go."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm putting a water butt by the shed. Is it worth it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very. Plants actually prefer rainwater, and you'll save on your bill in summer."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I connect it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You fit a diverter kit into the shed's downpipe. It sends rain into the butt and back down the pipe once the butt is full."
+    },
+    {
+     "speaker": "user",
+     "text": "The shed doesn't have a gutter."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ah, then you'll need to add one. A short length of plastic gutter and a downpipe is cheap and pretty easy to screw on."
+    },
+    {
+     "speaker": "user",
+     "text": "Right. Anything else I / should know before buying?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get one with a lid so it doesn't breed mosquitoes, and raise it on a stand so a watering can fits under the tap."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I planted mint in the border last year. It's now in the lawn, the path and I think the neighbour's garden."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic mint. It spreads by underground runners and it's very good at it."
+    },
+    {
+     "speaker": "user",
+     "text": "So how do I kill it off?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Dig out as much as you can, especially those white runners. Expect to keep pulling bits for a season or two."
+    },
+    {
+     "speaker": "user",
+     "text": "Brilliant. So I can never have mint again?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, just in a pot. Even better, sink the pot into the ground with the rim above the soil. Looks planted, but it's caged."
+    },
+    {
+     "speaker": "user",
+     "text": "And I owe / my neighbour an apology, don't I."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe an apology and a mojito. They've got plenty of mint now."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We want to grow a giant pumpkin for Halloween. Like, really giant."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Love it. Pick a giant variety and start the seeds indoors in late April or early May."
+    },
+    {
+     "speaker": "user",
+     "text": "And then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plant it out after the last frost in a really rich spot, loads of manure or compost. They're very hungry plants."
+    },
+    {
+     "speaker": "user",
+     "text": "We've got space next to the compost heap."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's actually a perfect spot. Once a few pumpkins form, keep only the best one, so the plant feeds just that."
+    },
+    {
+     "speaker": "user",
+     "text": "Only one? That / feels a bit harsh."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's harsh but that's the secret. Water it deeply and often, and slide a board under the pumpkin so it doesn't rot."
+    },
+    {
+     "speaker": "user",
+     "text": "How big could it get?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "In a good summer, big enough that you'll need two people to lift it."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There are tiny black flies around my houseplants. They come out every time I water."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those are probably fungus gnats. They breed in damp compost, and the larvae live in the top layer of soil."
+    },
+    {
+     "speaker": "user",
+     "text": "Gross. Are they hurting the plants?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mostly they're just annoying, though lots of larvae can nibble seedling roots."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I get rid of them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let the top few centimetres dry out between waterings, that breaks their cycle. Yellow sticky traps catch the adults."
+    },
+    {
+     "speaker": "user",
+     "text": "I do water a lot, to be fair. I / kind of love my watering can."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a common one. Try watering from below, standing the pots in a tray for twenty minutes. The surface stays dry and the gnats give up."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our new house has a steep sloping garden. Mowing it is honestly dangerous."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Slopes are tough. Many people terrace them, or swap the grass for plants that hold the soil and never need mowing."
+    },
+    {
+     "speaker": "user",
+     "text": "Terracing sounds expensive."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be if you hire a team. A cheaper route is ground cover plants and shrubs, with a simple path of steps across it."
+    },
+    {
+     "speaker": "user",
+     "text": "What kind of ground cover?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For sun, creeping thyme, rock roses and low junipers. For shade, periwinkle and some hardy geraniums."
+    },
+    {
+     "speaker": "user",
+     "text": "And to stop the soil / sliding down when it rains?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mulch with bark chips and use a biodegradable jute matting while the plants get going. The roots will hold it after a year or two."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My lavender's gone all woody and bald at the bottom. Can I cut it hard?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Unfortunately lavender usually doesn't regrow from old bare wood. If you cut into it, those stems often stay bare."
+    },
+    {
+     "speaker": "user",
+     "text": "Well that's depressing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is. The good news is lavender is cheap and easy to replace, and you can take cuttings from the green tips first."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I stop the new ones going the same way?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Trim them every year right after flowering, taking off the flower stalks and a bit of the green. Never go into the brown."
+    },
+    {
+     "speaker": "user",
+     "text": "I've literally never / pruned it once in six years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it did really well to last that long. Start fresh and give the new ones a trim every August."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I rent a basement flat. One small north facing window. Can I grow herbs at all?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Some, yes. Mint, parsley and chives handle lower light better than sunny herbs like basil or rosemary."
+    },
+    {
+     "speaker": "user",
+     "text": "Basil was the one I wanted, of course."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Of course. You could grow basil under a small clip on grow light. They're cheap now, and it makes a huge difference."
+    },
+    {
+     "speaker": "user",
+     "text": "Does it need to be on all day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About twelve to fourteen hours. A plug timer makes it effortless."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, so chives and parsley on the sill, basil under the light. Do I / buy seeds or plants?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For basil, honestly, a supermarket pot works. Split it into three or four clumps and repot them, they'll grow much better."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I save seeds from my tomatoes for next year?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, as long as they're not hybrids. If the packet said hybrid, the new plants might not match the parent."
+    },
+    {
+     "speaker": "user",
+     "text": "These are old heirloom ones from my uncle."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect, those come true from seed. Pick a really ripe tomato and scoop the seeds into a jar with a little water."
+    },
+    {
+     "speaker": "user",
+     "text": "And then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Leave it a few days until it gets a bit mouldy on top. That ferments away the jelly coating. Then rinse and dry the seeds on a plate."
+    },
+    {
+     "speaker": "user",
+     "text": "Mouldy on purpose. That's / disgusting and brilliant."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's the traditional way. Store them dry in a paper envelope, labelled, somewhere cool. They'll keep for years."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a huge tree stump in the middle of my garden. Any way to get rid of it without a machine?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can, it just takes patience. Drill some deep holes in the top, fill them with water and cover it so it stays damp. That speeds up rotting."
+    },
+    {
+     "speaker": "user",
+     "text": "How long are we talking?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A year or two for a big stump. Fungi and bugs do most of the work."
+    },
+    {
+     "speaker": "user",
+     "text": "That's ages."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is. The quicker route is hiring a stump grinder for a day. It turns the stump into wood chips in an hour or so."
+    },
+    {
+     "speaker": "user",
+     "text": "Or I could / just make it a feature, I suppose?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lovely option. Put a big pot on top, or let ferns and moss grow around it. Beetles will love it too."
+    }
+   ]
+  },
+  {
+   "id": "gardening.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'd like to turn part of the lawn into a wildflower meadow. Can I just scatter seeds?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sadly, scattering seed on lawn rarely works. Grass is too competitive and smothers the seedlings."
+    },
+    {
+     "speaker": "user",
+     "text": "So what's the trick?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Strip off the turf in that patch, and don't add compost. Wildflowers actually like poor soil. Then sow in autumn or spring."
+    },
+    {
+     "speaker": "user",
+     "text": "Poor soil, okay, my garden is great at that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you're halfway there. Another trick is a plant called yellow rattle. It weakens the grass so flowers can get in."
+    },
+    {
+     "speaker": "user",
+     "text": "And do I mow it ever?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Once a year in late summer, after the flowers set seed. Leave the cuttings a few days so the seeds drop, then rake them up."
+    },
+    {
+     "speaker": "user",
+     "text": "Sounds good. I'll mark out / a patch by the back fence this weekend."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start small, maybe a couple of metres square. You can always expand it once you see what comes up."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "gardening.opt1",
+   "lead_in": "I've got one empty bed in the backyard and I can't decide what to plant.",
+   "options": [
+    "The first idea is tomatoes and peppers, which need a lot of sun and regular watering.",
+    "Then there's a herb garden with basil, mint and rosemary, small and easy to keep up.",
+    "And the last one is wildflowers for the bees, basically no work once they're in the ground."
+   ],
+   "moshi_comment": [
+    "If that bed gets full sun, tomatoes and peppers would give you the most to eat, but they need daily attention in summer. The herbs are easy and you'll use them all the time in the kitchen. Wildflowers are the lowest effort and great for bees.",
+    "How much time do you want to spend out there each week? If you love being in the garden, go for the tomatoes. If not, herbs give you something useful without much work, just keep the mint in a pot or it'll take over."
+   ]
+  },
+  {
+   "id": "gardening.opt2",
+   "lead_in": "Our lawn looks terrible and I'm trying to figure out what to do with it.",
+   "options": [
+    "One option is to reseed the whole thing in the fall and water it a lot for a few weeks.",
+    "Another is to lay new sod, which looks perfect right away but costs a lot more.",
+    "Or we could replace part of it with a gravel patio and some low plants that don't need much water."
+   ],
+   "moshi_comment": [
+    "Reseeding in the fall is the cheapest way to get a nice lawn, it just takes patience. Sod is instant, but you're paying a lot for that speed. The gravel patio is a nice idea if you're tired of mowing and watering.",
+    "Do you actually use the lawn, like for kids or a dog? If so, I'd reseed in the fall. If it's mostly for looks, the patio with low water plants could save you a lot of work in the long run."
+   ]
+  },
+  {
+   "id": "gardening.opt3",
+   "lead_in": "I've got room for exactly one fruit tree and I keep changing my mind.",
+   "options": [
+    "There's an apple on a dwarf rootstock, so it stays small and fruits in a couple of years.",
+    "Or a fig trained against the south wall, which would love the warmth there.",
+    "A plum is another one, but I've heard they crop like mad one year and then hardly at all.",
+    "And maybe a cherry, though the birds would probably get most of them."
+   ],
+   "moshi_comment": [
+    "The dwarf apple is the steady, reliable pick, and you'll get fruit quickly. The fig on that warm wall is tempting if you love figs, it'll look great too. The plum and cherry are lovely but come with the boom and bust years and the bird battle.",
+    "Which fruit do you actually eat most? If it's apples, go dwarf apple and you'll never regret it. If you want something a bit special, the fig against the south wall is a treat that most neighbours won't have."
+   ]
+  },
+  {
+   "id": "gardening.opt4",
+   "lead_in": "The gravel drive is full of weeds again and I want to pick a method that actually works.",
+   "options": [
+    "One idea is just pouring boiling water from the kettle on them every week or so.",
+    "Another is buying a gas weed burner, which looks fun but a bit scary.",
+    "Or we rake all the gravel off, put down a proper membrane, and put the gravel back."
+   ],
+   "moshi_comment": [
+    "Boiling water works on small weeds but you'll be doing it forever. The burner is quicker, though deep roots often come back. Redoing the membrane is a weekend of hard work, but it's the only one that stops most weeds for years.",
+    "How long are you staying in the house? If it's years, the membrane job is worth the sore back. If it's short term, the kettle or the burner will keep things tidy enough, just be careful with the burner near the hedge."
+   ]
+  },
+  {
+   "id": "gardening.opt5",
+   "lead_in": "My new flat is on the tenth floor and the balcony is so windy. I need plants that cope.",
+   "options": [
+    "I was looking at ornamental grasses, they sway around and apparently don't snap.",
+    "Lavender is another idea, because it's tough and smells nice when you brush past.",
+    "Or succulents in heavy pots, since they hold onto water and stay low."
+   ],
+   "moshi_comment": [
+    "Grasses are made for wind, they bend instead of breaking and look lovely moving. Lavender is tough too and handles dry, breezy spots well. Succulents are fine as long as the pots are heavy, but some get scorched in that much wind and sun.",
+    "I'd mix the first two. Grasses for height and movement, lavender lower down for scent. Keep the succulents for the most sheltered corner, and use heavy pots for all of them so nothing takes off."
+   ]
+  },
+  {
+   "id": "gardening.opt6",
+   "lead_in": "I want a winter project to help me start seeds earlier next year.",
+   "options": [
+    "A small glass greenhouse would be the dream, but it costs a lot and needs a flat base.",
+    "A wooden cold frame is cheap, and I could probably build it myself from old windows.",
+    "Or a polytunnel, which gives tons of space but I'm worried it looks ugly."
+   ],
+   "moshi_comment": [
+    "The cold frame is the easy win, cheap, quick and fine for hardening off seedlings. A greenhouse is lovely and lasts, but it's a bigger project with that base. The polytunnel gives you the most growing room for the money, if you can live with the look.",
+    "If this is your first year starting seeds early, I'd build the cold frame from those old windows. It'll teach you a lot. If you catch the bug, you can save up for the greenhouse later."
+   ]
+  }
+ ]
 }

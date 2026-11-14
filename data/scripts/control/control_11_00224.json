@@ -7,120 +7,124 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
  "wait_type": null,
  "conditions": [],
  "topics": [
-  "public_transport"
+  "weather_plans"
  ],
- "topic": "public_transport",
+ "topic": "weather_plans",
  "voices": {
-  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "user": "4210f97652d14bec82edc1c2ee8296d2",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_28",
-  "greet_ans_02"
+  "greet_11",
+  "greet_ans_16"
  ],
  "block_ids": [
-  "public_transport.dlg3"
+  "weather_plans.dlg24"
  ],
- "est_total_sec": 50.12,
- "est_speech_sec": 38.61,
+ "est_total_sec": 53.8,
+ "est_speech_sec": 41.4,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's everything today?",
-   "est_sec": 1.34,
-   "gap_before": 0.63,
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.71,
    "role": "greeting",
-   "phrasing": "greet_28"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.42,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Can I bring my bike on the train?",
-   "est_sec": 2.58,
-   "gap_before": 0.27,
-   "event": "ordinary_request",
-   "block": "public_transport.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "On most regional trains, yes, but often not during rush hour. Look for the carriages with a bike symbol on the door.",
-   "est_sec": 6.92,
-   "gap_before": 1.0,
-   "role": "reply",
-   "block": "public_transport.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Do I need a ticket for it?",
-   "est_sec": 2.27,
-   "gap_before": 1.04,
-   "event": "ordinary_request",
-   "block": "public_transport.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Many operators charge a small bike fee or need a reservation on long distance trains. Check your operator's website before you go.",
-   "est_sec": 6.92,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "public_transport.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Actually, I'm also thinking",
+   "text": "Pretty busy, but good.",
    "est_sec": 1.34,
-   "gap_before": 0.44,
+   "gap_before": 0.82,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "I have tickets for an outdoor concert and it's meant to pour. What do I wear?",
+   "est_sec": 5.06,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "A proper poncho or rain jacket with a hood. Many festivals don't allow umbrellas because they block the view.",
+   "est_sec": 5.99,
+   "gap_before": 0.75,
+   "role": "reply",
+   "block": "weather_plans.dlg24"
+  },
+  {
+   "speaker": "user",
+   "text": "What about shoes? I was going to wear trainers.",
+   "est_sec": 2.89,
+   "gap_before": 1.3,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If the ground is grass, it'll turn to mud quickly. Old boots or wellies would be much happier.",
+   "est_sec": 5.68,
+   "gap_before": 0.49,
+   "role": "reply",
+   "block": "weather_plans.dlg24"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I bring a bag?",
+   "est_sec": 1.65,
+   "gap_before": 0.79,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Check the venue rules, many only allow small clear bags. A dry bag or a zip lock for your phone is a good idea.",
+   "est_sec": 7.54,
+   "gap_before": 0.52,
+   "role": "reply",
+   "block": "weather_plans.dlg24"
+  },
+  {
+   "speaker": "user",
+   "text": "Should I",
+   "est_sec": 0.72,
+   "gap_before": 1.33,
    "event": "distractor",
    "kind": "pause",
-   "block": "public_transport.dlg3"
+   "block": "weather_plans.dlg24"
   },
   {
    "speaker": "user",
-   "text": "about getting a folding bike instead.",
-   "est_sec": 1.96,
-   "gap_before": 2.51,
+   "text": "bring a change of clothes?",
+   "est_sec": 1.65,
+   "gap_before": 2.7,
    "event": "ordinary_request",
-   "block": "public_transport.dlg3"
+   "block": "weather_plans.dlg24"
   },
   {
    "speaker": "moshi",
-   "text": "That's a great option for commuting. Folded bikes usually count as luggage, so you can bring them anytime for free.",
-   "est_sec": 6.3,
-   "gap_before": 1.18,
+   "text": "Leave them in the car or a locker if you can. A dry pair of socks for the trip home feels amazing.",
+   "est_sec": 6.92,
+   "gap_before": 0.95,
    "role": "reply",
-   "block": "public_transport.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Aren't they slow, though?",
-   "est_sec": 1.34,
-   "gap_before": 0.68,
-   "event": "ordinary_request",
-   "block": "public_transport.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A bit slower than a regular bike, but for short rides to and from the station you'll hardly notice.",
-   "est_sec": 5.99,
-   "gap_before": 1.03,
-   "role": "reply",
-   "block": "public_transport.dlg3"
+   "block": "weather_plans.dlg24"
   }
  ]
 }

@@ -7,171 +7,114 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "cooking",
-  "weekend_plans"
+  "fitness"
  ],
- "topic": "cooking",
+ "topic": "fitness",
  "voices": {
-  "user": "e3cd384158934cc9a01029cd7d278634",
-  "friend": "ec3f1730c4494386accf1e86625bfe6d",
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Leo",
- "friend_name_id": "name_07",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_28",
-  "greet_ans_17",
-  "side_instr_10",
-  "ack_12",
-  "side_cue_22"
+  "greet_19",
+  "greet_ans_22",
+  "describe_instr_07",
+  "describe_cue_13"
  ],
  "block_ids": [
-  "cooking.ctx2",
-  "weekend_plans.side3"
+  "fitness.opt2"
  ],
- "est_total_sec": 70.41,
- "est_speech_sec": 56.57,
+ "est_total_sec": 60.79,
+ "est_speech_sec": 49.67,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's everything today?",
-   "est_sec": 1.34,
-   "gap_before": 0.45,
-   "role": "greeting",
-   "phrasing": "greet_28"
-  },
-  {
-   "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.88,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
-  },
-  {
-   "speaker": "user",
-   "text": "My in-laws are coming Sunday and I want to make something impressive but not stressful.",
-   "est_sec": 4.75,
-   "gap_before": 0.45,
-   "event": "ordinary_request",
-   "block": "cooking.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A slow roast is hard to mess up. Would you rather do a roast chicken, a lamb shoulder, or a vegetarian lasagna?",
-   "est_sec": 6.92,
-   "gap_before": 0.73,
-   "role": "reply",
-   "block": "cooking.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, can you stay quiet for a minute? I need to talk to my partner. I'll come back to you.",
-   "est_sec": 6.3,
-   "gap_before": 0.44,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_10"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
-   "gap_before": 0.27,
-   "role": "ack",
-   "phrasing": "ack_12"
-  },
-  {
-   "speaker": "user",
-   "text": "Are we still going to your sister's on Saturday?",
-   "est_sec": 2.89,
-   "gap_before": 0.64,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "weekend_plans.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "She cancelled, the baby's got a cold.",
-   "est_sec": 2.27,
-   "gap_before": 0.44,
-   "block": "weekend_plans.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh no, poor thing. So we're free all day then?",
-   "est_sec": 3.2,
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
    "gap_before": 0.55,
+   "role": "greeting",
+   "phrasing": "greet_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty relaxed today.",
+   "est_sec": 1.03,
+   "gap_before": 0.52,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_22"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm training for my first five kilometer race and I'm trying to pick a plan.",
+   "est_sec": 4.75,
+   "gap_before": 0.21,
+   "block": "fitness.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me walk you through all the options, then you can tell me what you think.",
+   "est_sec": 5.06,
+   "gap_before": 0.8,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "One plan has me running three days a week, slowly building up over about eight weeks.",
+   "est_sec": 5.06,
+   "gap_before": 1.16,
+   "block": "fitness.opt2",
    "event": "distractor",
-   "kind": "friend_question",
-   "block": "weekend_plans.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Looks like it. We could finally clear out the garage.",
-   "est_sec": 3.2,
-   "gap_before": 0.89,
-   "block": "weekend_plans.side3"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Or we could not do that and go for a long lunch instead.",
-   "est_sec": 4.13,
-   "gap_before": 1.19,
-   "block": "weekend_plans.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Garage in the morning, lunch after. That's my offer.",
-   "est_sec": 2.89,
-   "gap_before": 0.82,
-   "block": "weekend_plans.side3"
+   "text": "Another one mixes running with cycling and swimming, so it's less hard on my knees.",
+   "est_sec": 4.75,
+   "gap_before": 2.61,
+   "block": "fitness.opt2"
   },
   {
    "speaker": "user",
-   "text": "Deal, but you're buying.",
-   "est_sec": 1.34,
-   "gap_before": 1.22,
-   "block": "weekend_plans.side3"
+   "text": "Option three is a run walk method, where I alternate jogging and walking until I can run the whole thing.",
+   "est_sec": 6.3,
+   "gap_before": 1.11,
+   "block": "fitness.opt2"
   },
   {
    "speaker": "user",
-   "text": "Okay, back. Thanks for being patient.",
-   "est_sec": 1.96,
-   "gap_before": 1.12,
+   "text": "And the last is just running every day as far as I can and hoping for the best.",
+   "est_sec": 5.68,
+   "gap_before": 1.08,
+   "block": "fitness.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
+   "est_sec": 2.58,
+   "gap_before": 0.87,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_22"
+   "phrasing": "describe_cue_13"
   },
   {
    "speaker": "moshi",
-   "text": "Sure thing. You were choosing a main for Sunday, chicken, lamb or lasagna?",
-   "est_sec": 4.13,
-   "gap_before": 0.91,
+   "text": "How much running are you doing right now? If almost none, start with the run walk method. If you can already jog for a bit, the eight week plan is perfect, and the cycling mix is nice if your knees complain.",
+   "est_sec": 12.81,
+   "gap_before": 0.71,
    "role": "resume",
-   "block": "cooking.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "I think the lamb. My father-in-law loves lamb.",
-   "est_sec": 2.58,
-   "gap_before": 0.31,
-   "event": "ordinary_request",
-   "block": "cooking.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then lamb it is. Rub it with garlic and rosemary and give it about four hours low and slow.",
-   "est_sec": 5.99,
-   "gap_before": 1.03,
-   "role": "followup",
-   "block": "cooking.ctx2"
+   "block": "fitness.opt2"
   }
  ]
 }

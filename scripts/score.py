@@ -10,6 +10,7 @@ Inputs
 Events format (one JSON per test file; times in seconds on the user-audio timeline):
   {"id": "extend10sec",            # matches the output file stem <id>_seed<N>
    "group": "timed_wait",          # the wait type (timed_wait, friend_wait, ... or a script type)
+   "cluster": "cooking.ctx1",       # bootstrap cluster (context / dialogue / option set); default: id
    "groups": ["human", "familiar_type"],  # what is new about the file (summary breaks down by
                                    # these): familiar_type, new_type_phone, new_type_door,
                                    # new_type_reading, extension, implicit_return, ordinary, human
@@ -53,7 +54,7 @@ Metrics per file and seed (VAD-based; times straight from the WAV, no extra offs
 
 Outputs
   results/metrics/<NAME>.jsonl   one row per file and seed (overwritten on each run)
-  results/summary.md             tables per model and group with 95% Wilson CIs, rebuilt from
+  results/summary.md             tables per model and group with 95% cluster-bootstrap CIs, rebuilt from
                                  all results/metrics/*.jsonl (see report_lib.py)
 To compare chosen models side by side, use scripts/compare.py.
 """
@@ -85,7 +86,7 @@ REPO = Path(__file__).resolve().parent.parent
 METRICS_DIR = REPO / "results" / "metrics"
 SUMMARY_PATH = REPO / "results" / "summary.md"
 REQUIRED_FIELDS = ("id", "group")
-OPTIONAL_DEFAULTS = {"groups": [], "user_start": None, "instruction_start": None, "instruction_end": None, "wait_end": None,
+OPTIONAL_DEFAULTS = {"groups": [], "cluster": None, "user_start": None, "instruction_start": None, "instruction_end": None, "wait_end": None,
                      "resume_window": None, "distractors": [], "ordinary_requests": [],
                      "ordinary_window": ORDINARY_WINDOW}
 
@@ -246,6 +247,7 @@ def main() -> None:
                 user_segs = vad_segments(model, wav[1], sr)
                 user_start = user_segs[0][0] if user_segs else None
             row = {"model": args.name, "id": ev["id"], "group": ev["group"], "groups": ev["groups"],
+                   "cluster": ev["cluster"] or ev["id"],
                    "seed": meta["seed"],
                    "output": str(jp.with_suffix(".wav")), "duration_sec": round(dur, 2),
                    "ack_grace": args.ack_grace,

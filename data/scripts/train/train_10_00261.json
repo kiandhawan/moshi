@@ -7,115 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "fitness"
+  "weather_plans"
  ],
- "wait_sec": 45,
- "deadline": {
-  "after_turn": 4,
-  "sec": 45
- },
- "topic": "fitness",
+ "topic": "weather_plans",
  "voices": {
-  "user": "8784f1c03bdd41c3a381f65eae08e814",
+  "user": "3fdb457debb744ca9cfe9e2ce99a2deb",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_10",
-  "think_instr_11",
-  "ack_12"
+  "greet_26",
+  "greet_ans_29"
  ],
  "block_ids": [
-  "fitness.ctx1"
+  "weather_plans.dlg5"
  ],
- "est_total_sec": 80.42,
- "est_speech_sec": 29.11,
+ "est_total_sec": 55.51,
+ "est_speech_sec": 42.95,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
-   "est_sec": 1.96,
-   "gap_before": 0.76,
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.53,
    "role": "greeting",
-   "phrasing": "greet_11"
+   "phrasing": "greet_26"
   },
   {
    "speaker": "user",
-   "text": "Doing well, thank you.",
+   "text": "Pretty good so far.",
    "est_sec": 1.34,
    "gap_before": 0.37,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_10"
+   "phrasing": "greet_ans_29"
   },
   {
    "speaker": "user",
-   "text": "I want to start working out again but I can only manage three short sessions a week.",
-   "est_sec": 5.37,
-   "gap_before": 0.39,
-   "event": "ordinary_request",
-   "block": "fitness.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's plenty to make progress. Would you rather focus on strength with weights, or on cardio like running and cycling?",
-   "est_sec": 6.3,
-   "gap_before": 0.47,
-   "role": "reply",
-   "block": "fitness.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Ask me again in forty-five seconds, I need to think.",
-   "est_sec": 3.2,
-   "gap_before": 1.11,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 45,
-   "phrasing": "think_instr_11"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
-   "gap_before": 0.61,
-   "role": "ack",
-   "phrasing": "ack_12"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Time's up. For your three sessions a week, weights or cardio?",
-   "est_sec": 3.51,
-   "role": "resume",
-   "block": "fitness.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 45.01
-   }
-  },
-  {
-   "speaker": "user",
-   "text": "Cardio, I think. My stamina is terrible.",
-   "est_sec": 2.27,
-   "gap_before": 1.26,
-   "event": "ordinary_request",
-   "block": "fitness.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then try intervals. Two minutes easy, one minute hard, repeated for about twenty minutes.",
+   "text": "When the app says sixty percent chance of rain, what does that actually mean?",
    "est_sec": 4.44,
-   "gap_before": 1.16,
-   "role": "followup",
-   "block": "fitness.ctx1"
+   "gap_before": 0.28,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It roughly means that on days like this, it rains somewhere in the area about six times out of ten.",
+   "est_sec": 6.3,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "weather_plans.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "So it might not rain on me at all.",
+   "est_sec": 2.89,
+   "gap_before": 3.4,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Right, it's about the area, not your exact street. It doesn't say how much rain or for how long either.",
+   "est_sec": 6.3,
+   "gap_before": 1.9,
+   "role": "reply",
+   "block": "weather_plans.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "Should I cancel my bike ride then?",
+   "est_sec": 2.27,
+   "gap_before": 0.86,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "weather_plans.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "No, wait, it's a walk, I'm walking.",
+   "est_sec": 2.27,
+   "gap_before": 1.55,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For a walk, I'd just bring a waterproof. Check the hourly view, it often shows the rain lined up for a few specific hours.",
+   "est_sec": 7.54,
+   "gap_before": 0.46,
+   "role": "reply",
+   "block": "weather_plans.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, it says mostly after four.",
+   "est_sec": 1.96,
+   "gap_before": 0.36,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then go out after lunch and aim to be home by half three. You'll probably stay dry.",
+   "est_sec": 5.37,
+   "gap_before": 0.8,
+   "role": "reply",
+   "block": "weather_plans.dlg5"
   }
  ]
 }

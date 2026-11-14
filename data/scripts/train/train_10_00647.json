@@ -7,120 +7,108 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "hiking"
+  "weather_plans"
  ],
- "topic": "hiking",
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "weather_plans",
  "voices": {
-  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "user": "4210f97652d14bec82edc1c2ee8296d2",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_29",
-  "greet_ans_08"
+  "greet_14",
+  "greet_ans_16",
+  "think_instr_16"
  ],
  "block_ids": [
-  "hiking.dlg3"
+  "weather_plans.ctx3"
  ],
- "est_total_sec": 53.99,
- "est_speech_sec": 40.16,
+ "est_total_sec": 56.71,
+ "est_speech_sec": 29.94,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you doing right now?",
-   "est_sec": 2.27,
-   "gap_before": 0.34,
-   "role": "greeting",
-   "phrasing": "greet_29"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm great, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.33,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it safe to hike alone?",
-   "est_sec": 1.96,
-   "gap_before": 0.35,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It can be, with some precautions. Pick a well used trail, and always tell someone where you're going and when you'll be back.",
-   "est_sec": 7.23,
-   "gap_before": 1.06,
-   "role": "reply",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "What if I get lost?",
+   "text": "Hi! How's life treating you?",
    "est_sec": 1.65,
-   "gap_before": 1.09,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Download an offline map before you go and carry a small battery pack for your phone. If you're unsure, stay where you are and call for help.",
-   "est_sec": 8.47,
-   "gap_before": 0.58,
-   "role": "reply",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm retired, so I can go on weekdays when it's",
-   "est_sec": 3.2,
-   "gap_before": 3.42,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "really quiet.",
-   "est_sec": 0.72,
-   "gap_before": 2.99,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's lovely, but quieter trails mean fewer people to help. Stick to routes you know until you're confident.",
-   "est_sec": 5.68,
-   "gap_before": 0.6,
-   "role": "reply",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Good point. Maybe I'll join a walking group too.",
-   "est_sec": 2.89,
-   "gap_before": 1.17,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's a great idea. Many groups do weekday hikes, and you'll learn new trails from them.",
-   "est_sec": 5.06,
    "gap_before": 0.4,
+   "role": "greeting",
+   "phrasing": "greet_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.48,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_16"
+  },
+  {
+   "speaker": "user",
+   "text": "There's a snowstorm coming Thursday night and I'm supposed to drive to my sister's on Friday.",
+   "est_sec": 5.06,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That could make the roads rough. Would you rather leave Thursday afternoon before it hits, or wait and go Saturday?",
+   "est_sec": 6.3,
+   "gap_before": 0.46,
    "role": "reply",
-   "block": "hiking.dlg3"
+   "block": "weather_plans.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Can I have twenty seconds to think? Ask me again after.",
+   "est_sec": 3.51,
+   "gap_before": 1.86,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, are you leaving early on Thursday or holding off until Saturday?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "weather_plans.ctx3",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.19
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Saturday. I don't want to rush.",
+   "est_sec": 1.96,
+   "gap_before": 0.91,
+   "event": "ordinary_request",
+   "block": "weather_plans.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's the safer choice. Give the plows a day to clear things and check the road conditions before you go.",
+   "est_sec": 6.3,
+   "gap_before": 0.56,
+   "role": "followup",
+   "block": "weather_plans.ctx3"
   }
  ]
 }

@@ -7,134 +7,173 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [],
  "topics": [
-  "coffee"
+  "weekend_plans",
+  "video_games"
  ],
- "wait_sec": 20,
- "deadline": {
-  "after_turn": 4,
-  "sec": 20
- },
- "topic": "coffee",
+ "topic": "weekend_plans",
  "voices": {
-  "user": "ce9db9be1ecb4c8a832802626864595d",
-  "friend": null,
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": "a92fb82d739d428a80d4645c5cf91e38",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Ethan",
+ "friend_name_id": "name_23",
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_22",
-  "think_instr_16",
-  "self_04",
-  "self_26"
+  "greet_01",
+  "greet_ans_19",
+  "side_instr_05",
+  "side_cue_02"
  ],
  "block_ids": [
-  "coffee.ctx1"
+  "weekend_plans.ctx6",
+  "video_games.side6"
  ],
- "est_total_sec": 58.83,
- "est_speech_sec": 35.41,
+ "est_total_sec": 66.91,
+ "est_speech_sec": 50.99,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
-   "est_sec": 1.96,
-   "gap_before": 0.66,
+   "text": "Hey, how are you doing?",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_11"
+   "phrasing": "greet_01"
   },
   {
    "speaker": "user",
-   "text": "Pretty relaxed today.",
-   "est_sec": 1.03,
-   "gap_before": 0.86,
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.48,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_22"
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "I want to stop buying coffee every morning and make it at home instead.",
-   "est_sec": 4.44,
-   "gap_before": 0.37,
-   "event": "ordinary_request",
-   "block": "coffee.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Good plan, you'll save a lot. Do you want something simple like a French press, or are you ready to invest in an espresso machine?",
-   "est_sec": 7.85,
-   "gap_before": 1.04,
-   "role": "reply",
-   "block": "coffee.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Can I have twenty seconds to think? Ask me again after.",
-   "est_sec": 3.51,
-   "gap_before": 0.41,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_16"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, what did I do last time?",
-   "est_sec": 2.27,
-   "anchor": {
-    "turn": 4,
-    "offset": 11.09
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_04"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, decisions, decisions.",
-   "est_sec": 1.03,
-   "anchor": {
-    "turn": 4,
-    "offset": 15.31
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_26"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, what's it going to be for your home coffee, press or espresso machine?",
-   "est_sec": 4.44,
-   "role": "resume",
-   "block": "coffee.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 20.15
-   }
-  },
-  {
-   "speaker": "user",
-   "text": "Espresso. I mostly drink lattes, so I might as well.",
+   "text": "I've got the grandkids all day Saturday. Four and seven.",
    "est_sec": 3.2,
-   "gap_before": 1.17,
+   "gap_before": 0.33,
    "event": "ordinary_request",
-   "block": "coffee.ctx1"
+   "block": "weekend_plans.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "Then get one with a steam wand for the milk. It'll pay for itself in a few months.",
-   "est_sec": 5.68,
-   "gap_before": 0.56,
+   "text": "Lovely. The zoo would be a big day out, or the farm park is smaller and they can feed the goats. How much energy do you have?",
+   "est_sec": 8.47,
+   "gap_before": 0.85,
+   "role": "reply",
+   "block": "weekend_plans.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang on, I'm going to chat with my friend for a bit. Just wait until I say I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 0.68,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Why are you holding my controller like that?",
+   "est_sec": 2.58,
+   "gap_before": 1.1,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "I need a favour. There's this level with the moving platforms, I've died about fifty times.",
+   "est_sec": 5.06,
+   "gap_before": 0.94,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "You want me to beat it for you?",
+   "est_sec": 2.58,
+   "gap_before": 1.22,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Just this one. I'll do the rest myself, promise.",
+   "est_sec": 2.89,
+   "gap_before": 2.78,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Is that cheating?",
+   "est_sec": 1.03,
+   "gap_before": 0.96,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "It's teamwork.",
+   "est_sec": 0.72,
+   "gap_before": 1.18,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Fine. But you're making tea.",
+   "est_sec": 1.65,
+   "gap_before": 0.3,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Done. Milk, no sugar?",
+   "est_sec": 1.34,
+   "gap_before": 0.35,
+   "block": "video_games.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm back now.",
+   "est_sec": 1.34,
+   "gap_before": 0.84,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Your Saturday with the grandkids. Zoo, or farm park?",
+   "est_sec": 3.51,
+   "gap_before": 0.34,
+   "role": "resume",
+   "block": "weekend_plans.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "Farm park. My hip won't do the zoo.",
+   "est_sec": 2.58,
+   "gap_before": 1.33,
+   "event": "ordinary_request",
+   "block": "weekend_plans.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sensible. The little one will love the goats anyway, and there's usually a play barn.",
+   "est_sec": 4.75,
+   "gap_before": 0.39,
    "role": "followup",
-   "block": "coffee.ctx1"
+   "block": "weekend_plans.ctx6"
   }
  ]
 }

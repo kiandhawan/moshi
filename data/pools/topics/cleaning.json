@@ -1,162 +1,1824 @@
 {
-  "topic": "cleaning",
-  "contexts": [
+ "topic": "cleaning",
+ "contexts": [
+  {
+   "id": "cleaning.ctx1",
+   "turns": [
     {
-      "id": "cleaning.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "Guests are coming Saturday and the whole place is a mess. I've got maybe two hours tomorrow."},
-        {"speaker": "moshi", "text": "Two hours is enough if you focus. Should we start with the kitchen and bathroom, or the living room where everyone will sit?"}
-      ],
-      "pending": "kitchen and bathroom first or living room first",
-      "think_reask": [
-        "So, where do you want to start? Kitchen and bathroom, or the living room?",
-        "Alright, decision time. Which room gets your first hour?",
-        "Okay, back to the cleaning plan. Kitchen and bath, or living room first?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were picking which rooms to clean first before Saturday.",
-        "Hi again. So, kitchen and bathroom first, or the living room?",
-        "There you are. You were deciding where to start your two hours of cleaning."
-      ],
-      "endings": [
-        {"user": "Kitchen and bathroom. Those are the gross ones.", "moshi": "Good call. Spray the bathroom first and let it soak while you do the kitchen counters."},
-        {"user": "Living room. That's what people will actually see.", "moshi": "Fair enough. Clear the surfaces, vacuum, and fluff the cushions, and it'll look great fast."}
-      ]
+     "speaker": "user",
+     "text": "Guests are coming Saturday and the whole place is a mess. I've got maybe two hours tomorrow."
     },
     {
-      "id": "cleaning.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "My closet is overflowing. I can't find anything in there."},
-        {"speaker": "moshi", "text": "A good sort will help. For the stuff you don't wear anymore, do you want to donate it, sell it online, or just store it in boxes for now?"}
-      ],
-      "pending": "donate, sell or store old clothes",
-      "think_reask": [
-        "So, what's the plan for those old clothes? Donate, sell, or store?",
-        "Okay, time's up. Where are the clothes going?",
-        "Back to your closet. Have you decided what to do with the things you don't wear?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were deciding whether to donate, sell or store your old clothes.",
-        "Hi again. We were sorting out your closet. What's happening to the clothes you don't wear?",
-        "Good to have you back. Donate, sell, or boxes?"
-      ],
-      "endings": [
-        {"user": "Donate. I don't have the patience to sell stuff.", "moshi": "Easy and kind. Bag it up today and drop it off this week before it creeps back into the closet."},
-        {"user": "I'll sell the nice things and donate the rest.", "moshi": "Nice balance. Take photos in good daylight and the nicer pieces will sell faster."}
-      ]
-    },
-    {
-      "id": "cleaning.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I keep falling behind on chores. Everything piles up until Sunday."},
-        {"speaker": "moshi", "text": "That's really common. Would you prefer a little bit every day, like fifteen minutes, or one bigger cleaning session each week?"}
-      ],
-      "pending": "daily short chores or one weekly session",
-      "think_reask": [
-        "So, which sounds more like you? A little every day, or one big weekly clean?",
-        "Okay, have you thought about it? Fifteen minutes daily, or one longer session?",
-        "Back to the chores. Daily or weekly?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were choosing between short daily chores and one big weekly session.",
-        "Hi again. So, for keeping up with chores, daily or weekly?",
-        "There you are. We were figuring out a chore routine. Which style do you want?"
-      ],
-      "endings": [
-        {"user": "Fifteen minutes a day. I can handle that.", "moshi": "Great. Pick a set time, like right after dinner, so it becomes a habit."},
-        {"user": "One big session. I'd rather get it all done at once.", "moshi": "That works. Put on a podcast and do it Saturday morning so your Sunday stays free."}
-      ]
+     "speaker": "moshi",
+     "text": "Two hours is enough if you focus. Should we start with the kitchen and bathroom, or the living room where everyone will sit?"
     }
-  ],
-  "side_conversations": [
-    {"id": "cleaning.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, whose turn is it to take out the trash?"},
-      {"speaker": "friend", "text": "Pretty sure it's yours. I did it Tuesday and Thursday."},
-      {"speaker": "user", "text": "Really? I thought I did Thursday."},
-      {"speaker": "friend", "text": "No, you were at your sister's on Thursday."},
-      {"speaker": "user", "text": "Oh right. Fine, I'll take it down tonight."},
-      {"speaker": "friend", "text": "Recycling too, please. The box is overflowing."}
-    ]},
-    {"id": "cleaning.side2", "turns": [
-      {"speaker": "user", "text": "Do we have any more of that spray for the shower?"},
-      {"speaker": "friend", "text": "Under the sink, behind the sponges. There should be a full bottle."},
-      {"speaker": "user", "text": "Found it. Did you ever figure out what's causing that black stuff in the corner?"},
-      {"speaker": "friend", "text": "I think it's just mold. We should open the window after showers."},
-      {"speaker": "user", "text": "Yeah, let's both try to remember that."}
-    ]},
-    {"id": "cleaning.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, can you help me move the couch for a second? I want to vacuum behind it."},
-      {"speaker": "friend", "text": "Sure. On three. One, two, three."},
-      {"speaker": "user", "text": "Oh wow, look at all that dust. And there's the remote!"},
-      {"speaker": "friend", "text": "Told you it wasn't in the kitchen."},
-      {"speaker": "user", "text": "Can you hold it there while I run the vacuum?"},
-      {"speaker": "friend", "text": "Go ahead, just be quick, it's heavy."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "cleaning.dlg1", "turns": [
-      {"speaker": "user", "text": "What's the best way to get coffee stains out of a white mug?"},
-      {"speaker": "moshi", "text": "Make a paste with baking soda and a little water and scrub it in with a sponge. Most stains lift in a minute or two."},
-      {"speaker": "user", "text": "And if that doesn't work?"},
-      {"speaker": "moshi", "text": "Soak the mug overnight in hot water with a spoonful of dishwasher powder. That usually gets even old stains."},
-      {"speaker": "user", "text": "Nice. Does the same / trick work for the teapot?"},
-      {"speaker": "moshi", "text": "Yes, the soak works well for teapots too. Just rinse it really well afterwards so the next pot doesn't taste soapy."},
-      {"speaker": "user", "text": "Good point. Thanks!"}
-    ]},
-    {"id": "cleaning.dlg2", "turns": [
-      {"speaker": "user", "text": "My kids' room is chaos. Toys everywhere, every single day."},
-      {"speaker": "moshi", "text": "Open bins with picture labels really help younger kids. They can see where everything goes without reading."},
-      {"speaker": "user", "text": "They're five and eight."},
-      {"speaker": "moshi", "text": "Perfect ages for that. You could also try a quick ten minute tidy before bedtime, with a song playing as a timer."},
-      {"speaker": "user", "text": "Ha, they'd like that. But they / have way too many toys, honestly."},
-      {"speaker": "moshi", "text": "Try rotating them. Put half in a box in the closet and swap them every month, so the old ones feel new again."},
-      {"speaker": "user", "text": "Oh, that's clever. Less mess and less begging for new stuff."},
-      {"speaker": "moshi", "text": "Exactly. And fewer toys out means the tidy really does take ten minutes."}
-    ]},
-    {"id": "cleaning.dlg3", "turns": [
-      {"speaker": "user", "text": "Can I use bleach on my wooden cutting board?"},
-      {"speaker": "moshi", "text": "Bleach can dry out and crack wood, so I'd avoid it. Hot soapy water and drying it standing up is usually enough."},
-      {"speaker": "user", "text": "What if I cut raw chicken on it?"},
-      {"speaker": "moshi", "text": "Then scrub it well and wipe it with plain white vinegar. Even better, keep a plastic board just for raw meat."},
-      {"speaker": "user", "text": "Okay. It also smells / kind of like onions all the time."},
-      {"speaker": "moshi", "text": "Rub it with half a lemon and some coarse salt, then rinse. That takes out most smells."},
-      {"speaker": "user", "text": "And should I oil it?"},
-      {"speaker": "moshi", "text": "Yes, once a month with food safe mineral oil. It keeps the wood from drying out and cracking."}
-    ]},
-    {"id": "cleaning.dlg4", "turns": [
-      {"speaker": "user", "text": "I just moved into an apartment and the oven is disgusting. Where do I even start?"},
-      {"speaker": "moshi", "text": "Take the racks out and soak them in the bathtub with hot water and dish soap. Then coat the inside with a baking soda paste and leave it overnight."},
-      {"speaker": "user", "text": "Overnight? I was hoping / to cook something tonight."},
-      {"speaker": "moshi", "text": "You can cook tonight and start the paste after. Cleaning a slightly warm oven is actually a bit easier."},
-      {"speaker": "user", "text": "What do I do in the morning?"},
-      {"speaker": "moshi", "text": "Wipe off the paste with a damp cloth, then spray a little vinegar on the leftover bits. It fizzes and loosens them."},
-      {"speaker": "user", "text": "And the glass on the door?"},
-      {"speaker": "moshi", "text": "Same paste, then a razor scraper held flat for the tough spots. Go gently so you don't scratch it."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "cleaning.opt1",
-     "lead_in": "Our place is always a mess, and I want to pick a cleaning system that sticks.",
-     "options": [
-      "The first idea is a chore chart where each person gets assigned rooms that rotate every week.",
-      "Then there's doing fifteen minutes of tidying together every evening before dinner.",
-      "Option three is one big cleaning session every Saturday morning for the whole house.",
-      "And the last one is just hiring a cleaner to come every two weeks."
-     ],
-     "moshi_comment": [
-      "The fifteen minutes every evening tends to work best, because the mess never piles up. A chore chart helps if people argue about who does what. The big Saturday session works, but it can eat your whole morning.",
-      "Is the problem more about clutter or about deep cleaning? For clutter, the evening tidy is great. For deep cleaning, a cleaner every two weeks could take a lot of pressure off."
-     ]},
-    {"id": "cleaning.opt2",
-     "lead_in": "I need a new vacuum and I'm comparing a few kinds.",
-     "options": [
-      "The first one is a robot vacuum that runs on a schedule, but it gets stuck under the couch.",
-      "Then there's a cordless stick vacuum that's light and handy for quick cleanups.",
-      "And the last one is a big corded upright with tons of suction, great for thick carpets."
-     ],
-     "moshi_comment": [
-      "If you have thick carpets, the upright will clean them best, though it's bulky to carry around. The cordless stick is the most convenient for daily messes. The robot is nice for keeping floors tidy but won't replace a real vacuum.",
-      "Is your place mostly carpet or hard floors? For hard floors, the cordless stick is probably all you need. For carpets, I'd go with the upright."
-     ]}
-  ]
+   ],
+   "pending": "kitchen and bathroom first or living room first",
+   "think_reask": [
+    "So, where do you want to start? Kitchen and bathroom, or the living room?",
+    "Alright, decision time. Which room gets your first hour?",
+    "Okay, back to the cleaning plan. Kitchen and bath, or living room first?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were picking which rooms to clean first before Saturday.",
+    "Hi again. So, kitchen and bathroom first, or the living room?",
+    "There you are. You were deciding where to start your two hours of cleaning."
+   ],
+   "endings": [
+    {
+     "user": "Kitchen and bathroom. Those are the gross ones.",
+     "moshi": "Good call. Spray the bathroom first and let it soak while you do the kitchen counters."
+    },
+    {
+     "user": "Living room. That's what people will actually see.",
+     "moshi": "Fair enough. Clear the surfaces, vacuum, and fluff the cushions, and it'll look great fast."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My closet is overflowing. I can't find anything in there."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A good sort will help. For the stuff you don't wear anymore, do you want to donate it, sell it online, or just store it in boxes for now?"
+    }
+   ],
+   "pending": "donate, sell or store old clothes",
+   "think_reask": [
+    "So, what's the plan for those old clothes? Donate, sell, or store?",
+    "Okay, time's up. Where are the clothes going?",
+    "Back to your closet. Have you decided what to do with the things you don't wear?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were deciding whether to donate, sell or store your old clothes.",
+    "Hi again. We were sorting out your closet. What's happening to the clothes you don't wear?",
+    "Good to have you back. Donate, sell, or boxes?"
+   ],
+   "endings": [
+    {
+     "user": "Donate. I don't have the patience to sell stuff.",
+     "moshi": "Easy and kind. Bag it up today and drop it off this week before it creeps back into the closet."
+    },
+    {
+     "user": "I'll sell the nice things and donate the rest.",
+     "moshi": "Nice balance. Take photos in good daylight and the nicer pieces will sell faster."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I keep falling behind on chores. Everything piles up until Sunday."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's really common. Would you prefer a little bit every day, like fifteen minutes, or one bigger cleaning session each week?"
+    }
+   ],
+   "pending": "daily short chores or one weekly session",
+   "think_reask": [
+    "So, which sounds more like you? A little every day, or one big weekly clean?",
+    "Okay, have you thought about it? Fifteen minutes daily, or one longer session?",
+    "Back to the chores. Daily or weekly?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were choosing between short daily chores and one big weekly session.",
+    "Hi again. So, for keeping up with chores, daily or weekly?",
+    "There you are. We were figuring out a chore routine. Which style do you want?"
+   ],
+   "endings": [
+    {
+     "user": "Fifteen minutes a day. I can handle that.",
+     "moshi": "Great. Pick a set time, like right after dinner, so it becomes a habit."
+    },
+    {
+     "user": "One big session. I'd rather get it all done at once.",
+     "moshi": "That works. Put on a podcast and do it Saturday morning so your Sunday stays free."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The grout in our shower has gone properly black. It's disgusting."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually it comes back with some effort. Would you rather scrub it by hand with a baking soda paste, or rent a steam cleaner for the day?"
+    }
+   ],
+   "pending": "scrub grout by hand or rent a steam cleaner",
+   "think_reask": [
+    "So, that black grout. Elbow grease or a steam cleaner?",
+    "Okay, the shower. Scrubbing by hand, or renting the steamer?"
+   ],
+   "welcome_back": [
+    "The grout in your shower is still waiting. Paste and a brush, or the steamer?",
+    "So, the black grout. Brush or steam?"
+   ],
+   "endings": [
+    {
+     "user": "I'll scrub it. I've got an old toothbrush and a podcast.",
+     "moshi": "Perfect pairing. Let the paste sit ten minutes first and it'll do half the work for you."
+    },
+    {
+     "user": "Steam cleaner. My wrists can't handle an hour of scrubbing.",
+     "moshi": "Fair. Steam lifts the grime fast, just keep the nozzle moving so you don't loosen old grout."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We're moving out at the end of the month and I really want my deposit back."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Landlords look hard at kitchens and bathrooms. Do you want to book a professional end of tenancy clean, or do it yourselves?"
+    }
+   ],
+   "pending": "professional move-out clean or do it yourselves",
+   "think_reask": [
+    "So, for the deposit. Pay for a pro clean, or do it yourselves?",
+    "Back to the move-out. Hire someone, or roll up your sleeves?"
+   ],
+   "welcome_back": [
+    "Your deposit is still on the line. Professional cleaners, or a DIY weekend?",
+    "So, the end of tenancy clean. Who's doing it?"
+   ],
+   "endings": [
+    {
+     "user": "We'll hire someone. Some agents only accept a receipt anyway.",
+     "moshi": "Good point. Book early, end of month slots fill up quickly."
+    },
+    {
+     "user": "We'll do it ourselves. Four of us, one long Saturday.",
+     "moshi": "Very doable with four. Split it by room and save the oven for whoever loses rock paper scissors."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can't park the car in the garage anymore. It's bikes, paint tins, and a broken treadmill."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like a big job, so let's pick a starting zone. The tool corner, or the sports and bike stuff?"
+    }
+   ],
+   "pending": "start garage clear-out with tools or sports gear",
+   "think_reask": [
+    "So, where do we start in the garage? Tools or the bikes and sports gear?",
+    "Okay, the garage. First zone?"
+   ],
+   "welcome_back": [
+    "The packed garage. Tools first, or the sports corner?",
+    "So, your garage clear-out. Which corner gets tackled first?"
+   ],
+   "endings": [
+    {
+     "user": "The sports stuff. Half of it belongs to kids who've left home.",
+     "moshi": "Then that's quick wins. Text them a photo and give them a week to claim anything."
+    },
+    {
+     "user": "Tools. If I can find a screwdriver again, I'll be happy.",
+     "moshi": "Good motivation. Pegboard on the wall gets everything off the floor and visible."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kids bring home paintings every day. The fridge is buried."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely problem, but a real one. Would you photograph them and keep only a few favourites, or have one keepsake box per child per year?"
+    }
+   ],
+   "pending": "photograph art or keepsake box per year",
+   "think_reask": [
+    "So, the mountain of kids' paintings. Photos, or a box a year?",
+    "About that buried fridge. Which system?"
+   ],
+   "welcome_back": [
+    "The children's artwork. Snap and recycle, or keepsake boxes?",
+    "So, the paintings. Have you settled on a way to keep them?"
+   ],
+   "endings": [
+    {
+     "user": "Photos. Then I can make a little book at the end of the year.",
+     "moshi": "That's a sweet idea. Kids love flipping through their own book."
+    },
+    {
+     "user": "A box each. I can't bring myself to throw their art away.",
+     "moshi": "Totally understandable. Write the date on the back and the boxes become a little time capsule."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My flatmates and I are at war over the dishes. The sink's been full for days."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yikes. Would a weekly dish rota help, or should everyone just have their own set of plates and wash them straight away?"
+    }
+   ],
+   "pending": "dish rota or everyone keeps their own dishes",
+   "think_reask": [
+    "So, the dish war. Rota, or everyone with their own plates?",
+    "Okay, peace talks. Rota or personal dishes?"
+   ],
+   "welcome_back": [
+    "That sink full of dishes. Rota, or separate sets?",
+    "So, the flat's dish problem. Which fix?"
+   ],
+   "endings": [
+    {
+     "user": "Own dishes. Then it's obvious who's guilty.",
+     "moshi": "Ha, accountability. Put the shared plates away in a box so nobody falls back on them."
+    },
+    {
+     "user": "A rota. Some people just don't own plates.",
+     "moshi": "Fair. Stick it on the fridge and make the swap day the same as bin day, so it's easy to remember."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Something in my fridge stinks. I can't figure out what."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mystery smell. Do you want to empty the whole thing and wipe it down today, or just pop in an open box of baking soda and investigate later?"
+    }
+   ],
+   "pending": "deep clean fridge now or baking soda for now",
+   "think_reask": [
+    "So, the smelly fridge. Full clean-out today, or baking soda for now?",
+    "Decided what to do with the fridge?"
+   ],
+   "welcome_back": [
+    "Your fridge smell. Empty it all, or the baking soda for now?",
+    "So, the mystery smell. Big clean or quick fix?"
+   ],
+   "endings": [
+    {
+     "user": "Full clean-out. The smell's too bad to wait.",
+     "moshi": "Then pull everything out, check the vegetable drawer first, that's where things go to die."
+    },
+    {
+     "user": "Baking soda for now. I'm about to go to work.",
+     "moshi": "Fine. Leave it open on a middle shelf, and maybe sniff around the back this weekend."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our new husky sheds like crazy. The sofa is basically fur at this point."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Huskies are famous for it. Would you rather go over the sofa with a lint roller every day, or get a washable throw that covers it?"
+    }
+   ],
+   "pending": "daily lint roller or washable sofa throw",
+   "think_reask": [
+    "So, husky fur. Lint roller every day, or a washable throw?",
+    "Back to the fur sofa. Which approach?"
+   ],
+   "welcome_back": [
+    "The furry sofa. Roller, or a throw you can wash?",
+    "So, the husky versus the sofa. How are you fighting back?"
+   ],
+   "endings": [
+    {
+     "user": "A throw. I'm not rolling a sofa every single day.",
+     "moshi": "Smart. Get two so one can be in the wash while the other's on the sofa."
+    },
+    {
+     "user": "Lint roller. I hate covering a nice sofa.",
+     "moshi": "Fair. A rubber glove swiped across the cushions also pulls up a lot of fur, and it's free."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My home desk is buried under papers. Bills, receipts, letters from school."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two ways to go. Scan everything and go mostly paperless, or set up a small filing box with folders?"
+    }
+   ],
+   "pending": "go paperless or set up filing box",
+   "think_reask": [
+    "So, the paper mountain. Scan it, or a filing box?",
+    "Time to decide on the papers. Digital or folders?"
+   ],
+   "welcome_back": [
+    "Your desk full of papers. Paperless, or a filing box?",
+    "So, the pile of bills and letters. Which system?"
+   ],
+   "endings": [
+    {
+     "user": "Scan it. I never want to touch paper again.",
+     "moshi": "Love the energy. A scanning app on your phone works fine, and shred the copies you don't legally need."
+    },
+    {
+     "user": "Filing box. I don't trust myself to find things on a computer.",
+     "moshi": "That's fine. Five folders is plenty, bills, health, school, money, and a to-do one at the front."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's black mould spreading on our bathroom ceiling. We rent."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That needs attention. Do you want to clean it yourself first, or report it to the landlord before touching it?"
+    }
+   ],
+   "pending": "clean mould yourself or report to landlord first",
+   "think_reask": [
+    "So, the mouldy ceiling. Clean it now, or tell the landlord first?",
+    "Okay, the mould. Which comes first?"
+   ],
+   "welcome_back": [
+    "The mould on your bathroom ceiling. Your landlord, or a scrub first?",
+    "So, that mould. Who's dealing with it?"
+   ],
+   "endings": [
+    {
+     "user": "Report it first. If it's a ventilation problem, it's on them.",
+     "moshi": "Good instinct. Take photos and send them in writing so there's a record."
+    },
+    {
+     "user": "I'll clean it now. It's making the whole room smell.",
+     "moshi": "Okay. Wear gloves and a mask, open the window, and still let the landlord know it's happening."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "cleaning.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, whose turn is it to take out the trash?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Pretty sure it's yours. I did it Tuesday and Thursday."
+    },
+    {
+     "speaker": "user",
+     "text": "Really? I thought I did Thursday."
+    },
+    {
+     "speaker": "friend",
+     "text": "No, you were at your sister's on Thursday."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh right. Fine, I'll take it down tonight."
+    },
+    {
+     "speaker": "friend",
+     "text": "Recycling too, please. The box is overflowing."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do we have any more of that spray for the shower?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Under the sink, behind the sponges. There should be a full bottle."
+    },
+    {
+     "speaker": "user",
+     "text": "Found it. Did you ever figure out what's causing that black stuff in the corner?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I think it's just mold. We should open the window after showers."
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, let's both try to remember that."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can you help me move the couch for a second? I want to vacuum behind it."
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. On three. One, two, three."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh wow, look at all that dust. And there's the remote!"
+    },
+    {
+     "speaker": "friend",
+     "text": "Told you it wasn't in the kitchen."
+    },
+    {
+     "speaker": "user",
+     "text": "Can you hold it there while I run the vacuum?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Go ahead, just be quick, it's heavy."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, where do the spare vacuum bags live? This one's full."
+    },
+    {
+     "speaker": "friend",
+     "text": "Hall cupboard, top shelf. Have you ever actually changed one before?"
+    },
+    {
+     "speaker": "user",
+     "text": "Of course I have."
+    },
+    {
+     "speaker": "friend",
+     "text": "When?"
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, never. Show me?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Pull the little tab, slide it out, don't shake it, unless you want to vacuum twice."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Are we really keeping this lamp? It's been in the loft for six years."
+    },
+    {
+     "speaker": "friend",
+     "text": "It was my gran's. I know it's ugly."
+    },
+    {
+     "speaker": "user",
+     "text": "It's not ugly, it's just missing a shade and the wire is taped together."
+    },
+    {
+     "speaker": "friend",
+     "text": "Fine, it's ugly. But I like it."
+    },
+    {
+     "speaker": "user",
+     "text": "How about we get it rewired and actually use it? Better than it sitting up there with the spiders."
+    },
+    {
+     "speaker": "friend",
+     "text": "Deal. The green shade from the charity shop would suit it."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, did you use the white towels to mop up the kitchen floor?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Um. They were the closest thing."
+    },
+    {
+     "speaker": "user",
+     "text": "Those were the guest towels. My mum's coming tomorrow."
+    },
+    {
+     "speaker": "friend",
+     "text": "I'll put them on a hot wash right now, they'll be fine."
+    },
+    {
+     "speaker": "user",
+     "text": "With the bleach-free stuff, please, they're the fluffy ones."
+    },
+    {
+     "speaker": "friend",
+     "text": "Got it. Sorry, I panicked, the whole jug of juice went everywhere."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "cleaning.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What's the best way to get coffee stains out of a white mug?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Make a paste with baking soda and a little water and scrub it in with a sponge. Most stains lift in a minute or two."
+    },
+    {
+     "speaker": "user",
+     "text": "And if that doesn't work?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Soak the mug overnight in hot water with a spoonful of dishwasher powder. That usually gets even old stains."
+    },
+    {
+     "speaker": "user",
+     "text": "Nice. Does the same / trick work for the teapot?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, the soak works well for teapots too. Just rinse it really well afterwards so the next pot doesn't taste soapy."
+    },
+    {
+     "speaker": "user",
+     "text": "Good point. Thanks!"
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kids' room is chaos. Toys everywhere, every single day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Open bins with picture labels really help younger kids. They can see where everything goes without reading."
+    },
+    {
+     "speaker": "user",
+     "text": "They're five and eight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect ages for that. You could also try a quick ten minute tidy before bedtime, with a song playing as a timer."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, they'd like that. But they / have way too many toys, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try rotating them. Put half in a box in the closet and swap them every month, so the old ones feel new again."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's clever. Less mess and less begging for new stuff."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. And fewer toys out means the tidy really does take ten minutes."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I use bleach on my wooden cutting board?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bleach can dry out and crack wood, so I'd avoid it. Hot soapy water and drying it standing up is usually enough."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I cut raw chicken on it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then scrub it well and wipe it with plain white vinegar. Even better, keep a plastic board just for raw meat."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. It also smells / kind of like onions all the time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rub it with half a lemon and some coarse salt, then rinse. That takes out most smells."
+    },
+    {
+     "speaker": "user",
+     "text": "And should I oil it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, once a month with food safe mineral oil. It keeps the wood from drying out and cracking."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I just moved into an apartment and the oven is disgusting. Where do I even start?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take the racks out and soak them in the bathtub with hot water and dish soap. Then coat the inside with a baking soda paste and leave it overnight."
+    },
+    {
+     "speaker": "user",
+     "text": "Overnight? I was hoping / to cook something tonight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can cook tonight and start the paste after. Cleaning a slightly warm oven is actually a bit easier."
+    },
+    {
+     "speaker": "user",
+     "text": "What do I do in the morning?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wipe off the paste with a damp cloth, then spray a little vinegar on the leftover bits. It fizzes and loosens them."
+    },
+    {
+     "speaker": "user",
+     "text": "And the glass on the door?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Same paste, then a razor scraper held flat for the tough spots. Go gently so you don't scratch it."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Candle wax dripped all over my linen tablecloth during dinner. Is it ruined?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not at all. Let it harden first, then scrape off as much as you can with a blunt knife."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, done. There's still a waxy patch."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put a paper bag over it and press with a warm iron. The paper soaks up the melted wax."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, it's working! The bag's getting / all greasy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Move to a clean part of the bag and repeat until nothing more comes up. If there's colour from the candle left, a stain remover before washing usually gets it."
+    },
+    {
+     "speaker": "user",
+     "text": "It was a red candle, of course."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Of course it was. Treat it before it goes in the wash, and skip the dryer until it's gone."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My microwave is crusty inside. Like, years of soup explosions."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Easy fix. Put a bowl of water with a sliced lemon in it, and run it for a few minutes until it steams up."
+    },
+    {
+     "speaker": "user",
+     "text": "And then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Leave the door closed for five more minutes, then wipe. The steam loosens everything."
+    },
+    {
+     "speaker": "user",
+     "text": "Wow, it just wiped off. Even the ceiling bit."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Steam does the work. Take the turntable out and wash it in the sink while you're at it."
+    },
+    {
+     "speaker": "user",
+     "text": "My flatmate's going to think I hired someone / honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let them think that. Maybe suggest covering bowls next time."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Why does my washing machine smell like a swamp? It's supposed to clean things."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ironic, right? Usually it's damp left in the rubber seal and the detergent drawer. Mould loves it."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh. I just looked in the seal. There's black gunk."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wipe it out with a cloth and some diluted white vinegar. Then pull out the detergent drawer and rinse it under hot water."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Run an empty hot wash, the hottest setting. And afterwards, leave the door and drawer open a crack so it can dry."
+    },
+    {
+     "speaker": "user",
+     "text": "I always shut it. I thought that / was tidier."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very common. A little open door is the secret."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I burned rice to the bottom of my good steel pot. It's black."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't panic, steel is tough. Cover the burnt bit with water, add a couple of spoons of baking soda, and bring it to a simmer."
+    },
+    {
+     "speaker": "user",
+     "text": "How long?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About ten minutes. Then let it cool and scrape with a wooden spoon. Most of it should lift."
+    },
+    {
+     "speaker": "user",
+     "text": "Some came off but there's still a dark ring."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Make a paste with baking soda and a little water and scrub the ring with a non-scratch sponge."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. It's coming / slowly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Slow is fine. It'll look nearly new."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our glass shower screen is covered in white spots. We live in a hard water area."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Limescale. Spray it with equal parts white vinegar and water, leave it for fifteen minutes, then wipe with a microfibre cloth."
+    },
+    {
+     "speaker": "user",
+     "text": "Does it smell?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A bit, but it fades fast. Open the window."
+    },
+    {
+     "speaker": "user",
+     "text": "And to stop it / coming back every week?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep a squeegee in the shower and give the glass a quick swipe after each use. Takes ten seconds."
+    },
+    {
+     "speaker": "user",
+     "text": "My husband will never do that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hang the squeegee right at eye level. Sometimes that's all it takes."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My teenager sat on chewing gum and now it's stuck to his favourite hoodie. He's devastated."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Freeze it. Put the hoodie in a bag in the freezer for an hour, then the gum goes hard and you can pick it off."
+    },
+    {
+     "speaker": "user",
+     "text": "Seriously? The freezer?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Really. Hard gum cracks off instead of stretching."
+    },
+    {
+     "speaker": "user",
+     "text": "And if there's a little / leftover bit?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rub a tiny bit of dish soap into it and wash as usual. Check it before it goes in the dryer."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll put it in now. He's acting like his life is over."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Hoodie emergencies are serious at that age."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My spice drawer is chaos. I bought paprika three times because I couldn't find it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic. First, pull everything out and toss anything that smells like dust, spices fade after a couple of years."
+    },
+    {
+     "speaker": "user",
+     "text": "That's half of them."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then that's already a win. Put the rest in alphabetical order, or group them by cuisine if that's how you cook."
+    },
+    {
+     "speaker": "user",
+     "text": "Alphabetical. I'm a librarian."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you'll be in your element. Labels on the lids help if they're lying flat in a drawer."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, lids. Of course. I've been / pulling every jar out to read the side."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not anymore."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do you clean a mattress? I've never done it in my life."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most people haven't. Strip the bed, vacuum the mattress with the upholstery tool, especially the seams."
+    },
+    {
+     "speaker": "user",
+     "text": "Then what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sprinkle baking soda over the top, leave it for a few hours, then vacuum it up. It freshens it nicely."
+    },
+    {
+     "speaker": "user",
+     "text": "There's a yellow stain on one side. Can't remember / from what."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Dab it with a mild mix of washing-up liquid and cool water, don't soak it. Then let it dry fully before the sheets go back on."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll do it while I'm at work. Leave the window open."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ideal. Fresh air helps it dry too."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My four-year-old drew on our cream leather sofa. With a biro."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Oh dear. Act fast, ink sets over time. Dab a cotton bud with a little rubbing alcohol and touch only the ink lines."
+    },
+    {
+     "speaker": "user",
+     "text": "Won't that hurt the leather?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Test it on a hidden spot first, like the back. And dab, don't rub, or you'll spread it."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. It's lifting on / the test bit."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good. Work slowly along the lines, then wipe with a damp cloth and use leather conditioner afterwards."
+    },
+    {
+     "speaker": "user",
+     "text": "And hide every pen in the house."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably wise for a while."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How often should I be washing my bed sheets? Be honest."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, about once a week. Every two weeks at most."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh no. It's been / maybe a month."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You're not alone, plenty of people stretch it. But sweat and skin build up, and that's what dust mites love."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, that's gross. Pillowcases too?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pillowcases ideally more often, especially if you have spots. Your face is on them all night."
+    },
+    {
+     "speaker": "user",
+     "text": "Right. Stripping the bed now."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Having a second set makes it easier, you swap them straight away."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I mix bleach and vinegar to make a super strong cleaner? My mould won't budge."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Please don't. Bleach mixed with vinegar, or with ammonia, gives off toxic gas. It's genuinely dangerous."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh wow. I almost did it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Glad you asked. Use one or the other, never together, and rinse well between them if you try both."
+    },
+    {
+     "speaker": "user",
+     "text": "Which one for mould?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "On hard surfaces, a diluted bleach spray works well. Wear gloves and keep the window open."
+    },
+    {
+     "speaker": "user",
+     "text": "And I'll keep / the vinegar for the kettle."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect use for it."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My laptop keyboard has crumbs under every key. I eat lunch at my desk."
+    },
+    {
+     "speaker": "moshi",
+     "text": "We all do. Turn the laptop off, tip it upside down and gently tap the back, a lot will fall out."
+    },
+    {
+     "speaker": "user",
+     "text": "Gross. A whole cracker came out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then use a soft brush or a can of compressed air between the keys, short bursts at an angle."
+    },
+    {
+     "speaker": "user",
+     "text": "And the keys are shiny / and grubby too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Wipe them with a cloth barely dampened with rubbing alcohol. Never spray anything straight onto the keyboard."
+    },
+    {
+     "speaker": "user",
+     "text": "Looks brand new. Kind of."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Kind of is great for a keyboard."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a brown ring in my toilet that won't come off no matter how much I scrub."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's usually mineral buildup, not dirt. Pour in a cup of white vinegar and leave it overnight."
+    },
+    {
+     "speaker": "user",
+     "text": "Overnight? Can I use the toilet?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Put a note on the lid if you live with others. In the morning, sprinkle baking soda and scrub with the brush."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it's / still there?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A pumice stone, wet, gently on the ring. It takes it off without scratching the porcelain."
+    },
+    {
+     "speaker": "user",
+     "text": "A pumice stone. I have one in the bathroom already."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe just buy a separate one for the toilet."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Every time I clean my windows they end up streaky. What am I doing wrong?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably cleaning in the sun. The liquid dries too fast and leaves streaks. Pick a cloudy day or do them in the shade."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. I always wait for a sunny day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Common mistake. Use a spray of water with a splash of vinegar, then wipe with a microfibre cloth, and buff with a second dry one."
+    },
+    {
+     "speaker": "user",
+     "text": "Two cloths?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "One to clean, one to polish. Wipe horizontally on the outside and vertically on the inside, so you know which side a streak is on."
+    },
+    {
+     "speaker": "user",
+     "text": "That's very clever. I'm doing it / this afternoon."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the forecast first."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm drowning in post. Leaflets, bills, letters. They pile up on the kitchen counter."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a rule of handling each piece once. When it comes through the door, recycle the junk standing right by the bin."
+    },
+    {
+     "speaker": "user",
+     "text": "And the / real stuff?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "One tray for things to act on, like bills. Everything else gets filed or scanned on a set day."
+    },
+    {
+     "speaker": "user",
+     "text": "What day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Whichever you'll stick to. Many people pick Sunday evening, ten minutes with a cup of tea."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll do Sunday. And put a no junk mail sign on the door."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That alone cuts it down a lot."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We had a birthday party last night and the flat is wrecked. What comes first?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bin bags first. Walk through every room collecting rubbish and cans, it makes the biggest visual difference."
+    },
+    {
+     "speaker": "user",
+     "text": "Done. Now it's the sticky floor. Someone spilled punch everywhere."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Dishes next, so the sink is free, and save floors for last, because you'll drip things while cleaning."
+    },
+    {
+     "speaker": "user",
+     "text": "Makes sense. Should I / should I mop twice?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Mop once with warm soapy water, then once with clean water to lift the sticky film."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. I'm putting music on."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good plan. And drink some water, I'm guessing it was a good party."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Our stainless steel fridge is covered in fingerprints. Three kids, you can imagine."
+    },
+    {
+     "speaker": "moshi",
+     "text": "I can. A microfibre cloth with a little warm water wipes most of it. Go with the grain of the steel, not in circles."
+    },
+    {
+     "speaker": "user",
+     "text": "There's a grain?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look closely, there are faint lines running one direction. Wipe along them and it won't streak."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh yeah. Vertical. I've been doing circles / for years."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a drop of olive oil on a dry cloth afterwards gives it a shine and makes the next prints easier to wipe."
+    },
+    {
+     "speaker": "user",
+     "text": "Olive oil on my fridge. Okay."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Just a tiny bit. Too much and it'll attract more fingers."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My bathroom sink smells awful. Like old eggs."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's usually gunk built up in the drain. Pull out the plug or stopper if you can, there's often hair wrapped around it."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that is horrible."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sorry. Clear it out, then pour half a cup of baking soda down, followed by a cup of vinegar."
+    },
+    {
+     "speaker": "user",
+     "text": "It's fizzing like / a science project."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Let it fizz for fifteen minutes, then flush with a kettle of hot water, not boiling if you have plastic pipes."
+    },
+    {
+     "speaker": "user",
+     "text": "The smell's already better."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Do the fizz trick once a month and it should stay that way."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've been really down lately and the flat's a mess, and that makes me feel worse. I can't start."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds really hard, and it's very common. Let's make it tiny. Could you do just five minutes, with a timer?"
+    },
+    {
+     "speaker": "user",
+     "text": "Five minutes of what?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick one surface you see a lot, like your bedside table. Clear only that."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. That's / doable, I think."
+    },
+    {
+     "speaker": "moshi",
+     "text": "When the timer goes, you can stop and that counts. If you feel like doing more, great, but you don't have to."
+    },
+    {
+     "speaker": "user",
+     "text": "I did it. It's small but it's nice to look at."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a real win. And if things keep feeling heavy, talking to someone you trust or a doctor can help too."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My yoga mat smells like feet. Can I put it in the washing machine?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Better not, it can tear or lose its grip. Mix water with a little gentle soap in a spray bottle."
+    },
+    {
+     "speaker": "user",
+     "text": "Then just spray and wipe?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Spray both sides, wipe with a soft cloth, and let it air dry hanging over a chair. Out of direct sun, which can crack it."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I add, like, / a nice smell?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A couple of drops of tea tree or lavender oil in the spray works, and tea tree is mildly antibacterial too."
+    },
+    {
+     "speaker": "user",
+     "text": "Lavender. Very zen."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My white trainers are grey and I've got a wedding on Saturday. Can I save them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably. Take the laces out, then scrub the soles and sides with a soft brush and a paste of baking soda and washing-up liquid."
+    },
+    {
+     "speaker": "user",
+     "text": "And the laces?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Soak them in warm soapy water while you scrub, or just buy new white ones, they're cheap."
+    },
+    {
+     "speaker": "user",
+     "text": "The fabric part is / the worst. It's mesh."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use an old toothbrush and the same paste gently on the mesh, then wipe with a damp cloth. Stuff them with paper to dry."
+    },
+    {
+     "speaker": "user",
+     "text": "Not the radiator?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No, heat can yellow them and warp the glue. Give them a full day to dry."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've got a cupboard full of kitchen gadgets I never use. Spiralizer, waffle maker, and three blenders."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like a museum. A quick test, when did you last use each one?"
+    },
+    {
+     "speaker": "user",
+     "text": "Honestly? The spiralizer was a January thing. Two years ago."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it can go. If you haven't touched something in a year, and it's not seasonal, it's probably clutter."
+    },
+    {
+     "speaker": "user",
+     "text": "The waffle maker is for when my nieces visit."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a keeper then, it has a job. But three blenders is two too many."
+    },
+    {
+     "speaker": "user",
+     "text": "Fair. I'll keep the / the good one and donate the rest."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That'll free up a whole shelf."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The puppy peed on the rug again. It's the third time this week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Puppies, eh. Blot up as much as you can with kitchen paper, pressing hard. Don't rub."
+    },
+    {
+     "speaker": "user",
+     "text": "Done. Now?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use an enzyme cleaner if you have one. It breaks down the smell completely, otherwise the puppy smells it and goes there again."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't have one. I could / get one tomorrow?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For tonight, a mix of white vinegar and water helps, then baking soda once it's dry. Get the enzyme cleaner tomorrow for a proper fix."
+    },
+    {
+     "speaker": "user",
+     "text": "And the training part?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take her out right after meals and naps, and praise her like crazy when she goes outside."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is there an easy way to clean a ceiling fan? Every time I try, dust rains on my head."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Use an old pillowcase. Slide it over each blade and pull back, the dust stays inside the case."
+    },
+    {
+     "speaker": "user",
+     "text": "That's genius."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's one of the best little tricks. Stand on a sturdy step stool, not a wobbly chair."
+    },
+    {
+     "speaker": "user",
+     "text": "My chair is pretty wobbly / to be fair."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then definitely the stool. Shake the pillowcase out outside, then wash it."
+    },
+    {
+     "speaker": "user",
+     "text": "Doing it right now."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Five students, one house, one bathroom. It's grim. How do we split the cleaning?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Make a rotating rota with five jobs, one per person, changing every week. Bathroom, kitchen, bins, hoover, and the shared living room."
+    },
+    {
+     "speaker": "user",
+     "text": "Someone will just not do it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably. Agree a small penalty together, like the slacker buys the next round of toilet roll and bin bags."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, that might actually work. Toilet roll is / weirdly expensive."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Put the rota in your group chat and on the fridge, and do a quick check-in every Sunday."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll draw it up tonight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And maybe start with yourself on bathroom duty, it sets a good tone."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My baby's high chair is crusted with porridge. It sets like cement."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Porridge is the worst. Soak the tray in hot soapy water for ten minutes, it softens right up."
+    },
+    {
+     "speaker": "user",
+     "text": "The straps are gross too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most straps unclip. Wash them in a mesh bag on a gentle cycle, or by hand in the sink."
+    },
+    {
+     "speaker": "user",
+     "text": "And the little gaps where food / gets stuck?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "An old toothbrush or a cotton bud gets into those. Then wipe everything with a damp cloth and let it dry fully."
+    },
+    {
+     "speaker": "user",
+     "text": "Thank you. She throws half her breakfast, so this'll happen daily."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then a quick wipe right after each meal saves you this whole job later."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm allergic to dust and I sneeze my way through every cleaning session."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's rough. Dust with a slightly damp microfibre cloth instead of a dry duster. It traps dust rather than throwing it in the air."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I wear a mask?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A simple mask helps a lot. And a vacuum with a HEPA filter, which keeps fine dust inside."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine's ancient. Probably / just spitting dust around."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Could be. Also dust top to bottom, shelves first, floor last, so you only clean each layer once."
+    },
+    {
+     "speaker": "user",
+     "text": "Top to bottom. That makes sense."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And wash bedding hot, mites hate heat."
+    }
+   ]
+  },
+  {
+   "id": "cleaning.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Under my bathroom sink is a jungle of half-empty bottles. How do I tidy it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Empty it completely and group what's left. Cleaning sprays, spare toiletries, and random stuff."
+    },
+    {
+     "speaker": "user",
+     "text": "I found four bottles of the same bathroom spray."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Combine them if they're the same, and recycle the empties."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Two small baskets or a little pull-out drawer make it easy to grab things. A tension rod across the top lets you hang spray bottles by their triggers."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that's smart. More space / for the baskets underneath."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Keep anything harsh high up if you have kids around."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "cleaning.opt1",
+   "lead_in": "Our place is always a mess, and I want to pick a cleaning system that sticks.",
+   "options": [
+    "The first idea is a chore chart where each person gets assigned rooms that rotate every week.",
+    "Then there's doing fifteen minutes of tidying together every evening before dinner.",
+    "Option three is one big cleaning session every Saturday morning for the whole house.",
+    "And the last one is just hiring a cleaner to come every two weeks."
+   ],
+   "moshi_comment": [
+    "The fifteen minutes every evening tends to work best, because the mess never piles up. A chore chart helps if people argue about who does what. The big Saturday session works, but it can eat your whole morning.",
+    "Is the problem more about clutter or about deep cleaning? For clutter, the evening tidy is great. For deep cleaning, a cleaner every two weeks could take a lot of pressure off."
+   ]
+  },
+  {
+   "id": "cleaning.opt2",
+   "lead_in": "I need a new vacuum and I'm comparing a few kinds.",
+   "options": [
+    "The first one is a robot vacuum that runs on a schedule, but it gets stuck under the couch.",
+    "Then there's a cordless stick vacuum that's light and handy for quick cleanups.",
+    "And the last one is a big corded upright with tons of suction, great for thick carpets."
+   ],
+   "moshi_comment": [
+    "If you have thick carpets, the upright will clean them best, though it's bulky to carry around. The cordless stick is the most convenient for daily messes. The robot is nice for keeping floors tidy but won't replace a real vacuum.",
+    "Is your place mostly carpet or hard floors? For hard floors, the cordless stick is probably all you need. For carpets, I'd go with the upright."
+   ]
+  },
+  {
+   "id": "cleaning.opt3",
+   "lead_in": "Laundry is taking over my bedroom and I need a better plan.",
+   "options": [
+    "I could do one small load every evening, so it never piles up.",
+    "Or have a laundry day on Sunday and do everything at once, folding included, with a film on.",
+    "There's a service near me that collects it and brings it back folded, but it isn't cheap."
+   ],
+   "moshi_comment": [
+    "A small load each night keeps the pile from ever forming, but it only works if your evenings are predictable. Sunday laundry day is great if you can face the marathon, and the service is lovely when your time is worth more than the fee.",
+    "If the folding is what you hate, the pickup service solves that completely. Otherwise the Sunday session with a film is the cheapest, and the nightly load is the gentlest on your weekends."
+   ]
+  },
+  {
+   "id": "cleaning.opt4",
+   "lead_in": "Our hallway is a shoe disaster and I'm picking some kind of storage.",
+   "options": [
+    "A simple open rack by the door, fits about twelve pairs, very cheap.",
+    "A bench with closed cupboards underneath, so you can sit to put boots on and hide the mess.",
+    "An over the door organiser with pockets, which takes up no floor at all.",
+    "Or a rule that shoes go back in each person's bedroom, no storage needed."
+   ],
+   "moshi_comment": [
+    "The bench is the nicest long-term, it hides everything and gives you a seat. The open rack is cheap but still looks cluttered, the door pockets suit small flats, and the bedroom rule only works if everyone obeys it.",
+    "If it's mostly about looks, go for the closed bench. The rack is the budget pick, the door organiser is clever if floor space is tight, and the bedroom rule sounds free but costs you a lot of nagging."
+   ]
+  },
+  {
+   "id": "cleaning.opt5",
+   "lead_in": "I want to finally declutter the whole flat and I can't decide on a method.",
+   "options": [
+    "Doing one room every weekend until the whole place is done.",
+    "A thirty-day challenge, getting rid of one item on day one, two on day two, and so on.",
+    "Packing everything I don't use daily into boxes and only unpacking what I actually need.",
+    "Or paying a professional organiser to come for a day and push me."
+   ],
+   "moshi_comment": [
+    "One room per weekend is steady and easy to plan. The thirty-day challenge is fun but ramps up fast, the packing method is the most brutal and effective, and the organiser is great if you need someone to keep you going.",
+    "If you tend to lose motivation, the organiser or the weekend rooms give you structure. The boxes method works brilliantly for big clear-outs, and the challenge is more of a game for people who like streaks."
+   ]
+  },
+  {
+   "id": "cleaning.opt6",
+   "lead_in": "Someone spilled red wine on our beige carpet last night and I need to pick a fix.",
+   "options": [
+    "Blotting it with cold water and dish soap, which my neighbour swears by.",
+    "Using that carpet stain spray from the supermarket, the oxygen one.",
+    "Renting a carpet cleaning machine for the weekend and doing the whole room."
+   ],
+   "moshi_comment": [
+    "Start with the cold water and soap, it's cheap and often enough on a fresh stain. If a shadow is left, the oxygen spray is the next step, and the rented machine is worth it if the rest of the carpet needs a refresh anyway.",
+    "The oxygen spray is the most reliable for red wine. Your neighbour's method is a fine first try, and the machine is overkill for one spot unless the whole room is looking tired."
+   ]
+  }
+ ]
 }

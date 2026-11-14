@@ -7,120 +7,124 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
  "wait_type": null,
  "conditions": [],
  "topics": [
-  "baking"
+  "travel_planning"
  ],
- "topic": "baking",
+ "topic": "travel_planning",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "f3a2b90078d54a65af4b95f63bc7798e",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_17",
-  "greet_ans_14"
+  "greet_02",
+  "greet_ans_02"
  ],
  "block_ids": [
-  "baking.dlg2"
+  "travel_planning.dlg23"
  ],
- "est_total_sec": 46.28,
- "est_speech_sec": 33.96,
+ "est_total_sec": 54.27,
+ "est_speech_sec": 40.78,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there! How's your day?",
+   "text": "Hi! How are you today?",
    "est_sec": 1.65,
-   "gap_before": 0.7,
+   "gap_before": 0.52,
    "role": "greeting",
-   "phrasing": "greet_17"
+   "phrasing": "greet_02"
   },
   {
    "speaker": "user",
-   "text": "Hanging in there.",
-   "est_sec": 1.03,
-   "gap_before": 0.6,
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.65,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_14"
+   "phrasing": "greet_ans_02"
   },
   {
    "speaker": "user",
-   "text": "Can I swap regular flour for whole wheat in my muffin recipe?",
-   "est_sec": 3.82,
-   "gap_before": 0.48,
-   "event": "ordinary_request",
-   "block": "baking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You can, but start by swapping only half. Whole wheat makes muffins denser and a little drier.",
+   "text": "I have about sixty thousand air miles. Is it smarter to use them for flights or upgrades?",
    "est_sec": 5.37,
-   "gap_before": 0.83,
-   "role": "reply",
-   "block": "baking.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Should I add more liquid then?",
-   "est_sec": 1.96,
-   "gap_before": 1.43,
+   "gap_before": 0.6,
    "event": "ordinary_request",
-   "block": "baking.dlg2"
+   "block": "travel_planning.dlg23"
   },
   {
    "speaker": "moshi",
-   "text": "Yes, a couple of extra spoonfuls of milk helps. Letting the batter rest ten minutes also softens the bran.",
-   "est_sec": 5.99,
-   "gap_before": 0.71,
+   "text": "Usually, long haul business class upgrades or reward seats give the most value per mile.",
+   "est_sec": 4.75,
+   "gap_before": 0.57,
    "role": "reply",
-   "block": "baking.dlg2"
+   "block": "travel_planning.dlg23"
   },
   {
    "speaker": "user",
-   "text": "And if I want to cut",
-   "est_sec": 1.96,
-   "gap_before": 1.24,
+   "text": "What about short flights?",
+   "est_sec": 1.34,
+   "gap_before": 0.91,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Short flights often give poor value, since cash fares are cheap and taxes on rewards can be high.",
+   "est_sec": 5.68,
+   "gap_before": 0.81,
+   "role": "reply",
+   "block": "travel_planning.dlg23"
+  },
+  {
+   "speaker": "user",
+   "text": "My partner wants to use them for a hotel.",
+   "est_sec": 2.89,
+   "gap_before": 3.49,
+   "event": "ordinary_request",
+   "block": "travel_planning.dlg23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hotels are usually one of the worst uses of airline miles. I'd save them for a flight.",
+   "est_sec": 5.37,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "travel_planning.dlg23"
+  },
+  {
+   "speaker": "user",
+   "text": "We were looking at New York in spring. Could I",
+   "est_sec": 3.2,
+   "gap_before": 0.82,
    "event": "distractor",
    "kind": "pause",
-   "block": "baking.dlg2"
+   "block": "travel_planning.dlg23"
   },
   {
    "speaker": "user",
-   "text": "some of the sugar too?",
-   "est_sec": 1.65,
-   "gap_before": 2.03,
+   "text": "get two economy tickets with that?",
+   "est_sec": 1.96,
+   "gap_before": 1.8,
    "event": "ordinary_request",
-   "block": "baking.dlg2"
+   "block": "travel_planning.dlg23"
   },
   {
    "speaker": "moshi",
-   "text": "You can cut about a quarter without problems. Mashed banana or a bit of applesauce adds sweetness back.",
-   "est_sec": 5.68,
-   "gap_before": 1.12,
+   "text": "Quite possibly, depending on where you're flying from and the airline. Check the reward chart and book early, reward seats sell out.",
+   "est_sec": 6.92,
+   "gap_before": 0.89,
    "role": "reply",
-   "block": "baking.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Banana sounds good. I have some brown ones.",
-   "est_sec": 2.58,
-   "gap_before": 0.96,
-   "event": "ordinary_request",
-   "block": "baking.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect, the browner the better for baking.",
-   "est_sec": 2.27,
-   "gap_before": 0.72,
-   "role": "reply",
-   "block": "baking.dlg2"
+   "block": "travel_planning.dlg23"
   }
  ]
 }

@@ -7,17 +7,21 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
  "wait_type": null,
  "conditions": [],
  "topics": [
-  "hiking"
+  "cars"
  ],
- "topic": "hiking",
+ "topic": "cars",
  "voices": {
-  "user": "879653fd2b9c4cb0854d68e7e9a049e8",
+  "user": "e7de86b388864b8cbd50d0d70a3494e5",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,102 +29,118 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_28",
-  "greet_ans_20"
+  "greet_ans_13"
  ],
  "block_ids": [
-  "hiking.dlg2"
+  "cars.dlg20"
  ],
- "est_total_sec": 47.63,
- "est_speech_sec": 36.44,
+ "est_total_sec": 63.13,
+ "est_speech_sec": 51.83,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hello! How's everything today?",
    "est_sec": 1.34,
-   "gap_before": 0.73,
+   "gap_before": 0.79,
    "role": "greeting",
    "phrasing": "greet_28"
   },
   {
    "speaker": "user",
-   "text": "Can't complain.",
-   "est_sec": 0.72,
-   "gap_before": 0.48,
+   "text": "Really good, actually.",
+   "est_sec": 1.03,
+   "gap_before": 0.73,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_20"
+   "phrasing": "greet_ans_13"
   },
   {
    "speaker": "user",
-   "text": "I keep getting blisters on my heels when I hike.",
-   "est_sec": 3.2,
-   "gap_before": 0.41,
+   "text": "I'm working abroad for three months and my car will just sit in the garage. Will it be okay?",
+   "est_sec": 5.99,
+   "gap_before": 0.29,
    "event": "ordinary_request",
-   "block": "hiking.dlg2"
+   "block": "cars.dlg20"
   },
   {
    "speaker": "moshi",
-   "text": "That's usually friction from your heel sliding in the boot. Are your boots well broken in?",
-   "est_sec": 5.06,
-   "gap_before": 1.49,
+   "text": "It should be, with a bit of preparation. The main risks are a flat battery and tyres getting flat spots.",
+   "est_sec": 6.3,
+   "gap_before": 0.4,
    "role": "reply",
-   "block": "hiking.dlg2"
+   "block": "cars.dlg20"
   },
   {
    "speaker": "user",
-   "text": "They're pretty new, yeah.",
-   "est_sec": 1.34,
-   "gap_before": 1.24,
+   "text": "What do I do about the battery?",
+   "est_sec": 2.27,
+   "gap_before": 0.48,
    "event": "ordinary_request",
-   "block": "hiking.dlg2"
+   "block": "cars.dlg20"
   },
   {
    "speaker": "moshi",
-   "text": "That's likely the cause. Wear them around the house and on short walks first. Proper hiking socks help a lot too, not cotton ones.",
+   "text": "The easiest option is a trickle charger, which keeps it topped up. If there's no power socket, you could disconnect the negative terminal instead.",
    "est_sec": 7.54,
    "gap_before": 0.37,
    "role": "reply",
-   "block": "hiking.dlg2"
+   "block": "cars.dlg20"
   },
   {
    "speaker": "user",
-   "text": "And if I feel one starting on the trail?",
-   "est_sec": 2.89,
-   "gap_before": 0.75,
+   "text": "There's a socket. And the tyres?",
+   "est_sec": 1.96,
+   "gap_before": 1.15,
    "event": "ordinary_request",
-   "block": "hiking.dlg2"
+   "block": "cars.dlg20"
   },
   {
    "speaker": "moshi",
-   "text": "Stop right away and put a blister plaster or some tape on the spot. Waiting until it hurts usually means it's already formed.",
-   "est_sec": 7.23,
-   "gap_before": 0.37,
+   "text": "Pump them up a little above normal pressure. Fill the fuel tank too, it helps stop moisture building up inside.",
+   "est_sec": 6.3,
+   "gap_before": 0.95,
    "role": "reply",
-   "block": "hiking.dlg2"
+   "block": "cars.dlg20"
   },
   {
    "speaker": "user",
-   "text": "I always think I'll",
-   "est_sec": 1.34,
-   "gap_before": 0.53,
+   "text": "Should I leave the handbrake on?",
+   "est_sec": 1.96,
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "cars.dlg20"
+  },
+  {
+   "speaker": "moshi",
+   "text": "For a long stay, it's better to leave it off and chock the wheels or leave it in gear, so the brakes don't stick.",
+   "est_sec": 7.54,
+   "gap_before": 0.44,
+   "role": "reply",
+   "block": "cars.dlg20"
+  },
+  {
+   "speaker": "user",
+   "text": "Brilliant. And insurance",
+   "est_sec": 1.03,
+   "gap_before": 1.29,
    "event": "distractor",
    "kind": "pause",
-   "block": "hiking.dlg2"
+   "block": "cars.dlg20"
   },
   {
    "speaker": "user",
-   "text": "just push through it.",
+   "text": "I can probably pause?",
    "est_sec": 1.34,
-   "gap_before": 1.82,
+   "gap_before": 1.99,
    "event": "ordinary_request",
-   "block": "hiking.dlg2"
+   "block": "cars.dlg20"
   },
   {
    "speaker": "moshi",
-   "text": "Most people do. A two minute stop early saves you a miserable walk back.",
-   "est_sec": 4.44,
-   "gap_before": 1.5,
+   "text": "Some insurers offer reduced cover for a car that's off the road. Worth asking, it could save you a bit while you're away.",
+   "est_sec": 7.23,
+   "gap_before": 0.46,
    "role": "reply",
-   "block": "hiking.dlg2"
+   "block": "cars.dlg20"
   }
  ]
 }

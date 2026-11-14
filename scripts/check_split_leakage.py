@@ -44,6 +44,8 @@ def main() -> None:
 
     def add_text(iid: str, t: str) -> None:
         t = norm(t.replace("{friend}", "").replace("{n}", ""))
+        if len(t.split()) <= 2:  # "Yes.", "Ha, okay.": too generic to be held-out material
+            return
         if len(t.split()) <= 3:  # short phrases: whole-turn match only, to avoid false alarms
             eval_text.append((iid, re.compile(rf"^{re.escape(t)}$")))
         else:
@@ -56,8 +58,10 @@ def main() -> None:
         if x["split"] == "eval":
             eval_text.append((x["id"], re.compile(rf"\b{x['text'].lower()}\b")))
     for x in eval_gen:
-        for t in [x.get("user"), x.get("text") if x["id"].startswith(("self", "murmur")) else None] \
-                + x.get("lines", []) + [tn["text"] for tn in x.get("turns", [])]:
+        # Eval phone calls and door visits are whole content blocks: compared block-to-block by
+        # scripts/check_duplicates.py (train and eval pools together), not line by line here,
+        # where everyday lines ("What should I prepare?") would match by coincidence.
+        for t in [x.get("user"), x.get("text") if x["id"].startswith(("self", "murmur")) else None]:
             if t:
                 add_text(x["id"], t)
 

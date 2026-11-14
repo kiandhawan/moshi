@@ -7,121 +7,143 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "travel_planning"
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
  ],
- "topic": "travel_planning",
+ "topics": [
+  "weekend_plans"
+ ],
+ "topic": "weekend_plans",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_01",
-  "describe_instr_04",
-  "ack_02",
-  "describe_cue_11"
+  "greet_07",
+  "greet_ans_20",
+  "waitlike_07"
  ],
  "block_ids": [
-  "travel_planning.opt1"
+  "weekend_plans.dlg18"
  ],
- "est_total_sec": 62.96,
- "est_speech_sec": 50.08,
+ "est_total_sec": 58.13,
+ "est_speech_sec": 40.05,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
-   "est_sec": 1.96,
-   "gap_before": 0.73,
+   "text": "Hey! How's everything going?",
+   "est_sec": 1.34,
+   "gap_before": 0.68,
    "role": "greeting",
-   "phrasing": "greet_16"
+   "phrasing": "greet_07"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.76,
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.43,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_20"
   },
   {
    "speaker": "user",
-   "text": "We're trying to pick where to go for a long weekend in the spring.",
-   "est_sec": 4.44,
-   "gap_before": 0.4,
-   "block": "travel_planning.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Hold your thoughts until I've described all the options.",
-   "est_sec": 2.89,
-   "gap_before": 0.8,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_04"
+   "text": "This Saturday, my son has a birthday party at two, and I promised my mum I'd visit her for lunch.",
+   "est_sec": 6.3,
+   "gap_before": 0.44,
+   "event": "ordinary_request",
+   "block": "weekend_plans.dlg18"
   },
   {
    "speaker": "moshi",
-   "text": "Okay.",
-   "est_sec": 0.41,
-   "gap_before": 0.55,
-   "role": "ack",
-   "phrasing": "ack_02"
+   "text": "Busy. How far is your mum from the party?",
+   "est_sec": 2.89,
+   "gap_before": 1.17,
+   "role": "reply",
+   "block": "weekend_plans.dlg18"
   },
   {
    "speaker": "user",
-   "text": "The first option is a beach town about four hours away, warm, but it might still be a little too cold to swim.",
+   "text": "About half an hour.",
+   "est_sec": 1.34,
+   "gap_before": 0.91,
+   "event": "ordinary_request",
+   "block": "weekend_plans.dlg18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then you could have an early lunch with her at twelve, leave at half one, and get to the party just in time.",
    "est_sec": 7.23,
-   "gap_before": 0.94,
-   "block": "travel_planning.opt1"
+   "gap_before": 0.77,
+   "role": "reply",
+   "block": "weekend_plans.dlg18"
   },
   {
    "speaker": "user",
-   "text": "Then there's a big city trip with museums and restaurants, but the hotels there are pretty expensive.",
-   "est_sec": 5.37,
-   "gap_before": 1.37,
-   "block": "travel_planning.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a cabin in the mountains, really quiet, with hiking trails right outside the door.",
-   "est_sec": 5.37,
-   "gap_before": 1.01,
-   "block": "travel_planning.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is just staying home and doing day trips, which would save a lot of money.",
-   "est_sec": 5.99,
-   "gap_before": 2.51,
-   "block": "travel_planning.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "And that's the last one. What do you think?",
-   "est_sec": 2.89,
-   "gap_before": 1.25,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_11"
+   "text": "My son needs to bring a present.",
+   "est_sec": 2.27,
+   "gap_before": 2.84,
+   "event": "ordinary_request",
+   "block": "weekend_plans.dlg18"
   },
   {
    "speaker": "moshi",
-   "text": "What are you hoping to get out of the weekend, rest or excitement? For rest, I'd pick the cabin. For excitement, the city is the clear winner, and day trips from home are a nice backup if money is tight.",
-   "est_sec": 12.5,
-   "gap_before": 1.06,
-   "role": "resume",
-   "block": "travel_planning.opt1"
+   "text": "Wrap it on Friday night so you're not doing it in the car.",
+   "est_sec": 4.13,
+   "gap_before": 0.45,
+   "role": "reply",
+   "block": "weekend_plans.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, that's not right.",
+   "est_sec": 1.65,
+   "gap_before": 2.05,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_07",
+   "block": "weekend_plans.dlg18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Hmm, I believe it is. Which part doesn't sound right?",
+   "est_sec": 3.2,
+   "gap_before": 0.3,
+   "role": "reply",
+   "block": "weekend_plans.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "Should my son",
+   "est_sec": 1.03,
+   "gap_before": 2.43,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "weekend_plans.dlg18"
+  },
+  {
+   "speaker": "user",
+   "text": "come to lunch with my mum too?",
+   "est_sec": 2.27,
+   "gap_before": 2.19,
+   "event": "ordinary_request",
+   "block": "weekend_plans.dlg18"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If he gets on with her, absolutely. She'll love seeing him, and it saves you a pick up.",
+   "est_sec": 5.68,
+   "gap_before": 1.92,
+   "role": "reply",
+   "block": "weekend_plans.dlg18"
   }
  ]
 }

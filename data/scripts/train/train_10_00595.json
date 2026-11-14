@@ -7,120 +7,109 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "music"
+  "board_games"
  ],
- "topic": "music",
+ "topic": "board_games",
  "voices": {
-  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_05"
+  "greet_29",
+  "greet_ans_10",
+  "describe_instr_07",
+  "describe_cue_01"
  ],
  "block_ids": [
-  "music.dlg2"
+  "board_games.opt5"
  ],
- "est_total_sec": 49.67,
- "est_speech_sec": 40.78,
+ "est_total_sec": 52.49,
+ "est_speech_sec": 42.13,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.51,
-   "role": "greeting",
-   "phrasing": "greet_22"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm alright, a bit tired.",
-   "est_sec": 1.65,
-   "gap_before": 0.46,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_05"
-  },
-  {
-   "speaker": "user",
-   "text": "What's the difference between a major and a minor chord?",
-   "est_sec": 3.2,
-   "gap_before": 0.21,
-   "event": "ordinary_request",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It comes down to the middle note. In a minor chord it's one half step lower, which gives it that sadder sound.",
-   "est_sec": 6.92,
-   "gap_before": 0.36,
-   "role": "reply",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "So major is happy and minor is sad?",
-   "est_sec": 2.58,
-   "gap_before": 0.82,
-   "event": "ordinary_request",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's the usual feeling, yes, though it's not a strict rule. Lots of upbeat songs use minor chords too.",
-   "est_sec": 5.99,
-   "gap_before": 0.32,
-   "role": "reply",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "On the piano, how do I find a minor chord from a major one?",
-   "est_sec": 4.44,
-   "gap_before": 1.06,
-   "event": "ordinary_request",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Play the major chord, then move the middle finger down to the very next key. That's your minor chord.",
-   "est_sec": 5.99,
-   "gap_before": 0.96,
-   "role": "reply",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, I just tried it and",
-   "est_sec": 1.96,
-   "gap_before": 0.63,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "wow, yeah, it really does sound sadder.",
+   "text": "Hi, how are you doing right now?",
    "est_sec": 2.27,
-   "gap_before": 1.65,
-   "event": "ordinary_request",
-   "block": "music.dlg2"
+   "gap_before": 0.49,
+   "role": "greeting",
+   "phrasing": "greet_29"
+  },
+  {
+   "speaker": "user",
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.64,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm planning a game day for my son's eleventh birthday, eight boys, and I need a main game.",
+   "est_sec": 5.68,
+   "gap_before": 0.44,
+   "block": "board_games.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me walk you through all the options, then you can tell me what you think.",
+   "est_sec": 5.06,
+   "gap_before": 0.67,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "A big werewolf style hidden role game, lots of shouting and accusing, good for big groups.",
+   "est_sec": 5.06,
+   "gap_before": 0.88,
+   "block": "board_games.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A dice rolling monster game where you smash each other and try to become king of the city.",
+   "est_sec": 5.68,
+   "gap_before": 2.52,
+   "block": "board_games.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "A fast drawing and guessing game played in two teams.",
+   "est_sec": 3.2,
+   "gap_before": 1.55,
+   "block": "board_games.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 1.07,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_01"
   },
   {
    "speaker": "moshi",
-   "text": "Nice! Try switching back and forth between them, it's a good first exercise.",
-   "est_sec": 4.13,
-   "gap_before": 0.41,
-   "role": "reply",
-   "block": "music.dlg2"
+   "text": "I'd open with the drawing game in teams to warm everyone up, then the monster dice game as the main event. Save hidden roles for when they're a bit older or know each other well.",
+   "est_sec": 10.95,
+   "gap_before": 0.6,
+   "role": "resume",
+   "block": "board_games.opt5"
   }
  ]
 }

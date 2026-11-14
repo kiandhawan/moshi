@@ -7,99 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "cooking"
+  "birthday_party"
  ],
- "wait_sec": 10,
- "deadline": {
-  "after_turn": 4,
-  "sec": 10
- },
- "topic": "cooking",
+ "topic": "birthday_party",
  "voices": {
-  "user": "536d3a5e000945adb7038665781a4aca",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_17",
-  "greet_ans_17",
-  "think_instr_20",
-  "ack_16"
+  "greet_20",
+  "greet_ans_10"
  ],
  "block_ids": [
-  "cooking.ctx1"
+  "birthday_party.dlg29"
  ],
- "est_total_sec": 38.11,
- "est_speech_sec": 23.33,
+ "est_total_sec": 48.94,
+ "est_speech_sec": 38.61,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there! How's your day?",
-   "est_sec": 1.65,
-   "gap_before": 0.58,
+   "text": "Hey, good to have you here. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.74,
    "role": "greeting",
-   "phrasing": "greet_17"
+   "phrasing": "greet_20"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.58,
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.71,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
+   "phrasing": "greet_ans_10"
   },
   {
    "speaker": "user",
-   "text": "I've got chicken thighs, a bag of spinach and some rice. The kids are hungry and I'm tired.",
-   "est_sec": 5.68,
-   "gap_before": 0.39,
+   "text": "I want a photo booth at my party but renting one is crazy expensive.",
+   "est_sec": 4.44,
+   "gap_before": 0.48,
    "event": "ordinary_request",
-   "block": "cooking.ctx1"
+   "block": "birthday_party.dlg29"
   },
   {
    "speaker": "moshi",
-   "text": "You could do a quick garlic chicken and rice bowl, or a creamy spinach chicken in one pan. Which sounds better tonight?",
-   "est_sec": 6.92,
-   "gap_before": 1.44,
+   "text": "You can make one easily. Do you have a blank wall and a phone tripod?",
+   "est_sec": 4.75,
+   "gap_before": 0.57,
    "role": "reply",
-   "block": "cooking.ctx1"
+   "block": "birthday_party.dlg29"
   },
   {
    "speaker": "user",
-   "text": "Hang on, I need ten seconds to think. Then ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 0.57,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 10,
-   "phrasing": "think_instr_20"
+   "text": "Wall yes, tripod no.",
+   "est_sec": 1.34,
+   "gap_before": 0.36,
+   "event": "ordinary_request",
+   "block": "birthday_party.dlg29"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, sure.",
+   "text": "A stack of books works as a tripod. Hang a sheet of shiny curtain or wrapping paper on the wall and add a lamp in front for good light.",
+   "est_sec": 9.09,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "birthday_party.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "And props?",
    "est_sec": 0.72,
-   "gap_before": 0.39,
-   "role": "ack",
-   "phrasing": "ack_16"
+   "gap_before": 0.78,
+   "event": "ordinary_request",
+   "block": "birthday_party.dlg29"
   },
   {
    "speaker": "moshi",
-   "text": "Have you decided between the two chicken dishes?",
-   "est_sec": 2.58,
-   "role": "resume",
-   "block": "cooking.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 10.44
-   }
+   "text": "Cardboard speech bubbles, silly hats, big sunglasses. Charity shops are brilliant for cheap props.",
+   "est_sec": 4.44,
+   "gap_before": 0.76,
+   "role": "reply",
+   "block": "birthday_party.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "How do people take the photos",
+   "est_sec": 1.96,
+   "gap_before": 1.45,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "birthday_party.dlg29"
+  },
+  {
+   "speaker": "user",
+   "text": "if nobody's standing behind the phone?",
+   "est_sec": 1.96,
+   "gap_before": 1.97,
+   "event": "ordinary_request",
+   "block": "birthday_party.dlg29"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Use the phone's timer, or a cheap Bluetooth remote. Put a little sign on the wall explaining how.",
+   "est_sec": 5.68,
+   "gap_before": 0.46,
+   "role": "reply",
+   "block": "birthday_party.dlg29"
   }
  ]
 }

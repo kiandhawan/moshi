@@ -7,6 +7,10 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
@@ -15,133 +19,133 @@
   "wait_like"
  ],
  "topics": [
-  "sleep"
+  "home_repair"
  ],
- "topic": "sleep",
+ "topic": "home_repair",
  "voices": {
-  "user": "ce9db9be1ecb4c8a832802626864595d",
+  "user": "676f1654c4f747a69a5921ad94886fa1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_20",
-  "waitlike_10"
+  "greet_11",
+  "greet_ans_19",
+  "waitlike_01"
  ],
  "block_ids": [
-  "sleep.dlg3"
+  "home_repair.dlg16"
  ],
- "est_total_sec": 63.15,
- "est_speech_sec": 48.42,
+ "est_total_sec": 62.46,
+ "est_speech_sec": 49.97,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
+   "text": "Hi, how are things with you?",
    "est_sec": 1.96,
-   "gap_before": 0.61,
+   "gap_before": 0.41,
    "role": "greeting",
-   "phrasing": "greet_16"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "Can't complain.",
-   "est_sec": 0.72,
-   "gap_before": 0.83,
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.58,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_20"
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "I keep waking up at four and I can't fall back asleep. Any ideas?",
-   "est_sec": 4.44,
-   "gap_before": 0.56,
+   "text": "The silicone around my kitchen sink is peeling off. Can I just glue it back down?",
+   "est_sec": 5.06,
+   "gap_before": 0.46,
    "event": "ordinary_request",
-   "block": "sleep.dlg3"
+   "block": "home_repair.dlg16"
   },
   {
    "speaker": "moshi",
-   "text": "If you're awake for more than twenty minutes, get up and do something calm in dim light, like reading. Lying there stressed usually makes it worse.",
-   "est_sec": 8.16,
-   "gap_before": 1.04,
+   "text": "Sadly no, silicone won't stick to itself well. You need to cut all the old stuff out and start fresh.",
+   "est_sec": 6.3,
+   "gap_before": 0.76,
    "role": "reply",
-   "block": "sleep.dlg3"
+   "block": "home_repair.dlg16"
   },
   {
    "speaker": "user",
-   "text": "Wait a second, that doesn't sound right.",
+   "text": "How do I get it all off?",
    "est_sec": 2.27,
-   "gap_before": 2.81,
+   "gap_before": 0.88,
+   "event": "ordinary_request",
+   "block": "home_repair.dlg16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Use a sharp blade or a special silicone remover tool. Then wipe with surgical spirit so there's no residue left.",
+   "est_sec": 6.3,
+   "gap_before": 0.92,
+   "role": "reply",
+   "block": "home_repair.dlg16"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, what did you say?",
+   "est_sec": 1.65,
+   "gap_before": 1.17,
    "event": "ordinary_request",
    "kind": "wait_like",
-   "phrasing": "waitlike_10",
-   "block": "sleep.dlg3"
+   "phrasing": "waitlike_01",
+   "block": "home_repair.dlg16"
   },
   {
    "speaker": "moshi",
-   "text": "Good to question it. I still think it's right, though you know your situation best.",
-   "est_sec": 4.75,
-   "gap_before": 0.87,
+   "text": "Sure, here it is again. Use a sharp blade or a special silicone remover tool. Then wipe with surgical spirit so there's no residue left.",
+   "est_sec": 7.85,
+   "gap_before": 0.62,
    "role": "reply",
-   "block": "sleep.dlg3"
+   "block": "home_repair.dlg16"
   },
   {
    "speaker": "user",
-   "text": "Should I look at the clock?",
-   "est_sec": 1.96,
-   "gap_before": 0.43,
+   "text": "Then I just squeeze in new silicone?",
+   "est_sec": 2.27,
+   "gap_before": 0.58,
    "event": "ordinary_request",
-   "block": "sleep.dlg3"
+   "block": "home_repair.dlg16"
   },
   {
    "speaker": "moshi",
-   "text": "Better not. Turn it away from you, because counting the hours left tends to wake you up more.",
-   "est_sec": 5.68,
-   "gap_before": 1.12,
+   "text": "Yes, but tape both sides first with masking tape. It gives you crisp neat lines.",
+   "est_sec": 4.75,
+   "gap_before": 1.0,
    "role": "reply",
-   "block": "sleep.dlg3"
+   "block": "home_repair.dlg16"
   },
   {
    "speaker": "user",
-   "text": "I also have",
-   "est_sec": 1.03,
-   "gap_before": 0.34,
+   "text": "Oh, clever. And then",
+   "est_sec": 1.34,
+   "gap_before": 0.85,
    "event": "distractor",
    "kind": "pause",
-   "block": "sleep.dlg3"
+   "block": "home_repair.dlg16"
   },
   {
    "speaker": "user",
-   "text": "a glass of wine most evenings. Could that be it?",
-   "est_sec": 3.2,
-   "gap_before": 1.88,
+   "text": "peel the tape off when it's dry?",
+   "est_sec": 2.27,
+   "gap_before": 2.25,
    "event": "ordinary_request",
-   "block": "sleep.dlg3"
+   "block": "home_repair.dlg16"
   },
   {
    "speaker": "moshi",
-   "text": "It could. Alcohol helps you fall asleep but often wakes you up in the early morning hours. Try a week without it and see.",
-   "est_sec": 7.54,
-   "gap_before": 0.38,
+   "text": "Peel it off while the silicone is still wet, right after smoothing. If you wait, it can tear the edge.",
+   "est_sec": 6.3,
+   "gap_before": 0.51,
    "role": "reply",
-   "block": "sleep.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, a week. I can do a week.",
-   "est_sec": 2.58,
-   "gap_before": 1.1,
-   "event": "ordinary_request",
-   "block": "sleep.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Great. Keep a quick note each morning so you can spot any pattern.",
-   "est_sec": 4.13,
-   "gap_before": 1.26,
-   "role": "reply",
-   "block": "sleep.dlg3"
+   "block": "home_repair.dlg16"
   }
  ]
 }

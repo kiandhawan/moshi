@@ -7,148 +7,146 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "phone_call",
  "wait_type": "phone_call",
  "conditions": [],
  "topics": [
-  "family_visit"
+  "cycling"
  ],
- "topic": "family_visit",
+ "topic": "cycling",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
+  "user": "026218fe0c054374838d934016f34082",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_18",
-  "greet_ans_21",
-  "phone_instr_02",
-  "call_11",
-  "phone_cue_03"
+  "greet_09",
+  "greet_ans_30",
+  "phone_instr_06",
+  "ack_05",
+  "call_22",
+  "phone_cue_02"
  ],
  "block_ids": [
-  "family_visit.ctx3"
+  "cycling.ctx12",
+  "call_22"
  ],
- "est_total_sec": 63.3,
- "est_speech_sec": 42.32,
+ "est_total_sec": 57.85,
+ "est_speech_sec": 35.71,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.76,
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.72,
    "role": "greeting",
-   "phrasing": "greet_18",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.5,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.79,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
+   "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "My sister and her two kids are coming Saturday and I have no idea what to do with them.",
-   "est_sec": 5.99,
-   "gap_before": 0.54,
+   "text": "Right, so, petrol is mad expensive and the school is only two miles away, so I'm thinking bike with both kids.",
+   "est_sec": 6.61,
+   "gap_before": 0.39,
    "event": "ordinary_request",
-   "block": "family_visit.ctx3"
+   "block": "cycling.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "We could plan something. Would the kids like the zoo, or would you rather keep it relaxed with a movie and pizza at home?",
-   "est_sec": 7.54,
-   "gap_before": 0.33,
+   "text": "Ooh, cargo bike time. Would you prefer a box at the front where you can see them, or a longtail where they sit behind you?",
+   "est_sec": 7.85,
+   "gap_before": 1.38,
    "role": "reply",
-   "block": "family_visit.ctx3",
+   "block": "cycling.ctx12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "My phone's ringing, give me a minute. Don't say anything until I'm done.",
-   "est_sec": 4.13,
-   "gap_before": 1.27,
+   "text": "Sorry, quick call. Wait until I'm off the phone, okay?",
+   "est_sec": 3.2,
+   "gap_before": 0.74,
    "event": "instruction",
    "kind": "phone_call",
-   "phrasing": "phone_instr_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, you.",
-   "est_sec": 0.72,
-   "gap_before": 1.57,
-   "phrasing": "call_11"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm just at home.",
-   "est_sec": 1.34,
-   "gap_before": 3.03,
-   "phrasing": "call_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait, you're back already? I thought your flight was tomorrow.",
-   "est_sec": 3.2,
-   "gap_before": 1.89,
-   "phrasing": "call_11",
-   "event": "distractor",
-   "kind": "near_miss"
-  },
-  {
-   "speaker": "user",
-   "text": "Ha, okay, welcome home.",
-   "est_sec": 1.34,
-   "gap_before": 1.53,
-   "phrasing": "call_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Talk later.",
-   "est_sec": 0.72,
-   "gap_before": 3.95,
-   "phrasing": "call_11"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, call's done. I'm back.",
-   "est_sec": 1.65,
-   "gap_before": 0.83,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "phone_cue_03"
+   "phrasing": "phone_instr_06"
   },
   {
    "speaker": "moshi",
-   "text": "Hope the call went okay. Did you pick between the zoo and a movie day for the kids?",
-   "est_sec": 5.68,
-   "gap_before": 1.88,
-   "role": "resume",
-   "block": "family_visit.ctx3",
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.37,
+   "role": "ack",
+   "phrasing": "ack_05",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Home. My sister will be tired from the drive anyway.",
-   "est_sec": 3.2,
-   "gap_before": 0.76,
-   "event": "ordinary_request",
-   "block": "family_visit.ctx3"
+   "text": "Hey stranger!",
+   "est_sec": 0.72,
+   "gap_before": 1.87,
+   "phrasing": "call_22"
+  },
+  {
+   "speaker": "user",
+   "text": "I know, it's been ages.",
+   "est_sec": 1.65,
+   "gap_before": 3.9,
+   "phrasing": "call_22"
+  },
+  {
+   "speaker": "user",
+   "text": "How's the new city treating you?",
+   "est_sec": 1.96,
+   "gap_before": 2.13,
+   "phrasing": "call_22",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "No way, you got a dog?",
+   "est_sec": 1.96,
+   "gap_before": 3.18,
+   "phrasing": "call_22",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "You have to send me pictures.",
+   "est_sec": 1.96,
+   "gap_before": 2.28,
+   "phrasing": "call_22"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, sorry about that. I'm back.",
+   "est_sec": 1.96,
+   "gap_before": 1.86,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_02"
   },
   {
    "speaker": "moshi",
-   "text": "Sounds cozy. Let the kids pick the movie and the pizza toppings.",
+   "text": "Welcome back. The school run bike is still undecided. Box or longtail?",
    "est_sec": 3.82,
-   "gap_before": 0.64,
-   "role": "followup",
-   "block": "family_visit.ctx3",
+   "gap_before": 1.03,
+   "role": "resume",
+   "block": "cycling.ctx12",
    "reference_only": true
   }
  ],

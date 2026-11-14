@@ -7,171 +7,139 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "extension",
-  "self_talk"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "learning_language"
+  "camping"
  ],
- "wait_sec": 15,
- "extension": {
-  "extra_sec": 10,
-  "said_before_deadline_sec": 1.48
- },
- "deadline": {
-  "after_turn": 8,
-  "sec": 10
- },
- "topic": "learning_language",
+ "topic": "camping",
  "voices": {
-  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "user": "026218fe0c054374838d934016f34082",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_24",
-  "greet_ans_27",
-  "think_instr_18",
-  "ack_09",
-  "self_27",
-  "self_03",
-  "extension_07"
+  "greet_15",
+  "greet_ans_06"
  ],
  "block_ids": [
-  "learning_language.ctx3"
+  "camping.dlg7"
  ],
- "est_total_sec": 60.69,
- "est_speech_sec": 33.75,
+ "est_total_sec": 59.85,
+ "est_speech_sec": 45.84,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, what's up? How are you doing?",
-   "est_sec": 2.27,
-   "gap_before": 0.49,
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.34,
    "role": "greeting",
-   "phrasing": "greet_24",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "All good here.",
-   "est_sec": 1.03,
-   "gap_before": 0.8,
+   "text": "Good, thanks. Busy day.",
+   "est_sec": 1.34,
+   "gap_before": 0.87,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_27"
+   "phrasing": "greet_ans_06"
   },
   {
    "speaker": "user",
-   "text": "My French exam is in two months.",
-   "est_sec": 2.27,
-   "gap_before": 0.57,
+   "text": "What am I supposed to do with dish water at a campsite?",
+   "est_sec": 3.82,
+   "gap_before": 0.55,
    "event": "ordinary_request",
-   "block": "learning_language.ctx3"
+   "block": "camping.dlg7"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, let's plan. How much time can you realistically give it each day, and which part worries you most, grammar, listening or speaking?",
-   "est_sec": 7.23,
-   "gap_before": 0.66,
+   "text": "Strain out the food bits first and pack them out with your trash. Then scatter the water widely, at least a couple hundred feet from any stream or lake.",
+   "est_sec": 9.09,
+   "gap_before": 0.31,
    "role": "reply",
-   "block": "learning_language.ctx3",
+   "block": "camping.dlg7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Let me think. Ask me again in about fifteen seconds.",
-   "est_sec": 3.2,
-   "gap_before": 0.39,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_18"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Take your time.",
-   "est_sec": 1.03,
-   "gap_before": 0.4,
-   "role": "ack",
-   "phrasing": "ack_09",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Huh, interesting.",
-   "est_sec": 0.72,
-   "anchor": {
-    "turn": 4,
-    "offset": 3.58
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_27"
-  },
-  {
-   "speaker": "user",
-   "text": "No, that won't work.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 7.37
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_03"
-  },
-  {
-   "speaker": "user",
-   "text": "Sorry, ten more seconds.",
-   "est_sec": 1.34,
-   "event": "extension",
-   "extra_sec": 10,
-   "phrasing": "extension_07",
-   "anchor": {
-    "turn": 4,
-    "offset": 13.52
-   }
-  },
-  {
-   "speaker": "moshi",
-   "text": "Time's up. Tell me your daily study time and the part that worries you most.",
-   "est_sec": 4.75,
-   "role": "resume",
-   "block": "learning_language.ctx3",
-   "anchor": {
-    "turn": 8,
-    "offset": 10.13
-   },
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "About an hour a day, and listening is the worst.",
-   "est_sec": 3.2,
-   "gap_before": 1.0,
+   "text": "Even if I used eco soap?",
+   "est_sec": 1.96,
+   "gap_before": 1.21,
    "event": "ordinary_request",
-   "block": "learning_language.ctx3"
+   "block": "camping.dlg7"
   },
   {
    "speaker": "moshi",
-   "text": "Then spend half of it on French podcasts or news with transcripts. Listen first, then read along.",
+   "text": "Yes, even then. Biodegradable soap still needs soil to break down, it's not safe straight into water.",
    "est_sec": 5.37,
-   "gap_before": 0.97,
-   "role": "followup",
-   "block": "learning_language.ctx3",
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "camping.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Okay. And the little food scraps, can I just bury them?",
+   "est_sec": 3.51,
+   "gap_before": 2.51,
+   "event": "ordinary_request",
+   "block": "camping.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Better not. Animals dig them up and get used to people food. Pack them out with everything else.",
+   "est_sec": 5.68,
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "camping.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "That's a lot of rules for washing a pot.",
+   "est_sec": 2.89,
+   "gap_before": 1.45,
+   "event": "ordinary_request",
+   "block": "camping.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Ha, it is. A trick is to scrape the pot really well and use hot water, then you barely need soap at all.",
+   "est_sec": 7.23,
+   "gap_before": 1.03,
+   "role": "reply",
+   "block": "camping.dlg7",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Fine, I'll be a good camper.",
+   "est_sec": 1.96,
+   "gap_before": 1.4,
+   "event": "ordinary_request",
+   "block": "camping.dlg7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "The wildlife thanks you.",
+   "est_sec": 1.34,
+   "gap_before": 1.34,
+   "role": "reply",
+   "block": "camping.dlg7",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

@@ -7,6 +7,8 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "side_conversation",
@@ -15,177 +17,192 @@
   "extra_question"
  ],
  "topics": [
-  "baking",
-  "music"
+  "public_transport",
+  "baking"
  ],
- "topic": "baking",
+ "topic": "public_transport",
  "voices": {
-  "user": "c250136a9ec74cc0b799be54664a83f2",
-  "friend": "c70cfb98867a4bfb9ae20d2401257b92",
+  "user": "fa4c9eb3dccc4806b382b40d61c6b10a",
+  "friend": "e58a6b7e06f048d0b83836d55d226b90",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Alex",
- "friend_name_id": "name_04",
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
  "phrasing_ids": [
-  "greet_14",
-  "greet_ans_22",
-  "side_instr_28",
-  "ack_15",
-  "dq_22",
-  "side_cue_14"
+  "greet_19",
+  "greet_ans_05",
+  "side_instr_13",
+  "ack_10",
+  "dq_41",
+  "side_cue_11"
  ],
  "block_ids": [
-  "baking.ctx2",
-  "music.side3"
+  "public_transport.ctx7",
+  "baking.side2",
+  "dq_41"
  ],
- "est_total_sec": 72.43,
- "est_speech_sec": 55.12,
+ "est_total_sec": 80.63,
+ "est_speech_sec": 56.25,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How's life treating you?",
+   "text": "Hi, how's everything with you?",
    "est_sec": 1.65,
-   "gap_before": 0.74,
+   "gap_before": 0.62,
    "role": "greeting",
-   "phrasing": "greet_14"
+   "phrasing": "greet_19"
   },
   {
    "speaker": "user",
-   "text": "Pretty relaxed today.",
-   "est_sec": 1.03,
-   "gap_before": 0.67,
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.84,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_22"
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "I want to start baking my own bread.",
-   "est_sec": 2.58,
-   "gap_before": 0.26,
+   "text": "I'm choosing between two flats for next term. One's right on the tram line but pricier.",
+   "est_sec": 5.06,
+   "gap_before": 0.45,
    "event": "ordinary_request",
-   "block": "baking.ctx2"
+   "block": "public_transport.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Great project. Do you want to start with a quick yeast loaf you can make in an afternoon, or grow a sourdough starter, which takes about a week?",
-   "est_sec": 8.78,
-   "gap_before": 0.9,
+   "text": "And the cheaper one?",
+   "est_sec": 1.34,
+   "gap_before": 0.46,
    "role": "reply",
-   "block": "baking.ctx2"
+   "block": "public_transport.ctx7"
   },
   {
    "speaker": "user",
-   "text": "Wait for me, I need to talk to Alex about something. Don't say a word until I'm back.",
-   "est_sec": 5.68,
-   "gap_before": 0.82,
+   "text": "Bus plus a transfer, about forty minutes.",
+   "est_sec": 2.27,
+   "gap_before": 1.05,
+   "event": "ordinary_request",
+   "block": "public_transport.ctx7"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So extra rent versus time every day. Which matters more right now?",
+   "est_sec": 3.82,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "public_transport.ctx7"
+  },
+  {
+   "speaker": "user",
+   "text": "Just a sec, I need to sort something out with my roommate. I'll say when I'm back.",
+   "est_sec": 5.37,
+   "gap_before": 2.44,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_28"
+   "phrasing": "side_instr_13"
   },
   {
    "speaker": "moshi",
-   "text": "Alright, go ahead.",
+   "text": "Okay, no rush.",
    "est_sec": 1.03,
-   "gap_before": 0.62,
+   "gap_before": 0.38,
    "role": "ack",
-   "phrasing": "ack_15"
+   "phrasing": "ack_10"
   },
   {
    "speaker": "user",
-   "text": "Can I borrow your jacket tomorrow?",
-   "est_sec": 1.96,
-   "gap_before": 1.48,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_22"
-  },
-  {
-   "speaker": "friend",
-   "text": "Sure, just bring it back.",
-   "est_sec": 1.65,
-   "gap_before": 1.11,
-   "phrasing": "dq_22"
-  },
-  {
-   "speaker": "user",
-   "text": "Alex, what should we play for the road trip tomorrow?",
-   "est_sec": 3.2,
-   "gap_before": 1.18,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "music.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Not your eighties playlist again, please.",
-   "est_sec": 1.96,
-   "gap_before": 0.32,
-   "block": "music.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, that playlist is a classic! Fine, what do you suggest?",
-   "est_sec": 3.51,
-   "gap_before": 0.58,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "music.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "Let's each pick an hour. Then nobody can complain.",
-   "est_sec": 2.89,
-   "gap_before": 0.61,
-   "block": "music.side3"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, fair. Do we have the cable for the car stereo?",
-   "est_sec": 3.51,
-   "gap_before": 1.41,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "music.side3"
-  },
-  {
-   "speaker": "friend",
-   "text": "It's in the glove box, I think.",
+   "text": "Was that the doorbell or the TV?",
    "est_sec": 2.27,
-   "gap_before": 0.75,
-   "block": "music.side3"
+   "gap_before": 0.97,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_41"
+  },
+  {
+   "speaker": "friend",
+   "text": "The TV, I think.",
+   "est_sec": 1.34,
+   "gap_before": 1.05,
+   "phrasing": "dq_41"
   },
   {
    "speaker": "user",
-   "text": "Okay, finished. I'm back now.",
-   "est_sec": 1.65,
-   "gap_before": 1.51,
+   "text": "Does this smell like it's burning to you?",
+   "est_sec": 2.58,
+   "gap_before": 0.63,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "baking.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "A little, yeah. How long has it been in?",
+   "est_sec": 2.89,
+   "gap_before": 0.35,
+   "block": "baking.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Only twenty minutes. The recipe says forty.",
+   "est_sec": 2.27,
+   "gap_before": 3.32,
+   "block": "baking.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Our oven runs hot though. Remember the pizza?",
+   "est_sec": 2.58,
+   "gap_before": 1.33,
+   "block": "baking.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh, right. Should I cover it with foil?",
+   "est_sec": 2.58,
+   "gap_before": 1.19,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "baking.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, and turn it down a bit. The middle probably still needs time.",
+   "est_sec": 4.13,
+   "gap_before": 2.52,
+   "block": "baking.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm done talking to them. I'm back.",
+   "est_sec": 2.58,
+   "gap_before": 1.29,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "side_cue_14"
+   "phrasing": "side_cue_11"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. We were getting you started on homemade bread.",
-   "est_sec": 2.89,
-   "gap_before": 1.09,
+   "text": "Sure thing. So, which wins, the tram flat or the cheaper one?",
+   "est_sec": 3.82,
+   "gap_before": 0.72,
    "role": "resume",
-   "block": "baking.ctx2"
+   "block": "public_transport.ctx7"
   },
   {
    "speaker": "user",
-   "text": "Sourdough. I'm patient, and I want to do it properly.",
-   "est_sec": 3.2,
-   "gap_before": 1.3,
+   "text": "The tram one. I'd rather sleep in.",
+   "est_sec": 2.27,
+   "gap_before": 1.75,
    "event": "ordinary_request",
-   "block": "baking.ctx2"
+   "block": "public_transport.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Love it. Mix equal parts flour and water in a jar today, and feed it once a day.",
-   "est_sec": 5.68,
-   "gap_before": 0.46,
+   "text": "Honestly, that extra time adds up. Over a year, it's days of your life back.",
+   "est_sec": 4.75,
+   "gap_before": 0.97,
    "role": "followup",
-   "block": "baking.ctx2"
+   "block": "public_transport.ctx7"
   }
  ]
 }

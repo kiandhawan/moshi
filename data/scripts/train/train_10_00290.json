@@ -7,105 +7,177 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "cooking"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
  ],
- "topic": "cooking",
+ "topics": [
+  "pets",
+  "moving_house"
+ ],
+ "topic": "pets",
  "voices": {
-  "user": "ba875f2fb2ea4a4e9b175821014984b6",
-  "friend": null,
+  "user": "536d3a5e000945adb7038665781a4aca",
+  "friend": "c250136a9ec74cc0b799be54664a83f2",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Ethan",
+ "friend_name_id": "name_23",
  "phrasing_ids": [
-  "greet_01",
-  "greet_ans_04",
-  "describe_instr_07",
-  "describe_cue_01"
+  "greet_04",
+  "greet_ans_01",
+  "side_instr_28",
+  "ack_02",
+  "dq_20",
+  "side_cue_16"
  ],
  "block_ids": [
-  "cooking.opt1"
+  "pets.ctx1",
+  "moving_house.side2",
+  "dq_20"
  ],
- "est_total_sec": 60.27,
- "est_speech_sec": 49.57,
+ "est_total_sec": 60.41,
+ "est_speech_sec": 46.96,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how are you doing?",
+   "text": "Hey there, how are you?",
    "est_sec": 1.65,
-   "gap_before": 0.6,
+   "gap_before": 0.44,
    "role": "greeting",
-   "phrasing": "greet_01"
+   "phrasing": "greet_04"
   },
   {
    "speaker": "user",
-   "text": "Pretty well, actually.",
+   "text": "I'm good, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.66,
+   "gap_before": 0.48,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_04"
+   "phrasing": "greet_ans_01"
   },
   {
    "speaker": "user",
-   "text": "I can't decide what to make for dinner on Saturday when my in-laws come over.",
-   "est_sec": 4.75,
-   "gap_before": 0.45,
-   "block": "cooking.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me walk you through all the options, then you can tell me what you think.",
-   "est_sec": 5.06,
-   "gap_before": 0.84,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_07"
-  },
-  {
-   "speaker": "user",
-   "text": "The first idea is a big roast chicken with potatoes and carrots, all in one tray in the oven.",
-   "est_sec": 5.99,
-   "gap_before": 1.0,
-   "block": "cooking.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's homemade lasagna, which I could make the night before and just bake when they arrive.",
-   "est_sec": 5.37,
-   "gap_before": 2.03,
-   "block": "cooking.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is grilled salmon with a lemon sauce and a green salad, lighter but more last minute.",
-   "est_sec": 6.3,
-   "gap_before": 1.13,
-   "block": "cooking.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all of them. What do you think?",
-   "est_sec": 2.89,
-   "gap_before": 0.65,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_01"
+   "text": "We're finally getting a dog! The kids have been begging for years.",
+   "est_sec": 3.82,
+   "gap_before": 0.44,
+   "event": "ordinary_request",
+   "block": "pets.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "The lasagna is the least stressful, since you can make it ahead and actually enjoy your guests. The roast chicken is a safe crowd pleaser too, but timing the oven can be tricky. The salmon is lovely, though cooking it at the last minute while people are chatting is a lot of pressure.",
-   "est_sec": 16.53,
-   "gap_before": 1.84,
+   "text": "How exciting! Are you leaning toward a puppy, or an older dog from a shelter?",
+   "est_sec": 4.75,
+   "gap_before": 0.59,
+   "role": "reply",
+   "block": "pets.ctx1"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait for me, I need to talk to Ethan about something. Don't say a word until I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 0.53,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_28"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay.",
+   "est_sec": 0.41,
+   "gap_before": 0.68,
+   "role": "ack",
+   "phrasing": "ack_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Ethan, when does your train leave?",
+   "est_sec": 1.96,
+   "gap_before": 1.31,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_20"
+  },
+  {
+   "speaker": "friend",
+   "text": "At a quarter past nine.",
+   "est_sec": 1.65,
+   "gap_before": 0.41,
+   "phrasing": "dq_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Did the landlord say anything about painting the walls?",
+   "est_sec": 2.89,
+   "gap_before": 0.33,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "moving_house.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "She said it's fine as long as it's a light colour.",
+   "est_sec": 3.51,
+   "gap_before": 1.14,
+   "block": "moving_house.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "So no dark green bedroom then.",
+   "est_sec": 1.96,
+   "gap_before": 1.03,
+   "block": "moving_house.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Probably not. Maybe a pale green?",
+   "est_sec": 1.96,
+   "gap_before": 0.97,
+   "block": "moving_house.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "I guess. Do you want to go to the hardware shop on Saturday and look at samples?",
+   "est_sec": 5.37,
+   "gap_before": 1.14,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "moving_house.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure, if we can get breakfast first.",
+   "est_sec": 2.27,
+   "gap_before": 1.07,
+   "block": "moving_house.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Obviously. That's half the reason to go.",
+   "est_sec": 2.27,
+   "gap_before": 0.37,
+   "block": "moving_house.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, we can continue now.",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_16"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. Any thoughts on the new family dog, puppy or shelter adult?",
+   "est_sec": 4.13,
+   "gap_before": 0.31,
    "role": "resume",
-   "block": "cooking.opt1"
+   "block": "pets.ctx1"
   }
  ]
 }

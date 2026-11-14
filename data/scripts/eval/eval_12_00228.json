@@ -7,151 +7,154 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "phone_call",
+ "wait_type": "phone_call",
  "conditions": [
-  "wait_like"
+  "implicit"
  ],
  "topics": [
-  "home_office"
+  "family_visit"
  ],
- "topic": "home_office",
+ "topic": "family_visit",
  "voices": {
-  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "user": "933563129e564b19a115bedd57b7406a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_03",
-  "waitlike_09"
+  "greet_24",
+  "greet_ans_12",
+  "phone_instr_04",
+  "call_38",
+  "implicit_10"
  ],
  "block_ids": [
-  "home_office.dlg2"
+  "family_visit.ctx22",
+  "call_38"
  ],
- "est_total_sec": 63.36,
- "est_speech_sec": 45.94,
+ "est_total_sec": 58.14,
+ "est_speech_sec": 38.19,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.67,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.5,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Doing okay, thanks.",
+   "text": "Okay, I guess.",
    "est_sec": 1.03,
-   "gap_before": 0.74,
+   "gap_before": 0.93,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_03"
+   "phrasing": "greet_ans_12"
   },
   {
    "speaker": "user",
-   "text": "I keep getting distracted at home. Any tips for focusing?",
-   "est_sec": 3.2,
-   "gap_before": 0.3,
-   "event": "ordinary_request",
-   "block": "home_office.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try working in focused blocks, like twenty five minutes on and five off. And keep your phone in another room during those blocks.",
-   "est_sec": 7.23,
-   "gap_before": 0.89,
-   "role": "reply",
-   "block": "home_office.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hang on, is that true?",
-   "est_sec": 1.65,
-   "gap_before": 0.48,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_09",
-   "block": "home_office.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "I'm fairly sure about it, but I could be wrong. What sounds off to you?",
-   "est_sec": 4.75,
-   "gap_before": 1.23,
-   "role": "reply",
-   "block": "home_office.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "My phone in another room? That sounds hard.",
-   "est_sec": 2.58,
-   "gap_before": 3.37,
-   "event": "ordinary_request",
-   "block": "home_office.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It is at first, but it's one of the most effective tricks. Even putting it in a drawer helps.",
-   "est_sec": 5.99,
-   "gap_before": 1.11,
-   "role": "reply",
-   "block": "home_office.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "What about noise? My neighbors",
-   "est_sec": 1.65,
-   "gap_before": 0.41,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "home_office.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "are doing construction all week.",
-   "est_sec": 1.65,
-   "gap_before": 2.3,
-   "event": "ordinary_request",
-   "block": "home_office.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Noise cancelling headphones with some brown noise or instrumental music can block out a lot. Earplugs work too if you're not on calls.",
-   "est_sec": 7.23,
-   "gap_before": 0.8,
-   "role": "reply",
-   "block": "home_office.dlg2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Maybe I'll just work from the library on those days.",
-   "est_sec": 3.2,
-   "gap_before": 2.54,
-   "event": "ordinary_request",
-   "block": "home_office.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Great idea. A change of scenery often boosts focus all by itself.",
+   "text": "My godmother's visiting from Ireland and she's never been to the city.",
    "est_sec": 3.82,
-   "gap_before": 1.08,
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How fun. Should her first day be the big famous sights, or a slow day around your neighbourhood so she can get over the jet lag?",
+   "est_sec": 8.16,
+   "gap_before": 0.39,
    "role": "reply",
-   "block": "home_office.dlg2",
+   "block": "family_visit.ctx22",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, I have to get this. Please wait quietly until I'm off the phone.",
+   "est_sec": 4.44,
+   "gap_before": 0.64,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_04"
+  },
+  {
+   "speaker": "user",
+   "text": "Hello, is that the pharmacy?",
+   "est_sec": 1.65,
+   "gap_before": 1.62,
+   "phrasing": "call_38",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Is my prescription ready to pick up?",
+   "est_sec": 2.27,
+   "gap_before": 3.71,
+   "phrasing": "call_38",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Under the name Rivers.",
+   "est_sec": 1.34,
+   "gap_before": 3.13,
+   "phrasing": "call_38"
+  },
+  {
+   "speaker": "user",
+   "text": "Great, I'll come by after work.",
+   "est_sec": 1.96,
+   "gap_before": 2.41,
+   "phrasing": "call_38"
+  },
+  {
+   "speaker": "user",
+   "text": "Anyway, what do you think?",
+   "est_sec": 1.65,
+   "gap_before": 0.6,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. Your godmother's first day. Sights, or take it slow?",
+   "est_sec": 3.51,
+   "gap_before": 0.88,
+   "role": "resume",
+   "block": "family_visit.ctx22",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Slow. She'll be wrecked after the flight.",
+   "est_sec": 2.27,
+   "gap_before": 2.72,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wise. A cafe, a short walk and an early dinner is plenty.",
+   "est_sec": 3.82,
+   "gap_before": 0.46,
+   "role": "followup",
+   "block": "family_visit.ctx22",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_phone",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

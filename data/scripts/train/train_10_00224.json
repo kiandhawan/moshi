@@ -7,163 +7,113 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "near_miss"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "birthday_party",
-  "smartphones"
+  "weather_plans"
  ],
- "topic": "birthday_party",
+ "topic": "weather_plans",
  "voices": {
-  "user": "e7de86b388864b8cbd50d0d70a3494e5",
-  "friend": "c913e2f3869449568fc3fc08dfa21dfe",
+  "user": "676f1654c4f747a69a5921ad94886fa1",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Chloe",
- "friend_name_id": "name_08",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_07",
-  "greet_ans_10",
-  "side_instr_10",
-  "dn_14",
-  "side_cue_17"
+  "greet_02",
+  "greet_ans_16"
  ],
  "block_ids": [
-  "birthday_party.ctx3",
-  "smartphones.side1"
+  "weather_plans.dlg9"
  ],
- "est_total_sec": 70.59,
- "est_speech_sec": 52.13,
+ "est_total_sec": 45.85,
+ "est_speech_sec": 37.27,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey! How's everything going?",
-   "est_sec": 1.34,
-   "gap_before": 0.37,
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
    "role": "greeting",
-   "phrasing": "greet_07"
+   "phrasing": "greet_02"
   },
   {
    "speaker": "user",
-   "text": "Doing well, thank you.",
+   "text": "Pretty busy, but good.",
    "est_sec": 1.34,
-   "gap_before": 0.51,
+   "gap_before": 0.99,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_10"
+   "phrasing": "greet_ans_16"
   },
   {
    "speaker": "user",
-   "text": "I still haven't ordered the cake for Saturday.",
-   "est_sec": 2.58,
-   "gap_before": 0.58,
-   "event": "ordinary_request",
-   "block": "birthday_party.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "There's still time if you order today. Chocolate is always popular, or would a fruity one like lemon fit better?",
-   "est_sec": 6.3,
-   "gap_before": 1.03,
-   "role": "reply",
-   "block": "birthday_party.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, can you stay quiet for a minute? I need to talk to my partner. I'll come back to you.",
-   "est_sec": 6.3,
-   "gap_before": 0.89,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_10"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, so where were we with the shopping list?",
-   "est_sec": 2.89,
-   "gap_before": 1.22,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_14"
-  },
-  {
-   "speaker": "friend",
-   "text": "We still need eggs and bread.",
-   "est_sec": 1.96,
-   "gap_before": 1.31,
-   "phrasing": "dn_14"
-  },
-  {
-   "speaker": "user",
-   "text": "Chloe, do you know the wifi password here? My phone keeps dropping off.",
+   "text": "The forecast says minus two but feels like minus nine. What's the difference?",
    "est_sec": 4.13,
-   "gap_before": 0.85,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "It's on the back of the router, I think. The long one with all the letters.",
-   "est_sec": 5.06,
-   "gap_before": 1.06,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Ugh, I typed that in twice already.",
-   "est_sec": 2.27,
-   "gap_before": 0.75,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Did you try forgetting the network and joining again? That fixed mine last week.",
-   "est_sec": 4.44,
-   "gap_before": 2.58,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "No, I'll try that now. Hold on.",
-   "est_sec": 2.27,
-   "gap_before": 1.05,
-   "block": "smartphones.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm back, thanks for waiting.",
-   "est_sec": 1.65,
-   "gap_before": 1.6,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_17"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem. Did you decide on the cake flavor?",
-   "est_sec": 2.89,
-   "gap_before": 0.98,
-   "role": "resume",
-   "block": "birthday_party.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Chocolate. You can't go wrong.",
-   "est_sec": 1.65,
-   "gap_before": 1.21,
+   "gap_before": 0.5,
    "event": "ordinary_request",
-   "block": "birthday_party.ctx3"
+   "block": "weather_plans.dlg9"
   },
   {
    "speaker": "moshi",
-   "text": "Classic choice. Ask for a raspberry filling if they have it, it cuts the sweetness nicely.",
-   "est_sec": 5.06,
-   "gap_before": 0.97,
-   "role": "followup",
-   "block": "birthday_party.ctx3"
+   "text": "That's wind chill. The wind pulls heat away from your skin faster, so it feels much colder than the thermometer says.",
+   "est_sec": 6.61,
+   "gap_before": 0.55,
+   "role": "reply",
+   "block": "weather_plans.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "So I should dress for minus nine.",
+   "est_sec": 2.27,
+   "gap_before": 0.63,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exactly. Especially your face, ears and hands, they're the bits that get bitten first.",
+   "est_sec": 4.44,
+   "gap_before": 0.38,
+   "role": "reply",
+   "block": "weather_plans.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "I was going to wear my wool coat.",
+   "est_sec": 2.58,
+   "gap_before": 0.36,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Wool is warm, but the wind goes straight through it. A windproof layer on top would help a lot.",
+   "est_sec": 5.99,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "weather_plans.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "Like a rain jacket?",
+   "est_sec": 1.34,
+   "gap_before": 0.95,
+   "event": "ordinary_request",
+   "block": "weather_plans.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, a rain jacket over a warm jumper works brilliantly. Add a hat and gloves, and maybe a scarf over your nose.",
+   "est_sec": 6.92,
+   "gap_before": 1.33,
+   "role": "reply",
+   "block": "weather_plans.dlg9"
   }
  ]
 }

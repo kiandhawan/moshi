@@ -7,123 +7,117 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "smartphones"
+  "moving_house"
  ],
- "topic": "smartphones",
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "moving_house",
  "voices": {
-  "user": "e3cd384158934cc9a01029cd7d278634",
+  "user": "050df12e0f30484fb882a9a5410e5d66",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_14",
-  "greet_ans_14",
-  "describe_instr_07",
-  "ack_02",
-  "describe_cue_13"
+  "greet_13",
+  "greet_ans_05",
+  "think_instr_28",
+  "ack_04"
  ],
  "block_ids": [
-  "smartphones.opt1"
+  "moving_house.ctx11"
  ],
- "est_total_sec": 61.74,
- "est_speech_sec": 48.53,
+ "est_total_sec": 60.05,
+ "est_speech_sec": 34.07,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How's life treating you?",
-   "est_sec": 1.65,
-   "gap_before": 0.65,
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.56,
    "role": "greeting",
-   "phrasing": "greet_14"
+   "phrasing": "greet_13"
   },
   {
    "speaker": "user",
-   "text": "Hanging in there.",
-   "est_sec": 1.03,
-   "gap_before": 0.93,
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.4,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_14"
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "My phone finally died, and I'm choosing between a few replacements.",
+   "text": "I've got about forty houseplants and I'm moving across the country.",
    "est_sec": 3.51,
-   "gap_before": 0.59,
-   "block": "smartphones.opt1"
+   "gap_before": 0.52,
+   "event": "ordinary_request",
+   "block": "moving_house.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a jungle. You could give most of them to friends and take just your favourites, or pack them all in the car and risk a few casualties. How attached are you?",
+   "est_sec": 10.02,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "moving_house.ctx11"
   },
   {
    "speaker": "user",
-   "text": "Let me walk you through all the options, then you can tell me what you think.",
-   "est_sec": 5.06,
-   "gap_before": 0.7,
+   "text": "I'll need twenty seconds to think. Ask me again after that.",
+   "est_sec": 3.51,
+   "gap_before": 0.8,
    "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_07"
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_28"
   },
   {
    "speaker": "moshi",
-   "text": "Okay.",
-   "est_sec": 0.41,
-   "gap_before": 0.51,
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.43,
    "role": "ack",
-   "phrasing": "ack_02"
-  },
-  {
-   "speaker": "user",
-   "text": "The first one is the latest flagship with an amazing camera, but it costs over a thousand dollars.",
-   "est_sec": 5.68,
-   "gap_before": 0.89,
-   "block": "smartphones.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's last year's model of the same phone, almost as good and a few hundred cheaper.",
-   "est_sec": 5.37,
-   "gap_before": 2.6,
-   "block": "smartphones.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a mid range phone with a huge battery that lasts two full days.",
-   "est_sec": 5.06,
-   "gap_before": 1.0,
-   "block": "smartphones.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a small compact phone that fits easily in my pocket.",
-   "est_sec": 4.75,
-   "gap_before": 1.99,
-   "block": "smartphones.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "That's all I've got. Which would you choose?",
-   "est_sec": 2.58,
-   "gap_before": 1.21,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_13"
+   "phrasing": "ack_04"
   },
   {
    "speaker": "moshi",
-   "text": "Last year's flagship is usually the best value, you get nearly the same camera for much less. The new flagship only makes sense if photos are really important to you. The mid range phone is great if battery life is your biggest worry.",
-   "est_sec": 13.43,
-   "gap_before": 0.64,
+   "text": "So, is the whole jungle coming, or just the stars of the collection?",
+   "est_sec": 4.13,
    "role": "resume",
-   "block": "smartphones.opt1"
+   "block": "moving_house.ctx11",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.44
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Only the favourites. Maybe ten.",
+   "est_sec": 1.65,
+   "gap_before": 1.31,
+   "event": "ordinary_request",
+   "block": "moving_house.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good compromise. Water them a day or two before, and keep them out of the boot if it's hot.",
+   "est_sec": 5.99,
+   "gap_before": 0.7,
+   "role": "followup",
+   "block": "moving_house.ctx11"
   }
  ]
 }

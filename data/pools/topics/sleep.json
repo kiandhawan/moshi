@@ -1,162 +1,1828 @@
 {
-  "topic": "sleep",
-  "contexts": [
+ "topic": "sleep",
+ "contexts": [
+  {
+   "id": "sleep.ctx1",
+   "turns": [
     {
-      "id": "sleep.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I've been going to bed at like one in the morning and I'm wrecked every day."},
-        {"speaker": "moshi", "text": "Let's move it earlier step by step. What time do you realistically want to be asleep by on work nights?"}
-      ],
-      "pending": "target bedtime on work nights",
-      "think_reask": [
-        "So, what bedtime are you aiming for on work nights?",
-        "Okay, have you picked a time? When do you want to be asleep by?",
-        "Back to your sleep plan. What's a realistic bedtime for you?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were choosing a bedtime for work nights.",
-        "Hi again. So, what time do you want to be asleep by?",
-        "There you are. We were working out an earlier bedtime for you."
-      ],
-      "endings": [
-        {"user": "Eleven, I think. That gives me about eight hours.", "moshi": "Good target. Try going to bed fifteen minutes earlier each week until you get there."},
-        {"user": "Let's say midnight to start. Eleven feels impossible right now.", "moshi": "Midnight is a solid first step. Once that feels normal we can nudge it earlier."}
-      ]
+     "speaker": "user",
+     "text": "I've been going to bed at like one in the morning and I'm wrecked every day."
     },
     {
-      "id": "sleep.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "My partner snores and I'm waking up three times a night."},
-        {"speaker": "moshi", "text": "That's rough. Do you want to try earplugs or a white noise machine first, or talk to your partner about seeing a doctor?"}
-      ],
-      "pending": "earplugs or white noise versus doctor",
-      "think_reask": [
-        "So, what do you want to try first? Earplugs and white noise, or the doctor conversation?",
-        "Okay, have you decided? A quick fix for you, or a visit to the doctor for them?",
-        "Back to the snoring. Which way are you leaning?"
-      ],
-      "welcome_back": [
-        "Welcome back! We were talking about the snoring. Earplugs and white noise, or the doctor?",
-        "Hi again. You were deciding how to deal with your partner's snoring.",
-        "Good to have you back. So, a quick fix, or the doctor idea?"
-      ],
-      "endings": [
-        {"user": "Earplugs first. I don't want to make a big deal of it yet.", "moshi": "Fair enough. Soft foam ones work best, and roll them thin before you put them in."},
-        {"user": "I think the doctor. It's been going on for years.", "moshi": "That's wise. Loud snoring can be a sign of sleep apnea, so it's worth checking."}
-      ]
-    },
-    {
-      "id": "sleep.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "I want a better bedtime routine. Right now I just scroll until I pass out."},
-        {"speaker": "moshi", "text": "A wind down routine can really help. What would you enjoy doing in the last half hour instead, reading, stretching, or maybe a warm shower?"}
-      ],
-      "pending": "what to do in the last half hour before bed",
-      "think_reask": [
-        "So, what will your wind down be? Reading, stretching, or a shower?",
-        "Okay, time to choose. What do you want to do instead of scrolling?",
-        "Back to your bedtime routine. Which one appeals to you?"
-      ],
-      "welcome_back": [
-        "Welcome back! You were picking something to replace scrolling before bed.",
-        "Hi again. So, reading, stretching, or a warm shower for your wind down?",
-        "There you are. We were building your bedtime routine."
-      ],
-      "endings": [
-        {"user": "Reading. I've got a pile of books I never touch.", "moshi": "Perfect. Leave the phone charging in another room and keep a book on your pillow."},
-        {"user": "A shower and some stretching, I think.", "moshi": "Nice combo. The drop in body temperature after a warm shower actually helps you fall asleep."}
-      ]
+     "speaker": "moshi",
+     "text": "Let's move it earlier step by step. What time do you realistically want to be asleep by on work nights?"
     }
-  ],
-  "side_conversations": [
-    {"id": "sleep.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, were you up late last night? I heard the TV."},
-      {"speaker": "friend", "text": "Yeah, I couldn't sleep. I watched two episodes of that cooking show."},
-      {"speaker": "user", "text": "Did it help at all?"},
-      {"speaker": "friend", "text": "Not really. I finally fell asleep around three."},
-      {"speaker": "user", "text": "You should try that tea I bought. It's on the top shelf."},
-      {"speaker": "friend", "text": "The chamomile one? Maybe tonight."}
-    ]},
-    {"id": "sleep.side2", "turns": [
-      {"speaker": "user", "text": "Can you keep it down a bit tomorrow morning? I'm trying to sleep in."},
-      {"speaker": "friend", "text": "Sure. What time do you want to get up?"},
-      {"speaker": "user", "text": "Ten, maybe eleven. It's been such a long week."},
-      {"speaker": "friend", "text": "No problem. I'll make my coffee quietly and go for a walk."},
-      {"speaker": "user", "text": "You're the best. Could you close the hallway door too? The light comes in."},
-      {"speaker": "friend", "text": "Will do."}
-    ]},
-    {"id": "sleep.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, which pillow do you use? Yours always looks so comfy."},
-      {"speaker": "friend", "text": "It's a memory foam one. I got it after my neck kept hurting."},
-      {"speaker": "user", "text": "Did it actually make a difference?"},
-      {"speaker": "friend", "text": "Honestly, yes. It took about a week to get used to it, but now I sleep way better."},
-      {"speaker": "user", "text": "Hmm. Was it expensive?"},
-      {"speaker": "friend", "text": "Not bad. I can send you the link later."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "sleep.dlg1", "turns": [
-      {"speaker": "user", "text": "Is it bad to drink coffee in the afternoon?"},
-      {"speaker": "moshi", "text": "For a lot of people, yes. Caffeine can stay in your system for six hours or more, so a cup at four can still keep you up at ten."},
-      {"speaker": "user", "text": "Wow. What about tea?"},
-      {"speaker": "moshi", "text": "Black and green tea have less caffeine, but still some. Herbal teas like chamomile or mint have none."},
-      {"speaker": "user", "text": "I usually need / something around three to get through work."},
-      {"speaker": "moshi", "text": "Try a short walk outside or a glass of cold water instead. A little daylight and movement can wake you up surprisingly well."},
-      {"speaker": "user", "text": "I'll give it a shot tomorrow."}
-    ]},
-    {"id": "sleep.dlg2", "turns": [
-      {"speaker": "user", "text": "My baby is six months old and I feel like I haven't slept since she was born."},
-      {"speaker": "moshi", "text": "That sounds exhausting. Can you and your partner take turns with night feeds, so each of you gets one longer stretch?"},
-      {"speaker": "user", "text": "I'm breastfeeding, so / it's mostly me."},
-      {"speaker": "moshi", "text": "You could pump one bottle in the evening so your partner can handle one feed. Even four hours in a row can make a big difference."},
-      {"speaker": "user", "text": "That might work. What about naps?"},
-      {"speaker": "moshi", "text": "Sleep when she naps, at least once a day, even if the house is messy. Rest matters more than chores right now."},
-      {"speaker": "user", "text": "That's hard for me, but okay."},
-      {"speaker": "moshi", "text": "It is hard. Be kind to yourself, this stage really does pass."}
-    ]},
-    {"id": "sleep.dlg3", "turns": [
-      {"speaker": "user", "text": "I keep waking up at four and I can't fall back asleep. Any ideas?"},
-      {"speaker": "moshi", "text": "If you're awake for more than twenty minutes, get up and do something calm in dim light, like reading. Lying there stressed usually makes it worse."},
-      {"speaker": "user", "text": "Should I look at the clock?"},
-      {"speaker": "moshi", "text": "Better not. Turn it away from you, because counting the hours left tends to wake you up more."},
-      {"speaker": "user", "text": "I also have / a glass of wine most evenings. Could that be it?"},
-      {"speaker": "moshi", "text": "It could. Alcohol helps you fall asleep but often wakes you up in the early morning hours. Try a week without it and see."},
-      {"speaker": "user", "text": "Okay, a week. I can do a week."},
-      {"speaker": "moshi", "text": "Great. Keep a quick note each morning so you can spot any pattern."}
-    ]},
-    {"id": "sleep.dlg4", "turns": [
-      {"speaker": "user", "text": "How warm or cold should my bedroom be for sleeping?"},
-      {"speaker": "moshi", "text": "Most people sleep best in a cool room, around sixty five degrees Fahrenheit or about eighteen Celsius."},
-      {"speaker": "user", "text": "That sounds cold. I'm always freezing."},
-      {"speaker": "moshi", "text": "You can keep the room cool and still be cozy with warm socks or a heavier blanket. Cold feet actually make it harder to fall asleep."},
-      {"speaker": "user", "text": "Oh, I didn't know that. What about / blackout curtains, are those worth it?"},
-      {"speaker": "moshi", "text": "Yes, especially if there are streetlights outside or you sleep past sunrise. A sleep mask is a cheaper way to test it first."},
-      {"speaker": "user", "text": "I'll try the mask then."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "sleep.opt1",
-     "lead_in": "I've been sleeping badly, and I want to try something new. Can you help me pick?",
-     "options": [
-      "The first idea is going to bed at exactly the same time every night, even on weekends.",
-      "Then there's no screens for an hour before bed and reading a paper book instead.",
-      "Option three is buying a white noise machine because my street is pretty loud at night.",
-      "And the last one is cutting out coffee after lunch, which would be really hard for me."
-     ],
-     "moshi_comment": [
-      "Since your street is loud, the white noise machine might give you the quickest improvement. A steady bedtime is one of the most reliable habits for better sleep in general. Cutting afternoon coffee is tough, but it can make a real difference.",
-      "What usually keeps you up, is it noise, a busy mind, or just not feeling tired? If it's noise, try the white noise machine first. If you're not tired, cutting afternoon coffee is worth a shot."
-     ]},
-    {"id": "sleep.opt2",
-     "lead_in": "I'm buying a new mattress and I've narrowed it down.",
-     "options": [
-      "One is a firm memory foam mattress that a lot of reviews say is great for back pain.",
-      "Another is a soft pillow top spring mattress, really cozy, but it might sag after a few years.",
-      "Or there's a hybrid with springs and foam, medium firm, and a bit more expensive."
-     ],
-     "moshi_comment": [
-      "The hybrid is often a good balance of support and comfort, and medium firm suits most sleepers. The firm foam one is worth a look if your back hurts. The pillow top feels lovely in the store but may not last as long.",
-      "Do you sleep on your side, back or stomach? Side sleepers usually like something softer, so the hybrid could be ideal. If you have back pain, I'd try the firm foam one."
-     ]}
-  ]
+   ],
+   "pending": "target bedtime on work nights",
+   "think_reask": [
+    "So, what bedtime are you aiming for on work nights?",
+    "Okay, have you picked a time? When do you want to be asleep by?",
+    "Back to your sleep plan. What's a realistic bedtime for you?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were choosing a bedtime for work nights.",
+    "Hi again. So, what time do you want to be asleep by?",
+    "There you are. We were working out an earlier bedtime for you."
+   ],
+   "endings": [
+    {
+     "user": "Eleven, I think. That gives me about eight hours.",
+     "moshi": "Good target. Try going to bed fifteen minutes earlier each week until you get there."
+    },
+    {
+     "user": "Let's say midnight to start. Eleven feels impossible right now.",
+     "moshi": "Midnight is a solid first step. Once that feels normal we can nudge it earlier."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My partner snores and I'm waking up three times a night."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's rough. Do you want to try earplugs or a white noise machine first, or talk to your partner about seeing a doctor?"
+    }
+   ],
+   "pending": "earplugs or white noise versus doctor",
+   "think_reask": [
+    "So, what do you want to try first? Earplugs and white noise, or the doctor conversation?",
+    "Okay, have you decided? A quick fix for you, or a visit to the doctor for them?",
+    "Back to the snoring. Which way are you leaning?"
+   ],
+   "welcome_back": [
+    "Welcome back! We were talking about the snoring. Earplugs and white noise, or the doctor?",
+    "Hi again. You were deciding how to deal with your partner's snoring.",
+    "Good to have you back. So, a quick fix, or the doctor idea?"
+   ],
+   "endings": [
+    {
+     "user": "Earplugs first. I don't want to make a big deal of it yet.",
+     "moshi": "Fair enough. Soft foam ones work best, and roll them thin before you put them in."
+    },
+    {
+     "user": "I think the doctor. It's been going on for years.",
+     "moshi": "That's wise. Loud snoring can be a sign of sleep apnea, so it's worth checking."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I want a better bedtime routine. Right now I just scroll until I pass out."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A wind down routine can really help. What would you enjoy doing in the last half hour instead, reading, stretching, or maybe a warm shower?"
+    }
+   ],
+   "pending": "what to do in the last half hour before bed",
+   "think_reask": [
+    "So, what will your wind down be? Reading, stretching, or a shower?",
+    "Okay, time to choose. What do you want to do instead of scrolling?",
+    "Back to your bedtime routine. Which one appeals to you?"
+   ],
+   "welcome_back": [
+    "Welcome back! You were picking something to replace scrolling before bed.",
+    "Hi again. So, reading, stretching, or a warm shower for your wind down?",
+    "There you are. We were building your bedtime routine."
+   ],
+   "endings": [
+    {
+     "user": "Reading. I've got a pile of books I never touch.",
+     "moshi": "Perfect. Leave the phone charging in another room and keep a book on your pillow."
+    },
+    {
+     "user": "A shower and some stretching, I think.",
+     "moshi": "Nice combo. The drop in body temperature after a warm shower actually helps you fall asleep."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I switch to night shifts on Monday. Seven at night till seven in the morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Big change. Before your first shift, would you rather take a long nap in the afternoon, or sleep in really late that morning?"
+    }
+   ],
+   "pending": "afternoon nap or late lie-in before first night shift",
+   "think_reask": [
+    "So, before that first night shift. Afternoon nap or a big lie-in?",
+    "Okay, Monday's shift. Which one?"
+   ],
+   "welcome_back": [
+    "Your first night shift on Monday. Nap in the afternoon, or sleep in?",
+    "So, prepping for nights. Where are you leaning?"
+   ],
+   "endings": [
+    {
+     "user": "A late lie-in. I can never nap in the afternoon.",
+     "moshi": "Then stay up a bit later on Sunday, sleep till noon, and keep the room really dark."
+    },
+    {
+     "user": "Afternoon nap. I'm an early riser no matter what.",
+     "moshi": "Fine. Aim for about ninety minutes, from around two, so you wake up before the grogginess hits."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My three-year-old keeps getting out of bed. Like ten times a night."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exhausting. Would you rather put a gate on her door, or try a sticker chart that rewards her for staying in bed?"
+    }
+   ],
+   "pending": "door gate or sticker reward chart for toddler",
+   "think_reask": [
+    "So, your little escape artist. Gate or sticker chart?",
+    "Back to the toddler. Which are you trying first?"
+   ],
+   "welcome_back": [
+    "Your three-year-old and the bedtime escapes. Gate or stickers?",
+    "So, the bedtime wandering. Have you picked an approach?"
+   ],
+   "endings": [
+    {
+     "user": "Sticker chart. She's obsessed with stickers right now.",
+     "moshi": "Perfect timing. Keep the reward simple and give it right after breakfast so it's fresh in her mind."
+    },
+    {
+     "user": "A gate. I'm too tired for negotiating.",
+     "moshi": "Fair. Walk her back calmly each time with as few words as possible, and she'll learn it's boring."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Just landed in Tokyo. It's noon here and my body thinks it's three in the morning."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rough. Do you want to push through and stay awake till local bedtime, or grab a short nap now?"
+    }
+   ],
+   "pending": "stay awake or short nap for jet lag",
+   "think_reask": [
+    "So, the jet lag. Push through, or a short nap?",
+    "Okay, Tokyo time. Staying up or napping?"
+   ],
+   "welcome_back": [
+    "Your jet lag in Tokyo. Stay awake, or a quick nap?",
+    "So, fighting the time difference. Which way?"
+   ],
+   "endings": [
+    {
+     "user": "Short nap. I'll fall over otherwise.",
+     "moshi": "Keep it under forty minutes, set two alarms, and get outside in daylight right after."
+    },
+    {
+     "user": "Push through. I want to get it over with.",
+     "moshi": "Brave. Walk around outdoors, the daylight helps reset your clock, and go to bed around ten."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I hit snooze like six times every morning and still wake up groggy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Snoozing actually makes the grogginess worse. Want to try one alarm with no snooze allowed, or a sunrise alarm light that wakes you gradually?"
+    }
+   ],
+   "pending": "single no-snooze alarm or sunrise light alarm",
+   "think_reask": [
+    "So, the snooze habit. One strict alarm, or a sunrise light?",
+    "Decided on your mornings yet?"
+   ],
+   "welcome_back": [
+    "Your snooze button problem. Strict alarm or sunrise light?",
+    "So, waking up less groggy. Which option?"
+   ],
+   "endings": [
+    {
+     "user": "The sunrise light. Being yanked awake is the worst.",
+     "moshi": "Nice choice. Set it for about half an hour before your actual alarm time."
+    },
+    {
+     "user": "One alarm, across the room. Force myself up.",
+     "moshi": "Classic for a reason. Once you're standing, go straight to the kitchen and drink some water."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My teenage son is gaming till two in the morning, then can't get up for school."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tough one. Would you go for a phone and console free bedroom, or agree a later but firm cutoff time with him?"
+    }
+   ],
+   "pending": "screen-free bedroom or agreed cutoff time",
+   "think_reask": [
+    "So, your son's gaming nights. Screen-free bedroom or a firm cutoff?",
+    "Back to the late gaming. Which rule?"
+   ],
+   "welcome_back": [
+    "The two in the morning gaming. Screens out of the bedroom, or a cutoff?",
+    "So, the teen and his console. What's the new rule?"
+   ],
+   "endings": [
+    {
+     "user": "A cutoff, eleven on school nights. He'll fight a total ban.",
+     "moshi": "Probably wise. Agree it together and set the console to switch off automatically, then you're not the bad guy."
+    },
+    {
+     "user": "Screens out of the bedroom. I'm done negotiating.",
+     "moshi": "Clear rule. Give him a cheap alarm clock so he doesn't need his phone in there."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm always roasting at night. I wake up kicking the duvet off."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A lot of people sleep hot. Would you try a cooling mattress topper, or swap to a lighter duvet and breathable sheets?"
+    }
+   ],
+   "pending": "cooling topper or lighter bedding",
+   "think_reask": [
+    "So, sleeping hot. Cooling topper or lighter bedding?",
+    "Okay, the overheating. Which fix?"
+   ],
+   "welcome_back": [
+    "Your hot nights. Topper or lighter duvet?",
+    "So, the roasting problem. Any decision?"
+   ],
+   "endings": [
+    {
+     "user": "Lighter bedding first. Cheaper.",
+     "moshi": "Good start. Cotton or linen sheets and a low tog duvet can make a surprising difference."
+    },
+    {
+     "user": "The topper. I've tried thin duvets already.",
+     "moshi": "Then a gel or latex topper is worth a look. Many have a trial period, so you can return it."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm studying for finals and I crash after lunch every day."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Normal dip. Would you rather take a twenty minute power nap, or skip napping and take a walk outside instead?"
+    }
+   ],
+   "pending": "power nap or walk for afternoon slump",
+   "think_reask": [
+    "So, the post-lunch crash. Power nap or a walk?",
+    "Back to your afternoon slump. Which one?"
+   ],
+   "welcome_back": [
+    "Your after-lunch crash. Nap or walk?",
+    "So, the afternoon dip during finals. What's your pick?"
+   ],
+   "endings": [
+    {
+     "user": "Power nap. My dorm's right next to the library.",
+     "moshi": "Handy. Set a twenty minute timer, longer and you'll wake up feeling worse."
+    },
+    {
+     "user": "A walk. If I nap I'll sleep for three hours.",
+     "moshi": "Know yourself. Ten minutes in daylight and some water can be just as good."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "At night my brain just won't switch off. Work, money, everything."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That racing mind is hard. Would you try writing your worries down before bed, or a slow breathing exercise once you're lying down?"
+    }
+   ],
+   "pending": "worry journal or breathing exercise",
+   "think_reask": [
+    "So, the racing thoughts. Journal or breathing?",
+    "Okay, the busy brain. Which one feels like you?"
+   ],
+   "welcome_back": [
+    "Your mind racing at night. Writing it down, or breathing?",
+    "So, switching your brain off. Have you chosen?"
+   ],
+   "endings": [
+    {
+     "user": "Writing it down. Getting it out of my head sounds good.",
+     "moshi": "Keep a notebook by the bed. Write the worry and one tiny next step, then close it."
+    },
+    {
+     "user": "Breathing. I'm too tired to write anything.",
+     "moshi": "Fair. Breathe in for four, hold for a moment, out for six. Repeat a few rounds slowly."
+    }
+   ]
+  },
+  {
+   "id": "sleep.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My boyfriend's a total night owl and I'm asleep by ten. We never go to bed together."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Common pairing. Would you rather keep separate bedtimes but have a cozy half hour together first, or both shift to a middle time?"
+    }
+   ],
+   "pending": "separate bedtimes with shared wind-down or compromise time",
+   "think_reask": [
+    "So, you and your night owl. Separate bedtimes, or meet in the middle?",
+    "Back to your bedtimes. Which way?"
+   ],
+   "welcome_back": [
+    "Your bedtime mismatch. Separate times with a cozy half hour, or a compromise?",
+    "So, the early bird and the night owl. How are you syncing up?"
+   ],
+   "endings": [
+    {
+     "user": "Separate, with the cozy bit. I need my sleep.",
+     "moshi": "That's healthy. He can tuck you in, then go read or game in another room."
+    },
+    {
+     "user": "Middle time. Eleven, maybe.",
+     "moshi": "Worth a try. Shift by fifteen minutes every few nights so it isn't a shock."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "sleep.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, were you up late last night? I heard the TV."
+    },
+    {
+     "speaker": "friend",
+     "text": "Yeah, I couldn't sleep. I watched two episodes of that cooking show."
+    },
+    {
+     "speaker": "user",
+     "text": "Did it help at all?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not really. I finally fell asleep around three."
+    },
+    {
+     "speaker": "user",
+     "text": "You should try that tea I bought. It's on the top shelf."
+    },
+    {
+     "speaker": "friend",
+     "text": "The chamomile one? Maybe tonight."
+    }
+   ]
+  },
+  {
+   "id": "sleep.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you keep it down a bit tomorrow morning? I'm trying to sleep in."
+    },
+    {
+     "speaker": "friend",
+     "text": "Sure. What time do you want to get up?"
+    },
+    {
+     "speaker": "user",
+     "text": "Ten, maybe eleven. It's been such a long week."
+    },
+    {
+     "speaker": "friend",
+     "text": "No problem. I'll make my coffee quietly and go for a walk."
+    },
+    {
+     "speaker": "user",
+     "text": "You're the best. Could you close the hallway door too? The light comes in."
+    },
+    {
+     "speaker": "friend",
+     "text": "Will do."
+    }
+   ]
+  },
+  {
+   "id": "sleep.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, which pillow do you use? Yours always looks so comfy."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's a memory foam one. I got it after my neck kept hurting."
+    },
+    {
+     "speaker": "user",
+     "text": "Did it actually make a difference?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Honestly, yes. It took about a week to get used to it, but now I sleep way better."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. Was it expensive?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Not bad. I can send you the link later."
+    }
+   ]
+  },
+  {
+   "id": "sleep.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, would you ever swap rooms with me? The buses outside mine start at five."
+    },
+    {
+     "speaker": "friend",
+     "text": "Mine's next to the boiler though. It clunks all night."
+    },
+    {
+     "speaker": "user",
+     "text": "Clunking I can handle. Brakes squealing at five I can't."
+    },
+    {
+     "speaker": "friend",
+     "text": "Hmm. If you give me your big wardrobe, maybe."
+    },
+    {
+     "speaker": "user",
+     "text": "Seriously? Done. Can we move stuff this weekend?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Sunday. After I've had a lie-in, obviously."
+    }
+   ]
+  },
+  {
+   "id": "sleep.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Did you just wake up? It's six in the evening."
+    },
+    {
+     "speaker": "friend",
+     "text": "I lay down for ten minutes at three."
+    },
+    {
+     "speaker": "user",
+     "text": "That was three hours ago."
+    },
+    {
+     "speaker": "friend",
+     "text": "I know. I feel like a zombie and I have no idea what day it is."
+    },
+    {
+     "speaker": "user",
+     "text": "Have some water. You'll be up till four now, you know that, right?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Probably. Want to watch something with me later, then?"
+    }
+   ]
+  },
+  {
+   "id": "sleep.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I had the weirdest dream. You were a waiter and you kept serving me soup made of buttons."
+    },
+    {
+     "speaker": "friend",
+     "text": "Buttons? Was it good at least?"
+    },
+    {
+     "speaker": "user",
+     "text": "It was crunchy. Then my teeth started falling out."
+    },
+    {
+     "speaker": "friend",
+     "text": "Oh, the teeth one. I get that before exams."
+    },
+    {
+     "speaker": "user",
+     "text": "Do you think it means something?"
+    },
+    {
+     "speaker": "friend",
+     "text": "It means you ate cheese at midnight. I saw you."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "sleep.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it bad to drink coffee in the afternoon?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a lot of people, yes. Caffeine can stay in your system for six hours or more, so a cup at four can still keep you up at ten."
+    },
+    {
+     "speaker": "user",
+     "text": "Wow. What about tea?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Black and green tea have less caffeine, but still some. Herbal teas like chamomile or mint have none."
+    },
+    {
+     "speaker": "user",
+     "text": "I usually need / something around three to get through work."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a short walk outside or a glass of cold water instead. A little daylight and movement can wake you up surprisingly well."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll give it a shot tomorrow."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My baby is six months old and I feel like I haven't slept since she was born."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That sounds exhausting. Can you and your partner take turns with night feeds, so each of you gets one longer stretch?"
+    },
+    {
+     "speaker": "user",
+     "text": "I'm breastfeeding, so / it's mostly me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could pump one bottle in the evening so your partner can handle one feed. Even four hours in a row can make a big difference."
+    },
+    {
+     "speaker": "user",
+     "text": "That might work. What about naps?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sleep when she naps, at least once a day, even if the house is messy. Rest matters more than chores right now."
+    },
+    {
+     "speaker": "user",
+     "text": "That's hard for me, but okay."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is hard. Be kind to yourself, this stage really does pass."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I keep waking up at four and I can't fall back asleep. Any ideas?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you're awake for more than twenty minutes, get up and do something calm in dim light, like reading. Lying there stressed usually makes it worse."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I look at the clock?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Better not. Turn it away from you, because counting the hours left tends to wake you up more."
+    },
+    {
+     "speaker": "user",
+     "text": "I also have / a glass of wine most evenings. Could that be it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It could. Alcohol helps you fall asleep but often wakes you up in the early morning hours. Try a week without it and see."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, a week. I can do a week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Great. Keep a quick note each morning so you can spot any pattern."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How warm or cold should my bedroom be for sleeping?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most people sleep best in a cool room, around sixty five degrees Fahrenheit or about eighteen Celsius."
+    },
+    {
+     "speaker": "user",
+     "text": "That sounds cold. I'm always freezing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can keep the room cool and still be cozy with warm socks or a heavier blanket. Cold feet actually make it harder to fall asleep."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I didn't know that. What about / blackout curtains, are those worth it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, especially if there are streetlights outside or you sleep past sunrise. A sleep mask is a cheaper way to test it first."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll try the mask then."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it okay to take melatonin every night? My coworker swears by it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's best to check with a doctor or pharmacist, especially for nightly use. It can help for things like jet lag, but it's not a fix for every sleep problem."
+    },
+    {
+     "speaker": "user",
+     "text": "I just thought it was / like a vitamin."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people think that. It's a hormone, and the doses in some products are much higher than your body makes."
+    },
+    {
+     "speaker": "user",
+     "text": "So what should I try instead?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Start with the basics. Same wake time every day, dim lights an hour before bed, and no caffeine after lunch. If that doesn't help in a few weeks, then talk to your doctor."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. The no caffeine part is going to hurt."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Decaf in the afternoon is a decent halfway point."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My wife talks in her sleep. Last night she said, very clearly, the penguins are late."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a great one. Sleep talking is really common and usually harmless, especially if she's stressed or overtired."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I wake her up?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No need. She probably won't remember it and waking her can just confuse her."
+    },
+    {
+     "speaker": "user",
+     "text": "It's mostly funny but sometimes it / keeps me awake."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Earplugs or a soft white noise in the background can help you sleep through it."
+    },
+    {
+     "speaker": "user",
+     "text": "I might start writing them down instead. The penguin one is going on the fridge."
+    },
+    {
+     "speaker": "moshi",
+     "text": "She'll love that at breakfast."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I wake up drenched in sweat most nights. The room isn't even that warm."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That can come from bedding that traps heat, alcohol, spicy food late, or sometimes medication or hormone changes."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm fifty two, so / maybe hormones?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Could well be. Many people notice night sweats around that age. Breathable cotton sheets, a fan, and a glass of cold water by the bed can help."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I see someone about it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, if it happens most nights, it's worth mentioning to your doctor, they can check what's behind it and suggest options."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll book something. And buy a fan today."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A small fan pointed at you can make a big difference while you wait."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Got a horrible calf cramp at three this morning. I yelled so loud I woke the dog."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ouch. When it happens, flex your foot toward your knee, it stretches the muscle and usually eases it."
+    },
+    {
+     "speaker": "user",
+     "text": "Why does it even happen?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Common triggers are dehydration, a long day on your feet, or a lot of exercise. Sometimes there's no clear reason."
+    },
+    {
+     "speaker": "user",
+     "text": "I did walk / a lot yesterday, actually."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's likely it. A gentle calf stretch before bed and a glass of water can help prevent the next one."
+    },
+    {
+     "speaker": "user",
+     "text": "And if it keeps happening?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then mention it to your doctor, especially if it's often or painful during the day."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My five-year-old turns bedtime into a two hour negotiation. One more story, one more water, one more hug."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic stalling. Try building those requests into the routine, so they're done before lights out."
+    },
+    {
+     "speaker": "user",
+     "text": "Like, give him the water beforehand?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Water, toilet, two stories, one hug. You could even make a little picture chart so he can tick them off himself."
+    },
+    {
+     "speaker": "user",
+     "text": "He'd like being the boss of a chart."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Kids love that. Then if he asks for more, you can kindly say the chart is finished."
+    },
+    {
+     "speaker": "user",
+     "text": "And if he / just cries?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stay calm and boring, short reassurance and back out. The first few nights are the hardest."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Weird question. Is it okay to sleep with socks on? My boyfriend says it's gross."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not weird at all, and it's fine. Warm feet can actually help you fall asleep faster, because it helps your body release heat."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha! Told him."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Just pick clean, loose socks, not tight ones that squeeze your ankles."
+    },
+    {
+     "speaker": "user",
+     "text": "I have fluffy ones / with little bears on."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Those sound perfect. If your feet get too hot during the night, you'll probably kick them off anyway."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm sending him this whole conversation."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The clocks go forward on Sunday and I always feel wrecked for a week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You can soften it. Starting Thursday, go to bed and get up fifteen minutes earlier each day."
+    },
+    {
+     "speaker": "user",
+     "text": "Just fifteen minutes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, small steps add up. By Sunday you've shifted most of the hour already."
+    },
+    {
+     "speaker": "user",
+     "text": "And on Sunday itself?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get outside in the morning light as soon as you can. It tells your body clock it's a new morning."
+    },
+    {
+     "speaker": "user",
+     "text": "I usually stay inside / on Sundays and binge something."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then maybe a short walk to get coffee first, then the binge."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have a glass of wine to fall asleep, but I always wake up at three. Connected?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very likely. Alcohol makes you drowsy at first, but as it wears off it disrupts your sleep in the second half of the night."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh. That's annoying, the wine's / the nice part of my evening."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Understandable. Having it earlier, with dinner rather than right before bed, gives your body time to process it."
+    },
+    {
+     "speaker": "user",
+     "text": "How much earlier?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ideally a few hours before sleep. You could also try a herbal tea as the new bedtime ritual a few nights a week and compare."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll try it for a week and see."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good experiment. Note how you feel each morning."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My sixteen-year-old is impossible to wake up. School starts at eight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Teens' body clocks genuinely shift later, so it's not just laziness. They often can't feel sleepy before eleven."
+    },
+    {
+     "speaker": "user",
+     "text": "So what do I do? / Let him sleep till noon?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "On school days, help him get to bed a little earlier by putting screens away at ten, and open the curtains as soon as he wakes."
+    },
+    {
+     "speaker": "user",
+     "text": "He'll hate that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably. Explain the why, teens respond better when they understand it. And keep weekend lie-ins to an hour or two longer, not until afternoon."
+    },
+    {
+     "speaker": "user",
+     "text": "An hour or two. Okay, that's fair."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And breakfast with some protein helps him actually feel awake."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you suggest something calming to do in bed? I'm wide awake but exhausted."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a body scan. Lie still and slowly bring your attention to your toes, then your feet, your ankles, working upward, relaxing each part."
+    },
+    {
+     "speaker": "user",
+     "text": "What if my mind wanders?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's normal. Just notice it and gently go back to where you were. No need to get it right."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'm at my knees already. This is / weirdly nice."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep going slowly. Breathe out a little longer than you breathe in."
+    },
+    {
+     "speaker": "user",
+     "text": "Mm."
+    },
+    {
+     "speaker": "moshi",
+     "text": "No need to reply. Just keep drifting."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Long-haul flight next week, twelve hours overnight. I never sleep on planes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Book a window seat if you can, you can lean on the wall and nobody will climb over you."
+    },
+    {
+     "speaker": "user",
+     "text": "Already got one. What else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A neck pillow, an eye mask and earplugs or noise cancelling headphones. Skip the coffee and go easy on the wine."
+    },
+    {
+     "speaker": "user",
+     "text": "I always watch three films / instead of sleeping."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Allow yourself one, then switch to a calm playlist or podcast. Set your watch to the destination time as soon as you board."
+    },
+    {
+     "speaker": "user",
+     "text": "Destination time. Good idea."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It helps your brain start adjusting before you land."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I watched a horror film last night and had nightmares all night. I'm thirty four. This is embarrassing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not embarrassing at all. Scary films right before bed keep your brain on alert, at any age."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm supposed to watch the sequel with my friends tonight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then watch something light afterwards, even twenty minutes of a comedy, to reset your mood before bed."
+    },
+    {
+     "speaker": "user",
+     "text": "That's actually / a really good plan."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And leave a small lamp on if it helps. No shame."
+    },
+    {
+     "speaker": "user",
+     "text": "Maybe I'll bring a comedy for everyone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Your friends might secretly thank you."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My lower back aches when I wake up. Could it be how I'm sleeping?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Quite possibly. Do you sleep on your back, side, or stomach?"
+    },
+    {
+     "speaker": "user",
+     "text": "Stomach, mostly. Face squished into the pillow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stomach sleeping can arch your lower back. Try putting a flat pillow under your hips, or slowly training yourself onto your side."
+    },
+    {
+     "speaker": "user",
+     "text": "Side with / a pillow between my knees?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly that. It keeps your hips level and takes pressure off your back."
+    },
+    {
+     "speaker": "user",
+     "text": "And if my mattress is just old?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If it sags in the middle or it's over eight years old, it could be part of the problem too."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm retired and I wake up at five every morning, wide awake. Drives my wife mad."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's very common as we get older, our body clocks tend to shift earlier."
+    },
+    {
+     "speaker": "user",
+     "text": "Can I change it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Somewhat. Getting bright light in the late afternoon and evening, like a walk at five, can nudge your clock later."
+    },
+    {
+     "speaker": "user",
+     "text": "And in the morning? I tend to / make tea and wander around."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep the lights low and stay quiet so you don't wake her. Some early risers enjoy that hour for reading."
+    },
+    {
+     "speaker": "user",
+     "text": "I do love the quiet, honestly."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then maybe it's not a problem, just a different rhythm."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hotel room tonight, right next to the lift. I can hear it every time it dings."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ask the front desk if they can move you. It's a very common request, and they often have quieter rooms."
+    },
+    {
+     "speaker": "user",
+     "text": "I asked. They're full."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then earplugs if you have them, or play white noise on your phone. A fan noise works well."
+    },
+    {
+     "speaker": "user",
+     "text": "No earplugs. But I've got / my headphones."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Soft foam headphones with rain sounds can block a lot. Also roll a towel along the bottom of the door, it cuts hallway noise."
+    },
+    {
+     "speaker": "user",
+     "text": "A towel. Never would have thought of that."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Old hotel trick. Hope you get some rest."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I can only fit in my workouts at ten at night. Is that wrecking my sleep?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For some people it does, because intense exercise raises your heart rate and body temperature. Others sleep fine."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I know which one I am?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Notice how long it takes to fall asleep on workout nights versus rest nights."
+    },
+    {
+     "speaker": "user",
+     "text": "Hmm. Now that you say it, / workout nights I'm up till one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then try to finish at least ninety minutes before bed, or do lighter stuff late, like stretching or yoga."
+    },
+    {
+     "speaker": "user",
+     "text": "I could lift weights in the morning on weekends."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a nice mix. Your body will thank you."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My husband snoozes his alarm five times. I wake up at every single one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's maddening. Could he set one alarm for the real time and put his phone across the room?"
+    },
+    {
+     "speaker": "user",
+     "text": "He says he needs the snoozes to wake up gently."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A sunrise light or a gradual volume alarm gives him gentle without five alarms."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll pitch that. Will he / go for it though?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe frame it as a gift. A gadget feels less like a complaint."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, very diplomatic."
+    },
+    {
+     "speaker": "moshi",
+     "text": "And earplugs for you until it arrives."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I catch up on sleep at the weekend? I do five hours on weeknights."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A little, but not fully. Weekend lie-ins help, but your body still feels the deficit during the week."
+    },
+    {
+     "speaker": "user",
+     "text": "So it's pointless?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not pointless, but sleeping in until noon can shift your body clock, and Monday morning hurts more."
+    },
+    {
+     "speaker": "user",
+     "text": "Monday is / always brutal, yeah."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try to get even thirty more minutes on weeknights, and keep weekend lie-ins to an hour or so."
+    },
+    {
+     "speaker": "user",
+     "text": "Thirty minutes I can probably manage."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Small changes like that add up fast."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My dorm roommate studies till three with the big light on. I'm losing it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's tough. Have you talked to her about it?"
+    },
+    {
+     "speaker": "user",
+     "text": "Sort of. I hinted."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try being direct but friendly. Ask if she could use a desk lamp after midnight instead of the main light."
+    },
+    {
+     "speaker": "user",
+     "text": "She'd probably say yes / if I actually asked."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most people do. Meanwhile, a good eye mask can save your nights."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll talk to her tonight. Wish me luck."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You've got this. Offer to chip in for the lamp if it helps."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I get up to pee three times a night. It's ruining my sleep."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try to drink most of your water earlier in the day, and slow down in the last two hours before bed."
+    },
+    {
+     "speaker": "user",
+     "text": "I do drink a huge glass right before bed."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's probably part of it. Tea and alcohol in the evening can also make it worse."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I cut back / and it still happens?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's worth checking with a doctor. Frequent waking to pee can have medical causes, and they're often easy to treat."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll try the water thing first."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Give it a couple of weeks and see."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is reading on an e-reader as bad as scrolling my phone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually much better. E-readers with e-ink screens don't glow like phones, and there are no notifications pulling you in."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine has a backlight though."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most have a warm light setting, turn that on and keep the brightness low."
+    },
+    {
+     "speaker": "user",
+     "text": "So / it's fine then?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pretty much. The main thing is that a book doesn't keep you hooked the way social media does, unless it's a thriller."
+    },
+    {
+     "speaker": "user",
+     "text": "It is a thriller."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then maybe stop at the end of a chapter, not the middle of a cliffhanger."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Big job interview tomorrow and I'm already lying in bed wired."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Totally normal. Even if you don't sleep perfectly, one rough night won't ruin your interview. Adrenaline will carry you."
+    },
+    {
+     "speaker": "user",
+     "text": "That's actually comforting."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good. Try not to check the time, it just adds pressure. Turn the clock away."
+    },
+    {
+     "speaker": "user",
+     "text": "My outfit's ready, I've / practised my answers."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you're prepared. Tell yourself that, and let your mind wander to something boring, like naming fruits from A to Z."
+    },
+    {
+     "speaker": "user",
+     "text": "Apple, banana, cherry."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's it. Take your time with each one."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My cat wakes me up at five every day screaming for breakfast."
+    },
+    {
+     "speaker": "moshi",
+     "text": "She's trained you well. Cats learn quickly that yowling gets food."
+    },
+    {
+     "speaker": "user",
+     "text": "So how do I untrain / her?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Don't feed her straight after the yowling, even if it's hard. Wait until your usual time."
+    },
+    {
+     "speaker": "user",
+     "text": "She'll scream louder."
+    },
+    {
+     "speaker": "moshi",
+     "text": "For a few days, yes. An automatic feeder set for five can also help, she starts waiting for the machine instead of you."
+    },
+    {
+     "speaker": "user",
+     "text": "Ooh. Then I'm not the food god anymore."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. The machine gets the blame."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Summer holidays are ending and my kids have been going to bed at eleven. School starts in a week."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A week is enough if you start now. Bring bedtime earlier by about twenty minutes every night or two."
+    },
+    {
+     "speaker": "user",
+     "text": "And mornings? They've been sleeping till ten."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Same idea, wake them a bit earlier each day too. Mornings actually matter even more for shifting their body clocks."
+    },
+    {
+     "speaker": "user",
+     "text": "They'll / grumble, no doubt about it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably. Make mornings more appealing, breakfast in the garden or something fun planned, and keep evenings calm with dimmer lights."
+    },
+    {
+     "speaker": "user",
+     "text": "Pancakes might work. They'd get up at dawn for pancakes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pancakes are a powerful motivator. Use them wisely."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I work from bed most days. My laptop basically lives there. Is that bad for sleep?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can. Your brain starts linking the bed with work and alertness, which makes switching off harder."
+    },
+    {
+     "speaker": "user",
+     "text": "My flat's tiny though. There's / no desk."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Even a small corner works. A chair and a fold-down table at the kitchen counter is enough."
+    },
+    {
+     "speaker": "user",
+     "text": "Really? Just that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It's about having a different spot. At night, the bed becomes just for sleep again."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll try the kitchen counter tomorrow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pack the laptop away when you finish, too. Out of sight helps."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Ate a massive curry at ten and now I've got heartburn lying down."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ouch. Prop yourself up with an extra pillow so your head and chest are higher. Lying on your left side can also help."
+    },
+    {
+     "speaker": "user",
+     "text": "Left side. Okay, that's / slightly better."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sip some water, and avoid lying totally flat for a bit."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I eat earlier in future?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you can, finish big meals at least two or three hours before bed. Spicy and fatty food late is a classic trigger."
+    },
+    {
+     "speaker": "user",
+     "text": "Lesson learned. Worth it though, it was a great curry."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds like it."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Do I really need eight hours of sleep? I feel fine on six."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most adults need about seven to nine, but there's some variation. A few people genuinely do well on less."
+    },
+    {
+     "speaker": "user",
+     "text": "How would I know?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Do you need an alarm to wake up? Do you crash in the afternoon, or doze off in meetings?"
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, all three. / Yes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you might be running on a sleep debt you've got used to. Try seven hours for two weeks and see how you feel."
+    },
+    {
+     "speaker": "user",
+     "text": "Seven. That's a whole extra hour of my evening gone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe, but you might get more done in the hours you're awake."
+    }
+   ]
+  },
+  {
+   "id": "sleep.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We moved into an old house last week and I can't sleep. Every creak sounds like someone on the stairs."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's really normal in a new place. Your brain stays a little on guard until the noises become familiar."
+    },
+    {
+     "speaker": "user",
+     "text": "How long does that last?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Usually a week or two. It helps to learn the sounds, the pipes cooling, the floorboards settling, the boiler clicking on."
+    },
+    {
+     "speaker": "user",
+     "text": "The boiler. That's probably / the thumping at midnight."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very likely. A quiet fan or white noise can cover the random sounds while you adjust."
+    },
+    {
+     "speaker": "user",
+     "text": "And maybe I'll check the locks before bed so I stop wondering."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good idea. A little routine like that tells your mind the house is safe."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "sleep.opt1",
+   "lead_in": "I've been sleeping badly, and I want to try something new. Can you help me pick?",
+   "options": [
+    "The first idea is going to bed at exactly the same time every night, even on weekends.",
+    "Then there's no screens for an hour before bed and reading a paper book instead.",
+    "Option three is buying a white noise machine because my street is pretty loud at night.",
+    "And the last one is cutting out coffee after lunch, which would be really hard for me."
+   ],
+   "moshi_comment": [
+    "Since your street is loud, the white noise machine might give you the quickest improvement. A steady bedtime is one of the most reliable habits for better sleep in general. Cutting afternoon coffee is tough, but it can make a real difference.",
+    "What usually keeps you up, is it noise, a busy mind, or just not feeling tired? If it's noise, try the white noise machine first. If you're not tired, cutting afternoon coffee is worth a shot."
+   ]
+  },
+  {
+   "id": "sleep.opt2",
+   "lead_in": "I'm buying a new mattress and I've narrowed it down.",
+   "options": [
+    "One is a firm memory foam mattress that a lot of reviews say is great for back pain.",
+    "Another is a soft pillow top spring mattress, really cozy, but it might sag after a few years.",
+    "Or there's a hybrid with springs and foam, medium firm, and a bit more expensive."
+   ],
+   "moshi_comment": [
+    "The hybrid is often a good balance of support and comfort, and medium firm suits most sleepers. The firm foam one is worth a look if your back hurts. The pillow top feels lovely in the store but may not last as long.",
+    "Do you sleep on your side, back or stomach? Side sleepers usually like something softer, so the hybrid could be ideal. If you have back pain, I'd try the firm foam one."
+   ]
+  },
+  {
+   "id": "sleep.opt3",
+   "lead_in": "My neck hurts every morning, so I'm shopping for a new pillow.",
+   "options": [
+    "There's a contoured memory foam pillow with a dip in the middle for your head.",
+    "Or a classic feather pillow, soft and squishy, that you can punch into shape.",
+    "A buckwheat pillow full of little husks, which apparently stays cool and supports well but rustles."
+   ],
+   "moshi_comment": [
+    "For neck pain, the contoured foam is often the most supportive. Feathers are comfy but flatten during the night, and buckwheat is a great middle ground if the rustling doesn't bother you.",
+    "If you sleep on your side, the contoured one or buckwheat will hold your neck better. The feather pillow is lovely to sink into, but it's the least likely to fix the ache."
+   ]
+  },
+  {
+   "id": "sleep.opt4",
+   "lead_in": "My dog has started sleeping in our bed and I need to decide what to do about it.",
+   "options": [
+    "We could buy him a nice dog bed and put it right next to ours, so he's still close.",
+    "Or crate train him in the kitchen at night with a blanket over the crate.",
+    "We could just give up and let him stay in the bed, he's a small dog after all.",
+    "Or close the bedroom door and let him have the whole living room sofa."
+   ],
+   "moshi_comment": [
+    "A dog bed beside yours is usually the gentlest change, he stays near you without kicking you at night. The crate works well too but takes more training, while letting him stay or giving him the sofa depends on how much you mind the fur.",
+    "If you're sleeping badly, the bed beside yours is the best compromise. The crate is good if he's anxious and likes a den, the sofa is easy but could become a habit, and keeping him in your bed is only fine if you both sleep well."
+   ]
+  },
+  {
+   "id": "sleep.opt5",
+   "lead_in": "I want to track my sleep for a month, and I'm not sure which way to do it.",
+   "options": [
+    "Wear a fitness watch to bed, which tracks heart rate and when I wake up.",
+    "Use a free app that sits on the mattress and listens for movement and snoring.",
+    "Or just keep a paper diary on my nightstand, writing bedtime and how rested I feel."
+   ],
+   "moshi_comment": [
+    "The watch gives you the most data without effort, but some people find it uncomfortable at night. The app is free and catches snoring, while the paper diary is surprisingly useful because it records how you actually feel.",
+    "A simple diary plus the free app is a great combination for a month. The watch is nice if you already own one, but don't worry too much about its exact sleep stages."
+   ]
+  },
+  {
+   "id": "sleep.opt6",
+   "lead_in": "My bedroom is way too bright in summer and I'm figuring out how to make it darker.",
+   "options": [
+    "Thick blackout curtains that cover the whole window and a bit past the edges.",
+    "A comfy silk eye mask, which is cheap but I always pull it off in my sleep.",
+    "Fitted blackout blinds inside the window frame, a bit pricey and need installing.",
+    "Or temporary blackout film stuck on the glass, which looks a bit strange from the street."
+   ],
+   "moshi_comment": [
+    "Fitted blinds give the darkest room, especially with curtains layered on top. Blackout curtains alone are a solid choice, the eye mask is fine for travel, and the film is a quick fix if you rent.",
+    "Since you pull masks off, the curtains or the fitted blinds will suit you better. The film is the cheapest way to go dark, it just looks odd from outside."
+   ]
+  }
+ ]
 }

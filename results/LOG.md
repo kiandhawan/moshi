@@ -3,6 +3,43 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-14: Content-unique datasets
+
+Every set is now content-unique: within train_1h, train_10h, control_10h and eval, no
+building block (context, side conversation, option set, ordinary dialogue, distractor
+exchange, phone call, door visit) is used in more than one file. Intended sharing stays:
+train_1h is a prefix of train_10h, and control_10h starts with the ordinary files of
+train_10h. Short phrasings (instructions, cues, greetings, acks, self-talk, murmurs, wait-like
+phrases) and voices still come from their fixed split lists and repeat.
+
+**Why:** with the old pools, contexts were reused up to 4 times in the 10 h set, ordinary
+dialogues up to 8 times in the control set and eval contexts up to 7 times. Repeated content
+inflates the "hours" of a set (the model hears the same conversation several times, which is
+closer to more epochs than to more data), lets eval scores depend on a few memorable
+contexts, and makes files that share a context correlated, so per-file statistics overstate
+the evidence.
+
+**How:**
+- Needed blocks per set computed from the script design (train list 720 scripts, control 500
+  ordinary, eval 400) plus about 10% spare; 1,820 new blocks (191k words) written by 14
+  parallel helpers on separate topics, with explicit variety requirements and a list of
+  overused stock phrases to avoid (`data/pools/NEW_BLOCKS.md`).
+- New `welcome_back` lines carry no greeting; the generator adds an opener that fits the wait.
+- `generate_scripts.py --unique`: content blocks are drawn without replacement and never
+  reshuffled; a script that is rebuilt (too long/short) gives its blocks back; a set that
+  runs out fails loudly. `--exclude-blocks-from` keeps the control additions off every block
+  of the training list. Same seeds (train 10, control 11, eval 12) and block design.
+- `check_duplicates.py`: near-duplicate check across all pools (word 3-gram containment >= 0.20
+  for long blocks, calibrated on a real pair at 0.24; content-word Jaccard >= 0.5 for short
+  exchanges). Flagged pairs: 1 before fixing (gardening.side1 / pets.side1, both old; none of
+  the new blocks), 0 after rewriting pets.side1.
+- Leakage check: one train near-miss (dn_37) contained a held-out implicit return verbatim
+  and was reworded. Eval phone calls / door visits are now compared block-to-block by the
+  near-duplicate check instead of line by line (everyday lines like "What should I prepare?"
+  matched by coincidence), and held-out phrases of two words or fewer are ignored.
+- Bootstrap CIs in score.py / eval_loss.py resample by cluster (the context, or the dialogue
+  / option set), so they now match the unit of independent content.
+
 ## 2026-11-14: Eval groups
 
 Eval files are tagged with what is new about them (events `groups`, a list): familiar_type,

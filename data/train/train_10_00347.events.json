@@ -1,42 +1,126 @@
 {
   "id": "train_10_00347",
-  "group": "think_time",
-  "user_start": 2.77,
-  "type": "think_time",
-  "conditions": [],
-  "instruction_start": 14.4,
-  "instruction_end": 16.88,
-  "wait_end": 76.88,
-  "resume_window": [
-    76.88,
-    80.88
+  "group": "side_conversation",
+  "user_start": 2.35,
+  "type": "side_conversation",
+  "conditions": [
+    "near_miss"
   ],
-  "wait_sec": 60.0,
-  "distractors": [],
-  "distractor_kinds": [],
-  "distractor_windows": [],
+  "cluster": "cooking.ctx3",
+  "instruction_start": 23.39,
+  "instruction_end": 28.19,
+  "wait_end": 58.45,
+  "resume_window": [
+    58.45,
+    63.45
+  ],
+  "wait_sec": 30.26,
+  "distractors": [
+    33.04,
+    45.84,
+    52.68
+  ],
+  "distractor_kinds": [
+    "friend_question",
+    "friend_question",
+    "near_miss"
+  ],
+  "distractor_windows": [
+    [
+      33.04,
+      33.71
+    ],
+    [
+      45.84,
+      47.02
+    ],
+    [
+      52.68,
+      53.97
+    ]
+  ],
   "ordinary_requests": [
-    8.03
+    7.7,
+    17.19
   ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.77,
-      "end": 4.16,
+      "start": 2.35,
+      "end": 3.24,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.49,
-      "end": 8.03,
+      "start": 3.52,
+      "end": 7.7,
       "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 14.4,
-      "end": 16.88,
+      "start": 15.8,
+      "end": 17.19,
+      "event": "ordinary_request"
+    },
+    {
+      "speaker": "user",
+      "start": 23.39,
+      "end": 28.19,
       "event": "instruction",
-      "kind": "think_time"
+      "kind": "side_conversation"
+    },
+    {
+      "speaker": "user",
+      "start": 30.3,
+      "end": 33.04,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 33.71,
+      "end": 37.49
+    },
+    {
+      "speaker": "user",
+      "start": 38.92,
+      "end": 40.82
+    },
+    {
+      "speaker": "friend",
+      "start": 41.22,
+      "end": 42.85
+    },
+    {
+      "speaker": "user",
+      "start": 43.18,
+      "end": 45.84,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 47.02,
+      "end": 49.38
+    },
+    {
+      "speaker": "user",
+      "start": 50.31,
+      "end": 52.68,
+      "event": "distractor",
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 53.97,
+      "end": 55.07
+    },
+    {
+      "speaker": "user",
+      "start": 56.43,
+      "end": 58.45,
+      "event": "return_cue",
+      "kind": "explicit"
     }
   ],
   "notes": "Rendered from script train_10_00347 by scripts/render.py.",
@@ -44,21 +128,33 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.61,
-      "end": 2.34,
-      "text": "Hi! How's life treating you?"
+      "start": 0.57,
+      "end": 1.7,
+      "text": "Hi, how are things with you?"
     },
     {
       "kind": "reply",
-      "start": 8.92,
-      "end": 14.08,
-      "text": "Got it. Are you thinking a long warm parka, or a shorter jacket that's easier to move in?"
+      "start": 9.63,
+      "end": 15.09,
+      "text": "Sure. Do you want one big batch of the same thing, like a chili, or two smaller recipes you can alternate?"
+    },
+    {
+      "kind": "reply",
+      "start": 18.07,
+      "end": 21.04,
+      "text": "No rush, it really depends on how much variety you need."
+    },
+    {
+      "kind": "ack",
+      "start": 28.7,
+      "end": 29.53,
+      "text": "No problem."
     },
     {
       "kind": "resume",
-      "start": 77.41,
-      "end": 81.01,
-      "text": "So, which coat are we hunting for, a long parka or something shorter?"
+      "start": 59.56,
+      "end": 63.72,
+      "text": "Alright. Did you decide between one batch and two alternating recipes?"
     }
   ]
 }

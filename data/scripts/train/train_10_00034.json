@@ -7,120 +7,166 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "baking"
+  "fitness",
+  "video_games"
  ],
- "topic": "baking",
+ "topic": "fitness",
  "voices": {
-  "user": "0efe38923c0b445ab09382e851ae1e30",
-  "friend": null,
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
+  "friend": "ec3f1730c4494386accf1e86625bfe6d",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Leo",
+ "friend_name_id": "name_07",
  "phrasing_ids": [
-  "greet_28",
-  "greet_ans_04"
+  "greet_02",
+  "greet_ans_04",
+  "side_instr_14",
+  "ack_03",
+  "side_cue_23"
  ],
  "block_ids": [
-  "baking.dlg3"
+  "fitness.ctx9",
+  "video_games.side2"
  ],
- "est_total_sec": 44.59,
- "est_speech_sec": 32.1,
+ "est_total_sec": 63.84,
+ "est_speech_sec": 45.93,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's everything today?",
-   "est_sec": 1.34,
-   "gap_before": 0.49,
+   "text": "Hi! How are you today?",
+   "est_sec": 1.65,
+   "gap_before": 0.7,
    "role": "greeting",
-   "phrasing": "greet_28"
+   "phrasing": "greet_02"
   },
   {
    "speaker": "user",
    "text": "Pretty well, actually.",
    "est_sec": 1.03,
-   "gap_before": 0.57,
+   "gap_before": 0.65,
    "event": "greeting_answer",
    "phrasing": "greet_ans_04"
   },
   {
    "speaker": "user",
-   "text": "I don't have buttermilk and the recipe needs it. Any way around that?",
-   "est_sec": 4.13,
-   "gap_before": 0.32,
+   "text": "I can never decide when to work out. Mornings I'm a zombie, evenings I'm lazy.",
+   "est_sec": 4.75,
+   "gap_before": 0.57,
    "event": "ordinary_request",
-   "block": "baking.dlg3"
+   "block": "fitness.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Easy fix. Stir a tablespoon of lemon juice or vinegar into a cup of regular milk and let it sit five minutes.",
-   "est_sec": 6.92,
-   "gap_before": 0.94,
+   "text": "Ha, tricky. The best time is the one you'll actually stick to. Would you rather get it over with first thing, or use it to unwind after work?",
+   "est_sec": 8.78,
+   "gap_before": 0.47,
    "role": "reply",
-   "block": "baking.dlg3"
+   "block": "fitness.ctx9"
   },
   {
    "speaker": "user",
-   "text": "It'll curdle, right? Is that okay?",
+   "text": "Wait a moment, my coworker is here. Please be quiet until I tell you I'm back.",
+   "est_sec": 5.06,
+   "gap_before": 1.41,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, take your time.",
+   "est_sec": 1.34,
+   "gap_before": 0.23,
+   "role": "ack",
+   "phrasing": "ack_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you take my controller again?",
    "est_sec": 1.96,
-   "gap_before": 0.99,
-   "event": "ordinary_request",
-   "block": "baking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's exactly what you want. It thickens and gets tangy like buttermilk.",
-   "est_sec": 3.82,
-   "gap_before": 0.59,
-   "role": "reply",
-   "block": "baking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Great. Oh, and I'm also",
-   "est_sec": 1.65,
-   "gap_before": 0.45,
+   "gap_before": 0.71,
    "event": "distractor",
-   "kind": "pause",
-   "block": "baking.dlg3"
+   "kind": "friend_question",
+   "block": "video_games.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Mine ran out of battery. I'll give it back.",
+   "est_sec": 2.89,
+   "gap_before": 0.94,
+   "block": "video_games.side2"
   },
   {
    "speaker": "user",
-   "text": "out of eggs. Is that a disaster?",
+   "text": "You said that yesterday.",
+   "est_sec": 1.34,
+   "gap_before": 0.99,
+   "block": "video_games.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Okay, okay. It's on the couch, under the blanket.",
+   "est_sec": 2.89,
+   "gap_before": 1.32,
+   "block": "video_games.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "And the charger?",
+   "est_sec": 1.03,
+   "gap_before": 1.36,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "video_games.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "No idea. Probably in your room, honestly.",
    "est_sec": 2.27,
-   "gap_before": 1.91,
-   "event": "ordinary_request",
-   "block": "baking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Not for most cakes. A quarter cup of plain yogurt or mashed banana can replace one egg.",
-   "est_sec": 5.37,
-   "gap_before": 0.34,
-   "role": "reply",
-   "block": "baking.dlg3"
+   "gap_before": 3.06,
+   "block": "video_games.side2"
   },
   {
    "speaker": "user",
-   "text": "I have yogurt. Okay, I'm saved.",
-   "est_sec": 1.96,
-   "gap_before": 3.32,
-   "event": "ordinary_request",
-   "block": "baking.dlg3"
+   "text": "Alright, all done. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.3,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_23"
   },
   {
    "speaker": "moshi",
-   "text": "Nice save. Enjoy your baking.",
-   "est_sec": 1.65,
-   "gap_before": 1.07,
-   "role": "reply",
-   "block": "baking.dlg3"
+   "text": "Okay. The workout time. Morning or evening?",
+   "est_sec": 2.27,
+   "gap_before": 0.64,
+   "role": "resume",
+   "block": "fitness.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Evenings. I need something to look forward to.",
+   "est_sec": 2.58,
+   "gap_before": 0.89,
+   "event": "ordinary_request",
+   "block": "fitness.ctx9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Go straight from work, don't stop at home first. The sofa is very persuasive.",
+   "est_sec": 4.44,
+   "gap_before": 1.17,
+   "role": "followup",
+   "block": "fitness.ctx9"
   }
  ]
 }

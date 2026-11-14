@@ -7,127 +7,131 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "think_time",
  "wait_type": "think_time",
  "conditions": [
-  "extension"
+  "self_talk"
  ],
  "topics": [
-  "cycling"
+  "home_office"
  ],
  "wait_sec": 30,
- "extension": {
-  "extra_sec": 5,
-  "said_before_deadline_sec": 1.29
- },
  "deadline": {
-  "after_turn": 6,
-  "sec": 5
+  "after_turn": 4,
+  "sec": 30
  },
- "topic": "cycling",
+ "topic": "home_office",
  "voices": {
-  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "user": "933563129e564b19a115bedd57b7406a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_21",
-  "greet_ans_21",
-  "think_instr_21",
-  "ack_05",
-  "extension_06"
+  "greet_03",
+  "greet_ans_30",
+  "think_instr_30",
+  "self_30"
  ],
  "block_ids": [
-  "cycling.ctx1"
+  "home_office.ctx12"
  ],
- "est_total_sec": 62.26,
- "est_speech_sec": 24.36,
+ "est_total_sec": 66.36,
+ "est_speech_sec": 31.9,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there! How's it going today?",
-   "est_sec": 1.96,
-   "gap_before": 0.75,
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.63,
    "role": "greeting",
-   "phrasing": "greet_21",
+   "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.38,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.5,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
+   "phrasing": "greet_ans_30"
   },
   {
    "speaker": "user",
-   "text": "I want to start biking to work instead of taking the bus.",
-   "est_sec": 3.82,
-   "gap_before": 0.46,
+   "text": "The kids are off school for the summer and I still have to work full time.",
+   "est_sec": 5.06,
+   "gap_before": 0.42,
    "event": "ordinary_request",
-   "block": "cycling.ctx1"
+   "block": "home_office.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "Love that. There's the quick route along the main road or the longer one through the park. Which sounds better to you?",
-   "est_sec": 6.92,
-   "gap_before": 0.45,
+   "text": "That's a juggle. Would you rather do your focused work very early before they wake up, or split the day in shifts with your partner?",
+   "est_sec": 7.85,
+   "gap_before": 0.91,
    "role": "reply",
-   "block": "cycling.ctx1",
+   "block": "home_office.ctx12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Okay, let me think for thirty seconds. Ask me again after that.",
+   "text": "Wait, give me thirty seconds to think and then ask me again.",
    "est_sec": 3.82,
-   "gap_before": 1.13,
+   "gap_before": 0.86,
    "event": "instruction",
    "kind": "think_time",
    "wait_sec": 30,
-   "phrasing": "think_instr_21"
+   "phrasing": "think_instr_30"
+  },
+  {
+   "speaker": "user",
+   "text": "Mm, hold on, hold on.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 7.89
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_30"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, I'll wait.",
-   "est_sec": 1.03,
-   "gap_before": 0.29,
-   "role": "ack",
-   "phrasing": "ack_05",
+   "text": "Now then, early mornings, or trading shifts with your partner?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "home_office.ctx12",
+   "anchor": {
+    "turn": 4,
+    "offset": 30.12
+   },
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Can I have five more seconds?",
-   "est_sec": 1.96,
-   "event": "extension",
-   "extra_sec": 5,
-   "phrasing": "extension_06",
-   "anchor": {
-    "turn": 4,
-    "offset": 28.71
-   }
+   "text": "Early mornings. I'm up at five anyway.",
+   "est_sec": 2.27,
+   "gap_before": 0.65,
+   "event": "ordinary_request",
+   "block": "home_office.ctx12"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, time's up. Main road or through the park for your commute?",
-   "est_sec": 3.82,
-   "role": "resume",
-   "block": "cycling.ctx1",
-   "anchor": {
-    "turn": 6,
-    "offset": 5.55
-   },
+   "text": "Then protect those hours for your hardest work, and keep afternoons for calls and email.",
+   "est_sec": 4.75,
+   "gap_before": 0.52,
+   "role": "followup",
+   "block": "home_office.ctx12",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

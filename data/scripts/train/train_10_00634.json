@@ -7,120 +7,118 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "studying"
+  "birthday_party"
  ],
- "topic": "studying",
+ "topic": "birthday_party",
  "voices": {
-  "user": "a52fdd0e957b4c288d8ec590bdd10288",
+  "user": "6d7a45828f6a432c9233cd93bb93e5be",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_14",
-  "greet_ans_28"
+  "greet_28",
+  "greet_ans_10",
+  "describe_instr_17",
+  "ack_16",
+  "describe_cue_08"
  ],
  "block_ids": [
-  "studying.dlg1"
+  "birthday_party.opt2"
  ],
- "est_total_sec": 59.03,
- "est_speech_sec": 42.95,
+ "est_total_sec": 53.53,
+ "est_speech_sec": 43.16,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How's life treating you?",
-   "est_sec": 1.65,
-   "gap_before": 0.43,
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.79,
    "role": "greeting",
-   "phrasing": "greet_14"
+   "phrasing": "greet_28"
   },
   {
    "speaker": "user",
-   "text": "Doing alright, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.71,
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.44,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
+   "phrasing": "greet_ans_10"
   },
   {
    "speaker": "user",
-   "text": "How long should I study before taking a break?",
+   "text": "I'm planning a surprise party for my best friend's thirtieth and I have a few ideas.",
+   "est_sec": 5.06,
+   "gap_before": 0.41,
+   "block": "birthday_party.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Let me finish describing every option before you respond.",
    "est_sec": 2.89,
-   "gap_before": 0.43,
-   "event": "ordinary_request",
-   "block": "studying.dlg1"
+   "gap_before": 0.6,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_17"
   },
   {
    "speaker": "moshi",
-   "text": "A lot of people like about twenty-five minutes of focus, then a five minute break. After four rounds, take a longer one.",
-   "est_sec": 6.92,
-   "gap_before": 0.57,
-   "role": "reply",
-   "block": "studying.dlg1"
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.5,
+   "role": "ack",
+   "phrasing": "ack_16"
   },
   {
    "speaker": "user",
-   "text": "Twenty-five feels short. I usually go for like two hours straight.",
-   "est_sec": 3.51,
-   "gap_before": 1.39,
-   "event": "ordinary_request",
-   "block": "studying.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You can stretch it to fifty minutes if that suits you. Two hours without a break usually means the last half isn't sinking in.",
-   "est_sec": 7.54,
-   "gap_before": 0.76,
-   "role": "reply",
-   "block": "studying.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, and what should I do during the break? I always",
-   "est_sec": 3.51,
-   "gap_before": 2.57,
+   "text": "One is renting the back room of her favorite restaurant for a dinner with about twenty people.",
+   "est_sec": 5.37,
+   "gap_before": 1.19,
+   "block": "birthday_party.opt2",
    "event": "distractor",
-   "kind": "pause",
-   "block": "studying.dlg1"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "end up on my phone.",
-   "est_sec": 1.65,
-   "gap_before": 2.24,
-   "event": "ordinary_request",
-   "block": "studying.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try getting up instead. Walk around, refill your water, stretch. Your phone tends to turn five minutes into twenty.",
-   "est_sec": 5.99,
-   "gap_before": 1.26,
-   "role": "reply",
-   "block": "studying.dlg1"
+   "text": "Another option is a house party at my place with music and lots of snacks.",
+   "est_sec": 4.75,
+   "gap_before": 1.97,
+   "block": "birthday_party.opt2",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Ha, that's exactly what happens. I'll try leaving it in the other room.",
-   "est_sec": 4.13,
-   "gap_before": 3.3,
-   "event": "ordinary_request",
-   "block": "studying.dlg1"
+   "text": "Or I could plan a smaller weekend trip with just her five closest friends.",
+   "est_sec": 4.44,
+   "gap_before": 2.03,
+   "block": "birthday_party.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all. Which sounds best to you?",
+   "est_sec": 2.58,
+   "gap_before": 0.62,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_08"
   },
   {
    "speaker": "moshi",
-   "text": "That's one of the simplest tricks that actually works. Good luck with it.",
-   "est_sec": 4.13,
-   "gap_before": 0.92,
-   "role": "reply",
-   "block": "studying.dlg1"
+   "text": "The restaurant dinner feels special and you don't have to clean up after. A house party is cheaper and more relaxed, but you'd be busy hosting. The weekend trip is the most memorable, though it's harder to keep a surprise when people need to plan time off.",
+   "est_sec": 14.67,
+   "gap_before": 0.32,
+   "role": "resume",
+   "block": "birthday_party.opt2"
   }
  ]
 }

@@ -7,111 +7,164 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "sleep"
+  "studying",
+  "shopping"
  ],
- "topic": "sleep",
+ "topic": "studying",
  "voices": {
-  "user": "cfc0d21e0b5947d08b957b2061670c0a",
-  "friend": null,
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
+  "friend": "3fdb457debb744ca9cfe9e2ce99a2deb",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Leo",
+ "friend_name_id": "name_07",
  "phrasing_ids": [
-  "greet_20",
-  "greet_ans_04"
+  "greet_13",
+  "greet_ans_28",
+  "side_instr_02",
+  "ack_08",
+  "side_cue_23"
  ],
  "block_ids": [
-  "sleep.dlg1"
+  "studying.ctx10",
+  "shopping.side5"
  ],
- "est_total_sec": 45.6,
- "est_speech_sec": 35.41,
+ "est_total_sec": 69.6,
+ "est_speech_sec": 52.13,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, good to have you here. How are you?",
+   "text": "Hey, nice to hear from you. How are you?",
    "est_sec": 2.89,
-   "gap_before": 0.8,
+   "gap_before": 0.65,
    "role": "greeting",
-   "phrasing": "greet_20"
+   "phrasing": "greet_13"
   },
   {
    "speaker": "user",
-   "text": "Pretty well, actually.",
+   "text": "Doing alright, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.46,
+   "gap_before": 0.75,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_04"
+   "phrasing": "greet_ans_28"
   },
   {
    "speaker": "user",
-   "text": "Is it bad to drink coffee in the afternoon?",
-   "est_sec": 2.89,
-   "gap_before": 0.29,
+   "text": "Exam at nine tomorrow. It's eleven at night and I've still got two topics left.",
+   "est_sec": 4.75,
+   "gap_before": 0.31,
    "event": "ordinary_request",
-   "block": "sleep.dlg1"
+   "block": "studying.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "For a lot of people, yes. Caffeine can stay in your system for six hours or more, so a cup at four can still keep you up at ten.",
-   "est_sec": 9.09,
-   "gap_before": 0.76,
+   "text": "Okay, it's late. Do you want to spend thirty minutes on a quick summary of those topics, or call it now and get proper sleep?",
+   "est_sec": 7.85,
+   "gap_before": 1.26,
    "role": "reply",
-   "block": "sleep.dlg1"
+   "block": "studying.ctx10"
   },
   {
    "speaker": "user",
-   "text": "Wow. What about tea?",
-   "est_sec": 1.34,
-   "gap_before": 1.27,
-   "event": "ordinary_request",
-   "block": "sleep.dlg1"
+   "text": "Give me a minute, my friend just walked in. Don't say anything until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.12,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_02"
   },
   {
    "speaker": "moshi",
-   "text": "Black and green tea have less caffeine, but still some. Herbal teas like chamomile or mint have none.",
-   "est_sec": 5.68,
-   "gap_before": 0.72,
-   "role": "reply",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "I usually need",
+   "text": "Sure, go ahead.",
    "est_sec": 1.03,
-   "gap_before": 0.33,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "sleep.dlg1"
+   "gap_before": 0.26,
+   "role": "ack",
+   "phrasing": "ack_08"
   },
   {
    "speaker": "user",
-   "text": "something around three to get through work.",
-   "est_sec": 2.27,
-   "gap_before": 2.81,
-   "event": "ordinary_request",
-   "block": "sleep.dlg1"
+   "text": "Did you bring the tape measure?",
+   "est_sec": 1.96,
+   "gap_before": 0.65,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "I thought you had it.",
+   "est_sec": 1.65,
+   "gap_before": 1.31,
+   "block": "shopping.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "No, I said remind me to bring it. That's different.",
+   "est_sec": 3.2,
+   "gap_before": 0.86,
+   "block": "shopping.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Well, I'm reminding you now.",
+   "est_sec": 1.65,
+   "gap_before": 3.39,
+   "block": "shopping.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Very helpful. Okay, that alcove is about as wide as my arms out, right?",
+   "est_sec": 4.44,
+   "gap_before": 0.44,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Your arms or my arms? Mine are longer.",
+   "est_sec": 2.58,
+   "gap_before": 0.35,
+   "block": "shopping.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Ugh. Let's just take a photo of the shelf label and measure at home tonight.",
+   "est_sec": 4.75,
+   "gap_before": 1.39,
+   "block": "shopping.side5"
+  },
+  {
+   "speaker": "friend",
+   "text": "Good. And if it fits, we come back Saturday and borrow my dad's van.",
+   "est_sec": 4.44,
+   "gap_before": 1.28,
+   "block": "shopping.side5"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, all done. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.36,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_23"
   },
   {
    "speaker": "moshi",
-   "text": "Try a short walk outside or a glass of cold water instead. A little daylight and movement can wake you up surprisingly well.",
-   "est_sec": 7.23,
-   "gap_before": 0.95,
-   "role": "reply",
-   "block": "sleep.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll give it a shot tomorrow.",
-   "est_sec": 1.96,
-   "gap_before": 0.3,
-   "block": "sleep.dlg1"
+   "text": "Alright. The night before your exam. A short review, or bed?",
+   "est_sec": 3.51,
+   "gap_before": 0.59,
+   "role": "resume",
+   "block": "studying.ctx10"
   }
  ]
 }

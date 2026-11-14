@@ -7,167 +7,158 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "implicit",
-  "near_miss"
- ],
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [],
  "topics": [
-  "cycling",
-  "home_office"
+  "cycling"
  ],
  "topic": "cycling",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
-  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "user": "026218fe0c054374838d934016f34082",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Sofia",
- "friend_name_id": "name_12",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_09",
-  "greet_ans_27",
-  "side_instr_18",
-  "dn_15",
-  "implicit_07"
+  "greet_15",
+  "greet_ans_24",
+  "phone_instr_07",
+  "ack_09",
+  "call_01",
+  "phone_cue_05"
  ],
  "block_ids": [
-  "cycling.ctx1",
-  "home_office.side1"
+  "cycling.ctx18",
+  "call_01"
  ],
- "est_total_sec": 64.34,
- "est_speech_sec": 44.9,
+ "est_total_sec": 60.17,
+ "est_speech_sec": 33.02,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's it going?",
-   "est_sec": 1.34,
-   "gap_before": 0.7,
-   "role": "greeting",
-   "phrasing": "greet_09",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "All good here.",
-   "est_sec": 1.03,
-   "gap_before": 0.72,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_27"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to start biking to work instead of taking the bus.",
-   "est_sec": 3.82,
-   "gap_before": 0.3,
-   "event": "ordinary_request",
-   "block": "cycling.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Love that. There's the quick route along the main road or the longer one through the park. Which sounds better to you?",
-   "est_sec": 6.92,
-   "gap_before": 1.03,
-   "role": "reply",
-   "block": "cycling.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hold up, my mom is asking me something. Please don't say anything until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 1.04,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_18"
-  },
-  {
-   "speaker": "user",
-   "text": "Back in a sec, I need to grab a pen.",
-   "est_sec": 3.2,
-   "gap_before": 0.73,
-   "event": "distractor",
-   "kind": "near_miss",
-   "phrasing": "dn_15"
-  },
-  {
-   "speaker": "friend",
-   "text": "No problem.",
-   "est_sec": 0.72,
-   "gap_before": 0.61,
-   "phrasing": "dn_15"
-  },
-  {
-   "speaker": "user",
-   "text": "Sofia, are you on a call right now?",
-   "est_sec": 2.58,
-   "gap_before": 2.8,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "In five minutes. Why?",
-   "est_sec": 1.34,
-   "gap_before": 0.54,
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "I have a big meeting at ten too. Can you take yours in the bedroom?",
-   "est_sec": 4.75,
-   "gap_before": 2.1,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Only if I can borrow your headphones.",
-   "est_sec": 2.27,
-   "gap_before": 3.31,
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Deal. They're on the shelf by the printer.",
-   "est_sec": 2.58,
-   "gap_before": 0.31,
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "friend",
-   "text": "Got them. Close the door when you start, the dog keeps barking.",
-   "est_sec": 3.82,
-   "gap_before": 1.02,
-   "block": "home_office.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "So, what were you saying?",
+   "text": "Hey, how's your week going?",
    "est_sec": 1.65,
-   "gap_before": 1.54,
-   "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_07"
+   "gap_before": 0.61,
+   "role": "greeting",
+   "phrasing": "greet_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.97,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
+  },
+  {
+   "speaker": "user",
+   "text": "I want to join a local cycling club but I'm scared of being dropped.",
+   "est_sec": 4.44,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "cycling.ctx18"
   },
   {
    "speaker": "moshi",
-   "text": "Right. You were choosing your bike route to work, main road or park.",
+   "text": "Totally understandable. Many clubs have a no drop social ride as well as faster groups. Which would you start with?",
+   "est_sec": 6.3,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "cycling.ctx18",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One second, someone's calling me. Don't talk until I say I'm back.",
+   "est_sec": 3.82,
+   "gap_before": 0.99,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Take your time.",
+   "est_sec": 1.03,
+   "gap_before": 0.38,
+   "role": "ack",
+   "phrasing": "ack_09",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hello?",
+   "est_sec": 0.41,
+   "gap_before": 1.91,
+   "phrasing": "call_01",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh hi, Mom.",
+   "est_sec": 1.03,
+   "gap_before": 3.39,
+   "phrasing": "call_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Yeah, I'm fine. Just busy.",
+   "est_sec": 1.65,
+   "gap_before": 2.77,
+   "phrasing": "call_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Did you get my message about Sunday?",
+   "est_sec": 2.27,
+   "gap_before": 3.97,
+   "phrasing": "call_01",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, good.",
+   "est_sec": 0.72,
+   "gap_before": 3.75,
+   "phrasing": "call_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Love you too, bye.",
+   "est_sec": 1.34,
+   "gap_before": 2.87,
+   "phrasing": "call_01"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I hung up. I'm all yours.",
+   "est_sec": 2.27,
+   "gap_before": 1.92,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "phone_cue_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, you're off the phone. Alright, which ride will you show up for?",
    "est_sec": 4.13,
-   "gap_before": 1.19,
+   "gap_before": 0.6,
    "role": "resume",
-   "block": "cycling.ctx1",
+   "block": "cycling.ctx18",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "implicit_return"
+  "new_type_phone"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

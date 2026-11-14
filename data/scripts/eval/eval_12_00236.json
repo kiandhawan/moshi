@@ -7,119 +7,186 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "painting_art"
+  "wedding_planning",
+  "restaurant_choice"
  ],
- "wait_sec": 15,
- "deadline": {
-  "after_turn": 4,
-  "sec": 15
- },
- "topic": "painting_art",
+ "topic": "wedding_planning",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
-  "friend": null,
+  "user": "7bb342e710854139b1d6e12411229f1f",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Aisha",
+ "friend_name_id": "name_18",
  "phrasing_ids": [
-  "greet_15",
-  "greet_ans_27",
-  "think_instr_21",
-  "ack_12"
+  "greet_27",
+  "greet_ans_24",
+  "side_instr_27",
+  "side_cue_24"
  ],
  "block_ids": [
-  "painting_art.ctx1"
+  "wedding_planning.ctx15",
+  "restaurant_choice.side4"
  ],
- "est_total_sec": 53.98,
- "est_speech_sec": 32.52,
+ "est_total_sec": 82.37,
+ "est_speech_sec": 60.08,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's your week going?",
-   "est_sec": 1.65,
-   "gap_before": 0.67,
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.48,
    "role": "greeting",
-   "phrasing": "greet_15",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "All good here.",
-   "est_sec": 1.03,
-   "gap_before": 0.76,
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.77,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_27"
+   "phrasing": "greet_ans_24"
   },
   {
    "speaker": "user",
-   "text": "I finally bought some paints and I want to start a little hobby.",
-   "est_sec": 4.13,
-   "gap_before": 0.25,
-   "event": "ordinary_request",
-   "block": "painting_art.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's exciting. Did you get watercolors or acrylics, and do you want to start with landscapes or something simpler like fruit on a table?",
-   "est_sec": 7.54,
-   "gap_before": 0.47,
-   "role": "reply",
-   "block": "painting_art.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, let me think for fifteen seconds. Ask me again after that.",
+   "text": "Hair and makeup quotes are insane. Like, four hundred just for me.",
    "est_sec": 3.82,
-   "gap_before": 1.35,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_21"
+   "gap_before": 0.49,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx15"
   },
   {
    "speaker": "moshi",
-   "text": "Sure thing.",
-   "est_sec": 0.72,
-   "gap_before": 0.32,
-   "role": "ack",
-   "phrasing": "ack_12",
-   "reference_only": true
-  },
-  {
-   "speaker": "moshi",
-   "text": "So, what did you land on? Landscape, or something like a bowl of fruit?",
-   "est_sec": 4.44,
-   "role": "resume",
-   "block": "painting_art.ctx1",
-   "anchor": {
-    "turn": 4,
-    "offset": 15.03
-   },
+   "text": "Yeah, it adds up fast. How confident are you doing your own?",
+   "est_sec": 3.82,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "wedding_planning.ctx15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Let's keep it easy, I'll paint a couple of lemons and a mug.",
-   "est_sec": 4.13,
-   "gap_before": 1.44,
+   "text": "I'm okay on a normal day, but this isn't a normal day.",
+   "est_sec": 3.82,
+   "gap_before": 1.37,
    "event": "ordinary_request",
-   "block": "painting_art.ctx1"
+   "block": "wedding_planning.ctx15"
   },
   {
    "speaker": "moshi",
-   "text": "Good pick. Set them near a window so you get one clear shadow to work with.",
+   "text": "True. A pro just for you, or your own makeup after a practice run?",
+   "est_sec": 4.44,
+   "gap_before": 0.77,
+   "role": "reply",
+   "block": "wedding_planning.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Just a minute, I have to answer my roommate. Please stay quiet until I return.",
+   "est_sec": 4.75,
+   "gap_before": 0.54,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_27"
+  },
+  {
+   "speaker": "user",
+   "text": "Did your brother ever text back about Saturday?",
+   "est_sec": 2.58,
+   "gap_before": 0.81,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "restaurant_choice.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, he's in, but he says no more Indian food, he had it three times this week.",
+   "est_sec": 5.37,
+   "gap_before": 1.57,
+   "block": "restaurant_choice.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Three times? Okay, so what does he want instead?",
+   "est_sec": 2.89,
+   "gap_before": 1.39,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "restaurant_choice.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "He said anything with a burger on the menu.",
+   "est_sec": 2.89,
+   "gap_before": 1.49,
+   "block": "restaurant_choice.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "That rules out half the list. Do you think the gastropub does burgers?",
+   "est_sec": 4.13,
+   "gap_before": 1.4,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "restaurant_choice.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "They do, and they're massive. I had one there in June.",
+   "est_sec": 3.51,
+   "gap_before": 1.17,
+   "block": "restaurant_choice.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Perfect, I'll book a table for four.",
+   "est_sec": 2.27,
+   "gap_before": 3.33,
+   "block": "restaurant_choice.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back. You can talk now.",
+   "est_sec": 2.27,
+   "gap_before": 0.94,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. So, are you booking someone?",
+   "est_sec": 2.27,
+   "gap_before": 1.12,
+   "role": "resume",
+   "block": "wedding_planning.ctx15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "I'll do it myself. I'll practise twice.",
+   "est_sec": 2.27,
+   "gap_before": 1.5,
+   "event": "ordinary_request",
+   "block": "wedding_planning.ctx15"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Smart. Take a photo in daylight after each trial, that's how the camera will see it.",
    "est_sec": 5.06,
-   "gap_before": 0.71,
+   "gap_before": 0.72,
    "role": "followup",
-   "block": "painting_art.ctx1",
+   "block": "wedding_planning.ctx15",
    "reference_only": true
   }
  ],

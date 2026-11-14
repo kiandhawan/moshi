@@ -7,129 +7,148 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "home_office"
+  "podcasts",
+  "laptop_buying"
  ],
- "topic": "home_office",
+ "topic": "podcasts",
  "voices": {
   "user": "732ea755bd9e446eb31dc79966b50428",
-  "friend": null,
+  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Marcus",
+ "friend_name_id": "name_09",
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_30"
+  "greet_21",
+  "greet_ans_09",
+  "side_instr_18",
+  "side_cue_21"
  ],
  "block_ids": [
-  "home_office.dlg3"
+  "podcasts.ctx14",
+  "laptop_buying.side1"
  ],
- "est_total_sec": 48.4,
- "est_speech_sec": 37.37,
+ "est_total_sec": 54.18,
+ "est_speech_sec": 40.98,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
+   "text": "Hi there! How's it going today?",
    "est_sec": 1.96,
-   "gap_before": 0.6,
-   "role": "greeting",
-   "phrasing": "greet_27",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.87,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
-  },
-  {
-   "speaker": "user",
-   "text": "My video calls look terrible. How do I make them better?",
-   "est_sec": 3.51,
-   "gap_before": 0.58,
-   "event": "ordinary_request",
-   "block": "home_office.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Lighting makes the biggest difference. Sit facing a window or a lamp, never with the light behind you.",
-   "est_sec": 5.68,
-   "gap_before": 0.37,
-   "role": "reply",
-   "block": "home_office.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "My desk faces a wall, and the window is behind me.",
-   "est_sec": 3.51,
-   "gap_before": 1.15,
-   "event": "ordinary_request",
-   "block": "home_office.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then put a small lamp behind your screen, pointing at your face. A cheap ring light works well too.",
-   "est_sec": 5.99,
    "gap_before": 0.44,
-   "role": "reply",
-   "block": "home_office.dlg3",
+   "role": "greeting",
+   "phrasing": "greet_21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Okay. And the sound is kind of",
-   "est_sec": 2.27,
-   "gap_before": 0.67,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "home_office.dlg3"
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.61,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "echoey in my room.",
-   "est_sec": 1.34,
-   "gap_before": 1.53,
-   "event": "ordinary_request",
-   "block": "home_office.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Soft things absorb echo, like a rug, curtains, or even a bookshelf. A headset microphone also helps a lot.",
-   "est_sec": 5.99,
-   "gap_before": 1.39,
-   "role": "reply",
-   "block": "home_office.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "What about the camera angle?",
-   "est_sec": 1.65,
-   "gap_before": 1.36,
-   "event": "ordinary_request",
-   "block": "home_office.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Raise it to eye level. Looking up from below is never flattering.",
+   "text": "My co-host moved to another city, so our podcast is in trouble.",
    "est_sec": 3.82,
-   "gap_before": 0.57,
+   "gap_before": 0.33,
+   "event": "ordinary_request",
+   "block": "podcasts.ctx14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It can survive this. Record remotely each week, or meet up in person once a month and batch a few episodes?",
+   "est_sec": 6.61,
+   "gap_before": 0.58,
    "role": "reply",
-   "block": "home_office.dlg3",
+   "block": "podcasts.ctx14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Hold up, my mom is asking me something. Please don't say anything until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.06,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_18"
+  },
+  {
+   "speaker": "user",
+   "text": "Marcus, how do you like your laptop? You've had it a while now.",
+   "est_sec": 4.13,
+   "gap_before": 1.28,
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Honestly, I love it. The battery lasts all day.",
+   "est_sec": 2.89,
+   "gap_before": 1.19,
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Does it get hot when you play games?",
+   "est_sec": 2.58,
+   "gap_before": 0.97,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "A little, but the fan isn't loud.",
+   "est_sec": 2.27,
+   "gap_before": 1.44,
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm. Was it expensive?",
+   "est_sec": 1.34,
+   "gap_before": 0.93,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Not too bad, I got it on sale. I can send you the link.",
+   "est_sec": 4.44,
+   "gap_before": 1.18,
+   "block": "laptop_buying.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Right, I'm back. What was I saying?",
+   "est_sec": 2.27,
+   "gap_before": 1.2,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_21"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem. So, how is the show going to survive?",
+   "est_sec": 3.2,
+   "gap_before": 0.49,
+   "role": "resume",
+   "block": "podcasts.ctx14",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

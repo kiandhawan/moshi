@@ -7,15 +7,21 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "reading",
+ "wait_type": "reading",
  "conditions": [],
  "topics": [
-  "podcasts"
+  "wedding_planning"
  ],
- "topic": "podcasts",
+ "reading": {
+  "material": "recipe",
+  "sec": 10.1
+ },
+ "topic": "wedding_planning",
  "voices": {
   "user": "b121b91872f54f04ba9f6da08b8b6253",
   "friend": null,
@@ -24,112 +30,124 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_12"
+  "greet_09",
+  "greet_ans_12",
+  "read_instr_04",
+  "ack_04",
+  "murmur_05",
+  "read_cue_04"
  ],
  "block_ids": [
-  "podcasts.dlg1"
+  "wedding_planning.ctx11"
  ],
- "est_total_sec": 46.3,
- "est_speech_sec": 35.2,
+ "est_total_sec": 51.9,
+ "est_speech_sec": 33.96,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
-   "est_sec": 1.96,
-   "gap_before": 0.65,
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.39,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "Okay, I guess.",
    "est_sec": 1.03,
-   "gap_before": 0.39,
+   "gap_before": 0.76,
    "event": "greeting_answer",
    "phrasing": "greet_ans_12"
   },
   {
    "speaker": "user",
-   "text": "Can you recommend a podcast that helps me fall asleep?",
-   "est_sec": 3.2,
-   "gap_before": 0.46,
+   "text": "My cousin's wedding is next month. Their registry is mostly kitchen stuff, but they hinted they'd prefer money.",
+   "est_sec": 5.68,
+   "gap_before": 0.58,
    "event": "ordinary_request",
-   "block": "podcasts.dlg1"
+   "block": "wedding_planning.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "There are shows made just for that, where someone reads slow, gentle stories. Calm nature documentaries in audio form work well too.",
-   "est_sec": 6.92,
-   "gap_before": 0.76,
+   "text": "Then a gift card or cash in a card will probably make them happiest. Or would giving money feel too impersonal to you?",
+   "est_sec": 7.23,
+   "gap_before": 1.1,
    "role": "reply",
-   "block": "podcasts.dlg1",
+   "block": "wedding_planning.ctx11",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I tried one but the guy's voice was",
-   "est_sec": 2.58,
-   "gap_before": 0.32,
+   "text": "Hang on, let me read this recipe first. Don't talk until I'm finished.",
+   "est_sec": 4.13,
+   "gap_before": 1.46,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_04"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No problem.",
+   "est_sec": 0.72,
+   "gap_before": 0.43,
+   "role": "ack",
+   "phrasing": "ack_04",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Bake for twenty minutes, okay.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 6.97
+   },
    "event": "distractor",
-   "kind": "pause",
-   "block": "podcasts.dlg1"
+   "kind": "self_talk",
+   "phrasing": "murmur_05"
   },
   {
    "speaker": "user",
-   "text": "kind of annoying.",
-   "est_sec": 1.03,
-   "gap_before": 1.99,
-   "event": "ordinary_request",
-   "block": "podcasts.dlg1"
+   "text": "Done, I read through it.",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 10.1
+   },
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "read_cue_04"
   },
   {
    "speaker": "moshi",
-   "text": "Voice matters a lot for sleep. Try a few episodes from different hosts and keep the one that feels most soothing.",
-   "est_sec": 6.61,
-   "gap_before": 1.18,
-   "role": "reply",
-   "block": "podcasts.dlg1",
+   "text": "Finished reading? So, which way did you go on the gift?",
+   "est_sec": 3.51,
+   "gap_before": 0.83,
+   "role": "resume",
+   "block": "wedding_planning.ctx11",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Should I use a sleep timer?",
-   "est_sec": 1.96,
-   "gap_before": 0.88,
+   "text": "I'll get the stand mixer. I want them to have something from me.",
+   "est_sec": 4.13,
+   "gap_before": 2.45,
    "event": "ordinary_request",
-   "block": "podcasts.dlg1"
+   "block": "wedding_planning.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Yes, set it for about thirty minutes. Otherwise you'll wake up halfway through the next episode.",
-   "est_sec": 5.06,
-   "gap_before": 0.71,
-   "role": "reply",
-   "block": "podcasts.dlg1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "That happened last week. Very confusing.",
-   "est_sec": 1.96,
-   "gap_before": 1.44,
-   "event": "ordinary_request",
-   "block": "podcasts.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It's a common surprise. Turning off autoplay helps too.",
+   "text": "Lovely, they'll think of you every time they bake.",
    "est_sec": 2.89,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "podcasts.dlg1",
+   "gap_before": 1.14,
+   "role": "followup",
+   "block": "wedding_planning.ctx11",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "new_type_reading"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

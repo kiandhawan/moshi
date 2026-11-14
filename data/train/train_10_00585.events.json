@@ -1,85 +1,118 @@
 {
   "id": "train_10_00585",
-  "group": "describe_options",
-  "user_start": 2.36,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 8.29,
-  "instruction_end": 12.64,
-  "wait_end": 39.85,
-  "resume_window": [
-    39.85,
-    44.85
+  "group": "side_conversation",
+  "user_start": 2.56,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question"
   ],
-  "wait_sec": 27.21,
+  "cluster": "smartphones.ctx7",
+  "instruction_start": 14.59,
+  "instruction_end": 19.54,
+  "wait_end": 59.33,
+  "resume_window": [
+    59.33,
+    64.33
+  ],
+  "wait_sec": 39.79,
   "distractors": [
-    18.22,
-    24.95
+    34.18,
+    52.81
   ],
   "distractor_kinds": [
-    "pause",
-    "pause"
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      18.22,
-      20.1
+      34.18,
+      34.75
     ],
     [
-      24.95,
-      26.74
+      52.81,
+      53.78
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    8.31,
+    69.55
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.36,
-      "end": 3.28,
+      "start": 2.56,
+      "end": 3.59,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 3.73,
-      "end": 7.72
+      "start": 3.93,
+      "end": 8.31,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 8.29,
-      "end": 12.64,
+      "start": 14.59,
+      "end": 19.54,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 13.81,
-      "end": 18.22,
+      "start": 20.24,
+      "end": 26.4
+    },
+    {
+      "speaker": "friend",
+      "start": 26.72,
+      "end": 31.72
+    },
+    {
+      "speaker": "user",
+      "start": 32.44,
+      "end": 34.18,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 34.75,
+      "end": 37.82
     },
     {
       "speaker": "user",
-      "start": 20.1,
-      "end": 24.95,
+      "start": 40.66,
+      "end": 46.19
+    },
+    {
+      "speaker": "friend",
+      "start": 48.19,
+      "end": 50.47
+    },
+    {
+      "speaker": "user",
+      "start": 50.89,
+      "end": 52.81,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 53.78,
+      "end": 55.3
     },
     {
       "speaker": "user",
-      "start": 26.74,
-      "end": 30.96
-    },
-    {
-      "speaker": "user",
-      "start": 32.02,
-      "end": 36.48
-    },
-    {
-      "speaker": "user",
-      "start": 37.45,
-      "end": 39.85,
+      "start": 57.14,
+      "end": 59.33,
       "event": "return_cue",
       "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 65.49,
+      "end": 69.55,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00585 by scripts/render.py.",
@@ -87,15 +120,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.7,
-      "end": 1.94,
-      "text": "Hi, how have you been?"
+      "start": 0.42,
+      "end": 1.92,
+      "text": "Hi, how are you holding up?"
+    },
+    {
+      "kind": "reply",
+      "start": 8.67,
+      "end": 13.72,
+      "text": "Understandable. Would you rather buy your carrier's travel pass, or get a local eSIM when you land?"
     },
     {
       "kind": "resume",
-      "start": 40.39,
-      "end": 47.27,
-      "text": "Do you have a beach umbrella? If you do, the lake could be great. If not, I'd do the pool in the morning and then relax at home with your shows."
+      "start": 60.02,
+      "end": 65.13,
+      "text": "Sure thing. Your Portugal trip and that roaming bill. Carrier pass or local eSIM?"
+    },
+    {
+      "kind": "followup",
+      "start": 69.87,
+      "end": 74.17,
+      "text": "Totally reasonable. Just switch it on before you fly so you're covered the moment you land."
     }
   ]
 }

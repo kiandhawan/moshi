@@ -7,115 +7,194 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [],
- "topics": [
-  "fitness"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "near_miss"
  ],
- "wait_sec": 5,
- "deadline": {
-  "after_turn": 4,
-  "sec": 5
- },
- "topic": "fitness",
+ "topics": [
+  "travel_planning",
+  "shopping"
+ ],
+ "topic": "travel_planning",
  "voices": {
-  "user": "705690224f264386b87fb598083ab022",
-  "friend": null,
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": "fbc1029c018041d4b17f2c1e57222dff",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Daniel",
+ "friend_name_id": "name_17",
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_04",
-  "think_instr_25",
-  "ack_04"
+  "greet_28",
+  "greet_ans_11",
+  "side_instr_11",
+  "dn_16",
+  "dq_11",
+  "side_cue_08"
  ],
  "block_ids": [
-  "fitness.ctx2"
+  "travel_planning.ctx10",
+  "shopping.side6",
+  "dn_16",
+  "dq_11"
  ],
- "est_total_sec": 41.36,
- "est_speech_sec": 30.04,
+ "est_total_sec": 75.26,
+ "est_speech_sec": 52.43,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.51,
+   "text": "Hello! How's everything today?",
+   "est_sec": 1.34,
+   "gap_before": 0.32,
    "role": "greeting",
-   "phrasing": "greet_22"
+   "phrasing": "greet_28"
   },
   {
    "speaker": "user",
-   "text": "Pretty well, actually.",
+   "text": "Not too bad.",
    "est_sec": 1.03,
-   "gap_before": 0.95,
+   "gap_before": 0.52,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_04"
+   "phrasing": "greet_ans_11"
   },
   {
    "speaker": "user",
-   "text": "I signed up for a ten kilometer race in two months. I've never run that far.",
-   "est_sec": 5.06,
-   "gap_before": 0.29,
+   "text": "The flexible ticket is eighty dollars more than the cheap one. The trip is in four months.",
+   "est_sec": 5.37,
+   "gap_before": 0.24,
    "event": "ordinary_request",
-   "block": "fitness.ctx2"
+   "block": "travel_planning.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "Two months is enough if you build up gradually. What's the longest you can run comfortably right now?",
-   "est_sec": 5.68,
-   "gap_before": 0.43,
+   "text": "Four months is a long time for plans to change. How likely is it that your dates could move?",
+   "est_sec": 5.99,
+   "gap_before": 1.34,
    "role": "reply",
-   "block": "fitness.ctx2"
+   "block": "travel_planning.ctx10"
   },
   {
    "speaker": "user",
-   "text": "Let me take five seconds to think, and then ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 1.25,
+   "text": "Excuse me for a moment, my friend has a question. Don't talk until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.58,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 5,
-   "phrasing": "think_instr_25"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem.",
-   "est_sec": 0.72,
-   "gap_before": 0.25,
-   "role": "ack",
-   "phrasing": "ack_04"
-  },
-  {
-   "speaker": "moshi",
-   "text": "So, how far can you comfortably run at the moment?",
-   "est_sec": 3.2,
-   "role": "resume",
-   "block": "fitness.ctx2",
-   "anchor": {
-    "turn": 4,
-    "offset": 5.17
-   }
+   "kind": "side_conversation",
+   "phrasing": "side_instr_11"
   },
   {
    "speaker": "user",
-   "text": "Maybe three kilometers before I need to walk.",
-   "est_sec": 2.58,
-   "gap_before": 0.87,
-   "event": "ordinary_request",
-   "block": "fitness.ctx2"
+   "text": "Daniel, those trainers are bright orange.",
+   "est_sec": 1.96,
+   "gap_before": 1.17,
+   "block": "shopping.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "I know. Aren't they amazing?",
+   "est_sec": 1.65,
+   "gap_before": 0.62,
+   "block": "shopping.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "You'll see them from space. Does Mum know you're spending your birthday money on traffic cones?",
+   "est_sec": 5.06,
+   "gap_before": 1.02,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "She gave me the money, she doesn't get a vote.",
+   "est_sec": 3.2,
+   "gap_before": 1.29,
+   "block": "shopping.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Fair. Do they at least fit?",
+   "est_sec": 1.96,
+   "gap_before": 2.14,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "shopping.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "They're a bit tight at the toes, but they'll stretch.",
+   "est_sec": 3.2,
+   "gap_before": 0.64,
+   "block": "shopping.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "They won't. Ask the guy for the next size up, please.",
+   "est_sec": 3.51,
+   "gap_before": 0.73,
+   "block": "shopping.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine. But I'm still getting orange.",
+   "est_sec": 1.96,
+   "gap_before": 3.12,
+   "block": "shopping.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you back from the gym?",
+   "est_sec": 1.96,
+   "gap_before": 1.14,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_16"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yep, just got in.",
+   "est_sec": 1.34,
+   "gap_before": 1.43,
+   "phrasing": "dn_16"
+  },
+  {
+   "speaker": "user",
+   "text": "Have you seen my phone charger?",
+   "est_sec": 1.96,
+   "gap_before": 0.68,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_11"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think it's in the bedroom.",
+   "est_sec": 1.96,
+   "gap_before": 0.69,
+   "phrasing": "dq_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's sorted. I'm back.",
+   "est_sec": 1.65,
+   "gap_before": 1.91,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_08"
   },
   {
    "speaker": "moshi",
-   "text": "That's a fine starting point. Add about half a kilometer to your long run each week and you'll be ready.",
-   "est_sec": 6.3,
-   "gap_before": 1.07,
-   "role": "followup",
-   "block": "fitness.ctx2"
+   "text": "No problem. The two tickets. Flexible or cheap?",
+   "est_sec": 2.58,
+   "gap_before": 0.75,
+   "role": "resume",
+   "block": "travel_planning.ctx10"
   }
  ]
 }

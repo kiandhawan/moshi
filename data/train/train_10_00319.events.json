@@ -1,85 +1,110 @@
 {
   "id": "train_10_00319",
-  "group": "describe_options",
-  "user_start": 3.0,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 9.83,
-  "instruction_end": 12.79,
-  "wait_end": 42.64,
-  "resume_window": [
-    42.64,
-    47.64
+  "group": "side_conversation",
+  "user_start": 3.24,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question"
   ],
-  "wait_sec": 29.85,
+  "cluster": "studying.ctx6",
+  "instruction_start": 15.69,
+  "instruction_end": 19.54,
+  "wait_end": 52.699,
+  "resume_window": [
+    52.699,
+    57.699
+  ],
+  "wait_sec": 33.159,
   "distractors": [
-    24.57,
-    33.12
+    23.819
   ],
   "distractor_kinds": [
-    "pause",
-    "pause"
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      24.57,
-      27.24
-    ],
-    [
-      33.12,
-      35.37
+      23.819,
+      24.679
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    8.71,
+    62.089
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 3.0,
-      "end": 4.53,
+      "start": 3.24,
+      "end": 4.76,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 5.12,
-      "end": 9.02
+      "start": 5.1,
+      "end": 8.71,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 9.83,
-      "end": 12.79,
+      "start": 15.69,
+      "end": 19.54,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 13.85,
-      "end": 18.63
-    },
-    {
-      "speaker": "user",
-      "start": 19.86,
-      "end": 24.57,
+      "start": 21.439,
+      "end": 23.819,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 24.679,
+      "end": 26.069
     },
     {
       "speaker": "user",
-      "start": 27.24,
-      "end": 33.12,
-      "event": "distractor",
-      "kind": "pause"
+      "start": 26.549,
+      "end": 29.749
+    },
+    {
+      "speaker": "friend",
+      "start": 31.619,
+      "end": 34.009
     },
     {
       "speaker": "user",
-      "start": 35.37,
-      "end": 39.7
+      "start": 34.599,
+      "end": 37.709
+    },
+    {
+      "speaker": "friend",
+      "start": 38.639,
+      "end": 42.449
     },
     {
       "speaker": "user",
-      "start": 40.57,
-      "end": 42.64,
+      "start": 42.999,
+      "end": 47.289
+    },
+    {
+      "speaker": "friend",
+      "start": 48.799,
+      "end": 49.439
+    },
+    {
+      "speaker": "user",
+      "start": 51.009,
+      "end": 52.699,
       "event": "return_cue",
       "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 59.589,
+      "end": 62.089,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00319 by scripts/render.py.",
@@ -87,15 +112,33 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.5,
-      "end": 2.23,
-      "text": "Hi! How's life treating you?"
+      "start": 0.68,
+      "end": 2.56,
+      "text": "Hello there! How's your day treating you?"
+    },
+    {
+      "kind": "reply",
+      "start": 9.17,
+      "end": 14.57,
+      "text": "That's a lot. Would it be better to study right after your shift, or after you've slept, before the next one?"
+    },
+    {
+      "kind": "ack",
+      "start": 19.79,
+      "end": 20.159,
+      "text": "Okay."
     },
     {
       "kind": "resume",
-      "start": 43.03,
-      "end": 55.33,
-      "text": "For a first race, the three days a week plan is a classic for a reason, it gives your body time to recover. The run walk method is great if you're starting from zero. I'd skip running every day, that's a fast way to get hurt."
+      "start": 54.079,
+      "end": 59.219,
+      "text": "Alright. The study timing around your night shifts. After work, or after sleep?"
+    },
+    {
+      "kind": "followup",
+      "start": 62.569,
+      "end": 66.699,
+      "text": "Makes sense. An hour before your shift, when your head's fresh, will go much further."
     }
   ]
 }

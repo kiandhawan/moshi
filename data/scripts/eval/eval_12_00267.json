@@ -7,129 +7,125 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
   "picnic"
  ],
  "topic": "picnic",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "user": "732ea755bd9e446eb31dc79966b50428",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_09",
-  "greet_ans_06"
+  "greet_12",
+  "greet_ans_03",
+  "describe_instr_06",
+  "ack_01",
+  "describe_cue_03"
  ],
  "block_ids": [
-  "picnic.dlg3"
+  "picnic.opt1"
  ],
- "est_total_sec": 48.91,
- "est_speech_sec": 35.51,
+ "est_total_sec": 50.53,
+ "est_speech_sec": 40.37,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's it going?",
-   "est_sec": 1.34,
-   "gap_before": 0.47,
+   "text": "Hello there, how are you doing today?",
+   "est_sec": 2.27,
+   "gap_before": 0.4,
    "role": "greeting",
-   "phrasing": "greet_09",
+   "phrasing": "greet_12",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Busy day.",
-   "est_sec": 1.34,
-   "gap_before": 0.73,
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.32,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_06"
+   "phrasing": "greet_ans_03"
   },
   {
    "speaker": "user",
-   "text": "I want to plan a romantic picnic for my girlfriend. Where do I start?",
-   "est_sec": 4.44,
+   "text": "I'm planning a picnic for my book club and I need help choosing a place.",
+   "est_sec": 4.75,
+   "gap_before": 0.55,
+   "block": "picnic.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Don't comment yet, let me describe all of them first.",
+   "est_sec": 3.2,
    "gap_before": 0.51,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_06"
   },
   {
    "speaker": "moshi",
-   "text": "Pick a quiet spot with a nice view, maybe for sunset. Then plan a few simple foods she really likes.",
-   "est_sec": 6.3,
-   "gap_before": 0.96,
-   "role": "reply",
-   "block": "picnic.dlg3",
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.33,
+   "role": "ack",
+   "phrasing": "ack_01",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "She loves strawberries and fancy cheese.",
-   "est_sec": 1.96,
-   "gap_before": 0.96,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Perfect. Add some good bread, a little honey and something sparkling to drink.",
-   "est_sec": 4.13,
-   "gap_before": 0.74,
-   "role": "reply",
-   "block": "picnic.dlg3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Should I bring music, or would that be",
-   "est_sec": 2.58,
-   "gap_before": 0.45,
+   "text": "The first one is the botanical garden, really pretty, but you have to pay to get in.",
+   "est_sec": 5.37,
+   "gap_before": 0.92,
+   "block": "picnic.opt1",
    "event": "distractor",
-   "kind": "pause",
-   "block": "picnic.dlg3"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "too cheesy?",
-   "est_sec": 0.72,
-   "gap_before": 2.58,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A small speaker playing quietly is sweet, not cheesy. Just keep the volume low.",
+   "text": "Then there's the lake park, free and big, but it gets noisy on weekends.",
    "est_sec": 4.44,
-   "gap_before": 0.85,
-   "role": "reply",
-   "block": "picnic.dlg3",
-   "reference_only": true
+   "gap_before": 2.23,
+   "block": "picnic.opt1",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Actually, I'm thinking of making it a surprise.",
+   "text": "And the last option is my friend's backyard, which has a big table and real bathrooms.",
+   "est_sec": 5.06,
+   "gap_before": 1.98,
+   "block": "picnic.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "So those are the options. What's your take?",
    "est_sec": 2.58,
-   "gap_before": 2.87,
-   "event": "ordinary_request",
-   "block": "picnic.dlg3"
+   "gap_before": 1.05,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_03"
   },
   {
    "speaker": "moshi",
-   "text": "Love it. Set everything up first, then bring her there for what she thinks is just a walk.",
-   "est_sec": 5.68,
-   "gap_before": 0.78,
-   "role": "reply",
-   "block": "picnic.dlg3",
+   "text": "I'd lean toward the backyard, it's quiet and practical for a long chat. Is it a special occasion, though? If you want it to feel a bit more special, the botanical garden is worth the ticket.",
+   "est_sec": 11.26,
+   "gap_before": 0.37,
+   "role": "resume",
+   "block": "picnic.opt1",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

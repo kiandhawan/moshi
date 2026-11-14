@@ -7,120 +7,105 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "weekend_plans"
+  "public_transport"
  ],
- "topic": "weekend_plans",
+ "topic": "public_transport",
  "voices": {
-  "user": "a52fdd0e957b4c288d8ec590bdd10288",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_29",
-  "greet_ans_07"
+  "greet_23",
+  "greet_ans_20",
+  "describe_instr_04",
+  "describe_cue_02"
  ],
  "block_ids": [
-  "weekend_plans.dlg3"
+  "public_transport.opt6"
  ],
- "est_total_sec": 51.18,
- "est_speech_sec": 38.92,
+ "est_total_sec": 45.47,
+ "est_speech_sec": 36.86,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you doing right now?",
-   "est_sec": 2.27,
-   "gap_before": 0.54,
-   "role": "greeting",
-   "phrasing": "greet_29"
-  },
-  {
-   "speaker": "user",
-   "text": "Honestly, a little stressed, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.93,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_07"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm thinking of doing a little day trip on Sunday. Somewhere I can get to by train.",
-   "est_sec": 5.37,
-   "gap_before": 0.21,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sounds fun. Do you prefer the seaside, a historic town, or countryside walks?",
-   "est_sec": 4.13,
-   "gap_before": 0.7,
-   "role": "reply",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Seaside, I think. I haven't seen the sea in ages.",
-   "est_sec": 3.2,
-   "gap_before": 0.49,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Then pick a coastal town within about two hours by train. Leave early so you get a full day there.",
-   "est_sec": 6.3,
-   "gap_before": 0.48,
-   "role": "reply",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "What if the weather's bad?",
+   "text": "Hey! How are you feeling?",
    "est_sec": 1.65,
-   "gap_before": 2.01,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Seaside towns are still nice in grey weather. A cozy cafe, the pier, maybe an aquarium if there's one.",
-   "est_sec": 5.99,
-   "gap_before": 1.28,
-   "role": "reply",
-   "block": "weekend_plans.dlg3"
+   "gap_before": 0.59,
+   "role": "greeting",
+   "phrasing": "greet_23"
   },
   {
    "speaker": "user",
-   "text": "Actually, I might",
-   "est_sec": 1.03,
-   "gap_before": 1.2,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "weekend_plans.dlg3"
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.86,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_20"
   },
   {
    "speaker": "user",
-   "text": "bring my sister along.",
-   "est_sec": 1.34,
-   "gap_before": 2.1,
-   "event": "ordinary_request",
-   "block": "weekend_plans.dlg3"
+   "text": "I'm finally ditching my car for commuting, and I need to pick a new routine.",
+   "est_sec": 4.75,
+   "gap_before": 0.22,
+   "block": "public_transport.opt6"
   },
   {
-   "speaker": "moshi",
-   "text": "Even better. Check if there's a two together railcard or group ticket, it can save you a lot.",
+   "speaker": "user",
+   "text": "Hold your thoughts until I've described all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.51,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_04"
+  },
+  {
+   "speaker": "user",
+   "text": "I could cycle to the park and ride, then take the express bus the rest of the way.",
    "est_sec": 5.68,
-   "gap_before": 0.82,
-   "role": "reply",
-   "block": "weekend_plans.dlg3"
+   "gap_before": 1.17,
+   "block": "public_transport.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Another way is the train from my village, which only runs twice an hour.",
+   "est_sec": 4.44,
+   "gap_before": 1.02,
+   "block": "public_transport.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "Or I join my neighbour's car share to the tram terminus and ride the tram in.",
+   "est_sec": 5.06,
+   "gap_before": 1.48,
+   "block": "public_transport.opt6"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
+   "est_sec": 2.27,
+   "gap_before": 0.76,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_02"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If you want the most flexibility, cycling plus the express bus means you're never waiting on anyone. The train works too if you're the kind of person who's always early.",
+   "est_sec": 9.4,
+   "gap_before": 0.5,
+   "role": "resume",
+   "block": "public_transport.opt6"
   }
  ]
 }

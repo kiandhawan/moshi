@@ -7,17 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "describe_options",
  "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "hiking"
+  "weather_plans"
  ],
- "topic": "hiking",
+ "topic": "weather_plans",
  "voices": {
-  "user": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "user": "2680da81de8348a68e1f4dbaa79272f1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,96 +27,96 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_05",
-  "greet_ans_08",
-  "describe_instr_17",
-  "describe_cue_07"
+  "greet_ans_13",
+  "describe_instr_11",
+  "describe_cue_05"
  ],
  "block_ids": [
-  "hiking.opt1"
+  "weather_plans.opt3"
  ],
- "est_total_sec": 58.17,
- "est_speech_sec": 46.57,
+ "est_total_sec": 57.78,
+ "est_speech_sec": 45.64,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi, how have you been?",
    "est_sec": 1.65,
-   "gap_before": 0.63,
+   "gap_before": 0.38,
    "role": "greeting",
    "phrasing": "greet_05"
   },
   {
    "speaker": "user",
-   "text": "I'm great, thanks.",
+   "text": "Really good, actually.",
    "est_sec": 1.03,
-   "gap_before": 0.42,
+   "gap_before": 0.32,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_08"
+   "phrasing": "greet_ans_13"
   },
   {
    "speaker": "user",
-   "text": "We're planning a hike next Saturday and I have to choose the trail.",
+   "text": "We're probably snowed in all weekend and I need ideas to keep everyone sane.",
+   "est_sec": 4.44,
+   "gap_before": 0.35,
+   "block": "weather_plans.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "First let me tell you about all of them, then you can comment.",
    "est_sec": 4.13,
-   "gap_before": 0.53,
-   "block": "hiking.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me finish describing every option before you respond.",
-   "est_sec": 2.89,
-   "gap_before": 0.62,
+   "gap_before": 0.57,
    "event": "instruction",
    "kind": "describe_options",
-   "phrasing": "describe_instr_17"
+   "phrasing": "describe_instr_11"
   },
   {
    "speaker": "user",
-   "text": "The first trail is a flat loop around a lake, about five miles, with lots of shade.",
-   "est_sec": 5.37,
-   "gap_before": 1.18,
-   "block": "hiking.opt1",
+   "text": "There's a massive jigsaw in the cupboard, a thousand pieces, which would keep us busy but might cause fights.",
+   "est_sec": 5.99,
+   "gap_before": 1.25,
+   "block": "weather_plans.opt3",
    "event": "distractor",
    "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "Then there's a steep climb to a ridge with amazing views, but it's eight miles and pretty rocky.",
-   "est_sec": 5.68,
-   "gap_before": 2.58,
-   "block": "hiking.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a forest trail along a river with a few small waterfalls, moderate and six miles.",
-   "est_sec": 5.68,
-   "gap_before": 1.05,
-   "block": "hiking.opt1",
+   "text": "We could have a baking marathon, bread, cookies, the lot, as long as we don't run out of flour.",
+   "est_sec": 5.99,
+   "gap_before": 2.53,
+   "block": "weather_plans.opt3",
    "event": "distractor",
    "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "And the last one is a coastal path that's easy but gets crowded on weekends.",
-   "est_sec": 4.75,
-   "gap_before": 1.98,
-   "block": "hiking.opt1"
+   "text": "The kids want to build an igloo in the garden, which sounds amazing until everyone's soaked and freezing.",
+   "est_sec": 5.68,
+   "gap_before": 2.28,
+   "block": "weather_plans.opt3"
   },
   {
    "speaker": "user",
-   "text": "That's it. Now you can comment.",
+   "text": "Or a full movie day with blankets, popcorn and a film each person picks.",
+   "est_sec": 4.44,
+   "gap_before": 1.44,
+   "block": "weather_plans.opt3"
+  },
+  {
+   "speaker": "user",
+   "text": "That's the full list. Go ahead.",
    "est_sec": 1.96,
-   "gap_before": 0.79,
+   "gap_before": 0.73,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_07"
+   "phrasing": "describe_cue_05"
   },
   {
    "speaker": "moshi",
-   "text": "The river trail sounds like a great middle ground, waterfalls and a moderate distance. The ridge climb is the most rewarding if everyone is fit and has good shoes. The lake loop is best if anyone in the group is new to hiking.",
-   "est_sec": 13.43,
-   "gap_before": 0.32,
+   "text": "Mix them up. An igloo session in the morning while everyone has energy, then warm up with baking, and finish with the movie day. Save the jigsaw for whoever needs some quiet time.",
+   "est_sec": 10.33,
+   "gap_before": 0.79,
    "role": "resume",
-   "block": "hiking.opt1"
+   "block": "weather_plans.opt3"
   }
  ]
 }

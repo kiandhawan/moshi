@@ -7,118 +7,110 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "reading",
  "wait_type": "reading",
- "conditions": [],
+ "conditions": [
+  "implicit"
+ ],
  "topics": [
-  "painting_art"
+  "laptop_buying"
  ],
  "reading": {
-  "material": "article",
-  "sec": 19.4
+  "material": "text message",
+  "sec": 12.1
  },
- "topic": "painting_art",
+ "topic": "laptop_buying",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
+  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_09",
-  "read_instr_10",
-  "murmur_13",
-  "read_cue_04"
+  "greet_27",
+  "greet_ans_18",
+  "read_instr_08",
+  "implicit_06"
  ],
  "block_ids": [
-  "painting_art.ctx3"
+  "laptop_buying.ctx16"
  ],
- "est_total_sec": 50.17,
- "est_speech_sec": 26.53,
+ "est_total_sec": 41.94,
+ "est_speech_sec": 21.78,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.51,
+   "text": "Hey there, how have things been?",
+   "est_sec": 1.96,
+   "gap_before": 0.53,
    "role": "greeting",
-   "phrasing": "greet_06",
+   "phrasing": "greet_27",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.46,
+   "text": "I'm doing great.",
+   "est_sec": 1.03,
+   "gap_before": 0.42,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_18"
   },
   {
    "speaker": "user",
-   "text": "My painting of the harbor looks kind of flat and boring.",
-   "est_sec": 3.51,
-   "gap_before": 0.42,
+   "text": "My laptop's only three years old but it's so slow.",
+   "est_sec": 3.2,
+   "gap_before": 0.4,
    "event": "ordinary_request",
-   "block": "painting_art.ctx3"
+   "block": "laptop_buying.ctx16"
   },
   {
    "speaker": "moshi",
-   "text": "Hmm, that often comes from contrast. Would you rather darken the shadows on the boats or add a bright color somewhere as a focal point?",
-   "est_sec": 7.85,
-   "gap_before": 0.74,
+   "text": "Before buying new, would you like to try upgrading it, maybe more memory or a fresh install, or are you ready to replace it?",
+   "est_sec": 7.54,
+   "gap_before": 1.54,
    "role": "reply",
-   "block": "painting_art.ctx3",
+   "block": "laptop_buying.ctx16",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Hold on, let me finish reading this article. I'll tell you when I'm done.",
-   "est_sec": 4.44,
-   "gap_before": 0.7,
+   "text": "Wait, a message just came in. Let me read it, don't talk yet.",
+   "est_sec": 4.13,
+   "gap_before": 2.58,
    "event": "instruction",
    "kind": "reading",
-   "phrasing": "read_instr_10"
+   "phrasing": "read_instr_08"
   },
   {
    "speaker": "user",
-   "text": "Hmm, really?",
-   "est_sec": 0.72,
-   "anchor": {
-    "turn": 4,
-    "offset": 15.5
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "murmur_13"
-  },
-  {
-   "speaker": "user",
-   "text": "Done, I read through it.",
+   "text": "Alright, done. Where were we?",
    "est_sec": 1.65,
    "anchor": {
     "turn": 4,
-    "offset": 19.4
+    "offset": 12.1
    },
    "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "read_cue_04"
+   "kind": "implicit",
+   "phrasing": "implicit_06"
   },
   {
    "speaker": "moshi",
-   "text": "Finished reading? We were trying to fix your flat harbor painting, shadows or a bright accent?",
-   "est_sec": 5.06,
-   "gap_before": 0.63,
+   "text": "Sure. Your slow laptop. Upgrade, or replace?",
+   "est_sec": 2.27,
+   "gap_before": 1.09,
    "role": "resume",
-   "block": "painting_art.ctx3",
+   "block": "laptop_buying.ctx16",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading"
+  "new_type_reading",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

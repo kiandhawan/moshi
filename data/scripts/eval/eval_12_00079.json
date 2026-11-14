@@ -7,108 +7,115 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
- "conditions": [
-  "implicit"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "learning_language"
+  "wedding_planning"
  ],
- "reading": {
-  "material": "email",
-  "sec": 11.9
- },
- "topic": "learning_language",
+ "topic": "wedding_planning",
  "voices": {
-  "user": "732ea755bd9e446eb31dc79966b50428",
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_24",
-  "greet_ans_18",
-  "read_instr_02",
-  "implicit_12"
+  "greet_18",
+  "greet_ans_30",
+  "describe_instr_18",
+  "describe_cue_06"
  ],
  "block_ids": [
-  "learning_language.ctx2"
+  "wedding_planning.opt1"
  ],
- "est_total_sec": 40.04,
- "est_speech_sec": 23.02,
+ "est_total_sec": 50.78,
+ "est_speech_sec": 39.65,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, what's up? How are you doing?",
-   "est_sec": 2.27,
-   "gap_before": 0.43,
+   "text": "Hello! How have you been lately?",
+   "est_sec": 1.96,
+   "gap_before": 0.48,
    "role": "greeting",
-   "phrasing": "greet_24",
+   "phrasing": "greet_18",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
-   "est_sec": 1.03,
-   "gap_before": 0.75,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
-  },
-  {
-   "speaker": "user",
-   "text": "I've been doing Spanish on an app for months, but I still freeze when someone talks to me.",
-   "est_sec": 5.68,
-   "gap_before": 0.58,
-   "event": "ordinary_request",
-   "block": "learning_language.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Very common. Would you be up for weekly sessions with an online tutor, or does a casual language exchange sound better?",
-   "est_sec": 6.61,
-   "gap_before": 0.67,
-   "role": "reply",
-   "block": "learning_language.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Let me read this email first before you comment.",
-   "est_sec": 2.89,
-   "gap_before": 0.42,
-   "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm all yours again.",
+   "text": "Not bad at all, thanks.",
    "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 11.9
-   },
+   "gap_before": 0.33,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "We've narrowed the venue down and I need a second opinion.",
+   "est_sec": 3.51,
+   "gap_before": 0.58,
+   "block": "wedding_planning.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll go through the options one by one. Don't say anything until I finish.",
+   "est_sec": 4.44,
+   "gap_before": 0.45,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_18"
+  },
+  {
+   "speaker": "user",
+   "text": "The first one is an old barn on a farm, really charming, but there's no air conditioning.",
+   "est_sec": 5.37,
+   "gap_before": 0.96,
+   "block": "wedding_planning.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Then there's a hotel ballroom downtown, very easy for guests, though it feels a bit generic.",
+   "est_sec": 5.06,
+   "gap_before": 1.88,
+   "block": "wedding_planning.opt1",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the last option is a vineyard about an hour out of town, stunning views, but the most expensive.",
+   "est_sec": 5.99,
+   "gap_before": 2.22,
+   "block": "wedding_planning.opt1"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, those are all the choices. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.2,
    "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_12"
+   "kind": "explicit",
+   "phrasing": "describe_cue_06"
   },
   {
    "speaker": "moshi",
-   "text": "Sure. Any decision on how to practice speaking Spanish?",
-   "est_sec": 2.89,
-   "gap_before": 0.77,
+   "text": "If it's a summer wedding, I'd worry about the barn without air conditioning. Between the other two, it comes down to whether views or convenience matter more to you.",
+   "est_sec": 9.09,
+   "gap_before": 1.53,
    "role": "resume",
-   "block": "learning_language.ctx2",
+   "block": "wedding_planning.opt1",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading",
-  "implicit_return"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

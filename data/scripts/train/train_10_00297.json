@@ -7,120 +7,125 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "home_repair"
+  "personal_finance"
  ],
- "topic": "home_repair",
+ "topic": "personal_finance",
  "voices": {
-  "user": "bf322df2096a46f18c579d0baa36f41d",
+  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_22"
+  "greet_19",
+  "greet_ans_20",
+  "describe_instr_08",
+  "ack_01",
+  "describe_cue_14"
  ],
  "block_ids": [
-  "home_repair.dlg1"
+  "personal_finance.opt4"
  ],
- "est_total_sec": 58.74,
- "est_speech_sec": 44.5,
+ "est_total_sec": 53.34,
+ "est_speech_sec": 41.09,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
-   "est_sec": 1.96,
-   "gap_before": 0.74,
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
    "role": "greeting",
-   "phrasing": "greet_16"
+   "phrasing": "greet_19"
   },
   {
    "speaker": "user",
-   "text": "Pretty relaxed today.",
-   "est_sec": 1.03,
-   "gap_before": 0.61,
+   "text": "Can't complain.",
+   "est_sec": 0.72,
+   "gap_before": 0.86,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_22"
+   "phrasing": "greet_ans_20"
   },
   {
    "speaker": "user",
-   "text": "My toilet keeps running after I flush. What's going on?",
-   "est_sec": 3.2,
-   "gap_before": 0.44,
-   "event": "ordinary_request",
-   "block": "home_repair.dlg1"
+   "text": "I want to start budgeting with my husband but we can't agree on how.",
+   "est_sec": 4.44,
+   "gap_before": 0.46,
+   "block": "personal_finance.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Please wait until I've gone through all the options.",
+   "est_sec": 2.89,
+   "gap_before": 0.82,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_08"
   },
   {
    "speaker": "moshi",
-   "text": "Most likely the flapper at the bottom of the tank isn't sealing. It's a cheap rubber part and easy to replace.",
-   "est_sec": 6.61,
-   "gap_before": 0.48,
-   "role": "reply",
-   "block": "home_repair.dlg1"
+   "text": "Sure.",
+   "est_sec": 0.41,
+   "gap_before": 0.26,
+   "role": "ack",
+   "phrasing": "ack_01"
   },
   {
    "speaker": "user",
-   "text": "Do I need to turn off the water for that?",
-   "est_sec": 3.2,
-   "gap_before": 1.49,
-   "event": "ordinary_request",
-   "block": "home_repair.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Yes, close the valve behind the toilet and flush to empty the tank. Then the old flapper just unhooks.",
-   "est_sec": 5.99,
-   "gap_before": 0.44,
-   "role": "reply",
-   "block": "home_repair.dlg1"
+   "text": "We could put both salaries into one joint account and pay everything from there.",
+   "est_sec": 4.44,
+   "gap_before": 1.06,
+   "block": "personal_finance.opt4"
   },
   {
    "speaker": "user",
-   "text": "And how do I know which one to buy? There are",
-   "est_sec": 3.51,
-   "gap_before": 1.4,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "home_repair.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "like a dozen kinds at the store.",
-   "est_sec": 2.27,
-   "gap_before": 2.68,
-   "event": "ordinary_request",
-   "block": "home_repair.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Take the old one with you and match the size, most are two inch or three inch. A universal one usually works too.",
-   "est_sec": 7.23,
-   "gap_before": 1.02,
-   "role": "reply",
-   "block": "home_repair.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that sounds doable. Anything else I should check while I'm in there?",
+   "text": "Or keep our own accounts and each pay half of the shared bills.",
    "est_sec": 4.13,
-   "gap_before": 2.22,
-   "event": "ordinary_request",
-   "block": "home_repair.dlg1"
+   "gap_before": 1.37,
+   "block": "personal_finance.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Another idea is to pay bills in proportion to what we earn, since he earns quite a bit more.",
+   "est_sec": 5.99,
+   "gap_before": 1.55,
+   "block": "personal_finance.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a joint account just for bills, and the rest stays separate as our own fun money.",
+   "est_sec": 5.37,
+   "gap_before": 1.61,
+   "block": "personal_finance.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, I'm finished. What's your opinion?",
+   "est_sec": 1.96,
+   "gap_before": 1.13,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_14"
   },
   {
    "speaker": "moshi",
-   "text": "Look at the chain length. If it's too tight or too loose, the flapper won't close properly.",
-   "est_sec": 5.37,
-   "gap_before": 1.22,
-   "role": "reply",
-   "block": "home_repair.dlg1"
+   "text": "Half and half can feel unfair if one of you earns much more. The joint bills account combined with paying in proportion to income is a nice middle ground.",
+   "est_sec": 9.09,
+   "gap_before": 0.99,
+   "role": "resume",
+   "block": "personal_finance.opt4"
   }
  ]
 }

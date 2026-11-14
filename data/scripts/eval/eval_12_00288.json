@@ -7,156 +7,194 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "door",
- "wait_type": "door",
- "conditions": [],
- "topics": [
-  "restaurant_choice"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "implicit",
+  "near_miss"
  ],
- "topic": "restaurant_choice",
+ "topics": [
+  "laptop_buying",
+  "holiday_gifts"
+ ],
+ "topic": "laptop_buying",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
-  "friend": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Priya",
+ "friend_name_id": "name_06",
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_18",
-  "door_instr_03",
-  "ack_09",
-  "door_08",
-  "door_cue_07"
+  "greet_09",
+  "greet_ans_15",
+  "side_instr_27",
+  "ack_10",
+  "dn_79",
+  "implicit_07"
  ],
  "block_ids": [
-  "restaurant_choice.ctx3"
+  "laptop_buying.ctx10",
+  "holiday_gifts.side3",
+  "dn_79"
  ],
- "est_total_sec": 52.75,
- "est_speech_sec": 33.95,
+ "est_total_sec": 69.94,
+ "est_speech_sec": 51.09,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
-   "est_sec": 1.96,
-   "gap_before": 0.42,
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.47,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm doing great.",
-   "est_sec": 1.03,
-   "gap_before": 0.49,
+   "text": "I'm fine, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.73,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_18"
+   "phrasing": "greet_ans_15"
   },
   {
    "speaker": "user",
-   "text": "There's a group of eight of us going out tomorrow night.",
-   "est_sec": 3.51,
-   "gap_before": 0.43,
-   "event": "ordinary_request",
-   "block": "restaurant_choice.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Big group. Any dietary needs, like vegetarians or allergies? That really narrows down where to book.",
-   "est_sec": 5.06,
-   "gap_before": 1.0,
-   "role": "reply",
-   "block": "restaurant_choice.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hold on, I think someone's here. Wait until I'm back.",
+   "text": "Should I buy refurbished? My brother says it's a scam.",
    "est_sec": 3.2,
-   "gap_before": 3.32,
-   "event": "instruction",
-   "kind": "door",
-   "phrasing": "door_instr_03"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Take your time.",
-   "est_sec": 1.03,
-   "gap_before": 0.58,
-   "role": "ack",
-   "phrasing": "ack_09",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Yes?",
-   "est_sec": 0.41,
-   "gap_before": 2.13,
-   "phrasing": "door_08",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Hi, is this the right address for Jordan?",
-   "est_sec": 2.58,
-   "gap_before": 0.38,
-   "phrasing": "door_08"
-  },
-  {
-   "speaker": "user",
-   "text": "No, I think that's next door.",
-   "est_sec": 1.96,
-   "gap_before": 1.59,
-   "phrasing": "door_08"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Oh, sorry, thanks!",
-   "est_sec": 1.03,
-   "gap_before": 1.29,
-   "phrasing": "door_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Alright, sorted. I'm back.",
-   "est_sec": 1.34,
-   "gap_before": 2.09,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "door_cue_07"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Everything okay at the door? Did you find out if anyone has allergies or special diets?",
-   "est_sec": 5.06,
-   "gap_before": 0.6,
-   "role": "resume",
-   "block": "restaurant_choice.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Nope, everyone eats everything.",
-   "est_sec": 1.34,
-   "gap_before": 2.14,
+   "gap_before": 0.55,
    "event": "ordinary_request",
-   "block": "restaurant_choice.ctx3"
+   "block": "laptop_buying.ctx10"
   },
   {
    "speaker": "moshi",
-   "text": "Easy then. Korean barbecue is great for a group of eight, everyone cooks together.",
-   "est_sec": 4.44,
-   "gap_before": 0.84,
-   "role": "followup",
-   "block": "restaurant_choice.ctx3",
+   "text": "Not usually, if it's from a trusted seller. Would you rather save money with a certified refurb, or pay full price for peace of mind?",
+   "est_sec": 7.85,
+   "gap_before": 0.89,
+   "role": "reply",
+   "block": "laptop_buying.ctx10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Just a minute, I have to answer my roommate. Please stay quiet until I return.",
+   "est_sec": 4.75,
+   "gap_before": 1.71,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_27"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.61,
+   "role": "ack",
+   "phrasing": "ack_10",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Did you get your deposit back from the old flat?",
+   "est_sec": 3.2,
+   "gap_before": 1.21,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_79"
+  },
+  {
+   "speaker": "friend",
+   "text": "Most of it, minus the carpet.",
+   "est_sec": 1.96,
+   "gap_before": 1.29,
+   "phrasing": "dn_79"
+  },
+  {
+   "speaker": "user",
+   "text": "Priya, do you think my aunt would like a scarf?",
+   "est_sec": 3.2,
+   "gap_before": 0.31,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "holiday_gifts.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Didn't you give her a scarf last year?",
+   "est_sec": 2.58,
+   "gap_before": 1.36,
+   "block": "holiday_gifts.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh no, I did. A red one.",
+   "est_sec": 2.27,
+   "gap_before": 0.83,
+   "block": "holiday_gifts.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Get her that tea set she pointed at in the market.",
+   "est_sec": 3.51,
+   "gap_before": 0.56,
+   "block": "holiday_gifts.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "The blue one? That was kind of expensive.",
+   "est_sec": 2.58,
+   "gap_before": 1.3,
+   "block": "holiday_gifts.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "We could split it and give it from both of us.",
+   "est_sec": 3.51,
+   "gap_before": 1.42,
+   "block": "holiday_gifts.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Deal. Can you pick it up on Thursday?",
+   "est_sec": 2.58,
+   "gap_before": 1.25,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "holiday_gifts.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure, I'm passing by there anyway.",
+   "est_sec": 1.96,
+   "gap_before": 0.32,
+   "block": "holiday_gifts.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "So, what were you saying?",
+   "est_sec": 1.65,
+   "gap_before": 0.78,
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_07"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course. So which one feels right?",
+   "est_sec": 2.27,
+   "gap_before": 1.76,
+   "role": "resume",
+   "block": "laptop_buying.ctx10",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_door"
+  "familiar_type",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

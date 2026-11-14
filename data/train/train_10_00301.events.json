@@ -1,80 +1,131 @@
 {
   "id": "train_10_00301",
-  "group": "describe_options",
-  "user_start": 2.65,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 7.53,
-  "instruction_end": 11.23,
-  "wait_end": 33.96,
-  "resume_window": [
-    33.96,
-    38.96
+  "group": "side_conversation",
+  "user_start": 2.82,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question"
   ],
-  "wait_sec": 22.73,
+  "cluster": "travel_planning.ctx4",
+  "instruction_start": 20.64,
+  "instruction_end": 25.3,
+  "wait_end": 62.79,
+  "resume_window": [
+    62.79,
+    67.79
+  ],
+  "wait_sec": 37.49,
   "distractors": [
-    18.14,
-    24.74
+    29.49,
+    45.22,
+    54.95
   ],
   "distractor_kinds": [
-    "pause",
-    "pause"
+    "friend_question",
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      18.14,
-      20.0
+      29.49,
+      30.0
     ],
     [
-      24.74,
-      27.36
+      45.22,
+      46.18
+    ],
+    [
+      54.95,
+      58.02
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    10.9,
+    74.11
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.65,
-      "end": 3.76,
+      "start": 2.82,
+      "end": 4.32,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.13,
-      "end": 7.12
+      "start": 4.71,
+      "end": 10.9,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 7.53,
-      "end": 11.23,
+      "start": 20.64,
+      "end": 25.3,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 12.57,
-      "end": 18.14,
+      "start": 26.01,
+      "end": 29.49,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 30.0,
+      "end": 33.05
     },
     {
       "speaker": "user",
-      "start": 20.0,
-      "end": 24.74,
+      "start": 34.98,
+      "end": 37.66
+    },
+    {
+      "speaker": "friend",
+      "start": 39.14,
+      "end": 41.37
+    },
+    {
+      "speaker": "user",
+      "start": 43.2,
+      "end": 45.22,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 46.18,
+      "end": 47.57
     },
     {
       "speaker": "user",
-      "start": 27.36,
-      "end": 31.15
+      "start": 47.91,
+      "end": 52.15
     },
     {
       "speaker": "user",
-      "start": 32.0,
-      "end": 33.96,
+      "start": 52.45,
+      "end": 54.95,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 58.02,
+      "end": 59.25
+    },
+    {
+      "speaker": "user",
+      "start": 61.18,
+      "end": 62.79,
       "event": "return_cue",
       "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 71.02,
+      "end": 74.11,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00301 by scripts/render.py.",
@@ -82,15 +133,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.71,
-      "end": 2.12,
-      "text": "Hey! How are you feeling?"
+      "start": 0.35,
+      "end": 1.93,
+      "text": "Hey there! How's your day?"
+    },
+    {
+      "kind": "reply",
+      "start": 12.36,
+      "end": 20.29,
+      "text": "Exciting! Thailand is the easiest place to land and find your feet, while Vietnam has amazing food but is a bit more hectic. Where do you want to start?"
     },
     {
       "kind": "resume",
-      "start": 34.83,
-      "end": 42.42,
-      "text": "How many days a week do you usually ride? If it's four or five, get the monthly pass. If it's only one or two, pay as you go is the way to go."
+      "start": 63.84,
+      "end": 68.3,
+      "text": "Sure thing. So, your first stop in January. Thailand or Vietnam?"
+    },
+    {
+      "kind": "followup",
+      "start": 74.99,
+      "end": 80.28,
+      "text": "Sensible. Spend a few days in Bangkok, then head north to Chiang Mai before the islands get busy."
     }
   ]
 }

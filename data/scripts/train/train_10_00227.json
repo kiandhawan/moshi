@@ -7,115 +7,132 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
  "wait_type": "think_time",
- "conditions": [],
+ "conditions": [
+  "self_talk"
+ ],
  "topics": [
-  "weekend_plans"
+  "public_transport"
  ],
  "wait_sec": 45,
  "deadline": {
   "after_turn": 4,
   "sec": 45
  },
- "topic": "weekend_plans",
+ "topic": "public_transport",
  "voices": {
-  "user": "705690224f264386b87fb598083ab022",
+  "user": "cc7f8544c64a439080193e9560100c5a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_20",
-  "greet_ans_28",
-  "think_instr_07",
-  "ack_04"
+  "greet_14",
+  "greet_ans_08",
+  "think_instr_17",
+  "ack_05",
+  "self_22"
  ],
  "block_ids": [
-  "weekend_plans.ctx1"
+  "public_transport.ctx6"
  ],
- "est_total_sec": 81.49,
- "est_speech_sec": 28.18,
+ "est_total_sec": 82.37,
+ "est_speech_sec": 32.31,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, good to have you here. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.7,
+   "text": "Hi! How's life treating you?",
+   "est_sec": 1.65,
+   "gap_before": 0.54,
    "role": "greeting",
-   "phrasing": "greet_20"
+   "phrasing": "greet_14"
   },
   {
    "speaker": "user",
-   "text": "Doing alright, thanks.",
+   "text": "I'm great, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.4,
+   "gap_before": 0.99,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
+   "phrasing": "greet_ans_08"
   },
   {
    "speaker": "user",
-   "text": "It's finally Friday and I have absolutely nothing planned.",
-   "est_sec": 2.89,
-   "gap_before": 0.26,
+   "text": "I've missed the last connecting train. I'm stuck at a junction station and it's almost midnight.",
+   "est_sec": 5.06,
+   "gap_before": 0.57,
    "event": "ordinary_request",
-   "block": "weekend_plans.ctx1"
+   "block": "public_transport.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "Lovely feeling. Do you want a lazy weekend at home to recharge, or would you like to get out and do something?",
-   "est_sec": 6.92,
-   "gap_before": 0.91,
+   "text": "That's rough. The first train is at quarter to six. You could wait in the station, or there's a budget hotel two minutes away. What would you prefer?",
+   "est_sec": 8.78,
+   "gap_before": 0.42,
    "role": "reply",
-   "block": "weekend_plans.ctx1"
+   "block": "public_transport.ctx6"
   },
   {
    "speaker": "user",
-   "text": "Hold on, give me forty-five seconds to decide and ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 1.49,
+   "text": "I haven't decided. Give me forty-five seconds, then ask me again.",
+   "est_sec": 3.51,
+   "gap_before": 1.18,
    "event": "instruction",
    "kind": "think_time",
    "wait_sec": 45,
-   "phrasing": "think_instr_07"
+   "phrasing": "think_instr_17"
   },
   {
    "speaker": "moshi",
-   "text": "No problem.",
-   "est_sec": 0.72,
-   "gap_before": 0.39,
+   "text": "Okay, I'll wait.",
+   "est_sec": 1.03,
+   "gap_before": 0.61,
    "role": "ack",
-   "phrasing": "ack_04"
+   "phrasing": "ack_05"
   },
   {
-   "speaker": "moshi",
-   "text": "So, a lazy weekend at home, or getting out and about?",
-   "est_sec": 3.51,
-   "role": "resume",
-   "block": "weekend_plans.ctx1",
+   "speaker": "user",
+   "text": "Okay, think, think.",
+   "est_sec": 1.03,
    "anchor": {
     "turn": 4,
-    "offset": 45.25
+    "offset": 3.73
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_22"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It's getting late. Are you booking the hotel or toughing it out?",
+   "est_sec": 3.82,
+   "role": "resume",
+   "block": "public_transport.ctx6",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.42
    }
   },
   {
    "speaker": "user",
-   "text": "Home. I've been running around all week.",
+   "text": "The hotel. I need a proper bed.",
    "est_sec": 2.27,
-   "gap_before": 2.57,
+   "gap_before": 0.82,
    "event": "ordinary_request",
-   "block": "weekend_plans.ctx1"
+   "block": "public_transport.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "You've earned it. Maybe plan one nice meal so it still feels special.",
+   "text": "Sensible. Set two alarms, and ask the desk if they serve early coffee.",
    "est_sec": 4.13,
-   "gap_before": 0.95,
+   "gap_before": 0.68,
    "role": "followup",
-   "block": "weekend_plans.ctx1"
+   "block": "public_transport.ctx6"
   }
  ]
 }

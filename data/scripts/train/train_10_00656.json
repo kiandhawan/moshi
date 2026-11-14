@@ -7,6 +7,8 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
  "type": "think_time",
@@ -15,110 +17,122 @@
   "self_talk"
  ],
  "topics": [
-  "gardening"
+  "smartphones"
  ],
- "wait_sec": 45,
+ "wait_sec": 20,
  "deadline": {
   "after_turn": 4,
-  "sec": 45
+  "sec": 20
  },
- "topic": "gardening",
+ "topic": "smartphones",
  "voices": {
-  "user": "c309730ce57e4419b1ac12a8b1f9f93f",
+  "user": "050df12e0f30484fb882a9a5410e5d66",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_01",
-  "think_instr_10",
-  "self_02",
-  "self_16"
+  "greet_10",
+  "greet_ans_05",
+  "think_instr_01",
+  "ack_15",
+  "self_11"
  ],
  "block_ids": [
-  "gardening.ctx1"
+  "smartphones.ctx2"
  ],
- "est_total_sec": 70.9,
- "est_speech_sec": 23.74,
+ "est_total_sec": 56.96,
+ "est_speech_sec": 32.62,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
-   "est_sec": 1.96,
-   "gap_before": 0.67,
+   "text": "Hey, how's your day been so far?",
+   "est_sec": 2.27,
+   "gap_before": 0.54,
    "role": "greeting",
-   "phrasing": "greet_16"
+   "phrasing": "greet_10"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.34,
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.69,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "I've got a sunny balcony and I want to grow something I can actually eat.",
-   "est_sec": 4.75,
-   "gap_before": 0.32,
+   "text": "I keep picking up my phone without even thinking. It's eating my whole evening.",
+   "est_sec": 4.44,
+   "gap_before": 0.3,
    "event": "ordinary_request",
-   "block": "gardening.ctx1"
+   "block": "smartphones.ctx2"
   },
   {
    "speaker": "moshi",
-   "text": "Lovely. Herbs, cherry tomatoes and salad greens all do well in pots. Which of those would you use the most?",
-   "est_sec": 6.3,
-   "gap_before": 0.69,
+   "text": "Lots of people feel that way. Would you rather set a daily time limit on certain apps, or delete the worst ones entirely?",
+   "est_sec": 7.23,
+   "gap_before": 0.76,
    "role": "reply",
-   "block": "gardening.ctx1"
+   "block": "smartphones.ctx2"
   },
   {
    "speaker": "user",
-   "text": "Um, give me forty-five seconds to think it over, then ask me.",
-   "est_sec": 3.82,
-   "gap_before": 1.06,
+   "text": "Give me twenty seconds to think, then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 0.74,
    "event": "instruction",
    "kind": "think_time",
-   "wait_sec": 45,
-   "phrasing": "think_instr_10"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, so if I do that, then",
-   "est_sec": 2.27,
-   "anchor": {
-    "turn": 4,
-    "offset": 25.32
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_02"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, tough.",
-   "est_sec": 0.72,
-   "anchor": {
-    "turn": 4,
-    "offset": 42.13
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_16"
+   "wait_sec": 20,
+   "phrasing": "think_instr_01"
   },
   {
    "speaker": "moshi",
-   "text": "Have you picked yet, herbs, cherry tomatoes or greens?",
-   "est_sec": 2.89,
-   "role": "resume",
-   "block": "gardening.ctx1",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.44,
+   "role": "ack",
+   "phrasing": "ack_15"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, pros and cons.",
+   "est_sec": 1.34,
    "anchor": {
     "turn": 4,
-    "offset": 45.57
+    "offset": 5.79
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, have you decided? Limits or removing the apps completely?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "smartphones.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.6
    }
+  },
+  {
+   "speaker": "user",
+   "text": "Let's try limits first. Deleting feels a bit extreme.",
+   "est_sec": 2.89,
+   "gap_before": 1.23,
+   "event": "ordinary_request",
+   "block": "smartphones.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good start. Try thirty minutes a day for social apps and see how the first week goes.",
+   "est_sec": 5.37,
+   "gap_before": 0.35,
+   "role": "followup",
+   "block": "smartphones.ctx2"
   }
  ]
 }

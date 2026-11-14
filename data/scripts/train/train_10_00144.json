@@ -7,17 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "music"
+  "pets"
  ],
- "topic": "music",
+ "topic": "pets",
  "voices": {
-  "user": "f3a2b90078d54a65af4b95f63bc7798e",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,102 +27,89 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_17",
-  "greet_ans_25"
+  "greet_ans_05",
+  "describe_instr_02",
+  "describe_cue_02"
  ],
  "block_ids": [
-  "music.dlg2"
+  "pets.opt5"
  ],
- "est_total_sec": 53.89,
- "est_speech_sec": 40.16,
+ "est_total_sec": 54.27,
+ "est_speech_sec": 41.2,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hey there! How's your day?",
    "est_sec": 1.65,
-   "gap_before": 0.57,
+   "gap_before": 0.65,
    "role": "greeting",
    "phrasing": "greet_17"
   },
   {
    "speaker": "user",
-   "text": "I'm well, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.66,
+   "text": "I'm alright, a bit tired.",
+   "est_sec": 1.65,
+   "gap_before": 0.99,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_25"
+   "phrasing": "greet_ans_05"
   },
   {
    "speaker": "user",
-   "text": "What's the difference between a major and a minor chord?",
-   "est_sec": 3.2,
-   "gap_before": 0.46,
-   "event": "ordinary_request",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It comes down to the middle note. In a minor chord it's one half step lower, which gives it that sadder sound.",
-   "est_sec": 6.92,
-   "gap_before": 1.09,
-   "role": "reply",
-   "block": "music.dlg2"
+   "text": "Our kitten is about to graduate to a proper litter tray and I can't pick a litter.",
+   "est_sec": 5.37,
+   "gap_before": 0.5,
+   "block": "pets.opt5"
   },
   {
    "speaker": "user",
-   "text": "So major is happy and minor is sad?",
-   "est_sec": 2.58,
-   "gap_before": 0.95,
-   "event": "ordinary_request",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's the usual feeling, yes, though it's not a strict rule. Lots of upbeat songs use minor chords too.",
-   "est_sec": 5.99,
-   "gap_before": 1.5,
-   "role": "reply",
-   "block": "music.dlg2"
+   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
+   "est_sec": 4.75,
+   "gap_before": 0.87,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_02"
   },
   {
    "speaker": "user",
-   "text": "On the piano, how do I find a minor chord from a major one?",
-   "est_sec": 4.44,
-   "gap_before": 1.31,
-   "event": "ordinary_request",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Play the major chord, then move the middle finger down to the very next key. That's your minor chord.",
-   "est_sec": 5.99,
-   "gap_before": 1.12,
-   "role": "reply",
-   "block": "music.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh, I just tried it and",
-   "est_sec": 1.96,
-   "gap_before": 1.11,
+   "text": "The clumping clay one is cheap and easy to scoop, but it's dusty and gets tracked everywhere.",
+   "est_sec": 5.37,
+   "gap_before": 1.49,
+   "block": "pets.opt5",
    "event": "distractor",
-   "kind": "pause",
-   "block": "music.dlg2"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "wow, yeah, it really does sound sadder.",
+   "text": "Pine pellets smell nice and are biodegradable, though some cats hate the feel under their paws.",
+   "est_sec": 5.06,
+   "gap_before": 1.94,
+   "block": "pets.opt5",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And silica crystals soak up smells really well, but they're expensive and crunchy.",
+   "est_sec": 4.13,
+   "gap_before": 2.83,
+   "block": "pets.opt5"
+  },
+  {
+   "speaker": "user",
+   "text": "That's everything. Which one would you pick?",
    "est_sec": 2.27,
-   "gap_before": 2.86,
-   "event": "ordinary_request",
-   "block": "music.dlg2"
+   "gap_before": 1.24,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_02"
   },
   {
    "speaker": "moshi",
-   "text": "Nice! Try switching back and forth between them, it's a good first exercise.",
-   "est_sec": 4.13,
-   "gap_before": 0.6,
-   "role": "reply",
-   "block": "music.dlg2"
+   "text": "I'd start her on a low dust clumping litter, it's the closest to what most cats like naturally. If you want to switch to pine later, mix it in slowly over a couple of weeks.",
+   "est_sec": 10.95,
+   "gap_before": 1.06,
+   "role": "resume",
+   "block": "pets.opt5"
   }
  ]
 }

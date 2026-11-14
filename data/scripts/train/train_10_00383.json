@@ -7,137 +7,107 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "self_talk"
- ],
+ "type": "describe_options",
+ "wait_type": "describe_options",
+ "conditions": [],
  "topics": [
-  "books"
+  "movies"
  ],
- "wait_sec": 10,
- "deadline": {
-  "after_turn": 6,
-  "sec": 10
- },
- "topic": "books",
+ "topic": "movies",
  "voices": {
-  "user": "e7de86b388864b8cbd50d0d70a3494e5",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_20",
-  "greet_ans_07",
-  "think_instr_26",
-  "self_28"
+  "greet_23",
+  "greet_ans_10",
+  "describe_instr_11",
+  "describe_cue_11"
  ],
  "block_ids": [
-  "books.ctx3"
+  "movies.opt4"
  ],
- "est_total_sec": 51.86,
- "est_speech_sec": 33.96,
+ "est_total_sec": 51.67,
+ "est_speech_sec": 41.2,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, good to have you here. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.41,
-   "role": "greeting",
-   "phrasing": "greet_20"
-  },
-  {
-   "speaker": "user",
-   "text": "Honestly, a little stressed, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.67,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_07"
-  },
-  {
-   "speaker": "user",
-   "text": "I want to read more, but I'm always on the go.",
-   "est_sec": 3.51,
-   "gap_before": 0.53,
-   "event": "ordinary_request",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Audiobooks might help, or an e-reader that fits in your pocket.",
-   "est_sec": 3.51,
-   "gap_before": 0.81,
-   "role": "reply",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, both sound good.",
-   "est_sec": 1.34,
-   "gap_before": 1.11,
-   "event": "ordinary_request",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Which fits your day better, listening on the bus and at the gym, or reading in short quiet moments?",
-   "est_sec": 5.99,
-   "gap_before": 0.51,
-   "role": "reply",
-   "block": "books.ctx3"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, wait ten seconds and then ask me again, okay?",
-   "est_sec": 3.2,
-   "gap_before": 1.89,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 10,
-   "phrasing": "think_instr_26"
-  },
-  {
-   "speaker": "user",
-   "text": "Wait, what else was there?",
+   "text": "Hey! How are you feeling?",
    "est_sec": 1.65,
-   "anchor": {
-    "turn": 6,
-    "offset": 6.03
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_28"
-  },
-  {
-   "speaker": "moshi",
-   "text": "So, audiobooks or an e-reader, which fits your day better?",
-   "est_sec": 3.2,
-   "role": "resume",
-   "block": "books.ctx3",
-   "anchor": {
-    "turn": 6,
-    "offset": 10.45
-   }
+   "gap_before": 0.68,
+   "role": "greeting",
+   "phrasing": "greet_23"
   },
   {
    "speaker": "user",
-   "text": "E-reader. I like seeing the words.",
-   "est_sec": 1.96,
-   "gap_before": 0.59,
-   "event": "ordinary_request",
-   "block": "books.ctx3"
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.72,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_10"
+  },
+  {
+   "speaker": "user",
+   "text": "My friends and I want to see the new monster film on Friday and we can't agree where.",
+   "est_sec": 5.68,
+   "gap_before": 0.51,
+   "block": "movies.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "First let me tell you about all of them, then you can comment.",
+   "est_sec": 4.13,
+   "gap_before": 0.68,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_11"
+  },
+  {
+   "speaker": "user",
+   "text": "There's the big multiplex with reclining seats, but tickets are pretty pricey.",
+   "est_sec": 3.82,
+   "gap_before": 1.05,
+   "block": "movies.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "A tiny independent cinema near the station, cheap, cosy, and they serve proper cake.",
+   "est_sec": 4.44,
+   "gap_before": 1.35,
+   "block": "movies.opt4",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or a drive in about forty minutes out of town, which we've never been to.",
+   "est_sec": 4.75,
+   "gap_before": 2.41,
+   "block": "movies.opt4"
+  },
+  {
+   "speaker": "user",
+   "text": "And that's the last one. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 0.55,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_11"
   },
   {
    "speaker": "moshi",
-   "text": "Good. Keep it in your bag and read a few pages whenever you're waiting somewhere.",
-   "est_sec": 4.75,
-   "gap_before": 1.08,
-   "role": "followup",
-   "block": "books.ctx3"
+   "text": "If the goal is the film itself, go to the multiplex. If it's more about a fun night together, the drive in is an adventure you'll talk about for ages, and you can save the indie for a quieter film.",
+   "est_sec": 12.5,
+   "gap_before": 1.02,
+   "role": "resume",
+   "block": "movies.opt4"
   }
  ]
 }

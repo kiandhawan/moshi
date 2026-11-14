@@ -7,119 +7,161 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [
-  "early_end"
+  "extra_question"
  ],
  "topics": [
-  "travel_planning"
+  "hiking",
+  "photography"
  ],
- "wait_sec": 20,
- "early_end": {
-  "after_sec": 9.23,
-  "direct": false
- },
- "topic": "travel_planning",
+ "topic": "hiking",
  "voices": {
-  "user": "18b1276891524bd786fb8a59ecd3630a",
-  "friend": null,
+  "user": "a52fdd0e957b4c288d8ec590bdd10288",
+  "friend": "fbc1029c018041d4b17f2c1e57222dff",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Emma",
+ "friend_name_id": "name_20",
  "phrasing_ids": [
-  "greet_05",
-  "greet_ans_19",
-  "think_instr_25",
-  "ack_14",
-  "early_end_14"
+  "greet_11",
+  "greet_ans_17",
+  "side_instr_01",
+  "dq_28",
+  "side_cue_13"
  ],
  "block_ids": [
-  "travel_planning.ctx2"
+  "hiking.ctx8",
+  "photography.side2",
+  "dq_28"
  ],
- "est_total_sec": 46.84,
- "est_speech_sec": 31.59,
+ "est_total_sec": 69.98,
+ "est_speech_sec": 51.41,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how have you been?",
-   "est_sec": 1.65,
-   "gap_before": 0.32,
+   "text": "Hi, how are things with you?",
+   "est_sec": 1.96,
+   "gap_before": 0.5,
    "role": "greeting",
-   "phrasing": "greet_05"
+   "phrasing": "greet_11"
   },
   {
    "speaker": "user",
-   "text": "Good, thanks. Just got home.",
-   "est_sec": 1.65,
-   "gap_before": 0.56,
+   "text": "A bit tired today, but okay.",
+   "est_sec": 1.96,
+   "gap_before": 0.92,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_19"
+   "phrasing": "greet_ans_17"
   },
   {
    "speaker": "user",
-   "text": "I found two flights to Tokyo. One is cheaper but has a nine hour layover.",
-   "est_sec": 4.75,
-   "gap_before": 0.37,
+   "text": "We want to take our little girl hiking. She's two and a half.",
+   "est_sec": 4.13,
+   "gap_before": 0.29,
    "event": "ordinary_request",
-   "block": "travel_planning.ctx2"
+   "block": "hiking.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "That layover is long, but you could leave the airport for a few hours. Is saving the money worth the extra travel time to you?",
-   "est_sec": 7.85,
-   "gap_before": 1.46,
+   "text": "Fun age. You could carry her in a hiking backpack and do a proper route, or let her toddle a tiny trail with lots of puddles. Which sounds more like your family?",
+   "est_sec": 10.02,
+   "gap_before": 0.86,
    "role": "reply",
-   "block": "travel_planning.ctx2"
+   "block": "hiking.ctx8"
   },
   {
    "speaker": "user",
-   "text": "Let me take twenty seconds to think, and then ask me again.",
-   "est_sec": 3.82,
-   "gap_before": 1.38,
+   "text": "Hold on, I need to talk to my roommate for a second. Stay quiet until I say I'm back.",
+   "est_sec": 5.99,
+   "gap_before": 1.25,
    "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 20,
-   "phrasing": "think_instr_25"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No worries.",
-   "est_sec": 0.72,
-   "gap_before": 0.54,
-   "role": "ack",
-   "phrasing": "ack_14"
+   "kind": "side_conversation",
+   "phrasing": "side_instr_01"
   },
   {
    "speaker": "user",
-   "text": "You know what, I've decided.",
+   "text": "Should we order pizza tonight?",
    "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 9.23
-   },
-   "event": "return_cue",
-   "kind": "early_end",
-   "phrasing": "early_end_14"
+   "gap_before": 0.95,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_28"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yes, definitely.",
+   "est_sec": 0.72,
+   "gap_before": 2.87,
+   "phrasing": "dq_28"
   },
   {
    "speaker": "user",
-   "text": "Yeah, I'll take the cheap one. I'm a student, every bit counts.",
+   "text": "Did you take the camera to the beach last weekend?",
+   "est_sec": 3.2,
+   "gap_before": 0.64,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "photography.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Yeah, and I think I got sand in the lens.",
+   "est_sec": 3.2,
+   "gap_before": 0.55,
+   "block": "photography.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh no. Is it making a grinding noise?",
+   "est_sec": 2.58,
+   "gap_before": 0.71,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "photography.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "A little, when it zooms.",
+   "est_sec": 1.65,
+   "gap_before": 1.31,
+   "block": "photography.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Don't force it. Let me try the blower brush on it later.",
    "est_sec": 3.82,
-   "gap_before": 0.4,
-   "event": "ordinary_request",
-   "block": "travel_planning.ctx2"
+   "gap_before": 2.36,
+   "block": "photography.side2"
+  },
+  {
+   "speaker": "friend",
+   "text": "Thanks. I'm so sorry, I should've used the bag.",
+   "est_sec": 2.89,
+   "gap_before": 1.3,
+   "block": "photography.side2"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, back to you.",
+   "est_sec": 1.34,
+   "gap_before": 1.39,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_13"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. Bring a neck pillow and check whether you need a transit visa to leave the airport.",
-   "est_sec": 5.68,
-   "gap_before": 0.75,
-   "role": "followup",
-   "block": "travel_planning.ctx2"
+   "text": "Sure thing. So for the two and a half year old, proper route in the carrier or a puddle trail?",
+   "est_sec": 6.3,
+   "gap_before": 1.17,
+   "role": "resume",
+   "block": "hiking.ctx8"
   }
  ]
 }

@@ -7,112 +7,120 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "gardening"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "self_talk"
  ],
- "topic": "gardening",
+ "topics": [
+  "cars"
+ ],
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "cars",
  "voices": {
-  "user": "cc7f8544c64a439080193e9560100c5a",
+  "user": "676f1654c4f747a69a5921ad94886fa1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_19",
+  "greet_04",
   "greet_ans_26",
-  "describe_instr_08",
-  "ack_11",
-  "describe_cue_11"
+  "think_instr_10",
+  "self_19",
+  "self_04"
  ],
  "block_ids": [
-  "gardening.opt1"
+  "cars.ctx4"
  ],
- "est_total_sec": 52.56,
- "est_speech_sec": 43.16,
+ "est_total_sec": 77.05,
+ "est_speech_sec": 30.87,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how's everything with you?",
+   "text": "Hey there, how are you?",
    "est_sec": 1.65,
-   "gap_before": 0.43,
+   "gap_before": 0.38,
    "role": "greeting",
-   "phrasing": "greet_19"
+   "phrasing": "greet_04"
   },
   {
    "speaker": "user",
    "text": "Kind of tired, honestly.",
    "est_sec": 1.34,
-   "gap_before": 0.45,
+   "gap_before": 0.37,
    "event": "greeting_answer",
    "phrasing": "greet_ans_26"
   },
   {
    "speaker": "user",
-   "text": "I've got one empty bed in the backyard and I can't decide what to plant.",
-   "est_sec": 4.75,
-   "gap_before": 0.53,
-   "block": "gardening.opt1"
+   "text": "Ugh, the engine light just came on and I'm still twenty miles from home. It's pitch dark out here.",
+   "est_sec": 5.99,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "cars.ctx4"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, stay calm. Is the car driving normally? If so, you could stop at the next services to check it, or carry on gently and look at it at home.",
+   "est_sec": 9.4,
+   "gap_before": 1.0,
+   "role": "reply",
+   "block": "cars.ctx4"
   },
   {
    "speaker": "user",
-   "text": "Please wait until I've gone through all the options.",
-   "est_sec": 2.89,
-   "gap_before": 0.9,
+   "text": "Um, give me forty-five seconds to think it over, then ask me.",
+   "est_sec": 3.82,
+   "gap_before": 0.91,
    "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_08"
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, but then again",
+   "est_sec": 1.34,
+   "anchor": {
+    "turn": 4,
+    "offset": 15.63
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_19"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, what did I do last time?",
+   "est_sec": 2.27,
+   "anchor": {
+    "turn": 4,
+    "offset": 20.91
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_04"
   },
   {
    "speaker": "moshi",
-   "text": "Alright.",
-   "est_sec": 0.41,
-   "gap_before": 0.29,
-   "role": "ack",
-   "phrasing": "ack_11"
-  },
-  {
-   "speaker": "user",
-   "text": "The first idea is tomatoes and peppers, which need a lot of sun and regular watering.",
+   "text": "Right, the engine light. Stopping at the services, or nursing it the last twenty miles home?",
    "est_sec": 5.06,
-   "gap_before": 1.47,
-   "block": "gardening.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a herb garden with basil, mint and rosemary, small and easy to keep up.",
-   "est_sec": 5.06,
-   "gap_before": 1.15,
-   "block": "gardening.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is wildflowers for the bees, basically no work once they're in the ground.",
-   "est_sec": 5.37,
-   "gap_before": 1.12,
-   "block": "gardening.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "And that's the last one. What do you think?",
-   "est_sec": 2.89,
-   "gap_before": 1.02,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_11"
-  },
-  {
-   "speaker": "moshi",
-   "text": "How much time do you want to spend out there each week? If you love being in the garden, go for the tomatoes. If not, herbs give you something useful without much work, just keep the mint in a pot or it'll take over.",
-   "est_sec": 13.74,
-   "gap_before": 0.54,
    "role": "resume",
-   "block": "gardening.opt1"
+   "block": "cars.ctx4",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.22
+   }
   }
  ]
 }

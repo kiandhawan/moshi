@@ -7,121 +7,110 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "cycling"
+ "type": "reading",
+ "wait_type": "reading",
+ "conditions": [
+  "implicit"
  ],
- "topic": "cycling",
+ "topics": [
+  "home_office"
+ ],
+ "reading": {
+  "material": "email",
+  "sec": 23.3
+ },
+ "topic": "home_office",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "user": "ca1a4fbf6702400a863d60be2fe8062d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_24",
-  "greet_ans_12",
-  "describe_instr_18",
-  "ack_11",
-  "describe_cue_09"
+  "greet_03",
+  "greet_ans_24",
+  "read_instr_02",
+  "implicit_05"
  ],
  "block_ids": [
-  "cycling.opt2"
+  "home_office.ctx16"
  ],
- "est_total_sec": 54.65,
- "est_speech_sec": 43.78,
+ "est_total_sec": 53.87,
+ "est_speech_sec": 25.5,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, what's up? How are you doing?",
-   "est_sec": 2.27,
-   "gap_before": 0.65,
-   "role": "greeting",
-   "phrasing": "greet_24",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I guess.",
-   "est_sec": 1.03,
-   "gap_before": 0.88,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_12"
-  },
-  {
-   "speaker": "user",
-   "text": "We're planning a cycling day trip and I can't decide on the route.",
-   "est_sec": 4.13,
-   "gap_before": 0.6,
-   "block": "cycling.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll go through the options one by one. Don't say anything until I finish.",
-   "est_sec": 4.44,
-   "gap_before": 0.69,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_18"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright.",
-   "est_sec": 0.41,
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
    "gap_before": 0.55,
-   "role": "ack",
-   "phrasing": "ack_11",
+   "role": "greeting",
+   "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "One route follows the coast, about thirty miles, flat, with a nice cafe at the end.",
-   "est_sec": 5.06,
-   "gap_before": 0.89,
-   "block": "cycling.opt2"
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.74,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_24"
   },
   {
    "speaker": "user",
-   "text": "Another one goes up through the vineyards, shorter, but with two pretty steep climbs.",
-   "est_sec": 4.44,
-   "gap_before": 1.09,
-   "block": "cycling.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "The third is a forest trail, mostly gravel, quiet and shady, maybe twenty miles.",
-   "est_sec": 4.44,
-   "gap_before": 2.09,
-   "block": "cycling.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "So, that's all of them. Tell me what you think.",
-   "est_sec": 3.2,
-   "gap_before": 1.45,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_09"
+   "text": "I've been fully remote for two years and lately I just feel kind of lonely.",
+   "est_sec": 4.75,
+   "gap_before": 0.54,
+   "event": "ordinary_request",
+   "block": "home_office.ctx16"
   },
   {
    "speaker": "moshi",
-   "text": "The coast route is the easiest and the cafe makes a great finish. The vineyard route has the best views, but those climbs could wear out a mixed group. The forest trail is lovely on a hot day, as long as everyone's bike can handle gravel.",
-   "est_sec": 14.36,
-   "gap_before": 0.48,
+   "text": "That's really common, and it's worth taking seriously. Would you rather set up regular virtual coffee chats with coworkers, or work from a cafe once or twice a week?",
+   "est_sec": 9.09,
+   "gap_before": 0.68,
+   "role": "reply",
+   "block": "home_office.ctx16",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me read this email first before you comment.",
+   "est_sec": 2.89,
+   "gap_before": 0.45,
+   "event": "instruction",
+   "kind": "reading",
+   "phrasing": "read_instr_02"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, sorry, where were we again?",
+   "est_sec": 1.96,
+   "anchor": {
+    "turn": 4,
+    "offset": 23.3
+   },
+   "event": "return_cue",
+   "kind": "implicit",
+   "phrasing": "implicit_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure. About feeling lonely, virtual chats or the cafe days?",
+   "est_sec": 3.2,
+   "gap_before": 0.61,
    "role": "resume",
-   "block": "cycling.opt2",
+   "block": "home_office.ctx16",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "new_type_reading",
+  "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

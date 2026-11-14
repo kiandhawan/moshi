@@ -7,114 +7,127 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "music"
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
  ],
- "topic": "music",
+ "topics": [
+  "baking"
+ ],
+ "topic": "baking",
  "voices": {
-  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "user": "e3cd384158934cc9a01029cd7d278634",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_11",
-  "greet_ans_28",
-  "describe_instr_01",
-  "ack_14",
-  "describe_cue_08"
+  "greet_25",
+  "greet_ans_25",
+  "waitlike_17"
  ],
  "block_ids": [
-  "music.opt2"
+  "baking.dlg19"
  ],
- "est_total_sec": 51.75,
- "est_speech_sec": 40.99,
+ "est_total_sec": 55.96,
+ "est_speech_sec": 42.64,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are things with you?",
-   "est_sec": 1.96,
-   "gap_before": 0.38,
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.66,
    "role": "greeting",
-   "phrasing": "greet_11"
+   "phrasing": "greet_25"
   },
   {
    "speaker": "user",
-   "text": "Doing alright, thanks.",
+   "text": "I'm well, thanks.",
    "est_sec": 1.03,
    "gap_before": 0.64,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
+   "phrasing": "greet_ans_25"
   },
   {
    "speaker": "user",
-   "text": "I'm putting together music for my friend's going away party and I have a few ideas.",
+   "text": "My cheesecake cracked right across the middle. Again. I'm starting to take it personally.",
+   "est_sec": 4.44,
+   "gap_before": 0.55,
+   "event": "ordinary_request",
+   "block": "baking.dlg19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Don't, it happens to everyone. Cracks usually come from baking too hot or cooling too fast.",
    "est_sec": 5.06,
-   "gap_before": 0.49,
-   "block": "music.opt2"
+   "gap_before": 0.87,
+   "role": "reply",
+   "block": "baking.dlg19"
   },
   {
    "speaker": "user",
-   "text": "Let me describe all the options before you comment.",
+   "text": "I bake it at the temperature the recipe says.",
    "est_sec": 2.89,
-   "gap_before": 0.62,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_01"
+   "gap_before": 1.27,
+   "event": "ordinary_request",
+   "block": "baking.dlg19"
   },
   {
    "speaker": "moshi",
-   "text": "No worries.",
-   "est_sec": 0.72,
-   "gap_before": 0.52,
-   "role": "ack",
-   "phrasing": "ack_14"
+   "text": "Try a water bath. Wrap the tin in foil and set it in a tray of hot water, it keeps the heat gentle and moist.",
+   "est_sec": 7.85,
+   "gap_before": 1.48,
+   "role": "reply",
+   "block": "baking.dlg19"
   },
   {
    "speaker": "user",
-   "text": "One option is a playlist of all the songs from our college years, really nostalgic.",
-   "est_sec": 4.75,
-   "gap_before": 1.02,
-   "block": "music.opt2"
+   "text": "And the cooling part?",
+   "est_sec": 1.34,
+   "gap_before": 1.46,
+   "event": "ordinary_request",
+   "block": "baking.dlg19"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Turn the oven off when the centre still wobbles slightly, crack the door open, and leave the cheesecake inside for an hour.",
+   "est_sec": 6.92,
+   "gap_before": 1.47,
+   "role": "reply",
+   "block": "baking.dlg19"
   },
   {
    "speaker": "user",
-   "text": "Another is hiring a local band that plays covers, but that eats up half the budget.",
-   "est_sec": 5.06,
-   "gap_before": 1.35,
-   "block": "music.opt2",
+   "text": "Hold on a sec, it's supposed to",
+   "est_sec": 2.27,
+   "gap_before": 0.37,
    "event": "distractor",
-   "kind": "pause"
+   "kind": "pause",
+   "block": "baking.dlg19"
   },
   {
    "speaker": "user",
-   "text": "Or I could ask a friend who does DJ sets on weekends, he'd do it for free if we feed him.",
-   "est_sec": 6.61,
-   "gap_before": 1.73,
-   "block": "music.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, that's all. Which sounds best to you?",
-   "est_sec": 2.58,
-   "gap_before": 0.58,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_08"
+   "text": "still wobble? I always bake it until it's firm.",
+   "est_sec": 2.89,
+   "gap_before": 2.62,
+   "event": "ordinary_request",
+   "kind": "wait_like",
+   "phrasing": "waitlike_17",
+   "block": "baking.dlg19"
   },
   {
    "speaker": "moshi",
-   "text": "How big is the party? For a small group, the nostalgic playlist is perfect. For a bigger crowd, I'd ask your DJ friend and give him the college songs as a request list.",
-   "est_sec": 10.33,
-   "gap_before": 1.93,
-   "role": "resume",
-   "block": "music.opt2"
+   "text": "That's probably the main issue. It sets as it cools. If it's firm in the oven, it's overbaked.",
+   "est_sec": 5.68,
+   "gap_before": 0.43,
+   "role": "reply",
+   "block": "baking.dlg19"
   }
  ]
 }

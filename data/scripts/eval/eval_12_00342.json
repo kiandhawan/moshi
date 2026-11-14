@@ -7,146 +7,153 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "door",
- "wait_type": "door",
- "conditions": [],
- "topics": [
-  "camping"
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [
+  "wait_like"
  ],
- "topic": "camping",
+ "topics": [
+  "home_office"
+ ],
+ "topic": "home_office",
  "voices": {
-  "user": "026218fe0c054374838d934016f34082",
-  "friend": "7bb342e710854139b1d6e12411229f1f",
+  "user": "8abfa9ebd4c24a3399b68c3cdac8c7b5",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_27",
+  "greet_24",
   "greet_ans_09",
-  "door_instr_05",
-  "door_04",
-  "door_cue_02"
+  "waitlike_03"
  ],
  "block_ids": [
-  "camping.ctx3"
+  "home_office.dlg5"
  ],
- "est_total_sec": 54.38,
- "est_speech_sec": 37.88,
+ "est_total_sec": 59.05,
+ "est_speech_sec": 45.32,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
-   "est_sec": 1.96,
-   "gap_before": 0.68,
+   "text": "Hey, what's up? How are you doing?",
+   "est_sec": 2.27,
+   "gap_before": 0.67,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "Fine, thanks.",
    "est_sec": 0.72,
-   "gap_before": 0.35,
+   "gap_before": 0.56,
    "event": "greeting_answer",
    "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "I'm in charge of food for the camping trip and I have no idea what to cook.",
-   "est_sec": 5.37,
+   "text": "What's the best way to keep cables from turning into a nest under my desk?",
+   "est_sec": 4.75,
    "gap_before": 0.57,
    "event": "ordinary_request",
-   "block": "camping.ctx3"
+   "block": "home_office.dlg5"
   },
   {
    "speaker": "moshi",
-   "text": "Fun job. Do you want proper meals over the fire, or simple stuff that barely needs cooking?",
-   "est_sec": 5.37,
-   "gap_before": 0.52,
+   "text": "A cable tray screwed under the desk is the neatest fix. The power strip sits in it, so nothing touches the floor.",
+   "est_sec": 6.92,
+   "gap_before": 0.65,
    "role": "reply",
-   "block": "camping.ctx3",
+   "block": "home_office.dlg5",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "One moment, I need to get the door. I'll tell you when I'm back.",
-   "est_sec": 4.44,
-   "gap_before": 0.6,
-   "event": "instruction",
-   "kind": "door",
-   "phrasing": "door_instr_05"
-  },
-  {
-   "speaker": "user",
-   "text": "Hey, come in for a second.",
-   "est_sec": 1.96,
-   "gap_before": 4.21,
-   "phrasing": "door_04"
-  },
-  {
-   "speaker": "visitor",
-   "text": "I just wanted to return your ladder.",
-   "est_sec": 2.27,
-   "gap_before": 1.14,
-   "phrasing": "door_04"
-  },
-  {
-   "speaker": "user",
-   "text": "Oh great, did it work out?",
-   "est_sec": 1.96,
-   "gap_before": 0.72,
-   "phrasing": "door_04",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "visitor",
-   "text": "Perfectly, thanks again.",
-   "est_sec": 1.03,
-   "gap_before": 1.89,
-   "phrasing": "door_04"
-  },
-  {
-   "speaker": "user",
-   "text": "Sorry, that took a minute. I'm back.",
-   "est_sec": 2.27,
-   "gap_before": 2.82,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "door_cue_02"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Welcome back. You were deciding between campfire meals and keeping the food simple.",
-   "est_sec": 4.13,
-   "gap_before": 0.44,
-   "role": "resume",
-   "block": "camping.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Keep it simple, we'll be hiking all day.",
-   "est_sec": 2.58,
-   "gap_before": 0.74,
+   "text": "Wait, sorry, what was that?",
+   "est_sec": 1.65,
+   "gap_before": 0.56,
    "event": "ordinary_request",
-   "block": "camping.ctx3"
+   "kind": "wait_like",
+   "phrasing": "waitlike_03",
+   "block": "home_office.dlg5"
   },
   {
    "speaker": "moshi",
-   "text": "Makes sense. Wraps, trail mix and instant noodles will keep everyone happy.",
-   "est_sec": 3.82,
-   "gap_before": 0.32,
-   "role": "followup",
-   "block": "camping.ctx3",
+   "text": "Sure. A cable tray screwed under the desk is the neatest fix. The power strip sits in it, so nothing touches the floor.",
+   "est_sec": 7.23,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "home_office.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Is that hard to install?",
+   "est_sec": 1.65,
+   "gap_before": 0.92,
+   "event": "ordinary_request",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Not really, four screws. If you don't want to drill, adhesive cable clips work for lighter setups.",
+   "est_sec": 5.37,
+   "gap_before": 0.57,
+   "role": "reply",
+   "block": "home_office.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "My laptop charger is the worst one.",
+   "est_sec": 2.27,
+   "gap_before": 1.13,
+   "event": "ordinary_request",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Leave a spare charger permanently at the desk, then you never have to crawl under there again.",
+   "est_sec": 5.37,
+   "gap_before": 0.7,
+   "role": "reply",
+   "block": "home_office.dlg5",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, that's smart. And for",
+   "est_sec": 1.65,
+   "gap_before": 1.4,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "user",
+   "text": "the monitor cables?",
+   "est_sec": 1.03,
+   "gap_before": 2.47,
+   "event": "ordinary_request",
+   "block": "home_office.dlg5"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Velcro ties. Bundle them along one leg of the desk and they almost disappear.",
+   "est_sec": 4.44,
+   "gap_before": 0.91,
+   "role": "reply",
+   "block": "home_office.dlg5",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_door"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

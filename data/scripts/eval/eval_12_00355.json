@@ -7,148 +7,185 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [
-  "extension",
-  "self_talk"
+  "near_miss"
  ],
  "topics": [
-  "podcasts"
+  "learning_language",
+  "restaurant_choice"
  ],
- "wait_sec": 15,
- "extension": {
-  "extra_sec": 10,
-  "said_before_deadline_sec": 1.37
- },
- "deadline": {
-  "after_turn": 6,
-  "sec": 10
- },
- "topic": "podcasts",
+ "topic": "learning_language",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
-  "friend": null,
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": "7bb342e710854139b1d6e12411229f1f",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Zoe",
+ "friend_name_id": "name_24",
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_27",
-  "think_instr_18",
-  "self_27",
-  "extension_03"
+  "greet_15",
+  "greet_ans_03",
+  "side_instr_03",
+  "dn_70",
+  "side_cue_24"
  ],
  "block_ids": [
-  "podcasts.ctx2"
+  "learning_language.ctx11",
+  "restaurant_choice.side3",
+  "dn_70"
  ],
- "est_total_sec": 57.92,
- "est_speech_sec": 26.42,
+ "est_total_sec": 71.48,
+ "est_speech_sec": 53.78,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
-   "est_sec": 1.96,
-   "gap_before": 0.6,
-   "role": "greeting",
-   "phrasing": "greet_27",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "All good here.",
-   "est_sec": 1.03,
-   "gap_before": 0.75,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_27"
-  },
-  {
-   "speaker": "user",
-   "text": "My friend and I want to start our own podcast.",
-   "est_sec": 3.2,
-   "gap_before": 0.3,
-   "event": "ordinary_request",
-   "block": "podcasts.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fun! What would it be about? Having a clear theme makes it much easier to find listeners.",
-   "est_sec": 5.37,
-   "gap_before": 0.91,
-   "role": "reply",
-   "block": "podcasts.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Let me think. Ask me again in about fifteen seconds.",
-   "est_sec": 3.2,
-   "gap_before": 1.77,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_18"
-  },
-  {
-   "speaker": "user",
-   "text": "Huh, interesting.",
-   "est_sec": 0.72,
-   "anchor": {
-    "turn": 4,
-    "offset": 3.63
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_27"
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, ten more seconds please.",
+   "text": "Hey, how's your week going?",
    "est_sec": 1.65,
-   "event": "extension",
-   "extra_sec": 10,
-   "phrasing": "extension_03",
-   "anchor": {
-    "turn": 4,
-    "offset": 13.63
-   }
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, what's the show going to be about?",
-   "est_sec": 2.58,
-   "role": "resume",
-   "block": "podcasts.ctx2",
-   "anchor": {
-    "turn": 6,
-    "offset": 10.43
-   },
+   "gap_before": 0.39,
+   "role": "greeting",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Maybe local food, trying a new restaurant in town each week.",
-   "est_sec": 3.51,
-   "gap_before": 1.35,
+   "text": "Doing okay, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.39,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_03"
+  },
+  {
+   "speaker": "user",
+   "text": "A deaf colleague just joined my team and I'd like to learn some sign language.",
+   "est_sec": 4.75,
+   "gap_before": 0.28,
    "event": "ordinary_request",
-   "block": "podcasts.ctx2"
+   "block": "learning_language.ctx11"
   },
   {
    "speaker": "moshi",
-   "text": "Nice, very focused. Local businesses might even help promote it.",
+   "text": "That's a kind thing to do. An in-person class, or online videos you can watch at your own pace?",
+   "est_sec": 5.99,
+   "gap_before": 1.21,
+   "role": "reply",
+   "block": "learning_language.ctx11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, Zoe needs me for a sec. Please stay quiet until I come back to you.",
+   "est_sec": 5.06,
+   "gap_before": 0.73,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_03"
+  },
+  {
+   "speaker": "user",
+   "text": "Are you back from the dentist? How's your tooth?",
+   "est_sec": 2.89,
+   "gap_before": 1.26,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_70"
+  },
+  {
+   "speaker": "friend",
+   "text": "Numb, I can't feel my lip.",
+   "est_sec": 1.96,
+   "gap_before": 1.18,
+   "phrasing": "dn_70"
+  },
+  {
+   "speaker": "user",
+   "text": "Zoe, how was that tapas bar you tried last weekend?",
    "est_sec": 3.2,
-   "gap_before": 0.98,
+   "gap_before": 0.58,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "restaurant_choice.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Food was great, but it was so loud we had to shout.",
+   "est_sec": 3.82,
+   "gap_before": 1.12,
+   "block": "restaurant_choice.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, I want somewhere we can actually talk. Was it pricey?",
+   "est_sec": 3.51,
+   "gap_before": 0.54,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "restaurant_choice.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "About forty each with drinks. Not bad.",
+   "est_sec": 2.27,
+   "gap_before": 3.09,
+   "block": "restaurant_choice.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe we go early, before it gets busy.",
+   "est_sec": 2.58,
+   "gap_before": 1.49,
+   "block": "restaurant_choice.side3"
+  },
+  {
+   "speaker": "friend",
+   "text": "Good plan. It's pretty calm before seven.",
+   "est_sec": 2.27,
+   "gap_before": 0.4,
+   "block": "restaurant_choice.side3"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm back. You can talk now.",
+   "est_sec": 2.27,
+   "gap_before": 1.57,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_24"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. So, how are you going to start?",
+   "est_sec": 2.58,
+   "gap_before": 1.01,
+   "role": "resume",
+   "block": "learning_language.ctx11",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "A class. I need someone to correct my hands.",
+   "est_sec": 2.89,
+   "gap_before": 0.31,
+   "event": "ordinary_request",
+   "block": "learning_language.ctx11"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great idea, signing really benefits from feedback. Maybe ask your colleague for a sign name too.",
+   "est_sec": 5.06,
+   "gap_before": 0.65,
    "role": "followup",
-   "block": "podcasts.ctx2",
+   "block": "learning_language.ctx11",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

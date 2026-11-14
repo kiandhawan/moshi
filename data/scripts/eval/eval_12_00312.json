@@ -7,23 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "reading",
- "wait_type": "reading",
- "conditions": [
-  "implicit"
- ],
+ "type": "phone_call",
+ "wait_type": "phone_call",
+ "conditions": [],
  "topics": [
   "picnic"
  ],
- "reading": {
-  "material": "recipe",
-  "sec": 23.4
- },
  "topic": "picnic",
  "voices": {
-  "user": "7bb342e710854139b1d6e12411229f1f",
+  "user": "933563129e564b19a115bedd57b7406a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -31,124 +27,136 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_21",
-  "greet_ans_21",
-  "read_instr_05",
-  "ack_08",
-  "murmur_04",
-  "implicit_14"
+  "greet_ans_24",
+  "phone_instr_07",
+  "call_11",
+  "phone_cue_07"
  ],
  "block_ids": [
-  "picnic.ctx3"
+  "picnic.ctx7",
+  "call_11"
  ],
- "est_total_sec": 63.51,
- "est_speech_sec": 33.96,
+ "est_total_sec": 63.65,
+ "est_speech_sec": 41.08,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi there! How's it going today?",
    "est_sec": 1.96,
-   "gap_before": 0.52,
+   "gap_before": 0.67,
    "role": "greeting",
    "phrasing": "greet_21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.94,
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.96,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
+   "phrasing": "greet_ans_24"
   },
   {
    "speaker": "user",
-   "text": "My friends want to do a picnic but the forecast says maybe rain.",
-   "est_sec": 4.13,
-   "gap_before": 0.58,
+   "text": "We want to bring the dog to the picnic, he's a big golden retriever.",
+   "est_sec": 4.44,
+   "gap_before": 0.34,
    "event": "ordinary_request",
-   "block": "picnic.ctx3"
+   "block": "picnic.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Hmm, there's a forty percent chance in the afternoon. Do you want to move it to the morning, or keep the plan and bring a tarp just in case?",
-   "est_sec": 9.09,
-   "gap_before": 1.12,
+   "text": "He'll have a great time. Would you go to the off leash park, or somewhere quieter where he stays on the lead?",
+   "est_sec": 6.92,
+   "gap_before": 0.35,
    "role": "reply",
-   "block": "picnic.ctx3",
+   "block": "picnic.ctx7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Give me a moment to read through the recipe before you say anything.",
-   "est_sec": 4.13,
-   "gap_before": 1.02,
+   "text": "One second, someone's calling me. Don't talk until I say I'm back.",
+   "est_sec": 3.82,
+   "gap_before": 0.63,
    "event": "instruction",
-   "kind": "reading",
-   "phrasing": "read_instr_05"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.5,
-   "role": "ack",
-   "phrasing": "ack_08",
-   "reference_only": true
+   "kind": "phone_call",
+   "phrasing": "phone_instr_07"
   },
   {
    "speaker": "user",
-   "text": "Two cups of flour, right.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 15.45
-   },
+   "text": "Hey, you.",
+   "est_sec": 0.72,
+   "gap_before": 1.17,
+   "phrasing": "call_11"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm just at home.",
+   "est_sec": 1.34,
+   "gap_before": 3.63,
+   "phrasing": "call_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, you're back already? I thought your flight was tomorrow.",
+   "est_sec": 3.2,
+   "gap_before": 2.67,
+   "phrasing": "call_11",
    "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "murmur_04"
+   "kind": "near_miss"
   },
   {
    "speaker": "user",
-   "text": "Okay, go ahead.",
-   "est_sec": 1.03,
-   "anchor": {
-    "turn": 4,
-    "offset": 23.4
-   },
+   "text": "Ha, okay, welcome home.",
+   "est_sec": 1.34,
+   "gap_before": 3.94,
+   "phrasing": "call_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Talk later.",
+   "est_sec": 0.72,
+   "gap_before": 2.23,
+   "phrasing": "call_11"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, off the phone. Sorry about that.",
+   "est_sec": 2.27,
+   "gap_before": 1.95,
    "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_14"
+   "kind": "explicit",
+   "phrasing": "phone_cue_07"
   },
   {
    "speaker": "moshi",
-   "text": "Right. We were working around the rain forecast for your picnic.",
-   "est_sec": 3.51,
-   "gap_before": 0.65,
+   "text": "Okay, you're off the phone. Your dog's picnic. Off leash park, or quieter spot?",
+   "est_sec": 4.44,
+   "gap_before": 0.51,
    "role": "resume",
-   "block": "picnic.ctx3",
+   "block": "picnic.ctx7",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "We'll keep it and bring the tarp.",
-   "est_sec": 2.27,
-   "gap_before": 1.41,
+   "text": "Off leash. He needs to run or he'll steal our sandwiches.",
+   "est_sec": 3.51,
+   "gap_before": 1.01,
    "event": "ordinary_request",
-   "block": "picnic.ctx3"
+   "block": "picnic.ctx7"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. Pick a spot near a shelter, just in case it really pours.",
-   "est_sec": 4.13,
-   "gap_before": 1.09,
+   "text": "Ha, true. Bring a long water bowl and an old towel for the mud.",
+   "est_sec": 4.44,
+   "gap_before": 1.01,
    "role": "followup",
-   "block": "picnic.ctx3",
+   "block": "picnic.ctx7",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_reading",
-  "implicit_return"
+  "new_type_phone"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

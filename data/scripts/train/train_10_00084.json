@@ -7,105 +7,138 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "cooking"
+  "public_transport"
  ],
- "topic": "cooking",
+ "topic": "public_transport",
  "voices": {
-  "user": "bd45448dd6f84f9ebd06f369f93f4410",
+  "user": "c250136a9ec74cc0b799be54664a83f2",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_29",
-  "greet_ans_10",
-  "describe_instr_05",
-  "describe_cue_07"
+  "greet_04",
+  "greet_ans_02"
  ],
  "block_ids": [
-  "cooking.opt1"
+  "public_transport.dlg31"
  ],
- "est_total_sec": 55.68,
- "est_speech_sec": 44.92,
+ "est_total_sec": 52.92,
+ "est_speech_sec": 38.19,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you doing right now?",
-   "est_sec": 2.27,
-   "gap_before": 0.62,
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.76,
    "role": "greeting",
-   "phrasing": "greet_29"
+   "phrasing": "greet_04"
   },
   {
    "speaker": "user",
-   "text": "Doing well, thank you.",
-   "est_sec": 1.34,
-   "gap_before": 0.59,
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_10"
+   "phrasing": "greet_ans_02"
   },
   {
    "speaker": "user",
-   "text": "I can't decide what to make for dinner on Saturday when my in-laws come over.",
-   "est_sec": 4.75,
-   "gap_before": 0.46,
-   "block": "cooking.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "I'll tell you all the choices first. Wait until I'm finished before you comment.",
-   "est_sec": 4.44,
-   "gap_before": 0.57,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_05"
-  },
-  {
-   "speaker": "user",
-   "text": "The first idea is a big roast chicken with potatoes and carrots, all in one tray in the oven.",
-   "est_sec": 5.99,
-   "gap_before": 1.1,
-   "block": "cooking.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's homemade lasagna, which I could make the night before and just bake when they arrive.",
-   "est_sec": 5.37,
-   "gap_before": 1.02,
-   "block": "cooking.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is grilled salmon with a lemon sauce and a green salad, lighter but more last minute.",
-   "est_sec": 6.3,
-   "gap_before": 2.54,
-   "block": "cooking.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "That's it. Now you can comment.",
-   "est_sec": 1.96,
-   "gap_before": 1.4,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_07"
+   "text": "I'm doing a ten hour overnight coach next week. I need survival tips.",
+   "est_sec": 4.13,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "public_transport.dlg31"
   },
   {
    "speaker": "moshi",
-   "text": "Do your in-laws have any favorite foods, or anything they don't eat? If not, I'd go with the lasagna so you're not stuck in the kitchen. The roast chicken would be my second pick, it's simple and everyone likes it.",
-   "est_sec": 12.5,
+   "text": "Respect. A neck pillow, an eye mask and earplugs are the holy trinity.",
+   "est_sec": 4.13,
+   "gap_before": 0.67,
+   "role": "reply",
+   "block": "public_transport.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "Where should I sit?",
+   "est_sec": 1.34,
    "gap_before": 0.96,
-   "role": "resume",
-   "block": "cooking.opt1"
+   "event": "ordinary_request",
+   "block": "public_transport.dlg31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Somewhere in the middle, away from the toilet and not right over the wheels. A window seat lets you lean and control the curtain.",
+   "est_sec": 7.54,
+   "gap_before": 1.04,
+   "role": "reply",
+   "block": "public_transport.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "What about",
+   "est_sec": 0.72,
+   "gap_before": 0.44,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "public_transport.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "food and stuff?",
+   "est_sec": 1.03,
+   "gap_before": 2.35,
+   "event": "ordinary_request",
+   "block": "public_transport.dlg31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Bring snacks and water, but nothing too salty. And wear layers, coaches swing from boiling to freezing.",
+   "est_sec": 5.37,
+   "gap_before": 0.92,
+   "role": "reply",
+   "block": "public_transport.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "Anything to help actually sleep?",
+   "est_sec": 1.65,
+   "gap_before": 1.76,
+   "event": "ordinary_request",
+   "block": "public_transport.dlg31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Download a long, boring podcast. And put your shoes somewhere you'll find them in the dark.",
+   "est_sec": 5.06,
+   "gap_before": 0.74,
+   "role": "reply",
+   "block": "public_transport.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "Very specific advice.",
+   "est_sec": 1.03,
+   "gap_before": 1.87,
+   "event": "ordinary_request",
+   "block": "public_transport.dlg31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Learned the hard way, I imagine, by many people.",
+   "est_sec": 2.89,
+   "gap_before": 0.73,
+   "role": "reply",
+   "block": "public_transport.dlg31"
   }
  ]
 }

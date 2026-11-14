@@ -7,125 +7,157 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
  "conditions": [],
  "topics": [
-  "baking"
+  "board_games",
+  "cooking"
  ],
- "topic": "baking",
+ "topic": "board_games",
  "voices": {
-  "user": "2680da81de8348a68e1f4dbaa79272f1",
-  "friend": null,
+  "user": "e58a6b7e06f048d0b83836d55d226b90",
+  "friend": "536d3a5e000945adb7038665781a4aca",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Rosa",
+ "friend_name_id": "name_22",
  "phrasing_ids": [
-  "greet_16",
-  "greet_ans_13",
-  "describe_instr_17",
-  "ack_15",
-  "describe_cue_01"
+  "greet_26",
+  "greet_ans_16",
+  "side_instr_17",
+  "side_cue_20"
  ],
  "block_ids": [
-  "baking.opt1"
+  "board_games.ctx3",
+  "cooking.side1"
  ],
- "est_total_sec": 55.18,
- "est_speech_sec": 42.64,
+ "est_total_sec": 62.72,
+ "est_speech_sec": 52.34,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how are you holding up?",
-   "est_sec": 1.96,
-   "gap_before": 0.65,
+   "text": "Hi! How are you doing these days?",
+   "est_sec": 2.27,
+   "gap_before": 0.49,
    "role": "greeting",
-   "phrasing": "greet_16"
+   "phrasing": "greet_26"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.46,
+   "text": "Pretty busy, but good.",
+   "est_sec": 1.34,
+   "gap_before": 0.54,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
+   "phrasing": "greet_ans_16"
   },
   {
    "speaker": "user",
-   "text": "I'm baking something for my friend's birthday, and I can't decide what.",
-   "est_sec": 3.82,
-   "gap_before": 0.21,
-   "block": "baking.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me finish describing every option before you respond.",
-   "est_sec": 2.89,
-   "gap_before": 0.61,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_17"
+   "text": "We've played the same three games every week for a year. I'm bored.",
+   "est_sec": 4.13,
+   "gap_before": 0.27,
+   "event": "ordinary_request",
+   "block": "board_games.ctx3"
   },
   {
    "speaker": "moshi",
-   "text": "Alright, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.7,
-   "role": "ack",
-   "phrasing": "ack_15"
+   "text": "Time for something new. Do you want a short game you can play a few rounds of, or one long epic game for the whole evening?",
+   "est_sec": 8.16,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "board_games.ctx3"
   },
   {
    "speaker": "user",
-   "text": "The first idea is a classic chocolate layer cake with fudge frosting, which takes most of a day.",
-   "est_sec": 5.68,
-   "gap_before": 0.62,
-   "block": "baking.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's a lemon drizzle loaf, which is simple and I've made it before.",
-   "est_sec": 4.44,
-   "gap_before": 1.63,
-   "block": "baking.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Option three is a big batch of decorated cupcakes so everyone gets their own.",
-   "est_sec": 4.44,
-   "gap_before": 1.72,
-   "block": "baking.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last one is a fruit tart with a homemade crust, which looks really fancy.",
+   "text": "Sorry, can you wait? My friend is talking to me. Keep quiet until I come back.",
    "est_sec": 5.06,
-   "gap_before": 2.79,
-   "block": "baking.opt1"
+   "gap_before": 0.33,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_17"
   },
   {
    "speaker": "user",
-   "text": "Okay, that's all of them. What do you think?",
-   "est_sec": 2.89,
-   "gap_before": 0.83,
+   "text": "Rosa, do we still have garlic or did you use the last of it?",
+   "est_sec": 4.44,
+   "gap_before": 0.91,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think there's half a bulb in the cupboard by the kettle.",
+   "est_sec": 3.82,
+   "gap_before": 0.35,
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Half a bulb won't be enough. Could you grab some on your way back from work?",
+   "est_sec": 5.06,
+   "gap_before": 0.33,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure, anything else while I'm there?",
+   "est_sec": 1.96,
+   "gap_before": 0.51,
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe a lemon. And check if they have fresh parsley.",
+   "est_sec": 3.2,
+   "gap_before": 0.57,
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "friend",
+   "text": "Got it, garlic, lemon, parsley.",
+   "est_sec": 1.65,
+   "gap_before": 0.45,
+   "block": "cooking.side1"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, I'm free again.",
+   "est_sec": 1.34,
+   "gap_before": 1.95,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_01"
+   "phrasing": "side_cue_20"
   },
   {
    "speaker": "moshi",
-   "text": "What's your friend's favorite flavor? If they love chocolate, go for the layer cake. If you're short on time, the lemon loaf with a candle on top is still lovely.",
-   "est_sec": 9.4,
-   "gap_before": 0.82,
+   "text": "No problem. So, quick rounds or one big game?",
+   "est_sec": 2.89,
+   "gap_before": 0.69,
    "role": "resume",
-   "block": "baking.opt1"
+   "block": "board_games.ctx3"
+  },
+  {
+   "speaker": "user",
+   "text": "Short ones. People tend to show up late.",
+   "est_sec": 2.58,
+   "gap_before": 0.41,
+   "event": "ordinary_request",
+   "block": "board_games.ctx3"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Good point. Quick card games let late arrivals jump in at the next round.",
+   "est_sec": 4.44,
+   "gap_before": 0.45,
+   "role": "followup",
+   "block": "board_games.ctx3"
   }
  ]
 }

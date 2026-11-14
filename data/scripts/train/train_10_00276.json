@@ -7,17 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "moving_house"
+  "gardening"
  ],
- "topic": "moving_house",
+ "topic": "gardening",
  "voices": {
-  "user": "fbc1029c018041d4b17f2c1e57222dff",
+  "user": "bf322df2096a46f18c579d0baa36f41d",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,102 +27,89 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_05",
-  "greet_ans_29"
+  "greet_ans_25",
+  "describe_instr_07",
+  "describe_cue_01"
  ],
  "block_ids": [
-  "moving_house.dlg4"
+  "gardening.opt2"
  ],
- "est_total_sec": 51.04,
- "est_speech_sec": 38.61,
+ "est_total_sec": 56.06,
+ "est_speech_sec": 45.85,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi, how have you been?",
    "est_sec": 1.65,
-   "gap_before": 0.37,
+   "gap_before": 0.62,
    "role": "greeting",
    "phrasing": "greet_05"
   },
   {
    "speaker": "user",
-   "text": "Pretty good so far.",
-   "est_sec": 1.34,
-   "gap_before": 0.9,
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.95,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_29"
+   "phrasing": "greet_ans_25"
   },
   {
    "speaker": "user",
-   "text": "Who do I need to tell when I move?",
-   "est_sec": 2.89,
-   "gap_before": 0.44,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Your bank, your employer, your doctor and dentist, and any utility companies. Don't forget the council and your insurance.",
-   "est_sec": 5.99,
-   "gap_before": 0.61,
-   "role": "reply",
-   "block": "moving_house.dlg4"
-  },
-  {
-   "speaker": "user",
-   "text": "That's a lot. Is there a way to do it all at once?",
-   "est_sec": 4.13,
-   "gap_before": 0.82,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Not really, but setting up mail forwarding for a few months catches anything you forget.",
+   "text": "Our lawn looks terrible and I'm trying to figure out what to do with it.",
    "est_sec": 4.75,
-   "gap_before": 1.15,
-   "role": "reply",
-   "block": "moving_house.dlg4"
+   "gap_before": 0.28,
+   "block": "gardening.opt2"
   },
   {
    "speaker": "user",
-   "text": "Good. Oh, and the internet. Should I",
-   "est_sec": 2.27,
-   "gap_before": 2.06,
+   "text": "Let me walk you through all the options, then you can tell me what you think.",
+   "est_sec": 5.06,
+   "gap_before": 0.46,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_07"
+  },
+  {
+   "speaker": "user",
+   "text": "One option is to reseed the whole thing in the fall and water it a lot for a few weeks.",
+   "est_sec": 6.3,
+   "gap_before": 0.75,
+   "block": "gardening.opt2",
    "event": "distractor",
-   "kind": "pause",
-   "block": "moving_house.dlg4"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "set that up before I move in?",
-   "est_sec": 2.27,
-   "gap_before": 1.83,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg4"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Yes, as early as possible. Installation can take a couple of weeks, so book it as soon as you have the address.",
-   "est_sec": 6.92,
-   "gap_before": 0.67,
-   "role": "reply",
-   "block": "moving_house.dlg4"
+   "text": "Another is to lay new sod, which looks perfect right away but costs a lot more.",
+   "est_sec": 5.06,
+   "gap_before": 1.74,
+   "block": "gardening.opt2",
+   "event": "distractor",
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "I'll do that today then.",
-   "est_sec": 1.65,
-   "gap_before": 1.3,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg4"
+   "text": "Or we could replace part of it with a gravel patio and some low plants that don't need much water.",
+   "est_sec": 6.3,
+   "gap_before": 1.77,
+   "block": "gardening.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, that's all of them. What do you think?",
+   "est_sec": 2.89,
+   "gap_before": 1.19,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_01"
   },
   {
    "speaker": "moshi",
-   "text": "Great. Make a quick checklist too, so you can tick things off as you go.",
-   "est_sec": 4.75,
-   "gap_before": 0.78,
-   "role": "reply",
-   "block": "moving_house.dlg4"
+   "text": "Do you actually use the lawn, like for kids or a dog? If so, I'd reseed in the fall. If it's mostly for looks, the patio with low water plants could save you a lot of work in the long run.",
+   "est_sec": 12.81,
+   "gap_before": 0.95,
+   "role": "resume",
+   "block": "gardening.opt2"
   }
  ]
 }

@@ -125,6 +125,9 @@ def events_for(script: dict, turns: list[dict]) -> dict:
     user = [t for t in turns if t["speaker"] != "moshi"]
     ev = {"user_start": user[0]["start"] if user else None, "type": script["type"],
           "conditions": script.get("conditions", [])}
+    # Bootstrap cluster: the context (waits), option set (describe options) or dialogue
+    # (ordinary), i.e. the first building block; files sharing it are not independent.
+    ev["cluster"] = script["block_ids"][0]
     if script["split"] == "eval":
         if not script.get("groups"):
             raise SystemExit(f"{script['id']}: eval script without groups (regenerate it)")

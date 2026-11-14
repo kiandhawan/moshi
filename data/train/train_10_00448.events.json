@@ -1,85 +1,145 @@
 {
   "id": "train_10_00448",
-  "group": "describe_options",
-  "user_start": 2.7,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 8.31,
-  "instruction_end": 12.38,
-  "wait_end": 39.93,
-  "resume_window": [
-    39.93,
-    44.93
+  "group": "side_conversation",
+  "user_start": 2.45,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question",
+    "near_miss"
   ],
-  "wait_sec": 27.55,
+  "cluster": "fitness.ctx10",
+  "instruction_start": 17.43,
+  "instruction_end": 21.68,
+  "wait_end": 60.32,
+  "resume_window": [
+    60.32,
+    65.32
+  ],
+  "wait_sec": 38.64,
   "distractors": [
-    17.76,
-    24.21
+    24.73,
+    29.33,
+    37.11,
+    46.4
   ],
   "distractor_kinds": [
-    "pause",
-    "pause"
+    "friend_question",
+    "near_miss",
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      17.76,
-      19.71
+      24.73,
+      25.66
     ],
     [
-      24.21,
-      26.12
+      29.33,
+      31.86
+    ],
+    [
+      37.11,
+      37.44
+    ],
+    [
+      46.4,
+      47.16
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    7.5,
+    66.01
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.7,
-      "end": 3.7,
+      "start": 2.45,
+      "end": 3.17,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 3.95,
-      "end": 7.54
+      "start": 3.5,
+      "end": 7.5,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 8.31,
-      "end": 12.38,
+      "start": 17.43,
+      "end": 21.68,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 13.04,
-      "end": 17.76,
+      "start": 23.67,
+      "end": 24.73,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 25.66,
+      "end": 26.59
     },
     {
       "speaker": "user",
-      "start": 19.71,
-      "end": 24.21,
+      "start": 27.64,
+      "end": 29.33,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "near_miss"
+    },
+    {
+      "speaker": "friend",
+      "start": 31.86,
+      "end": 33.3
     },
     {
       "speaker": "user",
-      "start": 26.12,
-      "end": 30.41
+      "start": 34.59,
+      "end": 37.11,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 37.44,
+      "end": 40.1
     },
     {
       "speaker": "user",
-      "start": 31.85,
-      "end": 37.12
+      "start": 43.41,
+      "end": 46.4,
+      "event": "distractor",
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 47.16,
+      "end": 49.83
     },
     {
       "speaker": "user",
-      "start": 37.72,
-      "end": 39.93,
+      "start": 52.35,
+      "end": 54.55
+    },
+    {
+      "speaker": "friend",
+      "start": 55.25,
+      "end": 57.14
+    },
+    {
+      "speaker": "user",
+      "start": 58.24,
+      "end": 60.32,
       "event": "return_cue",
       "kind": "explicit"
+    },
+    {
+      "speaker": "user",
+      "start": 63.94,
+      "end": 66.01,
+      "event": "ordinary_request"
     }
   ],
   "notes": "Rendered from script train_10_00448 by scripts/render.py.",
@@ -87,15 +147,33 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.76,
-      "end": 2.26,
-      "text": "Hi, how are you holding up?"
+      "start": 0.36,
+      "end": 2.04,
+      "text": "Hi, how are you doing right now?"
+    },
+    {
+      "kind": "reply",
+      "start": 8.44,
+      "end": 16.54,
+      "text": "Both are gentle on the knees. Swimming is zero impact, while rowing builds more strength but does bend the knees a lot. How do your knees feel when you squat?"
+    },
+    {
+      "kind": "ack",
+      "start": 22.14,
+      "end": 22.94,
+      "text": "Okay, I'll wait."
     },
     {
       "kind": "resume",
-      "start": 40.42,
-      "end": 52.92,
-      "text": "For learning the basics, the used entry level camera is a smart, low risk start. The mirrorless camera is great if you'll carry it everywhere, since small cameras actually get used. A good phone is easiest, but you won't learn manual controls as well."
+      "start": 60.93,
+      "end": 63.47,
+      "text": "Alright. So, the pool or the rower?"
+    },
+    {
+      "kind": "followup",
+      "start": 66.98,
+      "end": 72.11,
+      "text": "Then swimming it is. Front crawl or backstroke are kinder than breaststroke, which twists the knees."
     }
   ]
 }

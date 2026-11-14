@@ -7,161 +7,139 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "extension",
-  "self_talk"
- ],
+ "type": "door",
+ "wait_type": "door",
+ "conditions": [],
  "topics": [
-  "podcasts"
+  "cycling"
  ],
- "wait_sec": 30,
- "extension": {
-  "extra_sec": 10,
-  "said_before_deadline_sec": 1.88
- },
- "deadline": {
-  "after_turn": 7,
-  "sec": 10
- },
- "topic": "podcasts",
+ "topic": "cycling",
  "voices": {
-  "user": "08b4100b4c3747fe84ed8b57d26a95ba",
-  "friend": null,
+  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "friend": "026218fe0c054374838d934016f34082",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_12",
-  "greet_ans_09",
-  "think_instr_15",
-  "self_30",
-  "self_15",
-  "extension_08"
+  "greet_21",
+  "greet_ans_30",
+  "door_instr_05",
+  "door_14",
+  "door_cue_05"
  ],
  "block_ids": [
-  "podcasts.ctx2"
+  "cycling.ctx14",
+  "door_14"
  ],
- "est_total_sec": 75.67,
- "est_speech_sec": 31.79,
+ "est_total_sec": 55.63,
+ "est_speech_sec": 38.4,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello there, how are you doing today?",
-   "est_sec": 2.27,
-   "gap_before": 0.3,
-   "role": "greeting",
-   "phrasing": "greet_12",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.58,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
-  },
-  {
-   "speaker": "user",
-   "text": "My friend and I want to start our own podcast.",
-   "est_sec": 3.2,
-   "gap_before": 0.58,
-   "event": "ordinary_request",
-   "block": "podcasts.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fun! What would it be about? Having a clear theme makes it much easier to find listeners.",
-   "est_sec": 5.37,
-   "gap_before": 1.19,
-   "role": "reply",
-   "block": "podcasts.ctx2",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hmm, tough one. Give me thirty seconds and ask me again.",
-   "est_sec": 3.51,
-   "gap_before": 2.45,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 30,
-   "phrasing": "think_instr_15"
-  },
-  {
-   "speaker": "user",
-   "text": "Mm, hold on, hold on.",
-   "est_sec": 1.65,
-   "anchor": {
-    "turn": 4,
-    "offset": 14.04
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_30"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, what would I regret more?",
+   "text": "Hi there! How's it going today?",
    "est_sec": 1.96,
-   "anchor": {
-    "turn": 4,
-    "offset": 24.39
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_15"
-  },
-  {
-   "speaker": "user",
-   "text": "Not yet, give me ten more seconds.",
-   "est_sec": 2.27,
-   "event": "extension",
-   "extra_sec": 10,
-   "phrasing": "extension_08",
-   "anchor": {
-    "turn": 4,
-    "offset": 28.12
-   }
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, what's the show going to be about?",
-   "est_sec": 2.58,
-   "role": "resume",
-   "block": "podcasts.ctx2",
-   "anchor": {
-    "turn": 7,
-    "offset": 10.48
-   },
+   "gap_before": 0.74,
+   "role": "greeting",
+   "phrasing": "greet_21",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "We both love bad movies, so we'll review terrible films.",
-   "est_sec": 3.2,
-   "gap_before": 0.43,
+   "text": "Not bad at all, thanks.",
+   "est_sec": 1.65,
+   "gap_before": 0.93,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_30"
+  },
+  {
+   "speaker": "user",
+   "text": "It's getting icy and I don't want to stop training over winter.",
+   "est_sec": 3.82,
+   "gap_before": 0.44,
    "event": "ordinary_request",
-   "block": "podcasts.ctx2"
+   "block": "cycling.ctx14"
   },
   {
    "speaker": "moshi",
-   "text": "That's a proven format. Pick one movie per episode and give it a silly rating system.",
-   "est_sec": 5.06,
-   "gap_before": 1.86,
-   "role": "followup",
-   "block": "podcasts.ctx2",
+   "text": "Fair. Would you rather get a smart trainer and ride at home, or join an indoor spin class at the gym?",
+   "est_sec": 6.61,
+   "gap_before": 0.35,
+   "role": "reply",
+   "block": "cycling.ctx14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "One moment, I need to get the door. I'll tell you when I'm back.",
+   "est_sec": 4.44,
+   "gap_before": 1.23,
+   "event": "instruction",
+   "kind": "door",
+   "phrasing": "door_instr_05"
+  },
+  {
+   "speaker": "user",
+   "text": "Oh, hi, Mrs Lowe.",
+   "est_sec": 1.34,
+   "gap_before": 3.59,
+   "phrasing": "door_14"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Sorry, dear, have you seen a grey cat around? Biscuit got out.",
+   "est_sec": 3.82,
+   "gap_before": 0.35,
+   "phrasing": "door_14"
+  },
+  {
+   "speaker": "user",
+   "text": "Not today. Does he usually go far?",
+   "est_sec": 2.27,
+   "gap_before": 1.42,
+   "phrasing": "door_14",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "visitor",
+   "text": "Never past the hedge, that's why I'm worried.",
+   "est_sec": 2.58,
+   "gap_before": 1.18,
+   "phrasing": "door_14"
+  },
+  {
+   "speaker": "user",
+   "text": "I'll keep an eye out and knock if I see him.",
+   "est_sec": 3.51,
+   "gap_before": 1.41,
+   "phrasing": "door_14"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, sorry about the interruption.",
+   "est_sec": 1.96,
+   "gap_before": 3.1,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "door_cue_05"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Everything okay at the door? For the winter, trainer at home or spin class?",
+   "est_sec": 4.44,
+   "gap_before": 0.99,
+   "role": "resume",
+   "block": "cycling.ctx14",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "new_type_door"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

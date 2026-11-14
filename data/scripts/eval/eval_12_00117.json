@@ -7,15 +7,28 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "phone_call",
- "wait_type": "phone_call",
- "conditions": [],
- "topics": [
-  "cycling"
+ "type": "think_time",
+ "wait_type": "think_time",
+ "conditions": [
+  "extension"
  ],
- "topic": "cycling",
+ "topics": [
+  "painting_art"
+ ],
+ "wait_sec": 15,
+ "extension": {
+  "extra_sec": 10,
+  "said_before_deadline_sec": 2.45
+ },
+ "deadline": {
+  "after_turn": 7,
+  "sec": 10
+ },
+ "topic": "painting_art",
  "voices": {
   "user": "732ea755bd9e446eb31dc79966b50428",
   "friend": null,
@@ -24,131 +37,123 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_30",
-  "greet_ans_24",
-  "phone_instr_09",
-  "ack_16",
-  "call_03",
-  "phone_cue_07"
+  "greet_03",
+  "greet_ans_12",
+  "think_instr_06",
+  "extension_02"
  ],
  "block_ids": [
-  "cycling.ctx3"
+  "painting_art.ctx6"
  ],
- "est_total_sec": 51.5,
- "est_speech_sec": 33.85,
+ "est_total_sec": 66.45,
+ "est_speech_sec": 34.89,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, how's it going? You doing okay?",
-   "est_sec": 2.27,
-   "gap_before": 0.5,
+   "text": "Hello, how's your day going?",
+   "est_sec": 1.65,
+   "gap_before": 0.37,
    "role": "greeting",
-   "phrasing": "greet_30",
+   "phrasing": "greet_03",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Ah, it's been a long day.",
-   "est_sec": 1.96,
-   "gap_before": 0.9,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_24"
-  },
-  {
-   "speaker": "user",
-   "text": "A few friends invited me on a long weekend ride.",
-   "est_sec": 3.2,
-   "gap_before": 0.3,
-   "event": "ordinary_request",
-   "block": "cycling.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Fun! They're doing either the flat forty mile loop or the hilly twenty five mile one. Which do you think your legs can handle?",
-   "est_sec": 7.54,
-   "gap_before": 0.64,
-   "role": "reply",
-   "block": "cycling.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Wait, I need to answer this. Stay quiet till I'm back.",
-   "est_sec": 3.51,
-   "gap_before": 0.78,
-   "event": "instruction",
-   "kind": "phone_call",
-   "phrasing": "phone_instr_09"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Okay, sure.",
-   "est_sec": 0.72,
-   "gap_before": 0.26,
-   "role": "ack",
-   "phrasing": "ack_16",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Hey!",
-   "est_sec": 0.41,
-   "gap_before": 1.1,
-   "phrasing": "call_03"
-  },
-  {
-   "speaker": "user",
-   "text": "Sorry, you cut out there. Okay, you're back.",
-   "est_sec": 2.58,
-   "gap_before": 2.64,
-   "phrasing": "call_03",
-   "event": "distractor",
-   "kind": "near_miss"
-  },
-  {
-   "speaker": "user",
-   "text": "I said I'll be there at seven.",
-   "est_sec": 2.27,
-   "gap_before": 1.9,
-   "phrasing": "call_03"
-  },
-  {
-   "speaker": "user",
-   "text": "Can you pick up some bread on the way?",
-   "est_sec": 2.89,
-   "gap_before": 1.85,
-   "phrasing": "call_03",
-   "event": "distractor",
-   "kind": "question_to_other"
-  },
-  {
-   "speaker": "user",
-   "text": "Perfect, see you.",
+   "text": "Okay, I guess.",
    "est_sec": 1.03,
-   "gap_before": 2.99,
-   "phrasing": "call_03"
+   "gap_before": 0.84,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
   },
   {
    "speaker": "user",
-   "text": "Okay, off the phone. Sorry about that.",
-   "est_sec": 2.27,
-   "gap_before": 1.69,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "phone_cue_07"
+   "text": "My neighbour wants to pay me to paint her house. Like, a painting of it.",
+   "est_sec": 4.75,
+   "gap_before": 0.6,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "Welcome back. Did you decide which group ride to do?",
-   "est_sec": 3.2,
-   "gap_before": 0.6,
+   "text": "How fun, your first commission! Have you got a rough idea of how many hours it would take you?",
+   "est_sec": 5.99,
+   "gap_before": 0.66,
+   "role": "reply",
+   "block": "painting_art.ctx6",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "No clue, maybe a week of evenings?",
+   "est_sec": 2.27,
+   "gap_before": 1.36,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That could mean ten hours or thirty. Can you narrow it down a bit?",
+   "est_sec": 4.44,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "painting_art.ctx6",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Let me think for fifteen seconds, then check back with me.",
+   "est_sec": 3.51,
+   "gap_before": 0.9,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 15,
+   "phrasing": "think_instr_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Wait, I need ten more seconds.",
+   "est_sec": 1.96,
+   "event": "extension",
+   "extra_sec": 10,
+   "phrasing": "extension_02",
+   "anchor": {
+    "turn": 6,
+    "offset": 12.55
+   }
+  },
+  {
+   "speaker": "moshi",
+   "text": "Any better guess on the hours for the commission?",
+   "est_sec": 2.89,
    "role": "resume",
-   "block": "cycling.ctx3",
+   "block": "painting_art.ctx6",
+   "anchor": {
+    "turn": 7,
+    "offset": 10.03
+   },
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Probably about fifteen hours in total.",
+   "est_sec": 1.96,
+   "gap_before": 1.31,
+   "event": "ordinary_request",
+   "block": "painting_art.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then even a modest hourly rate puts you around two hundred. Don't undersell yourself.",
+   "est_sec": 4.44,
+   "gap_before": 0.81,
+   "role": "followup",
+   "block": "painting_art.ctx6",
    "reference_only": true
   }
  ],
  "groups": [
-  "new_type_phone"
+  "familiar_type",
+  "extension"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

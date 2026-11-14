@@ -7,192 +7,179 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "phone_call",
+ "wait_type": "phone_call",
  "conditions": [
   "implicit"
  ],
  "topics": [
-  "podcasts",
-  "home_office"
+  "family_visit"
  ],
- "topic": "podcasts",
+ "topic": "family_visit",
  "voices": {
   "user": "b121b91872f54f04ba9f6da08b8b6253",
-  "friend": "ca1a4fbf6702400a863d60be2fe8062d",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Aisha",
- "friend_name_id": "name_18",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_18",
-  "greet_ans_21",
-  "side_instr_15",
-  "ack_04",
-  "implicit_07"
+  "greet_15",
+  "greet_ans_09",
+  "phone_instr_06",
+  "call_20",
+  "implicit_14"
  ],
  "block_ids": [
-  "podcasts.ctx3",
-  "home_office.side2"
+  "family_visit.ctx14",
+  "call_20"
  ],
- "est_total_sec": 69.59,
- "est_speech_sec": 51.71,
+ "est_total_sec": 63.15,
+ "est_speech_sec": 40.66,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.69,
+   "text": "Hey, how's your week going?",
+   "est_sec": 1.65,
+   "gap_before": 0.52,
    "role": "greeting",
-   "phrasing": "greet_18",
+   "phrasing": "greet_15",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "I'm okay, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.82,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_21"
-  },
-  {
-   "speaker": "user",
-   "text": "I've subscribed to way too many shows and I'm drowning in episodes.",
-   "est_sec": 3.82,
-   "gap_before": 0.31,
-   "event": "ordinary_request",
-   "block": "podcasts.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Happens to everyone. Which ones could you drop? Think about which you actually look forward to.",
-   "est_sec": 5.06,
-   "gap_before": 0.6,
-   "role": "reply",
-   "block": "podcasts.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Let me think about that.",
-   "est_sec": 1.65,
-   "gap_before": 0.76,
-   "event": "ordinary_request",
-   "block": "podcasts.ctx3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure. Aim to keep maybe five.",
-   "est_sec": 1.96,
-   "gap_before": 0.9,
-   "role": "reply",
-   "block": "podcasts.ctx3",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Give me a second, my brother needs help with something. Stay quiet until I'm back.",
-   "est_sec": 4.75,
-   "gap_before": 0.61,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_15"
-  },
-  {
-   "speaker": "moshi",
-   "text": "No problem.",
+   "text": "Fine, thanks.",
    "est_sec": 0.72,
-   "gap_before": 0.63,
-   "role": "ack",
-   "phrasing": "ack_04",
+   "gap_before": 0.77,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_09"
+  },
+  {
+   "speaker": "user",
+   "text": "My stepdad's visiting and he's a really picky eater.",
+   "est_sec": 2.89,
+   "gap_before": 0.55,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "How picky are we talking?",
+   "est_sec": 1.65,
+   "gap_before": 0.64,
+   "role": "reply",
+   "block": "family_visit.ctx14",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Is the internet slow for you too, or is it just my laptop?",
-   "est_sec": 4.13,
-   "gap_before": 1.41,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "It's crawling. I think someone's downloading a game.",
-   "est_sec": 2.58,
-   "gap_before": 1.17,
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Well, it isn't me. I'm trying to upload a presentation.",
-   "est_sec": 3.2,
-   "gap_before": 0.56,
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Let me restart the router, give it two minutes.",
-   "est_sec": 2.89,
-   "gap_before": 1.07,
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Thanks. Maybe we should finally get the faster plan?",
-   "est_sec": 2.89,
-   "gap_before": 1.26,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Yeah, if we're both working from home, it's probably worth it.",
-   "est_sec": 3.51,
-   "gap_before": 2.07,
-   "block": "home_office.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "So, what were you saying?",
+   "text": "Plain chicken, potatoes, nothing green.",
    "est_sec": 1.65,
-   "gap_before": 0.75,
+   "gap_before": 0.63,
+   "event": "ordinary_request",
+   "block": "family_visit.ctx14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Got it. Do you want to cook one simple meal everyone eats, or make his plain version on the side?",
+   "est_sec": 6.3,
+   "gap_before": 0.48,
+   "role": "reply",
+   "block": "family_visit.ctx14",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Sorry, quick call. Wait until I'm off the phone, okay?",
+   "est_sec": 3.2,
+   "gap_before": 1.03,
+   "event": "instruction",
+   "kind": "phone_call",
+   "phrasing": "phone_instr_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Hi, it's me, sorry, I'm on the bus.",
+   "est_sec": 2.58,
+   "gap_before": 1.89,
+   "phrasing": "call_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Hello? Can you hear me?",
+   "est_sec": 1.65,
+   "gap_before": 2.11,
+   "phrasing": "call_20",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Ah, there you are, I'm back, I was in the lift.",
+   "est_sec": 3.51,
+   "gap_before": 1.97,
+   "phrasing": "call_20",
+   "event": "distractor",
+   "kind": "near_miss"
+  },
+  {
+   "speaker": "user",
+   "text": "So, are we still on for the cinema?",
+   "est_sec": 2.58,
+   "gap_before": 2.88,
+   "phrasing": "call_20",
+   "event": "distractor",
+   "kind": "question_to_other"
+  },
+  {
+   "speaker": "user",
+   "text": "Great, I'll get the tickets.",
+   "est_sec": 1.65,
+   "gap_before": 3.25,
+   "phrasing": "call_20"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 1.37,
    "event": "return_cue",
    "kind": "implicit",
-   "phrasing": "implicit_07"
+   "phrasing": "implicit_14"
   },
   {
    "speaker": "moshi",
-   "text": "Sure. We were trimming your podcast list. Which ones could go?",
-   "est_sec": 3.51,
-   "gap_before": 0.48,
+   "text": "Of course. So, one menu or two?",
+   "est_sec": 2.27,
+   "gap_before": 1.14,
    "role": "resume",
-   "block": "podcasts.ctx3",
+   "block": "family_visit.ctx14",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Honestly, I'll only keep the three interview shows.",
-   "est_sec": 2.58,
-   "gap_before": 1.33,
+   "text": "His own plate. I'm not giving up my curry.",
+   "est_sec": 2.89,
+   "gap_before": 0.87,
    "event": "ordinary_request",
-   "block": "podcasts.ctx3"
+   "block": "family_visit.ctx14"
   },
   {
    "speaker": "moshi",
-   "text": "Great. Mark everything older than a month as played and start fresh.",
-   "est_sec": 3.82,
-   "gap_before": 0.96,
+   "text": "Fair. Keep a little plain rice and chicken aside before you add the spices.",
+   "est_sec": 4.44,
+   "gap_before": 0.89,
    "role": "followup",
-   "block": "podcasts.ctx3",
+   "block": "family_visit.ctx14",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
+  "new_type_phone",
   "implicit_return"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."

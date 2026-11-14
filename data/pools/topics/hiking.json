@@ -1,160 +1,1868 @@
 {
-  "topic": "hiking",
-  "contexts": [
+ "topic": "hiking",
+ "contexts": [
+  {
+   "id": "hiking.ctx1",
+   "turns": [
     {
-      "id": "hiking.ctx1",
-      "turns": [
-        {"speaker": "user", "text": "I want to do a day hike on Sunday but I'm not super fit."},
-        {"speaker": "moshi", "text": "No problem. There's a flat lakeside loop of about five miles, or a shorter trail with a steep climb and a great view. Which appeals more?"}
-      ],
-      "pending": "flat lakeside loop or short steep trail with a view",
-      "think_reask": [
-        "So, the flat loop around the lake, or the steep one with the view?",
-        "Okay, time's up. Lakeside loop or the short climb?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were choosing a hike for Sunday, the lake loop or the steep trail?",
-        "Hi again. Did you pick between the flat walk and the climb with the view?"
-      ],
-      "endings": [
-        {"user": "The lake. I'd rather enjoy it than suffer.", "moshi": "Good choice. Bring a picnic, there are benches along the shore."},
-        {"user": "The steep one. I want the view, even if I'm slow.", "moshi": "Go for it. Take plenty of breaks and start early before it gets hot."}
-      ]
+     "speaker": "user",
+     "text": "I want to do a day hike on Sunday but I'm not super fit."
     },
     {
-      "id": "hiking.ctx2",
-      "turns": [
-        {"speaker": "user", "text": "My old boots finally fell apart."},
-        {"speaker": "moshi", "text": "Time for new ones. Do you want proper leather boots with ankle support, or lighter trail shoes?"}
-      ],
-      "pending": "leather boots with ankle support or light trail shoes",
-      "think_reask": [
-        "So, sturdy leather boots, or lighter trail shoes?",
-        "Have you decided? Ankle support or something lighter?"
-      ],
-      "welcome_back": [
-        "Welcome back. We were picking new hiking footwear, boots or trail shoes?",
-        "There you are. Still deciding between boots and trail shoes?"
-      ],
-      "endings": [
-        {"user": "Boots. I twisted my ankle last year and I don't want that again.", "moshi": "Makes sense. Break them in on short walks before any big hike."},
-        {"user": "Trail shoes. I mostly do easy paths in summer.", "moshi": "Then they'll be much more comfortable. Pick a pair with a good grippy sole."}
-      ]
-    },
-    {
-      "id": "hiking.ctx3",
-      "turns": [
-        {"speaker": "user", "text": "My friends invited me on a hike but the forecast says rain in the afternoon."},
-        {"speaker": "moshi", "text": "Tricky. You could start very early and be down before the rain, or move the hike to another day. What do you think?"}
-      ],
-      "pending": "start early before the rain or postpone the hike",
-      "think_reask": [
-        "So, an early start to beat the rain, or postpone it?",
-        "Okay, what's the plan, go early or pick another day?"
-      ],
-      "welcome_back": [
-        "Welcome back. You were deciding about the hike and the rain. Early start or postpone?",
-        "Hi again. Any decision on the rainy hike?"
-      ],
-      "endings": [
-        {"user": "Let's go early. Everyone's already free that day.", "moshi": "Then aim to be on the trail by seven, and still pack a rain jacket just in case."},
-        {"user": "Postpone. Muddy trails are no fun.", "moshi": "Fair. Next weekend looks drier, so suggest that to the group."}
-      ]
+     "speaker": "moshi",
+     "text": "No problem. There's a flat lakeside loop of about five miles, or a shorter trail with a steep climb and a great view. Which appeals more?"
     }
-  ],
-  "side_conversations": [
-    {"id": "hiking.side1", "turns": [
-      {"speaker": "user", "text": "{friend}, have you seen my water bottle? The big green one."},
-      {"speaker": "friend", "text": "It's in the car from last weekend, I think."},
-      {"speaker": "user", "text": "Ugh, it's probably gross by now."},
-      {"speaker": "friend", "text": "Just take one of mine. I've got about five."},
-      {"speaker": "user", "text": "Thanks. Do you want to come with us tomorrow, by the way?"},
-      {"speaker": "friend", "text": "Where are you going?"},
-      {"speaker": "user", "text": "Up to the ridge and back. Maybe four hours."},
-      {"speaker": "friend", "text": "Tempting, but my knees say no."}
-    ]},
-    {"id": "hiking.side2", "turns": [
-      {"speaker": "user", "text": "How was the trail you did last week?"},
-      {"speaker": "friend", "text": "Beautiful, but really muddy near the waterfall."},
-      {"speaker": "user", "text": "Would it be okay for the kids?"},
-      {"speaker": "friend", "text": "The first part, yes. The last mile is steep with loose rocks, I wouldn't bring them up there."},
-      {"speaker": "user", "text": "We could just go to the waterfall and turn back."},
-      {"speaker": "friend", "text": "That's the best bit anyway. They'll love it."}
-    ]},
-    {"id": "hiking.side3", "turns": [
-      {"speaker": "user", "text": "{friend}, are you bringing the map or should I?"},
-      {"speaker": "friend", "text": "I've got it on my phone."},
-      {"speaker": "user", "text": "There's no signal up there though."},
-      {"speaker": "friend", "text": "I downloaded it, it works offline."},
-      {"speaker": "user", "text": "Okay, but I'm bringing the paper one too. Just in case your battery dies."},
-      {"speaker": "friend", "text": "You're such a scout. Fine, bring it."}
-    ]}
-  ],
-  "ordinary_dialogues": [
-    {"id": "hiking.dlg1", "turns": [
-      {"speaker": "user", "text": "What should I pack for a day hike? It's my first one."},
-      {"speaker": "moshi", "text": "The basics are water, snacks, a light rain jacket, sunscreen and a charged phone. A small first aid kit is a good idea too."},
-      {"speaker": "user", "text": "How much water are we talking?"},
-      {"speaker": "moshi", "text": "About half a litre per hour of hiking, more if it's hot. For a four hour walk, two litres is a safe amount."},
-      {"speaker": "user", "text": "That's heavy. Can I / just bring one bottle and refill it?"},
-      {"speaker": "moshi", "text": "Only if you know there's safe water along the way. Streams aren't safe to drink without a filter."},
-      {"speaker": "user", "text": "Okay, two litres it is. What kind of snacks?"},
-      {"speaker": "moshi", "text": "Things that are easy to eat on the move, like nuts, dried fruit, cereal bars or a sandwich. Salty snacks are nice if you sweat a lot."}
-    ]},
-    {"id": "hiking.dlg2", "turns": [
-      {"speaker": "user", "text": "I keep getting blisters on my heels when I hike."},
-      {"speaker": "moshi", "text": "That's usually friction from your heel sliding in the boot. Are your boots well broken in?"},
-      {"speaker": "user", "text": "They're pretty new, yeah."},
-      {"speaker": "moshi", "text": "That's likely the cause. Wear them around the house and on short walks first. Proper hiking socks help a lot too, not cotton ones."},
-      {"speaker": "user", "text": "And if I feel one starting on the trail?"},
-      {"speaker": "moshi", "text": "Stop right away and put a blister plaster or some tape on the spot. Waiting until it hurts usually means it's already formed."},
-      {"speaker": "user", "text": "I always think I'll / just push through it."},
-      {"speaker": "moshi", "text": "Most people do. A two minute stop early saves you a miserable walk back."}
-    ]},
-    {"id": "hiking.dlg3", "turns": [
-      {"speaker": "user", "text": "Is it safe to hike alone?"},
-      {"speaker": "moshi", "text": "It can be, with some precautions. Pick a well used trail, and always tell someone where you're going and when you'll be back."},
-      {"speaker": "user", "text": "What if I get lost?"},
-      {"speaker": "moshi", "text": "Download an offline map before you go and carry a small battery pack for your phone. If you're unsure, stay where you are and call for help."},
-      {"speaker": "user", "text": "I'm retired, so I can go on weekdays when it's / really quiet."},
-      {"speaker": "moshi", "text": "That's lovely, but quieter trails mean fewer people to help. Stick to routes you know until you're confident."},
-      {"speaker": "user", "text": "Good point. Maybe I'll join a walking group too."},
-      {"speaker": "moshi", "text": "That's a great idea. Many groups do weekday hikes, and you'll learn new trails from them."}
-    ]},
-    {"id": "hiking.dlg4", "turns": [
-      {"speaker": "user", "text": "Can I take my dog on a long hike?"},
-      {"speaker": "moshi", "text": "Most healthy adult dogs love it. How old is your dog, and what breed?"},
-      {"speaker": "user", "text": "She's a three year old border collie."},
-      {"speaker": "moshi", "text": "Perfect, collies have tons of energy. She'll probably outlast you. Just build up the distance gradually."},
-      {"speaker": "user", "text": "What does she need to bring?"},
-      {"speaker": "moshi", "text": "Water and a collapsible bowl, some treats, and poo bags. Check her paws during breaks, rocky trails can hurt them."},
-      {"speaker": "user", "text": "Should I / keep her on the lead the whole time?"},
-      {"speaker": "moshi", "text": "Check the trail rules first. Near livestock or wildlife, a lead is always the safer choice."}
-    ]}
-  ],
-  "option_sets": [
-    {"id": "hiking.opt1",
-     "lead_in": "We're planning a hike next Saturday and I have to choose the trail.",
-     "options": [
-      "The first trail is a flat loop around a lake, about five miles, with lots of shade.",
-      "Then there's a steep climb to a ridge with amazing views, but it's eight miles and pretty rocky.",
-      "Option three is a forest trail along a river with a few small waterfalls, moderate and six miles.",
-      "And the last one is a coastal path that's easy but gets crowded on weekends."
-     ],
-     "moshi_comment": [
-      "The river trail sounds like a great middle ground, waterfalls and a moderate distance. The ridge climb is the most rewarding if everyone is fit and has good shoes. The lake loop is best if anyone in the group is new to hiking.",
-      "How experienced is everyone in the group? If it's mixed, I'd go with the river trail. The coastal path might be too busy on a Saturday."
-     ]},
-    {"id": "hiking.opt2",
-     "lead_in": "I need to pick hiking boots before my trip, and I've tried on a few pairs.",
-     "options": [
-      "The first pair is heavy leather boots, super sturdy and waterproof, but they need breaking in.",
-      "The second pair is lightweight trail runners, really comfortable right away, but not waterproof.",
-      "And the third pair is mid height synthetic boots, kind of in between, with decent ankle support."
-     ],
-     "moshi_comment": [
-      "For most trips, the mid height synthetic boots are a solid compromise between comfort and support. The leather boots are best for rough, wet terrain if you have time to break them in. The trail runners are great on dry, well kept trails.",
-      "What kind of terrain and weather are you expecting? If it's wet and rocky, go for the leather boots, but start wearing them now. If it's dry, the trail runners will feel amazing."
-     ]}
-  ]
+   ],
+   "pending": "flat lakeside loop or short steep trail with a view",
+   "think_reask": [
+    "So, the flat loop around the lake, or the steep one with the view?",
+    "Okay, time's up. Lakeside loop or the short climb?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were choosing a hike for Sunday, the lake loop or the steep trail?",
+    "Hi again. Did you pick between the flat walk and the climb with the view?"
+   ],
+   "endings": [
+    {
+     "user": "The lake. I'd rather enjoy it than suffer.",
+     "moshi": "Good choice. Bring a picnic, there are benches along the shore."
+    },
+    {
+     "user": "The steep one. I want the view, even if I'm slow.",
+     "moshi": "Go for it. Take plenty of breaks and start early before it gets hot."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My old boots finally fell apart."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Time for new ones. Do you want proper leather boots with ankle support, or lighter trail shoes?"
+    }
+   ],
+   "pending": "leather boots with ankle support or light trail shoes",
+   "think_reask": [
+    "So, sturdy leather boots, or lighter trail shoes?",
+    "Have you decided? Ankle support or something lighter?"
+   ],
+   "welcome_back": [
+    "Welcome back. We were picking new hiking footwear, boots or trail shoes?",
+    "There you are. Still deciding between boots and trail shoes?"
+   ],
+   "endings": [
+    {
+     "user": "Boots. I twisted my ankle last year and I don't want that again.",
+     "moshi": "Makes sense. Break them in on short walks before any big hike."
+    },
+    {
+     "user": "Trail shoes. I mostly do easy paths in summer.",
+     "moshi": "Then they'll be much more comfortable. Pick a pair with a good grippy sole."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My friends invited me on a hike but the forecast says rain in the afternoon."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Tricky. You could start very early and be down before the rain, or move the hike to another day. What do you think?"
+    }
+   ],
+   "pending": "start early before the rain or postpone the hike",
+   "think_reask": [
+    "So, an early start to beat the rain, or postpone it?",
+    "Okay, what's the plan, go early or pick another day?"
+   ],
+   "welcome_back": [
+    "Welcome back. You were deciding about the hike and the rain. Early start or postpone?",
+    "Hi again. Any decision on the rainy hike?"
+   ],
+   "endings": [
+    {
+     "user": "Let's go early. Everyone's already free that day.",
+     "moshi": "Then aim to be on the trail by seven, and still pack a rain jacket just in case."
+    },
+    {
+     "user": "Postpone. Muddy trails are no fun.",
+     "moshi": "Fair. Next weekend looks drier, so suggest that to the group."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My wife's just had knee surgery and she's itching to get back on the trails."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good for her. The old railway path is completely flat but a bit dull, while the marsh boardwalk is prettier with a few steps. Which would she rather start with?"
+    }
+   ],
+   "pending": "railway path or marsh boardwalk for a post-surgery walk",
+   "think_reask": [
+    "So for her first walk back, the flat railway path or the boardwalk with the steps?",
+    "Which one feels right for her knee, the railway path or the marsh?"
+   ],
+   "welcome_back": [
+    "Back to your wife's comeback walk. Railway path or marsh boardwalk?",
+    "For her knee, were you leaning towards the dead flat path or the prettier boardwalk?"
+   ],
+   "endings": [
+    {
+     "user": "The railway path. Boring is fine for now, she'll just be happy to be out.",
+     "moshi": "Sensible. Let her set the pace, and turn around before she feels she has to."
+    },
+    {
+     "user": "She'd hate the boring one. Let's do the boardwalk and take the steps slowly.",
+     "moshi": "Fair enough. A short loop with a bench halfway would be ideal, then."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I really want to see a sunrise from the top of Pike Hill."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That means starting in the dark with a head torch, around half past four. Or you could go up for sunset and come down in the dusk. Are you a morning person?"
+    }
+   ],
+   "pending": "sunrise start in the dark or sunset hike",
+   "think_reask": [
+    "Right then, half past four with a head torch, or the sunset version?",
+    "Have you made peace with the early alarm, or is it sunset after all?"
+   ],
+   "welcome_back": [
+    "So, about Pike Hill. Sunrise in the dark, or sunset instead?",
+    "You were weighing a four thirty alarm against an evening climb. Any closer?"
+   ],
+   "endings": [
+    {
+     "user": "Sunrise. If I don't do it now I never will.",
+     "moshi": "Love it. Lay everything out the night before so you're not hunting for socks at four."
+    },
+    {
+     "user": "Honestly, sunset. I'm useless before seven.",
+     "moshi": "No shame in that. Just make sure your torch is charged for the walk down."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Okay, trekking poles. My knees are begging me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Smart move. Cheap aluminium ones are tough but bulky, and carbon folding ones pack tiny but cost about three times as much."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, money."
+    },
+    {
+     "speaker": "moshi",
+     "text": "So how often would you actually use them, every weekend or a few times a year?"
+    }
+   ],
+   "pending": "cheap aluminium poles or pricier carbon folding poles",
+   "think_reask": [
+    "So, aluminium and save the cash, or splash out on the folding carbon ones?",
+    "Every weekend or a few times a year? That decides the poles."
+   ],
+   "welcome_back": [
+    "Back to your knees. Bulky aluminium poles or the little folding carbon ones?",
+    "The poles question is still open. Cheap and sturdy, or light and expensive?"
+   ],
+   "endings": [
+    {
+     "user": "Most weekends, if I'm honest. I'll get the carbon ones.",
+     "moshi": "Then they'll pay for themselves. Set them a bit shorter for the uphill bits."
+    },
+    {
+     "user": "A few times a year. Aluminium is plenty.",
+     "moshi": "Good call. They'll last for ages, and you can always upgrade later."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I've organised a team hike for work and one guy is really, really slow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That happens. You could split into a fast and a slow group with a meeting point, or keep everyone together at his pace. How would he feel about being split off?"
+    }
+   ],
+   "pending": "split the work group or keep everyone together",
+   "think_reask": [
+    "So for the team hike, two groups or everyone at one pace?",
+    "Have you decided how to handle the slow walker? Split or stick together?"
+   ],
+   "welcome_back": [
+    "About your work hike. Split the group, or keep everyone together?",
+    "We'd got to the slow colleague. Two groups with a meeting point, or one group?"
+   ],
+   "endings": [
+    {
+     "user": "Together. It's meant to be team building, not a race.",
+     "moshi": "Agreed. Put him near the front, it stops the gap from opening up."
+    },
+    {
+     "user": "Split it, but I'll walk with the slow group myself.",
+     "moshi": "That's kind. Pick a meeting point with a view, so nobody minds waiting."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "We want to take our little girl hiking. She's two and a half."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fun age. You could carry her in a hiking backpack and do a proper route, or let her toddle a tiny trail with lots of puddles. Which sounds more like your family?"
+    }
+   ],
+   "pending": "carry the toddler on a proper route or let her walk a tiny trail",
+   "think_reask": [
+    "So, toddler in the backpack on a real route, or her own little puddle trail?",
+    "Carrier and a proper hike, or a short walk at her speed?"
+   ],
+   "welcome_back": [
+    "Your little hiker. Backpack carrier, or let her walk a tiny trail?",
+    "So for the two and a half year old, proper route in the carrier or a puddle trail?"
+   ],
+   "endings": [
+    {
+     "user": "Let her walk. She'll be furious if she can't jump in puddles.",
+     "moshi": "Then keep it under a mile and pack spare trousers. Lots of them."
+    },
+    {
+     "user": "The carrier. We miss proper hikes.",
+     "moshi": "Fair. Stop every hour so she can run around, or she'll get grumpy up there."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "It's going to be thirty five degrees tomorrow and I'm supposed to do the canyon trail."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's brutal heat with no shade. You could start at dawn and be out by ten, or swap to the shady forest trail. Which would you prefer?"
+    }
+   ],
+   "pending": "canyon at dawn or the shady forest trail in the heat",
+   "think_reask": [
+    "So, canyon at the crack of dawn, or the forest where it's cooler?",
+    "Dawn start in the canyon or switch to the shade? Your call."
+   ],
+   "welcome_back": [
+    "About tomorrow's heat. Early canyon, or the forest trail?",
+    "The canyon in thirty five degrees. Going at dawn, or swapping?"
+   ],
+   "endings": [
+    {
+     "user": "Forest. I'm not risking heatstroke for a photo.",
+     "moshi": "Wise. Still take extra water, forests get humid in a heatwave."
+    },
+    {
+     "user": "Dawn canyon. I've waited months for this one.",
+     "moshi": "Okay, then be off the trail by ten, and carry at least three litres."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I moved here in spring and I still haven't found anyone to hike with."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That can be lonely. There's a local rambling club with a small yearly fee, or a free app where people post group walks. Would you prefer regular faces or more flexibility?"
+    }
+   ],
+   "pending": "join the rambling club or use the group walk app",
+   "think_reask": [
+    "So, the rambling club with regulars, or the app and see who turns up?",
+    "Regular faces or flexibility? Which way are you leaning?"
+   ],
+   "welcome_back": [
+    "Finding hiking company. The club, or the app?",
+    "Back to meeting people out here. Rambling club or the walk app?"
+   ],
+   "endings": [
+    {
+     "user": "The club. I want to see the same people and actually make friends.",
+     "moshi": "Good thinking. Go to three walks before you judge it, the first one's always awkward."
+    },
+    {
+     "user": "The app for now. I'm not ready to commit to a club.",
+     "moshi": "Makes sense. Try a few different groups and see who you click with."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "For Saturday's walk, do I pack lunch?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Depends. The route passes a mountain hut that's famous for its soup, but it closes at two. A packed lunch means you can stop anywhere. Fancy the gamble on timing?"
+    }
+   ],
+   "pending": "pack lunch or aim for the mountain hut soup",
+   "think_reask": [
+    "So, sandwiches in the bag, or race the clock for that soup?",
+    "Packed lunch or the hut before two?"
+   ],
+   "welcome_back": [
+    "Saturday's lunch. Hut soup or your own sandwiches?",
+    "So, are you chasing the soup before it closes, or packing your own?"
+   ],
+   "endings": [
+    {
+     "user": "Soup. I'll set off early so we make it.",
+     "moshi": "Good plan. Throw a cereal bar in anyway, just in case you're late."
+    },
+    {
+     "user": "I'll pack lunch. I don't want to rush the views.",
+     "moshi": "Fair. Eat it at the top, then you can grab a hot drink at the hut if it's open."
+    }
+   ]
+  },
+  {
+   "id": "hiking.ctx12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I keep getting a bit lost on hikes. Nothing dramatic, just wrong turns."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Happens to everyone."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I just buy a GPS watch?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "You could, or take a one day map and compass course so you never depend on batteries. Gadget or skill, which suits you?"
+    }
+   ],
+   "pending": "buy a GPS watch or take a map and compass course",
+   "think_reask": [
+    "So, the GPS watch, or learn the map and compass?",
+    "Gadget or skill? Which one are you going for?"
+   ],
+   "welcome_back": [
+    "About those wrong turns. Watch or navigation course?",
+    "The getting lost problem. GPS watch, or a map and compass day?"
+   ],
+   "endings": [
+    {
+     "user": "The course. I like the idea of not needing a screen.",
+     "moshi": "Great. You'll start noticing the land around you much more, too."
+    },
+    {
+     "user": "Watch. I'm never going to fold a map in the wind.",
+     "moshi": "Fair enough. Just keep a spare charge for it on longer days."
+    }
+   ]
+  }
+ ],
+ "side_conversations": [
+  {
+   "id": "hiking.side1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, have you seen my water bottle? The big green one."
+    },
+    {
+     "speaker": "friend",
+     "text": "It's in the car from last weekend, I think."
+    },
+    {
+     "speaker": "user",
+     "text": "Ugh, it's probably gross by now."
+    },
+    {
+     "speaker": "friend",
+     "text": "Just take one of mine. I've got about five."
+    },
+    {
+     "speaker": "user",
+     "text": "Thanks. Do you want to come with us tomorrow, by the way?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Where are you going?"
+    },
+    {
+     "speaker": "user",
+     "text": "Up to the ridge and back. Maybe four hours."
+    },
+    {
+     "speaker": "friend",
+     "text": "Tempting, but my knees say no."
+    }
+   ]
+  },
+  {
+   "id": "hiking.side2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How was the trail you did last week?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Beautiful, but really muddy near the waterfall."
+    },
+    {
+     "speaker": "user",
+     "text": "Would it be okay for the kids?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The first part, yes. The last mile is steep with loose rocks, I wouldn't bring them up there."
+    },
+    {
+     "speaker": "user",
+     "text": "We could just go to the waterfall and turn back."
+    },
+    {
+     "speaker": "friend",
+     "text": "That's the best bit anyway. They'll love it."
+    }
+   ]
+  },
+  {
+   "id": "hiking.side3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, are you bringing the map or should I?"
+    },
+    {
+     "speaker": "friend",
+     "text": "I've got it on my phone."
+    },
+    {
+     "speaker": "user",
+     "text": "There's no signal up there though."
+    },
+    {
+     "speaker": "friend",
+     "text": "I downloaded it, it works offline."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, but I'm bringing the paper one too. Just in case your battery dies."
+    },
+    {
+     "speaker": "friend",
+     "text": "You're such a scout. Fine, bring it."
+    }
+   ]
+  },
+  {
+   "id": "hiking.side4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, the taxi to the trailhead is booked for six."
+    },
+    {
+     "speaker": "friend",
+     "text": "Six in the morning? On a Saturday?"
+    },
+    {
+     "speaker": "user",
+     "text": "You said you wanted to beat the crowds."
+    },
+    {
+     "speaker": "friend",
+     "text": "I say a lot of things after dinner."
+    },
+    {
+     "speaker": "user",
+     "text": "Do you want me to wake you at half five, or will you set an alarm?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Knock on my door. Loudly. And have coffee ready or I'm not moving."
+    },
+    {
+     "speaker": "user",
+     "text": "Coffee in a flask, I promise."
+    }
+   ]
+  },
+  {
+   "id": "hiking.side5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Hang on, turn around. Is that a tick on the back of your leg?"
+    },
+    {
+     "speaker": "friend",
+     "text": "What? Where? Get it off!"
+    },
+    {
+     "speaker": "user",
+     "text": "Stay still. It's tiny, just behind your knee."
+    },
+    {
+     "speaker": "friend",
+     "text": "Don't squeeze it, I read you're not supposed to squeeze them."
+    },
+    {
+     "speaker": "user",
+     "text": "I know. Have you got those tweezers in the first aid bag?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Front pocket. Oh, I hate this."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it, all of it. Head and everything."
+    },
+    {
+     "speaker": "friend",
+     "text": "Thank you. I'm wearing long trousers next time, no matter how hot it is."
+    }
+   ]
+  },
+  {
+   "id": "hiking.side6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "{friend}, can I borrow your gaiters for the bog walk?"
+    },
+    {
+     "speaker": "friend",
+     "text": "The blue ones? You gave them back covered in mud last time."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll wash them this time, honestly."
+    },
+    {
+     "speaker": "friend",
+     "text": "You said that last time too."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine, what if I wash them and buy you a pint?"
+    },
+    {
+     "speaker": "friend",
+     "text": "Two pints and you can keep them till Tuesday."
+    }
+   ]
+  }
+ ],
+ "ordinary_dialogues": [
+  {
+   "id": "hiking.dlg1",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What should I pack for a day hike? It's my first one."
+    },
+    {
+     "speaker": "moshi",
+     "text": "The basics are water, snacks, a light rain jacket, sunscreen and a charged phone. A small first aid kit is a good idea too."
+    },
+    {
+     "speaker": "user",
+     "text": "How much water are we talking?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "About half a litre per hour of hiking, more if it's hot. For a four hour walk, two litres is a safe amount."
+    },
+    {
+     "speaker": "user",
+     "text": "That's heavy. Can I / just bring one bottle and refill it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Only if you know there's safe water along the way. Streams aren't safe to drink without a filter."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, two litres it is. What kind of snacks?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Things that are easy to eat on the move, like nuts, dried fruit, cereal bars or a sandwich. Salty snacks are nice if you sweat a lot."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg2",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I keep getting blisters on my heels when I hike."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's usually friction from your heel sliding in the boot. Are your boots well broken in?"
+    },
+    {
+     "speaker": "user",
+     "text": "They're pretty new, yeah."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's likely the cause. Wear them around the house and on short walks first. Proper hiking socks help a lot too, not cotton ones."
+    },
+    {
+     "speaker": "user",
+     "text": "And if I feel one starting on the trail?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Stop right away and put a blister plaster or some tape on the spot. Waiting until it hurts usually means it's already formed."
+    },
+    {
+     "speaker": "user",
+     "text": "I always think I'll / just push through it."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most people do. A two minute stop early saves you a miserable walk back."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg3",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Is it safe to hike alone?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be, with some precautions. Pick a well used trail, and always tell someone where you're going and when you'll be back."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I get lost?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Download an offline map before you go and carry a small battery pack for your phone. If you're unsure, stay where you are and call for help."
+    },
+    {
+     "speaker": "user",
+     "text": "I'm retired, so I can go on weekdays when it's / really quiet."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's lovely, but quieter trails mean fewer people to help. Stick to routes you know until you're confident."
+    },
+    {
+     "speaker": "user",
+     "text": "Good point. Maybe I'll join a walking group too."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a great idea. Many groups do weekday hikes, and you'll learn new trails from them."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg4",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can I take my dog on a long hike?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most healthy adult dogs love it. How old is your dog, and what breed?"
+    },
+    {
+     "speaker": "user",
+     "text": "She's a three year old border collie."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect, collies have tons of energy. She'll probably outlast you. Just build up the distance gradually."
+    },
+    {
+     "speaker": "user",
+     "text": "What does she need to bring?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Water and a collapsible bowl, some treats, and poo bags. Check her paws during breaks, rocky trails can hurt them."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I / keep her on the lead the whole time?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the trail rules first. Near livestock or wildlife, a lead is always the safer choice."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg5",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I got a pounding headache near the top of the mountain yesterday. Is that normal?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "How high were you? Above about two and a half thousand metres, a headache can be a mild sign of altitude sickness."
+    },
+    {
+     "speaker": "user",
+     "text": "Just under three thousand, I think."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then that's quite likely. Did it get better once you came down?"
+    },
+    {
+     "speaker": "user",
+     "text": "Yeah, pretty much straight away. I'd / also barely had any water, to be fair."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Dehydration makes it much worse. Next time, drink steadily on the way up, go a bit slower, and if the headache grows or you feel sick, head down."
+    },
+    {
+     "speaker": "user",
+     "text": "So going down is basically the cure?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "For mild symptoms, yes. Descending even a few hundred metres usually helps quickly."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg6",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a field full of cows on the footpath I want to use. Am I being silly to be scared?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not silly at all. Cows are usually calm, but mothers with calves can get protective."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh great. So what do I do?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Walk calmly around the edge of the herd rather than through the middle, and don't get between a cow and her calf."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they start following me?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep walking steadily, don't run. If you have a dog and they come at you, let the dog off the lead, it can outrun them and they'll chase it instead of you."
+    },
+    {
+     "speaker": "user",
+     "text": "I don't have a dog. Just a / very nervous husband."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then hold hands and stroll along the hedge. Most of the time, they'll just stare."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg7",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm sixteen and my friends think hiking is boring. How do I get them to come?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick a route with a payoff they'll care about, like a swimming spot, a rope swing, or a crazy view for photos."
+    },
+    {
+     "speaker": "user",
+     "text": "There's a lake with a jetty you can jump off."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. Sell it as a lake day that happens to need a walk to get there."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, sneaky. How long should it be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep it short the first time, maybe an hour each way. If they enjoy it, they'll be up for longer ones."
+    },
+    {
+     "speaker": "user",
+     "text": "And food?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Bring something good to share at the lake. Nobody complains about a hike that ends with crisps and a jump into cold water."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg8",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Going uphill is fine, but my knees kill me on the way down."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's really common. Downhill puts a lot more load on the front of the knee."
+    },
+    {
+     "speaker": "user",
+     "text": "Is there a trick?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Take shorter steps, keep your knees slightly bent, and don't lock them. Zigzagging on wide paths helps too."
+    },
+    {
+     "speaker": "user",
+     "text": "My friend swears by poles."
+    },
+    {
+     "speaker": "moshi",
+     "text": "She's right. Poles take a good chunk of the strain off your knees on steep descents. Lengthen them a bit before you head down."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay. And should I / be doing exercises at home?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, squats and step downs off a stair build the muscles that protect your knees. A few minutes a day makes a difference within weeks."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg9",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Quick one. Is it okay to throw an orange peel into the bushes? It's natural, right?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It feels harmless, but it's better to take it home. Peel takes a long time to break down, sometimes months or more."
+    },
+    {
+     "speaker": "user",
+     "text": "Seriously? Months?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, especially in dry or cold places. And it's not part of what animals there would normally eat."
+    },
+    {
+     "speaker": "user",
+     "text": "Huh. Same with apple cores?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Same idea. On busy trails, hundreds of people dropping cores adds up quickly."
+    },
+    {
+     "speaker": "user",
+     "text": "Fine, I'll / bring a little bag for scraps."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's all it takes. A small zip bag in the side pocket and you're sorted."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg10",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm doing a hike in October and it'll be chilly in the morning but warm by lunch. What do I wear?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Layers are your friend. A thin base layer that wicks sweat, a fleece or light jumper on top, and a windproof or waterproof jacket in your bag."
+    },
+    {
+     "speaker": "user",
+     "text": "No cotton t-shirt?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Best avoided. Cotton holds sweat and gets cold when you stop for a break."
+    },
+    {
+     "speaker": "user",
+     "text": "I hate stopping to change, though. It's so / faffy."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try to take a layer off just before you start getting hot, rather than after you're sweating. It saves you being cold at the top."
+    },
+    {
+     "speaker": "user",
+     "text": "And a hat?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A light beanie and thin gloves are worth the space. Cold hands at the summit ruin a good sandwich."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg11",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Can you explain contour lines to me like I'm five?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Imagine you walk around a hill without ever going up or down. The path you'd make is one contour line."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Now do the same thing a bit higher, and again higher. Those rings, drawn from above, are all the contour lines."
+    },
+    {
+     "speaker": "user",
+     "text": "So lots of lines squashed together means it's steep?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. You go up a lot in a short distance. Lines far apart mean it's gentle."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, that actually makes sense. And how do I tell / if it's a hill or a hole?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look at the height numbers printed on the lines. If they get bigger towards the middle, it's a hill."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg12",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I have asthma, mostly under control. Any tips for hiking with it?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Plenty of people with asthma hike happily. The main thing is always carrying your reliever inhaler where you can reach it, not buried in the bag."
+    },
+    {
+     "speaker": "user",
+     "text": "Cold air sets mine off."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A buff or scarf over your mouth on cold mornings warms the air a bit. Start slowly to let your lungs adjust."
+    },
+    {
+     "speaker": "user",
+     "text": "What about pollen? Spring is / pretty bad for me."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the pollen forecast and pick days after rain, or routes higher up and by the coast, where counts are often lower."
+    },
+    {
+     "speaker": "user",
+     "text": "Good idea. I'll talk to my nurse before the big one in May."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a great plan. She might suggest using your preventer more regularly in the weeks before."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg13",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I signed up for a twenty mile charity hike in six weeks. I currently do zero hiking. Help."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Very doable if you start now. Walk three or four times a week, with one longer walk at the weekend that grows each time."
+    },
+    {
+     "speaker": "user",
+     "text": "How long should the first long one be?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Maybe six miles. Add two or three miles each week, so you hit about fifteen two weeks before the event."
+    },
+    {
+     "speaker": "user",
+     "text": "Not twenty?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "No need. Fifteen plus the adrenaline on the day will carry you. Rest the last week so your legs are fresh."
+    },
+    {
+     "speaker": "user",
+     "text": "And I should wear the / exact shoes I'll use on the day?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, in every training walk. Never try new shoes or socks on the big day."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg14",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What do the little painted marks on trees mean? Some are white, some are yellow."
+    },
+    {
+     "speaker": "moshi",
+     "text": "They're called blazes, or waymarks. Each colour usually marks a different trail, so you follow one colour from start to finish."
+    },
+    {
+     "speaker": "user",
+     "text": "And when there are two stacked on top of each other?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "That usually means a turn is coming. If the top mark is offset to one side, the trail turns that way."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, clever. I always thought / someone was just bored with a paint can."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Ha, no, volunteers maintain most of them. If you go a long way without seeing one, you've probably missed a turn, so head back to the last one."
+    },
+    {
+     "speaker": "user",
+     "text": "Good to know. That's exactly what happened to me last month."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Most of us have done it. Looking behind you now and then helps too, the marks are often painted on both sides."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg15",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My leather boots are ten years old and starting to let water in."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good leather boots can often be revived. Have you waxed or treated them recently?"
+    },
+    {
+     "speaker": "user",
+     "text": "Never. Not once."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then that's probably it. Clean them with a brush and water, let them dry naturally, then rub in a proper boot wax."
+    },
+    {
+     "speaker": "user",
+     "text": "On the radiator to dry?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Please don't. Heat cracks the leather. Stuff them with newspaper and leave them somewhere airy."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they still leak?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the seams and the sole. If the sole is coming away, a cobbler can often resole them for less than new boots."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg16",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I take terrible photos on hikes. Everything looks flat."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's often the light. Midday sun flattens everything. Early morning or late afternoon gives you shadows and warmer colours."
+    },
+    {
+     "speaker": "user",
+     "text": "I can't always hike at those times."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Fair. Then try putting something in the foreground, like a rock, a tree or your friend, with the view behind. It adds depth straight away."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, like a person looking out at the view?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly, it also shows how big the landscape is. Just don't make them stand near a cliff edge for it."
+    },
+    {
+     "speaker": "user",
+     "text": "Ha, noted. And / should I bother with a proper camera?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Your phone is plenty to start. Learn the basics on that first."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg17",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My partner wants to do a full moon night hike. Is that a terrible idea?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not terrible, it can be magical. Just pick a trail you both know well in daylight."
+    },
+    {
+     "speaker": "user",
+     "text": "We've walked the forest loop loads of times, so / that one probably."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good choice. Bring head torches even if the moon is bright, clouds can roll in fast."
+    },
+    {
+     "speaker": "user",
+     "text": "Red light or normal?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Red keeps your night vision better for walking under the moon. Switch to white for anything tricky, like rocky steps."
+    },
+    {
+     "speaker": "user",
+     "text": "And it gets cold, I guess."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Much colder than you'd expect. Take a warm layer and a hot drink, and tell someone your plan and when you'll be back."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg18",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Midges. Last summer they ate me alive by the loch. What actually works?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Repellents with picaridin or a high strength of DEET work best. Some people swear by a head net too, it looks silly but it's bliss."
+    },
+    {
+     "speaker": "user",
+     "text": "I'll look silly, I don't care."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's the spirit. Midges are worst at dawn and dusk and on still days, so a breezy ridge is much better than a sheltered glen."
+    },
+    {
+     "speaker": "user",
+     "text": "And when I stop for lunch?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Find a spot in the wind or the sun. They hate both."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything for the bites themselves? I scratched / until they bled."
+    },
+    {
+     "speaker": "moshi",
+     "text": "An antihistamine and a cold compress help. Try hard not to scratch, it only makes them itch longer."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg19",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What should I do if a thunderstorm catches me on a ridge?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Get off the high ground as fast as you safely can. Ridges and summits are the worst places to be."
+    },
+    {
+     "speaker": "user",
+     "text": "What if I can't get down in time?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Avoid lone trees and metal fences, and spread out if you're in a group. Crouch low on your pack, feet together, rather than lying flat."
+    },
+    {
+     "speaker": "user",
+     "text": "Why not lie down?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lying flat puts more of your body in contact with the ground, where current can travel. Crouching keeps that smaller."
+    },
+    {
+     "speaker": "user",
+     "text": "Scary stuff."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It is, but rare if you plan well. Check the forecast, and if storms are likely in the afternoon, be off the tops by lunchtime."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg20",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I'm five months pregnant. Can I still go hiking?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Many people do, but please check with your midwife or doctor first, since they know your situation."
+    },
+    {
+     "speaker": "user",
+     "text": "She said gentle walks are fine. I'm just / not sure what counts as gentle."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Think trails you could chat on without getting breathless, with good footing and not too far from the car or a road."
+    },
+    {
+     "speaker": "user",
+     "text": "My balance feels a bit off already."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's very normal as your centre of gravity shifts. Poles help a lot, and avoid loose scree or slippery rocks."
+    },
+    {
+     "speaker": "user",
+     "text": "And snacks, I guess. I'm starving all the time."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. Pack more food and water than usual, and take plenty of breaks. You're hiking for two, after all."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg21",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "I don't drive. Can I still do proper hikes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Absolutely. Linear walks are great for that, you take a bus or train to the start and catch another one home from the end."
+    },
+    {
+     "speaker": "user",
+     "text": "Oh, I'd never thought of walking from one station to another."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of good routes work that way, and you never have to walk back the same path."
+    },
+    {
+     "speaker": "user",
+     "text": "But what if I miss the last bus?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Check the timetable before you set off and plan to arrive with an hour to spare. Save a local taxi number as a backup."
+    },
+    {
+     "speaker": "user",
+     "text": "Smart. Any / tips for finding these routes?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Rambling clubs and walking guidebooks often list public transport routes. Search for car free walks too."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg22",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There's a famous ridge walk my friends want to do, but I'm scared of heights."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a real concern. Do you know how narrow it gets? Some ridges look scary in photos but feel wide when you're on them."
+    },
+    {
+     "speaker": "user",
+     "text": "My friend said there's one bit with drops on both sides."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's usually the hardest part for people with a fear of heights. Is there a bypass path around it?"
+    },
+    {
+     "speaker": "user",
+     "text": "No idea."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Worth checking a guidebook or a walking forum. Many ridges have a lower path for exactly that reason."
+    },
+    {
+     "speaker": "user",
+     "text": "And if there isn't?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Try a smaller ridge first to see how you feel. And it's fine to turn back. Nobody good will mind."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg23",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My kids moan the whole way on every walk. Seven and nine."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Classic. Give them a job. One can be the navigator with the map, the other can be in charge of the snacks."
+    },
+    {
+     "speaker": "user",
+     "text": "The snack job will start a war."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then they swap halfway. Treasure hunts work too, like spotting a feather, a red leaf or a bird nest."
+    },
+    {
+     "speaker": "user",
+     "text": "They do like collecting things."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Perfect. A small bag each for treasures, and a hot chocolate at the end gives them something to aim for."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I / tell them how far it is?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Talk in landmarks instead of miles. To the bridge, then the big rock, then the cafe. It feels much shorter."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg24",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Are expensive hiking socks really worth it? They're like fifteen quid a pair."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Honestly, yes, at least one or two good pairs. Merino wool socks stay warm when damp, wick sweat, and don't smell after a long day."
+    },
+    {
+     "speaker": "user",
+     "text": "Mine smell after an hour."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then you'll notice the difference. Merino also tends to reduce blisters because your feet stay drier."
+    },
+    {
+     "speaker": "user",
+     "text": "Do they wear out fast?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Faster than synthetic ones, usually. Blends with a bit of nylon last longer."
+    },
+    {
+     "speaker": "user",
+     "text": "Okay, I'll buy two pairs and / see how it goes."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Good plan. Wash them cool and skip the tumble dryer, they'll last much longer."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg25",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "The walk I'm planning ends at a lake. I'd love to swim at the end."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Sounds lovely. Just be careful, mountain lakes are often much colder than they look, even in summer."
+    },
+    {
+     "speaker": "user",
+     "text": "How cold are we talking?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "It can be cold enough to make you gasp involuntarily, which is dangerous if your head goes under. Walk in slowly rather than jumping."
+    },
+    {
+     "speaker": "user",
+     "text": "I was totally going to jump."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lots of people do. Let your body adjust for a minute or two first, and stay close to the shore."
+    },
+    {
+     "speaker": "user",
+     "text": "Anything else?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Swim with someone, keep it short, and have warm clothes and a hot drink ready. You'll cool down more after you get out."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg26",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How do I work out how long a hike will take?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "A rough rule is about three miles an hour on flat ground, plus an extra half hour for every thousand feet you climb."
+    },
+    {
+     "speaker": "user",
+     "text": "So ten miles with two thousand feet of climbing would take how long?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Around three and a half hours of walking, then add time for breaks. I'd plan for four and a half to five."
+    },
+    {
+     "speaker": "user",
+     "text": "That seems long."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Breaks, photos and lunch add up fast. It's much nicer to finish early than to rush down in the dark."
+    },
+    {
+     "speaker": "user",
+     "text": "True. Last time I / got back as the sun went down and it was stressful."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's exactly why. And add a bit extra in winter, when daylight is short."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg27",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "Silly question. On a narrow path, who's supposed to step aside, the person going up or down?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Not silly. The usual etiquette is that people going downhill give way to those climbing up."
+    },
+    {
+     "speaker": "user",
+     "text": "Why's that?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Climbing is harder to restart once you've stopped, and the person coming up has a narrower view of the path."
+    },
+    {
+     "speaker": "user",
+     "text": "What about mountain bikers?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Officially, bikes give way to walkers. In practice, a friendly step aside is often easier for everyone."
+    },
+    {
+     "speaker": "user",
+     "text": "And horses?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Everyone gives way to horses. Step to the downhill side if you can and say hello, it helps the horse know you're human."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg28",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "How did I get sunburned on a cloudy, windy hike?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Clouds don't block much UV, and wind cools your skin so you don't feel yourself burning."
+    },
+    {
+     "speaker": "user",
+     "text": "That's sneaky."
+    },
+    {
+     "speaker": "moshi",
+     "text": "It really is. Higher up, the sun is also stronger than at sea level."
+    },
+    {
+     "speaker": "user",
+     "text": "So sunscreen even in April."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Yes, and reapply it after a couple of hours or if you sweat a lot. Don't forget your ears and the back of your neck."
+    },
+    {
+     "speaker": "user",
+     "text": "My ears are peeling right now. It's / honestly so embarrassing."
+    },
+    {
+     "speaker": "moshi",
+     "text": "A cap with a neck flap or a buff sorts that out next time. Until then, aloe gel will help."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg29",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "What would I do if someone rolled their ankle halfway up a trail?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "First, get them sitting down and check if they can bear any weight on it at all."
+    },
+    {
+     "speaker": "user",
+     "text": "Say they can, a little."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then it's probably a sprain. Keep the boot on for support, tighten the laces, and walk back slowly with poles or a shoulder to lean on."
+    },
+    {
+     "speaker": "user",
+     "text": "Keep the boot on? I'd have taken it off."
+    },
+    {
+     "speaker": "moshi",
+     "text": "If you take it off, the swelling might stop you getting it back on. Ice and elevate once you're home."
+    },
+    {
+     "speaker": "user",
+     "text": "And if they can't walk at all?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Keep them warm and call emergency services. Give your exact location, an offline map app can show your coordinates."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg30",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My best friend uses a wheelchair and I want to plan a day out on a trail together."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Lovely idea. Many parks now have accessible trails with smooth, firm surfaces and gentle slopes."
+    },
+    {
+     "speaker": "user",
+     "text": "How do I find them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Look on the park or council website, they often list accessible routes with details on gradients, gates and toilets."
+    },
+    {
+     "speaker": "user",
+     "text": "She'd hate anything too short and boring."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Then look for old railway lines and reservoir paths. They're flat, often long, and have great views."
+    },
+    {
+     "speaker": "user",
+     "text": "Should I / ask her to choose?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Definitely. She'll know what works for her chair, and you can plan the picnic."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg31",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "There are tons of blackberries along my usual trail. Is it safe to eat them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Blackberries are one of the safest wild fruits, since there's nothing toxic that looks similar."
+    },
+    {
+     "speaker": "user",
+     "text": "Even ones right by the path?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Pick the ones higher up, away from where dogs might wander. Avoid bushes next to busy roads."
+    },
+    {
+     "speaker": "user",
+     "text": "What about the red berries / right next to them?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Leave those unless you're absolutely sure what they are. Some red berries are poisonous."
+    },
+    {
+     "speaker": "user",
+     "text": "Got it, black and bumpy only."
+    },
+    {
+     "speaker": "moshi",
+     "text": "Exactly. Bring a tub and you'll have a crumble by the evening."
+    }
+   ]
+  },
+  {
+   "id": "hiking.dlg32",
+   "turns": [
+    {
+     "speaker": "user",
+     "text": "My son keeps telling me to track my hikes on an app. I don't see the point."
+    },
+    {
+     "speaker": "moshi",
+     "text": "You don't need to. But some people enjoy seeing their routes on a map and how far they've gone over a year."
+    },
+    {
+     "speaker": "user",
+     "text": "I've been walking these hills for forty years without a phone."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That's a lot of knowledge in your head. An app won't replace that."
+    },
+    {
+     "speaker": "user",
+     "text": "So what's he on about?"
+    },
+    {
+     "speaker": "moshi",
+     "text": "Probably safety. Some apps let you share your location live with family, so they know you're okay if you're out alone."
+    },
+    {
+     "speaker": "user",
+     "text": "Hm. That might stop / his mother worrying, I suppose."
+    },
+    {
+     "speaker": "moshi",
+     "text": "That might be the real reason. You could just turn it on for solo walks and ignore the rest."
+    }
+   ]
+  }
+ ],
+ "option_sets": [
+  {
+   "id": "hiking.opt1",
+   "lead_in": "We're planning a hike next Saturday and I have to choose the trail.",
+   "options": [
+    "The first trail is a flat loop around a lake, about five miles, with lots of shade.",
+    "Then there's a steep climb to a ridge with amazing views, but it's eight miles and pretty rocky.",
+    "Option three is a forest trail along a river with a few small waterfalls, moderate and six miles.",
+    "And the last one is a coastal path that's easy but gets crowded on weekends."
+   ],
+   "moshi_comment": [
+    "The river trail sounds like a great middle ground, waterfalls and a moderate distance. The ridge climb is the most rewarding if everyone is fit and has good shoes. The lake loop is best if anyone in the group is new to hiking.",
+    "How experienced is everyone in the group? If it's mixed, I'd go with the river trail. The coastal path might be too busy on a Saturday."
+   ]
+  },
+  {
+   "id": "hiking.opt2",
+   "lead_in": "I need to pick hiking boots before my trip, and I've tried on a few pairs.",
+   "options": [
+    "The first pair is heavy leather boots, super sturdy and waterproof, but they need breaking in.",
+    "The second pair is lightweight trail runners, really comfortable right away, but not waterproof.",
+    "And the third pair is mid height synthetic boots, kind of in between, with decent ankle support."
+   ],
+   "moshi_comment": [
+    "For most trips, the mid height synthetic boots are a solid compromise between comfort and support. The leather boots are best for rough, wet terrain if you have time to break them in. The trail runners are great on dry, well kept trails.",
+    "What kind of terrain and weather are you expecting? If it's wet and rocky, go for the leather boots, but start wearing them now. If it's dry, the trail runners will feel amazing."
+   ]
+  },
+  {
+   "id": "hiking.opt3",
+   "lead_in": "My old daypack is falling apart and I've narrowed the new one down, can you help me pick?",
+   "options": [
+    "There's a tiny twenty litre one, super light, just enough room for water, a jacket and lunch.",
+    "Then a thirty litre pack with a proper hip belt and a mesh back so you don't get a sweaty back.",
+    "And a bigger forty litre pack that would also work for overnight trips, but it's heavier and costs more."
+   ],
+   "moshi_comment": [
+    "If it's mostly day hikes, the thirty litre with the hip belt is the sweet spot. The tiny one fills up fast once you add layers, and the forty is overkill unless you really will camp.",
+    "Go for the thirty litre. The mesh back makes a real difference on warm days, and you won't miss the extra space of the big one for day trips."
+   ]
+  },
+  {
+   "id": "hiking.opt4",
+   "lead_in": "It's my dad's seventieth and he wants a birthday walk, but I need to choose where.",
+   "options": [
+    "One idea is the lighthouse loop, it's flat along the cliffs, about four miles, with a cafe at the end.",
+    "Another is the hill behind his old school, a steady climb, quite sentimental for him, about six miles.",
+    "Or there's the bluebell woods, short and gentle, but it might be muddy this time of year."
+   ],
+   "moshi_comment": [
+    "The hill behind his old school has the most meaning, and six steady miles sounds doable if he still walks a lot. If he's less sure on his feet, the lighthouse loop with cake at the end is the safest bet.",
+    "I'd lean towards his old school hill, a birthday walk with memories is special. Keep the lighthouse loop as a backup if the weather turns, and skip the woods if it's been raining."
+   ]
+  },
+  {
+   "id": "hiking.opt5",
+   "lead_in": "I've got a free Thursday and three trails in mind, I just can't pick.",
+   "options": [
+    "There's the gorge walk, narrow and rocky with waterfalls, about three hours, and you need decent grip.",
+    "Then the moorland ridge, wide open views the whole way, but no shelter at all if it gets windy.",
+    "Or the old drovers' road, long and easy, mostly grassy, with a village pub roughly halfway."
+   ],
+   "moshi_comment": [
+    "Check the wind first. If it's calm, the moorland ridge gives you the biggest views, and if it's wet, the gorge waterfalls will be at their best, as long as your boots grip well.",
+    "On a free weekday, the gorge will be quiet and the waterfalls make it special. The drovers' road is lovely but easy, so save it for a day when you want a pub lunch more than a challenge."
+   ]
+  },
+  {
+   "id": "hiking.opt6",
+   "lead_in": "I need a new rain jacket before the autumn and the shop gave me three to try.",
+   "options": [
+    "A really light packable shell that folds into its own pocket, but the guy said it's not great in long downpours.",
+    "A heavier three layer jacket, totally waterproof and breathable, but nearly double the price.",
+    "A cheap plastic poncho type thing that covers me and my backpack, ugly but it works."
+   ],
+   "moshi_comment": [
+    "For autumn, I'd spend more on the three layer jacket. The light shell is great in summer showers, but it'll let you down in all day rain, and the poncho turns into a sail on windy ridges.",
+    "The three layer jacket is the one you'll still have in five years. If money's tight, the packable shell plus a spare jumper is fine for short walks, but I'd skip the poncho unless it's low and sheltered."
+   ]
+  }
+ ]
 }

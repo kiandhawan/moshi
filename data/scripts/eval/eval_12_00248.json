@@ -7,123 +7,131 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "picnic"
+  "home_office"
  ],
- "topic": "picnic",
+ "topic": "home_office",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
+  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_18",
-  "greet_ans_09",
-  "describe_instr_06",
-  "ack_06",
-  "describe_cue_03"
+  "greet_09",
+  "greet_ans_24"
  ],
  "block_ids": [
-  "picnic.opt1"
+  "home_office.dlg2"
  ],
- "est_total_sec": 55.95,
- "est_speech_sec": 43.47,
+ "est_total_sec": 52.69,
+ "est_speech_sec": 39.85,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.75,
+   "text": "Hello! How's it going?",
+   "est_sec": 1.34,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_18",
+   "phrasing": "greet_09",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.37,
+   "text": "Ah, it's been a long day.",
+   "est_sec": 1.96,
+   "gap_before": 0.56,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
+   "phrasing": "greet_ans_24"
   },
   {
    "speaker": "user",
-   "text": "I'm planning a picnic for my book club and I need help choosing a place.",
-   "est_sec": 4.75,
-   "gap_before": 0.49,
-   "block": "picnic.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "Don't comment yet, let me describe all of them first.",
+   "text": "I keep getting distracted at home. Any tips for focusing?",
    "est_sec": 3.2,
-   "gap_before": 0.41,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_06"
+   "gap_before": 0.6,
+   "event": "ordinary_request",
+   "block": "home_office.dlg2"
   },
   {
    "speaker": "moshi",
-   "text": "Of course.",
-   "est_sec": 0.72,
-   "gap_before": 0.41,
-   "role": "ack",
-   "phrasing": "ack_06",
+   "text": "Try working in focused blocks, like twenty five minutes on and five off. And keep your phone in another room during those blocks.",
+   "est_sec": 7.23,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "home_office.dlg2",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "The first one is the botanical garden, really pretty, but you have to pay to get in.",
-   "est_sec": 5.37,
-   "gap_before": 0.97,
-   "block": "picnic.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Then there's the lake park, free and big, but it gets noisy on weekends.",
-   "est_sec": 4.44,
-   "gap_before": 2.5,
-   "block": "picnic.opt1",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "And the last option is my friend's backyard, which has a big table and real bathrooms.",
-   "est_sec": 5.06,
-   "gap_before": 2.42,
-   "block": "picnic.opt1"
-  },
-  {
-   "speaker": "user",
-   "text": "So those are the options. What's your take?",
+   "text": "My phone in another room? That sounds hard.",
    "est_sec": 2.58,
-   "gap_before": 1.47,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_03"
+   "gap_before": 1.01,
+   "event": "ordinary_request",
+   "block": "home_office.dlg2"
   },
   {
    "speaker": "moshi",
-   "text": "For a book club, being able to hear each other matters, so the noisy lake park might be a problem. The botanical garden is beautiful and calm, just check whether people mind the fee. Your friend's backyard is the most comfortable, especially with a table and bathrooms.",
-   "est_sec": 14.67,
-   "gap_before": 1.19,
-   "role": "resume",
-   "block": "picnic.opt1",
+   "text": "It is at first, but it's one of the most effective tricks. Even putting it in a drawer helps.",
+   "est_sec": 5.99,
+   "gap_before": 0.92,
+   "role": "reply",
+   "block": "home_office.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "What about noise? My neighbors",
+   "est_sec": 1.65,
+   "gap_before": 1.49,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "home_office.dlg2"
+  },
+  {
+   "speaker": "user",
+   "text": "are doing construction all week.",
+   "est_sec": 1.65,
+   "gap_before": 1.63,
+   "event": "ordinary_request",
+   "block": "home_office.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Noise cancelling headphones with some brown noise or instrumental music can block out a lot. Earplugs work too if you're not on calls.",
+   "est_sec": 7.23,
+   "gap_before": 0.86,
+   "role": "reply",
+   "block": "home_office.dlg2",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe I'll just work from the library on those days.",
+   "est_sec": 3.2,
+   "gap_before": 2.28,
+   "event": "ordinary_request",
+   "block": "home_office.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great idea. A change of scenery often boosts focus all by itself.",
+   "est_sec": 3.82,
+   "gap_before": 0.57,
+   "role": "reply",
+   "block": "home_office.dlg2",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

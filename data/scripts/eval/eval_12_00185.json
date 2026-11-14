@@ -7,129 +7,134 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "laptop_buying"
+  "restaurant_choice"
  ],
- "topic": "laptop_buying",
+ "topic": "restaurant_choice",
  "voices": {
-  "user": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "user": "026218fe0c054374838d934016f34082",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_06",
-  "greet_ans_09"
+  "greet_24",
+  "greet_ans_12",
+  "describe_instr_06",
+  "ack_15",
+  "describe_cue_06"
  ],
  "block_ids": [
-  "laptop_buying.dlg1"
+  "restaurant_choice.opt2"
  ],
- "est_total_sec": 50.68,
- "est_speech_sec": 36.75,
+ "est_total_sec": 57.15,
+ "est_speech_sec": 44.81,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Good to hear from you. How are you?",
-   "est_sec": 2.58,
-   "gap_before": 0.68,
-   "role": "greeting",
-   "phrasing": "greet_06",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Fine, thanks.",
-   "est_sec": 0.72,
-   "gap_before": 0.37,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_09"
-  },
-  {
-   "speaker": "user",
-   "text": "What laptop specs actually matter for college?",
+   "text": "Hey, what's up? How are you doing?",
    "est_sec": 2.27,
-   "gap_before": 0.38,
-   "event": "ordinary_request",
-   "block": "laptop_buying.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "For most students, good battery life, at least eight gigs of memory and a comfortable keyboard. Raw speed matters less than people think.",
-   "est_sec": 7.23,
-   "gap_before": 0.62,
-   "role": "reply",
-   "block": "laptop_buying.dlg1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I'm studying architecture, does that change things?",
-   "est_sec": 2.27,
-   "gap_before": 0.57,
-   "event": "ordinary_request",
-   "block": "laptop_buying.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Yes, quite a bit. Design software needs sixteen gigs of memory or more and a decent graphics chip.",
-   "est_sec": 5.68,
    "gap_before": 0.74,
-   "role": "reply",
-   "block": "laptop_buying.dlg1",
+   "role": "greeting",
+   "phrasing": "greet_24",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Ugh, that sounds expensive. Is there",
-   "est_sec": 1.96,
-   "gap_before": 2.5,
+   "text": "Okay, I guess.",
+   "est_sec": 1.03,
+   "gap_before": 0.94,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_12"
+  },
+  {
+   "speaker": "user",
+   "text": "My sister's birthday dinner is next week, and I have to choose where we go.",
+   "est_sec": 4.75,
+   "gap_before": 0.31,
+   "block": "restaurant_choice.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Don't comment yet, let me describe all of them first.",
+   "est_sec": 3.2,
+   "gap_before": 0.44,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Alright, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.22,
+   "role": "ack",
+   "phrasing": "ack_15",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "First, there's a rooftop bar with small plates and an amazing view of the river.",
+   "est_sec": 4.75,
+   "gap_before": 0.78,
+   "block": "restaurant_choice.opt2",
    "event": "distractor",
-   "kind": "pause",
-   "block": "laptop_buying.dlg1"
+   "kind": "pause"
   },
   {
    "speaker": "user",
-   "text": "a cheaper way around it?",
-   "est_sec": 1.65,
-   "gap_before": 2.0,
-   "event": "ordinary_request",
-   "block": "laptop_buying.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Check if your school has computer labs with the software installed. Then a mid range laptop could be enough.",
-   "est_sec": 5.99,
-   "gap_before": 0.87,
-   "role": "reply",
-   "block": "laptop_buying.dlg1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Good point. I'll ask at orientation.",
-   "est_sec": 1.96,
-   "gap_before": 2.83,
-   "event": "ordinary_request",
-   "block": "laptop_buying.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Great idea. Ask older students too, they'll know what really works for the program.",
+   "text": "Second, a family-run Mexican restaurant where the staff sing to you on your birthday.",
    "est_sec": 4.44,
-   "gap_before": 0.87,
-   "role": "reply",
-   "block": "laptop_buying.dlg1",
+   "gap_before": 2.03,
+   "block": "restaurant_choice.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "There's also a fancy French bistro she's mentioned wanting to try for ages.",
+   "est_sec": 4.13,
+   "gap_before": 1.69,
+   "block": "restaurant_choice.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "Or lastly, we could just do a pizza night at my place with the whole family.",
+   "est_sec": 5.06,
+   "gap_before": 1.61,
+   "block": "restaurant_choice.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "Alright, those are all the choices. Your thoughts?",
+   "est_sec": 2.58,
+   "gap_before": 1.39,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_06"
+  },
+  {
+   "speaker": "moshi",
+   "text": "If she's been wanting to try the French bistro for ages, that would feel really thoughtful. The Mexican place is more fun if she enjoys a bit of attention. Does she like being the center of attention?",
+   "est_sec": 11.57,
+   "gap_before": 0.69,
+   "role": "resume",
+   "block": "restaurant_choice.opt2",
    "reference_only": true
   }
  ],
  "groups": [
-  "ordinary"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

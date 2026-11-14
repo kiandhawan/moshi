@@ -7,111 +7,118 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "describe_options",
+ "wait_type": "describe_options",
  "conditions": [],
  "topics": [
-  "movies"
+  "hiking"
  ],
- "topic": "movies",
+ "topic": "hiking",
  "voices": {
-  "user": "be9ce4282d8e414daad6fa1797f1cee8",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_22",
-  "greet_ans_13"
+  "greet_26",
+  "greet_ans_02",
+  "describe_instr_02",
+  "ack_16",
+  "describe_cue_13"
  ],
  "block_ids": [
-  "movies.dlg2"
+  "hiking.opt2"
  ],
- "est_total_sec": 46.75,
- "est_speech_sec": 36.65,
+ "est_total_sec": 52.8,
+ "est_speech_sec": 42.23,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello, how are things going?",
-   "est_sec": 1.65,
-   "gap_before": 0.31,
-   "role": "greeting",
-   "phrasing": "greet_22"
-  },
-  {
-   "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.86,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
-  },
-  {
-   "speaker": "user",
-   "text": "Why do people say the book is always better than the movie?",
-   "est_sec": 3.82,
-   "gap_before": 0.29,
-   "event": "ordinary_request",
-   "block": "movies.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "A book can spend pages inside a character's head, while a film has to show everything in about two hours. So a lot gets cut.",
-   "est_sec": 7.85,
-   "gap_before": 0.76,
-   "role": "reply",
-   "block": "movies.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Are there movies that are better than the book?",
-   "est_sec": 2.89,
-   "gap_before": 0.94,
-   "event": "ordinary_request",
-   "block": "movies.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Definitely. Sometimes a director tightens a slow story or a great actor adds something the book didn't have.",
-   "est_sec": 5.68,
-   "gap_before": 1.03,
-   "role": "reply",
-   "block": "movies.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "I usually read the book first, but",
+   "text": "Hi! How are you doing these days?",
    "est_sec": 2.27,
-   "gap_before": 1.23,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "movies.dlg2"
+   "gap_before": 0.64,
+   "role": "greeting",
+   "phrasing": "greet_26"
   },
   {
    "speaker": "user",
-   "text": "maybe I should try the other way round.",
-   "est_sec": 2.58,
-   "gap_before": 2.04,
-   "event": "ordinary_request",
-   "block": "movies.dlg2"
+   "text": "Pretty good, thanks for asking.",
+   "est_sec": 1.65,
+   "gap_before": 0.68,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_02"
+  },
+  {
+   "speaker": "user",
+   "text": "I need to pick hiking boots before my trip, and I've tried on a few pairs.",
+   "est_sec": 5.06,
+   "gap_before": 0.22,
+   "block": "hiking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm going to list all the options first, so please don't comment until I'm done.",
+   "est_sec": 4.75,
+   "gap_before": 0.73,
+   "event": "instruction",
+   "kind": "describe_options",
+   "phrasing": "describe_instr_02"
   },
   {
    "speaker": "moshi",
-   "text": "That can be fun. You get to enjoy the film without comparing, and the book then fills in the details.",
-   "est_sec": 6.3,
-   "gap_before": 0.59,
-   "role": "reply",
-   "block": "movies.dlg2"
+   "text": "Okay, sure.",
+   "est_sec": 0.72,
+   "gap_before": 0.4,
+   "role": "ack",
+   "phrasing": "ack_16"
   },
   {
    "speaker": "user",
-   "text": "Okay, I'll try it with the next adaptation.",
+   "text": "The first pair is heavy leather boots, super sturdy and waterproof, but they need breaking in.",
+   "est_sec": 5.06,
+   "gap_before": 0.86,
+   "block": "hiking.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "The second pair is lightweight trail runners, really comfortable right away, but not waterproof.",
+   "est_sec": 4.44,
+   "gap_before": 2.43,
+   "block": "hiking.opt2",
+   "event": "distractor",
+   "kind": "pause"
+  },
+  {
+   "speaker": "user",
+   "text": "And the third pair is mid height synthetic boots, kind of in between, with decent ankle support.",
+   "est_sec": 5.37,
+   "gap_before": 2.02,
+   "block": "hiking.opt2"
+  },
+  {
+   "speaker": "user",
+   "text": "That's all I've got. Which would you choose?",
    "est_sec": 2.58,
-   "gap_before": 0.55,
-   "block": "movies.dlg2"
+   "gap_before": 0.73,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "describe_cue_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "What kind of terrain and weather are you expecting? If it's wet and rocky, go for the leather boots, but start wearing them now. If it's dry, the trail runners will feel amazing.",
+   "est_sec": 10.33,
+   "gap_before": 0.36,
+   "role": "resume",
+   "block": "hiking.opt2"
   }
  ]
 }

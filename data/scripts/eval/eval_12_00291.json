@@ -7,158 +7,148 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
- "type": "think_time",
- "wait_type": "think_time",
- "conditions": [
-  "extension",
-  "self_talk"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "laptop_buying"
+  "cycling"
  ],
- "wait_sec": 15,
- "extension": {
-  "extra_sec": 10,
-  "said_before_deadline_sec": 1.41
- },
- "deadline": {
-  "after_turn": 7,
-  "sec": 10
- },
- "topic": "laptop_buying",
+ "topic": "cycling",
  "voices": {
-  "user": "933563129e564b19a115bedd57b7406a",
+  "user": "732ea755bd9e446eb31dc79966b50428",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_27",
-  "greet_ans_21",
-  "think_instr_12",
-  "ack_07",
-  "self_18",
-  "extension_04"
+  "greet_06",
+  "greet_ans_21"
  ],
  "block_ids": [
-  "laptop_buying.ctx1"
+  "cycling.dlg9"
  ],
- "est_total_sec": 60.91,
- "est_speech_sec": 33.03,
+ "est_total_sec": 56.57,
+ "est_speech_sec": 43.77,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how have things been?",
-   "est_sec": 1.96,
-   "gap_before": 0.45,
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.57,
    "role": "greeting",
-   "phrasing": "greet_27",
+   "phrasing": "greet_06",
    "reference_only": true
   },
   {
    "speaker": "user",
    "text": "I'm okay, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.97,
+   "gap_before": 0.32,
    "event": "greeting_answer",
    "phrasing": "greet_ans_21"
   },
   {
    "speaker": "user",
-   "text": "My old laptop is dying and I need a new one before next month.",
+   "text": "I want to ride a century one day. Is that just a hundred miles?",
    "est_sec": 4.44,
-   "gap_before": 0.58,
+   "gap_before": 0.47,
    "event": "ordinary_request",
-   "block": "laptop_buying.ctx1"
+   "block": "cycling.dlg9"
   },
   {
    "speaker": "moshi",
-   "text": "Okay. First big question, do you want something small and light to carry around, or a bigger screen for working at a desk?",
-   "est_sec": 7.23,
-   "gap_before": 0.51,
-   "role": "reply",
-   "block": "laptop_buying.ctx1",
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "I need to think. Give me fifteen seconds and then ask me again.",
-   "est_sec": 4.13,
-   "gap_before": 0.31,
-   "event": "instruction",
-   "kind": "think_time",
-   "wait_sec": 15,
-   "phrasing": "think_instr_12"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Got it.",
-   "est_sec": 0.72,
+   "text": "Exactly, a hundred miles in one ride. Some people also do a metric century, which is a hundred kilometers.",
+   "est_sec": 5.99,
    "gap_before": 0.66,
-   "role": "ack",
-   "phrasing": "ack_07",
+   "role": "reply",
+   "block": "cycling.dlg9",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Mmm, yeah, maybe that.",
-   "est_sec": 1.34,
-   "anchor": {
-    "turn": 4,
-    "offset": 6.65
-   },
-   "event": "distractor",
-   "kind": "self_talk",
-   "phrasing": "self_18"
-  },
-  {
-   "speaker": "user",
-   "text": "Actually, wait ten more seconds.",
-   "est_sec": 1.65,
-   "event": "extension",
-   "extra_sec": 10,
-   "phrasing": "extension_04",
-   "anchor": {
-    "turn": 4,
-    "offset": 13.59
-   }
-  },
-  {
-   "speaker": "moshi",
-   "text": "So, for the new laptop, small and light or a bigger screen?",
-   "est_sec": 3.82,
-   "role": "resume",
-   "block": "laptop_buying.ctx1",
-   "anchor": {
-    "turn": 7,
-    "offset": 10.43
-   },
-   "reference_only": true
-  },
-  {
-   "speaker": "user",
-   "text": "Light. I carry it to cafes almost every day.",
-   "est_sec": 2.89,
-   "gap_before": 0.98,
+   "text": "How long would that take me?",
+   "est_sec": 1.96,
+   "gap_before": 1.22,
    "event": "ordinary_request",
-   "block": "laptop_buying.ctx1"
+   "block": "cycling.dlg9"
   },
   {
    "speaker": "moshi",
-   "text": "Then look at thirteen or fourteen inch models with long battery life.",
-   "est_sec": 3.82,
-   "gap_before": 0.62,
-   "role": "followup",
-   "block": "laptop_buying.ctx1",
+   "text": "At an average of fifteen miles an hour, about seven hours of riding, plus stops.",
+   "est_sec": 4.75,
+   "gap_before": 0.72,
+   "role": "reply",
+   "block": "cycling.dlg9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Wow. That's a whole day.",
+   "est_sec": 1.65,
+   "gap_before": 1.1,
+   "event": "ordinary_request",
+   "block": "cycling.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It is. Most people start early, plan a couple of cafe stops, and finish by late afternoon.",
+   "est_sec": 5.37,
+   "gap_before": 0.31,
+   "role": "reply",
+   "block": "cycling.dlg9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe I'll start",
+   "est_sec": 1.03,
+   "gap_before": 0.5,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "cycling.dlg9"
+  },
+  {
+   "speaker": "user",
+   "text": "with the metric one.",
+   "est_sec": 1.34,
+   "gap_before": 1.94,
+   "event": "ordinary_request",
+   "block": "cycling.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Great first goal. It's a big achievement on its own and builds you up for the full hundred.",
+   "est_sec": 5.68,
+   "gap_before": 0.98,
+   "role": "reply",
+   "block": "cycling.dlg9",
+   "reference_only": true
+  },
+  {
+   "speaker": "user",
+   "text": "How do I train for it?",
+   "est_sec": 1.96,
+   "gap_before": 0.7,
+   "event": "ordinary_request",
+   "block": "cycling.dlg9"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Build up your longest ride gradually, add about ten percent each week, and include an easy week every month.",
+   "est_sec": 5.99,
+   "gap_before": 1.81,
+   "role": "reply",
+   "block": "cycling.dlg9",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "extension"
+  "ordinary"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }

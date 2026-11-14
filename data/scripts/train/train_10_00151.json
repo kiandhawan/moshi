@@ -7,170 +7,132 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [
-  "extra_question"
+  "self_talk"
  ],
  "topics": [
-  "sleep",
-  "sleep"
+  "fitness"
  ],
- "topic": "sleep",
+ "wait_sec": 45,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 45
+ },
+ "topic": "fitness",
  "voices": {
-  "user": "ba875f2fb2ea4a4e9b175821014984b6",
-  "friend": "536d3a5e000945adb7038665781a4aca",
+  "user": "9a9cf47702da476aa4629e2506d4a857",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Sam",
- "friend_name_id": "name_02",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_20",
-  "greet_ans_17",
-  "side_instr_19",
-  "dq_16",
-  "side_cue_01"
+  "greet_19",
+  "greet_ans_28",
+  "think_instr_10",
+  "ack_10",
+  "self_26"
  ],
  "block_ids": [
-  "sleep.ctx1",
-  "sleep.side2"
+  "fitness.ctx2"
  ],
- "est_total_sec": 76.45,
- "est_speech_sec": 57.5,
+ "est_total_sec": 81.77,
+ "est_speech_sec": 31.38,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, good to have you here. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.61,
+   "text": "Hi, how's everything with you?",
+   "est_sec": 1.65,
+   "gap_before": 0.35,
    "role": "greeting",
-   "phrasing": "greet_20"
+   "phrasing": "greet_19"
   },
   {
    "speaker": "user",
-   "text": "A bit tired today, but okay.",
-   "est_sec": 1.96,
-   "gap_before": 0.98,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_17"
-  },
-  {
-   "speaker": "user",
-   "text": "I've been going to bed at like one in the morning and I'm wrecked every day.",
-   "est_sec": 5.06,
-   "gap_before": 0.3,
-   "event": "ordinary_request",
-   "block": "sleep.ctx1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Let's move it earlier step by step. What time do you realistically want to be asleep by on work nights?",
-   "est_sec": 6.3,
-   "gap_before": 0.94,
-   "role": "reply",
-   "block": "sleep.ctx1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, quick break, I need to talk to my roommate. I'll tell you when I'm done.",
-   "est_sec": 5.06,
-   "gap_before": 0.38,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_19"
-  },
-  {
-   "speaker": "user",
-   "text": "What was the name of that show we watched?",
-   "est_sec": 2.89,
-   "gap_before": 0.82,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_16"
-  },
-  {
-   "speaker": "friend",
-   "text": "I can't remember either.",
-   "est_sec": 1.34,
-   "gap_before": 1.22,
-   "phrasing": "dq_16"
-  },
-  {
-   "speaker": "user",
-   "text": "Can you keep it down a bit tomorrow morning? I'm trying to sleep in.",
-   "est_sec": 4.44,
-   "gap_before": 2.85,
-   "block": "sleep.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Sure. What time do you want to get up?",
-   "est_sec": 2.89,
-   "gap_before": 1.32,
-   "block": "sleep.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Ten, maybe eleven. It's been such a long week.",
-   "est_sec": 2.89,
-   "gap_before": 1.18,
-   "block": "sleep.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "No problem. I'll make my coffee quietly and go for a walk.",
-   "est_sec": 3.82,
-   "gap_before": 1.44,
-   "block": "sleep.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "You're the best. Could you close the hallway door too? The light comes in.",
-   "est_sec": 4.44,
-   "gap_before": 0.44,
-   "block": "sleep.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Will do.",
-   "est_sec": 0.72,
-   "gap_before": 0.9,
-   "block": "sleep.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm back.",
+   "text": "Doing alright, thanks.",
    "est_sec": 1.03,
-   "gap_before": 1.38,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_01"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure thing. So, what time do you want to be asleep by?",
-   "est_sec": 3.82,
-   "gap_before": 0.93,
-   "role": "resume",
-   "block": "sleep.ctx1"
+   "gap_before": 0.82,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_28"
   },
   {
    "speaker": "user",
-   "text": "Let's say midnight to start. Eleven feels impossible right now.",
-   "est_sec": 3.2,
-   "gap_before": 1.35,
+   "text": "I signed up for a ten kilometer race in two months. I've never run that far.",
+   "est_sec": 5.06,
+   "gap_before": 0.44,
    "event": "ordinary_request",
-   "block": "sleep.ctx1"
+   "block": "fitness.ctx2"
   },
   {
    "speaker": "moshi",
-   "text": "Midnight is a solid first step. Once that feels normal we can nudge it earlier.",
-   "est_sec": 4.75,
-   "gap_before": 0.41,
+   "text": "Two months is enough if you build up gradually. What's the longest you can run comfortably right now?",
+   "est_sec": 5.68,
+   "gap_before": 0.47,
+   "role": "reply",
+   "block": "fitness.ctx2"
+  },
+  {
+   "speaker": "user",
+   "text": "Um, give me forty-five seconds to think it over, then ask me.",
+   "est_sec": 3.82,
+   "gap_before": 1.32,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 45,
+   "phrasing": "think_instr_10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, no rush.",
+   "est_sec": 1.03,
+   "gap_before": 0.25,
+   "role": "ack",
+   "phrasing": "ack_10"
+  },
+  {
+   "speaker": "user",
+   "text": "Hmm, decisions, decisions.",
+   "est_sec": 1.03,
+   "anchor": {
+    "turn": 4,
+    "offset": 9.25
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_26"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So, how far can you comfortably run at the moment?",
+   "est_sec": 3.2,
+   "role": "resume",
+   "block": "fitness.ctx2",
+   "anchor": {
+    "turn": 4,
+    "offset": 45.53
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Maybe three kilometers before I need to walk.",
+   "est_sec": 2.58,
+   "gap_before": 0.83,
+   "event": "ordinary_request",
+   "block": "fitness.ctx2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a fine starting point. Add about half a kilometer to your long run each week and you'll be ready.",
+   "est_sec": 6.3,
+   "gap_before": 1.19,
    "role": "followup",
-   "block": "sleep.ctx1"
+   "block": "fitness.ctx2"
   }
  ]
 }

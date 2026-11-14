@@ -7,114 +7,187 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "video_games"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question",
+  "near_miss"
  ],
- "topic": "video_games",
+ "topics": [
+  "movies",
+  "cleaning"
+ ],
+ "topic": "movies",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
-  "friend": null,
+  "user": "c70cfb98867a4bfb9ae20d2401257b92",
+  "friend": "458abe2c9c0b41f793c7235a230caa8c",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Lucas",
+ "friend_name_id": "name_19",
  "phrasing_ids": [
-  "greet_26",
-  "greet_ans_28",
-  "describe_instr_08",
-  "ack_02",
-  "describe_cue_02"
+  "greet_10",
+  "greet_ans_10",
+  "side_instr_08",
+  "ack_13",
+  "dn_34",
+  "dq_48",
+  "side_cue_22"
  ],
  "block_ids": [
-  "video_games.opt2"
+  "movies.ctx9",
+  "cleaning.side6",
+  "dn_34",
+  "dq_48"
  ],
- "est_total_sec": 50.77,
- "est_speech_sec": 40.99,
+ "est_total_sec": 74.96,
+ "est_speech_sec": 56.36,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you doing these days?",
+   "text": "Hey, how's your day been so far?",
    "est_sec": 2.27,
-   "gap_before": 0.55,
+   "gap_before": 0.53,
    "role": "greeting",
-   "phrasing": "greet_26"
+   "phrasing": "greet_10"
   },
   {
    "speaker": "user",
-   "text": "Doing alright, thanks.",
-   "est_sec": 1.03,
-   "gap_before": 0.45,
+   "text": "Doing well, thank you.",
+   "est_sec": 1.34,
+   "gap_before": 0.75,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_28"
+   "phrasing": "greet_ans_10"
   },
   {
    "speaker": "user",
-   "text": "I'm trying to decide what to play with my little brother this weekend.",
-   "est_sec": 4.13,
-   "gap_before": 0.47,
-   "block": "video_games.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Please wait until I've gone through all the options.",
-   "est_sec": 2.89,
-   "gap_before": 0.63,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_08"
+   "text": "We got a projector to watch films in the garden this summer.",
+   "est_sec": 3.82,
+   "gap_before": 0.35,
+   "event": "ordinary_request",
+   "block": "movies.ctx9"
   },
   {
    "speaker": "moshi",
-   "text": "Okay.",
-   "est_sec": 0.41,
-   "gap_before": 0.29,
+   "text": "Outdoor cinema, fantastic. For the screen, would you buy a proper inflatable one, or try a white sheet on the fence first?",
+   "est_sec": 6.92,
+   "gap_before": 1.93,
+   "role": "reply",
+   "block": "movies.ctx9"
+  },
+  {
+   "speaker": "user",
+   "text": "Pause for a second, my roommate wants to ask me something. I'll let you know when I'm back.",
+   "est_sec": 5.68,
+   "gap_before": 2.26,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, I'll hold on.",
+   "est_sec": 1.34,
+   "gap_before": 0.48,
    "role": "ack",
-   "phrasing": "ack_02"
+   "phrasing": "ack_13"
   },
   {
    "speaker": "user",
-   "text": "One is a racing game with silly karts that we can both play on the same screen.",
-   "est_sec": 5.37,
-   "gap_before": 0.81,
-   "block": "video_games.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is a building game where we make castles and explore caves together.",
-   "est_sec": 4.13,
-   "gap_before": 1.04,
-   "block": "video_games.opt2",
+   "text": "Have you seen the remote for the fan?",
+   "est_sec": 2.58,
+   "gap_before": 1.09,
    "event": "distractor",
-   "kind": "pause"
+   "kind": "friend_question",
+   "phrasing": "dq_48"
+  },
+  {
+   "speaker": "friend",
+   "text": "It fell behind the sofa again.",
+   "est_sec": 1.96,
+   "gap_before": 0.82,
+   "phrasing": "dq_48"
   },
   {
    "speaker": "user",
-   "text": "Or there's a dance game that uses the controllers, which would get us both moving around.",
-   "est_sec": 5.06,
-   "gap_before": 2.19,
-   "block": "video_games.opt2"
+   "text": "Lucas, did you use the white towels to mop up the kitchen floor?",
+   "est_sec": 4.13,
+   "gap_before": 0.66,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Um. They were the closest thing.",
+   "est_sec": 1.96,
+   "gap_before": 1.28,
+   "block": "cleaning.side6"
   },
   {
    "speaker": "user",
-   "text": "That's everything. Which one would you pick?",
-   "est_sec": 2.27,
-   "gap_before": 1.41,
+   "text": "Those were the guest towels. My mum's coming tomorrow.",
+   "est_sec": 2.89,
+   "gap_before": 0.66,
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'll put them on a hot wash right now, they'll be fine.",
+   "est_sec": 3.82,
+   "gap_before": 1.45,
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "With the bleach-free stuff, please, they're the fluffy ones.",
+   "est_sec": 2.89,
+   "gap_before": 0.58,
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "friend",
+   "text": "Got it. Sorry, I panicked, the whole jug of juice went everywhere.",
+   "est_sec": 3.82,
+   "gap_before": 0.69,
+   "block": "cleaning.side6"
+  },
+  {
+   "speaker": "user",
+   "text": "Go ahead, you tell the story, you remember it better.",
+   "est_sec": 3.2,
+   "gap_before": 0.53,
+   "event": "distractor",
+   "kind": "near_miss",
+   "phrasing": "dn_34"
+  },
+  {
+   "speaker": "friend",
+   "text": "Fine, but you'll interrupt me anyway.",
+   "est_sec": 1.96,
+   "gap_before": 1.03,
+   "phrasing": "dn_34"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, back. Thanks for being patient.",
+   "est_sec": 1.96,
+   "gap_before": 1.04,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_02"
+   "phrasing": "side_cue_22"
   },
   {
    "speaker": "moshi",
-   "text": "The kart racer is a classic for siblings, it's quick to pick up and really fun to compete. The building game is better if you'd rather work together than compete. The dance game is great for a laugh but might tire out fast.",
-   "est_sec": 13.43,
-   "gap_before": 0.44,
+   "text": "No problem. So for the projector, have you settled on a screen?",
+   "est_sec": 3.82,
+   "gap_before": 0.97,
    "role": "resume",
-   "block": "video_games.opt2"
+   "block": "movies.ctx9"
   }
  ]
 }

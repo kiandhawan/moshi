@@ -7,17 +7,19 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "smartphones"
+  "birthday_party"
  ],
- "topic": "smartphones",
+ "topic": "birthday_party",
  "voices": {
-  "user": "6d7a45828f6a432c9233cd93bb93e5be",
+  "user": "f83f2e43d24b4bccb3bd3a63a950aa93",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
@@ -25,87 +27,102 @@
  "friend_name_id": null,
  "phrasing_ids": [
   "greet_08",
-  "greet_ans_10",
-  "describe_instr_16",
-  "describe_cue_07"
+  "greet_ans_19"
  ],
  "block_ids": [
-  "smartphones.opt2"
+  "birthday_party.dlg2"
  ],
- "est_total_sec": 49.28,
- "est_speech_sec": 39.34,
+ "est_total_sec": 50.62,
+ "est_speech_sec": 38.3,
  "turns": [
   {
    "speaker": "moshi",
    "text": "Hi there, how are you feeling today?",
    "est_sec": 2.27,
-   "gap_before": 0.65,
+   "gap_before": 0.34,
    "role": "greeting",
    "phrasing": "greet_08"
   },
   {
    "speaker": "user",
-   "text": "Doing well, thank you.",
-   "est_sec": 1.34,
-   "gap_before": 0.47,
+   "text": "Good, thanks. Just got home.",
+   "est_sec": 1.65,
+   "gap_before": 0.82,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_10"
+   "phrasing": "greet_ans_19"
   },
   {
    "speaker": "user",
-   "text": "I'm getting my dad a new phone and I want to pick the right one.",
-   "est_sec": 4.75,
-   "gap_before": 0.2,
-   "block": "smartphones.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Listen to all of them first, then comment.",
-   "est_sec": 2.58,
-   "gap_before": 0.71,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_16"
-  },
-  {
-   "speaker": "user",
-   "text": "One is a simple phone with big buttons and a large screen, made for people who aren't techy.",
-   "est_sec": 5.68,
-   "gap_before": 0.97,
-   "block": "smartphones.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Another is the same brand he's using now, just the newer version, so everything feels familiar.",
-   "est_sec": 5.06,
-   "gap_before": 2.41,
-   "block": "smartphones.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's a cheap basic smartphone that mostly does calls, texts and photos.",
-   "est_sec": 4.13,
-   "gap_before": 1.15,
-   "block": "smartphones.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "That's it. Now you can comment.",
-   "est_sec": 1.96,
-   "gap_before": 1.34,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_07"
+   "text": "My wife's birthday is Sunday and I've got nothing planned. I'm panicking a little.",
+   "est_sec": 4.44,
+   "gap_before": 0.47,
+   "event": "ordinary_request",
+   "block": "birthday_party.dlg2"
   },
   {
    "speaker": "moshi",
-   "text": "Sticking with the same brand is probably the smoothest choice, he won't have to relearn anything. The big button phone is great if his eyesight is a concern. The basic smartphone saves money but might feel slow.",
-   "est_sec": 11.57,
-   "gap_before": 0.54,
-   "role": "resume",
-   "block": "smartphones.opt2"
+   "text": "Don't worry, there's still time. What does she love doing on a free day?",
+   "est_sec": 4.44,
+   "gap_before": 1.2,
+   "role": "reply",
+   "block": "birthday_party.dlg2"
+  },
+  {
+   "speaker": "user",
+   "text": "She loves brunch, and anything near the water.",
+   "est_sec": 2.58,
+   "gap_before": 0.67,
+   "event": "ordinary_request",
+   "block": "birthday_party.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Then book a brunch spot with a view, and plan a walk along the water afterwards. Simple but thoughtful.",
+   "est_sec": 5.99,
+   "gap_before": 1.11,
+   "role": "reply",
+   "block": "birthday_party.dlg2"
+  },
+  {
+   "speaker": "user",
+   "text": "Should I invite her friends or",
+   "est_sec": 1.96,
+   "gap_before": 1.42,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "birthday_party.dlg2"
+  },
+  {
+   "speaker": "user",
+   "text": "keep it just the two of us?",
+   "est_sec": 2.27,
+   "gap_before": 2.95,
+   "event": "ordinary_request",
+   "block": "birthday_party.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "You could do both. Brunch for two, then a small get together with friends in the evening.",
+   "est_sec": 5.37,
+   "gap_before": 0.37,
+   "role": "reply",
+   "block": "birthday_party.dlg2"
+  },
+  {
+   "speaker": "user",
+   "text": "I like that. What about a gift?",
+   "est_sec": 2.27,
+   "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "birthday_party.dlg2"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Think of something she mentioned wanting recently. A handwritten card with it goes a long way.",
+   "est_sec": 5.06,
+   "gap_before": 1.07,
+   "role": "reply",
+   "block": "birthday_party.dlg2"
   }
  ]
 }

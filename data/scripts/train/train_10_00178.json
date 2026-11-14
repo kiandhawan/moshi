@@ -7,116 +7,166 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
- "conditions": [],
- "topics": [
-  "studying"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "near_miss"
  ],
- "topic": "studying",
+ "topics": [
+  "fitness",
+  "smartphones"
+ ],
+ "topic": "fitness",
  "voices": {
-  "user": "8784f1c03bdd41c3a381f65eae08e814",
-  "friend": null,
+  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "friend": "cc7f8544c64a439080193e9560100c5a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Ethan",
+ "friend_name_id": "name_23",
  "phrasing_ids": [
-  "greet_19",
-  "greet_ans_23",
-  "describe_instr_10",
-  "ack_16",
-  "describe_cue_07"
+  "greet_25",
+  "greet_ans_22",
+  "side_instr_23",
+  "ack_08",
+  "dn_17",
+  "side_cue_17"
  ],
  "block_ids": [
-  "studying.opt2"
+  "fitness.ctx5",
+  "smartphones.side4",
+  "dn_17"
  ],
- "est_total_sec": 51.71,
- "est_speech_sec": 40.99,
+ "est_total_sec": 68.65,
+ "est_speech_sec": 53.99,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi, how's everything with you?",
-   "est_sec": 1.65,
-   "gap_before": 0.41,
+   "text": "Hello there! How's your day treating you?",
+   "est_sec": 2.27,
+   "gap_before": 0.59,
    "role": "greeting",
-   "phrasing": "greet_19"
+   "phrasing": "greet_25"
   },
   {
    "speaker": "user",
-   "text": "Good, good. Thanks.",
+   "text": "Pretty relaxed today.",
    "est_sec": 1.03,
-   "gap_before": 0.37,
+   "gap_before": 0.56,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_23"
+   "phrasing": "greet_ans_22"
   },
   {
    "speaker": "user",
-   "text": "I'm trying to figure out where I should study this semester.",
-   "est_sec": 3.51,
-   "gap_before": 0.58,
-   "block": "studying.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let me get through all the options before you weigh in.",
-   "est_sec": 3.51,
-   "gap_before": 0.43,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_10"
+   "text": "My bench press has been stuck at the same weight for two months. It's driving me nuts.",
+   "est_sec": 5.37,
+   "gap_before": 0.33,
+   "event": "ordinary_request",
+   "block": "fitness.ctx5"
   },
   {
    "speaker": "moshi",
-   "text": "Okay, sure.",
-   "est_sec": 0.72,
-   "gap_before": 0.51,
+   "text": "Classic plateau. You could take a lighter deload week to recover, or switch up the program with new variations. Which do you think you need more?",
+   "est_sec": 8.16,
+   "gap_before": 0.53,
+   "role": "reply",
+   "block": "fitness.ctx5"
+  },
+  {
+   "speaker": "user",
+   "text": "Hold on, I need a minute with my roommate. Just stay silent until I come back to you.",
+   "est_sec": 5.68,
+   "gap_before": 1.35,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_23"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Sure, go ahead.",
+   "est_sec": 1.03,
+   "gap_before": 0.7,
    "role": "ack",
-   "phrasing": "ack_16"
+   "phrasing": "ack_08"
   },
   {
    "speaker": "user",
-   "text": "One option is my bedroom desk, which is quiet but right next to my bed and my phone charger.",
-   "est_sec": 5.99,
-   "gap_before": 1.01,
-   "block": "studying.opt2",
+   "text": "Okay, let's continue after lunch.",
+   "est_sec": 1.65,
+   "gap_before": 0.93,
    "event": "distractor",
-   "kind": "pause"
+   "kind": "near_miss",
+   "phrasing": "dn_17"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sounds good.",
+   "est_sec": 0.72,
+   "gap_before": 0.43,
+   "phrasing": "dn_17"
   },
   {
    "speaker": "user",
-   "text": "Another is the campus library, a twenty minute walk, but nobody bothers me there.",
-   "est_sec": 4.44,
-   "gap_before": 1.87,
-   "block": "studying.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or there's the coffee shop downstairs, a bit noisy, but I always feel weirdly focused there.",
+   "text": "Ethan, can you grab a picture of all of us? Get the lake in the background.",
    "est_sec": 5.06,
-   "gap_before": 2.16,
-   "block": "studying.opt2"
+   "gap_before": 0.46,
+   "block": "smartphones.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Sure. Wait, how do I make it go wide? It's only showing your heads.",
+   "est_sec": 4.44,
+   "gap_before": 0.99,
+   "block": "smartphones.side4"
   },
   {
    "speaker": "user",
-   "text": "That's it. Now you can comment.",
+   "text": "Tap the little point five at the bottom.",
+   "est_sec": 2.58,
+   "gap_before": 1.36,
+   "block": "smartphones.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Got it. Okay, everyone squish in. Uncle Ray, you're half cut off.",
+   "est_sec": 3.82,
+   "gap_before": 1.32,
+   "block": "smartphones.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Take a few, someone always blinks.",
    "est_sec": 1.96,
-   "gap_before": 0.69,
+   "gap_before": 1.08,
+   "block": "smartphones.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "I took about fifteen. Your aunt blinked in every single one, by the way.",
+   "est_sec": 4.44,
+   "gap_before": 0.7,
+   "block": "smartphones.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm back, thanks for waiting.",
+   "est_sec": 1.65,
+   "gap_before": 0.89,
    "event": "return_cue",
    "kind": "explicit",
-   "phrasing": "describe_cue_07"
+   "phrasing": "side_cue_17"
   },
   {
    "speaker": "moshi",
-   "text": "The library sounds like the best bet for deep work, the walk even gives you a little break. The coffee shop is great if the background noise actually helps you. Your bedroom is the riskiest, with the bed and phone so close.",
-   "est_sec": 13.12,
-   "gap_before": 1.19,
+   "text": "Alright. Two months at the same weight. Which fix are you going for?",
+   "est_sec": 4.13,
+   "gap_before": 0.94,
    "role": "resume",
-   "block": "studying.opt2"
+   "block": "fitness.ctx5"
   }
  ]
 }

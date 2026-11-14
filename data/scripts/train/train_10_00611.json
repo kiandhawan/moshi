@@ -7,120 +7,124 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "home_repair"
+  "birthday_party"
  ],
- "topic": "home_repair",
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 6,
+  "sec": 20
+ },
+ "topic": "birthday_party",
  "voices": {
-  "user": "879653fd2b9c4cb0854d68e7e9a049e8",
+  "user": "705690224f264386b87fb598083ab022",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_26",
-  "greet_ans_22"
+  "greet_04",
+  "greet_ans_01",
+  "think_instr_13"
  ],
  "block_ids": [
-  "home_repair.dlg2"
+  "birthday_party.ctx8"
  ],
- "est_total_sec": 52.67,
- "est_speech_sec": 41.09,
+ "est_total_sec": 62.73,
+ "est_speech_sec": 33.86,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you doing these days?",
-   "est_sec": 2.27,
-   "gap_before": 0.57,
+   "text": "Hey there, how are you?",
+   "est_sec": 1.65,
+   "gap_before": 0.41,
    "role": "greeting",
-   "phrasing": "greet_26"
+   "phrasing": "greet_04"
   },
   {
    "speaker": "user",
-   "text": "Pretty relaxed today.",
+   "text": "I'm good, thanks.",
    "est_sec": 1.03,
-   "gap_before": 0.38,
+   "gap_before": 0.71,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_22"
+   "phrasing": "greet_ans_01"
   },
   {
    "speaker": "user",
-   "text": "I'm retired now and finally have time to fix up the deck. Where do I even begin?",
-   "est_sec": 5.37,
-   "gap_before": 0.21,
+   "text": "So I'm hosting my own thirty fifth and I've invited way too many people.",
+   "est_sec": 4.44,
+   "gap_before": 0.59,
    "event": "ordinary_request",
-   "block": "home_repair.dlg2"
+   "block": "birthday_party.ctx8"
   },
   {
    "speaker": "moshi",
-   "text": "Start with a good look for loose boards, popped nails and soft spots. Soft wood means rot and should be replaced first.",
+   "text": "How many are we talking?",
+   "est_sec": 1.65,
+   "gap_before": 0.56,
+   "role": "reply",
+   "block": "birthday_party.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Like sixty. My flat holds maybe twenty five.",
+   "est_sec": 2.58,
+   "gap_before": 1.29,
+   "event": "ordinary_request",
+   "block": "birthday_party.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, that's tight. Do you want to rent a room at a pub, or move the whole thing outdoors to a park?",
    "est_sec": 6.92,
-   "gap_before": 1.18,
+   "gap_before": 0.82,
    "role": "reply",
-   "block": "home_repair.dlg2"
+   "block": "birthday_party.ctx8"
   },
   {
    "speaker": "user",
-   "text": "There are a few soft boards near the steps, yes.",
-   "est_sec": 3.2,
-   "gap_before": 1.35,
-   "event": "ordinary_request",
-   "block": "home_repair.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Replace those, then give the whole deck a scrub with a deck cleaner and let it dry for a couple of days.",
-   "est_sec": 6.92,
-   "gap_before": 0.83,
-   "role": "reply",
-   "block": "home_repair.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "Then stain it?",
-   "est_sec": 1.03,
-   "gap_before": 0.9,
-   "event": "ordinary_request",
-   "block": "home_repair.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Exactly. Pick a dry stretch of weather and apply a thin, even coat. Two thin coats beat one thick one.",
-   "est_sec": 6.3,
-   "gap_before": 1.1,
-   "role": "reply",
-   "block": "home_repair.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "I was going to do it all",
-   "est_sec": 2.27,
-   "gap_before": 1.52,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "home_repair.dlg2"
-  },
-  {
-   "speaker": "user",
-   "text": "well, maybe over two weekends instead.",
-   "est_sec": 1.96,
-   "gap_before": 1.66,
-   "event": "ordinary_request",
-   "block": "home_repair.dlg2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's a sensible pace. Repairs and cleaning one weekend, staining the next.",
+   "text": "Let me mull it over for twenty seconds. Then ask me again.",
    "est_sec": 3.82,
-   "gap_before": 0.38,
-   "role": "reply",
-   "block": "home_repair.dlg2"
+   "gap_before": 0.89,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_13"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay, your thirty fifth. Indoors at a pub, or outdoors in the park?",
+   "est_sec": 4.13,
+   "role": "resume",
+   "block": "birthday_party.ctx8",
+   "anchor": {
+    "turn": 6,
+    "offset": 20.44
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "The park. It's summer and it's free.",
+   "est_sec": 2.27,
+   "gap_before": 0.87,
+   "event": "ordinary_request",
+   "block": "birthday_party.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Nice. Get there early to claim a spot near some shade and bring a few big blankets.",
+   "est_sec": 5.37,
+   "gap_before": 0.79,
+   "role": "followup",
+   "block": "birthday_party.ctx8"
   }
  ]
 }

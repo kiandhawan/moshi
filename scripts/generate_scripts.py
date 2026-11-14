@@ -104,35 +104,57 @@ def moshi_gap(rng: random.Random) -> float:
     return round(rng.uniform(0.3, 1.2) if rng.random() < 0.9 else rng.uniform(1.2, 2.0), 2)
 
 
+class PoolExhausted(Exception):
+    pass
+
+
 class Deck:
     """Draw items without replacement, reshuffling when exhausted, so reuse is spread
-    evenly over a pool (no item is used twice before every item was used once)."""
+    evenly over a pool (no item is used twice before every item was used once).
+    unique=True (content blocks): never reshuffle; every item is used at most once and an
+    empty deck raises PoolExhausted. Items drawn for a script that is then rejected (too
+    long / short) are given back with put_back()."""
 
-    def __init__(self, items: list, rng: random.Random):
-        self.items, self.rng, self.queue = list(items), rng, []
-        assert self.items, "empty pool"
+    def __init__(self, items: list, rng: random.Random, name: str = "", unique: bool = False):
+        self.items, self.rng, self.queue, self.name, self.unique = list(items), rng, [], name, unique
+        self.started = False
+        assert self.items or unique, f"empty pool {name}"
 
     def draw(self, avoid=lambda x: False):
-        for _ in range(2 * len(self.items) + 1):
-            if not self.queue:
-                self.queue = self.rng.sample(self.items, len(self.items))
+        if not self.started or (not self.queue and not self.unique):
+            self.queue = self.rng.sample(self.items, len(self.items))
+            self.started = True
+        for _ in range(len(self.queue)):
             x = self.queue.pop()
             if not avoid(x):
                 return x
             self.queue.insert(0, x)
+        if self.unique:
+            raise PoolExhausted(f"pool '{self.name}' has no unused items left ({len(self.items)} in total)")
         return x
+
+    def put_back(self, x) -> None:
+        self.queue.insert(0, x)  # drawn again only after the others
+
+
+UNIQUE_DECKS = {"contexts", "side_conversations", "ordinary_dialogues", "option_sets",
+                "friend_question", "near_miss", "phone_calls", "door_visits"}
 
 
 class Pools:
-    def __init__(self, split: str, rng: random.Random):
-        self.split, self.rng = split, rng
+    def __init__(self, split: str, rng: random.Random, unique: bool = False, exclude: set[str] | None = None):
+        self.split, self.rng, self.unique = split, rng, unique
+        self.pending: list[tuple[str, dict]] = []  # content blocks drawn for the script being built
+        exclude = exclude or set()
         topics = json.loads((ROOT / "data/splits/topics.json").read_text())[split]
         blocks = {k: [] for k in ("contexts", "side_conversations", "ordinary_dialogues", "option_sets")}
         for t in topics:
             d = json.loads((ROOT / f"data/pools/topics/{t}.json").read_text())
             for k in blocks:
                 blocks[k] += [{**it, "topic": t} for it in d.get(k, [])]
-        self.decks = {k: Deck(v, rng) for k, v in blocks.items() if v}
+        mk = lambda k, items: Deck([x for x in items if x["id"] not in exclude], rng, k,  # noqa: E731
+                                   unique and k in UNIQUE_DECKS)
+        self.decks = {k: mk(k, v) for k, v in blocks.items() if v}
         ok = lambda it: it["split"] in (split, "both")  # noqa: E731
         ph = json.loads((ROOT / "data/splits/phrasings.json").read_text())
         for k, v in ph.items():
@@ -142,11 +164,11 @@ class Pools:
         for k in ("acks", "friend_names"):
             self.decks[k] = Deck([x for x in gen[k] if ok(x)], rng)
         for kind in ("friend_question", "near_miss"):
-            self.decks[kind] = Deck([x for x in gen["distractors"] if x["kind"] == kind and ok(x)], rng)
+            self.decks[kind] = mk(kind, [x for x in gen["distractors"] if x["kind"] == kind and ok(x)])
         for k in ("self_talk", "wait_like", "phone_calls", "door_visits", "reading_murmurs"):
             items = [x for x in gen[k] if ok(x)]
             if items:
-                self.decks[k] = Deck(items, rng)
+                self.decks[k] = mk(k, items)
         self.wait_like_moshi = gen["wait_like_moshi"]
         self.resume_openers = gen["resume_openers"]
         v = json.loads((ROOT / "data/splits/voices.json").read_text())
@@ -155,7 +177,18 @@ class Pools:
         self.extension_seconds = json.loads((ROOT / "data/splits/waits.json").read_text())["extension_seconds"]
 
     def draw(self, k: str, **kw):
-        return self.decks[k].draw(**kw)
+        x = self.decks[k].draw(**kw)
+        if self.decks[k].unique:
+            self.pending.append((k, x))
+        return x
+
+    def commit(self) -> None:
+        self.pending = []
+
+    def rollback(self) -> None:
+        for k, x in reversed(self.pending):
+            self.decks[k].put_back(x)
+        self.pending = []
 
 
 class Builder:
@@ -387,6 +420,7 @@ def build(kind: str, split: str, P: Pools, rng: random.Random, cond: set[str]) -
             for dk in inserts:
                 d = P.draw(dk)
                 b.phrasing_ids.append(d["id"])
+                b.block_ids.append(d["id"])  # a distractor exchange is a content block
                 # only at the start or the end, so an inserted exchange never splits a
                 # question from its answer inside the side conversation
                 pos = rng.choice([0, len(turns)])
@@ -407,6 +441,7 @@ def build(kind: str, split: str, P: Pools, rng: random.Random, cond: set[str]) -
             b.add("user", x["text"], event="instruction", kind="phone_call", phrasing=x["id"])
             ack()
             call = phr("phone_calls")
+            b.block_ids.append(call["id"])
             for k, line in enumerate(call["lines"]):
                 gp = round(rng.uniform(1.0, 2.0), 2) if k == 0 else round(rng.uniform(1.5, 4.0), 2)
                 ev = {}
@@ -424,6 +459,7 @@ def build(kind: str, split: str, P: Pools, rng: random.Random, cond: set[str]) -
             b.add("user", x["text"], event="instruction", kind="door", phrasing=x["id"])
             ack()
             visit = phr("door_visits")
+            b.block_ids.append(visit["id"])
             for k, t in enumerate(visit["turns"]):
                 gp = round(rng.uniform(2.0, 5.0), 2) if k == 0 else None  # walking to the door
                 ev = {}
@@ -648,10 +684,19 @@ def main() -> None:
     p.add_argument("--only", choices=list(MIX["train"]), default=None,
                    help="With --ordered: only this script type (e.g. ordinary for the control set).")
     p.add_argument("--id-prefix", default=None, help="Script id prefix (default: <split>_<seed>).")
+    p.add_argument("--unique", action="store_true",
+                   help="Content-unique: every content block (context, side conversation, option set, "
+                        "dialogue, distractor exchange, phone call, door visit) is used at most once.")
+    p.add_argument("--exclude-blocks-from", type=Path, action="append", default=[],
+                   help="Don't use blocks already used by the scripts in this folder (repeatable).")
     args = p.parse_args()
+    exclude = set()
+    for d in args.exclude_blocks_from:
+        for f in d.glob("*_*.json"):
+            exclude |= set(json.loads(f.read_text())["block_ids"])
 
     rng = random.Random(f"{args.split}-{args.seed}" + (f"-only-{args.only}" if args.only else ""))
-    P = Pools(args.split, rng)
+    P = Pools(args.split, rng, unique=args.unique, exclude=exclude)
     if args.ordered:
         plan = OrderedPlan(args.split, rng, args.only)
         # The plan draws a block's shuffle from rng when the block starts, between builds, so
@@ -676,14 +721,20 @@ def main() -> None:
         for attempt in range(100):
             try:
                 s = build(kind, args.split, P, rng, cond_i)
+                P.commit()
                 break
             except ValueError:
+                P.rollback()  # give the rejected script's blocks back
                 continue
+            except PoolExhausted as e:
+                raise SystemExit(f"script {i} ({kind}): {e}. Write more blocks or generate fewer scripts.")
         else:
             raise SystemExit(f"could not build a {kind} script {sorted(cond_i)} within {MIN_SEC}-{MAX_SEC} s")
         sid = f"{prefix}_{i:05d}"
         script = {"id": sid, "split": args.split, "seed": args.seed, "order_index": i,
                   "generator": {"ordered": args.ordered, "only": args.only, "seed": args.seed,
+                                "unique": args.unique,
+                                "exclude_blocks_from": [str(d) for d in args.exclude_blocks_from],
                                 "block": (BLOCK[args.split] if not args.only else 1) if args.ordered else None},
                   **s}
         if args.split == "eval":

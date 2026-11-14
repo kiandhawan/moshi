@@ -7,120 +7,124 @@
   "ordered": true,
   "only": "ordinary",
   "seed": 11,
+  "unique": true,
+  "exclude_blocks_from": [
+   "data/scripts/train"
+  ],
   "block": 1
  },
  "type": "ordinary",
  "wait_type": null,
  "conditions": [],
  "topics": [
-  "public_transport"
+  "board_games"
  ],
- "topic": "public_transport",
+ "topic": "board_games",
  "voices": {
-  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "user": "050df12e0f30484fb882a9a5410e5d66",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_26",
-  "greet_ans_02"
+  "greet_13",
+  "greet_ans_25"
  ],
  "block_ids": [
-  "public_transport.dlg1"
+  "board_games.dlg31"
  ],
- "est_total_sec": 54.84,
- "est_speech_sec": 43.57,
+ "est_total_sec": 58.54,
+ "est_speech_sec": 44.81,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi! How are you doing these days?",
-   "est_sec": 2.27,
-   "gap_before": 0.47,
+   "text": "Hey, nice to hear from you. How are you?",
+   "est_sec": 2.89,
+   "gap_before": 0.53,
    "role": "greeting",
-   "phrasing": "greet_26"
+   "phrasing": "greet_13"
   },
   {
    "speaker": "user",
-   "text": "Pretty good, thanks for asking.",
-   "est_sec": 1.65,
-   "gap_before": 0.98,
+   "text": "I'm well, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.64,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_02"
+   "phrasing": "greet_ans_25"
   },
   {
    "speaker": "user",
-   "text": "I'm visiting a big city next week and I've never used a subway before. Any tips?",
-   "est_sec": 5.06,
-   "gap_before": 0.29,
+   "text": "My partner's family plays mahjong every New Year and I don't want to embarrass myself.",
+   "est_sec": 4.75,
+   "gap_before": 0.31,
    "event": "ordinary_request",
-   "block": "public_transport.dlg1"
+   "block": "board_games.dlg31"
   },
   {
    "speaker": "moshi",
-   "text": "Download the city's transit app before you go. It shows routes, live times and which exit to use.",
-   "est_sec": 5.68,
-   "gap_before": 1.08,
+   "text": "That's a lovely thing to learn for them. The basic idea is collecting sets of tiles, a bit like rummy with tiles.",
+   "est_sec": 6.92,
+   "gap_before": 0.4,
    "role": "reply",
-   "block": "public_transport.dlg1"
+   "block": "board_games.dlg31"
   },
   {
    "speaker": "user",
-   "text": "How do I know",
+   "text": "Like sets of three?",
    "est_sec": 1.34,
-   "gap_before": 1.26,
+   "gap_before": 2.65,
+   "event": "ordinary_request",
+   "block": "board_games.dlg31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Yes, mostly sets of three matching or in a row, plus one pair. You take and throw away a tile each turn until your hand is complete.",
+   "est_sec": 8.47,
+   "gap_before": 0.93,
+   "role": "reply",
+   "block": "board_games.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "There are so many tiles with symbols I can't read.",
+   "est_sec": 3.2,
+   "gap_before": 1.07,
+   "event": "ordinary_request",
+   "block": "board_games.dlg31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Learn the three suits first, dots, bamboo and characters. The numbers on the character tiles are the trickiest, a cheat sheet helps.",
+   "est_sec": 6.92,
+   "gap_before": 1.19,
+   "role": "reply",
+   "block": "board_games.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "Will they mind if",
+   "est_sec": 1.34,
+   "gap_before": 1.04,
    "event": "distractor",
    "kind": "pause",
-   "block": "public_transport.dlg1"
+   "block": "board_games.dlg31"
   },
   {
    "speaker": "user",
-   "text": "which direction to go?",
-   "est_sec": 1.34,
-   "gap_before": 1.6,
+   "text": "I bring a cheat sheet?",
+   "est_sec": 1.65,
+   "gap_before": 2.79,
    "event": "ordinary_request",
-   "block": "public_transport.dlg1"
+   "block": "board_games.dlg31"
   },
   {
    "speaker": "moshi",
-   "text": "Platforms are usually labeled by the last station on the line. Find your stop on the map, then follow signs for the end station in that direction.",
-   "est_sec": 8.47,
-   "gap_before": 0.73,
+   "text": "Most families love that you're trying. Ask your partner which rules they use, because they vary a lot between regions.",
+   "est_sec": 6.3,
+   "gap_before": 0.68,
    "role": "reply",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "That makes sense. What about rush hour?",
-   "est_sec": 2.27,
-   "gap_before": 1.15,
-   "event": "ordinary_request",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Try to avoid roughly seven to nine in the morning and five to seven in the evening. If you can't, stand to the side and let people off first.",
-   "est_sec": 9.09,
-   "gap_before": 0.66,
-   "role": "reply",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, thanks. I feel less nervous now.",
-   "est_sec": 2.27,
-   "gap_before": 1.22,
-   "event": "ordinary_request",
-   "block": "public_transport.dlg1"
-  },
-  {
-   "speaker": "moshi",
-   "text": "You'll do great. Most people figure it out after one or two rides.",
-   "est_sec": 4.13,
-   "gap_before": 0.33,
-   "role": "reply",
-   "block": "public_transport.dlg1"
+   "block": "board_games.dlg31"
   }
  ]
 }

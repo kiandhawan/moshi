@@ -7,120 +7,108 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [],
  "topics": [
-  "hiking"
+  "moving_house"
  ],
- "topic": "hiking",
+ "wait_sec": 20,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 20
+ },
+ "topic": "moving_house",
  "voices": {
-  "user": "a92fb82d739d428a80d4645c5cf91e38",
+  "user": "fbc1029c018041d4b17f2c1e57222dff",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_08",
-  "greet_ans_04"
+  "greet_20",
+  "greet_ans_01",
+  "think_instr_08"
  ],
  "block_ids": [
-  "hiking.dlg3"
+  "moving_house.ctx6"
  ],
- "est_total_sec": 50.98,
- "est_speech_sec": 40.16,
+ "est_total_sec": 62.04,
+ "est_speech_sec": 35.52,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there, how are you feeling today?",
-   "est_sec": 2.27,
-   "gap_before": 0.55,
-   "role": "greeting",
-   "phrasing": "greet_08"
-  },
-  {
-   "speaker": "user",
-   "text": "Pretty well, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.65,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_04"
-  },
-  {
-   "speaker": "user",
-   "text": "Is it safe to hike alone?",
-   "est_sec": 1.96,
-   "gap_before": 0.5,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It can be, with some precautions. Pick a well used trail, and always tell someone where you're going and when you'll be back.",
-   "est_sec": 7.23,
-   "gap_before": 0.3,
-   "role": "reply",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "What if I get lost?",
-   "est_sec": 1.65,
-   "gap_before": 0.55,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Download an offline map before you go and carry a small battery pack for your phone. If you're unsure, stay where you are and call for help.",
-   "est_sec": 8.47,
-   "gap_before": 0.88,
-   "role": "reply",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm retired, so I can go on weekdays when it's",
-   "est_sec": 3.2,
-   "gap_before": 0.41,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "really quiet.",
-   "est_sec": 0.72,
-   "gap_before": 2.13,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's lovely, but quieter trails mean fewer people to help. Stick to routes you know until you're confident.",
-   "est_sec": 5.68,
-   "gap_before": 0.78,
-   "role": "reply",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Good point. Maybe I'll join a walking group too.",
+   "text": "Hey, good to have you here. How are you?",
    "est_sec": 2.89,
-   "gap_before": 2.04,
+   "gap_before": 0.74,
+   "role": "greeting",
+   "phrasing": "greet_20"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm good, thanks.",
+   "est_sec": 1.03,
+   "gap_before": 0.63,
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_01"
+  },
+  {
+   "speaker": "user",
+   "text": "My mum is moving into a bungalow, and the big question is her old piano.",
+   "est_sec": 4.75,
+   "gap_before": 0.33,
    "event": "ordinary_request",
-   "block": "hiking.dlg3"
+   "block": "moving_house.ctx6"
   },
   {
    "speaker": "moshi",
-   "text": "That's a great idea. Many groups do weekday hikes, and you'll learn new trails from them.",
-   "est_sec": 5.06,
-   "gap_before": 0.53,
+   "text": "That's a tough one. She could keep it and give up a bit of living room, or give it to a school and keep the space. Does she still play?",
+   "est_sec": 9.4,
+   "gap_before": 0.44,
    "role": "reply",
-   "block": "hiking.dlg3"
+   "block": "moving_house.ctx6"
+  },
+  {
+   "speaker": "user",
+   "text": "I'm not sure. Wait twenty seconds and ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 1.47,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 20,
+   "phrasing": "think_instr_08"
+  },
+  {
+   "speaker": "moshi",
+   "text": "So what's the verdict on the piano? Keep it, or pass it on to a school?",
+   "est_sec": 5.06,
+   "role": "resume",
+   "block": "moving_house.ctx6",
+   "anchor": {
+    "turn": 4,
+    "offset": 20.2
+   }
+  },
+  {
+   "speaker": "user",
+   "text": "Hardly ever. A school would get much more use out of it.",
+   "est_sec": 3.82,
+   "gap_before": 0.44,
+   "event": "ordinary_request",
+   "block": "moving_house.ctx6"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a lovely way to pass it on. She could ask to hear the kids play it.",
+   "est_sec": 5.37,
+   "gap_before": 0.77,
+   "role": "followup",
+   "block": "moving_house.ctx6"
   }
  ]
 }

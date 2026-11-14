@@ -1,78 +1,109 @@
 {
   "id": "train_10_00090",
-  "group": "describe_options",
-  "user_start": 2.73,
-  "type": "describe_options",
-  "conditions": [],
-  "instruction_start": 8.58,
-  "instruction_end": 11.45,
-  "wait_end": 35.65,
-  "resume_window": [
-    35.65,
-    40.65
+  "group": "side_conversation",
+  "user_start": 3.46,
+  "type": "side_conversation",
+  "conditions": [
+    "extra_question"
   ],
-  "wait_sec": 24.2,
+  "cluster": "board_games.ctx12",
+  "instruction_start": 18.84,
+  "instruction_end": 23.31,
+  "wait_end": 64.11,
+  "resume_window": [
+    64.11,
+    69.11
+  ],
+  "wait_sec": 40.8,
   "distractors": [
-    18.93,
-    26.23
+    28.05,
+    56.677
   ],
   "distractor_kinds": [
-    "pause",
-    "pause"
+    "friend_question",
+    "friend_question"
   ],
   "distractor_windows": [
     [
-      18.93,
-      21.03
+      28.05,
+      30.41
     ],
     [
-      26.23,
-      27.82
+      56.677,
+      57.647
     ]
   ],
-  "ordinary_requests": [],
+  "ordinary_requests": [
+    10.27
+  ],
   "right_turns": [
     {
       "speaker": "user",
-      "start": 2.73,
-      "end": 4.28,
+      "start": 3.46,
+      "end": 4.35,
       "event": "greeting_answer"
     },
     {
       "speaker": "user",
-      "start": 4.8,
-      "end": 8.02
+      "start": 4.88,
+      "end": 10.27,
+      "event": "ordinary_request"
     },
     {
       "speaker": "user",
-      "start": 8.58,
-      "end": 11.45,
+      "start": 18.84,
+      "end": 23.31,
       "event": "instruction",
-      "kind": "describe_options"
+      "kind": "side_conversation"
     },
     {
       "speaker": "user",
-      "start": 12.4,
-      "end": 18.93,
+      "start": 25.23,
+      "end": 28.05,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 30.41,
+      "end": 34.029
     },
     {
       "speaker": "user",
-      "start": 21.03,
-      "end": 26.23,
+      "start": 35.459,
+      "end": 39.159
+    },
+    {
+      "speaker": "friend",
+      "start": 40.939,
+      "end": 43.839
+    },
+    {
+      "speaker": "user",
+      "start": 44.759,
+      "end": 46.159
+    },
+    {
+      "speaker": "friend",
+      "start": 49.579,
+      "end": 53.477
+    },
+    {
+      "speaker": "user",
+      "start": 54.097,
+      "end": 56.677,
       "event": "distractor",
-      "kind": "pause"
+      "kind": "friend_question"
+    },
+    {
+      "speaker": "friend",
+      "start": 57.647,
+      "end": 60.57
     },
     {
       "speaker": "user",
-      "start": 27.82,
-      "end": 31.8
-    },
-    {
-      "speaker": "user",
-      "start": 32.52,
-      "end": 35.65,
+      "start": 61.94,
+      "end": 64.11,
       "event": "return_cue",
       "kind": "explicit"
     }
@@ -82,15 +113,27 @@
   "moshi_turns": [
     {
       "kind": "greeting",
-      "start": 0.64,
-      "end": 1.77,
-      "text": "Hi, how are things with you?"
+      "start": 0.79,
+      "end": 2.9,
+      "text": "Hey, how's your day been so far?"
+    },
+    {
+      "kind": "reply",
+      "start": 11.24,
+      "end": 17.93,
+      "text": "That's a hard goodbye. Do you want to sell them online for some money, or donate them somewhere like a local school or youth club?"
+    },
+    {
+      "kind": "ack",
+      "start": 23.77,
+      "end": 24.21,
+      "text": "Sure."
     },
     {
       "kind": "resume",
-      "start": 37.56,
-      "end": 45.15,
-      "text": "How many days a week do you usually ride? If it's four or five, get the monthly pass. If it's only one or two, pay as you go is the way to go."
+      "start": 64.59,
+      "end": 68.06,
+      "text": "Sure thing. We'd left the forty games hanging. What's their fate?"
     }
   ]
 }

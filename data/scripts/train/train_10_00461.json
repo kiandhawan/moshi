@@ -7,120 +7,207 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
- "conditions": [],
- "topics": [
-  "moving_house"
+ "type": "side_conversation",
+ "wait_type": "side_conversation",
+ "conditions": [
+  "extra_question"
  ],
- "topic": "moving_house",
+ "topics": [
+  "home_repair",
+  "music"
+ ],
+ "topic": "home_repair",
  "voices": {
-  "user": "be9ce4282d8e414daad6fa1797f1cee8",
-  "friend": null,
+  "user": "e3cd384158934cc9a01029cd7d278634",
+  "friend": "fa4c9eb3dccc4806b382b40d61c6b10a",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": null,
- "friend_name_id": null,
+ "friend_name": "Nina",
+ "friend_name_id": "name_10",
  "phrasing_ids": [
-  "greet_13",
-  "greet_ans_02"
+  "greet_17",
+  "greet_ans_02",
+  "side_instr_25",
+  "ack_06",
+  "dq_25",
+  "side_cue_14"
  ],
  "block_ids": [
-  "moving_house.dlg3"
+  "home_repair.ctx8",
+  "music.side4",
+  "dq_25"
  ],
- "est_total_sec": 53.83,
- "est_speech_sec": 40.78,
+ "est_total_sec": 80.22,
+ "est_speech_sec": 57.59,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey, nice to hear from you. How are you?",
-   "est_sec": 2.89,
-   "gap_before": 0.72,
+   "text": "Hey there! How's your day?",
+   "est_sec": 1.65,
+   "gap_before": 0.54,
    "role": "greeting",
-   "phrasing": "greet_13"
+   "phrasing": "greet_17"
   },
   {
    "speaker": "user",
    "text": "Pretty good, thanks for asking.",
    "est_sec": 1.65,
-   "gap_before": 0.92,
+   "gap_before": 0.37,
    "event": "greeting_answer",
    "phrasing": "greet_ans_02"
   },
   {
    "speaker": "user",
-   "text": "My kids are really upset about moving to a new town.",
-   "est_sec": 3.51,
-   "gap_before": 0.42,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's understandable, it's a big change. How old are they?",
-   "est_sec": 3.2,
-   "gap_before": 0.58,
-   "role": "reply",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "Six and eleven.",
-   "est_sec": 1.03,
-   "gap_before": 1.48,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Letting them have some say helps a lot. The younger one could choose a paint colour for their room, the older one could help plan the layout.",
-   "est_sec": 8.47,
-   "gap_before": 1.18,
-   "role": "reply",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "My eleven year old is mostly sad about",
-   "est_sec": 2.58,
-   "gap_before": 1.23,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "leaving her best friend.",
-   "est_sec": 1.34,
-   "gap_before": 2.66,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's the hardest part. Plan a visit or a sleepover in the first couple of months, so she knows the friendship doesn't have to end.",
-   "est_sec": 7.85,
-   "gap_before": 0.95,
-   "role": "reply",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "That's a good idea. They could video call too.",
-   "est_sec": 2.89,
-   "gap_before": 1.01,
-   "event": "ordinary_request",
-   "block": "moving_house.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Exactly. And finding a club in the new town quickly will help her meet people her age.",
-   "est_sec": 5.37,
+   "text": "Me and my dad want to build a shelf for my records.",
+   "est_sec": 3.82,
    "gap_before": 0.4,
+   "event": "ordinary_request",
+   "block": "home_repair.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Fun project together. Are you picturing floating shelves on the wall, or a standing unit you build on the floor?",
+   "est_sec": 6.3,
+   "gap_before": 0.98,
    "role": "reply",
-   "block": "moving_house.dlg3"
+   "block": "home_repair.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Hang tight, my dad is calling me over. Don't talk until I say I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 1.49,
+   "event": "instruction",
+   "kind": "side_conversation",
+   "phrasing": "side_instr_25"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Of course.",
+   "est_sec": 0.72,
+   "gap_before": 0.36,
+   "role": "ack",
+   "phrasing": "ack_06"
+  },
+  {
+   "speaker": "user",
+   "text": "Nina, the tickets sold out in four minutes.",
+   "est_sec": 2.58,
+   "gap_before": 0.93,
+   "block": "music.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "You're joking. We were in the queue!",
+   "est_sec": 2.27,
+   "gap_before": 1.5,
+   "block": "music.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "There's resale, but they're three times the price.",
+   "est_sec": 2.58,
+   "gap_before": 0.52,
+   "block": "music.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "No way. That's robbery.",
+   "est_sec": 1.34,
+   "gap_before": 0.72,
+   "block": "music.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "So, do we pay it or skip it?",
+   "est_sec": 2.58,
+   "gap_before": 2.42,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "music.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "I'd rather wait. Sometimes they release more closer to the date.",
+   "est_sec": 3.51,
+   "gap_before": 0.31,
+   "block": "music.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "And if they don't?",
+   "est_sec": 1.34,
+   "gap_before": 1.15,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "music.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Then we go to the pub and play the album really loud.",
+   "est_sec": 3.82,
+   "gap_before": 1.13,
+   "block": "music.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Deal. But I'm keeping the resale page open.",
+   "est_sec": 2.58,
+   "gap_before": 0.56,
+   "block": "music.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Nina, did you hear that noise?",
+   "est_sec": 1.96,
+   "gap_before": 1.47,
+   "event": "distractor",
+   "kind": "friend_question",
+   "phrasing": "dq_25"
+  },
+  {
+   "speaker": "friend",
+   "text": "I think it was the neighbors.",
+   "est_sec": 1.96,
+   "gap_before": 0.47,
+   "phrasing": "dq_25"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay, finished. I'm back now.",
+   "est_sec": 1.65,
+   "gap_before": 1.43,
+   "event": "return_cue",
+   "kind": "explicit",
+   "phrasing": "side_cue_14"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Okay. The shelf with your dad. Floating or standing?",
+   "est_sec": 2.89,
+   "gap_before": 1.85,
+   "role": "resume",
+   "block": "home_repair.ctx8"
+  },
+  {
+   "speaker": "user",
+   "text": "Floating. Dad has a stud finder he's dying to use.",
+   "est_sec": 3.2,
+   "gap_before": 1.8,
+   "event": "ordinary_request",
+   "block": "home_repair.ctx8"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Perfect, let him find those studs. Records are heavy, so screw right into them.",
+   "est_sec": 4.44,
+   "gap_before": 0.73,
+   "role": "followup",
+   "block": "home_repair.ctx8"
   }
  ]
 }

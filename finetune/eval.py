@@ -1,4 +1,5 @@
 import logging
+import time
 from typing import Iterator
 
 import torch
@@ -32,6 +33,8 @@ def evaluate(
     text_loss = torch.tensor(0.0).cuda()
     audio_loss = torch.tensor(0.0).cuda()
     model.eval()
+    torch.cuda.synchronize()
+    t0 = time.perf_counter()
     # Take the batches first so every rank runs the same number of forward passes: with
     # FSDP each forward is a collective, and a rank with one batch fewer would hang the rest.
     batches = []
@@ -79,7 +82,9 @@ def evaluate(
 
     total_num_samples = int(torch.tensor(all_num_samples).sum().item())
     # sum loss
-    main_logger_info("Eval finished!")
+    torch.cuda.synchronize()
+    main_logger_info(f"Eval finished! {int(total_num_samples)} batches over {get_world_size()} ranks "
+                     f"in {time.perf_counter() - t0:.1f} s (data loading + forward passes)")
 
     dist.all_reduce(eval_loss, op=dist.ReduceOp.SUM)
     dist.all_reduce(text_loss, op=dist.ReduceOp.SUM)

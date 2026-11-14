@@ -7,15 +7,17 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "describe_options",
- "wait_type": "describe_options",
+ "type": "ordinary",
+ "wait_type": null,
  "conditions": [],
  "topics": [
-  "coffee"
+  "fitness"
  ],
- "topic": "coffee",
+ "topic": "fitness",
  "voices": {
   "user": "676f1654c4f747a69a5921ad94886fa1",
   "friend": null,
@@ -24,99 +26,119 @@
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_28",
-  "greet_ans_01",
-  "describe_instr_11",
-  "ack_02",
-  "describe_cue_04"
+  "greet_07",
+  "greet_ans_04"
  ],
  "block_ids": [
-  "coffee.opt2"
+  "fitness.dlg31"
  ],
- "est_total_sec": 50.3,
- "est_speech_sec": 38.2,
+ "est_total_sec": 54.3,
+ "est_speech_sec": 41.29,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How's everything today?",
+   "text": "Hey! How's everything going?",
    "est_sec": 1.34,
-   "gap_before": 0.69,
+   "gap_before": 0.31,
    "role": "greeting",
-   "phrasing": "greet_28"
+   "phrasing": "greet_07"
   },
   {
    "speaker": "user",
-   "text": "I'm good, thanks.",
+   "text": "Pretty well, actually.",
    "est_sec": 1.03,
-   "gap_before": 0.6,
+   "gap_before": 0.85,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_01"
+   "phrasing": "greet_ans_04"
   },
   {
    "speaker": "user",
-   "text": "I can't figure out which coffee beans to order for the office.",
-   "est_sec": 3.82,
-   "gap_before": 0.5,
-   "block": "coffee.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "First let me tell you about all of them, then you can comment.",
-   "est_sec": 4.13,
-   "gap_before": 0.57,
-   "event": "instruction",
-   "kind": "describe_options",
-   "phrasing": "describe_instr_11"
+   "text": "I've been training for two months and the scale hasn't moved. I'm so frustrated.",
+   "est_sec": 4.44,
+   "gap_before": 0.21,
+   "event": "ordinary_request",
+   "block": "fitness.dlg31"
   },
   {
    "speaker": "moshi",
-   "text": "Okay.",
-   "est_sec": 0.41,
-   "gap_before": 0.22,
-   "role": "ack",
-   "phrasing": "ack_02"
+   "text": "That's understandable. But the scale is only one measure, and if you're lifting, you might be building muscle as you lose fat.",
+   "est_sec": 6.92,
+   "gap_before": 0.66,
+   "role": "reply",
+   "block": "fitness.dlg31"
   },
   {
    "speaker": "user",
-   "text": "One is a dark roast that's bold and smoky, the kind most people expect from office coffee.",
-   "est_sec": 5.37,
-   "gap_before": 1.39,
-   "block": "coffee.opt2",
-   "event": "distractor",
-   "kind": "pause"
+   "text": "How would I even know?",
+   "est_sec": 1.65,
+   "gap_before": 0.83,
+   "event": "ordinary_request",
+   "block": "fitness.dlg31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Measure your waist, take a photo every few weeks in the same light, and notice how your clothes fit.",
+   "est_sec": 5.99,
+   "gap_before": 0.63,
+   "role": "reply",
+   "block": "fitness.dlg31"
   },
   {
    "speaker": "user",
-   "text": "Another is a light roast from a small farm, fruity and bright, but some people find it sour.",
-   "est_sec": 5.68,
-   "gap_before": 2.26,
-   "block": "coffee.opt2",
-   "event": "distractor",
-   "kind": "pause"
-  },
-  {
-   "speaker": "user",
-   "text": "Or we could get a medium blend that's smooth and balanced and a bit cheaper by the pound.",
-   "est_sec": 5.68,
-   "gap_before": 2.25,
-   "block": "coffee.opt2"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, I'm done. What do you think?",
+   "text": "My jeans are a bit looser, actually.",
    "est_sec": 2.27,
-   "gap_before": 1.28,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "describe_cue_04"
+   "gap_before": 0.69,
+   "event": "ordinary_request",
+   "block": "fitness.dlg31"
   },
   {
    "speaker": "moshi",
-   "text": "Do people mostly drink it with milk and sugar? If so, the dark roast holds up better. If not, the medium blend is a nice middle ground.",
-   "est_sec": 8.47,
-   "gap_before": 0.84,
-   "role": "resume",
-   "block": "coffee.opt2"
+   "text": "That's a great sign. Strength counts too. Are you lifting more than you did in week one?",
+   "est_sec": 5.37,
+   "gap_before": 1.1,
+   "role": "reply",
+   "block": "fitness.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "Way more. My squat",
+   "est_sec": 1.34,
+   "gap_before": 0.99,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "fitness.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "went up by twenty kilos.",
+   "est_sec": 1.65,
+   "gap_before": 2.05,
+   "event": "ordinary_request",
+   "block": "fitness.dlg31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's real progress. Keep going, and weigh yourself less often, maybe once a week at the same time.",
+   "est_sec": 5.68,
+   "gap_before": 1.09,
+   "role": "reply",
+   "block": "fitness.dlg31"
+  },
+  {
+   "speaker": "user",
+   "text": "Okay. That makes me feel better.",
+   "est_sec": 1.96,
+   "gap_before": 1.39,
+   "event": "ordinary_request",
+   "block": "fitness.dlg31"
+  },
+  {
+   "speaker": "moshi",
+   "text": "It should. You're doing well.",
+   "est_sec": 1.65,
+   "gap_before": 0.71,
+   "role": "reply",
+   "block": "fitness.dlg31"
   }
  ]
 }

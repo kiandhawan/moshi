@@ -7,183 +7,122 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "side_conversation",
- "wait_type": "side_conversation",
- "conditions": [
-  "extra_question"
- ],
+ "type": "ordinary",
+ "wait_type": null,
+ "conditions": [],
  "topics": [
-  "smartphones",
-  "cooking"
+  "shopping"
  ],
- "topic": "smartphones",
+ "topic": "shopping",
  "voices": {
-  "user": "458abe2c9c0b41f793c7235a230caa8c",
-  "friend": "2e8a3bd7fb474d80b4e7966d678fb777",
+  "user": "c913e2f3869449568fc3fc08dfa21dfe",
+  "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Leo",
- "friend_name_id": "name_07",
+ "friend_name": null,
+ "friend_name_id": null,
  "phrasing_ids": [
-  "greet_08",
-  "greet_ans_11",
-  "side_instr_08",
-  "ack_01",
-  "dq_28",
-  "side_cue_22"
+  "greet_10",
+  "greet_ans_04"
  ],
  "block_ids": [
-  "smartphones.ctx2",
-  "cooking.side2"
+  "shopping.dlg10"
  ],
- "est_total_sec": 74.01,
- "est_speech_sec": 54.81,
+ "est_total_sec": 55.27,
+ "est_speech_sec": 42.95,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hi there, how are you feeling today?",
+   "text": "Hey, how's your day been so far?",
    "est_sec": 2.27,
-   "gap_before": 0.67,
+   "gap_before": 0.58,
    "role": "greeting",
-   "phrasing": "greet_08"
+   "phrasing": "greet_10"
   },
   {
    "speaker": "user",
-   "text": "Not too bad.",
+   "text": "Pretty well, actually.",
    "est_sec": 1.03,
-   "gap_before": 0.66,
-   "event": "greeting_answer",
-   "phrasing": "greet_ans_11"
-  },
-  {
-   "speaker": "user",
-   "text": "I keep picking up my phone without even thinking. It's eating my whole evening.",
-   "est_sec": 4.44,
-   "gap_before": 0.49,
-   "event": "ordinary_request",
-   "block": "smartphones.ctx2"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Lots of people feel that way. Would you rather set a daily time limit on certain apps, or delete the worst ones entirely?",
-   "est_sec": 7.23,
-   "gap_before": 0.55,
-   "role": "reply",
-   "block": "smartphones.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Pause for a second, my roommate wants to ask me something. I'll let you know when I'm back.",
-   "est_sec": 5.68,
-   "gap_before": 0.91,
-   "event": "instruction",
-   "kind": "side_conversation",
-   "phrasing": "side_instr_08"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure.",
-   "est_sec": 0.41,
-   "gap_before": 0.32,
-   "role": "ack",
-   "phrasing": "ack_01"
-  },
-  {
-   "speaker": "user",
-   "text": "Can you taste this sauce? Is it too salty?",
-   "est_sec": 2.89,
-   "gap_before": 1.28,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "cooking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Hmm, a little bit. Not terrible though.",
-   "est_sec": 2.27,
-   "gap_before": 0.82,
-   "block": "cooking.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Ugh, I knew it. I added the stock and forgot it was already salted.",
-   "est_sec": 4.44,
-   "gap_before": 0.87,
-   "block": "cooking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Just throw in some more tomatoes, that usually fixes it.",
-   "est_sec": 3.2,
-   "gap_before": 1.24,
-   "block": "cooking.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Good idea. Do you know if we have another tin?",
-   "est_sec": 3.2,
-   "gap_before": 1.04,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "cooking.side2"
-  },
-  {
-   "speaker": "friend",
-   "text": "Bottom shelf, behind the beans.",
-   "est_sec": 1.65,
-   "gap_before": 0.6,
-   "block": "cooking.side2"
-  },
-  {
-   "speaker": "user",
-   "text": "Should we order pizza tonight?",
-   "est_sec": 1.65,
-   "gap_before": 1.34,
-   "event": "distractor",
-   "kind": "friend_question",
-   "phrasing": "dq_28"
-  },
-  {
-   "speaker": "friend",
-   "text": "Yes, definitely.",
-   "est_sec": 0.72,
    "gap_before": 0.45,
-   "phrasing": "dq_28"
+   "event": "greeting_answer",
+   "phrasing": "greet_ans_04"
   },
   {
    "speaker": "user",
-   "text": "Okay, back. Thanks for being patient.",
-   "est_sec": 1.96,
-   "gap_before": 0.96,
-   "event": "return_cue",
-   "kind": "explicit",
-   "phrasing": "side_cue_22"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Alright. We were working on your evening scrolling. Limits or delete?",
-   "est_sec": 3.51,
-   "gap_before": 0.32,
-   "role": "resume",
-   "block": "smartphones.ctx2"
-  },
-  {
-   "speaker": "user",
-   "text": "Let's try limits first. Deleting feels a bit extreme.",
-   "est_sec": 2.89,
-   "gap_before": 3.25,
+   "text": "How do I tell if online reviews are fake? This bluetooth speaker has like five thousand stars and I don't believe it.",
+   "est_sec": 6.92,
+   "gap_before": 0.38,
    "event": "ordinary_request",
-   "block": "smartphones.ctx2"
+   "block": "shopping.dlg10"
   },
   {
    "speaker": "moshi",
-   "text": "Good start. Try thirty minutes a day for social apps and see how the first week goes.",
-   "est_sec": 5.37,
-   "gap_before": 1.93,
-   "role": "followup",
-   "block": "smartphones.ctx2"
+   "text": "Healthy suspicion. Look at the bad reviews first, they're often more honest about what actually breaks.",
+   "est_sec": 5.06,
+   "gap_before": 0.9,
+   "role": "reply",
+   "block": "shopping.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "There are almost no bad ones.",
+   "est_sec": 1.96,
+   "gap_before": 1.16,
+   "event": "ordinary_request",
+   "block": "shopping.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "That's a warning sign by itself. Also watch for lots of short, vague reviews posted around the same few days.",
+   "est_sec": 6.3,
+   "gap_before": 0.59,
+   "role": "reply",
+   "block": "shopping.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "Yes, loads of them say great product, fast shipping. That's it.",
+   "est_sec": 3.51,
+   "gap_before": 0.56,
+   "event": "ordinary_request",
+   "block": "shopping.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Exactly the pattern. Reviews with photos, details and some complaints alongside the praise are usually the real ones.",
+   "est_sec": 5.68,
+   "gap_before": 0.99,
+   "role": "reply",
+   "block": "shopping.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "So should I just",
+   "est_sec": 1.34,
+   "gap_before": 2.38,
+   "event": "distractor",
+   "kind": "pause",
+   "block": "shopping.dlg10"
+  },
+  {
+   "speaker": "user",
+   "text": "skip it?",
+   "est_sec": 0.72,
+   "gap_before": 1.71,
+   "event": "ordinary_request",
+   "block": "shopping.dlg10"
+  },
+  {
+   "speaker": "moshi",
+   "text": "I'd look up the speaker on a proper review site, or pick a brand you recognise. Paying a little more for something reliable often saves money.",
+   "est_sec": 8.16,
+   "gap_before": 1.12,
+   "role": "reply",
+   "block": "shopping.dlg10"
   }
  ]
 }

@@ -7,141 +7,129 @@
   "ordered": true,
   "only": null,
   "seed": 10,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 20
  },
- "type": "ordinary",
- "wait_type": null,
+ "type": "think_time",
+ "wait_type": "think_time",
  "conditions": [
-  "wait_like"
+  "self_talk"
  ],
  "topics": [
-  "hiking"
+  "movies"
  ],
- "topic": "hiking",
+ "wait_sec": 60,
+ "deadline": {
+  "after_turn": 4,
+  "sec": 60
+ },
+ "topic": "movies",
  "voices": {
-  "user": "10b2254869cf4340bdb801928e2fc88e",
+  "user": "cfc0d21e0b5947d08b957b2061670c0a",
   "friend": null,
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
  "friend_name": null,
  "friend_name_id": null,
  "phrasing_ids": [
-  "greet_04",
-  "greet_ans_13",
-  "waitlike_10"
+  "greet_05",
+  "greet_ans_26",
+  "think_instr_01",
+  "ack_14",
+  "self_28",
+  "self_05"
  ],
  "block_ids": [
-  "hiking.dlg3"
+  "movies.ctx1"
  ],
- "est_total_sec": 57.67,
- "est_speech_sec": 45.01,
+ "est_total_sec": 82.15,
+ "est_speech_sec": 20.43,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hey there, how are you?",
+   "text": "Hi, how have you been?",
    "est_sec": 1.65,
-   "gap_before": 0.46,
+   "gap_before": 0.56,
    "role": "greeting",
-   "phrasing": "greet_04"
+   "phrasing": "greet_05"
   },
   {
    "speaker": "user",
-   "text": "Really good, actually.",
-   "est_sec": 1.03,
-   "gap_before": 0.39,
+   "text": "Kind of tired, honestly.",
+   "est_sec": 1.34,
+   "gap_before": 0.45,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_13"
+   "phrasing": "greet_ans_26"
   },
   {
    "speaker": "user",
-   "text": "Is it safe to hike alone?",
-   "est_sec": 1.96,
-   "gap_before": 0.49,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "It can be, with some precautions. Pick a well used trail, and always tell someone where you're going and when you'll be back.",
-   "est_sec": 7.23,
-   "gap_before": 1.62,
-   "role": "reply",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "What if I get lost?",
-   "est_sec": 1.65,
-   "gap_before": 0.61,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Download an offline map before you go and carry a small battery pack for your phone. If you're unsure, stay where you are and call for help.",
-   "est_sec": 8.47,
-   "gap_before": 0.86,
-   "role": "reply",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "user",
-   "text": "I'm retired, so I can go on weekdays when it's",
+   "text": "It's movie night and nobody can agree on anything. Help.",
    "est_sec": 3.2,
-   "gap_before": 0.61,
-   "event": "distractor",
-   "kind": "pause",
-   "block": "hiking.dlg3"
+   "gap_before": 0.46,
+   "event": "ordinary_request",
+   "block": "movies.ctx1"
+  },
+  {
+   "speaker": "moshi",
+   "text": "Let's narrow it down. Are you in the mood for something funny, something scary, or a big action film?",
+   "est_sec": 5.99,
+   "gap_before": 0.64,
+   "role": "reply",
+   "block": "movies.ctx1"
   },
   {
    "speaker": "user",
-   "text": "really quiet.",
+   "text": "Give me sixty seconds to think, then ask me again.",
+   "est_sec": 3.2,
+   "gap_before": 0.91,
+   "event": "instruction",
+   "kind": "think_time",
+   "wait_sec": 60,
+   "phrasing": "think_instr_01"
+  },
+  {
+   "speaker": "moshi",
+   "text": "No worries.",
    "est_sec": 0.72,
-   "gap_before": 2.62,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "That's lovely, but quieter trails mean fewer people to help. Stick to routes you know until you're confident.",
-   "est_sec": 5.68,
-   "gap_before": 0.43,
-   "role": "reply",
-   "block": "hiking.dlg3"
+   "gap_before": 0.42,
+   "role": "ack",
+   "phrasing": "ack_14"
   },
   {
    "speaker": "user",
-   "text": "Wait a second, that doesn't sound right.",
-   "est_sec": 2.27,
-   "gap_before": 0.51,
-   "event": "ordinary_request",
-   "kind": "wait_like",
-   "phrasing": "waitlike_10",
-   "block": "hiking.dlg3"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Hmm, I believe it is. Which part doesn't sound right?",
-   "est_sec": 3.2,
-   "gap_before": 0.36,
-   "role": "reply",
-   "block": "hiking.dlg3"
+   "text": "Wait, what else was there?",
+   "est_sec": 1.65,
+   "anchor": {
+    "turn": 4,
+    "offset": 28.8
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_28"
   },
   {
    "speaker": "user",
-   "text": "Good point. Maybe I'll join a walking group too.",
-   "est_sec": 2.89,
-   "gap_before": 1.37,
-   "event": "ordinary_request",
-   "block": "hiking.dlg3"
+   "text": "Okay, okay.",
+   "est_sec": 0.72,
+   "anchor": {
+    "turn": 4,
+    "offset": 43.26
+   },
+   "event": "distractor",
+   "kind": "self_talk",
+   "phrasing": "self_05"
   },
   {
    "speaker": "moshi",
-   "text": "That's a great idea. Many groups do weekday hikes, and you'll learn new trails from them.",
-   "est_sec": 5.06,
-   "gap_before": 0.83,
-   "role": "reply",
-   "block": "hiking.dlg3"
+   "text": "Time's up! Comedy, horror or action?",
+   "est_sec": 1.96,
+   "role": "resume",
+   "block": "movies.ctx1",
+   "anchor": {
+    "turn": 4,
+    "offset": 60.29
+   }
   }
  ]
 }

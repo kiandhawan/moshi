@@ -7,159 +7,166 @@
   "ordered": true,
   "only": null,
   "seed": 12,
+  "unique": true,
+  "exclude_blocks_from": [],
   "block": 50
  },
  "type": "side_conversation",
  "wait_type": "side_conversation",
  "conditions": [
-  "implicit"
+  "near_miss"
  ],
  "topics": [
   "laptop_buying",
-  "restaurant_choice"
+  "wedding_planning"
  ],
  "topic": "laptop_buying",
  "voices": {
-  "user": "1258154bb41540c7b9dc0d10cd6704bf",
-  "friend": "79d0bd3e4e5444b18f7b6d89b5927bf1",
+  "user": "b121b91872f54f04ba9f6da08b8b6253",
+  "friend": "1258154bb41540c7b9dc0d10cd6704bf",
   "moshi": "edb8caefa8f841bbadc24974ae040c28"
  },
- "friend_name": "Marcus",
- "friend_name_id": "name_09",
+ "friend_name": "Kenji",
+ "friend_name_id": "name_21",
  "phrasing_ids": [
-  "greet_18",
-  "greet_ans_30",
-  "side_instr_30",
-  "ack_08",
-  "implicit_06"
+  "greet_06",
+  "greet_ans_09",
+  "side_instr_15",
+  "dn_24",
+  "side_cue_12"
  ],
  "block_ids": [
-  "laptop_buying.ctx2",
-  "restaurant_choice.side1"
+  "laptop_buying.ctx1",
+  "wedding_planning.side4",
+  "dn_24"
  ],
- "est_total_sec": 55.55,
- "est_speech_sec": 43.25,
+ "est_total_sec": 65.38,
+ "est_speech_sec": 48.93,
  "turns": [
   {
    "speaker": "moshi",
-   "text": "Hello! How have you been lately?",
-   "est_sec": 1.96,
-   "gap_before": 0.55,
+   "text": "Good to hear from you. How are you?",
+   "est_sec": 2.58,
+   "gap_before": 0.8,
    "role": "greeting",
-   "phrasing": "greet_18",
+   "phrasing": "greet_06",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Not bad at all, thanks.",
-   "est_sec": 1.65,
-   "gap_before": 0.94,
+   "text": "Fine, thanks.",
+   "est_sec": 0.72,
+   "gap_before": 0.54,
    "event": "greeting_answer",
-   "phrasing": "greet_ans_30"
+   "phrasing": "greet_ans_09"
   },
   {
    "speaker": "user",
-   "text": "I found a laptop I like but there are two versions.",
-   "est_sec": 3.51,
-   "gap_before": 0.48,
+   "text": "My old laptop is dying and I need a new one before next month.",
+   "est_sec": 4.44,
+   "gap_before": 0.3,
    "event": "ordinary_request",
-   "block": "laptop_buying.ctx2"
+   "block": "laptop_buying.ctx1"
   },
   {
    "speaker": "moshi",
-   "text": "Let me guess, more memory or more storage? One has sixteen gigs of memory and the other has a bigger drive. Which do you think you'd miss more?",
-   "est_sec": 8.78,
-   "gap_before": 1.14,
+   "text": "Okay. First big question, do you want something small and light to carry around, or a bigger screen for working at a desk?",
+   "est_sec": 7.23,
+   "gap_before": 1.05,
    "role": "reply",
-   "block": "laptop_buying.ctx2",
+   "block": "laptop_buying.ctx1",
    "reference_only": true
   },
   {
    "speaker": "user",
-   "text": "Give me a moment, I'm going to talk to my friend. Stay quiet until you hear I'm back.",
-   "est_sec": 5.68,
-   "gap_before": 0.99,
+   "text": "Give me a second, my brother needs help with something. Stay quiet until I'm back.",
+   "est_sec": 4.75,
+   "gap_before": 0.97,
    "event": "instruction",
    "kind": "side_conversation",
-   "phrasing": "side_instr_30"
-  },
-  {
-   "speaker": "moshi",
-   "text": "Sure, go ahead.",
-   "est_sec": 1.03,
-   "gap_before": 0.32,
-   "role": "ack",
-   "phrasing": "ack_08",
-   "reference_only": true
+   "phrasing": "side_instr_15"
   },
   {
    "speaker": "user",
-   "text": "Marcus, do you feel like sushi or burgers tonight?",
-   "est_sec": 2.89,
-   "gap_before": 1.43,
+   "text": "Right, back to what you were saying.",
+   "est_sec": 2.27,
+   "gap_before": 1.34,
    "event": "distractor",
-   "kind": "friend_question",
-   "block": "restaurant_choice.side1"
+   "kind": "near_miss",
+   "phrasing": "dn_24"
   },
   {
    "speaker": "friend",
-   "text": "We had sushi on Tuesday. Burgers?",
+   "text": "So anyway, the trip is in June.",
+   "est_sec": 2.27,
+   "gap_before": 0.97,
+   "phrasing": "dn_24"
+  },
+  {
+   "speaker": "user",
+   "text": "Kenji, can you read this envelope back to me? Is my handwriting legible?",
+   "est_sec": 4.13,
+   "gap_before": 1.25,
+   "event": "distractor",
+   "kind": "friend_question",
+   "block": "wedding_planning.side4"
+  },
+  {
+   "speaker": "friend",
+   "text": "Mrs. and Mr. Pat Holloway. Yes, but your Ls look like Ts.",
+   "est_sec": 3.82,
+   "gap_before": 0.58,
+   "block": "wedding_planning.side4"
+  },
+  {
+   "speaker": "user",
+   "text": "Great. That's sixty envelopes of Ts.",
    "est_sec": 1.96,
-   "gap_before": 0.48,
-   "block": "restaurant_choice.side1"
-  },
-  {
-   "speaker": "user",
-   "text": "Okay, but not the place with the endless line.",
-   "est_sec": 2.89,
-   "gap_before": 0.43,
-   "block": "restaurant_choice.side1"
+   "gap_before": 2.92,
+   "block": "wedding_planning.side4"
   },
   {
    "speaker": "friend",
-   "text": "What about the new one on Elm Street? I heard the fries are amazing.",
-   "est_sec": 4.44,
-   "gap_before": 1.15,
-   "block": "restaurant_choice.side1"
+   "text": "Nobody's going to notice. Want me to do the addresses and you do the names?",
+   "est_sec": 4.75,
+   "gap_before": 1.45,
+   "block": "wedding_planning.side4"
   },
   {
    "speaker": "user",
-   "text": "Do they take reservations?",
-   "est_sec": 1.34,
-   "gap_before": 0.68,
-   "event": "distractor",
-   "kind": "friend_question",
-   "block": "restaurant_choice.side1"
+   "text": "Would you? Your writing is so neat.",
+   "est_sec": 2.27,
+   "gap_before": 0.8,
+   "block": "wedding_planning.side4"
   },
   {
    "speaker": "friend",
-   "text": "No idea. Let's just go early, like six.",
+   "text": "Years of labelling lunchboxes. Pass me the pen.",
    "est_sec": 2.58,
-   "gap_before": 0.73,
-   "block": "restaurant_choice.side1"
+   "gap_before": 0.79,
+   "block": "wedding_planning.side4"
   },
   {
    "speaker": "user",
-   "text": "Alright, done. Where were we?",
-   "est_sec": 1.65,
-   "gap_before": 0.71,
+   "text": "I'm back. Where did we leave off?",
+   "est_sec": 2.27,
+   "gap_before": 0.65,
    "event": "return_cue",
-   "kind": "implicit",
-   "phrasing": "implicit_06"
+   "kind": "explicit",
+   "phrasing": "side_cue_12"
   },
   {
    "speaker": "moshi",
-   "text": "Sure. Still weighing memory against storage on that laptop?",
+   "text": "Okay. Any thoughts on size for the new laptop?",
    "est_sec": 2.89,
-   "gap_before": 0.77,
+   "gap_before": 0.54,
    "role": "resume",
-   "block": "laptop_buying.ctx2",
+   "block": "laptop_buying.ctx1",
    "reference_only": true
   }
  ],
  "groups": [
-  "familiar_type",
-  "implicit_return"
+  "familiar_type"
  ],
  "note": "Moshi turns are reference_only: the ideal replies, for eval_full and loss evaluation. Never render them into the model's input."
 }
