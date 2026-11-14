@@ -15,7 +15,7 @@ channel, the same .wav also works directly as input to run_inference.py, which r
 right channel of stereo files.
 
 Conversation spec (a dict):
-  id, group, duration (minimum length in s, optional)
+  id, group
   user_audio   optional path to a recorded user side (mono, or right channel of stereo)
   user_lines   [{text, voice, start}]  TTS lines for the user/friend side
   moshi_lines  [{text, start, kind}]   kind: greeting | ack | resume | ordinary
@@ -43,7 +43,8 @@ SR = 24000
 MODEL = "s2-pro"
 CACHE = Path("data/tts_cache")
 MAIN = "SPEAKER_MAIN"
-TAIL_SEC = 1.0          # silence kept after the last line
+TAIL_SEC = 1.5          # digital silence after the last speech on either channel
+GREETING_MIN_START = 0.3  # the opening greeting never starts earlier (CLAUDE.md)
 MAX_SEC = 100.0         # must stay below training duration_sec (see CLAUDE.md)
 
 
@@ -168,12 +169,15 @@ def _place(track: np.ndarray, x: np.ndarray, start: float) -> np.ndarray:
 def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     right = np.zeros(0, dtype=np.float32)
+    speech_ends = [0.0]  # end of every piece of speech on either channel
     if spec.get("user_audio"):
         u, _ = sphn.read(spec["user_audio"], sample_rate=SR)
         right = (u[1] if u.shape[0] == 2 else u[0]).astype(np.float32)
+        speech_ends.append(last_speech_end(right))
     for ln in spec.get("user_lines", []):
         x, _ = synth(client, ln["text"], ln["voice"])
         right = _place(right, x, ln["start"])
+        speech_ends.append(ln["start"] + len(x) / SR)  # clips are trimmed to their speech
 
     left = np.zeros(0, dtype=np.float32)
     voice = moshi_voice_id()
@@ -183,13 +187,18 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
         start, end = ln["start"], ln["start"] + len(x) / SR
         if turns and start < turns[-1]["end"]:
             raise ValueError(f"{spec['id']}: Moshi line at {start}s overlaps the previous one")
+        if ln["kind"] == "greeting" and start < GREETING_MIN_START:
+            raise ValueError(f"{spec['id']}: greeting starts at {start}s, before {GREETING_MIN_START}s")
+        speech_ends.append(end)
         left = _place(left, x, start)
         alignments += [[w, [round(start + s, 3), round(start + e, 3)], MAIN] for w, s, e in words]
         turns.append({"kind": ln["kind"], "start": round(start, 3), "end": round(end, 3),
                       "text": ln["text"]})
 
-    n = max(len(left), len(right), int(spec.get("duration", 0) * SR))
-    n = max(n, len(left) + int(TAIL_SEC * SR))
+    # The file ends exactly TAIL_SEC after the last speech on either channel. Anything a
+    # recording has after that is non-speech (room noise) and is cut, so the tail is silent.
+    n = int(round((max(speech_ends) + TAIL_SEC) * SR))
+    left, right = left[:n], right[:n]
     dur = n / SR
     if dur >= MAX_SEC:
         raise ValueError(f"{spec['id']}: {dur:.1f}s is not shorter than duration_sec={MAX_SEC}")
@@ -209,6 +218,17 @@ def render_full(spec: dict, client, out_dir: Path, index_dir: Path) -> dict:
     ev_p.write_text(json.dumps(events, indent=2) + "\n")
     rel = lambda p: os.path.relpath(p.resolve(), index_dir.resolve())  # noqa: E731
     return {"path": rel(wav_p), "duration": round(dur, 3), "events": rel(ev_p)}
+
+
+def last_speech_end(x: np.ndarray) -> float:
+    """End (s) of the last VAD speech segment in a 24 kHz mono signal (0 if none); same VAD
+    settings as score.py."""
+    import torch
+    from silero_vad import load_silero_vad
+    from score import vad_segments
+    torch.set_num_threads(1)
+    segs = vad_segments(load_silero_vad(), x, SR)
+    return segs[-1][1] if segs else 0.0
 
 
 def overlaps_with_user(row: dict, index_dir: Path, min_sec: float = 0.1) -> list[str]:

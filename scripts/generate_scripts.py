@@ -48,7 +48,7 @@ MIX = {"train": {"think_time": 0.3, "side_conversation": 0.3, "ordinary": 0.4},
        "eval": {"think_time": 0.25, "side_conversation": 0.25, "describe_options": 0.2, "ordinary": 0.3}}
 MIN_SEC, MAX_SEC = 30.0, 85.0
 ACK_P, ENDING_P, EXTENSION_P = 0.5, 0.7, 0.4
-TAIL_SEC = 1.0
+TAIL_SEC = 1.5  # same as render_lib: silence after the last speech
 NUM_WORDS = {5: "five", 10: "ten", 15: "fifteen", 20: "twenty", 30: "thirty", 45: "forty-five", 60: "sixty"}
 
 

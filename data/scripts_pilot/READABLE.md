@@ -30,7 +30,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## train_01_00001
 
 ```
-=== train_01_00001  [ordinary]  topic books  ~52 s total, ~41 s speech
+=== train_01_00001  [ordinary]  topic books  ~53 s total, ~41 s speech
       voices user=f83f2e43
     0.3s MOSHI  Hi, how's everything with you?   <greeting>
     2.4s USER   Pretty relaxed today.   <greeting_answer>
@@ -51,7 +51,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## train_01_00002
 
 ```
-=== train_01_00002  [side_conversation]  topic travel_planning, pets  ~66 s total, ~49 s speech
+=== train_01_00002  [side_conversation]  topic travel_planning, pets  ~67 s total, ~49 s speech
     friend Ethan  voices user=a92fb82d friend=b47bb94b
     0.5s MOSHI  Hey! How's everything going?   <greeting>
     2.3s USER   Doing alright, thanks.   <greeting_answer>
@@ -162,7 +162,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## train_01_00006
 
 ```
-=== train_01_00006  [side_conversation]  topic hiking, smartphones  ~68 s total, ~53 s speech
+=== train_01_00006  [side_conversation]  topic hiking, smartphones  ~69 s total, ~53 s speech
     friend Hannah  voices user=18b12768 friend=a92fb82d
     0.4s MOSHI  Hey! How are you feeling?   <greeting>
     3.0s USER   Honestly, a little stressed, but okay.   <greeting_answer>
@@ -208,7 +208,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## train_01_00008
 
 ```
-=== train_01_00008  [ordinary]  topic coffee  ~51 s total, ~39 s speech
+=== train_01_00008  [ordinary]  topic coffee  ~52 s total, ~39 s speech
       voices user=cfc0d21e
     0.6s MOSHI  Hello, how are things going?   <greeting>
     3.0s USER   Good, thanks. Just got home.   <greeting_answer>
@@ -231,7 +231,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## train_01_00009
 
 ```
-=== train_01_00009  [side_conversation]  topic job_interview, home_repair  ~74 s total, ~55 s speech
+=== train_01_00009  [side_conversation]  topic job_interview, home_repair  ~75 s total, ~55 s speech
     friend Grace  voices user=cc7f8544 friend=be9ce428
     0.7s MOSHI  Hi, how are things with you?   <greeting>
     3.5s USER   Pretty good so far.   <greeting_answer>
@@ -321,7 +321,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## train_01_00013
 
 ```
-=== train_01_00013  [ordinary]  topic photography  ~45 s total, ~34 s speech
+=== train_01_00013  [ordinary]  topic photography  ~46 s total, ~34 s speech
       voices user=cc7f8544
     0.5s MOSHI  Hello there! How's your day treating you?   <greeting>
     3.3s USER   Not too bad.   <greeting_answer>
@@ -341,7 +341,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## train_01_00014
 
 ```
-=== train_01_00014  [ordinary]  topic baking  ~46 s total, ~35 s speech
+=== train_01_00014  [ordinary]  topic baking  ~47 s total, ~35 s speech
       voices user=5ce84bbd
     0.7s MOSHI  Hi, how are you doing right now?   <greeting>
     3.9s USER   Pretty good, thanks for asking.   <greeting_answer>
@@ -383,7 +383,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## train_01_00016
 
 ```
-=== train_01_00016  [think_time]  topic hiking  ~33 s total, ~17 s speech
+=== train_01_00016  [think_time]  topic hiking  ~34 s total, ~17 s speech
     wait 10 s  voices user=6d7a4582
     0.7s MOSHI  Hi, how have you been?   <greeting>
     2.9s USER   Really good, actually.   <greeting_answer>
@@ -419,7 +419,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## train_01_00018
 
 ```
-=== train_01_00018  [think_time]  topic travel_planning  ~35 s total, ~25 s speech
+=== train_01_00018  [think_time]  topic travel_planning  ~36 s total, ~25 s speech
     wait 5 s  voices user=c309730c
     0.8s MOSHI  Hey, nice to hear from you. How are you?   <greeting>
     4.4s USER   Pretty busy, but good.   <greeting_answer>
@@ -463,7 +463,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## eval_01_00000
 
 ```
-=== eval_01_00000  [think_time]  topic podcasts  ~76 s total, ~31 s speech
+=== eval_01_00000  [think_time]  topic podcasts  ~77 s total, ~31 s speech
     wait 30 s  extension +10 s  voices user=1258154b
     0.5s MOSHI  Hey, how's your week going?   <greeting [reference only]>
     2.9s USER   Doing okay, thanks.   <greeting_answer>
@@ -552,7 +552,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## eval_01_00004
 
 ```
-=== eval_01_00004  [describe_options]  topic picnic  ~55 s total, ~45 s speech
+=== eval_01_00004  [describe_options]  topic picnic  ~56 s total, ~45 s speech
       voices user=8abfa9eb
     0.7s MOSHI  Good to hear from you. How are you?   <greeting [reference only]>
     3.9s USER   Good, thanks. Busy day.   <greeting_answer>
@@ -641,7 +641,7 @@ Silences of 4 s or more are shown as `... N s silence ...`.
 ## eval_01_00008
 
 ```
-=== eval_01_00008  [side_conversation]  topic cycling, picnic  ~71 s total, ~53 s speech
+=== eval_01_00008  [side_conversation]  topic cycling, picnic  ~72 s total, ~53 s speech
     friend Zoe  voices user=08b4100b friend=93356312
     0.7s MOSHI  Hey, what's up? How are you doing?   <greeting [reference only]>
     3.6s USER   Not bad at all, thanks.   <greeting_answer>

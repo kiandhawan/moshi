@@ -1,7 +1,10 @@
 """Check that eval_full WAVs match their transcripts and events (the ideal Moshi side).
 
 For each file in the index:
-  - greeting: the left (Moshi) channel has VAD speech inside GREETING_WINDOW (0.3-1.5 s);
+  - greeting: the left (Moshi) channel has VAD speech inside GREETING_WINDOW (0.3-1.5 s),
+    and no speech starts before 0.3 s;
+  - tail: the file ends TAIL_SEC (1.5 s, +-TAIL_TOL) after the last VAD speech on either
+    channel, and that tail is silent (RMS below -60 dBFS on both channels);
   - every moshi_turn in the events file has a VAD segment on the left channel that starts
     within START_TOL of the turn start and ends within END_TOL of the turn end;
   - no left-channel speech outside the turns (beyond SLACK);
@@ -27,6 +30,7 @@ from score import vad_segments
 
 GREETING_WINDOW = (0.3, 1.5)
 START_TOL, END_TOL, SLACK = 0.15, 0.25, 0.2
+TAIL_SEC, TAIL_TOL, SILENT_DBFS = 1.5, 0.1, -60.0
 
 
 def main() -> None:
@@ -51,6 +55,19 @@ def main() -> None:
         print(f"  left VAD : {', '.join(f'{s:.2f}-{e:.2f}' for s, e in segs)}")
         print(f"  turns    : {', '.join(f'{t['kind']} {t['start']:.2f}-{t['end']:.2f}' for t in turns)}")
         lo, hi = GREETING_WINDOW
+        if segs and segs[0][0] < lo - 0.02:
+            problems.append(f"{name}: left-channel speech starts at {segs[0][0]:.2f} s, before {lo} s")
+        right_segs = vad_segments(model, x[1], sr)
+        last = max([e for _, e in segs + right_segs] or [0.0])
+        dur = x.shape[1] / sr
+        tail = x[:, int(round(last * sr)) + int(0.05 * sr):]
+        tail_db = 20 * np.log10(max(float(np.sqrt(np.mean(tail.astype(np.float64) ** 2))) if tail.size else 0.0, 1e-9))
+        print(f"  tail     : last speech ends {last:.2f} s, file ends {dur:.2f} s -> {dur - last:.2f} s tail, "
+              f"tail RMS {tail_db:.0f} dBFS")
+        if abs(dur - last - TAIL_SEC) > TAIL_TOL:
+            problems.append(f"{name}: tail is {dur - last:.2f} s, want {TAIL_SEC} s")
+        if tail_db > SILENT_DBFS:
+            problems.append(f"{name}: tail not silent ({tail_db:.0f} dBFS)")
         if not any(s < hi and e > lo for s, e in segs):
             problems.append(f"{name}: no left-channel speech in the greeting window {lo}-{hi} s")
         for t in turns:
