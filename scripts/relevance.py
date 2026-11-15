@@ -4,7 +4,7 @@ A fixed random sample (seed 7) of 50 resumes (eval v2 files with a wait: Moshi's
 at/after wait_end) and 50 ordinary replies (ordinary requests: Moshi's ideal answer), the same
 items for every model. For each model, the reply is Moshi's own text stream (inference json,
 non-padding text tokens) starting in [t, t + 12 s), where t = wait_end or the request end, cut at
-the user's next turn that starts >= 1 s after t. Empty = no reply (counted separately, not judged).
+the user's next turn that starts >= 1 s after t. Empty = no reply (not judged; a failure in the strict rate_all).
 
   prepare MODEL...  writes results/relevance/batch_<tag>.jsonl: blind, shuffled items (context =
                     the scripted conversation before t, with the reference Moshi turns; the
@@ -14,7 +14,8 @@ the user's next turn that starts >= 1 s after t. Empty = no reply (counted separ
    results/relevance/verdicts_<tag>.jsonl: {"uid", "fits": true/false, "why"})
   collect           joins all verdicts with their keys -> results/metrics/relevance.csv: per model
                     and kind (resume / ordinary) rate = fits / judged, k, n, no_reply, 95% CI
-                    (cluster bootstrap over contexts)
+                    (cluster bootstrap over contexts), and the strict rate_all = fits / all sampled
+                    items (no reply counts as not fitting), n_all, lo_all, hi_all
 
 Usage: python scripts/relevance.py prepare --tag pair1 base train_1h_v2_lr1e-5 ...
        python scripts/relevance.py collect
@@ -130,11 +131,18 @@ def collect() -> None:
             den = np.array([sum(1 for k in judged.values() if k["cluster"] == c) for c in cl], float)
             kk, n = int(num.sum()), int(den.sum())
             lo, hi = bootstrap_ratio(num, den) if n else (float("nan"),) * 2
+            # strict rate: every sampled item counts, no reply = does not fit
+            cla = sorted({k["cluster"] for k in ks.values()})
+            num_a = np.array([sum(verdict.get(u, False) for u, k in ks.items() if k["cluster"] == c) for c in cla], float)
+            den_a = np.array([sum(1 for k in ks.values() if k["cluster"] == c) for c in cla], float)
+            lo_a, hi_a = bootstrap_ratio(num_a, den_a)
             rows.append({"label": readable(m, roles), "model": m, "kind": kind, "k": kk, "n": n, "rate": kk / n if n else "",
-                         "lo": lo, "hi": hi, "no_reply": len(ks) - len(judged)})
+                         "lo": lo, "hi": hi, "no_reply": len(ks) - len(judged), "n_all": int(den_a.sum()),
+                         "rate_all": num_a.sum() / den_a.sum(), "lo_all": lo_a, "hi_all": hi_a})
     out = REPO / "results/metrics/relevance.csv"
     with out.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["label", "model", "kind", "k", "n", "rate", "lo", "hi", "no_reply"])
+        w = csv.DictWriter(f, fieldnames=["label", "model", "kind", "k", "n", "rate", "lo", "hi", "no_reply",
+                                              "n_all", "rate_all", "lo_all", "hi_all"])
         w.writeheader(); w.writerows(rows)
     for r in rows:
         print(r)

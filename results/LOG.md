@@ -19,10 +19,20 @@ The best-checkpoint rule picked the final step 150 for both. Comparison against
 - **Decision:** onset ×3 is the preferred variant. It reduces missed responses without losing wait
   success, at a moderate cost in interruptions. The summary and tables are in
   `results/comparison_notes.md`, which `compare.py` now includes in `comparison.md`.
-- **Open:** onset ×3 may still improve past step 150; reply relevance hasn't been judged; ×3 plus
-  bias 0.5 hasn't been tested.
+- **Reply relevance** (blind judge, tag `onset`; `relevance.py` now also writes a strict rate in which no reply
+  counts as not fitting): with onset ×3, 80% (40/50) of ordinary replies and 62% (31/50) of resumes fit, against
+  48% and 40% for step 125. Over the replies given: 85% and 79% (step 125: 73% and 74%).
+- **Open:** onset ×3 may still improve past step 150; ×3 plus bias 0.5 hasn't been tested.
+- **Disk cleanup (later the same day):** deleted 53 LoRA weight files that were no longer needed, and kept 21:
+  each main run's best and final, all onset checkpoints, and step 200 of each 250-step reference run. The
+  deleted files were steps 50/100 and similar of the main runs, the smoke-test and null-adapter weights, the
+  reference runs' other steps and duplicate `checkpoints_all/` copies, and the archived copies in `/root/keep`
+  (copies of lr 1e-5 checkpoints). All their evaluations are in `results/`; the reference runs' training-loss
+  logs were copied to `results/train_logs/*_250ref/` first. Free disk: 51 → 89 GB. The extra model
+  1h · lr 3e-5 · step 100 (tested live) no longer has weights; its metrics stay.
+- `scripts/talk.sh onset3` starts onset ×3 at step 150.
 - **Weights kept:** steps 50, 100 and 150 of each onset run (the pipeline pruned the rest after
-  saving all evaluations). Free disk is about 51 GB.
+  saving all evaluations). Free disk was about 51 GB (see the cleanup below).
 
 ## 2026-11-15: Overnight - onset weighting (x3, x6) and a decoding-time silence penalty
 

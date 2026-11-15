@@ -88,17 +88,22 @@ def main() -> None:
             v = next((r for r in vs if r["model"] == m), None)
             cell = lambda k: (f"{float(rr[k]['rate']):.0%} ({rr[k]['k']}/{rr[k]['n']}) [{float(rr[k]['lo']):.0%}-{float(rr[k]['hi']):.0%}]"  # noqa: E731
                               f", {rr[k]['no_reply']} no reply" if k in rr else "-")
+            strict = lambda k: (f"{float(rr[k]['rate_all']):.0%} ({rr[k]['k']}/{rr[k]['n_all']}) "  # noqa: E731
+                                f"[{float(rr[k]['lo_all']):.0%}-{float(rr[k]['hi_all']):.0%}]"
+                                if k in rr and rr[k].get("rate_all") not in (None, "") else "-")
             vcell = (f"{float(v['cos_vs_base']):.3f} [{float(v['lo']):.3f}-{float(v['hi']):.3f}] (n={v['n']})"
                      if v and v.get("cos_vs_base") not in (None, "") else "-")
             vref = f"{float(v['cos_vs_reference']):.3f}" if v and v.get("cos_vs_reference") else "-"
-            body.append([readable(m, roles), f"`{m}`", cell("resume"), cell("ordinary"), vcell, vref])
+            body.append([readable(m, roles), f"`{m}`", cell("resume"), strict("resume"), cell("ordinary"),
+                         strict("ordinary"), vcell, vref])
         parts += ["**Reply relevance and voice**", "",
                   "Relevance: blind judgement of Moshi's generated text against the reference reply for a fixed sample of "
-                  "50 resumes and 50 ordinary replies (`scripts/relevance.py`); rate over items with a reply. Voice: mean "
+                  "50 resumes and 50 ordinary replies (`scripts/relevance.py`); rate over items with a reply; strict = over all 50 sampled items, no reply counted as not fitting. Voice: mean "
                   "cosine similarity of ECAPA speaker embeddings (SpeechBrain spkrec-ecapa-voxceleb) of Moshi's channel "
                   "vs the base model's output on the same file (`scripts/voice_similarity.py`); the base row is base seed 1 "
                   "vs seed 2 on the human files (sampling noise floor). Reference = vs the Moshi voice of the training data.", "",
-                  md_table(["model", "run (raw)", "resume relevance", "ordinary relevance", "voice sim. vs base",
+                  md_table(["model", "run (raw)", "resume relevance", "resume relevance (strict)", "ordinary relevance",
+                            "ordinary relevance (strict)", "voice sim. vs base",
                             "vs training voice"], body), ""]
 
     for g in GROUPS:

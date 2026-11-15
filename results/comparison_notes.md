@@ -24,6 +24,8 @@ Paired differences vs 10h · lr 3e-5 · step 125 on the same 400 files, in pp
 | onset ×3 | +5.0 [-0.4, +10.4] | +15.0 [+10.4, +19.6] | -20.4 [-25.4, -15.4] | +7.9 [+4.9, +10.9] | +16.5 [+13.9, +19.3] |
 | onset ×6 | -2.9 [-8.9, +3.2] | +27.5 [+22.5, +32.9] | -26.1 [-31.4, -20.7] | +15.4 [+12.0, +19.0] | +21.0 [+18.2, +23.9] |
 
+Reply relevance (blind judged, the fixed sample of 50 resumes and 50 ordinary replies; strict = no reply counts as not fitting): onset ×3 gives a fitting reply to **80%** (40/50) of ordinary requests (step 125: 48%, base: 54%) and to **62%** (31/50) of resumes (step 125: 40%, base: 22%). Over the replies it does give, it fits 85% and 79% of the time (step 125: 73% and 74%), so the extra replies are as relevant as the old ones. Onset ×6: 82% and 58%.
+
 Human recordings (3 files × 3 seeds): onset ×3 answers 8/9 ordinary requests (step 125: 2/9) and
 succeeds on 3/6 waits (step 125: 1/6). The TTS twins give the same results (`results/human_tts/comparison.md`).
 
@@ -47,5 +49,4 @@ raises ordinary response from 73% to 90% (base: 72%). Wait success holds: 54% vs
   40 files. Its ordinary no-reply (25%) stays close to base, and any bias of 1 or more brings the
   interruptions back. It is cheaper (no training) but weaker than onset ×3.
 - **Caveats.** Onset ×3's best step is the final one (wait success 46% → 53% → 54% at steps 100,
-  125 and 150), so it may still be improving. Reply relevance of the onset models hasn't been
-  judged yet. Onset ×3 combined with a small penalty hasn't been tested.
+  125 and 150), so it may still be improving. Onset ×3 combined with a small penalty hasn't been tested.

@@ -1,11 +1,15 @@
 #!/bin/bash
 # Talk to a model in the browser: starts moshi.server on port 8998.
-# Usage: scripts/talk.sh RUN|base [STEP] [GPU]   (GPU default 1)
+# Usage: scripts/talk.sh RUN|base|NAME [STEP] [GPU]   (GPU default 1)
 #   RUN without STEP = the run's best checkpoint (results/best/RUN.json, scripts/eval_run.py).
-#   e.g. scripts/talk.sh base;  scripts/talk.sh train_10h_v2_lr1e-5;  scripts/talk.sh train_1h_v2_lr3e-5 60 0
+#   Short names: onset3 = train_10h_v2_lr3e-5_onsetw3 step 150 (onset x3, best = final).
+#   e.g. scripts/talk.sh base;  scripts/talk.sh onset3;  scripts/talk.sh train_1h_v2_lr3e-5 80 0
 set -eu
 cd /root/moshi-finetune
-RUN=${1:?usage: scripts/talk.sh RUN|base [STEP] [GPU]}; STEP=${2:-}; GPU=${3:-1}
+RUN=${1:?usage: scripts/talk.sh RUN|base|NAME [STEP] [GPU]}; STEP=${2:-}; GPU=${3:-1}
+case $RUN in
+  onset3) RUN=train_10h_v2_lr3e-5_onsetw3; STEP=${STEP:-150} ;;
+esac
 export HF_HUB_ENABLE_HF_TRANSFER=0 CUDA_VISIBLE_DEVICES=$GPU
 ARGS=()
 if [ "$RUN" = base ]; then
