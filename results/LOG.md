@@ -3,6 +3,29 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: TTS twins of the human test set
+
+To separate "real voice / real microphone" from "conversation content", each human recording got
+a TTS twin (`scripts/make_human_tts.py` -> `data/human_tts/<name>_tts.wav` (not in git), events,
+`data/indexes/human_tts.jsonl`). Whisper medium.en word timestamps (`whisper_words.json`) ->
+utterances at pauses >= 0.4 s -> speakers assigned by hand (only "12:28 am" in talktoroommate is
+the roommate Ryan) -> each line re-voiced by Fish s2-pro with held-out eval voices (Chloe for the
+user, Ruan for Ryan), eval loudness (-21 / -25 dBFS), placed at its original onset, light room
+noise (-55 dBFS), same length. Events copied (id `<name>_tts`, group `human_tts`).
+- **Adjustments** (`data/human_tts/report.json`): Fish speaks more slowly than the recordings, so
+  each line whose end defines an event was sped up (ffmpeg atempo, pitch kept) to end at it, capped
+  at 1.35x: talktoroommate instruction 1.35x, still +0.18 s past instruction_end; "Okay, I'm back"
+  1.35x, +0.15 s past wait_end; regularconvo requests 1 and 2 1.11x / 1.06x, on time; all other
+  lines unchanged. Fish cost < $0.01 (13 short lines).
+- **Results** (`results/human_tts/comparison.md`; 3 files x seeds 1 2 3 per model, so very wide
+  intervals): wait success is the same on real and twin audio for all four models (base 0/6,
+  1h 3e-5 step 80 2/6, 10h 1e-5 step 150 0/6, 10h 3e-5 step 125 1/6). Ordinary response differs
+  most: 10h 3e-5 step 125 answers 2/9 real requests but 7/9 on the twin, base 6/9 vs 9/9 - the
+  real recording's voice/microphone seems to make Moshi slower to answer within regularconvo's 2 s
+  window. 1h 3e-5 and 10h 1e-5 go the other way on interruptions / ordinary answers. With 3 files
+  none of these differences is reliable; the twins are mainly for listening
+  (`listen_human_tts/`, not committed).
+
 ## 2026-11-15: Check of the lr 2e-6 quietness: real (from training), not a pipeline bug
 
 The 2e-6 runs answered only ~34% of ordinary requests, which looked suspicious for the gentlest
