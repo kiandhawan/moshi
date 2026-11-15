@@ -3,6 +3,27 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: Overnight results - onset x3 is the best way to cut missed responses
+
+Both onset runs trained and evaluated without errors (`logs/overnight.log`, 07:23-08:47 UTC).
+The best-checkpoint rule picked the final step 150 for both. Comparison against
+10h · lr 3e-5 · step 125 on the same 400 files (paired cluster bootstrap, `scripts/paired_diff.py`):
+- **onset ×3:** wait success 49% → 54% (+5.0 pp [-0.4, +10.4]); missed resume 35% → 14%
+  (-20 pp); ordinary response 73% → 90% (+17 pp). Costs: interrupt rate 13% → 28% (+15 pp) and
+  distractor response 15% → 22% (+8 pp).
+- **onset ×6:** wait success 46% (-2.9 pp, not significant); missed resume 9%; ordinary response
+  94%. Costs: interrupt rate 40%, distractor response 30%.
+- **Silence penalty (40 files):** bias 0.5 halves missed resumes (44% → 26%) at unchanged wait
+  success, but leaves ordinary no-reply near base. Bias 1 or more trades wait success for speech.
+- **Human files:** onset ×3 answers 8/9 ordinary requests vs 2/9 for step 125.
+- **Decision:** onset ×3 is the preferred variant. It reduces missed responses without losing wait
+  success, at a moderate cost in interruptions. The summary and tables are in
+  `results/comparison_notes.md`, which `compare.py` now includes in `comparison.md`.
+- **Open:** onset ×3 may still improve past step 150; reply relevance hasn't been judged; ×3 plus
+  bias 0.5 hasn't been tested.
+- **Weights kept:** steps 50, 100 and 150 of each onset run (the pipeline pruned the rest after
+  saving all evaluations). Free disk is about 51 GB.
+
 ## 2026-11-15: Overnight - onset weighting (x3, x6) and a decoding-time silence penalty
 
 Goal: reduce missed responses (resumes, ordinary replies) without losing wait success.

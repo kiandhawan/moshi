@@ -72,7 +72,11 @@ def main() -> None:
              "", "Order (all tables): base; 1h runs; 10h runs; controls; learning rate ascending; step ascending. "
              "Raw names: `RUN__sNNN` = checkpoint at step NNN of RUN.", "",
              md_table(["model", "run (raw)"], [[readable(m, roles), f"`{m}`"] for m in models]),
-             "", "Best checkpoints and why: `results/best_checkpoints.md`.", "", "## Overall (eval v2, 400 files)", "",
+             "", "Best checkpoints and why: `results/best_checkpoints.md`.", ""]
+    notes = REPO / "results/comparison_notes.md"  # hand-written summaries, kept across regenerations
+    if notes.exists():
+        parts += [notes.read_text().strip(), ""]
+    parts += ["## Overall (eval v2, 400 files)", "",
              model_tables(models, keep=lambda r: not is_h(r)), ""]
 
     rel = read_csv(METRICS_DIR / "relevance.csv")
