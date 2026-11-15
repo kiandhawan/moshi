@@ -339,14 +339,107 @@ def model_tables(models: dict[str, list[dict]], extra_cols: dict[str, dict[str, 
     for title, cols in (("Waits", WAIT_COLS), ("Distractors (response rate; lower is better)", DISTRACTOR_COLS),
                         ("Conversation", CONV_COLS)):
         body = []
-        for m, rows in models.items():
-            rs = [r for r in rows if keep(r)]
+        roles = model_roles()
+        for m in ordered(models):
+            rs = [r for r in models[m] if keep(r)]
             if not rs:
                 continue
             cells = [any_cell(rs, k, kind) for _, k, kind in cols]
-            body.append([m, str(n_files(rs)), str(n_clusters(rs)), str(len(rs))] + cells)
+            body.append([readable(m, roles), f"`{m}`", str(n_files(rs)), str(n_clusters(rs)), str(len(rs))] + cells)
         if body:
-            keepcol = [i for i in range(4, len(body[0])) if any(b[i] != "-" for b in body)]
-            hdr = ["model", "files", "contexts", "runs"] + [cols[i - 4][0] for i in keepcol]
-            out.append(f"**{title}**\n\n" + md_table(hdr, [b[:4] + [b[i] for i in keepcol] for b in body]))
+            keepcol = [i for i in range(5, len(body[0])) if any(b[i] != "-" for b in body)]
+            hdr = ["model", "run (raw)", "files", "contexts", "runs"] + [cols[i - 5][0] for i in keepcol]
+            out.append(f"**{title}**\n\n" + md_table(hdr, [b[:5] + [b[i] for i in keepcol] for b in body]))
     return "\n\n".join(out)
+
+
+# ---------------------------------------------------------------- ordering and readable labels
+# Every table / CSV / plot legend uses these: base first; then 1 h runs, 10 h runs, then the
+# controls (1 h, 10 h); within each, learning rate ascending by value; the 250-step reference runs
+# after their sibling; within a run, step ascending. All numeric.
+
+_RUN_LR: dict[str, float | None] = {}
+
+
+def run_lr(run: str) -> float | None:
+    """Learning rate of a run (from its name, else configs/<run>.yaml or runs/<run>/args.yaml)."""
+    if run not in _RUN_LR:
+        lr = None
+        if "_lr" in run:
+            lr = float(run.split("_lr")[1].split("_")[0])
+        else:
+            import yaml
+            for p in (REPO / f"configs/{run.removesuffix('_250ref')}.yaml", REPO / f"runs/{run}/args.yaml"):
+                if p.exists():
+                    v = (yaml.safe_load(p.read_text()).get("optim") or {}).get("lr")
+                    if v not in (None, ""):
+                        lr = float(v)
+                        break
+        _RUN_LR[run] = lr
+    return _RUN_LR[run]
+
+
+def split_model(name: str) -> tuple[str, int | None]:
+    """'RUN__sNNN' -> (RUN, NNN); 'RUN/stepN' (eval_loss label) -> (RUN, N); 'base' -> ('base', 0)."""
+    if name == "base":
+        return "base", 0
+    if "__s" in name:
+        run, s = name.rsplit("__s", 1)
+        return run, int(s)
+    if "/step" in name:
+        run, s = name.split("/step")
+        return run, int(s)
+    return name, None
+
+
+def run_sort_key(run: str) -> tuple:
+    """(0,) base; (1, hours, lr, ...) training runs; (2, ...) controls; (3, ...) anything else (e.g. smoke)."""
+    if run == "base":
+        return (0,)
+    parts = run.split("_")
+    if parts[0] not in ("train", "control") or len(parts) < 2 or not (parts[1].endswith("h") and parts[1][:-1].isdigit()):
+        return (3, 0.0, 9.0, False, run)
+    lr = run_lr(run)
+    return (2 if parts[0] == "control" else 1, float(parts[1][:-1]), lr if lr is not None else 9.0, run.endswith("_250ref"), run)
+
+
+def model_sort_key(name: str) -> tuple:
+    run, step = split_model(name)
+    return run_sort_key(run) + (step if step is not None else -1,)
+
+
+def fmt_lr(lr: float | None) -> str:
+    if lr is None:
+        return "lr ?"
+    m, e = f"{lr:.0e}".split("e")
+    return f"lr {m}e{int(e)}"
+
+
+def model_roles() -> dict[str, str]:
+    """model name -> 'best' / 'final' / 'best = final', from results/best/<run>.json."""
+    roles: dict[str, str] = {}
+    for p in (REPO / "results/best").glob("*.json"):
+        b = json.loads(p.read_text())
+        roles[b["final_model"]] = "final"
+        roles[b["model"]] = "best = final" if b["model"] == b["final_model"] else "best"
+    return roles
+
+
+def readable(name: str, roles: dict[str, str] | None = None) -> str:
+    """'1h · lr 2e-6 · step 140 (best)', 'control 10h · lr 3e-5 · step 150 (final)', 'base'."""
+    run, step = split_model(name)
+    if run == "base":
+        return "base"
+    size = run.split("_")[1]
+    head = ("control " if run.startswith("control_") else "") + size
+    parts = [head, fmt_lr(run_lr(run))]
+    if run.endswith("_250ref"):
+        parts.append("250-step ref")
+    if step is not None:
+        parts.append(f"step {step}")
+    role = (roles or {}).get(name if "__s" in name or name == "base" else f"{run}__s{step:03d}" if step is not None else name)
+    return " · ".join(parts) + (f" ({role})" if role else "")
+
+
+def ordered(names) -> list:
+    return sorted(names, key=model_sort_key)

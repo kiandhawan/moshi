@@ -31,7 +31,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from report_lib import bootstrap_ratio, model_dir  # noqa: E402
+from report_lib import bootstrap_ratio, model_dir, ordered, readable, model_roles  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 DIR = REPO / "results/relevance"
@@ -116,7 +116,8 @@ def collect() -> None:
             if line.strip():
                 v = json.loads(line); verdict[v["uid"]] = bool(v["fits"])
     rows = []
-    for m in sorted({k["model"] for k in key.values()}):
+    roles = model_roles()
+    for m in ordered({k["model"] for k in key.values()}):
         for kind in ("resume", "ordinary"):
             ks = {u: k for u, k in key.items() if k["model"] == m and k["kind"] == kind}
             judged = {u: k for u, k in ks.items() if not k["empty"]}
@@ -129,11 +130,11 @@ def collect() -> None:
             den = np.array([sum(1 for k in judged.values() if k["cluster"] == c) for c in cl], float)
             kk, n = int(num.sum()), int(den.sum())
             lo, hi = bootstrap_ratio(num, den) if n else (float("nan"),) * 2
-            rows.append({"model": m, "kind": kind, "k": kk, "n": n, "rate": kk / n if n else "",
+            rows.append({"label": readable(m, roles), "model": m, "kind": kind, "k": kk, "n": n, "rate": kk / n if n else "",
                          "lo": lo, "hi": hi, "no_reply": len(ks) - len(judged)})
     out = REPO / "results/metrics/relevance.csv"
     with out.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["model", "kind", "k", "n", "rate", "lo", "hi", "no_reply"])
+        w = csv.DictWriter(f, fieldnames=["label", "model", "kind", "k", "n", "rate", "lo", "hi", "no_reply"])
         w.writeheader(); w.writerows(rows)
     for r in rows:
         print(r)

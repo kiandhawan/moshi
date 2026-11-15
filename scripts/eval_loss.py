@@ -329,10 +329,12 @@ def main() -> None:
     if args.out.exists():
         with args.out.open() as f:
             rows = [r for r in csv.DictReader(f) if r["label"] != label]
+    sys.path.insert(0, str(REPO / "scripts"))
+    from report_lib import model_sort_key  # same order as every report: base, 1h, 10h, controls; lr; step
     with args.out.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=COLUMNS)
         w.writeheader()
-        w.writerows(rows + [row])
+        w.writerows(sorted(rows + [row], key=lambda r: model_sort_key(r["label"])))
     gout = args.out.with_name(args.out.stem + "_groups.csv")
     gcols = COLUMNS[:3] + ["eval_group"] + COLUMNS[3:]
     grows = []
@@ -342,7 +344,7 @@ def main() -> None:
     with gout.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=gcols)
         w.writeheader()
-        w.writerows(grows + group_rows)
+        w.writerows(sorted(grows + group_rows, key=lambda r: (model_sort_key(r["label"]), r["eval_group"])))
     fcntl.flock(lock, fcntl.LOCK_UN)
     def cell(g, m):
         v = g.get(m)

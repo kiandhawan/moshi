@@ -28,7 +28,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from report_lib import cluster_counts, bootstrap_ratio  # noqa: E402
+from report_lib import cluster_counts, bootstrap_ratio, model_roles, ordered, readable, run_sort_key  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 MET, OUT = REPO / "results/metrics", REPO / "results/plots"
@@ -134,7 +134,7 @@ def survival_plot(models):
         else:
             c = CONTROL if info[1] == "control" else LR_COLOR[info[1]]
             ls = "--" if info[0] == "1h" else "-"
-        ax.plot(xs, ys, color=c, linestyle=ls, linewidth=2, label=f"{m.replace('__s', ' step ')} (n={len(w)})")
+        ax.plot(xs, ys, color=c, linestyle=ls, linewidth=2, label=f"{readable(m, model_roles())} (n={len(w)})")
     ax.set_ylim(0, 1.02); ax.set_xlim(0, 52)
     ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
     ax.legend(frameon=False, fontsize=8, loc="lower left")
@@ -151,7 +151,8 @@ def step_plot(metric, title, ylabel, fname, log):
     style(ax, title, "training step", ylabel)
     if log:
         ax.set_yscale("log")
-    runs = sorted({r["label"].split("/")[0] for r in lr_rows if "/" in r["label"] and not r["label"].split("/")[0].endswith("_250ref")})
+    runs = sorted({r["label"].split("/")[0] for r in lr_rows if "/" in r["label"] and not r["label"].split("/")[0].endswith("_250ref")},
+                  key=run_sort_key)
     for run in runs:
         info = model_info(run)
         if not info:
@@ -165,7 +166,7 @@ def step_plot(metric, title, ylabel, fname, log):
         x, y = zip(*pts)
         c = CONTROL if info[1] == "control" else LR_COLOR[info[1]]
         ax.plot(x, y, color=c, linestyle="--" if info[0] == "1h" else "-", linewidth=2, marker="o", markersize=6,
-                markeredgecolor="white", label=run)
+                markeredgecolor="white", label=readable(run))
     if base:
         ax.axhline(float(base[metric]), color=BASE, linestyle=":", linewidth=1.5, label="baseline")
     ax.legend(frameon=False, fontsize=8)
@@ -174,7 +175,7 @@ def step_plot(metric, title, ylabel, fname, log):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    models = ["base"] + [json.loads(p.read_text())["model"] for p in sorted((REPO / "results/best").glob("*.json"))]
+    models = ordered(["base"] + [json.loads(p.read_text())["model"] for p in (REPO / "results/best").glob("*.json")])
     data_size_plot(models, "wait_success", "run", "Wait success vs data size", "data_size_wait_success.png")
     data_size_plot(models, "ordinary_answered", "list", "Ordinary response vs data size", "data_size_ordinary_response.png")
     survival_plot(models)

@@ -20,6 +20,10 @@ import json
 import re
 from pathlib import Path
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from report_lib import model_roles, model_sort_key, readable  # noqa: E402
+
 REPO = Path(__file__).resolve().parents[1]
 MET = REPO / "results/metrics"
 
@@ -33,6 +37,7 @@ def main() -> None:
     argparse.ArgumentParser().add_argument("--keep", nargs="*")
     loss = {r["label"]: r for r in csv.DictReader((MET / "loss_eval.csv").open())} if (MET / "loss_eval.csv").exists() else {}
     rows = []
+    roles = model_roles()
     for run_dir in sorted((REPO / "runs").iterdir()):
         args = run_dir / "args.yaml"
         if not args.exists() or not (run_dir.name.startswith("train_") or run_dir.name.startswith("control_")):
@@ -65,7 +70,7 @@ def main() -> None:
             else:
                 role = "pruned" if not has_w else "to prune"
             rows.append({
-                "run": run, "data_set": ds, "lr": cfg["optim"]["lr"], "schedule_steps": cfg["max_steps"], "step": step,
+                "label": readable(f"{run}__s{step:03d}", roles), "run": run, "data_set": ds, "lr": cfg["optim"]["lr"], "schedule_steps": cfg["max_steps"], "step": step,
                 "epochs": round(step * batch / n, 2), "seen_hours": round(step * batch / n * hours, 2),
                 "unique_scripts": n, "unique_hours": round(hours, 3),
                 "silence_hours": round(sum(r["silence_sec"] for r in man) / 3600, 3),
@@ -77,6 +82,7 @@ def main() -> None:
                 "scored": (MET / f"{run}__s{step:03d}.jsonl").exists(),
                 "role": role + (" (250-step reference, stopped early)" if run.endswith("_250ref") else ""),
                 "weights": "present" if has_w else "deleted", "checkpoint": str(c.relative_to(REPO))})
+    rows.sort(key=lambda r: model_sort_key(f"{r['run']}__s{int(r['step']):03d}"))
     out = REPO / "results/runs.csv"
     with out.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))

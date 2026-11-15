@@ -25,7 +25,7 @@ import numpy as np
 
 os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from report_lib import bootstrap_ratio, model_dir  # noqa: E402
+from report_lib import bootstrap_ratio, model_dir, model_roles, ordered, readable  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 OUT = REPO / "results/metrics/voice_similarity.csv"
@@ -109,9 +109,11 @@ def main() -> None:
         fcntl.flock(lock, fcntl.LOCK_EX)
         old = {r["model"]: r for r in csv.DictReader(OUT.open())} if OUT.exists() else {}
         old.update({m: rows[m] for m in a.models})
+        roles = model_roles()
+        out_rows = [{**old[m], "label": readable(m, roles)} for m in ordered(old)]
         with OUT.open("w", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=["model", "n", "cos_vs_base", "lo", "hi", "cos_vs_reference"])
-            w.writeheader(); w.writerows(old.values())
+            w = csv.DictWriter(f, fieldnames=["label", "model", "n", "cos_vs_base", "lo", "hi", "cos_vs_reference"])
+            w.writeheader(); w.writerows(out_rows)
 
 
 if __name__ == "__main__":

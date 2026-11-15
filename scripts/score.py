@@ -130,6 +130,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--ack-grace", type=float, default=2.0,
                    help="Seconds after instruction_end in which a brief acknowledgement is allowed.")
     p.add_argument("--quiet", action="store_true", help="Don't print per-run segment details.")
+    p.add_argument("--out-dir", type=Path, default=None,
+                   help="Write <out-dir>/<name>.jsonl instead of results/metrics/ and skip results/summary.md "
+                        "(diagnostics that should not enter the main tables).")
     return p.parse_args()
 
 
@@ -359,6 +362,12 @@ def main() -> None:
     if not rows:
         sys.exit("Nothing scored.")
 
+    if args.out_dir is not None:
+        args.out_dir.mkdir(parents=True, exist_ok=True)
+        out = args.out_dir / f"{args.name}.jsonl"
+        out.write_text("".join(json.dumps(r) + "\n" for r in rows))
+        print(f"Wrote {len(rows)} rows to {out}")
+        return
     METRICS_DIR.mkdir(parents=True, exist_ok=True)
     out = METRICS_DIR / f"{args.name}.jsonl"
     out.write_text("".join(json.dumps(r) + "\n" for r in rows))

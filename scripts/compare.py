@@ -11,7 +11,10 @@ contexts]; medians: value [95% CI] (n).
 Usage:
   python scripts/compare.py                      # base + every run's best and final checkpoint
                                                  # (results/best/<run>.json; models RUN__sNNN)
-  python scripts/compare.py base train_1h_v2_lr1e-5 ...   # chosen models, in this order
+  python scripts/compare.py base train_1h_v2_lr1e-5__s150 ...   # chosen models
+Every table is ordered the same way (report_lib.model_sort_key, numeric): base; 1 h runs; 10 h
+runs; controls; within each, learning rate ascending; within a run, step ascending. Rows show a
+readable label ("1h · lr 2e-6 · step 140 (best)") and the raw name in its own column.
 """
 
 import argparse
@@ -19,7 +22,8 @@ import csv
 import json
 from pathlib import Path
 
-from report_lib import METRICS_DIR, REPO, load_rows, model_label, model_tables, md_table
+from report_lib import (METRICS_DIR, REPO, load_rows, md_table, model_label, model_roles, model_sort_key, model_tables,
+                        ordered, readable)
 
 GROUPS = ["familiar_type", "new_type_phone", "new_type_door", "new_type_reading", "extension",
           "implicit_return", "other_name", "ordinary", "human"]
@@ -45,18 +49,13 @@ def main() -> None:
     p.add_argument("models", nargs="*")
     p.add_argument("--out", type=Path, default=REPO / "results" / "comparison.md")
     a = p.parse_args()
-    roles = {"base": "base model"}
+    roles = model_roles()
     if not a.models:
         a.models = ["base"]
-        for bp in sorted((REPO / "results/best").glob("*.json")):
+        for bp in (REPO / "results/best").glob("*.json"):
             b = json.loads(bp.read_text())
-            for m, role in ((b["model"], f"best (step {b['step']})"), (b["final_model"], f"final (step {b['max_steps']})")):
-                if m in roles:
-                    roles[m] += " = " + role
-                else:
-                    roles[m] = role
-                    a.models.append(m)
-    models = load_rows(a.models)
+            a.models += [m for m in (b["model"], b["final_model"]) if m not in a.models]
+    models = load_rows(ordered(a.models))
     if not models:
         raise SystemExit("No results found in results/metrics/.")
     is_h = lambda r: "human" in (r.get("groups") or [])  # noqa: E731
@@ -66,7 +65,9 @@ def main() -> None:
              "docstring); loss metrics from `eval_loss.py` on all 403 eval_full_v2 files. Rates: % (k/n) [95% CI, "
              "cluster bootstrap over contexts; * = every context had the same outcome, Wilson interval over contexts]. "
              "Medians: value [95% CI] (n). Overall = the 400 eval v2 files; human files only in their own section.",
-             "", "Models (`RUN__sNNN` = checkpoint at step NNN of RUN): " + "; ".join(f"`{m}` {roles.get(m, '')}" for m in models),
+             "", "Order (all tables): base; 1h runs; 10h runs; controls; learning rate ascending; step ascending. "
+             "Raw names: `RUN__sNNN` = checkpoint at step NNN of RUN.", "",
+             md_table(["model", "run (raw)"], [[readable(m, roles), f"`{m}`"] for m in models]),
              "", "Best checkpoints and why: `results/best_checkpoints.md`.", "", "## Overall (eval v2, 400 files)", "",
              model_tables(models, keep=lambda r: not is_h(r)), ""]
 
@@ -74,7 +75,7 @@ def main() -> None:
     vs = read_csv(METRICS_DIR / "voice_similarity.csv")
     if rel or vs:
         body = []
-        for m in models:
+        for m in ordered(models):
             rr = {r["kind"]: r for r in rel if r["model"] == m}
             v = next((r for r in vs if r["model"] == m), None)
             cell = lambda k: (f"{float(rr[k]['rate']):.0%} ({rr[k]['k']}/{rr[k]['n']}) [{float(rr[k]['lo']):.0%}-{float(rr[k]['hi']):.0%}]"  # noqa: E731
@@ -82,14 +83,15 @@ def main() -> None:
             vcell = (f"{float(v['cos_vs_base']):.3f} [{float(v['lo']):.3f}-{float(v['hi']):.3f}] (n={v['n']})"
                      if v and v.get("cos_vs_base") not in (None, "") else "-")
             vref = f"{float(v['cos_vs_reference']):.3f}" if v and v.get("cos_vs_reference") else "-"
-            body.append([m, cell("resume"), cell("ordinary"), vcell, vref])
+            body.append([readable(m, roles), f"`{m}`", cell("resume"), cell("ordinary"), vcell, vref])
         parts += ["**Reply relevance and voice**", "",
                   "Relevance: blind judgement of Moshi's generated text against the reference reply for a fixed sample of "
                   "50 resumes and 50 ordinary replies (`scripts/relevance.py`); rate over items with a reply. Voice: mean "
                   "cosine similarity of ECAPA speaker embeddings (SpeechBrain spkrec-ecapa-voxceleb) of Moshi's channel "
                   "vs the base model's output on the same file (`scripts/voice_similarity.py`); the base row is base seed 1 "
                   "vs seed 2 on the human files (sampling noise floor). Reference = vs the Moshi voice of the training data.", "",
-                  md_table(["model", "resume relevance", "ordinary relevance", "voice sim. vs base", "vs training voice"], body), ""]
+                  md_table(["model", "run (raw)", "resume relevance", "ordinary relevance", "voice sim. vs base",
+                            "vs training voice"], body), ""]
 
     for g in GROUPS:
         t = model_tables(models, keep=lambda r, g=g: g in (r.get("groups") or []) and (g == "human" or not is_h(r)))
@@ -100,21 +102,23 @@ def main() -> None:
     names = {m.rsplit("__s", 1)[0] for m in models}
     loss = [r for r in loss if r["label"] == "base" or r["label"].split("/")[0] in names]
     if loss:
-        loss.sort(key=lambda r: (r["label"] != "base", r["label"].split("/")[0], int(r["step"] or 0)))
+        loss.sort(key=lambda r: model_sort_key(r["label"]))
         parts += ["## Loss metrics per checkpoint (eval_full_v2, 403 files)", "",
                   "wait_p_pad = mean P(silence token) during waits; wait_p_silent_whole = per wait, P(silent through the "
                   "entire wait), averaged over waits; _10s = the same normalized to a 10 s wait; cue_p_speak = P(speak) in "
                   "the 2 s after the cue; distractor_p_pad = P(silence) after distractors; [95% CI].", "",
-                  md_table(["checkpoint", "step"] + LOSS_COLS, [[r["label"], r["step"] or "0"] + [ci(r, m) for m in LOSS_COLS]
-                                                               for r in loss]), ""]
+                  md_table(["checkpoint", "run (raw)", "step"] + LOSS_COLS,
+                           [[readable(r["label"], roles), f"`{r['label']}`", r["step"] or "0"] + [ci(r, m) for m in LOSS_COLS]
+                            for r in loss]), ""]
         gl = [r for r in read_csv(METRICS_DIR / "loss_eval_groups.csv")
               if r["label"] == "base" or r["label"].split("/")[0] in names]
         if gl:
-            gl.sort(key=lambda r: (GROUPS.index(r["eval_group"]) if r["eval_group"] in GROUPS else 99, r["label"] != "base",
-                                   r["label"], int(r["step"] or 0)))
+            gl.sort(key=lambda r: (GROUPS.index(r["eval_group"]) if r["eval_group"] in GROUPS else 99,
+                                   model_sort_key(r["label"])))
             parts += ["**Loss metrics by eval group** (base and the best / final checkpoints above)", "",
-                      md_table(["eval group", "checkpoint"] + LOSS_COLS,
-                               [[r["eval_group"], r["label"]] + [ci(r, m) for m in LOSS_COLS] for r in gl
+                      md_table(["eval group", "checkpoint", "run (raw)"] + LOSS_COLS,
+                               [[r["eval_group"], readable(r["label"], roles), f"`{r['label']}`"] + [ci(r, m) for m in LOSS_COLS]
+                                for r in gl
                                 if r["label"] == "base" or any(model_label(m) == r["label"] for m in models)]), ""]
     md = "\n".join(parts)
     a.out.parent.mkdir(parents=True, exist_ok=True)
