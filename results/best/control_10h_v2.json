@@ -1,0 +1,51 @@
+{
+ "run": "control_10h_v2",
+ "step": 150,
+ "checkpoint": "runs/control_10h_v2/checkpoints/checkpoint_000150/consolidated",
+ "model": "control_10h_v2__s150",
+ "final_model": "control_10h_v2__s150",
+ "max_steps": 150,
+ "epochs": 3.4,
+ "seen_hours": 33.99,
+ "reason": "highest wait success (5% (13/280) [2%-7%]) among the candidates whose ordinary response is within 10 pp of the baseline's 72% (>= 62%: s125, s150)",
+ "baseline_ordinary": {
+  "rate": 0.7193717277486911,
+  "k": 687,
+  "n": 955,
+  "cell": "72% (687/955) [69%-75%]"
+ },
+ "candidates": {
+  "75": {
+   "wait_success": "5% (13/280) [2%-7%]",
+   "ordinary_response": "61% (587/955) [59%-64%]",
+   "interrupt_rate": "90% (252/280) [86%-94%]",
+   "resume_on_time": "40% (111/280) [34%-46%]",
+   "distractor_response": "45% (250/557) [41%-49%]",
+   "wait_p_silent_whole": 0.07561,
+   "val_loss": 0.7142
+  },
+  "125": {
+   "wait_success": "2% (6/280) [1%-4%]",
+   "ordinary_response": "67% (641/955) [64%-70%]",
+   "interrupt_rate": "94% (263/280) [91%-96%]",
+   "resume_on_time": "48% (133/280) [41%-53%]",
+   "distractor_response": "46% (258/557) [42%-50%]",
+   "wait_p_silent_whole": 0.06638,
+   "val_loss": 0.7329
+  },
+  "150": {
+   "wait_success": "5% (13/280) [2%-7%]",
+   "ordinary_response": "67% (643/955) [64%-70%]",
+   "interrupt_rate": "92% (258/280) [89%-95%]",
+   "resume_on_time": "48% (133/280) [42%-53%]",
+   "distractor_response": "49% (273/557) [45%-53%]",
+   "wait_p_silent_whole": 0.06653,
+   "val_loss": 0.7324
+  }
+ },
+ "top3_by_silence": [
+  75,
+  150,
+  125
+ ]
+}

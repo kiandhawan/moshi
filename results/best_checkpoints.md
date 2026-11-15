@@ -10,6 +10,8 @@ One row per run (scripts/eval_run.py). Candidates = the 3 checkpoints with the h
 | 10h · lr 2e-6 | `train_10h_v2_lr2e-6` | 100 | 2.96 | 29.24 | `runs/train_10h_v2_lr2e-6/checkpoints/checkpoint_000100/consolidated` | 7% (19/280) [4%-10%] | 35% (339/955) [31%-40%] | 42% (118/280) [36%-48%] | 16% (90/557) [13%-19%] | 1.28e-01 | 0.788 | NO candidate kept ordinary response within 10 pp of the baseline's 72%; this is the one with the highest ordinary response |
 | 10h · lr 1e-5 | `train_10h_v2_lr1e-5` | 150 | 4.44 | 43.85 | `runs/train_10h_v2_lr1e-5/checkpoints/checkpoint_000150/consolidated` | 12% (35/280) [9%-16%] | 40% (385/955) [37%-44%] | 19% (52/280) [14%-23%] | 11% (63/557) [9%-14%] | 2.79e-01 | 0.699 | NO candidate kept ordinary response within 10 pp of the baseline's 72%; this is the one with the highest ordinary response |
 | 10h · lr 3e-5 | `train_10h_v2_lr3e-5` | 125 | 3.7 | 36.54 | `runs/train_10h_v2_lr3e-5/checkpoints/checkpoint_000125/consolidated` | 49% (138/280) [43%-55%] | 73% (700/955) [70%-76%] | 13% (36/280) [9%-17%] | 15% (81/557) [12%-18%] | 5.29e-01 | 0.724 | highest wait success (49% (138/280) [43%-55%]) among the candidates whose ordinary response is within 10 pp of the baseline's 72% (>= 62%: s125, s150) |
+| control 1h · lr 3e-5 | `control_1h_v2` | 80 | 16.0 | 18.1 | `runs/control_1h_v2/checkpoints/checkpoint_000080/consolidated` | 4% (12/280) [2%-7%] | 82% (784/955) [80%-84%] | 92% (257/280) [88%-95%] | 46% (254/557) [41%-50%] | 5.39e-02 | 1.269 | highest wait success (4% (12/280) [2%-7%]) among the candidates whose ordinary response is within 10 pp of the baseline's 72% (>= 62%: s70, s80, s90, s150) |
+| control 10h · lr 3e-5 | `control_10h_v2` | 150 | 3.4 | 33.99 | `runs/control_10h_v2/checkpoints/checkpoint_000150/consolidated` | 5% (13/280) [2%-7%] | 67% (643/955) [64%-70%] | 92% (258/280) [89%-95%] | 49% (273/557) [45%-53%] | 6.65e-02 | 0.732 | highest wait success (5% (13/280) [2%-7%]) among the candidates whose ordinary response is within 10 pp of the baseline's 72% (>= 62%: s125, s150) |
 
 ## All candidates
 
@@ -22,7 +24,7 @@ One row per run (scripts/eval_run.py). Candidates = the 3 checkpoints with the h
 | 1h · lr 1e-5 · step 130 | `train_1h_v2_lr1e-5` | 130 | 21% (58/280) [16%-25%] | 49% (465/955) [45%-52%] | 36% (100/280) [30%-41%] | 2.99e-01 | 1.055 |
 | 1h · lr 1e-5 · step 150 (best = final) | `train_1h_v2_lr1e-5` | 150 | 22% (62/280) [18%-27%] | 50% (474/955) [46%-53%] | 33% (92/280) [28%-39%] | 2.98e-01 | 1.061 |
 | 1h · lr 3e-5 · step 80 (best) | `train_1h_v2_lr3e-5` | 80 | 36% (100/280) [30%-41%] | 75% (719/955) [72%-78%] | 44% (122/280) [38%-49%] | 4.69e-01 | 1.374 |
-| 1h · lr 3e-5 · step 90 | `train_1h_v2_lr3e-5` | 90 | 32% (90/280) [26%-38%] | 78% (744/955) [75%-81%] | 54% (152/280) [48%-60%] | 4.80e-01 | 1.430 |
+| 1h · lr 3e-5 · step 90 (extra: neighbour of step 100) | `train_1h_v2_lr3e-5` | 90 | 32% (90/280) [26%-38%] | 78% (744/955) [75%-81%] | 54% (152/280) [48%-60%] | 4.80e-01 | 1.430 |
 | 1h · lr 3e-5 · step 130 | `train_1h_v2_lr3e-5` | 130 | 24% (67/280) [19%-29%] | 88% (840/955) [86%-90%] | 69% (192/280) [63%-74%] | 4.24e-01 | 1.542 |
 | 1h · lr 3e-5 · step 150 (final) | `train_1h_v2_lr3e-5` | 150 | 25% (69/280) [20%-30%] | 92% (878/955) [90%-94%] | 71% (198/280) [65%-76%] | 3.33e-01 | 1.550 |
 | 10h · lr 2e-6 · step 100 (best) | `train_10h_v2_lr2e-6` | 100 | 7% (19/280) [4%-10%] | 35% (339/955) [31%-40%] | 42% (118/280) [36%-48%] | 1.28e-01 | 0.788 |
@@ -34,3 +36,10 @@ One row per run (scripts/eval_run.py). Candidates = the 3 checkpoints with the h
 | 10h · lr 3e-5 · step 75 | `train_10h_v2_lr3e-5` | 75 | 32% (89/280) [26%-38%] | 57% (546/955) [54%-61%] | 14% (40/280) [10%-19%] | 4.91e-01 | 0.698 |
 | 10h · lr 3e-5 · step 125 (best) | `train_10h_v2_lr3e-5` | 125 | 49% (138/280) [43%-55%] | 73% (700/955) [70%-76%] | 13% (36/280) [9%-17%] | 5.29e-01 | 0.724 |
 | 10h · lr 3e-5 · step 150 (final) | `train_10h_v2_lr3e-5` | 150 | 48% (134/280) [42%-54%] | 69% (656/955) [66%-72%] | 11% (32/280) [8%-15%] | 5.66e-01 | 0.723 |
+| control 1h · lr 3e-5 · step 70 | `control_1h_v2` | 70 | 2% (7/280) [1%-5%] | 83% (788/955) [80%-85%] | 95% (266/280) [92%-98%] | 4.94e-02 | 1.163 |
+| control 1h · lr 3e-5 · step 80 (best) | `control_1h_v2` | 80 | 4% (12/280) [2%-7%] | 82% (784/955) [80%-84%] | 92% (257/280) [88%-95%] | 5.39e-02 | 1.269 |
+| control 1h · lr 3e-5 · step 90 | `control_1h_v2` | 90 | 2% (5/280) [0%-4%] | 87% (835/955) [85%-89%] | 97% (272/280) [95%-99%] | 4.95e-02 | 1.333 |
+| control 1h · lr 3e-5 · step 150 (final) | `control_1h_v2` | 150 | 1% (4/280) [0%-3%] | 91% (866/955) [89%-92%] | 98% (274/280) [96%-99%] | 4.22e-02 | 1.533 |
+| control 10h · lr 3e-5 · step 75 | `control_10h_v2` | 75 | 5% (13/280) [2%-7%] | 61% (587/955) [59%-64%] | 90% (252/280) [86%-94%] | 7.56e-02 | 0.714 |
+| control 10h · lr 3e-5 · step 125 | `control_10h_v2` | 125 | 2% (6/280) [1%-4%] | 67% (641/955) [64%-70%] | 94% (263/280) [91%-96%] | 6.64e-02 | 0.733 |
+| control 10h · lr 3e-5 · step 150 (best = final) | `control_10h_v2` | 150 | 5% (13/280) [2%-7%] | 67% (643/955) [64%-70%] | 92% (258/280) [89%-95%] | 6.65e-02 | 0.732 |
