@@ -226,6 +226,40 @@ waits within seconds; the 10 h model still has about 78% of waits uninterrupted 
 
 Both are covered in §9.
 
+**In-distribution vs held-out vs human speech.** As an in-distribution check, we tested 60 rendered
+training-list files that no run trained on: 24 ordinary conversations and 12 of each trained wait
+type. They use the training split's voices, phrasings, topics and audio augmentation, but are new
+conversations, none of them in any training index. Each cell gives the overall score (0–100, the mean
+of silence, return, answer and addressee; `results/checkpoint_table.md`), then wait success.
+
+| condition | base | 10 h · lr 3e-5 · step 125 | onset ×3 · step 150 |
+|---|---|---|---|
+| in-distribution (60 files, 36 waits) | 47.0 [42.0–52.2]; 3% (1/36) | 73.3 [67.5–79.2]; 33% (12/36) | 86.5 [81.7–91.1]; 56% (20/36) |
+| held-out, trained types; only voices/wording/topics new (202 files, 94 waits) | 48.4 [45.6–51.5]; 2% (2/94) | 82.8 [79.3–86.0]; 69% (65/94) | 86.0 [82.2–89.5]; 71% (67/94) |
+| held-out, new wait types (120 files) | 48.0 [45.2–50.9]; 4% (5/120) | 76.7 [73.1–80.1]; 51% (61/120) | 81.8 [77.7–85.7]; 60% (72/120) |
+| human speech (3 recordings × 3 seeds; anecdotal) | 41.7; 0/6 | 59.7; 1/6 | 84.7; 3/6 |
+
+Sources: `results/in_distribution/comparison.md` (`scripts/make_in_distribution.py`,
+`scripts/in_dist_compare.py`).
+
+The in-distribution files are not easier; for step 125 they are clearly harder. Two causes show up in
+the per-file results:
+- **The mix.** A third of the in-distribution waits are think time, 10 of 12 with a deadline. Timed
+  think time fails everywhere: 0/10 here and 0/12 held-out.
+- **Side conversations.** Step 125 succeeds on 4 of 12, against 27 of 32 held-out, and the failures
+  are almost all missed resumes.
+
+A plausible reason for the side conversations: 360 of the 400 eval files come from the v1 generator,
+whose return cues are plain ("I'm back"). The training data also uses v2 cues: fragments and implied
+returns such as "Done and dusted. Go ahead." Step 125 missed 5 of 6 in-distribution side
+conversations with v2-style cues, but also 3 of 6 with v1-style ones. With 12 files this is a
+hypothesis.
+
+The training audio augmentation showed no consistent effect at this sample size.
+
+The held-out eval may therefore overstate performance on the full range of phrasing styles in
+training. Onset ×3 closes the gap: 86.5 in-distribution, 86.0 held-out.
+
 ## 8. Real versus synthetic speech (anecdotal)
 
 **The human test set** is three recordings by one speaker:

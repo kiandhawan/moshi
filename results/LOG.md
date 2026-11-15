@@ -3,6 +3,45 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: In-distribution test set; overall behavior score
+
+**In-distribution test set** (`scripts/make_in_distribution.py`, `data/indexes/in_distribution_v2.jsonl`):
+- 60 rendered training-list files that no run trained on: the 180 renders beyond the train_10h_v2 cut
+  appear in no training index. Chosen in list order at the training mix (24 ordinary + 12 per wait type).
+- Each test file is the right (user) channel of its training render, as trained, augmentation
+  included. Events were rebuilt with `render.events_for` (eval definitions; group `in_distribution`)
+  from the script and the training events' turn timings. The rebuilt user turns match the originals;
+  in 35/36 waits the reference resume starts inside the rebuilt resume window (the exception is
+  0.38 s late in its own training file).
+- **Block rule:** none shares a building block with train_1h_v2 / train_10h_v2. Nine share a
+  dialogue block with control_10h_v2 (control files reuse dialogue blocks of training-list wait
+  files), which the tested models never trained on; their events file lists this under
+  `shares_block_with`.
+- **Runs:** base, 10h lr3e-5 step 125 and onset x3 step 150 at seed 1, batch 32. Scored into
+  `results/in_distribution/metrics/`, separately, so Overall and every other table are unchanged.
+  Comparison: `results/in_distribution/comparison.md`.
+- **Result:** in-distribution is not easier. Step 125: overall score 73.3 vs 82.8 on held-out files
+  where only voices/phrasings/topics are new; wait success 33% vs 69%. Causes:
+  - **The mix:** a third of the waits are think time, 10/12 timed, which fails everywhere.
+  - **Side conversations:** 4/12 vs 27/32, mostly missed resumes. Possibly the v2 return-cue styles
+    in training data vs the eval's v1 cues; 12 files, so a hypothesis.
+  - Onset x3: 86.5 vs 86.0.
+
+**Overall behavior score** (`report_lib.behavior_score`):
+- **Definition:** mean of four 0-100 components: silence = 100 - interrupt rate, return = 100 -
+  missed-resume rate, answer = ordinary response rate, addressee = 100 - distractor response rate.
+- **Interval:** 95% bootstrap over contexts, all four components resampled together.
+- **Where it appears:** first column of comparison.md's Overall table, `results/checkpoint_table.md`
+  (all 35 checkpoints with behavioral results) and `results/plots/overall_score_<run>.png`. Each plot
+  shows the measured checkpoints only, the rule's pick circled, and base and the controls as
+  reference lines.
+- **Observations:** the original rule's pick is also the highest-scoring measured checkpoint in 6 of
+  the 10 runs. In the other 4 the top is a neighbouring checkpoint, always within the 95% intervals:
+  - onset x3: step 125 81.5, pick (step 150) 81.3;
+  - control 1h: step 150 55.9, pick (step 80) 54.6;
+  - 1h lr2e-6: step 150 50.9, pick (step 140) 50.1;
+  - 10h lr2e-6: step 150 50.8, pick (step 100) 49.7.
+
 ## 2026-11-15: Report draft and the measurements it added
 
 `results/REPORT.md` is the short experimental report. Every number in it comes from `results/`; all

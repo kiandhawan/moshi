@@ -205,6 +205,20 @@ successful waits in parentheses.
 **Ordinary response in ordinary conversations:** base 79% (420/532), step 125 76% (405/532), onset ×3
 91% (485/532).
 
+## A6b. In-distribution test set and the overall score
+
+- **In-distribution files:** 60 rendered training-list files (`trainv2_10_00540`–`00719`) that no run
+  trained on; `scripts/make_in_distribution.py`, index `data/indexes/in_distribution_v2.jsonl`.
+  - Per-metric tables for base, 10h·3e-5 step 125 and onset ×3: `results/comparison.md`, section
+    "In-distribution".
+  - Comparison by condition: `results/in_distribution/comparison.md`.
+  - None shares a building block with train_1h_v2 / train_10h_v2. Nine share a dialogue block with
+    control_10h_v2, which the tested models never trained on; each such events file says so under
+    `shares_block_with`.
+- **Overall score:** for every checkpoint with behavioral results, the score (mean of four 0–100
+  components: silence, return, answer, addressee) is in `results/checkpoint_table.md`. Per-run plots
+  are `results/plots/overall_score_<run>.png`.
+
 ## A7. Human recordings and TTS twins (anecdotal: 3 files × 3 seeds)
 
 Sources: `results/comparison.md` (group `human`) and `results/human_tts/comparison.md`.
@@ -311,4 +325,11 @@ python scripts/relevance.py collect
 python scripts/compare.py
 python scripts/plot_results.py
 python scripts/runs_table.py
+python scripts/checkpoint_table.py      # overall score table + per-run plots
+
+# In-distribution test set (unused training-list renders), scored separately
+python scripts/make_in_distribution.py
+python scripts/run_inference.py data/indexes/in_distribution_v2.jsonl --lora CKPT --seeds 1 --batch 32 --gpu 0 --out-dir runs/RUN/infer/sNNN/in_dist
+python scripts/score.py --outputs runs/RUN/infer/sNNN/in_dist --events data/indexes/in_distribution_v2.jsonl --name RUN__sNNN --out-dir results/in_distribution/metrics
+python scripts/in_dist_compare.py base train_10h_v2_lr3e-5__s125 train_10h_v2_lr3e-5_onsetw3__s150
 ```

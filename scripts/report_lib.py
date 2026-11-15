@@ -332,24 +332,76 @@ def any_cell(rows: list[dict], key: str, kind: str) -> str:
     return permin_cell(rows, key)
 
 
+# ---------------------------------------------------------------- overall behavior score
+# Mean of four 0-100 components, higher is better: silence = 100 - interrupt rate (waits),
+# return = 100 - missed-resume rate (waits), answer = ordinary response rate (requests),
+# addressee = 100 - distractor response rate (distractors). 95% CI: percentile bootstrap over
+# contexts (clusters), resampled once per draw for all four components together.
+SCORE_COMPONENTS = [("silence", "interrupted", "run", True), ("return", "missed_resume", "run", True),
+                    ("answer", "ordinary_answered", "list", False), ("addressee", "distractor_responses", "list", True)]
+
+
+def behavior_score(rows: list[dict], b: int = BOOT_B, seed: int = BOOT_SEED) -> dict:
+    """{'score', 'lo', 'hi', 'components': {name: value}} on the 0-100 scale (NaN if a component has no data)."""
+    per = []
+    for _, key, kind, _ in SCORE_COMPONENTS:
+        k: dict[str, int] = defaultdict(int); n: dict[str, int] = defaultdict(int)
+        for r in rows:
+            vals = ([bool(r[key])] if r.get(key) is not None else []) if kind == "run" else [bool(v) for v in r.get(key) or []]
+            c = cluster_of(r); k[c] += sum(vals); n[c] += len(vals)
+        per.append((k, n))
+    cl = sorted({cluster_of(r) for r in rows})
+    K = np.array([[k[c] for c in cl] for k, _ in per], float)
+    N = np.array([[n[c] for c in cl] for _, n in per], float)
+
+    flip = np.array([inv for *_, inv in SCORE_COMPONENTS])
+
+    def comps(ks, ns):  # ks, ns: (4, ...) summed counts -> components on 0-100, (4, ...)
+        rate = ks / np.where(ns > 0, ns, np.nan)
+        f = flip.reshape((-1,) + (1,) * (rate.ndim - 1))
+        return 100 * np.where(f, 1 - rate, rate)
+
+    point = comps(K.sum(-1), N.sum(-1))
+    out = {"score": float(np.mean(point)), "lo": math.nan, "hi": math.nan,
+           "components": {name: float(v) for (name, *_), v in zip(SCORE_COMPONENTS, point)}}
+    if len(cl) >= 2 and not np.isnan(point).any():
+        idx = np.random.default_rng(seed).integers(0, len(cl), size=(b, len(cl)))
+        sc = comps(K[:, idx].sum(-1), N[:, idx].sum(-1)).mean(0)  # (b,)
+        sc = sc[~np.isnan(sc)]
+        out["lo"], out["hi"] = float(np.percentile(sc, 2.5)), float(np.percentile(sc, 97.5))
+    return out
+
+
+def score_cell(rows: list[dict]) -> str:
+    s = behavior_score(rows)
+    if math.isnan(s["score"]):
+        return "-"
+    return f"{s['score']:.1f} [{s['lo']:.1f}-{s['hi']:.1f}]" if not math.isnan(s["lo"]) else f"{s['score']:.1f}"
+
+
 def model_tables(models: dict[str, list[dict]], extra_cols: dict[str, dict[str, str]] | None = None,
-                 keep=lambda r: True) -> str:
-    """Three tables (waits, distractors, conversation), one row per model, for rows passing keep."""
+                 keep=lambda r: True, score: bool = False) -> str:
+    """Three tables (waits, distractors, conversation), one row per model, for rows passing keep.
+    score=True: the first table starts with the overall behavior score column (behavior_score)."""
     out = []
-    for title, cols in (("Waits", WAIT_COLS), ("Distractors (response rate; lower is better)", DISTRACTOR_COLS),
-                        ("Conversation", CONV_COLS)):
+    for ti, (title, cols) in enumerate((("Waits", WAIT_COLS), ("Distractors (response rate; lower is better)", DISTRACTOR_COLS),
+                                        ("Conversation", CONV_COLS))):
         body = []
         roles = model_roles()
+        with_score = score and ti == 0
         for m in ordered(models):
             rs = [r for r in models[m] if keep(r)]
             if not rs:
                 continue
             cells = [any_cell(rs, k, kind) for _, k, kind in cols]
-            body.append([readable(m, roles), f"`{m}`", str(n_files(rs)), str(n_clusters(rs)), str(len(rs))] + cells)
+            body.append(([score_cell(rs)] if with_score else [])
+                        + [readable(m, roles), f"`{m}`", str(n_files(rs)), str(n_clusters(rs)), str(len(rs))] + cells)
         if body:
-            keepcol = [i for i in range(5, len(body[0])) if any(b[i] != "-" for b in body)]
-            hdr = ["model", "run (raw)", "files", "contexts", "runs"] + [cols[i - 5][0] for i in keepcol]
-            out.append(f"**{title}**\n\n" + md_table(hdr, [b[:5] + [b[i] for i in keepcol] for b in body]))
+            o = 6 if with_score else 5
+            keepcol = [i for i in range(o, len(body[0])) if any(b[i] != "-" for b in body)]
+            hdr = (["overall score [95% CI]"] if with_score else []) + ["model", "run (raw)", "files", "contexts", "runs"] \
+                + [cols[i - o][0] for i in keepcol]
+            out.append(f"**{title}**\n\n" + md_table(hdr, [b[:o] + [b[i] for i in keepcol] for b in body]))
     return "\n\n".join(out)
 
 

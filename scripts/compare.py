@@ -77,7 +77,11 @@ def main() -> None:
     if notes.exists():
         parts += [notes.read_text().strip(), ""]
     parts += ["## Overall (eval v2, 400 files)", "",
-             model_tables(models, keep=lambda r: not is_h(r)), ""]
+             "Overall score (first column; `report_lib.behavior_score`): mean of four 0-100 components, higher is "
+             "better - silence = 100 - interrupt rate, return = 100 - missed-resume rate, answer = ordinary response "
+             "rate, addressee = 100 - distractor response rate; 95% CI by bootstrap over contexts. Per checkpoint and "
+             "by component: `results/checkpoint_table.md`.", "",
+             model_tables(models, keep=lambda r: not is_h(r), score=True), ""]
 
     rel = read_csv(METRICS_DIR / "relevance.csv")
     vs = read_csv(METRICS_DIR / "voice_similarity.csv")
@@ -105,6 +109,18 @@ def main() -> None:
                   md_table(["model", "run (raw)", "resume relevance", "resume relevance (strict)", "ordinary relevance",
                             "ordinary relevance (strict)", "voice sim. vs base",
                             "vs training voice"], body), ""]
+
+    ind_dir = REPO / "results/in_distribution/metrics"  # scripts/make_in_distribution.py, scored separately
+    ind = {m: [json.loads(l) for l in (ind_dir / f"{m}.jsonl").read_text().splitlines() if l.strip()]
+           for m in models if (ind_dir / f"{m}.jsonl").exists()}
+    if ind:
+        parts += ["## In-distribution (60 unused training-list files)", "",
+                  "Rendered training-list files that no training run used (`scripts/make_in_distribution.py`): the train "
+                  "split's voices, phrasings, names, topics and augmentation, but conversations the models never saw; "
+                  "24 ordinary + 12 of each trained wait type, seed 1. Scored separately "
+                  "(`results/in_distribution/metrics/`), so they are not in Overall. Comparison with the held-out groups "
+                  "and human speech: `results/in_distribution/comparison.md`.", "",
+                  model_tables(ind, score=True), ""]
 
     for g in GROUPS:
         t = model_tables(models, keep=lambda r, g=g: g in (r.get("groups") or []) and (g == "human" or not is_h(r)))
