@@ -38,9 +38,9 @@ Relevance: blind judgement of Moshi's generated text against the reference reply
 
 | model | resume relevance | ordinary relevance | voice sim. vs base | vs training voice |
 |---|---|---|---|---|
-| base | - | - | 0.650 [0.650-0.650] (n=4) | 0.482 |
-| train_10h_v2_lr1e-5__s150 | - | - | 0.621 [0.610-0.632] (n=257) | 0.646 |
-| train_1h_v2_lr1e-5__s150 | - | - | 0.626 [0.616-0.636] (n=322) | 0.657 |
+| base | 26% (11/43) [14%-40%], 7 no reply | 61% (27/44) [48%-75%], 6 no reply | 0.650 [0.650-0.650] (n=4) | 0.482 |
+| train_10h_v2_lr1e-5__s150 | 50% (4/8) [12%-88%], 42 no reply | 75% (15/20) [55%-90%], 30 no reply | 0.621 [0.610-0.632] (n=257) | 0.646 |
+| train_1h_v2_lr1e-5__s150 | 45% (10/22) [27%-64%], 28 no reply | 80% (20/25) [64%-96%], 25 no reply | 0.626 [0.616-0.636] (n=322) | 0.657 |
 
 ## Eval group: familiar_type
 
