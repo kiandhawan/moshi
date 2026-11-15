@@ -97,7 +97,8 @@ def main() -> None:
     cands = sorted(set(top3) | {max_steps})
     print(f"top 3 by whole-wait silence probability: {top3}; candidates {cands}", flush=True)
 
-    # 3. inference + scoring for the candidates (two at a time on this GPU)
+    # 3. inference + scoring for the candidates, one inference process at a time (a batch of 32 needs
+    #    ~30 GB next to a ~45 GB training run; four at once ran out of memory)
     def infer_cmds(step):
         out = model_dir(f"{run}__s{step:03d}")
         lora = ["--lora", str(ck[step])]
@@ -106,16 +107,10 @@ def main() -> None:
                 ([PY, "scripts/run_inference.py", "data/indexes/human.jsonl", *lora, "--seeds", "1", "2", "3",
                   "--gpu", gpu, "--out-dir", str(out / "human")], logs / f"infer_{run}_s{step:03d}_human.log")]
     todo = [s for s in cands if not (MET / f"{run}__s{s:03d}.jsonl").exists()]
-    for i in range(0, len(todo), 2):
-        procs = []
-        for s in todo[i:i + 2]:
-            for cmd, log in infer_cmds(s):
-                print(f"$ {' '.join(cmd)}", flush=True)
-                procs.append((subprocess.Popen(cmd, cwd=REPO, stdout=log.open("w"), stderr=subprocess.STDOUT), cmd))
-        for pr, cmd in procs:
-            if pr.wait():
-                raise SystemExit(f"FAILED: {' '.join(cmd)}")
-        for s in todo[i:i + 2]:
+    for i in range(len(todo)):
+        for cmd, log in infer_cmds(todo[i]):
+            sh(cmd, log)
+        for s in todo[i:i + 1]:
             d = model_dir(f"{run}__s{s:03d}")
             sh([PY, "scripts/score.py", "--outputs", str(d / "eval"), str(d / "human"), "--events",
                 "data/indexes/eval_full_v2.jsonl", "data/indexes/human.jsonl", "--name", f"{run}__s{s:03d}", "--quiet"],

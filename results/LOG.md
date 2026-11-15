@@ -3,6 +3,25 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: Pair 1 (lr 1e-5) evaluated - no checkpoint met the ordinary-response limit
+
+- Baseline ordinary response 72% (687/955), so the limit is >= 62%. Candidates (top 3 by
+  wait_p_silent_whole + final): 1h steps 120/130/150 -> ordinary 48-50%, wait success 18-22%;
+  10h steps 100/125/150 -> ordinary 32-40%, wait success 10-12%. None qualifies, so per the
+  fallback rule the best = the highest ordinary response = step 150 in both (= final), flagged
+  in results/best_checkpoints.md.
+- What changed: interruptions fell from 94% to 33% (1h) / 19% (10h) and distractor responses from
+  68% to 17% / 11%, but Moshi now stays silent too much: missed resumes 16% -> 57% / 76%, ordinary
+  response 72% -> 50% / 40%. So the gain in wait success is limited by never resuming.
+- Loss curves: the 1h run overfits after ~step 40 (full eval val_loss 0.746 at step 40 -> 1.061 at
+  150; ordinary text loss 1.38 -> 2.47, worse than base 1.86), while wait_p_silent_whole keeps
+  rising, so the selection rule's top 3 are all late, overfit checkpoints; steps 40-50 (lowest
+  val loss) were not run behaviorally (step 50's weights are kept; step 40's were pruned after its
+  loss eval). The 10h run does not overfit (val_loss 0.70 from step 75 on).
+- Voice: similarity to the base output 0.63 (1h) / 0.62 (10h), close to the base's own seed-to-seed
+  floor 0.65; similarity to the training data's Moshi voice rose from 0.48 (base) to 0.66 / 0.65:
+  the LoRA moves Moshi's voice toward the Fish-cloned training voice.
+
 ## 2026-11-15: New training schedule (150 steps, frequent checkpoints, best-checkpoint selection)
 
 All training restarted with a new schedule. The two pair-1 runs on the 250-step schedule were
