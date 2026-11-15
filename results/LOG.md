@@ -3,6 +3,35 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: Check of the lr 2e-6 quietness: real (from training), not a pipeline bug
+
+The 2e-6 runs answered only ~34% of ordinary requests, which looked suspicious for the gentlest
+rate. Checks (`results/diagnostics/quiet40.md`, `results/plots/quiet_vs_step.png`; 40-file subset
+eval_full_subset_v2 incl. the 3 human files, one batch of 40 at seed 1 for every model):
+- **Config / loading**: the checkpoint config.json differs from the loader defaults the base is
+  built from only in `lora`, `lora_rank` (128), `lora_scaling` (2.0); no lm_gen_config on either
+  side, and every output records the same sampling (temp 0.8 / text 0.7, top-k 250 / 25). Every
+  checkpoint of every run has the same 337 LoRA A/B pairs, rank 128, scaling 2.0, and the update
+  size ||2 B A|| is ordered by learning rate at every step (step 50: 0.82 / 2.88 / 7.02 for
+  2e-6 / 1e-5 / 3e-5, 1 h).
+- **Decisive controls**: a null adapter (the step-50 checkpoint with every B = 0, same config.json,
+  same LoRA path) and the base model built from the checkpoint config.json without LoRA
+  (`run_inference.py --config`) are both **bit-identical** to the base: 40/40 identical text-token
+  streams, max audio difference 0. So the pipeline adds nothing; any change comes from trained B.
+- **Batching**: 1 h 2e-6 step 50 is as quiet at --batch 1 (no-reply 52% vs base 29% at batch 1)
+  as at batch 40 (70% vs 23%).
+- **Step 10** (pruned, but its full eval_loss is recorded) is ~ base: wait_p_silent_whole 0.0026
+  vs 0.0025, P(speak) after the cue 0.404 vs 0.404, ordinary text loss 1.859 vs 1.860.
+- **Trajectory**: every run first becomes much quieter than base (no-reply 23% -> 41-75%, missed
+  resumes 15% -> 41-94% by step 50), and only at 3e-5 does replying come back (1 h: no-reply 7-8%
+  from step 100; 10 h: 30-34% at steps 100-125). 2e-6 and 1e-5 stay in the quiet phase for all 150
+  steps; 2e-6 is the slowest version of the same path (its step 50 looks like 3e-5 at ~step 10 in
+  the loss metrics). Teacher-forced loss moves much less than behavior (step 50, 2e-6: P(speak)
+  after the cue 0.404 -> 0.373) - in free generation a slightly lower per-frame chance of starting
+  to speak compounds, and once Moshi's own stream is silent it conditions on that silence.
+Conclusion: a real training effect ("be quiet" is learned before "speak again on cue"), not a
+bug. No earlier result changes.
+
 ## 2026-11-15: Best learning rate per data size: 3e-5 for both (controls use it)
 
 Rule: highest wait success (400 eval v2 files, seed 1) of each run's best checkpoint, as long as

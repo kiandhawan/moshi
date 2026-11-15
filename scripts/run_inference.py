@@ -49,6 +49,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--tail-sec", type=float, default=TAIL_SILENCE_SEC,
                    help="Seconds of silence fed after the input ends (default 8).")
     p.add_argument("--hf-repo", default="kyutai/moshiko-pytorch-bf16", help="Base model repository.")
+    p.add_argument("--config", type=Path, default=None,
+                   help="Model config.json to build the model from without LoRA weights (diagnostics; default: "
+                        "the loader's built-in defaults, or the --lora folder's config.json).")
     p.add_argument("--shard", default="0/1",
                    help="I/N: this worker takes every N-th input starting at I (run N workers in parallel).")
     p.add_argument("--batch", type=int, default=1,
@@ -109,6 +112,10 @@ def main() -> None:
             if not f.exists():
                 sys.exit(f"--lora folder is missing {f.name}: {f}")
     print(f"Loading {args.hf_repo}" + (f" + LoRA {args.lora}" if args.lora else " (base model)"), flush=True)
+    if args.config is not None:
+        assert args.lora is None, "--config is for building the model without LoRA"
+        config_path = args.config
+        print(f"Building the model from {args.config}", flush=True)
     checkpoint_info = loaders.CheckpointInfo.from_hf_repo(
         args.hf_repo, lora_weights=lora_weights, config_path=config_path)
     mimi = checkpoint_info.get_mimi(device=device)
@@ -186,6 +193,7 @@ def main() -> None:
             "input": str(path),
             "seed": seed,
             "lora": str(args.lora) if args.lora else None,
+            "config": str(args.config) if args.config else None,
             "hf_repo": args.hf_repo,
             "sampling": sampling,
             "sample_rate": SAMPLE_RATE,
