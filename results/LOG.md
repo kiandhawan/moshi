@@ -3,6 +3,37 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: New training schedule (150 steps, frequent checkpoints, best-checkpoint selection)
+
+All training restarted with a new schedule. The two pair-1 runs on the 250-step schedule were
+stopped at step ~220 and kept as references (`runs/train_{1h,10h}_v2_lr1e-5_250ref/`, NOTE.txt;
+logs `logs/*_250ref.log`; 250 steps, 25 warm-up, checkpoint/eval every 50, default
+num_ckpt_keep 3). Why: at 16 files per step, 250 steps are 66.7 epochs of the 1 h set, and the
+250ref 1 h run was already overfitting early - its eval-subset loss rose 0.71 (step 50) -> 1.01
+(100) -> 1.38 (150) while its training loss fell to 0.13 - so checkpoints every 50 steps were
+too coarse to catch the best point, and the end of the run was past it.
+- **Schedule** (`make_run_configs.py`): max_steps 150, pct_start 0.1 (15 warm-up steps, then
+  cosine decay), seed 0, batch 16, duration_sec 100, LoRA as smoke; checkpoint + eval-subset loss
+  every 10 steps for 1 h data (15 checkpoints) and every 25 for 10 h (6); keep all checkpoints.
+  150 steps = 40 epochs of train_1h_v2 (44 h seen), 4.4 of train_10h_v2 (44 h seen).
+- **Per run** (`scripts/eval_run.py`): eval_loss.py on all 403 eval_full_v2 files for every
+  checkpoint (47 s each); the 3 checkpoints with the highest whole-wait silence probability
+  (wait_p_silent_whole) + the final one get streaming inference (400 eval v2 files at seed 1,
+  human files at seeds 1 2 3) and scoring; best = highest wait success among those whose ordinary
+  response is at most 10 pp below the baseline's (ties: higher wait_p_silent_whole; if none
+  qualifies, the highest ordinary response, flagged) -> `results/best/<run>.json`,
+  `results/best_checkpoints.md`. Then prune: only lora.safetensors of checkpoints that are not
+  the best, not a multiple of 50 and not the final are deleted, and only after their eval_loss
+  rows, runs.csv row, copied training logs (`results/train_logs/<run>/`) and any scores are in
+  results/. `results/runs.csv` has one row per checkpoint (steps, epochs, seen hours, losses,
+  role, weights present/deleted).
+- **Reports**: comparison.md = base + each run's best and final checkpoint; plots of eval loss and
+  whole-wait silence probability vs step per run. `scripts/talk.sh RUN [STEP] [GPU]` serves a
+  run's best checkpoint (or a given step) with moshi.server on port 8998.
+- **Voice similarity floor**: base seed 1 vs seeds 2/3 on the human files = 0.650 (only 4 pairs
+  have >= 3 s of speech, so a rough floor); base vs the training data's Moshi voice (Fish clone)
+  = 0.482.
+
 ## 2026-11-14: Data v2 and eval v2 are final
 
 The v2 training sets (train_1h_v2, train_10h_v2, control_1h_v2, control_10h_v2) and the eval set

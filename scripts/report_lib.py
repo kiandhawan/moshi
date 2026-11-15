@@ -19,6 +19,23 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 METRICS_DIR = REPO / "results" / "metrics"
 
+
+def model_dir(model: str) -> Path:
+    """Inference outputs of a model name: base -> runs/base/infer; RUN__sNNN (checkpoint at step NNN
+    of RUN) -> runs/RUN/infer/sNNN; anything else -> runs/<model>/infer. Holds eval/ and human/."""
+    if "__s" in model:
+        run, step = model.rsplit("__s", 1)
+        return REPO / "runs" / run / "infer" / f"s{step}"
+    return REPO / "runs" / model / "infer"
+
+
+def model_label(model: str) -> str:
+    """The eval_loss.py label of a model name: base, or RUN/stepN."""
+    if "__s" in model:
+        run, step = model.rsplit("__s", 1)
+        return f"{run}/step{int(step)}"
+    return model
+
 # (label, row key, kind): kind "run" = one boolean per run, "list" = list of booleans per run.
 PRIMARY = [
     ("wait success", "wait_success", "run"),

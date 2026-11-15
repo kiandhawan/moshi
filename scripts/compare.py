@@ -9,15 +9,17 @@ file with several groups is counted in each. Rates: % (k/n) [95% CI, cluster boo
 contexts]; medians: value [95% CI] (n).
 
 Usage:
-  python scripts/compare.py                      # all models in results/metrics/*.jsonl
+  python scripts/compare.py                      # base + every run's best and final checkpoint
+                                                 # (results/best/<run>.json; models RUN__sNNN)
   python scripts/compare.py base train_1h_v2_lr1e-5 ...   # chosen models, in this order
 """
 
 import argparse
 import csv
+import json
 from pathlib import Path
 
-from report_lib import METRICS_DIR, REPO, load_rows, model_tables, md_table
+from report_lib import METRICS_DIR, REPO, load_rows, model_label, model_tables, md_table
 
 GROUPS = ["familiar_type", "new_type_phone", "new_type_door", "new_type_reading", "extension",
           "implicit_return", "other_name", "ordinary", "human"]
@@ -43,7 +45,18 @@ def main() -> None:
     p.add_argument("models", nargs="*")
     p.add_argument("--out", type=Path, default=REPO / "results" / "comparison.md")
     a = p.parse_args()
-    models = load_rows(a.models or None)
+    roles = {"base": "base model"}
+    if not a.models:
+        a.models = ["base"]
+        for bp in sorted((REPO / "results/best").glob("*.json")):
+            b = json.loads(bp.read_text())
+            for m, role in ((b["model"], f"best (step {b['step']})"), (b["final_model"], f"final (step {b['max_steps']})")):
+                if m in roles:
+                    roles[m] += " = " + role
+                else:
+                    roles[m] = role
+                    a.models.append(m)
+    models = load_rows(a.models)
     if not models:
         raise SystemExit("No results found in results/metrics/.")
     is_h = lambda r: "human" in (r.get("groups") or [])  # noqa: E731
@@ -53,7 +66,8 @@ def main() -> None:
              "docstring); loss metrics from `eval_loss.py` on all 403 eval_full_v2 files. Rates: % (k/n) [95% CI, "
              "cluster bootstrap over contexts; * = every context had the same outcome, Wilson interval over contexts]. "
              "Medians: value [95% CI] (n). Overall = the 400 eval v2 files; human files only in their own section.",
-             "", "Models: " + ", ".join(models), "", "## Overall (eval v2, 400 files)", "",
+             "", "Models (`RUN__sNNN` = checkpoint at step NNN of RUN): " + "; ".join(f"`{m}` {roles.get(m, '')}" for m in models),
+             "", "Best checkpoints and why: `results/best_checkpoints.md`.", "", "## Overall (eval v2, 400 files)", "",
              model_tables(models, keep=lambda r: not is_h(r)), ""]
 
     rel = read_csv(METRICS_DIR / "relevance.csv")
@@ -65,7 +79,8 @@ def main() -> None:
             v = next((r for r in vs if r["model"] == m), None)
             cell = lambda k: (f"{float(rr[k]['rate']):.0%} ({rr[k]['k']}/{rr[k]['n']}) [{float(rr[k]['lo']):.0%}-{float(rr[k]['hi']):.0%}]"  # noqa: E731
                               f", {rr[k]['no_reply']} no reply" if k in rr else "-")
-            vcell = (f"{float(v['cos_vs_base']):.3f} [{float(v['lo']):.3f}-{float(v['hi']):.3f}] (n={v['n']})" if v else "-")
+            vcell = (f"{float(v['cos_vs_base']):.3f} [{float(v['lo']):.3f}-{float(v['hi']):.3f}] (n={v['n']})"
+                     if v and v.get("cos_vs_base") not in (None, "") else "-")
             vref = f"{float(v['cos_vs_reference']):.3f}" if v and v.get("cos_vs_reference") else "-"
             body.append([m, cell("resume"), cell("ordinary"), vcell, vref])
         parts += ["**Reply relevance and voice**", "",
@@ -82,7 +97,7 @@ def main() -> None:
             parts += [f"## Eval group: {g}", "", t, ""]
 
     loss = read_csv(METRICS_DIR / "loss_eval.csv")
-    names = set(models)
+    names = {m.rsplit("__s", 1)[0] for m in models}
     loss = [r for r in loss if r["label"] == "base" or r["label"].split("/")[0] in names]
     if loss:
         loss.sort(key=lambda r: (r["label"] != "base", r["label"].split("/")[0], int(r["step"] or 0)))
@@ -97,10 +112,10 @@ def main() -> None:
         if gl:
             gl.sort(key=lambda r: (GROUPS.index(r["eval_group"]) if r["eval_group"] in GROUPS else 99, r["label"] != "base",
                                    r["label"], int(r["step"] or 0)))
-            parts += ["**Loss metrics by eval group** (final checkpoints and base)", "",
+            parts += ["**Loss metrics by eval group** (base and the best / final checkpoints above)", "",
                       md_table(["eval group", "checkpoint"] + LOSS_COLS,
                                [[r["eval_group"], r["label"]] + [ci(r, m) for m in LOSS_COLS] for r in gl
-                                if r["label"] == "base" or r["label"].endswith("step250")]), ""]
+                                if r["label"] == "base" or any(model_label(m) == r["label"] for m in models)]), ""]
     md = "\n".join(parts)
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.write_text(md)

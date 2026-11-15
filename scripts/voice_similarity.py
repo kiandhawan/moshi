@@ -25,7 +25,7 @@ import numpy as np
 
 os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from report_lib import bootstrap_ratio  # noqa: E402
+from report_lib import bootstrap_ratio, model_dir  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 OUT = REPO / "results/metrics/voice_similarity.csv"
@@ -60,7 +60,7 @@ def main() -> None:
         return e / np.linalg.norm(e)
 
     def model_embs(m: str) -> dict:
-        cache = REPO / f"runs/{m}/voice_emb.npz"
+        cache = model_dir(m) / "voice_emb.npz"
         if cache.exists():
             z = np.load(cache, allow_pickle=True)
             return z["embs"].item()
@@ -70,6 +70,7 @@ def main() -> None:
             e = embed(r["output"], r["speech_segments"])
             if e is not None:
                 embs[(r["id"], r["seed"])] = e
+        cache.parent.mkdir(parents=True, exist_ok=True)
         np.savez(cache, embs=np.array(embs, dtype=object))
         return embs
 
@@ -90,8 +91,8 @@ def main() -> None:
     for m in a.models:
         embs = base if m == "base" else model_embs(m)
         if m == "base":
-            pairs = [(k, (k[0], s)) for k in embs if k[1] == 1 and "human" not in str(clusters.get(k[0], ""))
-                     and not k[0].startswith("eval_") for s in (2, 3) if (k[0], s) in embs]
+            pairs = [(k, (k[0], s)) for k in embs if k[1] == 1 and not k[0].startswith("eval_")  # human files
+                     for s in (2, 3) if (k[0], s) in embs]
             sims = [(clusters.get(k[0], k[0]), float(embs[k] @ embs[o])) for k, o in pairs]
         else:
             sims = [(clusters.get(k[0], k[0]), float(e @ base[k])) for k, e in embs.items()
@@ -103,9 +104,14 @@ def main() -> None:
         rows[m] = {"model": m, "n": len(sims), "cos_vs_base": float(num.sum() / den.sum()) if len(sims) else "",
                    "lo": lo, "hi": hi, "cos_vs_reference": vref}
         print(rows[m])
-    with OUT.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["model", "n", "cos_vs_base", "lo", "hi", "cos_vs_reference"])
-        w.writeheader(); w.writerows(rows.values())
+    import fcntl
+    with open(OUT.with_suffix(".lock"), "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        old = {r["model"]: r for r in csv.DictReader(OUT.open())} if OUT.exists() else {}
+        old.update({m: rows[m] for m in a.models})
+        with OUT.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=["model", "n", "cos_vs_base", "lo", "hi", "cos_vs_reference"])
+            w.writeheader(); w.writerows(old.values())
 
 
 if __name__ == "__main__":

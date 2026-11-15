@@ -7,9 +7,10 @@
       per model: fraction of waits still silent vs seconds into the wait (Kaplan-Meier: an
       interruption = score.py time_to_interruption; waits without one are censored at their
       length). Eval v2 waits, seed 1. Speech in the first 2 s (acknowledgement grace) never counts.
-  silence_prob_vs_step.png
-      eval_loss.py wait_p_silent_10s (P(silent through a 10 s wait), teacher-forced) vs training
-      step per run; step 0 = base.
+  eval_loss_vs_step.png, silence_prob_vs_step.png
+      eval_loss.py val_loss and wait_p_silent_whole (P(silent through the entire wait), teacher-forced,
+      averaged over waits) on all 403 eval_full_v2 files vs training step, per run; step 0 = base.
+The data-size and survival plots use each run's best checkpoint (results/best/<run>.json).
 
 Colors: fixed per entity (lr 2e-6 blue, 1e-5 orange, 3e-5 aqua, control yellow, base gray);
 line style = data size (solid 10 h, dashed 1 h).
@@ -63,7 +64,8 @@ def rate(rs, key, kind):
 
 
 def model_info(name):
-    """(size, lr or 'control', label) for a run name, None for base."""
+    """(size, lr or 'control') for a run name or RUN__sNNN, None for base."""
+    name = name.rsplit("__s", 1)[0]
     if name.startswith("control_"):
         return name.split("_")[1], "control"
     if name.startswith("train_"):
@@ -132,50 +134,53 @@ def survival_plot(models):
         else:
             c = CONTROL if info[1] == "control" else LR_COLOR[info[1]]
             ls = "--" if info[0] == "1h" else "-"
-        ax.plot(xs, ys, color=c, linestyle=ls, linewidth=2, label=f"{m} (n={len(w)})")
+        ax.plot(xs, ys, color=c, linestyle=ls, linewidth=2, label=f"{m.replace('__s', ' step ')} (n={len(w)})")
     ax.set_ylim(0, 1.02); ax.set_xlim(0, 52)
     ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
     ax.legend(frameon=False, fontsize=8, loc="lower left")
     fig.tight_layout(); fig.savefig(OUT / "survival.png"); plt.close(fig)
 
 
-def silence_step_plot():
+def step_plot(metric, title, ylabel, fname, log):
     p = MET / "loss_eval.csv"
     if not p.exists():
         return
     lr_rows = list(csv.DictReader(p.open()))
-    base = next((r for r in lr_rows if r["label"] == "base" and r.get("wait_p_silent_10s")), None)
+    base = next((r for r in lr_rows if r["label"] == "base" and r.get(metric)), None)
     fig, ax = plt.subplots(figsize=(6.8, 4.4), dpi=150)
-    style(ax, "P(silent through a 10 s wait), teacher-forced", "training step", "probability (log scale)")
-    ax.set_yscale("log")
-    runs = sorted({r["label"].split("/")[0] for r in lr_rows if "/" in r["label"]})
+    style(ax, title, "training step", ylabel)
+    if log:
+        ax.set_yscale("log")
+    runs = sorted({r["label"].split("/")[0] for r in lr_rows if "/" in r["label"] and not r["label"].split("/")[0].endswith("_250ref")})
     for run in runs:
         info = model_info(run)
         if not info:
             continue
-        pts = sorted((int(r["step"]), float(r["wait_p_silent_10s"])) for r in lr_rows
-                     if r["label"].startswith(run + "/") and r.get("wait_p_silent_10s"))
+        pts = sorted((int(r["step"]), float(r[metric])) for r in lr_rows
+                     if r["label"].startswith(run + "/") and r.get(metric))
         if not pts:
             continue
         if base:
-            pts = [(0, float(base["wait_p_silent_10s"]))] + pts
+            pts = [(0, float(base[metric]))] + pts
         x, y = zip(*pts)
         c = CONTROL if info[1] == "control" else LR_COLOR[info[1]]
         ax.plot(x, y, color=c, linestyle="--" if info[0] == "1h" else "-", linewidth=2, marker="o", markersize=6,
                 markeredgecolor="white", label=run)
     if base:
-        ax.axhline(float(base["wait_p_silent_10s"]), color=BASE, linestyle=":", linewidth=1.5, label="baseline")
+        ax.axhline(float(base[metric]), color=BASE, linestyle=":", linewidth=1.5, label="baseline")
     ax.legend(frameon=False, fontsize=8)
-    fig.tight_layout(); fig.savefig(OUT / "silence_prob_vs_step.png"); plt.close(fig)
+    fig.tight_layout(); fig.savefig(OUT / fname); plt.close(fig)
 
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    models = ["base"] + [p.stem for p in sorted(MET.glob("*.jsonl")) if p.stem != "base"]
+    models = ["base"] + [json.loads(p.read_text())["model"] for p in sorted((REPO / "results/best").glob("*.json"))]
     data_size_plot(models, "wait_success", "run", "Wait success vs data size", "data_size_wait_success.png")
     data_size_plot(models, "ordinary_answered", "list", "Ordinary response vs data size", "data_size_ordinary_response.png")
     survival_plot(models)
-    silence_step_plot()
+    step_plot("val_loss", "Eval loss (all 403 eval_full_v2 files)", "val_loss (text + audio)", "eval_loss_vs_step.png", False)
+    step_plot("wait_p_silent_whole", "P(silent through the entire wait), teacher-forced", "probability (log scale)",
+              "silence_prob_vs_step.png", True)
     print("Wrote", ", ".join(p.name for p in sorted(OUT.glob("*.png"))))
 
 

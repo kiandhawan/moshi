@@ -1,9 +1,12 @@
-run,data_set,unique_scripts,unique_hours,silence_hours,wait_hours,steps,batch,samples_seen,epochs,seen_hours,lr,seed,status,checkpoints
-train_1h_v2_lr2e-6,train_1h_v2,60,1.103,0.321,0.293,250,16,4000,66.67,73.56,2e-6,0,not started,
-train_10h_v2_lr2e-6,train_10h_v2,540,9.867,2.969,2.721,250,16,4000,7.41,73.09,2e-6,0,not started,
-train_1h_v2_lr1e-5,train_1h_v2,60,1.103,0.321,0.293,250,16,4000,66.67,73.56,1e-5,0,"running, step 33",
-train_10h_v2_lr1e-5,train_10h_v2,540,9.867,2.969,2.721,250,16,4000,7.41,73.09,1e-5,0,"running, step 37",
-train_1h_v2_lr3e-5,train_1h_v2,60,1.103,0.321,0.293,250,16,4000,66.67,73.56,3e-5,0,not started,
-train_10h_v2_lr3e-5,train_10h_v2,540,9.867,2.969,2.721,250,16,4000,7.41,73.09,3e-5,0,not started,
-control_1h_v2,control_1h_v2,80,1.131,0.28,0.0,250,16,4000,50.0,56.57,TBD,0,not started,
-control_10h_v2,control_10h_v2,706,9.999,2.462,0.0,250,16,4000,5.67,56.65,TBD,0,not started,
+run,data_set,lr,schedule_steps,step,epochs,seen_hours,unique_scripts,unique_hours,silence_hours,wait_hours,train_loss,eval_subset_loss,val_loss,wait_p_silent_whole,scored,role,weights,checkpoint
+train_10h_v2_lr1e-5,train_10h_v2,1e-05,150,25,0.74,7.31,540,9.867,2.969,2.721,0.8717,0.7464,,,False,,present,runs/train_10h_v2_lr1e-5/checkpoints/checkpoint_000025/consolidated
+train_10h_v2_lr1e-5_250ref,train_10h_v2,1e-05,250,50,1.48,14.62,540,9.867,2.969,2.721,0.6424,0.6905,,,False," (250-step reference, stopped early)",present,runs/train_10h_v2_lr1e-5_250ref/checkpoints_all/checkpoint_000050/consolidated
+train_10h_v2_lr1e-5_250ref,train_10h_v2,1e-05,250,100,2.96,29.24,540,9.867,2.969,2.721,0.685,0.6608,,,False," (250-step reference, stopped early)",present,runs/train_10h_v2_lr1e-5_250ref/checkpoints/checkpoint_000100/consolidated
+train_10h_v2_lr1e-5_250ref,train_10h_v2,1e-05,250,150,4.44,43.85,540,9.867,2.969,2.721,0.6664,0.6677,,,False," (250-step reference, stopped early)",present,runs/train_10h_v2_lr1e-5_250ref/checkpoints/checkpoint_000150/consolidated
+train_10h_v2_lr1e-5_250ref,train_10h_v2,1e-05,250,200,5.93,58.47,540,9.867,2.969,2.721,0.5817,0.6756,,,False," (250-step reference, stopped early)",present,runs/train_10h_v2_lr1e-5_250ref/checkpoints/checkpoint_000200/consolidated
+train_1h_v2_lr1e-5,train_1h_v2,1e-05,150,10,2.67,2.94,60,1.103,0.321,0.293,1.1363,0.9601,,,False,,present,runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000010/consolidated
+train_1h_v2_lr1e-5,train_1h_v2,1e-05,150,20,5.33,5.89,60,1.103,0.321,0.293,0.8819,0.7742,,,False,,present,runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000020/consolidated
+train_1h_v2_lr1e-5_250ref,train_1h_v2,1e-05,250,50,13.33,14.71,60,1.103,0.321,0.293,0.6257,0.7075,,,False," (250-step reference, stopped early)",present,runs/train_1h_v2_lr1e-5_250ref/checkpoints_all/checkpoint_000050/consolidated
+train_1h_v2_lr1e-5_250ref,train_1h_v2,1e-05,250,100,26.67,29.43,60,1.103,0.321,0.293,0.2782,1.0078,,,False," (250-step reference, stopped early)",present,runs/train_1h_v2_lr1e-5_250ref/checkpoints/checkpoint_000100/consolidated
+train_1h_v2_lr1e-5_250ref,train_1h_v2,1e-05,250,150,40.0,44.14,60,1.103,0.321,0.293,0.1258,1.3771,,,False," (250-step reference, stopped early)",present,runs/train_1h_v2_lr1e-5_250ref/checkpoints/checkpoint_000150/consolidated
+train_1h_v2_lr1e-5_250ref,train_1h_v2,1e-05,250,200,53.33,58.85,60,1.103,0.321,0.293,0.0782,1.526,,,False," (250-step reference, stopped early)",present,runs/train_1h_v2_lr1e-5_250ref/checkpoints/checkpoint_000200/consolidated

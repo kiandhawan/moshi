@@ -322,6 +322,9 @@ def main() -> None:
     print(json.dumps(row, indent=1))
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
+    import fcntl  # several eval_loss runs may finish at once: serialize the CSV read-modify-write
+    lock = open(args.out.with_suffix(".lock"), "w")
+    fcntl.flock(lock, fcntl.LOCK_EX)
     rows = []
     if args.out.exists():
         with args.out.open() as f:
@@ -340,6 +343,7 @@ def main() -> None:
         w = csv.DictWriter(f, fieldnames=gcols)
         w.writeheader()
         w.writerows(grows + group_rows)
+    fcntl.flock(lock, fcntl.LOCK_UN)
     def cell(g, m):
         v = g.get(m)
         if v is None:

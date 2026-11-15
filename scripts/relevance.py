@@ -31,7 +31,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from report_lib import bootstrap_ratio  # noqa: E402
+from report_lib import bootstrap_ratio, model_dir  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 DIR = REPO / "results/relevance"
@@ -80,7 +80,7 @@ def items() -> list[dict]:
 
 
 def generated(model: str, it: dict) -> str:
-    j = REPO / f"runs/{model}/infer/eval/{it['id']}_seed1.json"
+    j = model_dir(model) / f"eval/{it['id']}_seed1.json"
     toks = json.load(open(j))["text_tokens"]
     return "".join(w["piece"] for w in toks if it["t"] <= w["start"] < it["cut"]).replace("▁", " ").strip()
 
