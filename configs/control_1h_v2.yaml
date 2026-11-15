@@ -1,4 +1,4 @@
-# control_1h_v2: LoRA on data/indexes/control_1h_v2.jsonl, lr NOT SET YET (config refuses to load until it is).
+# control_1h_v2: LoRA on data/indexes/control_1h_v2.jsonl, lr 3e-5.
 # Written by scripts/make_run_configs.py from configs/smoke.yaml; only train_data, run_dir, lr,
 # max_steps (150), pct_start (0.1), ckpt_freq = eval_freq (10) and num_ckpt_keep (all) differ.
 
@@ -28,7 +28,7 @@ batch_size: 16
 max_steps: 150
 gradient_checkpointing: true
 optim:
-  lr: null  # TO SET: best learning rate for this data size (results/LOG.md)
+  lr: 3e-5
   weight_decay: 0.1
   pct_start: 0.1  # 15 warm-up steps of 150, then cosine decay
 

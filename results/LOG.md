@@ -3,6 +3,32 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: Best learning rate per data size: 3e-5 for both (controls use it)
+
+Rule: highest wait success (400 eval v2 files, seed 1) of each run's best checkpoint, as long as
+its ordinary response is within 10 pp of the baseline's 72% (>= 62%); if close, whole-wait silence
+probability decides. Best checkpoints (results/best_checkpoints.md):
+
+| data | lr | best step | wait success | ordinary response | P(silent whole wait) | meets limit |
+|---|---|---|---|---|---|---|
+| 1 h | 2e-6 | 140 | 6% (16/280) [3-9%] | 34% (326/955) | 0.128 | no |
+| 1 h | 1e-5 | 150 | 22% (62/280) [18-27%] | 50% (474/955) | 0.298 | no |
+| 1 h | **3e-5** | **80** | **36% (100/280) [30-41%]** | **75% (719/955)** | 0.469 | yes |
+| 10 h | 2e-6 | 100 | 7% (19/280) [4-10%] | 35% (339/955) | 0.128 | no |
+| 10 h | 1e-5 | 150 | 12% (35/280) [9-16%] | 40% (385/955) | 0.279 | no |
+| 10 h | **3e-5** | **125** | **49% (138/280) [43-55%]** | **73% (700/955)** | 0.529 | yes |
+
+- **1 h -> 3e-5** and **10 h -> 3e-5**: at each size it is the only learning rate whose best
+  checkpoint meets the ordinary-response limit, and it also has the highest wait success, with a
+  CI that does not overlap the others' (1 h: 30-41% vs <= 27%; 10 h: 43-55% vs <= 16%). Not
+  close, so the silence-probability tie-break is not needed (it points the same way).
+- The lower rates fail in the same way: Moshi learns to stay silent (interruptions 94% -> 33-42%)
+  but not to come back (missed resumes 57-76%), and answers only 34-50% of ordinary requests.
+  At 2e-6 the model barely moves in 150 steps (full-eval val_loss 0.78 vs 0.70 at 3e-5 / 10 h).
+- So pair 4 = control_1h_v2 and control_10h_v2 at 3e-5 (`make_run_configs.py --control-lr
+  1h=3e-5 10h=3e-5`), same 150-step schedule (checkpoints every 10 / 25 steps).
+- Caveat: 3e-5 is the highest rate in the grid, so the optimum may lie above it.
+
 ## 2026-11-15: Pair 1 (lr 1e-5) evaluated - no checkpoint met the ordinary-response limit
 
 - Baseline ordinary response 72% (687/955), so the limit is >= 62%. Candidates (top 3 by
