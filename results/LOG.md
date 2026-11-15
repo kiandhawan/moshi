@@ -3,6 +3,22 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: Report draft and the measurements it added
+
+`results/REPORT.md` is the short experimental report. Every number in it comes from `results/`; all
+50 "(k/n)" counts in it were checked against the results files.
+- `scripts/report_extra.py` -> `results/diagnostics/report_extra.md` measures four failures:
+  - **Greeting answer:** in no training or control file does Moshi reply to the user's answer to its
+    greeting (0/540 train_10h_v2, 0/706 control_10h_v2; the user goes on after a median 0.42 s).
+  - **Responsiveness later in a conversation:** ordinary response falls with request time for step 125
+    (82% under 20 s, 57% at 40 s or later); the base doesn't fall (70% / 69%).
+  - **Timed returns:** first speech within 3 s of the deadline in 0/14 (step 125) and 3/14 (onset x3)
+    plain timed waits.
+  - **Other-name questions:** responses split by ordinary vs wait conversations.
+- `results/diagnostics/paired_diffs.txt` holds the paired differences the report cites.
+- `plot_results.py`: the survival plot drew the onset runs in base's gray; they now have their own
+  colors (onset x3 purple, x6 magenta, dash-dot), and the legend sits outside the axes.
+
 ## 2026-11-15: Overnight results - onset x3 is the best way to cut missed responses
 
 Both onset runs trained and evaluated without errors (`logs/overnight.log`, 07:23-08:47 UTC).

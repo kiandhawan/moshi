@@ -12,7 +12,7 @@
       averaged over waits) on all 403 eval_full_v2 files vs training step, per run; step 0 = base.
 The data-size and survival plots use each run's best checkpoint (results/best/<run>.json).
 
-Colors: fixed per entity (lr 2e-6 blue, 1e-5 orange, 3e-5 aqua, control yellow, base gray);
+Colors: fixed per entity (lr 2e-6 blue, 1e-5 orange, 3e-5 aqua, control yellow, base gray; survival plot: onset x3 purple, x6 magenta, dash-dot);
 line style = data size (solid 10 h, dashed 1 h).
 Usage: python scripts/plot_results.py
 """
@@ -34,6 +34,7 @@ REPO = Path(__file__).resolve().parents[1]
 MET, OUT = REPO / "results/metrics", REPO / "results/plots"
 LR_COLOR = {"2e-6": "#2a78d6", "1e-5": "#eb6834", "3e-5": "#1baf7a"}
 CONTROL, BASE, INK, GRID = "#eda100", "#8a8a85", "#2b2b29", "#e4e3df"
+VARIANT_COLOR = {"onsetw3": "#7a52c7", "onsetw6": "#c04a8f"}  # training variants of 10h lr 3e-5 (survival plot)
 SIZES = {"1h": 1.1, "10h": 9.9}
 
 
@@ -118,7 +119,7 @@ def km(times, events):
 
 
 def survival_plot(models):
-    fig, ax = plt.subplots(figsize=(7.2, 4.6), dpi=150)
+    fig, ax = plt.subplots(figsize=(10.5, 4.6), dpi=150)
     style(ax, "Waits still silent", "seconds into the wait (from the end of the instruction)", "fraction of waits silent")
     for m in models:
         rs = rows(m)
@@ -131,7 +132,10 @@ def survival_plot(models):
         e = [r["time_to_interruption"] is not None for r in w]
         xs, ys = km(t, e)
         info = model_info(m)
-        if info is None:
+        var = next((v for v in VARIANT_COLOR if f"_{v}__" in m), None)
+        if var:
+            c, ls = VARIANT_COLOR[var], "-."
+        elif info is None:
             c, ls = BASE, "-"
         else:
             c = CONTROL if info[1] == "control" else LR_COLOR[info[1]]
@@ -139,7 +143,7 @@ def survival_plot(models):
         ax.plot(xs, ys, color=c, linestyle=ls, linewidth=2, label=f"{readable(m, model_roles())} (n={len(w)})")
     ax.set_ylim(0, 1.02); ax.set_xlim(0, 52)
     ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
-    ax.legend(frameon=False, fontsize=8, loc="lower left")
+    ax.legend(frameon=False, fontsize=8, loc="upper left", bbox_to_anchor=(1.01, 1.0))
     fig.tight_layout(); fig.savefig(OUT / "survival.png"); plt.close(fig)
 
 
