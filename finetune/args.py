@@ -72,6 +72,12 @@ class TrainArgs(Serializable):
     moshi_paths: ModelPaths = field(default_factory=ModelPaths)
     first_codebook_weight_multiplier: float = 1.0
     text_padding_weight: float = 0.5
+    # Onset weighting (results/LOG.md, run A): multiply the training loss on Moshi's text and
+    # audio tokens by onset_weight in the first onset_weight_sec seconds of every Moshi turn
+    # (moshi_turns in each file's .events.json; from the frame before the turn's onset). 1.0 = off:
+    # no events files are read and training is exactly as before. The eval loss is never weighted.
+    onset_weight: float = 1.0
+    onset_weight_sec: float = 1.0
 
     optim: OptimArgs = field(default_factory=OptimArgs)
     seed: int = 0

@@ -58,6 +58,9 @@ def parse_args() -> argparse.Namespace:
                    help="Stream B files together in lockstep (one independent conversation each, padded "
                         "with silence to the longest; outputs trimmed back). Seeds are set once per batch, so "
                         "results differ from --batch 1 at the same seed. Files are sorted by length first.")
+    p.add_argument("--pad-bias", type=float, default=0.0,
+                   help="Decoding-time silence penalty: subtract this from the text padding token's (PAD, id 3) "
+                        "logit at every step before sampling. A global decoding setting, not a mute rule. 0 = off.")
     p.add_argument("--overwrite", action="store_true",
                    help="Redo outputs that already exist (default: skip them, so a stopped run can resume).")
     return p.parse_args()
@@ -146,6 +149,19 @@ def main() -> None:
     sampling = {k: getattr(lm_gen, k) for k in ("use_sampling", "temp", "temp_text", "top_k", "top_k_text")}
     print(f"Sampling settings: {sampling}", flush=True)
     padding_ids = {lm.text_padding_token_id, lm.end_of_text_padding_id}  # 3 and 0, as the server skips
+    if args.pad_bias:
+        # Wrap moshi's sampler: for text logits (last dim = text vocabulary) lower the PAD logit by
+        # pad_bias before sampling; audio sampling is untouched. Outside the CUDA graph, every step.
+        import moshi.models.lm as lm_mod
+        _orig_sample, pad_id, text_card, bias = lm_mod.sample_token, lm.text_padding_token_id, lm.text_card, args.pad_bias
+
+        def sample_with_pad_bias(logits, *a, **k):
+            if logits.shape[-1] == text_card:
+                logits = logits.clone()
+                logits[..., pad_id] -= bias
+            return _orig_sample(logits, *a, **k)
+        lm_mod.sample_token = sample_with_pad_bias
+        print(f"Decoding-time PAD logit bias: -{bias}", flush=True)
 
     def run_one(user_pcm: np.ndarray, seed: int) -> tuple[np.ndarray, list[int | None]]:
         """Stream `user_pcm` (float32, 24 kHz, length a multiple of frame_size) through
@@ -194,6 +210,7 @@ def main() -> None:
             "seed": seed,
             "lora": str(args.lora) if args.lora else None,
             "config": str(args.config) if args.config else None,
+            "pad_bias": args.pad_bias,
             "hf_repo": args.hf_repo,
             "sampling": sampling,
             "sample_rate": SAMPLE_RATE,

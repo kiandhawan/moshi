@@ -18,19 +18,22 @@ TokenizedAlignment = tuple[list[int], tuple[float, float], str]
 class Sample:
     codes: torch.Tensor
     condition_attributes: ConditionAttributes | None = None
+    frame_weights: torch.Tensor | None = None  # [1, T] loss weight per frame (onset weighting), None = all 1
 
 
 @dataclass
 class Batch:
     codes: torch.Tensor
     condition_attributes: list[ConditionAttributes] | None = None
+    frame_weights: torch.Tensor | None = None  # [B, T]
 
     @classmethod
     def collate(cls, batch: list[Sample]) -> "Batch":
         codes = torch.cat([b.codes for b in batch])
+        fw = torch.cat([b.frame_weights for b in batch]) if batch[0].frame_weights is not None else None
         if batch[0].condition_attributes is None:
-            return Batch(codes)
-        return Batch(codes, [b.condition_attributes for b in batch])
+            return Batch(codes, frame_weights=fw)
+        return Batch(codes, [b.condition_attributes for b in batch], frame_weights=fw)
 
 
 def tokenize(
@@ -245,11 +248,29 @@ def dicho(alignment, val, i=0, j=None):
 
 
 class InterleavedTokenizer:
-    def __init__(self, mimi, interleaver, duration_sec: float):
+    def __init__(self, mimi, interleaver, duration_sec: float, onset_weight: float = 1.0,
+                 onset_weight_sec: float = 1.0):
         self.mimi = mimi
         self.interleaver = interleaver
         self.duration_sec = duration_sec
         self.num_audio_frames = math.ceil(duration_sec * mimi.frame_rate)
+        self.onset_weight = onset_weight
+        self.onset_weight_sec = onset_weight_sec
+
+    def frame_weights(self, path: str, start_sec: float) -> torch.Tensor:
+        """[1, T]: onset_weight on frames from the one before each Moshi turn's onset (where the
+        EPAD token goes) to onset + onset_weight_sec, else 1 (times from <file>.events.json)."""
+        fps = self.mimi.frame_rate
+        with open(os.path.splitext(path)[0] + ".events.json") as f:
+            turns = json.load(f)["moshi_turns"]
+        w = torch.ones(1, self.num_audio_frames)
+        for t in turns:
+            lo = math.floor((t["start"] - start_sec) * fps) - 1
+            hi = math.ceil((t["start"] + self.onset_weight_sec - start_sec) * fps)
+            lo, hi = max(lo, 0), min(hi, self.num_audio_frames)
+            if hi > lo:
+                w[0, lo:hi] = self.onset_weight
+        return w
 
     def __call__(self, wav: np.ndarray, start_sec: float, path: str) -> Sample:
         with torch.no_grad():
@@ -286,4 +307,5 @@ class InterleavedTokenizer:
             )
 
             codes = torch.cat([text_tokens, audio_tokens], dim=1)
-            return Sample(codes, data.get("text_conditions", None))
+            fw = self.frame_weights(path, start_sec).to(codes.device) if self.onset_weight != 1.0 else None
+            return Sample(codes, data.get("text_conditions", None), frame_weights=fw)

@@ -3,6 +3,42 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: Overnight - onset weighting (x3, x6) and a decoding-time silence penalty
+
+Goal: reduce missed responses (resumes, ordinary replies) without losing wait success.
+- **Onset weighting** (`train.py`, `finetune/{args,loss}.py`, `finetune/data/interleaver.py`): new
+  options `onset_weight` / `onset_weight_sec` (default 1.0 = off; then no events file is read and
+  training is exactly as before). When on, the training loss on Moshi's text and audio tokens is
+  multiplied by onset_weight on every frame from the one before each Moshi turn's onset (where its
+  EPAD start-of-speech token goes) to onset + onset_weight_sec, using `moshi_turns` (all kinds:
+  greeting, reply / followup, ack, resume, ...) of each training file's .events.json. The model's
+  logits are aligned with the input codes (moshi LMModel.forward), so the weights apply per frame
+  to the text stream and Moshi's 8 audio codebooks alike. The loss stays normalized by the sum of
+  weights. The eval-subset loss (and eval_loss.py) is never weighted, so it stays comparable.
+  **One-batch check** (base model, x3, trainv2_10_00043, think time with a 47 s wait, 69.9 s =
+  1250 frames): 58 frames (4.6 s) weighted, each turn from its EPAD frame: greeting onset 0.63 s ->
+  frames 0.48-1.68 s ("Hi, how have you been?"); reply 8.73 s -> 8.64-9.76 s ("Big milestone. Are
+  you"); ack 17.88 s -> 17.76-18.88 s ("No problem." + silence); resume 64.69 s -> 64.56-65.76 s
+  ("So, for your daughter."); every other frame, including the whole wait, x1. Loss on that batch:
+  text 0.396 -> 0.567, audio 0.443 -> 0.700 (onsets are the hard frames).
+  Runs: `train_10h_v2_lr3e-5_onsetw3` (x3) and `..._onsetw6` (x6), otherwise exactly
+  train_10h_v2_lr3e-5 (base model, seed 0, 150 steps, ckpt + eval-subset loss every 25 steps),
+  then `eval_run.py` (now also runs the TTS twins for every candidate). `scripts/overnight.sh`.
+- **Experiment B (more ordinary) replaced** by onset x6 before it ran. Its index is kept for
+  reference: `scripts/make_more_ordinary.py` -> `data/indexes/train_10h_v2_moreord.jsonl` (585 files,
+  9.90 h, 60% ordinary = 216 from train_10h_v2 + 135 control-only; 78 files of each wait type;
+  control files sharing a block with a selected wait file are skipped - control_10h_v2's control
+  files were generated to avoid only the training list's *ordinary* blocks, and 58 of them reuse a
+  dialogue block of a train_10h_v2 wait file, which never mattered within one set);
+  `configs/train_10h_v2_moreord_lr3e-5.yaml` is marked not run.
+- **Decoding-time silence penalty** (`run_inference.py --pad-bias b`, `scripts/pad_bias_sweep.sh`,
+  `scripts/pad_bias_report.py`): at every decoding step the text padding token's (PAD, id 3) logit
+  is lowered by b before sampling (moshi's sample_token wrapped for text logits only; audio
+  sampling untouched). This is a **global decoding setting**, the same at every step of every
+  conversation - nothing inspects the conversation or forces silence or speech, so it is not an
+  external mute rule. Sweep b = 0 / 0.5 / 1 / 1.5 / 2 on 10h · lr 3e-5 · step 125 and 1h · lr 3e-5
+  · step 80, 40-file diagnostic set, seed 1, one batch of 40 (b = 0 = the existing diagnostic run).
+
 ## 2026-11-15: Pair 4 (controls at lr 3e-5) evaluated - waiting comes from the wait data
 
 Ordinary-only controls, same schedule and lr as the best grid runs. Best: control 1h step 80 and

@@ -161,6 +161,11 @@ def _train(args: TrainArgs, exit_stack: ExitStack):
         keep_main_only=True,
     )
     interleaved_tokenizer = InterleavedTokenizer(
+        mimi, interleaver, duration_sec=args.duration_sec,
+        onset_weight=args.onset_weight, onset_weight_sec=args.onset_weight_sec,
+    )
+    # The eval-subset loss is never onset-weighted, so it stays comparable across runs.
+    eval_interleaved_tokenizer = InterleavedTokenizer(
         mimi, interleaver, duration_sec=args.duration_sec
     )
 
@@ -179,7 +184,7 @@ def _train(args: TrainArgs, exit_stack: ExitStack):
         # A fresh loader for every evaluation: the eval loader is a finite generator, so a
         # single one built up front would be used up after the first evaluation.
         return build_data_loader(
-            instruct_tokenizer=interleaved_tokenizer,
+            instruct_tokenizer=eval_interleaved_tokenizer,
             args=args.data,
             batch_size=args.batch_size,
             seed=None,
@@ -265,6 +270,7 @@ def _train(args: TrainArgs, exit_stack: ExitStack):
                     model.text_padding_token_id,
                     model.end_of_text_padding_id,
                 },
+                frame_weights=batch.frame_weights,
             )
             audio_loss = compute_loss_with_mask(
                 output.logits,
@@ -272,6 +278,7 @@ def _train(args: TrainArgs, exit_stack: ExitStack):
                 output.mask,
                 mode="audio",
                 first_codebook_weight_multiplier=args.first_codebook_weight_multiplier,
+                frame_weights=batch.frame_weights,
             )
 
             mb_loss = text_loss + audio_loss

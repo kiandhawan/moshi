@@ -439,6 +439,10 @@ def readable(name: str, roles: dict[str, str] | None = None) -> str:
     parts = [head, fmt_lr(run_lr(run))]
     if run.endswith("_250ref"):
         parts.append("250-step ref")
+    if "_onsetw" in run:
+        parts.append(f"onset ×{run.split('_onsetw')[1].split('_')[0]}")
+    if "_moreord" in run:
+        parts.append("60% ordinary")
     if step is not None:
         parts.append(f"step {step}")
     role = (roles or {}).get(name if "__s" in name or name == "base" else f"{run}__s{step:03d}" if step is not None else name)

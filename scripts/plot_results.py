@@ -69,7 +69,9 @@ def model_info(name):
     if name.startswith("control_"):
         return name.split("_")[1], "control"
     if name.startswith("train_"):
-        return name.split("_")[1], name.split("_lr")[1]
+        if "_onsetw" in name or "_moreord" in name:
+            return None  # variants (results/LOG.md) are not points on the learning-rate lines
+        return name.split("_")[1], name.split("_lr")[1].split("_")[0]
     return None
 
 

@@ -6,7 +6,7 @@ Steps (each skips work already done, so the script can be rerun after an interru
  2. eval_loss.py on all 403 eval_full_v2 files for every checkpoint (results/metrics/loss_eval*.csv)
  3. candidates = the 3 checkpoints with the highest whole-wait silence probability
     (wait_p_silent_whole, all files) + the final checkpoint; for each: streaming inference
-    (400 eval v2 files, seed 1, batches of 32; human files, seeds 1 2 3) into
+    (400 eval v2 files, seed 1, batches of 32; human files and their TTS twins, seeds 1 2 3) into
     runs/RUN/infer/sNNN/ and score.py as model RUN__sNNN
  4. best = the candidate with the highest wait success (eval v2, 400 files) among those whose
     ordinary response is at least the baseline's minus 10 percentage points (ties: higher
@@ -105,7 +105,9 @@ def main() -> None:
         return [([PY, "scripts/run_inference.py", "data/indexes/eval_v2.jsonl", *lora, "--seeds", "1", "--batch", "32",
                   "--gpu", gpu, "--out-dir", str(out / "eval")], logs / f"infer_{run}_s{step:03d}_eval.log"),
                 ([PY, "scripts/run_inference.py", "data/indexes/human.jsonl", *lora, "--seeds", "1", "2", "3",
-                  "--gpu", gpu, "--out-dir", str(out / "human")], logs / f"infer_{run}_s{step:03d}_human.log")]
+                  "--gpu", gpu, "--out-dir", str(out / "human")], logs / f"infer_{run}_s{step:03d}_human.log"),
+                ([PY, "scripts/run_inference.py", "data/indexes/human_tts.jsonl", *lora, "--seeds", "1", "2", "3",
+                  "--gpu", gpu, "--out-dir", str(out / "human_tts")], logs / f"infer_{run}_s{step:03d}_twins.log")]
     todo = [s for s in cands if not (MET / f"{run}__s{s:03d}.jsonl").exists()]
     for i in range(len(todo)):
         for cmd, log in infer_cmds(todo[i]):
@@ -115,6 +117,9 @@ def main() -> None:
             sh([PY, "scripts/score.py", "--outputs", str(d / "eval"), str(d / "human"), "--events",
                 "data/indexes/eval_full_v2.jsonl", "data/indexes/human.jsonl", "--name", f"{run}__s{s:03d}", "--quiet"],
                logs / f"score_{run}_s{s:03d}.log")
+            sh([PY, "scripts/score.py", "--outputs", str(d / "human_tts"), "--events", "data/indexes/human_tts.jsonl",
+                "--name", f"{run}__s{s:03d}", "--quiet", "--out-dir", "results/human_tts/metrics"],
+               logs / f"score_{run}_s{s:03d}_twins.log")
 
     # 4. best checkpoint
     base = overall("base")

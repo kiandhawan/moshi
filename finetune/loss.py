@@ -10,7 +10,9 @@ def compute_loss_with_mask(
     first_codebook_weight_multiplier: float = 1.0,
     text_padding_weight: float = 1.0,
     text_padding_ids: set[int] | None = None,
+    frame_weights: torch.Tensor | None = None,
 ):
+    """frame_weights: optional [B, T] per-frame multiplier (onset weighting); None = unweighted."""
     target = torch.where(target_mask, target, torch.zeros_like(target))
 
     weights = target_mask.float()
@@ -20,6 +22,8 @@ def compute_loss_with_mask(
         assert text_padding_ids is not None
         for id in text_padding_ids:
             weights[target == id] *= text_padding_weight
+    if frame_weights is not None:
+        weights = weights * frame_weights[:, None, :].to(weights.dtype)
 
     logits = logits.view(-1, logits.size(-1)).float()
     target = target.view(-1)
