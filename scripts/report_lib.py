@@ -422,6 +422,10 @@ def model_roles() -> dict[str, str]:
         b = json.loads(p.read_text())
         roles[b["final_model"]] = "final"
         roles[b["model"]] = "best = final" if b["model"] == b["final_model"] else "best"
+    extra = REPO / "results/extra_models.json"
+    if extra.exists():
+        for m, role in json.loads(extra.read_text())["models"].items():
+            roles.setdefault(m, role)
     return roles
 
 

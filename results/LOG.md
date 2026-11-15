@@ -3,6 +3,19 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: 1h · lr 3e-5 · step 100 (tested live) evaluated as an extra checkpoint
+
+The user found step 100 responsive and reasonably good at waiting in a live conversation. Full
+evaluation (`results/extra_models.json` adds it, and step 90, to comparison.md; step 110's weights
+were pruned and it was never run behaviorally, so only its losses exist): on the 400 eval files it
+is a dip, not a peak - wait success 80: 36% -> 90: 32% -> **100: 16% (44/280)** -> 150: 25%,
+because it interrupts 80% of waits (80: 44%), while it is the most responsive (ordinary response
+92%, missed resumes 11%). On the 3 human files (seeds 1 2 3) it does as well as its neighbours
+(wait success 3/6, interrupt 1/6, ordinary 9/9) - matching the live impression - but on their TTS
+twins it interrupts 5/6 and answers all 3 distractors. With 3 files this is anecdotal, but it is
+the same direction as the eval set: on synthetic (TTS) users step 100 does not wait; on the real
+voice it did. Worth a larger real-voice test before trusting either.
+
 ## 2026-11-15: TTS twins of the human test set
 
 To separate "real voice / real microphone" from "conversation content", each human recording got

@@ -55,6 +55,10 @@ def main() -> None:
         for bp in (REPO / "results/best").glob("*.json"):
             b = json.loads(bp.read_text())
             a.models += [m for m in (b["model"], b["final_model"]) if m not in a.models]
+        extra = REPO / "results/extra_models.json"  # further checkpoints to show (e.g. one tested live)
+        if extra.exists():
+            a.models += [m for m in json.loads(extra.read_text())["models"]
+                         if m not in a.models and (METRICS_DIR / f"{m}.jsonl").exists()]
     models = load_rows(ordered(a.models))
     if not models:
         raise SystemExit("No results found in results/metrics/.")
