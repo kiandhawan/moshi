@@ -3,6 +3,18 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-15: Pair 4 (controls at lr 3e-5) evaluated - waiting comes from the wait data
+
+Ordinary-only controls, same schedule and lr as the best grid runs. Best: control 1h step 80 and
+control 10h step 150 (= final), both within the ordinary-response limit. On the 400 eval files
+they wait no better than the base: wait success 4% (12/280) and 5% (13/280) vs base 3% and vs 36%
+(1h · lr 3e-5 step 80) and 49% (10h · lr 3e-5 step 125); interruptions 92% vs base 94%.
+They answer more ordinary requests (82% / 67%; 1h final 91%) and talk over the user far less
+(6% vs 21%), so fine-tuning on Fish conversations alone changes turn-taking but not waiting:
+the wait gains of the grid runs come from the wait conversations. Caveat for the human files:
+the controls also "wait" on 2-3 of 6 human-file waits, the same as the trained 1h models, so the
+3 human recordings cannot separate learned waiting from general quieting.
+
 ## 2026-11-15: 1h · lr 3e-5 · step 100 (tested live) evaluated as an extra checkpoint
 
 The user found step 100 responsive and reasonably good at waiting in a live conversation. Full
