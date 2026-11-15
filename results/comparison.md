@@ -101,17 +101,17 @@ Relevance: blind judgement of Moshi's generated text against the reference reply
 | 1h · lr 2e-6 · step 150 (final) | `train_1h_v2_lr2e-6__s150` | 33% (2/6) [0%-67%], 44 no reply | 48% (11/23) [27%-67%], 27 no reply | 0.628 [0.616-0.639] (n=260) | 0.578 |
 | 1h · lr 1e-5 · step 150 (best = final) | `train_1h_v2_lr1e-5__s150` | 45% (10/22) [27%-64%], 28 no reply | 80% (20/25) [64%-96%], 25 no reply | 0.626 [0.616-0.636] (n=322) | 0.657 |
 | 1h · lr 3e-5 · step 80 (best) | `train_1h_v2_lr3e-5__s080` | 68% (21/31) [52%-84%], 19 no reply | 60% (25/42) [45%-74%], 8 no reply | 0.615 [0.606-0.623] (n=386) | 0.686 |
-| 1h · lr 3e-5 · step 90 (extra: neighbour of step 100) | `train_1h_v2_lr3e-5__s090` | - | - | - | - |
-| 1h · lr 3e-5 · step 100 (extra: live test) | `train_1h_v2_lr3e-5__s100` | - | - | - | - |
+| 1h · lr 3e-5 · step 90 (extra: neighbour of step 100) | `train_1h_v2_lr3e-5__s090` | 38% (13/34) [24%-56%], 16 no reply | 70% (28/40) [55%-85%], 10 no reply | - | - |
+| 1h · lr 3e-5 · step 100 (extra: live test) | `train_1h_v2_lr3e-5__s100` | 46% (19/41) [32%-61%], 9 no reply | 73% (36/49) [60%-85%], 1 no reply | - | - |
 | 1h · lr 3e-5 · step 150 (final) | `train_1h_v2_lr3e-5__s150` | 45% (19/42) [31%-60%], 8 no reply | 70% (32/46) [56%-83%], 4 no reply | 0.627 [0.619-0.635] (n=400) | 0.698 |
 | 10h · lr 2e-6 · step 100 (best) | `train_10h_v2_lr2e-6__s100` | 57% (4/7) [29%-86%], 43 no reply | 54% (13/24) [33%-75%], 26 no reply | 0.624 [0.613-0.635] (n=265) | 0.558 |
 | 10h · lr 2e-6 · step 150 (final) | `train_10h_v2_lr2e-6__s150` | 71% (5/7) [29%-100%], 43 no reply | 52% (14/27) [33%-70%], 23 no reply | 0.625 [0.612-0.637] (n=253) | 0.567 |
 | 10h · lr 1e-5 · step 150 (best = final) | `train_10h_v2_lr1e-5__s150` | 50% (4/8) [12%-88%], 42 no reply | 75% (15/20) [55%-90%], 30 no reply | 0.621 [0.610-0.632] (n=257) | 0.646 |
 | 10h · lr 3e-5 · step 125 (best) | `train_10h_v2_lr3e-5__s125` | 74% (20/27) [56%-89%], 23 no reply | 73% (24/33) [58%-88%], 17 no reply | 0.618 [0.609-0.627] (n=382) | 0.676 |
 | 10h · lr 3e-5 · step 150 (final) | `train_10h_v2_lr3e-5__s150` | 90% (26/29) [76%-100%], 21 no reply | 88% (28/32) [75%-97%], 18 no reply | 0.620 [0.610-0.629] (n=376) | 0.674 |
-| control 1h · lr 3e-5 · step 80 (best) | `control_1h_v2__s080` | - | - | 0.631 [0.622-0.640] (n=399) | 0.690 |
-| control 1h · lr 3e-5 · step 150 (final) | `control_1h_v2__s150` | - | - | 0.640 [0.632-0.648] (n=400) | 0.699 |
-| control 10h · lr 3e-5 · step 150 (best = final) | `control_10h_v2__s150` | - | - | 0.636 [0.627-0.644] (n=397) | 0.687 |
+| control 1h · lr 3e-5 · step 80 (best) | `control_1h_v2__s080` | 37% (11/30) [20%-53%], 20 no reply | 64% (29/45) [50%-78%], 5 no reply | 0.631 [0.622-0.640] (n=399) | 0.690 |
+| control 1h · lr 3e-5 · step 150 (final) | `control_1h_v2__s150` | 27% (10/37) [14%-41%], 13 no reply | 71% (35/49) [59%-83%], 1 no reply | 0.640 [0.632-0.648] (n=400) | 0.699 |
+| control 10h · lr 3e-5 · step 150 (best = final) | `control_10h_v2__s150` | 47% (14/30) [27%-63%], 20 no reply | 90% (28/31) [81%-100%], 19 no reply | 0.636 [0.627-0.644] (n=397) | 0.687 |
 
 ## Eval group: familiar_type
 
