@@ -12,7 +12,12 @@
       averaged over waits) on all 403 eval_full_v2 files vs training step, per run; step 0 = base.
 The data-size and survival plots use each run's best checkpoint (results/best/<run>.json).
 
-Colors: fixed per entity (lr 2e-6 blue, 1e-5 orange, 3e-5 aqua, control yellow, base gray; survival plot: onset x3 purple, x6 magenta, dash-dot);
+  lr_wait_success.png, lr_ordinary_response.png
+      metric vs learning rate (log scale), one line per data size (dashed 1 h, solid 10 h), best checkpoint
+      per run; baseline as reference.
+Colors: fixed per entity (lr 2e-6 blue, 1e-5 orange, 3e-5 aqua, 1e-4 dark crimson, control yellow, base gray;
+survival plot: onset x3 purple, x6 magenta, onset x3 at lr 1e-4 navy, dash-dot). Pairwise OKLab distance >= 11
+under simulated protan/deutan/tritan vision for every pair that can share a plot (checked 2026-11-16);
 line style = data size (solid 10 h, dashed 1 h).
 Usage: python scripts/plot_results.py
 """
@@ -32,9 +37,10 @@ from report_lib import cluster_counts, bootstrap_ratio, model_roles, ordered, re
 
 REPO = Path(__file__).resolve().parents[1]
 MET, OUT = REPO / "results/metrics", REPO / "results/plots"
-LR_COLOR = {"2e-6": "#2a78d6", "1e-5": "#eb6834", "3e-5": "#1baf7a"}
+LR_COLOR = {"2e-6": "#2a78d6", "1e-5": "#eb6834", "3e-5": "#1baf7a", "1e-4": "#7a1f2e"}
 CONTROL, BASE, INK, GRID = "#eda100", "#8a8a85", "#2b2b29", "#e4e3df"
-VARIANT_COLOR = {"onsetw3": "#7a52c7", "onsetw6": "#c04a8f"}  # training variants of 10h lr 3e-5 (survival plot)
+# training variants (survival and per-run score plots), keyed by the run-name suffix "lr<LR>_<variant>"
+VARIANT_COLOR = {"lr3e-5_onsetw3": "#7a52c7", "lr3e-5_onsetw6": "#c04a8f", "lr1e-4_onsetw3": "#0d366b"}
 SIZES = {"1h": 1.1, "10h": 9.9}
 
 
@@ -91,7 +97,7 @@ def data_size_plot(models, key, kind, title, fname):
             r = rate(rows(m), key, kind)
             if r:
                 series.setdefault(info[1], []).append((SIZES[info[0]], *r))
-    for lr in ["2e-6", "1e-5", "3e-5", "control"]:
+    for lr in [*LR_COLOR, "control"]:
         if lr not in series:
             continue
         pts = sorted(series[lr])
@@ -100,6 +106,38 @@ def data_size_plot(models, key, kind, title, fname):
         ax.errorbar(x, y, yerr=[y - lo, hi - y], color=c, linewidth=2, marker="o", markersize=8, capsize=4,
                     markeredgecolor="white", markeredgewidth=1.5, linestyle=":" if lr == "control" else "-",
                     label="control (ordinary only)" if lr == "control" else f"lr {lr}")
+    ax.set_ylim(0, 1); ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
+    ax.legend(frameon=False, fontsize=9)
+    fig.tight_layout(); fig.savefig(OUT / fname); plt.close(fig)
+
+
+def lr_plot(models, key, kind, title, fname):
+    """metric vs learning rate, one line per data size (best checkpoint per run)."""
+    fig, ax = plt.subplots(figsize=(6.4, 4.2), dpi=150)
+    style(ax, title, "learning rate (log scale)", "rate")
+    ax.set_xscale("log")
+    lrs = sorted(LR_COLOR, key=float)
+    ax.set_xticks([float(l) for l in lrs], lrs); ax.minorticks_off()
+    b = rate(rows("base"), key, kind) if rows("base") else None
+    if b:
+        ax.axhline(b[0], color=BASE, linestyle="--", linewidth=2, label=f"baseline {b[0]:.0%}")
+        ax.axhspan(b[1], b[2], color=BASE, alpha=0.12, linewidth=0)
+    series = {}
+    for m in models:
+        info = model_info(m)
+        if info and info[1] != "control" and rows(m):
+            r = rate(rows(m), key, kind)
+            if r:
+                series.setdefault(info[0], []).append((float(info[1]), *r))
+    for size, ls, mk in (("1h", "--", "s"), ("10h", "-", "o")):
+        if size not in series:
+            continue
+        x, y, lo, hi = map(np.array, zip(*sorted(series[size])))
+        ax.plot(x, y, color=INK, linestyle=ls, linewidth=1.5, zorder=2, label=f"{size[:-1]} h data")
+        for xi, yi, l, h in zip(x, y, lo, hi):
+            c = LR_COLOR[next(k for k in LR_COLOR if float(k) == xi)]
+            ax.errorbar([xi], [yi], yerr=[[yi - l], [h - yi]], color=c, marker=mk, markersize=8, capsize=4,
+                        markeredgecolor="white", markeredgewidth=1.5, linestyle="none", zorder=3)
     ax.set_ylim(0, 1); ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
     ax.legend(frameon=False, fontsize=9)
     fig.tight_layout(); fig.savefig(OUT / fname); plt.close(fig)
@@ -184,6 +222,8 @@ def main():
     models = ordered(["base"] + [json.loads(p.read_text())["model"] for p in (REPO / "results/best").glob("*.json")])
     data_size_plot(models, "wait_success", "run", "Wait success vs data size", "data_size_wait_success.png")
     data_size_plot(models, "ordinary_answered", "list", "Ordinary response vs data size", "data_size_ordinary_response.png")
+    lr_plot(models, "wait_success", "run", "Wait success vs learning rate", "lr_wait_success.png")
+    lr_plot(models, "ordinary_answered", "list", "Ordinary response vs learning rate", "lr_ordinary_response.png")
     survival_plot(models)
     step_plot("val_loss", "Eval loss (all 403 eval_full_v2 files)", "val_loss (text + audio)", "eval_loss_vs_step.png", False)
     step_plot("wait_p_silent_whole", "P(silent through the entire wait), teacher-forced", "probability (log scale)",

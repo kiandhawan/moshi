@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 IDX = "/root/moshi-finetune/data/indexes"
-LRS = {"2e-6": "2e-6", "1e-5": "1e-5", "3e-5": "3e-5"}
+LRS = {"2e-6": "2e-6", "1e-5": "1e-5", "3e-5": "3e-5", "1e-4": "1e-4"}
 SIZES = {"1h": "train_1h_v2", "10h": "train_10h_v2"}
 CONTROLS = {"1h": "control_1h_v2", "10h": "control_10h_v2"}
 MAX_STEPS = 150
