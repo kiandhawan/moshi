@@ -1,0 +1,48 @@
+# train_10h_v2_lr3e-4: LoRA on data/indexes/train_10h_v2.jsonl, lr 3e-4.
+# Written by scripts/make_run_configs.py from configs/smoke.yaml; only train_data, run_dir, lr,
+# max_steps (150), pct_start (0.1), ckpt_freq = eval_freq (25) and num_ckpt_keep (all) differ.
+
+# data
+data:
+  eval_data: '/root/moshi-finetune/data/indexes/eval_full_subset_v2.jsonl'  # fixed stratified 40-file subset of eval v2 (scripts/make_eval_subset.py); all 403 eval_full_v2 files: eval_loss.py after training
+  shuffle: true
+  train_data: '/root/moshi-finetune/data/indexes/train_10h_v2.jsonl'
+
+# model
+moshi_paths:
+  hf_repo_id: "kyutai/moshiko-pytorch-bf16"
+
+full_finetuning: false
+lora:
+  enable: true
+  rank: 128
+  scaling: 2.
+  ft_embed: false
+
+first_codebook_weight_multiplier: 100.
+text_padding_weight: .5
+
+# optim
+duration_sec: 100
+batch_size: 16
+max_steps: 150
+gradient_checkpointing: true
+optim:
+  lr: 3e-4
+  weight_decay: 0.1
+  pct_start: 0.1  # 15 warm-up steps of 150, then cosine decay
+
+# other
+seed: 0
+log_freq: 1
+eval_freq: 25
+do_eval: true
+do_ckpt: true
+ckpt_freq: 25
+num_ckpt_keep: null  # keep every checkpoint (default 3 deletes older ones)
+
+save_adapters: true
+
+run_dir: "runs/train_10h_v2_lr3e-4"
+
+# No wandb section: wandb is disabled when wandb.project is unset.

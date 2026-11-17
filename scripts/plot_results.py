@@ -15,8 +15,8 @@ The data-size and survival plots use each run's best checkpoint (results/best/<r
   lr_wait_success.png, lr_ordinary_response.png
       metric vs learning rate (log scale), one line per data size (dashed 1 h, solid 10 h), best checkpoint
       per run; baseline as reference.
-Colors: fixed per entity (lr 2e-6 blue, 1e-5 orange, 3e-5 aqua, 1e-4 dark crimson, control yellow, base gray;
-survival plot: onset x3 purple, x6 magenta, onset x3 at lr 1e-4 navy, dash-dot). Pairwise OKLab distance >= 11
+Colors: fixed per entity (lr 2e-6 blue, 1e-5 orange, 3e-5 aqua, 1e-4 dark crimson, 3e-4 lavender, control yellow, base gray;
+survival plot: onset x3 purple, x6 magenta, onset x3 at lr 1e-4 navy, at 3e-4 near-black, dash-dot). Pairwise OKLab distance >= 9.5
 under simulated protan/deutan/tritan vision for every pair that can share a plot (checked 2026-11-16);
 line style = data size (solid 10 h, dashed 1 h).
 Usage: python scripts/plot_results.py
@@ -37,10 +37,10 @@ from report_lib import cluster_counts, bootstrap_ratio, model_roles, ordered, re
 
 REPO = Path(__file__).resolve().parents[1]
 MET, OUT = REPO / "results/metrics", REPO / "results/plots"
-LR_COLOR = {"2e-6": "#2a78d6", "1e-5": "#eb6834", "3e-5": "#1baf7a", "1e-4": "#7a1f2e"}
+LR_COLOR = {"2e-6": "#2a78d6", "1e-5": "#eb6834", "3e-5": "#1baf7a", "1e-4": "#7a1f2e", "3e-4": "#b48cff"}
 CONTROL, BASE, INK, GRID = "#eda100", "#8a8a85", "#2b2b29", "#e4e3df"
 # training variants (survival and per-run score plots), keyed by the run-name suffix "lr<LR>_<variant>"
-VARIANT_COLOR = {"lr3e-5_onsetw3": "#7a52c7", "lr3e-5_onsetw6": "#c04a8f", "lr1e-4_onsetw3": "#0d366b"}
+VARIANT_COLOR = {"lr3e-5_onsetw3": "#7a52c7", "lr3e-5_onsetw6": "#c04a8f", "lr1e-4_onsetw3": "#0d366b", "lr3e-4_onsetw3": "#1a1a1a"}
 SIZES = {"1h": 1.1, "10h": 9.9}
 
 
