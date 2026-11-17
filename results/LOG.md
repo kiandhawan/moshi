@@ -3,6 +3,32 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-17: lr 3e-4 at 10 h (plain and onset x3) - ties 1e-4; no 1 h or control runs at 3e-4
+
+- Runs: train_10h_v2_lr3e-4 (GPU 0) and train_10h_v2_lr3e-4_onsetw3 (GPU 1), 03:50; configs are the
+  1e-4 configs with only lr and run_dir changed. `scripts/lr3e4.sh`, evaluation `scripts/eval_run.py`.
+- False divergence stop: at 03:55 the watcher stopped train_10h_v2_lr3e-4 at step 18 on a single loss
+  spike (2.53 vs a recent median of 0.91, right after warm-up reached 3e-4); it was already recovering
+  (1.35, 1.13). The rule (one step above the step-1 loss = diverged) was too strict; it now needs 3
+  consecutive bad steps (`scripts/check_divergence.py`). The run was restarted from scratch at 04:01
+  (same seed; the stopped attempt is runs/train_10h_v2_lr3e-4_stopped). The restart hit the same spike
+  at step 18, recovered within 2 steps and trained normally (final loss 0.181). Onset x3: no spikes.
+- Eval loss rises faster than at 1e-4 (step 150: 0.945 vs 0.843), whole-wait silence probability is
+  higher early (step 50: 0.70 vs 0.52).
+- Best checkpoints (same rule): plain step 125, wait success 62% (173/280) [56-68%]; onset x3 step 100,
+  66% (184/280) [60-71%].
+- Paired vs 10h 1e-4 step 125 (400 files): plain 3e-4 wait success -0.7 pp [-5.0, +3.6], overall score
+  -0.2 [-1.8, +1.4] (step 150: +0.7 [-1.0, +2.3]); quieter (distractor responses -4.1 pp, interrupts
+  -2.1 n.s.) but answers fewer ordinary requests (-3.5 pp) and misses more returns (+3.6, borderline).
+  Onset x3 3e-4: overall score +2.6 [+0.9, +4.3] (highest of all runs, 87.7), wait success +3.2
+  [-0.7, +7.2]; vs onset x3 1e-4: score +1.2 [-0.4, +2.8], wait success +1.1 [-3.2, +5.4] (n.s.).
+- Decision: 10h 3e-4 does not beat 10h 1e-4 significantly (wait success or overall score), so - as
+  planned - no 1 h or control runs at 3e-4. The learning-rate curve at 10 h has flattened between
+  1e-4 and 3e-4; the remaining gain comes from onset weighting.
+- `paired_diff.py` now also reports the overall score difference (all four components resampled
+  from the same clusters per draw).
+- Disk: 19 GB free after these evaluations (below the 50 GB warning line; nothing deleted).
+
 ## 2026-11-16/17: lr 1e-4 added to the grid; it beats 3e-5 at both sizes, so the controls rerun at 1e-4
 
 - Runs: train_1h_v2_lr1e-4 (GPU 0) and train_10h_v2_lr1e-4 (GPU 1), started 22:30; configs from
