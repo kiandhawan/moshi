@@ -73,8 +73,8 @@ def rate(rs, key, kind):
 def model_info(name):
     """(size, lr or 'control') for a run name or RUN__sNNN, None for base."""
     name = name.rsplit("__s", 1)[0]
-    if name.startswith("control_"):
-        return name.split("_")[1], "control"
+    if name.startswith("control_"):  # control_1h_v2 (lr 3e-5) -> "control"; control_1h_v2_lr1e-4 -> "control 1e-4"
+        return name.split("_")[1], "control" + (" " + name.split("_lr")[1] if "_lr" in name else "")
     if name.startswith("train_"):
         if "_onsetw" in name or "_moreord" in name:
             return None  # variants (results/LOG.md) are not points on the learning-rate lines
@@ -97,15 +97,17 @@ def data_size_plot(models, key, kind, title, fname):
             r = rate(rows(m), key, kind)
             if r:
                 series.setdefault(info[1], []).append((SIZES[info[0]], *r))
-    for lr in [*LR_COLOR, "control"]:
+    for lr in [*LR_COLOR, "control", "control 1e-4"]:
         if lr not in series:
             continue
         pts = sorted(series[lr])
         x, y, lo, hi = map(np.array, zip(*pts))
-        c = CONTROL if lr == "control" else LR_COLOR[lr]
-        ax.errorbar(x, y, yerr=[y - lo, hi - y], color=c, linewidth=2, marker="o", markersize=8, capsize=4,
-                    markeredgecolor="white", markeredgewidth=1.5, linestyle=":" if lr == "control" else "-",
-                    label="control (ordinary only)" if lr == "control" else f"lr {lr}")
+        ctl = lr.startswith("control")
+        c = CONTROL if ctl else LR_COLOR[lr]
+        ax.errorbar(x, y, yerr=[y - lo, hi - y], color=c, linewidth=2, marker="D" if lr == "control 1e-4" else "o",
+                    markersize=8, capsize=4, markeredgecolor="white", markeredgewidth=1.5,
+                    linestyle={"control": ":", "control 1e-4": "-."}.get(lr, "-"),
+                    label=f"control (ordinary only), lr {lr.split()[1] if ' ' in lr else '3e-5'}" if ctl else f"lr {lr}")
     ax.set_ylim(0, 1); ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
     ax.legend(frameon=False, fontsize=9)
     fig.tight_layout(); fig.savefig(OUT / fname); plt.close(fig)
@@ -125,7 +127,7 @@ def lr_plot(models, key, kind, title, fname):
     series = {}
     for m in models:
         info = model_info(m)
-        if info and info[1] != "control" and rows(m):
+        if info and not info[1].startswith("control") and rows(m):
             r = rate(rows(m), key, kind)
             if r:
                 series.setdefault(info[0], []).append((float(info[1]), *r))
@@ -176,7 +178,7 @@ def survival_plot(models):
         elif info is None:
             c, ls = BASE, "-"
         else:
-            c = CONTROL if info[1] == "control" else LR_COLOR[info[1]]
+            c = CONTROL if info[1].startswith("control") else LR_COLOR[info[1]]
             ls = "--" if info[0] == "1h" else "-"
         ax.plot(xs, ys, color=c, linestyle=ls, linewidth=2, label=f"{readable(m, model_roles())} (n={len(w)})")
     ax.set_ylim(0, 1.02); ax.set_xlim(0, 52)
@@ -208,7 +210,7 @@ def step_plot(metric, title, ylabel, fname, log):
         if base:
             pts = [(0, float(base[metric]))] + pts
         x, y = zip(*pts)
-        c = CONTROL if info[1] == "control" else LR_COLOR[info[1]]
+        c = CONTROL if info[1].startswith("control") else LR_COLOR[info[1]]
         ax.plot(x, y, color=c, linestyle="--" if info[0] == "1h" else "-", linewidth=2, marker="o", markersize=6,
                 markeredgecolor="white", label=readable(run))
     if base:

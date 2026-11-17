@@ -3,6 +3,31 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-16/17: lr 1e-4 added to the grid; it beats 3e-5 at both sizes, so the controls rerun at 1e-4
+
+- Runs: train_1h_v2_lr1e-4 (GPU 0) and train_10h_v2_lr1e-4 (GPU 1), started 22:30; configs from
+  `make_run_configs.py` (LRS now includes 1e-4), identical to the 3e-5 runs except lr (base, seed 0,
+  batch 16, 150 steps, pct_start 0.1, checkpoints + eval-subset loss every 10 / 25 steps). Then
+  train_10h_v2_lr1e-4_onsetw3 (onset x3 config, only lr differs) on the first GPU to free (GPU 1, 23:54).
+  Orchestration `scripts/lr1e4.sh`; evaluation `scripts/eval_run.py` as for every run.
+- Instability watch: `scripts/check_divergence.py` every 30 s (stop on non-finite loss, loss above the
+  step-1 loss after warm-up, or 3 consecutive steps > 2x the previous-10 median). No run diverged and
+  no spike was flagged. Final training loss: 1 h 0.012 (3e-5: 0.061), 10 h 0.324 (3e-5: 0.568),
+  onset x3 0.406.
+- Best checkpoints (same rule): 1 h step 50, wait success 41% (116/280) [36-47%], ordinary 75%;
+  10 h step 125, 62% (175/280) [57-68%], ordinary 82%. 3e-5 best: 1 h 36%, 10 h 49%.
+- Paired (`paired_diff.py`, 400 files), 1e-4 minus 3e-5: 1 h wait success +5.7 pp [+1.1, +10.7],
+  interrupts -11.8 pp, distractor responses -8.3 pp, ordinary +0.1 pp; 10 h wait success +13.2 pp
+  [+8.6, +18.2], missed resumes -15.7 pp, ordinary +8.5 pp. Both meet the ordinary-response limit.
+- 1 h at 1e-4 overfits after its peak: step 140 has 65% interrupts (step 50: 32%) and the full-eval
+  loss rises 1.28 -> 1.62; the training loss falls to 0.012.
+- Decision: by the rule used to pick 3e-5 (best checkpoint's wait success, ordinary response within
+  10 pp of base), 1e-4 beats 3e-5 at both sizes, so both controls run at 1e-4 (configs
+  control_{1h,10h}_v2_lr1e-4.yaml, copies of the 3e-5 controls with only lr changed;
+  `scripts/controls_1e4.sh`: 10 h on GPU 0 from 00:40, 1 h on GPU 1 after the onset evaluation).
+  The 3e-5 controls stay as they are.
+- The optimum may again lie above the grid (1e-4 is now the highest rate).
+
 ## 2026-11-15: In-distribution test set; overall behavior score
 
 **In-distribution test set** (`scripts/make_in_distribution.py`, `data/indexes/in_distribution_v2.jsonl`):
