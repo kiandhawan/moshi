@@ -4,7 +4,8 @@ Samples: listen_sample/*.wav (data v1: train_10_*, eval_12_*) and listen_sample/
 Each -> stereo MP3 (left = Moshi, right = user side, 48 kbps) at audio/sample_<id>.mp3, plus a timed
 transcript (Moshi turns from the events file; user/friend/other turn times from the events file, text from
 the script, matched in order), the wait/resume windows and both channels' loudness envelopes.
-Demos: every video in demos/ (optional demos/demos.json: [{"file", "title", "note"}] sets order and titles)
+Demos: every audio recording in demos/ (<base>?<scenario>demo<take>?.m4a, e.g. baseknockdemo.m4a vs knockdemo.m4a:
+base vs fine-tuned, grouped by scenario) -> 96 kbps mono MP3 at audio/demo_<stem>.mp3; every video in demos/ (optional demos/demos.json: [{"file", "title", "note"}] sets order and titles)
 -> H.264/AAC MP4, 720p max, at video/<stem>.mp4 with a poster video/<stem>.jpg. Kept under 15 MB each.
 Writes extras.json next to data.json. Usage: python scripts/build_listen_extras.py OUT_DIR
 """
@@ -22,6 +23,9 @@ from build_listen_site import envelope  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 VIDEO_EXT = {".mp4", ".mov", ".m4v", ".webm", ".mkv", ".avi"}
+AUDIO_EXT = {".m4a", ".mp3", ".wav", ".aac", ".ogg", ".flac"}
+SCENARIOS = {"knock": "Someone knocks at the door", "movie": "Watching a movie", "options": "Describing options",
+             "talktoroommate": "Talking to my roommate", "wait15sec": "Wait 15 seconds", "ryanbed": "Ryan and the bed"}
 MAX_BYTES = 14_500_000
 
 
@@ -68,7 +72,7 @@ def demos(out: Path) -> list:
     if not d.exists():
         return []
     meta = json.loads((d / "demos.json").read_text()) if (d / "demos.json").exists() else []
-    files = [d / m["file"] for m in meta] + sorted(p for p in d.iterdir() if p.suffix.lower() in VIDEO_EXT
+    files = [d / m["file"] for m in meta] + sorted(p for p in d.iterdir() if p.suffix.lower() in VIDEO_EXT | AUDIO_EXT
                                                    and p.name not in {m["file"] for m in meta})
     info = {m["file"]: m for m in meta}
     res = []
@@ -76,6 +80,18 @@ def demos(out: Path) -> list:
     for f in files:
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(f)],
                                    capture_output=True, text=True, check=True).stdout.strip())
+        m = info.get(f.name, {})
+        if f.suffix.lower() in AUDIO_EXT:  # live recordings: <base>?<scenario>demo<take>?.m4a
+            dst = out / f"audio/demo_{f.stem}.mp3"
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(f), "-ac", "1", "-c:a", "libmp3lame", "-b:a", "96k", str(dst)], check=True)
+            g = re.fullmatch(r"(base)?(.+?)demo(\d*)", f.stem)
+            key = g.group(2) if g else f.stem
+            res.append({"kind": "audio", "src": f"audio/demo_{f.stem}.mp3", "dur": round(dur, 1), "file": f.name,
+                        "scenario": m.get("scenario") or key, "title": m.get("title") or SCENARIOS.get(key, key),
+                        "model": m.get("model") or ("Base Moshi" if g and g.group(1) else "Fine-tuned"),
+                        "take": int(g.group(3)) if g and g.group(3) else 1, "note": m.get("note", "")})
+            print(f"  {f.name}: {dur:.0f} s (audio)")
+            continue
         dst, poster = out / f"video/{f.stem}.mp4", out / f"video/{f.stem}.jpg"
         for vk, ak in ((1400, 96), (900, 64), (550, 48), (300, 32)):  # step the bitrate down until it fits
             if (vk + ak) * 1000 / 8 * dur * 1.05 > MAX_BYTES:
@@ -89,8 +105,7 @@ def demos(out: Path) -> list:
             raise SystemExit(f"{f.name}: too long to fit in 15 MB ({dur:.0f} s)")
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(min(1.0, dur / 2)), "-i", str(dst), "-frames:v", "1",
                         "-q:v", "4", str(poster)], check=True)
-        m = info.get(f.name, {})
-        res.append({"src": f"video/{f.stem}.mp4", "poster": f"video/{f.stem}.jpg", "dur": round(dur, 1),
+        res.append({"kind": "video", "src": f"video/{f.stem}.mp4", "poster": f"video/{f.stem}.jpg", "dur": round(dur, 1),
                     "title": m.get("title") or f.stem.replace("_", " ").replace("-", " "), "note": m.get("note", "")})
         print(f"  {f.name}: {dur:.0f} s -> {dst.stat().st_size / 1e6:.1f} MB")
     return res
