@@ -27,6 +27,18 @@ Decisions about how results are scored, newest first. Metric definitions live in
   `scripts/controls_1e4.sh`: 10 h on GPU 0 from 00:40, 1 h on GPU 1 after the onset evaluation).
   The 3e-5 controls stay as they are.
 - The optimum may again lie above the grid (1e-4 is now the highest rate).
+- Onset x3 at 1e-4 (best = final step 150): wait success 65% (181/280) [59-70%], interrupts 19%,
+  missed resumes 11%, ordinary response 91%, distractor responses 15%; overall score 86.5 (highest of
+  all runs). Paired vs onset x3 at 3e-5: wait success +10.4 pp [+6.1, +14.6], interrupts -8.6,
+  distractors -7.9, missed -3.2, ordinary +1.0 (n.s.). Vs plain 1e-4 step 125: wait success +2.1 pp
+  [-1.4, +5.7] (n.s.); the same trade as at 3e-5 - missed resumes -7.9 pp and ordinary response
+  +9.1 pp, bought with interrupts +8.6 pp.
+- Controls at 1e-4 (both finished, no instability): 1 h best step 40, wait success 5% (15/280),
+  interrupts 83%, ordinary 64%; 10 h best step 150, wait success 7% (20/280), interrupts 91%,
+  ordinary 79%. Like the 3e-5 controls (4-5%), near base (3%): the higher rate does not teach waiting
+  without wait data, so the 1e-4 gains come from the wait data. (The 1 h control at 1e-4 also
+  overfits: ordinary response 64%, below the 3e-5 control's 82%.)
+- Disk fell to 38 GB free after all evaluations (inference audio, ~2.3 GB per evaluated checkpoint).
 
 ## 2026-11-15: In-distribution test set; overall behavior score
 
