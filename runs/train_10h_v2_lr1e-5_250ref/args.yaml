@@ -1,0 +1,45 @@
+batch_size: 16
+ckpt_freq: 50
+data:
+  eval_data: /root/moshi-finetune/data/indexes/eval_full_subset_v2.jsonl
+  shuffle: true
+  train_data: /root/moshi-finetune/data/indexes/train_10h_v2.jsonl
+do_ckpt: true
+do_eval: true
+duration_sec: 100.0
+eval_freq: 50
+first_codebook_weight_multiplier: 100.0
+full_finetuning: false
+gradient_checkpointing: true
+log_freq: 1
+lora:
+  enable: true
+  ft_embed: false
+  rank: 128
+  scaling: 2.0
+max_norm: 1.0
+max_steps: 250
+moshi_paths:
+  config_path: null
+  hf_repo_id: kyutai/moshiko-pytorch-bf16
+  mimi_path: null
+  moshi_path: null
+  tokenizer_path: null
+num_ckpt_keep: 3
+num_microbatches: 1
+optim:
+  lr: 1.0e-05
+  pct_start: 0.1
+  weight_decay: 0.1
+overwrite_run_dir: false
+param_dtype: bfloat16
+run_dir: runs/train_10h_v2_lr1e-5
+save_adapters: true
+seed: 0
+text_padding_weight: 0.5
+wandb:
+  key: null
+  offline: false
+  project: null
+  run_name: null
+world_size: 1

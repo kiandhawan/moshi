@@ -1,0 +1,48 @@
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000010/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s010.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000020/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s020.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000030/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s030.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000040/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s040.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000050/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s050.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000060/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s060.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000070/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s070.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000080/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s080.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000090/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s090.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000100/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s100.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000110/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s110.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000120/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s120.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000130/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s130.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000140/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s140.log
+$ /root/moshi-finetune/.venv/bin/python scripts/eval_loss.py --checkpoint /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000150/consolidated --gpu 0  > logs/eval_loss_control_1h_v2_s150.log
+top 3 by whole-wait silence probability: [80, 90, 70]; candidates [70, 80, 90, 150]
+$ /root/moshi-finetune/.venv/bin/python scripts/run_inference.py data/indexes/eval_v2.jsonl --lora /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000070/consolidated --seeds 1 --batch 32 --gpu 0 --out-dir /root/moshi-finetune/runs/control_1h_v2/infer/s070/eval  > logs/infer_control_1h_v2_s070_eval.log
+$ /root/moshi-finetune/.venv/bin/python scripts/run_inference.py data/indexes/human.jsonl --lora /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000070/consolidated --seeds 1 2 3 --gpu 0 --out-dir /root/moshi-finetune/runs/control_1h_v2/infer/s070/human  > logs/infer_control_1h_v2_s070_human.log
+$ /root/moshi-finetune/.venv/bin/python scripts/score.py --outputs /root/moshi-finetune/runs/control_1h_v2/infer/s070/eval /root/moshi-finetune/runs/control_1h_v2/infer/s070/human --events data/indexes/eval_full_v2.jsonl data/indexes/human.jsonl --name control_1h_v2__s070 --quiet  > logs/score_control_1h_v2_s070.log
+$ /root/moshi-finetune/.venv/bin/python scripts/run_inference.py data/indexes/eval_v2.jsonl --lora /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000080/consolidated --seeds 1 --batch 32 --gpu 0 --out-dir /root/moshi-finetune/runs/control_1h_v2/infer/s080/eval  > logs/infer_control_1h_v2_s080_eval.log
+$ /root/moshi-finetune/.venv/bin/python scripts/run_inference.py data/indexes/human.jsonl --lora /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000080/consolidated --seeds 1 2 3 --gpu 0 --out-dir /root/moshi-finetune/runs/control_1h_v2/infer/s080/human  > logs/infer_control_1h_v2_s080_human.log
+$ /root/moshi-finetune/.venv/bin/python scripts/score.py --outputs /root/moshi-finetune/runs/control_1h_v2/infer/s080/eval /root/moshi-finetune/runs/control_1h_v2/infer/s080/human --events data/indexes/eval_full_v2.jsonl data/indexes/human.jsonl --name control_1h_v2__s080 --quiet  > logs/score_control_1h_v2_s080.log
+$ /root/moshi-finetune/.venv/bin/python scripts/run_inference.py data/indexes/eval_v2.jsonl --lora /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000090/consolidated --seeds 1 --batch 32 --gpu 0 --out-dir /root/moshi-finetune/runs/control_1h_v2/infer/s090/eval  > logs/infer_control_1h_v2_s090_eval.log
+$ /root/moshi-finetune/.venv/bin/python scripts/run_inference.py data/indexes/human.jsonl --lora /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000090/consolidated --seeds 1 2 3 --gpu 0 --out-dir /root/moshi-finetune/runs/control_1h_v2/infer/s090/human  > logs/infer_control_1h_v2_s090_human.log
+$ /root/moshi-finetune/.venv/bin/python scripts/score.py --outputs /root/moshi-finetune/runs/control_1h_v2/infer/s090/eval /root/moshi-finetune/runs/control_1h_v2/infer/s090/human --events data/indexes/eval_full_v2.jsonl data/indexes/human.jsonl --name control_1h_v2__s090 --quiet  > logs/score_control_1h_v2_s090.log
+$ /root/moshi-finetune/.venv/bin/python scripts/run_inference.py data/indexes/eval_v2.jsonl --lora /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000150/consolidated --seeds 1 --batch 32 --gpu 0 --out-dir /root/moshi-finetune/runs/control_1h_v2/infer/s150/eval  > logs/infer_control_1h_v2_s150_eval.log
+$ /root/moshi-finetune/.venv/bin/python scripts/run_inference.py data/indexes/human.jsonl --lora /root/moshi-finetune/runs/control_1h_v2/checkpoints/checkpoint_000150/consolidated --seeds 1 2 3 --gpu 0 --out-dir /root/moshi-finetune/runs/control_1h_v2/infer/s150/human  > logs/infer_control_1h_v2_s150_human.log
+$ /root/moshi-finetune/.venv/bin/python scripts/score.py --outputs /root/moshi-finetune/runs/control_1h_v2/infer/s150/eval /root/moshi-finetune/runs/control_1h_v2/infer/s150/human --events data/indexes/eval_full_v2.jsonl data/indexes/human.jsonl --name control_1h_v2__s150 --quiet  > logs/score_control_1h_v2_s150.log
+BEST control_1h_v2: step 80 - highest wait success (4% (12/280) [2%-7%]) among the candidates whose ordinary response is within 10 pp of the baseline's 72% (>= 62%: s70, s80, s90, s150)
+$ /root/moshi-finetune/.venv/bin/python scripts/best_table.py  > logs/best_table.log
+$ /root/moshi-finetune/.venv/bin/python scripts/voice_similarity.py control_1h_v2__s080 control_1h_v2__s150 --gpu 0  > logs/voice_control_1h_v2.log
+$ /root/moshi-finetune/.venv/bin/python scripts/pick_listen.py control_1h_v2__s080 control_1h_v2  > logs/listen_control_1h_v2.log
+$ /root/moshi-finetune/.venv/bin/python scripts/runs_table.py --keep control_1h_v2=50,80,100,150  > logs/runs_table.log
+$ /root/moshi-finetune/.venv/bin/python scripts/compare.py  > logs/compare.log
+$ /root/moshi-finetune/.venv/bin/python scripts/plot_results.py  > logs/plots.log
+pruned runs/control_1h_v2/checkpoints/checkpoint_000010/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000020/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000030/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000040/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000060/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000070/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000090/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000110/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000120/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000130/consolidated/lora.safetensors
+pruned runs/control_1h_v2/checkpoints/checkpoint_000140/consolidated/lora.safetensors
+$ /root/moshi-finetune/.venv/bin/python scripts/runs_table.py --keep control_1h_v2=50,80,100,150  > logs/runs_table.log
+DONE control_1h_v2; disk free 76 GB

@@ -1,0 +1,67 @@
+Warning: `hf_repo_id` is set but `config_path` is None. This will load default models.
+2026-11-17 03:50:25 (UTC) - 0:00:02 - distributed - INFO - torch.cuda.device_count: 1
+2026-11-17 03:50:25 (UTC) - 0:00:02 - distributed - INFO - CUDA_VISIBLE_DEVICES: 0
+2026-11-17 03:50:25 (UTC) - 0:00:02 - distributed - INFO - local rank: 0
+2026-11-17 03:50:25 (UTC) - 0:00:03 - train - INFO - Going to init comms...
+2026-11-17 03:50:25 (UTC) - 0:00:03 - train - INFO - Run dir: runs/train_10h_v2_lr3e-4
+[rank0]:[W1117 03:50:25.279600987 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2026-11-17 03:50:26 (UTC) - 0:00:03 - train - INFO - TrainArgs: {'batch_size': 16,
+ 'ckpt_freq': 25,
+ 'data': {'eval_data': '/root/moshi-finetune/data/indexes/eval_full_subset_v2.jsonl',
+          'shuffle': True,
+          'train_data': '/root/moshi-finetune/data/indexes/train_10h_v2.jsonl'},
+ 'do_ckpt': True,
+ 'do_eval': True,
+ 'duration_sec': 100.0,
+ 'eval_freq': 25,
+ 'first_codebook_weight_multiplier': 100.0,
+ 'full_finetuning': False,
+ 'gradient_checkpointing': True,
+ 'log_freq': 1,
+ 'lora': {'enable': True, 'ft_embed': False, 'rank': 128, 'scaling': 2.0},
+ 'max_norm': 1.0,
+ 'max_steps': 150,
+ 'moshi_paths': {'config_path': None,
+                 'hf_repo_id': 'kyutai/moshiko-pytorch-bf16',
+                 'mimi_path': None,
+                 'moshi_path': None,
+                 'tokenizer_path': None},
+ 'num_ckpt_keep': None,
+ 'num_microbatches': 1,
+ 'onset_weight': 1.0,
+ 'onset_weight_sec': 1.0,
+ 'optim': {'lr': 0.0003, 'pct_start': 0.1, 'weight_decay': 0.1},
+ 'overwrite_run_dir': False,
+ 'param_dtype': 'bfloat16',
+ 'run_dir': 'runs/train_10h_v2_lr3e-4',
+ 'save_adapters': True,
+ 'seed': 0,
+ 'text_padding_weight': 0.5,
+ 'wandb': {'key': None, 'offline': False, 'project': None, 'run_name': None},
+ 'world_size': 1}
+2026-11-17 03:50:26 (UTC) - 0:00:03 - train - INFO - Loading Mimi and Moshi...
+/root/moshi-finetune/.venv/lib/python3.12/site-packages/moshi/models/loaders.py:174: UserWarning: Repository kyutai/moshiko-pytorch-bf16 contains no config.json. Assuming this is a Moshi 7B. Support for such repository might be removed in the future.
+  warnings.warn(
+2026-11-17 03:50:28 (UTC) - 0:00:05 - finetune.wrapped_model - INFO - Converting model to dtype torch.bfloat16 ...
+2026-11-17 03:50:28 (UTC) - 0:00:05 - finetune.wrapped_model - INFO - Initializing lora layers ...
+2026-11-17 03:50:36 (UTC) - 0:00:13 - finetune.wrapped_model - INFO - Finished initialization!
+2026-11-17 03:50:59 (UTC) - 0:00:36 - train - INFO - step: 000001 - done (%): 0.7 - loss: 1.277 - lr: 1.2e-05 - peak_alloc_mem (GB): 36.7 - alloc_mem (GB): 22.3 - words_per_second: 9054.2 - avg_words_per_second: 9054.2 - ETA: >2026-11-17 04:40:21
+2026-11-17 03:51:13 (UTC) - 0:00:51 - train - INFO - step: 000002 - done (%): 1.3 - loss: 1.101 - lr: 1.6e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12529.6 - avg_words_per_second: 10512.1 - ETA: >2026-11-17 04:33:27
+2026-11-17 03:51:27 (UTC) - 0:01:05 - train - INFO - step: 000003 - done (%): 2.0 - loss: 1.048 - lr: 2.6e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12616.0 - avg_words_per_second: 11130.9 - ETA: >2026-11-17 04:31:04
+2026-11-17 03:51:41 (UTC) - 0:01:19 - train - INFO - step: 000004 - done (%): 2.7 - loss: 0.987 - lr: 4.3e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12698.8 - avg_words_per_second: 11485.4 - ETA: >2026-11-17 04:29:50
+2026-11-17 03:51:56 (UTC) - 0:01:33 - train - INFO - step: 000005 - done (%): 3.3 - loss: 0.961 - lr: 6.6e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12659.5 - avg_words_per_second: 11702.5 - ETA: >2026-11-17 04:29:06
+2026-11-17 03:52:10 (UTC) - 0:01:47 - train - INFO - step: 000006 - done (%): 4.0 - loss: 0.949 - lr: 9.4e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12720.7 - avg_words_per_second: 11860.7 - ETA: >2026-11-17 04:28:35
+2026-11-17 03:52:24 (UTC) - 0:02:02 - train - INFO - step: 000007 - done (%): 4.7 - loss: 0.884 - lr: 1.2e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12696.3 - avg_words_per_second: 11973.3 - ETA: >2026-11-17 04:28:14
+2026-11-17 03:52:38 (UTC) - 0:02:16 - train - INFO - step: 000008 - done (%): 5.3 - loss: 0.911 - lr: 1.6e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12683.7 - avg_words_per_second: 12057.7 - ETA: >2026-11-17 04:27:58
+2026-11-17 03:52:53 (UTC) - 0:02:30 - train - INFO - step: 000009 - done (%): 6.0 - loss: 0.913 - lr: 1.9e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12558.5 - avg_words_per_second: 12111.4 - ETA: >2026-11-17 04:27:48
+2026-11-17 03:53:07 (UTC) - 0:02:44 - train - INFO - step: 000010 - done (%): 6.7 - loss: 0.825 - lr: 2.2e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12638.5 - avg_words_per_second: 12162.1 - ETA: >2026-11-17 04:27:39
+2026-11-17 03:53:21 (UTC) - 0:02:59 - train - INFO - step: 000011 - done (%): 7.3 - loss: 0.783 - lr: 2.5e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12611.7 - avg_words_per_second: 12201.6 - ETA: >2026-11-17 04:27:32
+2026-11-17 03:53:35 (UTC) - 0:03:13 - train - INFO - step: 000012 - done (%): 8.0 - loss: 0.903 - lr: 2.7e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12672.4 - avg_words_per_second: 12239.5 - ETA: >2026-11-17 04:27:25
+2026-11-17 03:53:50 (UTC) - 0:03:27 - train - INFO - step: 000013 - done (%): 8.7 - loss: 0.916 - lr: 2.9e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12613.1 - avg_words_per_second: 12267.5 - ETA: >2026-11-17 04:27:20
+2026-11-17 03:54:04 (UTC) - 0:03:41 - train - INFO - step: 000014 - done (%): 9.3 - loss: 0.998 - lr: 3.0e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12658.2 - avg_words_per_second: 12294.6 - ETA: >2026-11-17 04:27:15
+2026-11-17 03:54:18 (UTC) - 0:03:56 - train - INFO - step: 000015 - done (%): 10.0 - loss: 0.909 - lr: 3.0e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12583.8 - avg_words_per_second: 12313.4 - ETA: >2026-11-17 04:27:11
+2026-11-17 03:54:32 (UTC) - 0:04:10 - train - INFO - step: 000016 - done (%): 10.7 - loss: 1.065 - lr: 3.0e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12648.4 - avg_words_per_second: 12333.9 - ETA: >2026-11-17 04:27:08
+2026-11-17 03:54:47 (UTC) - 0:04:24 - train - INFO - step: 000017 - done (%): 11.3 - loss: 0.824 - lr: 3.0e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12563.6 - avg_words_per_second: 12347.1 - ETA: >2026-11-17 04:27:06
+2026-11-17 03:55:01 (UTC) - 0:04:38 - train - INFO - step: 000018 - done (%): 12.0 - loss: 2.531 - lr: 3.0e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12664.4 - avg_words_per_second: 12364.3 - ETA: >2026-11-17 04:27:02
+2026-11-17 03:55:15 (UTC) - 0:04:53 - train - INFO - step: 000019 - done (%): 12.7 - loss: 1.349 - lr: 3.0e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12586.7 - avg_words_per_second: 12375.9 - ETA: >2026-11-17 04:27:00
+2026-11-17 03:55:29 (UTC) - 0:05:07 - train - INFO - step: 000020 - done (%): 13.3 - loss: 1.133 - lr: 3.0e-04 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12717.4 - avg_words_per_second: 12392.5 - ETA: >2026-11-17 04:26:58

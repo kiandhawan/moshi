@@ -1,0 +1,115 @@
+Warning: `hf_repo_id` is set but `config_path` is None. This will load default models.
+2026-11-12 22:12:36 (UTC) - 0:00:04 - distributed - INFO - torch.cuda.device_count: 1
+2026-11-12 22:12:36 (UTC) - 0:00:04 - distributed - INFO - CUDA_VISIBLE_DEVICES: 0
+2026-11-12 22:12:36 (UTC) - 0:00:04 - distributed - INFO - local rank: 0
+2026-11-12 22:12:37 (UTC) - 0:00:05 - train - INFO - Going to init comms...
+2026-11-12 22:12:37 (UTC) - 0:00:05 - train - INFO - Run dir: runs/smoke
+[rank0]:[W1112 22:12:37.829021078 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2026-11-12 22:12:37 (UTC) - 0:00:05 - train - INFO - TrainArgs: {'batch_size': 16,
+ 'ckpt_freq': 20,
+ 'data': {'eval_data': '',
+          'shuffle': True,
+          'train_data': '/root/moshi-finetune/daily-talk-contiguous/smoke.jsonl'},
+ 'do_ckpt': True,
+ 'do_eval': False,
+ 'duration_sec': 100.0,
+ 'eval_freq': 100,
+ 'first_codebook_weight_multiplier': 100.0,
+ 'full_finetuning': False,
+ 'gradient_checkpointing': True,
+ 'log_freq': 1,
+ 'lora': {'enable': True, 'ft_embed': False, 'rank': 128, 'scaling': 2.0},
+ 'max_norm': 1.0,
+ 'max_steps': 20,
+ 'moshi_paths': {'config_path': None,
+                 'hf_repo_id': 'kyutai/moshiko-pytorch-bf16',
+                 'mimi_path': None,
+                 'moshi_path': None,
+                 'tokenizer_path': None},
+ 'num_ckpt_keep': 3,
+ 'num_microbatches': 1,
+ 'optim': {'lr': 2e-06, 'pct_start': 0.05, 'weight_decay': 0.1},
+ 'overwrite_run_dir': False,
+ 'param_dtype': 'bfloat16',
+ 'run_dir': 'runs/smoke',
+ 'save_adapters': True,
+ 'seed': 0,
+ 'text_padding_weight': 0.5,
+ 'wandb': {'key': None, 'offline': False, 'project': None, 'run_name': None},
+ 'world_size': 1}
+2026-11-12 22:12:37 (UTC) - 0:00:05 - train - INFO - Loading Mimi and Moshi...
+/root/moshi-finetune/.venv/lib/python3.12/site-packages/moshi/models/loaders.py:174: UserWarning: Repository kyutai/moshiko-pytorch-bf16 contains no config.json. Assuming this is a Moshi 7B. Support for such repository might be removed in the future.
+  warnings.warn(
+2026-11-12 22:19:40 (UTC) - 0:07:08 - finetune.wrapped_model - INFO - Converting model to dtype torch.bfloat16 ...
+2026-11-12 22:19:40 (UTC) - 0:07:08 - finetune.wrapped_model - INFO - Initializing lora layers ...
+2026-11-12 22:19:42 (UTC) - 0:07:10 - finetune.wrapped_model - INFO - Finished initialization!
+2026-11-12 22:19:45 (UTC) - 0:07:13 - utils - INFO - Closing: eval_logger
+2026-11-12 22:19:45 (UTC) - 0:07:13 - utils - INFO - Closed: eval_logger
+2026-11-12 22:19:45 (UTC) - 0:07:13 - utils - INFO - Closing: metrics_logger
+2026-11-12 22:19:45 (UTC) - 0:07:13 - utils - INFO - Closed: metrics_logger
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "/root/moshi-finetune/train.py", line 360, in <module>
+[rank0]:     fire.Fire(train)
+[rank0]:   File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/fire/core.py", line 135, in Fire
+[rank0]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/fire/core.py", line 468, in _Fire
+[rank0]:     component, remaining_args = _CallAndUpdateTrace(
+[rank0]:                                 ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank0]:     component = fn(*varargs, **kwargs)
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/moshi-finetune/train.py", line 60, in train
+[rank0]:     _train(args, exit_stack)
+[rank0]:   File "/root/moshi-finetune/train.py", line 205, in _train
+[rank0]:     scheduler = lr_scheduler.OneCycleLR(
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py", line 2120, in __init__
+[rank0]:     super().__init__(optimizer, last_epoch, verbose)
+[rank0]:   File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py", line 149, in __init__
+[rank0]:     self._initial_step()
+[rank0]:   File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py", line 154, in _initial_step
+[rank0]:     self.step()
+[rank0]:   File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py", line 241, in step
+[rank0]:     values = self.get_lr()
+[rank0]:              ^^^^^^^^^^^^^
+[rank0]:   File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/optim/lr_scheduler.py", line 2162, in get_lr
+[rank0]:     pct = (step_num - start_step) / (end_step - start_step)
+[rank0]:           ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+[rank0]: ZeroDivisionError: float division by zero
+[rank0]:[W1112 22:19:45.708613284 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+E1112 22:19:46.503000 2404 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 2475) of binary: /root/moshi-finetune/.venv/bin/python
+Traceback (most recent call last):
+  File "/root/moshi-finetune/.venv/bin/torchrun", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/moshi-finetune/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-11-12_22:19:46
+  host      : 165b0d407598
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 2475)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

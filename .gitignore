@@ -110,9 +110,16 @@ example/debug_configs/
 # Local data, training runs and logs (large / regenerated)
 daily-talk-contiguous/*
 !daily-talk-contiguous/smoke.jsonl
-runs/
-logs/
-eval_outputs/
+# runs/, logs/, eval_outputs/: text (configs, loss logs, output transcripts, job logs) is tracked;
+# audio, model weights and checkpoints are not (size; no audio in git).
+runs/**/*.wav
+runs/**/*.safetensors
+runs/**/*.pt
+runs/**/*.bin
+eval_outputs/**/*.wav
+results/**/*.lock
+# listening folders and demo audio stay local
+listen_*/
 data/voices/*.wav
 data/tts_samples/
 data/eval_full/*.wav

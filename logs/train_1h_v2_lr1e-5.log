@@ -1,0 +1,316 @@
+Warning: `hf_repo_id` is set but `config_path` is None. This will load default models.
+2026-11-15 00:13:36 (UTC) - 0:00:02 - distributed - INFO - torch.cuda.device_count: 1
+2026-11-15 00:13:36 (UTC) - 0:00:02 - distributed - INFO - CUDA_VISIBLE_DEVICES: 0
+2026-11-15 00:13:36 (UTC) - 0:00:02 - distributed - INFO - local rank: 0
+2026-11-15 00:13:37 (UTC) - 0:00:02 - train - INFO - Going to init comms...
+2026-11-15 00:13:37 (UTC) - 0:00:02 - train - INFO - Run dir: runs/train_1h_v2_lr1e-5
+[rank0]:[W1115 00:13:38.475768193 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2026-11-15 00:13:38 (UTC) - 0:00:03 - train - INFO - TrainArgs: {'batch_size': 16,
+ 'ckpt_freq': 10,
+ 'data': {'eval_data': '/root/moshi-finetune/data/indexes/eval_full_subset_v2.jsonl',
+          'shuffle': True,
+          'train_data': '/root/moshi-finetune/data/indexes/train_1h_v2.jsonl'},
+ 'do_ckpt': True,
+ 'do_eval': True,
+ 'duration_sec': 100.0,
+ 'eval_freq': 10,
+ 'first_codebook_weight_multiplier': 100.0,
+ 'full_finetuning': False,
+ 'gradient_checkpointing': True,
+ 'log_freq': 1,
+ 'lora': {'enable': True, 'ft_embed': False, 'rank': 128, 'scaling': 2.0},
+ 'max_norm': 1.0,
+ 'max_steps': 150,
+ 'moshi_paths': {'config_path': None,
+                 'hf_repo_id': 'kyutai/moshiko-pytorch-bf16',
+                 'mimi_path': None,
+                 'moshi_path': None,
+                 'tokenizer_path': None},
+ 'num_ckpt_keep': None,
+ 'num_microbatches': 1,
+ 'optim': {'lr': 1e-05, 'pct_start': 0.1, 'weight_decay': 0.1},
+ 'overwrite_run_dir': False,
+ 'param_dtype': 'bfloat16',
+ 'run_dir': 'runs/train_1h_v2_lr1e-5',
+ 'save_adapters': True,
+ 'seed': 0,
+ 'text_padding_weight': 0.5,
+ 'wandb': {'key': None, 'offline': False, 'project': None, 'run_name': None},
+ 'world_size': 1}
+2026-11-15 00:13:38 (UTC) - 0:00:03 - train - INFO - Loading Mimi and Moshi...
+/root/moshi-finetune/.venv/lib/python3.12/site-packages/moshi/models/loaders.py:174: UserWarning: Repository kyutai/moshiko-pytorch-bf16 contains no config.json. Assuming this is a Moshi 7B. Support for such repository might be removed in the future.
+  warnings.warn(
+2026-11-15 00:13:39 (UTC) - 0:00:04 - finetune.wrapped_model - INFO - Converting model to dtype torch.bfloat16 ...
+2026-11-15 00:13:39 (UTC) - 0:00:04 - finetune.wrapped_model - INFO - Initializing lora layers ...
+2026-11-15 00:13:48 (UTC) - 0:00:13 - finetune.wrapped_model - INFO - Finished initialization!
+2026-11-15 00:14:10 (UTC) - 0:00:36 - train - INFO - step: 000001 - done (%): 0.7 - loss: 1.300 - lr: 4.0e-07 - peak_alloc_mem (GB): 36.7 - alloc_mem (GB): 22.3 - words_per_second: 9384.6 - avg_words_per_second: 9384.6 - ETA: >2026-11-15 01:01:48
+2026-11-15 00:14:24 (UTC) - 0:00:50 - train - INFO - step: 000002 - done (%): 1.3 - loss: 1.319 - lr: 5.2e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12601.3 - avg_words_per_second: 10757.6 - ETA: >2026-11-15 00:55:41
+2026-11-15 00:14:39 (UTC) - 0:01:04 - train - INFO - step: 000003 - done (%): 2.0 - loss: 1.343 - lr: 8.8e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12588.0 - avg_words_per_second: 11305.6 - ETA: >2026-11-15 00:53:39
+Rank 0 finished epoch 1
+2026-11-15 00:14:53 (UTC) - 0:01:19 - train - INFO - step: 000004 - done (%): 2.7 - loss: 1.348 - lr: 1.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12472.2 - avg_words_per_second: 11576.3 - ETA: >2026-11-15 00:52:43
+2026-11-15 00:15:07 (UTC) - 0:01:33 - train - INFO - step: 000005 - done (%): 3.3 - loss: 1.285 - lr: 2.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12706.8 - avg_words_per_second: 11786.0 - ETA: >2026-11-15 00:52:02
+2026-11-15 00:15:22 (UTC) - 0:01:47 - train - INFO - step: 000006 - done (%): 4.0 - loss: 1.262 - lr: 3.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12656.5 - avg_words_per_second: 11922.7 - ETA: >2026-11-15 00:51:36
+2026-11-15 00:15:36 (UTC) - 0:02:01 - train - INFO - step: 000007 - done (%): 4.7 - loss: 1.199 - lr: 4.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12576.4 - avg_words_per_second: 12011.9 - ETA: >2026-11-15 00:51:19
+Rank 0 finished epoch 2
+2026-11-15 00:15:50 (UTC) - 0:02:16 - train - INFO - step: 000008 - done (%): 5.3 - loss: 1.183 - lr: 5.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12596.6 - avg_words_per_second: 12082.0 - ETA: >2026-11-15 00:51:06
+2026-11-15 00:16:05 (UTC) - 0:02:30 - train - INFO - step: 000009 - done (%): 6.0 - loss: 1.193 - lr: 6.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12568.9 - avg_words_per_second: 12134.2 - ETA: >2026-11-15 00:50:56
+2026-11-15 00:16:31 (UTC) - 0:02:56 - eval - INFO - Eval finished! 3 batches over 1 ranks in 11.9 s (data loading + forward passes)
+2026-11-15 00:16:31 (UTC) - 0:02:56 - train - INFO - step: 000010 - eval_perplexity: 1.945 - eval_loss: 0.960 - train_loss: 1.136
+2026-11-15 00:16:31 (UTC) - 0:02:56 - train - INFO - step: 000010 - done (%): 6.7 - loss: 1.136 - lr: 7.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 6894.6 - avg_words_per_second: 11277.2 - ETA: >2026-11-15 00:53:45
+2026-11-15 00:16:31 (UTC) - 0:02:56 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000010/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:16:31 (UTC) - 0:02:57 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000010/consolidated for step: 10
+2026-11-15 00:16:31 (UTC) - 0:02:57 - checkpointing - INFO - Done!
+2026-11-15 00:16:46 (UTC) - 0:03:11 - train - INFO - step: 000011 - done (%): 7.3 - loss: 1.055 - lr: 8.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12603.4 - avg_words_per_second: 11386.1 - ETA: >2026-11-15 00:53:23
+Rank 0 finished epoch 3
+2026-11-15 00:17:00 (UTC) - 0:03:25 - train - INFO - step: 000012 - done (%): 8.0 - loss: 1.063 - lr: 9.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12589.1 - avg_words_per_second: 11477.5 - ETA: >2026-11-15 00:53:04
+2026-11-15 00:17:14 (UTC) - 0:03:40 - train - INFO - step: 000013 - done (%): 8.7 - loss: 1.123 - lr: 9.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12620.8 - avg_words_per_second: 11558.0 - ETA: >2026-11-15 00:52:48
+2026-11-15 00:17:29 (UTC) - 0:03:55 - train - INFO - step: 000014 - done (%): 9.3 - loss: 0.994 - lr: 9.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 11894.5 - avg_words_per_second: 11581.4 - ETA: >2026-11-15 00:52:43
+2026-11-15 00:17:54 (UTC) - 0:04:20 - train - INFO - step: 000015 - done (%): 10.0 - loss: 0.936 - lr: 1.0e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7218.9 - avg_words_per_second: 11132.9 - ETA: >2026-11-15 00:54:17
+Rank 0 finished epoch 4
+2026-11-15 00:18:19 (UTC) - 0:04:45 - train - INFO - step: 000016 - done (%): 10.7 - loss: 0.897 - lr: 1.0e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7179.3 - avg_words_per_second: 10762.5 - ETA: >2026-11-15 00:55:40
+2026-11-15 00:18:44 (UTC) - 0:05:10 - train - INFO - step: 000017 - done (%): 11.3 - loss: 0.900 - lr: 1.0e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7206.8 - avg_words_per_second: 10458.9 - ETA: >2026-11-15 00:56:53
+2026-11-15 00:19:09 (UTC) - 0:05:35 - train - INFO - step: 000018 - done (%): 12.0 - loss: 1.021 - lr: 1.0e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7211.6 - avg_words_per_second: 10203.7 - ETA: >2026-11-15 00:57:58
+Rank 0 finished epoch 5
+2026-11-15 00:19:32 (UTC) - 0:05:57 - train - INFO - step: 000019 - done (%): 12.7 - loss: 0.968 - lr: 1.0e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 8031.2 - avg_words_per_second: 10060.4 - ETA: >2026-11-15 00:58:36
+2026-11-15 00:20:01 (UTC) - 0:06:26 - eval - INFO - Eval finished! 3 batches over 1 ranks in 13.0 s (data loading + forward passes)
+2026-11-15 00:20:01 (UTC) - 0:06:26 - train - INFO - step: 000020 - eval_perplexity: 1.710 - eval_loss: 0.774 - train_loss: 0.882
+2026-11-15 00:20:01 (UTC) - 0:06:26 - train - INFO - step: 000020 - done (%): 13.3 - loss: 0.882 - lr: 1.0e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 6251.4 - avg_words_per_second: 9763.0 - ETA: >2026-11-15 00:59:57
+2026-11-15 00:20:01 (UTC) - 0:06:26 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000020/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:20:01 (UTC) - 0:06:27 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000020/consolidated for step: 20
+2026-11-15 00:20:01 (UTC) - 0:06:27 - checkpointing - INFO - Done!
+2026-11-15 00:20:17 (UTC) - 0:06:42 - train - INFO - step: 000021 - done (%): 14.0 - loss: 0.894 - lr: 1.0e-05 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 11847.2 - avg_words_per_second: 9845.5 - ETA: >2026-11-15 00:59:35
+2026-11-15 00:20:33 (UTC) - 0:06:59 - train - INFO - step: 000022 - done (%): 14.7 - loss: 0.856 - lr: 9.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 10889.9 - avg_words_per_second: 9888.6 - ETA: >2026-11-15 00:59:23
+Rank 0 finished epoch 6
+2026-11-15 00:20:47 (UTC) - 0:07:13 - train - INFO - step: 000023 - done (%): 15.3 - loss: 0.934 - lr: 9.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12539.7 - avg_words_per_second: 9980.3 - ETA: >2026-11-15 00:58:58
+2026-11-15 00:21:02 (UTC) - 0:07:27 - train - INFO - step: 000024 - done (%): 16.0 - loss: 0.882 - lr: 9.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12611.6 - avg_words_per_second: 10067.9 - ETA: >2026-11-15 00:58:34
+2026-11-15 00:21:16 (UTC) - 0:07:42 - train - INFO - step: 000025 - done (%): 16.7 - loss: 0.839 - lr: 9.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12510.8 - avg_words_per_second: 10147.1 - ETA: >2026-11-15 00:58:13
+2026-11-15 00:21:30 (UTC) - 0:07:56 - train - INFO - step: 000026 - done (%): 17.3 - loss: 0.849 - lr: 9.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12670.7 - avg_words_per_second: 10225.4 - ETA: >2026-11-15 00:57:53
+Rank 0 finished epoch 7
+2026-11-15 00:21:45 (UTC) - 0:08:10 - train - INFO - step: 000027 - done (%): 18.0 - loss: 0.845 - lr: 9.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12538.5 - avg_words_per_second: 10295.8 - ETA: >2026-11-15 00:57:35
+2026-11-15 00:21:59 (UTC) - 0:08:24 - train - INFO - step: 000028 - done (%): 18.7 - loss: 0.775 - lr: 9.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12626.8 - avg_words_per_second: 10364.1 - ETA: >2026-11-15 00:57:18
+2026-11-15 00:22:13 (UTC) - 0:08:39 - train - INFO - step: 000029 - done (%): 19.3 - loss: 0.877 - lr: 9.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12749.2 - avg_words_per_second: 10431.4 - ETA: >2026-11-15 00:57:01
+2026-11-15 00:22:38 (UTC) - 0:09:04 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:22:38 (UTC) - 0:09:04 - train - INFO - step: 000030 - eval_perplexity: 1.654 - eval_loss: 0.726 - train_loss: 0.767
+2026-11-15 00:22:38 (UTC) - 0:09:04 - train - INFO - step: 000030 - done (%): 20.0 - loss: 0.767 - lr: 9.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7154.8 - avg_words_per_second: 10274.6 - ETA: >2026-11-15 00:57:40
+2026-11-15 00:22:38 (UTC) - 0:09:04 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000030/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:22:39 (UTC) - 0:09:04 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000030/consolidated for step: 30
+2026-11-15 00:22:39 (UTC) - 0:09:04 - checkpointing - INFO - Done!
+Rank 0 finished epoch 8
+2026-11-15 00:22:53 (UTC) - 0:09:19 - train - INFO - step: 000031 - done (%): 20.7 - loss: 0.813 - lr: 9.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12599.6 - avg_words_per_second: 10336.1 - ETA: >2026-11-15 00:57:25
+2026-11-15 00:23:07 (UTC) - 0:09:33 - train - INFO - step: 000032 - done (%): 21.3 - loss: 0.751 - lr: 9.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12687.9 - avg_words_per_second: 10396.3 - ETA: >2026-11-15 00:57:10
+2026-11-15 00:23:22 (UTC) - 0:09:47 - train - INFO - step: 000033 - done (%): 22.0 - loss: 0.758 - lr: 9.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12585.7 - avg_words_per_second: 10451.4 - ETA: >2026-11-15 00:56:57
+Rank 0 finished epoch 9
+2026-11-15 00:23:36 (UTC) - 0:10:01 - train - INFO - step: 000034 - done (%): 22.7 - loss: 0.778 - lr: 9.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12649.9 - avg_words_per_second: 10505.1 - ETA: >2026-11-15 00:56:43
+2026-11-15 00:23:50 (UTC) - 0:10:16 - train - INFO - step: 000035 - done (%): 23.3 - loss: 0.697 - lr: 9.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12528.9 - avg_words_per_second: 10553.8 - ETA: >2026-11-15 00:56:32
+2026-11-15 00:24:04 (UTC) - 0:10:30 - train - INFO - step: 000036 - done (%): 24.0 - loss: 0.752 - lr: 9.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12724.5 - avg_words_per_second: 10604.1 - ETA: >2026-11-15 00:56:19
+2026-11-15 00:24:19 (UTC) - 0:10:44 - train - INFO - step: 000037 - done (%): 24.7 - loss: 0.782 - lr: 9.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12597.5 - avg_words_per_second: 10649.6 - ETA: >2026-11-15 00:56:09
+Rank 0 finished epoch 10
+2026-11-15 00:24:33 (UTC) - 0:10:58 - train - INFO - step: 000038 - done (%): 25.3 - loss: 0.734 - lr: 9.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12673.1 - avg_words_per_second: 10694.5 - ETA: >2026-11-15 00:55:58
+2026-11-15 00:24:47 (UTC) - 0:11:13 - train - INFO - step: 000039 - done (%): 26.0 - loss: 0.736 - lr: 9.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12573.5 - avg_words_per_second: 10735.7 - ETA: >2026-11-15 00:55:48
+2026-11-15 00:25:12 (UTC) - 0:11:38 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:25:12 (UTC) - 0:11:38 - train - INFO - step: 000040 - eval_perplexity: 1.633 - eval_loss: 0.708 - train_loss: 0.732
+2026-11-15 00:25:12 (UTC) - 0:11:38 - train - INFO - step: 000040 - done (%): 26.7 - loss: 0.732 - lr: 9.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7218.2 - avg_words_per_second: 10606.5 - ETA: >2026-11-15 00:56:19
+2026-11-15 00:25:12 (UTC) - 0:11:38 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000040/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:25:13 (UTC) - 0:11:38 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000040/consolidated for step: 40
+2026-11-15 00:25:13 (UTC) - 0:11:38 - checkpointing - INFO - Done!
+2026-11-15 00:25:27 (UTC) - 0:11:53 - train - INFO - step: 000041 - done (%): 27.3 - loss: 0.661 - lr: 9.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12589.2 - avg_words_per_second: 10647.4 - ETA: >2026-11-15 00:56:10
+Rank 0 finished epoch 11
+2026-11-15 00:25:41 (UTC) - 0:12:07 - train - INFO - step: 000042 - done (%): 28.0 - loss: 0.676 - lr: 9.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12659.9 - avg_words_per_second: 10687.8 - ETA: >2026-11-15 00:56:00
+2026-11-15 00:25:56 (UTC) - 0:12:21 - train - INFO - step: 000043 - done (%): 28.7 - loss: 0.671 - lr: 9.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12556.5 - avg_words_per_second: 10724.9 - ETA: >2026-11-15 00:55:51
+2026-11-15 00:26:10 (UTC) - 0:12:35 - train - INFO - step: 000044 - done (%): 29.3 - loss: 0.675 - lr: 8.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12722.5 - avg_words_per_second: 10763.3 - ETA: >2026-11-15 00:55:43
+2026-11-15 00:26:24 (UTC) - 0:12:50 - train - INFO - step: 000045 - done (%): 30.0 - loss: 0.702 - lr: 8.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12566.9 - avg_words_per_second: 10797.8 - ETA: >2026-11-15 00:55:35
+Rank 0 finished epoch 12
+2026-11-15 00:26:38 (UTC) - 0:13:04 - train - INFO - step: 000046 - done (%): 30.7 - loss: 0.676 - lr: 8.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12672.8 - avg_words_per_second: 10832.6 - ETA: >2026-11-15 00:55:26
+2026-11-15 00:26:53 (UTC) - 0:13:18 - train - INFO - step: 000047 - done (%): 31.3 - loss: 0.656 - lr: 8.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12545.5 - avg_words_per_second: 10864.2 - ETA: >2026-11-15 00:55:19
+2026-11-15 00:27:07 (UTC) - 0:13:32 - train - INFO - step: 000048 - done (%): 32.0 - loss: 0.678 - lr: 8.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12703.0 - avg_words_per_second: 10897.0 - ETA: >2026-11-15 00:55:12
+Rank 0 finished epoch 13
+2026-11-15 00:27:21 (UTC) - 0:13:47 - train - INFO - step: 000049 - done (%): 32.7 - loss: 0.558 - lr: 8.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12527.1 - avg_words_per_second: 10926.1 - ETA: >2026-11-15 00:55:05
+2026-11-15 00:27:46 (UTC) - 0:14:12 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:27:46 (UTC) - 0:14:12 - train - INFO - step: 000050 - eval_perplexity: 1.635 - eval_loss: 0.709 - train_loss: 0.595
+2026-11-15 00:27:46 (UTC) - 0:14:12 - train - INFO - step: 000050 - done (%): 33.3 - loss: 0.595 - lr: 8.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7198.5 - avg_words_per_second: 10814.1 - ETA: >2026-11-15 00:55:31
+2026-11-15 00:27:46 (UTC) - 0:14:12 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000050/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:27:47 (UTC) - 0:14:12 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000050/consolidated for step: 50
+2026-11-15 00:27:47 (UTC) - 0:14:12 - checkpointing - INFO - Done!
+2026-11-15 00:28:01 (UTC) - 0:14:27 - train - INFO - step: 000051 - done (%): 34.0 - loss: 0.625 - lr: 8.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12593.2 - avg_words_per_second: 10844.1 - ETA: >2026-11-15 00:55:24
+2026-11-15 00:28:15 (UTC) - 0:14:41 - train - INFO - step: 000052 - done (%): 34.7 - loss: 0.642 - lr: 8.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12726.1 - avg_words_per_second: 10875.0 - ETA: >2026-11-15 00:55:17
+Rank 0 finished epoch 14
+2026-11-15 00:28:30 (UTC) - 0:14:55 - train - INFO - step: 000053 - done (%): 35.3 - loss: 0.640 - lr: 8.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12523.7 - avg_words_per_second: 10902.1 - ETA: >2026-11-15 00:55:11
+2026-11-15 00:28:44 (UTC) - 0:15:09 - train - INFO - step: 000054 - done (%): 36.0 - loss: 0.583 - lr: 8.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12724.1 - avg_words_per_second: 10931.1 - ETA: >2026-11-15 00:55:05
+2026-11-15 00:28:58 (UTC) - 0:15:24 - train - INFO - step: 000055 - done (%): 36.7 - loss: 0.580 - lr: 8.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12554.8 - avg_words_per_second: 10956.9 - ETA: >2026-11-15 00:54:59
+2026-11-15 00:29:12 (UTC) - 0:15:38 - train - INFO - step: 000056 - done (%): 37.3 - loss: 0.578 - lr: 7.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12719.4 - avg_words_per_second: 10984.0 - ETA: >2026-11-15 00:54:53
+Rank 0 finished epoch 15
+2026-11-15 00:29:27 (UTC) - 0:15:52 - train - INFO - step: 000057 - done (%): 38.0 - loss: 0.580 - lr: 7.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12584.6 - avg_words_per_second: 11008.6 - ETA: >2026-11-15 00:54:47
+2026-11-15 00:29:41 (UTC) - 0:16:06 - train - INFO - step: 000058 - done (%): 38.7 - loss: 0.546 - lr: 7.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12697.9 - avg_words_per_second: 11033.9 - ETA: >2026-11-15 00:54:42
+2026-11-15 00:29:55 (UTC) - 0:16:21 - train - INFO - step: 000059 - done (%): 39.3 - loss: 0.522 - lr: 7.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12558.5 - avg_words_per_second: 11056.7 - ETA: >2026-11-15 00:54:37
+2026-11-15 00:30:20 (UTC) - 0:16:46 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:30:20 (UTC) - 0:16:46 - train - INFO - step: 000060 - eval_perplexity: 1.658 - eval_loss: 0.730 - train_loss: 0.624
+2026-11-15 00:30:20 (UTC) - 0:16:46 - train - INFO - step: 000060 - done (%): 40.0 - loss: 0.624 - lr: 7.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7203.6 - avg_words_per_second: 10959.0 - ETA: >2026-11-15 00:54:58
+2026-11-15 00:30:20 (UTC) - 0:16:46 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000060/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:30:21 (UTC) - 0:16:46 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000060/consolidated for step: 60
+2026-11-15 00:30:21 (UTC) - 0:16:46 - checkpointing - INFO - Done!
+Rank 0 finished epoch 16
+2026-11-15 00:30:35 (UTC) - 0:17:01 - train - INFO - step: 000061 - done (%): 40.7 - loss: 0.501 - lr: 7.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12565.5 - avg_words_per_second: 10982.0 - ETA: >2026-11-15 00:54:54
+2026-11-15 00:30:49 (UTC) - 0:17:15 - train - INFO - step: 000062 - done (%): 41.3 - loss: 0.520 - lr: 7.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12667.5 - avg_words_per_second: 11005.6 - ETA: >2026-11-15 00:54:49
+2026-11-15 00:31:04 (UTC) - 0:17:29 - train - INFO - step: 000063 - done (%): 42.0 - loss: 0.601 - lr: 7.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12600.5 - avg_words_per_second: 11027.8 - ETA: >2026-11-15 00:54:44
+Rank 0 finished epoch 17
+2026-11-15 00:31:18 (UTC) - 0:17:43 - train - INFO - step: 000064 - done (%): 42.7 - loss: 0.519 - lr: 7.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12680.3 - avg_words_per_second: 11050.3 - ETA: >2026-11-15 00:54:39
+2026-11-15 00:31:32 (UTC) - 0:17:58 - train - INFO - step: 000065 - done (%): 43.3 - loss: 0.511 - lr: 7.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12566.5 - avg_words_per_second: 11070.8 - ETA: >2026-11-15 00:54:34
+2026-11-15 00:31:46 (UTC) - 0:18:12 - train - INFO - step: 000066 - done (%): 44.0 - loss: 0.491 - lr: 6.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12706.2 - avg_words_per_second: 11092.4 - ETA: >2026-11-15 00:54:29
+2026-11-15 00:32:01 (UTC) - 0:18:26 - train - INFO - step: 000067 - done (%): 44.7 - loss: 0.467 - lr: 6.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12550.9 - avg_words_per_second: 11111.7 - ETA: >2026-11-15 00:54:25
+Rank 0 finished epoch 18
+2026-11-15 00:32:15 (UTC) - 0:18:40 - train - INFO - step: 000068 - done (%): 45.3 - loss: 0.550 - lr: 6.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12711.9 - avg_words_per_second: 11132.3 - ETA: >2026-11-15 00:54:21
+2026-11-15 00:32:29 (UTC) - 0:18:55 - train - INFO - step: 000069 - done (%): 46.0 - loss: 0.469 - lr: 6.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12585.8 - avg_words_per_second: 11151.0 - ETA: >2026-11-15 00:54:17
+2026-11-15 00:32:54 (UTC) - 0:19:20 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:32:54 (UTC) - 0:19:20 - train - INFO - step: 000070 - eval_perplexity: 1.706 - eval_loss: 0.771 - train_loss: 0.475
+2026-11-15 00:32:54 (UTC) - 0:19:20 - train - INFO - step: 000070 - done (%): 46.7 - loss: 0.475 - lr: 6.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7213.8 - avg_words_per_second: 11064.7 - ETA: >2026-11-15 00:54:36
+2026-11-15 00:32:54 (UTC) - 0:19:20 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000070/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:32:55 (UTC) - 0:19:20 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000070/consolidated for step: 70
+2026-11-15 00:32:55 (UTC) - 0:19:20 - checkpointing - INFO - Done!
+2026-11-15 00:33:09 (UTC) - 0:19:35 - train - INFO - step: 000071 - done (%): 47.3 - loss: 0.469 - lr: 6.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12556.8 - avg_words_per_second: 11083.3 - ETA: >2026-11-15 00:54:32
+Rank 0 finished epoch 19
+2026-11-15 00:33:23 (UTC) - 0:19:49 - train - INFO - step: 000072 - done (%): 48.0 - loss: 0.520 - lr: 6.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12714.0 - avg_words_per_second: 11103.0 - ETA: >2026-11-15 00:54:28
+2026-11-15 00:33:38 (UTC) - 0:20:03 - train - INFO - step: 000073 - done (%): 48.7 - loss: 0.460 - lr: 6.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12568.8 - avg_words_per_second: 11120.8 - ETA: >2026-11-15 00:54:24
+2026-11-15 00:33:52 (UTC) - 0:20:17 - train - INFO - step: 000074 - done (%): 49.3 - loss: 0.389 - lr: 6.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12686.2 - avg_words_per_second: 11139.4 - ETA: >2026-11-15 00:54:20
+2026-11-15 00:34:06 (UTC) - 0:20:32 - train - INFO - step: 000075 - done (%): 50.0 - loss: 0.453 - lr: 5.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12573.6 - avg_words_per_second: 11156.4 - ETA: >2026-11-15 00:54:16
+Rank 0 finished epoch 20
+2026-11-15 00:34:20 (UTC) - 0:20:46 - train - INFO - step: 000076 - done (%): 50.7 - loss: 0.437 - lr: 5.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12700.2 - avg_words_per_second: 11174.2 - ETA: >2026-11-15 00:54:12
+2026-11-15 00:34:35 (UTC) - 0:21:00 - train - INFO - step: 000077 - done (%): 51.3 - loss: 0.408 - lr: 5.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12586.5 - avg_words_per_second: 11190.5 - ETA: >2026-11-15 00:54:09
+2026-11-15 00:34:49 (UTC) - 0:21:14 - train - INFO - step: 000078 - done (%): 52.0 - loss: 0.446 - lr: 5.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12691.9 - avg_words_per_second: 11207.5 - ETA: >2026-11-15 00:54:05
+Rank 0 finished epoch 21
+2026-11-15 00:35:03 (UTC) - 0:21:29 - train - INFO - step: 000079 - done (%): 52.7 - loss: 0.418 - lr: 5.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12527.1 - avg_words_per_second: 11222.5 - ETA: >2026-11-15 00:54:02
+2026-11-15 00:35:28 (UTC) - 0:21:54 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:35:28 (UTC) - 0:21:54 - train - INFO - step: 000080 - eval_perplexity: 1.766 - eval_loss: 0.821 - train_loss: 0.412
+2026-11-15 00:35:28 (UTC) - 0:21:54 - train - INFO - step: 000080 - done (%): 53.3 - loss: 0.412 - lr: 5.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7198.9 - avg_words_per_second: 11144.6 - ETA: >2026-11-15 00:54:19
+2026-11-15 00:35:28 (UTC) - 0:21:54 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000080/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:35:29 (UTC) - 0:21:54 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000080/consolidated for step: 80
+2026-11-15 00:35:29 (UTC) - 0:21:54 - checkpointing - INFO - Done!
+2026-11-15 00:35:43 (UTC) - 0:22:09 - train - INFO - step: 000081 - done (%): 54.0 - loss: 0.408 - lr: 5.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12573.6 - avg_words_per_second: 11160.3 - ETA: >2026-11-15 00:54:16
+2026-11-15 00:35:57 (UTC) - 0:22:23 - train - INFO - step: 000082 - done (%): 54.7 - loss: 0.428 - lr: 5.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12707.6 - avg_words_per_second: 11176.9 - ETA: >2026-11-15 00:54:12
+Rank 0 finished epoch 22
+2026-11-15 00:36:12 (UTC) - 0:22:37 - train - INFO - step: 000083 - done (%): 55.3 - loss: 0.408 - lr: 4.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12553.7 - avg_words_per_second: 11191.7 - ETA: >2026-11-15 00:54:09
+2026-11-15 00:36:26 (UTC) - 0:22:51 - train - INFO - step: 000084 - done (%): 56.0 - loss: 0.377 - lr: 4.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12661.9 - avg_words_per_second: 11207.2 - ETA: >2026-11-15 00:54:06
+2026-11-15 00:36:40 (UTC) - 0:23:06 - train - INFO - step: 000085 - done (%): 56.7 - loss: 0.402 - lr: 4.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12580.8 - avg_words_per_second: 11221.6 - ETA: >2026-11-15 00:54:03
+2026-11-15 00:36:54 (UTC) - 0:23:20 - train - INFO - step: 000086 - done (%): 57.3 - loss: 0.413 - lr: 4.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12734.8 - avg_words_per_second: 11237.1 - ETA: >2026-11-15 00:53:59
+Rank 0 finished epoch 23
+2026-11-15 00:37:09 (UTC) - 0:23:34 - train - INFO - step: 000087 - done (%): 58.0 - loss: 0.390 - lr: 4.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12588.6 - avg_words_per_second: 11251.0 - ETA: >2026-11-15 00:53:56
+2026-11-15 00:37:23 (UTC) - 0:23:48 - train - INFO - step: 000088 - done (%): 58.7 - loss: 0.393 - lr: 4.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12726.4 - avg_words_per_second: 11265.8 - ETA: >2026-11-15 00:53:53
+2026-11-15 00:37:37 (UTC) - 0:24:03 - train - INFO - step: 000089 - done (%): 59.3 - loss: 0.357 - lr: 4.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12576.8 - avg_words_per_second: 11279.0 - ETA: >2026-11-15 00:53:51
+2026-11-15 00:38:02 (UTC) - 0:24:27 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:38:02 (UTC) - 0:24:27 - train - INFO - step: 000090 - eval_perplexity: 1.829 - eval_loss: 0.871 - train_loss: 0.385
+2026-11-15 00:38:02 (UTC) - 0:24:27 - train - INFO - step: 000090 - done (%): 60.0 - loss: 0.385 - lr: 4.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7214.4 - avg_words_per_second: 11208.9 - ETA: >2026-11-15 00:54:06
+2026-11-15 00:38:02 (UTC) - 0:24:27 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000090/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:38:03 (UTC) - 0:24:28 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000090/consolidated for step: 90
+2026-11-15 00:38:03 (UTC) - 0:24:28 - checkpointing - INFO - Done!
+Rank 0 finished epoch 24
+2026-11-15 00:38:17 (UTC) - 0:24:43 - train - INFO - step: 000091 - done (%): 60.7 - loss: 0.381 - lr: 4.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12482.9 - avg_words_per_second: 11221.5 - ETA: >2026-11-15 00:54:04
+2026-11-15 00:38:31 (UTC) - 0:24:57 - train - INFO - step: 000092 - done (%): 61.3 - loss: 0.366 - lr: 3.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12574.7 - avg_words_per_second: 11234.6 - ETA: >2026-11-15 00:54:01
+2026-11-15 00:38:46 (UTC) - 0:25:11 - train - INFO - step: 000093 - done (%): 62.0 - loss: 0.329 - lr: 3.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12535.2 - avg_words_per_second: 11247.2 - ETA: >2026-11-15 00:53:58
+Rank 0 finished epoch 25
+2026-11-15 00:39:00 (UTC) - 0:25:26 - train - INFO - step: 000094 - done (%): 62.7 - loss: 0.380 - lr: 3.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12681.4 - avg_words_per_second: 11260.7 - ETA: >2026-11-15 00:53:55
+2026-11-15 00:39:14 (UTC) - 0:25:40 - train - INFO - step: 000095 - done (%): 63.3 - loss: 0.383 - lr: 3.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12579.8 - avg_words_per_second: 11273.1 - ETA: >2026-11-15 00:53:53
+2026-11-15 00:39:29 (UTC) - 0:25:54 - train - INFO - step: 000096 - done (%): 64.0 - loss: 0.354 - lr: 3.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12670.4 - avg_words_per_second: 11286.1 - ETA: >2026-11-15 00:53:50
+2026-11-15 00:39:43 (UTC) - 0:26:08 - train - INFO - step: 000097 - done (%): 64.7 - loss: 0.354 - lr: 3.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12612.0 - avg_words_per_second: 11298.4 - ETA: >2026-11-15 00:53:47
+Rank 0 finished epoch 26
+2026-11-15 00:39:57 (UTC) - 0:26:23 - train - INFO - step: 000098 - done (%): 65.3 - loss: 0.349 - lr: 3.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12652.7 - avg_words_per_second: 11310.7 - ETA: >2026-11-15 00:53:45
+2026-11-15 00:40:11 (UTC) - 0:26:37 - train - INFO - step: 000099 - done (%): 66.0 - loss: 0.349 - lr: 3.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12540.8 - avg_words_per_second: 11321.9 - ETA: >2026-11-15 00:53:42
+2026-11-15 00:40:36 (UTC) - 0:27:02 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:40:36 (UTC) - 0:27:02 - train - INFO - step: 000100 - eval_perplexity: 1.888 - eval_loss: 0.917 - train_loss: 0.345
+2026-11-15 00:40:36 (UTC) - 0:27:02 - train - INFO - step: 000100 - done (%): 66.7 - loss: 0.345 - lr: 3.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7215.7 - avg_words_per_second: 11257.9 - ETA: >2026-11-15 00:53:56
+2026-11-15 00:40:36 (UTC) - 0:27:02 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000100/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:40:37 (UTC) - 0:27:03 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000100/consolidated for step: 100
+2026-11-15 00:40:37 (UTC) - 0:27:03 - checkpointing - INFO - Done!
+2026-11-15 00:40:51 (UTC) - 0:27:17 - train - INFO - step: 000101 - done (%): 67.3 - loss: 0.325 - lr: 2.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12555.5 - avg_words_per_second: 11269.4 - ETA: >2026-11-15 00:53:54
+Rank 0 finished epoch 27
+2026-11-15 00:41:06 (UTC) - 0:27:31 - train - INFO - step: 000102 - done (%): 68.0 - loss: 0.332 - lr: 2.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12666.4 - avg_words_per_second: 11281.6 - ETA: >2026-11-15 00:53:51
+2026-11-15 00:41:20 (UTC) - 0:27:45 - train - INFO - step: 000103 - done (%): 68.7 - loss: 0.325 - lr: 2.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12601.5 - avg_words_per_second: 11293.1 - ETA: >2026-11-15 00:53:49
+2026-11-15 00:41:34 (UTC) - 0:28:00 - train - INFO - step: 000104 - done (%): 69.3 - loss: 0.319 - lr: 2.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12707.5 - avg_words_per_second: 11305.2 - ETA: >2026-11-15 00:53:46
+2026-11-15 00:41:48 (UTC) - 0:28:14 - train - INFO - step: 000105 - done (%): 70.0 - loss: 0.362 - lr: 2.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12577.9 - avg_words_per_second: 11316.1 - ETA: >2026-11-15 00:53:44
+Rank 0 finished epoch 28
+2026-11-15 00:42:02 (UTC) - 0:28:28 - train - INFO - step: 000106 - done (%): 70.7 - loss: 0.344 - lr: 2.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12704.9 - avg_words_per_second: 11327.8 - ETA: >2026-11-15 00:53:42
+2026-11-15 00:42:17 (UTC) - 0:28:42 - train - INFO - step: 000107 - done (%): 71.3 - loss: 0.318 - lr: 2.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12560.4 - avg_words_per_second: 11338.2 - ETA: >2026-11-15 00:53:39
+2026-11-15 00:42:31 (UTC) - 0:28:56 - train - INFO - step: 000108 - done (%): 72.0 - loss: 0.313 - lr: 2.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12714.5 - avg_words_per_second: 11349.5 - ETA: >2026-11-15 00:53:37
+Rank 0 finished epoch 29
+2026-11-15 00:42:45 (UTC) - 0:29:11 - train - INFO - step: 000109 - done (%): 72.7 - loss: 0.325 - lr: 2.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12574.2 - avg_words_per_second: 11359.7 - ETA: >2026-11-15 00:53:35
+2026-11-15 00:43:10 (UTC) - 0:29:36 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:43:10 (UTC) - 0:29:36 - train - INFO - step: 000110 - eval_perplexity: 1.927 - eval_loss: 0.947 - train_loss: 0.347
+2026-11-15 00:43:10 (UTC) - 0:29:36 - train - INFO - step: 000110 - done (%): 73.3 - loss: 0.347 - lr: 2.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7214.6 - avg_words_per_second: 11300.7 - ETA: >2026-11-15 00:53:47
+2026-11-15 00:43:10 (UTC) - 0:29:36 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000110/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:43:11 (UTC) - 0:29:36 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000110/consolidated for step: 110
+2026-11-15 00:43:11 (UTC) - 0:29:36 - checkpointing - INFO - Done!
+2026-11-15 00:43:25 (UTC) - 0:29:51 - train - INFO - step: 000111 - done (%): 74.0 - loss: 0.308 - lr: 1.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12566.6 - avg_words_per_second: 11310.9 - ETA: >2026-11-15 00:53:46
+2026-11-15 00:43:40 (UTC) - 0:30:05 - train - INFO - step: 000112 - done (%): 74.7 - loss: 0.291 - lr: 1.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12669.4 - avg_words_per_second: 11321.8 - ETA: >2026-11-15 00:53:44
+Rank 0 finished epoch 30
+2026-11-15 00:43:54 (UTC) - 0:30:19 - train - INFO - step: 000113 - done (%): 75.3 - loss: 0.346 - lr: 1.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12560.8 - avg_words_per_second: 11331.7 - ETA: >2026-11-15 00:53:42
+2026-11-15 00:44:08 (UTC) - 0:30:34 - train - INFO - step: 000114 - done (%): 76.0 - loss: 0.318 - lr: 1.7e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12698.2 - avg_words_per_second: 11342.4 - ETA: >2026-11-15 00:53:39
+2026-11-15 00:44:22 (UTC) - 0:30:48 - train - INFO - step: 000115 - done (%): 76.7 - loss: 0.285 - lr: 1.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12544.7 - avg_words_per_second: 11351.8 - ETA: >2026-11-15 00:53:37
+2026-11-15 00:44:37 (UTC) - 0:31:02 - train - INFO - step: 000116 - done (%): 77.3 - loss: 0.329 - lr: 1.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12724.3 - avg_words_per_second: 11362.4 - ETA: >2026-11-15 00:53:35
+Rank 0 finished epoch 31
+2026-11-15 00:44:51 (UTC) - 0:31:16 - train - INFO - step: 000117 - done (%): 78.0 - loss: 0.310 - lr: 1.4e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12555.2 - avg_words_per_second: 11371.6 - ETA: >2026-11-15 00:53:33
+2026-11-15 00:45:05 (UTC) - 0:31:31 - train - INFO - step: 000118 - done (%): 78.7 - loss: 0.294 - lr: 1.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12677.1 - avg_words_per_second: 11381.6 - ETA: >2026-11-15 00:53:31
+2026-11-15 00:45:19 (UTC) - 0:31:45 - train - INFO - step: 000119 - done (%): 79.3 - loss: 0.315 - lr: 1.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12552.8 - avg_words_per_second: 11390.5 - ETA: >2026-11-15 00:53:29
+2026-11-15 00:45:44 (UTC) - 0:32:10 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:45:44 (UTC) - 0:32:10 - train - INFO - step: 000120 - eval_perplexity: 1.961 - eval_loss: 0.972 - train_loss: 0.308
+2026-11-15 00:45:44 (UTC) - 0:32:10 - train - INFO - step: 000120 - done (%): 80.0 - loss: 0.308 - lr: 1.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7229.5 - avg_words_per_second: 11336.1 - ETA: >2026-11-15 00:53:41
+2026-11-15 00:45:44 (UTC) - 0:32:10 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000120/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:45:45 (UTC) - 0:32:10 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000120/consolidated for step: 120
+2026-11-15 00:45:45 (UTC) - 0:32:10 - checkpointing - INFO - Done!
+Rank 0 finished epoch 32
+2026-11-15 00:45:59 (UTC) - 0:32:25 - train - INFO - step: 000121 - done (%): 80.7 - loss: 0.292 - lr: 1.1e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12560.6 - avg_words_per_second: 11345.3 - ETA: >2026-11-15 00:53:39
+2026-11-15 00:46:13 (UTC) - 0:32:39 - train - INFO - step: 000122 - done (%): 81.3 - loss: 0.313 - lr: 1.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12691.0 - avg_words_per_second: 11355.1 - ETA: >2026-11-15 00:53:37
+2026-11-15 00:46:28 (UTC) - 0:32:53 - train - INFO - step: 000123 - done (%): 82.0 - loss: 0.293 - lr: 9.5e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12585.5 - avg_words_per_second: 11364.2 - ETA: >2026-11-15 00:53:35
+Rank 0 finished epoch 33
+2026-11-15 00:46:42 (UTC) - 0:33:07 - train - INFO - step: 000124 - done (%): 82.7 - loss: 0.314 - lr: 8.9e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12692.4 - avg_words_per_second: 11373.8 - ETA: >2026-11-15 00:53:33
+2026-11-15 00:46:56 (UTC) - 0:33:22 - train - INFO - step: 000125 - done (%): 83.3 - loss: 0.307 - lr: 8.2e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12599.1 - avg_words_per_second: 11382.6 - ETA: >2026-11-15 00:53:32
+2026-11-15 00:47:10 (UTC) - 0:33:36 - train - INFO - step: 000126 - done (%): 84.0 - loss: 0.308 - lr: 7.6e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12701.6 - avg_words_per_second: 11392.0 - ETA: >2026-11-15 00:53:30
+2026-11-15 00:47:25 (UTC) - 0:33:50 - train - INFO - step: 000127 - done (%): 84.7 - loss: 0.307 - lr: 7.0e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12559.9 - avg_words_per_second: 11400.3 - ETA: >2026-11-15 00:53:28
+Rank 0 finished epoch 34
+2026-11-15 00:47:39 (UTC) - 0:34:04 - train - INFO - step: 000128 - done (%): 85.3 - loss: 0.277 - lr: 6.4e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12662.2 - avg_words_per_second: 11409.2 - ETA: >2026-11-15 00:53:26
+2026-11-15 00:47:53 (UTC) - 0:34:19 - train - INFO - step: 000129 - done (%): 86.0 - loss: 0.303 - lr: 5.9e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12578.5 - avg_words_per_second: 11417.5 - ETA: >2026-11-15 00:53:24
+2026-11-15 00:48:18 (UTC) - 0:34:44 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:48:18 (UTC) - 0:34:44 - train - INFO - step: 000130 - eval_perplexity: 1.975 - eval_loss: 0.982 - train_loss: 0.318
+2026-11-15 00:48:18 (UTC) - 0:34:44 - train - INFO - step: 000130 - done (%): 86.7 - loss: 0.318 - lr: 5.3e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7206.5 - avg_words_per_second: 11366.4 - ETA: >2026-11-15 00:53:35
+2026-11-15 00:48:18 (UTC) - 0:34:44 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000130/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:48:19 (UTC) - 0:34:45 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000130/consolidated for step: 130
+2026-11-15 00:48:19 (UTC) - 0:34:45 - checkpointing - INFO - Done!
+2026-11-15 00:48:33 (UTC) - 0:34:59 - train - INFO - step: 000131 - done (%): 87.3 - loss: 0.287 - lr: 4.8e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12567.7 - avg_words_per_second: 11374.7 - ETA: >2026-11-15 00:53:34
+Rank 0 finished epoch 35
+2026-11-15 00:48:48 (UTC) - 0:35:13 - train - INFO - step: 000132 - done (%): 88.0 - loss: 0.278 - lr: 4.3e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12657.7 - avg_words_per_second: 11383.4 - ETA: >2026-11-15 00:53:32
+2026-11-15 00:49:02 (UTC) - 0:35:27 - train - INFO - step: 000133 - done (%): 88.7 - loss: 0.300 - lr: 3.9e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12552.1 - avg_words_per_second: 11391.4 - ETA: >2026-11-15 00:53:31
+2026-11-15 00:49:16 (UTC) - 0:35:42 - train - INFO - step: 000134 - done (%): 89.3 - loss: 0.277 - lr: 3.4e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12708.6 - avg_words_per_second: 11400.2 - ETA: >2026-11-15 00:53:29
+2026-11-15 00:49:30 (UTC) - 0:35:56 - train - INFO - step: 000135 - done (%): 90.0 - loss: 0.319 - lr: 3.0e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12602.0 - avg_words_per_second: 11408.3 - ETA: >2026-11-15 00:53:27
+Rank 0 finished epoch 36
+2026-11-15 00:49:45 (UTC) - 0:36:10 - train - INFO - step: 000136 - done (%): 90.7 - loss: 0.284 - lr: 2.6e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12676.0 - avg_words_per_second: 11416.7 - ETA: >2026-11-15 00:53:25
+2026-11-15 00:49:59 (UTC) - 0:36:24 - train - INFO - step: 000137 - done (%): 91.3 - loss: 0.284 - lr: 2.3e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12568.5 - avg_words_per_second: 11424.3 - ETA: >2026-11-15 00:53:24
+2026-11-15 00:50:13 (UTC) - 0:36:39 - train - INFO - step: 000138 - done (%): 92.0 - loss: 0.317 - lr: 1.9e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12739.7 - avg_words_per_second: 11432.9 - ETA: >2026-11-15 00:53:22
+Rank 0 finished epoch 37
+2026-11-15 00:50:27 (UTC) - 0:36:53 - train - INFO - step: 000139 - done (%): 92.7 - loss: 0.284 - lr: 1.6e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12563.9 - avg_words_per_second: 11440.3 - ETA: >2026-11-15 00:53:20
+2026-11-15 00:50:52 (UTC) - 0:37:18 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:50:52 (UTC) - 0:37:18 - train - INFO - step: 000140 - eval_perplexity: 1.983 - eval_loss: 0.988 - train_loss: 0.283
+2026-11-15 00:50:52 (UTC) - 0:37:18 - train - INFO - step: 000140 - done (%): 93.3 - loss: 0.283 - lr: 1.3e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7203.3 - avg_words_per_second: 11392.4 - ETA: >2026-11-15 00:53:30
+2026-11-15 00:50:52 (UTC) - 0:37:18 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000140/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:50:53 (UTC) - 0:37:19 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000140/consolidated for step: 140
+2026-11-15 00:50:53 (UTC) - 0:37:19 - checkpointing - INFO - Done!
+2026-11-15 00:51:07 (UTC) - 0:37:33 - train - INFO - step: 000141 - done (%): 94.0 - loss: 0.303 - lr: 1.1e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12575.5 - avg_words_per_second: 11400.0 - ETA: >2026-11-15 00:53:30
+2026-11-15 00:51:22 (UTC) - 0:37:47 - train - INFO - step: 000142 - done (%): 94.7 - loss: 0.314 - lr: 8.6e-08 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12735.0 - avg_words_per_second: 11408.4 - ETA: >2026-11-15 00:53:28
+Rank 0 finished epoch 38
+2026-11-15 00:51:36 (UTC) - 0:38:01 - train - INFO - step: 000143 - done (%): 95.3 - loss: 0.279 - lr: 6.6e-08 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12543.2 - avg_words_per_second: 11415.6 - ETA: >2026-11-15 00:53:26
+2026-11-15 00:51:50 (UTC) - 0:38:16 - train - INFO - step: 000144 - done (%): 96.0 - loss: 0.278 - lr: 4.9e-08 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12686.8 - avg_words_per_second: 11423.6 - ETA: >2026-11-15 00:53:25
+2026-11-15 00:52:04 (UTC) - 0:38:30 - train - INFO - step: 000145 - done (%): 96.7 - loss: 0.312 - lr: 3.4e-08 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12569.9 - avg_words_per_second: 11430.8 - ETA: >2026-11-15 00:53:23
+2026-11-15 00:52:19 (UTC) - 0:38:44 - train - INFO - step: 000146 - done (%): 97.3 - loss: 0.296 - lr: 2.2e-08 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12688.0 - avg_words_per_second: 11438.5 - ETA: >2026-11-15 00:53:22
+Rank 0 finished epoch 39
+2026-11-15 00:52:33 (UTC) - 0:38:58 - train - INFO - step: 000147 - done (%): 98.0 - loss: 0.283 - lr: 1.2e-08 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12558.7 - avg_words_per_second: 11445.5 - ETA: >2026-11-15 00:53:20
+2026-11-15 00:52:47 (UTC) - 0:39:13 - train - INFO - step: 000148 - done (%): 98.7 - loss: 0.263 - lr: 5.5e-09 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12680.7 - avg_words_per_second: 11453.0 - ETA: >2026-11-15 00:53:19
+2026-11-15 00:53:01 (UTC) - 0:39:27 - train - INFO - step: 000149 - done (%): 99.3 - loss: 0.316 - lr: 1.4e-09 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12589.4 - avg_words_per_second: 11460.0 - ETA: >2026-11-15 00:53:17
+2026-11-15 00:53:26 (UTC) - 0:39:52 - eval - INFO - Eval finished! 3 batches over 1 ranks in 10.8 s (data loading + forward passes)
+2026-11-15 00:53:26 (UTC) - 0:39:52 - train - INFO - step: 000150 - eval_perplexity: 1.982 - eval_loss: 0.987 - train_loss: 0.321
+2026-11-15 00:53:26 (UTC) - 0:39:52 - train - INFO - step: 000150 - done (%): 100.0 - loss: 0.321 - lr: 4.0e-11 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 7193.6 - avg_words_per_second: 11414.8 - ETA: >2026-11-15 00:53:26
+2026-11-15 00:53:26 (UTC) - 0:39:52 - checkpointing - INFO - Dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000150/consolidated using tmp name: tmp.consolidated
+2026-11-15 00:53:27 (UTC) - 0:39:53 - checkpointing - INFO - Done dumping checkpoint in runs/train_1h_v2_lr1e-5/checkpoints/checkpoint_000150/consolidated for step: 150
+2026-11-15 00:53:27 (UTC) - 0:39:53 - checkpointing - INFO - Done!
+2026-11-15 00:53:27 (UTC) - 0:39:53 - train - INFO - done!
+2026-11-15 00:53:27 (UTC) - 0:39:53 - utils - INFO - Closing: eval_logger
+2026-11-15 00:53:27 (UTC) - 0:39:53 - utils - INFO - Closed: eval_logger
+2026-11-15 00:53:27 (UTC) - 0:39:53 - utils - INFO - Closing: metrics_logger
+2026-11-15 00:53:27 (UTC) - 0:39:53 - utils - INFO - Closed: metrics_logger
+2026-11-15 00:53:27 (UTC) - 0:39:53 - train - INFO - Closed everything!
+[rank0]:[W1115 00:53:27.413804245 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

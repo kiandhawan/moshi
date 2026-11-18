@@ -1,0 +1,139 @@
+Warning: `hf_repo_id` is set but `config_path` is None. This will load default models.
+2026-11-12 22:20:27 (UTC) - 0:00:02 - distributed - INFO - torch.cuda.device_count: 1
+2026-11-12 22:20:27 (UTC) - 0:00:02 - distributed - INFO - CUDA_VISIBLE_DEVICES: 0
+2026-11-12 22:20:27 (UTC) - 0:00:02 - distributed - INFO - local rank: 0
+2026-11-12 22:20:28 (UTC) - 0:00:02 - train - INFO - Going to init comms...
+2026-11-12 22:20:28 (UTC) - 0:00:02 - train - INFO - Run dir: runs/smoke
+[rank0]:[W1112 22:20:28.629180305 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2026-11-12 22:20:28 (UTC) - 0:00:03 - train - INFO - TrainArgs: {'batch_size': 16,
+ 'ckpt_freq': 20,
+ 'data': {'eval_data': '',
+          'shuffle': True,
+          'train_data': '/root/moshi-finetune/daily-talk-contiguous/smoke.jsonl'},
+ 'do_ckpt': True,
+ 'do_eval': False,
+ 'duration_sec': 100.0,
+ 'eval_freq': 100,
+ 'first_codebook_weight_multiplier': 100.0,
+ 'full_finetuning': False,
+ 'gradient_checkpointing': True,
+ 'log_freq': 1,
+ 'lora': {'enable': True, 'ft_embed': False, 'rank': 128, 'scaling': 2.0},
+ 'max_norm': 1.0,
+ 'max_steps': 20,
+ 'moshi_paths': {'config_path': None,
+                 'hf_repo_id': 'kyutai/moshiko-pytorch-bf16',
+                 'mimi_path': None,
+                 'moshi_path': None,
+                 'tokenizer_path': None},
+ 'num_ckpt_keep': 3,
+ 'num_microbatches': 1,
+ 'optim': {'lr': 2e-06, 'pct_start': 0.1, 'weight_decay': 0.1},
+ 'overwrite_run_dir': False,
+ 'param_dtype': 'bfloat16',
+ 'run_dir': 'runs/smoke',
+ 'save_adapters': True,
+ 'seed': 0,
+ 'text_padding_weight': 0.5,
+ 'wandb': {'key': None, 'offline': False, 'project': None, 'run_name': None},
+ 'world_size': 1}
+2026-11-12 22:20:28 (UTC) - 0:00:03 - train - INFO - Loading Mimi and Moshi...
+/root/moshi-finetune/.venv/lib/python3.12/site-packages/moshi/models/loaders.py:174: UserWarning: Repository kyutai/moshiko-pytorch-bf16 contains no config.json. Assuming this is a Moshi 7B. Support for such repository might be removed in the future.
+  warnings.warn(
+2026-11-12 22:20:29 (UTC) - 0:00:04 - finetune.wrapped_model - INFO - Converting model to dtype torch.bfloat16 ...
+2026-11-12 22:20:29 (UTC) - 0:00:04 - finetune.wrapped_model - INFO - Initializing lora layers ...
+2026-11-12 22:20:31 (UTC) - 0:00:06 - finetune.wrapped_model - INFO - Finished initialization!
+Rank 0 finished epoch 1
+Rank 0 finished epoch 2
+Rank 0 finished epoch 3
+2026-11-12 22:21:00 (UTC) - 0:00:35 - train - INFO - step: 000001 - done (%): 5.0 - loss: 1.709 - lr: 8.0e-08 - peak_alloc_mem (GB): 36.7 - alloc_mem (GB): 22.3 - words_per_second: 6770.6 - avg_words_per_second: 6770.6 - ETA: >2026-11-12 22:29:25
+Rank 0 finished epoch 4
+Rank 0 finished epoch 5
+Rank 0 finished epoch 6
+2026-11-12 22:21:15 (UTC) - 0:00:49 - train - INFO - step: 000002 - done (%): 10.0 - loss: 1.732 - lr: 2.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12547.6 - avg_words_per_second: 8795.3 - ETA: >2026-11-12 22:27:23
+Rank 0 finished epoch 7
+Rank 0 finished epoch 8
+Rank 0 finished epoch 9
+2026-11-12 22:21:29 (UTC) - 0:01:04 - train - INFO - step: 000003 - done (%): 15.0 - loss: 1.717 - lr: 2.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12579.3 - avg_words_per_second: 9775.5 - ETA: >2026-11-12 22:26:42
+Rank 0 finished epoch 10
+Rank 0 finished epoch 11
+Rank 0 finished epoch 12
+2026-11-12 22:21:43 (UTC) - 0:01:18 - train - INFO - step: 000004 - done (%): 20.0 - loss: 1.708 - lr: 1.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12628.2 - avg_words_per_second: 10360.6 - ETA: >2026-11-12 22:26:21
+Rank 0 finished epoch 13
+Rank 0 finished epoch 14
+Rank 0 finished epoch 15
+2026-11-12 22:21:57 (UTC) - 0:01:32 - train - INFO - step: 000005 - done (%): 25.0 - loss: 1.662 - lr: 1.9e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12571.3 - avg_words_per_second: 10738.3 - ETA: >2026-11-12 22:26:09
+Rank 0 finished epoch 16
+Rank 0 finished epoch 17
+Rank 0 finished epoch 18
+Rank 0 finished epoch 19
+2026-11-12 22:22:12 (UTC) - 0:01:47 - train - INFO - step: 000006 - done (%): 30.0 - loss: 1.658 - lr: 1.8e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12543.8 - avg_words_per_second: 11002.2 - ETA: >2026-11-12 22:26:01
+Rank 0 finished epoch 20
+Rank 0 finished epoch 21
+Rank 0 finished epoch 22
+2026-11-12 22:22:26 (UTC) - 0:02:01 - train - INFO - step: 000007 - done (%): 35.0 - loss: 1.617 - lr: 1.6e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12615.0 - avg_words_per_second: 11206.9 - ETA: >2026-11-12 22:25:55
+Rank 0 finished epoch 23
+Rank 0 finished epoch 24
+Rank 0 finished epoch 25
+2026-11-12 22:22:40 (UTC) - 0:02:15 - train - INFO - step: 000008 - done (%): 40.0 - loss: 1.625 - lr: 1.5e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12610.9 - avg_words_per_second: 11365.1 - ETA: >2026-11-12 22:25:50
+Rank 0 finished epoch 26
+Rank 0 finished epoch 27
+Rank 0 finished epoch 28
+2026-11-12 22:22:55 (UTC) - 0:02:29 - train - INFO - step: 000009 - done (%): 45.0 - loss: 1.614 - lr: 1.3e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12643.2 - avg_words_per_second: 11494.2 - ETA: >2026-11-12 22:25:47
+Rank 0 finished epoch 29
+Rank 0 finished epoch 30
+Rank 0 finished epoch 31
+2026-11-12 22:23:09 (UTC) - 0:02:44 - train - INFO - step: 000010 - done (%): 50.0 - loss: 1.572 - lr: 1.2e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12538.6 - avg_words_per_second: 11590.7 - ETA: >2026-11-12 22:25:44
+Rank 0 finished epoch 32
+Rank 0 finished epoch 33
+Rank 0 finished epoch 34
+Rank 0 finished epoch 35
+2026-11-12 22:23:23 (UTC) - 0:02:58 - train - INFO - step: 000011 - done (%): 55.0 - loss: 1.593 - lr: 1.0e-06 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12510.0 - avg_words_per_second: 11668.7 - ETA: >2026-11-12 22:25:42
+Rank 0 finished epoch 36
+Rank 0 finished epoch 37
+Rank 0 finished epoch 38
+2026-11-12 22:23:38 (UTC) - 0:03:12 - train - INFO - step: 000012 - done (%): 60.0 - loss: 1.527 - lr: 8.3e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12594.2 - avg_words_per_second: 11740.6 - ETA: >2026-11-12 22:25:40
+Rank 0 finished epoch 39
+Rank 0 finished epoch 40
+Rank 0 finished epoch 41
+2026-11-12 22:23:52 (UTC) - 0:03:27 - train - INFO - step: 000013 - done (%): 65.0 - loss: 1.581 - lr: 6.6e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12608.7 - avg_words_per_second: 11803.1 - ETA: >2026-11-12 22:25:39
+Rank 0 finished epoch 42
+Rank 0 finished epoch 43
+Rank 0 finished epoch 44
+2026-11-12 22:24:06 (UTC) - 0:03:41 - train - INFO - step: 000014 - done (%): 70.0 - loss: 1.552 - lr: 5.0e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12653.7 - avg_words_per_second: 11860.0 - ETA: >2026-11-12 22:25:37
+Rank 0 finished epoch 45
+Rank 0 finished epoch 46
+Rank 0 finished epoch 47
+2026-11-12 22:24:20 (UTC) - 0:03:55 - train - INFO - step: 000015 - done (%): 75.0 - loss: 1.528 - lr: 3.6e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12624.2 - avg_words_per_second: 11908.1 - ETA: >2026-11-12 22:25:36
+Rank 0 finished epoch 48
+Rank 0 finished epoch 49
+Rank 0 finished epoch 50
+Rank 0 finished epoch 51
+2026-11-12 22:24:35 (UTC) - 0:04:10 - train - INFO - step: 000016 - done (%): 80.0 - loss: 1.536 - lr: 2.3e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12535.4 - avg_words_per_second: 11945.4 - ETA: >2026-11-12 22:25:35
+Rank 0 finished epoch 52
+Rank 0 finished epoch 53
+Rank 0 finished epoch 54
+2026-11-12 22:24:49 (UTC) - 0:04:24 - train - INFO - step: 000017 - done (%): 85.0 - loss: 1.530 - lr: 1.3e-07 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12697.2 - avg_words_per_second: 11987.2 - ETA: >2026-11-12 22:25:34
+Rank 0 finished epoch 55
+Rank 0 finished epoch 56
+Rank 0 finished epoch 57
+2026-11-12 22:25:03 (UTC) - 0:04:38 - train - INFO - step: 000018 - done (%): 90.0 - loss: 1.537 - lr: 6.0e-08 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12681.4 - avg_words_per_second: 12023.8 - ETA: >2026-11-12 22:25:33
+Rank 0 finished epoch 58
+Rank 0 finished epoch 59
+Rank 0 finished epoch 60
+2026-11-12 22:25:17 (UTC) - 0:04:52 - train - INFO - step: 000019 - done (%): 95.0 - loss: 1.544 - lr: 1.5e-08 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12684.4 - avg_words_per_second: 12056.8 - ETA: >2026-11-12 22:25:32
+Rank 0 finished epoch 61
+Rank 0 finished epoch 62
+Rank 0 finished epoch 63
+2026-11-12 22:25:32 (UTC) - 0:05:06 - train - INFO - step: 000020 - done (%): 100.0 - loss: 1.518 - lr: 8.0e-12 - peak_alloc_mem (GB): 39.6 - alloc_mem (GB): 22.3 - words_per_second: 12627.9 - avg_words_per_second: 12084.1 - ETA: >2026-11-12 22:25:32
+2026-11-12 22:25:32 (UTC) - 0:05:06 - checkpointing - INFO - Dumping checkpoint in runs/smoke/checkpoints/checkpoint_000020/consolidated using tmp name: tmp.consolidated
+2026-11-12 22:25:32 (UTC) - 0:05:07 - checkpointing - INFO - Done dumping checkpoint in runs/smoke/checkpoints/checkpoint_000020/consolidated for step: 20
+2026-11-12 22:25:32 (UTC) - 0:05:07 - checkpointing - INFO - Done deleting checkpoints 
+2026-11-12 22:25:32 (UTC) - 0:05:07 - checkpointing - INFO - Done!
+2026-11-12 22:25:32 (UTC) - 0:05:07 - train - INFO - done!
+2026-11-12 22:25:32 (UTC) - 0:05:07 - utils - INFO - Closing: eval_logger
+2026-11-12 22:25:32 (UTC) - 0:05:07 - utils - INFO - Closed: eval_logger
+2026-11-12 22:25:32 (UTC) - 0:05:07 - utils - INFO - Closing: metrics_logger
+2026-11-12 22:25:32 (UTC) - 0:05:07 - utils - INFO - Closed: metrics_logger
+2026-11-12 22:25:32 (UTC) - 0:05:07 - train - INFO - Closed everything!
+[rank0]:[W1112 22:25:33.517305434 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
