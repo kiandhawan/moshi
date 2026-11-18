@@ -30,6 +30,13 @@ Decisions about how results are scored, newest first. Metric definitions live in
     answers to questions meant for others; with 10 h it mostly lands on returns and ordinary requests.
 - Paired diffs appended to results/diagnostics/paired_diffs.txt; comparison.md, best_checkpoints.md,
   checkpoint_table.md, runs.csv regenerated.
+- **Extra checkpoints (steps 50 and 100 of both 1h onset runs, `scripts/extra_ckpts.sh`, same tests as
+  candidates)** to rule out a selection artefact: no tested onset checkpoint comes close to plain 1h. Best of
+  all five tested at 1e-4 is step 50 (score 68.8, wait success 29%) vs selected step 150 (68.4, 27%; paired
+  +0.4 [-1.8, +2.6], wait +1.8 pp [-3.2, +6.8]) and vs plain 1h step 50 still -4.4 [-7.2, -1.8]. At 3e-5 steps
+  50/100 are the worst (63.4 / 64.8). Every tested onset checkpoint at 1h interrupts in 64-74% of waits and
+  answers 42-50% of questions meant for someone else. The selected bests are unchanged (the rule's candidate set
+  is fixed); `results/onset_x_size.md` lists every tested checkpoint.
 
 ## 2026-11-17: lr 3e-4 at 10 h (plain and onset x3) - ties 1e-4; no 1 h or control runs at 3e-4
 

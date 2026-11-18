@@ -101,6 +101,23 @@ def main() -> None:
                    f"{'*' if not lo <= 0 <= hi else ''} |", ""]
     md += ["Interaction = (10h onset − 10h plain) − (1h onset − 1h plain): how much the onset effect changes with "
            "10× the data (equivalently, how much the data effect changes with onset weighting).", ""]
+    # every behaviorally tested checkpoint of the 1h onset runs (candidates + extra steps), point estimates
+    md += ["## Every tested checkpoint of the 1h runs", "",
+           "Point estimates on the same 400 files. Candidates come from the selection rule (top 3 by whole-wait silence "
+           "probability + final); other steps were tested afterwards as extra checkpoints (`scripts/extra_ckpts.sh`) "
+           "and do not change the selected best.", "",
+           "| model | overall score | " + " | ".join(r[0] for r in RATES) + " |", "|---" * (len(RATES) + 2) + "|"]
+    for lr in LRS:
+        for run in (f"train_1h_v2_lr{lr}", f"train_1h_v2_lr{lr}_onsetw3"):
+            b = best(run)
+            for f in sorted((REPO / "results/metrics").glob(f"{run}__s*.jsonl")):
+                m = f.stem
+                if run.endswith("lr" + lr) and m != b:
+                    continue  # plain runs: their best only (the 2x2 cell)
+                st, _, _ = stats({("x", "x"): m}, 200)
+                cells = [f"{st['overall score'][('x', 'x')][0]:.1f}"] + [f"{st[r[0]][('x', 'x')][0]:.1f}" for r in RATES]
+                md.append(f"| `{m}`{' (best)' if m == b else ''} | " + " | ".join(cells) + " |")
+    md.append("")
     (REPO / "results/onset_x_size.md").write_text("\n".join(md))
     print("\n".join(md))
 

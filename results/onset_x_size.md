@@ -107,3 +107,22 @@ Models: 1h plain = `train_1h_v2_lr3e-5__s080`, 1h onset = `train_1h_v2_lr3e-5_on
 | data effect (10h − 1h) | -9.3 [-13.8, -4.8]* | -26.9 [-32.1, -21.6]* | interaction: -17.6 [-23.3, -11.6]* |
 
 Interaction = (10h onset − 10h plain) − (1h onset − 1h plain): how much the onset effect changes with 10× the data (equivalently, how much the data effect changes with onset weighting).
+
+## Every tested checkpoint of the 1h runs
+
+Point estimates on the same 400 files. Candidates come from the selection rule (top 3 by whole-wait silence probability + final); other steps were tested afterwards as extra checkpoints (`scripts/extra_ckpts.sh`) and do not change the selected best.
+
+| model | overall score | wait success | interrupt | missed resume | ordinary response | distractor response |
+|---|---|---|---|---|---|---|
+| `train_1h_v2_lr1e-4__s050` (best) | 73.3 | 41.4 | 31.8 | 34.6 | 75.2 | 15.6 |
+| `train_1h_v2_lr1e-4_onsetw3__s050` | 68.8 | 28.6 | 64.3 | 10.7 | 92.6 | 42.2 |
+| `train_1h_v2_lr1e-4_onsetw3__s100` | 66.4 | 21.4 | 69.6 | 10.0 | 95.2 | 50.1 |
+| `train_1h_v2_lr1e-4_onsetw3__s120` | 66.4 | 23.6 | 66.1 | 13.9 | 93.6 | 47.9 |
+| `train_1h_v2_lr1e-4_onsetw3__s130` | 67.7 | 25.4 | 66.4 | 10.4 | 95.7 | 48.1 |
+| `train_1h_v2_lr1e-4_onsetw3__s150` (best) | 68.4 | 26.8 | 66.4 | 10.0 | 94.9 | 44.7 |
+| `train_1h_v2_lr3e-5__s080` (best) | 69.5 | 35.7 | 43.6 | 29.6 | 75.3 | 23.9 |
+| `train_1h_v2_lr3e-5_onsetw3__s050` | 63.4 | 19.3 | 72.9 | 13.2 | 89.6 | 49.9 |
+| `train_1h_v2_lr3e-5_onsetw3__s100` | 64.8 | 18.9 | 73.9 | 9.6 | 93.0 | 50.1 |
+| `train_1h_v2_lr3e-5_onsetw3__s110` | 67.1 | 23.6 | 67.5 | 12.5 | 91.8 | 43.3 |
+| `train_1h_v2_lr3e-5_onsetw3__s140` (best) | 66.4 | 25.0 | 67.9 | 9.6 | 92.5 | 49.4 |
+| `train_1h_v2_lr3e-5_onsetw3__s150` | 65.8 | 22.1 | 67.1 | 12.5 | 92.8 | 49.9 |
