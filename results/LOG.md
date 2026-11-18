@@ -3,6 +3,34 @@
 Decisions about how results are scored, newest first. Metric definitions live in
 `scripts/score.py` (module docstring); this file records *why* they are the way they are.
 
+## 2026-11-18: 1 h x onset x3 (2x2 data size x onset weighting) - onset helps only with 10 h of data
+
+- Runs: train_1h_v2_lr1e-4_onsetw3 (GPU 0) and train_1h_v2_lr3e-5_onsetw3 (GPU 1), 19:19-19:59; configs are
+  the plain 1 h configs plus the two onset lines of train_10h_v2_lr1e-4_onsetw3 (x3, 1.0 s); seed 0, 150 steps,
+  batch 16, rank 128, checkpoints every 10 steps. No spikes (final loss 0.012 / 0.067, as plain 1 h).
+  `scripts/onset_1h.sh` (watch + `eval_run.py`); logs in runs/<run>/train.log.
+- Disk first: deleted the 400-file eval output audio of the 28 checkpoints that are no run's best or final
+  (67.8 GB; all their metrics were already in results/metrics/); free 19 -> 83 GB.
+- Best (same rule): 1e-4 step 150, wait success 27% (75/280), ordinary 95%; 3e-5 step 140, 25% (70/280),
+  ordinary 92%. Candidates were late steps (1e-4: 120/130/150; 3e-5: 110/140/150) because whole-wait silence
+  probability rises late; it is below the plain run's at almost every step (peak 0.454 vs 0.555 at 1e-4,
+  0.414 vs 0.480 at 3e-5), so the low wait success is not only a selection artefact. Steps 50 and 100 are
+  kept for both runs; earlier checkpoints were never run behaviorally.
+- 2x2 (`scripts/onset_x_size.py` -> results/onset_x_size.md; paired cluster bootstrap, 400 files):
+  - **Onset effect at 1 h is negative:** overall score -4.8 [-7.5, -2.1] (1e-4) and -3.2 [-6.0, -0.2] (3e-5);
+    wait success -14.6 / -10.7 pp. Missed resumes drop (-24.6 / -20.0 pp) and ordinary response rises
+    (+19.7 / +17.2 pp), but interruptions (+34.6 / +24.3 pp) and distractor responses (+29.1 / +25.5 pp)
+    rise far more than at 10 h.
+  - **At 10 h it is neutral to positive:** score +1.4 [-0.4, +3.2] (1e-4), +3.5 [+1.3, +5.7] (3e-5).
+  - **Interaction (10 h onset - 10 h plain) - (1 h onset - 1 h plain):** overall score +6.2 [+3.0, +9.4]
+    (1e-4) and +6.7 [+3.1, +10.3] (3e-5); missed resume +16.8 [+10.6, +23.0] (1e-4; onset removes fewer
+    missed resumes at 10 h because plain 10 h misses fewer) and -0.4 [-7.8, +7.1] (3e-5, none).
+  - Reading: onset weighting makes Moshi readier to speak. With 1 h of data the model has not learned
+    *when* silence is required well enough to absorb that, so the extra readiness becomes interruptions and
+    answers to questions meant for others; with 10 h it mostly lands on returns and ordinary requests.
+- Paired diffs appended to results/diagnostics/paired_diffs.txt; comparison.md, best_checkpoints.md,
+  checkpoint_table.md, runs.csv regenerated.
+
 ## 2026-11-17: lr 3e-4 at 10 h (plain and onset x3) - ties 1e-4; no 1 h or control runs at 3e-4
 
 - Runs: train_10h_v2_lr3e-4 (GPU 0) and train_10h_v2_lr3e-4_onsetw3 (GPU 1), 03:50; configs are the
