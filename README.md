@@ -1,3 +1,5 @@
+> **This fork: teaching Moshi conditional silence.** Results, findings and an index of every report: [results/README.md](results/README.md).
+
 # Moshi-Finetune
 
 <a target="_blank" href="https://colab.research.google.com/github//kyutai-labs/moshi-finetune/blob/main/tutorials/moshi_finetune.ipynb">
